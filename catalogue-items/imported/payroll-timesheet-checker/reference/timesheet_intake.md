@@ -44,7 +44,7 @@ Pull, tool by tool:
 | Input | Tool | Read it like this |
 |---|---|---|
 | Hours | `list_time_records` (period start and end) | Check `source` first. `native`: shifts with clock-in, clock-out, breaks. `third_party`: timesheets; `get_time_sheet` on a timesheet's top-level id for per-day lines. `none`: no hours here, use the spreadsheet path. |
-| Leave taken | `list_time_off_requests` (period, `status: approved`) | Each approved day is paid as PTO or sick, not as worked. Pending is a flag. Notes are withheld by the tool; do not ask for them. |
+| Leave taken | `list_time_off_requests` (period, `status: approved`) | An approved day is never paid as worked. Keep its leave type: paid types are PTO or sick hours, unpaid types are unpaid hours at zero pay, and a missing or unclear type is a flag. Pending is a flag. Notes are withheld by the tool; do not ask for them. |
 | Balances | `get_time_off_balances` | Available, accrued, used, pending per policy. Policy names need the time-off-policies scope; without it match on policy uuid. Feeds the over-balance check. |
 | Roster, rates, classifications | `list_employees` and its compensations | Employment status and the active flag are separate fields (below). |
 | Prior run | `list_payrolls`, `get_payroll` | The last processed run's per-person totals, for the comparison. |
@@ -94,7 +94,7 @@ When the sheet is already totaled, still recompute from the punches when punches
 Produce one row per person per day:
 
 ```
-person | date | in | out | break_min | regular | ot | pto | holiday | job
+person | date | in | out | break_min | regular | ot | pto | unpaid | holiday | job
 ```
 
 Rules that keep this honest:
@@ -116,3 +116,5 @@ Okonkwo Mechanical, week ending 3/15, five on the crew.
 - One row for Marcus on 3/12 has a 6:40 AM in and no out.
 
 Reported: 5 people, 214 hours readable, 1 shift with no clock-out (Marcus, Thursday), 1 new hire to confirm hours for (Dee, started 3/12).
+
+Changed by AI Blocks (2026-10-28): approved leave keeps its paid or unpaid type, and the normalized row has an unpaid column.

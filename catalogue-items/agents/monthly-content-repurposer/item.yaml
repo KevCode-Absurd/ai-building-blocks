@@ -7,7 +7,7 @@ role: orchestrate
 job: organic
 level: beginner
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: true}
   - {type: source_text, required: true}
   - {type: brand_brain, required: false}
 outputs:

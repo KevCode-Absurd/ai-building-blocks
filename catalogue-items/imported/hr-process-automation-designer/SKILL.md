@@ -10,6 +10,19 @@ metadata:
 
 Identify, design, and implement automation across the HR function — from no-code workflow tools and HRIS configuration to AI-assisted content generation and chatbot use cases — freeing HR teams from administrative burden to focus on higher-value people work.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supported tasks
 
 - Identifying and prioritizing HR process automation opportunities
@@ -65,3 +78,10 @@ Identify, design, and implement automation across the HR function — from no-co
 - Apply responsible AI principles to any automated HR decision-making, especially in hiring and performance.
 - Automate the task, not the relationship—use automation to free HR capacity for complex human interactions.
 - Measure time saved and error reduction post-implementation to validate automation investment and justify further scope.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

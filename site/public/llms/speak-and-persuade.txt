@@ -1,18 +1,20 @@
 # Speak and persuade: AI Blocks
 
-> 40 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer): Write an annual letter to your team or owners from your results. It puts the bad news first, owns mistakes, and says what you will do and stop.
 - [Bad news update writer](https://useaiblocks.com/skills/bad-news-update-writer): Write a bad news update that opens with the loss, gives the real numbers and ends on next steps. Paste the facts of the setback to start.
 - [Belief-led message writer](https://useaiblocks.com/skills/why-first-message-writer): Turn a pitch that opens with your product into a why-first message. Give your cause and audience, and get belief, how, then what.
 - [Board deck builder](https://useaiblocks.com/skills/board-deck-builder): Build a board deck outline from your quarter's numbers. Get the story, metrics, bad news and board asks laid out section by section.
 - [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach): Share your board agenda, deck and weak spots. Get tough practice questions, number checks and answer outlines with clear next actions.
+- [Case competition answer and backup-slide planner](https://useaiblocks.com/workflows/prepare-case-competition-judge-questions): Share your deck, case evidence and judging criteria. Get practice questions, sourced answer notes and backup-slide outlines.
 - [Case competition financial-assumption reviewer](https://useaiblocks.com/workflows/stress-test-a-case-competition-recommendation): Share the full case, marking guide and draft recommendation. Get a challenged argument, financial checks and an editable deck when tools support it.
 - [Case competition slide reviewer](https://useaiblocks.com/agents/case-competition-evidence-review-assistant): Check a changed case recommendation and its numbers. Review new assumptions and update the affected slides with supported tools.
 - [Case-based pitch and talk writer](https://useaiblocks.com/workflows/build-a-talk-around-one-real-case): Use one real case to build a pitch story, explain the idea and put the stakes early in the talk.
 - [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer): Turn rough notes from a first meeting into a one-page contact memory card with the exact name, facts, promises and your next contact date.
 - [Conversation question planner](https://useaiblocks.com/skills/get-them-talking-plan): Plan a conversation that gets the other person talking. Give it a brief on them. You get a warm start, open questions and a close.
 - [Elevator pitch writer](https://useaiblocks.com/skills/elevator-pitch-writer): Say what you do, for whom and the result. Get 10, 30 and 60 second pitches and an opening question.
+- [Funding pitch claim and evidence organizer](https://useaiblocks.com/workflows/prepare-a-funding-pitch-evidence-appendix): Share your pitch, dated records and disclosure limits. Get a claim-to-source table, unsupported claims and a supporting-slide outline.
 - [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner): Turn one true story into a funny speech or toast. You get a deadpan script with the pause marked and a check on what your room can take.
 - [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer): Share one thing you valued and a real detail. Get a short thank-you note that stays specific, truthful and free of requests.
 - [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner): Plan how to get buy-in for your idea. Give it your idea and the people who decide. You get a story, a vision picture and an order to approach them.
@@ -39,6 +41,10 @@
 - [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer): Turn your press release, questions and numbers into a six-page narrative memo in full sentences, with the ask on page one and a writing schedule.
 - [Speaking event outreach planner](https://useaiblocks.com/skills/traction-speaking-engagements): Share your expertise and buyer audience. Get an event shortlist, talk proposal and follow-up resource plan.
 - [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner): Reorder your talk or pitch outline so the room knows the stakes in the first minute. Get a true clock, picture swaps and one real twist.
+- [Student conference talk and rehearsal planner](https://useaiblocks.com/workflows/prepare-a-student-conference-talk): Share the completed project, audience and speaking time. Get a timed talk outline, speaker notes, proofreading and rehearsal checklist.
+- [Survey results checker and briefing planner](https://useaiblocks.com/workflows/prepare-a-survey-findings-briefing): Share survey data, questions and sampling notes. Get checked findings, response counts, sample limits and a briefing outline.
+- [Thesis defence outline and question planner](https://useaiblocks.com/workflows/prepare-a-thesis-defence-evidence-brief): Share your completed thesis, results and exam format. Get a defence outline, evidence index, speaking notes and practice questions.
 - [Tough audience speech planner](https://useaiblocks.com/skills/hostile-room-speech-planner): Share the audience’s concerns, your point and evidence. Plan a speech with honest common ground, a clear argument and one practical next step.
 - [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator): Turn your key figures into pictures an audience can feel. Give it your numbers and your listeners. You get each one as a comparison or a count of people.
+- [Webinar outline, slides and promotion planner](https://useaiblocks.com/workflows/prepare-a-webinar-people-can-follow): Share the audience problem, claims and session length. Get a teaching outline, editable slides when supported and promotion drafts.
 - [Witty line editor](https://useaiblocks.com/skills/witty-line-punch-up): Punch up a toast, speech or bio with two or three sharp turned lines. Each stays true, and the rest of your text stays plain.

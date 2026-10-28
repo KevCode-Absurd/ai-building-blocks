@@ -111,7 +111,7 @@ tweaks:
   - what: Product type
     how: Say one-off, consumable or subscription. Consumables and subscriptions can lose a little on order one. One-off buys cannot.
   - what: Cash you can spend while waiting
-    how: Give the cash you could put into ads for 90 days. Without it the cash part of the score is half marks and flagged.
+    how: Give the cash you could put into ads for 90 days. If your first order loses money and you leave cash out, the cash part scores zero, it is flagged, and the call cannot be scale.
   - what: CPC and conversion rate
     how: Give the CPC you would accept and the best conversion rate you could reach. It uses them for a floor CAC below which you should not plan.
 

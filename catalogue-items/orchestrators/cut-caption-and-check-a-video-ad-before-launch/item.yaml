@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: footage, required: true}
   - {type: script, required: true}
-  - {type: video_ads, required: true}
+  - {type: video_ads, required: false}
   - {type: offer, required: false}
   - {type: brand_brain, required: false}
 outputs:

@@ -5,7 +5,7 @@ description: Use when you want to run a discount, a free gift or a special price
 
 # Reason-why deal writer
 
-A deal with no reason sounds like a trap. A deal with a true reason sounds like good luck. This skill states the deal plainly, finds a reason the buyer will believe, and writes it in three versions with exact steps to claim. For picking the group first, use the [Hungry audience ranker](https://useaiblocks.com/skills/hungry-audience-ranker).
+A deal with no reason sounds like a trap. A deal with a true reason sounds like good luck. This skill states the deal plainly, finds a reason the buyer will believe, and writes it in three versions with exact steps to claim. For picking the group first, use the [Market demand reviewer](https://useaiblocks.com/skills/hungry-audience-ranker).
 
 **When not to use it:** you have no real saving or no reason you can prove (run a plain price cut instead), the group is not chosen yet (use the Hungry audience ranker first), or you only want to polish copy you already wrote (use the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor)).
 

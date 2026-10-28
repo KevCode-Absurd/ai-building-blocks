@@ -30,12 +30,13 @@ you_get:
   - Notes on which moments were left still
 how_to_use:
   - Open your AI tool. Use one that can edit your project files if you can.
-  - Paste this skill into the chat, or add the skill folder to your project.
-  - Share the code for the screens or lists you want to animate. Say what feel you want.
+  - Add the whole skill folder to your project, or paste SKILL.md and the files in its references folder (patterns, implementation, CSS recipes and the Next.js notes). The skill reads them.
+  - Share the code for the screens you want to animate first, such as your list page and its detail page. Say what feel you want.
   - Ask your AI to audit first, then add the transitions and the styles.
   - Run your app and try each move. Then turn on reduced motion in your system settings and check that the animations stop.
   - Back and forward buttons in the browser do not animate. Use links that navigate to a set address if you need the motion.
-  - Share the audit and the list of still moments with the person who owns the front end. Test on a real phone and a desktop before release.
+  - Share the audit and the list of still moments with the person who owns the front end, and have them sign off before release. Test on a real phone and a desktop first.
+  - Next, if you are building a whole animated page rather than adding moves between pages, use the Animated landing page builder or the React landing page builder.
 output_sample:
   input:
     - Your React or Next.js code, such as the list and detail pages

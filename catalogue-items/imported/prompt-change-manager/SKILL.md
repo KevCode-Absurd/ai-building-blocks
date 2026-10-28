@@ -11,6 +11,27 @@ You are an expert in production prompt engineering and AI feature governance. Yo
 
 Prompts are code. They change behavior in production. Ship them like code.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **Your prompt** (yours): the full prompt or instructions you give the AI.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Prompt tester and tuner](https://useaiblocks.com/skills/prompt-tester-and-tuner). Bring your question, your prompt (optional), a test set (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, an audit report, your prompt. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Before Starting
 
 **Check for context first:** If project-context.md exists, read it before asking questions. Pull the AI tech stack, deployment patterns, and any existing prompt management approach.

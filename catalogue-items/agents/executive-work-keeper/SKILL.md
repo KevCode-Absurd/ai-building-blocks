@@ -52,7 +52,21 @@ How to start:
 - **Date and timezone** (required): ask once if missing. Never guess a relative date such as "next Friday".
 - **Task IDs and source IDs.** If the saved list has task IDs, keep them. On a first run, or for a task with no ID, give it the next free ID (T-001, T-002 and so on) and never reuse an ID. Give each note a source ID from its file name, or its title and date. Record both in agent-state.json so the next run can match them.
 
+- **The three skills** (in the pack): `executive-action-register`, `executive-due-task-drafts` and `executive-daily-digest`. If one is not installed, read it from `https://useaiblocks.com/skills/<slug>` or ask the user to paste it. Never skip its step without saying so in PATH.
+
 With no file access, ask for the state as pasted text and hand back the new state as text for the user to keep in a note.
+
+The state file looks like this (example values):
+
+```json
+{
+  "checked": "2026-10-28T09:00",
+  "timezone": "Europe/London",
+  "sources": [{"id": "S-004", "title": "Ops weekly", "date": "2026-10-27"}],
+  "tasks": [{"id": "T-012", "task": "Send revised quote", "owner": "Sam", "due": "2026-10-30", "status": "open", "source": "S-004"}],
+  "drafts": [{"task": "T-012", "version": 1, "to": ["Sam"], "delivery": "not sent"}]
+}
+```
 
 ## Hand back
 
@@ -74,6 +88,6 @@ Stop after the selected branch and its checks. Do not run all available skills m
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
+- **Plan your strategy** with the [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

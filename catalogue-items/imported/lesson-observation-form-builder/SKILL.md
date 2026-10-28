@@ -71,6 +71,19 @@ tags: ["observation", "look-fors", "feedback", "professional-development", "evid
 
 # Lesson Observation Protocol Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a focused, evidence-based lesson observation protocol for a specific teaching practice — providing clear "look-fors" (observable indicators of the practice in action), a structured recording format, and a framework for the post-observation feedback conversation. The critical principle is that observations should be FOCUSED (looking for specific things, not "everything"), EVIDENCE-BASED (recording what is seen, not judgements), and DEVELOPMENTAL (generating learning for the teacher, not just a grade). The output is a ready-to-use protocol that an observer can take into a classroom, plus a feedback framework for the post-observation conversation. AI is specifically valuable here because designing effective look-fors requires translating abstract teaching practices ("effective questioning") into observable, specific indicators ("the teacher waits at least 3 seconds after asking a question before accepting a response") — a translation that requires both research knowledge and practical teaching experience.
@@ -253,3 +266,10 @@ Staying focused on ONE aspect produces deep, useful evidence. Spreading attentio
 2. **The quality of feedback depends on the observer's skill.** A well-designed protocol in the hands of an observer who delivers feedback judgementally will produce defensiveness, not growth. The feedback framework guides the conversation, but the observer must be trained to deliver feedback as evidence-based dialogue, not evaluation.
 
 3. **Developmental observation and performance management observation require different approaches.** This protocol is designed for developmental purposes. If the same protocol is used for high-stakes performance management, teachers will perform for the observer rather than teach naturally, and the data will be unreliable. Schools should separate developmental observation from accountability observation.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Course reading list builder](https://useaiblocks.com/skills/course-reading-list-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -16,7 +16,7 @@ when:
   - You are choosing between two finalists and want a fair side-by-side.
   - You want to check whether a rating has real evidence behind it.
 not_for:
-  - "You only have one interviewer's loose notes and no written scorecard: write the scorecard first, with questions and green and red flags, then come back."
+  - "You only have one interviewer's loose notes and no written scorecard: write the scorecard first, with questions and green and red flags, then come back. The Interview question set maker can draft one."
   - "You want the AI to pick who to hire: make the call yourself with your team. AI ratings must never be the only basis for a decision. Check employment-law and data-protection rules before using AI on candidates."
   - "You need a legal or HR review of your hiring process: ask an HR adviser or employment lawyer."
 you_give:
@@ -32,9 +32,10 @@ you_get:
   - A list of evidence gaps, interviewer gaps and bias flags
 next: [candidate-comparison-table-builder]
 how_to_use:
+  - First, confirm which AI tool your company has approved for candidate data, and your data-protection basis for using it (for example, what your candidate privacy notice says). Do not paste any candidate data until both are clear.
   - Write your role scorecard first. List each question, the follow-ups, and the green and red flags.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. Metaview and Teamtailor, which it names, are paid tools you only need if you use their transcripts or kits.
-  - Before you paste, swap each candidate's name and personal details for Candidate A and Candidate B. Use only an AI tool your company has approved for candidate data.
+  - Before you paste, swap each candidate's name and personal details for Candidate A and Candidate B.
   - Use one rating scale for every candidate, the one in your scorecard. If you have none, use the 1 to 4 scale in the skill. Do not mix scales.
   - Check again that names and personal details are gone before you paste. Then paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
   - Ask for the scorecard and the screen evaluation. For several candidates, ask for the comparison matrix.

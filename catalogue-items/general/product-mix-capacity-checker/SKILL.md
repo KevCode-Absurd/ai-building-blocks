@@ -93,16 +93,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the plan table, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any decision about what to produce to the person.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Get cost per good unit after waste with the [Manufacturing yield cost bridge](https://useaiblocks.com/skills/manufacturing-yield-cost-bridge).
-- If your limit is staff time, use the [Service utilization margin builder](https://useaiblocks.com/skills/service-utilization-margin-builder).
-- Work out contribution per dish with the [Restaurant portion cost builder](https://useaiblocks.com/skills/restaurant-portion-cost-builder).
+- Get cost per good unit after waste with the [Manufacturing yield and unit cost calculator](https://useaiblocks.com/skills/manufacturing-yield-cost-bridge).
+- If your limit is staff time, use the [Service hours and margin calculator](https://useaiblocks.com/skills/service-utilization-margin-builder).
+- Work out contribution per dish with the [Restaurant portion cost calculator](https://useaiblocks.com/skills/restaurant-portion-cost-builder).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the plan table, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any decision about what to produce to the person.

@@ -7,6 +7,27 @@ description: Use when preparing roadmap narratives, release notes, changelogs, o
 
 Create clear roadmap communication artifacts for internal and external stakeholders.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude or ChatGPT:** Either can write the updates. Neither can read your git history, so paste the commits or run the script yourself.
+- **Git and Python 3:** Needed only if you want the changelog script to read your git history.
+<!-- /needs -->
+
 ## When To Use
 
 Use this skill for:
@@ -52,6 +73,13 @@ Return only the pieces the person asked for, in this order, under the headings b
 4. **Release notes**: user-facing or internal, using the templates.
 5. **Changelog**: grouped by type of change, in markdown or plain text.
 6. **Missing**: every input marked MISSING and how it limits the update.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Roadmap Formats
 

@@ -10,7 +10,7 @@ description: Check five gates before scaling Meta campaigns. Compare pacing, met
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -25,7 +25,9 @@ This skill reviews campaigns you already run, so it needs the campaign results b
 - **Days at current budget and number of live ads** (recommended).
 - A Meta ad account for the data. Meta ad spend is paid media.
 
-When not to use: with under 14 days of data or a new ad account, wait. For a break-even ROAS, a spend ladder or a scaling campaign design, use the [Meta scaling campaign planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). To write or check new ads, use a creative skill.
+Export from Meta Ads Manager at campaign level, one row per campaign, with these columns: campaign name, daily budget, amount spent, purchases, purchase value, cost per purchase, purchase ROAS, CTR (link), frequency. Set the date range to the last 14 to 30 days.
+
+When not to use: with under 14 days of data or a new ad account, wait. This skill is built around Meta. For Google or TikTok scaling, use that platform's own planner; the Google and TikTok figures here are rough starting points only. For a break-even ROAS, a spend ladder or a scaling campaign design, use the [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). To write or check new ads, use a creative skill.
 
 ## Working rules
 
@@ -170,6 +172,7 @@ Risk: LOW/MEDIUM/HIGH
 | All | CPA | >50% above target 3+ days | Pause and diagnose |
 
 ### Automatic Stop Rules:
+These are unsourced starting points. Propose them to the owner as rules to set from their own account; never pause or kill anything on them alone, and never present them as Meta guidance.
 - CPA > 3x target for 3+ consecutive days → pause
 - ROAS < 0.5x for 7+ days → kill
 - Frequency threshold breached + CTR declining → refresh creative before scaling
@@ -187,6 +190,8 @@ Risk: LOW/MEDIUM/HIGH
 7. Next step: re-run this review with fresh data after the 7-day cycle wait. If no campaign passes, say so and point to a creative test (for example the Meta concept diversity test planner) before any scaling.
 
 ## Rules
+
+The numbers in these rules are this skill's defaults, not platform rules. The owner can change them.
 
 1. All 5 checks must pass. 4 of 5 is not "almost ready", it's NO.
 2. 20% per cycle is the default. Don't aggregate multiple cycles into one move.

@@ -29,4 +29,4 @@ credits:
   - title: matlab-optimize-pcb-design skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-optimize-pcb-design
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Copied under the BSD 2-Clause licence. We gave it a plain name, made the 3 dB bandwidth count only the unbroken band around the peak, and wrote insertion and return loss as positive dB with clear definitions. We added Before you start and After this sections that link to other AI Blocks steps.

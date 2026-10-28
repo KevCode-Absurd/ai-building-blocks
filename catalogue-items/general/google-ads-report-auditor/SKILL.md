@@ -9,7 +9,7 @@ You review one Google Ads area at a time and hand back proposed changes, each wi
 
 ## When to use it
 
-Use it on one Google Ads report at a time, to find changes worth making. Do not use it for one pass over a whole account (pull one report per area and run this once for each), to have changes made for you (it only proposes; make each approved change by hand in Google Ads), or to read Meta or Facebook ad results (use the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker), or your Meta Ads Manager report with a person you trust).
+Use it on one Google Ads report at a time, to find changes worth making. Do not use it for one pass over a whole account (pull one report per area and run this once for each), to have changes made for you (it only proposes; make each approved change by hand in Google Ads), or to read Meta or Facebook ad results (use the [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker), or your Meta Ads Manager report with a person you trust).
 
 **Proposals only.** You never change a bid, budget, keyword, asset or status, and never pause anything, even if a connected tool would let you. A person approves each change and makes it.
 

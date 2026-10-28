@@ -36,6 +36,7 @@ how_to_use:
   - Paste this skill into the chat and say you want to build a support automation. Use test accounts first, such as a Stripe test key and a sandbox help desk. Do not point it at live billing or live tickets until you have checked every script that replies, closes, refunds or cancels.
   - Answer the questions about your help desk, billing tool, database and common ticket types. Check the summary it gives back.
   - Add your API keys when asked. Keep them in a .env.local file in your project's top folder, never in the chat.
+  - "Required before any live key: with test keys only, run each of the four write scripts (reply-to-ticket.ts, close-ticket.ts, issue-refund.ts, cancel-subscription.ts) and check each one stops at the terminal prompt and does nothing until you type yes. Answer no and check nothing was sent, closed, refunded or cancelled."
   - "For the database, create a read-only database user limited to the tables the automation needs. Do not give it production admin credentials."
   - Run the setup check, then try the triage on a few real tickets. Read each drafted reply before you approve it. Check that every script that replies, closes a ticket or refunds a payment stops and asks you to type yes in the terminal before it acts. A flag on its own is not a check. Run those four scripts yourself and do not let your AI run them for you. After your first approved draft, refine the triage keywords and reply templates.
   - When it is built, open the README.md your AI wrote. It says how to run each script and fix common errors.

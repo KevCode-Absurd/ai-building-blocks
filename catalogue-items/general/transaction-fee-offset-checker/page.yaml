@@ -18,7 +18,7 @@ not_for:
   - "You need to split fees across several funds or apply a tax gross-up: ask your fund accountant or counsel, because this checks one fund and one period only."
   - "You need refunds or expiring credits handled: ask your fund administrator, because this only covers carryforward that the LPA allows."
   - "You want to know if a fee is allowed under your LPA: ask your lawyer, because this checks the arithmetic and does not read the contract for legal meaning."
-  - "You need a management fee compared before and after a change in basis or rate: use the Management fee stepdown checker instead."
+  - "You need a management fee compared before and after a change in basis or rate: use the Fund management fee change checker instead."
 you_give:
   - Gross management fee, eligible received transaction fees, contractual offset percentage and verified beginning offset carryforward.
   - "The fee period, plus the currency and scale used for the management fee offset."

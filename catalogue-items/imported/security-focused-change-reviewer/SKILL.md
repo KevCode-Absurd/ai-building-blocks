@@ -10,6 +10,23 @@ date_added: "2026-09-04"
 
 Security-focused code review for PRs, commits, and diffs.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, your notes, a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 - You need a security-focused review of a PR, commit range, or diff rather than a general code review.
 - The changes touch auth, crypto, external calls, value transfer, permissions, or other high-risk logic.
@@ -206,6 +223,8 @@ These patterns require adversarial analysis even in quick triage.
 
 ## Supporting Documentation
 
+AI Blocks note: these four files are not included in this copy. Follow the phases in this file (triage, code analysis, test coverage, blast radius, adversarial pass, report) and say in the report that the detailed guides were not available.
+
 - **methodology.md** - Detailed phase-by-phase workflow (Phases 0-4)
 - **adversarial.md** - Attacker modeling and exploit scenarios (Phase 5)
 - **reporting.md** - Report structure and formatting (Phase 6)
@@ -221,3 +240,12 @@ These patterns require adversarial analysis even in quick triage.
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+- The [Pull request review tracker](https://useaiblocks.com/skills/pull-request-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

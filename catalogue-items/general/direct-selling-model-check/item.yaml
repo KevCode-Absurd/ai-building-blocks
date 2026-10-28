@@ -7,7 +7,7 @@ role: check
 job: strategy
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: true}
   - {type: question, required: true}
 outputs:
   - {type: plan}

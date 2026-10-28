@@ -10,6 +10,22 @@ user-invocable: false
 
 # SaaS / Subscription Agreement Review
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It works in any chat AI. One that can read a PDF saves you pasting the contract.
+<!-- /needs -->
+
 ## Using this skill in a chat (AI Blocks note)
 
 This skill came from a plugin that keeps a team playbook in a config file. In a plain chat that file does not exist, and nothing needs installing. Work like this instead:
@@ -225,6 +241,15 @@ Data-exit, auto-renewal, and price-escalation findings are the ones most likely 
 [findings against `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` positions]
 ```
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [Vendor contract renewal reviewer](https://useaiblocks.com/skills/monthly-contract-renewal-keeper).
+- The [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Handoffs
 
 **To renewal-tracker:** When you find the renewal date and notice window, hand them off. The renewal-tracker register expects the following fields (the fields below are the full record; the renewal tracker file is not in this package):
@@ -257,4 +282,6 @@ Calibrate based on contract value and switching cost. A $5K/year tool with easy 
 ## Close with the next-steps decision tree
 
 End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+
+Changed by AI Blocks (2026-10-28): added the chat-use note at the top and "Not used in a chat" notes before the plugin-only parts (config paths, slash commands, matter workspaces, legal research tool).
 

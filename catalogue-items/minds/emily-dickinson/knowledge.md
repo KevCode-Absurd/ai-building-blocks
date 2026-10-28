@@ -1,6 +1,6 @@
 # Emily Dickinson: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources on 2026-10-20; the whole mind was last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Dickinson died in 1886 and her poems and letters in these editions are in the public domain, so we can quote short lines. This version rests on her own words: four 1862 letters to T. W. Higginson from the Dickinson Electronic Archives (April to July) [S6][S7][S8][S9], three letters printed in his 1909 essay [S3], and the poems as first printed in the three series [S2]. The poem editions regularised her dashes and capitals, and Higginson's essay frames the letters it prints, so read those as his selection. The archive letters are closer to her own pages, but the archive notes and our summaries are not her manuscripts. We have no interview and no diary, and she published almost nothing in life. The museum says only about a tenth of her letters survive, so the record is partial [S10]. Wikipedia and the Academy of American Poets [S1][S4][S5] supply dates and reception. She warned that the "I" in her verse may be "a supposed person", so we treat the poems' speaker as a voice, not a diary [S3].
 

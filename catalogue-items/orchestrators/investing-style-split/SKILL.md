@@ -31,7 +31,7 @@ How to start:
 - **Money you need within five years**, with dates (optional). It is taken out of the split and kept in cash or very short, safe holdings.
 - **Whether you invest with a partner** (optional)
 
-Not for personal financial advice, a large sum or money needed within five years. See a regulated financial adviser for those. Step 3 uses your tax rate for a general comparison of bond kinds only. It is not a tax decision. Confirm any tax choice, and any split you plan to put real money into, with a regulated adviser before you act. Every result here is a worked method, not a recommendation to buy or sell.
+**When not to use it:** you need personal financial advice, have a large sum, face a tax decision or need the money within five years (see a regulated financial adviser). You want to pick single stocks (once your split is set, use the [Company quality and share-price screener](https://useaiblocks.com/workflows/defensive-stock-screen) workflow). You want a named fund to buy (this plan names none). Step 3 uses your tax rate for a general comparison of bond kinds only. It is not a tax decision. Confirm any tax choice, and any split you plan to put real money into, with a regulated adviser before you act. Every result here is a worked method, not a recommendation to buy or sell.
 
 The four skills this workflow uses must be available before the run starts: `investor-type-quiz`, `stock-and-bond-split-planner`, `bond-type-and-maturity-chooser` and `investing-policy-page-writer`. All four are in the AI Blocks library. If one is missing, stop before step 1, name it and ask the person to add it. Do not do its job from memory.
 
@@ -48,7 +48,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Set your stock and bond split.** Use the skill `stock-and-bond-split-planner`. Give it `outputs/step-01-investor-type-quiz.md`, the sum and the money you need within five years. It hands back a split with a range, a rebalancing trigger and the reasons for it. No named funds or securities. Saved as `outputs/step-02-stock-and-bond-split-planner.md`.
 3. **Choose the kind of bonds that fit.** Use the skill `bond-type-and-maturity-chooser`. Give it `outputs/step-02-stock-and-bond-split-planner.md` and your tax rate. It makes the bond half of the split concrete: which kind, how long and why. Saved as `outputs/step-03-bond-type-and-maturity-chooser.md`.
 4. **Write your one-page investing policy.** Use the skill `investing-policy-page-writer`. Give it `outputs/step-01-investor-type-quiz.md`, `outputs/step-02-stock-and-bond-split-planner.md` and `outputs/step-03-bond-type-and-maturity-chooser.md`. It writes one page you can read in a panic: what you hold, how you keep it, what you expect, what you will not do and a review date. Any expected return comes only from the person's own figures. If there are none, write `MISSING: expected return`. Never estimate it from market history. Saved as `outputs/step-04-investing-policy-page-writer.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 4 step files and the summary:
@@ -62,6 +62,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- The split keeps stocks between 25% and 75% of the plan, as in the defensive investor's range, and the money needed within five years sits outside it.
+- The policy page names no fund or security, and any expected return comes from the person's own figures or is `MISSING:`.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

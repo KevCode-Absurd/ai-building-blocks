@@ -13,7 +13,7 @@ The panels follow the same order as the story ad: the push (the moment it stoppe
 
 **Health warning:** ads about a private body problem fall under the ad platform's health and personal-attribute policy. A drawn symptom can still be flagged. Do not write the panel plan or the prompt until the policy check is done. Ask the person to confirm it first, or mark `MISSING: policy check` and stop.
 
-**Not for:** a problem a camera can show safely. Use the matching photo skill, and let the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads) choose one if you are unsure.
+**Not for:** a problem a camera can show safely. Use the matching photo skill, and let the [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads) choose one if you are unsure.
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks drawn by a person and photographed on a phone: real paper, uneven ink, a bit of the table showing.

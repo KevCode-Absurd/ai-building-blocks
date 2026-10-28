@@ -38,7 +38,8 @@ how_to_use:
   - Run the same newman command on your own computer first, against your collection and environment files, to confirm the tests pass. Node.js must be installed there, or this first run will fail.
   - Copy the pipeline file into your project, in the place your CI tool expects.
   - Add the secrets your AI lists in your CI tool's settings. In GitHub Actions and Jenkins the template passes them to Newman with --env-var, so the names must match. In Jenkins, create two Secret text credentials and put their IDs in the file. Then push a change to see the first run. In GitLab, set BASE_URL and API_KEY under Settings, CI/CD, Variables. The pipeline file does not set them itself.
-  - This skill only writes text, so it needs no code running. It helps if your AI can read your project files.
+  - This skill only writes text, so it needs no code running. It helps if your AI can read your project files. The author marks it "risk critical" because the pipeline it writes runs commands on your build servers and uses your secrets. Read the file before you commit it.
+  - In Azure DevOps, set both BASE_URL and API_KEY under Pipeline, Variables. The template passes both to Newman.
   - Never paste real keys or passwords into the chat. Use the names of the secrets only.
   - The skill's text may mention Postman test cases. That needs a separate postman-testcase-generator skill, which is not in this library, so it is not available here. Use the Postman collection maker instead.
   - Once the pipeline passes, use the API test suite builder to add more tests. It writes tests from your routes, so the pipeline has more to run.

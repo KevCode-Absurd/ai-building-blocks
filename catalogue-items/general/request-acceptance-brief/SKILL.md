@@ -103,14 +103,6 @@ Request: "Write 3 product descriptions in English and Spanish, each under 80 wor
 
 Deadline: Friday. The date is MISSING, so ask for it. One question is worth asking here: which 3 products.
 
-<!-- next: written by hand for this skill. -->
-## After this
-When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
-- **Make the files** with the [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter). It takes request-brief.md.
-- **Check finished files** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes request-brief.md and the files.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every limit in the request appears in a requirement, including each language, count and platform.
@@ -119,6 +111,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No personal fact, budget, date or permission was assumed.
 - There are no more than three questions.
 - Nothing was sent, published, booked or spent.
+
+<!-- next: written by hand for this skill. -->
+## After this
+When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
+- **Make the files** with the [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter). It takes request-brief.md.
+- **Check finished files** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes request-brief.md and the files.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

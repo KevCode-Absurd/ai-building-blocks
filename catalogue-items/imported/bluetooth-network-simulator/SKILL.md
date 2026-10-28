@@ -13,6 +13,23 @@ metadata:
 
 Entry point for all Bluetooth system-level simulation. All Bluetooth simulations use `sim = wirelessNetworkSimulator.init` and follow the workflow defined in `matlab-simulate-wireless-network` (simulator init, traffic, mobility, instrumentation, addNodes, run).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **MATLAB with the Bluetooth Toolbox:** The simulation only runs there. It is a paid MathWorks product.
+- **Claude Code or another AI that can run MATLAB:** It can write, run and fix the script without you copying code across.
+<!-- /needs -->
+
 ## Inputs to Gather First
 
 Ask once for anything missing. Do not invent devices, data rates or run times.
@@ -62,6 +79,13 @@ The `references/*.md` files in this folder hold the full pattern for each Blueto
 - Non-Bluetooth wireless simulations (use `matlab-simulate-wireless-network` instead)
 - PHY-layer or link level Bluetooth waveform generation, receiver analysis or BER analysis
 - Generic simulator setup, traffic models, or mobility (use `matlab-simulate-wireless-network`)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Wireless network simulator](https://useaiblocks.com/skills/wireless-network-simulator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Scenario → Reference Routing
 

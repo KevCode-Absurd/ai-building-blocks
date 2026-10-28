@@ -7,7 +7,7 @@ description: Use when someone wants to see the shape of a story, talk or pitch. 
 
 A draft can be fine line by line and still stay level, so the reader is never pulled along. This skill scores each beat from good to ill fortune, draws the line in text and names the shape. It flags the flat spots and suggests one change you can see on the redrawn line.
 
-**When not to use it:** you want facts, grammar or tone checked (use a fact-checker or the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor)), you have no draft yet (build a first one with the [Hero story mapper](https://useaiblocks.com/skills/hero-story-mapper), then map it here), or you want line-by-line edits or a rewrite (this gives one change only).
+**When not to use it:** you want facts, grammar or tone checked (use a fact-checker or the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor)), you have no draft yet (build a first one with the [True story outline writer](https://useaiblocks.com/skills/hero-story-mapper), then map it here), or you want line-by-line edits or a rewrite (this gives one change only).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

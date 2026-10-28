@@ -62,13 +62,13 @@ SHEET PLAN
 [one-page zones and image jobs]
 ASSET PROMPTS
 [one per needed image]
-CHECKS AND NOT RUN
-[truth/consistency/layout/export]
+CHECKS MISSED
+[truth, consistency, layout or export checks that failed or did not run, or none]
 ```
 
 ## Next steps
 
-Nothing here is an image yet. Paste each asset prompt into an image tool (ChatGPT or Gemini draw images; Claude does not unless an image tool is connected) and check each result against the product photo. If no brand file exists, run the Brand guide builder first and bring its output back for the visual rules.
+Nothing here is an image yet. Paste each asset prompt into an image tool (ChatGPT or Gemini draw images; Claude does not unless an image tool is connected) and check each result against the product photo. Making many images in ChatGPT or Gemini may need a paid plan, since free plans have tight daily limits, and an image API key bills each picture. If no brand file exists, run the Brand guide builder first and bring its output back for the visual rules.
 
 ## Check before handing back
 

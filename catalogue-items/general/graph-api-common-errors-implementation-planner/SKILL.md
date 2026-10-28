@@ -9,7 +9,7 @@ Work out why Meta Graph API calls fail. The usual causes are an expired or wrong
 
 **What to bring:** the redacted error text for each failing call, the permissions your token shows, and your role on the ad account.
 
-**Not for:** a Meta developer app or token you have not made yet (set that up in your Meta app dashboard first), a permission Meta has not approved for your app (only Meta app review fixes that), or a rejected ad or restricted account (use the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)). To get code that pulls your Meta report, use the [Meta Ads report coding prompt](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
+**Not for:** a Meta developer app or token you have not made yet (set that up in your Meta app dashboard first), a permission Meta has not approved for your app (only Meta app review fixes that), or a rejected ad or restricted account (use the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)). To get code that pulls your Meta report, use the [Meta Ads reporting app planner](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -118,8 +118,8 @@ Give the deliverables, the evidence used, the assumptions, the missing inputs an
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
 - The [API spec writer](https://useaiblocks.com/skills/api-spec-writer). It takes the plan.
+- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
 - The [vLLM model server setup planner](https://useaiblocks.com/skills/vllm-model-server-setup). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

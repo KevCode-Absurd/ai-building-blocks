@@ -61,4 +61,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 **Not for:** a dispute or court papers (see a lawyer), or a large or high-risk deal (have a qualified lawyer read it; use this only to prepare your questions).
 
-For the full version with every check, use the [Contract plain-words summary writer](https://useaiblocks.com/skills/contract-plain-summary).
+For the full version with every check, use the [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary).

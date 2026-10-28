@@ -66,6 +66,19 @@ tags: ["WEIRD-bias", "Henrich", "cross-cultural", "cultural-assumptions", "valid
 
 # Cross-Cultural Task Validity Checker
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Analyses an educational task, strategy, or research-based practice for hidden cultural assumptions that may limit its validity or effectiveness when used with students from different cultural backgrounds. The critical insight from Henrich, Heine & Norenzayan (2010) is that most educational research has been conducted with WEIRD populations (Western, Educated, Industrialised, Rich, Democratic) and the findings are often presented as universal when they are in fact culturally specific. A teaching strategy that "works" in research may work because it aligns with the cultural assumptions of the population studied — not because it is universally effective. The skill identifies specific cultural assumptions embedded in a task (about individualism, communication styles, authority, knowledge, competition, or values), assesses whether these assumptions hold in the intended context, and suggests adaptations or alternative approaches from other cultural traditions. The output includes a validity analysis, identification of cultural assumptions, adaptation suggestions, and alternative approaches. AI is specifically valuable here because identifying hidden cultural assumptions requires simultaneously understanding the cultural context of origin AND the cultural context of use — a cross-referencing task that requires broad knowledge across multiple cultural systems.
@@ -252,3 +265,12 @@ The CORE PRINCIPLE of think-pair-share transfers very well across cultures:
 2. **Cross-cultural analysis requires more than WEIRD research.** The evidence base for this skill draws on cross-cultural research, but most educational research remains WEIRD-centric. The alternative approaches from other traditions (neriage, Ubuntu circle, silent discussion) are described based on available literature, but teachers working in specific cultural contexts should seek out LOCAL educational expertise, not just Western academic research about those contexts.
 
 3. **There is a tension between cultural adaptation and cultural change.** If a student from a high-power-distance culture is uncomfortable with peer discussion, should the teacher adapt the task (respecting the cultural norm) or persist with the task (deliberately exposing students to a different cultural norm)? This is a genuine pedagogical dilemma with no universal answer. The skill provides adaptations but does not resolve this tension — the teacher must make a professional judgement about their specific context, ideally in dialogue with families and community.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker).
+- The [Culturally responsive lesson rewriter](https://useaiblocks.com/skills/culturally-responsive-lesson).
+- The [Classroom belonging planner](https://useaiblocks.com/skills/classroom-belonging-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

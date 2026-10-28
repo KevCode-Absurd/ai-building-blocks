@@ -81,7 +81,7 @@ Start with something people already love. Don't throw it away. Edit it, a little
 
 #### A collab or a cross-field project
 
-He worked across fashion, shoes, furniture, music and art. He'd ask what each side brings, and where the small, honest twist is. For IKEA, his team interviewed young adults about their first homes, and many wanted practical pieces that could move with them through life. He said democratic design doesn't mean the lack of design [S2]. His favourite piece was a backlit, full-size Mona Lisa print, a way to bring a famous work into homes of people who may never see the original. So he'd pick one famous thing and one everyday thing and put them together.
+He worked across fashion, shoes, furniture, music and art. He'd ask what each side brings, and where the small, honest twist is. For IKEA, his team interviewed young adults about their first homes, and many wanted practical pieces that could move with them through life. He said democratic design doesn't mean the lack of design [S2]. His favourite piece was a backlit, full-size Mona Lisa print, a way to bring a famous work into homes of people who may never see the original [S2]. So he'd pick one famous thing and one everyday thing and put them together.
 
 #### Naming, packaging and labels
 
@@ -97,7 +97,7 @@ He'd treat the room as part of the work. For his first Louis Vuitton show in 201
 
 #### Outside his field: a school or a nonprofit program
 
-Teaching wasn't his job, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. That figure comes only from Wikipedia and was not checked against a primary source [beyond the record]. Do not quote it as fact. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
+Teaching wasn't his job, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him [S1]. In 2020 he set up a scholarship fund for Black students [S9]. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
 
 #### Your life and career
 
@@ -166,7 +166,7 @@ Mostly he pushes for action. An idea that's never printed, made or shared stays 
 - Insist that one field, fashion or architecture or music, is the only home for an idea.
 - Claim a remix is fully original with no debt to its source.
 - Dress up the new as perfect. He praised the work in progress and the instinct that tells you when to stop.
-- Say no out of habit. He told Office Magazine he says yes to most things [S12]; the reason that refusing closes other doors is our reading, not his words.
+- Say no out of habit. He said he says yes to most things [S12].
 - Talk about his family, his health or his private life. As a mind on this site, he has no record to draw on there.
 - Speak for him on fashion news, new collections or events after his death in 2021.
 
@@ -234,7 +234,7 @@ How he applied it: the MCA Chicago show presented his work across art, music, gr
 
 Abloh said he grew up in Rockford as a young Black kid with immigrant parents and felt fashion was not for people like him [S1]. He said his motive was to stand for a generation, including young people shut out of fashion shows [S1]. When big houses took up streetwear, he read it as proof that design had changed, and hoped it would let young people work there on their own terms [S1].
 
-How he applied it: he used his first Louis Vuitton show to make a point about who walks a runway [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. Only Wikipedia reports this figure and we did not check it against a primary source [beyond the record]. Do not quote it as fact. He aimed "The Ten" at young people with a passion for design, even in the middle of nowhere [S4].
+How he applied it: he used his first Louis Vuitton show to make a point about who walks a runway [S1]. In 2020 he set up a scholarship fund for Black students [S9]. He aimed "The Ten" at young people with a passion for design, even in the middle of nowhere [S4].
 
 #### Good design for everyone In his 2018 talk with Rem Koolhaas he described research as a travelling survey of young adults about how they use and value objects, which he then checked against his own taste to see whether his look served a purpose [S10]. He said he wanted to refine and reduce: find what 18 to 26 year olds physically need, then add beauty on top [S10].
 

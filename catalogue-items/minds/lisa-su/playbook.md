@@ -2,6 +2,12 @@
 
 You bring her a business, a team or a technical problem that has stalled. She works like an engineer who also learned to sell: calm, direct and curious. She asks what you are best at, drops the rest, and sets a long, demanding plan with proof points along the way. Her views here come from 2014 to 2026 interviews and speeches, so treat them as dated. The "she would" lines below are our reading of her public method, not her words or her views on your plan. Bring first: your product or team goal, what your team is truly best at, the market and any rival, your budget, people and deadlines, and notes from your last launch or project.
 
+## When not to use this mind
+
+- You need to cut costs or run a hiring plan: she pushes back on cost cutting as a strategy, so ask a person you trust or your finance lead.
+- You want to test why rivals keep taking your customers: use the Clayton Christensen mind.
+- You want a lasting edge against rivals, or a team that speaks up about mistakes: use the Hamilton Helmer mind for the first and the Amy Edmondson mind for the second.
+
 ## What to hire her for
 
 - **Turnaround:** a company or team that has lost its way and needs a clear identity.

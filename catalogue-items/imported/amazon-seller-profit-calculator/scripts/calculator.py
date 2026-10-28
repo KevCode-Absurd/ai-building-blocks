@@ -29,6 +29,9 @@ class ProfitStatus(Enum):
 
 # ============================================================
 # Amazon Referral Fee Rates (by category)
+# Simplified flat rates. Amazon charges the greater of the category percentage or a
+# per-item minimum, and some categories are tiered by price. Check the current
+# schedule: https://sellercentral.amazon.com/gp/help/external/200336920
 # ============================================================
 
 REFERRAL_FEE_RATES = {
@@ -187,17 +190,48 @@ def get_referral_fee_rate(category: str, custom_rate: Optional[float] = None) ->
     return REFERRAL_FEE_RATES.get(category.lower(), REFERRAL_FEE_RATES["default"])
 
 
+# Share of the product cost assumed lost on each returned unit (an assumption, not an Amazon figure).
+RETURN_PRODUCT_LOSS_SHARE = 0.5
+
+
+def per_unit_flat_cost(product: ProductInput) -> float:
+    """Per-unit costs that do not change with the selling price.
+
+    The same cost model is used by calculate_costs, calculate_break_even and
+    calculate_pricing_suggestions, so every price this file suggests is checked
+    against the same costs it reports.
+    """
+    return_cost = product.return_rate * (
+        product.return_processing_fee + product.product_cost * RETURN_PRODUCT_LOSS_SHARE
+    )
+    return (
+        product.product_cost +
+        product.shipping_cost +
+        product.fba_fulfillment_fee +
+        product.fba_storage_fee +
+        product.other_fees +
+        return_cost
+    )
+
+
+def price_linked_rate(product: ProductInput) -> float:
+    """Share of the selling price taken by the referral fee and ad spend."""
+    return get_referral_fee_rate(product.category, product.referral_fee_rate) + product.ad_spend_ratio
+
+
 def calculate_costs(product: ProductInput) -> CostBreakdown:
     """Calculate cost breakdown"""
     # Referral Fee
     referral_rate = get_referral_fee_rate(product.category, product.referral_fee_rate)
     referral_fee = product.selling_price * referral_rate
-    
+
     # Ad cost
     ad_cost = product.selling_price * product.ad_spend_ratio
-    
-    # Return cost = return rate × (processing fee + product cost loss ratio)
-    return_cost = product.return_rate * (product.return_processing_fee + product.product_cost * 0.5)
+
+    # Return cost = return rate × (processing fee + share of product cost lost)
+    return_cost = product.return_rate * (
+        product.return_processing_fee + product.product_cost * RETURN_PRODUCT_LOSS_SHARE
+    )
     
     return CostBreakdown(
         selling_price=product.selling_price,
@@ -214,24 +248,20 @@ def calculate_costs(product: ProductInput) -> CostBreakdown:
 
 def calculate_break_even(product: ProductInput, costs: CostBreakdown) -> BreakEvenAnalysis:
     """Calculate break-even point"""
-    # Variable cost (per unit)
-    variable_cost = (
-        product.product_cost +
-        product.shipping_cost +
-        product.fba_fulfillment_fee +
-        product.fba_storage_fee +
-        costs.referral_fee +
-        costs.return_cost +
-        product.other_fees
-    )
-    
-    # Minimum price (cover variable cost + ad spend)
-    # Ad ratio unchanged: min_price - variable_cost - min_price * ad_ratio = 0
-    # min_price * (1 - ad_ratio) = variable_cost
-    if product.ad_spend_ratio < 1:
-        min_price = variable_cost / (1 - product.ad_spend_ratio)
+    # Flat per-unit cost (does not change with price), including returns
+    flat_cost = per_unit_flat_cost(product)
+
+    # Referral fee and ad spend are both a share of the NEW price, so solve:
+    # min_price - flat_cost - min_price * (referral_rate + ad_ratio) = 0
+    # min_price = flat_cost / (1 - referral_rate - ad_ratio)
+    # Worked case: flat cost $10, referral 15%, ads 10% -> 10 / 0.75 = $13.33,
+    # and at $13.33 the fees are $2.00 + $1.33, so profit is $0.00.
+    denominator = 1 - price_linked_rate(product)
+    if denominator > 0:
+        min_price = flat_cost / denominator
     else:
-        min_price = variable_cost * 2  # Abnormal case
+        # Fees and ads take 100% or more of any price: no price breaks even.
+        min_price = float("inf")
     
     # Break-even units (if fixed costs exist)
     if product.fixed_costs > 0 and costs.net_profit > 0:
@@ -240,11 +270,15 @@ def calculate_break_even(product: ProductInput, costs: CostBreakdown) -> BreakEv
         break_even_units = 0
     
     # Safety margin
-    safety_margin = (product.selling_price - min_price) / product.selling_price if product.selling_price > 0 else 0
-    margin_above_min = (product.selling_price - min_price) / min_price if min_price > 0 else 0
-    
+    if min_price == float("inf"):
+        safety_margin = float("-inf")
+        margin_above_min = float("-inf")
+    else:
+        safety_margin = (product.selling_price - min_price) / product.selling_price if product.selling_price > 0 else 0
+        margin_above_min = (product.selling_price - min_price) / min_price if min_price > 0 else 0
+
     return BreakEvenAnalysis(
-        min_price=round(min_price, 2),
+        min_price=round(min_price, 2) if min_price != float("inf") else min_price,
         break_even_units=break_even_units,
         safety_margin=round(safety_margin, 4),
         current_margin_above_min=round(margin_above_min, 4)
@@ -258,26 +292,20 @@ def calculate_pricing_suggestions(product: ProductInput, target_margins: List[fl
     
     suggestions = []
     
-    # Base cost (excluding Referral Fee and ad cost as they're % of price)
-    base_cost = (
-        product.product_cost +
-        product.shipping_cost +
-        product.fba_fulfillment_fee +
-        product.fba_storage_fee +
-        product.other_fees +
-        product.return_rate * product.return_processing_fee
-    )
-    
-    referral_rate = get_referral_fee_rate(product.category, product.referral_fee_rate)
-    
+    # Base cost (excluding Referral Fee and ad cost as they're % of price).
+    # Uses the same cost model as calculate_costs, including the product-loss part of returns.
+    base_cost = per_unit_flat_cost(product)
+
+    rate = price_linked_rate(product)
+
     for target_margin in target_margins:
         # Target: net_profit / selling_price = target_margin
-        # net_profit = selling_price - base_cost - selling_price * referral_rate - selling_price * ad_ratio
-        # selling_price * target_margin = selling_price - base_cost - selling_price * (referral_rate + ad_ratio)
-        # selling_price * (target_margin + referral_rate + ad_ratio - 1) = -base_cost
+        # net_profit = selling_price - base_cost - selling_price * (referral_rate + ad_ratio)
         # selling_price = base_cost / (1 - target_margin - referral_rate - ad_ratio)
-        
-        denominator = 1 - target_margin - referral_rate - product.ad_spend_ratio
+        # Worked case: base cost $10, referral 15%, ads 10%, target 20% -> 10 / 0.55 = $18.18,
+        # fees $2.73 + $1.82, profit $3.64 = 20% of $18.18.
+
+        denominator = 1 - target_margin - rate
         if denominator > 0:
             suggested_price = base_cost / denominator
             profit_per_unit = suggested_price * target_margin
@@ -363,6 +391,11 @@ def format_cost_breakdown(costs: CostBreakdown) -> str:
 
 def format_break_even(be: BreakEvenAnalysis, current_price: float) -> str:
     """Format break-even analysis"""
+    if be.min_price == float("inf"):
+        return "\n".join([
+            "Break-even Price: none",
+            "├── Referral fee + ad spend take 100% or more of any price, so every sale loses money",
+        ])
     lines = [
         f"Break-even Price: ${be.min_price:.2f}",
         f"├── Below this price = Loss",

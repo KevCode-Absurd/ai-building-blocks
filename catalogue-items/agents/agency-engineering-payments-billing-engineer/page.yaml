@@ -54,6 +54,7 @@ how_to_use:
   - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
   - Describe your provider, products, currencies and flow. Paste a sample webhook with all personal data and keys removed.
   - Never paste card numbers, secret API keys or webhook signing secrets into any chat.
+  - It cannot reach your payment account or run on a schedule. It plans the daily check for your own system to run. To check a mismatch now, paste the payout report and the order list for the same dates.
   - Read "Money flow" and "State tables" first. Check them against how your business really works.
   - Run the failure test list in your provider's test mode before you go live.
   - Ask a payments or security expert to review the design before it touches real money.

@@ -11,7 +11,7 @@ explain: |
 
   You give a live URL. A browser walks the page, takes a full screenshot, and lists every heading, button, card, stat and table cell. With your approval it clicks tabs and safe buttons, and watches network calls and console errors. Each value is labelled real, mocked, hardcoded, generated or broken. Warning signs include round numbers, clustered timestamps and values that never change. You confirm ownership and which actions are allowed before it starts.
 
-  Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit CodeShuX and sickn33 if you reuse it.
+  Licence: the skill file's header names the author's MIT licence, and sickn33's collection, where we copied it from, ships it with a CC BY 4.0 file (LICENSE-CONTENT). Both allow reuse with credit. Credit CodeShuX and sickn33 if you reuse it.
 when:
   - You built a dashboard with an AI tool and are unsure what is connected.
   - A contractor delivered an app and you need a check before you pay.
@@ -38,7 +38,7 @@ how_to_use:
   - Say whether the page is public or needs a login. Offer a test account, never your real one.
   - Name the buttons and forms that are safe to click. Say which are off limits.
   - Your AI must ask before every click or form submit. Check each action it proposes against your safe list, and say no to anything on live customer data.
-  - Read the report. Fix the hardcoded and mock values by connecting the real data source, then run it again on a fresh test account with no data. Pair the fixes with the test writer or code reviewer you already use. After the fixes, re-run the audit on a fresh test account and compare the two reports.
+  - Read the report. Fix the hardcoded and mock values by connecting the real data source, then run it again on a fresh test account with no data and compare the two reports. Pair the fixes with the test writer or code reviewer you already use.
 output_sample:
   input:
     - The link to your live page

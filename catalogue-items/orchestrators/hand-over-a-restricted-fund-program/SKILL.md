@@ -83,6 +83,7 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Nonprofit grant proposal writer](https://useaiblocks.com/skills/nonprofit-grant-proposal-writer). It takes the document.
 - The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
+- The [Clinic referral handover reviewer](https://useaiblocks.com/skills/referral-administration-evidence-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -94,5 +95,5 @@ Write `MISSING: <what>` beside the affected line and carry on with the rest. If 
 
 Suggest one next step in a short question, and say they can type their own:
 - **Check spending against the agreement** with the [Prepare a grant spending evidence pack](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack) workflow, which checks your spending records against the agreement.
-- **Cover a short absence** with the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow, if the outgoing owner is only away for a while.
+- **Cover a short absence** with the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow, if the outgoing owner is only away for a while.
 Nothing here sends the brief or approves any spending. A person does that.

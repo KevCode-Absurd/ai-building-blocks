@@ -59,7 +59,9 @@ output_sample:
       contains: Online platforms, communities, events and content they use, ranked by how likely they are to be there.
     - name: How to Engage
       contains: Best first channel, message themes that fit, mistakes to avoid and good timing.
-    - name: Counter-Offer Risk
-      contains: How likely their current employer is to counter, and how to reduce that risk.
+    - name: Transition Readiness
+      contains: What the role needs in pace, ambiguity and support, with questions to ask every candidate. It is not a screening score.
+    - name: Counter-Offer Questions
+      contains: Questions to ask every candidate about notice and what would make them stay, and how the offer can answer them.
     - name: Alternative Personas
       contains: One or two other backgrounds that could fill the role.

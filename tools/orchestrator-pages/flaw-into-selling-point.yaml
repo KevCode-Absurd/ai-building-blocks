@@ -113,6 +113,7 @@ not_for:
   - "Your product has no flaw and you only need a headline: use Write a headline that fits what your buyers already know."
   - "You want to find the one claim that sells and show it working: use Find the one claim that sells and show it working."
   - "You want to check a claim you have already written: use the USP claim checker."
+  - "The flaw has no true upside for any buyer, such as a fault or a safety issue: fix the product, or lead with a different real strength."
 output_sample:
   input:
     - Your product facts, such as price, what it does and how it is used

@@ -18,6 +18,27 @@ license_source: "https://github.com/twoicewoo/awesome-copilot/blob/886bf799bb055
 
 Replace patch-and-retry behavior with a bounded, evidence-producing repair. Treat a changed patch as progress only when an observable state changes.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **A test report** (yours): what was tested, what passed, what failed and why.
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A code change** with the [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). Bring a codebase, your question, a test report (optional), a code change (optional), an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a test report, a code change. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 - Use when an AI coding agent cycles through similar patches without changing the observed failure.
@@ -203,6 +224,14 @@ Decision: PROVEN.
 - `verification-before-completion` gates success claims on fresh evidence; this skill adds repair-attempt accounting and rollback proof.
 - `closed-loop-delivery` spans acceptance through delivery; this skill is the narrower anti-stagnation and verifier-falsification protocol for repair loops.
 - `audit-agent-run-evidence` performs a read-only post-run audit; this skill governs the repair while it is happening.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the test report and code change.
+- The [Release day rollback planner](https://useaiblocks.com/prompts/release-day-rollback-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 
 ## Source and license

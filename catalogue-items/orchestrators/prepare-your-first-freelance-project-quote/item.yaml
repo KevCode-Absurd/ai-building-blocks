@@ -13,6 +13,8 @@ inputs:
     required: true
   - type: idea
     required: true
+  - type: deal_terms
+    required: true
 outputs:
   - type: plan
   - type: document

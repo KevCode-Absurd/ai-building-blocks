@@ -63,15 +63,6 @@ In this order:
 7. **The decision:** measure, date, drop rule and go-bigger rule.
 8. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you want the single cheapest test run first** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **If the tests are in and you must keep or cut** with the [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). Bring the results.
-- **If the results say change course** with the [Pivot or persevere decider](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The loss cap is a number the person can survive (or marked MISSING, never chosen for them).
@@ -79,6 +70,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A failure still teaches something named in advance.
 - The decision date and measure are set before work starts.
 - Each test is cheap and low-risk.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you want the single cheapest test run first** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **If the tests are in and you must keep or cut** with the [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). Bring the results.
+- **If the results say change course** with the [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

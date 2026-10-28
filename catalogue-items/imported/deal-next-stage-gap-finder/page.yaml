@@ -32,7 +32,10 @@ you_get:
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - It works best when your AI can read your CRM, email and calendar through connectors, which need your own access and may be on a paid plan. Without them, paste the deal record, the contact list with roles, recent emails and call notes, and your stage exit rules.
+  - The skill names other skills (deal-review, log-activity, update-opportunity). They are optional. Without them, it lists the record changes and you make them in your CRM by hand.
+  - Read the gap list first. Check each gap's evidence, then agree the owner and date with your team.
+  - This is Anthropic's deal-advance-gap skill under the Apache 2.0 licence, with a plainer name.
 output_sample:
   input:
     - Your deal name or ID

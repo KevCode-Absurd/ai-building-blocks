@@ -16,6 +16,26 @@ license_source: "https://github.com/Sharrmavishal/operating-kit/blob/main/LICENS
 
 # Pre-Ship Gate
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **A deploy url** (yours): a live link to the app, and how it was put online.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A deploy url** with the [Vercel publisher](https://useaiblocks.com/skills/vercel-publisher). Bring a codebase.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a deploy url. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Most bad deploys do not fail loudly. The pipeline goes green, the CLI prints "deployed", and the old or broken version is still what users hit. This skill is the gate you run right before a production deploy and right after, so an agent stops trusting deploy output and starts confirming what is actually live. It exists because "the deploy command exited 0" and "the new version is serving traffic" are two different facts, and agents routinely confuse them.
@@ -127,3 +147,12 @@ new code will 500 on /orders.
 
 - `@codebase-audit-pre-push`: clean and audit the code before it ever reaches a deploy.
 - `@dos-verify-done-claims`: verify a "done" claim against git ground truth after the fact.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Software release verification coordinator](https://useaiblocks.com/skills/release-manager).
+- The [Live software release reviewer](https://useaiblocks.com/skills/release-proof-checker).
+- The [Release safety planner](https://useaiblocks.com/skills/safe-release-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

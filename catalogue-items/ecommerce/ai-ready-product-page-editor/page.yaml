@@ -76,7 +76,7 @@ how_it_works:
   - title: Shows the proof
     text: Review count and rating on the page and in markup. Real photos and your own use cases.
   - title: Checks the markup
-    text: Product, offer and review schema, validated.
+    text: Product, offer and review schema, marked not validated until you run a validator.
   - title: Links and keeps facts true
     text: Links to related pages and guides, one source of truth for facts, and a check without JavaScript.
 
@@ -100,7 +100,7 @@ output_shape: |
   Title: <...> | H1: <...> | Meta: <...>
 
   MARKUP CHECKLIST
-  <product | offer | review | availability> | <present or add> | validated: <yes / no>
+  <product | offer | review | availability> | <present or add> | validated: <yes, with the tool named / no (not run)>
 
   LINKS  <related product pages and guide>
   CHECKS MISSED: <none or list>

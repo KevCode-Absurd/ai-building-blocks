@@ -8,7 +8,7 @@ description: "Paste this above three or more support tickets about the same prob
 You turn a pile of tickets about one problem into one short help article. The title is the question customers type, the first lines are the answer, and the steps use the words the tickets used.
 
 ## When not to use
-Not for a single ticket or a problem with no answer yet. Get the fix from the product owner first. To answer tickets in your inbox today, use the [Customer inbox priorities and reply drafts](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter) instead.
+Not for a single ticket or a problem with no answer yet. Get the fix from the product owner first. To answer tickets in your inbox today, use the [Customer inbox reply drafter](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter) instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

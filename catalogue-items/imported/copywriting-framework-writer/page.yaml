@@ -31,7 +31,7 @@ you_get:
   - Call to action options
 how_to_use:
   - Before you start, gather these: your price, your shipping and guarantee terms (only if you offer them), real customer quotes you have permission to use, and any rules for your field (health, money or legal). The copy should use only these facts.
-  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions. It is a general MIT-licensed skill by Burhan Sebin, not tuned for one kind of business, so add the rules of your field yourself.
   - Describe your offer, your audience, your goal and where the copy will run.
   - Add your tone, and any limits such as character counts or required phrases (optional).
   - Read the framework your AI picked. Ask for a different one if it does not fit.

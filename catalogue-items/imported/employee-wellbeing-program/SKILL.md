@@ -12,6 +12,22 @@ Comprehensive employee wellbeing knowledge for HR business partners, wellbeing p
 
 This is HR planning support. It is not medical advice, and it cannot diagnose anyone.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a planning and writing job. Claude, ChatGPT or Gemini all do it well.
+<!-- /needs -->
+
 ## Safety first
 
 - If someone may be in danger or may harm themselves, stop. Tell the user to contact local emergency services, or the person's clinician or crisis line, right now. Do not draft a plan for that moment.
@@ -128,3 +144,12 @@ The period immediately following a return from burnout or mental health leave is
 - Manager training should begin alongside program design, not after rollout. Managers are most often the first to see early burnout signals.
 - Pair wellbeing measures with workload data. A burnout signal often traces back to workload and structure, not personal resilience alone.
 - The first 90 days after any return-to-work transition deserve a dedicated check-in cadence. Without one, workload often quietly creeps back to pre-leave levels.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
+- The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
+- The [Workplace change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

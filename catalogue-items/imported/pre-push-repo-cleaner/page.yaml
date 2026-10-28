@@ -9,7 +9,7 @@ subhead: A cleaner project before it goes on GitHub. The skill reads your code f
 explain: |
   A cleaner project before it goes on GitHub. The skill reads your code file by file, fixes what it can and flags what needs your decision.
 
-  It deletes junk such as .DS_Store, logs, temp files, build output and installed dependencies. Then it looks for dead code, unused files, hard-coded secrets and keys, security holes and slow patterns. Small safe fixes are made straight away. Deleting files and removing secrets wait for your yes. Use it before a first push, before making a repo public or before a production release. Review its changes before you commit.
+  It finds junk such as .DS_Store, logs, temp files, build output and installed dependencies, and with your yes takes them out of git while leaving them on your computer. Files that might be needed or might be your own work, such as a vendor folder, backups or notes, are only listed for you to decide. Then it looks for dead code, hard-coded secrets and keys, security holes and slow patterns. Small safe fixes are made straight away. Untracking files and removing secrets wait for your yes. Use it before a first push, before making a repo public or before a production release. Review its changes before you commit.
 when:
   - You are about to push a project to GitHub for the first time.
   - You want to make a private repo public safely.
@@ -24,7 +24,7 @@ you_give:
   - Notes on files to keep (optional)
   - Target platform (optional)
 you_get:
-  - Junk files removed
+  - Junk files taken out of git, with a list of files for you to decide on
   - Dead code removed
   - List of leaked secrets found
   - Security and speed fixes applied
@@ -33,7 +33,7 @@ how_to_use:
   - Open an AI that can read and edit your project files, and add your project folder.
   - Paste in the skill instructions, or say "Follow this skill".
   - Add notes on files to keep, and where you plan to publish (optional).
-  - Check the list of files it plans to delete, and say yes or no to each one before it removes anything.
+  - Check the list of files it plans to take out of git, and say yes or no to each one. Decide what to do with each file it lists for you, such as backups and notes.
   - Read the report. Fix any critical items first, then run the app and the tests.
   - Review every change before you commit, and change any key that was exposed.
 output_sample:
@@ -45,8 +45,8 @@ output_sample:
     - An AI that can read and edit your project files
     - Code you can run, so it can check the app still starts
   output:
-    - name: Files removed
-      contains: Junk such as logs, temp files, build output, backups and installed dependencies that should not be on GitHub.
+    - name: Files taken out of git
+      contains: Junk such as logs, temp files, build output and installed dependencies, kept on your computer but no longer pushed, plus a list of files for you to decide on.
     - name: Code changes
       contains: Each file with its fixes, such as dead code removed, vague names changed and missing error handling added.
     - name: Security issues

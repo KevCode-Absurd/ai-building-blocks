@@ -22,6 +22,7 @@ not_for:
 you_give:
   - Your AI app code in Python
   - A LangSmith account and API key
+  - An API key for the model your app calls, such as OpenAI, with billing turned on. The skill's examples call gpt-4o, which is paid per use
   - Example questions and good answers (optional)
   - What counts as a good answer
 you_get:
@@ -33,9 +34,9 @@ how_to_use:
   - Open an AI that can run Python code, or plan to run the code yourself. Paste your app code.
   - Install the package with pip install langsmith. Set LANGSMITH_API_KEY to your key and LANGSMITH_TRACING to true.
   - Wrap one model call with the traceable tag or the OpenAI wrapper. Run your app once and check that the trace shows in LangSmith.
-  - Hide private data first. Redact names, passwords and other user details before they are traced.
+  - Before you trace real users, hide private data. Pass a cleaning function to the traceable tag with process_inputs, as in the skill's example that replaces a password with ***. Do the same for names, emails and other user details.
   - Build a test set from good and bad traces, or write a few questions and answers by hand.
-  - Run the evaluation, then change your prompt and run it again. Compare the two scores to see if answers got better.
+  - Run the evaluation, then change your prompt and run it again. Compare the two experiments side by side in LangSmith's Experiments view to see if answers got better. The skill's correctness check only looks for the reference text inside the answer, so it is a placeholder. Replace it with a check that fits your task.
 output_sample:
   input:
     - Your AI app code in Python
@@ -45,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run Python code, or a developer to run the code it writes
     - A LangSmith account (the free plan works to start, paid plans cost more)
+    - A model provider API key with billing, such as OpenAI, for the example calls
   output:
     - name: Tracing setup
       contains: Install steps, the two settings to add, and code that records each model call in your app.

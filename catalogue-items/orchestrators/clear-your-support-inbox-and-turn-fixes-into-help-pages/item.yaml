@@ -7,9 +7,8 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: source_text, required: true}
-  - {type: question, required: true}
-  - {type: voc_reviews, required: false}
+  - {type: voc_reviews, required: true}
+  - {type: policy, required: true}
 outputs:
   - {type: spreadsheet}
   - {type: copy_draft}

@@ -17,7 +17,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last approved handoff for this component, developers' open questions, the platform (web, iOS or Android) and the user's accessibility rules.
 
-**The pieces it uses:** the [Give developers a complete component brief](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief) workflow, which runs the [Design system auditor](https://useaiblocks.com/skills/design-system-auditor), the [Screen states designer](https://useaiblocks.com/skills/screen-states-designer) and the [Design token builder](https://useaiblocks.com/skills/design-token-builder). Read the workflow and the states skill in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
+**The pieces it uses:** the [Developer component brief planner](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief) workflow, which runs the [Design system reviewer](https://useaiblocks.com/skills/design-system-auditor), the [Screen states designer](https://useaiblocks.com/skills/screen-states-designer) and the [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). Read the workflow and the states skill in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
 
 **Tools that do this best:** an AI that reads uploaded images and files and can save files. In plain chat, return the same tables as text, say nothing was saved, and give the record for the user to keep. If you cannot open a design link, say so and ask for screenshots.
 

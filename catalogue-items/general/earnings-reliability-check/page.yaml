@@ -125,7 +125,7 @@ test:
 improve:
   - Add your own rule for what counts as near the average.
   - Keep a record of companies rated and what happened.
-  - Pair it with "Earnings padding detector" and "Normal earnings estimator".
+  - Pair it with "Reported earnings adjustment reviewer" and "Normal earnings estimator".
   - Add a line on the main cost, such as labour or materials, for each business.
 
 works_best_with:

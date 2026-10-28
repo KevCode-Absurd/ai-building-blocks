@@ -44,6 +44,7 @@ how_to_use:
   - Click through every slide. Look for cut-off text or crowded slides, and ask for fixes.
   - For a PDF, it needs Node, Playwright and Chromium already installed. Without them, print the deck to PDF from your browser. The one-click share step is not in this copy.
   - When it is done, open the HTML file, check every slide, then send the single file or host it yourself. Before you share it, check names, numbers and images, and read the HTML if it came from someone else.
+  - If your team needs to edit the slides in PowerPoint, use the Editable slide deck builder instead, since an HTML deck does not open as a .pptx file.
 output_sample:
   input:
     - Your talk topic, outline or rough notes

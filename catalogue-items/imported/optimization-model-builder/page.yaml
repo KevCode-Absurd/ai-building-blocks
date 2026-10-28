@@ -31,11 +31,12 @@ you_get:
   - The best solution found
   - Notes on which limits bind
 how_to_use:
-  - Use an AI that can run Python code.
+  - Use an AI that can run Python code. It needs the free pulp, pandas, scipy and matplotlib packages. The code examples in the skill use made-up numbers, so swap in your own tables.
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe your decision, your goal and your limits in plain words. Say which limits are firm.
   - Paste or upload your data tables. Say which numbers you trust.
   - Read the answer. Check each limit against your real rules, then rerun with changed numbers to test it.
+  - If the solver says the problem is infeasible (no plan fits) or unbounded (no limit on the goal), look for limits that clash or one that is missing. Loosen the firmest limits one at a time and run it again.
   - When you pick a plan, give it to whoever will carry it out. Rerun the model when your limits change.
 output_sample:
   input:

@@ -80,7 +80,7 @@ Files | MISSING | CHECKS MISSED | one next step
 
 Nothing has been taught or changed in the original plan. Offer one next step and say the teacher can type their own:
 
-- If learners with access needs are in the class, run the [Adapt a lesson for different access needs](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs) workflow on the revised sequence.
+- If learners with access needs are in the class, run the [Lesson access and activity planner](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs) workflow on the revised sequence.
 - After you teach it, note what happened with the [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
 - Come back with what you saw in the room and ask for the sequence to be adjusted.
 

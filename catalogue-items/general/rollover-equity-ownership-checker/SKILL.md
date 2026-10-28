@@ -53,14 +53,6 @@ Use these headings, in this order: DEAL TERMS, SUMS (rolled amount, seller cash,
 
 If they ask for a spreadsheet and you can make files: put inputs, calculations and checks on separate sheets, mark input cells, change one input to confirm the results move, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **See what the seller really receives at closing** with the [Closing equity proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker). Bring the price, debt and closing adjustments.
-- **Check a manager's share above a value hurdle** with the [Management equity hurdle checker](https://useaiblocks.com/skills/management-equity-hurdle-checker). Bring the hurdle and the participation terms.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, in USD millions, not a real deal. Seller proceeds 40, rollover share 25%, buyer cash 30.
@@ -81,6 +73,14 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 - Seller cash + rolled amount equals the seller's proceeds.
 - Rolled amount + buyer cash equals total equity.
 - Every figure traces to a source, a date, a currency and a scale. A missing figure is `MISSING:`, never zero.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **See what the seller really receives at closing** with the [Business sale proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker). Bring the price, debt and closing adjustments.
+- **Check a manager's share above a value hurdle** with the [Management equity payout checker](https://useaiblocks.com/skills/management-equity-hurdle-checker). Bring the hurdle and the participation terms.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

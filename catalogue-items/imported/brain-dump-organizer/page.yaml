@@ -9,7 +9,7 @@ subhead: Paste a messy stream of thoughts and get it sorted into a clean, usable
 explain: |
   Paste a messy stream of thoughts and get it sorted into a clean, usable list with nothing lost. Tasks, ideas and notes each land in their place, still in your own words.
 
-  The skill runs without asking permission when it spots a long, mixed block of text. Five rules apply every time: capture everything, keep your voice, match the output size to the input, sort into four sections, and let you prune later. A five-item dump will not get an elaborate structure. Casual phrasing stays casual, so "build something crazy with AI" is not turned into corporate language.
+  The skill starts sorting as soon as it spots a long, mixed block of text, with no questions up front. It asks at most one question, and only when a single item could be either a task or a project. Five rules apply every time: capture everything, keep your voice, match the output size to the input, sort into four sections, and let you prune later. A five-item dump will not get an elaborate structure. Casual phrasing stays casual, so "build something crazy with AI" is not turned into corporate language.
 when:
   - Your head is full and you need it out on paper.
   - You pasted a wall of mixed notes and need them sorted.
@@ -23,6 +23,7 @@ not_for:
 you_give:
   - A messy block of text or dictation
   - Anything you want treated as urgent (optional)
+  - The folder or project files to match ideas against, if your AI can see files (optional)
   - Preferred format (optional)
 you_get:
   - Four clear sections of actions, ideas and notes
@@ -35,7 +36,7 @@ how_to_use:
   - Answer the one question it may ask, if a single item could be a task or a project.
   - Check the sections. Nothing should be missing, and the wording should still sound like you.
   - Pick which offer from How I Can Help it should do next. It waits for your pick.
-  - Connections only looks at files if your AI can see them (Claude Code, or a project with files attached). In a plain chat it says no workspace is available, and the rest of the sort still works. To turn it off, tell your AI not to look at your files.
+  - Connections only looks at files if your AI can see them (Claude Code, or a project with files attached). In a plain chat it says no workspace is available, and the rest of the sort still works. The helper scripts and reference files are skipped there too. To turn it off, tell your AI not to look at your files.
 output_sample:
   input:
     - A messy block of text or dictation, typed or pasted

@@ -14,7 +14,7 @@ New openings for an ad that used to win, so you keep the part that worked.
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
@@ -61,6 +61,7 @@ CHECK WITH A QUALIFIED PERSON: <any health, weight or money claim>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
 - The [Fading ad refresh planner](https://useaiblocks.com/skills/fatigued-ad-reviver). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -71,4 +72,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No brief recuts the old opening.
 - Every claim in a brief is true and can be backed.
 
-For the full version with every check, use the [Fatigued ad reviver](https://useaiblocks.com/skills/fatigued-ad-reviver).
+For the full version with every check, use the [Fading ad refresh planner](https://useaiblocks.com/skills/fatigued-ad-reviver).

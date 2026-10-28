@@ -12,6 +12,28 @@ Find the queries worth ranking for, classify them by intent, cluster them into t
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
+2. **A plan** with the [Keyword researcher](https://useaiblocks.com/skills/keyword-researcher). Bring your question, a spreadsheet (optional).
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a shortlist, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Starting a new site or content section
@@ -157,6 +179,15 @@ Recommended columns for the keyword sheet:
 | Notes | Free text |
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Search topic and link planner](https://useaiblocks.com/skills/topic-cluster-mapper). It takes the keyword list and plan.
+- The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the keyword list and plan.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If required data is unavailable
 

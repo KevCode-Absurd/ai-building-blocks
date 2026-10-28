@@ -110,7 +110,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## What to do with the result
 
-These fit an outage better than the generic suggestions above. Suggest the user have their sign-off person read each message and post it themselves. Offer to run it again with new facts for the next update, or the [Turn an incident into a safer procedure](https://useaiblocks.com/workflows/turn-an-incident-into-a-safer-procedure) workflow after recovery.
+These fit an outage better than the generic suggestions above. Suggest the user have their sign-off person read each message and post it themselves. Offer to run it again with new facts for the next update, or the [Incident learning and follow-up planner](https://useaiblocks.com/workflows/turn-an-incident-into-a-safer-procedure) workflow after recovery.
 
 ## Avoid
 

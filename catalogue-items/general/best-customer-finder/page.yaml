@@ -21,7 +21,7 @@ when:
 not_for:
   - "You have fewer than about 20 customers: talk to them one by one or run a short survey. The result here would only be a hunch."
   - "You sell one product once and customers never come back: use a survey or interviews to learn why they bought."
-  - "You want to see what your best customers read before they bought: use the Buying path rebuilder."
+  - "You want to see what your best customers read before they bought: use the Customer buying journey test planner."
 
 you_give:
   - A customer list with what each paid and how long they stayed
@@ -139,7 +139,7 @@ improve:
   - Add the fields you keep on customers, such as industry or size, so it can use them.
   - Add traits you must not use, such as age or other protected factors.
   - Update the profile each quarter as new customers come in.
-  - Pair it with "Buying path rebuilder" to see what the top group read before buying.
+  - Pair it with the "Customer buying journey test planner" to see what the top group read before buying.
 
 works_best_with:
   tools:

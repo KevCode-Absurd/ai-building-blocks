@@ -22,6 +22,21 @@ When to use this skill: synthesizing a recent batch of customer interviews, audi
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for customer words, a transcript, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans research-to-decision synthesis. The PM-skill distinction:
@@ -263,3 +278,12 @@ Discovery research is one of the most expensive activities a product team commis
 The teams that earn returns on the research investment are the teams that take synthesis seriously: the sequence is run end-to-end, the patterns are named with conviction, the implications are falsifiable, the so-what ties to specific decisions, the output is a load-bearing document the team references for months. The teams that do not earn returns produce data-dumps or insight-theater; their research becomes documentation of work done rather than the input to work to come.
 
 When in doubt about whether a synthesis is ready, ask: are the patterns named with conviction, do they reach product implications, do the implications tie to specific decisions, has the synthesis been reviewed by participants and adjacent teams, are the data gaps named honestly? If yes to all of those, the synthesis is real. If no to any, the gap is where the research investment will fail to convert into decisions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
+- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the customer needs.
+- The [Product launch FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the customer needs.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

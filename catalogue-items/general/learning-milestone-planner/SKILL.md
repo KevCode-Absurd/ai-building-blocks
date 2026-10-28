@@ -63,8 +63,8 @@ The chain of hoped-for rates. The test that gives each starting figure, with who
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder). It takes the plan.
-- The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
 - **Decide what to do** with the [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
+- The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

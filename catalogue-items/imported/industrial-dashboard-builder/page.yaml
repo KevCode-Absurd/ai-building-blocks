@@ -14,6 +14,8 @@ explain: |
   A plant-floor dashboard in MATLAB App Designer that an operator can read at a glance, with alarms that stand out, live trends and setpoint changes that need confirmation. It turns a data script into a proper screen.
 
   The skill follows industrial screen conventions. The background is grey, so colour is saved for problems. Alarms appear in a banner with clear priority. Writes to the plant need a confirm step, so no one changes a setpoint by a stray click. Figures are built in a light theme so widgets stay readable on a dark desktop. It suits data from OPC UA, Modbus, MQTT and PI. It is not for consumer apps or finding OPC servers.
+
+  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products. The skill file links MathWorks' own reuse licence page, which says the same.
 when:
   - You have a script reading plant data and want an operator screen.
   - You need alarm banners that rank by priority.
@@ -25,6 +27,7 @@ not_for:
   - "You want a phone or consumer app: build it in App Designer by hand, or ask your AI for a plain MATLAB app."
   - "You need to find the OPC UA servers on your network: use a network scan or the OPC UA Explorer app in MATLAB."
   - "You want to change a live plant without testing first: test on a simulated node, and ask a controls engineer to review it."
+  - "You do not have MATLAB: this skill covers no other route. Use the screen builder that comes with your SCADA or HMI system instead."
 you_give:
   - The script or data source (OPC UA, Modbus, MQTT, PI)
   - The tags and alarm limits
@@ -39,7 +42,7 @@ you_get:
 how_to_use:
   - Open an AI that can run MATLAB code, and paste in this skill.
   - Paste your data script, your tag names, your alarm limits and the values operators may change.
-  - Ask your AI to build the dashboard. It saves a real .mlapp file if the matlab-build-app skill is available. If not, it makes a plain .m app and tells you. Expect one file, either dashboard.mlapp or a .m file. Save it in your MATLAB project folder.
+  - Ask your AI to build the dashboard. It saves a real .mlapp file if the matlab-build-app skill is available and you have MATLAB R2025a or newer. If not, it makes a plain .m app and tells you. Expect one file, either dashboard.mlapp or a .m file. Save it in your MATLAB project folder.
   - Gate before you check anything else. Do not connect any write to a live plant until the app has been tested on a simulated node and a controls engineer has signed it off. MATLAB, App Designer and the Industrial Communication Toolbox are paid licensed products.
   - "Check the result: alarms stand out, trends show your limits, and each setpoint change asks for a confirm."
   - The skill points to one guide file that is not in this copy (agent-guide-shared.md). If your AI cannot find it, it uses the rules in the skill and the other reference files.

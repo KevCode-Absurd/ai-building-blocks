@@ -38,10 +38,11 @@ works_best_with:
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
   - Add the downloaded folder to an AI that can read skill files and run commands.
-  - Link your accounts first. Run composio link gorgias and composio link hubspot if asked.
+  - Link your accounts first. Run composio link gorgias and composio link hubspot if asked. Gorgias is a paid help desk. HubSpot has a free CRM plan, with paid extras. Composio may charge for use, so check its pricing before the first run.
   - Ask for the refund processor and give the ticket number or customer email. Paste your refund policy and the amount above which a manager must approve. Without them, the policy rows are left as not checked.
   - Read the eligibility table and the recommendation. Check them against your own policy.
   - Edit the draft reply, then send it yourself. The skill never issues the refund.
+  - If you approve, issue the refund yourself in your shop or payment tool, such as Shopify or Stripe. Then tell the customer the amount and when to expect it, and note the decision on the Gorgias ticket.
 output_sample:
   input:
     - A Gorgias ticket number or the customer's email

@@ -107,8 +107,8 @@ Write MISSING: <what> next to the result it affects. Keep working on parts that 
 
 - Send the brief to the client for sign-off. The user sends it, not this workflow.
 - After the meeting, add the raw notes and run step 3 again to catch actions with no owner or date.
-- If the client later asks for something extra, run the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
-- If the work starts with by-hand delivery, run the [Plan a manual first customer delivery](https://useaiblocks.com/workflows/plan-a-manual-first-customer-delivery) workflow.
+- If the client later asks for something extra, run the [Client scope change planner](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
+- If the work starts with by-hand delivery, run the [First-customer manual delivery planner](https://useaiblocks.com/workflows/plan-a-manual-first-customer-delivery) workflow.
 
 ## Avoid
 

@@ -14,7 +14,7 @@ A platform says its ads earned 5 for every dollar. An incrementality test asks h
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
@@ -81,7 +81,7 @@ MISSING: <what you did not give>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [BigQuery multi-touch sales credit calculator](https://useaiblocks.com/skills/multi-touch-credit-calculator).
+- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

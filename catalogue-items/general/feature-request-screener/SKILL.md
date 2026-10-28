@@ -9,7 +9,7 @@ Every request sounds small. Each feature you add also brings screens, help text,
 
 ## When to use it
 
-Use it when a long request list needs a yes, later or no on each item. Do not use it for a one-off bug or a single loud customer (use a simple bug list, or talk to that customer), when you have no product vision written down yet (write one or two sentences first, because the vision test depends on it), or when you want a quick first pass with fewer checks (use the [Yes-later-no request sorter](https://useaiblocks.com/prompts/yes-later-no-request-sorter)).
+Use it when a long request list needs a yes, later or no on each item. Do not use it for a one-off bug or a single loud customer (use a simple bug list, or talk to that customer), when you have no product vision written down yet (write one or two sentences first, because the vision test depends on it), or when you want a quick first pass with fewer checks (use the [Feature request priority planner](https://useaiblocks.com/prompts/yes-later-no-request-sorter)).
 
 ## What you need
 

@@ -9,7 +9,7 @@ subhead: Paste a table of listed companies. It keeps the cheapest by earnings, c
 explain: |
   Cheap stocks are cheap for a reason, and most reasons are good ones. The skill is in telling the few that are only neglected from the many that are in trouble. And no single bargain is certain, so the method has to be judged on a group.
 
-  This workflow follows the enterprising investor's method in The Intelligent Investor by Benjamin Graham. A first cut on a low price against recent earnings is followed by five tests: current assets at one and a half times current liabilities with debt no more than net current assets, no loss in five years, a dividend now, earnings above those of a few years back, and a price no more than 120% of tangible assets. Survivors get an asset floor, and the gap to the price is judged. Then you set the group size, the caps, the exit and a scorecard before you buy anything. The book says the extra work is worth it only if it adds a few points a year to the stock part. The scorecard tests that. It names no company to buy.
+  This workflow follows the enterprising investor's method in The Intelligent Investor by Benjamin Graham. A first cut on a low price against recent earnings is followed by five tests: current assets at one and a half times current liabilities with debt no more than net current assets, no loss in five years, a dividend now, earnings above those of a few years back, and a price no more than 120% of tangible assets. Survivors get an asset floor, and the gap to the price is judged. Then you set the group size, the caps, the exit and a scorecard before you buy anything. The scorecard checks whether the extra work beats a plain index fund by enough to be worth your time. It names no company to buy, and it is not personal financial advice.
 when:
   - You have time to study companies and want to look for stocks priced under their worth.
   - You want a repeatable first cut instead of following tips.
@@ -59,6 +59,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: First cut
     how: Pick a lower multiple for a shorter list, or the lowest tenth of the table.

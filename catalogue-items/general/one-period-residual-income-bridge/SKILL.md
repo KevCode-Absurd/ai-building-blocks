@@ -94,16 +94,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Turn the same ideas into a price-to-book view with the [Justified price-to-book scenario](https://useaiblocks.com/skills/justified-price-book-scenario).
-- Roll book value per share from a filing with the [Book value per share roll-forward](https://useaiblocks.com/skills/book-value-per-share-rollforward).
-- Fade excess returns over time with the [Economic profit fade schedule](https://useaiblocks.com/skills/economic-profit-fade-schedule).
+- Turn the same ideas into a price-to-book view with the [Price-to-book scenario calculator](https://useaiblocks.com/skills/justified-price-book-scenario).
+- Roll book value per share from a filing with the [Book value per share calculator](https://useaiblocks.com/skills/book-value-per-share-rollforward).
+- Fade excess returns over time with the [Economic profit value calculator](https://useaiblocks.com/skills/economic-profit-fade-schedule).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any investment conclusion unresolved.

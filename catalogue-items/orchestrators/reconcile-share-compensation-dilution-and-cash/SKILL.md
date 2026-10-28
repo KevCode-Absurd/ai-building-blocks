@@ -63,6 +63,6 @@ Lead with the three share counts and the cash offset against reported expense. S
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow, when you also hold convertibles or want EPS tied to the report.
-- The [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when real buybacks happened and you want them tied to owner cash.
+- The [Basic and diluted earnings per share checker](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow, when you also hold convertibles or want EPS tied to the report.
+- The [Share buyback accounting checker](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when real buybacks happened and you want them tied to owner cash.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

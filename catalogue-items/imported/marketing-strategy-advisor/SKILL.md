@@ -18,6 +18,28 @@ Strategic marketing leadership — brand positioning, growth model design, budge
 
 **Working in a chat (added by AI Blocks).** This copy has no multi-agent setup, no `company-context.md` file and no colour tags. Ask the user for what you need. If you cannot run the Python scripts, do the sums in chat. Hand back, in this order: a positioning check, a growth model with the reason, a budget table (channel, monthly spend, target cost per customer, expected customers), the key numbers to track, and a short list of warning signs. Mark any number the user did not give as MISSING.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Keywords
 CMO, chief marketing officer, brand strategy, brand positioning, growth model, product-led growth, PLG, sales-led growth, community-led growth, marketing budget, CAC, customer acquisition cost, LTV, lifetime value, channel mix, marketing ROI, pipeline contribution, marketing org, category design, competitive positioning, growth loops, payback period, MQL, pipeline coverage
 
@@ -152,6 +174,15 @@ Surface these without being asked when you see them in what the user has told yo
 | "Design our growth model" | Growth projection with channel mix scenarios |
 | "Build the marketing team" | Hiring plan with sequence, roles, agency vs in-house |
 | "Marketing board section" | Pipeline contribution report with channel ROI |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Reasoning Technique: Recursion of Thought
 

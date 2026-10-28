@@ -38,11 +38,12 @@ works_best_with:
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
   - Use an AI that can run terminal commands, such as Claude Code. A plain chat window cannot run the live lookup.
-  - Install Composio CLI and link both accounts with composio link gorgias and composio link hubspot.
+  - Install Composio CLI and link both accounts with composio link gorgias and composio link hubspot. Gorgias is a paid help desk. HubSpot has a free CRM plan, with paid extras. Composio may charge for use, so check its pricing before the first run.
   - Add the skill folder and ask for the Customer 360 view.
   - Give it the customer email or name.
   - Check the brief. If one system has no match, it shows the other and says so.
   - Approve any reply or account change yourself before it happens.
+  - Next, copy the brief into the HubSpot record, or use the Gorgias support reply writer to draft a reply you approve before sending.
 output_sample:
   input:
     - A customer email or name
@@ -62,6 +63,6 @@ output_sample:
     - name: Engagement Timeline (HubSpot)
       contains: A dated table of notes, emails and calls with a short summary of each.
     - name: Customer Health Score
-      contains: Sentiment, engagement and risk levels, based on recent tickets and how often they get in touch.
+      contains: Sentiment, engagement and risk levels, based on recent tickets and how often they get in touch. This is the AI's estimate, so check it before you act on it.
     - name: Recommended Actions
       contains: Specific next steps based on the data found.

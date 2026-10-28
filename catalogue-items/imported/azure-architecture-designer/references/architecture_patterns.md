@@ -80,7 +80,7 @@ Reference guide for selecting the right Azure architecture pattern based on appl
 |-----------|-----|-----------|
 | App Service | $13 (B1) | $75 (P1v3) |
 | Azure SQL | $5 (Basic) | $40-120 (Serverless GP) |
-| Front Door | $0 (disabled) | $35-55 |
+| Front Door | $0 (not deployed in dev) | $35 base fee + requests and data out |
 | Blob Storage | $1 | $5-15 |
 | Key Vault | $0.03 | $1-5 |
 | Application Insights | $0 (free tier) | $5-20 |
@@ -363,7 +363,7 @@ Multi-region typically costs 1.5-2x single region:
 - Compute: 2x (running in both regions)
 - Database: 1.5-2x (replication, multi-write)
 - Networking: Additional cross-region data transfer (~$0.02-0.05/GB)
-- Front Door Premium: ~$100-200/month
+- Front Door Premium: $330/month base fee plus per-request and data transfer charges (US prices on Microsoft's Front Door pricing page; check the calculator)
 
 ---
 

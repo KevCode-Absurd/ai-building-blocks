@@ -38,7 +38,7 @@ credits:
   - title: handle-objection skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/handle-objection
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name, added a note that it works without its sibling skills, split Step 4 into six numbered lines, and made the reply email draft-only. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Anthropic
     url: https://github.com/anthropics

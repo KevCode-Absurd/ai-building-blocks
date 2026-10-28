@@ -20,12 +20,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Your website** (yours): the link to your site or the page.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -84,6 +85,6 @@ Pause here: Put the new top screen live for the test, run it for at least two fu
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit giving page writer](https://useaiblocks.com/skills/nonprofit-donation-page-writer). It takes the draft.
+- The [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

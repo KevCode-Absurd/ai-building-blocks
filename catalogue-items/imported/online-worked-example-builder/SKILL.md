@@ -69,6 +69,26 @@ tags: ["worked-examples", "fading", "digital-learning", "CLT", "Sweller", "Renkl
 
 # Digital Worked Example Sequence
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). Bring your lesson plan, your notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a worked example sequence optimised for digital delivery — incorporating self-explanation prompts, a systematic fading schedule, and interactivity design that exploits what digital environments offer beyond paper. The sequence moves students from studying complete worked examples (where every step is shown and explained) through faded examples (where progressively more steps are removed for the student to complete) to independent problem-solving. The critical insight from Renkl (2014) is that worked examples only produce learning when students actively process them — passive reading of worked examples is barely better than no examples at all. Digital delivery creates unique opportunities (self-explanation prompts at each step, immediate feedback on faded steps, adaptive pacing based on performance) and unique risks (split attention between screen elements, cognitive overload from multimedia, temptation to click through without thinking). The output includes the complete example sequence, embedded self-explanation prompts, a precise fading schedule, and digital design specifications. AI is specifically valuable here because designing an effective digital worked example sequence requires coordinating content design (the mathematical or procedural steps), cognitive design (fading schedule, self-explanation points), and interface design (how steps are revealed, where prompts appear, how feedback is given) — three design dimensions that must be aligned.
@@ -273,3 +293,12 @@ If the platform tracks student responses:
 2. **Digital self-explanation prompts can become perfunctory.** Students may learn to type the minimum response to unlock the next step without genuinely engaging. The design mitigates this (minimum character count, the prompt appears before the answer) but cannot fully prevent gaming behaviour. In classroom use, the teacher should periodically review students' self-explanation responses to check for genuine engagement.
 
 3. **The fading schedule above is a fixed sequence.** Truly adaptive fading would adjust the pace based on each student's performance — fading faster for students who demonstrate mastery and slower for those who struggle. The fixed schedule is a practical default for platforms without adaptive capability. Platforms with tracking should use the adaptation notes to personalise the pace.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -25,6 +25,25 @@ Built by [Nexscope](https://www.nexscope.ai/?co-from=skill8) — your AI assista
 
 > **Figures last checked: Oct 2026, when this skill was imported. Treat every tax, duty and shipping figure in this file as needing a check.** When you pass a tax rate, duty limit, threshold, fee or date to the person, add "[check before use]" after it unless you confirmed it from an official source in this chat. Do not present any of them as current facts.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Install
 
 ```bash
@@ -240,7 +259,7 @@ Choose the right fulfillment model based on order volume, product characteristic
 - **Marketplace-first strategy** → Platform fulfillment from day one
 - **High-value products (AOV > $100)** → Express shipping is viable (shipping cost is small % of order)
 
-#### Recommended 3PL Networks for Cross-Border *(names only: check each one still serves your market and get a quote)*
+#### Recommended 3PL Networks for Cross-Border *(names only: these are paid services, so check each one still serves your market and get a quote)*
 
 | Region | 3PLs to Evaluate | Notes |
 |--------|-----------------|-------|
@@ -262,10 +281,10 @@ This is where most sellers get stuck. Country-by-country breakdown:
 #### European Union (27 countries)
 - **VAT:** 17-27% depending on member state (standard rates: DE 19%, FR 20%, IT 22%, ES 21%, NL 21%)
 - **IOSS (Import One-Stop Shop):** Simplifies VAT for B2C imports ≤EUR150. Register once, charge VAT at checkout, remit via single return
-- **EUR150 duty exemption removal:** Currently, imports ≤EUR150 are exempt from customs duty. This exemption will be abolished effective 2028. Plan IOSS registration now
+- **EUR150 duty exemption removal:** Currently, imports ≤EUR150 are exempt from customs duty. This exemption will be abolished effective 2028. Plan IOSS registration now **[check before use: the EU has been changing this timeline, so confirm the current date on the EU customs site]**
 - **HS code classification:** Required for all imports. Determines duty rate (0-17% typically)
 - **When to register for VAT:** If you store inventory in an EU country (e.g., Amazon FBA Pan-EU), you must register for VAT in that country
-- **Tools:** Avalara, TaxJar (Stripe Tax), Zonos, SimplyVAT
+- **Tools:** Avalara, TaxJar (Stripe Tax), Zonos, SimplyVAT (paid services that need an account; check current pricing before you choose one)
 
 #### United Kingdom
 - **UK VAT:** 20% standard rate
@@ -276,7 +295,7 @@ This is where most sellers get stuck. Country-by-country breakdown:
 
 #### United States
 - **Sales tax:** No federal sales tax. State-level nexus rules. Economic nexus thresholds vary ($100K-$500K revenue or 200 transactions in a state)
-- **De minimis:** $800 — imports under $800 in declared value enter duty-free (Section 321). This is under political pressure and may be reduced
+- **De minimis:** $800 — imports under $800 in declared value enter duty-free (Section 321). This is under political pressure and may be reduced **[check before use: the US has suspended this duty-free route for many imports since this was written, so confirm the current rule on the US Customs (CBP) site and do not plan around it]**
 - **Customs duty:** Varies by HS code and country of origin. US tariff schedule applies
 - **Marketplace facilitator laws:** Amazon, Walmart, etc. collect and remit sales tax in most states
 - **When to worry:** If selling DTC to US customers, research nexus in top states
@@ -656,6 +675,14 @@ For each target market, evaluate:
 Estimates are marked with ⚠️ when based on general benchmarks rather than user-specific data.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator).
+- The [Product listing localizer](https://useaiblocks.com/skills/overseas-listing-localizer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limitations
 

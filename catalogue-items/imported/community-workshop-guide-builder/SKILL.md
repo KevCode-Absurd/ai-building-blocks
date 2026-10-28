@@ -17,6 +17,26 @@ Help a community turn a shared concern into feasible actions and a program that
 another facilitator can run. Success means usable materials, clear dependencies,
 and an honest account of what has been checked and what still needs participants.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **A chat AI that can read the bundled reference files:** Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+<!-- /needs -->
+
 ## When not to use
 
 For destination research and visitor itineraries, use a travel writer or a local tourism office. For document formatting alone, use a word processor. For product requirements research, do the research first, then come back. This skill owns community program design. It does not
@@ -207,3 +227,10 @@ Read [source pattern and attribution](references/source-pattern.md) when adaptin
 Ready Together. Retain the participatory method while researching technical content
 afresh. Do not reproduce the source handbook's text, images, or worksheets without
 appropriate permission.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

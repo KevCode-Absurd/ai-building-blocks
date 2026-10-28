@@ -72,15 +72,6 @@ HAND-BACK SUMMARY
 
 The files are `outputs/step-01-what-you-really-sell-finder.md` to `outputs/step-03-claim-and-proof-matcher.md`. The second holds the offer review, the third the claims table.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Write the ad** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). Bring the copy and the fixes from step 3.
-- **Plan the split tests** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Bring the three angles and the three offer changes.
-- **Plan a video that shows the claims** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). Bring the claims table.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order. Step 2 used the angles, and step 3 used the revised offer.
@@ -89,6 +80,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - No claim was invented or made bigger to fit a gap. Every claim has proof beside it or a flag saying it has none.
 - No limit, deadline or guarantee was suggested that the owner has not said they will keep.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Write the ad** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). Bring the copy and the fixes from step 3.
+- **Plan the split tests** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Bring the three angles and the three offer changes.
+- **Plan a video that shows the claims** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). Bring the claims table.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If a required input is absent, stop that step and return what you have with the exact input needed to resume. Never invent a figure, a quote or a proof.

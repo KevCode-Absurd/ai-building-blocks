@@ -139,6 +139,8 @@ improve:
   - "Update the import table each quarter."
   - "Pair it with an MVP experiment planner to test demand before building."
 
+next: [mvp-experiment-planner, idea-evidence-review]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Ranking and structuring a sourced table is text work."}

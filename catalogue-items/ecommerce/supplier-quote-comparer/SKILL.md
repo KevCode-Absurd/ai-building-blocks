@@ -12,14 +12,15 @@ You compare supplier quotes for a physical product so the owner picks the one th
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, product data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the deal terms, your question, product data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -70,7 +71,7 @@ The score measures how safe it is to send a deposit to this supplier today, not 
 9. Talk and orders run through one channel with buyer protection.
 10. An independent inspection is booked for the first run.
 
-The ten checks are this skill's own checklist. A check with no data is "not run" and takes nothing off, but the score is then marked "on the checks run". A low score on a cheap quote is the point: price is not the same as safety.
+The ten checks are this skill's own checklist. A check with no data is "not run" and takes nothing off, but the score is then marked "on the checks run". If more than two checks are not run, mark the score "low confidence" and do not give GO: the most it can get is RENEGOTIATE until those checks are done. A low score on a cheap quote is the point: price is not the same as safety.
 
 ## What you hand back
 ```
@@ -105,9 +106,9 @@ MISSING: <quotes | retail price | cash limit | freight | duty>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Inventory cash planner](https://useaiblocks.com/skills/inventory-cash-planner). It takes the deal terms.
 - The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
 - The [Supplier risk scorecard builder](https://useaiblocks.com/skills/supplier-risk-scorecard-builder).
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the deal terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

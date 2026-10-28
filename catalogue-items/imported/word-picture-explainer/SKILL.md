@@ -63,6 +63,19 @@ tags: ["dual-coding", "visual-representation", "multimedia", "cognitive-load", "
 
 # Dual Coding Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a verbal explanation or concept and designs a complementary visual representation — specifying the diagram type, spatial layout, labelling strategy, and annotation approach that best supports understanding. This is NOT about making content "more visual" or appealing to "visual learners" (a debunked concept). It is about exploiting the well-established finding that processing information through both verbal and visual channels simultaneously creates stronger, more retrievable memory traces than either channel alone. AI is specifically valuable here because selecting the right visual representation for a concept requires understanding both the structure of the knowledge (sequential? hierarchical? causal? spatial?) and the principles of multimedia learning — most teachers default to decorative images or overly complex diagrams that increase cognitive load rather than reducing it.
@@ -211,7 +224,7 @@ Process arrows connect the elements in a cycle:
 
 1. First, draw the landscape only (sea, land, tree, mountain, river). No labels. Ask: "What do you see? Where might water be in this picture?"
 2. Add the evaporation arrow and label. Narrate: "Solar energy heats the water surface. Water molecules gain energy and escape into the air as water vapour." Let students process this single step.
-3. Add the transpiration arrow. Ask: "Water also rises from plants. Where does a tree get its water from? How does it end up in the air?" (Elaborative interrogation — chains with Skill 6.)
+3. Add the transpiration arrow. Ask: "Water also rises from plants. Where does a tree get its water from? How does it end up in the air?" (Elaborative interrogation — chains with the Why and how question writer skill.)
 4. Add the cloud and condensation label. Narrate the cooling process.
 5. Add precipitation arrows. Ask: "Why does the water fall? What force is pulling it down?" (Gravity — connecting to prior science knowledge.)
 6. Add runoff and infiltration arrows. Complete the cycle.
@@ -236,3 +249,10 @@ Process arrows connect the elements in a cycle:
 2. **Some concepts are inherently difficult to represent visually.** Abstract concepts (justice, irony, probability) and complex multi-variable relationships resist simple visual representation. The skill will recommend the best available approach, but for highly abstract content, the visual may add limited value beyond what verbal explanation provides. This is not a failure of dual coding — it reflects the genuine boundaries of visual representation.
 
 3. **The effectiveness of dual coding depends on integration, not just presence.** Simply showing a diagram alongside text does not automatically produce dual coding benefits. The teacher must actively integrate the two channels — narrating while pointing, building the diagram progressively while explaining, asking students to connect visual elements to verbal descriptions. A well-designed visual presented without integration is just a picture on a slide.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Self-explanation question writer](https://useaiblocks.com/skills/self-explanation-question-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

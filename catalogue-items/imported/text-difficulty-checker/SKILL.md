@@ -69,6 +69,23 @@ tags: ["text-complexity", "reading", "scaffolding", "vocabulary", "differentiati
 
 # Text Complexity Analyser & Scaffold Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a document, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Evaluates a text across three dimensions of complexity — quantitative (sentence length, vocabulary frequency), qualitative (structure, levels of meaning, knowledge demands), and reader-task (the interaction between the text's demands and the specific readers and purpose) — and generates a tailored set of before, during, and after reading scaffolds that address the specific complexity challenges identified. Unlike readability formulas alone (which only measure quantitative features), this analysis considers whether the text has implicit meaning that requires inference, whether it assumes background knowledge students may lack, whether its structure is familiar or unfamiliar, and whether the vocabulary demands are primarily Tier 2 (academic) or Tier 3 (technical). AI is specifically valuable here because text complexity is multi-dimensional — a text can be quantitatively simple but qualitatively complex (a poem with short sentences but deep figurative meaning), and scaffolds must target the ACTUAL complexity, not just the reading level number.
@@ -295,3 +312,10 @@ Push toward the key historical insight: the letter tells us about the EXPERIENCE
 2. **The analysis identifies complexity but cannot measure individual students' reading levels.** The scaffold recommendations are designed for the stated student level, but individual students within the class will have different reading capabilities, background knowledge, and engagement levels. The teacher must differentiate within the scaffold plan based on their knowledge of specific students.
 
 3. **Text complexity is context-dependent.** The same text can be simple for one reading purpose and complex for another — reading a poem for enjoyment requires different comprehension demands than analysing its figurative language. The analysis is specific to the stated reading purpose; changing the purpose would change the complexity profile and scaffold recommendations.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

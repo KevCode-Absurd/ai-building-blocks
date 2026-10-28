@@ -50,6 +50,7 @@ first_result:
     - "Add the next step, such as a Slack message. Connect your account when asked."
     - "Run the workflow once by hand. Open each step to see the data it received and sent."
     - "Fix anything wrong, then switch the workflow on."
+    - "Next: add an alert for failed runs with the n8n failure handler, or move steps you repeat into a reusable piece with the n8n sub-workflow builder."
   self-hosted:
     - "Read the install guide linked from n8n.io. It covers Docker. We did not test the steps."
     - "Start the server and open it in your browser. Then follow the same steps as in the cloud."

@@ -29,13 +29,15 @@ you_get:
   - Case IDs tagged on each test
   - Results sent to a TestRail run
   - A count of imported cases and written tests
+  - "A status report in this shape: TestRail cases, Playwright tests with TestRail IDs, unlinked TestRail cases, and Playwright tests without IDs, each as a count"
+  - "An operation summary after each job: counts, any errors or unmatched cases, and a link to the TestRail run"
 how_to_use:
   - Check you have a TestRail account and an API key. Set your TestRail address, user email and API key as settings your AI can read.
-  - Set up the TestRail connector once. A developer can do this. Take the integrations/testrail-mcp folder from the source repo, run npm install inside it, and add it to your AI tool's connector (MCP) settings. Then ask your AI to list its tools and check the testrail ones appear. Setting the keys alone is not enough.
+  - Set up the TestRail connector once. A developer can do this. Take the integrations/testrail-mcp folder from the source repo, run npm install inside it, and add it to your AI tool's connector (MCP) settings. Then ask your AI to list its tools and check the testrail ones appear. Setting the keys alone is not enough. As a last setup check, ask it to call testrail_get_projects. If your projects come back, the connection works.
   - Open your AI in your Playwright project. It must be able to run code and read your files.
   - Ask it to import your project and suite ID. Check the new tests and their case IDs.
-  - To send results, give it a run ID. It runs your tests and pushes each result to that run.
-  - Ask for a status report to see which TestRail cases still have no automated test. Write those as new Playwright tests next. You can also ask it to update a TestRail case from the steps in a Playwright test.
+  - To send results, give it a run ID. It runs your tests with npx playwright test, which runs your project's own test code on your computer and writes a test-results.json file. Then it pushes each result to that run.
+  - Ask for a status report to see which TestRail cases still have no automated test. Write those as new Playwright tests next, with the browser test writer, then import again to tag them. You can also ask it to update a TestRail case from the steps in a Playwright test.
 output_sample:
   input:
     - Your TestRail address, user email and API key

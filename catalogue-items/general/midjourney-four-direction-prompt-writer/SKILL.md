@@ -9,8 +9,8 @@ Turn one image idea or reference into four Midjourney prompts that each look dif
 
 ## When not to use this
 
-- The image needs exact words on it, such as a logo or a headline: use the [Image ad maker with exact text](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
-- It is an ad that must keep the real product's label and shape: use the [Accurate product image ad maker](https://useaiblocks.com/skills/accurate-product-image-ad-maker).
+- The image needs exact words on it, such as a logo or a headline: use the [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
+- It is an ad that must keep the real product's label and shape: use the [Product image ad prompt writer](https://useaiblocks.com/skills/accurate-product-image-ad-maker).
 - The person uses Gemini or Nano Banana, not Midjourney: use the [Nano Banana image and edit prompt planner](https://useaiblocks.com/skills/nano-banana-image-prompt-planner).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

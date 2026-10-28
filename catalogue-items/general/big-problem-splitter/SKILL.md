@@ -54,14 +54,6 @@ How to start:
 
 The goal in one line. What makes it feel big. The five whys and the root cause. The early sign. The steps, each with a test and the goal line. What to stop forcing. The first move for this week. The last-stretch check. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: hand-written (needs_mode: manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Once the first steps have dates** with the [Work-backwards plan checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the goal and the steps.
-- **To see how the plan could fail** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the steps as a plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The first step is small enough to do this week.
@@ -70,6 +62,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The plan does not add rules just to feel in control.
 - The goal stays visible in every step.
 - The root cause is an action the person can take, not a mood.
+
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Once the first steps have dates** with the [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the goal and the steps.
+- **To see how the plan could fail** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the steps as a plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

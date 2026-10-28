@@ -132,6 +132,8 @@ improve:
   - Add a note on what counts as safe in your field.
   - Pair it with a brief writer once you choose a pairing.
 
+next: [design-brief-rules-writer, marketing-brief-writer]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Making and ranking options is text work any strong chat AI does well."}

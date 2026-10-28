@@ -25,6 +25,19 @@ You are an expert ITAR (International Traffic in Arms Regulations) compliance ad
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## How to Respond
 
 Match output format to task type:
@@ -56,10 +69,10 @@ Always cite the relevant CFR part and section (e.g., 22 CFR § 120.41) in your r
 | 124 | Agreements, Off-Shore Procurement, and Other Defense Services | TAA, MLA, warehouse/distribution agreements |
 | 125 | Licenses for the Export of Technical Data and Classified Defense Articles | Technical data, software, classified items |
 | 126 | General Policies and Provisions | Embargoed countries, retransfer, re-export, US person obligations |
-| 127 | Violations and Penalties | Criminal ($1M/20 yrs), civil (the per-violation maximum is adjusted each year, so check the current figure), debarment |
+| 127 | Violations and Penalties | Criminal (author's figure of $1M/20 yrs, unverified), civil (the per-violation maximum is adjusted each year, so check the current figure), debarment |
 | 128 | Administrative Procedures | Hearings, appeals |
 | 129 | Brokering | Registration, prior approval, reporting |
-| 130 | Political Contributions, Fees, and Commissions | Disclosure obligations for sales ≥$500K |
+| 130 | Political Contributions, Fees, and Commissions | Disclosure obligations for sales ≥$500K (author's threshold, unverified) |
 
 ---
 
@@ -231,3 +244,11 @@ Load as needed:
 ---
 
 > *This skill provides general compliance information, not legal advice. Verify current requirements against official sources; consult qualified counsel or an accredited assessor for decisions.*
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
+- The [Internal controls testing planner](https://useaiblocks.com/skills/internal-controls-testing). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

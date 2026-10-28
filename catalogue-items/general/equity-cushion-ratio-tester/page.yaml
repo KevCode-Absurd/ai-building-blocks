@@ -48,7 +48,7 @@ output_sample:
     - The earnings cover result from the Average earnings coverage tester, or the borrower's list of debts
   output:
     - name: Total debt
-      contains: All debt level with or ahead of your claim, plus your own claim, and what it is made of.
+      contains: All debt level with or ahead of your claim, plus your own claim, each counted once, and what it is made of.
     - name: The cushion
       contains: The value of everything behind your claim, how it was valued and whether a low or peak price was used.
     - name: Ratio
@@ -66,7 +66,7 @@ output_sample:
 
 how_it_works:
   - title: Totals the debt
-    text: Adds every claim level with or ahead of yours, plus your own.
+    text: Adds every claim level with or ahead of yours, plus your own. If a total you give already includes your claim, it is not added twice.
   - title: Values the cushion
     text: Uses a recent low price or a fair private price for everything that ranks behind.
   - title: Sets the bar
@@ -114,7 +114,7 @@ tweaks:
     how: Give your lender's bar if you have one. It replaces the starting bar and the reason is shown.
 
 judge:
-  - Total debt includes everything level with or ahead of the claim.
+  - Total debt includes everything level with or ahead of the claim, with each item counted once.
   - The cushion uses a low price, or says the low price is missing.
   - The bar has a reason, and both tests are read together.
   - Book values of property are not used as proof of safety.

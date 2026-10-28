@@ -257,9 +257,14 @@ Compare model output against **datasheet specs only**:
 
 ### 7.2 Lock Time Measurement
 
+Report lock time only from the PLL Testbench, which detects lock by frequency error (`FreqErrorTol`). This is the only valid lock measurement (P103):
+
 ```matlab
-LockTime = lockTimeMeasure(Vctrl, Time, ErrorTol)
+ud = get_param([model '/PLL Testbench'], 'UserData');
+LockTime = ud.lockTime;   % seconds
 ```
+
+`lockTimeMeasure(Vctrl, Time, ErrorTol)` exists, but it works from Vctrl settling, which does not map evenly to frequency error across the VCO tuning curve. Do not use it to report or pass/fail lock time. At most, use it as a rough visual cross-check, and say so.
 
 ### 7.3 Clock Jitter Measurement
 
@@ -402,7 +407,7 @@ Never use 2nd-order approximation (P72: can be 3-5 dB off near loop BW).
 
 ### 9.4 Two-Pass Simulation Strategy (P86 — MANDATORY)
 
-- **Pass 1 (ALWAYS):** Lock time only. `StopTime = min(3*t_lock_target, 50µs)`.
+- **Pass 1 (ALWAYS):** Lock time only. `StopTime = max(min(3*t_lock_target, 50µs), 2*t_lock_target)` and `HoldOffTime = min(1.5*t_lock_target, 0.8*StopTime)`, so HoldOffTime is above the lock time and below StopTime (P54, P87).
   If PASSES with >3x margin → DONE. Do NOT sweep or iterate.
 - **Pass 2 (ONLY if user specified PN/jitter/spur targets or asks for PN):**
   1. Set `SpectralAverages='2'` explicitly (P102: mask default is 4)

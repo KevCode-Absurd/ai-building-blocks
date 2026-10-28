@@ -249,9 +249,12 @@ def validate(
     accent_on_bg = contrast_ratio(accent_final, bg_final)
     link_on_bg = contrast_ratio(link_final, bg_final)
 
+    # AI Blocks fix: body text and links below 4.5:1 are a FAIL, not a WARN.
+    # The original warned between 3:1 and 4.5:1, so onboarding saved palettes
+    # that break the skill's own hard rule (refuse below 4.5:1).
     add(
         "wcag-text-on-bg",
-        "PASS" if text_on_bg >= 4.5 else ("WARN" if text_on_bg >= 3.0 else "FAIL"),
+        "PASS" if text_on_bg >= 4.5 else "FAIL",
         f"Body text on bg contrast: {text_on_bg:.2f}:1 (need 4.5:1 for body, WCAG AA)",
     )
     add(
@@ -261,7 +264,7 @@ def validate(
     )
     add(
         "wcag-link-on-bg",
-        "PASS" if link_on_bg >= 4.5 else ("WARN" if link_on_bg >= 3.0 else "FAIL"),
+        "PASS" if link_on_bg >= 4.5 else "FAIL",
         f"Link on bg contrast: {link_on_bg:.2f}:1 (need 4.5:1, links are body-text-equivalent)",
     )
 

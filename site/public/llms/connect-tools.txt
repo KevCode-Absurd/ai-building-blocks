@@ -1,11 +1,12 @@
 # Connect AI to your tools: AI Blocks
 
-> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe the agent’s jobs and tool problems. Get clear tool definitions, input and output rules, examples and recovery errors.
 - [AI tool builder](https://useaiblocks.com/skills/ai-tool-designer): Describe the job your AI needs to do. Get tool definitions, input checks, clear errors and code patterns for connecting the tools.
 - [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe a tool’s job and limits. Get its name, input schema, side-effect rules and test cases, with unclear or risky parts flagged.
 - [AI tool set designer](https://useaiblocks.com/prompts/ai-tool-list-drafter): Describe jobs, apps and limits. Get tool definitions with clear names, inputs, results and approval rules.
+- [API connector builder](https://useaiblocks.com/skills/api-connector-builder): Name the service you need to reach and get working API connector code with sign-in, error handling and safe retries, ready to run.
 - [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Share an OpenAPI spec. Get tool definitions and starter server code in Python or TypeScript, with checks and next build steps.
 - [API-to-MCP server release builder](https://useaiblocks.com/workflows/turn-an-api-into-a-safe-mcp-server-others-can-install): Share the API spec, access rules and hosting limits. Get server code, OAuth sign-in, security findings and a release path after fixes.
 - [Automation flow sketcher](https://useaiblocks.com/prompts/automation-flow-sketcher): Turn a task you repeat into an automation plan for Zapier or Make. You get each step, filters, and what happens when it fails.

@@ -10,6 +10,23 @@ date_added: "2026-02-27"
 
 Generate marketing-quality screenshots of your app using Playwright directly. Screenshots are captured at true HiDPI (2x retina) resolution using `deviceScaleFactor: 2`.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A web app** (yours): a working web page or app, built and ready to open.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A web app** with the [Generative art maker](https://useaiblocks.com/skills/generative-art-maker). Bring a brief.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a web app. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill when:
@@ -71,12 +88,15 @@ Use `AskUserQuestion` with the following questions:
 - Question: "Does the app require login to access the features you want to screenshot?"
 - Options:
   - "No login needed" - Public pages only
-  - "Yes, I'll provide credentials" - Need to log in first
+  - "Yes, I have a test account" - Need to log in first
 
-If user selects "Yes, I'll provide credentials", ask follow-up questions:
+If the user selects "Yes, I have a test account", ask only:
 - "What is the login page URL?" (e.g., `/login`, `/sign-in`)
-- "What is the email/username?"
-- "What is the password?"
+
+Never ask for the email, username or password in chat, and never write them into a file. Tell the user:
+"Use a test account, not your real one. In your own terminal, set `APP_EMAIL` and `APP_PASSWORD` as
+environment variables (or load them from your password manager's command-line tool). Do not paste
+them here." Wait until the user confirms they are set. If they are not set, the script stops before it logs in.
 
 The script will automatically detect login form fields using Playwright's smart locators.
 
@@ -192,6 +212,11 @@ const AUTH = {
   password: process.env.APP_PASSWORD,
 };
 
+if (AUTH.needed && (!AUTH.email || !AUTH.password)) {
+  console.error('Set APP_EMAIL and APP_PASSWORD in your shell first (test account only).');
+  process.exit(1);
+}
+
 // Screenshots to capture
 const SCREENSHOTS = [
   { name: '01-feature-name', url: '/path', waitFor: '[optional-selector]' },
@@ -289,6 +314,8 @@ main().catch(console.error);
 ```bash
 node screenshot-script.mjs
 ```
+
+If the login is needed and the user set `APP_EMAIL` and `APP_PASSWORD` in their own terminal, your shell may not see them. Ask the user to run this command in that terminal instead of asking for the values.
 
 After running, clean up the temporary script:
 ```bash
@@ -410,3 +437,12 @@ All screenshots are true retina-quality (2x deviceScaleFactor) and ready for mar
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Screenshot privacy masker](https://useaiblocks.com/skills/screenshot-privacy-masker). It takes the image.
+- **Check the landing page** with the [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser).
+- The [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -114,6 +114,7 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Etsy listing SEO scorer](https://useaiblocks.com/skills/etsy-listing-seo-scorer). It takes the pdp copy.
 - The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the pdp copy.
 - The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

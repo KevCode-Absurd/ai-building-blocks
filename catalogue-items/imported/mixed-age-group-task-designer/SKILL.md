@@ -69,6 +69,19 @@ tags: ["mixed-age", "Montessori", "peer-tutoring", "Vygotsky", "ZPD", "Hattie", 
 
 # Mixed-Age Learning Task Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a learning task that productively uses mixed-age groupings — creating genuine interdependence between older and younger students so that BOTH age groups learn. This is one of the defining features of Montessori education and one of the most frequently misunderstood: mixed-age grouping is not about older children "helping" younger ones (which benefits the younger child but potentially wastes the older child's time). It is about designing tasks where the older child's role requires genuine cognitive work that deepens their own understanding, while the younger child benefits from scaffolding within their zone of proximal development (Vygotsky, 1978). Hattie (2009) reports an effect size of 0.55 for peer tutoring — one of the highest-impact strategies in his synthesis — but this effect depends critically on the DESIGN of the tutoring interaction. Topping (2005) found that the tutoring student (the older child) often learns as much or more than the tutee, provided the task requires them to organise, explain, and adapt their knowledge — which is a demanding cognitive task. The output includes the complete task design, the learning objectives for BOTH age groups (not just the younger students), the role structure (designed for interdependence, not one-directional help), and practical implementation guidance.
@@ -286,3 +299,11 @@ Teach the Year 4 students four tutoring principles:
 3. **Social dynamics can undermine the learning.** Some older students may be condescending ("That's easy, you should know this"); some younger students may be anxious or intimidated; some pairs may simply not get along. The tutor preparation session should address respect and patience explicitly, and the teacher should monitor pair dynamics, reassigning if necessary.
 
 4. **Mixed-age grouping requires timetable coordination.** In schools with rigid timetables and separate year-group classes, arranging cross-age sessions is a logistical challenge. The most common implementation is a weekly "buddy" session, but this requires agreement between at least two teachers and alignment of curriculum timing. The logistical barrier is often more significant than the pedagogical design challenge.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Group work task planner](https://useaiblocks.com/skills/group-work-task-planner). It takes the lesson plan.
+- The [Tutor chat script writer](https://useaiblocks.com/skills/tutor-chat-script-writer). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

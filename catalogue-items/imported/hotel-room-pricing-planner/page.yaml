@@ -22,6 +22,7 @@ not_for:
   - "You need to buy linens, food or supplies for the hotel: use the Hotel and restaurant buying planner."
   - "You want a sales forecast for any business, not a hotel: use the Demand forecast planner."
   - "You have no booking history yet, for example before opening: it can only give rough guesses, so treat its numbers as a start."
+  - "You want legal advice on walked guests: before you accept extra bookings, check your booking contracts, travel-site rules and local consumer law on moving guests to another hotel. This skill does not cover them."
 you_give:
   - Past bookings and occupancy by date, from your booking system or a spreadsheet
   - Your current rate for each room type
@@ -35,7 +36,7 @@ you_get:
   - Revenue under two or three different price choices
   - A list of the numbers it was missing
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to get the plan.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to get the plan. The Python examples in the skill are optional. To run them you need Python 3 with numpy, pandas, scipy, pulp and scikit-learn, and every price and fee in them is a placeholder to replace with yours.
   - Paste the skill text into the chat, or open the skill if you added it to your AI.
   - Paste your bookings and rates as plain text or a spreadsheet. Use these columns if you can (date, room type, rooms sold, rate paid, channel, channel fee and no-show rate). Name each channel and its fee.
   - If it asks for a number you do not have, say so. It will mark the gap instead of making up a figure.
@@ -64,6 +65,7 @@ output_shape: |
   Price scenarios: <two or three choices with expected occupancy and revenue>
   Actions: <3 to 5 next steps>
   Assumptions and gaps: <every MISSING input and what it changes>
+    for example: No-show rate: MISSING. Overbooking limit not set until you give it.
 output_sample:
   input:
     - Your past bookings and occupancy, by date

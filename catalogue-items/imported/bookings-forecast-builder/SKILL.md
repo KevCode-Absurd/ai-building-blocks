@@ -10,6 +10,20 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # commercial-forecaster
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, your lead list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 Help Commercial leaders answer three questions at the forecast moment:
@@ -52,6 +66,8 @@ Outputs three numbers — **commit**, **best-case**, **pipe-only** — each with
 
 **The assumption block is non-optional.** If you remove it, the forecast becomes theatre.
 
+**Input checks.** Conversion rates go in as fractions from 0 to 1 (0.32 means 32%). The script ignores any rate outside 0–1, NaN or non-numeric, and says so in the warnings. An opportunity with a missing or invalid amount is left out of every total with a warning naming it; it is never counted as $0. Fix the warnings before the number goes on a slide.
+
 ### Step 3 — Project cohort-level ARR
 
 ```
@@ -62,13 +78,15 @@ Computes per-cohort NRR + GRR over the projection horizon. Flags any cohort whos
 
 Output includes the consolidated NRR/GRR trajectory + the cohort heatmap + a leaky-cohort callout.
 
+Retention and expansion go in as percentages (93 means 93%). Gross retention must be 0–100; an invalid value falls back to the stated default curve with a warning. A cohort with no starting ARR is left out with a warning, never counted as $0.
+
 ### Step 4 — Score per-stage funnel confidence
 
 ```
 scripts/funnel_confidence_scorer.py --input intake.json --output markdown
 ```
 
-Per stage: mean conversion %, standard deviation, coefficient of variation (CoV = StDev / Mean), confidence band (HIGH < 10%, MEDIUM 10-25%, LOW 25-50%, VERY LOW > 50%). Recommends treatment per stage: extend-data-window, treat-as-soft-floor, or commit-quality.
+Per stage: mean conversion %, standard deviation, coefficient of variation (CoV = StDev / Mean), confidence band (HIGH < 10%, MEDIUM 10-25%, LOW 25-50%, VERY LOW > 50%). Recommends treatment per stage: extend-data-window, treat-as-soft-floor, or commit-quality. History values must be percentages from 0 to 100; invalid values are dropped and listed. A stage whose mean conversion is 0% is marked UNKNOWN / do-not-use, because its variance cannot be scored.
 
 ### Step 5 — Assemble the forecast deck
 
@@ -151,3 +169,11 @@ Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended 
    Why: a number is easier to challenge and fix when its assumptions are on the slide. No figure is claimed for how much this helps.
 
 Walk depth-first. Lock 1-3 before opening 4-7. After all 7 are answered, invoke `bookings_forecaster.py` → `cohort_arr_projector.py` → `funnel_confidence_scorer.py` in sequence.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Forecast narrative writer](https://useaiblocks.com/skills/forecast-narrative-writer).
+- The [Sales pipeline and forecast checker](https://useaiblocks.com/skills/pipeline-and-forecast-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

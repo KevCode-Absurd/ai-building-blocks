@@ -74,7 +74,7 @@ Penalties for systemic-risk GPAI non-compliance: up to EUR 15M or 3% of worldwid
 
 ## Code of Practice (Article 56) — Bridging Instrument
 
-The AI Office facilitates a **Code of Practice** for GPAI providers covering Article 53 and 55 obligations. The Code is voluntary but provides a presumption of compliance. The first Code is expected to be finalised by 2 Aug 2025 (with iteration thereafter).
+The AI Office facilitates a **Code of Practice** for GPAI providers covering Article 53 and 55 obligations. The Code is voluntary; providers may rely on it to demonstrate compliance until a harmonised standard is published (Article 53(4); source: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53). The final Code was published on 10 July 2025 and approved as adequate by the Commission and the AI Board on 1 Aug 2025 (source: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai).
 
 **Practical implication:** until harmonised standards are published under Article 40 for GPAI (not yet available as of mid-2026), the Code of Practice is the primary "what does compliance look like" reference.
 

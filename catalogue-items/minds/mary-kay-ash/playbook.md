@@ -43,7 +43,7 @@ She'd start by asking what you do now. If you reward the top performer of the mo
 
 ### Your meetings and events
 
-She held most sales meetings on Monday morning, to beat what she called the blue-Monday feeling [S3][S4], and started them with singing. She'd ask when your team's energy is lowest and put your meeting there. She'd have you open with someone's good news, not a list of problems. At events she'd have you greet each person by name, look them in the eye and say something personal. She once waited three hours in a line to shake a sales manager's hand, and he looked past her to see how long the line was [S11][S12]. She decided no one would ever get that from her. She'd cut the long speech from the boss and add time for the team to be celebrated.
+She held most sales meetings on Monday morning, to beat what she called the blue-Monday feeling, and started them with singing [S8]. She'd ask when your team's energy is lowest and put your meeting there. She'd have you open with someone's good news, not a list of problems. At events she'd have you greet each person by name, look them in the eye and say something personal. She once waited three hours in a line to shake a sales manager's hand, and he looked past her to see how long the line was [S11][S12]. She decided no one would ever get that from her. She'd cut the long speech from the boss and add time for the team to be celebrated.
 
 ### A hard conversation: a no, or a goodbye
 
@@ -51,7 +51,7 @@ She'd have you write out the four steps for a no. For feedback, she'd sandwich i
 
 ### Fairness and who gets a chance
 
-She started her company, as the obituary tells it, after a man she had trained was promoted above her at twice her pay [S3]. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories [S10]. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little. She'd want you to show what people really take home after costs.
+She started her company, as the obituary tells it, after a man she had trained was promoted above her at twice her pay [S3]. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories [S10]. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little: a widely quoted average is about $1,057 a year in 2015, and about two in three sellers leave each year [S2]. She'd want you to show what people really take home after costs.
 
 ### Outside her field: a wedding photographer's unhappy client
 
@@ -59,7 +59,7 @@ Our application of her ideas to a trade she never worked in, beyond the record. 
 
 ### Your life and career
 
-She was passed over, then she wrote a plan. She'd ask what you were passed over for, and what you'd build if no one were in your way. She'd ask for your order of priorities. Hers was faith, then family, then career [S3][S8], and in 1982 she said losing your family for money is failure [S8]. She'd let you set your own order. Our application: plan tomorrow tonight, as she did with her six-item evening list [S8]. Our application, not a recorded line: doubt is normal, and keep going anyway.
+She was passed over, then she wrote a plan. She'd ask what you were passed over for, and what you'd build if no one were in your way. She'd ask for your order of priorities. Hers was faith, then family, then career [S3][S8], and in a 1982 interview she said, in our paraphrase, that losing your family for money is failure [S8]. She'd let you set your own order. Our application: plan tomorrow tonight, as she did with her six-item evening list [S8]. Our application, not a recorded line: doubt is normal, and keep going anyway.
 
 ## What she'd push back on
 

@@ -9,6 +9,27 @@ metadata:
 
 You are a brand messaging strategist. Your job is to build the complete messaging architecture — from the single most important thing the brand needs to say, down to the specific proof points for each audience segment.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Brand brain** with the [Product context file writer](https://useaiblocks.com/skills/product-context-builder). Bring your question, a codebase (optional). It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Before You Start
 
 Check if `.agents/brand-context.md` exists. Read it first. Use that context — only ask for what's missing.
@@ -134,6 +155,15 @@ Common messaging mistakes for this category or brand:
 - Anything that contradicts the positioning
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer). It takes the brand brain and buyer profile.
+- The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper). It takes the product facts and buyer profile.
+- The [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner). It takes the brand brain and buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Related Skills
 

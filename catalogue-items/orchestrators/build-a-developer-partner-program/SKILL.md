@@ -61,6 +61,6 @@ NEXT ACTION   <one step>
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Work out the terms for one partner** with the [Set up a partner deal both sides win from](https://useaiblocks.com/workflows/partner-deal-setup) workflow.
-- **Plan the announcement** with the [Prepare a partner launch announcement pack](https://useaiblocks.com/workflows/prepare-a-partner-launch-announcement-pack) workflow, once a partner has agreed.
+- **Work out the terms for one partner** with the [Partner deal profit planner](https://useaiblocks.com/workflows/partner-deal-setup) workflow.
+- **Plan the announcement** with the [Partner launch announcement and approval planner](https://useaiblocks.com/workflows/prepare-a-partner-launch-announcement-pack) workflow, once a partner has agreed.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

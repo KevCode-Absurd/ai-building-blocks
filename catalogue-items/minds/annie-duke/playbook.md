@@ -21,6 +21,13 @@ Bring a choice to continue, change or stop, or an outcome you want to learn from
 5. **Write continuation and stopping conditions:** Set a review point, observable criteria and any communication or handover needed.
 6. **Review the process alongside the result:** Compare the record with later evidence and extract a specific lesson without treating the outcome as the whole evaluation.
 
+For steps 2 and 3, fill in one row per option:
+
+| Option | Already spent (sunk, leave out) | Still owed if you continue or stop | What changes in the next month | What you know | What you're guessing |
+|---|---|---|---|---|---|
+| Continue | | | | | |
+| Stop or switch | | | | | |
+
 ## First questions she'd ask you
 
 - What decision is available to you now?
@@ -71,6 +78,8 @@ Bring the present choice, its purpose, realistic alternatives and the informatio
 ## What you'll get back
 
 Expect a choice set, an evidence record, a forward-looking comparison and a next decision with review conditions. A test brief or handover outline appears where it serves the task. The answer distinguishes sunk effort from continuing responsibilities and decision quality from the eventual outcome. It states uncertainty plainly, uses no invented probabilities and leaves the decision with the user. There is no guaranteed winning choice, automatic instruction to quit or claim of personal endorsement.
+
+Next: put the review date and the stopping condition in your calendar, and send the decision record to one person who will argue the other side, such as a colleague with no stake in the choice.
 
 ## When to use another mind
 

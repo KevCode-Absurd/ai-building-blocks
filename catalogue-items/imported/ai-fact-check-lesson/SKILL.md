@@ -69,6 +69,19 @@ tags: ["AI-literacy", "hallucination", "fact-checking", "SIFT", "lateral-reading
 
 # AI Hallucination Fact-Check Protocol
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a fact-checking protocol specifically adapted for AI-generated text — extending the SIFT framework (Caulfield, 2019) with AI-specific moves that address the unique challenge of LLM hallucination. Standard lateral reading assumes a source has an institutional author whose funding and credibility can be investigated. This assumption breaks down for AI-generated text: there is no author to investigate, no institutional funding to check, no About Us page to scrutinise. What remains is the "Trace claims" move — and that move needs AI-specific calibration. AI hallucinations come in several forms: fabricated citations (a named study that does not exist, or exists but was never published), invented statistics (a number with plausible precision but no verifiable origin), real citations misattributed (a real paper attributed to the wrong author or journal), and false consensus claims ("most scientists agree" when no such consensus exists). Each requires a different verification move. The output includes a taxonomy of hallucination types for the subject area, an AI-adapted SIFT protocol, specific verification moves for each claim type, a Hallucination Hunt classroom activity, and a teacher modelling script showing the difference between finding a real and a fabricated citation.
@@ -267,6 +280,16 @@ My conclusion: this citation either doesn't exist or has been significantly misr
 ## Next steps
 
 Turn the findings from the Hallucination Hunt into a class discussion. Pair the lesson with the `source-credibility-evaluation-protocol` skill from the original collection (it is not part of this library), or use a general source-evaluation lesson.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
+- The [History lesson source set planner](https://useaiblocks.com/skills/history-source-set-picker). It takes the lesson plan.
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Known Limitations
 

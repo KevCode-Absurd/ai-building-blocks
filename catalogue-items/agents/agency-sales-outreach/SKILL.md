@@ -17,7 +17,7 @@ Ask which one the user wants, then run only that job.
 2. **They replied.** Run steps 1, 5 and 6. Return the snapshot, the reply drafts and the next action.
 3. **Deal check.** Run steps 1 and 6. Return the snapshot, the stage, the next action and what could stall.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -37,7 +37,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
 2. **Check what's missing.** Look for your question, your brand brain, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Any of them can draft from pasted text. Use one with web search if you want it to look for news on the prospect.
@@ -90,9 +90,9 @@ Return these sections in order. If your AI can save files, save one file. If not
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
-When to stop and hand off: if the buyer asks for a full proposal, move to the [Proposal Strategist agent](https://useaiblocks.com/skills/agency-sales-proposal-strategist). If the user needs a plan for a list of accounts, move to the [Outbound Strategist agent](https://useaiblocks.com/skills/agency-sales-outbound-strategist). The "After this" links above are shared suggestions: offer the ones that fit.
+When to stop and hand off: if the buyer asks for a full proposal, move to the [Sales proposal narrative writer](https://useaiblocks.com/skills/agency-sales-proposal-strategist). If the user needs a plan for a list of accounts, move to the [Outbound sales planner](https://useaiblocks.com/skills/agency-sales-outbound-strategist). The "After this" links below are shared suggestions: offer the ones that fit.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.

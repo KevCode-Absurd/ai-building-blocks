@@ -7,6 +7,19 @@ description: Use when reviewing a cart, checkout, or payment form — e.g. "revi
 
 Audit the cart, checkout, and payment step — not the product page. Let someone who already wants the item pay without being blocked, surprised, or sent away to hunt for a code.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - A cart, checkout, or payment form (URL, screenshot, or walkthrough)
@@ -23,6 +36,8 @@ Audit the cart, checkout, and payment step — not the product page. Let someone
 ## Inputs
 
 Collect, or state your assumption: the flow (steps vs one page; mobile vs desktop); whether an account is required before the form; the field list; when shipping, tax, and the total appear; coupon field; wallets (Apple Pay, Google Pay, Shop Pay, Link) and their placement; returning-customer path; error states (decline, inventory, 3-D Secure).
+
+Before you rank anything, list the inputs you were not given and the assumption you made for each, so the user can correct them.
 
 ## Procedure
 
@@ -44,10 +59,17 @@ Rank by distance from the rule and whether the miss sits on the pay path. Ship t
 
 | # | Issue | Change | Measured effect (study context) | Source |
 |---|---|---|---|---|
-| 1 | Login/Register before the form | Continue as guest | +45% customers purchasing (one large retailer) † | Spool |
+| 1 | Login/Register before the form | Continue as guest | +45% customers purchasing (one large retailer) † | Spool, "The $300 million button" (practitioner case, not peer-reviewed; see reference.md) |
 | 2 | Always-on coupon box | "Have a code?" | Lower completion when prompted with no code | Oliver & Shor 2003 |
 
 Close with what the flow already does right. Effects are from the cited contexts, not predictions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

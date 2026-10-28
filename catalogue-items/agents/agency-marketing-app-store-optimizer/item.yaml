@@ -14,7 +14,7 @@ inputs:
     required: false
   - type: competitor_set
     required: false
-  - type: performance_sheet
+  - type: spreadsheet
     required: false
 outputs:
   - type: plan

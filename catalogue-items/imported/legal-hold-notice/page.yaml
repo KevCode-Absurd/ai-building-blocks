@@ -23,6 +23,7 @@ you_give:
   - The dispute and key facts, from the matter file
   - The people and teams who hold records, from your team or HR
   - The date range and systems involved, such as email or shared drives
+  - The court, country or state whose rules apply (the forum)
   - Your matter log, from your matter intake step
   - Your house-style notes file, from your legal setup interview
 you_get:
@@ -31,11 +32,12 @@ you_get:
   - A release notice
   - A log entry for the matter
 how_to_use:
+  - "What it needs, and where to get each: the matter-intake step and the portfolio status report come from the same claude-for-legal litigation plugin and are not in this item. The house-style notes file comes from the setup interview, which is in this item's setup-interview folder. Word files need a Word (docx) skill or tool in your AI. Researching the preservation rule needs web access, or a legal research tool."
   - Download the skill folder and add it to your AI tool. Your AI must be able to read files and make Word files.
   - Make sure the matter is in your matter log and your house-style notes file is saved.
   - Tell your AI to issue a hold, and name the matter. Add the facts, people, dates and systems.
   - Read the draft notice and the log changes. Fix anything wrong before you confirm.
-  - Send the notice to a lawyer to review before it goes to staff.
+  - Send the notice to a lawyer to review before it goes to staff. Check every rule and case the draft cites against the official source for your forum first, because they may come from the AI's memory.
   - Later, ask for a refresh when scope changes, or a release when the matter ends.
 output_sample:
   input:

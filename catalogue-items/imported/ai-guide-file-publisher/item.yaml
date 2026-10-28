@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-agentic-llms-txt skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/agentic/shopify-admin-agentic-llms-txt
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, made the theme copy a required step before writing, required the drafted template to be shown and approved first, and dropped the unexplained assets/llms.txt write. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

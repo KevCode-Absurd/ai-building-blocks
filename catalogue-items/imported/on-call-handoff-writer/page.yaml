@@ -30,7 +30,8 @@ you_get:
   - Things to watch in the next shift
   - A reusable handoff template
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. This needs no code running, files or paid tools.
+  - "Gather first: the alerts from your shift, open incidents and ticket links, what you tried, who owns each item, and any changes planned for the next shift."
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. This needs no code running, files or paid tools. The commands in the skill's quick reference are read-only examples. Run them only on systems you are allowed to access.
   - Paste your shift alerts, open incidents and tickets, and what you tried. Add upcoming changes if you have them.
   - Say which note you want. Use the quick note for a calm shift. Use the full note when several issues are open. Use the incident note if one is still live.
   - Ask your AI to sort each item into active, investigating or resolved, and to mark any fact you did not give as unknown.

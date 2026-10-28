@@ -7,6 +7,19 @@ description: When the user wants to solve single-period inventory problems, opti
 
 You are an expert in newsvendor models and single-period inventory optimization under uncertainty. Your goal is to help determine optimal stocking quantities for products with a single ordering opportunity and uncertain demand, balancing the costs of excess inventory against the costs of stockouts.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before solving newsvendor problems, understand:
@@ -198,7 +211,9 @@ class NewsvendorModel:
         # Expected lost sales
         expected_lost_sales = self.expected_lost_sales(Q_star)
 
-        # In-stock probability (fill rate)
+        # In-stock probability (cycle service level) = P(D <= Q*).
+        # Kept under the key 'fill_rate' for compatibility; the true fill rate
+        # (share of demand met) is expected_sales / mean demand.
         fill_rate = self.dist.cdf(Q_star)
 
         return {
@@ -238,7 +253,7 @@ class NewsvendorModel:
         """
 
         # For continuous distribution, use integration
-        # E[min(D,Q)] = Q - ∫[Q to ∞] F(x)dx
+        # E[min(D,Q)] = Q - ∫[0 to Q] F(x)dx   (for demand D >= 0)
         #             = Q - E[max(0, D-Q)]
 
         # Alternative formula:
@@ -494,7 +509,8 @@ def example_basic_newsvendor():
     print(f"{'Expected Sales:':<35} {optimal['expected_sales']:.0f} units")
     print(f"{'Expected Leftover Inventory:':<35} {optimal['expected_leftover']:.0f} units")
     print(f"{'Expected Lost Sales:':<35} {optimal['expected_lost_sales']:.0f} units")
-    print(f"{'Fill Rate (Service Level):':<35} {optimal['fill_rate']:.2%}")
+    print(f"{'In-stock Probability:':<35} {optimal['fill_rate']:.2%}")
+    print(f"{'Fill Rate (share of demand met):':<35} {optimal['expected_sales'] / model.dist.mean():.2%}")
 
     # Financial breakdown
     revenue = model.p * optimal['expected_sales']
@@ -687,7 +703,7 @@ def example_discrete_newsvendor():
     print(f"{'Expected Daily Profit:':<35} ${optimal['expected_profit']:.2f}")
     print(f"{'Expected Sales:':<35} {optimal['expected_sales']:.1f} loaves")
     print(f"{'Expected Waste:':<35} {optimal['expected_leftover']:.1f} loaves")
-    print(f"{'Fill Rate:':<35} {optimal['fill_rate']:.2%}")
+    print(f"{'In-stock Probability:':<35} {optimal['fill_rate']:.2%}")
 
     # Show all options
     print("\n\nEvaluation of All Order Quantities:")
@@ -741,8 +757,15 @@ class MultiProductNewsvendor:
         """
         Calculate marginal benefit of ordering one more unit of product i
 
-        MB(Q) = p*P(D > Q) - c*P(D ≤ Q) + v*P(D ≤ Q)
-              = p*P(D > Q) - (c - v)*P(D ≤ Q)
+        The extra unit always costs c. It sells at p if D > Q,
+        otherwise it is salvaged at v:
+        MB(Q) = p*P(D > Q) + v*P(D ≤ Q) - c
+              = (p - c)*P(D > Q) - (c - v)*P(D ≤ Q)
+
+        Check: p=5, c=2, v=0.5, P(D ≤ Q)=0.7 gives
+        3*0.3 - 1.5*0.7 = -0.15, so do not add the unit.
+        MB(Q) > 0 exactly while P(D ≤ Q) < (p - c)/(p - v), the critical
+        fractile, so with no constraint the greedy stops at Q*.
         """
         prod = self.products[product_idx]
 
@@ -751,14 +774,17 @@ class MultiProductNewsvendor:
         prob_excess = 1 - dist.cdf(Q)
         prob_shortage = dist.cdf(Q)
 
-        mb = (prod['price'] * prob_excess -
+        mb = ((prod['price'] - prod['cost']) * prob_excess -
               (prod['cost'] - prod['salvage']) * prob_shortage)
 
         return mb
 
     def optimize_greedy(self) -> Dict:
         """
-        Greedy heuristic: iteratively add unit with highest marginal benefit
+        Greedy heuristic: iteratively add the unit with the highest marginal
+        benefit (per dollar of cost when a budget is set, per unit otherwise).
+        Stops when no unit adds expected profit, so it never orders past
+        each product's unconstrained optimum.
 
         Respects budget and capacity constraints
         """
@@ -784,11 +810,12 @@ class MultiProductNewsvendor:
                 if self.capacity and total_units + 1 > self.capacity:
                     continue
 
-                # Calculate marginal benefit
+                # Calculate marginal benefit (rank per dollar under a budget)
                 mb = self.marginal_benefit(i, Q[i])
+                score = mb / prod['cost'] if self.budget else mb
 
-                if mb > best_mb:
-                    best_mb = mb
+                if mb > 0 and score > best_mb:
+                    best_mb = score
                     best_product = i
 
             # If no product has positive marginal benefit, stop
@@ -989,12 +1016,14 @@ if __name__ == "__main__":
 
 ### Newsvendor Analysis Report
 
+*Illustrative example. The inputs are made-up round numbers, and every figure below is worked out from them with the normal-demand formulas above (Q* = μ + zσ; expected lost sales = σ·L(z), where L(z) = φ(z) − z(1 − Φ(z))). Check that revenue + salvage − cost equals the profit line before you hand a report over.*
+
 **Executive Summary:**
-- Product: Fall fashion jacket collection
-- Optimal order quantity: 1,850 units
-- Expected profit: $87,500
-- Expected leftover: 125 units (6.8% of order)
-- Recommendation: Order 1,850 units before season starts
+- Product: Fall fashion jacket collection (example)
+- Optimal order quantity: 1,929 units
+- Expected profit: $98,183
+- Expected leftover: 195 units (10.1% of order)
+- Recommendation: Order 1,929 units before season starts
 
 **Problem Setup:**
 
@@ -1020,38 +1049,51 @@ if __name__ == "__main__":
 
 | Metric | Value |
 |--------|-------|
-| Optimal Order Quantity | 1,850 units |
-| Expected Sales | 1,725 units |
-| Expected Leftover Inventory | 125 units |
-| Expected Lost Sales | 75 units |
-| Fill Rate (Service Level) | 66.7% |
-| Expected Revenue | $172,500 (sales) + $1,250 (salvage) |
-| Expected Cost | $74,000 |
-| **Expected Profit** | **$87,500** |
+| z-score at critical fractile | 0.431 |
+| Optimal Order Quantity | 1,929 units (1,800 + 0.431 × 300) |
+| Expected Sales | 1,734 units |
+| Expected Leftover Inventory | 195 units |
+| Expected Lost Sales | 66 units |
+| In-stock Probability (cycle service level) | 66.7% |
+| Fill Rate (share of demand met) | 96.3% |
+| Expected Revenue | $173,392 (sales) + $1,951 (salvage) |
+| Expected Cost | $77,160 (1,929 × $40) |
+| **Expected Profit** | **$98,183** ($173,392 + $1,951 − $77,160) |
 
 **Sensitivity Analysis:**
 
 | Scenario | Order Quantity | Expected Profit | Change |
 |----------|----------------|-----------------|--------|
-| Base Case | 1,850 | $87,500 | - |
-| Demand -20% | 1,490 | $70,000 | -20% |
-| Demand +20% | 2,210 | $105,000 | +20% |
-| Higher Salvage ($20) | 1,730 | $89,200 | +2% |
-| Lower Salvage ($5) | 1,920 | $86,800 | -1% |
+| Base Case | 1,929 | $98,183 | - |
+| Demand -20% (mean 1,440, σ 240) | 1,543 | $78,546 | -20% |
+| Demand +20% (mean 2,160, σ 360) | 2,315 | $117,819 | +20% |
+| Higher Salvage ($20) | 2,002 | $100,373 | +2% |
+| Lower Salvage ($5) | 1,901 | $97,254 | -1% |
+
+Higher salvage makes leftovers cheaper, so the best order goes **up**; lower salvage makes it go down.
 
 **Risk Assessment:**
 - Probability demand exceeds order: 33%
-- Probability of leftover > 200 units: 15%
-- Worst-case scenario (demand = 1,200): Profit = $45,000
+- Probability of leftover > 200 units: 41% (demand below 1,729)
+- Low-demand scenario (demand = 1,200): Profit = $50,130 (1,200 × $100 + 729 × $10 − $77,160)
 
 **Recommendations:**
-1. Order 1,850 units (round to nearest case pack size)
-2. Secure clearance channel for expected 125 leftover units
+1. Order 1,929 units (round to nearest case pack size)
+2. Secure clearance channel for expected 195 leftover units
 3. Monitor early-season sales (first 2 weeks)
 4. If sales tracking 20%+ above forecast, consider mid-season reorder
 5. Plan markdown strategy for week 8-10 of season
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker). It takes the plan.
+- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the plan.
+- The [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

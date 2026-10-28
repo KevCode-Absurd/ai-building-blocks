@@ -87,7 +87,7 @@ LOW    <gap | where | fix>
 
 SCHEDULE  weekly: <...>  monthly: <...>  on each promotion: <...>  once: <...>
 SCORE  <n>/100 (100 - 20 x <High> - 10 x <Medium> - 5 x <Low> = <n>), on the checks run
-NOT RUN  <check | what is needed, or "none">
+NOT RUN (the CHECKS MISSED list)  <check | what is needed, or "none">
 MISSING: <what would sharpen it>
 NOTE  Google does not name the exact reason for a suspension. This is a best-practice check, not a guarantee.
 ```
@@ -97,7 +97,7 @@ Use `pass`, `fail` or `not run` for each area. NOT RUN is also the checks-missed
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search term sorter](https://useaiblocks.com/skills/search-term-sorter). It takes the audit report.
+- The [Google Merchant Center feed checker](https://useaiblocks.com/skills/merchant-center-feed-health-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

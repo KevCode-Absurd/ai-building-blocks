@@ -18,10 +18,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Video clips** (yours): the clips you want to edit.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
-- **Your video ads** (yours): the video ads, attached or linked.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your video ads** (yours): the video ads, attached or linked.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **A shot list**, made by the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): the video broken into shots, with timing and on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
@@ -41,7 +41,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for video clips, a video ad script, your video ads. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for video clips, a video ad script, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -68,7 +68,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Cut the video to the cut list in your editor and export it.
 
 2. **Caption it in your brand font.** Use the skill `branded-video-captions`. It reads the exported video, the script and the caption windows in `outputs/step-01-video-ad-edit-planner.md`, and your font file. It keeps each caption word for word with the script, splits the words into groups, times each group to the speech and places the captions clear of the app buttons. It returns three files: the clean video, the captioned video and a subtitle file. It also returns a fault list with the smallest fix for each fault. Save it as `outputs/step-02-branded-video-captions.md` and list the three files in it.
-3. **Check it before launch.** Use the skill `pre-launch-ad-checker`. It reads the captioned video from step 2, the script and your offer and claims. It walks the ad as a viewer meets it, with the sound off first. It returns a stop-ship list, a list of things worth a look, the few things only a person can check on a real phone, a readiness score out of 100 and a verdict. Anything it could not inspect is listed as not checked, not passed. Save it as `outputs/step-03-pre-launch-ad-checker.md`.
+3. **Check it before launch.** Use the skill `pre-launch-ad-checker`. It reads the captioned video from step 2, the script and your offer and claims. It walks the ad as a viewer meets it, with the sound off first. It returns a stop-ship list, a list of things worth a look, the few things only a person can check on a real phone, a readiness score out of 100 and a verdict. Anything it could not inspect is listed as not checked, not passed. Save it as `outputs/step-03-pre-launch-ad-checker.md`. If the verdict is fix: caption faults go back to step 2, and cut, timing or sound faults go back to your editor with step 1's cut list. Make the one-line fixes, export again and rerun step 3. If the verdict is remake: go back to step 1 with the missing or weak shots listed.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -77,6 +77,9 @@ Three step files and the summary. The last step file holds the launch check.
 - **Step 2, captions:** caption groups word for word, style and font, a timing table, the three files and a fault list.
 - **Step 3, launch check:** stop-ship mistakes first, each with a fix, then things worth a look, things for a person to check, the score and the verdict.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
+
+## Next steps for this workflow
+Use this, not the generated link below, which is for making new clips. Suggest one next step as a short question: when the verdict is ship, upload the captioned video and launch it yourself (nothing here posts it), then bring the first week's results back to judge the ad.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

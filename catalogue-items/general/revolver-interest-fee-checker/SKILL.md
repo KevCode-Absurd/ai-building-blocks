@@ -54,15 +54,6 @@ Use these headings, in this order: PERIOD AND SOURCES, INPUTS, CHARGES (interest
 
 If they ask for a spreadsheet and you can make files: put inputs, calculations and checks on separate sheets, mark input cells, change one input to confirm the total moves, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **See how much you can still borrow** with the [Revolver availability checker](https://useaiblocks.com/skills/revolver-availability-checker). Bring the commitment, the drawn amount and any letters of credit.
-- **Check your leverage test** with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker). Bring your debt, cash and earnings figures.
-- **Check cash cover for the lender's tests** with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker). Bring your debt service and cash figures.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, in USD, not a real facility. Average drawn 500, average unused 500, interest rate 12% (0.12), commitment fee rate 1.2% (0.012), 30 days, 360 basis, other fees 0.
@@ -83,6 +74,15 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 - Any fee base carve-out, such as letters of credit, is sourced to the agreement.
 - Any difference from the bill is shown as a difference, with no plug.
 - Every figure traces to a source, a date, a currency and a scale.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **See how much you can still borrow** with the [Revolving credit availability checker](https://useaiblocks.com/skills/revolver-availability-checker). Bring the commitment, the drawn amount and any letters of credit.
+- **Check your leverage test** with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker). Bring your debt, cash and earnings figures.
+- **Check cash cover for the lender's tests** with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker). Bring your debt service and cash figures.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

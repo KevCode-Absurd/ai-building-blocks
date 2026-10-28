@@ -66,7 +66,7 @@ The weight statement. The cash log with GOOD, POOR or UNKNOWN. The pay compariso
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
 - The [Return on equity and margin checker](https://useaiblocks.com/skills/roe-margin-check). It takes the audit report.
-- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
+- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

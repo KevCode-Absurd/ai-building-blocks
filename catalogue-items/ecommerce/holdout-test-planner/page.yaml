@@ -74,7 +74,7 @@ how_it_works:
   - title: Builds the read-out table
     text: Holdout rate, exposed rate, absolute and relative lift, and the share of results the thing really caused.
   - title: Writes the budget rule
-    text: Keep, cut or repeat, based on the extra cost per extra order against your break-even.
+    text: Keep, cut or repeat. It first checks that the spend added any orders at all, then compares the cost per extra order with your break-even.
   - title: States the cost
     text: Sales given up or spend paused during the test.
   - title: Adds the log
@@ -88,7 +88,7 @@ output_shape: |
   COST         <sales given up or spend paused during the test>
   READ-OUT TABLE
    measure | holdout (baseline) | exposed | absolute lift | relative lift | incremental share
-  DECISION RULE  keep if <...> | cut or move if <...> | repeat if <...>
+  DECISION RULE  extra orders at or below 0: cut or move | range crosses 0: repeat | above 0: keep if worst-case cost per extra order < <break-even>, cut or move if best case > <break-even>, else repeat
   LOG          question | method | result with range | budget decision
   MISSING: <what was not given>
   CHECKS MISSED: <one line each, or none>

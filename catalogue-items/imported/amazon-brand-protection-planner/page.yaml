@@ -9,7 +9,7 @@ subhead: A set of checks and ready complaint templates to protect your Amazon br
 explain: |
   A set of checks and ready complaint templates to protect your Amazon brand from hijackers, fakes and sellers breaking your price rules (your minimum advertised price, or MAP, is the lowest price you allow sellers to show). It works to risk levels, so you know what needs action in 24 hours and what only needs watching.
 
-  You give the brand name and listings. It does not watch Amazon for you. It checks four signals in the data you paste in: new sellers appearing on your listing, prices below your minimum, review wording that hints at counterfeits, and your trademark used in other sellers' titles. Each gets a risk rating of high, medium or low. It supplies a Brand Registry complaint, a cease and desist letter, a MAP notice and a guide to making a test buy for evidence. Check each letter with a lawyer before sending.
+  You give the brand name and listings. It does not watch Amazon for you. It checks four signals in the data you paste in: new sellers appearing on your listing, prices below your minimum, review wording that hints at counterfeits, and your trademark used in other sellers' titles. Each gets a risk rating of high, medium or low. It supplies a Brand Registry complaint, a cease and desist letter, a MAP notice and a guide to making a test buy for evidence. Amazon's complaint tools are for fakes and trademark misuse. They are not for price breaks or for sellers of real goods you did not approve. Check each letter with a lawyer before sending.
 when:
   - Another seller has suddenly joined your listing.
   - Reviews say the product is fake or different from the photos.
@@ -35,7 +35,7 @@ how_to_use:
   - Open the skill in an AI that can run code. The detector script runs only on built-in sample data. Ask your AI to open scripts/detector.py, find get_demo_data(), and replace the brand, listings, sellers and review text there with yours before it runs. Give one entry per listing: its ASIN, title, price, and each seller with their ID, name and price, plus the review text.
   - A review that says fake is weak evidence. Confirm with a test buy before you send any complaint.
   - Ask your AI to run detector.py on your details. Read the risk rating for each listing. High means act within 24 hours.
-  - "Before you run the templates script, replace the sample brand, seller and contact details in its main() with yours. Then run it for the letter you need: complaint, cease, map or testbuy. When a listing rates high, send the Brand Registry complaint first. Use the cease and desist letter only if you know who the seller is."
+  - "Before you run the templates script, replace the sample brand, seller and contact details in its main() with yours. Then run it for the letter you need: complaint, cease, map or testbuy. When a listing rates high, do a test buy first. Send the Brand Registry complaint or the cease and desist letter only if the item is fake or misuses your trademark. A seller who is not on your list, or who prices below your MAP, is not grounds for a complaint on its own. Send the MAP notice only to resellers who agreed to your MAP policy."
   - Have a lawyer check each letter before you send it. Treat the sample report as made-up example data.
 output_sample:
   input:

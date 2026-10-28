@@ -29,4 +29,4 @@ credits:
   - title: job-shop-scheduling skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/job-shop-scheduling
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a note that the branch-and-bound and shifting bottleneck code are simplified sketches. We added Before you start and After this sections that link to other AI Blocks steps.

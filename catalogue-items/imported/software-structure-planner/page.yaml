@@ -31,10 +31,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
   - Paste the full text of the skill's SKILL.md into the chat.
-  - Paste your folder tree, or a short list of your main folders and what each holds.
+  - Paste your folder tree, or a short list of your main folders and what each holds. The top two folder levels are enough, plus the few files that hold your business rules. You do not need to paste the whole codebase.
   - Say which framework and database you use. Add the change you want to make later, if you have one.
   - Ask your AI to score your structure with the seven checks.
   - Read the failed checks first. Make the fixes one at a time, starting with the dependency that leaks the most.
+  - After the fixes, paste the new folder tree and run the seven checks again to confirm the score went up.
 output_sample:
   input:
     - Your codebase or a list of its folders

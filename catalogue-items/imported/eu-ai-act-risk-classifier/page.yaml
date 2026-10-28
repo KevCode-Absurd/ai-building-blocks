@@ -5,11 +5,11 @@ name: EU AI Act risk classifier
 summary: Find your AI system's risk tier under the EU AI Act, the paperwork it needs, and the duties for your role. Not legal advice.
 job: check-contracts
 headline: EU AI Act risk classifier
-subhead: The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
+subhead: The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned or high-risk, and which transparency duties apply on top, even to a high-risk system.
 explain: |
-  The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
+  The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned or high-risk, and which transparency duties apply on top, even to a high-risk system.
 
-  You describe the system, its purpose and who uses it. The skill checks it against the banned practices first, then the high-risk areas such as hiring, credit and education. For high-risk systems it plans the conformity route and the technical documents. It then lists duties by your role: provider, user, importer or distributor. Three Python scripts back each step. It is not legal advice, and unclear cases should go to a lawyer.
+  You describe the system, its purpose and who uses it. The skill checks it against the banned practices first, then the high-risk areas such as hiring, credit and education. For high-risk systems it plans the conformity route and the technical documents. It then lists duties by your role: provider, user, importer or distributor, with the date each one starts. Each transparency duty goes to the role the law names. The maker of a chatbot must make it say it is an AI. The business that publishes a deepfake must label it. Three Python scripts back each step. It is not legal advice, and unclear cases should go to a lawyer.
 when:
   - You are about to launch an AI feature and need to know its risk tier.
   - You are not sure if your system counts as high-risk.
@@ -28,7 +28,7 @@ you_get:
   - Risk tier with the reason
   - Conformity route for high-risk systems
   - Documentation checklist
-  - Duties by role
+  - Duties by role, with start dates
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - "Describe your system: its purpose, who uses it, who it affects, what data it uses and where it runs."
@@ -46,12 +46,12 @@ output_sample:
     - An AI that can run Python scripts, if you want the three included scripts to run (optional)
   output:
     - name: Risk tier
-      contains: Whether the system is banned, high-risk, limited-risk with a transparency duty, or minimal-risk, with the Article that decides it.
+      contains: Whether the system is banned, high-risk or neither, with the Article that decides it, plus any transparency duty that applies on top, even for a high-risk system.
     - name: Conformity route
       contains: "For high-risk systems, which assessment route under Article 43 applies: internal control or a full quality system with a notified body."
     - name: Annex IV documentation checklist
       contains: The technical documents a high-risk system needs, listed so you can gather each one.
     - name: Obligations by role
-      contains: The duties and deadlines that fall on you as provider, deployer, importer, distributor or authorized representative.
+      contains: "The duties that fall on you as provider, deployer, importer, distributor or authorized representative, each with the date it starts. Transparency duties go to the role the law names: providers make chatbots say they are AI and mark AI-made content; deployers label deepfakes and tell people about emotion recognition."
     - name: Decision memo
       contains: A short memo with a bottom line, Article citations, the evidence, three next steps and the call left for your lawyer.

@@ -37,8 +37,8 @@ how_to_use:
   - "Open Claude, ChatGPT or Gemini. Turn on web search: the skill reads the rival's public pages."
   - Add the skill to your AI with the buttons on this page, or paste the skill text into the chat.
   - "First paste the rival's name. Then paste the deal in three lines: the buyer, the stage and what they care about. A closed-deals export and call notes are optional. With neither, you get the rival's public view only."
-  - In a plain chat in ChatGPT or Gemini, the parts of the skill about connectors, Pages and records do not apply. Skip them. Pasted files and notes are a full input.
-  - It reads public pages only. Check a rival site's terms before you lean on its pages in a claim you make to a buyer.
+  - In a plain chat in ChatGPT or Gemini, the parts of the skill about connectors, Pages and records do not apply. Skip them. Pasted files and notes are a full input. The other skills it names (customer-voice, handle-objection, draft-outreach) are optional. Without them it does that step in plain text.
+  - It fetches the rival's public web pages through web search. That is a light form of web scraping, and some sites' terms forbid it. Check the rival site's terms allow this before you use what it finds in a claim to a buyer.
   - Read the plan first, then the sources under it. Check any claim marked unverified before you say it to a buyer.
   - If you use a connected CRM, email or call-recording tool, it needs your own access, and some of these are paid. Files you paste work as well.
   - Use the plan on your next call. Ask for a battlecard once you trust the facts.

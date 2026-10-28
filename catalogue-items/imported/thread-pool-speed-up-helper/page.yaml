@@ -9,7 +9,9 @@ subhead: Give it slow local parallel code. Get it switched to a thread pool, wit
 explain: |
   MATLAB code that runs in parallel on your own computer often barely beats a plain loop, because data gets copied between worker processes. Switching to a thread pool removes much of that copying, and your existing parfor, parfeval or spmd code needs no rewrite.
 
-  The skill starts the thread pool and runs your code. Ask it to time the run against the process pool (with tic and toc) so you can see the gain. If something is not supported on threads, MATLAB says so and the skill falls back to a process pool. It also explains what threads really save: large shared variables are not copied, while sliced arrays still are. It can set Threads as your default. It does not apply to clusters or Simulink parallel runs.
+  The skill starts the thread pool and runs your code. Ask it to time the run against the process pool (with tic and toc) so you can see the gain. If something is not supported on threads, MATLAB says so and the skill falls back to a process pool. It also explains what threads really save: large shared variables are not copied, while sliced arrays still are. It can set Threads as your default. It does not apply to clusters or Simulink parallel runs. If a process pool is already open, it asks you before closing it.
+
+  Licence: the LICENSE.md file in this item governs. It is BSD 2-Clause with one added term: you may use the skill only with MathWorks products and services. The license link in the skill file's header points to a MathWorks licence page; follow LICENSE.md, and keep it with any copy. Skills it mentions, such as matlab-optimize-performance, may not be installed; in this library, use the MATLAB speed tuner.
 when:
   - Your parfor loop is only slightly faster than a normal for loop.
   - Workers spend a lot of time receiving large arrays.

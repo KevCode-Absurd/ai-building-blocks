@@ -47,12 +47,12 @@ last_checked: 2026-10-20
 sources:
   - {n: 1, title: "Joe Girard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Joe_Girard", kind: reference}
   - {n: 2, title: "The History of Joe Girard (biography)", by: "JoeGirard.com", url: "http://www.joegirard.com/biography/", kind: reference}
-  - {n: 3, title: "Repeat Business and Referrals (posted January 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/repeat-business-and-referrals/", kind: own-words}
-  - {n: 4, title: "Tell Customers You Appreciate Their Business (posted October 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/tell-customers-you-appreciate-their-business/", kind: own-words}
-  - {n: 5, title: "Banish Fear Forever (posted December 1, 2021)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/banish-fear-forever/", kind: own-words}
-  - {n: 6, title: "Build Your Business (posted December 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/build-your-business/", kind: own-words}
-  - {n: 7, title: "Spend Your Time Wisely (posted February 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/spend-your-time-wisely/", kind: own-words}
-  - {n: 8, title: "Find the Right Product for Your Customer (posted May 1, 2022)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/find-the-right-product-for-your-customer/", kind: own-words}
+  - {n: 3, title: "Repeat Business and Referrals (posted January 1, 2022, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/repeat-business-and-referrals/", kind: own-words}
+  - {n: 4, title: "Tell Customers You Appreciate Their Business (posted October 1, 2022, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/tell-customers-you-appreciate-their-business/", kind: own-words}
+  - {n: 5, title: "Banish Fear Forever (posted December 1, 2021, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/banish-fear-forever/", kind: own-words}
+  - {n: 6, title: "Build Your Business (posted December 1, 2022, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/build-your-business/", kind: own-words}
+  - {n: 7, title: "Spend Your Time Wisely (posted February 1, 2022, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/spend-your-time-wisely/", kind: own-words}
+  - {n: 8, title: "Find the Right Product for Your Customer (posted May 1, 2022, after his death, by the site's owners)", by: "Joe Girard, JoeGirard.com", url: "https://www.joegirard.com/posts/find-the-right-product-for-your-customer/", kind: own-words}
   - {n: 9, title: "Sales Training Books (book page)", by: "JoeGirard.com", url: "https://www.joegirard.com/books/", kind: reference}
 tests:
   - {kind: use, prompt: "Write the thank-you letter a bike shop should send the evening a customer buys a new bike."}

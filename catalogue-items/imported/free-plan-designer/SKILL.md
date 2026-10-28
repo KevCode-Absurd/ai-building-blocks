@@ -12,6 +12,22 @@ license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICE
 
 # Free Tier Strategy
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** Any chat AI can design the plan from the facts you paste.
+<!-- /needs -->
+
 ## Working in a chat (added by AI Blocks)
 
 The advice below is the original author's and is unchanged. This section tells you how to run it in a chat.
@@ -498,3 +514,11 @@ These tools are optional examples. Lago, Flagsmith and PostHog have open source 
 - Use this skill only when the task clearly matches its upstream source and local project context.
 - Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
 - Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SaaS pricing planner](https://useaiblocks.com/skills/copilot-gtm-technical-product-pricing). It takes the plan.
+- The [Self-service product growth planner](https://useaiblocks.com/skills/copilot-gtm-product-led-growth). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

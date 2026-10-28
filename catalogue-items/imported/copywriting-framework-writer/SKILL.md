@@ -11,6 +11,29 @@ metadata:
 
 This skill enables an AI agent to write persuasive marketing and sales copy that drives action. The agent applies proven copywriting frameworks — AIDA (Attention, Interest, Desire, Action), PAS (Problem, Agitation, Solution), BAB (Before, After, Bridge), and 4Ps (Promise, Picture, Proof, Push) — and adapts tone, voice, and structure to the brand, audience, and channel. It supports landing pages, email campaigns, social media ads, product descriptions, and more.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for a buyer brief, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Define the Objective and Audience**
@@ -41,6 +64,8 @@ Provide the agent with:
 - **Channel** — landing page, email, Facebook ad, Google ad, product page
 - **Brand voice** — or a link to brand guidelines
 - **Constraints** — character limits, required disclaimers, mandatory phrases
+
+Return, in this order: the framework chosen and why, the copy, two or more CTA options, the A/B variants (each labelled), and the hypothesis behind each variant.
 
 Example prompt: "Write a landing page hero section for our project management tool aimed at remote teams. Use PAS. Tone: confident but friendly. Include two headline variants."
 
@@ -81,7 +106,9 @@ The examples below show layout only. Every figure, name and quote in them is a p
 > **Body:** Hi {first_name}, here is your code: **[CODE]**. FitTrack tracks heart rate, sleep, and activity, then gives you a single weekly health score — no complicated dashboards. **[Shop FitTrack — [X]% Off]**
 >
 > **Email 2 — Desire (Day 1)**
-> **Subject:** "I finally sleep through the night" — here is what changed
+> **Subject:** "[A short quote from a real, consenting customer]" — here is what changed
+>
+> (Any health result or customer quote must come from a real customer who agreed to be quoted. Never write one yourself.)
 > **Body:** [Real customer name and role, used with their permission] was [their real situation]. [What they found and changed, in their words]. [Their real result.] [A real figure about all users, only if you have the survey or data to back it.] Code **[CODE]** still active. **[Get Your FitTrack Now]**
 >
 > **Email 3 — Action (Day 2)**
@@ -104,3 +131,10 @@ The examples below show layout only. Every figure, name and quote in them is a p
 - **Extremely short formats:** For Google Ads (30-character headlines) or SMS (160 characters), prioritize the single strongest benefit and the CTA.
 - **Multi-language campaigns:** Avoid idioms, puns, and cultural references that do not translate. Write for translatability.
 - **Sensitive topics:** When writing about health, finances, or personal struggles, use empathetic language and avoid exploitative fear-mongering.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -52,6 +52,13 @@ For the in-deal play, return:
 
 For a battlecard or weekly digest, use the layout in Mode B. End with one next step, such as handling a specific pushback or writing the reply to the buyer.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales competitor guide writer](https://useaiblocks.com/skills/sales-battlecard-builder). It takes the competitors.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Tools used
 
 | Tool type | Used for | Required? |
@@ -130,3 +137,5 @@ tiers:
   gated-writes: none - competitor-field backfills hand off to
                 update-opportunity
 ```
+
+Changed by AI Blocks (2026-10-28): added notes on inputs, plain-chat use, missing companion skills and small deal samples.

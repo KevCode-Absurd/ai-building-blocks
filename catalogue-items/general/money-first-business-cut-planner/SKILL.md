@@ -80,14 +80,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Protect the time you free up** with the [Values-to-week planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
-- **See what the cuts do to your cash** with the [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every task is marked as earning or not.
@@ -96,6 +88,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The plan has a start date, two measures and a review date.
 - Results are not promised.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Protect the time you free up** with the [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- **See what the cuts do to your cash** with the [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -8,9 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: document
     required: true
   - type: question
+    required: true
+  - type: spreadsheet
     required: false
 outputs:
   - type: document

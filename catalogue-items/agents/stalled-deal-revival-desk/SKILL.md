@@ -20,6 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **A transcript** (yours): the words from a recording, written out, with who said what.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

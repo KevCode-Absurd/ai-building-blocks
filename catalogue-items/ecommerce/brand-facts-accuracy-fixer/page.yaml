@@ -156,3 +156,4 @@ terms:
     meaning: A claim about price, returns, delivery, safety or ingredients. These go first.
   - term: NAP
     meaning: Name, address and phone. Keep them the same in every listing.
+next: [ai-recommendation-panel-runner, ai-answer-visibility-tracker]

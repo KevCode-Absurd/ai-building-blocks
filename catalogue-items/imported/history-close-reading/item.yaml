@@ -32,4 +32,4 @@ credits:
   - title: close-reading-skill-builder skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/historical-thinking/close-reading-skill-builder
-    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+    used: Copied under the CC BY-SA-4.0 licence, and our changes are shared under the same licence. We gave it a plain name and rewrote one teaching response so it no longer says a friendly welcome and a later threat cannot both happen; students now check the order of events, claims and omissions before treating the accounts as in conflict. We added Before you start and After this sections that link to other AI Blocks steps.

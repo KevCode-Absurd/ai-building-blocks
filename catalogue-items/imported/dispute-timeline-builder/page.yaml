@@ -11,7 +11,7 @@ explain: |
 
   The skill reads the case notes if they exist, then goes through your sources and pulls out every dated event. It merges duplicates and tags each event with its sources. Each one is marked red, yellow or grey for how much it matters to the case theory. Unreachable documents are listed as gaps. Before finalising, it asks you to scan the red entries for mistakes. It also asks if any papers came from legal disclosure, as their use can be limited.
 
-  Deadlines and rules in the skill come from the AI's general knowledge and are tagged "verify". Check them with a lawyer. This is Anthropic's chronology skill from its claude-for-legal collection, shared under the Apache 2.0 licence. It is a copy of that skill. We changed only its name and added a short plain-chat procedure at the top, so the rest still mentions plugin paths you can ignore.
+  Deadlines and rules in the skill come from the AI's general knowledge and are tagged "verify". Check them with a lawyer. Source: Anthropic's chronology skill (claude-for-legal, Apache 2.0), with a plainer name and a short plain-chat procedure added at the top.
 when:
   - A contract dispute has dozens of emails and you need the order of events.
   - You must brief a lawyer and want the facts laid out clearly.
@@ -33,14 +33,12 @@ you_get:
   - A version history when you update it
 how_to_use:
   - "Start here: paste the plain-chat steps A to F from the top of SKILL.md into a chat, with your files uploaded. Ignore the saved-folder and plugin paths further down; you do not need them."
-  - "Gather first: PDFs, saved emails (.eml), Word files (.docx) and text files (.txt) about the dispute. Export emails so the dates show. Note which papers, if any, came from legal disclosure. Then open your AI tool. Use one that can read files, such as Claude. Add the skill, or paste its instructions into a chat. If you have no saved case folder, that is fine. It works from the files you upload and your one-line description of the issue."
+  - "Gather first: PDFs, saved emails (.eml), Word files (.docx) and text files (.txt) about the dispute. Export emails so the dates show. Note which papers, if any, came from legal disclosure. Then open a chat that can read uploaded files, such as Claude, and paste in steps A to F. You do not need a saved case folder."
   - "The least you need: your files (PDF, .eml, .docx or .txt), the date range, and one line on the main issue. A timeline row looks like this: [DATE] | [EVENT, one sentence] | red, yellow or grey | [SOURCE FILE]."
   - Statements that come from the AI's own knowledge are tagged "verify". They include the England and Wales rule on using disclosed papers (CPR 31.22) and any US protective order point. They have never been checked, so a lawyer must confirm each one.
-  - Tell your AI if any papers came from legal disclosure. It will ask, and it will warn you if their use may be limited.
-  - Upload your emails and documents. Say in one or two lines what the main issue is.
+  - Upload your emails and documents. Say in one or two lines what the main issue is, and which papers came from legal disclosure. It will warn you if their use may be limited.
   - Ask it to build the timeline. If you have case notes, add them too. Say if you want a working, statement-of-facts or witness version.
   - Read the red entries and fix anything it got wrong. It will ask you to do this before it finishes.
-  - The dates and events come only from the files you uploaded. Anything from the web or the AI's own memory is tagged "verify". Check those first. Any deadline, time limit or rule about disclosed papers is the AI's general knowledge, so confirm it with a lawyer before you rely on it.
   - Check each red entry against its source document before you use it in a letter, a brief or a lawyer briefing. The timeline is a working draft. It does not replace a lawyer's review. Use the checked red entries as the facts section of a letter or brief, or hand the timeline to your lawyer.
 output_sample:
   input:

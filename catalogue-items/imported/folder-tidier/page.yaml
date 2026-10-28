@@ -41,7 +41,7 @@ how_to_use:
   - Tell it to show the plan first and not delete anything.
   - Read the duplicate list and the planned moves. Ask for changes until you are happy.
   - Say yes to start the moves. Deleting needs its own separate yes.
-  - The skill writes each move to a log file in the folder, as old path and new path. If something lands in the wrong place, use the log to move it back by hand.
+  - The skill writes each move to a log file in the folder, as old path and new path. If something lands in the wrong place, use the log to move it back by hand. If a move fails or a file with the same name is already there, the skill leaves both files where they are and lists the pair for you to decide.
   - Check the summary at the end, then keep up the habits it suggests. Pair the tidy with a backup tool, and set a monthly reminder to run the maintenance habits.
 output_sample:
   input:

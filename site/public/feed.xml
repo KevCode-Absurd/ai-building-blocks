@@ -8,6 +8,16 @@
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Ask your AI what it knows about you</title>
+      <link>https://useaiblocks.com/prompts/me-md-from-ai-memory</link>
+      <guid isPermaLink="true">https://useaiblocks.com/prompts/me-md-from-ai-memory</guid>
+      <description>Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>prompt</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
       <title>Expense report builder</title>
       <link>https://useaiblocks.com/skills/expense-report-builder</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/expense-report-builder</guid>
@@ -26,6 +36,46 @@
       <category>updated</category>
       <category>skill</category>
       <category>Set your prices</category>
+    </item>
+    <item>
+      <title>Make your me.md and set it up in every AI you use</title>
+      <link>https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai</guid>
+      <description>Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>me.md builder</title>
+      <link>https://useaiblocks.com/skills/me-md-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/me-md-builder</guid>
+      <description>Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>me.md refresher</title>
+      <link>https://useaiblocks.com/skills/me-md-refresher</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/me-md-refresher</guid>
+      <description>Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>me.md short-core writer</title>
+      <link>https://useaiblocks.com/skills/me-md-short-core-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/me-md-short-core-writer</guid>
+      <description>Give it your me.md. Get a short version for your AI&apos;s settings box and where to put it in each AI you use.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
     </item>
     <item>
       <title>Mortgage affordability checker</title>
@@ -558,6 +608,26 @@
       <category>Research a topic properly</category>
     </item>
     <item>
+      <title>Claude Code learning coach</title>
+      <link>https://useaiblocks.com/skills/claude-code-learning-coach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/claude-code-learning-coach</guid>
+      <description>Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Study and check your understanding</category>
+    </item>
+    <item>
+      <title>Claude Code quiz coach</title>
+      <link>https://useaiblocks.com/skills/claude-code-quiz-coach</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/claude-code-quiz-coach</guid>
+      <description>Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Study and check your understanding</category>
+    </item>
+    <item>
       <title>Clinical evidence reviewer</title>
       <link>https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent</link>
       <guid isPermaLink="true">https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent</guid>
@@ -798,6 +868,16 @@
       <category>Ship and host your app</category>
     </item>
     <item>
+      <title>Design animator</title>
+      <link>https://useaiblocks.com/skills/design-to-motion-animator</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/design-to-motion-animator</guid>
+      <description>Turn a static design into an animated HTML version that loops, with checks on the still frame and loop, plus MP4 or GIF files if you ask.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Design things people love</category>
+    </item>
+    <item>
       <title>Desktop app engineer agent</title>
       <link>https://useaiblocks.com/agents/agency-engineering-desktop-app-engineer</link>
       <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-desktop-app-engineer</guid>
@@ -926,86 +1006,6 @@
       <category>updated</category>
       <category>agent</category>
       <category>Build and ship software</category>
-    </item>
-    <item>
-      <title>Email marketing planner</title>
-      <link>https://useaiblocks.com/agents/agency-marketing-email-strategist</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-marketing-email-strategist</guid>
-      <description>Turn a messy contact list into an email plan: who gets what, when, with exit rules, a deliverability checklist and clicks-first measurement.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Write emails that get read</category>
-    </item>
-    <item>
-      <title>Email parsing engineer</title>
-      <link>https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer</guid>
-      <description>Turn a messy email thread into who said what, decisions and tasks with owners. Or plan the pipeline that does it for many threads.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Connect AI to your tools</category>
-    </item>
-    <item>
-      <title>Embedded firmware engineer</title>
-      <link>https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer</guid>
-      <description>Plan embedded firmware for ESP32, STM32 or Nordic chips: tasks, pin map, memory limits and failure handling. Bring your chip and goal.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Build and ship software</category>
-    </item>
-    <item>
-      <title>Engineering documentation writer</title>
-      <link>https://useaiblocks.com/agents/agency-engineering-technical-writer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-technical-writer</guid>
-      <description>Get developer docs drafted from your code and notes, such as a README, API reference or tutorial, plus a list of claims to verify.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Write down how work gets done</category>
-    </item>
-    <item>
-      <title>Executive summary generator</title>
-      <link>https://useaiblocks.com/agents/agency-support-executive-summary-generator</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-support-executive-summary-generator</guid>
-      <description>Turn a long report into a 325 to 475 word executive summary with findings, impact, ranked actions and owners. Paste your report.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Write down how work gets done</category>
-    </item>
-    <item>
-      <title>Experiment tracker</title>
-      <link>https://useaiblocks.com/agents/agency-project-management-experiment-tracker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-project-management-experiment-tracker</guid>
-      <description>Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Track your numbers</category>
-    </item>
-    <item>
-      <title>Family care visit coordinator</title>
-      <link>https://useaiblocks.com/workflows/family-care-visit-handoff</link>
-      <guid isPermaLink="true">https://useaiblocks.com/workflows/family-care-visit-handoff</guid>
-      <description>Prepare questions for a relative&apos;s care visit, record what the care team said and draft a short family handoff. You review it; nothing is sent.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>workflow</category>
-      <category>Run meetings, notes and plans</category>
-    </item>
-    <item>
-      <title>FedRAMP and RMF compliance planner</title>
-      <link>https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance</guid>
-      <description>Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Check contracts and rules</category>
     </item>
   </channel>
 </rss>

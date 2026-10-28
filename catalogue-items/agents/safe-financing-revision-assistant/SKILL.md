@@ -20,7 +20,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last approved review's record and changed source files with dates. The actual participation side letter and the cash outside investors will put in, if pro rata is in question. The actual charter and the qualifying issuance records, if a down round may trigger price protection.
 
-**The pieces it uses:** the [Check a SAFE into priced financing](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing) workflow (the governing method) and the [Weighted-average antidilution checker](https://useaiblocks.com/skills/weighted-average-antidilution-checker) (only when a down round triggers price protection). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [SAFE ownership and funding checker](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing) workflow (the governing method) and the [Down-round conversion price checker](https://useaiblocks.com/skills/weighted-average-antidilution-checker) (only when a down round triggers price protection). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the linked workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -74,6 +74,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check a convertible note in the same round** with the [Note conversion revision assistant](https://useaiblocks.com/skills/note-conversion-revision-assistant).
-- **Plan the reserve for later rounds** with the [Follow-on reserve planner](https://useaiblocks.com/skills/follow-on-reserve-planner).
+- **Check a convertible note in the same round** with the [Convertible note conversion reviewer](https://useaiblocks.com/skills/note-conversion-revision-assistant).
+- **Plan the reserve for later rounds** with the [Follow-on investment cash planner](https://useaiblocks.com/skills/follow-on-reserve-planner).
 Nothing here files anything or contacts an investor. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

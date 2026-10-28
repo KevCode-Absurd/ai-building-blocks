@@ -33,4 +33,4 @@ credits:
   - title: frontend-ui-engineering skill
     by: Addy Osmani
     url: https://github.com/addyosmani/agent-skills/tree/main/skills/frontend-ui-engineering
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, removed an unsourced "3x harder" figure and linked the Accessibility standards checker. We added Before you start and After this sections that link to other AI Blocks steps.

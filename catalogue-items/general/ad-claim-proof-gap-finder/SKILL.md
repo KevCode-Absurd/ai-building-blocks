@@ -55,7 +55,9 @@ Claim | Proof | Distance | Verdict | Fix
 WORN-OUT WORDS: <list>
 SCORE: <matched>/<counted> = <score> out of 100; with fixes: <sum>
 MISSING: proof for claim <n>
+CHECKS MISSED: <none, or the checks that could not run and why>
 CHECK WITH A QUALIFIED PERSON: <any health, money or legal claim>
+NEXT: apply the fixes, then run this again to confirm the score rises
 ```
 
 ## Checks

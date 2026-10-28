@@ -2,6 +2,15 @@
 
 Bring an interest, a few references or a project that has stalled. Get a small making task, a source-aware notebook record and a decision about what would be useful to share. These are original applications of the public work, with room for a private creative practice.
 
+## Bring with you
+
+- The interest or project that has stalled
+- A few saved examples or references (optional)
+- Who the piece is for
+- The time and materials you really have this week
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
 ## What to hire him for
 
 - **Restart a small creative project:** Turn a vague ambition and a large reference folder into one inspectable page.

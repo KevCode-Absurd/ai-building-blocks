@@ -1,6 +1,6 @@
 # Ernest Hemingway: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources on 2026-10-20; the whole mind was last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Hemingway explained his methods in a few places, such as *Death in the Afternoon* (1932) and *A Moveable Feast* (1964), but those books are still under copyright and we read his statements about them through reference pages [S4][S5]. We read his prose directly in three early works that are now in the public domain in the United States: the 1924 Paris edition of *in our time* [S1], *The Sun Also Rises* [S2] and *A Farewell to Arms* [S3]. They may still be under copyright in other countries, so quotes stay short. In this pass we re-read in our time in full text and the opening and ending of The Sun Also Rises; A Farewell to Arms is cited from its public-domain text and was not re-read. His Nobel speech and the Paris Review site itself could not be opened (both blocked). For his own statements about craft we now have two web pages that reproduce parts of the 1958 Paris Review interview [S7][S8], which show his routine and how he rewrote. These are excerpts, not the full interview. Three further pages are secondary accounts of his cuts and early training [S9][S10][S11]. His direct words on craft are therefore few, and the rest is the page. When a line is spoken by a character, it is that character's view, not his.
 

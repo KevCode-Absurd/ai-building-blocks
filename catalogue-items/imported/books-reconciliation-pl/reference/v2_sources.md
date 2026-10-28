@@ -85,13 +85,29 @@ is absent when the business pays international contractors.
 most recent run with its totals; runs earlier in the month are in the payroll
 summary export. Confirm the field names before the first close.
 
-**The cross-check.** Net pay + employer taxes + contractor wages, compared to
-the ledger's payroll expense lines for the month:
+**The cross-check.** Compare like with like. Employee taxes and other
+withholdings reduce net pay, but they are still wages the business owes, so
+the expense side uses gross pay:
+
+- Expense: gross pay + employer taxes + contractor wages, compared to the
+  ledger's payroll expense lines for the month (wages, employer payroll taxes,
+  contractor costs, plus employer-paid benefits on both sides if the ledger
+  books them as payroll expense).
+- Cash: net pay compared to the bank's payroll payments; employee taxes +
+  employer taxes compared to the payroll tax liability paid or still owed.
+
+Confirm the ledger's payroll accounts and whether it posts on the check date
+or accrues by pay period before matching, and state that mapping in the packet.
+
+Example with round numbers:
 
 ```
 Payroll (Gusto): 2 runs, GBP 18,420 gross, GBP 1,660 employer taxes,
 GBP 14,210 net. Contractors: GBP 2,400.
-Ledger payroll expense: GBP 18,270. Delta GBP 150 — the 28 Mar run posted to April.
+Expected payroll expense: 18,420 + 1,660 + 2,400 = GBP 22,480.
+Ledger payroll expense: GBP 22,330. Delta GBP 150, for example a contractor
+payment dated 31 Mar that was posted to April.
+Cash: bank payroll payments GBP 14,210 = net pay. Matched.
 ```
 
 **What never enters the packet:** employee names, rates, hours, deductions,
@@ -123,3 +139,5 @@ in this close.
 Name the ledger and, where its register was assembled from parts, say which parts.
 
 The second line protects the owner. A close packet that silently omits a processor is worse than one that says it did.
+
+Changed by AI Blocks (2026-10-28): the payroll cross-check now compares gross pay plus employer taxes plus contractor wages with the ledger payroll expense, and net pay with bank payments, after mapping the ledger accounts and posting basis.

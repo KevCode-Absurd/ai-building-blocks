@@ -12,11 +12,11 @@ what_it_does:
   - "Answers questions about contacts and companies with a Data Agent, using CRM data, calls and documents (checked 26 Oct 2026)."
   - "Drafts blog posts, social posts and landing pages in your brand voice with a Content Agent. A Campaign Agent builds a multi-channel campaign from one goal (checked 26 Oct 2026)."
   - "Lets you build your own agents and workflows on one canvas in Agent Builder (checked 26 Oct 2026)."
+  - "Lists a Revenue Agent for invoice follow-ups (checked 26 Oct 2026). The page gives no detail on what it does."
 benefits:
   - Spend less time on research before each sales call.
   - "Set the Customer Agent to handle common first replies."
   - Draft campaign and content ideas from your own contact data.
-  - "Hand invoice follow-ups to a Revenue Agent (checked 26 Oct 2026)."
 best_for:
   - Teams that already run their sales and service in HubSpot.
   - Small sales teams that need lead research done for them.
@@ -31,10 +31,7 @@ pricing:
   note: "Checked 26 Oct 2026. Agent Hub is included in the Starter, Professional and Enterprise editions. Many agents run on HubSpot credits. You buy credits in packs in advance, or pay as you go. The page does not give a credit cost per agent. Custom agents built in Agent Builder also use credits. Edition prices are on HubSpot's pricing pages, which we did not read."
 works_with:
   - HubSpot
-  - claude
-  - chatgpt
-  - zapier
-runs_in: [web, mobile]
+runs_in: [web]
 blocks:
   - crm-record-filler
   - deal-notes-and-crm-updater
@@ -54,6 +51,7 @@ first_result:
   - "Check what data it uses. It works from your HubSpot records, so clean contact and company records give better results."
   - "Run it on one small set of companies first. Read each lead it suggests and the reason it gives."
   - "Check your credit balance after the first run, then decide whether to widen it."
+  - "Next: rank the shortlist with the Who to call first ranker, or set who follows up each lead with the Lead handoff designer."
 needs:
   - "A HubSpot account on the Starter, Professional or Enterprise edition."
   - "Contact and company records in HubSpot for the agent to work from."
@@ -61,7 +59,7 @@ needs:
 example:
   task: "Find 10 companies in your HubSpot list that look ready to buy and suggest who to contact first."
   cost: "Not known. The page does not give a credit cost per agent run. Run it once on a small list, then read your credit use in HubSpot."
-  reply: "A short list of companies with a reason for each and a suggested first contact. The exact layout depends on the agent and your records, so check each name against your own notes."
+  reply: "Up to 10 rows, one per company: company name, the reason it looks ready, the suggested first contact, and the HubSpot record it came from. The exact layout depends on the agent and your records, so check each name against your own notes."
 not_verified:
   - "What Breeze Assistant does. Agent Hub lists it, but the page gives no description."
   - "Credit cost per agent. An earlier note quoted about US$0.50 per resolved chat from a third-party blog. We could not confirm it on HubSpot's own site, so we removed it."

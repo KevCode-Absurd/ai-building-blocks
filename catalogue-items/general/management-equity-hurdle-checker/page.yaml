@@ -19,7 +19,8 @@ not_for:
   - "Your hurdle has a catch-up, ratchet, option exercise price or leaver forfeiture: ask a legal or tax adviser, because this checker leaves those out."
   - "You need a tax, employment or fair-value accounting view: use an accountant or tax adviser."
   - "You need legal advice on whether the award terms apply: ask a lawyer who has read the signed documents."
-  - "You need a seller's cash and ownership after rolling proceeds into the buyer's equity: use the Rollover equity ownership checker instead."
+  - "You need shares or cash swapped at a fixed exchange ratio: use the Fixed share-swap payout calculator instead."
+  - "You need a seller's cash and ownership after rolling proceeds into the buyer's equity: use the Seller rollover ownership calculator instead."
 you_give:
   - Your signed incentive terms.
   - Net equity value left to share out, with its date.

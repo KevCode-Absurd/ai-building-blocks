@@ -52,15 +52,6 @@ Use these headings, in this order: SPLIT TERMS, RESTATED TABLE (one line per yea
 
 If they ask for a spreadsheet and you can make files: put inputs, the restated table and checks on separate sheets, mark input cells, change the factor to confirm the table moves, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Work out the share count from dated issues and buybacks** with the [Weighted-average share schedule](https://useaiblocks.com/skills/weighted-average-share-schedule). Bring the dated share changes.
-- **Adjust for a discounted rights issue** with the [Rights-issue EPS adjustment](https://useaiblocks.com/skills/rights-issue-eps-adjustment). Bring the issue terms and the share price before it.
-- **Add dilution from options** with the [Treasury-stock option dilution](https://useaiblocks.com/skills/treasury-stock-option-dilution). Bring the option terms and average share price.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, not a real company. One year: reported EPS $2 and 100 million weighted shares, so earnings are $200 million.
@@ -77,6 +68,15 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 - The reported columns are kept beside the restated ones.
 - Share sales for cash are not restated with the split factor.
 - Every input traces to a filing page, period, currency and scale. A missing figure is `MISSING:`, never zero.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Work out the share count from dated issues and buybacks** with the [Weighted share count calculator](https://useaiblocks.com/skills/weighted-average-share-schedule). Bring the dated share changes.
+- **Adjust for a discounted rights issue** with the [Rights issue earnings adjustment calculator](https://useaiblocks.com/skills/rights-issue-eps-adjustment). Bring the issue terms and the share price before it.
+- **Add dilution from options** with the [Employee option dilution calculator](https://useaiblocks.com/skills/treasury-stock-option-dilution). Bring the option terms and average share price.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

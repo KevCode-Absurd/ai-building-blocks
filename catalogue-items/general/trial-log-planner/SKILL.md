@@ -53,14 +53,6 @@ If the result you are asked to get working is missing, do not plan trials or inv
 
 The result and who would pay. The option list. The roughest version. The tool check. The trial log with a row per trial. What else the system needs. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Design one trial cleanly** with the [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes one option from the log, so paste in that row.
-- **Write up what you learned** with the [Lessons learned note writer](https://useaiblocks.com/prompts/lessons-learned-note-writer). It takes the finished log.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Someone is named who would pay for the result.
@@ -68,6 +60,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Failed trials say what they ruled out.
 - The plan names what else the whole system needs.
 - The tool was checked before use.
+
+<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Design one trial cleanly** with the [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes one option from the log, so paste in that row.
+- **Write up what you learned** with the [Lessons learned note writer](https://useaiblocks.com/prompts/lessons-learned-note-writer). It takes the finished log.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

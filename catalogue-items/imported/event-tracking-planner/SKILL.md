@@ -6,6 +6,19 @@ catalog_summary: "Instrument product analytics correctly: event taxonomy, proper
 display_order: 8
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Ask first (in place of the missing analytics-strategy skill)
 
 Some skills the author names, such as `analytics-strategy` and `experimentation-analytics`, are not in this library. Do not say you read or ran them. Ask the person these questions in one batch, and never invent the answers:
@@ -80,6 +93,8 @@ Two property types, treated separately.
 **User-level properties** describe the USER over time. `subscription_tier`, `lifetime_value`, `acquisition_channel`. Set them once on the user profile; the analytics tool joins them onto every event the user fires. They update over time as the user changes.
 
 The trap. Putting user-level properties on every event. Do not track `subscription_tier` on every event payload; set it once on the user profile and rely on the join. Putting it on the event creates payload bloat, schema drift when the value changes, and reporting confusion when a user upgrades mid-session.
+
+The check before you rely on the join (added by AI Blocks). Ask how the person's tool or warehouse joins profile properties: with the value as it was when each event fired, or with the current value only. If it uses the current value only, a user who upgrades makes all their old free-tier events look like pro, and any "how do free users behave" report is wrong. In that case, either keep a dated tier history (for example a table of tier changes) and join on the event time, or put `plan_tier` on the few events where the tier at that moment matters, such as conversion, upgrade and key feature events. Say which one you chose in the tracking plan.
 
 Data type discipline.
 
@@ -323,3 +338,14 @@ Most product analytics setups are over-instrumented, not under-instrumented. Tra
 The data you do not have can be added later. The data you over-collected costs you forever, in dashboard performance, in schema complexity, in signal-to-noise. The team that ships with thirty well-designed events and a small set of named cohorts outperforms the team that ships with two hundred events and no cohort discipline.
 
 When the team disagrees on whether to add an event, the question is not "could this be useful?" but "what specific decision will this event inform, and is the decision worth the instrumentation cost?" If the answer is "we might want to know" the answer to the question is no.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Analytics events and tracking gap review](https://useaiblocks.com/skills/monthly-tracking-health-keeper). It takes the spreadsheet.
+- The [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker). It takes the spreadsheet.
+- The [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst). It takes the spreadsheet.
+- **Shape the product** with the [Product funnel steps and experiment review](https://useaiblocks.com/skills/weekly-product-funnel-watcher). It takes the spreadsheet and plan.
+- **Decide what to do** with the [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -78,6 +78,19 @@ tags: ["KUD", "knowledge-type", "assessment-routing", "Wiggins-McTighe", "Bernst
 
 # KUD Knowledge Type Mapper
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a curriculum input — a unit description, competency set, or project brief — and produces a complete Know/Understand/Do chart where every element is labelled with its knowledge type (Hierarchical, Horizontal, or Dispositional) and routed to the correct assessment approach. This is the operational bridge between the Curriculum Knowledge Architecture Designer (which diagnoses what types of knowledge are present) and the assessment skills that build the actual instruments: Coherent Rubric Logic Builder for skills, Dispositional Knowledge Assessment Designer for dispositions. Most KUD charts treat all three columns as equivalent. They are not. A Hierarchical Know element (facts with right/wrong answers) and a Horizontal Know element (contested conceptual knowledge) require fundamentally different assessment — the first can be auto-assessed, the second requires interpretive judgment. A Do that is a skill (assessed by rubric against criteria on a specific task) and a Do that is a disposition (assessed through multi-informant observation over time) cannot be assessed the same way — and routing a disposition to a rubric actively undermines it. This skill makes those distinctions explicit so that every element in the KUD chart has a clear, defensible assessment pathway before teaching begins. AI is specifically valuable here because producing a knowledge-typed KUD chart requires simultaneously applying curriculum epistemology (Bernstein's knowledge structures), assessment design logic (Wiliam's assessability constraints), learning science (Hattie's surface/deep/transfer distinction), and motivation theory (Deci & Ryan's autonomy conditions) — a combination that is rare in any single educator and that most planning processes skip entirely.
@@ -419,3 +432,12 @@ Return your output in this exact format:
 4. **Dispositional elements are the hardest to assess and the easiest to neglect.** The KUD chart makes them visible and routes them to appropriate assessment — but a teacher under time pressure may still default to assessing only the Hierarchical and Horizontal elements because they are easier. The chart cannot solve this problem; it can only make the choice visible.
 
 5. **The KUD chart is a planning tool, not a teaching sequence.** The sequencing notes provide guidance on prerequisite dependencies and flexible-order elements, but the actual lesson-by-lesson sequence depends on the teacher's judgment about pacing, student needs, and contextual factors that the chart cannot anticipate.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the plan.
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -89,7 +89,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
 - **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
-- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the script.
+- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

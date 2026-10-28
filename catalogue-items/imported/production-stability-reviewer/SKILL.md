@@ -11,6 +11,19 @@ metadata:
 
 Framework for designing, deploying, and operating production-ready software. The software that passes QA is not the software that survives production — production is hostile, and systems must expect and handle failure at every level.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Every system will eventually be pushed beyond its design limits.** The question is not whether failures happen, but whether your system degrades gracefully or collapses catastrophically. Production-ready software is not just correct — it is resilient, observable, and operates through partial failures without human intervention.
@@ -213,4 +226,11 @@ For the complete methodology, war stories, and implementation details:
 
 ## About the Author
 
-**Michael T. Nygard** is a software architect with 30+ years building and operating large-scale production systems handling millions of transactions per day. *Release It!* (2007; 2nd edition 2018) became a foundational text of the DevOps and site reliability engineering movements, arguing that architects must stay responsible for systems long after the code is written.
+**Michael T. Nygard** wrote *Release It!* (2007; 2nd edition 2018). The book argues that architects must stay responsible for systems long after the code is written.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -59,17 +59,17 @@ HAND-BACK SUMMARY
 Files: ... | MISSING: ...
 ```
 
-## After this
-
-Nothing has been sent. The person reads the draft, fills any MISSING facts and sends it from their own mail app. Offer one next step and say they can type their own:
-
-- If the thread also created tasks for you, pull them into one list with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
-- If several threads are overdue, draft them together with the [Draft your due task follow ups](https://useaiblocks.com/workflows/draft-your-due-task-followups) workflow.
-- If the reply still feels heavy, tighten it with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor).
-
 ## Check before you hand it back
 
 - The recipient list is shown before the draft and matches the thread and any limits given.
 - Every fact in the reply traces to the thread or the person's message, or is marked MISSING.
 - The voice edit changed no date, price, number or promise.
 - Nothing was sent, scheduled or saved to a mailbox without a clear yes for that action.
+
+## After this
+
+Nothing has been sent. The person reads the draft, fills any MISSING facts and sends it from their own mail app. Offer one next step and say they can type their own:
+
+- If the thread also created tasks for you, pull them into one list with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
+- If several threads are overdue, draft them together with the [Task follow-up and voice editor](https://useaiblocks.com/workflows/draft-your-due-task-followups) workflow.
+- If the reply still feels heavy, tighten it with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor).

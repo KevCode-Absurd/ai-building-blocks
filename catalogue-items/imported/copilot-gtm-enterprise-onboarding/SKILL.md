@@ -15,6 +15,26 @@ Gather first (ask for anything missing): the signed contract summary, the custom
 
 What you hand back: an owner check, a pre-kickoff checklist, a four-phase plan with owners and checks, warning signs, and checks that use is holding after go-live. Aim for two to four pages. The Week 4 and Week 12 patterns are the author's experience, not measured facts.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Enterprise account deal planner](https://useaiblocks.com/skills/copilot-gtm-enterprise-account-planning). Bring your question, meeting notes (optional), a document (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 **Triggers:**
@@ -463,3 +483,10 @@ Next step: after the owner check, take any role with no named person to the cust
 ---
 
 *The author's own account (not checked here): enterprise onboarding work, designing partner onboarding directly and working closely with customer success. Not theory — lessons from seeing Week 4 ghosting happen repeatedly and learning that go-live ≠ success, and understanding the adoption cliff that the author says costs accounts in the first year. These are one author's experience. The week numbers are patterns, and no figure here is sourced.*
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

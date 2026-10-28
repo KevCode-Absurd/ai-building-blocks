@@ -56,4 +56,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Only routes you can really offer are listed.
 - Nothing suggests the person was wrong to ask.
 
-For the full version with every check, use the [Hard no planner](https://useaiblocks.com/skills/hard-no-planner).
+For the full version with every check, use the [Clear refusal message writer](https://useaiblocks.com/skills/hard-no-planner).

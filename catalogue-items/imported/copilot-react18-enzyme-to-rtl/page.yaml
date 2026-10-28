@@ -13,7 +13,7 @@ not_for:
   - "You need to fix the app code, not the tests: use your own developer or a code review step, as this skill only rewrites test files."
 how_to_use:
   - Before you start, gather your Enzyme test files, your React version, the React Testing Library version you have installed, and any provider setup.
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page. Also paste or attach the two files in its references folder (enzyme-api-map.md and async-patterns.md), which hold the full API map. Without them, ask it to list every Enzyme call it could not map.
   - Paste your Enzyme test file. Add your React version, your React Testing Library version and any provider setup or customRender helper.
   - Ask your AI to rewrite the tests and list any it could not translate. The rewrite is untested AI output. Run the tests before you trust them.
   - Run the new tests in your project. This step needs your own machine, not the chat.

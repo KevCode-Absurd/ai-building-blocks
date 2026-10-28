@@ -8,6 +8,28 @@ metadata: {"nexscope":{"emoji":"🟢","category":"shopify"}}
 
 Complete DTC marketing ecosystem for Shopify stores. Drive traffic, optimize conversions, and build customer loyalty.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Usage Examples
 
 **Complete marketing strategy:**
@@ -90,7 +112,7 @@ Create automated customer lifecycle marketing:
 - **Average order value:** $[Amount]
 - **Customer acquisition cost:** $[Amount]
 - **Customer lifetime value:** $[Amount]
-- **LTV:CAC ratio:** [X.X]:1 ([Health status])
+- **LTV:CAC ratio:** [X.X]:1 ([Health status]) (write MISSING unless the person gave real CAC and LTV figures; added by AI Blocks)
 
 **Target Market Analysis:**
 - **Primary customer:** [Demographics, psychographics, behavior]
@@ -304,6 +326,13 @@ Leave every figure in this section blank, or write "not enough data", unless the
 - Customer segmentation recommendations require integration with actual customer data
 - ROI projections estimated from general industry metrics rather than specific store performance
 - Competitive analysis limited to publicly available information about competitors
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Best Practices
 

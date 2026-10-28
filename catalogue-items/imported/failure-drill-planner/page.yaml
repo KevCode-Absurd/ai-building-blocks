@@ -5,9 +5,9 @@ name: Failure drill planner
 summary: Plan a safe failure drill for your system. Give it a service and a fault. You get a test plan with limits, a rollback step and a write-up.
 job: test-and-fix-code
 headline: Failure drill planner
-subhead: A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule, so a test cannot turn into an outage.
+subhead: A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule and a rollback to limit the damage if a test goes wrong.
 explain: |
-  A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule, so a test cannot turn into an outage.
+  A safer plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule and a rollback to limit the damage. They lower the risk of an outage; they do not remove it.
 
   You name the service and what you expect to stay true, such as response time under 500 ms. The skill writes a hypothesis, picks a fault like slow network or a dead node, and sizes the blast radius from traffic share, users and duration. It sets abort limits and a rollback step before anything runs. It helps you choose a tool, such as Chaos Mesh, Litmus or AWS FIS, and a script writes up the result afterwards. The scripts use Python only.
 when:
@@ -33,9 +33,11 @@ you_get:
   - A short results write-up
 next: [incident-postmortem-writer, feature-flag-planner]
 how_to_use:
+  - Before you start, gather your current dashboards for the service, the on-call person's name, the person who owns the rollback, and written sign-off from whoever approves the test. The skill advises testing in production, so start with the smallest blast radius it offers and never run without all four.
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your project files.
+  - This is a copy of the chaos-engineering skill from Alireza Rezvani's claude-skills collection (MIT), with a plainer name.
 output_sample:
   input:
     - The service you want to test

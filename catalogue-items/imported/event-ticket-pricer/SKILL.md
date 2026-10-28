@@ -7,6 +7,19 @@ description: Use when pricing or promoting tickets, classes, workshops, bookings
 
 Events are experiences: buyers decide on feelings, sold-out dates signal quality, and the wrong kind of scarcity turns the people who miss out against you. This skill covers only what changes for dated, capacity-limited events. The general pricing, promotion, discount and product-page skills it was built beside are not in this library, so the five rules you need for events are written here. The topics it does not cover are named under the procedure. The payment form is set up in your booking or checkout tool. All figures below (30%, 3 weeks, 40%) are rules of thumb from the author's evidence notes in reference.md, not tested laws. Check them against your own sales.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your offer. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Setting a ticket, class, or booking price
@@ -34,7 +47,7 @@ Only the rules that change for dated, capacity-limited events.
 2. **Show sold-out dates — about 10% to 30% of them.** Mark them instead of hiding them. As a rule of thumb, keep the share of sold-out dates between about 10% and 30%. That is not a tested result, so check it against your own sales. This is the event form of the sold-out-variant rule.
 3. **Deadline, not a seat-count, as the promotional lever.** "Early pricing ends 30 Sept, 23:59 CET" is fine. "Only 12 seats left!" as a marketing hook is not: people who miss a quantity-capped *offer* get angry and switch. Showing *accurate* remaining capacity as inventory (a seat picker, "2 dates left" in a list) is fine.
 4. **Pre-sales: gift, not early-bird discount, when the event is 3+ weeks out.** A bonus session, materials, or the recording at no cost. Within about a week, either works. Hedonic events tolerate long windows; functional ones should keep them short.
-5. **Human-labeled recommendations** for experiences ("others also booked").
+5. **Human-labeled recommendations** for experiences, only when the label is true. Use "Others also booked" only if your booking records show buyers really booked those together. Use "Instructor's pick" only if the instructor chose them. With neither, use a neutral label such as "You might also like". Never put a social-proof label on a row the algorithm made without that evidence.
 
 Not covered here: general discounts (the usual rule of thumb is to keep any discount at 40% or below), special-day offers and ticket-page layout. Ask your AI to handle those separately.
 
@@ -49,7 +62,7 @@ Illustration only, with made-up numbers. Pottery studio, 8-week wheel class, pla
 - **$150**, rounded.
 - Early-bird 8 weeks out → **glazing-masterclass recording at no cost**, dated deadline, no seat-count banner.
 - Show the sold-out Saturday, marked, if sold-out dates stay in the 10–30% band.
-- **"Others also booked"** instead of the algorithm label.
+- **"You might also like"** instead of the algorithm label, because this example has no co-booking records. Switch to "Others also booked" only once booking data shows it.
 
 ## Output
 
@@ -59,8 +72,16 @@ Illustration only, with made-up numbers. Pottery studio, 8-week wheel class, pla
 | Dates shown | All 8; 2 marked sold out (25%) |
 | Pre-sale (8 weeks out) | Recording at no cost by a dated deadline |
 | Urgency copy | Deadline + reason + timezone; no seat-count promo |
+| Recommendation label | "Others also booked" only with real co-booking data; else a neutral label |
 | Rejected | 25% early-bird, "Only 12 seats left", hidden sold-out dates |
 | Why | one line per choice |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

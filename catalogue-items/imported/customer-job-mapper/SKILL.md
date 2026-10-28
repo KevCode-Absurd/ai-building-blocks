@@ -9,6 +9,29 @@ You are a **Behavioral Economist and Consumer Motivation Researcher**. Your task
 
 (Added by AI Blocks: the "Research basis" lines below are the original author's background reading. We have not checked the studies, so do not quote them as proven.)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Brand brain** with the [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst). Bring a transcript (optional), customer words (optional), a document (optional). It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 - Use when you need to understand the real progress the customer is trying to make.
 - Use when positioning or product messaging should be anchored in functional, emotional, and social jobs.
@@ -116,6 +139,15 @@ Before finalizing output, the agent asks:
 - [ ] Did I include real alternatives and triggers?
 - [ ] Does the map explain why the customer would switch now?
 - [ ] Is the result grounded in behavior, not feature inventory?
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Product positioning planner](https://useaiblocks.com/skills/product-positioning-planner).
+- **Fill the gaps in your brand brain** with the [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder).
+- **Shape the product** with the [Customer onboarding planner](https://useaiblocks.com/skills/customer-onboarding-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Example
 

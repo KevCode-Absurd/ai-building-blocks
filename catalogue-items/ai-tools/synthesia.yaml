@@ -41,6 +41,7 @@ first_result:
   - "Pick a stock avatar, paste the script, and choose the language."
   - "Generate the video and watch it all the way through. Listen for names, numbers and product words that are said wrong, then fix the script and render again."
   - "Share the link or embed it. On the free plan the Synthesia watermark stays on. The pricing page says Starter and above can remove the logo."
+  - "Next: plan the script and scenes for your next video with the Marketing video producer, then render it the same way."
 needs:
   - "A finished script. The AI reads it as written, so spell out names and numbers the way you want them said."
   - "A free account. A card is not needed for Basic."
@@ -50,12 +51,11 @@ needs:
 example:
   task: "Turn a 150-word onboarding script into a short video with a stock presenter."
   cost: "The free Basic plan gives 500 credits a month, which Synthesia says covers up to 10 minutes of video (checked 26 Oct 2026). Credit use varies with avatars and extras, so the minutes are an estimate. A short clip fits well inside that."
-  reply: "A video of one presenter reading your script, with a Synthesia watermark on the free plan. Render time and file formats are not stated on the pages we read, so test one clip before you plan a batch."
+  reply: "One video of a presenter reading your script, as a share link or embed, with a Synthesia watermark on the free plan and none from Starter up. Render time and file formats are not stated on the pages we read, so test one clip before you plan a batch."
 not_verified:
   - "Which plan includes API access. The pricing page showed an API row but did not say which tier has it. Check before you build on it."
   - "Download formats, resolution and the longest video allowed. The pages we read did not list them."
   - "How long a render takes. The site says a demo video is emailed in minutes, but it gives no render time for paid plans."
-  - "The Starter price. An earlier note here said US$29 a month. The pricing page on 26 Oct 2026 showed US$19 a month, so check the page again before you pay."
 sources:
   - https://www.synthesia.io
   - https://www.synthesia.io/pricing

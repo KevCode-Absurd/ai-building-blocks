@@ -33,6 +33,8 @@ How to start:
 
 ## What you need
 
+This list spells out the inputs named in "Before you start" above: the document is the dated sign-off records, the policy is the approved induction and safeguarding rules per role, the question is the roles and the named clearance signer, and the spreadsheet is the supervision rota.
+
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the part of the review it limits, and finish the rest. Never guess.
 
 - The volunteer roles and what each one does.
@@ -73,9 +75,8 @@ Ask once for anything below that is missing. If it is still missing, write `MISS
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the document and audit report.
-- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan and audit report.
-- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the plan.
+- The [Volunteer onboarding checklist writer](https://useaiblocks.com/workflows/build-a-volunteer-induction-checklist).
+- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the document and plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

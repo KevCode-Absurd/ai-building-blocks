@@ -5,7 +5,7 @@ description: Use when you have a business idea and want proof that people will p
 
 # Three-buyer idea test planner
 
-Interest costs nothing, so it proves little. Payment proves something. This skill plans a weekend in which you ask ten reachable people to pay for your idea, with rules written before you start so the result is clear. For a quick first pass with fewer checks, use the [Two-day paid ask planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner). This one adds the buyers-needed math and a list of ten reachable people.
+Interest costs nothing, so it proves little. Payment proves something. This skill plans a weekend in which you ask ten reachable people to pay for your idea, with rules written before you start so the result is clear. For a quick first pass with fewer checks, use the [Paid idea test planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner). This one adds the buyers-needed math and a list of ten reachable people.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

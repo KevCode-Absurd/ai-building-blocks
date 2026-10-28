@@ -71,9 +71,9 @@ The first cut and its multiple, the survivors, the cuts with the failed test, th
 
 When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
 
-- See what each survivor would fetch if it stopped, with the [Asset floor estimator](https://useaiblocks.com/skills/asset-floor-estimator).
-- Judge whether a survivor has a real margin of safety with the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
-- Set group size, caps and an exit rule with the [Bargain group rules writer](https://useaiblocks.com/skills/bargain-group-rules-writer).
+- See what each survivor would fetch if it stopped, with the [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator).
+- Judge whether a survivor has a real margin of safety with the [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge).
+- Set group size, caps and an exit rule with the [Bargain investment portfolio planner](https://useaiblocks.com/skills/bargain-group-rules-writer).
 - Run all four together in the [Find bargain stocks with a screen and a group test](https://useaiblocks.com/workflows/bargain-stock-screen) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.

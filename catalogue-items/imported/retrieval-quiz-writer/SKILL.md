@@ -69,6 +69,23 @@ tags: ["retrieval", "memory", "assessment", "spaced-practice", "testing-effect"]
 
 # Retrieval Practice Question Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a set of retrieval practice questions that force genuine reconstruction of knowledge from memory — not recognition, not re-reading, not familiarity-based guessing. The skill distinguishes between free recall (no cues), cued recall (partial cues), and recognition (select from options) question types, and calibrates the mix based on student level and time since learning. AI is specifically valuable here because designing questions that target reconstruction rather than recognition requires deep understanding of the testing effect literature — most teacher-made quiz questions inadvertently test recognition.
@@ -223,3 +240,12 @@ Run this as a low-stakes retrieval starter — no notes, no textbooks, no device
 2. **Free recall questions may overwhelm students with very low prior knowledge or limited English proficiency.** For EAL students or those with significant gaps, increase the proportion of cued recall and recognition questions. Chain with the Scaffolded Task Modifier for language-adapted versions.
 
 3. **The spacing recommendation is calibrated to lab research on optimal intervals.** Real classroom scheduling constraints (timetable gaps, holidays, assessment windows) may make the recommended spacing impractical. Teacher judgment on timing is always necessary.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper).
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the question.
+- The [Study recall tutor](https://useaiblocks.com/skills/recall-first-study-tutor). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

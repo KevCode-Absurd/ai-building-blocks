@@ -46,9 +46,8 @@ output_sample:
     - What looks wrong, such as wrinkles, crooked shape or uneven light
     - Background colour you want (optional)
   prerequisites:
-    - An image editing model you can call, such as gpt-image-2 through the dLazy tool
-    - A dLazy account, since the model call is paid (the skill lists about 60 credits per image)
-    - An AI that can run commands, or you can copy the prompt into your image tool
+    - "Free route: an image model that accepts a photo, such as ChatGPT or Gemini"
+    - "Paid route (optional): a dLazy account (the skill lists about 60 credits per image) and an AI that can run commands"
   output:
     - name: Template choice
       contains: "One of four edit types: flat-lay retouch, wrinkle removal only, general clean-up, or your own custom edit."
@@ -61,4 +60,4 @@ output_sample:
     - name: Fix-up lines
       contains: Extra lines to add if the result flattens folds, smooths the surface, changes the style or erases flaws.
     - name: Retouched image
-      contains: The edited photo your image model saves, ready to compare side by side with the original.
+      contains: One edited photo your image model saves (the source skill uses a 1024x1024 jpg), plus the prompt text you used, ready to compare side by side with the original.

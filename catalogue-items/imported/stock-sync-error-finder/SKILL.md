@@ -11,6 +11,23 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with a Shopify connection:** Lets the AI read your live stock levels with read-only access.
+- **Any good chat AI:** Works on an exported inventory file if you have no connection.
+<!-- /needs -->
+
 ## Purpose
 Surfaces inventory sync discrepancies across locations: variants where `available` is negative or `committed` > `on_hand`. These indicate drift between Shopify's counts and actual physical stock. Common causes: 3PL delays posting returns, WMS deductions stacking with Shopify's committed count, or multi-store sync issues. Read-only: no mutations. Replaces manual inventory reconciliation spreadsheets and the need to open each location separately in the Shopify admin.
 
@@ -113,6 +130,15 @@ CSV columns: `location_name`, `product_title`, `variant_title`, `sku`, `availabl
 End with a short "where to look first" list: the three locations or products with the most flags, and one line on the likely cause for each (for example, "returns not yet posted by the 3PL"). Mark causes as guesses.
 
 For `format: json`, return the same data as one JSON object with `store`, `started_at`, `completed_at`, `locations`, `flagged` (the CSV rows) and `errors`.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product data gaps and catalogue review](https://useaiblocks.com/skills/monthly-catalogue-clean-up-keeper).
+- The [Stock count updater](https://useaiblocks.com/skills/stock-count-updater). It takes the audit report.
+- The [Product listing completeness checker](https://useaiblocks.com/skills/listing-completeness-scorer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

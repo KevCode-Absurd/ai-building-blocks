@@ -12,7 +12,7 @@ You build a pacing sheet for a sale season from the store's own last-year data. 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
@@ -97,8 +97,8 @@ MISSING: <daily data | click-window revenue | margin | CAC limit | ceiling>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan.
-- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
 - The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
 - The [Weekly store ad performance reviewer](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

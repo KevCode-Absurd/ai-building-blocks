@@ -19,9 +19,9 @@ how_to_use:
   - "Gather three things first: your feature goals and targets, your usage and outcome numbers with any known gaps, and your user feedback with dates."
   - If one is missing, say so. Your AI will mark it as missing and will not guess. Add what you can find, or note it as a gap.
   - Add the skill to your AI tool, or paste its text into a chat. No code or web access is needed.
-  - Paste your three inputs and ask your AI to review the feature and write the decision brief.
+  - Paste your three inputs and ask your AI to work in four stages, in this order. First the outcome review, from your goals and numbers. Then the assumption updates, from your early assumptions and the feedback. Then the feature health record, from usage, cost and support load. Last the decision brief. The skill folder has a template for each stage in templates/.
   - Check the facts and gaps first. Then let the person who owns the choice make the decision.
-  - The skill points to follow-up work on customer success and incident learning. Those items are not yet available, so handle customer notices and incident reviews by hand.
+  - The skill points to follow-up skills for customer success and incident learning that are not yet available. Do those by hand. If you retire the feature, the product owner and support lead write the customer notice and the export or migration steps. Send any incident found to your on-call lead for a normal incident review.
 output_sample:
   input:
     - Your feature goals and targets

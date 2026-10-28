@@ -69,6 +69,19 @@ tags: ["differentiation", "UDL", "inclusion", "SEND", "adaptation"]
 
 # Differentiation Adapter
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Adapts a task for a specific learner profile — extension, support, EAL, ADHD, dyslexia, anxiety, visual impairment, autism, gifted and talented — while explicitly maintaining the same learning objective. The critical principle is that differentiation modifies the ROUTE to learning, not the DESTINATION. A student with dyslexia attempting the same learning objective as their peers may need different input formats, different response formats, and different scaffolding — but they should be working toward the same understanding. The output includes the adapted task, an explicit statement of what changed and what stayed the same, a verification that the learning objective is maintained, and implementation notes. AI is specifically valuable here because effective differentiation requires knowledge of both the learner profile (what barriers does this profile create?) and the task (which elements of this task create those barriers?) — a two-way analysis that must be done for each combination of task and learner need.
@@ -238,3 +251,11 @@ The adapted task still requires the student to **analyse how Dickens presents ch
 2. **Differentiation by learning style is explicitly excluded.** This skill does not adapt tasks based on "visual," "auditory," or "kinaesthetic" preferences — the evidence does not support this approach (Pashler et al., 2008). Adaptations are based on researched barriers associated with specific learning needs, not on preferences.
 
 3. **Adapted tasks can inadvertently signal low expectations.** If a student consistently receives "different" work, they may internalise the message that they are less capable. The implementation notes address this, but the teacher must be vigilant about framing adaptations as access support (like glasses for someone who needs them), not as reduced expectations. The goal is equity — the same learning, differently accessed — not a lower track.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [English learner task support planner](https://useaiblocks.com/skills/ell-task-scaffolds). It takes the lesson plan.
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

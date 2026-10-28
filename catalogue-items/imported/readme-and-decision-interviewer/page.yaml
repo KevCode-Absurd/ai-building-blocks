@@ -31,7 +31,7 @@ you_get:
   - Reasons behind each decision
   - Updated docs after each session
 how_to_use:
-  - Have ready the path to your project folder, any README or notes you already have, and a rough list of the decisions you have already made. Your AI shows each proposed file change and waits for your yes before it saves. Open your AI in a chat that can read and save files there. If it cannot, paste your README and notes into the chat.
+  - Have ready the path to your project folder, any README or notes you already have, and a rough list of the decisions you have already made. The skill file is tagged critical risk because it can change files in your project, so your AI shows each proposed file change and waits for your yes before it saves. Open your AI in a chat that can read and save files there. If it cannot, paste your README and notes into the chat.
   - If your AI cannot save files, ask it to print each README or decision record in full after each round. Copy each one into your project folder yourself.
   - "Paste the skill text and say: start the README and decision interview."
   - Answer the questions you find most useful. You can skip the rest.

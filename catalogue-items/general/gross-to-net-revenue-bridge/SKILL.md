@@ -9,7 +9,7 @@ Bridges gross billings to reported net revenue, taking each evidenced deduction 
 
 ## When to use it
 
-Use it when billings and reported revenue differ and you need to see why. Do not use it when returns and rebates are already taken out of the gross figure (fix the input first, or they count twice), to decide whether you are principal or agent (ask your accountant or auditor to review the contract and revenue policy), or for a legal or investment opinion. To take acquisitions, disposals and currency out of growth, use the [Organic revenue perimeter bridge](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). To roll a contract liability balance forward and infer revenue released, use the [Contract-liability release bridge](https://useaiblocks.com/skills/contract-liability-release-bridge); this bridge starts from billings, not from a liability balance.
+Use it when billings and reported revenue differ and you need to see why. Do not use it when returns and rebates are already taken out of the gross figure (fix the input first, or they count twice), to decide whether you are principal or agent (ask your accountant or auditor to review the contract and revenue policy), or for a legal or investment opinion. To take acquisitions, disposals and currency out of growth, use the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). To roll a contract liability balance forward and infer revenue released, use the [Customer advance revenue tracker](https://useaiblocks.com/skills/contract-liability-release-bridge); this bridge starts from billings, not from a liability balance.
 
 ## What you need
 
@@ -59,7 +59,7 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 ## What next
 
-Take the unexplained gap, if any, to whoever owns the revenue policy, with the source index. To take acquisitions, disposals and currency out of growth, use the [Organic revenue perimeter bridge](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge).
+Take the unexplained gap, if any, to whoever owns the revenue policy, with the source index. To take acquisitions, disposals and currency out of growth, use the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge).
 
 ## Limits
 

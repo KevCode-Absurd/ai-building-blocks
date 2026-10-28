@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your app is web only: use Expo Router data loaders, which load data for a page on the web."
   - "Your app makes no network calls: you do not need this, so skip it."
-  - "You need a backend or API built: ask a developer, since this skill only writes the app side that calls it."
+  - "You need a backend or API built: ask a developer, since this skill only writes the app side that calls it. If your API needs a secret key, the skill may suggest a small server route (an Expo API route) to hold it. That route needs hosting, so get a developer to set it up."
 you_give:
   - The data your screens need and the API it comes from
   - How fresh each piece of data must be
@@ -34,7 +34,7 @@ you_get:
   - Environment files for each stage
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat, then paste references/detailed-guide.md too. SKILL.md tells the AI to read that guide before it starts, because the full steps are in it. For route-level loaders on the web, also paste references/expo-router-loaders.md.
-  - "Have ready: your API base URL, the login method, the list of screens with the data each one needs, and how fresh each piece of data must be. Describe them to your AI."
+  - "Have ready: your API docs and base URL, your Expo SDK version, the login method, the list of screens with the data each one needs, and how fresh each piece of data must be. Say whether your AI can read your project files. Describe them to your AI."
   - Add your login method if the API needs one (optional).
   - Share your Expo project files if your AI can read them. Otherwise paste the files that make requests.
   - "Check the result before you use it: test it with the network off, and make sure no secret key sits in app code."

@@ -27,5 +27,5 @@ Delta only. Shared digit, gift, deadline, sold-out, and recommendation findings 
 
 ## Human labels for experiences
 
-**Rule.** "Others also booked" / "instructor's pick" for hedonic events.
+**Rule.** "Others also booked" / "instructor's pick" for hedonic events, only when true: co-booking must show in your booking records, and a pick must be the instructor's own. Otherwise use a neutral label such as "You might also like".
 **Source.** See `store-audit` — Longoni & Cian (2020), https://doi.org/10.1177/0022242920957347

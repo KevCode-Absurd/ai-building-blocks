@@ -8,7 +8,7 @@ description: Use when you want buyers to decide sooner without fake timers. Sets
 Limits move people when they are real. This skill finds the real ones in your business: how many buyers you can serve well and when each round starts or a deal ends. It writes the lines to say them, and a check to make sure each is true on the day. It never writes a fake timer or a made-up count.
 
 Use [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer) instead when you only need the closing ask in one ad, with a real reason to act now.
-Use [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder) instead when the problem is hesitation about the offer itself, not time.
+Use [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder) instead when the problem is hesitation about the offer itself, not time.
 
 ## What you need
 

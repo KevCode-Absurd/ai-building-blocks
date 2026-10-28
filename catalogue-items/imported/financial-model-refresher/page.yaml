@@ -34,7 +34,7 @@ how_to_use:
   - "Say what triggered the update: results, guidance, a macro move or an event."
   - Paste your current model, or upload the file if your AI can read files.
   - Add the new results or guidance. Add your own view if you have one (optional).
-  - Check the actuals table first. Then read the flagged changes and the summary.
+  - Check the actuals table first. Confirm each actual against the company's results release before you read the valuation. Anything marked not provided was not found, so add it yourself. Then read the flagged changes and the summary.
   - Treat the rating and price target as your own working view until a compliance check is done.
   - Next, compare your new estimates with consensus. Then write the note with the earnings update report writer, and re-check the value with the valuation method comparer.
 output_sample:

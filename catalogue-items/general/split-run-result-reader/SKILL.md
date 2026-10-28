@@ -5,14 +5,14 @@ description: Use when a two-version test has finished and you have the counts. W
 
 # Split-run result reader
 
-A test result is a few numbers, and numbers are easy to over-read. This skill turns them into one plain call and a record you can reuse. It states the gap the way a buyer of ads would, as a percentage, then asks four questions: is the gap bigger than luck, did the test stay fair, did the replies lead to sales, and what does it cost. For planning the test, use the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner). For a before-and-after report on a whole account, use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer).
+A test result is a few numbers, and numbers are easy to over-read. This skill turns them into one plain call and a record you can reuse. It states the gap the way a buyer of ads would, as a percentage, then asks four questions: is the gap bigger than luck, did the test stay fair, did the replies lead to sales, and what does it cost. For planning the test, use the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). For a before-and-after report on a whole account, use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.

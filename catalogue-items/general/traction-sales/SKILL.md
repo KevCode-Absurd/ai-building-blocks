@@ -5,6 +5,8 @@ description: "Plan a sales acquisition experiment from a product URL or business
 
 # Sales channel experiment planner
 
+Use this when you have already picked direct sales as the channel to test. To compare all 19 channels first, use the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker). For deals with partners rather than buyers, use the [Partnership experiment planner](https://useaiblocks.com/skills/traction-business-development).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,6 +32,8 @@ Separate observed facts, user-provided facts, hypotheses and missing inputs. Pub
 
 ## Make one bounded experiment
 
+Plain words used here: traction is proof that real customers want and use what you sell. CAC is customer acquisition cost, what it costs to win one paying customer; fully loaded CAC includes salaries, tools and time, not only ad spend. Bullseye is the method of testing a few cheap channels before spending on any.
+
 Explain this channel's fit for the current business and the strongest reason it might fail. Use evidence to propose one cheap pilot, its audience, offer, deliverable, owner, time window, cash cap, labour cap, tracking and go / revise / stop rules. If caps or thresholds were not supplied, label proposed values as assumptions for approval. Check long sales cycles and slow channels before choosing a review date. A short pilot can test an early assumption without proving long-term acquisition.
 
 Use the funnel qualified visitor or account -> useful product action -> paying customer -> retained customer. Keep people, teams and buying accounts separate. Use references/measurement.md for economics and attribution. Never invent search volume, contacts, conversion rates, ROI or results. Include an evidence ledger and MISSING at the end. Send nothing, spend nothing, publish nothing and change no live system without authorization for that action.
@@ -38,9 +42,9 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Does customer value support a human-led buying process and is there an urgent, qualified problem?
 
-1. Define a narrow account profile, buying trigger, user, champion and economic buyer. Check whether contract value can support the proposed sales effort.
-2. Map discovery, qualification, demonstration, security or procurement, paid pilot and close with explicit exit criteria.
-3. Draft discovery questions about current behaviour and cost, an evidence-led demonstration and a mutual next-step plan. Record objections and losses as learning.
+1. **Account profile.** Write a narrow profile: the kind of company, the buying trigger, the user, the champion and the person who signs. Check whether the contract value can pay for the sales effort.
+2. **Qualification checklist.** List the stages (discovery, qualification, demonstration, security or procurement, paid pilot, close), each with the fact that lets a deal move to the next stage.
+3. **Discovery guide and mutual action plan.** Write discovery questions about current behaviour and cost, an evidence-led demonstration outline, and a shared next-step plan with dates. Record objections and losses as learning.
 
 Cheap pilot: Research a small account set and prepare relevant discovery outreach. Test problem urgency and willingness to take a paid next step before building a sales team.
 

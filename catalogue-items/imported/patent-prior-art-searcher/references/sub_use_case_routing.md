@@ -8,7 +8,7 @@ The patent skill refuses to be a generic "patent search". Q2 is mandatory. The 5
 
 | Sub-use-case | Wrong-strategy danger |
 |---|---|
-| Novelty | Generic search misses claim-text proximity → false negatives ("looks novel, isn't") |
+| Novelty | Generic search misses close disclosures and ignores dates → false negatives ("looks novel, isn't") |
 | FTO | Generic search includes expired/abandoned patents → false positives ("looks blocked, isn't") |
 | Landscape | Generic search misses CPC class trends → incomplete competitive picture |
 | Diligence | Generic search misses assignment chain → ownership-verification gaps |
@@ -25,8 +25,8 @@ The 5 strategies are **not interchangeable**. The skill enforces commitment to p
 ### Search emphasis
 
 - **Narrow** queries on invention-specific terminology (don't drown in adjacent art)
-- **Claims-text focused** (the legal test is claim-by-claim anticipation)
-- **Pre-filing date irrelevant** — anything published before user's filing is potential art
+- **Feature by feature across the whole document** — anticipation needs one document that discloses every element of the invention as it will be claimed, anywhere in its description, drawings or claims (USPTO MPEP 2131)
+- **Date gate** — only art public before the user's effective filing date counts; under US law an earlier-filed US patent or published application by someone else also counts (35 U.S.C. 102(a)(2); MPEP 2152). Ask for the planned filing date or claimed priority date and drop or separately list anything later
 
 ### Query plan
 
@@ -39,13 +39,15 @@ The 5 strategies are **not interchangeable**. The skill enforces commitment to p
 
 ### Ranking heuristic
 
-Rank by **claim-text overlap** with user's invention description (Q1). Top hits are those whose claim 1 most overlaps in technical terminology. Surface independent claim 1 verbatim for each top-5 hit.
+Rank by **feature coverage**: how many of the invention's features (from Q1) each eligible document discloses, anywhere in its text. For each top-5 hit, quote the passage for each disclosed feature, and list its independent claims (all of them, not only claim 1).
 
 ### Verdict scale
 
-- **NOVEL** — closest hit has <30% claim-text overlap; clear differentiation possible
-- **POTENTIALLY NOVEL** — 30-60% overlap; differentiation possible but requires careful claim drafting
-- **NOT NOVEL** — >60% overlap; invention as described is anticipated by closest art
+These bands are this skill's search-signal thresholds, not legal tests:
+
+- **NOVEL** — no single eligible document disclosed most of the invention's features; clear differentiation possible
+- **POTENTIALLY NOVEL** — one eligible document disclosed many but not all features; differentiation possible but requires careful claim drafting
+- **NOT NOVEL** — one eligible document appears to disclose every feature; a patent attorney should review it before you file
 
 ### DOCX emphasis
 

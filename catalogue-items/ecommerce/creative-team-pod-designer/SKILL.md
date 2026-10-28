@@ -25,7 +25,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
+This skill runs on its own. Start by pasting the team list and the current approval steps; the rest can follow. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
 
 - **Who is on the team**, with what each person does (required).
 - **How creative is approved now**: who reviews, how many people, how long it takes (required).
@@ -82,7 +82,8 @@ MISSING: <team | approval process | KPIs | trend budget>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+- **Plan what to test** with the [Monthly ad production planner](https://useaiblocks.com/skills/creative-volume-planner).
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

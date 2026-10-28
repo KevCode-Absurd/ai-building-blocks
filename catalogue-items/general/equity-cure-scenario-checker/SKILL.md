@@ -97,16 +97,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the calculation, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or default conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test leverage before any cure with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
-- Check a requested EBITDA addback with the [Deal EBITDA addback checker](https://useaiblocks.com/skills/deal-ebitda-addback-checker).
-- Run the addback, leverage and cure checks together in the [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow.
+- Test leverage before any cure with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+- Check a requested EBITDA addback with the [Deal earnings adjustment checker](https://useaiblocks.com/skills/deal-ebitda-addback-checker).
+- Run the addback, leverage and cure checks together in the [Loan leverage and equity cure checker](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the calculation, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or default conclusion unresolved.

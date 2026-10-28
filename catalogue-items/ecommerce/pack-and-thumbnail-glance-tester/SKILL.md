@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -94,7 +94,7 @@ MISSING: <image | rivals in view | stranger answers | sales data>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store brand consistency reviewer](https://useaiblocks.com/skills/store-brand-signal-auditor).
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

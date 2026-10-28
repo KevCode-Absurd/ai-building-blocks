@@ -7,9 +7,7 @@ job: design-work
 headline: Premium interface designer
 subhead: "A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code."
 explain: |
-  A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code.
-
-  The skill bans common giveaways such as Inter, Roboto and Arial fonts, thick generic icons and harsh shadows. It instead picks distinctive fonts and light icons, builds layered surfaces and plans micro-motion for hover and scroll. It will not repeat the same layout twice in a row. Fonts and libraries must be added to your project, and heavy motion is not right for tight dashboards or regulated products. Licence: this is an unchanged copy of the high-end-visual-design skill by Leonxlnx (taste-skill), shared in the sickn33 collection under CC BY 4.0. Only the font note was changed in this copy.
+  The skill bans common giveaways such as Inter, Roboto and Arial fonts, thick generic icons and harsh shadows. It instead picks distinctive fonts and light icons, builds layered surfaces and plans micro-motion for hover and scroll. It will not repeat the same layout twice in a row. Fonts and libraries must be added to your project, and heavy motion is not right for tight dashboards or regulated products. Licence: this is the high-end-visual-design skill by Leonxlnx (taste-skill), shared in the sickn33 collection under CC BY 4.0 (see LICENSE-CONTENT). We changed the font note, the rule about not repeating a layout, and the example's skill name.
 when:
   - Your landing page must look like a high-end agency made it.
   - You want a portfolio with real polish.
@@ -31,7 +29,7 @@ you_get:
   - Ranked design fixes for a review
 how_to_use:
   - "Before you start, gather: your brand name, the tone you want, the devices people will use (phone, desktop or both), and any existing code or design to match or review."
-  - Open Claude, ChatGPT or Gemini, or a coding AI such as Claude Code or Cursor. Paste in the text of the skill file (SKILL.md).
+  - Open Claude, ChatGPT or Gemini, or a coding AI such as Claude Code or Cursor. Paste in the text of the skill file (SKILL.md). If you add it as a skill, ask for it by name (Premium interface designer).
   - Describe your page or app. Add your brand name, tone and any fonts you can use.
   - To review a design, paste its code or describe it, and ask for the top fixes.
   - Check that your project has the fonts and icons the code names. Some fonts are paid, so ask for free ones if needed.

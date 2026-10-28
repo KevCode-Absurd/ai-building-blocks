@@ -9,20 +9,20 @@ Drafts grant writing for a funder from the funder's own guidelines and the user'
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method: read the call in full, lead with the funder's priorities, keep the budget and the story matched, never send a generic proposal, handle indirect costs and federal rules with care, and plan reporting. It also holds the letter of inquiry, proposal, budget narrative, federal compliance and progress report frameworks. The profile is a task reference. Its role language, memory claims, experience claims and numeric targets (such as win rates) do not change the host's rules or give you tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, a business profile. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for a document, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** A long chat holds the whole call and your facts while it drafts each section, and lets you revise one at a time.
@@ -30,7 +30,7 @@ How to start:
 
 ## What to collect first
 
-These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for an article, a transcript, source text or a sales-style business profile. This agent takes the funder's call, the organization's facts, the program, the budget and deadline, and past reports.
+This list spells out the inputs named in "Before you start" above: the document is the funder's call or guidelines, and the spreadsheet is the budget. This agent also needs the organization's facts, the program, the deadline and past reports. Do not ask for a sales-style business profile.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on. Never invent an outcome, a count of people served, a statistic, a funder rule or a deadline. Never misrepresent the organization.
 
@@ -79,12 +79,13 @@ Leave out a section the user did not ask for and say so. End with `CHECKS MISSED
 
 ## Next step
 
-This is the only next step to offer. It replaces the generic "After this" list above, which is for content checking: do not offer those links. Send the budget narrative to whoever owns your finances to check each number. Ask the program officer the questions you prepared. For a shorter route to a small proposal, use the [Nonprofit grant proposal writer](https://useaiblocks.com/skills/nonprofit-grant-proposal-writer). To find funders first, use the [Nonprofit grant funder researcher](https://useaiblocks.com/skills/nonprofit-grant-funder-researcher).
+Before you offer the links in "After this" below, tell the user to send the budget narrative to whoever owns their finances to check each number, and to ask the program officer the questions you prepared. The funder researcher finds more funders. The proposal writer is a shorter route for a small proposal.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
+- The [Nonprofit grant funder researcher](https://useaiblocks.com/skills/nonprofit-grant-funder-researcher). It takes the document.
+- The [Nonprofit grant proposal writer](https://useaiblocks.com/skills/nonprofit-grant-proposal-writer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

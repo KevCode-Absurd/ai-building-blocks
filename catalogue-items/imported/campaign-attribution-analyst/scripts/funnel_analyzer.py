@@ -40,6 +40,9 @@ def analyze_funnel(stages: List[str], counts: List[int]) -> Dict[str, Any]:
         raise ValueError("Number of stages must match number of counts.")
     if not stages:
         raise ValueError("Funnel must have at least one stage.")
+    if counts[0] == 0:
+        # With no entries every conversion rate is undefined (0 of 0), not 0%.
+        raise ValueError("Funnel has 0 entries at the first stage: conversion rates are undefined.")
 
     stage_metrics: List[Dict[str, Any]] = []
     max_dropoff_abs = 0
@@ -57,13 +60,18 @@ def analyze_funnel(stages: List[str], counts: List[int]) -> Dict[str, Any]:
         if i > 0:
             prev_count = counts[i - 1]
             dropoff = prev_count - count
-            conversion_rate = safe_divide(count, prev_count) * 100
-            dropoff_rate = 100 - conversion_rate
+            if prev_count == 0:
+                # Nobody reached the previous stage: the rate is undefined, not 0%.
+                conversion_rate = None
+                dropoff_rate = None
+            else:
+                conversion_rate = count / prev_count * 100
+                dropoff_rate = 100 - conversion_rate
 
             metric["from_previous"] = stages[i - 1]
-            metric["conversion_rate"] = round(conversion_rate, 2)
+            metric["conversion_rate"] = round(conversion_rate, 2) if conversion_rate is not None else None
             metric["dropoff_count"] = dropoff
-            metric["dropoff_rate"] = round(dropoff_rate, 2)
+            metric["dropoff_rate"] = round(dropoff_rate, 2) if dropoff_rate is not None else None
 
             # Track biggest absolute drop-off
             if dropoff > max_dropoff_abs:
@@ -71,7 +79,7 @@ def analyze_funnel(stages: List[str], counts: List[int]) -> Dict[str, Any]:
                 bottleneck_abs = f"{stages[i-1]} -> {stage}"
 
             # Track biggest relative drop-off
-            if dropoff_rate > max_dropoff_rel:
+            if dropoff_rate is not None and dropoff_rate > max_dropoff_rel:
                 max_dropoff_rel = dropoff_rate
                 bottleneck_rel = f"{stages[i-1]} -> {stage}"
         else:
@@ -173,8 +181,8 @@ def format_single_funnel_text(analysis: Dict[str, Any], title: str = "FUNNEL") -
     for m in analysis["stage_metrics"]:
         stage = m["stage"]
         count = m["count"]
-        conv = f"{m['conversion_rate']:.1f}%"
-        drop = f"-{m['dropoff_count']:,} ({m['dropoff_rate']:.1f}%)" if m["dropoff_count"] > 0 else "-"
+        conv = f"{m['conversion_rate']:.1f}%" if m["conversion_rate"] is not None else "n/a"
+        drop = f"-{m['dropoff_count']:,} ({m['dropoff_rate']:.1f}%)" if m["dropoff_count"] > 0 and m["dropoff_rate"] is not None else "-"
         cumul = f"{m['cumulative_conversion']:.1f}%"
         lines.append(f"  {stage:<20} {count:>10,} {conv:>12} {drop:>12} {cumul:>12}")
 
@@ -227,7 +235,8 @@ def format_text(results: Dict[str, Any]) -> str:
             row = f"  {sc['stage']:<20}"
             for sn in seg_names:
                 data = sc[sn]
-                row += f" {data['count']:>8,} ({data['conversion_rate']:>5.1f}%)"
+                rate = f"{data['conversion_rate']:>5.1f}%" if data["conversion_rate"] is not None else "  n/a"
+                row += f" {data['count']:>8,} ({rate})"
             lines.append(row)
 
     else:

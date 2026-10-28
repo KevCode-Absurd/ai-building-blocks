@@ -19,7 +19,7 @@ when:
   - You have spent a week on a fix and cannot tell if it helped.
 not_for:
   - "You want a cost estimate and nothing is running yet: use a simple spreadsheet of the steps and ask the person who runs it for rough times."
-  - "The slow stage could be removed, not sped up: use the Weak part design-out planner."
+  - "The slow stage could be removed, not sped up: use the Product weak-point redesign planner."
   - "You need deep code-level timing inside a program: use a profiler, then bring its numbers back here."
 
 you_give:
@@ -131,7 +131,7 @@ improve:
   - Add the timing tools you use to step 2, so the plan names them.
   - Add your target speed, so the gap is judged against it every time.
   - Keep a running list of dropped ideas so the same ones are not argued twice.
-  - Pair it with "Weak part design-out planner" when the biggest cost is a stage you could remove.
+  - Pair it with "Product weak-point redesign planner" when the biggest cost is a stage you could remove.
 
 works_best_with:
   tools:

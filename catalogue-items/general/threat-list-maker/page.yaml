@@ -81,6 +81,12 @@ output_shape: |
   TO CONFIRM
   - <question for someone who knows the system>
 
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check that failed, or none>
+
 tweaks:
   - what: "What to protect"
     how: "Say what matters most. The ranking follows it."

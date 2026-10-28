@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - type: plan
+  - type: dataset
     required: true
   - type: customer_needs
     required: false

@@ -48,7 +48,7 @@ output_sample:
     - Your escalation contacts (optional)
     - Your location and sector (optional, for notice rules)
   prerequisites:
-    - An AI that can run Python code, if you want to use the triage script
+    - An AI that can run Python code and the included scripts/incident_triage.py file, if you want the triage script. Without them, use the hand triage route.
     - A security alert from a SIEM, an endpoint tool, a threat feed or a user report
   output:
     - name: Incident type

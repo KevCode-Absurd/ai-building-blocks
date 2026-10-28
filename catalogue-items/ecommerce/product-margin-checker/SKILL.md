@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -99,8 +99,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Monthly store profit reviewer](https://useaiblocks.com/skills/monthly-profit-close).
 - **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- The [Sale discount and price change review](https://useaiblocks.com/skills/discount-and-price-change-checker).
 - **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
-- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -75,6 +75,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: The page's job
     how: Say if the page is for a first sale, a lead or a bigger order. Every finding is judged against that job.

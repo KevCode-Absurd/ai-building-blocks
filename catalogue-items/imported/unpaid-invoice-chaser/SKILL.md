@@ -16,6 +16,20 @@ allowed-tools: Read, WebFetch
 
 # Invoice Chase
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Quick start
 
 Pull the AR aging report, score each customer by payment history, draft a tone-matched reminder for each overdue invoice, and present them to the owner. Nothing sends until the owner says so.
@@ -117,6 +131,13 @@ Reminders go out under the owner's name, so read [the shared voice profile](../.
 - **Visual artifact (the default):** render the chase as an HTML page in the house style — total outstanding as the lead stat tile, each customer a row with amount in tabular-nums, days overdue, tone score, and a possibly-paid pill where it applies. **Each drafted reminder is a copy block** so the owner can copy any single email and send it by hand.
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why.
 - **Best for skill:** use the visual artifact — this output is a batch of drafts the owner works through, not prose.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UK late payment reminder writer](https://useaiblocks.com/skills/uk-late-payment-chaser).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After the run
 

@@ -20,7 +20,7 @@ not_for:
   - "You want to test your app for bugs like injection or broken login: use an app security testing tool or a penetration tester."
   - "You want to watch cloud logs for odd behavior over time: use a log monitoring tool, because this checks settings once."
 you_give:
-  - Infrastructure code or exported configs
+  - Exported cloud settings or Terraform plans as JSON files
   - Which cloud provider you use
   - Permission policies (optional)
   - Network rules (optional)
@@ -31,7 +31,8 @@ you_get:
   - Open network rules
   - Fixes for each issue
 how_to_use:
-  - Export your cloud settings as JSON files. Use read-only access. For Terraform, run terraform show -json on your plan.
+  - Export your cloud settings as JSON files. Use read-only access. For Terraform, run terraform show -json on your plan, since the checks read JSON, not .tf files.
+  - Before you give the files to any AI, remove access keys, secrets, session tokens, passwords and account IDs you do not need. Check your company's rules on sharing cloud settings with an AI tool.
   - Open an AI that can run Python code and add the skill folder or paste its instructions.
   - Give it your files. Say which cloud you use. Say if the system faces the internet or holds regulated data.
   - Ask it to run the permission, storage and firewall checks. For a storage bucket, add its access list (ACL) to the bucket file or check each file on its own.

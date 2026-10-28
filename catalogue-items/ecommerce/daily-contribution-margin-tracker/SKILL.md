@@ -18,14 +18,14 @@ Not for: a store with no returns history yet (use a plain sales-minus-costs shee
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Makes it better (optional):**
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,7 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Daily net sales** (required): sales after discounts and before returns. Do not take returns off the sales figure. The returns accrual in step 2 is the only returns deduction, so returns are never counted twice. This skill runs on these inputs. The "Your results" line in "Before you start" means this daily sheet.
+- **Daily net sales** (required): sales after discounts and before returns. Do not take returns off the sales figure. The returns accrual in step 2 is the only returns deduction, so returns are never counted twice. This skill runs on these inputs. The data named in "Before you start" is this daily sheet of net sales, costs, ad spend and the return rate, not an ad-platform export.
 - **Product cost and variable costs** (required), per order or as a percent. Variable costs include shipping, fulfilment and payment fees.
 - **Daily ad spend** (required).
 - **Return rate** (required). From the store's last 90 days. An honest estimate, not a guess made to look good. Put it in one rate cell of the sheet, and set the reconciliation date as the last day of each month, so the 90-day window always comes from the store's own data.
@@ -81,10 +81,8 @@ End with: "Planning numbers only. Check with your accountant."
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock clearance cash tracker](https://useaiblocks.com/skills/retail-markdown-stock-reconciler). It takes the spreadsheet.
-- The [Freight trip cash margin calculator](https://useaiblocks.com/skills/freight-trip-contribution-builder). It takes the spreadsheet.
-- The [Product mix capacity checker](https://useaiblocks.com/skills/product-mix-capacity-checker). It takes the spreadsheet.
-- **Check the money** with the [Return on equity and margin checker](https://useaiblocks.com/skills/roe-margin-check). It takes the spreadsheet.
+- The [Store profit and loss builder](https://useaiblocks.com/skills/store-pl-builder). It takes the spreadsheet.
+- The [Daily Meta ad review planner](https://useaiblocks.com/skills/meta-manage-ads-on-a-daily-basis-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -98,7 +96,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No repeat-buyer percentage is quoted. The active customer file is a flag to check against the store's own order history.
 
 ## If something is missing
-Write `MISSING: <return rate | variable costs | ad spend>`. Without a return rate, use a clearly marked placeholder and say every day's number is provisional. Never invent a cost.
+Write `MISSING: <return rate | variable costs | ad spend>`. Without a return rate, stop the returns accrual (step 2) and say so: this skill is not for a store with no returns history. Build the sheet without the accrual column, marked "returns not accrued", and point to a plain sales-minus-costs sheet until there are about 90 days of returns. Never invent a cost.
 
 ## Avoid
 - Spreading fixed costs across days in the media buyer's view.

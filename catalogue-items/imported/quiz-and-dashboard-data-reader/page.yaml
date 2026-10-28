@@ -30,10 +30,12 @@ you_get:
   - Follow-up checks
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
-  - Paste your quiz results or LMS numbers as text. Say what was measured and how.
+  - Remove pupil names, ID numbers and anything else that identifies a pupil before you paste. Check your school's data protection policy on AI tools first.
+  - Paste your quiz results or LMS numbers as text, or rows copied from a spreadsheet. Say what was measured and how.
   - Say the decision you face, such as reteach or move on.
   - Add student level, subject or last year's results if you have them (optional).
   - Read What the Data Does NOT Show first, then pick one or two actions to try this week.
+  - Next, if the data shows a gap, use the Retrieval quiz writer to build a short quiz on it, and read the new results the same way.
 output_sample:
   input:
     - Your quiz results or LMS numbers, pasted as text

@@ -106,8 +106,8 @@ Write MISSING: <what> next to the result it affects. Keep working on parts that 
 ## After this
 
 - Send the decision draft to the account owner to review before any client contact. A person sends it, not this workflow.
-- If the client accepts, update your plan and commitments with the Team capacity planner or the [Check capacity before promising a delivery date](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow.
-- For a priced change on a building job, use the [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow.
+- If the client accepts, update your plan and commitments with the Team capacity planner or the [Team capacity and delivery-date planner](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow.
+- For a priced change on a building job, use the [Construction change decision brief writer](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow.
 - If the contract is unclear on a point that matters, ask a lawyer.
 
 ## Avoid

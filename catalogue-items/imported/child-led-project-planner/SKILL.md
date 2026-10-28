@@ -72,6 +72,19 @@ tags: ["Reggio-Emilia", "emergent-curriculum", "project-approach", "Rinaldi", "M
 
 # Emergent Project Design Scaffold
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a flexible scaffold for an emergent project — a sustained investigation driven by children's interests, questions, and theories, following the Reggio Emilia approach to curriculum. Unlike predetermined projects (where the teacher plans the topic, activities, and outcomes in advance), emergent projects begin with children's genuine interests and develop through a cycle of observation, provocation, documentation, and response. The teacher's role is not to plan the journey but to SCAFFOLD it — providing materials, provocations, and environments that deepen and extend the children's inquiry while connecting it to curriculum objectives. The critical principle from Rinaldi is that the teacher is a researcher alongside the children, genuinely curious about where the investigation will lead. The output includes a project scaffold (not a fixed plan but a flexible framework with decision points), provocations designed to deepen inquiry, curriculum connections, a documentation plan, and identified decision points where the teacher observes and responds. AI is specifically valuable here because designing provocations that are genuinely responsive to children's current thinking requires understanding both the developmental trajectory of children's ideas and the range of materials, experiences, and questions that can move thinking forward.
@@ -281,3 +294,10 @@ Document throughout using the Reggio Documentation Protocol:
 2. **Accountability systems can conflict with emergent approaches.** Schools that require detailed medium-term plans submitted in advance cannot easily accommodate emergent curriculum. The curriculum connections identified above show that emergent projects DO address curriculum objectives — but not in a predictable, plannable sequence. Teachers may need to advocate for flexibility within their school's planning requirements.
 
 3. **Not all interests sustain a project.** Some children's fascinations are momentary — intense for a day and then gone. The teacher's skill lies in distinguishing a momentary fascination from a sustained interest that can sustain an investigation. The decision points above help — if interest wanes after Week 1, the project is concluded rather than artificially extended.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Reggio learning documentation planner](https://useaiblocks.com/skills/learning-documentation-planner). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

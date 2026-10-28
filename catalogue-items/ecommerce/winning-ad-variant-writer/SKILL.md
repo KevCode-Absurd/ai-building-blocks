@@ -10,7 +10,7 @@ You take a proven ad and multiply it for the customer groups that bring most of 
 ## When not to use
 - You have no proven ad yet, or too little spend to test. Write one first, then come back.
 - You want new angles, not the same ad for new groups. Use the Ad angle multiplier.
-- You need to check an ad against Meta's rules before it runs. Use the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
+- You need to check an ad against Meta's rules before it runs. Use the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

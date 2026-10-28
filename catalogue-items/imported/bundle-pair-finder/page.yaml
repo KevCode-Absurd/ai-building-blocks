@@ -9,7 +9,7 @@ subhead: Find which products your customers already buy together, so your bundle
 explain: |
   Find which products your customers already buy together, so your bundles and cross-sells start from real orders, not hunches. It only reads data and changes nothing.
 
-  The skill looks at your Shopify orders over a set window, 180 days by default. For every order with two or more products, it counts pairs, or triples if you ask. It scores each combination by support (how many orders), confidence (how often B follows A) and lift (how much more often they sell together than by chance). You can limit by collection and set a minimum count. You need the Shopify CLI signed in with read access to orders and products.
+  The skill looks at your Shopify orders over a set window, 180 days by default. For every order with two or more products, it counts each pair of products bought together. It reads every line of every order, even large ones. It scores each combination by support (how many orders), confidence (how often B follows A) and lift (how much more often they sell together than by chance, measured across all your orders). You can limit by collection and set a minimum count. You need the Shopify CLI signed in with read access to orders and products.
 when:
   - You want to design a bundle that people already want.
   - You need ideas for "frequently bought together" suggestions.
@@ -23,25 +23,23 @@ you_give:
   - Your store address
   - How many days of orders to look at (optional)
   - A collection to focus on (optional)
-  - Pair or triple size (optional)
 you_get:
-  - A ranked list of product pairs or triples
+  - A ranked list of product pairs
   - Support, confidence and lift scores
   - Bundle candidates
   - Cross-sell ideas
 how_to_use:
   - Check that you have the Shopify CLI signed in to your store with read access to orders and products.
   - Open an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
-  - Paste the skill and give your store address. Add days, a collection or triples if you want them.
+  - Paste the skill and give your store address. Add days or a collection if you want them.
   - Check the order count first. If few orders had two or more products, run it again with a longer window.
-  - Use the top pairs to plan bundles by hand. Pairs with high lift are the strongest ideas. A store with over 250 orders in the window needs several passes, so the run takes longer.
+  - Use the top pairs to plan bundles by hand. Pairs with high lift are the strongest ideas. It reads orders a few at a time to stay within Shopify's limits, so a busy store takes longer.
   - Next, check the pairs against the Top product ranker, then build the bundle or cross-sell offer from the CSV.
 output_sample:
   input:
     - Your store address
     - How many days of orders to look at (optional)
     - A collection to focus on (optional)
-    - Pair or triple size (optional)
   prerequisites:
     - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
     - Shopify CLI signed in to your store with read access to orders and products

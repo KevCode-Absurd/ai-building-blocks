@@ -5,12 +5,12 @@ description: Use when a reply offer (a booklet, sample, quote or call) brings to
 
 # Lead offer tuner
 
-The same free offer can draw a crowd or draw only serious people, depending on how it is shown. This skill follows one of two lists, one to raise replies and one to cut weak ones, and picks three changes. It uses the diagnosis from "Inquiry problem diagnoser" and hands the new offer to "Coupon and form fixer".
+The same free offer can draw a crowd or draw only serious people, depending on how it is shown. This skill follows one of two lists, one to raise replies and one to cut weak ones, and picks three changes. It uses the diagnosis from "Lead quality reviewer" and hands the new offer to "Coupon and form fixer".
 
 ## When not to use it
 
-- There is no diagnosis yet: run the [Inquiry problem diagnoser](https://useaiblocks.com/skills/inquiry-problem-diagnoser) first, or state your own call.
-- The ad itself is weak: use the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer).
+- There is no diagnosis yet: run the [Lead quality reviewer](https://useaiblocks.com/skills/inquiry-problem-diagnoser) first, or state your own call.
+- The ad itself is weak: use the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer).
 - The form asks too much or too little: use the [Coupon and form fixer](https://useaiblocks.com/skills/coupon-and-form-fixer).
 - There is no reply offer yet. This tunes one that exists.
 
@@ -37,8 +37,8 @@ How to start:
 
 ## What you need
 
-- **The diagnosis or your own call** (required, one of the two; this is the "audit report" in Before you start): the result from the Inquiry problem diagnoser, or your own call in plain words ("raise replies" or "cut weak replies"), with numbers if you have them.
-- **The current offer** (required; a hidden-offer search is not needed): what the person gets for replying, its title and where it sits.
+- **The diagnosis or your own call** (required, one of the two; this is the "audit report" in Before you start): the result from the Lead quality reviewer, or your own call in plain words ("raise replies" or "cut weak replies"), with numbers if you have them.
+- **The current offer** (required; you supply it, so the New offer opportunity finder in Before you start is not needed): what the person gets for replying, its title and where it sits.
 - **What you can promise or ask** (recommended): a fee, a question, a guarantee, no sales call.
 - **An expert's name and credential** (optional): only if they have agreed in writing.
 

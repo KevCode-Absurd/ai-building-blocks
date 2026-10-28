@@ -13,7 +13,7 @@ You need a topic and what the person believes about it. Everything else is optio
 
 **Needed:** the topic and the person's claim about it, in a sentence or two.
 
-**Makes it better (optional):** the result from the [Circle of competence mapper](https://useaiblocks.com/skills/circle-of-competence-mapper), which shows where the edge of their knowledge is. What they plan to do because of the claim.
+**Makes it better (optional):** the result from the [Knowledge gap reviewer](https://useaiblocks.com/skills/circle-of-competence-mapper), which shows where the edge of their knowledge is. What they plan to do because of the claim.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for a circle result by name.
@@ -78,14 +78,6 @@ CHECKS MISSED
 
 Before the answers arrive, hand back only CLAIM, the six questions under QUESTIONS AND ANSWERS, and a request for the answers.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do about the gaps** with the [Learn, borrow or pass planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). Bring the gap questions and your score.
-- **Check an adviser before you rely on them** with the [Advice skin-in-the-game checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker). Bring the advice and who gave it.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The six questions come from the edges, not the basics.
@@ -94,6 +86,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The verdict follows the count in step six.
 - Each gap has a question that can be looked up or asked.
 - No answer was written for the person.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide what to do about the gaps** with the [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). Bring the gap questions and your score.
+- **Check an adviser before you rely on them** with the [Advice credibility checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker). Bring the advice and who gave it.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -59,5 +59,6 @@ how_it_works:
     text: A shared connection, a queue called agent-jobs, a worker that handles 3 jobs at a time, and a test script.
   - title: Test and explain
     text: You run the test script and check that all three jobs log as completed. The AI explains the parts in plain words.
+next: [the-job-queue-where-agents-actually-run-implementation-planner]
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

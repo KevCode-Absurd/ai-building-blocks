@@ -5,11 +5,13 @@ name: Drug exposure model builder
 summary: Turn your drug concentration-over-time data into fitted exposure models, AUC and dose scenarios for research. Not for patient dosing.
 job: research-topics
 headline: Drug exposure model builder
-subhead: Give it concentration-over-time data. Get fitted drug exposure models, research dose scenarios and a clear write-up of what holds. None of it is a dose for a patient. Bring concentration-time data with units. Use the result to plan your next step.
+subhead: Give it concentration-over-time data. Get fitted drug exposure models, research dose scenarios and a clear write-up of what holds. None of it is a dose for a patient. Bring concentration-time data with units.
 explain: |
   Concentration-over-time numbers turned into fitted drug models, exposure measures and a write-up that says what the data does and does not support. This is exploratory research work. It does not give a dose for a patient.
 
-  The skill makes you fix the basics first: which compound, what matrix, units, the exposure measure, and how to handle values below the assay limit. It then separates the structure model, the residual error and any covariates. It checks whether parameters can really be told apart, using sensitivity and multiple starts. The Python scripts need only NumPy and SciPy, and never use the internet. Only the optional step that looks up a citation may read arXiv, if your AI has web access. The vancomycin monitoring example is a demonstration only: its prior values are illustrative, it must not be run on real patient data, and those values must be replaced before any use. They cover dose simulation, exposure-response, bioequivalence planning and interaction screening.
+  The skill makes you fix the basics first: which compound, what matrix, units, the exposure measure, and how to handle values below the assay limit. It then separates the structure model, the residual error and any covariates. It checks whether parameters can really be told apart, using sensitivity and multiple starts. The Python scripts need only NumPy and SciPy, and never use the internet. Only the optional step that looks up a citation may read arXiv, if your AI has web access. The scripts cover dose simulation, exposure-response, bioequivalence planning and interaction screening.
+
+  Warning: the vancomycin monitoring example is a demonstration only. Its prior values are placeholders, it must not be run on real patient data, and its output must never go into a patient record.
 when:
   - You have concentration-time data and want fitted PK curves.
   - You are planning a bioequivalence study and need sample sizes.
@@ -33,11 +35,11 @@ how_to_use:
   - Start here. Get your concentration-time file with units, your dose history and your question ready. Use an AI that can run code, such as Claude with code running turned on. The scripts need Python 3.12 or newer, NumPy 2 and SciPy. They need no internet.
   - Know this before you start. The monitoring example in the skill runs on placeholder values. A qualified person must replace them, and its output must never go into a patient's record or be used to set a dose.
   - 'Open the skill folder and give your AI the SKILL.md file. Say: "Follow this skill on my data."'
-  - Upload your concentration-time file. Tell your AI the units, the dose history, the sample times and your question.
+  - Upload your concentration-time file as a CSV with the columns id (optional), time and conc. Add dose, tau (dosing interval), tinf (infusion time) and blq (1 for below the assay limit) if you have them. Tell your AI the units, the dose history, the sample times and your question.
   - Add your assay limit and any covariates, if you have them. Say how to treat values below the limit.
   - New to pharmacokinetics? Read the findings write-up first, then the fits. Before you trust any result, check that the units match your file and that the fitted values can be told apart.
   - Treat dose results as research scenarios only. Take clinical questions to a qualified pharmacometrician.
-  - "What next: hand the write-up to a pharmacometrician or your study team. Move to NONMEM or Monolix when you need full population model fitting or a regulatory submission."
+  - "What next: hand the write-up to your study team and the fits to a pharmacometrician. Move to NONMEM or Monolix when you need full population model fitting or a regulatory submission. The skill names FDA and EMA guidance by date, so check each against the current version before you cite it."
 terms:
   - term: AUC
     meaning: The total drug exposure over time. It is the area under the concentration curve.

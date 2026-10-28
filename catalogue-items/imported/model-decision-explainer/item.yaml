@@ -31,4 +31,4 @@ credits:
   - title: matlab-interpret-machine-learning-model skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model
-    used: Copied as it is, under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

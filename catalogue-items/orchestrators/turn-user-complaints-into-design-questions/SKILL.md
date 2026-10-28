@@ -63,10 +63,10 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## Next steps to offer
 
-Ignore the "After this" list above and use only this list. Suggest one next step in a short question, and say they can type their own:
+Ignore the "After this" list below and use only this list. Suggest one next step in a short question, and say they can type their own:
 - **Run the top research task** and bring back the answers.
-- **Turn a known problem into changes** with the [Turn a design review into fixes](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
-- **Dig into one repeated mistake** with the [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser).
+- **Turn a known problem into changes** with the [Design revision usability test planner](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
+- **Dig into one repeated mistake** with the [Product ease of use checker](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser).
 Nothing here contacts any customer.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

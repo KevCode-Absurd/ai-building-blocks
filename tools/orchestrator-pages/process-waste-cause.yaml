@@ -9,7 +9,7 @@ subhead: Paste your process step by step, with who does each step. It marks ever
 explain: |
   Most slow or error-prone processes are full of steps nobody questioned. People work harder inside the process instead of asking whether a step should exist, and when a problem repeats, the fix is a patch on the symptom. The cause stays, and the problem comes back.
 
-  This workflow follows the order from Taiichi Ohno's interview on the Toyota production system. First, it lists each step with its work time and wait time and marks it as something the customer would pay for or not. It names the kind of waste, finds the worst and asks who required each step. Then it uses the five whys on that waste: it asks why until it reaches a cause in your process or training, and checks each answer against the real place or record.
+  The ideas are inspired by Taiichi Ohno's published work on the Toyota production system. The step order is this library's own, not his method. First, it lists each step with its work time and wait time and marks it as something the customer would pay for or not. It names the kind of waste, finds the worst and asks who required each step. Then it uses the five whys on that waste: it asks why until it reaches a cause in your process or training, and checks each answer against the real place or record.
 when:
   - A process feels slow and you can't say which steps are the problem.
   - The same mistake keeps happening, and each fix lasts only a few weeks.
@@ -83,7 +83,7 @@ output_shape: |-
     Fix and prevention check: <what> | <how to check it held>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Times for work and waiting
     how: Even rough numbers help. The waiting time is often most of the total, and people leave it out.

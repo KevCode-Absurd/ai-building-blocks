@@ -8,6 +8,19 @@ date_added: "2026-02-27"
 
 # PostgreSQL Table Design 
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Use this skill when
 
 - Designing a schema for PostgreSQL
@@ -46,7 +59,7 @@ date_added: "2026-02-27"
 ## PostgreSQL “Gotchas”
 
 - **Identifiers**: unquoted → lowercased. Avoid quoted/mixed-case names. Convention: use `snake_case` for table/column names.
-- **Unique + NULLs**: UNIQUE allows multiple NULLs. Use `UNIQUE (...) NULLS NOT DISTINCT` (PG15+) to restrict to one NULL.
+- **Unique + NULLs**: UNIQUE allows multiple NULLs. Use `UNIQUE NULLS NOT DISTINCT (...)` as a table constraint (PG15+) to restrict to one NULL. The clause goes right after `UNIQUE`, before the column list. On `CREATE UNIQUE INDEX` it goes after the column list: `CREATE UNIQUE INDEX ON tbl (a, b) NULLS NOT DISTINCT`. Source: https://www.postgresql.org/docs/current/sql-createtable.html
 - **FK indexes**: PostgreSQL **does not** auto-index FK columns. Add them.
 - **No silent coercions**: length/precision overflows error out (no truncation). Example: inserting 999 into `NUMERIC(2,0)` fails with error, unlike some databases that silently truncate or round.
 - **Sequences/identity have gaps** (normal; don't "fix"). Rollbacks, crashes, and concurrent transactions create gaps in ID sequences (1, 2, 5, 6...). This is expected behavior—don't try to make IDs consecutive.
@@ -144,7 +157,7 @@ Enable with `ALTER TABLE tbl ENABLE ROW LEVEL SECURITY`. Create policies: `CREAT
 
 ### Upsert-Friendly Design
 
-- **Requires UNIQUE index** on conflict target columns—`ON CONFLICT (col1, col2)` needs exact matching unique index (partial indexes don't work).
+- **Requires a unique index or constraint** that the conflict target can infer: `ON CONFLICT (col1, col2)` picks a unique index on exactly those columns. A partial unique index works too if you repeat its predicate: `ON CONFLICT (did) WHERE is_active DO NOTHING`. Without the `WHERE`, inference fails with an error. Source: https://www.postgresql.org/docs/current/sql-insert.html
 - **Use `EXCLUDED.column`** to reference would-be-inserted values; only update columns that actually changed to reduce write overhead.
 - **`DO NOTHING` faster** than `DO UPDATE` when no actual update needed.
 
@@ -232,3 +245,12 @@ CREATE TABLE profiles (
 );
 CREATE INDEX profiles_attrs_gin ON profiles USING GIN (attrs);
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Agent database migration planner](https://useaiblocks.com/skills/agent-database-migration-planner). It takes the data model.
+- The [Postgres performance tuner](https://useaiblocks.com/skills/postgres-performance-tuner). It takes the data model and code change.
+- The [Postgres query tuner](https://useaiblocks.com/skills/postgres-query-tuner). It takes the data model.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

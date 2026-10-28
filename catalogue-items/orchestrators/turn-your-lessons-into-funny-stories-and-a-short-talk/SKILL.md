@@ -63,7 +63,7 @@ Pause here: Fix the lines marked competing. Then repeat the first two steps for 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Rehearse the talk aloud, then record it and time it against your slot.
 - Keep the stories that got a laugh and reuse them in your next talk.
 - Plan the jokes and timing in more detail with the [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner).

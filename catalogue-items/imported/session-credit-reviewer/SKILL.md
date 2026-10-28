@@ -9,6 +9,22 @@ license: MIT
 Surfaces AI collaboration evidence the developer didn't consciously record.
 The original author calls this method a "Vela 3-layer pipeline" with "ADHD 4-frame reasoning". Those are the author's labels, not clinical terms. In plain words: three layers (rate the session, score it four ways, write the record) and four scoring frames (technical, uncertainty, fork, AI contribution).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It reads your local git history and Claude Code session logs, and writes files into your project.
+<!-- /needs -->
+
 ## What you need first
 
 **Privacy first.** The optional token count reads the user's local Claude Code logs, which hold past chats. Those can contain keys, passwords or client names. This step is **off by default**. Skip it, and write `cache:n/a` and `tok:n/a`, unless the user clearly says yes after you explain this.
@@ -409,3 +425,10 @@ When `/collab-proof` runs at session end:
 - Merge frame scores (take max per frame across all snapshots)
 - Combine `key_moments` arrays — these preserve tradeoff discussions that were compacted away
 - Delete `.tmp-*.json` files after merging
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI answer fact-checker](https://useaiblocks.com/skills/ai-answer-fact-checker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

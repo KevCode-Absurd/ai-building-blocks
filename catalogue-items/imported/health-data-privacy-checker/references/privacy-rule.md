@@ -26,7 +26,8 @@
 
 **Business Associates (BAs):**
 - Entities that create, receive, maintain, or transmit PHI on behalf of a CE
-- Must sign a **Business Associate Agreement (BAA)** before PHI is shared
+- Must sign a **Business Associate Agreement (BAA)** before PHI is shared (45 CFR §164.502(e), §164.504(e))
+- Not business associates (45 CFR §160.103, definition, paragraph (4)): a health care provider receiving PHI for treatment; a plan sponsor receiving PHI from its group health plan under §164.504(f); a government agency determining eligibility for a public-benefit health plan; and the covered entity's own workforce. Check the role before saying a BAA is needed.
 - Subject to Security Rule; portions of Privacy Rule apply via BAA
 
 **PHI Definition** (§164.501):
@@ -130,13 +131,18 @@ Permitted if:
 
 ## 5. Notice of Privacy Practices (NPP)
 
-### Required for: All Covered Entities (not BAs)
+### Required for: most Covered Entities (not BAs)
+
+Exceptions (https://www.ecfr.gov/current/title-45/section-164.520, https://www.ecfr.gov/current/title-45/section-164.500):
+- A group health plan that provides benefits only through an insurance contract with an insurer or HMO, and creates or receives no PHI other than summary health information and enrollment or participation data, does not have to maintain or provide a notice (§164.520(a)(3)(iii)). The insurer or HMO provides it instead.
+- An inmate has no right to a notice, and the notice rules do not apply to a correctional institution that is a covered entity (§164.520(a)(4)).
+- A health care clearinghouse that creates or receives PHI only as another covered entity's business associate is not subject to §164.520 (§164.500(b)(1)).
 
 ### Must Be Provided (§164.520(c)):
 - At first service delivery (in-person)
 - On request
 - On CE's website (if one exists)
-- Health plans: at enrollment and every 3 years if material changes
+- Health plans: at enrollment; at least once every 3 years, a reminder that the notice is available and how to get it; and after a material change, as set out in §164.520(c)(1)
 
 ### Required NPP Contents (§164.520(b)):
 1. **Header**: "THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY."

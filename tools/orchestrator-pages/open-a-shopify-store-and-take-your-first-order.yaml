@@ -95,7 +95,7 @@ output_shape: |-
     Score out of 100 | blockers first | test-order plan | safe switch to live
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Your country
     how: It decides which payment options exist and which tax rules matter. State the registered country first.
@@ -122,4 +122,5 @@ improve:
   - Save the product sheets in your brand file, so you can add new products fast.
   - Re-run the shipping and tax steps whenever you add a country.
   - Re-run the go-live check after any big change to payments, shipping or tax.
-  - Pair it with a policy writer for returns and shipping pages.
+  - Then check your returns and shipping pages with the Shopify store policy checker (useaiblocks.com/skills/store-policy-checker). Bring the step 2 product sheets and the step 4 shipping plan, so the pages match your real rates.
+next: [payments-and-checkout-settings-checker, store-policy-checker]

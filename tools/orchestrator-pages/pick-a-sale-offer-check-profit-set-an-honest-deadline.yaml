@@ -80,7 +80,7 @@ output_shape: |-
     Capacity | limit type | date | lines per channel | honesty check
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Single hero product or many
     how: Say which. Step 1 leans toward a gift or new angle for one product and toward bundles for many.

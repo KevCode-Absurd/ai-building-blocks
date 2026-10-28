@@ -11,6 +11,19 @@ metadata:
 
 Clarify your message so customers will listen. Customers don't buy the best products — they buy the ones they can understand the fastest.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **The customer is the hero, not your brand.** Your brand is the guide who helps the hero win. Position yourself as the hero and you compete with your customer; position yourself as the guide and you serve them.
@@ -254,8 +267,17 @@ See: [references/multi-channel-consistency.md](references/multi-channel-consiste
 
 For the complete methodology and worksheets:
 
-- [*"Building a StoryBrand: Clarify Your Message So Customers Will Listen"*](https://www.amazon.com/Building-StoryBrand-Clarify-Message-Customers/dp/0718033329?tag=wondelai00-20) by Donald Miller
+- [*"Building a StoryBrand: Clarify Your Message So Customers Will Listen"*](https://www.amazon.com/Building-StoryBrand-Clarify-Message-Customers/dp/0718033329) by Donald Miller
 
 ## About the Author
 
 Donald Miller is the CEO of StoryBrand, which says it has helped over 10,000 businesses clarify their messaging (its own figure, not checked here). A New York Times bestselling author of *Building a StoryBrand*, *Marketing Made Simple*, and *Business Made Simple*, he distilled decades of narrative theory into the practical seven-part SB7 framework.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer-focused message writer](https://useaiblocks.com/skills/customer-hero-message-writer).
+- The [Story shape mapper](https://useaiblocks.com/skills/story-shape-mapper). It takes the draft.
+- The [Memorable message editor](https://useaiblocks.com/prompts/message-stickiness-rewriter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

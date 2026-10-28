@@ -31,10 +31,10 @@ you_get:
   - Feed and via placement
   - A note on the next steps, such as EM analysis
 how_to_use:
-  - You need paid MATLAB with the Antenna Toolbox or PCB Toolbox, and the skill's licence lets you use it only with MathWorks products. Without them, stop here.
+  - You need paid MATLAB with the Antenna Toolbox or PCB Toolbox, and the skill's licence lets you use it only with MathWorks products. Without them, stop here. The licence for this copy is the LICENSE.md in the skill folder (BSD 2-Clause plus that MathWorks-only condition). The link in the skill file's header points to MathWorks' own reuse licence, which says the same.
   - Open a chat with an AI that can write MATLAB code. Paste in the skill text.
   - Describe the shape you want, or paste a sketch. Add substrate, conductor, feed type and position, dimensions and layer order.
-  - Copy the MATLAB script it writes into MATLAB. You need the Antenna Toolbox or PCB Toolbox to run it.
+  - You get back one MATLAB script and a checklist of layer and feed settings. Copy the script into MATLAB. You need the Antenna Toolbox or PCB Toolbox to run it.
   - Check the layer numbers and feed settings against the list it gives you. Also check the returned script's layer count and feed positions against your substrate before you run any EM analysis, because that list is the only guard.
   - Run your EM analysis once the shape looks right.
 output_sample:

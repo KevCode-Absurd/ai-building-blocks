@@ -10,6 +10,22 @@ metadata:
 
 End-to-end performance management support — from goal setting and performance reviews to 360-degree feedback, performance improvement plans, recognition programs, and succession planning.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** Forms and wording are a writing job. Claude, ChatGPT and Gemini all do it well.
+<!-- /needs -->
+
 ## Steps
 
 1. Ask for what you need in one message: the team and its roles, the goals or OKRs to measure, the review period, and the rating scale. Examples of achievements or issues, and company values, are optional.
@@ -99,3 +115,12 @@ Do not use this for dismissals, tribunal or court cases, or formal disciplinary 
 - Calibrate across teams before finalizing ratings. Conduct calibration sessions with peer managers to align rating standards across departments, mitigate lenient or harsh grading tendencies, and maintain organizational fairness.
 - Establish clear, time-bound PIP milestones. Performance Improvement Plans must detail specific gap areas, expected outcomes, support resources, and 30/60/90-day evaluation checkpoints to provide genuinely supportive remediation.
 - Maintain comprehensive documentation across all performance stages — some countries give informal feedback and verbal warnings little legal standing, and the original author names Vietnam as one. Check your own country's employment law with HR or a lawyer.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Workplace investigation planner](https://useaiblocks.com/skills/workplace-investigation-guide). It takes the document.
+- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the document.
+- The [HR policy drafter](https://useaiblocks.com/skills/hr-policy-drafter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

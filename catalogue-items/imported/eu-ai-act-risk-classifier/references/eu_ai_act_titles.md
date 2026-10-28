@@ -15,17 +15,19 @@ The Act has 13 Titles + 13 Annexes. Adopted as Regulation (EU) 2024/1689 (the "A
 | **1** | Subject matter | Establishes harmonised rules for AI systems placed on EU market, used or put into service |
 | **2** | Scope | Applies to providers, deployers, importers, distributors, authorized representatives. Extraterritorial: applies to non-EU providers placing systems on EU market. Excludes military / national security / pure scientific research |
 | **3** | Definitions | "AI system" (Article 3(1)): a machine-based system designed to operate with varying levels of autonomy that may exhibit adaptiveness after deployment; infers from input how to generate outputs (predictions, content, recommendations, decisions). Per Commission Feb 2025 Guidelines, excludes simple rule-based systems with no adaptiveness |
-| **4** | AI literacy | **In force from 2 Feb 2025.** Organizations must ensure staff dealing with AI systems have AI literacy proportionate to their roles |
+| **4** | AI literacy | **Applies from 2 Feb 2025.** Providers and deployers must take measures to support the AI literacy of staff and others operating or using AI systems for them, suited to their knowledge and the context of use. As amended by the Digital Omnibus on AI, no specific level is required of any individual |
 
 ## Title II — Prohibited AI Practices (Article 5)
 
 **In force from 2 Feb 2025.** Penalty: up to EUR 35M or 7% worldwide annual turnover (Article 99).
 
-8 prohibited categories per Article 5(1):
+Prohibited categories per Article 5(1):
 
 - **(a)** Subliminal techniques beyond awareness causing harm
 - **(b)** Exploitation of vulnerabilities (age, disability, socioeconomic situation)
-- **(c)** Social scoring by public authorities causing detrimental treatment
+- **(ba)** Generating or manipulating realistic intimate or sexually explicit imagery of an identifiable person without consent — **added by the Digital Omnibus on AI; applies from 2 Dec 2026**
+- **(bb)** Generating or manipulating child sexual abuse material — **added by the Digital Omnibus on AI; applies from 2 Dec 2026**
+- **(c)** Social scoring (by any operator, not only public authorities) causing detrimental or unfavourable treatment
 - **(d)** Predictive policing based solely on profiling natural persons (with narrow law-enforcement exceptions per Article 5(2))
 - **(e)** Untargeted scraping of facial images for facial recognition databases
 - **(f)** Emotion recognition in workplace and educational institutions
@@ -34,7 +36,7 @@ The Act has 13 Titles + 13 Annexes. Adopted as Regulation (EU) 2024/1689 (the "A
 
 ## Title III — High-Risk AI Systems (Articles 6–49)
 
-The densest part of the regulation. **Title III general high-risk obligations in force 2 Aug 2026; Annex I sectoral 2 Aug 2027.**
+The densest part of the regulation. **After the Digital Omnibus on AI (Regulation (EU) 2026/1744), the high-risk rules apply from 2 Dec 2027 for Annex III systems and from 2 Aug 2028 for Annex I systems (Article 113(c)).** Source: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113
 
 ### Chapter 1 — Classification (Articles 6–7)
 
@@ -63,12 +65,12 @@ See `high_risk_systems_annex_iii.md` for the detailed Annex III walkthrough.
 
 | Article | Topic | Applies to |
 |---|---|---|
-| **22** | Authorized representative | Non-EU providers must appoint one |
+| **22** | Authorized representative | Non-EU providers of high-risk systems must appoint one |
 | **23** | Importer obligations | Verify provider conformity assessment before import |
 | **24** | Distributor obligations | Verify CE marking before making available |
 | **25** | Responsibilities along the value chain | Substantial modification turns deployer into provider |
-| **26** | Deployer obligations | Use per instructions; human oversight; input data; logs; transparency |
-| **27** | Fundamental Rights Impact Assessment (FRIA) | Public-sector deployers + essential-services deployers of high-risk |
+| **26** | Deployer obligations | Use per instructions; human oversight; input data; logs kept at least six months (26(6)); inform workers (26(7)); tell people a high-risk Annex III system is used to decide about them (26(11)) |
+| **27** | Fundamental Rights Impact Assessment (FRIA) | Deployers that are public-law bodies or private entities providing public services, and deployers of Annex III point 5(b) and 5(c) systems (credit scoring, life and health insurance); not Annex III point 2 |
 
 ### Chapter 4 — Notified Bodies (Articles 28–39)
 
@@ -87,14 +89,14 @@ Procedures for designating + monitoring notified bodies (involved in Module H co
 
 ## Title IV — Transparency Obligations (Article 50)
 
-**In force from 2 Aug 2025.**
+**Applies from 2 Aug 2026** (Article 113, general date). Article 50(2) marking for systems already on the market before 2 Aug 2026: from 2 Dec 2026 (Article 111(4)). These duties apply at any risk class, high-risk included (Article 50(6)). Sources: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50 and https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-111
 
-| Article 50 paragraph | Requirement |
-|---|---|
-| **50(1)** | Disclose AI interaction (chatbots): natural persons must be informed |
-| **50(2)** | Mark synthetic content (machine-readable) as AI-generated |
-| **50(3)** | Disclose emotion recognition / biometric categorisation to subjects (outside Article 5 prohibition) |
-| **50(4)** | Disclose deepfakes (image/audio/video) — exception for art, satire, security |
+| Article 50 paragraph | Who | Requirement |
+|---|---|---|
+| **50(1)** | Provider | Design systems that interact with people so they are told it is an AI, unless obvious |
+| **50(2)** | Provider | Mark synthetic audio, image, video or text output (machine-readable) as AI-generated |
+| **50(3)** | Deployer | Tell people exposed to emotion recognition / biometric categorisation (outside Article 5 prohibition) |
+| **50(4)** | Deployer | Disclose deepfakes (image/audio/video), and AI text published to inform the public on matters of public interest unless it had human review and editorial responsibility; lighter disclosure for evidently artistic, satirical or fictional work |
 
 ## Title V — General-Purpose AI Models (Articles 51–55)
 
@@ -137,7 +139,7 @@ EU-wide database of stand-alone high-risk Annex III AI systems. Provider registr
 | Article | Topic |
 |---|---|
 | **72** | Provider post-market monitoring system |
-| **73** | Serious-incident reporting (provider) — 15 days general; 2 days for critical infrastructure |
+| **73** | Serious-incident reporting (provider) — at the latest 15 days after becoming aware; 2 days for a widespread infringement or an Article 3(49)(b) incident (critical infrastructure); 10 days in case of death |
 | **74** | Market surveillance + AI Office cooperation |
 | **75–84** | Market surveillance powers, enforcement, mutual assistance |
 
@@ -155,7 +157,7 @@ Commission powers to update Annexes (notably Annex III categories) via delegated
 |---|---|
 | **99** | Penalties: up to EUR 35M / 7% turnover (Article 5); EUR 15M / 3% (most high-risk); EUR 7.5M / 1% (incorrect info) |
 | **102** | Amendments to other regulations (medical devices, etc.) |
-| **113** | Entry into force + application phasing |
+| **113** | Entry into force + application phasing (amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744) |
 
 ## Annexes — At a Glance
 

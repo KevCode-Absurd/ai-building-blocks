@@ -58,14 +58,6 @@ Use these headings, in this order: SCOPE, SEGMENT MEASURES, BRIDGE (sum of segme
 
 If they ask for a spreadsheet and you can make files: put inputs, the bridge and checks on separate sheets, mark input cells, change one input to confirm the residual moves, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Match earnings to the right value measure** with the [Minority-interest multiple reconciliation](https://useaiblocks.com/skills/minority-interest-multiple-reconciliation). Bring the reconciled group earnings and the enterprise value pieces.
-- **Compare profit with cash** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). Bring your profit and cash figures.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, in USD millions, not a real company.
@@ -93,6 +85,14 @@ To repeat the baseline as a second check, run `node scripts/run-model.mjs refere
 - No balancing plug was added, and any residual is shown as a residual.
 - A segment EBITDA or adjusted measure is not treated as group operating profit.
 - Every figure traces to a source page. A missing figure is `MISSING:`, never zero.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Match earnings to the right value measure** with the [Minority interest valuation checker](https://useaiblocks.com/skills/minority-interest-multiple-reconciliation). Bring the reconciled group earnings and the enterprise value pieces.
+- **Compare profit with cash** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). Bring your profit and cash figures.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

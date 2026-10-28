@@ -5,6 +5,23 @@ risk: critical
 source: community
 date_added: "2026-02-27"
 ---
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can read your project files and run the tests for you, when you allow it.
+- **Any good chat AI:** It can write the plan from pasted files. You run each stage yourself.
+<!-- /needs -->
+
 ## Supporting material availability
 
 This catalog copy contains the inline guidance below, but does not include the following supporting paths. They are external prerequisites, not bundled files:
@@ -50,6 +67,14 @@ Give the user a plan with these parts, in order:
 7. **Blocked steps**: any step that needs a supporting file this copy does not include.
 
 Never invent versions, changelog entries or commands. Read the user's dependency file first. If the package, target version or dependency file is missing, ask once, then mark it MISSING. Do not run an upgrade command without the user's say-so, and do not change files. After the plan, suggest the first stage to run.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Use this skill when
 
@@ -199,27 +224,24 @@ describe('Dependency Compatibility', () => {
 
 ### Identifying Breaking Changes
 ```bash
-# Use changelog parsers
-npx changelog-parser react 16.0.0 17.0.0
-
-# Or manually check
+# Read the package's own changelog, release notes or migration guide.
+# Check the address first; each project keeps it in a different place.
 curl https://raw.githubusercontent.com/facebook/react/main/CHANGELOG.md
 ```
 
 ### Codemod for Automated Fixes
-```bash
-# React upgrade codemods
-npx react-codeshift <transform> <path>
+Codemods rewrite your files. Ask the user for a clear yes, commit first and review the diff. Use the package's official codemod and check its README for the current command before running it.
 
-# Example: Update lifecycle methods
-npx react-codeshift \
-  --parser tsx \
-  --transform react-codeshift/transforms/rename-unsafe-lifecycles.js \
-  src/
+```bash
+# React's official codemods are in the reactjs/react-codemod repo (check its README first)
+npx react-codemod <transform> <path>
+
+# Example: rename old lifecycle methods
+npx react-codemod rename-unsafe-lifecycles src/
 ```
 
 ### Custom Migration Script
-Warning: this rewrites every matching file. Commit first, run on a copy or branch, and review the diff before keeping it. Only use it when a codemod does not exist.
+Warning: this rewrites every matching file. Ask the user for a clear yes before running it. Commit first, run on a copy or branch, and review the diff before keeping it. Only use it when a codemod does not exist.
 
 ```javascript
 // migration-script.js
@@ -377,7 +399,8 @@ yarn upgrade-interactive  # Interactive upgrades
 
 ### Peer Dependency Resolution
 ```bash
-# Last resort only. These hide real conflicts: say so in the plan and test twice.
+# Blocked step: last resort only. Ask the user for a clear yes before running either one.
+# These skip real conflict checks: say so in the plan, then run the full tests a second time.
 # npm 7+: strict peer dependencies
 npm install --legacy-peer-deps  # Ignore peer deps
 

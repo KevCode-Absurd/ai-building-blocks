@@ -5,7 +5,7 @@ description: Use when you want to find what you can offer that others cannot eas
 
 # Specific knowledge finder
 
-Your edge is usually something you learned because you were curious, not something you were taught. This skill finds it from what you tell it, keeps teachable skills apart from the rest, and gives you a small test to run. It does not predict what you will earn. To turn a pick into something you own, use the [Hours-to-assets planner](https://useaiblocks.com/skills/hours-to-assets-planner).
+Your edge is usually something you learned because you were curious, not something you were taught. This skill finds it from what you tell it, keeps teachable skills apart from the rest, and gives you a small test to run. It does not predict what you will earn. To turn a pick into something you own, use the [Hourly work to product planner](https://useaiblocks.com/skills/hours-to-assets-planner).
 
 **Not for:** someone who has already chosen a path and needs a plan (talk to a career coach or mentor), a skills list for a CV (use a simple skills audit), or any promise of income or a business plan (use an adviser for money questions). The ideas it gives you are a place to start, not a verdict.
 

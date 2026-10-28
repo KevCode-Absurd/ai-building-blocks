@@ -29,4 +29,4 @@ credits:
   - title: langchain skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/langchain
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, updated removed LangChain calls, replaced the eval-based calculator with a safe arithmetic parser, removed the code and shell tool examples, and made every key come from the environment. We added Before you start and After this sections that link to other AI Blocks steps.

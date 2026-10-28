@@ -63,7 +63,7 @@ Response speed deserves attention out of proportion to its size. Inbound leads g
 - Yellow: rising 0% to 25%
 - Red: rising more than 25%
 
-A rising cost per lead alongside rising spend means the channel is saturating. More budget will not fix it, and recommending more budget there is the most common way this pulse gives bad advice.
+A rising cost per lead alongside rising spend is a warning that the channel may be saturating. It does not prove the cause (creative fatigue, targeting changes, the season and tracking gaps look the same), and it does not tell you what the next dollar will buy. Do not recommend more budget on that pattern; recommending more budget there is the most common way this pulse gives bad advice.
 
 ---
 
@@ -108,3 +108,5 @@ A rising cost per lead alongside rising spend means the channel is saturating. M
 Thresholds set the status color. They do not write the finding.
 
 "Win rate is yellow" is not useful. "Win rate fell to 14% from 22%, and the drop is entirely in leads from the trade show list" is. Use the cutoffs to decide what deserves attention, then go look at why.
+
+Changed by AI Blocks (2026-10-28): rising spend with rising cost per lead is now a warning sign, not proof of saturation.

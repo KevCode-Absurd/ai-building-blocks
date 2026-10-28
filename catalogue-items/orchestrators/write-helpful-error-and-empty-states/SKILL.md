@@ -95,6 +95,6 @@ Write `MISSING: <what>` beside the affected message and carry on with the rest. 
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Check the new text on a real screen** with the [Plain words interface rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter), which takes the finished messages.
+- **Check the new text on a real screen** with the [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter), which takes the finished messages.
 - **Score a single message set** with the [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter).
 Nothing here edits your product. A developer builds from the notes.

@@ -54,10 +54,10 @@ Produce one final artifact with the deliverables below. Resolve contradictions u
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Fix each release blocker, then run step 3 again in a fresh session.
 - Run the [MCP server test runner](https://useaiblocks.com/skills/mcp-server-test-runner) for deeper tests of your tools.
-- Tighten the server with the [MCP server hardener](https://useaiblocks.com/skills/mcp-server-hardener).
+- Tighten the server with the [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener).
 
 ## Resume
 
@@ -74,6 +74,6 @@ Include source coverage, unresolved findings, missing facts and one next action.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder). It takes the document.
+- The [Penetration test planner](https://useaiblocks.com/skills/agency-security-penetration-tester). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -72,6 +72,26 @@ tags: ["Reggio-Emilia", "documentation", "Rinaldi", "Malaguzzi", "visible-learni
 
 # Reggio Documentation Protocol
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lesson plan** with the [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer). Bring your lesson plan, a plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a documentation protocol following the Reggio Emilia approach — a systematic practice of observing, recording, interpreting, and sharing children's learning processes, not just their products. In the Reggio tradition, documentation is not assessment, display, or record-keeping — it is a research tool. The teacher-as-researcher observes children's thinking, captures their theories and questions, and uses this evidence to understand what children are TRYING to understand and to plan what to offer next. The critical principle from Rinaldi is that documentation makes learning VISIBLE — not as a finished outcome but as a living process of inquiry, hypothesis, revision, and deepening understanding. The output includes a protocol for what to observe, how to record it (photographs, transcriptions of children's dialogue, work samples), how to interpret the evidence (what does it reveal about children's thinking?), and how to share it (with children for revisiting, with families for connection, with colleagues for professional dialogue). AI is specifically valuable here because designing effective documentation protocols requires translating the philosophical principles of Reggio (the image of the child as capable, the hundred languages, learning as research) into practical observation strategies that a teacher can implement in a busy classroom.
@@ -257,3 +277,11 @@ Based on the documentation, the teacher plans the NEXT provocation (not the next
 2. **The Reggio approach was developed for early childhood and primary education.** While Krechevsky et al. (2013) have shown it can be adapted for older students, the documentation practices described here are most naturally suited to early years and primary settings where children's learning is more visible and less constrained by subject timetables. Adaptation for secondary contexts requires rethinking what "children's theories" look like in subject-specific learning.
 
 3. **Documentation is a pedagogical stance, not a technique.** The protocol provides practical guidance, but Reggio documentation requires a fundamental belief in the child as a capable, competent theory-builder. A teacher who documents children's words while privately dismissing them as "cute mistakes" has missed the point. The documentation is only as powerful as the respect with which it treats children's thinking.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Child-led project planner](https://useaiblocks.com/skills/child-led-project-planner).
+- The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

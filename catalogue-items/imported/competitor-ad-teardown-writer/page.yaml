@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and turn on web search. This skill needs it to find ad pages. It reads public ad library pages by hand, one rival at a time. Bulk scraping of ad libraries is out of scope here, and it can break platform terms.
   - Paste the skill text into the chat, or upload the skill file.
   - Add your rivals' names and websites, your product, and the channels to check. Say standard or deep.
-  - Add any landing page links you already found (optional).
+  - Add any landing page links you already found (optional). The skill opens landing pages one at a time. Tell it which rivals and pages are in scope before it starts, and ask it to check with you before it opens a long list.
   - Read Coverage first to see what was found. Then check that each claim has a link to an ad or page.
   - Treat anything marked as a guess as an idea to test, not a fact.
   - Next, turn the top gaps into a test plan. Check any counter ad against the ad platform's rules before it runs.

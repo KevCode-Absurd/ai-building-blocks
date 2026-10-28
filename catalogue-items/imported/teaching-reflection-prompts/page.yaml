@@ -32,11 +32,13 @@ you_get:
   - A short five-minute version
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text into the chat.
+  - Paste the block under the "Prompt" heading of the skill file into the chat. Replace {{teaching_experience}}, {{reflection_purpose}} and the other {{...}} fields with your own words. The skill file says optional fields are "injected by context engine"; in a normal chat nothing fills them, so type them yourself or delete those lines.
   - Describe the lesson in a few sentences. Say what you want to understand.
-  - Add how you felt and how much time you have, if you like.
+  - Add how you felt and how much time you have, if you like. If you only have five minutes, ask for the Quick Reflection Option instead of the full set of prompts.
   - Answer the questions in a journal or out loud. Start with the first layer and work down.
-  - Check any named research against the source before you quote it to colleagues or in an appraisal log.
+  - Check any named research against the source before you quote it to colleagues or in an appraisal log. The example's claim about group-work research (Johnson & Johnson, Mercer) gives no source details, so look it up first.
+  - Next, take the "what will I do differently" answer into the Lesson study cycle planner to try the change with a colleague.
+  - This is Gareth Manning's skill, copied as it is under CC BY-SA 4.0. If you share it or a changed version, keep his credit and use the same licence.
 output_sample:
   input:
     - What happened in the lesson or event

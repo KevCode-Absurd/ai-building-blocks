@@ -31,4 +31,4 @@ credits:
   - title: prototype skill
     by: Matt Pocock
     url: https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

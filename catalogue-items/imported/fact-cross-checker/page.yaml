@@ -32,11 +32,11 @@ you_get:
   - A list of conflicts between sources
   - A list of gaps still open
 how_to_use:
-  - Open Claude, ChatGPT or Gemini in a mode that can search the web and open pages. The skill wants at least two different search tools, such as web search plus a page reader or a second search source. With only one, you still get a table, but it is a partial check. The skill should say so under gaps, so do not treat it as complete.
-  - Without a second search tool, the evidence table is partial. Do not share it as a complete check. The validator script and report-schema.md are only for the optional code step.
+  - Open Claude, ChatGPT or Gemini in a mode that can search the web and open pages. The skill needs at least two different search tools, such as web search plus a page reader or a second search source, and works to a budget of about six searches and six page opens. With only one tool, the table is a partial check and says so under gaps, so do not share it as complete.
+  - The validator step is optional. The validator script and report-schema.md are only for that code step.
   - Paste the skill text from this page into the chat. If you want the validator step, also attach references/report-schema.md and scripts/validate_report.py. Without them, skip that step and ask for the table in plain text.
   - Type the claim you want checked, word for word. Add links to any sources you already trust, how deep to go, and any topics that must not be searched.
-  - Read the table by confidence first. Then read the conflicts and gaps before you use the claim.
+  - The result is a table with one row per claim: the claim, the source IDs, which sources support it and which contradict it, whether it is sourced or an inference, its confidence (low, medium or high) and whether sources conflict. A list of gaps follows. Read the table by confidence first. Then read the conflicts and gaps before you use the claim.
   - Click the cited links yourself for anything important. The check shows how well sources agree. It does not prove a claim is true.
   - Running the validator (scripts/validate_report.py) needs an AI that can run code, plus Python 3. It needs no API key. Without code, ask for the table in plain text.
   - Carry each claim into your final report with its confidence level and conflicts beside it.

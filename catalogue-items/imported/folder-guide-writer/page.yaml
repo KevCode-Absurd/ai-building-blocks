@@ -9,7 +9,7 @@ subhead: A short CLAUDE.md file for one folder, so any AI helper that opens it k
 explain: |
   A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch. A matching AGENTS.md points to the same file.
 
-  This is davidondrej's skill, copied as it is. Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit davidondrej if you reuse it.
+  This is davidondrej's skill, copied as it is. Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The author's own file header says MIT. Both allow reuse. Credit davidondrej and sickn33.
 
   No paid service, API key or web scraping is needed. Your AI must ask you before it runs each shell command.
 
@@ -37,6 +37,7 @@ how_to_use:
   - Open your AI in a tool that can read and write your project files, such as Claude Code. The skill runs shell commands (it makes a link with ln -s and can commit with git) and writes files, so confirm the folder first and approve each command.
   - Paste this skill into the chat, or add it to your skills folder.
   - Tell your AI which folder to write a guide for. Add any rules you want kept.
+  - The skill reads every file in the folder in full. Move out or exclude .env files, keys, passwords and other secrets first, and tell your AI to skip them.
   - The skill asks for the folder path, reads every file, and shows you a bullet outline. Fix anything wrong or missing in the outline, then say go. Only then does it write CLAUDE.md and the AGENTS.md link.
   - Check the finished CLAUDE.md for rules that clash. Add any rule your AI keeps breaking. A good guide is short, about 60 lines or fewer.
   - Nothing is committed or pushed unless you ask. A push sends the file to your remote repository, so your AI must ask you first. When your AI breaks a rule later, add that rule to the file.

@@ -144,3 +144,4 @@ terms:
     meaning: What you pay for every 1,000 times your ad is shown.
   - term: AOV
     meaning: Average order value. The average amount a customer spends in one order.
+next: [ad-performance-diagnoser, ad-test-sprint-runner]

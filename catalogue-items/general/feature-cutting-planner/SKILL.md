@@ -9,7 +9,7 @@ Every feature seems small when it is added, and the sum is a product nobody can 
 
 ## When to use it
 
-Use it when a product has more parts than people can use. Do not use it when the product has no users yet (write down the job you expect first, or talk to a few likely users), when you need a legal or compliance review of what must stay (ask a specialist; this skill only marks those parts as fixed), or when you first want a review of how the design looks and works (run the [Design ten-principles reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer), then bring its report here).
+Use it when a product has more parts than people can use. Do not use it when the product has no users yet (write down the job you expect first, or talk to a few likely users), when you need a legal or compliance review of what must stay (ask a specialist; this skill only marks those parts as fixed), or when you first want a review of how the design looks and works (run the [Ten-principle product design reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer), then bring its report here).
 
 ## What you need
 
@@ -38,7 +38,7 @@ The one job and who would own the result. Part by part decisions with reasons. T
 ## What next
 
 When you've handed it back, ask in one short question what they want to do next. Offer this, and say they can type their own:
-- **Check the slimmer version** by running the [Design ten-principles reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer) again after the cuts are made.
+- **Check the slimmer version** by running the [Ten-principle product design reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer) again after the cuts are made.
 
 ## Check before you hand it back
 

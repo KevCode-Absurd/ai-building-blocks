@@ -10,6 +10,27 @@ date_added: "2026-02-27"
 
 Postgres performance rules maintained by Supabase, in 8 categories ordered by impact. Use them to tune one slow query, or the table and settings it depends on, one change at a time.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **The data model** (yours): the database tables or collections, their fields and how they link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, the data model. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It reads pasted SQL and query plans well and explains each change in plain words.
+- **Claude Code or Codex:** They can open your project files and the rules folder, so you paste less.
+- **psql or your database's SQL editor:** You run EXPLAIN ANALYZE there before and after each change.
+<!-- /needs -->
+
 ## What you need
 
 - The slow query, as plain SQL.
@@ -81,6 +102,15 @@ End with **Not checked**. Do not promise a speed-up. The rule files quote figure
 - The user wants the whole app and schema reviewed. Use the Postgres performance tuner skill.
 - The user wants new tables designed. Use the Postgres schema designer.
 - A live database is failing now. Tell the user to get a database admin first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Postgres performance tuner](https://useaiblocks.com/skills/postgres-performance-tuner). It takes the code change.
+- The [Database schema planner](https://useaiblocks.com/skills/database-schema-planner). It takes the code change.
+- The [Database designer](https://useaiblocks.com/skills/database-design-guide). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit and licence
 

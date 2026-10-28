@@ -9,7 +9,7 @@ Tell it your hours. Get a daily word count, a reading plan, a restart rule and a
 
 The four-step order is this workflow's own design. It is inspired by Stephen King's On Writing: write every day, set a daily count, and read as part of the job. Each step is its own skill. They run one after another, and each result is saved and passed to the next.
 
-Not for: a plan for several habits at once or a habit that is not writing (use the Habit plan builder), a plan for one day only (use the Daily writing session planner), a habit that is not writing (use the Habit plan builder), or help finishing a draft you already have (use the Book writing project coach).
+Not for: a plan for several habits at once or a habit that is not writing (use the Habit plan builder), a plan for one day only (use the Daily writing session planner), or help finishing a draft you already have (use the Book writing project coach).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -17,9 +17,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your notes** (yours): what to keep, change or drop.
 - **A story outline** (yours): the premise, the characters and the scenes in order.
 

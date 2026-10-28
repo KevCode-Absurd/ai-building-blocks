@@ -94,16 +94,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test the cash demands on the same debt with the [Debt cash sweep checker](https://useaiblocks.com/skills/debt-cash-sweep-checker).
-- Check the leverage test with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
-- Run all three together in the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow.
+- Test the cash demands on the same debt with the [Excess cash debt payment checker](https://useaiblocks.com/skills/debt-cash-sweep-checker).
+- Check the leverage test with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+- Run all three together in the [Debt interest and leverage checker](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.

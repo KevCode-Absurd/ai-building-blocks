@@ -66,16 +66,16 @@ Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or sk
 - For documents and slides, reopen the final native file, render and inspect every page or slide; for spreadsheets, reconcile source totals, recalculate when supported and reopen the result. If those checks cannot run, say so and leave the delivery unverified.
 - End with CHECKS MISSED: followed by the actual failed or unavailable checks, or none. Never add a tested badge without recorded run evidence.
 
-## If something is missing
-
-Write MISSING: <what> next to the affected result. Continue independent work that does not depend on it. Stop the affected step when a required source, tool or check is absent; return the partial files and the exact input or action needed to resume. Do not turn an unknown fact into an assumption merely to finish.
-
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Stress the assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow, once the claims hold up.
+- **Stress the assumptions** with the [Equity valuation scenario reviewer](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow, once the claims hold up.
 - **Close the gaps** by finding the filings for each open question, then run this workflow again with the new files.
 Nothing here sends or publishes anything. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
+
+## If something is missing
+
+Write MISSING: <what> next to the affected result. Continue independent work that does not depend on it. Stop the affected step when a required source, tool or check is absent; return the partial files and the exact input or action needed to resume. Do not turn an unknown fact into an assumption merely to finish.
 
 ## Avoid
 

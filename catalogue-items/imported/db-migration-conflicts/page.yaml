@@ -5,7 +5,7 @@ name: Database migration conflict fixer
 summary: Fix a Drizzle migration conflict safely. Paste your error and migration files. Get a diagnosis, repair steps and CI rules to stop repeat clashes.
 job: test-and-fix-code
 headline: Database migration conflict fixer
-subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back. Bring your migration folder and git state. Act on the verdict before any file changes.
+subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back. Bring your migration folder and git state.
 explain: |
   A clash in your Drizzle migration files, snapshots or journal gets diagnosed and repaired without damaging your history, with a plan so it stops recurring.
 
@@ -37,7 +37,7 @@ how_to_use:
   - Open your AI tool in the project folder, or paste in your error and file names if it cannot read files.
   - Add the skill with the buttons on this page. Install the whole folder if you can, since it comes with a helper script that needs Python 3. If you only paste the skill text, the helper is skipped and your AI inspects the files with git instead. The helper only reads the migration folder and journal. It never connects to a database or writes files.
   - Say what happened, such as a failed rebase or a drizzle-kit check error.
-  - Let it run the read-only checks first. Read its diagnosis and the verdict before you agree to any change.
+  - Let it run the read-only checks first. In this first pass it only uses git, the helper script and file reading. It does not run drizzle-kit check, typechecks or tests, because those run your project's code, until you agree. Read its diagnosis and the verdict before you agree to any change.
   - If the verdict is safe to regenerate, confirm the exact files and the branch side it names, then let it make the fix.
   - Run your own tests on a test database, not production. Then add the CI rules it suggests.
   - "Next step by verdict. Safe to regenerate means repair, then run the checks. Needs your confirmation means answer its questions first. Blocked by ambiguity means tell it which branch is the parent, then run it again. No conflict found means look at your schema code instead."

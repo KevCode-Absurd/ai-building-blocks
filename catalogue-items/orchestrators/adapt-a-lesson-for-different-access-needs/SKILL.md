@@ -84,8 +84,8 @@ Files | MISSING | CHECKS MISSED | one next step
 Offer one next step and say they can type their own:
 
 - Teach the lesson and note which checks showed the goal was met. Bring the notes back to adjust the options.
-- Before you teach it, run the whole lesson through [Check a lesson before teaching it](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it).
-- Start the next lesson in the unit with the [Learning options designer](https://useaiblocks.com/skills/learning-options-designer).
+- Before you teach it, run the whole lesson through [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it).
+- Start the next lesson in the unit with the [Learning option planner](https://useaiblocks.com/skills/learning-options-designer).
 
 ## Check before you hand it back
 
@@ -100,6 +100,6 @@ Offer one next step and say they can type their own:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
-- The [Lesson and recall quiz planner](https://useaiblocks.com/workflows/build-a-lesson-from-explanation-to-practice-and-a-quiz). It takes the lesson plan.
+- The [Lesson and recall quiz planner](https://useaiblocks.com/workflows/build-a-lesson-from-explanation-to-practice-and-a-quiz).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

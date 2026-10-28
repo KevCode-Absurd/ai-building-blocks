@@ -18,9 +18,9 @@ when:
   - A board member asks how much is left for common holders after one preferred class is paid.
   - You are checking a lawyer's or accountant's payout table against the share terms.
 not_for:
-  - The preferred class has no participation, only a preference or a choice to convert. Use the Nonparticipating preference checker.
+  - The preferred class has no participation, only a preference or a choice to convert. Use the Preferred share payout comparison analyst.
   - Two or more preferred classes rank against each other, or the terms add dividends. This covers one class and no dividends, so ask a lawyer or build a full payout table.
-  - You want what the sellers take home after debt, cash and deal costs. Use the Closing equity proceeds checker first, then bring its result here.
+  - You want what the sellers take home after debt, cash and deal costs. Use the Business sale proceeds checker first, then bring its result here.
 you_give:
   - The sale proceeds left for shareholders after debt and any claims that rank ahead (from the sale agreement or your cap table)
   - The amount the investor paid in for this class of shares (from the term sheet or share purchase agreement)
@@ -148,6 +148,8 @@ terms:
     meaning: The ordinary shares held by founders, staff and others, paid after preferred shares.
   - term: Illustrative figures
     meaning: Practice numbers that show how the sums work. They are not a real deal.
+before:
+  - closing-equity-proceeds-checker
 next:
   - nonparticipating-preference-checker
   - closing-equity-proceeds-checker

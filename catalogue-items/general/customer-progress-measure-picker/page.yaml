@@ -15,7 +15,7 @@ when:
   - You count purchases or sign-ups and cannot tell if people use the thing.
   - Teams hit their numbers and customers still complain.
 not_for:
-  - "You have no numbers to track yet: start with the Job spec writer, then come back."
+  - "You have no numbers to track yet: start with the Customer task definition writer, then come back."
   - "You want to clean up numbers you share with investors or the press: use the Vanity metric fixer."
   - "You are planning a one-off product launch: write a simple launch checklist with your team instead."
 you_give:
@@ -132,3 +132,4 @@ terms:
     meaning: Numbers that the system produces on its own and that pull attention to themselves.
   - term: Surface growth
     meaning: Growth from selling more products to the same people, instead of doing the core job better.
+before: [job-spec-writer]

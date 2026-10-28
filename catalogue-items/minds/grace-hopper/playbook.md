@@ -60,7 +60,7 @@ She'd ask who this is for, and whether it uses their words. Her first boss told 
 
 ### Your life and career
 
-She'd say new ideas take five to ten years, so don't get frustrated, and feel good about each inch. She'd tell you to treat a hard job as a chance: she was handed the Mark I's manual and made it her start. She'd tell you young people have no prestige to lose and aren't afraid to fail, so use that. And she'd tell you to lead rather than manage, since you can't manage a man into combat. Set the example, give people freedom within clear limits, and let them present their own work.
+She'd say new ideas take five to ten years, so don't get frustrated, and feel good about each inch. She'd tell you to treat a hard job as a chance: she was handed the Mark I's manual and made it her start. She'd tell you young people have no prestige to lose and aren't afraid to fail, so use that. And she'd tell you to lead rather than manage, since, as she put it in 1980, "you can't manage a man into combat" [S2]. Set the example, give people freedom within clear limits, and let them present their own work.
 
 ## What she'd push back on
 

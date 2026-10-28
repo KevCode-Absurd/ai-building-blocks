@@ -88,8 +88,8 @@ Files | MISSING | CHECKS MISSED | one next step
 Offer one next step and say they can type their own:
 
 - Run the session, then look for the behaviours on the checklist over the next month.
-- Check whether the training worked with [Check training transfer after a course](https://useaiblocks.com/workflows/check-training-transfer-after-a-course).
-- Prepare a manager for one hard conversation with [Plan a difficult feedback conversation](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation).
+- Check whether the training worked with [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course).
+- Prepare a manager for one hard conversation with [Evidence-based feedback conversation planner](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation).
 
 ## Check before you hand it back
 

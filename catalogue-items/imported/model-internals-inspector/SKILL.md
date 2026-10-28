@@ -14,6 +14,22 @@ TransformerLens is the de facto standard library for mechanistic interpretabilit
 
 **GitHub**: [TransformerLensOrg/TransformerLens](https://github.com/TransformerLensOrg/TransformerLens) (2,900+ stars)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use TransformerLens
 
 **Use TransformerLens when you need to:**
@@ -30,7 +46,7 @@ TransformerLens is the de facto standard library for mechanistic interpretabilit
 - You need remote execution on massive models → Use **nnsight** with NDIF
 - You want higher-level causal intervention abstractions → Use **pyvene**
 
-Start from a behaviour you can describe in a sentence and test with two prompts, one the model gets right and one it gets wrong (for example the IOI task in Workflow 2). The model feature finder is not part of this skill, so do not wait for its report.
+Start from a behaviour you can describe in a sentence and test with two prompts, one the model gets right and one it gets wrong (for example the IOI task in Workflow 2). You do not need a report from any other skill to start.
 
 ## Installation
 
@@ -199,6 +215,11 @@ def get_head_contribution(layer, head):
     W_U = model.W_U  # [d_model, vocab]
 
     # Head contribution to logits at final position
+    # Approximate (note added by AI Blocks): this skips the final LayerNorm scale,
+    # so compare heads with each other, not with the logit difference above.
+    # For exact numbers, scale by the final LayerNorm first, for example with
+    # cache.apply_ln_to_stack(..., layer=-1, pos_slice=-1) in TransformerLens,
+    # and say in the caveats which version you used.
     contribution = head_out[-1] @ W_O @ W_U
     return contribution[john_token] - contribution[mary_token]
 
@@ -348,3 +369,10 @@ For detailed API documentation, tutorials, and advanced usage, see the `referenc
 
 - **v2.0**: Removed HookedSAE (moved to SAELens)
 - **v3.0 (alpha)**: TransformerBridge for loading any nn.Module
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Language model feature explorer](https://useaiblocks.com/skills/model-feature-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

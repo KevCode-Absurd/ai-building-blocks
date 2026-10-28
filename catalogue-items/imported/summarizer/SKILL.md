@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to condense long-form text into clear, accurate summaries. The agent supports multiple summarization strategies — extractive (selecting key sentences verbatim), abstractive (rewriting in new words), hierarchical (layered summaries at different detail levels), and multi-document (synthesizing across several sources). The skill is designed for technical documents, meeting notes, research papers, articles, and any text where readers need the core information without reading the full content.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the Input:** Determine the type, length, and structure of the source material. Identify whether it is a single document or multiple documents, whether it has clear sections (headings, chapters) or is unstructured prose, and what domain it belongs to. This determines which summarization strategy to apply.
@@ -112,3 +125,10 @@ The Kubernetes Gateway API, which reached GA in October 2023, replaces the Ingre
 - **Highly technical or jargon-heavy text:** If summarizing for a non-specialist audience, define key terms on first use. If summarizing for experts, preserve the technical vocabulary without over-simplifying.
 - **Incomplete or cut-off documents:** If the source text appears truncated (ends mid-sentence, references sections not provided), note this and summarize only the available content, flagging that the summary may be incomplete.
 - **Multiple documents with overlapping content:** In multi-document summarization, deduplicate overlapping information rather than repeating it. Note where sources agree and where they diverge.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research paper summarizer](https://useaiblocks.com/skills/research-paper-summarizer). It takes the source text.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

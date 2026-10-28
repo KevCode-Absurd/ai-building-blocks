@@ -11,13 +11,27 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Splits a fulfillment order containing multiple line items into two or more separate fulfillment orders, each of which can be shipped independently with its own tracking number. Used when items in an order ship from different locations, on different dates, or require different carriers. Replaces manual split-shipment handling in Shopify Admin.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,write_fulfillments`
 - API scopes: `read_orders`, `write_fulfillments`
-- Target fulfillment order must be in `OPEN` status
+- Target fulfillment order must be in `OPEN` status. To check, run the step 1 query and read the `status` field, or open the order in Shopify Admin: an unfulfilled shipment there is open.
+- A current Shopify CLI that has the `shopify store auth` command. Run `shopify version` and update the CLI if that command is missing.
 
 ## Parameters
 
@@ -41,11 +55,11 @@ Splits a fulfillment order containing multiple line items into two or more separ
 
 2. Validate `split_groups` — confirm all line item IDs exist in the fulfillment order and quantities are ≤ remaining quantities
 
-3. **OPERATION:** `fulfillmentOrderSplit` — mutation
+3. **Dry run first.** Before any mutation, print the planned groups (one line per group, with item names and quantities) and the target fulfillment order ID. Stop here when `dry_run` is true. Go on to step 4 only after the user says yes to that exact preview.
+
+4. **OPERATION:** `fulfillmentOrderSplit` — mutation (only after the yes in step 3)
    **Inputs:** one `fulfillmentOrderSplits` entry with `fulfillmentOrderId` and `fulfillmentOrderLineItems` (the items and quantities for one split group). Run it once per split group.
    **Expected output:** `fulfillmentOrderSplits { fulfillmentOrder, remainingFulfillmentOrder, replacementFulfillmentOrder }` and `userErrors`. If Shopify returns a schema error, stop and show it to the user. Do not guess a fix.
-
-4. **Dry run first.** Before any mutation, print the planned groups (one line per group, with item names and quantities) and the target fulfillment order ID. Run the mutation only after the user says yes to that exact preview.
 
 ## GraphQL Operations
 
@@ -165,7 +179,7 @@ For `format: json`, emit:
   "store": "<domain>",
   "started_at": "<ISO8601>",
   "completed_at": "<ISO8601>",
-  "dry_run": true,
+  "dry_run": <true for a preview, false for a live split>,
   "original_fulfillment_order_id": "<id>",
   "resulting_fulfillment_orders": [],
   "errors": 0
@@ -174,6 +188,13 @@ For `format: json`, emit:
 
 ## Output Format
 Human-readable split summary. No CSV output — split results are viewable in Shopify Admin under the order's fulfillment tab.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

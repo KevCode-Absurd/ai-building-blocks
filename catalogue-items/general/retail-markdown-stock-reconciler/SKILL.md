@@ -5,7 +5,7 @@ description: "Check a batch of retail stock that was marked down: units sold and
 
 # Retail markdown stock reconciler
 
-Check a batch of stock that you marked down, after the sales have happened. This is for marked-down retail stock only; for a dish made in a kitchen, use the [Restaurant portion cost builder](https://useaiblocks.com/skills/restaurant-portion-cost-builder). See how many units sold and how many are left, what the sales earned over their cost, and how much cash came back against what you paid for the whole batch.
+Check a batch of stock that you marked down, after the sales have happened. This is for marked-down retail stock only; for a dish made in a kitchen, use the [Restaurant portion cost calculator](https://useaiblocks.com/skills/restaurant-portion-cost-builder). See how many units sold and how many are left, what the sales earned over their cost, and how much cash came back against what you paid for the whole batch.
 
 ## How to start
 
@@ -21,7 +21,8 @@ Two terms used below: a **cohort** is the one batch of stock you bought together
 - You need profit for a period or current-period cash flow: use your accountant or a finance planning tool.
 - You need tax reporting or sales tax figures: ask your accountant. This does not cover tax.
 - You need to price a markdown or decide a clearance plan: use a spreadsheet or a pricing tool. This only checks sales that already happened.
-- You need how much a lender will advance against your inventory: use the Inventory borrowing base builder.
+- You need how much a lender will advance against your inventory: use the Inventory borrowing limit calculator.
+- You are costing a dish made in a kitchen, where weight is lost to trim and cooking: use the Restaurant portion cost calculator.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -109,6 +110,8 @@ These links identify public methods and definitions. All instructions and practi
 
 ## What you hand back
 Return the actual native files, a list of where each number came from, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. Use these headings: SCOPE AND DATED SOURCES, INPUTS AND ASSUMPTIONS, UNITS, RECEIPTS, COST OF SOLD UNITS AND CONTRIBUTION, CUMULATIVE NET CASH, RECONCILIATION, FILE CHECKS, MISSING, CHECKS MISSED. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
+To carry on with the Inventory borrowing limit calculator, bring the units left, the held-cost memo for them, the receipts and the cumulative net cash from this result.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

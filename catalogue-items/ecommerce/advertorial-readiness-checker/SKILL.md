@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

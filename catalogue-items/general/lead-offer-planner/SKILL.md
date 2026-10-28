@@ -7,7 +7,7 @@ description: Use when your marketing pitches or hints but gets few replies, or l
 
 Someone with a costly problem often wants facts before they want a seller. An offer of useful information gives them a reason to reply without the pressure of a pitch, and each reply tells you who is looking. This skill picks that information, defines a reply you can count, writes the ask, and sets who follows up and when. For people who reply but do not buy, use "Almost-buyer follow-up writer".
 
-Use [Front-end offer picker](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
+Use [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

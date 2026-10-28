@@ -10,6 +10,25 @@ metadata:
 
 Protect employee data privacy in AI-powered HR systems — from assessing privacy risks of AI tools and designing data minimization practices to building employee consent frameworks, ensuring regulatory compliance, and governing responsible data use across the HR tech stack.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a checking and writing job. Use one whose data settings you have reviewed.
+<!-- /needs -->
+
 ## How to run this skill
 
 1. **Warn first.** Tell the user not to paste real staff names, ID numbers or health details. They should describe data types instead ("performance scores", "interview recordings"). They should also check their AI tool's data settings. If they have already pasted personal data, say so and carry on without repeating it.
@@ -99,3 +118,12 @@ This is general guidance, not legal advice.
 - Consent is rarely the right legal basis for employee data processing in employment relationships due to power imbalance — consult legal counsel on appropriate bases under applicable law.
 - Privacy notices and disclosures are only effective if employees read and understand them; test your privacy communications for comprehension before publication.
 - Cross-border data transfers are a significant compliance risk for global HR systems — map your HR data flows across jurisdictions before deploying AI tools with international data processing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [People risk register builder](https://useaiblocks.com/skills/people-risk-register-builder). It takes the document.
+- The [Contractor hiring program planner](https://useaiblocks.com/skills/contractor-program-setup-guide). It takes the document.
+- The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

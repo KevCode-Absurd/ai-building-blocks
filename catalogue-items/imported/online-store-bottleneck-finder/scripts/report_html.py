@@ -24,7 +24,7 @@ def generate_html_report(data: SupplyChainInput, output_path: str = "report.html
     cost_data = result.cost_breakdown
     
     bottlenecks_html = ""
-    severity_colors = {"High": "#ef4444", " in ": "#f59e0b", " low ": "#22c55e"}
+    severity_colors = {"Outside planning line": "#ef4444", "Near planning line": "#f59e0b"}
     for i, b in enumerate(result.bottlenecks, 1):
         color = severity_colors.get(b.severity, "#6b7280")
         bottlenecks_html += f"""
@@ -119,9 +119,9 @@ def generate_html_report(data: SupplyChainInput, output_path: str = "report.html
             align-items: center;
             gap: 4px;
         }}
-        .status.healthy {{ color: #22c55e; }}
-        .status.warning {{ color: #f59e0b; }}
-        .status.danger {{ color: #ef4444; }}
+        .status.within {{ color: #22c55e; }}
+        .status.near {{ color: #f59e0b; }}
+        .status.outside {{ color: #ef4444; }}
         .chart-container {{
             position: relative;
             height: 300px;
@@ -187,7 +187,7 @@ def generate_html_report(data: SupplyChainInput, output_path: str = "report.html
                         <tr>
                             <th>Metrics</th>
                             <th>Value</th>
-                            <th>Benchmark</th>
+                            <th>Planning line (unsourced)</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -216,7 +216,7 @@ def generate_html_report(data: SupplyChainInput, output_path: str = "report.html
         
         <div class="card">
             <h3>🎯 Top 3 Bottleneck Diagnosis</h3>
-            {bottlenecks_html if bottlenecks_html else "<p>✅ No obvious bottleneck found，Supply ChainOverallHealthy</p>"}
+            {bottlenecks_html if bottlenecks_html else "<p>No measure is outside the planning lines. These lines are unsourced starting points, not proof the store is healthy.</p>"}
         </div>
         
         <div class="footer">
@@ -279,21 +279,12 @@ def generate_html_report(data: SupplyChainInput, output_path: str = "report.html
 
 
 if __name__ == "__main__":
-    # TestData
-    test_data = SupplyChainInput(
-        product_cost=8.00,
-        supplier_payment_days=0,
-        production_days=25,
-        shipping_cost_per_unit=0.75,
-        shipping_days=35,
-        selling_price=25.00,
-        fba_fee=5.00,
-        storage_fee=0.50,
-        ad_spend_ratio=0.10,
-        inventory_days=60,
-        has_long_term_storage=True,
-        platform="amazon"
-    )
-    
-    output = generate_html_report(test_data, "supply_chain_report.html")
-    print(f"✅ Report already Generate: {output}")
+    import sys
+    import json
+    # No built-in sample figures: a report must come from the user's own numbers.
+    if len(sys.argv) < 2:
+        print("Usage: python report_html.py '<JSON with your own figures>'", file=sys.stderr)
+        sys.exit(2)
+    data = SupplyChainInput(**json.loads(sys.argv[1]))
+    output = generate_html_report(data, "supply_chain_report.html")
+    print(f"Report written: {output}")

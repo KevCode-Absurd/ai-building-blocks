@@ -5,6 +5,23 @@ description: Suggest, pick, or vet a business, startup, or product name that sta
 
 # Business Name Fit
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Help founders choose or check a business/brand/product name that is authentic to their origin **and** lands well in the market where they'll operate.
@@ -118,3 +135,10 @@ Expand any of these only if asked.
 - **brand-guidelines** (`marketing-skill/skills/brand-guidelines`) — use after a name is chosen, to build the visual and verbal identity system around it.
 - **copywriting** (`marketing-skill/skills/copywriting`) — use once the name is locked, for tagline and messaging work that needs to match the name's tone.
 - **marketing-context** (`marketing-skill/skills/marketing-context`) — load first if available; ICP and positioning context should inform which candidate names fit best.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store name tester](https://useaiblocks.com/skills/store-name-tester). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

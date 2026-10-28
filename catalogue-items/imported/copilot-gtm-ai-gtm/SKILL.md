@@ -13,6 +13,19 @@ Note: the figures and rules of thumb in this skill (such as three deals closing 
 
 Go-to-market strategy for AI products. These aren't generic AI principles — they're patterns from selling autonomous AI agents into enterprises where "autonomous" scared buyers and "teammate" converted them.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a business profile. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 **Triggers:**
@@ -522,7 +535,7 @@ Do they have incident response processes for tool failures?
    - Real objection: "who's responsible when it does?" Organizational readiness, not accuracy.
 
 **4. Pricing usage-based AI like OpenAI**
-   - Your cost structure isn't theirs. Price for 20-30% of customer's alternative cost.
+   - Your cost structure isn't theirs. The author's rule of thumb is 20-30% of the customer's alternative cost; set yours from real buyer quotes.
 
 **5. Skipping transparency docs before demo**
    - Order matters. Transparency → Control → Performance → Scale. Don't skip steps.
@@ -571,3 +584,12 @@ The original names three related skills (positioning-strategy, technical-product
 ---
 
 *Based on enterprise AI agent GTM across developer tools and infrastructure. Patterns drawn from working enterprise deal cycles selling autonomous AI products — some carried directly, others supported alongside sales leadership — including the positioning trap diagnosis that shifted from feature competition to structural differentiation, the ceiling-moment qualification that improved outbound conversion significantly, and frameworks tested across security, operations, and engineering buyer personas. Not theory — lessons from deals where "autonomous" killed conversations and "teammate" converted.*
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the plan.
+- The [Software launch evidence reviewer](https://useaiblocks.com/skills/saas-launch-review-agent). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

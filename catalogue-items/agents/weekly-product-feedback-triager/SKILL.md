@@ -62,16 +62,6 @@ If the owner approves one of these in clear words, do only that one. Then write 
 - **Watch next week:** the 1 to 3 requests or numbers that decide next week's path.
 - **Files:** each step's file. Then every `MISSING:` line from all steps in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the roadmap and the requests.
-- **Rank a long yes list** with the [Feature priority scorer](https://useaiblocks.com/skills/feature-priority-scorer). It takes the list of yeses.
-- **Find where new users leave** with the [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder). It takes your visits, sign-ups and 30-day users.
-- **Tell your team or customers** with the [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the approved roadmap change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Each count is of different people, not messages.
 - Every yes has its full cost and a place on the roadmap, or on the later list.
@@ -86,6 +76,16 @@ Write `MISSING: <what>` where it belongs and carry on with what you have. Withou
 
 ## When not to use
 Skip this agent for a single one-off feature decision, for a product with no written aim that the owner won't write, and for a handful of messages a month. In those cases point to `feature-request-screener` on its own.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the roadmap and the requests.
+- **Rank a long yes list** with the [Feature priority scorer](https://useaiblocks.com/skills/feature-priority-scorer). It takes the list of yeses.
+- **Find where new users leave** with the [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder). It takes your visits, sign-ups and 30-day users.
+- **Tell your team or customers** with the [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the approved roadmap change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 - Counting one loud person three times.

@@ -32,8 +32,8 @@ you_get:
   - A CSV or table export
 how_to_use:
   - Have your list of companies ready. Open Claude, ChatGPT or Gemini and paste in the skill text. Turn on web search, because the skill needs it to check official pages. Without search, every date is marked unknown, and you must open each official filing page yourself and paste in what it says. A registered agent is optional and usually costs money.
-  - List each company with its type and where it is formed or registered. Add your registered agent if you have one (optional).
-  - 'Say: "Build my filing tracker." Your AI makes a tracker table. Save it as a file called compliance-tracker.yaml in your own folder.'
+  - For each company, gather its full legal name, entity type (such as LLC or corporation), the state or country where it was formed, its formation date, and any other places it is registered to do business. Add your registered agent's name if you have one (optional).
+  - 'Say: "Build my filing tracker." Your AI shows the tracker in full. Save it as a file called compliance-tracker.yaml in your own folder, and paste it back in each time you want a report or an update.'
   - Check every date. Each one needs an official source link and a date checked. If it has no checked source, it must say unknown.
   - Say "Show what is due in the next 90 days" to get the report. Say "Update" with a new filing date to change a status, or "Export as CSV" for a table.
   - Before you file anything, confirm the date with your registered agent or the official filing office. If you are not a lawyer, ask an attorney or agent first.

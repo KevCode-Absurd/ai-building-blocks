@@ -7,7 +7,7 @@ description: "Use when you need to tie a water utility's billings, collections a
 
 This skill rolls a water utility's receivables forward for one period: opening receivables, plus new billings, less approved adjustments, less total receipts, equals closing receivables. It splits receipts into payment of current bills and payment of old arrears. It does arithmetic on the numbers you supply. It does not check that they are true.
 
-Not for: tariff approval, a regulator filing, an accounting treatment, or deciding that unbilled water was physically lost. For credit-loss expense and write-offs, use "Receivables allowance roll-forward". For health claims, use "Clinic claims collections bridge".
+Not for: tariff approval, a regulator filing, an accounting treatment, or deciding that unbilled water was physically lost. For credit-loss expense and write-offs, use "Customer credit loss allowance checker". For health claims, use "Clinic payment reconciliation reviewer".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -38,6 +38,8 @@ How to start:
 - **Approved adjustments** (required, may be a true zero): credits or write-offs someone has signed off.
 - **Operating cash** (required): operating cash for the period, to compare with receipts.
 - **Reporting dates, currency and scale** (required).
+
+In Before you start, the "spreadsheet" is these figures and the "document" is any source report behind them. This list is the full set of inputs.
 
 If none of these are given, ask for them in one short message and stop. If some are missing, write `MISSING: <figure>` and work out only what does not depend on it. Never use zero for a missing figure. Never use the practice figures below as the person's data.
 

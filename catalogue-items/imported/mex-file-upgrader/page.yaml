@@ -36,6 +36,7 @@ how_to_use:
   - Check the change summary. Old calls like mxGetPr and mxGetPi should now be typed calls like mxGetComplexDoubles.
   - Build the new file in MATLAB with mex -R2018a. This needs a MATLAB licence and a working C or Fortran compiler.
   - Run your own tests and compare with the old results before you use the new file. Next, accept the offered benchmark and compare its output with your original test suite.
+  - Any speed gain depends on how big your complex arrays are and how often the function is called. Only the benchmark on your own data shows the real gain, so do not promise one before it runs.
 output_sample:
   input:
     - Your MEX source files (.c, .cpp, .cxx, .F or .f90)

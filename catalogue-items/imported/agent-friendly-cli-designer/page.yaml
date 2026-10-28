@@ -11,7 +11,7 @@ explain: |
 
   The core idea is to treat the agent like an untrusted caller. Output defaults to structured JSON, with a plain-text option for humans. Errors carry a code and a reason the agent can act on. Exit codes mean the same thing every time. Risky commands need an explicit confirmation, and any input is checked before it runs. The rules come in three levels, so you can adopt a small core first and add more later.
 
-  Limit: the rules are a design checklist from one contributor's proposal. They are not a safety certification. A confirmation flag such as --yes is not a person approving the action. Access and argument checks must be enforced in your code.
+  Limit: the rules are a design checklist from one contributor's proposal. They are not a safety certification. A confirmation flag such as --yes is not a person approving the action. Access and argument checks must be enforced in your code. Agree as a team which Level 1 rules fit your tool before you change anything other people or scripts already rely on.
 when:
   - You are building a command-line tool that scripts or AI agents will call.
   - An agent keeps misreading your tool's messy text output.
@@ -38,7 +38,7 @@ how_to_use:
   - Tell your AI to keep your existing flags and output as they are unless you agree to a change.
   - Ask your AI to check the 20 Level 1 rules first and list every failure.
   - Fix the top priority failures from the plan, then paste your updated help text and output.
-  - Ask your AI to run the same check again and confirm each fix.
+  - Ask your AI to run the same check again and confirm each fix. Rerun it after every round of fixes. Move on to the Level 2 rules only once every Level 1 rule passes.
 output_sample:
   input:
     - The help text or a description of your command-line tool

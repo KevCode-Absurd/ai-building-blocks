@@ -31,8 +31,8 @@ you_get:
   - An offer and pricing plan
 how_to_use:
   - Gather your idea in a few sentences, your guess at the customer, and any interview notes (optional).
-  - Use an AI tool that can read and write files, such as Claude with file access. You may need a paid plan.
-  - Add the ten skills this guide runs with npx skills add, then add this skill to the same project folder.
+  - Use an AI tool that can read and write files, such as Claude Code or Claude with file access. File access may need a paid plan of that AI tool. The skills themselves are free.
+  - "Add the ten skills this guide runs, one command each: npx skills add wondelai/skills/<name> --global, for jobs-to-be-done, mom-test, design-sprint, lean-startup, good-strategy-bad-strategy, blue-ocean-strategy, obviously-awesome, hundred-million-offers, monetizing-innovation and crossing-the-chasm. Then add this skill to the same project. If you skip a skill, the guide runs that phase from a short built-in method instead."
   - Ask your AI to follow this skill and start at the intake questions.
   - Answer each question, then approve each draft before it is saved to the docs folder.
   - Come back later and say you want to resume. The tracker file shows where you stopped.
@@ -50,10 +50,14 @@ output_sample:
     - name: docs/CUSTOMER.md
       contains: The job your customer hires you for, plus what you learned from real customer conversations.
     - name: docs/EXPERIMENTS.md
-      contains: The tests you ran with five customers and the smallest first product to try.
+      contains: The tests you ran with five customers and what they showed.
+    - name: docs/PRODUCT.md
+      contains: The smallest first product (MVP) and the riskiest assumption it tests.
+    - name: docs/STRATEGY.md
+      contains: The one critical challenge, the open space you can own, and the first market segment to win.
     - name: docs/POSITIONING.md
-      contains: Your strategy, the space nobody else holds, and how you explain what makes you different.
+      contains: How you explain what you are and what makes you different, in 30 seconds.
     - name: docs/OFFER.md
       contains: Your offer and your price, based on what customers say they will pay.
     - name: docs/CREATE-BUSINESS-PLAN.md
-      contains: A progress tracker, plus the first market to win, so you can pause and resume.
+      contains: A progress tracker with the status of every phase, key decisions and next actions, so you can pause and resume.

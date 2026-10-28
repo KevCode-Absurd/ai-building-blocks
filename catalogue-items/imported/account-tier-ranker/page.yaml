@@ -33,7 +33,8 @@ how_to_use:
   - "Write your ideal customer profile first if you have none: the industries, the size range, the job titles you sell to, and the red flags that rule an account out. The default weights apply unless you change them. Fit: industry 3, size 3, right job titles 2, no red flags 2. Engagement: open deal 3, last contact 3, inbound email 2, several contacts 2. A score of 6 or more counts as high."
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - It works best when your AI can read your CRM, email and calendar. The inbound email row needs an email connection. Without one, that row is dropped, the other engagement scores are scaled back up to 10, and the result says so.
+  - Next, take Tier A and B into your pipeline review, or into an outreach skill for the Tier B accounts. Save each account's tier back in your CRM, in a field or tag, so the next quarter's run can compare.
 output_sample:
   input:
     - "Your accounts: all you own, a named list or a saved CRM view"

@@ -15,8 +15,8 @@ when:
   - The numbers say one thing and your instinct says another, for example on price.
   - You are about to build a model for a decision that no model can settle.
 not_for:
-  - "You need to know how much evidence to gather first: use the Decision evidence bar setter."
-  - "You want to test a small idea with real people: use the Smallest test picker."
+  - "You need to know how much evidence to gather first: use the Decision evidence planner."
+  - "You want to test a small idea with real people: use the Minimum experiment planner."
   - "You already have years of your own data on every input and just need a forecast: use a spreadsheet or ask your finance person."
 you_give:
   - The decision and the options
@@ -124,7 +124,7 @@ improve:
   - Add your own history, such as past tests, to the input.
   - Add your rule of thumb for how long effects take in your field.
   - Keep a log of judgment calls and their results.
-  - Pair it with "Decision evidence bar setter" for how much evidence to gather.
+  - Pair it with "Decision evidence planner" for how much evidence to gather.
 works_best_with:
   tools:
     - name: Any good chat AI

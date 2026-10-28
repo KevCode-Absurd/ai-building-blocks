@@ -34,10 +34,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Paste your buy and your store sales as tables. A spreadsheet with columns for store, style, size and units works best.
-  - Answer its questions about your products, store tiers, current split and goals.
+  - Answer its questions about your products, store tiers, current split and goals. If you have no store sales history or sell-through figures, say so. Your AI must then ask for them or leave expected sell-through, markdown rate and financial impact blank. It must not estimate them.
   - Check the store groups first. The A, B and C cut-offs and the 8, 6 and 4 weeks of cover are defaults, so change them to fit your data.
   - Read the units by store, style and size. Fix anything that looks off before you send it to the warehouse.
-  - Any code in the skill is only an example with random data. You do not need to run it.
+  - Any code in the skill is only an example with random data. You do not need to run it. The result is a plan in tables, not code.
+  - Next, once the stock is in stores, set weekly top-ups with the Restock rule designer, and plan price cuts on slow sellers with the Clearance discount planner.
 output_sample:
   input:
     - Your new buy by style, size and cost

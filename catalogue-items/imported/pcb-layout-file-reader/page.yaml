@@ -17,7 +17,7 @@ when:
   - You need metal shapes from a layout to reuse in your own design.
   - You want to run signal tests on a board someone else designed.
 not_for:
-  - "You want to save your own design as Gerber files: use the write PCB layout skill (matlab-write-pcb-layout), not this reader."
+  - "You want to save your own design as Gerber files: use the PCB Gerber exporter (matlab-write-pcb-layout), not this reader."
   - "You want S-parameters or other signal tests after loading the board: use the MATLAB analyze EM skill (matlab-analyze-em)."
   - "You want to build a board from simple shapes, or define materials: use matlab-assemble-pcb-layout or matlab-manage-pcb-material."
 you_give:
@@ -30,6 +30,7 @@ you_get:
   - A board object ready for S-parameter or power checks
   - The right reader call for your file type
 how_to_use:
+  - "Before you start, check three things: your file type (Gerber layer files, a zipped or unzipped ODB++ archive, or an Allegro .brd or .mcm file), that MATLAB with the RF PCB Toolbox is installed, and, for Allegro files only, the path to Cadence's extracta.exe."
   - Open an AI that can run MATLAB code, with the RF PCB Toolbox installed. Allegro .brd files also need a licensed Cadence install, which is paid software.
   - Paste the skill text into the chat, or add the skill folder if your tool takes files. The skill may be used only with MathWorks products such as MATLAB.
   - Give your AI the board file. Add your stackup if it is a Gerber file. For an Allegro .brd file, give the path to extracta.exe.

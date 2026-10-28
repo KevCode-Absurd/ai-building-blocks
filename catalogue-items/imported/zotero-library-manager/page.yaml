@@ -7,7 +7,7 @@ job: research-topics
 headline: Zotero library manager
 subhead: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations. Bring what to find or change in the library. Use the result to plan your next step.
 explain: |
-  Tell it what to find or tidy in your Zotero library and get the references searched, tagged, sorted or exported as citations.
+  This is a copy of K-Dense's pyzotero skill, shared under the MIT licence. We changed only the name.
 
   It uses Pyzotero, a Python wrapper for the Zotero web API. You set up your library ID and an API key from your Zotero settings, and store them in environment variables. From there it can read items and collections, search by keyword, add or edit entries, apply tags, move items between collections, and export in citation formats. It can work on your own library or a group library. You need Python, the Pyzotero package and a Zotero account. Be careful with write actions, because they change your real library, so check the plan first.
 
@@ -35,9 +35,9 @@ you_get:
   - A plan to review before any write
 how_to_use:
   - Get your library ID and make an API key in your Zotero account settings. Say if it is a personal or group library.
-  - Open an AI that can run Python code. Add the Pyzotero package and keep your key in an environment variable, not in the chat.
+  - Open an AI that can run Python code, such as Claude Code. Add the Pyzotero package and keep your key in an environment variable, not in the chat. If your AI cannot run Python, use the Zotero app's own search, tags and export instead.
   - Paste this skill and say what to find or tidy, such as tagging untagged papers or exporting a reading list.
-  - Before any write, ask your AI to list every tag, move and new entry it plans, and to wait for your yes. Read that list and fix the plan first, because writes change your real library.
+  - Before any write, ask your AI to list every tag, move and new entry it plans, with each item's title and Zotero item key, and to wait for your yes. Match each line to a real item and fix the plan first, because writes change your real library.
   - Approve the plan to apply it, then save the exported citations where you need them.
   - Next, import the exported BibTeX into your word processor or reference manager, and clean up any broken entries with citation-and-bibtex-fixer.
 output_sample:

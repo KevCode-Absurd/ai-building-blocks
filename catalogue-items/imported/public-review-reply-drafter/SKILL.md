@@ -9,6 +9,22 @@ Write replies the owner can paste straight into their review app. Each one shoul
 
 **Input:** the reviews, in any format. **Optional:** support email, approved remedies, brand voice, sign-off name. Don't ask for these. The defaults are: voice "we", no name, `[support email]`, and **no approved remedies**. **If the owner gives a support email (or any other value), write it literally in every reply. A placeholder must never appear for a value you were given.**
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for customer words, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Reading pages
 Work from what the user pastes. If they give a public review page instead, you may read it with your assistant's own web-fetch tool (it identifies itself). Don't fetch it any other way (no curl, no code of your own, no browser user agent), and if the page can't be read, ask the user to paste the reviews.
 
@@ -52,6 +68,14 @@ If the owner supplied a value, use the real value. Flagged reviews never get `[R
 - **4 or more:** one table, `| # | Reviewer | ★ | Product | Type | Flag | Reply (ready to paste) |`, with each reply as a single paragraph and `|` escaped.
 - Then **Needs a human (N)**: flag code, severity and what to check, for each flagged review. Then **Other notes** (rating-mismatch, wrong product page, trends). Then **Placeholders to fill**.
 - CSV only if asked: `review_number,reviewer,rating,product,type,flag,reply`.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
+- The [Public review response manager](https://useaiblocks.com/skills/public-review-reply-desk).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Self-check
 - [ ] Specific to this review. Opening and sentences not repeated in the batch. No banned phrases.

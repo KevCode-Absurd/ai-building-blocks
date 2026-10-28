@@ -118,14 +118,6 @@ Never: <the top things to avoid>.
 
 Then: `TO CHECK:` each fact marked from memory, `MISSING:` each gap, `REMOVED:` what the check pass took out (by kind, not content), `CHECKS MISSED:` one line each, or none. Then the two next steps.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set it up in every AI you use** with the [me.md short-core writer](https://useaiblocks.com/skills/me-md-short-core-writer). It takes the me.md.
-- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every fact came from the person, a named document or your memory after a yes. Memory facts are marked.
 - No passwords, keys, ID or bank numbers, health details or private facts about other people.
@@ -133,6 +125,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every section has an `as of` date; Projects has an `expires` date.
 - Core is about 1,200 characters or less.
 - You asked at most 12 interview questions, one at a time.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Set it up in every AI you use** with the [me.md short-core writer](https://useaiblocks.com/skills/me-md-short-core-writer). It takes the me.md.
+- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Leave the section out, or write `MISSING: <what>` in the summary. Never fill a gap with a guess. A me.md with three true sections beats one with ten guessed ones.

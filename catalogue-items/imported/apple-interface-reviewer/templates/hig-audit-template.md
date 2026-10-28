@@ -35,9 +35,9 @@ Score: /20
 Score: /30
 
 - [ ] **VoiceOver**: All elements have labels and hints?
-- [ ] **Tap Targets**: All buttons min 44x44pt?
+- [ ] **Tap Targets**: All buttons meet the platform's recommended size (44x44 pt iOS, 28x28 pt macOS, 60x60 pt visionOS)?
 - [ ] **Dynamic Type**: Does the layout scale without clipping?
-- [ ] **Contrast**: Min 4.5:1 ratio for text?
+- [ ] **Contrast**: Min 4.5:1 for text up to 17 pt, 3:1 for 18 pt and up or bold?
 
 **Notes:**
 

@@ -5,6 +5,25 @@ description: UGC 口播种草视频。商品 + 人设 → 口播脚本与成片�
 
 # ugc-testimonial — UGC 口播种草
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## English summary (added by AI Blocks)
 
 The instructions below are in Chinese. This summary is in English.
@@ -57,7 +76,7 @@ UGC 风格 ≠ 伪造评价。生成的内容**不能声称是真实买家的真
 | 可以 | 不可以 |
 | --- | --- |
 | AI 生成的演示型口播 | 冒充具名真实买家的评价 |
-| 「这件我穿了一周」的场景演绎 | 伪造好评截图、伪造买家秀 |
+| 「我来演示一下这件怎么搭」的场景演绎（只说可核实的产品事实） | 伪造好评截图、伪造买家秀、「我穿了一周」这类冒充真实使用经历的台词 |
 | 按平台要求标注 AI 生成 | 隐瞒 AI 生成身份（部分平台强制标注） |
 
 各平台对 AI 生成内容的标注要求不同，投放前确认目标平台的规则。
@@ -151,3 +170,14 @@ node scripts/video.mjs --mode storyboard --task ugc-testimonial \
 - **口播镜头短、商品镜头长**。人脸生成越久越容易崩，3–4 秒一切。
 - **同一脚本换人设出三版**做 A/B，投流看数据说话。
 - **字幕必须有**。大部分人静音刷视频。
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the script and video ads.
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

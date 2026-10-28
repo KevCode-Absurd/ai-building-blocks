@@ -41,6 +41,13 @@ Return these parts in order. Mark each one MISSING if the input was not given.
 
 Next: use the trial plan in the customer meeting. For the written bid itself, the RFP response builder helps.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 
 ## 5-Phase Workflow
 
@@ -141,7 +148,7 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 
 **Output:** POC plan, evaluation scorecard, go/no-go recommendation.
 
-**Validation checkpoint:** POC conversion requires scorecard score >60% across all evaluation dimensions (functionality, performance, integration, usability, support). If score <60%, document gaps and loop back to Phase 2 for solution redesign.
+**Validation checkpoint:** POC conversion requires scorecard score >60% across all evaluation dimensions (functionality, performance, integration, usability, support). If score <60%, document gaps and loop back to Phase 2 for solution redesign. This 60% gate is separate from the one bid rule: the bid rule decides whether to bid and run a POC at all; this gate is checked after the POC and decides whether to push for conversion.
 
 ---
 

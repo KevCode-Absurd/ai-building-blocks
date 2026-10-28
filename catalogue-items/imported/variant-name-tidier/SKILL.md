@@ -11,6 +11,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Scans product variants for inconsistent option values (e.g., "Sm", "Small", "small", "S" all meaning the same size) and bulk-updates them to a canonical set you define. Inconsistent option naming breaks size filters, causes customer confusion, and prevents search apps from grouping variants correctly.
 
@@ -163,6 +176,13 @@ For `format: json`, emit:
 ## Output Format
 CSV file `option_normalizer_<YYYY-MM-DD>.csv` with columns:
 `product_id`, `product_title`, `variant_id`, `sku`, `option_name`, `old_value`, `new_value`
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Variant sales ranker](https://useaiblocks.com/skills/variant-sales-ranker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

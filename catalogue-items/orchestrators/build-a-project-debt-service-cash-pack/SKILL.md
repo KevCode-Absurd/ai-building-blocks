@@ -22,7 +22,11 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 ## What you need
 
-The items under "Before you start", as of one reporting date, with the currency and scale stated once. If the discount rate for the loan-life test is not in the agreement text you were given, mark it MISSING and do not use your own cost of capital. Ask once, in one short message, for only what you cannot work without.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. In short, paste:
+- **For each of the three years:** cash received, operating payments, and any adjustments the lender's definition adds or removes.
+- **Once:** the opening loan balance, the fixed rate, the target cover and the loan-life discount rate.
+
+No spreadsheet tool? The pack still works: it returns the same tables as text. If the discount rate for the loan-life test is not in the agreement text you were given, mark it MISSING and do not use your own cost of capital. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -57,6 +61,6 @@ Lead with the cash by year, the repayment schedule and the loan-life cover ratio
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test covenant headroom** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
-- **Check cash and PIK interest against a sweep** with the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
+- **Test covenant headroom** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check cash and PIK interest against a sweep** with the [Debt interest and leverage checker](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

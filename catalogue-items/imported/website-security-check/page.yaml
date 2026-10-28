@@ -5,9 +5,9 @@ name: Website security baseline checker
 summary: Run a website security check before launch. Give it your site details and get a ranked list of fixes for HTTPS, headers, secrets and content policy.
 job: secure-code
 headline: Website security baseline checker
-subhead: A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It matters because most breaches come from basics that were never set up, not from clever attacks.
+subhead: A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It covers the basics a site should have before real visitors and real data arrive.
 explain: |
-  A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It matters because most breaches come from basics that were never set up, not from clever attacks.
+  A free scanner such as securityheaders.com grades your response headers. This check goes further: it also covers HTTPS, secrets, logins, access and monitoring, and turns the gaps into a ranked fix plan with owners and dates.
 
   You describe the site, where it is hosted and what third-party scripts it loads. The skill then walks six layers: how data travels (HTTPS, TLS version, HSTS), response headers, secrets handling, content security policy, access control and monitoring. For each layer it says what is in place, what is missing and what to change. Run it before launch and again every quarter to catch drift.
 when:

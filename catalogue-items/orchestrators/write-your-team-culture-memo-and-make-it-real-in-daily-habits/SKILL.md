@@ -67,7 +67,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Ignore the "After this" list above and use only these:
+Ignore the "After this" list below and use only these:
 - Bring new people in on the memo with the [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner).
 - Run the rule trial from step 4 for the time it sets, then decide whether to keep the rule gone.
 

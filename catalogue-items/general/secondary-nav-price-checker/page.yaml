@@ -20,8 +20,8 @@ not_for:
   - "You need a fair value or a view on future NAV: ask a valuation professional, since this only does price arithmetic."
   - "The deal has interim cash calls, currency conversion or a discount-rate valuation: use a valuation specialist, as this check does not cover them."
   - "You need to know if the deal terms are legal or binding: ask a lawyer, because the arithmetic cannot settle that."
-  - "You need the unfunded part of one commitment after calls and recalls: use the Unfunded commitment checker instead."
-  - "You need to check how much of a fund's distributions it can recycle: use the Fund recycling capacity checker instead."
+  - "You need the unfunded part of one commitment after calls and recalls: use the Remaining fund commitment checker instead."
+  - "You need to check how much of a fund's distributions it can recycle: use the Fund reinvestment limit checker instead."
 you_give:
   - The reference NAV and its date
   - The price fraction (the quote as a percent of NAV)
@@ -58,12 +58,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Confirm the quoted NAV date, transferred interest and treatment of calls and distributions between reference date and closing
-    text: Confirm the quoted NAV date, transferred interest and treatment of calls and distributions between reference date and closing.
-  - title: 2. Multiply reference NAV by price fraction; deduct only seller-retained distributions explicitly credited dollar-for-dollar against price
-    text: Multiply reference NAV by price fraction; deduct only seller-retained distributions explicitly credited dollar-for-dollar against price.
-  - title: 3. Show future unfunded commitment separately from purchase payment and sum them only as a gross cash funding budget, not fair value
-    text: Show future unfunded commitment separately from purchase payment and sum them only as a gross cash funding budget, not fair value.
+  - title: Confirm the dates and terms
+    text: Checks the NAV date, the interest being sold, and how calls and distributions between that date and closing are treated.
+  - title: Work out the closing payment
+    text: Multiplies the NAV by the price fraction, then takes off only the distributions the seller kept that the terms credit against the price.
+  - title: Keep future calls apart
+    text: Shows the money still to be called separately, and adds it to the payment only as a cash budget, not as a value.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS (NAV date, price fraction, credited distributions, unfunded commitment)

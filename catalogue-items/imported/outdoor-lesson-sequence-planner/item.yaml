@@ -33,7 +33,7 @@ credits:
   - title: outdoor-learning-sequence-designer skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/outdoor-learning-sequence-designer
-    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+    used: Adapted under the CC BY-SA-4.0 licence. We gave it a plain name and replaced the storm-or-lightning-only cancellation rule with a full list of stop conditions (closures, blocked exits, staffing, student needs), made the school's own risk assessment the deciding rule, and added an access check for every student.
   - title: Original author
     by: Gareth Manning
     url: https://github.com/GarethManning

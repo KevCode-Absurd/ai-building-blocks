@@ -18,12 +18,12 @@ Every layer between you and the customer takes a cut. Some layers earn it, by re
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. If the section above asks for an ads export, ignore that: use your own sales and margin by channel.
+These are the inputs for this skill. The spreadsheet in the box above is your sales, costs and margin by channel; a pasted table is fine. No ad export is needed.
 
 - **Your channels, their costs and margins** (required): how you sell today and what each takes.
 - **Stock and payment timing** (required): days of stock held, when you pay suppliers, when customers pay you.
@@ -49,7 +49,7 @@ These are the inputs for this skill. If the section above asks for an ads export
 5. **Split the customers.** Group customers by how they buy and what they need. For each group, write margin, size, what they care about most and which channel reaches them. Pick the group with better margins that the model suits. Say why, using the figures.
 6. **Choose the new channel to be early on.** Pick one channel or tool that is new enough that rivals have not filled it. Check it against your customer group. Plan a small test with a cost, a time and a signal for success.
 7. **Set a review date.** Set a date, no more than a year ahead, to question the model itself, not just its results. Write the question: "Is this still the best way to reach this group?" and the three figures to look at.
-8. **Score the model.** One point for each of six checks: each middleman has a cost and a value; payment timing is in days; customers are split into groups; build to order was tested; a new channel has a small test; a review date is set. Divide by six, multiply by 100 and round. Show the six results. The score is about how complete the check is, not about whether direct selling is right for you.
+8. **Score the model.** One point for each of six checks: each middleman has a cost and a value; payment timing is in days; customers are split into groups; build to order was tested; a new channel has a small test; a review date is set. Divide by six, multiply by 100 and round. Show the six results. The score is about how complete the check is, not about whether direct selling is right for you. It is this skill's own checklist, not a tested benchmark.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
@@ -68,7 +68,7 @@ The commodity test. The middleman table. The build-to-order view. The cash timin
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
+- The [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

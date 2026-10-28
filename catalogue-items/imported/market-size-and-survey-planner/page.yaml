@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open an AI that can run code, such as Claude or ChatGPT with code tools on.
   - Paste the skill and say you want market size, survey sample size and segment scores.
-  - Save your inputs as market.json, survey.json and segments.json. Ask your AI to run market_sizer.py, sample_size_planner.py and segmentation_scorer.py on them, one at a time.
+  - Save your inputs as market.json, survey.json and segments.json. Ask your AI to run market_sizer.py, sample_size_planner.py and segmentation_scorer.py on them, one at a time. Start with market_sizer.py. It prints both market sizes side by side, the percent gap between them, and a pass or TRIANGULATION FAILED flag.
   - "Gather your inputs first. market.json needs a market name; top-down: total market value, serviceable fraction and reachable share; bottoms-up: total potential customers, annual price, serviceable fraction and realistic adoption. survey.json needs confidence, margin of error and population, plus segments with a population share each. segments.json needs each segment's name and five scores from 0 to 100: measurable, substantial, accessible, differentiable, actionable. Every value must be yours, with a source. Run each script with --sample to see the layout."
   - Check the divergence flag before you quote any market size. If it fails, re-check your inputs against their sources and run it again. Only change an input when you have a cited reason, and note the change in the assumptions list. Never adjust inputs just to make the two methods agree.
   - Fund the minimum sample for each segment you plan to report, not just the total.

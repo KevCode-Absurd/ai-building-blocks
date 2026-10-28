@@ -9,19 +9,22 @@ Paste a table of listed companies. Get the cheap ones that pass five safety test
 
 This workflow follows the method in The Intelligent Investor (revised edition, with commentary by Jason Zweig) by Benjamin Graham. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** Not for banks, insurers or utilities. The five tests suit industrial companies, so name any you hold and they are set aside. Not for a quick tip. If you do not have time to study companies, a low-cost index fund is the plain path. This is a method of analysis, not personal financial advice, and it never says buy or sell. For a steadier list of large companies, use the [Screen stocks with a defensive investor's seven tests](https://useaiblocks.com/workflows/defensive-stock-screen) workflow instead.
+**When not to use it:** Not for banks, insurers or utilities. The five tests suit industrial companies, so name any you hold and they are set aside. Not for a quick tip. If you do not have time to study companies, a low-cost index fund is the plain path. This is a method of analysis, not personal financial advice, and it never says buy or sell. For a steadier list of large companies, use the [Company quality and share-price screener](https://useaiblocks.com/workflows/defensive-stock-screen) workflow instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with source text. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
@@ -50,8 +53,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Screen for cheap stocks that pass five safety tests.** Use the skill `enterprising-bargain-screener`. Give it the table. It makes a first cut on a low multiple of the last twelve months of earnings. If you gave no multiple, use 10 times as the default and say so, so two runs on the same table keep the same survivors. It then removes any company that fails one of five tests. It returns the survivors, the cuts with the failed test beside each, and the share kept at each stage. Save it as `outputs/step-01-enterprising-bargain-screener.md`.
 2. **Find the asset floor for each survivor.** Use the skill `asset-floor-estimator`. Give it the survivors in `outputs/step-01-enterprising-bargain-screener.md`, each one's latest balance sheet, its share count and price. It returns book value, net current assets and cash assets per share, a typical and a harsh sale value, and how each sits beside the price. Save it as `outputs/step-02-asset-floor-estimator.md`.
 3. **Judge the gap for each one.** Use the skill `price-versus-value-gap-judge`. Give it `outputs/step-02-asset-floor-estimator.md`, the price with its date, and an earnings value range if you have one. If you have none, say so: the judge then works from the asset floor and the price, and marks the missing range as `MISSING:`. It returns a margin of safety verdict for each survivor and why the price may be low. Save it as `outputs/step-03-price-versus-value-gap-judge.md`.
-4. **Set the group rules before you buy.** Use the skill `bargain-group-rules-writer`. Give it the verdicts in `outputs/step-03-price-versus-value-gap-judge.md`, the money for the group, and your costs and tax rate. It returns group size, caps for one name and one industry, a gain target, a time limit, an if-the-facts-change rule, the cost and tax sums, and a scorecard against a plain fund with a pass mark set in advance. Save it as `outputs/step-04-bargain-group-rules-writer.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Set the group rules before you buy.** Use the skill `bargain-group-rules-writer`. Give it the verdicts in `outputs/step-03-price-versus-value-gap-judge.md`, the money for the group, and your costs and tax rate. It returns group size, caps for one name and one industry, a gain target, a time limit, an if-the-facts-change rule, the cost and tax sums, and a scorecard against a plain fund with a pass mark set in advance. These are rules for your own study, not personal financial advice: check with a licensed adviser before you buy. Save it as `outputs/step-04-bargain-group-rules-writer.md`.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 
@@ -66,17 +69,6 @@ It names no company to buy or sell.
 
 Next step that fits: review the scorecard at the date step 4 set, against the plain fund. Do not offer the tools in the generic "After this" list below (bonds, habits, feature requests) unless the person asks. Better follow-ups: rerun the screen on a fresh table once a year, and compare the scorecard with a plain index fund at the review date. The Case-against writer is the one listed tool that fits, to argue against your own shortlist.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every cut shows the first test it failed, and gaps in the table are marked unknown.
 - If fewer than about 20 survivors have a clear margin, the plan says the group is too thin. It does not pad the group.
 - The exit rule and the scorecard pass mark were set before any purchase, and the output says it is a method, not advice.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business diligence meeting question planner](https://useaiblocks.com/skills/diligence-meeting-prep-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

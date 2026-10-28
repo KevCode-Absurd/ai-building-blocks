@@ -12,6 +12,19 @@ dependencies: [crewai>=1.2.0, crewai-tools>=1.2.0]
 
 Build teams of autonomous AI agents that collaborate to solve complex tasks.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use CrewAI
 
 **Use CrewAI when:**
@@ -229,35 +242,52 @@ researcher = Agent(
 ### Custom tools
 
 ```python
+import ast
+import operator
+
 from crewai.tools import BaseTool
-from pydantic import Field
+
+# AI Blocks note: the original called eval() on the agent's text, which can run
+# any code. Never eval text an agent or user supplies. This version parses the
+# expression and only allows numbers, brackets and + - * / // % **, with limits
+# on length, exponent and result size so a huge power cannot hang the process.
+_OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+        ast.Div: operator.truediv, ast.FloorDiv: operator.floordiv, ast.Mod: operator.mod,
+        ast.Pow: operator.pow, ast.USub: operator.neg, ast.UAdd: operator.pos}
+_LIMIT = 1e300
+
+def safe_calc(expression: str):
+    if len(expression) > 200:
+        raise ValueError("Expression is too long")
+
+    def check(value):
+        if abs(value) > _LIMIT:
+            raise ValueError("Number is too large")
+        return value
+
+    def walk(node):
+        if isinstance(node, ast.Constant) and type(node.value) in (int, float):
+            return check(node.value)
+        if isinstance(node, ast.BinOp) and type(node.op) in _OPS:
+            left, right = walk(node.left), walk(node.right)
+            if isinstance(node.op, ast.Pow) and abs(right) > 100:
+                raise ValueError("Exponent is too large")
+            return check(_OPS[type(node.op)](left, right))
+        if isinstance(node, ast.UnaryOp) and type(node.op) in _OPS:
+            return check(_OPS[type(node.op)](walk(node.operand)))
+        raise ValueError("Only numbers, brackets and + - * / // % ** are allowed")
+
+    return walk(ast.parse(expression, mode="eval").body)
 
 class CalculatorTool(BaseTool):
     name: str = "Calculator"
-    description: str = "Performs mathematical calculations. Input: expression"
+    description: str = "Performs arithmetic. Input: an expression such as '(3 + 4) * 2'"
 
     def _run(self, expression: str) -> str:
-        # AI Blocks note: the original called eval() on model output, which can run
-        # any code. Never eval text an agent supplies. This version only allows
-        # plain numbers and + - * / ** operators.
-        import ast, operator
-        ops = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
-               ast.Div: operator.truediv, ast.Pow: operator.pow, ast.USub: operator.neg}
-
-        def walk(node):
-            if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
-                return node.value
-            if isinstance(node, ast.BinOp) and type(node.op) in ops:
-                return ops[type(node.op)](walk(node.left), walk(node.right))
-            if isinstance(node, ast.UnaryOp) and type(node.op) in ops:
-                return ops[type(node.op)](walk(node.operand))
-            raise ValueError("Only numbers and + - * / ** are allowed")
-
         try:
-            result = walk(ast.parse(expression, mode="eval").body)
-            return f"Result: {result}"
+            return f"Result: {safe_calc(expression)}"
         except Exception as e:
-            return f"Error: {str(e)}"
+            return f"Error: {e}"
 
 # Use custom tool
 agent = Agent(
@@ -512,3 +542,10 @@ os.environ["CREWAI_STORAGE_DIR"] = "./my_storage"
 - **Examples**: https://github.com/crewAIInc/crewAI-examples
 - **Version**: 1.2.0+
 - **License**: MIT
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

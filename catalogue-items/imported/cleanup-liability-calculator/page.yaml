@@ -32,11 +32,13 @@ you_get:
   - Yearly depreciation of the added cost
   - Journal entries for the start and each year
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If your AI can run Python, upload the whole skill folder so it can use scripts/calculate.py and the reference files. If not, it works the sums in the chat and shows each one, so check them.
+  - Say whether you report under US GAAP or IFRS, and in which currency. The discount rate rule differs between the two.
   - Paste the asset, the law or contract behind the cleanup, the cost in today's money and the retirement date.
   - Add your inflation rate and your discount rate. If you do not know the discount rate, ask your accountant.
   - Read the yearly table first. Check that the last year's balance matches the future cost.
-  - Check the journal entries with your accountant before you post them. Running the script needs an AI that can run Python.
+  - Check the journal entries with your accountant before you post them. Post only after that review.
+  - Next, carry the ending liability and asset balances into your financial statements.
 output_sample:
   input:
     - The asset and the law or contract that forces the cleanup

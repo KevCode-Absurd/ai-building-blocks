@@ -7,6 +7,19 @@ description: When the user wants to optimize pallet loading, arrange boxes on pa
 
 You are an expert in pallet loading and optimization. Your goal is to help efficiently load boxes, cases, and items onto pallets while maximizing utilization, ensuring load stability, meeting weight constraints, and complying with shipping requirements.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Accuracy warning
 
 The weight, height and compression results in this skill are rough estimates. The code samples use simplified rules (for example a placeholder height limit and a rough layer-weight estimate), and the mixed-SKU model is a sketch. Always tell the user to check the final pattern against the box maker's stacking strength, the pallet's load rating and the carrier's rules before shipping. Never present these figures as a safety guarantee. If a figure is not supplied, mark it `MISSING:` and do not guess it. The centre-of-gravity score is a rough screen with arbitrary cut-offs. It is not a safety pass, and the box compression strength and pallet load rating must come from the user.
@@ -411,7 +424,8 @@ def check_center_of_gravity(loaded_items, pallet_dims):
         'pallet_center': (pallet_center_x, pallet_center_y),
         'offset': (offset_x, offset_y),
         'stability_score': stability_score,
-        'is_stable': stability_score > 70  # rough screen only, not a safety pass
+        # Rough centring screen only. It ignores weight, crush strength and wrap.
+        'looks_centred': stability_score > 70
     }
 
 # Example
@@ -426,7 +440,7 @@ pallet = (48, 40, 72)
 cog_result = check_center_of_gravity(items, pallet)
 print(f"COG: {cog_result['cog']}")
 print(f"Stability Score: {cog_result['stability_score']:.1f}")
-print(f"Stable: {cog_result['is_stable']}")
+print(f"Looks centred (rough screen, not a safety pass): {cog_result['looks_centred']}")
 ```
 
 **Compression Strength Check**
@@ -494,7 +508,7 @@ class PalletOptimizer:
     """
 
     def __init__(self, pallet_type='GMA', custom_dims=None,
-                 weight_capacity=2500, max_height=72):
+                 weight_capacity=None, max_height=72):
         """
         Initialize pallet optimizer
 
@@ -523,6 +537,11 @@ class PalletOptimizer:
         else:
             dims = pallet_dims.get(pallet_type, (48, 40))
             self.pallet_dims = (*dims, max_height)
+
+        # The load rating must come from the user or the pallet maker.
+        # If it includes the pallet's own weight, pass the rating minus that weight.
+        if weight_capacity is None:
+            raise ValueError("MISSING: weight_capacity. Ask for the pallet's load rating.")
 
         self.pallet_type = pallet_type
         self.weight_capacity = weight_capacity
@@ -578,6 +597,8 @@ class PalletOptimizer:
         base_for_weight = generate_block_pattern(
             box_dims, self.pallet_dims, allow_overhang
         )
+        if not base_for_weight or base_for_weight['boxes_per_layer'] == 0:
+            raise ValueError("The box does not fit on this pallet.")
         max_layers_weight = int(self.weight_capacity //
                                (box_weight * base_for_weight['boxes_per_layer']))
 
@@ -604,22 +625,38 @@ class PalletOptimizer:
                 'layers': [base_pattern] * max_layers
             }
 
-        # Check if we have enough quantity
-        if pattern['total_boxes'] > available_qty:
-            # Reduce layers to fit available quantity
-            boxes_per_layer = pattern['layers'][0]['boxes_per_layer']
-            actual_layers = int(available_qty // boxes_per_layer)
-            pattern['num_layers'] = actual_layers
-            pattern['total_boxes'] = boxes_per_layer * actual_layers
+        # Enforce quantity AND total weight on the pattern actually built.
+        # Layers can hold different box counts (interlocking layers are made
+        # separately), so add them up one by one and stop before either limit
+        # is passed. Never rely on the layer estimate above alone.
+        kept_layers = []
+        boxes_so_far = 0
+        for layer in pattern['layers']:
+            n = layer['boxes_per_layer']
+            if boxes_so_far + n > available_qty:
+                break
+            if (boxes_so_far + n) * box_weight > self.weight_capacity:
+                break
+            kept_layers.append(layer)
+            boxes_so_far += n
+        pattern['layers'] = kept_layers
+        pattern['num_layers'] = len(kept_layers)
+        pattern['total_boxes'] = boxes_so_far
 
-        # Calculate weight
+        # Calculate weight and check it against the stated capacity
         total_weight = pattern['total_boxes'] * box_weight
+        within_weight = total_weight <= self.weight_capacity
+        if not within_weight:
+            raise ValueError(
+                f"Plan weighs {total_weight} lbs, over the stated capacity of "
+                f"{self.weight_capacity} lbs. Do not use it."
+            )
 
         # Check stability
         loaded_items = []
         for layer_idx in range(pattern['num_layers']):
             z = layer_idx * box_dims[2]
-            layer_pattern = pattern['layers'][layer_idx % len(pattern['layers'])]
+            layer_pattern = pattern['layers'][layer_idx]
 
             for pos in layer_pattern['positions']:
                 loaded_items.append({
@@ -628,12 +665,15 @@ class PalletOptimizer:
                     'weight': box_weight
                 })
 
+        if not loaded_items:
+            raise ValueError("Not even one layer fits the quantity and weight limits.")
         cog = check_center_of_gravity(loaded_items, self.pallet_dims)
 
         self.solution = {
             'pattern': pattern,
             'total_boxes': pattern['total_boxes'],
             'total_weight': total_weight,
+            'within_weight_capacity': within_weight,
             'total_height': pattern['num_layers'] * box_dims[2],
             'num_layers': pattern['num_layers'],
             'utilization': self.calculate_utilization(pattern, box_dims),
@@ -714,6 +754,7 @@ class PalletOptimizer:
         self.solution = {
             'total_boxes': len(loaded_items),
             'total_weight': total_weight,
+            'within_weight_capacity': total_weight <= self.weight_capacity,
             'total_height': current_height,
             'loaded_items': loaded_items,
             'stability': cog
@@ -883,6 +924,7 @@ class PalletOptimizer:
         print(f"Total boxes loaded: {self.solution['total_boxes']}")
         print(f"Total weight: {self.solution['total_weight']:.1f} lbs "
               f"({self.solution['total_weight']/self.weight_capacity*100:.1f}% of capacity)")
+        print(f"Weight check: {'within stated capacity' if self.solution.get('within_weight_capacity') else 'OVER CAPACITY - DO NOT USE'}")
         print(f"Total height: {self.solution['total_height']:.1f} in "
               f"({self.solution['total_height']/self.pallet_dims[2]*100:.1f}% of max)")
 
@@ -896,7 +938,8 @@ class PalletOptimizer:
             print(f"  Center of Gravity: ({stab['cog'][0]:.1f}, {stab['cog'][1]:.1f}, {stab['cog'][2]:.1f})")
             print(f"  Offset from center: ({stab['offset'][0]:.1f}, {stab['offset'][1]:.1f}) in")
             print(f"  Stability Score: {stab['stability_score']:.1f}/100")
-            print(f"  Rough centre check: {'looks centred' if stab['is_stable'] else 'OFF CENTRE - REVIEW REQUIRED'} (not a safety pass)")
+            print(f"  Rough centre check: {'looks centred' if stab['looks_centred'] else 'OFF CENTRE - REVIEW REQUIRED'} (not a safety pass)")
+            print("  The centre check says nothing about weight, crush strength or wrapping. Check those separately.")
 
 
 # Example usage
@@ -905,7 +948,7 @@ if __name__ == "__main__":
     print("Example 1: Single SKU Pallet Loading")
     print("-" * 50)
 
-    pallet = PalletOptimizer(pallet_type='GMA', weight_capacity=2500, max_height=72)
+    pallet = PalletOptimizer(pallet_type='GMA', weight_capacity=2500, max_height=72)  # example values only: use the pallet's real load rating
 
     # Add boxes (12x10x8 inches, 25 lbs each, 100 available)
     pallet.add_item(length=12, width=10, height=8, weight=25,
@@ -1038,7 +1081,8 @@ _Layout example only. Every number below is made up to show the layout. Never re
 **Summary:**
 - Pallet Type: GMA (48" x 40")
 - Boxes Loaded: 84 cases
-- Total Weight: 2,100 lbs
+- Total Weight: [TOTAL] lbs
+- Weight check: [TOTAL] of [CAPACITY] lbs stated capacity (must be at or under it)
 - Total Height: 64 inches
 - Utilization: 89.5%
 - Rough centre-of-gravity screen: looks centred (offset [OFFSET]"). This is not a safety pass.
@@ -1084,11 +1128,18 @@ Layer 5 (Top):
 **Shipping Instructions:**
 - Apply stretch wrap immediately after loading
 - Use 4-way entry for forklift
-- Can be double-stacked (weight allows)
+- Double-stack only if the pallet's load rating and the box maker's stacking strength allow it
 - Max stack height: 2 high (128" total)
 - Label all 4 sides
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Freight mode and carrier picker](https://useaiblocks.com/skills/freight-mode-and-carrier-picker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

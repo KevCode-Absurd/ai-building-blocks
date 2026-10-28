@@ -11,6 +11,23 @@ metadata:
 
 This skill equips an AI agent to perform the full spectrum of Git-based version control tasks, from initializing a repository and crafting atomic commits to orchestrating branching strategies, resolving merge conflicts, and configuring automation with hooks. It covers both everyday workflows and advanced operations needed for professional team collaboration.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What you need
 
 A plain description of the Git problem. If you have a plan, such as a branching plan or a triaged issue list, use it to decide which branches to make and in what order.
@@ -144,3 +161,12 @@ gh pr merge --squash --delete-branch
 - **Shallow clones**: Operations like `blame`, `log`, and `bisect` may fail on shallow clones (`--depth 1`). Run `git fetch --unshallow` before performing history-dependent operations.
 - **Submodules and monorepos**: When the project uses submodules, ensure `git submodule update --init --recursive` is part of the setup instructions. For monorepos, respect per-package change boundaries during commits.
 - **Diverged branches after force-push**: If a teammate force-pushed a shared branch, advise `git fetch` followed by `git reset --hard origin/<branch>` only after confirming no local work will be lost. Coordinate with the team first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Git pre-commit hook builder](https://useaiblocks.com/skills/pre-commit-hook-setter).
+- The [Software release preparer](https://useaiblocks.com/skills/release-preparer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

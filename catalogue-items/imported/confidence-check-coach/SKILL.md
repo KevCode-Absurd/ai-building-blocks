@@ -59,6 +59,19 @@ tags: ["metacognition", "calibration", "confidence", "self-monitoring", "overcon
 
 # Confidence Calibration Check
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Captures a confidence rating (0–100) before a knowledge attempt and again after receiving feedback, then compares the two. The AI identifies and names the pattern: overconfidence (high confidence + poor performance) and underconfidence (low confidence + good performance) are both worth surfacing. Over time, tracking calibration accuracy becomes itself a metacognitive skill — research on learning suggests that learners who can accurately predict their own knowledge gaps may allocate study time better. Treat this as a likely effect, not a proven result for any one learner. This skill makes the "illusion of competence" visible and actionable.
@@ -220,3 +233,10 @@ Here's your micro-goal for the next session: instead of re-reading the equilibri
 3. **Frequent calibration checks can produce strategic responding if learners game the rating.** A learner who understands the pattern may artificially lower pre-attempt confidence to appear "well-calibrated" after a good performance. This is unlikely with genuinely motivated learners but worth noting.
 
 4. **Calibration data across sessions requires session history to be useful.** A single calibration check gives a snapshot. The pattern — persistent overconfidence, improving calibration — only becomes visible over multiple sessions. In this library, pair it with the Study session planner and review, the Study gap tracker or the Study review scheduler for tracking over time.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

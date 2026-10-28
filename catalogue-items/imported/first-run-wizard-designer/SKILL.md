@@ -20,6 +20,19 @@ When to use this skill: scoping a first-run onboarding wizard for the first time
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill covers
 
 This skill spans first-run product onboarding wizards. The growth-tooling distinctions:
@@ -278,3 +291,11 @@ That is the bar. Below the bar are tutorial-overload (everything upfront, nobody
 The discipline is in the design choices. The decision to build a wizard at all, or defer to contextual help. The step architecture that converges on the ah-ha moment. The progressive disclosure that surfaces the right thing at the right moment. The skip mechanics that protect the user from an empty product. The drop-off instrumentation that informs ongoing improvement. The maintenance cadence that keeps the wizard in sync with the product it represents.
 
 When in doubt, ask: did the user reach the ah-ha moment in their first session, and did the wizard help or hinder that? If yes to the first and helped on the second, the wizard earned its build. If no to either, redesign.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer).
+- The [Product onboarding planner](https://useaiblocks.com/skills/onboarding-improver).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

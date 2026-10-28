@@ -15,19 +15,16 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
@@ -63,7 +60,7 @@ Which file each step reads: step 1 reads your product description. Step 2 reads 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Act on the week where most people drop: pick one change for that week and check the grid again after two to four more weeks.
 - If you run Meta ads, the Meta pixel and server events fixer can check that sign-ups reach Meta. Skip it if you do not.
 
@@ -73,17 +70,6 @@ Use these instead of the general "After this" list above:
 - **Step 2, retention grid:** the active rule, the share still active per group per week, and a reading of where people drop.
 - **Step 3, dashboard:** cards, a retention chart, a funnel, filters and one shareable page.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta pixel and server events fixer](https://useaiblocks.com/skills/meta-pixel-capi-fix). It takes the website.
-- **Fill the gaps in your brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). It takes the website.
-- **Design it** with the [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker). It takes the website.
-- The [AI shortlist readiness checker](https://useaiblocks.com/skills/ai-shortlist-readiness-checker). It takes the website.
-- The [Web page speed tuner](https://useaiblocks.com/skills/web-page-speed-tuner). It takes the website.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -92,3 +78,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The plan has one main number and a short event list, and event names read as object then past-tense action.
 - The grid uses the person's real activity rule, marks small groups as noisy, and the reading names the week where most people drop.
 - Every chart on the dashboard matches the export.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta pixel and server events fixer](https://useaiblocks.com/skills/meta-pixel-capi-fix). It takes the website.
+- The [Nonprofit board dashboard planner](https://useaiblocks.com/skills/nonprofit-executive-dashboard-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

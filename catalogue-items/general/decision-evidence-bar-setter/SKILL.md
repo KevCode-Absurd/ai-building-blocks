@@ -8,7 +8,7 @@ description: Use when a team keeps asking for more data before a decision, or yo
 Waiting for certainty is a choice with a price. This skill makes the evidence bar explicit so the team knows when to stop collecting facts. For most reversible choices the bar is about seventy percent of what you wish you knew. One-way choices need more. To close the decision once the bar is met, use "Disagree-and-commit note writer".
 
 Use [Reversible decision sorter](https://useaiblocks.com/skills/reversible-decision-sorter) instead when you only need to know whether a choice is a one-way or two-way door, and who owns it, not how much evidence is enough.
-Use [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decisions) instead when people disagree and the problem is who decides and how dissent is heard.
+Use [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions) instead when people disagree and the problem is who decides and how dissent is heard.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

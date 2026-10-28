@@ -66,6 +66,27 @@ tags: ["interleaving", "desirable-difficulty", "planning", "memory", "practice"]
 
 # Interleaving Unit Planner
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lesson plan** with the [Backwards unit planner](https://useaiblocks.com/skills/backwards-unit-planner). Bring your lesson plan.
+2. **A draft** with the [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). Bring your lesson plan, a plan (optional), your notes (optional).
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a blocked topic sequence (Topic A, A, A, then Topic B, B, B) and restructures it to interleave related but distinct concepts (A, B, A, C, B, A...), producing a sequence that exploits the interleaving effect to improve long-term retention and discrimination between similar concepts. The output includes the restructured plan, the rationale for interleaving these specific topics, and a briefing for explaining the approach to students. AI is specifically valuable here because interleaving requires identifying which topics benefit from interleaving (related but distinct concepts), which must stay blocked (genuinely prerequisite knowledge), and how to sequence the interleaving pattern — a task that requires understanding both the cognitive science and the specific subject content.
@@ -222,3 +243,10 @@ These four topics are ideal for interleaving because they share a surface struct
 2. **The evidence base is strongest for mathematics and category-learning tasks.** Rohrer et al. (2015) and Taylor & Rohrer (2010) used mathematical and perceptual classification tasks. Transfer to humanities subjects (e.g., interleaving essay types, historical periods) is theoretically supported but has less direct experimental evidence. Use with appropriate caution outside mathematics and science.
 
 3. **Students and sometimes colleagues will resist.** Kornell & Bjork (2008) consistently found that learners rated blocked practice as more effective. Teachers may face pushback from students ("this is confusing"), parents ("they're jumping around"), and colleagues ("they need to master one topic before moving on"). The student briefing script is essential, not optional.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

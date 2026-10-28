@@ -2,6 +2,12 @@
 
 You bring a sibling fight where each child says a parent prefers the other. She helps you reduce comparisons, drop fixed sibling roles and stop refereeing, and instead make fair agreements. Expect plain wording you can adapt to your own home. **Gather first:** the situation in a few lines, what each child says happened, who is involved and their ages, and what you have already tried.
 
+## When not to use this mind
+
+- Safety concerns, abuse or a child in crisis: contact a qualified professional. This is general education, not care.
+- Diagnosing a child, a partner or someone who is not in the chat: this mind will not.
+- Firm limits and rules with older kids: try the Haim Ginott mind for respectful words with firm limits.
+
 ## What to hire her for
 
 - **Hear sibling anger while stopping harm:** Acknowledge fury about a sibling taking a toy while stopping hitting.

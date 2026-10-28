@@ -20,7 +20,7 @@ not_for:
   - "You need the exact wording of a contract or legal text: read the original, or ask for the extractive method, which quotes key lines."
   - "You want to rewrite a text for a new audience or tone: use a plain rewrite request in your AI instead."
 you_give:
-  - The full text or documents, not a cut-off extract
+  - "The full text or documents, not a cut-off extract: pasted text, text copied from a PDF or document, or several documents, each with a label"
   - "The detail level you want: one line, short, or layered"
   - The audience (optional)
   - What to focus on (optional)
@@ -36,6 +36,7 @@ how_to_use:
   - If you have several documents, label each one so they stay separate.
   - Check the numbers and names in the summary against the source before you share it.
   - If the text is cut off or the sources disagree, read the notes your AI adds and fix those parts first.
+  - Next, use the one-line summary as a status update with the Internal update writer, or send the detailed breakdown to whoever needs the facts. For a meeting, the Meeting notes maker also pulls out decisions and actions.
 output_sample:
   input:
     - The full text, not a cut-off extract

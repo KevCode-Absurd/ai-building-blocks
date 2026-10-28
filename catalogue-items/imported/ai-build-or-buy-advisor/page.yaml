@@ -32,12 +32,12 @@ you_get:
   - A next-hire recommendation
 how_to_use:
   - Write down your use case, your monthly usage, your team size, and where you operate. The three calculators take a small JSON file. The cost calculator wants monthly input and output tokens in millions, the quality tier, the self-host model size, a latency target and expected GPU use. The build-or-buy calculator wants queries per month, tokens per query, a latency budget, the accuracy you need, your team's ML capacity and whether data must stay on your own servers. The risk classifier wants the domain, whether you deploy in the EU or in which US states, whether decisions are consequential or automated, and whether it is user-facing.
-  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, because the cost and risk tools are scripts.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, because the cost and risk tools are scripts. Running code may need a paid plan or a setting you turn on. Without it, the AI can still talk through the method, but it cannot run the calculators.
   - Attach or paste the three Python files from the scripts folder in the downloaded skill folder (model_buildvsbuy_calculator.py, ai_risk_classifier.py and ai_cost_economics.py). The AI cannot run them without the files.
   - Paste the skill text, then paste your details. Say which of the four decisions you want help with.
   - Read the Bottom Line and The Evidence first. Check the numbers against your own bills. Enter current prices from each provider's price page and a current GPU quote yourself. The skill has no prices of its own.
   - Check every law and price it names against current official sources before you act. Rules and prices change. The US state laws and 2026 API prices in the skill come from the original author and were not checked. Some names look wrong. Do not trust a risk class or a cost figure until you have checked it.
-  - Take the three next steps, then make the final call yourself.
+  - Read the How to Act section. It lists three concrete next steps for your case. Do them, then make the final call yourself.
 output_sample:
   input:
     - A description of your AI use case

@@ -7,7 +7,7 @@ job: brand-file
 headline: Brand perception auditor
 subhead: A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience.
 explain: |
-  A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience.
+  A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience. The skill calls the picture a customer forms of you in their head your brand schema.
 
   The skill gathers context about your market and who you serve. It then reviews your visual, verbal and behavioural identity for what each part signals about trust and status, and where those signals clash. Ideas from psychology are treated as lenses to check, not proof, so verify any claim before you use it in public. It leans on your own audience research and verified product facts.
 when:
@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Then paste what you gathered.
   - Answer any question it asks about your intended position.
   - "It works in five steps, and you can check each one. 1. Write the three words a customer would use to describe you today. 2. Write the three words you want them to use. 3. Find the biggest clash between your look, your words and what you do. 4. Pick the smallest change that fixes it. 5. Check that the change holds on your website, packaging, emails and support."
-  - Read the clashes and check any claim from psychology before you use it in public.
+  - Read the clashes and check any claim from psychology against a real source before you use it in public. Write down which customer quotes back up the biggest clash, so the fix rests on what customers said.
   - Fix the top change first. Then test it with real customers. To clean up the words, use the Honest persuasion editor.
 next: [honest-persuasion-editor]
 output_sample:

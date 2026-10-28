@@ -70,6 +70,19 @@ tags: ["gap-analysis", "student-work", "formative-assessment", "feedback", "diag
 
 # Gap Analysis from Student Work
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Analyses a student work sample against assessment criteria, identifies specific gaps (not just "needs improvement" but exactly WHAT is missing and WHY), classifies each gap by type (conceptual misunderstanding, procedural error, or communication/presentation issue), and generates targeted next teaching steps — specific actions the teacher can take to close each gap, rather than generic advice like "practise more." The output also includes a feedback script showing how to communicate the analysis to the student in a way that promotes improvement. AI is specifically valuable here because effective gap analysis requires simultaneously comparing the work to the criteria, diagnosing the type of gap (which determines the remedy), identifying strengths (which maintain motivation), and designing a targeted next step (which requires pedagogical knowledge) — a multi-layered analysis that takes significant time and expertise to do well.
@@ -225,3 +238,11 @@ Address **Gap 2 first** (explaining vs. analysing). This is the conceptual gap �
 2. **Diagnostic ambiguity between gap types.** Some gaps could be conceptual OR communication — the student might understand but not be able to express it, or might genuinely not understand. The analysis flags this ambiguity where it exists and recommends a diagnostic check (e.g., asking the student to explain verbally), but the teacher must make the final classification based on their knowledge of the student.
 
 3. **The analysis is based on a single work sample.** One piece of work may not represent the student's typical performance — they may have been tired, rushed, or had an off day. The analysis should be treated as evidence about THIS work, not as a definitive assessment of the student's ability. Multiple work samples over time provide a more reliable picture.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker).
+- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

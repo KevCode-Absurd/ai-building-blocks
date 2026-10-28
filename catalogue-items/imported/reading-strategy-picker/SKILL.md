@@ -69,6 +69,22 @@ tags: ["reading", "comprehension", "strategy-instruction", "reciprocal-teaching"
 
 # Reading Comprehension Strategy Selector
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Identifies the most appropriate reading comprehension strategies for a specific text and reader challenge, and provides a complete implementation guide including a teacher modelling script. Rather than defaulting to "use all the strategies" (a common but ineffective approach), this skill matches specific strategies to specific comprehension challenges — predicting when the text structure is unfamiliar, questioning when the content is dense, clarifying when vocabulary is technical, summarising when the text is long and detailed. The output tells teachers not just WHICH strategy to use but HOW to teach it with this specific text. AI is specifically valuable here because strategy selection requires simultaneously analysing the text's demands, the readers' likely difficulties, and the evidence base for each strategy — a three-way match that most teachers don't have time to make explicitly.
@@ -265,3 +281,12 @@ See what I did? I didn't just say 'trade routes — that's a cause.' I asked HOW
 2. **The strategy recommendations depend on the accuracy of the text description and reader challenge.** If the teacher describes the challenge as "students can't understand the vocabulary" but the real challenge is "students don't have the background knowledge to make sense of the content," the recommended strategies will miss the mark. Strategy selection is diagnostic — it requires accurate identification of what's going wrong.
 
 3. **Strategy instruction can become formulaic if overused.** If every text is preceded by "Today we're going to use predicting and questioning," students stop engaging with the strategies and start performing them mechanically. Strategies should be taught when they're needed, not used as a routine for every reading task. The best outcome is students who select strategies themselves when they notice their comprehension breaking down.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study strategy picker](https://useaiblocks.com/skills/study-strategy-picker). It takes the lesson plan and plan.
+- The [Hard topic teaching guide](https://useaiblocks.com/skills/hard-topic-teaching-guide). It takes the lesson plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

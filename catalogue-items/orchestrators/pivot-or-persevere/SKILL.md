@@ -15,14 +15,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Experiment results** (yours): observed dated results with cohort definitions, costs, account identities, activation, paid outcomes and retention.
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your data** (yours): the data files, with their format and where they came from.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your results, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, experiment results, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -51,7 +53,7 @@ Pause here: Run the first test or launch. Export results for each month or week 
 3. **Turn totals into rates per customer group.** Use the skill `vanity-metric-fixer`. Give it the milestones in `outputs/step-02-learning-milestone-planner.md` and your results by period. It marks which numbers are vanity and gives the per-group rates to use instead. Saves `outputs/step-03-vanity-metric-fixer.md`.
 4. **Read whether your changes moved the rates.** Use the skill `cohort-funnel-reader`. Give it the per-group rates in `outputs/step-03-vanity-metric-fixer.md`, the milestones from step 2 and your change dates. It shows which changes moved which rates, which did nothing, and how far each rate is from its target. Saves `outputs/step-04-cohort-funnel-reader.md`.
 5. **Make the pivot or persevere call.** Use the skill `pivot-or-persevere-decider`. Give it the funnel reading in `outputs/step-04-cohort-funnel-reader.md` and the milestones from step 2. It gives a call: persevere or pivot, the evidence for it, the kind of pivot, and a dated next review.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 5 step files and the summary. The last file holds the audit report.

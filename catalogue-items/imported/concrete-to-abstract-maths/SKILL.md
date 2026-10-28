@@ -70,6 +70,19 @@ tags: ["CPA", "Singapore-maths", "Bruner", "manipulatives", "bar-model", "concre
 
 # Concrete-Pictorial-Abstract Sequence Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a learning sequence that moves students from concrete manipulation (physical objects), through pictorial representation (diagrams, bar models, number lines), to abstract notation (symbols and numbers) — following the CPA approach central to the Singapore Mathematics Curriculum Framework. The approach is rooted in Bruner's (1966) theory that learners progress through enactive (action-based), iconic (image-based), and symbolic (language/symbol-based) modes of representation. The critical insight is that the stages are not separate activities but a connected progression — each stage builds understanding that makes the next stage meaningful. The output includes activities for each stage with explicit bridging questions that help students see the connection between what they did with objects, what they drew in diagrams, and what the numbers and symbols mean. AI is specifically valuable here because designing effective CPA sequences requires ensuring that the concrete and pictorial stages genuinely represent the mathematical structure (not just illustrate it), and that the transitions between stages are explicit, not assumed.
@@ -268,3 +281,12 @@ If students can answer all three, they understand adding fractions at all three 
 2. **The concrete stage requires quality manipulatives and teacher skill.** Poorly designed manipulatives (counters used for fractions, for example) can create misconceptions rather than prevent them. The manipulative must embody the mathematical structure. Teachers need training in which manipulatives represent which concepts — using the wrong concrete material is worse than no concrete material.
 
 3. **CPA does not mean every lesson must start from concrete.** Once students have solid concrete and pictorial understanding of a concept, they can work at the abstract level without going through all three stages every time. CPA is a learning progression for NEW concepts, not a ritual for every lesson. The stages should be revisited when students encounter a new application or get confused, not repeated when students are already fluent.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the lesson plan and plan.
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

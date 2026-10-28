@@ -100,7 +100,7 @@ output_shape: |
   DECISION RULE (set before the event)
   Goes forward if <X of N matching tasters like it and Y would buy at a price in range>
   Tie <...> | Fail <...> | Read-out <who counts, when>
-  SAFETY AND LEGAL: <food safety, allergens, permits, filming consent>
+  SAFETY AND LEGAL: <food safety, allergens, permits, filming consent; if alcohol: licence and age checks>
   CHECKS MISSED: <none | list>
 
 tweaks:

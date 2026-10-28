@@ -8,9 +8,9 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - {type: plan, required: true}
+  - {type: code_change, required: true}
   - {type: question, required: true}
-  - {type: copy_draft, required: false}
+  - {type: plan, required: false}
   - {type: audit_report, required: false}
 outputs:
   - {type: plan}

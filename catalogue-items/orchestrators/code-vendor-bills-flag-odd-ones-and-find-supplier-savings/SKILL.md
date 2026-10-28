@@ -9,7 +9,7 @@ Give it your vendor bills. Get each coded, the odd ones flagged for a look, and 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** you have a few bills a month and know where each goes (code them by hand), or you need a month-end review of the whole ledger (use the Month-end bookkeeping reviewer).
+**When not to use it:** you have a few bills a month and know where each goes (code them by hand), or you need a month-end review of the whole ledger (use the Month-end bookkeeping reviewer). If you buy from only two or three suppliers, run steps 1 and 2 and skip step 3: compare their prices by hand instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 This list replaces the general one above.
-- **The vendor bills** (required): PDFs, photos, or an export with vendor, date, amount, invoice number and description.
+- **The vendor bills** (required): PDFs, photos, or an export from QuickBooks, Xero or a spreadsheet (CSV) with vendor, date, amount, invoice number and description. This workflow reads files you give it. It does not connect to your accounting tool or pay anything.
 - **Your chart of accounts** (required): the list of categories you code spend to. Without it, mark each category `MISSING:` and propose none.
 - **Purchase orders and receipts** (optional): they help step 2 tell a real repeat from a duplicate.
 

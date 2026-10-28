@@ -14,6 +14,26 @@ token regardless of audience.
 Targets spec revision **2025-11-25** (verified 2026-07-20):
 <https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization>.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A tool connection** with the [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder). Bring a codebase, your API spec (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When NOT to use
 
 - Threat modeling / injection / sandboxing → `mcp-server-security` (auth is one
@@ -115,6 +135,13 @@ signature/expiry/**audience** on every request via cached JWKS, returns the
 step-up, registers clients via CIMD (DCR only as fallback, allowlisted),
 touches downstream APIs only with its own credentials, and passes the probe
 script + a live client flow.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Gotchas
 

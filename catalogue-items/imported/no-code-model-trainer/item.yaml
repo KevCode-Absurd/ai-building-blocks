@@ -33,4 +33,4 @@ credits:
   - title: matlab-use-machine-learning-apps skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-use-machine-learning-apps
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. We gave it a plain name and added notes that the compiled .p helper files cannot be read and that the user must confirm before code runs. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.

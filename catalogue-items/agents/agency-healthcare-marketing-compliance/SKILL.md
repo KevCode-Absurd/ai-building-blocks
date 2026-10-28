@@ -7,7 +7,7 @@ description: "Review healthcare ads, posts and scripts for mainland China agains
 
 Review healthcare marketing content for mainland China and flag banned claims, missing approvals and privacy risks, with a risk level and a safer rewrite for each. This is a first-pass review. It is not legal advice and not an approval.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for a draft, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** They read long pasted text and can review it in Chinese or English.
@@ -68,7 +68,7 @@ Return these sections, in this order:
 
 The MISSING items and every approval marked Not shown or Not supplied are also your CHECKS MISSED list: name them, or write "none".
 
-Next: hand the flagged lines and the questions for counsel to a qualified lawyer in China. To check the medical facts behind a claim, use the [Clinical Evidence agent](https://useaiblocks.com/skills/agency-healthcare-clinical-evidence-agent).
+Next: hand the flagged lines and the questions for counsel to a qualified lawyer in China. To check the medical facts behind a claim, use the [Clinical evidence reviewer](https://useaiblocks.com/skills/agency-healthcare-clinical-evidence-agent).
 
 ## Rules
 

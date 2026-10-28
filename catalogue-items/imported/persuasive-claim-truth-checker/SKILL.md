@@ -15,6 +15,25 @@ license: MIT
 
 Use this skill to determine whether a persuasive message earns its conclusion. The goal is calibrated judgment, not reflexive distrust: distinguish **supported**, **false**, **misleading**, **complicated**, and **unknown** without turning missing evidence into proof of deception.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **A chat AI that can read the bundled reference files:** Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+<!-- /needs -->
+
 ## Non-negotiable rules
 
 - Judge **claims and evidence**, not the speaker’s body language, confidence, political identity, or presumed motive.
@@ -145,3 +164,11 @@ For a high-stakes claim, retain source URLs and access dates. Load `references/c
 ## Exit criteria
 
 Stop when every material claim has a verdict or an explicit evidence gap, the report separates truth from implication, the next verification step is proportionate to the decision stakes, and every commissioned check is reconciled, rejected, or cancelled. Public or irreversible delivery remains blocked while any check is pending.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the audit report.
+- **Decide what to do** with the [Claim fact checker](https://useaiblocks.com/skills/claim-fact-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

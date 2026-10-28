@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import statistics
 import sys
 from dataclasses import dataclass, field
@@ -73,21 +74,46 @@ def treatment_for_band(band: str, n: int) -> tuple[str, list[str]]:
 
 def score_stage(stage_data: dict[str, Any]) -> StageConfidence:
     stage = str(stage_data.get("stage_name", "?"))
-    history = [float(x) for x in (stage_data.get("conversion_pct_history") or []) if x is not None]
+    history: list[float] = []
+    rejected: list[Any] = []
+    for x in (stage_data.get("conversion_pct_history") or []):
+        if x is None:
+            continue
+        try:
+            v = float(x)
+        except (TypeError, ValueError):
+            rejected.append(x)
+            continue
+        # Conversion history is in percent: it must be finite and between 0 and 100.
+        if not math.isfinite(v) or v < 0.0 or v > 100.0:
+            rejected.append(x)
+            continue
+        history.append(v)
     n = len(history)
+    rejected_note = (
+        [f"Ignored {len(rejected)} invalid value(s) {rejected!r}: history must be percentages from 0 to 100."]
+        if rejected else []
+    )
     if n == 0:
         return StageConfidence(
             stage=stage, history=[], n=0, mean_pct=0.0, stdev_pct=0.0, cov_pct=0.0,
             band="UNKNOWN", treatment="extend-data-window",
-            rationale=["No conversion history provided."],
+            rationale=rejected_note + ["No valid conversion history provided."],
         )
     mean = statistics.mean(history)
+    if mean <= 0:
+        # CoV is undefined at a zero mean; never score an all-zero stage as stable.
+        return StageConfidence(
+            stage=stage, history=history, n=n, mean_pct=0.0, stdev_pct=0.0, cov_pct=0.0,
+            band="UNKNOWN", treatment="do-not-use",
+            rationale=rejected_note + ["Mean conversion is 0%, so variance cannot be scored. Check the data before forecasting from this stage."],
+        )
     stdev = statistics.pstdev(history) if n > 1 else 0.0
     cov = (stdev / mean * 100.0) if mean > 0 else 0.0
     band = classify_band(cov)
     treatment, rationale = treatment_for_band(band, n)
-    if mean > 0:
-        rationale.insert(0, f"Mean {mean:.2f}% across {n} quarters; stdev {stdev:.2f}%; CoV {cov:.1f}%.")
+    rationale.insert(0, f"Mean {mean:.2f}% across {n} quarters; stdev {stdev:.2f}%; CoV {cov:.1f}%.")
+    rationale[0:0] = rejected_note
     return StageConfidence(
         stage=stage, history=history, n=n, mean_pct=mean, stdev_pct=stdev,
         cov_pct=cov, band=band, treatment=treatment, rationale=rationale,

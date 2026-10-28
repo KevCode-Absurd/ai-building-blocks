@@ -11,6 +11,20 @@ metadata:
 
 # Nonprofit Retail Staffing
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a business profile, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill to design or fix the staffing layer specific to running a resale storefront: building
@@ -123,3 +137,14 @@ retail-staffing failure in thrift operations.
   volunteer-recruitment problem and routing it entirely to `nonprofit-volunteer-management` — first
   check whether the minimum-paid-staff rule and role matrix are even defined; a store without those
   will keep feeling short-staffed no matter how many volunteers are recruited.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit volunteer program planner](https://useaiblocks.com/skills/nonprofit-volunteer-program-planner). It takes the document.
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
+- The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
+- **Lead the team** with the [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
+- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

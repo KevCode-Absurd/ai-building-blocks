@@ -69,6 +69,19 @@ tags: ["AI-literacy", "disciplinary-thinking", "knowledge-types", "Bernstein", "
 
 # Disciplinary AI Literacy Sequence Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a multi-lesson sequence in which students systematically compare AI's handling of the same type of question across disciplines — developing a principled mental model of where AI is reliable and where it distorts, based on the type of knowledge the discipline produces. The central insight is that AI's reliability is not uniform: it handles settled factual knowledge differently from contested interpretive claims, sequential procedural knowledge differently from dispositional knowledge about values and judgment. A student who understands why AI is generally reliable when explaining photosynthesis but unreliable when interpreting the causes of the French Revolution has developed transferable AI literacy — not just a list of "AI gets wrong" examples, but a predictive framework. The sequence follows the logic of Maton's (2013) semantic wave: starting from concrete discipline-specific examples, building to an abstract framework (AI reliability varies by knowledge type), then returning to concrete predictions ("for this assignment, in this subject, I expect AI to be X reliable because..."). The skill draws on the library's existing knowledge architecture framework: sequential knowledge (structured, hierarchical, cumulative — as in mathematics or scientific procedures) tends to be well-served by AI; horizontal knowledge (multiple valid frameworks that don't displace each other — as in historiography or literary criticism) is where AI is most likely to flatten genuine complexity or false-certainty a contested position.
@@ -290,3 +303,11 @@ Pairs compare their trackers with another pair. Whole-class discussion:
 3. **The sequence requires students to have sufficient domain knowledge to evaluate AI's answers.** Students cannot assess whether AI's causal account of Germany's WWI defeat is oversimplified if they haven't studied WWI sufficiently. The sequence is most effective mid-unit or end-of-unit, after foundational knowledge is in place.
 
 4. **Direct empirical evidence for disciplinary AI literacy pedagogy is very limited.** The knowledge-type framework (Bernstein, Willingham, Maton) is strongly evidenced for general curriculum design. Its specific application as a framework for predicting AI reliability is principled but novel — there is not yet substantial research on teaching students to predict AI reliability using knowledge-structure reasoning.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Self-explanation question writer](https://useaiblocks.com/skills/self-explanation-question-writer).
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

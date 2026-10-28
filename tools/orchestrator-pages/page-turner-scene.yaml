@@ -11,7 +11,7 @@ subhead: Tell it what happens in the scene and to whom. It picks the one questio
 explain: |
   Readers turn pages for a specific answer, not for events. A scene can be well written and still let them stop, because the question is vague, the ending explains too much or one paragraph forgets what is at stake.
 
-  This workflow starts with the question. It picks the person at risk, the thing they could lose and the line to stop on, then plans the next scene's answer. It tests that answer for fairness, since readers forgive a hard turn but not a cheat. It then drafts the scene in short beats with real objects and sounds, holding the answer back until after the stop line. Last, it reads the draft as a reader would, marks every paragraph for how hard it pulls, and fixes the weakest one. The step order was adapted from the craft shown in Stephen King's novel Misery.
+  This workflow starts with the question. It picks the person at risk, the thing they could lose and the line to stop on, then plans the next scene's answer. It tests that answer for fairness, since readers forgive a hard turn but not a cheat. It then drafts the scene in short beats with real objects and sounds, holding the answer back until after the stop line. Last, it reads the draft as a reader would, marks every paragraph for how hard it pulls, and fixes the weakest one. The ideas draw on the craft shown in Stephen King's novel Misery. The four-step order is this workflow's own.
 
 when:
   - Your chapters end where the action ends, and readers stop for the night.
@@ -89,7 +89,7 @@ output_shape: |-
     Verdict: strong, patchy or flat
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 
 tweaks:
   - what: Scene or chapter

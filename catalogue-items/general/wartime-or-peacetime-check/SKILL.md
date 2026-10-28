@@ -70,15 +70,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide whether to change course** with the [Pivot or persevere decider](https://useaiblocks.com/skills/pivot-or-persevere-decider). Bring your progress and customer notes.
-- **Test your plan against a bad year** with the [Bad year plan stress tester](https://useaiblocks.com/skills/bad-year-plan-stress-tester). Bring your budget or plan.
-- **Question the shortcut** with the [Claim skepticism kit](https://useaiblocks.com/skills/claim-skepticism-kit). Bring the claim that backs the shortcut.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The mode is named with evidence, or called provisional with what would settle it.
 - The shortcut is tested, not accepted.
@@ -86,6 +77,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A signal for changing mode is listed.
 - No figure, threshold or deadline appears that the person did not give.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide whether to change course** with the [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). Bring your progress and customer notes.
+- **Test your plan against a bad year** with the [Budget stress tester](https://useaiblocks.com/skills/bad-year-plan-stress-tester). Bring your budget or plan.
+- **Question the shortcut** with the [Claim credibility reviewer](https://useaiblocks.com/skills/claim-skepticism-kit). Bring the claim that backs the shortcut.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <number or fact> for <part>`. Never invent figures, rivals, thresholds or deadlines, and do not offer example ones (runway months, review windows). If the situation itself is missing, do not use this section: ask for it and stop.

@@ -10,6 +10,8 @@ explain: |
   Ad numbers stop being a puzzle once each metric is explained. See where platforms disagree with each other, and whether to scale a campaign or cut it.
 
   The skill reads your pasted dashboard figures with care. It explains how each platform's attribution model inflates its own credit, and how to reconcile Meta, Google and your own sales data. It warns about the ROAS trap, where a short window hides the value of a customer over time. It checks whether a change is real or just noise. It also explains incrementality tests, such as holding out a region, so you can tell what ads caused versus what would have happened anyway. If data is missing, it says what it needs.
+
+  The percentage ranges it uses for noise and for how much each channel really causes are the original author's rules of thumb, not sourced benchmarks. Treat them as rough guides and check them against your own tests before you act. Platform default attribution windows also change over time, so check the current setting in each platform before you compare numbers.
 when:
   - Meta and Google both claim credit for the same sale.
   - ROAS looks great but your bank balance does not.
@@ -34,11 +36,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Remove names, emails and other personal data from anything you paste. Replace customer IDs with made-up labels such as C1, C2.
   - Paste your dashboard numbers from each ad platform, one platform at a time.
-  - Add your own sales figures, the date range and each platform's attribution window.
+  - Add your own sales figures, the date range and each platform's attribution window. Read the window from each platform's current settings, since defaults change.
   - Ask your AI to read each metric, then reconcile the totals to your sales.
   - Ask for the noise check, then the scale, hold or cut call and one test to run next.
   - Check the result against your own bank figures before you change any budget.
-  - The percentage ranges for noise and incrementality are the original author's rules of thumb, not sourced figures. Check them against your own test results before you act.
   - Next, run the suggested geo holdout, and read the result with the A/B test verdict maker.
 output_sample:
   input:

@@ -78,6 +78,19 @@ tags: ["close-reading", "historical-thinking", "disciplinary-literacy", "languag
 
 # Close Reading Skill Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs targeted instruction to develop students' close reading of historical documents — the practice of attending to an author's word choice, claims, evidence, tone, and rhetorical strategies to assess argument, perspective, and probity. The output includes a developmental progression, an explicit instruction sequence with a teacher think-aloud script, language analysis prompts specific to the source type, common failure patterns with instructional responses, and assessment indicators.
@@ -271,10 +284,10 @@ Students receive a new passage — one of the historians' interpretations. They 
 *Why:* Often imported from English/Language Arts, where identifying "persuasive techniques" is a common task. The student has learned to label but not to connect labels to historical context.
 *Response:* "WHICH emotive language? Point to the specific word. Now — why would THIS author, writing at THIS time, choose THAT word? What was happening in their world that makes that word choice significant?"
 
-**3. "Both accounts are true" — failing to recognise that language shapes meaning**
+**3. "Both accounts are true, so there's nothing to explain" — adding the accounts together without asking why they differ**
 *What it looks like:* "The 1608 version describes a friendly meeting and the 1624 version describes a rescue. Both things could have happened."
-*Why:* The student treats both accounts as transparent reports of different events rather than as differently constructed accounts of the same event. They don't yet see language as a lens that shapes what is reported.
-*Response:* "These describe the SAME meeting. Smith can't have been both kindly welcomed AND dragged to the stones to have his brains beaten out. The language isn't just describing — it's constructing a version of events. Which version, and why?"
+*Why:* The student is right that both could have happened: a warm welcome and a later threat are not impossible in one visit, so the accounts do not strictly contradict each other. What the student misses is that the two accounts were built differently. The 1608 account leaves out a rescue that the 1624 account puts at the centre, and the same scene gets very different words. They treat the accounts as transparent reports and don't yet see language and omission as choices that shape what is reported.
+*Response:* "You may be right that both happened — different accounts don't prove that one is false. So let's check before we decide. Put the events of each account in order: where does the welcome come, and where does the threat come? What does each account claim, and what does each leave out? Then the bigger question: why would Smith leave the rescue out in 1608, or put it in by 1624, and why does he choose such different words for the same people? The differences are evidence to weigh, not proof of what happened."
 
 ### Assessment Indicators
 
@@ -293,3 +306,12 @@ Students receive a new passage — one of the historians' interpretations. They 
 2. **Close reading was one of two skills that showed treatment effects in Reisman (2012), but the study's measures assessed strategy application, not depth of analysis.** Whether students who learn to identify word choices and rhetorical strategies also develop the deeper disposition to read all texts as constructed rather than transparent is an open question the evidence does not resolve.
 
 3. **Close reading of historical documents requires language proficiency that may create barriers for EAL students or students with reading difficulties.** The skill's emphasis on word choice analysis assumes students can perceive the connotative differences between words like "kindly" and "barbarous." Teachers should ensure that vocabulary support (see text-complexity-analyser and vocabulary-tiering-tool) is in place before asking students to analyse language as evidence.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [History think-aloud script writer](https://useaiblocks.com/skills/history-think-aloud).
+- The [History source text simplifier](https://useaiblocks.com/skills/history-source-simplifier).
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

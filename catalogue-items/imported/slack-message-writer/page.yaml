@@ -7,7 +7,7 @@ job: write-emails
 headline: Slack message writer
 subhead: A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification.
 explain: |
-  A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification. You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
+  You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
 
   It writes in Slack's own formatting, which differs from standard Markdown: single asterisks for bold, angle brackets for links and mentions, and no headers. It keeps messages to one to three short paragraphs and moves long content into a canvas. It also catches common mistakes, like double asterisks that show up as raw symbols. You need Slack connected if you want it to save the draft there.
 when:
@@ -19,6 +19,7 @@ not_for:
   - "You are sharing sensitive HR or legal news: talk to the person, or ask the right team to word it."
   - "You have a long report of more than a few screens: write a full document and link to it in Slack."
   - "You need a formal email to someone outside your team: write a normal email instead of a Slack post."
+  - "It is urgent, like an outage, or needs a reply by a set time: use your team's alert channel or on-call tool, or call the person."
 you_give:
   - The point you want to make
   - Who it is for and which channel, and whether the tone is formal or casual
@@ -35,7 +36,7 @@ how_to_use:
   - State your point in a line or two. Say who the channel's audience is and whether the tone is formal or casual.
   - Say which kind of post you want: a message, a thread reply or a canvas. If you are not sure, your AI picks by length.
   - Add any links or people to mention. Slack needs the user ID for a mention, so write the name and fix it before you send.
-  - Saving a draft or making a canvas only works if your AI has a Slack connector. Without one, just ask for text you can paste into Slack.
+  - A Slack connector is a link between your AI and your Slack workspace, added in your AI's settings. With it, your AI can save the message as a draft in Slack for you to send, or make a canvas (a longer Slack page) for you. Without one, just ask for text you can paste into Slack.
   - Get the draft. Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it yourself. Check the thread later for replies. If the update needs more detail, ask for a canvas or a short follow-up thread reply after the first post. For a longer written update, the internal update writer pairs well with this.
 output_sample:
   input:

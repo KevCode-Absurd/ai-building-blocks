@@ -15,9 +15,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your notes** (yours): what to keep, change or drop.
 
 **Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 
 How to start:

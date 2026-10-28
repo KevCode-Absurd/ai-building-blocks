@@ -32,4 +32,4 @@ credits:
   - title: vn-pdpl skill
     by: Hemant Naik
     url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/vn-pdpl/skills/vn-pdpl
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

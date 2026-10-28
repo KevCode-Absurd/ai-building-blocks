@@ -39,14 +39,14 @@ If year-over-year shows the same pattern: the change is seasonal, not anomalous.
 - [ ] One country dropped, others stable: local algorithm or geo issue
 - [ ] One device dropped, others stable: device-specific issue
 - [ ] One section dropped, others stable: section-specific quality or technical issue
-- [ ] Branded queries dropped: brand-level issue
-- [ ] Non-branded dropped: SEO ranking issue
+- [ ] Branded queries dropped: check brand search demand first (impressions, seasonality, ad or PR changes), then outage, reputation or manual action
+- [ ] Non-branded dropped: check impressions versus average position to separate falling demand or SERP features from ranking losses
 - [ ] Single page dropped: page-level issue
 - [ ] Everything dropped: sitewide issue
 
 ### Decision
 
-Pick the dominant pattern. Carry the most affected segment into Layer 3.
+Pick the dominant pattern. Carry the most affected segment into Layer 3. The pattern points to where to look; it is not the diagnosis until Layers 3 to 5 confirm it.
 
 ---
 

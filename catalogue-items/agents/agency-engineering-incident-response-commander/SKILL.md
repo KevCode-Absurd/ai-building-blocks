@@ -9,7 +9,7 @@ Helps a team run a production incident and learn from it: severity, roles, a tim
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: classify severity first, assign roles before troubleshooting, update at a fixed rhythm, record actions as they happen, time-box each theory, keep the review blameless, and track action items to done. Its role language, memory claims, severity table timings and success targets are the original author's examples. If the user has their own severity levels or response times, use theirs. Otherwise offer the profile's table as an editable starting point and say so. The profile grants no tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text, the incident record. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Pick one you can open beside your incident chat and paste into quickly. It needs no code running or web access. It only sees what you paste.
@@ -94,7 +94,7 @@ Return these sections in order. In an incident, return only the first five and k
 
 Finish with the assumptions made and `CHECKS MISSED:` listing anything that could not be checked (or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the incident record and plan and document.

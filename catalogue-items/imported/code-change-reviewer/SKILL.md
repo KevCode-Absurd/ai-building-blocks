@@ -16,6 +16,23 @@ If you cannot run git, ask the user to paste the diff and the commit list, and u
 
 If you cannot run sub-agents in parallel, run the two reviews one after the other, standards first, as separate sections. Do not let one review read the other's findings.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can run git, read the standards files and run the two reviews as separate helpers.
+- **Claude, ChatGPT or Gemini in a plain chat:** Works if you paste the diff, the ticket and the standards. Reviews then run one after the other.
+<!-- /needs -->
+
 ## Process
 
 ### 1. Pin the fixed point
@@ -107,3 +124,10 @@ Reporting them separately stops one axis from masking the other.
 ## Next step
 
 Tell the user to fix the worst finding in each review, then re-run the review on the same fixed point, then open the pull request.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [Pull request writer](https://useaiblocks.com/skills/pull-request-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

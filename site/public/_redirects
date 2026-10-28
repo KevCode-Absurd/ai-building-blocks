@@ -1,6 +1,7 @@
 # Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.
 /skills/3d-how-it-works-video-ad-script-writer /skills/3d-explainer-video-script 301
 /skills/3d-how-it-works-video-clip-prompt-writer /skills/3d-explainer-video-prompts 301
+/skills/acquisition-cost-by-source-calculator /skills/cac-by-source 301
 /skills/acquisition-due-diligence-planner /skills/acquisition-due-diligence 301
 /skills/ad-concept-grid-planner /skills/untried-ad-idea-finder 301
 /skills/ad-copy-brand-voice-check /skills/brand-voice-editor 301
@@ -38,10 +39,12 @@
 /skills/article-style-landing-page-writer /skills/article-landing-page 301
 /skills/assessment-fit-and-fairness-checker /skills/assessment-fairness-check 301
 /skills/assignment-ai-use-boundary-mapper /skills/assignment-ai-boundaries 301
+/skills/australian-government-security-checker /skills/australia-gov-security-check 301
 /skills/base-product-photos-from-reference /skills/reference-product-photos 301
 /workflows/beat-a-bigger-rival-with-a-model-it-cannot-copy /workflows/beat-bigger-rival 301
 /skills/believability-weighted-decision-helper /skills/believability-weighted-decisions 301
 /skills/book-notes-and-margin-system-builder /skills/book-notes-system 301
+/skills/books-reconciler-and-p-l-narrator /skills/books-reconciliation-pl 301
 /skills/borrow-a-photos-look-for-your-product /skills/reference-product-photos 301
 /workflows/borrow-an-ad-layout-that-already-works /workflows/copy-winning-ad-layout 301
 /skills/borrow-landing-page-layout-you-admire /skills/competitor-landing-layout 301
@@ -83,6 +86,7 @@
 /workflows/check-a-plan-for-bias-bad-incentives-and-failure /workflows/plan-bias-check 301
 /workflows/check-an-ideas-four-risks-and-rewrite-your-roadmap /workflows/idea-four-risks-check 301
 /skills/check-for-understanding-question-writer /skills/understanding-check-questions 301
+/workflows/check-if-a-bond-or-loan-is-safe-to-hold /workflows/bond-safety-check 301
 /skills/check-who-wrote-it-lesson-builder /skills/who-wrote-it-lesson 301
 /workflows/check-you-know-enough-before-you-act /workflows/enough-info-check 301
 /workflows/check-your-marketing-plan-against-the-laws-that-decide-who-wins /workflows/marketing-laws-check 301
@@ -102,6 +106,7 @@
 /skills/claymation-video-clip-prompt-writer /skills/claymation-video-prompts 301
 /skills/cleanup-cost-liability-calculator /skills/cleanup-liability-calculator 301
 /skills/clinical-research-evidence-packager /skills/clinical-evidence-package 301
+/skills/close-reading-lesson-builder-for-history /skills/history-close-reading 301
 /workflows/code-rendered-product-offer-reel /workflows/offer-reel-real-product 301
 /workflows/cold-audience-concept-static-ads /workflows/scroll-stopping-image-ads 301
 /skills/cold-traffic-native-story-ad-writer /skills/story-image-ad-writer 301
@@ -172,6 +177,7 @@
 /skills/decision-options-and-tripwire-planner /skills/decision-tripwire-planner 301
 /skills/defense-contractor-security-checker /skills/defense-contractor-security 301
 /skills/defensive-or-enterprising-investor-sorter /skills/investor-type-quiz 301
+/skills/delivery-route-planner-vehicle-routing /skills/delivery-route-planner 301
 /workflows/design-a-brand-mark-and-test-that-it-holds-up /workflows/brand-mark-design 301
 /workflows/design-the-experience-name-and-measures-around-the-job /workflows/job-based-product-design 301
 /skills/document-question-answerer-builder /skills/document-qa-builder 301
@@ -179,6 +185,7 @@
 /skills/earnings-preview-report-builder-for-india /skills/india-earnings-preview 301
 /skills/earnings-record-reliability-checker /skills/earnings-reliability-check 301
 /skills/edit-a-draft-so-it-sells /skills/sales-copy-editor 301
+/skills/electronics-parts-sourcing-planner /skills/electronics-parts-sourcing 301
 /skills/employee-wellbeing-program-planner /skills/employee-wellbeing-program 301
 /skills/error-warning-and-recovery-designer /skills/error-message-designer 301
 /skills/eu-network-security-rules-checker /skills/eu-network-security-check 301
@@ -194,6 +201,7 @@
 /workflows/find-a-new-category-you-can-be-first-in-and-launch-it /workflows/new-category-launch 301
 /workflows/find-a-space-no-rival-holds-and-win-buy-in /workflows/uncontested-market-space 301
 /skills/find-ad-ideas-competitors-all-miss /skills/competitor-ad-gap-finder 301
+/workflows/find-bargain-stocks-with-a-low-price-screen-and-a-group-test /workflows/bargain-stock-screen 301
 /skills/find-fixes-worth-making-in-your-google-ads /skills/google-ads-report-auditor 301
 /skills/find-image-ad-types-worth-testing-next /skills/image-ad-gap-finder 301
 /prompts/find-offers-hiding-in-what-you-already-sell /prompts/hidden-offer-finder 301
@@ -324,6 +332,9 @@
 /skills/group-knowledge-building-task-designer /skills/group-knowledge-task 301
 /skills/headline-and-image-words-writer /skills/ad-headline-writer 301
 /workflows/hire-pay-and-measure-a-sales-team-on-what-works /workflows/sales-team-hiring-pay 301
+/skills/historical-context-lesson-builder /skills/historical-context-lesson 301
+/skills/history-think-aloud-script-writer /skills/history-think-aloud 301
+/skills/holdings-business-results-reviewer /skills/holdings-results-review 301
 /skills/honest-scarcity-and-urgency-planner /skills/honest-urgency-planner 301
 /skills/hotel-and-restaurant-buying-planner /skills/hotel-restaurant-buying 301
 /skills/ignored-reminders-screenshot-image-ad-maker /skills/ignored-reminders-image-ad-maker 301
@@ -402,6 +413,7 @@
 /workflows/mine-your-products-own-words-and-find-the-shared-want /workflows/product-review-mining 301
 /skills/mistakes-letter-to-partners-writer /skills/mistakes-letter-partners 301
 /skills/month-end-variance-commentary-writer /skills/variance-commentary 301
+/skills/monthly-demand-and-supply-meeting-planner /skills/demand-supply-meeting 301
 /skills/motion-comic-video-ad-script-writer /skills/motion-comic-ad-script 301
 /skills/motion-comic-video-clip-prompt-writer /skills/motion-comic-video-prompts 301
 /skills/motion-graphics-video-ad-director /skills/motion-graphics-build-plan 301
@@ -453,6 +465,7 @@
 /skills/ownership-and-short-interest-lookup /skills/ownership-short-interest 301
 /skills/page-conversion-review-in-buyer-order /skills/landing-page-auditor 301
 /skills/page-objection-answer-map /skills/customer-question-finder 301
+/skills/page-traffic-and-conversion-reader /skills/page-traffic-conversion 301
 /skills/paired-creative-quality-evaluation /skills/old-vs-new-ad-prompt-scorer 301
 /skills/paper-and-repo-to-structured-notes /skills/paper-repo-notes 301
 /skills/paper-craft-video-ad-script-writer /skills/paper-craft-ad-script 301
@@ -528,6 +541,7 @@
 /skills/return-on-equity-and-margin-checker /skills/roe-margin-check 301
 /workflows/review-a-pages-ease-of-use-then-plan-a-test /workflows/page-usability-review 301
 /workflows/review-a-product-against-ten-principles-then-cut-extras /workflows/ten-principles-review 301
+/workflows/review-your-investments-by-business-results-not-price /workflows/investment-results-review 301
 /workflows/revise-a-draft-with-the-door-open /workflows/draft-revision 301
 /skills/risograph-print-style-guide-writer /skills/risograph-style-guide 301
 /workflows/run-a-project-review-where-people-tell-the-truth /workflows/honest-project-review 301

@@ -7,8 +7,6 @@ job: set-prices
 headline: Price digits and placement planner
 subhead: Decide how to show a price so it sends the signal you want. Give it a price you are weighing and learn whether to round it, how to price add-ons and where to put it on the page.
 explain: |
-  Decide how to show a price so it sends the signal you want. Give it a price you are weighing and learn whether to round it, how to price add-ons and where to put it on the page.
-
   The skill first sorts your product as bought for pleasure or for practical use, because that changes the best ending. Pleasure buys often suit round prices, practical buys suit precise ones. It then covers add-on and upgrade pricing, flat rate against pay-per-use, colour and position on the product page, and opening prices for negotiations. It also notes market quirks, such as lucky endings in Japan and China.
 when:
   - You can't decide between $200, $199 and $203.
@@ -34,7 +32,7 @@ how_to_use:
   - Tell it your product, the price you are weighing, and whether this is a promotion or an everyday price.
   - Add your brand position and market. Say if the price will be negotiated.
   - Read the table you get back. Check that the reason for each choice fits your product.
-  - Treat the color advice as a weak tip. Test it on your own page before you rely on it.
+  - Treat the color advice as a weak tip. Test it on your own page before you rely on it. Never show different prices or colors to people based on their gender.
 output_sample:
   input:
     - Your product and the price you are weighing

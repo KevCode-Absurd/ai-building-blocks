@@ -100,6 +100,8 @@ improve:
   - "Add who has the final say on one-way choices."
   - "Keep a list of sorted choices and see how they turned out."
 
+next: [reversible-decision-sorter, plan-pre-mortem-runner]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Works in one message."}

@@ -9,7 +9,7 @@ It is easier to own a small market than a large one, and a business needs to own
 
 ## When to use it
 
-Use it when your product could serve many kinds of buyers and you cannot pick one. Do not use it when your product already sells well to a proven group (use the [Market boundary checker](https://useaiblocks.com/skills/market-boundary-checker) to test where that market ends), when you want the size of a whole industry (use a market report), or when you already have a broad group and want it sliced into people you can reach this week (use the [First customer group picker](https://useaiblocks.com/skills/first-customer-group-picker)).
+Use it when your product could serve many kinds of buyers and you cannot pick one. Do not use it when your product already sells well to a proven group (use the [Market definition and share checker](https://useaiblocks.com/skills/market-boundary-checker) to test where that market ends), when you want the size of a whole industry (use a market report), or when you already have a broad group and want it sliced into people you can reach this week (use the [First customer group picker](https://useaiblocks.com/skills/first-customer-group-picker)).
 
 ## What you need
 
@@ -39,7 +39,7 @@ The ranked short list with scores on the five tests and a reason for each. The p
 ## What next
 
 When you've handed it back, suggest what they could do next in one short question. Offer these, and say they can type their own:
-- **Plan how to win the first customers by hand** with the [First customers by hand planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). Bring the pick.
+- **Plan how to win the first customers by hand** with the [First customer outreach planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). Bring the pick.
 - **Ask people in the group for a call** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). Bring the pick.
 
 ## Check before you hand it back

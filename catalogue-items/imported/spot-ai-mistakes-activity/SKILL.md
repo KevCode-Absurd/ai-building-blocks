@@ -69,6 +69,26 @@ tags: ["AI-literacy", "expertise", "distortion", "Funhouse-Mirror", "metacogniti
 
 # AI Expertise Interrogation Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Cross-subject AI reliability lesson planner](https://useaiblocks.com/skills/ai-reliability-lessons). Bring your lesson plan.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates an activity — Kharbach's (2026) "Funhouse Mirror" — in which students use their own domain expertise as the instrument for detecting AI distortions, omissions, and overconfidence. This reverses the usual expert-novice dynamic in AI evaluation: in most AI literacy activities, students are novices being warned about AI's limitations. In this activity, students ARE the domain experts. They ask AI about something they know genuinely well — a subject they have studied deeply, a sport they play competitively, a cultural context they grew up in, a local geography they know intimately — and they use their knowledge to identify what the AI gets wrong, oversimplifies, flattens, or presents with false confidence. The pedagogical mechanism is calibrated AI skepticism through direct confrontation: finding an AI error in your domain of expertise creates a visceral, durable understanding that AI is not omniscient. A student who has found AI confidently wrong about their sport, their cultural tradition, or their hometown has earned a much more reliable skepticism than one who has been warned abstractly that "AI can make mistakes." The output includes an expertise activation protocol (students document their own knowledge before consulting AI), calibrated interrogation questions, a distortion annotation protocol, a distortion taxonomy for the specific domain, and a discussion guide for synthesising findings across the class's varied expertise areas.
@@ -276,3 +296,12 @@ Note: this example shows the layout. The Hungarian folk music facts in it are il
 3. **Cultural and minority expertise creates emotional stakes.** Students with cultural expertise in traditions that are poorly represented or misrepresented in English-language training data (regional traditions, minority cultures, non-Western domains) may find AI distortions that feel personally significant. Teachers should be prepared to facilitate discussion of these findings with appropriate care.
 
 4. **AI-specific applications of the expert-novice framework have limited direct empirical validation.** The expertise research (Chi et al. 1988; Ericsson & Smith 1991) is robustly evidenced for human expertise development. Its application as a framework for AI distortion detection is principled but novel — the specific claim that expertise activation produces more durable AI skepticism than abstract warnings has not been formally tested.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Classroom tech fit checker](https://useaiblocks.com/skills/classroom-tech-fit-checker). It takes the lesson plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

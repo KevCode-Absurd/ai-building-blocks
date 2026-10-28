@@ -9,6 +9,27 @@ A reconciled grant spending table, variance brief and evidence gaps.
 
 When not to use: you want to hand over a recurring process, not report on grant spending (use Make a recurring process easier to hand over). You need an audit opinion or the funder's sign-off (ask your auditor or grant officer, because this prepares the table and marks the gaps). You have no transaction records for the reporting period (pull them from your accounts first, because the table cannot be reconciled without them).
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the contract, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A compatible spreadsheet engine:** Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+<!-- /needs -->
+
 ## What you need
 
 - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.
@@ -56,6 +77,15 @@ Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or sk
 - For money, keep currency, period and assumptions explicit; preparation is not tax, filing or investment advice. For legal or HR matters, state the supplied jurisdiction and source date and leave consequential decisions for the responsible reviewer.
 - For documents and slides, reopen the final native file, render and inspect every page or slide; for spreadsheets, reconcile source totals, recalculate when supported and reopen the result. If those checks cannot run, say so and leave the delivery unverified.
 - End with CHECKS MISSED: followed by the actual failed or unavailable checks, or none. Never add a tested badge without recorded run evidence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Grant spending and receipt review](https://useaiblocks.com/skills/grant-spending-evidence-review-assistant). It takes the spreadsheet.
+- The [Freelancer transaction and cash review](https://useaiblocks.com/skills/monthly-freelancer-books-closer). It takes the spreadsheet and document.
+- The [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

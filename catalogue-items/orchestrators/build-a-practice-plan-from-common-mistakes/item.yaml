@@ -8,10 +8,8 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: lesson_plan
-    required: true
   - type: source_text
-    required: false
+    required: true
   - type: plan
     required: false
 outputs:

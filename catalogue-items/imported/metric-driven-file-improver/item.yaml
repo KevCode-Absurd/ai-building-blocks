@@ -31,4 +31,4 @@ credits:
   - title: autoresearch-agent skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/autoresearch-agent/skills/autoresearch-agent
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, added safety checks so the runner only rolls back its own one-commit try to the last kept commit on a clean tree, and made it record a measured baseline before the first comparison. We added Before you start and After this sections that link to other AI Blocks steps.

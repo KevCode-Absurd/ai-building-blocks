@@ -13,18 +13,14 @@ This workflow follows the method in Security Analysis: Principles and Technique 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material):
-- **Your question** (yours): what you are thinking of lending or buying, the price, and why you like it.
-- **The borrower's papers** (yours): the loan or bond terms, about seven years of income statements, and the borrower's other debts and lease payments.
-
-**Makes it better (optional):**
-- **What the owners' stake is worth** (yours): a low share price from the last slump, or a fair private price.
-- **The most you could lose without harm** (yours): a speculative call is sized against it.
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for the terms, the statements, the other debts and the price. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Claude:** Keeps the four steps in one run, so each test uses the one before.
@@ -61,15 +57,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. The first holds the label, the second the earnings cover, the third the cushion, and the last the call with its reasons.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Find out if a business is worth owning long term](https://useaiblocks.com/workflows/business-worth-owning). Bring the borrower's accounts, to test the business itself.
-- The [Value a stock with a margin of safety](https://useaiblocks.com/workflows/stock-margin-of-safety). Use it if you are weighing the borrower's shares, not its debt.
-Otherwise suggest running this again each year, and whenever new debt ranks ahead of the one you hold.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -78,3 +65,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No bar was relaxed for a near due date, a high rate or a pledge.
 - The call says what would change it, and names no security to buy or sell.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term business quality reviewer](https://useaiblocks.com/workflows/business-worth-owning).
+- The [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

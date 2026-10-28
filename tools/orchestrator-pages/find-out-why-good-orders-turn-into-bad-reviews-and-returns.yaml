@@ -80,6 +80,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How many low reviews you give it
     how: The second step wants 30 or more. With fewer it reads each review, marks its groups as early reads and gives no score.

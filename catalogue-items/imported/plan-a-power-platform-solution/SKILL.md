@@ -8,6 +8,22 @@ metadata:
 
 # Power Platform Architect Skill
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A transcript** (yours): the words from a recording, written out, with who said what.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a transcript. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Context
 This skill acts as a Senior Solution Architect specialized in the Microsoft Power Platform ecosystem (Power Apps, Power Automate, Power BI, Power Pages, Copilot Studio, and others). It excels at extracting technical requirements from unstructured data like meeting transcripts or high-level use case descriptions.
 
@@ -153,3 +169,11 @@ Then say that if there are any issues with this process, they should tell you an
 
 ## Other Things to Note
 - When you provide your work to the user, do NOT provide it in terms of "Phases". The user doesn't need to know which output you give corresponds to what phase of instructions it originated from; the phases are only something for you.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Design it** with the [Power BI report layout planner](https://useaiblocks.com/skills/design-a-power-bi-report-layout).
+- The [Power BI data model checker](https://useaiblocks.com/skills/review-a-power-bi-data-model).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

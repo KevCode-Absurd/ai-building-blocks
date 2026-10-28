@@ -16,7 +16,7 @@ when:
   - Your in-app wording is vague, bossy or unclear.
   - You can't tell which fix to make first.
 not_for:
-  - "You want code fixes, tests or hardening: use the tech debt prioritiser."
+  - "You want code fixes, tests or hardening: use the old code paydown guide, from the same author, or the tech debt prioritiser."
   - "You have no app yet: build a first version with the single file app builder, then come back when you have users."
   - "You only need to fix one leaking sign-up or checkout flow: use the conversion problem finder."
 you_give:
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Plan for several sessions. The nine phases take more than one sitting, and the first phase (the job your app is hired for) must be confirmed before anything else.
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI takes files.
-  - Each phase uses its own method skill. If your AI does not have it, the skill offers to install it with "npx skills add" (free). If you decline, it runs the phase from its short built-in brief instead and tells you so.
+  - Each phase uses its own method skill. If your AI does not have it, the skill offers to install it with "npx skills add" (free). That command downloads third-party code from the author's GitHub collection (wondelai/skills), so look at it before you say yes. If you decline, it runs the phase from its short built-in brief instead and tells you so.
   - Tell your AI about your app, its users and where they get stuck.
   - Answer its questions at each phase. It asks before it decides anything.
   - Check each phase's notes before you move on. The first phase is a gate, so confirm the job your app is hired for.

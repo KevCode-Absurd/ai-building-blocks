@@ -19,7 +19,7 @@ when:
   - Two people on your team are at similar levels and you want both judged against the same criteria.
 not_for:
   - You are making the final promotion or pay decision. That stays with your HR reviewer and your policy. Use the pay band builder for pay ranges.
-  - You want a yearly review of how someone has done. Use the performance review helper.
+  - You want a yearly review of how someone has done. Use the Employee performance review writer.
   - You need levels and criteria for a whole job family, not one person. Use the career ladder and growth plan writer on its own.
   - The talk is about poor conduct, not growth. Use the feedback conversation planner.
 you_give:
@@ -111,6 +111,7 @@ works_best_with:
   inputs:
     - Your written promotion criteria for the target level.
     - Dated peer or customer feedback that names the work, not the person.
+next: [training-program-builder, one-on-one-meeting-planner]
 terms:
   - term: Evidence map
     meaning: A table that links each promotion criterion to the proof found, with its source and date.

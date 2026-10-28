@@ -35,7 +35,7 @@ how_to_use:
   - Add your project files if your AI can read them. If not, paste the key details.
   - Before launch day, note the exact version or commit to roll back to, and the command that undoes your database changes. The rollback steps need both.
   - Read the checklist and mark any box you cannot tick yet. Fix those before you ship.
-  - Check the rollback plan and the numbers that trigger it. Agree them with your team before launch day.
+  - Check the rollback plan and the numbers that trigger it. The skill's figures, such as an error rate over 2 times normal or a rollback under 5 minutes, are examples. Set your own and agree them with your team before launch day.
 output_sample:
   input:
     - What you are releasing

@@ -1,12 +1,12 @@
 new_slug: nda-traffic-light-checker
 name: NDA traffic-light checker
-summary: Check an NDA before you sign. Paste it in and get a green, yellow or red rating, plus the odd clauses explained in plain words.
+summary: Get a first check on an NDA before you sign. Paste it in for a green, yellow or red rating and the odd clauses in plain words.
 job: check-contracts
 thinking: medium
 thinking_why: It compares each clause against a standard, which needs some judgement.
 headline: NDA traffic-light checker
 subhead: Paste the NDA and say whether you share, receive or both. You get a green, yellow or red rating, the odd clauses with section numbers and plain meaning, and what to ask them to change.
-explain: "Most NDAs are routine. A few hide terms that tie your hands, like a ban on working with their competitors or a claim to your ideas. This prompt checks the agreement against common standards: the type, the definition, the usual exceptions, how long it lasts and a list of odd clauses. It gives a traffic-light rating so you know whether to sign, ask for a change or get a second opinion. Have a qualified person check anything rated yellow or red."
+explain: "Most NDAs are routine. A few hide terms that tie your hands, like a ban on working with their competitors or a claim to your ideas. This prompt checks the agreement against common standards: the type, the definition, the usual exceptions, how long it lasts and a list of odd clauses. It gives a traffic-light rating so you know whether it looks routine, needs a change or needs a second opinion. It is a first check, not legal advice. Have a qualified person check anything rated yellow or red, and anything you are unsure of."
 when:
   - Someone sent you an NDA and wants it back today.
   - You want to know if it is standard before you call a lawyer.
@@ -54,6 +54,7 @@ how_it_works:
 output_shape: |-
   RATING
   <GREEN / YELLOW / RED>. <one-line reason>
+  A first check, not legal advice. Have a qualified person check it before you sign.
 
   ODD CLAUSES
   <section, quoted words, plain meaning, why it matters>

@@ -5,7 +5,7 @@ description: Use when an idea needs approval from people who do not yet see it. 
 
 # Idea buy-in pitch planner
 
-New ideas get a no before they get a yes. People dismiss them, argue with them, and later say they were obvious. If you plan for one clean yes, the first no looks like the end. This skill plans for the whole path: who will react how at each stage, what to say, and in what order to approach people. For the sharp one-line version of the idea, use the [Onliness statement writer](https://useaiblocks.com/skills/onliness-statement-writer).
+New ideas get a no before they get a yes. People dismiss them, argue with them, and later say they were obvious. If you plan for one clean yes, the first no looks like the end. This skill plans for the whole path: who will react how at each stage, what to say, and in what order to approach people. For the sharp one-line version of the idea, use the [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer).
 
 Do not use it when you can decide alone (write a plain one-page brief for yourself), or when the person has already said yes (send a short thank-you and next steps).
 

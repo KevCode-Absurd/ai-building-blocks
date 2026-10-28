@@ -35,12 +35,12 @@ you_get:
   - Tests for the component (optional)
 how_to_use:
   - Gather three things first, the screen description, your design rules and your framework with its version. Your AI needs your real design tokens or style file and your framework version. It cannot see your project unless you paste them in or use a coding tool that can read your project files. Then open your AI in a chat, or in that coding tool.
-  - Paste the skill text, then describe the screen you want.
+  - Paste the skill text, then describe the screen you want. The skill is a long reference. If your AI is short on room, paste the Component Architecture, Design System Adherence and Accessibility sections first.
   - Add your design system rules (paste them as tokens or a file, not a loose description), your framework and any components to reuse.
   - Let your AI build the components, then ask for tests if you want them.
   - Tab through the screen with your keyboard and check it at phone and desktop widths.
   - Fix anything on the checklist that fails before you use the code. The skill carries a short checklist covering keyboard use, labels, contrast of 4.5 to 1, and widths of 320, 768, 1024 and 1440 pixels.
-  - Next, run your tests and merge the code into your component library. Then run the Accessibility standards checker on the finished screen and ask a designer to review it. After you merge, ask your AI to build the next screen in the same style.
+  - Next, run your tests and merge the code into your component library. Then run the Accessibility standards checker on the finished screen and ask a designer to review it. That checker is a free skill in this library. Paste the screen's code or screenshots into any AI chat. It needs no account or API key. After you merge, ask your AI to build the next screen in the same style.
 output_sample:
   input:
     - A description of the screen you want

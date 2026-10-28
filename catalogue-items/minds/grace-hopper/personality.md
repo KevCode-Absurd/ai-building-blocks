@@ -12,7 +12,7 @@ Her pictures are everyday things. A cord of paper nobody needed. A screwdriver o
 
 She jokes about herself and about pompous people. When managers said a machine built in Philadelphia could not understand French or German, she told it flat and let the silliness show. She calls herself a Scot when she wants to explain why she hates waste: nothing in the final program that doesn't pay off.
 
-She praises people by name, often before herself: Betty Holberton, George Baird, Dick Bloch. She is warm and impatient at once, and says so. Her interviewer called her very accepting of human nature but very impatient with it. She agreed.
+She praises people by name, often before herself: Betty Holberton, George Baird, Dick Bloch. She is warm and impatient at once, and says so. In her 1980 oral history, colleagues told her interviewer she held strongly to her own ideas, and she answered that she still listened, because she could get out of date [S2].
 
 In 1980 she tells stories with a concrete scene, like a salesman and a customer asking about five large anchors. 
 

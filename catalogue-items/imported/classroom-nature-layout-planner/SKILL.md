@@ -69,6 +69,19 @@ tags: ["biophilic-design", "Kellert", "Kaplan", "attention-restoration", "classr
 
 # Biophilic Learning Environment Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Redesigns a classroom or learning space to incorporate biophilic design elements — features that connect occupants to nature and natural processes, based on the evidence that human cognitive functioning, stress levels, and attention are improved by contact with natural environments. The approach draws on Kellert's (2005, 2008) biophilic design framework and Kaplan & Kaplan's (1989) Attention Restoration Theory. The critical insight is that most classrooms are biophilic deserts — sealed, artificial environments with fluorescent lighting, uniform surfaces, no living things, and no sensory variety — and that even small changes (plants, natural light, nature views, natural materials, water sounds) can measurably improve attention, reduce stress, and increase engagement. The output includes a design proposal with specific changes organised by biophilic design pattern, priority recommendations ranked by impact and cost, an implementation plan, and the evidence rationale for each change.
@@ -183,7 +196,7 @@ The room, studies and effect sizes in this example only show the format. Check a
 **Priority 1: Open the Blinds and Manage the Glare**
 - **What to do:** Open the blinds. Reposition the interactive whiteboard or adjust screen brightness so it's visible without closing out all natural light. If full blinds-open creates too much glare, use the blinds at half-mast (lower half open, upper half closed) or replace solid blinds with light-diffusing curtains or film.
 - **Biophilic pattern:** Visual Connection with Nature (Pattern 1 — Browning et al.)
-- **Evidence:** Natural daylight is the single strongest biophilic intervention. Wells (2000, from memory, check the original source) found cognitive improvements with increased "greenness" including natural light. The Heschong Mahone Group (1999, from memory, check the original source) is reported to have found that students in classrooms with the most daylight progressed faster in maths and reading than those in classrooms with the least (the author gives effect sizes, which we have left out because they are unchecked; look up the original before you quote any figure). Even controlling for other factors, daylight consistently improves attention, mood, and academic performance.
+- **Evidence:** Natural daylight is the single strongest biophilic intervention. Wells (2000, from memory, check the original source) found cognitive improvements with increased "greenness" including natural light. The Heschong Mahone Group (1999, from memory, check the original source) is reported to have found that students in classrooms with the most daylight progressed faster in maths and reading than those in classrooms with the least (the author gives effect sizes, which we have left out because they are unchecked; look up the original before you quote any figure). The author's reading is that daylight tends to help attention, mood and learning; treat that as a claim to check, not a settled finding.
 - **Cost:** Zero
 - **Implementation:** Tomorrow morning. Check the window view (is there sky, trees, green space visible?). If yes, this is immediately the most powerful nature connection in the room. Reposition student desks if needed so the whiteboard is not directly opposite the windows.
 
@@ -260,3 +273,11 @@ The room, studies and effect sizes in this example only show the format. Check a
 2. **School policies may restrict implementation.** Some schools prohibit live plants (allergy concerns), restrict wall displays to specific formats, seal windows, or have inflexible lighting systems. The phased approach addresses this, but teachers may find that their highest-impact changes (daylight, plants) are the ones their school restricts.
 
 3. **Biophilic design is a complement to good teaching, not a substitute.** A beautiful, nature-connected classroom with poor instruction will not produce good outcomes. A sterile classroom with excellent instruction will. Biophilic design improves the CONDITIONS for learning — it creates an environment where attention is easier to sustain and stress is lower — but it does not teach. The teacher's pedagogy remains the primary determinant of learning quality.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study strategy picker](https://useaiblocks.com/skills/study-strategy-picker). It takes the plan.
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

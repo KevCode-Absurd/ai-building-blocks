@@ -7,6 +7,19 @@ description: Use when reviewing an online store as a whole — homepage, categor
 
 Make the site-wide calls that depend on what you sell and what kind of company you are. Most follow from one classification, so classify first.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Where marketing budget goes (social, search, comparison sites, marketplaces)
@@ -39,7 +52,7 @@ Collect, or state your assumption:
 Work in this order: classify the product (if the store sells both kinds, classify each product group, run the rules for each group, and give one overall call only when one group makes most of the revenue), go through rules 1 to 9 and skip any that do not fit, then write the priority table.
 
 1. **Channels by product type.** Hedonic → social media and your own product pages; the journey is impulsive and starts on social. Utilitarian → search ads, comparison sites, third-party reviews, deal sites; the buyer compares for value. (Source: Li et al. 2020.)
-2. **Recommendation labels.** Utilitarian → algorithm-based label ("Recommended based on your browsing"). Hedonic → human label such as "Our team's pick". Use "Our expert's pick" only if a real expert reviewed the picks. Keep the module; change the label. (Source: Longoni & Cian 2020.)
+2. **Recommendation labels.** The label must say who really chose the products. Utilitarian → an algorithm-based label ("Recommended based on your browsing") fits, because buyers trust machines on function. Hedonic → buyers prefer human picks, so if this matters, have real people choose or review a pick list and label that ("Picked by our team"). Never put a human label on picks an algorithm made: that misleads the buyer. If the picks stay algorithmic, keep an honest algorithm label or a neutral one ("You might also like"). Ask who makes the picks before you recommend a label. (Source: Longoni & Cian 2020.)
 3. **Layout direction.** Horizontal (carousel) makes people weigh quality and the primary feature — 26% more chose the pricier, higher-quality laptop. Vertical (scroll) makes them price-sensitive. Horizontal where quality should win, vertical where you compete on price. (Source: Mukherjee 2022.)
 4. **Visual style.** Structured (straight lines, symmetry, geometry) reads reliable; unstructured (rounded, incomplete, unpredictable) reads fun. Match the brand: matched perfume ads got 39% more clicks. † (Practitioner tip, no primary source.)
 5. **Cost transparency.** If margin ≤ ~55%, show a per-product cost breakdown (materials, labor, shipping, packaging, development); group beyond ~8 categories. Sales were 22% higher for a $115 wallet with one. (Source: Mohan, Buell & John 2020.)
@@ -56,9 +69,16 @@ Table: priority, area, recommendation, rule + number. Then what to leave alone, 
 
 Start with the top row of the priority table and change one thing at a time. For a weak area, run a focused review: product-page (Product page auditor), checkout-ux (Checkout page auditor), post-purchase (Post-purchase experience) or pricing (Pricing strategist). If one is not in your library, ask for a review of that part on its own.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Common mistakes
 
-- Removing an "algorithm" label as fake — for utilitarian products it outperforms; for hedonic, relabel as human.
+- Removing an "algorithm" label as fake — for utilitarian products it outperforms. For hedonic products, add real human curation before you use a human label; never relabel algorithm picks as human.
 - Calling carousels weak in general — direction sets whether quality or price wins.
 - Choosing search over social on intent alone — the rule is product type; hedonic starts on social.
 - Hiding that you're small — for low-tech products it raises perceived quality.
@@ -68,7 +88,7 @@ Start with the top row of the priority table and change one thing at a time. For
 
 | Situation | Do |
 |---|---|
-| Hedonic | Social + product pages; human-labeled recs |
+| Hedonic | Social + product pages; human-curated recs, labeled as such (only if people really pick them) |
 | Utilitarian | Search, comparison, review, deal sites; algorithm-labeled recs |
 | Quality should win / price should win | Horizontal / vertical layout |
 | Margin ≤ 55% | Cost breakdown, ≤ 8 categories |

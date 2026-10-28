@@ -30,4 +30,4 @@ credits:
   - title: socratic-questioning-sequence-generator skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/questioning-discussion/socratic-questioning-sequence-generator
-    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+    used: Copied under the CC BY-SA-4.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -19,6 +19,19 @@ metadata:
 
 Build a MATLAB interface to a Python/PyTorch model repository using the MPyReq framework.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - User asks to interface MATLAB with a Python image processing or computer vision model (segmentation, depth estimation, object detection, image generation, super-resolution, pose estimation, optical flow, salient object detection, etc.)
@@ -82,7 +95,7 @@ Fetch and analyze the GitHub repository to determine:
 Create a MATLAB `.m` file that sets up the Python environment. Follow these patterns from the demo files:
 
 ### MANDATORY: Installation folder setup
-Every generated script MUST begin with `MPyReq.setInstallFolder()`. This tells MPyReq where to download Python, packages, and model weights. Without this, MPyReq will show a GUI dialog which blocks non-interactive execution. Also include `MPyReq.autoAcceptDownloadPrompts(true)` to avoid interactive confirmation prompts. **Safety gate (added by AI Blocks):** this setting means package installs and weight downloads from the chosen GitHub repo run without asking again. Before the user runs any setup script, tell them this, name the repo and its requirements file, and ask them to read both and say yes.
+Every generated script MUST begin with `MPyReq.setInstallFolder()`. This tells MPyReq where to download Python, packages, and model weights. Without this, MPyReq will show a GUI dialog which blocks non-interactive execution. Also include `MPyReq.autoAcceptDownloadPrompts(true)` to avoid interactive confirmation prompts. **Safety gate (added by AI Blocks):** this setting means package installs and weight downloads from the chosen GitHub repo run without asking again. Before the user runs any setup script, tell them this, name the repo and its requirements file, and ask them to read both and say yes. If you can run MATLAB through an MCP server, do not run any `MPyReq.pipPackage`, `MPyReq.gitrepo`, `MPyReq.requirementTextFile` or `MPyReq.weights` call, or any script that contains one, until the user has said yes in this conversation.
 
 ```matlab
 % Set installation folder (SSD recommended, ~15+ GB free space)
@@ -289,3 +302,11 @@ Categories: `wrong-command` (incorrect/outdated), `missing-guidance` (omitted st
 Copyright 2026 The MathWorks, Inc.
 
 ----
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [MATLAB app builder](https://useaiblocks.com/skills/matlab-app-builder).
+- The [MATLAB code reviewer](https://useaiblocks.com/skills/matlab-code-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

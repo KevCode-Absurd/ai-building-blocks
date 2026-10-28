@@ -26,9 +26,9 @@ Use what is attached or pasted first. If something is missing, say what you can 
 ## When not to use
 
 Say so and point to the better item when:
-- You only want reported basic and diluted EPS: use [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps).
-- You are updating a whole model after a new filing: use [Prepare a filing-based earnings model update](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update).
-- Your OCI item is a pension remeasurement, which is not moved to profit: use [Separate pension cost funding and remeasurement](https://useaiblocks.com/workflows/separate-pension-cost-funding-and-remeasurement).
+- You only want reported basic and diluted EPS: use [Basic and diluted earnings per share checker](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps).
+- You are updating a whole model after a new filing: use [Company filing earnings workbook updater](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update).
+- Your OCI item is a pension remeasurement, which is not moved to profit: use [Pension funding, expense and remeasurement checker](https://useaiblocks.com/workflows/separate-pension-cost-funding-and-remeasurement).
 
 ## Governing scope
 
@@ -81,6 +81,6 @@ Lead with reported and adjusted EPS and the OCI proof in the layout below. Label
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Update the whole model** with the [Prepare a filing-based earnings model update](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update) workflow.
-- **Check the share counts** with the [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow if the diluted count is in doubt.
+- **Update the whole model** with the [Company filing earnings workbook updater](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update) workflow.
+- **Check the share counts** with the [Basic and diluted earnings per share checker](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow if the diluted count is in doubt.
 If they pick one and it is not added here, give the link and say what to bring.

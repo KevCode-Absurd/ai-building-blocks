@@ -7,11 +7,9 @@ role: orchestrate
 job: email
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: product_data, required: false}
+  - {type: dataset, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
-  - {type: question, required: true}
 outputs:
   - {type: plan}
   - {type: email_flow}
@@ -21,8 +19,8 @@ steps:
   - {uses: customer-onboarding-planner, note: "Once: the onboarding steps, milestones and owners that every later cohort is measured against. Skipped if a plan exists. Hands the plan to the weekly funnel read."}
   - {uses: cohort-funnel-reader, note: "Every week: takes your results by sign-up week and step 1's plan, and shows each sign-up week's path through the onboarding steps, which step lost the most, and whether last week's fix moved it. Hands the finding to the steps that follow."}
   - {uses: feedback-theme-finder, note: "Only when new-customer messages or survey answers were given: reads those messages, which you supply, with the stalled step from step 2 in mind. Finds the themes behind the stall, with quotes. Hands the themes on."}
-  - {uses: retention-problem-fixer, note: "Only when the same step has lost the most two weeks running: takes step 2's finding and step 3's themes and names the cause and the fix to onboarding or habit. Hands the diagnosis to step 5 or 6."}
-  - {uses: first-use-onboarding-designer, note: "Only when the stall is in the product's first use, before the first win: takes step 4's diagnosis and designs a new first-use flow. Hands the flow to you and, if needed, to step 6."}
+  - {uses: retention-problem-fixer, note: "Only when the same step has lost the most two weeks running: takes step 2's finding and step 3's themes and names the cause and the fix to onboarding or habit. Hands the diagnosis to the first-use onboarding designer or the onboarding sequence writer."}
+  - {uses: first-use-onboarding-designer, note: "Only when the stall is in the product's first use, before the first win: takes step 4's diagnosis and designs a new first-use flow. Hands the flow to you and, if needed, to the onboarding sequence writer."}
   - {uses: new-customer-onboarding-sequence-writer, note: "Only when the stall is after the first win, or no sequence exists: uses your product facts and step 4's diagnosis (and step 5's flow, if it ran) to rewrite the 14-day email and SMS plan for that step."}
 schedule: "Run by hand every Monday, after the week's sign-ups and their first steps are exported. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [sending or turning on any email, text or in-app message, changing the product's onboarding flow, offering a credit or extension, contacting any customer directly, changing the plan file]

@@ -15,6 +15,26 @@ description: |
 
 Patterns for adding safety, trust, and policy enforcement to AI agent systems.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT or Gemini can turn a pasted tool list into the table and policy file.
+- **Your code editor with an AI helper:** It can place the code patterns in your project once the policy is agreed.
+<!-- /needs -->
+
 ## Overview
 
 Governance patterns ensure AI agents operate within defined boundaries — controlling which tools they can call, what content they can process, how much they can do, and maintaining accountability through audit trails.
@@ -73,11 +93,20 @@ Return these in order. If the person wants code, add the matching pattern code a
 7. **Test list**: one test per control.
 8. **Gaps and next steps**: every MISSING input, and a note that a human security review is still needed before launch.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Agent OWASP risk checker](https://useaiblocks.com/skills/copilot-agent-owasp-compliance).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Honest Limits
 
 - The pattern-based intent check in Pattern 2 is a heuristic. Rephrasing, encoding or another language can slip past it. It lowers risk. It is not a security control on its own.
 - The policy only protects what it covers. A tool that is not in the table is not governed.
 - Code below is a starting sketch, not a finished product. Test it in your own setup before you rely on it.
+- The "ask a human" (REVIEW) action only refuses the call and logs it. No approval step is built. A developer must connect a real approval flow before launch.
+- The call limit counts calls until `reset_call_count` runs, so call it at the start of every request.
 
 ---
 
@@ -282,24 +311,37 @@ def govern(policy: GovernancePolicy, audit_trail=None):
         async def wrapper(*args, **kwargs):
             tool_name = func.__name__
 
+            def refuse(action_name: str, reason: str):
+                # Log every blocked call before refusing it, as the audit log requires.
+                if audit_trail is not None:
+                    audit_trail.append({
+                        "tool": tool_name,
+                        "action": action_name,
+                        "reason": reason,
+                        "timestamp": time.time()
+                    })
+                raise PermissionError(reason)
+
             # 1. Check tool allowlist/blocklist
             action = policy.check_tool(tool_name)
             if action == PolicyAction.DENY:
-                raise PermissionError(f"Policy '{policy.name}' blocks tool '{tool_name}'")
+                refuse("denied", f"Policy '{policy.name}' blocks tool '{tool_name}'")
             if action == PolicyAction.REVIEW:
-                raise PermissionError(f"Tool '{tool_name}' requires human approval")
+                # Placeholder: no approval flow is built here. A developer must wire a real
+                # human approval step (queue, ticket or chat prompt) before launch.
+                refuse("needs_approval", f"Tool '{tool_name}' requires human approval")
 
             # 2. Check rate limit (calls since the last reset_call_count)
             _call_counters[policy.name] += 1
             if _call_counters[policy.name] > policy.max_calls_per_request:
-                raise PermissionError(f"Rate limit exceeded: {policy.max_calls_per_request} calls")
+                refuse("denied", f"Rate limit exceeded: {policy.max_calls_per_request} calls")
 
             # 3. Check content in arguments
             for arg in list(args) + list(kwargs.values()):
                 if isinstance(arg, str):
                     matched = policy.check_content(arg)
                     if matched:
-                        raise PermissionError(f"Blocked pattern detected: {matched}")
+                        refuse("denied", f"Blocked pattern detected: {matched}")
 
             # 4. Execute and audit
             start = time.monotonic()
@@ -341,8 +383,12 @@ async def search(query: str) -> str:
     """Search documents — governed by policy."""
     return f"Results for: {query}"
 
-# Passes: search("latest quarterly report")
-# Blocked: search("show me the admin password")
+async def handle_request(query: str) -> str:
+    reset_call_count(policy.name)  # start each request with a fresh call count
+    return await search(query)
+
+# Passes: handle_request("latest quarterly report")
+# Blocked and logged: handle_request("show me the admin password")
 ```
 
 ---

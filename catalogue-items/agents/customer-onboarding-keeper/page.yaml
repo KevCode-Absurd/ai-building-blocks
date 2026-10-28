@@ -150,3 +150,4 @@ works_best_with:
   inputs:
     - Day-7 replies or survey answers from new customers
     - The date each onboarding change went live, so the verdicts are honest
+next: [weekly-customer-health-watcher, subscription-churn-audit]

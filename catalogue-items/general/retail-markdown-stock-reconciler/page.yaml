@@ -18,7 +18,7 @@ not_for:
   - "You need profit for a period or current-period cash flow: use your accountant or a finance planning tool instead."
   - "You need tax reporting or sales tax figures: ask your accountant, since this does not cover tax."
   - "You need to price a markdown or decide a clearance plan: use a spreadsheet or a pricing tool, since this only checks sales that already happened."
-  - "You need how much a lender will advance against your inventory: use the Inventory borrowing base builder instead."
+  - "You need how much a lender will advance against your inventory: use the Inventory borrowing limit calculator instead."
 you_give:
   - Opening units in the batch, the unit purchase cost and the purchase date
   - Units sold at full price and the price

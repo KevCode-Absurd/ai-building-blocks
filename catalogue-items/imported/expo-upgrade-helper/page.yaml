@@ -5,7 +5,7 @@ name: Expo upgrade helper
 summary: Upgrade your Expo app to a newer SDK and fix broken packages. Give it your current and target Expo version. You get ordered steps and code fixes.
 job: build-software
 headline: Expo upgrade helper
-subhead: Say which Expo version to reach. Get your app upgraded and broken dependencies fixed. Bring current Expo version. Use the result to plan your next step.
+subhead: Tell it the Expo version you are on and the one you want. It walks the upgrade step by step, stops before anything that deletes files, and fixes the packages that break.
 explain: |
   Your Expo app moved to a newer SDK, with broken packages fixed and old code patterns swapped out, so it builds and runs again.
 
@@ -34,6 +34,7 @@ you_get:
   - Code changes for new React and navigation patterns
   - Migration of audio and video code
 how_to_use:
+  - Check that the target Expo version is a final release on expo.dev/changelog. If it is a preview or beta, stop unless you want to test a preview on a branch.
   - Save your project in git first. Back up ios/, android/, patches/ and app.json. Some steps delete files and folders.
   - Open your AI in a tool that can run commands and edit your project. Paste this skill into it.
   - Tell it your current Expo version and the version you want. Add your package.json and any error messages.

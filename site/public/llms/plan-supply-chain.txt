@@ -1,13 +1,19 @@
 # Plan stock, shipping and suppliers: AI Blocks
 
-> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI purchasing process planner](https://useaiblocks.com/skills/procurement-agent-architecture-plan): Plan procurement automation for your RFP and vendor process. Get six AI agent roles, checks on suppliers, and human sign-off on awards.
+- [Assembly line balancer](https://useaiblocks.com/skills/assembly-line-balancer): Balance your assembly line: give it your steps, times and order rules. You get stations with even workloads, takt time and idle time per station.
+- [Budget and space selection planner](https://useaiblocks.com/skills/budget-and-space-picker-knapsack): Turn item values, costs, and limits into a selection report with totals and method limits.
 - [China supply chain planner](https://useaiblocks.com/agents/agency-supply-chain-strategist): Plan how to buy from Chinese factories. Get a sourcing plan with supplier checks, total cost, an order split and a risk register with backups.
 - [Co-packer picker](https://useaiblocks.com/skills/co-packer-picker): Choose a co-packer with a clear scorecard. Give it what you need made and packed. You get a make-or-buy view and a plan to manage the deal.
 - [Cross-docking planner](https://useaiblocks.com/skills/cross-docking-planner): Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
 - [Delivered goods and invoice mismatch checker](https://useaiblocks.com/workflows/prepare-a-goods-receipt-discrepancy-brief): Share orders, goods received, invoices and item units. Get a mismatch table, supplier questions and a handover for the goods-in team.
+- [Delivery route planner (vehicle routing)](https://useaiblocks.com/skills/delivery-route-planner): Plan delivery routes that stay under each truck's load limit. Give it your stops and fleet. You get a route per vehicle with the fewest miles.
+- [Delivery time slot route planner](https://useaiblocks.com/skills/delivery-time-slot-route-planner): Plan delivery routes that arrive inside each customer's time window. Give it your stops and slots. You get a timed route per driver.
 - [Demand forecast planner](https://useaiblocks.com/skills/demand-forecast-planner): Share dated sales and the planning horizon. Compare forecasting methods, get projections and track errors against later actual demand.
+- [Electronics parts sourcing planner](https://useaiblocks.com/skills/electronics-parts-sourcing): Find the electronic parts that can stall your build. Give it your parts list to get a risk table, second-source ideas and a leftover stock plan.
+- [Equipment maintenance planner](https://useaiblocks.com/skills/equipment-maintenance-planner): Plan equipment maintenance that cuts breakdowns. Give it your machines and repair history. You get a service plan, a risk ranking and a spare parts list.
 - [Factory bottleneck finder](https://useaiblocks.com/skills/factory-bottleneck-finder): Share production steps and times. Get likely bottlenecks and fixes to test.
 - [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator): Plan a factory price negotiation from your bill of materials. Get a call script, line-by-line asks, what to give back and a fallback factory.
 - [Factory product brief writer](https://useaiblocks.com/skills/product-tech-pack-writer): Turn your product photos and notes into a tech pack a factory can build from, with every vague word rewritten as a measurement.
@@ -17,6 +23,7 @@
 - [Freight quote reviewer](https://useaiblocks.com/workflows/compare-freight-quotes-with-all-charges): Put freight quotes on the same load and service basis, check the charges and keep missing surcharges visible.
 - [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker): Share stock, supplier terms and your growth plan. Check funding gaps, stock cover and missing cash facts before deciding what to change.
 - [Hormuz shipping report writer](https://useaiblocks.com/skills/hormuz-shipping-status-reader): Ask about Hormuz shipping. Read a public dashboard’s reported status, traffic and market figures, with timestamps, source limits and missing data shown.
+- [Hospital supply stock planner](https://useaiblocks.com/skills/hospital-supply-stock-planner): Plan hospital supply stock levels with par levels for each item, expiry rules and a crash cart plan. Give it your usage data to cut stockouts and waste.
 - [Hotel and restaurant buying planner](https://useaiblocks.com/skills/hotel-restaurant-buying): Share your purchases. Get sourcing options, a supplier shortlist and negotiation points.
 - [Inbound shipment tracker builder](https://useaiblocks.com/skills/inbound-shipment-tracker-builder): Build a shared inbound shipment tracker from your purchase orders and freight quotes, plus a warehouse notice, so your team sees when stock lands.
 - [Inventory cash planner](https://useaiblocks.com/skills/inventory-cash-planner): Share orders, lead time and unit cost. Get order timing, cash needed, a downside case and the raise.
@@ -24,10 +31,14 @@
 - [Last-mile delivery planner](https://useaiblocks.com/skills/last-mile-delivery-planner): Share delivery data. Get options to compare cost per drop, speed and same-day service.
 - [Launch critical path builder](https://useaiblocks.com/skills/launch-critical-path-builder): Build a launch critical path: list every step from samples to warehouse, dated back from your launch day, with owners and delay warnings.
 - [Machine job scheduler](https://useaiblocks.com/skills/machine-job-scheduler): Share job routes and machine times. Get a proposed machine-by-machine schedule with completion times and any late jobs.
+- [Monthly demand and supply meeting planner](https://useaiblocks.com/skills/demand-supply-meeting): Compare forecasts, stock, and supply limits to plan meetings, weigh gaps, and assign tasks.
 - [Multi-stop route planner](https://useaiblocks.com/skills/multi-stop-route-planner): Use stops, vehicle limits, and delivery windows to plan routes with distance and time estimates.
 - [Multi-warehouse route planner](https://useaiblocks.com/skills/multi-warehouse-route-planner): Group customers by warehouse, then plan truck routes within load, fleet size, and return rules.
+- [One-time stock quantity picker](https://useaiblocks.com/skills/one-time-stock-quantity-picker): Find the best one-time stock quantity for a short-life item. Give it cost, price and demand. You get the order size and the risk of other choices.
 - [Optimization model builder](https://useaiblocks.com/skills/optimization-model-builder): Turn a choice with limits, like budget or capacity, into an optimization model. Get runnable Python and the best answer it finds.
+- [Order fulfillment mix planner](https://useaiblocks.com/skills/order-fulfillment-mix-planner): Get rules for which store or warehouse ships each online order, plus an in-store pickup plan, from your stock, order types and costs.
 - [Order quantity calculator](https://useaiblocks.com/skills/order-quantity-calculator): Work out your best order quantity from yearly demand, order cost and holding cost. See total cost for each option and if a bulk discount pays off.
+- [Pallet stacking planner](https://useaiblocks.com/skills/pallet-stacking-planner): Plan a pallet stacking pattern that fits the most boxes. Give it your box and pallet sizes, and get layers, box counts and weight and height checks.
 - [Peak season operations planner](https://useaiblocks.com/workflows/get-ready-for-peak-season-with-support-and-3pl-planned): Forecast peak orders and plan support, warehouse terms and incoming stock. Check the actual warehouse bill after the season.
 - [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer): Share the order, approved sample and product specs. Get an inspection brief, proposed decision rules and a payment checklist.
 - [Product bill of materials builder](https://useaiblocks.com/skills/product-bill-of-materials-builder): Turn one factory quote into a product bill of materials. Get a cost sheet by part, with each maker and price-break questions to ask.
@@ -88,4 +99,5 @@
 - [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner): Give it your warehouses and demand. Get stock targets for each level of your network.
 - [Warehouse stock variance reviewer](https://useaiblocks.com/workflows/explain-a-warehouse-stock-count-variance): Compare stock counts with the recorded snapshot and movements. Get explained differences, source gaps and questions for the warehouse owner.
 - [Waste reduction planner](https://useaiblocks.com/skills/waste-reduction-planner): Find where your process wastes time, money and materials. Get a waste map, a 5S plan and quick fixes ranked by payoff.
+- [Weekly production and capacity planner](https://useaiblocks.com/workflows/plan-what-to-make-each-week-from-your-past-sales): Share past sales and what you can make. Get a demand forecast, weekly work plan, capacity gaps and a review agenda.
 - [What-if supply scenario planner](https://useaiblocks.com/skills/what-if-supply-scenario-planner): Share a supply risk, decision, and time horizon. Get three scenarios, stated cost impacts, responses, and warning signs.

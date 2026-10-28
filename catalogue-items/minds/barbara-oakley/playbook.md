@@ -2,6 +2,21 @@
 
 Oakley is a good choice when a difficult subject has become a story about your limitations. You bring the unfinished exercise and the study routine that keeps failing. Her learning approach combines understanding, recall, short starts and time away from concentrated work. The aim is a repeatable way to approach intimidating material, with enough support to keep difficulty from becoming aimless frustration. [S1] [S3] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
+## Bring with you
+
+- The exercise or skill you keep getting stuck on
+- Your current study routine and where it fails
+- How much time you have this week
+- Your exam date or goal (optional)
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+## When not to use this mind
+
+- You want research on memory, forgetting and study breaks: use the Benedict Carey mind.
+- You want help sticking with a long-term aim: use the Angela Duckworth mind.
+- You need medical, legal or money advice, or help for a learning disability: ask a qualified professional or a subject tutor.
+
 ## What to hire her for
 
 - **Get unstuck on a hard problem:** You receive an impasse note and two alternative starts.
@@ -88,3 +103,5 @@ The focused and diffuse language is a teaching model, not a diagnosis or a compl
 ## What you'll get back
 
 For a career change, return a small project map: the target task, two prerequisites, one clear example, three practice appointments and a review date. For an exam, return a recall sheet with the difficult transitions marked. The transfer beyond mathematics is the same separation between seeing, doing and explaining. A cook learning a new technique should demonstrate it safely; a writer learning structure should build a paragraph. Neither needs a neuroscience lecture. Retain a break and an honest stopping point, and treat persistent confusion as a reason to improve instruction or support.
+
+Next: book the first practice slot in your calendar, and at the review date redo the stuck exercise from memory before you look at any notes.

@@ -135,8 +135,10 @@ check() {
     grep -E "$pattern" | grep -v ".env.example" | grep -v "test\|mock\|fixture\|fake" || true)
 
   if [ -n "$matches" ]; then
-    echo "SECRET DETECTED [$label]:"
-    echo "$matches" | head -5
+    # Report the pattern and the files only. Never print the matched values:
+    # hook and CI output is often kept in logs.
+    echo "SECRET DETECTED [$label]: $(printf '%s\n' "$matches" | wc -l) line(s), values not shown"
+    git diff --cached --name-only "-G$pattern" 2>/dev/null | sed 's/^/  file: /'
     FAIL=1
   fi
 }
@@ -209,11 +211,8 @@ PATTERNS=(
 
 for pattern in "${PATTERNS[@]}"; do
   echo "Scanning for: $pattern"
-  git log --all -p --no-color 2>/dev/null | \
-    grep -n "$pattern" | \
-    grep "^+" | \
-    grep -v "^+++" | \
-    head -10
+  # Lists the commits and files that add or remove a match; never prints the values
+  git log --all "-G$pattern" --format='  %H %ci' --name-only 2>/dev/null | head -20
 done
 
 # Alternative: use truffleHog or gitleaks for comprehensive scanning
@@ -275,81 +274,97 @@ repos:
 
 When a secret is leaked or compromised:
 
+**Handle the value safely throughout.** Never paste a leaked or new secret into chat, a ticket, an online search or scanner, or a command line (commands are saved in shell history). Read it into a variable with a hidden prompt, use the variable, then clear it:
+
+```bash
+read -rs LEAKED   # paste the value at the hidden prompt; it is not shown or saved in history
+# ... commands below use "$LEAKED" ...
+unset LEAKED
+```
+
 ### Step 1 — Detect & Confirm
 ```bash
-# Confirm which secret was exposed
-git log --all -p --no-color | grep -A2 -B2 "AKIA\|sk_live_\|SECRET"
+# List commits and files that add or remove likely secrets, without printing the values
+git log --all -E -G 'AKIA[0-9A-Z]{16}|sk_live_|SECRET' --format='%H %ci %an' --name-only
 
-# Check if secret is in any open PRs
-gh pr list --state open | while read pr; do
-  gh pr diff $(echo $pr | awk '{print $1}') | grep -E "AKIA|sk_live_" && echo "Found in PR: $pr"
+# Check if secret patterns are in any open PRs (prints PR numbers only)
+gh pr list --state open --json number --jq '.[].number' | while read -r pr; do
+  gh pr diff "$pr" | grep -qE 'AKIA|sk_live_' && echo "Found in PR: $pr"
 done
 ```
 
 ### Step 2 — Identify Exposure Window
 ```bash
-# Find first commit that introduced the secret
-git log --all -p --no-color -- "*.env" "*.json" "*.yaml" "*.ts" "*.py" | \
-  grep -B 10 "THE_LEAKED_VALUE" | grep "^commit" | tail -1
-
-# Get commit date
-git show --format="%ci" COMMIT_HASH | head -1
-
-# Check if secret appears in public repos (GitHub)
-gh api search/code -X GET -f q="THE_LEAKED_VALUE" | jq '.total_count, .items[].html_url'
+# Find the first commit that introduced the secret (value read with read -rs above;
+# it is briefly visible in the local process list while git runs, so run this on your own machine)
+git log --all --reverse -S"$LEAKED" --format='%H %ci' | head -1
 ```
+
+Do not search for the value on GitHub or any other online service: that sends the secret to a third party. If the repository was ever public, or the value reached CI logs, chat or tickets, treat it as exposed to everyone. Check your repository's secret scanning alerts and the provider's own audit logs for use of the credential.
 
 ### Step 3 — Rotate Credential
 Per service — rotate immediately:
 - **AWS**: IAM console → delete access key → create new → update everywhere
 - **Stripe**: Dashboard → Developers → API keys → Roll key
 - **GitHub PAT**: Settings → Developer Settings → Personal access tokens → Revoke → Create new
-- **DB password**: `ALTER USER app_user PASSWORD 'new-strong-password-here';`
+- **DB password**: change it through a password prompt so the new value is not saved in SQL or shell history (for example `\password app_user` in `psql`).
 - **JWT secret**: Rotate key (all existing sessions invalidated — users re-login)
 
 ### Step 4 — Update All Environments
 ```bash
-# Update secret manager (source of truth)
-# Then redeploy to pull new values
+# Update the secret manager (source of truth), then redeploy to pull new values.
+# Never type the new value inline: read it with a hidden prompt first.
+read -rs NEW_STRIPE_KEY
 
-# Vault KV v2
-vault kv put secret/myapp/prod \
-  STRIPE_SECRET_KEY="sk_live_NEW..." \
-  APP_SECRET="new-secret-here"
+# Vault KV v2 (a value of "-" is read from stdin)
+printf '%s' "$NEW_STRIPE_KEY" | vault kv put secret/myapp/prod STRIPE_SECRET_KEY=-
 
-# AWS SSM
+# AWS SSM (the value is briefly visible in the local process list while the command runs)
 aws ssm put-parameter \
   --name "/myapp/prod/STRIPE_SECRET_KEY" \
-  --value "sk_live_NEW..." \
+  --value "$NEW_STRIPE_KEY" \
   --type "SecureString" \
   --overwrite
 
-# 1Password
-op item edit "MyApp Prod" \
-  --field "STRIPE_SECRET_KEY[password]=sk_live_NEW..."
-
-# Doppler
-doppler secrets set STRIPE_SECRET_KEY="sk_live_NEW..." --project myapp --config prod
+unset NEW_STRIPE_KEY
 ```
 
-### Step 5 — Remove from Git History
+For 1Password, Doppler and other managers, enter the new value in the app or web console, or follow the tool's documented way to read a value from a prompt or stdin. Check the current CLI docs before scripting it.
+
+### Step 5 — Remove from Git History (optional, destructive)
+
+Rewriting history does not un-leak a secret: rotate first (Step 3), always. Only rewrite history when the repository owner has approved it, everyone with a clone has been told, and you have a backup. Stop and ask before running any of this.
+
 ```bash
-# WARNING: rewrites history — coordinate with team first
+# 1. Back up the whole repository first
+git clone --mirror <repo-url> repo-backup.git
+
+# 2. Work in a fresh clone, never in your everyday working copy
+git clone <repo-url> repo-clean && cd repo-clean
+
+# 3a. Remove whole files from all commits
 git filter-repo --path-glob "*.env" --invert-paths
 
-# Or remove specific string from all commits
-git filter-repo --replace-text <(echo "LEAKED_VALUE==>REDACTED")
+# 3b. Or replace one string in all commits. Write the rule in a file with an
+#     editor (one line: <the leaked value>==>REDACTED), never with echo, and
+#     delete the file when done.
+git filter-repo --replace-text replacements.txt
 
-# Force push all branches (requires team coordination + force push permissions)
+# 4. Only after review and approval: force push (needs force-push permission;
+#    protected branches may need to be unprotected by an admin). filter-repo
+#    removes the origin remote on purpose, so add it back first.
+git remote add origin <repo-url>
 git push origin --force --all
+git push origin --force --tags
 
-# Notify all developers to re-clone
+# 5. Everyone must re-clone. Old clones, forks and caches may still hold the value.
 ```
 
 ### Step 6 — Verify
 ```bash
-# Confirm secret no longer in history
-git log --all -p | grep "LEAKED_VALUE" | wc -l  # should be 0
+# Confirm the secret is no longer in history (value read with read -rs; should print 0)
+git log --all -S"$LEAKED" --oneline | wc -l
+unset LEAKED
 
 # Test new credentials work
 curl -H "Authorization: Bearer $NEW_TOKEN" https://api.service.com/test

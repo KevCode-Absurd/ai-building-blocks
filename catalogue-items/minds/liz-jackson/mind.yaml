@@ -17,7 +17,7 @@ use_cases:
   - "Choose a design learning project without making someone else your project"
 not_for:
   - "You need a legal, medical or buying decision on an aid: ask a qualified professional, such as a clinician or lawyer."
-  - "You want to judge a design on clean form and few parts: use Dieter Rams, who is not on the sibling list, so ask a design reviewer you trust."
+  - "You want to judge a design on clean form and few parts: use the Dieter Rams mind."
   - "You want to learn how to read a chart or graph: use Alberto Cairo, who teaches how charts can mislead."
 output_sample:
   input:
@@ -44,9 +44,9 @@ seats:
 pairs_with: [don-norman, dieter-rams, brene-brown]
 last_checked: 2026-10-23
 sources:
-  - {n: 1, title: "Liz Jackson Doesn't Want Design for Disability, interview", by: "Liz Jackson with Allison Fonder", url: "https://www.core77.com/posts/89571/Liz-Jackson-Doesnt-Want-Design-for-Disability%E2%80%94She-Wants-Disabled-People-to-Be-Part-of-Designing-Better-Products", kind: own-words}
+  - {n: 1, title: "Liz Jackson Doesn't Want Design for Disability, interview (2019)", by: "Liz Jackson with Allison Fonder", url: "https://www.core77.com/posts/89571/Liz-Jackson-Doesnt-Want-Design-for-Disability%E2%80%94She-Wants-Disabled-People-to-Be-Part-of-Designing-Better-Products", kind: own-words}
   - {n: 2, title: "Disability Dongle, coauthored essay", by: "Liz Jackson, Alex Haagaard and Rua Williams", url: "https://blog.castac.org/2022/04/disability-dongle/", kind: own-words}
-  - {n: 3, title: "This Woman is Changing the World of Disability Design, interview", by: "Liz Jackson with Brianna Flaherty", url: "https://www.thinx.com/blogs/periodical/liz-jackson-changing-world-disability-design", kind: own-words}
+  - {n: 3, title: "This Woman is Changing the World of Disability Design, interview (2018)", by: "Liz Jackson with Brianna Flaherty", url: "https://www.thinx.com/blogs/periodical/liz-jackson-changing-world-disability-design", kind: own-words}
   - {n: 4, title: "The Disabled List, collective commitments and Critical Axis", by: "The Disabled List", url: "https://www.disabledlist.org/", kind: reference}
   - {n: 5, title: "Liz Jackson, author biography", by: "Platypus, CASTAC", url: "https://blog.castac.org/author/lizjackson/", kind: reference}
 tests:

@@ -7,6 +7,23 @@ description: Use when designing or reviewing what happens after checkout in an o
 
 Design shipping, returns, loyalty, and re-engagement so each order raises the odds of the next. The wins are timing and sincerity: a reminder sent too early does worse than no reminder, and a coupon attached to a thank-you note cancels the note's benefit.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
+- **The policy** (yours): the written policy or rules, with the date they start.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your offer, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Reviewing a post-purchase or retention plan
@@ -40,6 +57,15 @@ Collect, or state your assumption:
 ## Output
 
 The user's plan as a table: element, keep/change, replacement, rule + number. Then the sequence in order (confirmation → box contents → return policy text → loyalty enrollment → abandonment timing).
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Returns policy designer](https://useaiblocks.com/skills/returns-policy-designer).
+- The [Loyalty and VIP program designer](https://useaiblocks.com/skills/loyalty-and-vip-program-designer).
+- The [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

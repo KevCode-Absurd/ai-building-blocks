@@ -31,8 +31,8 @@ you_get:
   - A price check before you run
   - A report.csv marking each product ok or fail
 how_to_use:
-  - Open your AI tool and paste in this skill. Use one that can run commands and read your files.
-  - "Before you start: you need a dLazy account with credits. The seedream-5.0 model is the cheap default. The gpt-image-2 model costs about 6 times more and suits products where fine detail matters. These credit prices and the batch discount are the original author's figures. Check dLazy's current price list before you set a budget."
+  - Open your AI tool and paste in this skill. Use one that can run commands and read your files. This is for advanced users who are happy working on the command line.
+  - "Before you start: you need a dLazy account with credits. The seedream-5.0 model is the cheap default. The gpt-image-2 model costs about 6 times more and suits products where fine detail matters. These credit prices (about 5 credits per image, about 500 for 100 products) and the batch discount are the original author's figures, as copied on 2026-10-20. Check dLazy's current price list before you set a budget."
   - Give it your product CSV, your source photos and the style you want for the whole set.
   - Run one product first. Then run five more that cover dark, light and shiny items. Fix the style now, because changing it later means rerunning the whole batch.
   - Do a dry run to see the price. Write down the most you accept to spend, because the loop has no spending stop. Run the batch in chunks, such as 20 products at a time, and check your credit balance between chunks. If the running credit total reaches the cap you set, stop the batch. Then check report.csv, which has one row per product marked ok or fail, and rerun only the failed products.

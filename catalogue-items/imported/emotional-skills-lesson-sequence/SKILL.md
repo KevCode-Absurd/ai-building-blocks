@@ -66,6 +66,19 @@ tags: ["RULER", "emotional-intelligence", "Brackett", "Yale", "SEL", "emotional-
 
 # RULER Emotional Literacy Sequence
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a structured sequence for developing emotional literacy using the RULER framework from the Yale Center for Emotional Intelligence — teaching students to Recognise emotions in themselves and others, Understand the causes and consequences of emotions, Label emotions with a nuanced vocabulary, Express emotions appropriately, and Regulate emotions using effective strategies. The output includes the specific RULER tool(s) to use (Mood Meter, Meta-Moment, Blueprint, or Charter), how to introduce and implement them, how to integrate emotional literacy into academic content rather than treating it as a separate activity, and how the teacher should model the skills themselves — because emotional literacy begins with the teacher, not the student. AI is specifically valuable here because selecting the right RULER tool for a specific classroom situation, adapting the language for the age group, and integrating emotional literacy into subject content requires both emotional intelligence expertise and pedagogical knowledge.
@@ -193,7 +206,7 @@ Before introducing the tools to students, the teacher models their own emotional
 **Step 1: Recognise — Where Are You Right Now? (5 minutes)**
 - **Activity:** Display the Mood Meter on the screen (four quadrants with emotion words). Give each student a small Post-it note. "I'd like you to place your Post-it on the Mood Meter where you are RIGHT NOW — not where you think you should be, but where you actually are. No names on the Post-its. I'll place mine first." [Teacher places their Post-it in the Red zone, modelling honesty.]
 - **Teacher script:** "There's no right or wrong place to be. Every part of the Mood Meter is normal. I'm interested in the pattern — where is our class as a whole?"
-- **What to look for:** The distribution will likely cluster in the Red (anxious, stressed) and Blue (tired, flat) zones. This provides visible data that anxiety is SHARED — it's not just "me." This normalisation is itself therapeutic: "I'm not the only one who feels this way."
+- **What to look for:** The distribution will likely cluster in the Red (anxious, stressed) and Blue (tired, flat) zones. This provides visible data that anxiety is SHARED — it's not just "me." Seeing this can reassure some students: "I'm not the only one who feels this way." Do not assume everyone feels anxious; a student who is calm is fine too.
 
 **Step 2: Label — Name It to Tame It (5 minutes)**
 - **Activity:** "Now I want us to get more specific. 'Stressed' is a start, but it doesn't tell us much. Look at the emotion words in your quadrant. Which word BEST describes how you feel? Is it 'anxious' (worried about something specific that might happen)? 'Overwhelmed' (too much to do and not enough time)? 'Dread' (a heavy feeling about something you can't avoid)? 'Frustrated' (you're trying but it doesn't feel like it's working)? These are different feelings — and they need different responses."
@@ -203,7 +216,7 @@ Before introducing the tools to students, the teacher models their own emotional
 **Step 3: Understand — What's Causing This? (5 minutes)**
 - **Activity:** "Now let's figure out what's underneath the feeling. Turn to your partner and complete this sentence: 'I feel [emotion word] because ___.' Be specific. Not 'because of exams' — WHAT about the exams? Is it not knowing what will come up? Feeling like you haven't revised enough? Worrying about what the result will mean? Comparing yourself to others?"
 - **Teacher script:** "Understanding the cause tells you what to do about it. If you're anxious because you haven't revised, the solution is a revision plan. If you're anxious because you're comparing yourself to others, the solution is different — it's about where YOU are, not where they are. Same feeling, different cause, different response."
-- **What to look for:** Students identifying specific causes rather than vague ones. Partners listening to each other (relatedness — Walton & Cohen). The conversation itself is often therapeutic — articulating the cause reduces the feeling's power.
+- **What to look for:** Students identifying specific causes rather than vague ones. Partners listening to each other (relatedness — Walton & Cohen). Putting the cause into words can help some students feel more in control. It is a classroom conversation, not therapy.
 
 **Step 4: Regulate — The Meta-Moment (5 minutes)**
 - **Activity:** Introduce the Meta-Moment: "When you feel that wave of anxiety — the sick feeling, the 'I can't do this' thought — here's what I want you to practise. PAUSE. Don't try to force the feeling away. Instead, three steps: (1) Notice it: 'I feel anxious right now.' (2) Ask: 'What would my best self do right now?' Not your panicking self, not your avoidant self — your best self. The version of you that handles things well. (3) Choose a strategy." Provide a strategy menu:
@@ -211,14 +224,14 @@ Before introducing the tools to students, the teacher models their own emotional
   - **Chunking:** "I can't revise everything — but I can revise ONE topic for 25 minutes right now."
   - **Reframing:** "Exams show me what I know — they don't define who I am."
   - **Connection:** "I'm going to talk to someone about how I feel — not to fix it, but to not feel alone."
-- **Teacher script:** "You will feel anxious before the exams. That's guaranteed — it's a normal response to something that matters. The Meta-Moment isn't about removing the anxiety. It's about choosing what you DO with it. Anxiety can paralyse you (you freeze and don't revise) or motivate you (you feel the urgency and start working). The Meta-Moment helps you choose the second one."
-- **What to look for:** Students engaging with the strategy menu — picking one that resonates. Students practising the breathing (even sceptically — sceptical practice still works). Students talking to each other about which strategy they'll try.
+- **Teacher script:** "Many people feel anxious before exams. If you do, that's a normal response to something that matters — and if you don't, that's fine too. The Meta-Moment isn't about removing the anxiety. It's about choosing what you DO with it. Anxiety can paralyse you (you freeze and don't revise) or motivate you (you feel the urgency and start working). The Meta-Moment helps you choose the second one."
+- **What to look for:** Students engaging with the strategy menu — picking one that resonates. Students trying the breathing if they choose to. Sceptical students can join in or sit it out; nobody has to believe in it to try it. Students talking to each other about which strategy they'll try.
 
 ### Academic Integration
 
 - **English:** When studying characters under pressure (Macbeth before the murder, Romeo after the banishment), place the character on the Mood Meter. "Where is Macbeth right now? What's causing it? What would the Meta-Moment look like for him?" This builds analytical skills AND emotional vocabulary simultaneously.
 
-- **Science:** Before a practical assessment: "Let's check in with the Mood Meter. Where are you? If you're in the Red zone, try one round of 4-7-8 breathing before you start. Feeling anxious can make it harder to focus, which means you might miss things in the experiment. Slowing your breathing can help you settle and focus."
+- **Science:** Before a practical assessment: "Let's check in with the Mood Meter. Where are you? If you're in the Red zone, try one round of 4-7-8 breathing before you start. Feeling anxious can make it harder to focus, which means you might miss things in the experiment. Some people find that slowing their breathing helps them settle."
 
 - **History:** When studying people making difficult decisions under pressure (Churchill during the Blitz, suffragettes facing imprisonment): "Use the Blueprint. What were they feeling? What caused those feelings? How did their emotions influence their decisions?"
 
@@ -241,3 +254,12 @@ Before introducing the tools to students, the teacher models their own emotional
 2. **Emotional literacy does not replace clinical support.** Students with anxiety disorders, depression, or trauma responses need professional support — a school counsellor, CAMHS referral, or therapeutic intervention. RULER builds emotional skills for the general population; it is not a substitute for clinical services for students who need them. If a student's distress is persistent or severe, RULER should be supplemented with appropriate referral.
 
 3. **The teacher must genuinely model.** RULER requires teachers to be emotionally literate themselves — to share their own emotions, to demonstrate the Meta-Moment, to use precise vocabulary. Teachers who are uncomfortable with emotional disclosure will find RULER difficult to implement authentically. Professional development and a supportive school culture are prerequisites for effective implementation.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 """ai_system_risk_classifier.py — EU AI Act (2024/1689) risk-tier classifier.
 
-Stdlib-only. Takes AI-system characteristics and classifies into one of:
+Stdlib-only. Takes AI-system characteristics and reports TWO separate things:
+
+1. Risk class ("tier"), one of:
   - prohibited (Article 5)
   - high-risk (Article 6 + Annex III, OR Article 6(1) + Annex I)
-  - limited-risk transparency (Article 50)
-  - minimal-risk (default)
+  - limited-risk (not high-risk, but Article 50 transparency duties apply)
+  - minimal-risk (not high-risk, no Article 50 duty found)
+2. Duties that apply ON TOP of the risk class ("transparency_duties",
+   "general_duties"). Article 50 duties can apply to a high-risk system too:
+   Article 50(6) says paragraphs 1 to 4 do not affect the Chapter III
+   (high-risk) requirements. Article 4 (AI literacy) applies to all providers
+   and deployers. So a single tier never erases these duties.
 
 Deterministic decision tree following the regulation's risk-based architecture
 (Recital 26 + Articles 5, 6, 50). Article 6(3) carve-outs applied.
@@ -24,6 +31,9 @@ Input schema (JSON):
       "article_6_1_safety_component": false,
       "article_6_3_carveout_applies": false,
       "interacts_with_natural_persons_directly": false,
+      "generates_synthetic_content": false,
+      "uses_emotion_recognition_or_biometric_categorisation": false,
+      "deploys_deepfakes_or_public_interest_text": false,
       "is_general_purpose_ai_model": false,
       "training_compute_flops": null
     }
@@ -136,11 +146,13 @@ SAMPLE: Dict[str, Any] = {
 ARTICLE_5_PRACTICES = {
     "subliminal_manipulation": "Article 5(1)(a) — Subliminal techniques beyond awareness causing harm",
     "exploitation_of_vulnerabilities": "Article 5(1)(b) — Exploiting vulnerabilities of age/disability/socioeconomic situation",
-    "social_scoring": "Article 5(1)(c) — Social scoring by public authorities causing detrimental treatment",
+    "non_consensual_intimate_imagery": "Article 5(1)(ba) — Generating or manipulating realistic intimate or sexually explicit imagery of an identifiable person without consent (applies from 2 Dec 2026)",
+    "child_sexual_abuse_material": "Article 5(1)(bb) — Generating or manipulating child sexual abuse material (applies from 2 Dec 2026)",
+    "social_scoring": "Article 5(1)(c) — Social scoring (by any operator) causing detrimental or unfavourable treatment",
     "predictive_policing_individual": "Article 5(1)(d) — Predictive policing based solely on profiling",
     "untargeted_facial_scraping": "Article 5(1)(e) — Untargeted scraping of facial images for facial recognition databases",
     "emotion_recognition_in_workplace_or_education": "Article 5(1)(f) — Emotion recognition in workplace and educational institutions",
-    "biometric_categorisation_sensitive": "Article 5(1)(g) — Biometric categorisation by sensitive attributes",
+    "biometric_categorisation_sensitive": "Article 5(1)(g) — Biometric categorisation to infer sensitive attributes (race, political opinions, religion, sex life, etc.)",
     "real_time_remote_biometric_id_public_law_enforcement": "Article 5(1)(h) — Real-time remote biometric ID in publicly accessible spaces for law enforcement",
 }
 
@@ -157,8 +169,44 @@ ANNEX_III_CATEGORIES = {
 }
 
 
+def _article_50_duties(system: Dict[str, Any]) -> List[str]:
+    """Article 50 duties, checked for every system that is not prohibited."""
+    duties = []
+    if system.get("interacts_with_natural_persons_directly", False):
+        duties.append("Article 50(1) — tell people they are interacting with an AI system (provider)")
+    if system.get("generates_synthetic_content", False):
+        duties.append("Article 50(2) — mark synthetic audio, image, video or text as machine-readable and detectable (provider)")
+    if system.get("uses_emotion_recognition_or_biometric_categorisation", False):
+        duties.append("Article 50(3) — inform people exposed to emotion recognition or biometric categorisation (deployer)")
+    if system.get("deploys_deepfakes_or_public_interest_text", False):
+        duties.append("Article 50(4) — disclose deepfakes and AI-generated public-interest text (deployer)")
+    return duties
+
+
+GENERAL_DUTIES = [
+    "Article 4 — AI literacy measures for staff and others operating the system (providers and deployers)",
+]
+
+
 def classify(system: Dict[str, Any]) -> Dict[str, Any]:
-    """Deterministic classification per Articles 5, 6, 50 + Annex III."""
+    """Risk class per Articles 5 and 6 + Annex III, plus duties that apply on top of it."""
+    result = _risk_class(system)
+    is_gpai = system.get("is_general_purpose_ai_model", False)
+    result["gpai_systemic_risk"] = _gpai_systemic_risk(is_gpai, system.get("training_compute_flops"))
+    if result["tier"] == "prohibited":
+        result["transparency_duties"] = []
+        result["general_duties"] = []
+        return result
+    duties = _article_50_duties(system)
+    result["transparency_duties"] = duties
+    result["general_duties"] = list(GENERAL_DUTIES)
+    if result["tier"] == "minimal_risk" and duties:
+        result["tier"] = "limited_risk"
+    return result
+
+
+def _risk_class(system: Dict[str, Any]) -> Dict[str, Any]:
+    """Deterministic risk class per Articles 5, 6 + Annex III (Article 50 is added by classify)."""
     name = system.get("name", "<unnamed>")
     article_5 = system.get("article_5_practice")
     annex_iii = system.get("annex_iii_category")
@@ -195,8 +243,8 @@ def classify(system: Dict[str, Any]) -> Dict[str, Any]:
     if annex_iii and annex_iii in ANNEX_III_CATEGORIES:
         # Article 6(3) carve-out check
         if carveout and not profiling:
-            # Carve-out applies AND no profiling — drops to limited or minimal
-            tier = "limited_risk" if interacts else "minimal_risk"
+            # Carve-out applies AND no profiling — not high-risk; Article 50 duties added by classify()
+            tier = "minimal_risk"
             return {
                 "name": name,
                 "tier": tier,
@@ -224,33 +272,24 @@ def classify(system: Dict[str, Any]) -> Dict[str, Any]:
             "gpai_systemic_risk": False,
         }
 
-    # Step 4: Article 50 transparency (limited-risk)
-    if interacts:
-        return {
-            "name": name,
-            "tier": "limited_risk",
-            "primary_citation": "Article 50(1) — Transparency for AI systems interacting with natural persons",
-            "rationale": "Direct interaction with natural persons requires disclosure that they are interacting with AI.",
-            "is_gpai": is_gpai,
-            "gpai_systemic_risk": _gpai_systemic_risk(is_gpai, flops),
-        }
-
-    # Step 5: Default — minimal-risk
+    # Step 4: Not prohibited, not high-risk. classify() adds Article 50 duties
+    # (which turn this into limited-risk) and Article 4 for every system.
     return {
         "name": name,
         "tier": "minimal_risk",
-        "primary_citation": "No Article 5, Annex III, or Article 50 trigger",
-        "rationale": "Minimal-risk default. No obligations under the Act (Article 95 voluntary codes of conduct only).",
+        "primary_citation": "No Article 5 or Article 6 / Annex III trigger",
+        "rationale": "Not prohibited and not high-risk. Check the transparency and general duties listed with it (Article 50, Article 4); Article 95 voluntary codes of conduct may also apply.",
         "is_gpai": is_gpai,
         "gpai_systemic_risk": _gpai_systemic_risk(is_gpai, flops),
     }
 
 
 def _gpai_systemic_risk(is_gpai: bool, flops: Optional[float]) -> bool:
-    """Article 51 — systemic-risk GPAI threshold: training compute ≥ 10^25 FLOPs."""
+    """Article 51(2) — systemic risk is presumed when training compute is greater than 10^25 FLOPs.
+    The Commission can also designate a model under Article 51(1); this check covers only the presumption."""
     if not is_gpai or flops is None:
         return False
-    return flops >= 1e25
+    return flops > 1e25
 
 
 def annotate_all(payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -293,11 +332,17 @@ def render_text(r: Dict[str, Any], source: str) -> str:
         lines.append(f"      Tier: {tier_label}")
         lines.append(f"      Citation: {s['primary_citation']}")
         lines.append(f"      Rationale: {s['rationale']}")
+        for d in s.get("transparency_duties", []):
+            lines.append(f"      Also applies: {d}")
+        for d in s.get("general_duties", []):
+            lines.append(f"      Also applies: {d}")
         lines.append("")
 
     lines.append("-" * 72)
     lines.append("DECISION ORDER: Article 5 prohibitions → Article 6(1) Annex I → Article 6(2) Annex III")
-    lines.append("                → Article 6(3) carve-outs (overridden by profiling) → Article 50 transparency → minimal-risk default")
+    lines.append("                → Article 6(3) carve-outs (overridden by profiling) → not high-risk")
+    lines.append("THEN, for every system that is not prohibited: Article 50 transparency duties and Article 4 AI literacy,")
+    lines.append("      listed on top of the risk class. A high-risk system can also have Article 50 duties (Article 50(6)).")
     return "\n".join(lines)
 
 

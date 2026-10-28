@@ -77,6 +77,7 @@ If the deck builder files are not in the pack, or you cannot run Python, do not 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the slide deck and audit report.
 - The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

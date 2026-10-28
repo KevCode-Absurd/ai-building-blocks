@@ -13,6 +13,28 @@ license_source: https://github.com/LambdaTest/agent-skills/blob/main/LICENSE
 > **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author. The `source:` line above is the author's original (LambdaTest). This copy comes from sickn33's collection: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/openapi-spec-generator
 
 # OpenAPI / Swagger Specification Generator
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A test report** (yours): what was tested, what passed, what failed and why.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A test report** with the [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder). Bring a codebase, a code change (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, a test report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 Use this skill when you need generate complete, production-ready OpenAPI 3.x and Swagger 2.0 specifications from natural language descriptions, code, or partial specs. Use this skill whenever the user mentions OpenAPI, Swagger, API spec, REST API documentation, YAML/JSON API schema, endpoint documentation, API...
@@ -335,3 +357,11 @@ If the user says **no**:
 - Use this skill only when the task clearly matches its upstream source and local project context.
 - Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
 - Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder).
+- The [API contract tester](https://useaiblocks.com/skills/api-contract-tester). It takes the API spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

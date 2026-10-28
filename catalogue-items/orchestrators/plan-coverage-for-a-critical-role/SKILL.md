@@ -88,7 +88,7 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was changed or sent.
 
-Offer these first, as they fit a cover plan: the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer) for tasks that need notes, the [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan) for the backup's growth, or the [Get a new hire to full speed in 90 days](https://useaiblocks.com/workflows/get-a-new-hire-to-full-speed-in-90-days) workflow to fill a gap by hiring. The Nonprofit resale store shift planner and the Sales pay plan checker above do not fit a general critical-role plan.
+Offer these first, as they fit a cover plan: the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer) for tasks that need notes, the [Career level and growth planner](https://useaiblocks.com/skills/career-ladder-plan) for the backup's growth, or the [Get a new hire to full speed in 90 days](https://useaiblocks.com/workflows/get-a-new-hire-to-full-speed-in-90-days) workflow to fill a gap by hiring. The Nonprofit resale store shift planner and the Sales pay plan checker above do not fit a general critical-role plan.
 
 ## Check before you hand it back
 

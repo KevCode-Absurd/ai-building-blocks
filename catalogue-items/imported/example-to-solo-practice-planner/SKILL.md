@@ -69,6 +69,19 @@ tags: ["expertise-reversal", "Kalyuga", "fading", "worked-examples", "Renkl", "t
 
 # Worked Example to Problem Solving Transition Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs the transition sequence from studying worked examples to solving problems independently — the critical phase where scaffolding is gradually removed and students take over the cognitive work. This addresses one of the most important findings in cognitive load theory: the expertise reversal effect (Kalyuga et al., 2003). When students are novices, worked examples are highly effective — they reduce extraneous cognitive load and allow students to build schemas. But as students develop competence, the same worked examples become REDUNDANT and actually HARM learning — the scaffolding that helped novices now prevents more advanced students from engaging in the active processing that drives further learning. The optimal instruction is not fixed but ADAPTIVE: it should shift from worked examples to problem solving as the student's expertise grows. Renkl & Atkinson (2003) developed the "fading" approach: rather than an abrupt switch from examples to problems, gradually remove steps from the worked examples so students progressively take over more of the work. This skill designs the complete fading sequence, including the triggers for when to fade (based on student performance), the order of fading (which steps to remove first), and the design of the independent practice phase that follows.
@@ -274,3 +287,12 @@ The procedure has 4 key steps:
 3. **Backward fading is not always optimal.** Renkl & Atkinson (2003) found backward fading effective for procedural skills with clear step sequences. For tasks with less linear structure (e.g., planning an experiment, structuring an argument), the "last step" may not be clearly defined. In these cases, the fading order needs to be adapted to the specific task structure.
 
 4. **The assessment must match the target.** If the end-of-unit test includes scaffolding (formula sheets, step prompts), the expertise reversal effect is less relevant — the scaffolding is provided in the assessment. The transition design above assumes an UNSCAFFOLDED assessment where students must perform the complete procedure independently.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Step-by-step hint writer](https://useaiblocks.com/skills/step-by-step-hint-writer).
+- The [Online worked example builder](https://useaiblocks.com/skills/online-worked-example-builder). It takes the lesson plan and plan.
+- The [Worked-example practice ladder builder](https://useaiblocks.com/skills/worked-example-practice). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

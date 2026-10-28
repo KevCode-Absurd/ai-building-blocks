@@ -33,7 +33,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste your error log, note or transcript. Add the product and version if you know them.
   - Answer any questions about missing details. If you don't know, say so and it will mark them as unknown.
-  - Read the draft. Check the steps to repeat and the severity rating.
+  - Read the draft. Check the steps to repeat and the severity rating. Steps you did not give are marked unknown, not guessed.
+  - The source collection labels this skill "risk critical". It only writes text and changes nothing, but a wrong bug report can send your team the wrong way, so check it before you file it.
   - Save the dated file. If your AI cannot save files, copy the text into one yourself.
   - Paste the draft into your project's issue tracker yourself. Check the severity with your team before you file it.
 output_sample:

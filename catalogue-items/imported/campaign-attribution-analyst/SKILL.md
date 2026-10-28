@@ -18,6 +18,19 @@ Production-grade campaign performance analysis with multi-touch attribution mode
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Input Requirements
 
 All scripts accept a JSON file as positional input argument. See `assets/sample_campaign_data.json` for complete examples.
@@ -92,6 +105,13 @@ All scripts support two output formats via the `--format` flag:
 
 ---
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Typical Analysis Workflow
 
 For a complete campaign review, run the three scripts in sequence:
@@ -103,7 +123,7 @@ python scripts/attribution_analyzer.py campaign_data.json --model time-decay
 # Step 2 — Funnel: identify where prospects drop off on the path to conversion
 python scripts/funnel_analyzer.py funnel_data.json
 
-# Step 3 — ROI: calculate profitability and benchmark against industry standards
+# Step 3 — ROI: compare revenue with media spend and against rule-of-thumb reference ranges
 python scripts/campaign_roi_calculator.py campaign_data.json
 ```
 
@@ -176,16 +196,18 @@ Analyzes conversion funnels to identify bottlenecks and optimization opportuniti
 
 ### 3. campaign_roi_calculator.py
 
-Calculates comprehensive ROI metrics with industry benchmarking:
+Calculates ROI metrics and compares them with built-in reference ranges (the original author's rules of thumb, with no published source):
 
-- **ROI**: Return on investment percentage
+- **ROI**: (revenue − media spend) ÷ media spend, as a percentage. Only media spend is counted, so this is not full return on investment.
+- **Revenue − media spend** (shown as `profit` in JSON, with a `profit_basis` note): not operating profit, because product cost, fees, creative, tools and labour are left out.
+- **Undefined is not zero**: when spend is 0 (or missing), ROI and ROAS show as `null` / `n/a` with a flag, never 0. Campaigns missing spend or revenue are left out of the money totals and listed.
 - **ROAS**: Return on ad spend ratio
 - **CPA**: Cost per acquisition
 - **CPL**: Cost per lead
 - **CAC**: Customer acquisition cost
 - **CTR**: Click-through rate
 - **CVR**: Conversion rate (leads to customers)
-- Flags underperforming campaigns against industry benchmarks
+- Flags campaigns outside the reference ranges (replace these with your own history before acting)
 
 ---
 

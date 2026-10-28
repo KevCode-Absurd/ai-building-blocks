@@ -9,7 +9,7 @@ subhead: Give it your selling price, product cost, shipping, stock and ad number
 explain: |
   A store can sell well and still feel broke. The cause is usually one area: cash tied up in stock, shipping that costs too much, or ads that cost more than a customer is worth. This online store bottleneck finder finds which one, so you fix it first.
 
-  Your AI works out your cost per order. It then checks four areas: cash flow, stock, shipping and logistics, and what it costs to win a customer against what that customer is worth. Each area is rated against rough rules of thumb, which you can change.
+  Your AI works out your cost per order. It then checks four areas: cash flow, stock, shipping and logistics, and what it costs to win a customer against what that customer is worth. Each area is compared with your own target, or with a rough starting line if you have none. The main bottleneck is the one that costs you the most money or cash.
 
   Those rules of thumb are rough starting defaults from the original skill, with no source, and are not facts for every store. Anything you do not give is marked NOT CHECKED. Nothing is guessed.
 when:
@@ -53,7 +53,7 @@ output_sample:
     - name: The bottleneck
       contains: The one area hurting you most, with the numbers that show it.
     - name: Numbers behind it
-      contains: Each measure against its rule of thumb, rated healthy, warning, danger or not checked.
+      contains: Each measure against your own target, or an unsourced starting line if you have none, or marked not checked.
     - name: Cost per order
       contains: Product, shipping, fees, ads and net profit, each in money and as a share of price.
     - name: Fixes, ranked by payoff

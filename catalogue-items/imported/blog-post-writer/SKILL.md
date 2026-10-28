@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to write well-structured, engaging, and SEO-optimized blog posts across multiple content types — how-to guides, listicles, opinion pieces, case studies, and thought leadership articles. The agent handles the full lifecycle from topic research and outlining through drafting, SEO optimization, and final review, producing publish-ready content tailored to the target audience and brand voice.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Research the Topic and Keywords**
@@ -63,7 +76,7 @@ Example prompt: "Write a 1,500-word how-to blog post about setting up a CI/CD pi
 >
 > **Introduction (filled in):**
 >
-> Visual Studio Code became the most popular code editor among Python developers for good reason — it is fast, free, and infinitely customizable. But a stock VS Code install only scratches the surface. The right extensions can turn it into a full-featured Python IDE with intelligent autocomplete, real-time linting, one-click debugging, and seamless virtual environment management. Here are seven extensions that will save you real time every single day in 2025.
+> Visual Studio Code is a popular editor among Python developers for good reason — it is fast, free, and highly customizable. (If you claim it is *the most* popular, cite a current developer survey.) But a stock VS Code install only scratches the surface. The right extensions can turn it into a full-featured Python IDE with intelligent autocomplete, real-time linting, one-click debugging, and seamless virtual environment management. Here are seven extensions that will save you real time every single day in 2025.
 >
 > **1. Pylance — Supercharged IntelliSense (filled in):**
 >
@@ -89,7 +102,9 @@ Example prompt: "Write a 1,500-word how-to blog post about setting up a CI/CD pi
 
 **Output:**
 
-> [Statistic about outages, with its source and year to verify before you use it]. That is not a scare tactic — it is a finding from [named source]. (Illustrative example only. The figure and source are placeholders, not a real finding. Never publish a number you cannot trace.) The irony is that most of these outages trace back to manual server configuration: someone fat-fingered a setting, forgot to open a port, or could not reproduce the production environment when it mattered most. Infrastructure as Code (IaC) eliminates this entire category of risk by treating your servers, networks, and deployments as version-controlled code — code that can be reviewed, tested, and rolled back just like the software it runs. You do not need a dedicated DevOps team to get started, and the earlier you adopt it, the less technical debt you accumulate. In this post, we will break down what IaC actually is, why it matters even at the five-person stage, and how to set it up in a single afternoon.
+> [STATISTIC ABOUT OUTAGES CAUSED BY CONFIGURATION MISTAKES — placeholder. Find it, check the original report, and add the source and year. If you cannot trace one, open with the reader's problem instead.] When an outage comes from manual server setup, someone has usually mistyped a setting, forgotten to open a port, or been unable to rebuild the production environment when it mattered. Infrastructure as Code (IaC) cuts that risk by treating your servers, networks, and deployments as version-controlled code — code that can be reviewed, tested, and rolled back like the software it runs. It will not stop every mistake, but it makes them easier to spot and undo. You do not need a dedicated DevOps team to get started, and the earlier you adopt it, the less clean-up you face later. In this post, we will break down what IaC is, why it matters even at the five-person stage, and how to take a first small step.
+
+*(Illustrative example only. The bracket is a placeholder, not a real finding, and no statistic or source is given here. Never publish a number you cannot trace to its original source.)*
 
 ## Best Practices
 
@@ -107,3 +122,12 @@ Example prompt: "Write a 1,500-word how-to blog post about setting up a CI/CD pi
 - **Time-sensitive content:** Posts referencing specific tool versions, pricing, or events should include a "Last updated" date and a note that details may have changed. Plan for periodic content refreshes.
 - **Multi-author blogs:** When writing for a blog with an established voice, review 2-3 recent published posts to match the existing tone, sentence style, and formatting conventions.
 - **Very long posts (3,000+ words):** Include a table of contents with anchor links at the top. Consider whether the post should be split into a series for better readability and sustained engagement.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
+- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
+- The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -115,6 +115,13 @@ def _derive_and_check_palette(config: dict) -> tuple[bool, str]:
     text = _get(config, "brand.text") or None
     result = bpv.validate(primary, accent, bg, text)
     config["derived_palette"] = result["derived_palette"]
+    # Hard rule: body text and links must reach 4.5:1. Check them by name so a
+    # WARN on these rules can never be saved (AI Blocks fix). Only non-text UI
+    # (the accent colour) may warn and still proceed.
+    hard = [f for f in result["findings"]
+            if f["rule"] in ("wcag-text-on-bg", "wcag-link-on-bg") and f["level"] != "PASS"]
+    if hard:
+        return False, "; ".join(m["message"] for m in hard)
     if result["verdict"] == "FAIL":
         msgs = [f for f in result["findings"] if f["level"] == "FAIL"]
         return False, "; ".join(m["message"] for m in msgs)

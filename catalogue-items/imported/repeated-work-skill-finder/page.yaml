@@ -9,8 +9,6 @@ subhead: A list of tasks you do again and again, with draft skills ready to auto
 explain: |
   Before you start: screen history can hold passwords, private messages and unpublished work. The cleanup of secrets is a pattern match and can miss things. If you pick a cloud model, app names and window titles leave your machine. Set Screenpipe's ignored-window list first.
 
-  A list of tasks you do again and again, with draft skills ready to automate them. It finds the patterns in your own screen history that you stopped noticing.
-
   You pick a time window. The skill reads your recorded activity from Screenpipe, a program that captures what you do on your computer. It groups similar workflows, checks whether an existing skill already covers each one, and drafts a new skill or a combination when none fits. Drafts are saved for you to review, not installed. It needs Python and a running Screenpipe, plus a local or cloud language model for drafting.
 when:
   - You suspect you waste hours on the same steps every week.
@@ -34,7 +32,7 @@ you_get:
   - Notes on which are worth automating
 how_to_use:
   - Install Screenpipe from its official project page, https://github.com/screenpipe/screenpipe, using the current release, and let it run. Use only Screenpipe's own install docs. The build-from-source example in the skill file was not tested, so skip it. Before it records much, set its ignored-window list so password managers, banking, HR and client apps and private browsing are skipped. Check the list covers them before you run anything.
-  - Set up Python and choose your language model. A local one in LM Studio keeps data on your machine. A cloud one gets summaries of your activity with secret patterns scrubbed, but the scrub can miss things. If sign-in is on, run screenpipe auth token and set the result as SCREENPIPE_TOKEN.
+  - Set up Python and choose your language model. The skill file pins exact package versions (such as sentence-transformers 6.1.0). We have not checked that each one exists, so if an install fails, use that package's current release. A local one in LM Studio keeps data on your machine. A cloud one gets summaries of your activity with secret patterns scrubbed, but the scrub can miss things. If sign-in is on, run screenpipe auth token and set the result as SCREENPIPE_TOKEN.
   - Run the doctor check first. It tells you if Screenpipe, Python and your model are ready. Then run with --dry-run and read plan.md, which is saved in the same proposal folder. The cleanup of secrets is a pattern match and does not guarantee that private or unpublished details are removed. Window titles and app names still leave your machine if you pick a cloud model.
   - "Before a cloud run, confirm two things. Your ignored-window list covers banking, HR, password and client apps. And you accept that app names and window titles go to the cloud model you chose. If not, use a local model."
   - "Run the skill with the time window you want, such as the last week. This needs an AI that can run commands on your computer. The command looks like: python skills/autoskill/scripts/autoskill.py run --start <START DATE AND TIME> --end <END DATE AND TIME> --config skills/autoskill/config.yaml --skills-dir skills. With --dry-run it stops after grouping. Results are saved in a new folder under ~/.autoskill/proposed/ named by the time of the run, unless you pass --out."

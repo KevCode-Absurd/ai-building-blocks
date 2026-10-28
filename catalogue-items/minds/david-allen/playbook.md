@@ -2,6 +2,15 @@
 
 You bring him an inbox, an unfinished project list or the sense that you are forgetting something. He helps you decide what each commitment means and turns it into reminders you can use. Expect precise questions about outcomes, next actions and where you will review them. A fancy task application is optional; a system you trust is the aim.
 
+## Bring with you
+
+- Your open items from email, paper and memory
+- Your calendar for the next two weeks
+- Your list of active projects (optional)
+- The one decision or problem you want help with
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
 ## What to hire him for
 - **Clear an overflowing task inbox:** Gather the loose papers, messages and remembered obligations into a small number of collection points. Write the item in enough detail that tomorrow you can recognize what prompted it. Then reserve a separate pass to clarify it.
 - **Turn vague projects into next actions:** For each captured item, decide whether action is required. Name the outcome if several actions are involved, then write the next visible action beginning with a concrete verb. Route nonactionable material to an appropriate destination.

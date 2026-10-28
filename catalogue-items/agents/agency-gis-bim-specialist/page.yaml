@@ -45,6 +45,7 @@ how_to_use:
   - Give the coordinate system of your site map, and the model's survey point and base point if you know them. Say if you do not.
   - Type "Plan this BIM to GIS job. Do the coordinate plan first. Mark anything you cannot tell."
   - Give the plan to your BIM and GIS team. The AI only plans. They run Revit, ArcGIS or other tools, and a surveyor confirms the coordinates.
+  - Revit and ArcGIS are paid products. Free options exist, such as QGIS for maps and open IFC tools. Check what each one supports in its docs before you pick.
 how_it_works:
   - title: Set the purpose
     text: It turns your one line into a scope, picks the level of detail and lists the building parts to carry over, such as building, floor, room, door and corridor.
@@ -146,3 +147,4 @@ judge:
 test:
   - Try a small task whose result you can check yourself.
   - Omit one important fact and check whether the agent names the gap.
+next: [agency-gis-qa-engineer, agency-gis-3d-scene-developer]

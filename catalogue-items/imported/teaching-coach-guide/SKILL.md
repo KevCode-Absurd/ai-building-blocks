@@ -70,6 +70,19 @@ tags: ["coaching", "instructional-coaching", "Knight", "professional-learning", 
 
 # Instructional Coaching Conversation Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a structured coaching conversation between an instructional coach and a teacher — using Knight's (2007, 2018) partnership approach and the Impact Cycle model — that helps the teacher identify a specific improvement focus, analyse evidence from their practice, and commit to a concrete next step. The critical principle is that effective coaching is a PARTNERSHIP: the coach does not tell the teacher what to do (that's directing) or simply affirm what the teacher already thinks (that's cheerleading). Instead, the coach uses questions, data, and dialogue to help the teacher think more clearly about their practice and make their own decisions about what to change. The output is a conversation plan with specific questions, anticipated responses, dialogue strategies for the coach (pausing, paraphrasing, probing), and clear next steps with accountability. AI is specifically valuable here because designing a coaching conversation requires anticipating the teacher's likely responses, selecting the right questions for the right moment, and balancing challenge with support — a real-time facilitation skill that benefits from advance planning.
@@ -228,3 +241,11 @@ This is a shortened outline. The scenario is made up to show the layout. Use you
 2. **Coaching is most effective as part of a sustained cycle.** One coaching conversation produces limited change. The meta-analysis by Kraft et al. (2018) found that coaching effects come from sustained cycles of goal-setting, observation, feedback, and adjustment. This conversation plan is one step in what should be an ongoing cycle.
 
 3. **The coach needs coaching skills, not just the conversation plan.** Reading a script of questions is not the same as facilitating a genuine coaching dialogue. The pausing, paraphrasing, probing, and responsive facilitation described above require practice. Coaches should receive training and, ideally, coaching on their own coaching practice.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Media literacy lesson builder](https://useaiblocks.com/skills/media-literacy-lesson-builder). It takes the plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

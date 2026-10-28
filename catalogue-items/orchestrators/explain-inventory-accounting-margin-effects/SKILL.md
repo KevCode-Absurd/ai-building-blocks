@@ -61,6 +61,6 @@ Lead with three results: FIFO comparable cost of goods sold and earnings effect,
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **See the wider cash picture** with the [Reconcile working capital and tax cash](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
-- **Explain a revenue change** with the [Reconcile revenue presentation and perimeter](https://useaiblocks.com/workflows/reconcile-revenue-presentation-and-perimeter) workflow, if sales moved too.
+- **See the wider cash picture** with the [Working capital and cash tax checker](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
+- **Explain a revenue change** with the [Comparable revenue growth checker](https://useaiblocks.com/workflows/reconcile-revenue-presentation-and-perimeter) workflow, if sales moved too.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

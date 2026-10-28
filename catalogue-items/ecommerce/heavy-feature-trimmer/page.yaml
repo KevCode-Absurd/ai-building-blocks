@@ -31,7 +31,7 @@ you_get:
   - "A list of heavy features with what each costs, and keep, change or remove"
   - "A replacement for each (static hero, lite video embed, thumbnail)"
   - "Theme advice"
-  - "A score out of 100 for how light your pages are, now and after the changes, with the sum shown"
+  - "A score out of 100 for how light your pages are now, with the sum shown, and a projected score after the changes"
 
 how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
@@ -49,7 +49,7 @@ output_sample:
     - An AI that can read images, so it can look at your screenshots
   output:
     - name: Lightness score
-      contains: A score out of 100 now and after the changes, with the deductions shown as a sum.
+      contains: A score out of 100 now, with the deductions shown as a sum, and a projected score after the changes (not a measurement).
     - name: Feature table
       contains: Each feature with its page, what it costs, whether shoppers use it, a keep, change or remove verdict and a lighter option.
     - name: Redirects and broken links
@@ -63,7 +63,7 @@ output_sample:
 
 how_it_works:
   - title: Checks quick view
-    text: Quick view can load product data for 20 to 30 items on a collection page. It looks at clicks, then removes it or loads data only after the click.
+    text: Quick view can load product data for 20 to 30 items on a collection page. It looks at clicks. It removes quick view only when the data shows little use; otherwise it keeps it and loads data only after the click.
   - title: Judges sliders
     text: Four to five slides cost load time. One strong hero, or two or three static sections, replaces an auto-rotating carousel.
   - title: Replaces video embeds
@@ -77,12 +77,12 @@ how_it_works:
   - title: Advises on the theme
     text: A clean, simple theme beats one with every option. Weighs the cost of fixing against rebuilding.
   - title: Scores the pages
-    text: Counts what is costly and what can go, and gives a score now and after.
+    text: Counts what is costly and what can go, and gives a score now and a projected score after.
 
 output_shape: |
   HEAVY FEATURE REVIEW  <store>, <date>
   LIGHTNESS SCORE  <n>/100 now (100 - <deductions> = <n>)
-                   <n>/100 after the changes
+                   <n>/100 projected after the changes (not measured; rerun PageSpeed to check)
 
   FEATURE | WHERE | WHAT IT COSTS | DO SHOPPERS USE IT? | VERDICT | REPLACEMENT
   <feature> | <page> | <cost> | <click data or unknown> | <keep | change | remove> | <lighter option>

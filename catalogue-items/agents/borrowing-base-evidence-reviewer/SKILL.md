@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, any lender reserve notice with its date, a proposed draw and the connected-party exposure limit.
 
-**The pieces it uses:** the [Reconcile an asset based revolver certificate](https://useaiblocks.com/workflows/reconcile-an-asset-based-revolver-certificate) workflow, which runs the [Receivables borrowing base builder](https://useaiblocks.com/skills/receivables-borrowing-base-builder), the [Inventory borrowing base builder](https://useaiblocks.com/skills/inventory-borrowing-base-builder) and the [Revolver availability checker](https://useaiblocks.com/skills/revolver-availability-checker), and the [Credit exposure limit checker](https://useaiblocks.com/skills/credit-exposure-limit-checker). Read the workflow in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
+**The pieces it uses:** the [Asset-backed credit line checker](https://useaiblocks.com/workflows/reconcile-an-asset-based-revolver-certificate) workflow, which runs the [Customer invoice borrowing limit calculator](https://useaiblocks.com/skills/receivables-borrowing-base-builder), the [Inventory borrowing limit calculator](https://useaiblocks.com/skills/inventory-borrowing-base-builder) and the [Revolving credit availability checker](https://useaiblocks.com/skills/revolver-availability-checker), and the [Credit limit exposure checker](https://useaiblocks.com/skills/credit-exposure-limit-checker). Read the workflow in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
 
 **Tools that do this best:** a spreadsheet engine and a file-capable AI. They build, recalculate and reopen a workbook and save the record. In plain chat, return the same tables as text, say no workbook was made and nothing was saved, and give the record for the user to keep.
 
@@ -69,6 +69,6 @@ Include the evidence window, the files saved, the branch taken or skipped and wh
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check what the line costs** with the [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the same loan balances.
+- **Check what the line costs** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the same loan balances.
 - **Test your loan covenants** with the [Loan covenant cash cover reviewer](https://useaiblocks.com/skills/debt-service-covenant-evidence-reviewer).
 Nothing here contacts a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

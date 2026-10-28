@@ -11,7 +11,7 @@ explain: |
 
   The steps run in order, with a pause for your approval at key choices. It fetches study info and asks which samples to download. A check confirms Docker, Nextflow and Java work, with fixes if not. You confirm the pipeline, then it runs the built-in test profile, which must pass. It builds the samplesheet, confirms the genome with you, runs the full job and checks the outputs. It needs a computer with those tools.
 when:
-  - You have RNA-seq reads and want a differential expression analysis run for you.
+  - You have RNA-seq reads and want gene counts made for you. It stops at counts; a bioinformatician does the differential expression step.
   - You found a public GEO dataset and want to reanalyse it.
   - You need variant calling run without learning Nextflow first.
   - Your pipeline failed and you suspect your setup.
@@ -32,7 +32,7 @@ you_get:
   - A check that the key result files exist
 how_to_use:
   - Use an AI tool that can run commands in a terminal on your own computer and download files, such as Claude Code. The skill was written for Claude Code. A plain chat window cannot run this.
-  - Check your computer has enough disk space, memory and time for a full run. The skill does not give disk or run-time figures, because they depend on your sample count and the pipeline. Its example cap for one run is 8 CPUs, 32 GB of memory and 24 hours. Read the chosen pipeline's own page for its needs before you start a full run.
+  - Check your computer has enough disk space, memory and time for a full run. The skill does not give disk or run-time figures, because they depend on your sample count and the pipeline. Its example cap for one run is 8 CPUs, 32 GB of memory and 24 hours. Read the chosen pipeline's own docs page on nf-co.re for its needs before you start a full run.
   - Some setup fixes use sudo (admin rights). Your AI should show you each command first. Say no to any you do not understand.
   - Paste the skill into your AI. Tell it your files or your GEO or SRA accession.
   - "Approve each choice it asks about: the samples, the pipeline, the genome and the pipeline options."

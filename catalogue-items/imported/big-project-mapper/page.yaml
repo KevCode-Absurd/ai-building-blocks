@@ -10,6 +10,10 @@ explain: |
   Some projects are too big to hold in one chat. This skill turns a loose, foggy idea into a shared map of open questions, then settles them one at a time until the route is clear. You end up with a list of decisions made, not a pile of half-done work.
 
   It starts by naming the destination, such as a spec, a locked choice or a change made in place. Then it posts each open question as a ticket on your issue tracker. It works one ticket per session, records the answer on the map, and refers to every ticket by its title so you can follow along. It plans first and builds later.
+
+  Before you start: by default it assigns a ticket to claim it, closes it when answered and pushes research notes to a throwaway branch, all without asking. These change your shared tracker and repo. If you want to approve each one, say so before the first session.
+
+  The map has five parts: Destination, Notes, Decisions so far, Not yet specified and Out of scope.
 when:
   - You have a large idea and no clear first step.
   - A project is too big to fit in one AI session.

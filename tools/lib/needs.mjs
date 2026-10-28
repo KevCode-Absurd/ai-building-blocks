@@ -37,7 +37,7 @@ export const INPUTS = {
   copy_draft: { label: "A draft", what: "the ad, page, email or script you want checked or improved" },
   voc_reviews: { label: "Customer words", what: "reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in" },
   product_photos: { label: "Product photos", what: "clear photos of the real product, from more than one angle. Attach them" },
-  performance_sheet: { label: "Your results", what: "an export from Meta Ads Manager, Google Ads or your store, for set dates" },
+  performance_sheet: { label: "Your results", what: "an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product" },
   landing_page: { label: "Your page", what: "the landing page's link, or its text and a screenshot" },
   web_page: { label: "Your website", what: "the link to your site or the page" },
   reference_set: { label: "Reference ads", what: "ads you like and want to learn from, as screenshots or links" },
@@ -403,8 +403,9 @@ const itemLine = (i) => {
   return i.maker ? `- **${i.label}**${part}, made by the [${i.maker.name}](${i.maker.url}): ${i.what}.` : `- **${i.label}** (yours): ${i.what}.`;
 };
 
-/** The "Before you start" section for a SKILL.md. `tools` is page.yaml's works_best_with.tools. */
-export function beforeSection(plan, tools = [], nl = "\n") {
+/** The "Before you start" section for a SKILL.md. `tools` is page.yaml's works_best_with.tools.
+ * `imported`: someone else's skill, which hands back in its own format, so step 3 doesn't add our CHECKS MISSED line. */
+export function beforeSection(plan, tools = [], nl = "\n", { imported = false } = {}) {
   const { needed, helps, chain, brain } = plan;
   const items = [...needed, ...helps];
   if (!items.length && !tools.length) return null;
@@ -430,7 +431,9 @@ export function beforeSection(plan, tools = [], nl = "\n") {
   out.push(ask.length
     ? `2. **Check what's missing.** Look for ${ask.join(", ")}. They can attach files, paste the details, or share a file path your assistant can read.${items.some((i) => i.maker) || chain.length ? " Offer the linked skills above when they help prepare that material." : ""} Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.`
     : "2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.");
-  out.push("3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.");
+  out.push(imported
+    ? "3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it."
+    : "3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.");
   if (tools.length) out.push("", "**Tools that do this best:**", ...tools.map((t) => `- **${t.name}:** ${t.why}`));
   return out.join(nl);
 }

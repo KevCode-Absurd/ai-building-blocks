@@ -30,4 +30,4 @@ credits:
   - title: sales-engineer skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/sales-engineer
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, added a start guide and one bid rule at the top, and said how the POC scorecard gate differs from the bid rule.

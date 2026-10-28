@@ -5,6 +5,22 @@ description: Update financial models with new data — quarterly earnings, manag
 
 # Model Update
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## India
 
 This skill operates on **Indian markets**. Two rules cause most Indian errors (no other file is needed):
@@ -35,6 +51,8 @@ Determine the update trigger:
 #### After Earnings
 Update the model with reported actuals:
 
+Any actual you cannot find in the results release or the user's input is marked `not provided`. Never estimate or fill in an actual.
+
 | Line Item | Prior Estimate | Actual | Delta | Notes |
 |-----------|---------------|--------|-------|-------|
 | Revenue | | | | |
@@ -56,6 +74,8 @@ Update the model with reported actuals:
 - Working capital changes
 
 ### Step 3: Revise Forward Estimates
+
+Order of work: the actuals from Step 2 feed the new forward estimates here. The new next-twelve-month EPS and EBITDA then feed the multiples and the DCF in Step 4, and the price target comes last. Leave any estimate that rests on a `not provided` actual flagged.
 
 Based on the new data, adjust forward estimates:
 
@@ -113,3 +133,12 @@ After the output: compare the revised estimates with consensus, then run the com
 - Share count matters — dilution from stock comp, converts, or buybacks can materially affect EPS
 
 - **Runbook:** [`references/runbook-model-update.md`](references/runbook-model-update.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+Changed by AI Blocks (2026-10-28): added a rule that missing actuals are marked not provided and never estimated, and a short order of work for Steps 3 and 4.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Valuation method comparer](https://useaiblocks.com/skills/valuation-method-comparer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

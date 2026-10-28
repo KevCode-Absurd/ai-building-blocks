@@ -19,7 +19,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **Your budget** (yours): a number or a range. Needed for the money check.
 - **The one word or idea you own** (yours): the feed test uses it.
 
-**Recommended step before this one** (optional): run the [Marketing plan law checker](https://useaiblocks.com/skills/marketing-plan-law-checker) to get a fix list to choose from. Bring your marketing plan.
+**Recommended step before this one** (optional): run the [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker) to get a fix list to choose from. Bring your marketing plan.
 
 How to start:
 1. **Look first.** Use what they have already pasted or attached, including an about-me note. In Claude Code, look in the project too.
@@ -87,15 +87,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the move for side effects over time** with the [Long-run effects checker](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
-- **Test the move cheaply before you commit money** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Hear the best case against the pick** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Exactly one move is picked.
@@ -105,6 +96,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The money is priced from quotes or marked `MISSING:`.
 - The test has a measure, a threshold and a date.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the move for side effects over time** with the [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+- **Test the move cheaply before you commit money** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **Hear the best case against the pick** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

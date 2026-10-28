@@ -25,6 +25,19 @@ runaway-guard fixes this. State the max calls. State the max dollars per run. St
 
 **Violating the letter of these rules is violating the spirit of the skill.** "I'm only testing locally" is the exact rationalization that ships the $200 bill — local code hits the same paid API as production.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use **runaway-guard** when:
@@ -75,9 +88,11 @@ A cap only in code can be bypassed by a bug in that code. A cap only at the prov
    ```
 
 3. **Every retry path is bounded by attempts AND total elapsed cost, not by time alone.** Exponential backoff with no attempt cap is a wallet attack on yourself.
-   - Max attempts: a small integer (3–5 for transient errors, 1 for 4xx).
-   - Cap counts across the whole pipeline, not just one library — Inngest retries × SDK retries × your own retry wrapper multiply.
-   - 4xx errors do not retry. Period. They will not become 2xx; they will just bill again.
+   - Max attempts: a small integer (3–5 for transient errors: 5xx, timeouts, network errors, and 429 rate limits; 1 for every other 4xx).
+   - Cap counts across the whole pipeline, not just one library — Inngest retries × SDK retries × your own retry wrapper multiply. Retry in one layer only and turn the others off, so the total attempts per call is one number you wrote down.
+   - 4xx errors other than 429 do not retry. They will not become 2xx; they will just bill again.
+   - The one 4xx exception is **429 (rate limited)**. Wait at least the time in the `Retry-After` header (with backoff if there is none), and count each 429 retry against the same max-attempts cap. A 429 never gets its own unbounded retry loop.
+   - Only retry a charging call that has an idempotency key (rule 6). With no key, use 1 attempt.
 
 4. **Every fan-out path declares a concurrency limit.** Parallel calls multiply cost per wall-clock second. State the limit in code, at the queue (Inngest `concurrency`), and at the provider where supported:
    - Inngest: `concurrency: { limit: N }` on the function.
@@ -118,7 +133,7 @@ Before producing code that calls a paid API, your message must contain — in th
 3. **Max $ per run.** `max_calls × unit_cost`. Compute it.
 4. **Max $ per day (provider hard cap).** The dashboard setting that backstops the code.
 5. **Concurrency limit.** In code, at the queue, at the provider.
-6. **Retry policy.** Max attempts, which error codes retry, idempotency key strategy.
+6. **Retry policy.** Max attempts (one number for the whole pipeline), which error codes retry (5xx, timeouts, 429 with `Retry-After`; no other 4xx), idempotency key strategy.
 7. **Amplifier audit.** Walk the list in rule 7; declare "none apply" or address each that does.
 8. **The code** — with the cost contract in a comment above the call site.
 9. **Self-check.** One line: "in the worst case, this code bills $X and the provider cap stops it at $Y."
@@ -201,7 +216,7 @@ Note: the bug in `fetchPrompts` is still there. The protocol does not fix that b
 | Pattern | Wallet invariant to write | Hard cap to set |
 |---|---|---|
 | Fan-out over a list of items | `total_cost ≤ list_len × unit_cost ≤ MAX_$_PER_RUN` | provider daily spend limit |
-| Retry on transient error | `total_cost ≤ attempts × unit_cost`, attempts ≤ 5 | provider daily spend limit; alert at 50% |
+| Retry on transient error (5xx, timeout, 429) | `total_cost ≤ attempts × unit_cost`, attempts ≤ 5 across all layers, 429 retries counted in the same cap | provider daily spend limit; alert at 50% |
 | Agent loop ("ask model what to do next") | `total_cost ≤ MAX_STEPS × per_step_cost`, depth ≤ MAX_DEPTH | per-agent-run cost ceiling, kill-switch |
 | Polling for job completion | `total_cost ≤ ceil(MAX_WAIT_MS / poll_interval) × poll_cost` | absolute deadline + alert |
 | Webhook handler → API call | idempotency key required; cycle if webhook is triggered by the same API | provider rate limit per key |
@@ -225,7 +240,7 @@ Set these **before** the first deploy. None of them require code changes.
 - Console → **Workspaces** → create a Workspace per environment.
 - Each Workspace gets a **Budget** with a **hard limit** (request blocking) and **soft limit** (email alert).
 - Use a per-Workspace API key — a leaked dev key cannot exceed the dev Workspace budget.
-- Prompt caching reduces cost ~90% for repeated context; cap is on unblended cost so caching extends the budget.
+- Prompt caching bills repeated context read from the cache at a fraction of the normal input price, while writing to the cache costs more than normal input. Check the current rates on Anthropic's pricing page (https://platform.claude.com/docs/en/about-claude/pricing) and put both into the cost contract.
 
 ### OpenAI
 - ⚠️ **Per-project monthly budgets are soft only.** OpenAI's Help Center documents project budgets as "soft spending thresholds" that send alerts but do **not** enforce a hard cap. A runaway can continue past the documented project budget.
@@ -245,8 +260,8 @@ Set these **before** the first deploy. None of them require code changes.
 
 ### Inngest (queue layer — not paid AI but the multiplier)
 - `concurrency: { limit: N }` on every function that calls a paid API.
-- `retries: 2` (Inngest default is **4 retries**, i.e. up to 5 attempts including the initial — confirm against current Inngest docs) for paid call functions; fewer attempts on idempotent failures. Worst-case wallet math: `attempts = 1 + retries`, so a default `step.run()` can bill **5×**, not 4×.
-- `NonRetriableError` for 4xx — never retry a 4xx into a paid API.
+- `retries: 2` (Inngest default is **4 retries**, i.e. up to 5 attempts including the initial — confirm against current Inngest docs) for paid call functions; set `retries: 0` for a charging call that has no idempotency key. Worst-case wallet math: `attempts = 1 + retries`, so a default `step.run()` can bill **5×**, not 4×.
+- `NonRetriableError` for 4xx other than 429 — never retry those into a paid API. For 429, throw a retryable error that waits for `Retry-After`; it still counts against `retries`.
 - `idempotency: ...` on events you cannot deduplicate at the call site.
 
 ## Edge cases to enumerate before shipping
@@ -255,11 +270,11 @@ Set these **before** the first deploy. None of them require code changes.
 |---|---|
 | Empty input list | 0 calls, 0 cost, return early — do not even auth |
 | Input list longer than MAX | reject with NonRetriableError, do not partial-process |
-| All calls fail with 4xx | 1 attempt each, no retry, surface error |
+| All calls fail with 4xx (not 429) | 1 attempt each, no retry, surface error |
 | All calls fail with 5xx | bounded retries, total cost ≤ attempts × unit, alert on full exhaustion |
 | Concurrent invocation of the same job | idempotency key dedups; second invocation costs $0 |
 | Network partition mid-batch | partial cost banked; on resume, idempotency key prevents re-charge |
-| Provider rate-limit (429) | respect `Retry-After`; do not multiply retries inside SDK and outside |
+| Provider rate-limit (429) | wait for `Retry-After`; retry in one layer only, counted against the same max-attempts cap; surface the error when the cap is hit |
 | Webhook retried by provider | idempotency at the handler boundary |
 | Local dev accidentally pointing at prod key | per-env keys + per-env caps make this cost $0.50, not $50 |
 | Cron fires while previous run still executing | concurrency limit = 1 OR explicit overlap-tolerant design |
@@ -273,8 +288,16 @@ Code you emit must:
 - Wrap fan-out in `p-limit` or equivalent — never raw `Promise.all` over a paid API.
 - Pass an idempotency key for every mutating / charging call.
 - Set queue-level concurrency and retries in the same file or document it.
-- Reject `4xx` retries via `NonRetriableError` or equivalent.
+- Reject retries of `4xx` other than 429 via `NonRetriableError` or equivalent; retry 429 only after `Retry-After`, inside the same attempt cap.
 - Reference the provider hard-cap setting by name ("Fal Spend Limit $50/day, set on [DATE YOU SET IT]") so a future reader knows it exists.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI system attack tester](https://useaiblocks.com/skills/ai-system-attack-tester).
+- The [Cloud and AI bills, waste and spend limits](https://useaiblocks.com/skills/monthly-cloud-and-ai-bill-keeper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Related Skills
 
@@ -289,7 +312,7 @@ Code you emit must:
 |---|---|
 | "I'm only testing locally." | Local hits the same paid endpoint. A retry bug in test code bills the same dollars. |
 | "The list is small, fan-out is fine." | The list is small *today*. Next week it is fetched from a table that grew 50×. The cap exists for next week. |
-| "Inngest already retries, so I don't need a retry policy." | Inngest retries × your retry wrapper × SDK retries = 27 attempts. Each one bills. |
+| "Inngest already retries, so I don't need a retry policy." | 3 attempts in Inngest × 3 in your retry wrapper × 3 in the SDK = 27 attempts. Each one bills. |
 | "The API call is cheap, $0.001." | At 10,000 unintended invocations that is $10 — and the count is exactly what you failed to bound. |
 | "I'll set the provider cap later." | The bug ships before "later". Set the cap in the 60 seconds it takes; the code can wait. |
 | "Idempotency is overkill for this." | Webhooks retry. Load balancers retry. Browsers retry. Without an idempotency key, *something* will duplicate. |
@@ -318,11 +341,11 @@ Before shipping any code that calls a paid API:
 - [ ] Cost contract comment exists above each call site with unit cost, max calls/run, max $/run, provider cap.
 - [ ] The iteration / fan-out bound is a named integer constant, not implicit in list length.
 - [ ] Concurrency limit is set in code (`p-limit`) AND at the queue (`Inngest concurrency`).
-- [ ] Retry policy is explicit: max attempts, 4xx → no retry, idempotency key per call.
+- [ ] Retry policy is explicit: one max-attempts number for the whole pipeline, 4xx (except 429) → no retry, 429 → wait for `Retry-After` within the same cap, idempotency key per call.
 - [ ] Provider dashboard hard cap is set and the value is documented in the file.
 - [ ] Per-environment API keys; dev keys have lower caps than prod.
 - [ ] Amplifier audit (rule 7) has been performed and either "none apply" or each addressed.
-- [ ] A test exists for: empty input, oversized input rejected, 4xx not retried, idempotency key dedups duplicate invocation.
+- [ ] A test exists for: empty input, oversized input rejected, 4xx (not 429) not retried, 429 retried no more than the attempt cap, idempotency key dedups duplicate invocation.
 - [ ] In the worst case the code bills ≤ MAX_$_PER_RUN, and even with a bug the provider cap stops loss at MAX_$_PER_DAY.
 
 Cannot check every box? The code is example-correct, not bill-correct. Either fill the gap or do not connect a billing-enabled key.
@@ -332,10 +355,12 @@ Cannot check every box? The code is example-correct, not bill-correct. Either fi
 - **Not a billing system.** runaway-guard enforces *intent* (caps, contracts, audits) at code-write time. It does not meter spend in production — pair it with the provider's hard cap and observability (LLM-cost dashboards, log alerts) for runtime enforcement.
 - **Provider-side caps may take minutes to enforce.** Anthropic Workspace Budgets, OpenAI usage limits, and Fal Spend Limits are reconciled on a delay measured in minutes, not milliseconds. A pathological burst within a single window can still exceed the cap modestly.
 - **No automated cost estimation for novel models.** The cost-contract numbers (unit cost, $/run) are inputs the author must look up; the skill does not maintain a per-model price table.
-- **Streaming and per-token pricing.** For per-token APIs (Anthropic, OpenAI), `max calls` is a proxy — the real cap is `max input tokens × max output tokens × per-token rate`. Adapt the protocol: replace `max calls per run` with `max tokens per run`.
+- **Streaming and per-token pricing.** For per-token APIs (Anthropic, OpenAI), `max calls` is a proxy. Input and output tokens are priced separately, so their costs are added, never multiplied. The real cap is the sum over every billed attempt (retries included) of `(max input tokens × input price per token) + (max output tokens × output price per token)`, plus any other billed parts (images, tool calls, cache writes). Adapt the protocol: bound `max input tokens` and `max output tokens` per call (set the output limit in the request), then multiply the per-call cap by the max billed attempts per run. Worked case with round numbers: 20 attempts × (1,000 input tokens × $2 per million + 100 output tokens × $10 per million) = 20 × ($0.002 + $0.001) = $0.06 per run.
 - **Compute-billed providers.** For long-running GPU jobs (training, video encoding) billed in seconds, replace "calls" with "GPU-seconds" in the contract; the discipline transfers but the units differ.
 - **Does not replace incident response.** When a bill has already arrived, escalate to `complexity-cuts` for the corrective rewrite — runaway-guard prevents the next one, not the current one.
 
 ## The thesis, in one line
 
 > **Time bounds prevent stalls. Space bounds prevent OOMs. Dollar bounds prevent $200 mornings. AI assistants enforce the first two by default and ignore the third. runaway-guard makes them reason about the wallet first.**
+
+Changed by AI Blocks (2026-10-28): corrected the per-token cost cap (input and output costs are added, then summed over all billed attempts) and made the retry rules agree (no 4xx retries except 429, which waits for Retry-After inside the same attempt cap).

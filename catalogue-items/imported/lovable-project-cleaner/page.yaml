@@ -9,7 +9,7 @@ subhead: A project export with every trace of Lovable removed, so the code reads
 explain: |
   A project export with every trace of Lovable removed, so the code reads as your own before you ship or open-source it. It covers fifteen places where the tool leaves marks.
 
-  The main one is a hidden dev dependency and a matching call in the Vite config. Removing both is always safe. Then it replaces the stock favicon, share image, logo and page title, and strips the Lovable link from the README. It also deletes the generated notes in the root folder, such as cleanup, deployment and development summaries. Finally, it audits the project again to make sure nothing was missed. It assumes a Vite and React project with shadcn components.
+  The main one is a hidden dev dependency and a matching call in the Vite config. Removing both is low risk, and the build check confirms it. Then it replaces the stock favicon, share image, logo and page title, and strips the Lovable link from the README. It also deletes the generated notes in the root folder, such as cleanup, deployment and development summaries. Finally, it audits the project again to make sure nothing was missed. It assumes a Vite and React project with shadcn components.
 when:
   - You exported a project from Lovable and want it to look like your own work.
   - Your page title and favicon are still the generic defaults.
@@ -31,6 +31,7 @@ you_get:
 how_to_use:
   - Open your AI tool with access to your project files, such as Claude Code or Cursor. A plain chat cannot change files.
   - 'Add this skill, then say: "Clean up my Lovable project."'
+  - Commit your project to git, or make a backup copy, before it removes any packages, so you can undo the change.
   - Tell your AI which package manager you use and give your own title and icons if you have them.
   - Read the Cleaned list, then answer anything under Needs your input.
   - Run your build to check the project still works before you ship it. Then run the leftovers scan once more and deploy.

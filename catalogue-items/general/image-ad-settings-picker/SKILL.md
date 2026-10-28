@@ -31,8 +31,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Pasting snippets and running the conflict check works the same in any strong chat AI.
-- **GPT Image:** Follows long, structured briefs closely, so each pasted snippet shows up in the picture.
-- **Nano Banana:** Takes several reference images at once, which the closeness and product choices often need.
+- **GPT Image:** Follows long, structured briefs closely, so each pasted snippet shows up in the picture. Use it in ChatGPT (free plans have limits) or with an OpenAI API key, which is paid.
+- **Nano Banana:** Takes several reference images at once, which the closeness and product choices often need. Use it in the Gemini app (free plans have limits) or with a Google API key, which is paid.
 <!-- /needs -->
 
 ## What you need
@@ -89,7 +89,7 @@ How to start:
 - *Headline only:* Plan one headline that carries the idea with the picture, short enough to read at a glance, and nothing else in type.
 
 **Picture finish**
-- *Phone photo:* Describe a snapshot someone took on a phone, never meant as an ad: room light or flash, a slight tilt, an off-centre subject, a little grain, real surfaces, clutter and skin. This finish wins over any line asking for polished art.
+- *Phone photo:* Describe a snapshot someone took on a phone, never meant as an ad: room light or flash, a slight tilt, an off-centre subject, a little grain, real surfaces, clutter and skin. This finish wins over any line asking for polished art. The picture is still an ad: never present it as a real customer's photo unless a real customer supplied it and agreed, and check the ad platform's rules on user-style images before it runs.
 - *Studio:* Controlled light, a clean surface, a chosen background, only chosen things in frame. The product stays exactly as photographed.
 
 **Copy length**

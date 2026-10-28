@@ -18,6 +18,19 @@ Fix Google Search Console coverage issues, canonical problems, sitemap errors, a
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - Use when a Next.js site has Google Search Console coverage issues such as duplicate canonicals, accidental noindex, crawl waste, or discovered-but-not-indexed URLs.
@@ -190,7 +203,7 @@ Pages with zero internal links are rarely indexed. Every important page should b
 ```bash
 # Find pages that have no inbound links from other pages
 # (manual check — grep for the slug across all files)
-grep -r "/blog/my-orphan-post" --include="*.{js,ts,jsx,tsx,md}" . | grep -v "sitemap\|the-page-itself"
+grep -r "/blog/my-orphan-post" --include=*.js --include=*.ts --include=*.jsx --include=*.tsx --include=*.md . | grep -v "sitemap\|the-page-itself"
 ```
 
 ---
@@ -265,6 +278,13 @@ export default function robots() {
 ## Next steps
 
 After you deploy the fixes, run URL Inspection in Google Search Console on the affected URLs and ask for a new crawl. Then check the Pages report again in a few days. If pages are still not indexed, the cause may be thin or copied content, so run a general SEO audit.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limitations
 

@@ -138,6 +138,8 @@ improve:
   - Save the savings that held in the test to your notes.
   - Pair it with "Waste and by-product finder" to find savings in what you throw away.
 
+next: [waste-and-by-product-finder, process-waste-finder]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Listing cost lines and estimating the effect of cuts is text and arithmetic work any strong chat AI handles."}

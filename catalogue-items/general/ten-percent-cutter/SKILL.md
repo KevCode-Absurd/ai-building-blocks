@@ -7,7 +7,7 @@ description: Use when someone has a draft that feels puffy. Counts the words, se
 
 Most first drafts run long. A useful rule is that the second draft should be about a tenth shorter than the first, and most drafts can give it up without losing the story. This skill does that cutting with sums and a log. It counts the words, sets a target of 90%, and cuts in passes from the easiest cuts to the hardest. Every cut is logged so you can undo any of them. It only deletes and shortens. It does not rewrite your voice.
 
-Use [Overstuffed draft cutter](https://useaiblocks.com/skills/overstuffed-draft-cutter) instead when the draft has several good ideas fighting each other and needs one main idea to cut around. Leave the draft alone if it is already lean or needs new ideas, and use a plain editing pass if you want your wording or voice rewritten, because this only deletes and shortens.
+Use [Long draft editor](https://useaiblocks.com/skills/overstuffed-draft-cutter) instead when the draft has several good ideas fighting each other and needs one main idea to cut around. Leave the draft alone if it is already lean or needs new ideas, and use a plain editing pass if you want your wording or voice rewritten, because this only deletes and shortens.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

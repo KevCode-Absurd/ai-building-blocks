@@ -7,8 +7,6 @@ job: plan-supply-chain
 headline: Quality control plan builder
 subhead: A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
 explain: |
-  A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
-
   It starts by asking what is going wrong, how bad the rates are, what a defect costs you, and how you inspect today. Then it applies standard quality methods: control charts, process capability, Pareto ranking and root cause tools. It tells you where you sit on the path from inspecting finished goods to preventing defects at the source. The plan sets targets and owners, so improvement does not stop at the report.
 
   Limits of this skill: charts and capability figures need enough stable data to mean anything. The sigma level and defect rate assume a normal spread, so treat them as estimates. The plan is a template. Check it against your own process and with a quality engineer before you rely on it for audits or customer promises.
@@ -31,12 +29,13 @@ you_get:
   - Ranked list of main defect causes
   - Improvement plan with owners and targets
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code, so the charts and numbers are real.
+  - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code, so the charts and numbers are real. Code running may depend on your plan. If your AI cannot run code, ask it for the Python script and run it yourself, or work the charts out in a spreadsheet.
   - Paste in the skill text, or upload the skill file.
   - "Paste your defect or inspection data. Have enough of it: about 20 to 25 subgroups or points in time order. Include these columns: date, subgroup, the measurement or defect count, and sample size. Add a few lines on your process and what a defect costs you."
   - Answer the questions your AI asks about your current checks and your target.
   - Read the control chart status first. Fix any one-off causes before you trust the capability numbers.
   - Pick the top item in the ranked causes. Give it an owner and a date.
+  - Next, review the plan with a quality engineer. If you already run a quality system such as ISO 9001, fold the plan into it rather than running it on the side.
 output_sample:
   input:
     - Your defect or inspection data, such as counts or measurements by date
@@ -59,4 +58,4 @@ output_sample:
     - name: Recommendations
       contains: Actions grouped as immediate, 30 days and 90 days.
     - name: Expected Benefits
-      contains: The gains you can expect, such as fewer defects, lower cost of quality and fewer complaints.
+      contains: Estimated gains, such as fewer defects and lower cost of quality, worked out from your own baseline and labelled as estimates, not promises.

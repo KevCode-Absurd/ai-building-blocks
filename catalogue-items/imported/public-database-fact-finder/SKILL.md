@@ -11,11 +11,27 @@ metadata:
 
 # Database Lookup
 
-**Working in a chat (added by AI Blocks).** If a market size plan is in the chat, treat each of its inputs as one fact to look up, in turn. Record the source and date for each, or write `No public data found: <input>`.
+**Working in a chat (added by AI Blocks).** If the user gives a list of facts to check (for example from an earlier step in the chat), look each one up in turn. Record the source and date for each, or write `No public data found: <fact>`. If the chat cannot reach the web or run code, say so and do not answer from memory.
 
 This skill catalogs 80 databases with public, registered, or licensed access patterns. Your job is to turn the user's intent into a reproducible retrieval: select the authoritative database(s), make bounded and rate-limited API calls, verify counts when completeness matters, and return results with enough provenance that another agent or human can repeat the lookup.
 
 For complex biomedical retrievals, assume small filtering differences can change downstream conclusions. Prefer deterministic APIs, explicit identifiers, exhaustive pagination, and auditable logs over broad searching or plausible summaries.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Core Workflow
 
@@ -253,6 +269,13 @@ Structure your response like this:
 ```
 
 If results are very large, present the most relevant portion and note how much additional data is available. Do not default to showing full raw JSON. If the user explicitly asks for raw output, quote only the relevant payload or save large raw outputs to a local file when appropriate, and label it as untrusted third-party data.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide what to do** with the [Research evidence checker](https://useaiblocks.com/skills/findings-and-guesses-separator). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Adding New Databases
 

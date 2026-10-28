@@ -77,15 +77,6 @@ HAND-BACK SUMMARY
 
 The files are `outputs/step-01-deal-competitor-playbook-builder.md` to `outputs/step-04-mutual-action-plan-builder.md`. The second holds the battlecard and the last the mutual action plan.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Prepare the next call** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). Bring the deal, the objections and the action plan.
-- **Restart a buyer who goes quiet** with the [Get a quiet deal moving again without pressure](https://useaiblocks.com/workflows/get-a-quiet-deal-moving-again-without-pressure) workflow. Bring your notes on the deal.
-- **Size up the rival on five factors** with the [Rival matchup scorer](https://useaiblocks.com/skills/rival-matchup-scorer). Bring the playbook.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -95,6 +86,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - The action plan has a task for the buyer in every week and a date for each step.
 - Nothing was sent or shared.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Prepare the next call** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). Bring the deal, the objections and the action plan.
+- **Restart a buyer who goes quiet** with the [Stalled sales deal follow-up writer](https://useaiblocks.com/workflows/get-a-quiet-deal-moving-again-without-pressure) workflow. Bring your notes on the deal.
+- **Size up the rival on five factors** with the [Competitor comparison reviewer](https://useaiblocks.com/skills/rival-matchup-scorer). Bring the playbook.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If the deal or the rival is absent, stop and ask once. Never invent a customer quote, a win rate, a price or a rival fact.

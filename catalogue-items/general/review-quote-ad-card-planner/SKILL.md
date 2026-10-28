@@ -9,7 +9,7 @@ One image ad per real review, with the customer's words kept exactly as written.
 
 ## When not to use it
 - You do not have written permission to use the reviews, or cannot show they are real: get permission from each reviewer first.
-- You plan to run a result or health claim from a quote: check the proof first with the [Ad claim proof gap finder](https://useaiblocks.com/skills/ad-claim-proof-gap-finder).
+- You plan to run a result or health claim from a quote: check the proof first with the [Ad claims checker](https://useaiblocks.com/skills/ad-claim-proof-gap-finder).
 - You want the full set of checks on one quote: use the [Customer quote image ad](https://useaiblocks.com/skills/customer-quote-image-ad).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

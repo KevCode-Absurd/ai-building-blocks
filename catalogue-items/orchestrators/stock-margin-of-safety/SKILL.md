@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Bring the step 3 file to the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). The floor depends on the debt and cash picture, and that tester checks it.
 - Write down your reasons and the price you checked before you commit money, then re-run step 4 when the price moves.
 

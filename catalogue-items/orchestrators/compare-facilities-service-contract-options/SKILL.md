@@ -83,8 +83,8 @@ Write MISSING: <what> next to the affected result. Continue independent work tha
 ## After this
 
 Offer one next step based on the result:
-- The [Prepare a contract renewal negotiation](https://useaiblocks.com/workflows/prepare-a-contract-renewal-negotiation). Use it if you are renewing. Bring the proposals and the contract summary.
-- The [Plan a vendor change without losing work](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work). Use it if you are switching. Bring the chosen contractor's terms and your site list.
+- The [Contract renewal and negotiation planner](https://useaiblocks.com/workflows/prepare-a-contract-renewal-negotiation). Use it if you are renewing. Bring the proposals and the contract summary.
+- The [Vendor transition continuity planner](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work). Use it if you are switching. Bring the chosen contractor's terms and your site list.
 
 State the concrete action and use only the authorization already given for it.
 

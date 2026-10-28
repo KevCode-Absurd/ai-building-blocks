@@ -9,7 +9,7 @@ subhead: A stock plan for your hospital supply room that cuts both stockouts and
 explain: |
   A stock plan for your hospital supply room that cuts both stockouts and waste. It sets a par level for each item, so staff know how much to keep on the shelf and when to reorder.
 
-  First it asks about your facility, your departments and how you restock today. Then it sorts items by cost and by how critical they are, so a missing glove box and a missing heart valve are not treated alike. It adds first-expired, first-out rules to stop expired stock, sets contents for crash carts, and checks operating room case carts and implant consignment. It also tracks stockout causes so you can fix them.
+  First it asks about your facility, your departments and how you restock today. Then it sorts items by cost and by how critical they are, so a missing glove box and a missing heart valve are not treated alike. It adds first-expired, first-out rules to stop expired stock, proposes crash cart levels for your clinical leads to approve (it never drops an approved emergency item), and checks operating room case carts and implant consignment. It also tracks stockout causes so you can fix them.
 when:
   - You keep running out of items on a ward and staff are borrowing from other units.
   - Expired stock is being thrown away and you want rules to prevent it.

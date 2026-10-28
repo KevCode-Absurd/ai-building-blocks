@@ -32,4 +32,4 @@ credits:
   - title: security-baseline skill
     by: RampStack
     url: https://github.com/rampstackco/claude-skills/tree/main/skills/security-baseline
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: "Copied under the MIT licence with a plain name. We changed the When NOT to use list to name the matching skills in this library and mark the ones that are not here. We added Before you start and After this sections that link to other AI Blocks steps."

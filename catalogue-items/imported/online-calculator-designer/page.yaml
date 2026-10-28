@@ -10,6 +10,8 @@ explain: |
   A calculator design that gives visitors a real answer they can defend to their boss, and still brings in good leads. Many calculators are bait: made-up multipliers and the result hidden behind a form. This one earns trust instead.
 
   The skill first decides if a calculator is the right tool for your audience. Then it designs the inputs, keeps the questions few, and shows the method so the result can be questioned. It sets out a fair trade. People get a useful result first, and a deeper report can sit behind an email address. It cites sources for any benchmark numbers. It also suggests how to judge lead quality from the answers people give.
+
+  This is RampStack's MIT-licensed calculator-design skill, with a few AI Blocks additions marked "Added by AI Blocks". It names three sister skills by their source names. In this library they are the Free giveaway designer (lead-magnet-design), the Idea to dev brief writer (pm-spec-writing) and the Conversion page writer (landing-page-copy).
 when:
   - You want an ROI or savings calculator on your site.
   - Your current calculator gets entries but the leads are poor.
@@ -34,10 +36,10 @@ how_to_use:
   - Write down the decision your visitors want help with, in one sentence.
   - Gather your formula and any benchmark numbers. Note the source for each number.
   - Describe your audience and what you want from the lead, such as a sales call or a newsletter signup.
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in, then add your notes. No code or web access is needed.
+  - Open Claude, ChatGPT or Gemini and start a chat with the skill. Open it if you added it to your AI, or paste SKILL.md in. In your first message, send the decision sentence, the formula with its sources, and your audience and lead goal. No code or web access is needed.
   - Check the idea first. List the three decisions a visitor makes after seeing the result. If you cannot name three, use a checklist instead.
   - "Ask for the design in this order: the decision, the inputs, the formula and its sources, the result, then the email tiers. Check that the result is free and that every number has a source."
-  - After you approve it, hand the spec and the method note to a developer. Pair it with the copy for the page that holds the calculator.
+  - After you approve it, hand the spec and the method note to a developer. The Idea to dev brief writer can turn it into a build brief. Pair it with the copy for the page that holds the calculator, from the Conversion page writer.
 output_sample:
   input:
     - The decision your visitors want help with

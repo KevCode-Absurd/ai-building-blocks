@@ -15,22 +15,22 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **A slide deck** (yours): a finished slide deck.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the contract, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A chat AI that reads files:** It reads a long listing and a lease together. Photos of floor plans are best pasted as text.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This list replaces the shared "Before you start" block above: the "source text" and "draft" there mean the listing and any terms you were sent. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The listing text, as pasted or attached, with its link and date.
@@ -63,7 +63,7 @@ If a component skill is missing, tell the user which one and ask them to add it 
 
 2. **Unsupported claim spotter** (`unsupported-claim-spotter`). Give it the listing and the step 1 file. Ask it to find unsupported guarantees, missing measurements and claims that need official or qualified evidence, ranked by risk, with the kind of source that would settle each. Save `outputs/step-02-unsupported-claim-spotter.md`.
 
-3. **Check and hand back.** Turn each gap, risky claim and goal into a question or an in-person check. Group them by who can answer: the agent or owner, the landlord, a surveyor, the council, a solicitor. Put the user's must-haves and accessibility needs first. Build the result below.
+3. **Check and hand back.** Turn each gap, risky claim and goal into a question or an in-person check. Group them by who can answer: the agent or owner, the landlord, a surveyor, the council, a solicitor. Put the user's must-haves and accessibility needs first. Within each group, rank by risk (high, medium, low, from step 2) and keep the five most important; list any others under `more questions` at the end of that group. Build the result below.
 
 ## What you hand back
 
@@ -80,6 +80,8 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent to the agent or owner.
 
+When you hand back, offer one next step in a short question, and say the user can type their own: read the lease in plain words with the [Contract plain-language summary writer](https://useaiblocks.com/skills/plain-words-contract-summary); run this again after the viewing with your notes, to see which claims held up; or take the open questions to a surveyor or solicitor before you commit.
+
 ## Check before you hand it back
 
 - Every listing claim is attributed and none is shown as proved.
@@ -91,16 +93,9 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Property transaction checklist writer](https://useaiblocks.com/skills/agency-real-estate-buyer-seller). It takes the document.
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Offer one next step in a short question, and say the user can type their own:
-- **Read the lease in plain words** with the Plain-words contract summary.
-- **Run this again** after the viewing with your notes, to see which claims held up.
-- **Take the open questions to a surveyor or solicitor** before you commit.
 
 ## Avoid
 

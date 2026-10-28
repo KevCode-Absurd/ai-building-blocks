@@ -31,10 +31,10 @@ you_get:
   - Run logs
 how_to_use:
   - Install Node.js 18 or newer and the opencode tool, then log in to your opencode account. This needs an AI that can run code, such as Claude Code. Opencode is a third-party tool and the free tier is theirs to change.
-  - Put the skill folder where your AI loads skills. Copy its command files and worker files into place, as the setup steps say.
+  - "Put the skill folder where your AI loads skills, such as ~/.claude/skills/hivemind. Set HIVEMIND_HOME to that folder (for example: export HIVEMIND_HOME=\"$HOME/.claude/skills/hivemind\"). Copy assets/commands/*.md to ~/.claude/commands/ and assets/agents/*.md to ~/.config/opencode/agent/."
   - First run. Try a read-only scout task on a project with no private code, to confirm the setup and the free model work before you let a coder change files.
   - Tell your AI the coding task. Use /hive to let it pick one worker or a group, or /oc for a single question.
-  - For a group, the AI splits the task into 2 to 5 separate jobs. Each coder gets its own git worktree, which is a separate copy of your project.
+  - For a group, the AI splits the task into 2 to 5 separate jobs. Each coder gets its own git worktree, which is a separate working copy of your project, so workers do not overwrite each other.
   - Read the diff for each worker before you accept it. Your AI merges only the work it has checked, then runs your tests.
   - If a worker fails twice, your AI does that job itself and marks it as orchestrator-sourced.
   - Next, commit or drop the merged branches, and check the run log with oc-status.mjs. For a second opinion on the merged code, use the Parallel code reviewer. Before a bulk run, check opencode's current pricing, because $0 is not guaranteed.

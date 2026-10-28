@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [al-ries, jack-trout]
 credits:
-  - {title: "The Positioning Era Cometh", by: "Al Ries and Jack Trout", used: "The order of the steps: positioning statement writer, brand name stretch checker, publicity-first launch planner"}
+  - {title: "The Positioning Era Cometh", by: "Al Ries and Jack Trout", used: "Ideas on positioning, brand names and press-first launches. How the three steps fit together is this workflow's own design"}
 generated_from: intake/positioning-era/skeleton.yaml

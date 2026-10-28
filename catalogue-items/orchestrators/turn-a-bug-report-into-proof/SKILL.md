@@ -25,7 +25,7 @@ How to start:
 
 Share a bug report and repo. Get a repeatable case, missing tests and a record of what is verified.
 
-When not to use: if you want the bug fixed and a pull request written, use [Fix a bug with proof and a clear pull request](https://useaiblocks.com/workflows/fix-a-bug-with-proof-and-a-clear-pull-request). To find the cause only, use the [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). To write up a report for a developer, use the [Bug report writer](https://useaiblocks.com/skills/bug-report-writer).
+When not to use: if you want the bug fixed and a pull request written, use [Bug repair and pull request reviewer](https://useaiblocks.com/workflows/fix-a-bug-with-proof-and-a-clear-pull-request). To find the cause only, use the [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). To write up a report for a developer, use the [Bug report writer](https://useaiblocks.com/skills/bug-report-writer).
 
 ## Gather first
 

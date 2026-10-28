@@ -79,12 +79,13 @@ plus a contractor row and a total row. Columns:
 | Column | Source |
 |---|---|
 | Run | Check date, or "Contractors" for the contractor-payments row |
-| Gross pay | Payroll connector `totals.gross_pay` |
+| Gross pay | Payroll connector `totals.gross_pay`; contractor row uses `total.wages` |
 | Employer taxes | `totals.employer_taxes` |
 | Employee taxes | `totals.employee_taxes` |
-| Net pay | `totals.net_pay`; contractor row uses `total.wages` |
-| Ledger payroll expense | The month's payroll expense lines from the ledger, matched by date |
-| Delta | Ledger minus (net pay + employer taxes), flagged above 0.50 |
+| Net pay | `totals.net_pay`; blank on the contractor row |
+| Ledger payroll expense | The month's payroll expense lines from the ledger (wages, employer payroll taxes, contractor costs), matched by date |
+| Delta | Ledger expense minus (gross pay + employer taxes; contractor row uses `total.wages`), flagged above 0.50 |
+| Bank payroll payments | Net pay paid out of the bank for the run (cash check: should equal net pay) |
 
 Totals only. No employee names or per-person amounts on this sheet — the run
 count and the month totals are what an accountant needs. Footnote when Gusto
@@ -125,3 +126,5 @@ figures is the business's own (`AUD` above is an example).
 a script, or instruct Claude to render the content and export via the Desktop
 connector's print-to-PDF capability. The user can also print the PDF from the xlsx
 P&L sheet if a script isn't available.
+
+Changed by AI Blocks (2026-10-28): the payroll cross-check now compares gross pay plus employer taxes plus contractor wages with the ledger payroll expense, and net pay with bank payments, after mapping the ledger accounts and posting basis.

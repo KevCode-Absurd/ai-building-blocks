@@ -5,7 +5,7 @@ description: "Paste this when you face a hard choice with two or more good optio
 
 # Three-mind debate brief
 
-Seats three thinkers who disagree, lets them argue, and hands you a short brief. It is a quick three-view test in one reply. The Advisory council differs by running a fuller panel with more checks. For a fuller council with more checks, use the [Advisory council](https://useaiblocks.com/skills/advisory-council).
+Seats three thinkers who disagree, lets them argue, and hands you a short brief. It is a quick three-view test in one reply. The Advisory council differs by running a fuller panel with more checks. For a fuller council with more checks, use the [Council decision brief writer](https://useaiblocks.com/skills/advisory-council).
 
 Not for a question with one right answer or a plain fact check: look it up directly. Not for investment, legal, medical or tax advice: talk to a qualified person, then use this to test your thinking. Not for a quick yes or no on a small choice: use a simple pros and cons list.
 
@@ -64,4 +64,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No investment, legal, medical or tax advice. Say to check with a qualified person where money, law or health is at stake.
 - Facts I did not give are marked MISSING, not guessed.
 
-For the full version with every check, use the [Advisory council](https://useaiblocks.com/skills/advisory-council).
+For the full version with every check, use the [Council decision brief writer](https://useaiblocks.com/skills/advisory-council).

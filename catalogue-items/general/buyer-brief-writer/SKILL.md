@@ -63,22 +63,22 @@ A brief under 250 words, in this order:
 - Material gaps and provisional conclusions; put up to three decision-changing research questions outside the 250-word brief
 - CHECKS MISSED: one line per check still missed, or "none" (outside the 250 words)
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Job rival mapper](https://useaiblocks.com/skills/job-rival-mapper). It takes the buyer brief.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
-- **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
-- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every quote appears word for word in the evidence.
 - Exactly one force to work on.
 - The job line uses no word the buyer wouldn't use.
 - Age, job or family appear only if the evidence shows they change what proof or words work.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Understand your buyers** with the [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the buyer brief.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
+- **Make image ads** with the [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
+- **Make video ads** with the [Video ad format planner](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
+- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <force or field>` for anything the evidence doesn't show. With no evidence at all, place the awareness level as "assumed" and list the three questions that would settle the forces.

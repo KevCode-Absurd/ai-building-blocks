@@ -11,6 +11,26 @@ metadata:
 
 A system for building profitable software without bloat, bureaucracy, or burnout, distilled from three books: *Getting Real* (build less), *Rework* (say no by default), and *Shape Up* (fix time, flex scope). Use it to shape work, bet on six-week cycles, run small autonomous teams, and ship on a predictable cadence.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Build less.** The best products do fewer things exceptionally well — simplicity is the destination, not the starting point. Traditional development adds; the 37signals way subtracts: build half a product (not a half-assed product), say no by default, fix the time and flex the scope. Constraints are what make great work possible — six weeks, three people, and a shaped pitch force you to find the essential version.
@@ -178,12 +198,19 @@ See [references/case-studies.md](references/case-studies.md) for end-to-end work
 
 ## Further Reading
 
-- [*"Getting Real"*](https://www.amazon.com/Getting-Real-Smarter-Successful-Application/dp/0578012812?tag=wondelai00-20) by Jason Fried & David Heinemeier Hansson
-- [*"Rework"*](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745?tag=wondelai00-20) by Jason Fried & David Heinemeier Hansson
+- [*"Getting Real"*](https://www.amazon.com/Getting-Real-Smarter-Successful-Application/dp/0578012812) by Jason Fried & David Heinemeier Hansson
+- [*"Rework"*](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745) by Jason Fried & David Heinemeier Hansson
 - [*"Shape Up: Stop Running in Circles and Ship Work that Matters"*](https://basecamp.com/shapeup) by Ryan Singer
-- [*"It Doesn't Have to Be Crazy at Work"*](https://www.amazon.com/Doesnt-Have-Crazy-Work/dp/0062874780?tag=wondelai00-20) by Jason Fried & David Heinemeier Hansson
-- [*"Remote: Office Not Required"*](https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501?tag=wondelai00-20) by Jason Fried & David Heinemeier Hansson
+- [*"It Doesn't Have to Be Crazy at Work"*](https://www.amazon.com/Doesnt-Have-Crazy-Work/dp/0062874780) by Jason Fried & David Heinemeier Hansson
+- [*"Remote: Office Not Required"*](https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501) by Jason Fried & David Heinemeier Hansson
 
 ## About the Authors
 
 **Jason Fried** is co-founder and CEO of 37signals (Basecamp, HEY) and a leading advocate for calm companies and product simplicity. **David Heinemeier Hansson (DHH)** is 37signals co-founder and creator of Ruby on Rails, extracted from Basecamp's codebase; together they wrote *Getting Real*, *Rework*, *Remote*, and *It Doesn't Have to Be Crazy at Work*. **Ryan Singer** spent 15+ years shaping product at 37signals and codified the methodology in *Shape Up*.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

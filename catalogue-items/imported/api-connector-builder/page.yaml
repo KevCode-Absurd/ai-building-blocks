@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Tell it the service, what data you need, and your language. Add the docs link if you have one.
   - Say which sign-in the service uses. Keep real keys out of the chat and use placeholders.
-  - Read the code. By default it retries only GET and DELETE calls. A POST is retried only when it sends an idempotency key (a unique code that stops a repeated request from running twice). For any POST that moves money, check for that key, or turn retries off for that call.
+  - Read the code. The example sends every POST with an idempotency key (a unique code that stops a repeated request from running twice) and refuses to send one without it. Every call has a time limit. For any call that moves money, check that the key is saved with the order and reused on a retry.
   - Check the circuit breaker is in the code. The skill asks for one, but its sample code does not show it.
   - Run it with your own key in an environment variable. This needs a place to run code and a connection to the internet.
   - Test the connector against saved responses first. Then run it on a schedule or call it from your app, and watch the logs for the first few days.

@@ -73,7 +73,7 @@ how_it_works:
   - title: Plans the offer
     text: Sets a first-week discount, or a limit on the first units, then raises the price.
   - title: Plans honest reviews
-    text: Asks buyers for honest reviews, uses the free Vine programme once the brand is registered, and leaves out bought reviews.
+    text: Asks buyers for honest reviews, uses Vine once the brand is registered and counts its enrolment fee, and leaves out bought reviews.
   - title: Checks stock
     text: Makes sure inventory will cover the spike.
 
@@ -92,7 +92,7 @@ output_shape: |
   Cost: <units x discount> | price rise plan: <steps>
 
   REVIEW PLAN (within Amazon's rules)
-  <honest requests, Vine once registered, who to ask and how>
+  <honest requests, Vine once registered (units and enrolment fee), who to ask and how>
 
   STOCK CHECK
   Needed for the spike: <units> | have: <units>

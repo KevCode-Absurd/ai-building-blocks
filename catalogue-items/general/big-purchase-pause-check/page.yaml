@@ -13,7 +13,7 @@ when:
   - You want a cheap way to test the want first.
 not_for:
   - "You already decided and just need a price comparison: use a shopping site or ask a friend who owns one."
-  - "You buy on impulse again and again: use the Spending story reviewer, which looks at your habits over time."
+  - "You buy on impulse again and again: use the Purchase decision cost reviewer, which looks at your habits over time."
   - "You need advice on whether to borrow or invest: talk to a licensed financial adviser."
 you_give:
   - What you want and its price
@@ -68,6 +68,7 @@ output_shape: |-
   SMALL TEST
   <cost, length, the one question>
   MISSING
+  CHECKS MISSED
 tweaks:
   - what: Years
     how: Say how long you would keep it.

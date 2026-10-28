@@ -34,11 +34,11 @@ you_get:
   - Saved volumes for history and settings
   - A short note on how to open it
 how_to_use:
-  - "Before you start: the skill cannot run without its base template files, and they are not included here. If they are missing, it stops, says so and writes nothing. Get them first (see the third step)."
+  - "Before you start: the skill cannot run without its base template files, and they are not included here. If they are missing, it stops, says so and writes nothing. Get them first (see the next step)."
+  - Get the base template files. They are not included here. They live in the same skill folder of the trailofbits/skills repository on GitHub (a Dockerfile, devcontainer.json, post_install.py, .zshrc and install.sh). Give them to your AI. If it has none, it stops and says so, and writes nothing.
   - Open your project folder in an AI that can read and write files, such as Claude Code. A plain chat can only give you the file text to copy.
   - "Paste the skill and say: set up a devcontainer for this project. Add any languages or ports you need."
-  - First get the base template files. They are not included here. They live in the same skill folder of the trailofbits/skills repository on GitHub (a Dockerfile, devcontainer.json, post_install.py, .zshrc and install.sh). Give them to your AI. If it has none, it stops and says so, and writes nothing.
-  - Before you accept the files, read them. The skill asks you to approve three things one by one. The container gets extra network rights (NET_ADMIN). It installs plugin collections from other people (anthropics/skills, trailofbits/skills and trailofbits/skills-curated). The deletion of your existing .venv folder is off by default and only goes in if you say yes.
+  - Before you accept the files, read them. The skill asks you to approve three things one by one. The container gets extra network rights (NET_ADMIN). It installs plugin collections from other people (anthropics/skills, trailofbits/skills and trailofbits/skills-curated). The deletion of your existing .venv folder (rm -rf .venv) is off by default and only goes in if you say yes. It deletes that folder for good and cannot be undone, though you can rebuild it from your lock file.
   - Open the project in VS Code and choose Reopen in Container. Or run devcontainer up --workspace-folder . in your terminal.
   - Once it opens, run your tests and build to confirm it works. Then commit the .devcontainer folder so teammates get the same setup.
 output_sample:

@@ -78,6 +78,19 @@ tags: ["PCK", "pedagogical-content-knowledge", "teacher-development", "content-k
 
 # Pedagogical Content Knowledge Developer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a description of what a teacher is about to teach and their background, diagnoses their likely pedagogical content knowledge gaps for that specific topic, and produces a development plan to close those gaps before teaching begins. Shulman's (1986) foundational insight is that knowing a subject and knowing how to teach it are genuinely different capabilities — a mathematician who has never taught fractions to nine-year-olds does not automatically know which representations work, which misconceptions will form, or what conceptual threshold students need to cross before the next idea makes sense. This skill makes those gaps visible and actionable. It covers all three knowledge dimensions: the hierarchical content knowledge the teacher must have secure, the horizontal thinking frameworks that define expert reasoning in the domain, and the dispositional orientation toward noticing and responding to student understanding in real time. The output is both a diagnosis and a development plan — not just identifying what is missing but sequencing what the teacher should do about it. This is particularly valuable when teachers are working outside their primary subject expertise, teaching ambitious new programmes (regenerative project-based learning, interdisciplinary units, wellbeing science), or moving to a new age group where their existing PCK needs recalibration. AI is specifically valuable here because mapping PCK gaps requires simultaneously knowing the content domain, the research on student misconceptions, the evidence on pedagogical representations, and the developmental appropriateness of different approaches — a combination that takes years to develop through experience and that most pre-service training delivers only partially.
@@ -275,7 +288,7 @@ Return your output in this exact format:
 
 **Hierarchical gaps (content knowledge):**
 A humanities-trained teacher is unlikely to have secure knowledge of:
-- The hypothalamic-pituitary-adrenal (HPA) axis — the specific neuroendocrine pathway that produces the stress response. This is the central prerequisite for teaching the stress response accurately. Without it, the teacher will default to vague descriptions ("the brain releases stress hormones") that students cannot build on.
+- The two pathways of the stress response, and that they are separate: the fast sympathetic-adrenal-medullary pathway (sympathetic nerves → adrenal medulla → adrenaline and noradrenaline, within seconds) and the slower hypothalamic-pituitary-adrenal (HPA) axis (hypothalamus → pituitary → adrenal cortex → cortisol, over minutes). This is the central prerequisite for teaching the stress response accurately. Without it, the teacher will default to vague descriptions ("the brain releases stress hormones") that students cannot build on.
 - The distinction between the amygdala's role in threat detection and the prefrontal cortex's role in executive regulation — and how these interact. This is essential for teaching emotional regulation as a neurological process rather than a matter of willpower.
 - The distinction between cortisol (chronic stress hormone) and adrenaline/noradrenaline (acute stress hormones) — including their different time courses and physiological effects. Teachers often conflate these, which prevents students from understanding the difference between adaptive acute stress and harmful chronic stress.
 - The basics of the autonomic nervous system: sympathetic (activation) vs parasympathetic (recovery) branches. This is prerequisite for explaining how calming techniques work physiologically.
@@ -300,11 +313,13 @@ A humanities-trained teacher is unlikely to have secure knowledge of:
 ```
 Autonomic nervous system: sympathetic vs parasympathetic branches
     ↓ [hard prerequisite]
-Threat detection: amygdala receives sensory input → assesses threat
+Threat detection: amygdala receives sensory input → assesses threat → signals the hypothalamus
     ↓ [hard prerequisite]
-HPA axis: hypothalamus → pituitary gland → adrenal glands → cortisol release
-    ↓ [hard prerequisite]
-Acute stress response: adrenaline/noradrenaline → fight-flight-freeze → physical symptoms
+Two separate pathways start at the hypothalamus (teach them side by side, not as one chain):
+  Fast, seconds (sympathetic-adrenal-medullary): sympathetic nerves → adrenal medulla
+      → adrenaline/noradrenaline → fight-flight-freeze → physical symptoms
+  Slower, minutes (HPA axis): hypothalamus → CRH → pituitary → ACTH → adrenal cortex
+      → cortisol release
     ↓ [soft prerequisite]
 Chronic stress: sustained HPA activation → elevated cortisol → physiological damage
     ↓ [hard prerequisite]
@@ -328,7 +343,7 @@ Calming techniques and their physiological basis: how breathing, grounding, and 
 |---|---|---|---|
 | "Stress is always bad" | Students experience stress as unpleasant and hear adults describe stress negatively. Media reinforces the equation of stress with harm. They do not distinguish between adaptive acute stress (which improves performance) and harmful chronic stress (which damages health). | High — reinforced by everyday language and media | Teaching the distinction between acute and chronic stress explicitly, with examples of adaptive stress (competition, performance, challenge). The Yerkes-Dodson curve (optimal performance at moderate stress) is useful here. Students need to experience that reframing stress as "my body is preparing to perform" can change its effect. |
 | "The amygdala controls emotions" | Popular science books and apps describe the amygdala as the "emotion centre." The simplification is appealing because it gives a single, nameable structure to point to. Students latch onto it because it makes the brain feel knowable. | Medium — shifts when students see a more accurate model, but the simplified version is sticky because it is memorable | Introduce the distributed processing model: "The amygdala detects threats, but your emotional experience involves many brain regions working together — the prefrontal cortex, the hippocampus (which connects the threat to memory), the insula (which monitors your body's state). Saying the amygdala 'controls' emotions is like saying the goalkeeper 'controls' the football match — they play a key role, but the game involves the whole team." |
-| "Willpower overcomes stress" | Cultural messaging equates emotional regulation with mental toughness. Students hear "just calm down" and internalise the idea that stress regulation is a matter of effort and character. This ignores the physiological reality: once the HPA axis is activated and cortisol is circulating, "willpower" cannot override the physiological cascade — it must run its course or be actively redirected through parasympathetic activation. | High — deeply embedded in cultural messaging, resists purely cognitive correction | Teach the physiology first: once cortisol is circulating, the body is in a physiological state that willpower cannot override. Then teach what DOES work: techniques that activate the parasympathetic nervous system (deep breathing, grounding, cold water on the face) work because they change the physiological state, not because the student is "trying harder." Reframe regulation as a physiological skill, not a character trait. |
+| "Willpower overcomes stress" | Cultural messaging equates emotional regulation with mental toughness. Students hear "just calm down" and internalise the idea that stress regulation is a matter of effort and character. This ignores the physiological reality: once the sympathetic nervous system has released adrenaline, and the HPA axis has released cortisol, "willpower" cannot simply switch the response off — it must run its course or be actively counterbalanced through parasympathetic activation. | High — deeply embedded in cultural messaging, resists purely cognitive correction | Teach the physiology first: once adrenaline and cortisol are circulating, the body is in a physiological state that willpower cannot simply override. Then teach what DOES work: techniques that activate the parasympathetic nervous system (deep breathing, grounding, cold water on the face) work because they change the physiological state, not because the student is "trying harder." Reframe regulation as a physiological skill, not a character trait. |
 
 ### 4. Pedagogical Representations
 
@@ -338,7 +353,7 @@ Calming techniques and their physiological basis: how breathing, grounding, and 
 |---|---|---|---|
 | **"Smoke alarm" analogy for the amygdala** | Makes the amygdala's role as a rapid threat detector intuitive. A smoke alarm doesn't fight fires — it detects potential danger and triggers a response. Similarly, the amygdala doesn't "create" fear — it detects potential threats and triggers the stress response cascade. | Implies the amygdala is the ONLY structure involved, and that it merely "goes off" rather than integrating multiple inputs. Also implies the response is binary (alarm on/off) when the actual response is graded. | Yes for 14-15 — effective entry point. Flag the limitation explicitly: "This analogy is useful but incomplete. A smoke alarm works alone; the amygdala works with many other brain regions." |
 | **"Dimmer switch" for the prefrontal cortex** | Makes the regulatory function intuitive. The prefrontal cortex does not eliminate the stress response — it modulates it, like a dimmer switch adjusts light. More prefrontal engagement = more modulated response. | May imply conscious, effortful control ("just turn it down"), which reinforces the willpower misconception. Must be taught alongside the developmental point: teenagers have a less mature dimmer switch, which is normal and not their fault. | Yes, with explicit caveats about developmental maturity. |
-| **Case-based teaching: "What happens in your body during an exam?"** | Grounds abstract neuroscience in lived experience. Every student has experienced exam stress. Walking through the physiological sequence (threat detection → HPA activation → adrenaline → physical symptoms → cortisol → recovery) using a familiar scenario makes the science concrete. | May over-generalise from exam stress to all stress. Exam stress is acute and largely adaptive; the most harmful stress in students' lives (family conflict, bullying, poverty) is chronic and operates through different pathways. Must explicitly distinguish the two. | Yes — particularly effective because it connects to shared experience. |
+| **Case-based teaching: "What happens in your body during an exam?"** | Grounds abstract neuroscience in lived experience. Every student has experienced exam stress. Walking through the physiological sequence using a familiar scenario makes the science concrete: threat detection → two pathways from the hypothalamus, the fast one (sympathetic nerves → adrenal medulla → adrenaline → racing heart and other physical symptoms within seconds) and the slower HPA one (pituitary → adrenal cortex → cortisol over minutes) → recovery as the parasympathetic branch takes over. | May over-generalise from exam stress to all stress. Exam stress is acute and largely adaptive; the most harmful stress in students' lives (family conflict, bullying, poverty) is chronic and operates through different pathways. Must explicitly distinguish the two. | Yes — particularly effective because it connects to shared experience. |
 
 **Representation to AVOID:**
 **"Left brain/right brain"** — This is pseudoscience. The claim that the left hemisphere is "logical" and the right hemisphere is "emotional" or "creative" has no basis in neuroimaging evidence (Nielsen et al., 2013). While hemispheric specialisation exists for some functions (e.g. language lateralisation), the idea that emotions are "right brain" and regulation is "left brain" is factually incorrect and produces a misconception that is difficult to correct once established. If the teacher encounters this in wellbeing resources, it should not be used.
@@ -378,7 +393,7 @@ Calming techniques and their physiological basis: how breathing, grounding, and 
 ### 7. Developmental Action Plan
 
 **Before teaching begins (priority order):**
-1. **Learn the HPA axis prerequisite chain.** Study the pathway: hypothalamus → CRH → anterior pituitary → ACTH → adrenal cortex → cortisol. Be able to draw it from memory and explain each step in plain language. Source: any introductory neuroscience textbook chapter on the stress response, or the APA's "Stress in America" background materials.
+1. **Learn the two stress pathways.** Study both, and keep them separate: the fast pathway (hypothalamus → sympathetic nerves → adrenal medulla → adrenaline and noradrenaline) and the slower HPA axis (hypothalamus → CRH → anterior pituitary → ACTH → adrenal cortex → cortisol). The adrenal medulla and the adrenal cortex are different parts of the gland with different triggers (NCI SEER Training, Adrenal Glands: https://training.seer.cancer.gov/anatomy/endocrine/glands/adrenal.html). Be able to draw both from memory and explain each step in plain language. Source: any introductory neuroscience textbook chapter on the stress response, or the APA's "Stress in America" background materials.
 2. **Read on the three key misconceptions** (stress is always bad, amygdala controls emotions, willpower overcomes stress). For each, know the accurate position and be able to explain why the misconception forms. Source: Sapolsky's *Why Zebras Don't Get Ulcers* (chapters 1-3) provides an accessible but accurate account.
 3. **Practise the "smoke alarm" analogy** and the "dimmer switch" analogy with a colleague. State the analogy, then immediately state its limitation. If you cannot articulate the limitation, you do not understand the content deeply enough yet.
 4. **Identify your pedagogical entry point.** Your humanities strength is discussion and case analysis. Plan to teach the stress response through a case: "What happens in your body during an exam?" Walk through the physiological sequence using the case, rather than starting with abstract diagrams. This plays to your strength.
@@ -406,3 +421,11 @@ Calming techniques and their physiological basis: how breathing, grounding, and 
 4. **The three-type framework maps onto PCK but does not capture all of PCK's complexity.** Ball et al.'s (2008) six-domain model includes specialised content knowledge, knowledge of content and students, knowledge of content and teaching, knowledge of content and curriculum, and horizon content knowledge — each of which has distinct development pathways. This skill uses the three-type framework for accessibility and consistency with the rest of the skills library, which means some PCK nuance is lost.
 
 5. **This skill diagnoses and develops individual teacher PCK.** It does not address collective or institutional PCK — the shared understanding a department or team develops about how to teach a subject well in a specific context with specific students. For ambitious new programmes involving multiple teachers, the lesson-study-cycle-designer is the more appropriate tool for building collective PCK.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer).
+- The [Group work task planner](https://useaiblocks.com/skills/group-work-task-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -35,7 +35,7 @@ how_to_use:
   - Give your AI the skill and tell it your store domain, a start date and an end date. Use at least 90 days.
   - Add your own limits and tags to leave out if you want. Tags such as gift-wrap are only removed if you list them as tags to leave out. The list is empty unless you set it.
   - Check the ranked table first. Pairs with lift above 2 suit bundles. The rest suit cross-sell offers.
-  - Check the outcome summary for orders that were cut at 50 line items or skipped for having more than 20 distinct products. Those orders are left out of the pairs.
+  - Check the outcome summary for orders skipped for having more than 20 distinct products. Their pairs are left out, but they still count in the order totals. Every order counts in the totals, even orders with one item, so the scores are not inflated.
   - Take the bundle candidates to a bundle offer. Take the cross-sell rows to your post-purchase emails. Re-run it every quarter, as popular pairs change with the seasons.
 next: [bundle-and-quantity-break-builder, bundle-stock-checker]
 output_sample:
@@ -53,7 +53,7 @@ output_sample:
     - name: Step log
       contains: One line per step showing what was asked and how many orders came back.
     - name: Outcome summary
-      contains: Orders checked, unique products, pairs checked, pairs above your limits, how many orders were cut or skipped, date range and errors.
+      contains: Orders checked, unique products, pairs checked, pairs above your limits, how many orders were skipped for pairs, date range and errors.
     - name: Ranked pair table
       contains: The top pairs with support, confidence in both directions and lift.
     - name: product_affinity CSV file

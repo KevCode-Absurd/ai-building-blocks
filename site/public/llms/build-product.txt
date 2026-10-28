@@ -1,6 +1,6 @@
 # Build a product people want: AI Blocks
 
-> 64 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 66 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [API first-call experience reviewer](https://useaiblocks.com/skills/developer-onboarding-improver): Share the API signup and setup path. Find delays, unclear steps and recovery gaps, then plan changes to test.
 - [App improvement planner](https://useaiblocks.com/skills/app-polish-guide): Share your shipped app and user evidence. Work through fixes for flow, design, words and honest sales prompts, with decisions recorded.
@@ -24,6 +24,7 @@
 - [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing): Share your product link. Test a small free tool by task completion and interest in the paid product.
 - [Free tool idea planner](https://useaiblocks.com/skills/free-tool-idea-planner): Share your product, buyers, goal, build time and budget. Get free tool ideas scored for buyer need, fit, upkeep and lead value.
 - [Gameplay designer](https://useaiblocks.com/agents/agency-game-designer): Turn a game idea into a game design plan. Get design pillars, a gameplay loop, mechanic specs, tuning numbers to test and a playtest plan.
+- [Habit loop designer](https://useaiblocks.com/skills/habit-loop-designer): Find why users stop coming back with this habit loop designer. Describe your product. You get a four-step loop map with weak steps scored.
 - [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer): Plan an in-app product tour that shows each tip only when a user needs it. Get a build or skip verdict, a tip plan and a way to track feature use.
 - [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter): Cut your launch scope without moving the date. Paste your plan, date and budget. You get a smaller core launch and a parked list for later.
 - [Lean product shaping coach](https://useaiblocks.com/skills/lean-product-shaping-coach): Cut your product plan down to a six-week bet. Get a score out of 10, a trimmed scope and a list of features to say no to.
@@ -41,6 +42,7 @@
 - [Product discovery coach](https://useaiblocks.com/skills/product-team-discovery-coach): Share your team and roadmap. Get a plan to test customer problems before building.
 - [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future): Share feature goals, results and feedback. Get a review and options for what to do next.
 - [Product feedback roadmap reviewer](https://useaiblocks.com/agents/weekly-product-feedback-triager): Group product requests by distinct people. Get supported yes, later or no proposals and a roadmap change to review.
+- [Product funnel steps and experiment review](https://useaiblocks.com/agents/weekly-product-funnel-watcher): Review where user progress drops. Compare sign-up groups, keep causes as hypotheses and propose one experiment for the weak step.
 - [Product idea decision memo writer](https://useaiblocks.com/workflows/press-release-memo): Share your product idea and customer evidence. Get a future press release, hard-question answers, a six-page memo and review notes.
 - [Product idea research planner](https://useaiblocks.com/skills/idea-to-plan-pipeline-runner): Turn a raw product idea into four files covering questions, research, product scope, and build phases.
 - [Product launch planner](https://useaiblocks.com/skills/product-launch-planner): Describe the product, audience and launch date. Get a phased plan, channel ideas and announcement drafts.

@@ -7,6 +7,22 @@ description: "Use when the user asks to design a RAG pipeline, choose a chunking
 
 Design, tune, and evaluate production RAG pipelines with three deterministic tools. Run the tools against the actual corpus and requirements — do not pick chunk sizes or databases by intuition.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Hard rules
 
 1. **Never present model names or vendor prices as current facts.** Embedding models and vector-DB pricing rot in months. Recommend a *tier* (see table below), name a current-generation candidate, and tell the user to verify against the provider's live pricing page.
@@ -63,6 +79,14 @@ The design is done only when:
 1. `eval.json` meets targets — typical floors: precision@5 ≥ 0.8, recall@10 ≥ 0.85 (set per use case with the user).
 2. If below target: inspect the poor-example lists, then change **one** variable (chunking strategy → re-run step 1; embedding tier; add reranking; hybrid retrieval) and re-run step 3. Repeat.
 3. Every recommended model/price in the deliverable carries a "verify current pricing/model availability" note with an as-of date.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [RAG pipeline implementation planner](https://useaiblocks.com/skills/agency-engineering-rag-pipeline-engineer). It takes the plan.
+- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## References
 

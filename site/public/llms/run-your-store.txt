@@ -1,12 +1,20 @@
 # Run your online store: AI Blocks
 
-> 111 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 130 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor): Check your 3PL invoice against your own orders and rate card. See each overcharge, a dispute note to send and a match score out of 100.
 - [90-day marketing planner](https://useaiblocks.com/skills/90-day-marketing-plan): Build a 90 day marketing plan for your online store. Give it your product, price and budget. You get a buyer profile, ranked channels and weekly actions.
+- [Acquisition cost by source calculator](https://useaiblocks.com/skills/cac-by-source): Find your acquisition cost by source. Add ad spend for Google, Meta or TikTok and get the cost to win one new Shopify customer from each.
 - [After-purchase experience planner](https://useaiblocks.com/skills/post-purchase-experience): Share shipping, returns, loyalty and follow-up details. Get proposed changes, timing and service rules to review for your store.
+- [Amazon brand protection planner](https://useaiblocks.com/skills/amazon-brand-protection-planner): Check your Amazon listings for hijackers, fakes and price breaks. Get a risk rating and complaint letters ready for Brand Registry.
 - [Amazon cost cutting advisor](https://useaiblocks.com/skills/amazon-cost-cutting-advisor): Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them.
 - [Amazon product edge finder](https://useaiblocks.com/skills/amazon-product-edge-finder): Share rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+- [Amazon seller profit calculator](https://useaiblocks.com/skills/amazon-seller-profit-calculator): Work out your Amazon FBA profit per sale. Give it your price and costs. You get fees, margin, break-even and a price for your target margin.
+- [Average order value tracker](https://useaiblocks.com/skills/average-order-value-tracker): Track average order value over time for your Shopify store, split into new and returning customers. Pick 90 days or any window, by day, week or month.
+- [Breakeven point calculator](https://useaiblocks.com/skills/breakeven-point-calculator): Share your prices and costs. Get the breakeven volume, margin of safety and the effect of price changes.
+- [Bulk order fulfiller](https://useaiblocks.com/skills/bulk-order-fulfiller): Mark many Shopify orders as shipped in one batch. Give it your order tracking numbers, check the preview, then it adds tracking to each order.
+- [Bundle pair finder](https://useaiblocks.com/skills/bundle-pair-finder): Find which products your Shopify customers buy together. Get ranked pairs from real orders to plan bundles and cross-sells.
+- [Bundle stock checker](https://useaiblocks.com/skills/bundle-stock-checker): Check your Shopify bundles for missing parts. Find bundles that show in stock but can't ship, and see how many you can really sell.
 - [Checkout page auditor](https://useaiblocks.com/skills/checkout-page-auditor): Give it your cart and checkout. Get a ranked list of fixes for guest checkout, fields, wallets and surprise costs.
 - [China ecommerce operations planner](https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator): Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown.
 - [Cross-border ecommerce planner](https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce): Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order.
@@ -21,6 +29,8 @@
 - [Daily fulfillment digest writer](https://useaiblocks.com/skills/daily-fulfillment-digest-writer): Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
 - [Dead stock finder](https://useaiblocks.com/skills/dead-stock-finder): Get products with stock on the shelf but no sales in your chosen number of days.
 - [Delivery time and price checker](https://useaiblocks.com/skills/carrier-performance-comparer): Compare delivery days, on-time rates and shipping prices by carrier.
+- [Discount payoff calculator](https://useaiblocks.com/skills/discount-payoff-calculator): Check your Shopify discount codes to see which ones earn more than they cost. You get revenue against discount cost for each code.
+- [Discount spend tracker](https://useaiblocks.com/skills/discount-spend-tracker): Track discount spend by week, month or quarter. See total dollars given away in your Shopify store, split by discount code and type.
 - [Donated goods online resale planner](https://useaiblocks.com/skills/donated-goods-online-resale-planner): Plan your donated goods online resale. Give it an item and its condition. You get a listing template, photo checklist, shipping standard and review plan.
 - [Etsy search results collector](https://useaiblocks.com/skills/etsy-search-results-collector): Turn an Etsy keyword into current listing rows with rank, price, badges, and shop names.
 - [Exchange and refund split analyst](https://useaiblocks.com/skills/exchange-or-refund-split-reader): Get how many returns become exchanges, refunds or store credit, and how much revenue you keep.
@@ -30,16 +40,25 @@
 - [Gift card issuer](https://useaiblocks.com/skills/gift-card-issuer): Share customer IDs, amounts, currency and a reason. Preview Shopify gift cards before approving live creation.
 - [Gift card liability calculator](https://useaiblocks.com/skills/gift-card-liability-calculator): Find your gift card liability: the total balance you still owe, split by issue month and balance size, from your Shopify store.
 - [Gift message collector](https://useaiblocks.com/skills/gift-message-collector): Find every gift message on your open Shopify orders. Get a gift message list with recipients and gift flags, ready for packing slips.
+- [Growth roadmap builder](https://useaiblocks.com/skills/growth-roadmap-builder): Find the growth lever that pays most for your online shop. Give it your numbers and get a ranked list and a 90 day growth roadmap.
 - [Inventory value calculator](https://useaiblocks.com/skills/inventory-value-calculator): Value your inventory with FIFO or weighted average cost. Get cost of goods sold, closing stock and write-downs for slow or damaged items.
 - [Inventory value report builder](https://useaiblocks.com/skills/inventory-value-report-builder): Get an inventory value report for your Shopify store: stock value by location and by supplier, ready for your accountant or insurance renewal.
 - [Lapsed customer finder](https://useaiblocks.com/skills/lapsed-customer-finder): Get customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
 - [Late order and shipment tracker](https://useaiblocks.com/agents/daily-order-and-shipping-watcher): Find late orders and stalled tracking. Compare the last review and get an action list with changes to approve.
 - [Live auction show planner](https://useaiblocks.com/skills/live-auction-show-planner): Plan a live auction show from your stock list. Get a run order, start prices, a promotion schedule and a profit sheet before you go live.
 - [Missing shipping rate checker](https://useaiblocks.com/skills/shipping-rate-gap-finder): Find shipping zones in your Shopify store with no rate or only manual rates, before customers hit a dead end at checkout. Read-only.
+- [Online order fulfillment planner](https://useaiblocks.com/skills/online-order-fulfillment-planner): Plan how to pick, pack and ship your online orders for less. Get a stage-by-stage review, ranked fixes and a returns process from your own numbers.
+- [Online store auditor](https://useaiblocks.com/skills/online-store-auditor): Describe your products, buyers, and store. Get ranked advice on channels, layout, and trust signals.
+- [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder): Find what holds your Shopify store back. Give it your cash, stock, shipping and ad numbers and get the main bottleneck and fixes ranked by payoff.
+- [Online store profit calculator](https://useaiblocks.com/skills/online-store-profit-calculator): Use this online store profit calculator to see your margin per sale after ads and fees, and whether your cost to win a customer works.
 - [Order hold manager](https://useaiblocks.com/skills/order-hold-manager): Place or lift fulfilment holds on many Shopify orders in one batch, with a reason your packing team sees. Preview first, as it changes live orders.
+- [Order note collector](https://useaiblocks.com/skills/order-note-collector): Collect gift messages and special instructions from your Shopify orders into one order notes report your packing team can print.
 - [Order picking, packing and shipping planner](https://useaiblocks.com/skills/pick-pack-and-ship-improver): Find the slow steps in picking, packing and shipping orders. Get a ranked fix plan, a picking method comparison and the time each fix could save.
 - [Order tracking delay finder](https://useaiblocks.com/skills/where-is-my-order-risk-finder): Find orders likely to trigger a where-is-my-order email: shipped orders that have not changed for days and late unshipped ones, so you can write to customers first.
+- [Orphan product finder](https://useaiblocks.com/skills/orphan-product-finder): Find products in no collection and products in too many, so shoppers can find them. Give it your Shopify store and get a CSV report.
 - [Overseas market planner](https://useaiblocks.com/skills/overseas-market-planner): Share store details and expansion goals. Get ranked markets, cost estimates, and a phased sales plan.
+- [Payout reconciler](https://useaiblocks.com/skills/payout-reconciler): Check your Shopify Payments payouts against the orders behind them. Find the gaps that explain a missing dollar, in one reconciliation file.
+- [Product data gaps and catalogue review](https://useaiblocks.com/agents/monthly-catalogue-clean-up-keeper): Find missing costs, duplicate stock codes and thin listings. Compare earlier issues and get a ranked fix list.
 - [Product description writer](https://useaiblocks.com/skills/product-description-writer): Write a product description that picks the best three claims and the right units. Give it your product facts and benefits.
 - [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor): Set or delete a custom field value on every Shopify product that matches a tag or vendor. Preview first, then bulk edit product fields in one run.
 - [Product listing completeness checker](https://useaiblocks.com/skills/listing-completeness-scorer): Score every Shopify product on missing descriptions, images, SEO, weight, barcode and cost. Get a product data completeness report, worst first.

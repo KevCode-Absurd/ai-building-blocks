@@ -1,6 +1,6 @@
 slug: low-memory-fine-tuning-guide
 name: Low-memory fine-tuning guide
-summary: Give it a big model and your GPU size. Get a fine-tune that trains under 1 percent of the model and fits.
+summary: Give it a big model and your GPU size. Get a fine-tuning script and settings that train under 1 percent of the model.
 category: general
 boards: []
 type: skill
@@ -34,4 +34,4 @@ credits:
   - title: peft-fine-tuning skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/03-fine-tuning/peft
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

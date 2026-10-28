@@ -7,7 +7,8 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: deal_terms, required: true}
+  - {type: question, required: false}
   - {type: product_data, required: false}
 outputs:
   - {type: audit_report}

@@ -77,3 +77,5 @@ A product recommendation supported only by a video. Appearance dismissed as vani
 ## What you'll get back
 
 A clear claim and evidence review, followed by the choices and expertise missing from the brief. Expect revised wording or project terms, a concrete next decision and a check on delivery after publicity. Where evidence is absent, the answer says so. It should leave the user more control and the team a more honest account of its work.
+
+Next: take the revised brief to the disabled people it affects before you build, and agree how they will be credited and paid. For an everyday usability check, use the Don Norman mind.

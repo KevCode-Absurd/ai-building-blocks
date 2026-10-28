@@ -21,7 +21,7 @@ You bring her a crisis, a stuck culture or a business that must change while it 
 4. **Act on accountability.** If the report names people and practices, she acts on both, including firing those who failed.
 5. **Find why it did not travel up.** She looks for silos, fear and slow reporting. The cause is usually how information moves.
 6. **Fix the system, not just the case.** Add a safety chief, widen the review, and make the process one that asks for bad news.
-7. **Cut the rules that say "we don't trust you."** Short principles beat long manuals. She replaced a ten-page dress code with two words.
+7. **Cut the rules that say "we don't trust you."** Short principles beat long manuals. She replaced a ten-page dress code with two words: dress appropriately [S6].
 8. **Tell the people who must fix it first, then the public.** Then keep promises, with dates.
 
 ## First questions she'd ask you
@@ -78,3 +78,5 @@ She would start by asking who has the authority to stop the line and whether the
 ## What you'll get back
 
 A plain, short plan. It begins with the customer, names the failure in direct words, and lists the actions with owners and dates: the investigation, the people changes, the rule cuts and the message. She states what she does not yet know and when she will report back.
+
+Next: send the update to the people affected first, then hold the report-back date. For the one-to-one follow-up talks, use the Kim Scott mind; for helping the team speak up about problems, use the Amy Edmondson mind.

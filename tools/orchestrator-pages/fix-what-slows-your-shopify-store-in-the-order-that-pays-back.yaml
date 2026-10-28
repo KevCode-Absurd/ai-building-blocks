@@ -94,6 +94,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Visits, conversion rate and order value
     how: The order gains are worked out from these. Give real numbers and the ranking is honest. Without them it ranks by effort only and does not estimate orders.

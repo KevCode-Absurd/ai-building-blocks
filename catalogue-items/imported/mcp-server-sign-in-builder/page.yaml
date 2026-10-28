@@ -10,6 +10,8 @@ explain: |
   Sign-in for your MCP server built the way the standard says, so clients can actually connect. Tell it how people will reach the server, and get OAuth that works and is safe.
 
   The first choice depends on the connection. Local stdio servers do not use OAuth, while web servers may. A web server should only check tokens, not issue them. It publishes discovery data so a client can find the sign-in, validates every token on every request, including who the token was meant for, and does not pass tokens through to other services. Finally it tests the flow from start to end.
+
+  This is Paldom's mcp-server-auth skill, copied as it is under the MIT licence. It mentions security incidents from 2025 and a 2026-07-28 revision of the MCP standard without naming sources. Check those against the MCP specification site before you rely on them.
 when:
   - Your remote MCP server needs users to sign in.
   - Clients cannot find how to connect to your server.
@@ -17,7 +19,7 @@ when:
   - You want to prevent a stolen token from working on other services.
 not_for:
   - Your MCP server runs locally over stdio. OAuth does not apply there, so read keys from the environment and keep them out of client settings.
-  - You need to find attack risks like injection or sandbox gaps. Use the MCP server security skill instead.
+  - You need to find attack risks like injection or sandbox gaps. Use the MCP attack defence reviewer instead.
   - You want login for an ordinary web or mobile app. Use your identity provider's own guide, since this follows the MCP rules only.
 you_give:
   - "How people connect: local or web"
@@ -31,12 +33,13 @@ you_get:
   - A client registration plan
   - An end to end test
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload its folder if your AI takes files.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload its folder if your AI takes files. The check script (scripts/check_auth_endpoints.py) and the wire-format notes (references/oauth-wire.md) only work if you upload the folder or use a coding agent that can read files and run code. A plain chat paste gives you the written guidance only.
   - Say how people reach your server (local or web) and name your identity provider.
   - Paste your server code and list the tools users will reach. Pick an AI that can read and edit code for best results.
   - Check the auth model choice first. Local servers should end up with no OAuth.
   - Add the token checks and discovery routes to your server.
-  - Run the check script against your live server. It needs code running and web access. Then try a real client.
+  - Run the check script against your live server. From the skill folder, run python3 scripts/check_auth_endpoints.py followed by your server address. (The skill file writes the path with ${CLAUDE_SKILL_DIR}, which only works in Claude Code.) It needs code running and web access. Then try a real client.
+  - Next, fix anything the script flags and run it again. Then give the server to the MCP attack defence reviewer to check for risks beyond sign-in.
 output_sample:
   input:
     - "How people connect to your server: local or web"

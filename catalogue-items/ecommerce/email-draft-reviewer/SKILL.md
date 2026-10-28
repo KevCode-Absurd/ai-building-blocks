@@ -44,7 +44,7 @@ The email draft is the only thing that is required. You do not need a brand brai
 - **Open and click data** (optional): it shows which limits hold for this list.
 
 When not to use:
-- You want a quick first pass with fewer checks. Use the [Email send-readiness scorer](https://useaiblocks.com/skills/email-send-readiness-scorer), which is faster.
+- You want a quick first pass with fewer checks. Use the [Email draft readiness checker](https://useaiblocks.com/skills/email-send-readiness-scorer), which is faster.
 - You need order, shipping or legal emails to stay formal. Keep the "we" lines as they are and ask a person to check the terms.
 - You want the email written from scratch. Write a first draft, then bring it here.
 
@@ -98,9 +98,9 @@ MISSING: <...>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email flow results and rebuild review](https://useaiblocks.com/skills/monthly-email-flow-keeper).
 - The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
 - The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
-- The [Email mistake fixer](https://useaiblocks.com/skills/email-mistake-fixer).
 - **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -73,3 +73,4 @@ how_it_works:
     text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+next: [code-change-reviewer, pull-request-writer]

@@ -106,12 +106,13 @@ output_sample:
       contains: "Every check that failed or could not run, or none."
 
 next: [restricted-cash-availability-checker, cash-versus-earnings-checker]
+before: []
 
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
   - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+    how: Change a grant amount or a spending figure and recalculate the cash schedule. Keep the bank and ledger figures you supplied as they are.
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
 

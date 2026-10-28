@@ -16,6 +16,19 @@ building blocks from the Mixed-Signal Blockset (MSB) foundation library
 **Companion file**: `modeling-pll-datasheet-validate.md` (in this item's references folder; paste it in with this skill) covers Phases 5-9
 (loop filter design, validation, measurement, iteration, pitfalls).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - Modeling a PLL IC from its datasheet (extracting parameters, selecting architecture)
@@ -399,7 +412,7 @@ Full assembly code template in **references/assembly-code.md**. Key sequence:
 7. Enable `lf_out='on'` for Vctrl probe
 8. Add PLL Testbench (`Fo=fPFD`, `ExpectedFreq=fVCO`, `SampleRate=8*fVCO`)
 9. Set `SpectralAverages='2'` (P102: mask default is 4), `LockTimeOption='on'`, `PhaseNoiseOption='off'` (P83)
-10. `StopTime = min(3*t_lock, 50e-6)`, `HoldOffTime = min(1.5*estLock, 0.8*StopTime)`
+10. `StopTime = max(min(3*estLock, 50e-6), 2*estLock)`, `HoldOffTime = min(1.5*estLock, 0.8*StopTime)`. The 50 µs cap keeps short sims fast, but StopTime must never fall below 2× the estimated lock time, or HoldOffTime cannot be both above the lock time (P54) and below StopTime (P87)
 11. Set paired vectors via `Simulink.Mask.get`: `PhaseNoiseFreqOffset`, `TargetPhaseNoiseVector` (P71, P100: use `-999` if no targets — mask rejects `-inf`)
 12. Connect: TB/1→PLL/1, PLL/1→TB/1, PLL/2→Scope+ToWorkspace
 13. `Simulink.BlockDiagram.arrangeSystem(model); drawnow; set_param(model,'ZoomFactor','FitSystem'); drawnow;` (P95)
@@ -476,7 +489,7 @@ Most common workflow in ~20 steps:
    - add PLL Testbench (Fo=fRef, ExpectedFreq=fVCO, SampleRate=8*fVCO)
    - set LockTimeOption='on', SpectralAverages='2'
    - connect TB↔PLL, enable lf_out, add scope
-   - StopTime = min(3*12/Fc, 50e-6), HoldOff = 1.5*12/Fc
+   - estLock = 12/Fc; StopTime = max(min(3*estLock, 50e-6), 2*estLock); HoldOff = min(1.5*estLock, 0.8*StopTime)  (HoldOff must stay below StopTime, P87)
    - arrangeSystem + FitSystem
 5. Plot Bode: pllOpenLoopPlot(...), confirm PM > 45° (if ylim crash, use manual fallback P106)
 6. sim(model)
@@ -491,3 +504,10 @@ Most common workflow in ~20 steps:
 ---
 
 Copyright 2026 The MathWorks, Inc.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [RF system modeler](https://useaiblocks.com/skills/rf-system-modeler).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

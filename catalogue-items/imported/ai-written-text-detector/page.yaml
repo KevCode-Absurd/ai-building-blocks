@@ -32,11 +32,12 @@ you_get:
   - The flagged phrases and patterns
   - A note on what the result cannot show
 how_to_use:
+  - "Before you start: this sends the whole document to Stipple, an outside service. We do not know its cost, free allowance or how long it keeps documents. Check Stipple's current terms and privacy rules on stipple.sh before you go on."
   - Get consent from the writer first. Your document is sent to a hosted third party, and we do not know how long Stipple keeps it. Read its privacy rules, and remove private details you do not need.
   - Open an AI that can run a web request, such as Claude with code tools. Paste the skill instructions.
-  - Sign up on the Stipple website (stipple.sh) and copy your API key first. Your AI cannot send a file without it. We have not tested Stipple's endpoint or its response fields, so expect to fix a detail or two. Add your key, then give it your file, link or pasted text. You get a key from the Stipple website (stipple.sh). We do not know if it is free or paid, or what the allowance is, so read Stipple's current terms and privacy rules on that site before you sign up. Keep the key out of the chat and out of shared files.
+  - Get an API key from stipple.sh. Keep it out of the chat and out of shared files, and never paste it into the skill text. Store it where your AI's code tool can read it, such as an environment variable. We have not tested Stipple's endpoint or its response fields, so expect to fix a detail or two. Then give your AI the file, link or pasted text.
   - First check whether the reply says applicable is false. That means Stipple refused the document because it is not prose, such as a form, table or scan. Stop there. Do not read a lean from a refused document. Otherwise read the lean, the flagged phrases and the limits note.
-  - Treat the result as one signal. Talk to the writer before you act on it.
+  - Treat the result as one signal. If the lean is ai or unsure, keep the original file and talk to the writer about how they wrote it before you act. If the question is whether the file was faked or edited, use a document check that looks at the file itself.
   - If the result is unsure or cannot tell, do not treat it as a no. Talk to the writer, or use a document check that looks at the file itself.
   - Before any decision, keep the original document, write down the result and what the writer said, and give the writer a way to appeal.
 output_sample:

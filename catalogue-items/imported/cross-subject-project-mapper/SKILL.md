@@ -72,6 +72,19 @@ tags: ["interdisciplinary", "cross-curricular", "Barron", "Drake", "integrated-c
 
 # Interdisciplinary Real-World Connection Mapper
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Maps the connections between a real-world problem or situation and the disciplinary knowledge required to address it, generating a practical curriculum integration plan that shows what each subject contributes, where subjects genuinely connect, and how to implement the integration within real school timetable constraints. The approach draws on Barron & Darling-Hammond's (2008) research on inquiry-based and meaningful learning, and Drake & Burns' (2004) framework for integrated curriculum design. The critical insight is that real-world problems are inherently interdisciplinary — climate change is not "science," homelessness is not "PSHE," a building project is not "mathematics" — and students who learn to draw on multiple disciplines to address complex problems develop deeper understanding than students who learn each discipline in isolation. However, integration must be GENUINE (each subject contributes something necessary) not FORCED (artificial connections that dilute both subjects). The output includes a connection map, disciplinary contributions with curriculum alignment, specific integration points, a practical implementation plan, and an assessment approach. AI is specifically valuable here because mapping a real-world problem to multiple curriculum standards simultaneously requires cross-referencing knowledge that spans multiple subject domains — a task that would take individual teachers hours of cross-departmental consultation.
@@ -295,3 +308,12 @@ The proposal is assessed on: accuracy of evidence, quality of analysis, depth of
 2. **Integration can dilute individual subjects if poorly designed (Czerniak et al., 1999).** The most common failure mode is that subjects contribute superficially to the shared problem rather than substantively. "Let's do energy percentages in Maths" (one lesson, low challenge) is weaker than "analyse real school energy data using percentage change, statistical representation, and financial modelling" (multiple lessons, genuine mathematical thinking). Each subject must maintain its own standards within the integrated context.
 
 3. **Not all real-world problems connect equally to all subjects.** The energy problem above connects naturally to Science, Maths, Geography, DT, and English. It does not connect well to Music, PE, or MFL. Forcing connections to subjects that don't naturally contribute weakens the integration. It is better to have four subjects genuinely integrated than eight subjects artificially connected.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Classroom tech fit checker](https://useaiblocks.com/skills/classroom-tech-fit-checker). It takes the lesson plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

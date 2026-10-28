@@ -7,7 +7,9 @@ job: help-customers
 headline: Gorgias support reply writer
 subhead: Give it a Gorgias ticket number and connect your support account. It reads the full thread, earlier fixes, and unanswered questions. You get a warm, clear reply to review, with an option to save it as a Gmail draft.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You have a Gorgias ticket with a customer question that needs a reply today.
+  - A long thread has gone back and forth and you need a reply that answers every open point.
+  - You want a draft reply saved in Gmail for a teammate to check before it goes out.
 not_for:
   - You need a refund or account change approved. Ask a person to make that call first, then write the reply.
   - You answer a simple FAQ question. Use your helpdesk's own saved replies (macros) in Gorgias instead.
@@ -33,10 +35,10 @@ works_best_with:
     - name: Gorgias; Gmail for optional drafts
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Use an AI that can run terminal commands and read skill files. Install the Composio CLI first.
+  - "Gather first: the ticket number, and the Gorgias and Gmail accounts you will link. You need an AI that can run terminal commands and read skill files, and the Composio CLI installed. Gorgias is a paid help desk. Composio may charge for use, so check its pricing first."
   - Link your Gorgias account with the command composio link gorgias. Link Gmail too if you want drafts.
   - Ask your AI to run the Gorgias support reply writer with your ticket number.
-  - Read the summary and the draft. Check every fact against what you know is true.
+  - Read the summary and the draft. Check every fact against what you know is true. The draft does not promise refunds, dates or account changes the thread has not confirmed. It marks them CHECK for you to decide.
   - Ask for edits or a different tone until it sounds right.
   - Choose the Gmail option only when you are happy. Then send the draft yourself from Gmail.
 output_sample:

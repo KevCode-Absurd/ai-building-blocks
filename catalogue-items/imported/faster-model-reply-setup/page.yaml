@@ -39,7 +39,7 @@ you_get:
 how_to_use:
   - Open an AI that can run Python on a computer with a CUDA GPU, such as Claude Code, and paste in this skill. Add the whole folder so it can read the Medusa and lookahead notes.
   - Tell it your model, your GPU and your main goal. Check that you can download the model. Some Llama models need you to accept a licence on Hugging Face first. The skill's big example pairs a 70B model with a 7B helper, which needs a very large multi-GPU setup, so ask for a model that fits your GPU.
-  - Read the method it picks and why. Ask it to check the code against the current README of the library before it runs anything.
+  - Read the method it picks and why. Ask it to check the code against the current README of the library before it runs anything. If the functions it names, such as medusa_generate or LookaheadDecoding, are not in the version you installed, stop and follow that repository's own quick start instead.
   - Run the before test, then the after test, on the same prompts. Compare tokens per second.
   - Compare the answers from both runs. If they differ, lower the settings or switch method.
 how_it_works:
@@ -50,7 +50,7 @@ how_it_works:
   - title: Gives install steps
     text: Lists the install commands for the chosen method, including the extra code you clone for Medusa and lookahead.
   - title: Writes starter code
-    text: Shows code for the transformers library or vLLM. The pseudocode in the skill is for learning, not for running.
+    text: Shows code for the transformers library or vLLM. The draft model route uses a real transformers feature. The Medusa and lookahead code is an unverified sketch to check first, and the 1.5 to 3.6 times speed-ups are best cases from the papers.
   - title: Suggests settings
     text: Sets starting values such as how many tokens to guess ahead, then tells you what to change.
   - title: Plans the test

@@ -31,4 +31,4 @@ credits:
   - title: is-this-a-problem skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/product-legal/skills/is-this-a-problem
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Adapted under the Apache 2.0 licence. We gave it a plain name and added plain-chat notes so it works without the Claude Code plugin, its config file or its slash commands.

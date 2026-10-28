@@ -23,7 +23,8 @@ not_for:
   - "You want a site-wide sale or percent-off plan: ask a person who knows your margins, since this plan avoids discounting everything."
 
 you_give:
-  - Each product with price, cost of goods, and shipping and fulfilment cost per unit
+  - Each product with price, cost of goods, and the shipping and fulfilment cost of a parcel with one unit and with two or three
+  - The currency, and whether your figures include sales tax or VAT
   - Your average order value, free-shipping line and discount habits
   - A possible gift and what it costs you delivered
   - Monthly orders and traffic (optional)

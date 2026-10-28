@@ -31,7 +31,7 @@ you_get:
   - A named next step and timeline when it is not fine
   - A warning if your answer is going to a wide channel
 how_to_use:
-  - "Write your risk table first, with four columns: pattern, usual call (fine, needs a look or hold), next step and timeline. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms, [DAYS]."
+  - "Write your risk table first, with four columns: pattern, usual call (fine, needs a look or hold), next step and timeline. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms, [DAYS]. Have your legal team review the table before first use, since every call rests on it."
   - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions, then paste your risk table under them. The skill file mentions a plugin config file and commands such as /product-legal. A plain chat does not have these, so it uses your pasted table and sends those questions to your lawyer.
   - Paste your question and say where the answer will go, for example a private message to a product manager.
   - Read the call and the reason. If it asks a catch question, answer it and run it again.

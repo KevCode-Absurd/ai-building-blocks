@@ -17,12 +17,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
 - **A video link** (yours): the link to the video, playlist, channel or post.
+- **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
+- **Your data** (yours): the data files, with their format and where they came from.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -33,7 +34,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, a video link. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -58,13 +59,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Thumbnail and title planner.** Use the skill `thumbnail-and-title-planner`. It receives your video idea, channel and any past results. It saves the single promise, a base pair, 12 or more title and thumbnail pairs that each change one thing, a phone-size check, a plan for the first minute and an empty result log.
-2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. It receives the titles from the step 1 pairs. It scores each title on five rules with the video hidden, cuts the weak ones with reasons, and saves the three picks that differ in type or reason, with a way to test each. To pick the top pair, read the three picks and their test method in the step 2 file, then match the top-ranked title with its thumbnail from the step 1 pairs. You publish that pair.
+2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. It receives the titles from the step 1 pairs. It scores each title on five rules with the video hidden, cuts the weak ones with reasons, and saves the three picks that differ in type or reason, with a way to test each. To pick the top pair, read the three picks and their test method in the step 2 file, then match the top-ranked title with its thumbnail from the step 1 pairs. If two titles tie for the top score, pick the one whose thumbnail still reads at phone size; if they still tie, pick the one least like your past titles, and say why. You publish that pair.
 
 Pause here: Publish the top pair. After a week or more, export the audience retention report from YouTube Studio for that video. You publish and export.
 
 3. **Get the words of the video.** Use the skill `youtube-transcript-reader` (the YouTube transcript and channel reader). It receives the link to the video you published with the step 2 top pair, not the step 2 file. It saves the video's words with times. The default route is free: paste the captions from YouTube Studio. The skill can also fetch the words for you, but it uses TranscriptAPI, a paid service that needs your own key (it has a small free allowance, then costs money) and reads the video's captions from YouTube. Use it only if the person agrees. A video with no captions cannot be fetched.
 4. **YouTube retention reader.** Use the skill `youtube-retention-reader`. It receives the transcript from the step 3 file and the retention export. It saves the loss in the opening, the steep drops each matched to the words said at that moment, the slow slide, and the one change to make.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 Four step files and the summary. The step 4 file holds the retention findings.

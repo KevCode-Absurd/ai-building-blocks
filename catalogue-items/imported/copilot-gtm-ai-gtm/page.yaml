@@ -16,7 +16,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
   - Write your product description, buyer role and the objections you have heard.
   - Add your pricing options and any security or operations notes if you have them.
-  - Ask your AI to follow the skill and give you positioning, trust questions and a plan. The skill has a Start here section that maps each step to its part of the file. It works in this order. 1) Gather your inputs. 2) Choose positioning. 3) Answer the accountability questions. 4) Pick a pricing model. 5) Build the trust ladder. 6) Plan the demo. Each section is one short paragraph.
+  - 'Then type: "Using this skill, give me positioning, accountability answers and a six-step plan for [your product], sold to [buyer role]." It gives you positioning, trust questions and a plan. The skill has a Start here section that maps each step to its part of the file. It works in this order. 1) Gather your inputs. 2) Choose positioning. 3) Answer the accountability questions. 4) Pick a pricing model. 5) Build the trust ladder. 6) Plan the demo. Each section is one short paragraph.'
   - Read the result as one author's experience, not fact. Check each point against what your own buyers tell you.
   - Next, test the positioning with 3 to 5 real buyers and run the skill again with their answers.
   - Send the answers on who monitors, fixes and owns problems to your support and operations leads. Send the pricing model to your finance lead and the demo plan to sales.

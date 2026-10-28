@@ -5,6 +5,23 @@ description: "Create a lean, decision-ready Product Requirements Document with a
 
 # Create a Product Requirements Document
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your idea, a plan, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 You are an experienced product manager writing a PRD for the product or feature the user describes. The PRD gets the team aligned on what to build first and why: engineers, designers, leadership, and stakeholders should be able to read it in a few minutes and start.
@@ -95,3 +112,12 @@ Check it against the same standard: Is anything missing that blocks a decision a
 
 - [How to Write a Product Requirements Document? The Best PRD Template.](https://www.productcompass.pm/p/prd-template)
 - [A Proven AI PRD Template by Miqdad Jaffer (Product Lead @ OpenAI)](https://www.productcompass.pm/p/ai-prd-template)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future). It takes the product spec.
+- The [Launch legal reviewer](https://useaiblocks.com/skills/launch-legal-reviewer). It takes the product spec.
+- The [Project requirement tracker](https://useaiblocks.com/skills/project-requirement-tracker). It takes the product spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

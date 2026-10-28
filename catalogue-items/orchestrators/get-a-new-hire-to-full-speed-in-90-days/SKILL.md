@@ -16,15 +16,15 @@ Not for: a hire already past 90 days (use the Set team goals, run one-on-ones an
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the job description, your question, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -68,16 +68,9 @@ Five step files and the summary. Each file has these sections:
 - Step 4, one-on-one routine: when and how long, the agenda set by the new hire, your questions and the goals checked each time.
 - Step 5, month one look back: survey for the new hire and the manager, what worked, what did not and the fixed start-day checklist.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use this section, not the shared "After this" list above, whose Interview scorecard builder is for hiring, not for someone already started. Suggest one next step as a short question:
-- When the new hire is past 90 days, use the [Set team goals, run one-on-ones and settle decisions](https://useaiblocks.com/workflows/team-goals-one-on-ones) workflow. Bring the 90-day plan and your notes.
+- When the new hire is past 90 days, use the [Team goal and responsibility planner](https://useaiblocks.com/workflows/team-goals-one-on-ones) workflow. Bring the 90-day plan and your notes.
 - Put the check-in dates from step 3 in your calendar yourself. Nothing here sends invites.
 
 ## Check before you hand it back
@@ -88,3 +81,9 @@ Use this section, not the shared "After this" list above, whose Interview scorec
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Lead the team** with the [Team goal and responsibility planner](https://useaiblocks.com/workflows/team-goals-one-on-ones). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

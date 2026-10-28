@@ -74,6 +74,19 @@ tags: ["CPD", "professional-development", "Timperley", "adult-learning", "INSET"
 
 # Professional Development Session Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a professional development session using evidence-based adult learning principles — ensuring the session is active (teachers DO, not just listen), connected to practice (teachers plan how to apply the learning in their own classrooms), and includes follow-through (what happens after the session to sustain the change). The critical insight from Timperley's research is that most professional development fails not because the content is wrong but because the design is wrong: a one-off presentation with no follow-up, no practice, and no accountability produces zero change in teaching. The output is a time-structured session plan with active learning tasks, practice application activities, and a follow-through plan. AI is specifically valuable here because designing effective PD requires balancing content delivery (teachers need to learn something new), active engagement (teachers need to process and apply it), and practical planning (teachers need to leave with a specific plan for their classroom) — all within a limited time frame.
@@ -263,3 +276,12 @@ Every teacher leaves with:
 2. **The session assumes basic facilitator competence.** The plan provides structure, but the facilitation — managing group dynamics, handling resistance, calibrating pace, responding to questions — requires skill. A facilitator who reads the plan like a script will not produce the same outcomes as one who understands the principles and can adapt in the moment.
 
 3. **School culture affects PD effectiveness.** In schools with low trust, high accountability pressure, or a history of initiative fatigue, even well-designed PD faces resistance. The session design addresses this (starting from experience, offering choice, respecting time), but it cannot fully compensate for a toxic professional culture. Leadership must create the conditions for professional learning to thrive.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study session planner and reviewer](https://useaiblocks.com/skills/study-session-planner-and-review). It takes the plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

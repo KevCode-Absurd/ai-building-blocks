@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -85,7 +85,7 @@ MISSING: <what would sharpen it>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
+- The [Google Merchant Center feed checker](https://useaiblocks.com/skills/merchant-center-feed-health-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

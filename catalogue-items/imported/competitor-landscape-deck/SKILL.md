@@ -11,6 +11,22 @@ Every value in the templates below is a bracketed placeholder that shows the lay
 
 If your AI has no `ask_user_question` tool, ask the same questions in plain chat, in one message, and wait for the answers.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Environment check
 
 This skill works in both the PowerPoint add-in and chat. Identify which you're in before starting — the mechanics differ, the workflow doesn't:
@@ -287,3 +303,12 @@ Run standard visual verification checks on every slide — this catches overlaps
 ## Repaired scope and evidence rules
 
 Use the geography the user names; if none is named, ask for it. The method is not India-only. Preserve local fiscal years, currencies and reporting definitions for each company; do not force India conventions onto other markets. Compare values only when period, currency, definition and denominator match. Label estimates and missing data. Cite each factual metric to its source and date. Use primary company filings first, then dated company materials and credible secondary sources. For exchange-rate conversion, state the rate, date and source. Distinguish reported fact, estimate and analysis. Do not invent market size, competitor facts or rankings. Ask for outline approval before making slides; approval applies to the outline, not to unsupported facts. If inputs conflict, show both with provenance.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
+- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder). It takes the slide deck.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

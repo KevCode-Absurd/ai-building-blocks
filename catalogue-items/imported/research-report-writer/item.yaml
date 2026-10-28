@@ -32,7 +32,7 @@ credits:
   - title: deep-research-framework skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deep-research-framework
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: "Copied with one added paragraph on when not to use it, and a plain name. Licence split: the SKILL.md header is alapha888's MIT licence (source alapha888/agent-skills-en); LICENSE-CONTENT sets CC BY 4.0 for the collection's written text."
   - title: Original author
     by: alapha888
     url: https://github.com/alapha888

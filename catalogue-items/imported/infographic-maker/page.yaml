@@ -34,8 +34,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Or upload the skill folder if your AI accepts files.
   - Paste your content or key points. Say the layout, style, size or image tool you want, if you have a view.
   - Check the layout and style your AI suggests. Answer its short questions or pick another option.
-  - Your AI writes the drawing instructions, then makes the image. This step needs an image tool. Some need an account, login, API key or payment.
+  - Your AI writes the drawing instructions, then makes the image. This step needs an image tool, such as ChatGPT's image maker or an AI agent with an image tool and file access. Some need an account, login, API key or payment. A chat with no image tool gives you only the drawing instructions, which you can paste into an image maker yourself.
+  - The skill file mentions settings such as EXTEND.md and tool names for coding agents. You can ignore them. When your AI asks you to pick a layout, style or image tool, just choose from the options it shows.
   - Look at the image. Ask for a different layout or style if it does not fit, then save the file.
+  - If any words in the image are wrong, ask your AI to make it again rather than editing the picture. Then place the PNG in your post, slide or report.
 output_sample:
   input:
     - Your content or key points, pasted or as a file

@@ -7,7 +7,7 @@ job: test-and-fix-code
 headline: Open-source contribution preparer
 subhead: A careful way to prepare a fix for someone else's open source project, ending at a queue item that you approve. The agent never posts anything itself.
 explain: |
-  A careful way to prepare a fix for someone else's open source project, ending at a queue item that you approve. The agent never posts anything itself.
+  Setup needed before the first run. The full method needs four things that are not in the download: a private approval queue repo, a poster (the tool that sends approved items), a read-only access token and a browser tool. Without them, run only the policy and reproduction checks and post the draft yourself. You must also run the write-refusal test on your token yourself (the skill gives the command, and the agent never runs it). It should return 403, which shows the token cannot write. If it returns 422, the token can write, so stop and replace it.
 
   It works in gates. First it checks whether the project allows AI-assisted pull requests. Then it asks the maintainer for a go-ahead if needed, checks for duplicate work, and reproduces the bug. Only then does it write a small patch, rerun the tests, and draft a pull request with the right disclosure note. It also handles follow-ups on your own pull requests: replies to reviews, a 14-day ping and a 28-day close. It refuses unasked refactors or features in other people's repos.
 when:
@@ -61,4 +61,6 @@ output_sample:
     - name: Pull request draft
       contains: The exact text to post, with the right AI disclosure, and a hash so you can tell if it changed.
     - name: Stop report
-      contains: If a gate fails, the gate, the reason, the evidence link and what would clear it.
+      contains: If a gate fails, the gate, the reason, the evidence link and what would clear it. It is not filed as a queue item.
+    - name: No-eligible-candidate report
+      contains: If a search finds no issue that passes every gate, each candidate checked with the gate it failed and the evidence, plus what would change the result. It is not filed either.

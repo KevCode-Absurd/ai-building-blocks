@@ -14,17 +14,17 @@ This workflow follows the method in Competing Against Luck by Clayton M. Christe
 Use the material below to do this job. If facts or tool access are missing, say what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A job spec** (yours): one customer circumstance, the progress they want and what gets in the way. The [Job spec writer](https://useaiblocks.com/skills/job-spec-writer) makes one.
+- **A job spec** (yours): one customer circumstance, the progress they want and what gets in the way. The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer) makes one.
 - **Your feature wish list and your question** (yours): every request, even odd ones, and the decision you face, such as what to build next.
 - **The numbers you track now** (yours): your dashboard or weekly report, with who sees each number.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, complaints, returns and support emails, pasted as written. They are the best evidence for how each moment is going today.
 - **Product facts** (yours): what it is, what it costs and how it is used.
-- **A switch story map** (yours): from the [Switch story mapper](https://useaiblocks.com/skills/switch-story-mapper).
+- **A switch story map** (yours): from the [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper).
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A job spec** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). Bring your notes on how buyers chose.
+1. **A job spec** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring your notes on how buyers chose.
 2. This one.
 
 How to start:
@@ -82,15 +82,6 @@ HAND-BACK SUMMARY
 
 The files are `outputs/step-01-job-experience-mapper.md` to `outputs/step-04-job-name-picker.md`. The measures are in step 3 and the names in step 4.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Screen new requests against the job** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). Bring the keep list and the job line.
-- **See who else could be hired for the job** with the [Job rival mapper](https://useaiblocks.com/skills/job-rival-mapper). Bring the job spec.
-- **Test the riskiest change** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). Bring the top three changes from step 1.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order. Step 2 used the moments file from step 1, step 3 used the numbers the person tracks and the keep list, and step 4 used the measures.
@@ -100,6 +91,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - No top name scored zero on the stranger test, and the trademark check is marked as not done.
 - Each measure traces to a promise in the job and has a guard against gaming.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Screen new requests against the job** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). Bring the keep list and the job line.
+- **See who else could be hired for the job** with the [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). Bring the job spec.
+- **Test the riskiest change** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). Bring the top three changes from step 1.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. Without a job spec, ask once and offer guess mode, where every line is marked GUESS and every fix is a hypothesis to test. Never invent complaints, feelings, usage counts or costs.

@@ -1,6 +1,6 @@
 # Write down how work gets done: AI Blocks
 
-> 54 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 57 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder): Turn your notes and facts into an Open Knowledge Format folder: linked Markdown files your team and AI tools can read, reuse and check.
 - [Analysis assumptions logger](https://useaiblocks.com/skills/analysis-assumptions-logger): Share an analysis and its key choices. Get a log of assumptions, confidence, risks and checks for reviewers.
@@ -38,8 +38,10 @@
 - [Metric definition writer](https://useaiblocks.com/skills/metric-definition-writer): Share a metric, calculation and business use. Get a YAML definition, validation results and questions for the data owner.
 - [Narrative decision memo writer](https://useaiblocks.com/skills/narrative-decision-memo-writer): Turn a decision and your evidence into a clear memo with options, costs, risks and a review plan, as a decision narrative, a PR/FAQ or a short brief.
 - [Nonprofit grant proposal writer](https://useaiblocks.com/skills/nonprofit-grant-proposal-writer): Write a nonprofit grant proposal, inquiry letter or grant report that follows your funder's rules. Give it the guidelines, program facts and budget.
+- [On-call runbook writer](https://useaiblocks.com/skills/on-call-runbook-writer): Write an on-call runbook for your service. You get numbered steps, checks, rollback and who to call, so anyone on call can fix it fast.
 - [Operations manager agent](https://useaiblocks.com/agents/agency-operations-manager): Find where your process wastes time and why. Get a ranked list of bottlenecks with evidence, root causes, measures to track and fixes.
 - [Plain-words SQL explainer](https://useaiblocks.com/skills/plain-words-sql-explainer): Paste a SQL query and get a plain-words explanation of what it counts, which rows it keeps and what each column means. Check it against the question.
+- [Procedure draft, newcomer test and training-deck builder](https://useaiblocks.com/workflows/write-a-procedure-test-it-and-build-a-training-deck): Share how the job works and its limits. Get a procedure, gap review, newcomer-test plan and training slides after actual feedback.
 - [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer): Turn how your team works into a clear SOP. Give it a process name or old notes. You get a RACI table, a flow, steps and exceptions.
 - [Process change note writer](https://useaiblocks.com/prompts/process-change-note-writer): Write a process change note that tells your team what to do differently and from when. Paste the old way, new way, date and reason.
 - [Process guide revision reviewer](https://useaiblocks.com/agents/process-doc-freshness-keeper): Find stale, unclear or ownerless process guides. Get a few draft fixes, recheck results and questions for the people doing the work.
@@ -54,5 +56,6 @@
 - [Staff policy explanation and rollout writer](https://useaiblocks.com/workflows/make-a-new-policy-understandable-to-staff): Share the approved policy, confirmed changes and start date. Get a plain explanation, staff questions answered and a rollout action list.
 - [Status report writer](https://useaiblocks.com/skills/status-report-writer): Turn project notes, targets, and blockers into a status report with risks and decision requests.
 - [Sustainability reporting planner](https://useaiblocks.com/agents/agency-esg-sustainability-officer): Plan your ESG and sustainability reporting with material topics, framework fit, data gaps and claims that need proof. Not audit or legal advice.
+- [Team documentation, procedure and runbook planner](https://useaiblocks.com/workflows/set-up-a-documentation-system-and-write-sops-that-pass-a-check): Share repeat tasks, known failures and team roles. Get a documentation plan, procedures, incident runbooks and step-by-step review findings.
 - [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer): Write a weekly status update from your notes. Get a one-page report with an overall call, risks and the decisions you need, in under 250 words.
 - [Workflow specification writer](https://useaiblocks.com/agents/agency-specialized-workflow-architect): Turn a feature into a workflow spec with every path, failure, cleanup and test case written down before anyone builds it.

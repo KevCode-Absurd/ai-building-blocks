@@ -11,7 +11,7 @@ explain: |
 
   First it uses the USE method: for each resource such as CPU, memory, disk and network, check use, saturation and errors. Then the TSA method looks at where each thread spends its time. Each finding is tied to evidence, such as command output, so you can see why a cause was ruled in or out. The last step writes a root cause report or postmortem. It works best on Linux systems where you can run the commands.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (thecsdoctor) says MIT. Credit goes to thecsdoctor and sickn33.
+  Licence: the author's own file header (thecsdoctor) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit thecsdoctor and sickn33.
 when:
   - A server is slow and nobody knows why.
   - Latency jumped after a deploy or a config change.
@@ -33,12 +33,13 @@ you_get:
 how_to_use:
   - "Have ready: a Linux machine you are allowed to operate, the right to run commands on it, and for some checks root access and the sysstat and perf tools. Tracing commands can add load to a live server. If your system is not Linux, stop here."
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
-  - "Describe the problem: what is slow, since when, and what changed."
+  - "Describe the problem: what is slow, which host or service, when it started (date and time), and any deploy or config change just before."
   - Some checks need root access, perf or sysstat. Tracing adds load, so on a live server start with short, read-only checks and ask your ops team first. Tools such as valgrind drd and bcc can slow a live server a lot. If the load rises while you check, stop and tell your ops team.
   - Run the commands the AI lists on your server and paste the output back. If your AI can run commands itself, make it show you each command first and wait for your yes before it runs it. Allow read-only checks only. Some checks need root access, so do not give it more access than you are happy with.
   - Check the causes it ruled out and the evidence for each one.
   - Approve any fix yourself before it is applied, then ask it to re-measure.
   - "Ask for the report you need: a triage note, root cause report or postmortem."
+  - Share the report with your ops or incident lead for the postmortem review, and turn each prevention action into a ticket with an owner.
 output_sample:
   input:
     - A short description of the slow or failing system

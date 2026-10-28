@@ -11,7 +11,7 @@ Send to the hiring manager 30 days after the new hire's start date. Focus: early
 | # | Question | Response Type | Why It's Included |
 |---|----------|--------------|-------------------|
 | 1 | How would you rate this hire's overall performance so far? | Scale 1-5 | Baseline performance signal at the earliest meaningful checkpoint. |
-| 2 | Is this person ramping at the pace you expected? | Faster than expected / As expected / Slower than expected / Concerned | Ramp speed is the strongest early QoH predictor — flags coaching needs before they compound. |
+| 2 | Is this person ramping at the pace you expected? | Faster than expected / As expected / Slower than expected / Concerned | An early signal of how the hire is settling in — flags coaching needs before they compound. |
 | 3 | How well does this person communicate with the team? | Scale 1-5 | Communication problems surface early and rarely self-correct. |
 | 4 | Does the day-to-day work match what was described in the job description and interviews? | Strongly agree / Agree / Somewhat / Disagree | Detects role-reality mismatches that cause early attrition. |
 | 5 | Has this person required more, less, or about the same level of support as you expected? | More / About right / Less | Calibrates whether the hire's seniority level was accurate. |
@@ -19,7 +19,7 @@ Send to the hiring manager 30 days after the new hire's start date. Focus: early
 | 7 | How well does this person fit with the team culture and working style? | Scale 1-5 | Culture fit issues at 30 days tend to persist — worth flagging early. |
 | 8 | What has this person done particularly well in their first month? | Open text | Captures strengths to reinforce and validates what the interview process selected for. |
 | 9 | Is there anything you're concerned about? | Open text | Open-ended concern capture — sometimes surfaces things the structured questions miss. |
-| 10 | Knowing what you know now, would you hire this person again? | Yes / Probably / Unsure / No | The single strongest QoH predictor. "Unsure" at 30 days warrants a conversation. |
+| 10 | Knowing what you know now, would you hire this person again? | Yes / Probably / Unsure / No | A direct read of the manager's view of the hire, worth tracking over 30, 60 and 90 days. It is one signal, not proof of quality of hire. "Unsure" at 30 days warrants a conversation. |
 
 ---
 
@@ -34,8 +34,8 @@ Send to the hiring manager 60 days after start. Focus: productivity trajectory, 
 | 3 | How effectively does this person collaborate with cross-functional partners? | Scale 1-5 | Cross-team collaboration is harder to assess in interviews and often surfaces around this mark. |
 | 4 | Rate this person's ability to work independently on tasks appropriate for their level. | Scale 1-5 | Independence at 60 days indicates whether seniority level was calibrated correctly. |
 | 5 | Has this person demonstrated the core technical/functional skills you expected? | All skills demonstrated / Most / Some / Few / None | Direct validation of what the interview process assessed. |
-| 6 | How well does this person handle feedback? | Scale 1-5 | Feedback receptivity predicts long-term growth and retention. |
-| 7 | Is this person on track to meet their 90-day goals? | Ahead of schedule / On track / Behind but recoverable / At risk | The key predictive question — "at risk" at 60 days needs immediate intervention. |
+| 6 | How well does this person handle feedback? | Scale 1-5 | Shows how the hire takes feedback, one input to the growth conversation. |
+| 7 | Is this person on track to meet their 90-day goals? | Ahead of schedule / On track / Behind but recoverable / At risk | A progress check against agreed goals — "at risk" at 60 days calls for a prompt conversation. |
 | 8 | What additional support or resources does this person need to succeed? | Open text | Identifies whether gaps are the hire's or the onboarding's. |
 | 9 | Has this person positively impacted team dynamics or morale? | Strongly positive / Somewhat positive / Neutral / Somewhat negative / Negative | Team impact is an underrated QoH dimension — a high performer who drags down the team is a net negative. |
 | 10 | What's one thing this person does that you didn't expect (positive or negative)? | Open text | Captures surprises — reveals what the interview process missed, good or bad. |
@@ -58,7 +58,7 @@ Send to the hiring manager 90 days after start. Focus: comprehensive performance
 | 6 | Rate this person's impact on team productivity and outcomes. | Significant positive / Moderate positive / Neutral / Moderate negative / Significant negative | Net team impact accounts for both individual contribution and collaboration effects. |
 | 7 | How well did this person's actual strengths match what we assessed during interviews? | Very accurate / Mostly accurate / Somewhat accurate / Not accurate | Direct feedback loop to interview process validity. |
 | 8 | Were there any important weaknesses that the interview process missed? | Open text | Reveals interview blind spots — feed back into scorecard design. |
-| 9 | What percentile would you place this hire in compared to others at the same level? | Top 10% / Top 25% / Average / Below average | Relative performance ranking — the most honest assessment when combined with the rehire question. |
+| 9 | What percentile would you place this hire in compared to others at the same level? | Top 10% / Top 25% / Average / Below average | Relative performance ranking — read it together with the rehire question, since both are one manager's view. |
 | 10 | How likely is this person to be promoted within the next 18 months? | Very likely / Likely / Possible / Unlikely | Forward-looking potential assessment — a high-performing hire with low ceiling is a different signal than one with high upside. |
 | 11 | Knowing what you know now, would you hire this person again? | Yes, without hesitation / Yes / Probably / Unsure / No | Final rehire signal. Track across the 30/60/90 arc. |
 | 12 | What's the single best thing about this hire? | Open text | Forces a positive anchor before asking about improvements — reduces negativity bias. |
@@ -97,9 +97,9 @@ Send on Day 1-3. Named responses are fine for hired candidates.
 |---|----------|--------------|-------------------|
 | 1 | On a scale of 0-10, how likely are you to recommend applying at [Company] to a friend? | NPS (0-10) | Candidate NPS — the headline metric for candidate experience. Hired candidates set the ceiling. |
 | 2 | Overall, how would you rate your experience during the hiring process? | Scale 1-5 | General satisfaction anchor before diving into specifics. |
-| 3 | The recruiter communicated clearly and kept me informed throughout. | Scale 1-5 | Communication is the #1 driver of candidate satisfaction across all research. |
+| 3 | The recruiter communicated clearly and kept me informed throughout. | Scale 1-5 | Checks how well the recruiter kept the candidate informed, a common source of candidate frustration. |
 | 4 | The interview process gave me a good understanding of the role and team. | Scale 1-5 | Tests whether the process sold the opportunity, not just assessed the candidate. |
-| 5 | The overall timeline from first contact to offer felt reasonable. | Scale 1-5 | Time-in-process is the #2 candidate complaint after communication. |
+| 5 | The overall timeline from first contact to offer felt reasonable. | Scale 1-5 | Checks whether the pace felt reasonable to the candidate. |
 | 6 | What was the most positive part of your experience? | Open text | Captures strengths to preserve and amplify. |
 | 7 | What nearly made you say no? | Open text | The highest-value question — reveals near-miss deal-breakers that don't show up in acceptance data. |
 | 8 | Was there anything about the process that surprised you (positively or negatively)? | Open text | Surfaces expectation gaps — things the team takes for granted that candidates notice. |
@@ -114,13 +114,13 @@ Send 3 days after rejection. Always anonymous.
 
 | # | Question | Response Type | Why It's Included |
 |---|----------|--------------|-------------------|
-| 1 | On a scale of 0-10, how likely are you to recommend applying at [Company] to a friend? | NPS (0-10) | Candidate NPS for rejected candidates — the true test of your process. Target: >6 even for rejected candidates. |
+| 1 | On a scale of 0-10, how likely are you to recommend applying at [Company] to a friend? | NPS (0-10) | Candidate NPS for rejected candidates — a hard test of your process, since they did not get the job. Compare with your own earlier searches rather than a fixed target. |
 | 2 | Overall, how would you rate your experience during the hiring process? | Scale 1-5 | Baseline satisfaction despite negative outcome — separates process quality from outcome disappointment. |
-| 3 | I felt the interview process was fair and gave me an adequate opportunity to demonstrate my abilities. | Scale 1-5 | Fairness perception is the strongest predictor of whether rejected candidates speak positively about the company. |
+| 3 | I felt the interview process was fair and gave me an adequate opportunity to demonstrate my abilities. | Scale 1-5 | Checks whether rejected candidates felt they had a fair chance, which can shape how they talk about the company. |
 | 4 | The feedback I received about the decision was helpful and respectful. | Scale 1-5 / N/A (no feedback received) | Feedback quality matters enormously — "N/A" responses reveal a gap in your rejection process. |
-| 5 | The recruiter communicated clearly and kept me informed about next steps and timelines. | Scale 1-5 | Communication remains the #1 driver even for rejected candidates. Ghosting destroys employer brand. |
+| 5 | The recruiter communicated clearly and kept me informed about next steps and timelines. | Scale 1-5 | Checks communication for rejected candidates too. Going silent on candidates can hurt how they talk about the company. |
 | 6 | The overall timeline from application to decision felt reasonable. | Scale 1-5 | Long processes followed by rejection feel especially disrespectful — this measures the pain. |
-| 7 | Would you apply to [Company] again in the future? | Yes / Maybe / No | Reapplication intent — the behavioral measure of candidate experience. "No" means you burned the bridge. |
+| 7 | Would you apply to [Company] again in the future? | Yes / Maybe / No | Reapplication intent — one measure of candidate experience. "No" suggests the relationship may be damaged; read the comments to see why. |
 | 8 | What could we have done differently to improve your experience? | Open text | Specific, actionable feedback from someone with no reason to be polite. |
 | 9 | Was there anything about the process that felt unprofessional or disrespectful? | Open text | Permission to flag bad behavior — sometimes reveals interviewer issues that internal feedback misses. |
 | 10 | Any additional comments? | Open text | Catch-all for things the structured questions didn't cover. |
@@ -134,7 +134,7 @@ Send 3 days after rejection. Always anonymous. Keep it short — they invested l
 | # | Question | Response Type | Why It's Included |
 |---|----------|--------------|-------------------|
 | 1 | On a scale of 0-10, how likely are you to recommend applying at [Company] to a friend? | NPS (0-10) | Candidate NPS at the earliest rejection point — high volume, so this has outsized employer brand impact. |
-| 2 | Did you feel your application was fairly reviewed? | Yes / Somewhat / No | The core fairness question — "No" at screen stage usually means the rejection felt automated or arbitrary. |
+| 2 | Did you feel your application was fairly reviewed? | Yes / Somewhat / No | The core fairness question — "No" at screen stage may mean the rejection felt automated or arbitrary; check the comments before deciding. |
 | 3 | The communication about the decision was timely and respectful. | Scale 1-5 | Speed of rejection communication matters — a 3-week silence followed by a form rejection scores poorly. |
 | 4 | Was the job description accurate enough for you to assess your fit before applying? | Yes / Mostly / No | JD clarity — if candidates who aren't a fit are applying, the JD may need work. |
 | 5 | Would you apply to [Company] again for a different role? | Yes / Maybe / No | Reapplication intent — even at screen stage, preserving this relationship has long-term value. |

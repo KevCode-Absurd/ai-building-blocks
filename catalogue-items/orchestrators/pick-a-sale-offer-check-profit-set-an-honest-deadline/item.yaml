@@ -19,7 +19,7 @@ steps:
   - {uses: store-offer-picker, note: "Starts the chain: the offer types worth testing, ranked, with the maths."}
   - {uses: reason-why-deal-writer, note: "Takes the top offer type from the step before and writes the deal with a reason a buyer will believe."}
   - {uses: discount-impact-checker, note: "Runs the deal from step 2 through your costs to find the return you must hit. If it says the deal does not pay, fix the deal before step 4."}
-  - {uses: honest-urgency-planner, note: "Uses the deal from step 2 and your own capacity (not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep."}
+  - {uses: honest-urgency-planner, note: "Uses the deal from step 2's file and your own capacity (orders you can ship well, not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/pick-a-sale-offer-check-profit-set-an-honest-deadline/skeleton.yaml

@@ -89,7 +89,7 @@ Files | MISSING | CHECKS MISSED | one next step
 
 Nothing has been said or sent. Offer one next step and say the person can type their own:
 
-- Track the follow-up with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
+- Track the follow-up with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
 - If a written follow-up is needed, draft it with the [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer).
 - Come back after the talk and ask for the next step based on what was said.
 

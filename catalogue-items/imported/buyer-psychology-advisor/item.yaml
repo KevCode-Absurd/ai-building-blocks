@@ -29,4 +29,4 @@ credits:
   - title: marketing-psychology skill
     by: Corey Haines
     url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-psychology
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, added guardrails so defaults never stand in for consent to a paid or recurring charge, and labelled the Rule of 7 as a rule of thumb. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -5,7 +5,7 @@ name: Content repurposer
 summary: Turn one article, talk or video into blog posts, emails, social posts and video scripts. Get a content repurposing plan fitted to each format.
 job: grow-social
 headline: Content repurposer
-subhead: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format. Bring the source piece (article, transcript or video notes). Use the result to plan your next step.
+subhead: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format. Bring the source piece (article, transcript or video notes).
 explain: |
   One strong article, talk or video turned into a blog series, an email sequence, social posts, a webinar outline and short video scripts, each written for how that format works. Posting the same text everywhere gets ignored. Rewriting by format gets read.
 
@@ -31,7 +31,7 @@ you_get:
   - Short video scripts
   - Release order and cross links
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions (SKILL.md). That is enough to run it. The nine files in the references folder add detail on each step, so attach them too if your AI can take files. No code or paid tool is needed.
   - Paste your source piece. Use the full text, a transcript or your video notes.
   - List the formats you want, such as emails, social posts or video scripts. Add a sample of your voice.
   - Let your AI check the source first. If it says the piece is weak, stop there and publish it once.
@@ -47,9 +47,9 @@ output_sample:
     - name: Source check
       contains: A verdict on whether your piece is strong enough to split, and which parts are worth using.
     - name: Blog series
-      contains: Standalone posts, each built on one sub-argument from the source, with a new opening and close.
+      contains: Standalone posts, each built on one sub-argument from the source, with a new opening and close. A long piece of about 6,000 words usually gives 4 to 6 posts.
     - name: Email sequence
-      contains: Emails that build on your framework, with a subject line, preheader and one clear call to action each.
+      contains: Emails that build on your framework, often 200 to 800 words each, with a subject line, preheader and one clear call to action each.
     - name: Social posts
       contains: Posts written for each platform, with a hook up front and one point per post.
     - name: Video scripts
@@ -57,4 +57,4 @@ output_sample:
     - name: Release plan
       contains: The order and spacing for publishing, plus links from each piece back to the original.
     - name: AI search extras
-      contains: Question and answer snippets pulled from the source so AI search tools can pick them up.
+      contains: Question and answer snippets of 40 to 80 words each, pulled from the source so AI search tools can pick them up.

@@ -31,6 +31,7 @@ you_give:
   - Impressions, likes, comments and reposts
   - Platform (X or LinkedIn)
   - What you normally get on a post (optional)
+  - When it was posted, and when you posted before it (optional, for the timing check)
 you_get:
   - "Verdict: not seen, skipped or ignored"
   - Evidence from your numbers
@@ -40,7 +41,7 @@ next: [post-flop-reason-finder]
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Paste your post text. Add its impressions, likes or reactions, comments and reposts.
-  - Say which platform it was on. Say what a normal post gets for you, if you know.
+  - Say which platform it was on. Say what a normal post gets for you, if you know. Add the day and time you posted it, and when you last posted before it, so it can check timing.
   - Read the failure type first. Check the evidence matches your numbers.
   - Try the one change on your next post. Do not rewrite the old post unless the verdict says the writing was the issue.
   - Then compare that post's impressions with what a normal post gets for you. That shows whether the change worked.

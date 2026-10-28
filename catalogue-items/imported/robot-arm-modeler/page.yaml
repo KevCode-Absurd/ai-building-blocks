@@ -5,11 +5,9 @@ name: Robot arm modeler
 summary: Name your robot arm and get a MATLAB robot arm model, with collision shapes and checked inverse kinematics, ready for moves and reach checks.
 job: build-software
 headline: Robot arm modeler
-subhead: A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
+subhead: Name the arm, such as a UR5e, KUKA iiwa or Panda. It builds the MATLAB model and checks each inverse kinematics answer, so later moves and reach checks do not quietly go wrong.
 explain: |
-  A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
-
-  It picks the best source it can find: the built-in robot library first, then your URDF file, then DH parameters. Collision shapes matter, because a model without them lets a planner call a path clear when it is not. It also helps you attach a gripper, choose between the two inverse kinematics solvers, and checks each solution for exit flags, position error and smooth joint changes. You need MATLAB with the robotics toolbox.
+  It picks the best source it can find: the built-in robot library first, then your URDF file, then DH parameters. Collision shapes matter, because a model without them lets a planner call a path clear when it is not. It also helps you attach a gripper, choose between the two inverse kinematics solvers, and checks each solution for exit flags, position error and smooth joint changes. You need MATLAB with Robotics System Toolbox.
 
   Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks.
 when:

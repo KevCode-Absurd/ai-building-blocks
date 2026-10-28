@@ -37,8 +37,8 @@ The scored and sorted list with reasons. The first three tests with measure and 
 ## What next
 
 When you've handed it back, suggest what they could do next in one short question. Offer these, and say they can type their own:
-- **Pick the cheapest test for the top idea** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). Bring the top three.
-- **Design a fair test of two versions** with the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner). Bring the test for the top idea.
+- **Pick the cheapest test for the top idea** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). Bring the top three.
+- **Design a fair test of two versions** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). Bring the test for the top idea.
 
 ## Check before you hand it back
 

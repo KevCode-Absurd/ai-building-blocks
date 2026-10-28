@@ -7,10 +7,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: question
-    required: true
   - type: deal_terms
     required: true
+  - type: question
+    required: false
   - type: spreadsheet
     required: false
 outputs:

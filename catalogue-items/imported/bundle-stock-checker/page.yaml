@@ -9,7 +9,7 @@ subhead: Find bundles that look in stock on your storefront but cannot be shippe
 explain: |
   A bundle can only be sold as often as its scarcest part allows. The skill names that bottleneck part for each bundle, and flags every bundle that part blocks.
 
-  The skill goes through every product marked as a bundle, using Shopify's own bundle setup or a metafield that lists the component variants and quantities. For each part it compares stock on hand against what one bundle needs. An optional safety buffer treats a part as out when stock minus the buffer falls short. It reports which bundles are at risk and how many you can truly sell. You need the Shopify CLI signed in with read access to products and inventory.
+  The skill goes through every product marked as a bundle, using Shopify's own bundle setup or a metafield that lists the component variants and quantities. For each part it compares the stock you can sell (Shopify's available count, not stock on hand, which includes units held for open orders) against what one bundle needs. An optional safety buffer treats a part as out when stock minus the buffer falls short. It reports which bundles are at risk and how many you can truly sell. You need the Shopify CLI signed in with read access to products and inventory.
 when:
   - A customer bought a bundle that you could not ship.
   - You want to check every bundle before a big sale.
@@ -34,7 +34,7 @@ how_to_use:
   - Sign in with the store auth command. Give it your store address and the read_products and read_inventory scopes.
   - Paste this skill into your AI. Add your store address, and your bundle metafield namespace and key if you use them.
   - Add a safety stock number or active-only setting if you want one (optional).
-  - Let your AI run the checks. It only reads data and changes nothing. It counts on-hand stock minus your safety stock. A part that Shopify does not track is listed for review, since it could make the count too high.
+  - Let your AI run the checks. It only reads data and changes nothing. It counts available stock minus your safety stock, never below zero. A part that Shopify does not track is listed for review, since it could make the count too high.
   - Open the bundle_availability CSV. Fix the broken bundles first, starting with the bottleneck part. To restock it, use restock-list-builder. To fix a wrong count, use stock-count-updater.
   - This skill was not run on a live store for this catalogue. Before you trust the first result, spot-check two bundles by hand in your Shopify admin. This is an MIT-licensed copy of the upstream skill from 40rty AI.
 output_sample:
@@ -48,7 +48,7 @@ output_sample:
     - The Shopify CLI signed in with read access to products and inventory
   output:
     - name: Run summary
-      contains: Counts of bundles checked, fully buildable, low on parts, and broken, plus the top broken bundles and their bottleneck part.
+      contains: Counts of bundles checked, fully buildable, low on parts (if you set a low level), and broken, plus the top broken bundles and their bottleneck part.
     - name: bundle_availability CSV
       contains: One row per bundle with how many you can build, the bottleneck part, what it needs, and what you have.
     - name: Status column

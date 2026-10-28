@@ -35,6 +35,7 @@ how_to_use:
   - "Before you start: name who has the authority to approve changes during an incident. Every command in the draft is a placeholder, so run read-only checks first and nothing that changes your systems until that person says yes."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running or web access.
   - Paste your service name, its main parts and your escalation contacts. Add past incidents if you have them.
+  - The skill's templates use a made-up payments service on Kubernetes, with example owner, Slack channel and paging names. Ask your AI to replace every one with your own service, owner and channels before you read any command.
   - Read the draft. Numbers, limits and messages are examples only, so replace them with your own. Every kubectl, feature-flag and curl command is a placeholder. Do not run any of them until you have replaced it with your own tested version and the service owner has approved it.
   - Do read-only checks first. Get approval from the service owner before any change, and confirm a rollback version first.
   - Add your own tested smoke test and rollback scripts where the draft mentions them. No scripts come with this skill.

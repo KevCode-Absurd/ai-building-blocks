@@ -30,4 +30,4 @@ credits:
   - title: electronics-supply-chain skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/electronics-supply-chain
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and fixed the helper code. Parts missing from the master data are listed instead of skipped, excess stock only counts forecast inside the chosen horizon, feeder slots go by rank with no shared slots, and line capacity comes from the slowest station using the user's own measured times. We added Before you start and After this sections that link to other AI Blocks steps.

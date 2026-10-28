@@ -50,10 +50,10 @@ the quote stage.
 
 ### The numbers
 
-**Revenue** — USD 86,400, up 4% vs. June · 61% direct, 24% paid social, 15% referral
+**Revenue** — USD 86,400, up 4% vs. June · 78% direct, 2% paid social, 20% referral
 **Leads** — 112, up 38% vs. June · paid social is the top source at 47
 **Win rate** — 11%, down from 19%
-**Ad return** — 2.1x on USD 3,200 · cost per lead USD 18, down from USD 31
+**Ad return** — 2.1x on USD 846 · cost per lead USD 18 (846 / 47), down from USD 31
 **Sentiment** — 4.4 stars, flat · 1 dispute, no change
 
 ### What's working
@@ -120,3 +120,5 @@ conversion returns), Google Ads (not connected here — export the campaign CSV)
 ```
 
 Never surface a connector error mid-brief, and never let a missing source silently remove a section without a word.
+
+Changed by AI Blocks (2026-10-28): made the worked example's spend, leads, cost per lead and paid-social revenue share agree.

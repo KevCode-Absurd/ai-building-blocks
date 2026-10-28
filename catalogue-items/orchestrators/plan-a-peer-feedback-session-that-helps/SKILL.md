@@ -83,7 +83,7 @@ HAND-BACK SUMMARY
 Files | MISSING | steps not run | one next step
 ```
 
-Use this note first, then the shared "After this" list above. Nothing has been shared with reviewers. After the session, bring the typed comments back to run the sorting step and fill the record. Then plan the writer's rewrite of one draft from the sorted list.
+Use this note first, then the shared "After this" list below. Nothing has been shared with reviewers. After the session, bring the typed comments back to run the sorting step and fill the record. Then plan the writer's rewrite of one draft from the sorted list.
 
 ## Check before you hand it back
 

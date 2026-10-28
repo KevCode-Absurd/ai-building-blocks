@@ -11,6 +11,19 @@ metadata:
 
 A systems-level approach to software craftsmanship from Hunt & Thomas' "The Pragmatic Programmer" (20th Anniversary Edition). Apply these meta-principles when designing systems, reviewing architecture, writing code, or advising on engineering culture -- how to think about software, not just how to write it.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Care about your craft.** Software development demands continuous learning, disciplined practice, and personal responsibility -- pragmatic programmers think beyond the immediate problem to context, trade-offs, and long-term consequences. Great software comes from great habits: avoid duplication ruthlessly, keep components orthogonal, and treat every line of code as a living asset that must earn its place. The goal is not perfection -- it is systems that are easy to change, easy to understand, and easy to trust.
@@ -222,3 +235,10 @@ See: [references/estimation-portfolio.md](references/estimation-portfolio.md) wh
 ## About the Authors
 
 **Andrew Hunt** and **David Thomas** co-founded the Pragmatic Bookshelf and were among the 17 original authors of the Agile Manifesto. Thomas coined "DRY" and "Code Kata" and co-authored *Programming Ruby* (the Pickaxe book); Hunt focuses on how teams learn, communicate, and maintain quality. Together they wrote *The Pragmatic Programmer*, one of the most influential software books ever published.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Generated code reviewer](https://useaiblocks.com/skills/generated-code-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

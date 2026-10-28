@@ -10,6 +10,23 @@ date_added: "2026-02-27"
 
 Transform messy input (error logs, voice notes, screenshots) into clean, actionable GitHub issues.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **An image** (yours): a finished picture.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, an image, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Output Template
 
 ````markdown
@@ -59,6 +76,8 @@ Transform messy input (error logs, voice notes, screenshots) into clean, actiona
 
 **Preserve uncertainty**: If user mentions "same project" or "the dashboard", use confirmed conversation context; label missing or inferred details instead of inventing a product, region, successful run or reproduction.
 
+**Steps only from the input**: list only reproduction steps the user actually gave. For any step you would have to guess, write `Unknown: steps not given` instead.
+
 **Placeholder sensitive data**: Use `[PROJECT_NAME]`, `[USER_ID]`, etc. for anything that might be sensitive.
 
 **Match severity to impact**:
@@ -84,10 +103,10 @@ Agent deployment fails silently - no error displayed, agent disappears from list
 - **Region/Version**: Unknown
 
 ## Reproduction Steps
-1. Navigate to agent deployment
-2. Configure and deploy agent
-3. Observe workflow completes
-4. Check agent list
+1. Deploy the agent
+2. Workflow runs
+3. Agent disappears from the list
+Unknown: steps not given before the deploy
 
 ## Expected Behavior
 Agent appears in list with deployment status, errors shown if deployment fails
@@ -99,7 +118,7 @@ Agent disappears from list. No error message. Requires page refresh and retry.
 **High** - Blocks agent deployment workflow, no feedback on failure cause
 
 ## Additional Context
-Required 3 retry attempts before successful deployment
+User refreshed and retried three times; whether a later try worked is not stated
 ````
 
 ---
@@ -117,8 +136,8 @@ Required 3 retry attempts before successful deployment
 - **Region/Version**: [REGION]
 
 ## Reproduction Steps
-1. Configure agent for Teams channel
-2. Attempt to publish
+1. Publish to a Teams channel
+Unknown: steps not given for how the channel or agent was set up
 
 ## Expected Behavior
 Agent publishes successfully to Teams channel
@@ -141,6 +160,14 @@ Was working yesterday - possible permission/config change or service regression
 
 ## When to Use
 Use this skill when you have unstructured bug input such as pasted errors, support notes, screenshots, or voice dictation and need to turn it into a clean GitHub issue with a summary, reproduction steps, expected vs actual behavior, impact, and attachment references.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Private bug evidence assistant](https://useaiblocks.com/skills/prepare-private-bug-evidence-for-developers). It takes the document.
+- The [Work ticket writer](https://useaiblocks.com/skills/work-ticket-writer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

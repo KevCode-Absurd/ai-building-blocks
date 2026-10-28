@@ -12,6 +12,23 @@ Memory provides the persistence layer that allows agents to maintain continuity 
 
 **Quick path (AI Blocks note):** 1) Write down what the agent must remember and five questions it must answer from memory. 2) Pick the simplest store that can answer them (file, vector, graph or time-aware graph). 3) Test the pick against the five questions, and change it if any question cannot be answered.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude or ChatGPT:** Either can compare the options and write the plan. Neither can build or run the store for you.
+- **A developer or a coding assistant:** The plan is a design. Someone still has to build the store and test it on your own questions.
+<!-- /needs -->
+
 ## When to Use
 
 Activate this skill when:
@@ -50,6 +67,14 @@ Return these sections, in this order. Keep the whole answer under about 900 word
 5. **Retrieval plan**: how memories get back into the agent's context (by meaning, by entity, by time), how many to load, and what happens when retrieval fails.
 6. **Privacy and safety**: what personal data is kept, who can read or delete it, and how it is backed up.
 7. **Open questions**: every input marked MISSING and how it limits the design.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data system design reviewer](https://useaiblocks.com/skills/data-system-designer). It takes the plan.
+- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Core Concepts
 

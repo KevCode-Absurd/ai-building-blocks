@@ -25,6 +25,7 @@ you_give:
   - What the AI should be able to do
   - The systems or APIs behind it
   - Examples of calls that went wrong (optional)
+  - Any tool list or draft schemas you already have (optional)
 you_get:
   - A proposed set of tools
   - JSON Schema for each tool
@@ -39,6 +40,7 @@ how_to_use:
   - Mark any tool that sends messages, changes data or spends money. Add input checks to it, and require a person to approve it before the agent runs it.
   - The full procedure sits in references/detailed-guide.md inside the skill folder. Upload the whole folder so your AI can read it.
   - Only the Python example needs code running. It also needs an Anthropic API key and a paid model. The design work needs neither.
+  - Next, take each tool that changes data or spends money to the tool definition writer for a safety review. Then have a developer test every tool against a test system before you connect it to live data.
 output_sample:
   input:
     - What your AI should be able to do

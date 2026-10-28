@@ -9,7 +9,7 @@ subhead: Give it a problem type and where students get stuck. It writes three to
 explain: |
   A set of hints for one kind of problem, written so a student can climb from a small nudge to a near-full solution without being handed the answer. You use it ahead of time to build worksheets, quizzes or tutoring scripts.
 
-  You name the problem type and where students usually get stuck. The skill designs three to five levels, each tied to a specific stuck point, from a prompt to look again, to naming the idea needed, to showing a parallel example. You choose what happens at the end: reveal the answer, send them to a teacher or give a fresh task. It follows research on tutoring hints and scaffolding, and can be tuned to an age group and subject.
+  You name the problem type and where students usually get stuck. The skill designs three to five levels, each tied to a specific stuck point, from a prompt to look again, to naming the idea needed, to showing a parallel example. You choose what happens at the end: reveal the answer, send them to a teacher or give a fresh task. It draws on the original author's summary of research on tutoring hints and scaffolding, and can be tuned to an age group and subject. Those study summaries and numbers were not checked against the sources, so check a study before you quote it.
 
   This is a copy of Gareth Manning's adaptive hint sequence skill (source link in the credits), shared under CC BY-SA 4.0.
 when:
@@ -38,11 +38,11 @@ how_to_use:
   - "Gather first: the problem type, two or three places students get stuck, and any notes from teachers on past mistakes. Have a worked example of one problem ready if you can."
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed. The pasted prompt has {{problem_type}}, {{common_sticking_points}} and other {{...}} fields. Replace each one with your own typed text, or delete the optional lines.
   - Type the problem type, for example the kind of equation students solve, and add two or three sticking points.
-  - Add your student level and say how many levels you want, 3 or 4 works well. Say what should happen after the last hint.
+  - Add your student level and say how many levels you want. Use 3 for short, one-step problems and 4 or 5 when students get stuck at several points. Say what should happen after the last hint. Pick a teacher referral when a wrong answer points to a gap in the basics, and reveal the answer when the student only needs to see the last step.
   - Read the hints in order. Check that none gives the answer too early, and ask your AI to soften any that do.
   - Paste the final sequence into your worksheet, quiz or tutoring script. The reply has five parts, in this order: Hint Architecture, Hint Sequence, Bottom-Out Strategy, Trigger Conditions Summary, then Adaptation Notes.
   - Next, pair the hints with a worked example. Use the Online worked example builder or the Worked example practice item.
-  - "Source and version: this is an unchanged copy of Gareth Manning's adaptive hint sequence skill, taken at commit 6bbbce4. The newest version lives in his repository (see the credits)."
+  - "Source and version: this is a copy of Gareth Manning's adaptive hint sequence skill, taken at commit 6bbbce4. We only added one note that the study summaries were not checked. The newest version lives in his repository (see the credits)."
   - The text comes from Gareth Manning's skill and is licensed CC BY-SA 4.0. If you reuse or share it, keep his credit and share your version under the same licence.
 output_sample:
   input:

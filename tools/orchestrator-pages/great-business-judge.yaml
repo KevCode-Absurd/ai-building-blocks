@@ -43,7 +43,7 @@ output_sample:
     - Five or more years of return on invested money, and what managers did with cash (optional)
     - Your tax rate and your next best choice for the money (optional)
   prerequisites:
-    - An AI that can work with files, such as Claude Code or a Claude Project, to run the handoff pack
+    - An AI that can work with files, such as Claude Code or a Claude Project, to run the handoff pack (these may need a paid plan)
   output:
     - name: Business power tester
       contains: What customers get that rivals cannot match, the barrier that protects it, and the kinds of scale at work.

@@ -69,9 +69,9 @@ If the person changes the spec later, re-run steps 3 and 4 so the tests and API 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Review the code for bugs and security with the [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
-- Build an app on the API with the [Build an app from an OpenAPI spec](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec) workflow.
+- Build an app on the API with the [OpenAPI app builder](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec) workflow.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

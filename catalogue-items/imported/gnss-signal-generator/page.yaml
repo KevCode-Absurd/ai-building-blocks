@@ -9,7 +9,9 @@ subhead: Pick a GPS or Galileo signal. Get a baseband waveform with realistic ch
 explain: |
   A test signal for a satellite navigation receiver, made on demand. Choose GPS, Galileo or NavIC and you get a baseband waveform for several satellites. It carries real navigation data, so a receiver can decode it and work out a position.
 
-  The channel effects, Doppler shift, delay and noise, can come from a realistic satellite scenario or from values you type in. That lets you test one condition at a time. It stops at the waveform, so it does not cover acquisition, tracking, decoding, BeiDou, GLONASS or sending the signal through radio hardware. It needs MATLAB, release R2026a or newer, with the matching toolboxes.
+  The channel effects, Doppler shift, delay and noise, can come from a realistic satellite scenario or from values you type in. That lets you test one condition at a time. It stops at the waveform, so it does not cover acquisition, tracking, decoding, BeiDou, GLONASS or sending the signal through radio hardware. It needs MATLAB, release R2026a or newer, with the matching toolboxes. These are paid MathWorks products.
+
+  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products. The skill file links MathWorks' own reuse licence page, which says the same.
 when:
   - You are testing a receiver and need a controlled input signal.
   - You want to see how Doppler and delay change decoding.
@@ -36,6 +38,16 @@ how_to_use:
   - Tell your AI the system, signal type and satellites. Say if you want scenario mode or your own Doppler, delay and noise.
   - Confirm the choices your AI shows you before it makes the waveform.
   - Run the MATLAB code. Check the waveform summary, then feed the signal to your receiver.
+  - The bundled almanac files are from a fixed past date, so the sky they show is not today's. That is fine for receiver tests. Ask for a fresh almanac download if you need today's satellite positions.
+output_shape: |
+  SETUP
+  System: <GPS / Galileo / NavIC> | Signal: <type> | Satellites: <list> | Mode: <scenario or custom>
+  DATA SOURCE
+  <almanac or RINEX file> | Epoch: <date of the data> | Nav data: <real or dummy bits>
+  WAVEFORM SUMMARY
+  Centre frequency: <Hz> | Sample rate: <Hz> | Duration: <s> | Per satellite: Doppler <Hz>, delay <s>, SNR <dB>
+  FILES
+  <script name>.m: rebuilds the waveform | <waveform variable or file>: the signal to feed your receiver
 output_sample:
   input:
     - "The satellite system to simulate: GPS, Galileo or NavIC"

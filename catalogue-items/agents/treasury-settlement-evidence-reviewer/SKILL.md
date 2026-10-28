@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, and the bank fee statement with your fee schedule.
 
-**The pieces it uses:** the [Reconcile treasury settlement liquidity](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity) workflow (the governing method) and the [Bank fee reconciliation checker](https://useaiblocks.com/skills/bank-fee-reconciliation-checker) (only for a fee in question). Read both in full before step 3.
+**The pieces it uses:** the [Treasury liquidity and payment timing checker](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity) workflow (the governing method) and the [Bank service fee checker](https://useaiblocks.com/skills/bank-fee-reconciliation-checker) (only for a fee in question). Read both in full before step 3.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.
@@ -59,6 +59,6 @@ Include the evidence window, saved files, branch taken or skipped and why, the p
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check one account's usable cash on its own** with the [Restricted cash availability checker](https://useaiblocks.com/skills/restricted-cash-availability-checker).
-- **Test your debt service covenant** with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- **Check one account's usable cash on its own** with the [Spendable cash balance checker](https://useaiblocks.com/skills/restricted-cash-availability-checker).
+- **Test your debt service covenant** with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
 Nothing here pays anyone or contacts a bank. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

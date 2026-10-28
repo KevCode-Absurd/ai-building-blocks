@@ -7,6 +7,30 @@ metadata:
 
 # Competitor & Alternative Pages
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Competitors** (yours): the brands buyers compare you with.
+
+**Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **An audit report** with the [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). Bring competitors, customer words (optional), an audit report (optional). It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for competitors, your brand brain, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When not to use
 
 - Internal battle cards or sales talk tracks. Ask your sales lead.
@@ -180,7 +204,7 @@ Include tier-by-tier comparison, what's included, hidden costs, and total cost c
 Be explicit about ideal customer for each option. Honest recommendations build trust.
 
 ### Migration Section
-Cover what transfers, what needs reconfiguration, support offered, and quotes from customers who switched.
+Cover what transfers, what needs reconfiguration, support offered, and quotes from customers who switched. Use only real switcher quotes the user supplies. Never invent testimonials, quotes or other social proof. If the user has none, leave the quotes out and say so.
 
 **For detailed templates**: See [references/templates.md](references/templates.md)
 
@@ -275,6 +299,17 @@ Claims checked per asset, status counts (current / changed / unverifiable / over
 
 ---
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
+- The [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Task-Specific Questions
 
 1. What are common reasons people switch to you?
@@ -285,6 +320,8 @@ Claims checked per asset, status counts (current / changed / unverifiable / over
 ---
 
 ## Related Skills
+
+These are skills from the original collection. They may not be installed where you are running this. If they are not, name them as ideas and carry on.
 
 - **programmatic-seo**: For building competitor pages at scale
 - **copywriting**: For writing compelling comparison copy

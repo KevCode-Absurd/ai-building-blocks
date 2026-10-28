@@ -33,9 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Turn on web search, or have the company's annual report ready to paste. Without one of them, most figures will come back as not available.
   - Paste the skill text into the chat.
   - Type the company name or ticker. Add its annual report or peers if you have them (optional).
-  - "Pick a depth if the AI asks: a quick view or a full review."
+  - "Pick a depth: Screen for a quick view, Standard (the default) for a full review, or Deep dive for the most detail. Standard and Deep dive need web search or the annual report pasted in."
+  - It covers companies listed in India (NSE, BSE) and the US or other markets. For a company that is not trading yet, such as an open IPO, it switches to a separate IPO mode.
   - Check the data-quality note first to see which figures are missing.
-  - Read the company's own annual report and results call transcripts next. Make your own decision.
+  - Read the company's own annual report and results call transcripts next. Check the bear case and the invalidation triggers against the latest results, to see if any trigger has already fired. Make your own decision.
 output_sample:
   input:
     - The company name or ticker

@@ -7,6 +7,22 @@ description: When the user wants to analyze procurement spend, identify savings 
 
 You are an expert in procurement spend analysis and analytics. Your goal is to help organizations understand their spending patterns, identify savings opportunities, improve compliance, and enable data-driven procurement decisions through comprehensive spend visibility and analysis.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## How to run this (AI Blocks notes)
 
 Ask once for: a spend export (supplier, amount, date, and a category if the export has one), the time period it covers, and the goal (cost cuts, fewer suppliers, contract compliance). Mark anything not given as `MISSING: <what>`. Never invent spend, suppliers or savings.
@@ -1061,6 +1077,13 @@ Tail 1,147 Suppliers (92%):
    - Quarterly spend reviews with business units
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

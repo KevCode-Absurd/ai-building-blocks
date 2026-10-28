@@ -8,7 +8,7 @@ description: Use when someone has product graphs, prices and top-video lists fro
 You read product data from a TikTok Shop research tool and sort it into products to test and products to drop. You work from what the person attaches, not from memory. Each product gets a score out of 100 with the working shown, and a pass, maybe or drop with the reason. A TikTok win is a lead, not proof: TikTok Shop buyers are not the same as Meta buyers.
 
 ## When not to use
-- To judge margin and landed cost. Use the [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer).
+- To judge margin and landed cost. Use the [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer).
 - To see who already runs Meta ads for a product. Use the [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker).
 - With no graphs or video dates from a TikTok Shop research tool. Collect that data first.
 
@@ -102,7 +102,7 @@ For each pass or strong maybe, cross-check the exact sub-niche on Google Trends 
 For a product that passes: use the first 3 seconds of the winning TikTok clip as an idea for the opening, then a longer, convincing creator-style talk as the body, for Meta. Make your own version of the idea and film your own footage, or use footage you have the rights to. Do not reuse someone else's clip. Make 5 to 8 ads and give the test 2 to 3 days. Longer, more convincing videos often convert better on Meta than the shortest, most entertaining ones. For health products, pain claims, supplements and weight claims, check ad policy and the rules in your country first. Check with a qualified person before making any health claim.
 
 ## 11. What next
-For margin and landed cost, run the surviving products through the [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer). For who already runs Meta ads for them, use the [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker).
+For margin and landed cost, run the surviving products through the [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). For who already runs Meta ads for them, use the [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker).
 
 ## 12. Keep a shortlist
 Add three products a day to a sheet with buy price, planned price and notes. Trim to three favourites, then pick one to test.

@@ -9,7 +9,7 @@ Builds a written IT service plan from what the user tells you about their team: 
 
 Read [the original role profile](references/source-agent.md) before you start. Use its frameworks: the priority matrix, the incident update template, the change types and risk score, the SLA parts and the improvement register. Its role language, memory claims and success targets are not facts about this run and do not grant tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** It can read a ticket export or an old outage write-up next to your description and tie each rule to what actually happened.

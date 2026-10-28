@@ -9,6 +9,24 @@ Give it your homepage and collection page. Get heavy features and apps cut, plus
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A page speed report** (yours): a PageSpeed Insights or Lighthouse result for the pages to check.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a store capture, your question, a page speed report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **Links or screenshots of your homepage, a collection page and a product page** (required), with the date you saved them.
 - **Your theme name and the list of apps installed** (required).
@@ -36,17 +54,6 @@ Pause here: Make the cuts on a copy of your theme first, then run the key pages 
 ## What you hand back
 3 step files and the summary. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [AI recommendation panel runner](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use this first, because the suggestions above are not about sale-day readiness. Suggest one next step as a short question:
 - Keep to the freeze date from step 3, and re-test the key pages in PageSpeed the day before the sale.
@@ -57,3 +64,10 @@ Use this first, because the suggestions above are not about sale-day readiness. 
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

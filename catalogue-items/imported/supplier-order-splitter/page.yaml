@@ -35,6 +35,7 @@ how_to_use:
   - Open a chat with an AI that can run Python code, such as Claude or ChatGPT. Code tools may need a paid plan in some AI apps.
   - Paste the skill text, or upload the skill file.
   - "Add your supplier quotes, price breaks, limits and demand. A simple layout works: one row per supplier, with columns for unit price, price breaks, minimum order, maximum capacity and lead time, and the demand figure on its own line. Say if you have holding and ordering costs."
+  - "Start from the right block. With one supplier, use the order quantity (EOQ) block: economic_order_quantity, or eoq_quantity_discounts if the supplier has price breaks. With several suppliers, use optimize_supplier_allocation."
   - Answer any questions your AI asks. If a quote, limit or demand figure is missing, it should ask you for it before it calculates. Do not let it guess.
   - First test it on a small case you can work by hand, with two suppliers. Stop if any total does not match the quotes. The portfolio and joint ordering models are approximations. They assume supplier costs are independent and ignore some price breaks.
   - Check every total against your original quotes, and that each supplier stays within its limit and the total meets your demand. The code is copied as it is and has not been tested on your numbers.

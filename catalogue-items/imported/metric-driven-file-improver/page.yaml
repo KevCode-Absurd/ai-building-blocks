@@ -34,7 +34,7 @@ how_to_use:
   - Use an AI that can run code and git commands, such as Claude Code, Codex or Gemini CLI. A plain chat window cannot run the loop.
   - "First step, before anything else: commit or stash all your work, so git status shows nothing. Then make a new branch just for the experiments. The loop uses git reset --hard to undo failed tries, and that wipes anything unsaved."
   - Ask your AI to set up the experiment. Give it your file, your score command, and whether higher or lower is better.
-  - Run the score command once to check it works. Then set a top limit on the number of tries.
+  - Run the score command once to check it works. Then record a baseline score on the unchanged file, and set a top limit on the number of tries.
   - Start one round, then check results.tsv. If it looks right, start the loop.
   - "Check your plan's usage limits before a long run. If you use an AI judge to score, every try is a paid call on your own plan (Claude, Codex or Gemini), so set a top limit on the number of tries first."
   - When it ends, review the kept changes with git diff on the experiment branch. Merge them only if the file reads well. If your score is a test pass rate, the test run is your score command. Review results.tsv and the kept diff first. Then merge the branch, or start a new round with a harder score.
@@ -54,7 +54,9 @@ output_sample:
     - A dedicated branch for the experiments
   output:
     - name: program.md
-      contains: Your goal, the rules for what may change, and the strategy notes the agent updates as it learns.
+      contains: Your goal, the rules for what may change, and the starting strategy.
+    - name: notes.md
+      contains: What the agent learned every 10 tries. It is kept out of git, so undoing a try never wipes it.
     - name: config.cfg
       contains: The target file, the score command, the score name, whether higher or lower wins, and the time limit.
     - name: evaluate.py

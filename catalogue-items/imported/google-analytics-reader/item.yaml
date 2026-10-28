@@ -31,7 +31,7 @@ credits:
   - title: google-analytics-cli skill
     by: Bin Huang
     url: https://github.com/Bin-Huang/google-analytics-cli/tree/main/skills/google-analytics-cli
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Bin Huang
     url: https://github.com/Bin-Huang

@@ -5,7 +5,7 @@ name: Compliance readiness checklist builder
 summary: Build a compliance readiness checklist for SOC 2, HIPAA, PCI DSS or GDPR. See what you have, what is missing, and which gaps to fix first.
 job: secure-code
 headline: Compliance readiness checklist builder
-subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority. Bring the framework or frameworks. Use the result to plan your next step.
+subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
 explain: |
   An evidence checklist for a standard such as SOC 2, HIPAA, PCI-DSS or GDPR, showing what you already have in place and what is missing, ranked so you fix the right things first.
 
@@ -31,8 +31,9 @@ you_get:
   - A readiness summary
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed. The checklist is for internal readiness planning only. It is not an audit or legal advice.
-  - Name each framework and its version, such as SOC 2 Type II or GDPR. Say your business type, size and the tools you use, as separate items.
-  - Describe your business, the tools you use and the controls you already have. Add your audit date if you have one.
+  - Gather what you have first, such as your current policies, the list of tools and systems you use, who has access to what, and your incident plan.
+  - Name each framework and its version, such as SOC 2 Type II or GDPR. Then describe your business type and size, the tools you use and the controls you already have, as separate items. Add your audit date if you have one.
+  - The worked examples in the skill text use made-up percentages, statuses and findings to show the layout. Your checklist must use only what you tell it.
   - Read the readiness summary first. Then check the status of each item against what you really have.
   - Check the version of the framework and its effective dates against the official source before you act on the gap ranking. Rules change.
   - Take the top ranked gaps into a fix plan. Ask an auditor or lawyer to confirm your scope before you act on it.

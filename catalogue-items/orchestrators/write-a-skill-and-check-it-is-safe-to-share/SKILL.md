@@ -65,7 +65,7 @@ Pause here: Apply the fixes from the score and the trigger grade to the skill fi
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Run the skill's test prompts on a real task and see whether it fires when it should.
 - Run the Skill safety checker again on the final files before you share them.
 

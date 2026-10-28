@@ -118,8 +118,8 @@ terms:
     meaning: A check that explains any gap between two sets of figures that should match.
 not_for:
   - Your loan has no reserve requirement. There is nothing to roll forward.
-  - You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment waterfall builder.
-  - You want to test a cash covenant. Use the Debt service covenant headroom checker.
+  - You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment priority planner.
+  - You want to test a cash covenant. Use the Loan covenant cash coverage checker.
   - Your payments are uneven across the year and you only have the yearly total. Give the real months, or treat the result as rough.
 output_sample:
   input:

@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run Python code and reach the internet, such as Claude or ChatGPT with code tools on.
   - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
-  - Describe what you need, such as the cancer type, scan type, body part and how many cases, and say if your use is commercial. The first run may install a search index, which takes some disk space.
+  - Describe what you need, such as the cancer type, scan type, body part and how many cases, and say if your use is commercial. If you only need to look things up, such as collections, licences or citations, ask it to use the no-install web API. The search index, about 77 MB, is only needed when you plan to download files.
   - Read the list of collections and the licence notes. Drop any collection whose licence does not fit your use.
   - Run the download commands on a computer with enough disk space. Add the citations to your paper or report.
   - Next, open the downloaded files with a tool such as pydicom or SimpleITK. Check each series' licence name again before any commercial use.
@@ -49,7 +49,7 @@ output_sample:
     - "About 77 MB of free space, which the first run uses to install the packaged search index"
   output:
     - name: Matching collections and series
-      contains: The public collections and image series that fit your request, with scan type, body part and case counts.
+      contains: A table you can save as a spreadsheet, one row per matching series, with columns for collection, scan type, body part, case count, licence and citation.
     - name: Licence summary
       contains: The reuse terms for each collection, so you know what you may build on.
     - name: Citations

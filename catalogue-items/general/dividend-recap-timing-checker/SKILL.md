@@ -128,8 +128,8 @@ The link names a public method. The instructions and practice numbers in this pa
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Split fund payouts between investors and the sponsor with the [No-catchup waterfall checker](https://useaiblocks.com/skills/no-catchup-waterfall-checker).
-- See what a longer hold could earn with the [Long-hold return calculator](https://useaiblocks.com/skills/long-hold-return-calculator).
+- Split fund payouts between investors and the sponsor with the [Fund payout without catch-up checker](https://useaiblocks.com/skills/no-catchup-waterfall-checker).
+- See what a longer hold could earn with the [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator).
 
 If they pick one and it is not added here, give the link and say what to bring.
 

@@ -89,7 +89,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 5. **Messages**: in order, with the sender of each, exactly as they'll appear.
 6. **Blank version**: the same screen with empty bubbles, so the words can change later.
 7. **Line under the image**: about 27 characters. A plain caption, a question about the thing, the buyer's own line or the swap. Never the product name.
-8. **Flags**: "words written for the image: read before it runs" for any message not in the story.
+8. **Flags**: always start with "Staged scene: this is not a real customer's chat. Do not present it as a real screenshot, review or testimonial." Then "words written for the image: read before it runs" for any message not in the story.
 9. **Image prompt**: 60 to 120 words, every message in quotes once, ready to paste.
 10. **How to make it**: design tool or image tool, one line.
 11. **Checks missed**: one line per check still missed, or "none".

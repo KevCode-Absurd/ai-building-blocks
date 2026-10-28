@@ -12,6 +12,28 @@ Optimize a single page for search relevance, click-through, and crawler comprehe
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Pdp copy** (yours): product page copy: title, benefits, details, FAQ, proof blocks.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor). Bring your website, an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website, an audit report, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Auditing or optimizing a single page (homepage, product page, article, landing page)
@@ -142,6 +164,15 @@ Default output is a markdown audit at `seo-audit-[page-slug].md` in the project 
 Keep audits under 1500 words. If a page needs more detail, link to deeper appendices.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Title and meta tag writer](https://useaiblocks.com/skills/title-and-meta-tag-writer). It takes the audit report and draft.
+- The [Schema markup writer](https://useaiblocks.com/skills/schema-markup-writer). It takes the audit report.
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Reference files
 

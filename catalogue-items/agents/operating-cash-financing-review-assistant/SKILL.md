@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the prior accepted model and review log. For a tax gap: current tax expense, opening and closing current tax payable, signed non-cash movements and reported cash tax paid.
 
-**The pieces it uses:** the [Separate financing effects from operating cash](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow (the governing method) and the [Current tax cash-payment bridge](https://useaiblocks.com/skills/current-tax-cash-payment-bridge) (only when current taxes may explain a leftover gap). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Factoring and supplier-finance cash-flow reviewer](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow (the governing method) and the [Cash tax payment reconciler](https://useaiblocks.com/skills/current-tax-cash-payment-bridge) (only when current taxes may explain a leftover gap). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the linked workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -75,6 +75,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test a net debt covenant** with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+- **Test a net debt covenant** with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
 - **Check buybacks and dividends against cash flow** with the [Issuer capital distribution review assistant](https://useaiblocks.com/skills/issuer-capital-distribution-review-assistant).
 Nothing here files anything or contacts a company. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

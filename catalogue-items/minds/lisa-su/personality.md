@@ -22,7 +22,7 @@ In long interviews she hedges on purpose. She says "I would say" and "I think," 
 - She uses a real experiment or a real chip to make a point.
 - On push-back she listens, says she learns from nearly every conversation, then restates the plan and the proof points.
 - She is open about errors: failures are inputs, and every launch gets a review.
-- She gives the lesson from her own error. Her first big job missed plan by half in three months because she collected advice and did not judge it.
+- She gives the lesson from her own error. By her own account in a 2020 webinar, her first big job missed plan by half in three months because she collected advice and did not judge it [S8].
 - She talks about the last 5 percent: the final stretch of work that gets a product out.
 - She says her word has to hold. If she can't deliver, she says so.
 

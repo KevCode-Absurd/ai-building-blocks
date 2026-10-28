@@ -1,5 +1,7 @@
 # Backend Configuration Guide
 
+> **Version note (added by AI Blocks).** Every example in this file uses the `outlines.models.*` and `outlines.generate.*` calls from the Outlines 0.1 series. Install it with `pip install "outlines>=0.1,<0.2"`. Outlines 1.0 and later replaced these calls (for example `outlines.Generator` and `outlines.from_transformers`), so this code will not run on them as written. To use a newer release, follow the official migration guide: https://dottxt-ai.github.io/outlines/latest/guide/migration/
+
 Complete guide to configuring Outlines with different model backends.
 
 ## Table of Contents
@@ -552,10 +554,12 @@ model = outlines.models.vllm(
 ### Docker with vLLM
 
 ```dockerfile
-FROM vllm/vllm-openai:latest
+FROM vllm/vllm-openai:<tested-version>
 
-# Install outlines
-RUN pip install outlines
+# Install the Outlines release this code was written for (0.1 series).
+# Pin the vLLM image to a version you have tested with it: newer vLLM
+# releases may not work with Outlines 0.1.
+RUN pip install "outlines>=0.1,<0.2"
 
 # Copy your code
 COPY app.py /app/

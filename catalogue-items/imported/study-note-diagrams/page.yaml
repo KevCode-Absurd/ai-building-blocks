@@ -29,9 +29,10 @@ how_to_use:
   - Paste this skill into a chat with Claude, ChatGPT or Gemini. No code running is needed for a Mermaid diagram.
   - Paste the lesson section and name the one idea you want to show. Add the learner level if you know it.
   - "Your AI picks the form: flowchart, timeline, mind map, table or drawing. Ask it to explain the choice if you disagree."
+  - "In a plain chat, the reply comes in this order: one Mermaid code block, a one-line caption on what to notice, then one sentence on where it goes in your notes."
   - Check the diagram. It should have about 15 boxes or fewer, with short labels. Ask for a split if it is too busy.
   - Paste the diagram code into your notes right after the explanation. Add the caption under it.
-  - Then check that the caption matches your explanation and that every label is true to the lesson. To turn the notes into practice, ask for flashcards with the flashcard maker.
+  - Then check that the caption matches your explanation and that every label is true to the lesson. If a label differs from the lesson, stop and fix it before you study from it. To turn the notes into practice, ask for flashcards with the flashcard maker.
   - For an SVG file, use an AI that can save files, and save it in your notes folder.
   - "A plain chat works fine. You do not need a notes vault, a Mermaid checker or a file-saving tool. The skill's dashboard chart and helper agent sections are for a full learning vault, so ignore them for one diagram."
 output_sample:

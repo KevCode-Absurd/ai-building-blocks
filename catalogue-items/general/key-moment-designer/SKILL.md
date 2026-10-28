@@ -87,14 +87,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **To invite or announce it** with the [Internal update writer](https://useaiblocks.com/skills/internal-update-writer). Bring the plan.
-- **To reward people after it** with the [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - There is one clear peak, not five.
@@ -104,6 +96,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No broken basic is hidden behind the peak.
 - The cost of the plan fits the budget given, or the gap is stated.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **To invite or announce it** with the [Internal update writer](https://useaiblocks.com/skills/internal-update-writer). Bring the plan.
+- **To reward people after it** with the [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

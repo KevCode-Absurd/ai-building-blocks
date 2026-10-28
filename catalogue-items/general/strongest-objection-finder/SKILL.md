@@ -64,4 +64,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The call follows from the ratings, not from my hopes.
 - A person on the other side would call the arguments fair.
 
-For the full version with every check, use the [Case-against writer](https://useaiblocks.com/skills/case-against-writer).
+For the full version with every check, use the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer).

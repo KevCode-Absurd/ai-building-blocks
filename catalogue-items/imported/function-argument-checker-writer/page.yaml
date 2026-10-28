@@ -36,6 +36,16 @@ how_to_use:
   - Ask your AI to rewrite the function with an arguments block.
   - Read the warnings on silent conversions and fix any input rules that are too loose.
   - Run the new function in MATLAB on good and bad inputs. Then write tests with the MATLAB unit test writer.
+  - No MATLAB licence? You can still get the rewrite and the warnings, but you cannot run or test them. Stop after reading the warnings, and have someone with MATLAB run the function before anyone relies on it.
+output_shape: |
+  REWRITTEN FUNCTION
+  <your full function, with the new arguments block at the top>
+  CHANGED INPUTS
+  <input> | old check | new rule | why
+  SILENT CONVERSION WARNINGS
+  <input>: <what MATLAB would quietly change, and how the new rule stops it>
+  CHECKS LEFT IN THE BODY
+  <guard checks kept in the function, and why>
 output_sample:
   input:
     - Your MATLAB function or class, pasted as text

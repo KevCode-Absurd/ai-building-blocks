@@ -107,8 +107,8 @@ Write MISSING: <what> next to the result it affects. Keep working on parts that 
 
 ## After this
 
-- If the plan keeps failing, run the [Trace why work keeps missing deadlines](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow to find the cause.
-- If a colleague will cover part of your week, run the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
+- If the plan keeps failing, run the [Recurring work delay reviewer](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow to find the cause.
+- If a colleague will cover part of your week, run the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
 - On the review point, bring the plan back and run step 2 again with what has changed.
 - Nothing here books or sends anything. The user adds the events to their own calendar.
 

@@ -38,7 +38,7 @@ how_to_use:
   - Read the plan and the script. Check any file paths and names before you run it.
   - Run the tests it gives you, then set up the schedule or trigger.
   - Keep the notes it writes so you know how to pause or turn off the job.
-  - Next, look at the error log on a set day each week, and send Slack alerts to one named channel that someone owns.
+  - Next, look at the error log on a set day each week, and send Slack alerts to one named channel that someone owns. In the examples, the file watcher logs to ~/data/errors/error.log and the health check to /var/log/health_check.log. Alerts go to whichever channel you picked when you made the Slack incoming webhook.
 output_sample:
   input:
     - The repetitive task in plain words

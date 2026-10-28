@@ -79,7 +79,7 @@ Allow at most two correction passes on any step. After that, stop and name the b
 
 Finish with the evidence used, assumptions, `MISSING:` lines, and `CHECKS MISSED:` listing any check that could not run (or "none"). Say whether this was a first baseline or a comparison with a record.
 
-What next: take the evidence brief and the gap list to the named owner, and set the next gate or results date. Offer these next steps: the Prepare an AI pilot go decision workflow for one decision, or the [Pilot customer promise review assistant](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant) to check what was promised to pilot customers. Say what to bring: the evidence brief and the checklist result.
+What next: take the evidence brief and the gap list to the named owner, and set the next gate or results date. Offer these next steps: the Prepare an AI pilot go decision workflow for one decision, or the [Pilot customer promise reviewer](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant) to check what was promised to pilot customers. Say what to bring: the evidence brief and the checklist result.
 
 ## Stop and ask before
 

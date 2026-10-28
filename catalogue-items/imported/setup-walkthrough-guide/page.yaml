@@ -7,7 +7,7 @@ job: organise-work
 headline: Setup walkthrough guide
 subhead: A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once.
 explain: |
-  A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once. Here each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
+  Each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
 
   Before step one, Claude builds a full checklist from your outline, the docs, your screen and any prerequisites. The remaining list never shows more than eight items. If more are left, later steps merge into broader ones, but none are dropped. A new required step is added in the right place. When done, Claude says setup is complete.
 

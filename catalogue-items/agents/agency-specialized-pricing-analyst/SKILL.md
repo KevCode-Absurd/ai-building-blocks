@@ -11,7 +11,7 @@ Read [the original role profile](references/source-agent.md) before you start. U
 
 When not to use it: for one safe test price from sales data, use the Price test planner. To see how sales move as price changes, use the Price sensitivity analyst. For a letter that tells customers about a price rise, use the Price rise letter writer. For a quick three-tier ladder for software, use the Three-tier price ladder drafter. Prices set by law or contract need a pricing or legal professional.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -32,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
 2. **Check what's missing.** Look for your question, your brand brain, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** Your cost and sales spreadsheet goes in as a file, so the margin table uses your own figures.
@@ -91,9 +91,9 @@ Return these sections in order. If your AI can save files, save one file. If not
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
-Next steps to offer, instead of the generic "After this" list above: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
+Next steps to offer, instead of the generic "After this" list below: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.

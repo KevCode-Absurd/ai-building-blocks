@@ -27,7 +27,7 @@ how_to_use:
   - Paste your current script if you have one.
   - Copy the code into Rhino's Script Editor and run it with the steps your AI gives you.
   - Do the listed checks in Rhino, then send any error text back to your AI to fix.
-  - Next, once it runs, save the script and ask for a toolbar button or a start-up load, using the macro in the skill.
+  - "Next, once it runs, save the script in a folder listed under Options, Files, Search paths. Then add a toolbar button or alias with the macro ! _-RunPythonScript \"MyScript.py\" (Python), or add the file to the Startup list under Tools, Options to load it every session."
 output_sample:
   input:
     - Your Rhino version

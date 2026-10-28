@@ -20,6 +20,7 @@ not_for:
   - "You only need a written answer or plain text summary: ask your AI to write it in chat, no visual needed."
   - "You want raw data exported or edited as a table: use a spreadsheet such as Google Sheets or Excel."
   - "You need a finished brand design or print layout: work with a designer or a design tool such as Figma."
+  - "You need a live dashboard fed by a database or analytics tool: build it in that tool, such as Looker Studio or your BI tool, since this makes a one-off page from the numbers you give."
 you_give:
   - "What you want to show: the series or items, their units, the time range, and the one question the visual should answer"
   - The data or facts to include

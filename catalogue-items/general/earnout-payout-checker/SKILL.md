@@ -128,7 +128,7 @@ The link names a public method. The instructions and practice numbers in this pa
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Settle the working capital after closing with the [Working capital true-up checker](https://useaiblocks.com/skills/working-capital-true-up-checker).
+- Settle the working capital after closing with the [Sale working capital settlement checker](https://useaiblocks.com/skills/working-capital-true-up-checker).
 - See the cash needed at closing with the [Deal funding gap checker](https://useaiblocks.com/skills/deal-funding-gap-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.

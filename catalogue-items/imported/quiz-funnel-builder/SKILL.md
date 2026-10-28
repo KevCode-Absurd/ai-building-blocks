@@ -11,6 +11,27 @@ metadata:
 
 A proven 4-step system for generating qualified leads through interactive assessments that arrive with rich data about each prospect.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Everything is downstream from lead generation.** People buy to resolve psychological tension between their current reality and desired reality — a scorecard awakens dormant desires by asking revealing questions.
@@ -208,8 +229,16 @@ See [references/analytics-optimization.md](references/analytics-optimization.md)
 
 For the complete system, additional examples, and advanced strategies:
 
-- [*"Scorecard Marketing: The four-step playbook for getting better leads and bigger profits"*](https://www.amazon.com/Scorecard-Marketing-four-step-playbook-getting/dp/1781337195?tag=wondelai00-20) by Daniel Priestley and Glen Carlson
+- [*"Scorecard Marketing: The four-step playbook for getting better leads and bigger profits"*](https://www.amazon.com/Scorecard-Marketing-four-step-playbook-getting/dp/1781337195) by Daniel Priestley and Glen Carlson
 
 ## About the Author
 
 **Daniel Priestley** is a serial entrepreneur, founder of the accelerator Dent Global, and co-founder of ScoreApp, the platform built around the scorecard methodology that has generated millions of leads. He is the author of *Key Person of Influence*, *Oversubscribed*, and *Scorecard Marketing*.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [Conversion problem finder](https://useaiblocks.com/skills/conversion-problem-finder).
+- **Plan your strategy** with the [One-page marketing plan builder](https://useaiblocks.com/skills/one-page-marketing-plan-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

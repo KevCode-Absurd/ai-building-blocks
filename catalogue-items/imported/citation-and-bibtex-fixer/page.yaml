@@ -38,6 +38,7 @@ how_to_use:
   - Read the list. Check every changed entry against the publisher page yourself.
   - Do not use Google Scholar for bulk or automated searches. Its terms may forbid scraping. Search it by hand if you must, and use PubMed or the publisher's export for the lookups.
   - Skim the final list before you submit your paper.
+  - Next, import the cleaned .bib file into Zotero or your LaTeX project and compile once, to catch any missing fields.
 output_shape: |
   | Entry key | Status (checked or unverified) | Source URL used | Fields that did not match |
   <one row per entry>
@@ -57,7 +58,7 @@ output_sample:
       contains: Entries with authors, title, journal, year and pages, built from search results or from DOIs.
     - name: Formatted and deduplicated BibTeX file
       contains: Your entries with consistent style and keys, duplicates removed, sorted by year if you ask.
-    - name: Validation report
-      contains: Each entry marked checked or unverified, with the errors, missing fields or details that do not match the real publication.
+    - name: Entry check list
+      contains: Each entry marked checked (with the source page your AI fetched) or unverified, plus any fields that do not match. This is a hand check, not an automatic validation report.
     - name: Final references file
       contains: The clean BibTeX file ready to use in your LaTeX paper or thesis.

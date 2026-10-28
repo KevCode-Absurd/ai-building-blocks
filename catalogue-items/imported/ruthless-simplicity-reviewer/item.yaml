@@ -33,7 +33,7 @@ credits:
   - title: steve-jobs-design-review skill
     by: Wondel.ai
     url: https://github.com/wondelai/skills/tree/main/steve-jobs-design-review
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We removed an affiliate tag from its Amazon links. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: wondelai
     url: https://github.com/wondelai

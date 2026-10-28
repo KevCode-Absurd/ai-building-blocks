@@ -7,7 +7,7 @@ description: Paste this above a story-style ad. It finds the moment the old way 
 
 One honest picture for a story ad, chosen from the story itself, with a prompt you can paste into an image tool. You always get the prompt. You only get the picture if your AI can draw (ChatGPT and Gemini can, Claude cannot unless an image tool is connected): see "Making the picture" below.
 
-**Not for:** a plain product or price ad with no story (use a direct product picture, or the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer) to fix the copy first), or a full check of every picture rule (use the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads)).
+**Not for:** a plain product or price ad with no story (use a direct product picture, or the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer) to fix the copy first), or a full check of every picture rule (use the [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -92,4 +92,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Flag any body part, before-and-after body or health condition in the picture or line for ad-policy review, and point to the platform's ad policy page (for Meta, its Advertising Standards). Real skin texture and hands at true size must not turn the picture into a close-up of a body problem.
 - Words on the image are the story's words.
 
-For the full version with every check, use the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads).
+For the full version with every check, use the [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads).

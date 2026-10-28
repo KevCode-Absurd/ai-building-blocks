@@ -11,7 +11,7 @@ explain: |
 
   Your AI first checks that the tools it needs are installed and asks before adding anything. It rewrites your text into clean sections, then builds slides in Marp, a tool that makes slides from Markdown. Any slide that would overflow is split. Next it writes a narration script with one section per slide, with symbols removed that should not be read aloud.
 
-  The last step makes the video. A script renders the slides, creates speech with Edge-TTS and joins the two into an MP4. That step needs Python and other tools on your own computer, plus scripts from the original repo. It also sends your text to an online speech service, so skip it for confidential documents.
+  The last step makes the video. Your AI turns each slide into a picture with Marp, creates speech with Edge-TTS and joins the two into an MP4 with ffmpeg. That step needs these free tools on your own computer. It also sends your text to an online speech service, so skip it for confidential documents.
 when:
   - You wrote a tutorial in Markdown and want a video version.
   - You need a narrated report for people who will not read a long document.
@@ -25,7 +25,7 @@ not_for:
 you_give:
   - A Markdown document
   - A Marp slide style (optional)
-  - For the video step, a computer where your AI can run code, with Python, Marp, ffmpeg and Edge-TTS installed
+  - For the video step, a computer where your AI can run code, with Node.js, Python, ffmpeg and Edge-TTS installed
 you_get:
   - A cleaned-up copy of your text, as a new file
   - A slide file in Marp format
@@ -34,8 +34,8 @@ you_get:
 how_to_use:
   - Get your document into Markdown. A plain text file with headings works. Copy it into a new file so the original stays safe.
   - Open Claude, ChatGPT or Gemini and paste the SKILL.md text from this item. This gives you the slides and the narration script in a chat. Stop here if you only need those, or if your document is confidential.
-  - For the MP4, use an AI that can run code on your computer, such as Claude Code. Get the three scripts from the original repo linked in the credits, and let your AI check that Python, Marp, ffmpeg and Edge-TTS are installed.
-  - Say yes or no before your AI installs anything. Answer any question the video script asks.
+  - For the MP4, use an AI that can run code on your computer, such as Claude Code. Let your AI check that Node.js, Python, ffmpeg and Edge-TTS are installed.
+  - Say yes or no before your AI installs anything. Pick a voice for the narration.
   - Check that the slide file and the narration have the same number of slides. Watch the video once before you share it.
 how_it_works:
   - title: Check the setup
@@ -47,15 +47,14 @@ how_it_works:
   - title: Write the narration
     text: It writes a script with one section per slide, without symbols that should not be spoken.
   - title: Make the video
-    text: A script renders the slides, makes speech with Edge-TTS and joins them into an MP4. A fallback script is tried if it fails.
+    text: It turns each slide into a picture, makes speech with Edge-TTS and joins them into an MP4 with ffmpeg. If a step fails, you still get the slides and script.
 output_sample:
   input:
     - A Markdown document, such as a tutorial or report
     - A Marp slide style (optional)
   prerequisites:
     - For the MP4, an AI that can run code on your computer
-    - Python, Marp, ffmpeg and Edge-TTS installed
-    - The three video scripts from the original repo
+    - Node.js, Python, ffmpeg and Edge-TTS installed
     - A document that is safe to send to an online speech service
   output:
     - name: Cleaned Markdown
@@ -69,7 +68,7 @@ output_sample:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can run the scripts, check your installs and save the files on your computer.
+      why: It can run the commands, check your installs and save the files on your computer.
     - name: Any good chat AI
       why: Claude, ChatGPT or Gemini can write the slides and narration, but cannot make the MP4 alone.
   inputs:

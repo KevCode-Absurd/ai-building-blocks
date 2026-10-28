@@ -37,13 +37,13 @@ STRATEGIES = {
     "novelty": {
         "query_count": 6,
         "sources": ["google_patents", "espacenet"],
-        "filters": {"date_filter": "any", "active_only": False},
+        "filters": {"date_filter": "before_user_effective_filing_date", "active_only": False},
         "queries": [
             {"type": "narrow_keyword", "count": 3, "source": "google_patents"},
             {"type": "broad_concept", "count": 2, "source": "google_patents+espacenet"},
             {"type": "cpc_class", "count": 1, "source": "google_patents", "after_initial": True},
         ],
-        "ranking_heuristic": "claim_text_overlap_with_invention_description",
+        "ranking_heuristic": "feature_coverage_in_full_document_text",
         "verdict_scale": ["NOVEL", "POTENTIALLY NOVEL", "NOT NOVEL"],
         "docx_emphasis": {
             "executive_summary": "expanded",

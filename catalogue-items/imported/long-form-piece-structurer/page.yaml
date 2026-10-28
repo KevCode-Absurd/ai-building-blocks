@@ -35,8 +35,9 @@ how_to_use:
   - Say what type of piece you are writing, such as a case study or whitepaper.
   - Add your main point, your audience and the goal of the piece.
   - Paste your notes or research if you have them (optional).
-  - Read the outline. Check each section earns its word target, then cut what is on the cut list.
+  - Start with the section outline, then the lede plan. If the outline does not fit your point, say what your point is in one sentence and ask for a new outline. Check each section earns its word target, then cut what is on the cut list.
   - Ask your AI to adjust any section that does not fit your point, then start drafting.
+  - Draft one section at a time from the outline. When the full draft is done, check it with the Draft proofreader before you publish.
 output_sample:
   input:
     - The type of piece, such as a case study or whitepaper

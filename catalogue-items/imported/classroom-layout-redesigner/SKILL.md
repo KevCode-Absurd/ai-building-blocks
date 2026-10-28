@@ -69,6 +69,19 @@ tags: ["Montessori", "prepared-environment", "classroom-design", "Lillard", "Cos
 
 # Prepared Environment Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Evaluates a classroom or learning space against Montessori prepared environment principles and produces a practical redesign plan. The prepared environment is one of Montessori's most distinctive and influential contributions: the idea that the physical space IS the curriculum — that a carefully designed environment invites learning, supports independence, and reduces the need for teacher direction. Lillard (2005) identified the key principles: accessibility (children can reach and choose materials independently), order (everything has a defined place and is returned there after use), beauty (the environment is aesthetically pleasing, using natural materials and careful design), real materials (functional objects, not toys — real glass, real tools, real plants), and child scale (furniture and materials are sized for the children using them). Cossentino (2006) added the concept of "big work" — the environment should invite sustained, meaningful engagement rather than quick, scattered activity. This skill is particularly valuable because environment design is one of the Montessori principles with the most independent supporting evidence: Barrett et al. (2015) found that classroom design factors (light, temperature, air quality, ownership, flexibility, complexity, and colour) explained 16% of variance in student learning progress — a substantial effect for a single variable. Fisher et al. (2014) found that visually cluttered classrooms significantly reduced children's attention and learning, providing direct empirical support for the Montessori emphasis on visual order.
@@ -261,3 +274,10 @@ The biggest change is not visual — it is behavioural. Children who previously 
 3. **School policies may limit environmental changes.** Many schools have policies about display requirements (literacy working walls, maths displays, behaviour charts), health and safety (real glass may be prohibited), and furniture (standardised tables and chairs from a central procurement system). The redesign plan above should be adapted to work within these constraints rather than fighting them.
 
 4. **The initial transition may temporarily increase disorder.** When children who are used to asking for permission are suddenly given open access to materials, there may be a period of overuse, messiness, or testing of boundaries. This is normal and temporary. The materials return routine (Phase 2, step 9) addresses this, but teachers should expect a 1-2 week adjustment period.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

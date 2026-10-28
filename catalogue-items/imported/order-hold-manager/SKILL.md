@@ -12,6 +12,26 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Risky order flagger](https://useaiblocks.com/skills/risky-order-flagger). Bring a tool connection.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Places or releases holds on fulfillment orders programmatically without navigating the Shopify admin. Useful for fraud review queues, inventory shortages, or payment verification workflows. Works on orders with fulfillment orders in `OPEN` status.
 
@@ -185,17 +205,25 @@ No CSV. Inline summary table:
 |-------|---------------------|-----------------|------------|
 | #1001 | gid://...FulfillmentOrder/456 | OPEN | ON_HOLD |
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Late order and shipment tracker](https://useaiblocks.com/skills/daily-order-and-shipping-watcher).
+- The [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder). It takes the plan.
+- The [Delivery time and price checker](https://useaiblocks.com/skills/carrier-performance-comparer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `fulfillmentOrder.status` is already `ON_HOLD` | Order already held | Skipped automatically — logged in output |
 | `fulfillmentOrder.status` is not `OPEN` or `ON_HOLD` | Order is already fulfilled, cancelled, or in progress | Cannot hold/release; skip and report |
-| `INVENTORY_OUT_OF_STOCK` reason without note | Unconfirmed: some stores may require a note for this reason (an assumption to check) | Add `reason_notes` parameter |
 | `userErrors` from mutation | Insufficient scopes or invalid fulfillment order state | Verify `write_merchant_managed_fulfillment_orders` scope |
 
 ## Best Practices
 1. Use `query_filter: "tag:fraud-review"` to hold all orders tagged by your fraud detection process in one command.
-2. Set `hold_until` to automatically release holds after a review window — prevents holds being forgotten on customer orders.
+2. Set `hold_until` to automatically release holds after a review window — prevents holds being forgotten on customer orders. Warning (added by AI Blocks): the hold lifts on that date whether or not anyone reviewed the order. For fraud-review or payment holds, finish the check first, or do not set an expiry.
 3. Always run `dry_run: true` first when using `query_filter` — confirm the order count before holding dozens of orders at once.
-4. To release, run this skill again with `action: release` on the same tag or order list after the review is done. (The `fulfillment-status-digest` skill named by the original author is not in this library.)
+4. To release, run this skill again with `action: release` on the same tag or order list after the review is done. (The `fulfillment-status-digest` skill named by the original author is not in this library.) To check the released orders, open Orders in the Shopify admin, filter by the same tag, and confirm each one is no longer on hold.
 5. The `AWAITING_PAYMENT` reason is visible to fulfillment staff and provides context for why an order is paused.

@@ -108,8 +108,10 @@ Key findings:
   3. [Company] - [X] open roles
 
 ### Supply/Demand Balance
-**Assessment:** [Candidate-driven / Employer-driven / Balanced]
-**Evidence:** [Supporting data points]
+**Assessment:** [Candidate-driven (more roles than qualified candidates) / Employer-driven (more qualified candidates than roles) / Balanced / Unclear]
+**Evidence:** [Supporting data points, each with source and date]
+**Scope match:** [Role, seniority, location and period that both the supply and demand figures cover, or why they could not be matched]
+**Qualified share:** [How much of the raw pool meets the must-haves, and how that was judged]
 **Trend:** [Improving / Worsening / Stable]
 
 ---

@@ -16,7 +16,7 @@ when:
   - Daily active users stay flat and nothing looks broken.
   - You want one retention number your whole team trusts.
 not_for:
-  - "Your app has broken screens or slow load times: fix those first, because no retention trick can cover them up. Ask a developer or designer."
+  - "Your app has broken screens or slow load times: fix those first, because no retention trick can cover them up. Run the App polish guide, or ask a developer or designer."
   - "You have no app yet: build a first version before you plan retention. Start with a simple prototype or a person who builds apps."
   - "You only need one method, like habit design or a single metric: ask your AI for that one step instead of running all eight."
 you_give:
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Check that your AI can read and write files, and that your project has a docs folder. Create one if it does not.
   - "Install the eight companion skills this one runs: hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions and drive-motivation. Each one is in the wondelai/skills collection. In Claude Code, run npx skills add wondelai/skills/<slug> --global for each name. In a chat AI, add each skill the way you added this one."
-  - Open the Grow an App skill in your AI and paste in your app description and numbers.
+  - Open the Grow an App skill in your AI and paste in your app description and numbers. The phases lean on the eight companion skills. Without them, your AI can only work from this skill's short notes, so install them first.
   - Answer the questions at each of the eight phases. Your AI asks before every choice.
   - Read the saved plan files after each phase and fix anything that is wrong.
   - Come back later and ask your AI to continue from the plan file.
@@ -55,6 +55,8 @@ output_sample:
       contains: The small, cheap tests chosen to find which bet is worth building.
     - name: docs/METRICS.md
       contains: The one retention number your team agrees to watch, and why it was chosen.
+    - name: docs/DESIGN.md
+      contains: A microinteraction list added in phase 7, with each interaction, its trigger and feedback, the fix and its status.
     - name: docs/GROW-APP-PLAN.md
       contains: A progress tracker for all eight phases, so you can stop and pick up later.
 terms:

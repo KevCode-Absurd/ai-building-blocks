@@ -7,8 +7,6 @@ job: test-and-fix-code
 headline: Site QA sweep runner
 subhead: A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
 explain: |
-  A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
-
   Choose one of three tiers. Smoke is a fast check after a deploy. Standard is the full audit of a new page or feature. Full is the release matrix before a major launch. It runs checks with snippets you paste into the browser console, so it works on any stack and needs only dev tools. It covers general quality, and sends deep accessibility or speed work to other specialist checks.
 when:
   - You just deployed and want to know nothing is broken.
@@ -32,9 +30,11 @@ you_get:
 how_to_use:
   - Paste this skill into Claude, ChatGPT or Gemini, or upload the skill folder.
   - "Tell your AI the page address and the depth: smoke, standard or full."
+  - "For a full run, gather first: the key user actions your analytics should record, the main user flow to test, and the browsers you can test on (Chrome, Safari, Firefox, Edge). It also uses two free tools: Lighthouse, built into Chrome dev tools, and Google's Rich Results Test."
   - Open the page in your browser, then open dev tools and the console.
   - If your AI cannot open a browser, paste each snippet it gives you into the console yourself. Copy the result back into the chat for review.
-  - Read the problem list. Fix each item before launch, or file it as a known issue.
+  - Some full-run checks have no snippet. Open /sitemap.xml and /robots.txt in the browser and check they load. Visit a made-up address on your site and check the Network tab shows a 404 status. The headers snippet only reads your own site, so run it on the page you are testing.
+  - Read the problem list. A pass means the check's rule in the skill was met, such as one H1 per page. Fix each failed item before launch, or file it as a known issue.
   - For standard and full runs, ask for the written report and save it as qa-report-[date].md.
 output_sample:
   input:

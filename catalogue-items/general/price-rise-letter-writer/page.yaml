@@ -26,6 +26,7 @@ you_give:
   - "Old price, new price, what it covers, start date"
   - "The honest reason"
   - "Who it affects"
+  - "The send date and the days of notice your terms or local rules require"
   - "What customers can do, such as lock in, switch or cancel (advised)"
 you_get:
   - "The change in money and percent, checked"

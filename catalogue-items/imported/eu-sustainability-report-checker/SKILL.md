@@ -15,9 +15,26 @@ description: >
 
 # CSRD Compliance Skill
 
-> **Currency:** The original author dated this skill October 2026. AI Blocks has not checked it. Every legal reference and date below is unverified. Mark each one "unverified, confirm against the Official Journal" in your result.
+> **Currency:** The original author dated this skill October 2026. AI Blocks has checked only the scope rule (see "Scope rule" below). Every other legal reference and date below is unverified. Mark each one "unverified, confirm against the Official Journal" in your result.
 
 > ⚠️ **The Omnibus changed this framework in 2026 (the author's account).** Mandatory CSRD reporting applies to large undertakings with **more than 1,000 employees AND net turnover above €450 million**. Companies at or below that line are out of mandatory scope, and the voluntary standard is available instead. Simplified ESRS also cut the mandatory datapoints a great deal. **Before any gap assessment, ask: current ESRS (2023) basis or revised ESRS basis?**
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude:** Follows long legal rule chains and keeps a clear line between facts and guesses.
+- **Any AI with web access:** Can check the latest law and dates, which this skill cannot confirm alone.
+<!-- /needs -->
 
 ## Dates and references to confirm (the one list)
 
@@ -52,9 +69,9 @@ Ask once for anything missing. Never guess a figure.
 
 This is the one scope rule for this skill. Use no other size test:
 
-- In mandatory scope: more than 1,000 employees AND net turnover above €450 million. This is the only scope test.
+- In mandatory scope: more than 1,000 employees AND net turnover above €450 million. This is the only scope test. AI Blocks checked this rule on 2026-10-28 against the European Parliament's Omnibus I page (europarl.europa.eu/legislative-train, "Omnibus I - simplification of the directives on corporate sustainability reporting"), which says the text was published in the Official Journal on 26 February 2026 and entered into force on 18 March 2026. Older tests (250 employees, a balance-sheet total, or two of three size criteria) no longer apply; never use them.
 - Anything at or below either line: out of mandatory scope. The voluntary standard is the route if customers ask for data.
-- Non-EU companies: undetermined until confirmed.
+- Non-EU companies: the same Parliament page says the turnover line for non-EU companies is €450 million generated in the EU. Other conditions for non-EU groups are not set out there, so keep the verdict undetermined until counsel confirms them.
 - Give the first reporting year from the list of dates above and the "Implementation Timelines" section, and label it "to confirm with counsel". Never work it out from phase-in dates in your memory.
 
 **Dates and citations.** The legal references, dates and the currency note at the top of this file come from the skill's author. You cannot check them from inside this skill. Put them in the result as "to confirm against the Official Journal", and put the "not legal advice" line next to the scope verdict, not only at the end.
@@ -71,6 +88,13 @@ Return these parts, in this order:
 6. **Check before use.** Say that a human, such as a sustainability lead, counsel or an assurance provider, must review the draft before anyone relies on it.
 
 Then give a next step: collect the MISSING data, and book counsel to confirm scope and dates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## How to Respond
 
@@ -97,7 +121,7 @@ Always cite the relevant source: Directive article (e.g., "Art. 19a CSRD"), ESRS
 - **Directive (EU) 2022/2464** — amends Accounting Directive 2013/34/EU, Audit Directive, Transparency Directive, and MiFID II
 - **In force:** 5 January 2023
 - **ESRS standards:** Commission Delegated Regulation (EU) 2023/2772 (adopted 31 July 2023)
-- Replaces the **Non-Financial Reporting Directive (NFRD)** — expands scope from ~11,000 to ~50,000 companies
+- Replaced the **Non-Financial Reporting Directive (NFRD)**. The original 2022 text was expected to widen scope from about 11,000 to about 50,000 companies; the 2026 Omnibus scope rule above narrows it a great deal
 
 ### Objective
 Ensure companies disclose consistent, comparable, and reliable sustainability information to support the EU Green Deal, sustainable finance objectives, and investor/stakeholder decision-making. Reporting must follow the **double materiality** principle.
@@ -229,7 +253,7 @@ All sustainability disclosures must be **digitally tagged** in XBRL/iXBRL format
 
 ### Third-Party Assurance (Art. 26a)
 - **Limited assurance** required initially (from first reporting year)
-- **Reasonable assurance** standard to be phased in later (Commission review by 2028)
+- **Reasonable assurance:** Whether reasonable assurance will ever be required is not settled here. Older texts said it would phase in after a Commission review by 2028; the author says the Omnibus removed the Commission's power to require it. We could not confirm the final position from an official source, so plan for limited assurance and check the current text of Directive (EU) 2026/470 on EUR-Lex (eur-lex.europa.eu) before you advise on it
 - Assurance by statutory auditor or independent assurance services provider (IASP)
 - Must cover: compliance with ESRS, DMA process, sustainability information
 
@@ -313,3 +337,5 @@ Required elements per ESRS E1-1 and Art. 19a(2)(a):
 ---
 
 > *This skill provides general compliance information, not legal advice. Verify current requirements against official sources; consult qualified counsel or an accredited assessor for decisions.*
+
+Changed by AI Blocks (2026-10-28): removed old scope tests and phase-in dates that conflicted with the one scope rule, checked that rule against the European Parliament's Omnibus I page, and marked the reasonable-assurance position as unconfirmed.

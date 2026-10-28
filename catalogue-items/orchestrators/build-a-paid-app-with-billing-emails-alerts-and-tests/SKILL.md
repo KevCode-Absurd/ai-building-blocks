@@ -9,7 +9,7 @@ Give it your app idea. Get a working starter with sign-in, billing, emails, aler
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it.** If you only need a landing page or a one-time payment link, use a page builder or your payment provider's own link tool. If you already have a live app and only need failing tests fixed, use the [Test failure repair loop](https://useaiblocks.com/skills/test-failure-repair-loop).
+**When not to use it.** If you only need a landing page or a one-time payment link, use a page builder or your payment provider's own link tool. If you already have a live app and only need failing tests fixed, use the [Failed test repairer](https://useaiblocks.com/skills/test-failure-repair-loop).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

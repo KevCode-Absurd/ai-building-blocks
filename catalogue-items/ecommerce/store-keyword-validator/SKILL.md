@@ -9,17 +9,17 @@ When not to use: if the store does not sell the product behind the term, pick a 
 
 You test each keyword idea the way a store owner should before building a page: would a buyer type it, can this store win it, and which page should own it. You keep the terms that pass, reject the rest with a reason, and score the list.
 
-Inputs: products and keyword data only. The generic note below lists a brand brain as a need. It is optional here: it only helps with product names and buyer words, so do not stop or ask the user to build one first.
+Inputs: products and keyword data only. A brand brain is optional: it only helps with product names and buyer words, so do not stop or ask the user to build one first.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
 
 **Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -30,7 +30,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, a keyword list, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a keyword list, your brand brain, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**

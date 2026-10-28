@@ -9,7 +9,7 @@ subhead: Give it your Shopify store, how many days back to look, a minimum cart 
 explain: |
   You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made. To undo a run, delete the discount it made in your Shopify Admin under Discounts. The tags stay on the customers until you remove them.
 
-  It pulls abandoned checkouts from the last few days, filters out carts below your minimum value, keeps one checkout per email, then creates one code per person at your chosen percentage with your chosen prefix. It then adds a tag to each customer. A preview mode shows how many people qualify before anything is written. It does not send email, so you need a separate tool for that. It needs the Shopify command line signed in, with the right permissions.
+  It pulls abandoned checkouts from the last few days, filters out carts below your minimum value and shoppers who have not agreed to marketing emails, keeps one checkout per email, then creates one code per person at your chosen percentage with your chosen prefix. It then adds a tag to each customer. A preview mode shows how many people qualify before anything is written. It does not send email, so you need a separate tool for that. It needs the Shopify command line signed in, with the right permissions.
 when:
   - You want to win back shoppers who left items in their cart.
   - You need a unique code for each shopper so one code is not shared around.
@@ -19,6 +19,7 @@ not_for:
   - "You need to send the emails: use Shopify Email or your own email tool, because this only makes codes and tags."
   - "You want one shared code for everyone: make it by hand in your Shopify discounts page."
   - "Your store is not on Shopify: use your own store's discount tools, because this only works with Shopify."
+  - "Some shoppers have not agreed to marketing emails: leave them out. Only email shoppers who opted in, and check your consent rules before you send the codes."
 you_give:
   - Your Shopify store address
   - How many days back to look
@@ -35,7 +36,7 @@ how_to_use:
   - Sign in to your store with the Shopify command line first. Your login needs the permissions listed on this page.
   - Paste this skill. Give your store address, days back, minimum cart value, discount and code prefix.
   - Run it in preview mode first. Turn on dry run, and check how many shoppers qualify.
-  - Your AI will first run a small read-only check of the Shopify queries. It has not been tested on a real store, so expect it to fix a field name or two. Then it stops and asks you to confirm the count. Reply with the count and say yes before anything is made.
+  - Your AI will first run a small read-only check of the Shopify queries. It has not been tested on a real store, so expect it to fix a field name or two. It also checks that the discount calls it uses are in Shopify's docs for your API version. We checked them against the October 2026 version. If one is missing, it stops and asks to fix that step with you. Then it stops and asks you to confirm the count. Reply with the count and say yes before anything is made.
   - Once you confirm, the codes go live at once. If something is wrong, delete the discount in Shopify Admin. The tags stay on the customers until you remove them.
   - Open the CSV and load it into your email tool. It needs the customer_email and discount_code columns, and the tag name if your tool filters by tag. Then send each shopper their code.
 output_sample:
@@ -47,7 +48,7 @@ output_sample:
     - A tag name for the shoppers (optional)
   prerequisites:
     - An AI that can run code and use the Shopify command line
-    - A Shopify login with permission to read checkouts and customers, and to write discounts and customers
+    - A Shopify login with permission to read orders (this covers abandoned checkouts) and customers, and to write discounts and customers
   output:
     - name: Start banner
       contains: Your store address and the start time, shown when the run begins.

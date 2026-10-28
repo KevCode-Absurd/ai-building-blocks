@@ -8,10 +8,11 @@ Features:
 - TitleOptimization Suggestions
 - 13 TagRecommended
 - DescriptionOptimization Suggestions
-- KeywordsResearch
-- Competitor SEO Analyze
-- Store SEO Optimization
+- Keyword suggestions from fixed category lists (no live Etsy search data)
 - Attribute fillingCheck
+
+Not included: competitor analysis and live keyword research. This script
+reads only the listing you give it.
 
 Version: 1.0.0
 """
@@ -302,7 +303,9 @@ def analyze_tags(tags: List[str], category: str) -> Tuple[int, TagsAnalysis]:
     
     suggested = []
     for kw in category_keywords:
-        if kw.lower() not in existing_lower and len(suggested) < analysis.missing_count:
+        # Etsy tags are limited to 20 characters, so never suggest a longer one.
+        if (len(kw) <= 20 and kw.lower() not in existing_lower
+                and len(suggested) < analysis.missing_count):
             suggested.append(kw)
     
     # AddLong-tailVariant
@@ -658,17 +661,54 @@ def format_report(report: SEOReport, lang: str = "en") -> str:
             "",
         ]
         
-        if t.issues:
-            for issue in t.issues:
-                lines.append(f"- ❌ {issue}")
-        
+        for issue in t.issues:
+            lines.append(f"- ❌ {issue}")
+        for sug in t.suggestions:
+            lines.append(f"- 💡 {sug}")
+        if t.optimized_title:
+            lines.extend([
+                "",
+                "Starting point for a new title (rewrite it with your real product facts):",
+                f"`{t.optimized_title}`",
+            ])
+
+        lines.extend([
+            "",
+            "## 🏷️ Tag Analysis",
+            f"Used: {tg.count}/13 | Multi-word: {tg.long_tail_count} | Average length: {tg.avg_length:.1f} chars",
+        ])
+        for issue in tg.issues:
+            lines.append(f"- ❌ {issue}")
         if tg.suggested_tags:
             lines.extend([
                 "",
-                "## 🏷️ Suggested Tags",
+                "Suggested tags (from a fixed category list, each 20 characters or fewer):",
                 ", ".join([f"`{tag}`" for tag in tg.suggested_tags]),
             ])
-        
+
+        lines.extend([
+            "",
+            "## 📄 Description Analysis",
+            f"Length: {d.length} chars | Call to action: {'yes' if d.has_call_to_action else 'no'}",
+            f"First 160 characters: \"{d.first_160_chars}\"",
+        ])
+        for issue in d.issues:
+            lines.append(f"- ❌ {issue}")
+        for sug in d.suggestions:
+            lines.append(f"- 💡 {sug}")
+
+        if report.keyword_suggestions:
+            lines.extend([
+                "",
+                "## 🔑 Keyword Ideas (fixed category list, not live Etsy data)",
+                ", ".join([f"`{kw}`" for kw in report.keyword_suggestions[:8]]),
+            ])
+
+        if report.action_items:
+            lines.extend(["", "## 📋 Action Plan (P1 first)"])
+            for action in report.action_items:
+                lines.append(f"- [{action['priority']}] [{action['category']}] {action['action']}")
+
         lines.extend(["", report.summary])
     
     return "\n".join(lines)
@@ -678,11 +718,33 @@ def format_report(report: SEOReport, lang: str = "en") -> str:
 # CLI
 # ============================================================
 
-def main():
-    lang = "zh" if "--zh" in sys.argv else "en"
-    
-    # DemoData
-    listing = ListingInfo(
+def normalize_category(raw: str) -> str:
+    """Map a category such as 'Jewelry > Bracelets' or 'Home Decor' to a keyword list key."""
+    first = (raw or "").split(">")[0].strip().lower()
+    key = re.sub(r"[^a-z0-9]+", "_", first).strip("_")
+    return key if key in ETSY_KEYWORDS else "default"
+
+
+def listing_from_dict(data: Dict) -> ListingInfo:
+    """Build a ListingInfo from the listing JSON the user supplies."""
+    attributes = data.get("attributes") or {}
+    if not isinstance(attributes, dict):
+        attributes = {}
+    return ListingInfo(
+        title=str(data.get("title", "")),
+        tags=[str(t) for t in (data.get("tags") or [])],
+        description=str(data.get("description", "")),
+        category=normalize_category(str(data.get("category", ""))),
+        attributes={str(k): str(v) for k, v in attributes.items()},
+        price=float(data.get("price", 0) or 0),
+        images=int(data.get("images", 0) or 0),
+        url=str(data.get("url", "")),
+    )
+
+
+def demo_listing() -> ListingInfo:
+    """Made-up demo listing, used only with --demo or when no listing is given."""
+    return ListingInfo(
         title="Beautiful Handmade Bracelet",
         tags=["bracelet", "handmade", "gift", "jewelry", "beaded"],
         description="A beautiful handmade bracelet perfect for any occasion. Made with high quality beads.",
@@ -690,7 +752,36 @@ def main():
         attributes={"material": "beads", "color": "blue"},
         images=5,
     )
-    
+
+
+def main():
+    lang = "zh" if "--zh" in sys.argv else "en"
+    args = [a for a in sys.argv[1:] if a not in ("--zh", "--demo")]
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # the report uses emoji; Windows consoles may not default to UTF-8
+    except (AttributeError, ValueError):
+        pass
+
+    if not args:
+        print("No listing given, so this is the made-up demo listing. "
+              "Pass your listing as a JSON string or a path to a JSON file.\n")
+        listing = demo_listing()
+    else:
+        raw = args[0]
+        try:
+            if raw.strip().startswith("{"):
+                data = json.loads(raw)
+            else:
+                with open(raw, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"Error: could not read the listing JSON: {e}", file=sys.stderr)
+            sys.exit(1)
+        if not isinstance(data, dict):
+            print("Error: the listing JSON must be an object", file=sys.stderr)
+            sys.exit(1)
+        listing = listing_from_dict(data)
+
     report = analyze_listing(listing)
     print(format_report(report, lang))
 

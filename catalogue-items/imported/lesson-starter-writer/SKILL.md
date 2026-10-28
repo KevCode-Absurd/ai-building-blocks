@@ -69,6 +69,19 @@ tags: ["lesson-opening", "retrieval", "prior-knowledge", "advance-organiser", "l
 
 # Lesson Opening Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates an evidence-based lesson opening comprising three components: a retrieval practice starter that reviews previous learning, a prior-knowledge bridge that connects what students already know to today's new content, and a learning intention framing that sets purpose without revealing all answers. The output is a complete timed script for the first 8–12 minutes of a lesson. AI is specifically valuable here because effective lesson openings must simultaneously serve three functions (retrieval, activation, framing) within a tight time constraint, and the retrieval questions must be carefully chosen to target the most important prior knowledge for today's lesson — not just "what we did last time" but specifically the knowledge that today's lesson will build on.
@@ -244,3 +257,12 @@ Let's go."
 2. **"Do Now" starters require consistent classroom routines.** If students are not trained to begin working immediately on entry, the first 2–3 minutes are lost to settling, instructions, and reminders. The lesson opening design assumes an established routine. Building that routine is a classroom management task, not a lesson design task.
 
 3. **The prior knowledge bridge is scripted for this specific content connection.** If the teacher has not followed the assumed teaching sequence (equivalent fractions → like-denominator addition → unlike-denominator addition), the bridge won't land. Teachers must verify that the "previous learning" field accurately reflects what was taught, not what was planned.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and draft.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
+- The [Lesson opener planner](https://useaiblocks.com/prompts/lesson-opener-planner). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

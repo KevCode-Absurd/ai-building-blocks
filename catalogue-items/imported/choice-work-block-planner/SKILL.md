@@ -69,6 +69,19 @@ tags: ["Montessori", "work-cycle", "uninterrupted", "flow", "Csikszentmihalyi", 
 
 # Uninterrupted Work Cycle Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 You give it the real length of your time block and the activities students can choose from. You get back a work cycle plan with an opening, a work period and a closing (with the teacher's role at each), how materials are organised and rotated, how the teacher observes and when to step in, and how students enter and leave the block.
@@ -117,7 +130,7 @@ The following optional context may or may not be provided. Use whatever is avail
 **Class size:** {{class_size}} — if not provided, assume 25-30 students.
 **Current routines:** {{current_routines}} — if not provided, assume students are used to teacher-directed, segmented lessons and this is their first experience with an extended work cycle.
 **Teacher concerns:** {{teacher_concerns}} — if not provided, address the three most common concerns: off-task behaviour, accountability, and students who don't choose challenging work.
-**Environment setup:** {{environment_setup}} — if not provided, assume materials are accessible and work areas are defined (see Skill 93: Prepared Environment Designer).
+**Environment setup:** {{environment_setup}} — if not provided, assume materials are accessible and work areas are defined (see the Classroom layout redesigner, called prepared-environment-designer in the original collection).
 
 Return your output in this exact format:
 
@@ -338,8 +351,15 @@ It will feel chaotic in Week 1. It will feel busy in Week 2. It will feel produc
 
 2. **The evidence for the work cycle specifically is embedded in whole-programme Montessori evaluations.** Lillard & Else-Quest (2006) evaluated Montessori as a complete system — mixed-age grouping, prepared environment, specific materials, AND the work cycle. The specific contribution of uninterrupted time cannot be isolated. Rosenshine's (2012) time-on-task research and Csikszentmihalyi's (1990) flow research provide independent theoretical support, but neither was conducted in the context of Montessori work cycles specifically.
 
-3. **Self-directed choice requires a prepared environment.** The work cycle assumes that high-quality, self-contained, appropriately challenging activities are available and accessible (see Skill 93: Prepared Environment Designer). Without this, "choose your own work" becomes "choose from whatever's lying around" — which is not the same thing. The work cycle and the prepared environment are interdependent; implementing one without the other reduces effectiveness.
+3. **Self-directed choice requires a prepared environment.** The work cycle assumes that high-quality, self-contained, appropriately challenging activities are available and accessible (see the Classroom layout redesigner, called prepared-environment-designer in the original collection). Without this, "choose your own work" becomes "choose from whatever's lying around" — which is not the same thing. The work cycle and the prepared environment are interdependent; implementing one without the other reduces effectiveness.
 
 4. **Executive function development varies by age and individual.** The self-regulation demands of the work cycle (choosing, initiating, sustaining, completing) require executive function skills that develop throughout childhood. Younger children (ages 3-5) may need shorter work periods and more structured choice. Children with executive function difficulties (including many children with ADHD) may need modified work plans and additional scaffolding. The gradual introduction plan (Week 1-5) addresses this to some extent, but some students will need ongoing support beyond the introductory period.
 
 5. **Teacher anxiety is a real barrier.** Teachers accustomed to whole-class instruction may experience genuine anxiety during the work cycle — the silence (or productive hum) feels unfamiliar, and the lack of direct control is uncomfortable. Cossentino (2006) found that Montessori teachers described a deliberate process of "stepping back" that required practice and trust. This is not a trivial mindset shift, and it should not be dismissed. The phased introduction helps the teacher build confidence alongside the students.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Reggio learning documentation planner](https://useaiblocks.com/skills/learning-documentation-planner). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -10,6 +10,28 @@ metadata:
 
 Design and execute offboarding programs that protect the organization, support departing employees, and capture institutional knowledge — covering voluntary and involuntary separations, exit insights, and alumni engagement.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). Bring your question, a plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supported tasks
 
 - Designing end-to-end offboarding workflows for voluntary and involuntary departures
@@ -47,7 +69,7 @@ Design and execute offboarding programs that protect the organization, support d
 
 1. "Create a termination meeting script for [performance/redundancy/misconduct] separation."
 2. "Develop a redundancy communication plan for [team/department] restructuring."
-3. "Write a separation checklist ensuring legal compliance for [country]."
+3. "Draft a separation checklist for [country] for me to check with an employment lawyer. Mark every legal step as 'confirm locally' and do not state local law as fact." (Reworded by AI Blocks: the original asked for a checklist that ensures legal compliance, which an AI cannot promise.)
 4. "Design an outplacement support package outline for [involuntary departures]."
 5. "Create a manager guide for delivering difficult termination conversations."
 
@@ -66,3 +88,11 @@ Design and execute offboarding programs that protect the organization, support d
 - Systematically analyze exit data quarterly to connect departure patterns to retention strategy.
 - For involuntary separations, prepare the manager thoroughly—the conversation itself affects team morale beyond the individual.
 - Build knowledge transfer into the offboarding timeline from day one of the notice period.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
+- The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

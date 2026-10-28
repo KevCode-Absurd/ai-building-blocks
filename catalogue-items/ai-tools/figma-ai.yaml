@@ -51,20 +51,22 @@ alternatives: [canva, lovable, v0, bolt]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Sign up at figma.com. Starter is free. Figma Make needs a Full seat, which Starter includes."
+  - "Sign up at figma.com. Starter is free. Figma Make needs a Full seat, and we could not confirm that Starter gives you one. If Make will not open on Starter, you need a Professional Full seat (US$16 a month)."
   - "Open Figma Make from figma.com/make and start from scratch, or attach a design and files to your first prompt."
   - "Write what the screen or app should do and who uses it. Name the first screen and the one action a person takes on it."
   - "Click through the result. Ask for changes in the chat, then edit the code or the canvas by hand."
-  - "To add sign-in or saved data, ask for it in the chat. Make offers to connect Supabase, and you sign in or create a Supabase account."
+  - "To add sign-in or saved data, ask for it in the chat. Make offers to connect Supabase, and you sign in or create a Supabase account. Check Supabase's own pricing first, as Figma's page does not give it."
+  - "Next: share the Figma link with your team or a developer for review, or hand the code to a developer to build on. We could not confirm how to publish a live site from Make."
 needs:
-  - "A Figma account with a Full seat. Dev and Collab seats do not include Figma Make."
+  - "A Figma account with a Full seat. Dev and Collab seats do not include Figma Make. Whether free Starter includes Make is not confirmed."
   - "A written prompt, and optional designs, images or files to guide it."
   - "A Supabase account, only if you want sign-in or stored data."
   - "AI credits. Starter gets 150 a day, up to 500 a month, and Professional Full gets 3,000 a month."
 example:
   task: "A prompt describing one screen or a small app, with a design file attached (optional)."
-  reply: "A working prototype or web app you can click through and edit as code or on the canvas. Figma's pages show no sample run, so judge the first result against your own design before you share it."
+  reply: "A working prototype or web app: clickable screens, the code files behind them that you can edit, and the chat thread for follow-up changes. Build time was not stated. Figma's pages show no sample run, so judge the first result against your own design before you share it."
 not_verified:
+  - "Whether the free Starter plan includes a Full seat and Figma Make. The pricing page lists Starter as free with AI credits, and Make as needing a Full seat."
   - "Publishing. The Figma Make page we read says running Make locally is coming soon, and gives no publish steps. Third-party summaries say Professional can publish a site, which we did not confirm."
   - "Which plans can add a Supabase backend. Figma's help article names Organization and Professional teams, and other sources name Organization and Enterprise."
   - "What Supabase costs. Figma's article does not say."

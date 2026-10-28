@@ -89,16 +89,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 - It does not show a legal breach, a waiver or a financing approval.
 - Correct arithmetic does not prove the facts or settle what the agreement means.
 
+## Hand back
+
+Return the result, the headroom schedule, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or breach conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check a fixed charge test with the [Fixed charge coverage bridge builder](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder).
-- Check the leverage test with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
-- Run both cash tests together in the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- Check a fixed charge test with the [Fixed payment cash coverage checker](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder).
+- Check the leverage test with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+- Run both cash tests together in the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the headroom schedule, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or breach conclusion unresolved.

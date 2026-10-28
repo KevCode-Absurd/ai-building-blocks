@@ -9,7 +9,7 @@ You write the brief and image prompt for one calm, ordinary object that would ar
 
 **Good for:** a feared next step buyers name in their own words: a price that jumps, a repair that grows, a bill, a lost deposit, a wasted year.
 
-**Not for:** fears about illness, injury or the body. Use [Empty room image ad maker](https://useaiblocks.com/skills/empty-room-image-ad-maker) to show how daily life changed instead. For one visible flaw rather than a feared next step, use the [Circled flaw image ad maker](https://useaiblocks.com/skills/circled-flaw-image-ad-maker).
+**Not for:** fears about illness, injury or the body. Use [Empty-room photo ad brief writer](https://useaiblocks.com/skills/empty-room-image-ad-maker) to show how daily life changed instead. For one visible flaw rather than a feared next step, use the [Flaw photo ad maker](https://useaiblocks.com/skills/circled-flaw-image-ad-maker).
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks captured on a phone by a person: everyday light, the room's normal mess, nothing retouched.

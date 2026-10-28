@@ -36,7 +36,7 @@ How to start:
 - Counts, quotes, ratings, savings and deadlines in the copy must be real and match the user's data. Urgency claims need a real deadline. Check health, money and comparison claims against the ad platform's rules.
 - This skill writes a brief. It does not make or publish the image.
 
-When not to use: for a video ad, brief a video instead. To mix two styles in one ad, run this twice. For only the first frame of a video, use the [Twelve-pattern opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). To check the finished ad against platform rules, use the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
+When not to use: for a video ad, brief a video instead. To mix two styles in one ad, run this twice. For only the first frame of a video, use the [Video opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). To check the finished ad against platform rules, use the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
 
 ## Method
 

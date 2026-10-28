@@ -127,7 +127,7 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 ## What next
 
-The two main next steps are the Debt service covenant headroom checker (cover after the sweep) and the Net leverage covenant checker (leverage after the sweep). The other items in the "After this" list above are optional extras.
+The two main next steps are the Debt service covenant headroom checker (cover after the sweep) and the Net leverage covenant checker (leverage after the sweep). The other items in the "After this" list below are optional extras.
 
 ## Limits
 

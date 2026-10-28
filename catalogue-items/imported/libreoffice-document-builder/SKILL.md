@@ -22,6 +22,30 @@ Use this skill when:
 - Performing batch document operations
 - Creating templates and standardized document formats
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [JSON document file generator](https://useaiblocks.com/skills/document-file-generator). Bring your question, a draft (optional), a plan (optional), an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can run LibreOffice commands and Python scripts and save the files on your computer.
+- **Any chat AI:** It can write the template and the commands, but you run them yourself.
+<!-- /needs -->
+
 ## What you need first
 
 - LibreOffice installed. Check with `soffice --version`. On Windows, `soffice` may not be on the PATH: use the full path, such as `"C:\Program Files\LibreOffice\program\soffice.exe"`.
@@ -269,6 +293,13 @@ soffice --headless --convert-to pdf:writer_pdf_Export document.odt
 - For a batch or merge: the count of files made and a list of any that failed. A mail merge writes one `letter-<row number>.odt` per row into a `merged` folder, and the PDF copies go in the same folder.
 - The exact commands you ran, so the user can repeat them.
 - A list of checks you did not run (for example, "did not open the DOCX in Word").
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PDF file editor](https://useaiblocks.com/skills/pdf-toolkit). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

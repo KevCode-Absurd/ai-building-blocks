@@ -59,6 +59,6 @@ Lead with delivery contribution, the allocated shared cost and the idle capacity
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Check capacity before promising a delivery date](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow, when you need to decide whether to promise a date.
+- The [Team capacity and delivery-date planner](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow, when you need to decide whether to promise a date.
 - The [Reconcile hotel room and food contribution](https://useaiblocks.com/workflows/reconcile-hotel-room-and-food-contribution) workflow, when the business is a property with rooms and food.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

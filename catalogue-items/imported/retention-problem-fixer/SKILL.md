@@ -11,6 +11,23 @@ metadata:
 
 Framework for designing products that reliably change behavior. Behavior is not about willpower or motivation — it is a design problem with a predictable equation.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your results, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **The Fogg Behavior Model** = B=MAP. Behavior happens when Motivation, Ability, and a Prompt converge at the same moment.
@@ -227,9 +244,16 @@ See: [references/case-studies.md](references/case-studies.md) for a worked diagn
 
 Based on BJ Fogg's behavior design research:
 
-- [*"Tiny Habits: The Small Changes That Change Everything"*](https://www.amazon.com/Tiny-Habits-Small-Changes-Everything/dp/0358003326?tag=wondelai00-20) by BJ Fogg
-- [*"Designing for Behavior Change: Applying Psychology and Behavioral Economics"*](https://www.amazon.com/Designing-Behavior-Change-Psychology-Behavioral/dp/1492056030?tag=wondelai00-20) by Stephen Wendel (companion: applying behavior science to product design)
+- [*"Tiny Habits: The Small Changes That Change Everything"*](https://www.amazon.com/Tiny-Habits-Small-Changes-Everything/dp/0358003326) by BJ Fogg
+- [*"Designing for Behavior Change: Applying Psychology and Behavioral Economics"*](https://www.amazon.com/Designing-Behavior-Change-Psychology-Behavioral/dp/1492056030) by Stephen Wendel (companion: applying behavior science to product design)
 
 ## About the Author
 
 **BJ Fogg, PhD** founded the Behavior Design Lab at Stanford University, where he has researched behavior change since 1998. He created the Fogg Behavior Model (B=MAP), coined the term "behavior design", and trained thousands of innovators — including Instagram co-founder Mike Krieger. *Tiny Habits* distills two decades of that research: lasting change comes from behaviors that are tiny, anchored, and celebrated.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Shape the product** with the [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

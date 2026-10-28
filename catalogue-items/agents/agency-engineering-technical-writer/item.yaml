@@ -8,11 +8,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: question
     required: true
   - type: codebase
     required: false
   - type: api_spec
+    required: false
+  - type: product_spec
     required: false
 outputs:
   - type: document

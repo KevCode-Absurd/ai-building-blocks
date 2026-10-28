@@ -17,12 +17,13 @@ when:
 not_for:
   - "You only want a title and description for one page: use the Title and meta tag writer on its own."
   - "Your traffic comes from paid ads: use the Ad sales drop analyst to find out why results fell."
-  - "Your search traffic fell after a change and you want the cause: use the Ad sales drop analyst, or ask the person who runs your site."
+  - "Your search traffic fell after a change and you want the cause: use the Fix a drop in search traffic and check it recovers workflow."
 you_give:
   - Your site address
   - The pages that matter most and the searches you want them to rank for
   - Your brand voice, or two titles you like (optional)
-  - Access to your search console data (optional)
+  - Your site platform, such as Shopify or WordPress (optional)
+  - A search console export with dates, queries, pages, clicks and positions (optional)
 you_get:
   - A site audit ranked by what blocks ranking most
   - A technical audit with the fixes in order
@@ -86,6 +87,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 example:
   business: sprout
   input: |

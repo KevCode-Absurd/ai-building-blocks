@@ -36,7 +36,8 @@ you_get:
   - Structured output settings
   - Approval steps for risky actions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill's instructions, or upload the skill folder if your AI accepts files.
+  - Start by asking whether you need an agent at all. Describe the job in two lines and ask your AI to run the skill's "Pick the right node first" check. A simple chain or classifier is often enough.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder if your AI accepts files. The detail on tools, memory, human review and the rest lives in the references folder (TOOLS.md, HUMAN_REVIEW.md and others), so pasting SKILL.md alone leaves those parts out.
   - "Have ready: your n8n version, the list of apps and tools the agent must reach, and whether the n8n MCP tools are connected. You also need a paid account and API key with a model provider, and one for embeddings or a vector store if you use your own documents. Describe the job your agent should do."
   - Say which n8n version you run. Checking each node against your live setup needs the n8n MCP tools. Without them, ask whoever runs your n8n to review the plan.
   - Read the node choice first. If a simple chain or classifier fits, build that instead.

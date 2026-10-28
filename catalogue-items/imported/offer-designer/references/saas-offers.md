@@ -12,9 +12,9 @@ The instinct when a SaaS isn't converting is to cut the price — a launch coupo
 
 **Offers beat discounts.** A discount lowers the price. An offer raises the value — a guarantee, a done-for-you migration, a bonus that removes the switching cost. Same net price to the buyer, but one trains them to expect cheap and the other trains them to expect valuable.
 
-### The data
+### Why discounting tends to backfire
 
-**Discount-*askers* churn at roughly 2× the rate of full-price customers.** The buyer who negotiated their way in is signaling something: price was the reason they bought, not value. When a cheaper option appears — or when the renewal hits full price — they leave. You bought a customer who was never yours.
+**Discount-*askers* may churn faster than full-price customers.** No figure here is sourced, so check it against your own cohort data before you rely on it. The buyer who negotiated their way in is signaling something: price was the reason they bought, not value. When a cheaper option appears — or when the renewal hits full price — they leave. You bought a customer who was never yours.
 
 This compounds. Discounting to acquire also:
 
@@ -113,4 +113,4 @@ Each shows how to wrap a SaaS price in a real offer — risk-reversal, a switchi
 
 Notice what's *not* here: a coupon, a "% off," a slashed sticker price. Every one raises value and reverses the real risk — and the scarcity is either capacity, cohort, or a genuine seasonal window, never a fake timer.
 
-**The SaaS takeaway:** when conversion is stuck, your instinct will be to discount. Build the offer instead. Discount only to reward existing customers (upgrades, cross-sells) or in a real seasonal window — never to acquire a stranger you'll watch churn at 2×.
+**The SaaS takeaway:** when conversion is stuck, your instinct will be to discount. Build the offer instead. Discount only to reward existing customers (upgrades, cross-sells) or in a real seasonal window — never to acquire a stranger who came for the price.

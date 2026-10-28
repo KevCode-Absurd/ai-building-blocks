@@ -38,7 +38,7 @@ how_to_use:
   - "Say what you want: a gap table, an authorisation plan, an IRAP checklist or a security document."
   - The control numbers, release contents and the "last verified" date come from the skill's source. They are not checked by us.
   - Check the ISM release the answer names. Confirm every control number and date on cyber.gov.au before it goes into any document. This is guidance, not an IRAP result or legal advice.
-  - Paste the matching ISM chapter text before you ask for the gap table, so the table is built from the source text and not from the skill's summary. Then ask your AI to turn the gap table into a security plan outline or a fix plan, and book an IRAP assessor when the gaps are closed.
+  - Paste the matching ISM chapter text before you ask for the gap table, so the table is built from the source text and not from the skill's summary. Then ask your AI to turn the gap table into a security plan outline or a fix plan, and book an assessor when the gaps are closed. Who may assess depends on your system's level and type, so check the ISM's assessment guidance on cyber.gov.au. Your agency or contract may also require IRAP.
 output_sample:
   input:
     - A short description of your system and where it is hosted

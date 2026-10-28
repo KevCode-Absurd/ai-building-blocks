@@ -70,5 +70,5 @@ Lead with the NAV-to-book gap per share and its parts, then the supporting sched
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - The [Reconcile conglomerate valuation perimeters](https://useaiblocks.com/workflows/reconcile-conglomerate-valuation-perimeters) workflow, when the group also holds stakes in other businesses.
-- The [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when buybacks moved the share count or closing book value.
+- The [Share buyback accounting checker](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow, when buybacks moved the share count or closing book value.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

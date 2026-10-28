@@ -16,7 +16,7 @@ when:
   - You want to see whether your argument holds in full sentences.
 not_for:
   - "You need a one-page update after a change broke the plan: use the Top-priority shift memo writer."
-  - "You want one clear idea of what you sell: use the Outcome-first positioning memo writer."
+  - "You want one clear idea of what you sell: use the Product positioning brief writer."
   - "You have no press release or answered questions yet: write those first, then come back."
 you_give:
   - Your press release and the answered questions
@@ -39,7 +39,7 @@ output_sample:
     - The decision you want, who decides and the date
     - Numbers you can back, such as costs, revenue or tests (optional)
   prerequisites:
-    - A press release and answered questions, made with the Future press release writer and the Hard questions FAQ writer
+    - A press release and answered questions, made with the Future press release writer and the Product launch FAQ writer
   output:
     - name: The decision
       contains: The ask, who decides, the date, why now, and three sentences on what the proposal is.
@@ -129,6 +129,8 @@ improve:
   - Add examples of memos your team found clear.
   - Save the memo template in your project notes.
   - Pair it with "Narrative memo checker" before the meeting.
+before: [future-press-release-writer, hard-questions-faq-writer]
+
 works_best_with:
   tools:
     - name: Any good chat AI

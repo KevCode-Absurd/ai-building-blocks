@@ -8,7 +8,7 @@ role: check
 job: analysis
 level: expert
 inputs:
-  - {type: static_ads, required: true}
+  - {type: static_ads, required: false}
   - {type: brief, required: true}
   - {type: prompt, required: true}
 outputs:

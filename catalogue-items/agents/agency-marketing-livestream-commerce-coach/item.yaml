@@ -10,9 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: product_data
-    required: false
-  - type: performance_sheet
+  - type: spreadsheet
+    required: true
+  - type: dataset
     required: false
 outputs:
   - type: plan

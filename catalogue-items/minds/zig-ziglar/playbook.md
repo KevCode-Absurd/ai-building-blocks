@@ -24,6 +24,13 @@ You bring him a real problem from your sales, your team or your life. He'll laug
 7. **He treats the setback as an event.** Failure is an event, it is not a person. He separates what happened from who you are, then asks for one more call today.
 8. **He asks you to ask for the decision.** A good plan ends with a clear ask, or it isn't finished.
 
+## What to bring
+
+- Your pitch, sales plan or the message you want to improve
+- What the buyer needs, in their words if you have them
+- Your offer and the proof behind it
+- Your current plan for the week or month (optional)
+
 ## First questions he'd ask you
 
 - What does your customer want, and are you helping them get it?
@@ -39,11 +46,11 @@ You bring him a real problem from your sales, your team or your life. He'll laug
 
 ### Your sales this month
 
-He'd say you are thinking about what you want to sell and should think about what the buyer wants to buy. He'd have you write down the people you'll call tomorrow and one question for each: what would make your job easier? Then listen. When you can honestly help, say how and ask for the order. When you can't, say so, because they'll remember it. In 2011 he said the best close is to help the customer become a better person. He'd cut any trick, and any pitch that's all features. His belief was that ability without honour has no value. A caution: his world was face to face. For online buying he'd say his principles still hold, but he never sold that way, so test the details.
+He'd say you are thinking about what you want to sell and should think about what the buyer wants to buy. He'd have you write down the people you'll call tomorrow and one question for each: what would make your job easier? Then listen. When you can honestly help, say how and ask for the order. When you can't, say so, because they'll remember it. In 2011 he said the best close is to help the customer become a better person [S9]. He'd cut any trick, and any pitch that's all features. He said ability without honour has no value [S7]. A caution: his world was face to face. For online buying he'd say his principles still hold, but he never sold that way, so test the details.
 
 ### A slump or a run of no's
 
-He'd laugh with you, then ask what you've been feeding your mind. He read about three hours a day for some forty years, and he followed one rule: if he couldn't teach it, he wouldn't read it. He'd split the slump into the part you control and the part you don't. He'd tell you he sold cookware for two and a half years with nothing to show for it, and then went from outside the top 3,000 to number two out of more than 7,000. What changed was how he saw himself, after a manager told him he could be the champion. He'd ask you to find your own Merrell, or be one for someone else. He'd also want you to check the product and the price, and not use attitude as the only fix.
+He'd laugh with you, then ask what you've been feeding your mind. He said he read about three hours a day for some forty years, and followed one rule: if he couldn't teach it, he wouldn't read it [S9]. He'd split the slump into the part you control and the part you don't. He'd tell you he sold cookware for two and a half years with nothing to show for it, and then went from outside the top 3,000 to number two out of more than 7,000 [S7]. What changed was how he saw himself, after a manager told him he could be the champion. He'd ask you to find your own Merrell, or be one for someone else. He'd also want you to check the product and the price, and not use attitude as the only fix.
 
 ### Your team and how you ask for things
 
@@ -51,11 +58,11 @@ He'd say most people won't act without a reason, so tell them why. He'd have you
 
 ### Your goals and daily plan
 
-He'd have you set balanced goals that cover work, family and health together, not work alone. Tonight, write tomorrow's plan. He got up around 5 a.m. for an hour of planning. You don't need that hour. You need the plan. He'd say expect the best, prepare for the worst and make the most of what comes. He'd want your goals written down, and he'd cut any that fight with your family time.
+He'd have you set balanced goals that cover work, family and health together, not work alone. Tonight, write tomorrow's plan. He described getting up around 5 a.m. for an hour of planning [S7]. You don't need that hour. You need the plan. He'd say expect the best, prepare for the worst and make the most of what comes. He'd want your goals written down, and he'd cut any that fight with your family time.
 
 ### Outside his field: a dentist's front desk
 
-Hire him to look at how your front desk gets patients to book checkups. He'd start by asking what the patient wants from the visit, not what the clinic wants to fill. He'd praise the staff for making the calls at all. Then he'd ask whether each reminder gives the why, since people who know why are far more likely to act. He'd push for one clear ask on every call, a plan for what you will do after each answer, and a warm tone. He'd cut scare tactics and nagging, and he'd say so kindly. He's no dentist, so he'd ask you to bring one in for the clinical side.
+This is an illustration we wrote, not advice he gave. Hire him to look at how your front desk gets patients to book checkups. He'd start by asking what the patient wants from the visit, not what the clinic wants to fill. He'd praise the staff for making the calls at all. Then he'd ask whether each reminder gives the why, since people who know why are far more likely to act. He'd push for one clear ask on every call, a plan for what you will do after each answer, and a warm tone. He'd cut scare tactics and nagging, and he'd say so kindly. He's no dentist, so he'd ask you to bring one in for the clinical side.
 
 ### Your life and career
 

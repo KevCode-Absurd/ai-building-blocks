@@ -31,11 +31,14 @@ you_get:
   - A status view of every agent
 how_to_use:
   - Open your project in an AI tool that can run code, use git and start helper agents, such as Claude Code. Install the skill folder there.
-  - Start a session and give it your task in one sentence, how many agents to run, and how to score them.
+  - The skill names /hub commands from the original AgentHub plugin, which this item does not include. Ask in plain words instead, in this order: start a session, launch the agents, rank the results, merge the winner.
+  - Start a session and give it your task in one sentence, how many agents to run, and how to score them. It sets up the session files and a baseline.
   - "Pick a ready-made pattern if one fits: speed tuning, code cleanup, test writing or bug fixing."
-  - Start the agents. Each one works on its own branch and cannot see the others.
+  - Launch the agents. Each one works on its own branch and cannot see the others. Ask for the status view to see how far each has got.
   - Check the ranked comparison. Each agent is a separate paid run, so more agents cost more.
+  - Before you merge, read the winning branch's changes and run your tests on it. The merge goes straight into your base branch with no review step.
   - Merge the winner. The other attempts are kept as tags in case you want them.
+  - Next, push the merged branch, delete the archive tags you do not need, and ask it to clean up any leftover worktrees with session_manager.py --cleanup.
 output_sample:
   input:
     - The task in one sentence

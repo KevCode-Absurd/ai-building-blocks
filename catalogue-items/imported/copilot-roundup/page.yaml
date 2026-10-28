@@ -36,7 +36,7 @@ you_get:
   - Options to make it shorter, longer or for another audience
 how_to_use:
   - Open Claude, ChatGPT or Gemini. A plain chat works if you paste your notes.
-  - Connected tools (GitHub, Slack, Microsoft 365, Google Workspace) are optional. They let your AI read your private email, chat and calendar, and some need a paid plan or an admin. Only connect ones you are happy to let it read.
+  - Connected tools (GitHub, Slack, Microsoft 365, Google Workspace) are optional. They let your AI read your private email, chat and calendar, and some need a paid plan or an admin. Only connect ones you are happy to let it read, and that your workplace policy lets you share with an AI tool. It asks you to confirm before reading each private source.
   - Paste the skill text. Say who the update is for and what time to cover.
   - If you have no setup file, fill in the short config the skill asks for. A past update you wrote is the best style sample.
   - Read the draft. Check every name, date and number against your sources. Ask for it shorter or in another tone.

@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -95,6 +96,6 @@ Suggest one next step in a short question, and say they can type their own:
 
 - **Get the missing facts** with the questions in the brief. A person sends them.
 - **Work out the true cost per unit** with the [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator).
-- **Split an order** across suppliers with the [Set your order size and split it across suppliers](https://useaiblocks.com/workflows/set-your-order-size-and-split-it-across-suppliers) workflow.
+- **Split an order** across suppliers with the [Supplier order quantity planner](https://useaiblocks.com/workflows/set-your-order-size-and-split-it-across-suppliers) workflow.
 
 Nothing here pays or orders anything.

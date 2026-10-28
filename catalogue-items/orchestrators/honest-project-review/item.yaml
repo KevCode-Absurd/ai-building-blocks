@@ -8,7 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: feedback_notes, required: true}
+  - {type: feedback_notes, required: false}
 outputs:
   - {type: lessons_register}
 uses: [project-review-prep-planner, review-lists-sorter, blame-free-review-agenda-writer, mistake-to-principle-writer]

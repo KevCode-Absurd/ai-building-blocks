@@ -11,7 +11,7 @@ One image repeated in new colours is quick to make, easy to recognise and easy f
 
 - The photo has several subjects or no one clear shape: use the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
 - You want a new idea for each ad, not one image in many colours: use the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner).
-- You need exact words set on the image: use the [Image ad maker with exact text](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
+- You need exact words set on the image: use the [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

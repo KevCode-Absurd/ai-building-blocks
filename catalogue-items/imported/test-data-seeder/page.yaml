@@ -39,6 +39,8 @@ how_to_use:
   - Read the seed script. Check it refuses to run unless the environment is set to a test value, and that it reads the database login from environment variables. Never commit a password to your repo.
   - Run it on a test database. Your AI can do this only if it can run code. Otherwise run it yourself.
   - Check the row counts and the link check. Then commit the script next to your migrations.
+  - Next, run the seed in your CI against a throwaway test database before the test suite. If tests then fail, use the Failing test fixer.
+  - If you want a staging copy of production data, have the anonymising checked first. Production rows hold personal data, so never copy them raw into a test database.
 output_sample:
   input:
     - Your schema or migration files

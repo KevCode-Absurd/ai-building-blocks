@@ -94,16 +94,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the escrow bridge, the claim list, the source list, the dated assumptions, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or payment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check an earnout paid from the escrow with the [Earnout payout checker](https://useaiblocks.com/skills/earnout-payout-checker).
-- See what the sellers receive at closing with the [Closing equity proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker).
-- Run the earnout and escrow checks together in the [Check an escrow-funded earnout](https://useaiblocks.com/workflows/check-an-escrow-funded-earnout) workflow.
+- Check an earnout paid from the escrow with the [Sale earnout payout checker](https://useaiblocks.com/skills/earnout-payout-checker).
+- See what the sellers receive at closing with the [Business sale proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker).
+- Run the earnout and escrow checks together in the [Earnout payout and escrow cash checker](https://useaiblocks.com/workflows/check-an-escrow-funded-earnout) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the escrow bridge, the claim list, the source list, the dated assumptions, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or payment conclusion unresolved.

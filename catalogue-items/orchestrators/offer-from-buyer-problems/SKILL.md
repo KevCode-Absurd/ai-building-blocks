@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -83,8 +83,8 @@ Five step files and the summary. The step 5 file holds the priced offer.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
 - The [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
+- The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 - **Write the landing page** with the [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

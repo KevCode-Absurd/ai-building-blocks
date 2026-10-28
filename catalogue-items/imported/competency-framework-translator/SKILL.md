@@ -71,6 +71,22 @@ tags: ["competency-frameworks", "DigComp", "GreenComp", "ISTE", "UNESCO-AI", "tr
 
 # Competency Framework Translator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes any external competency framework — DigComp (digital competence), GreenComp (sustainability), ISTE Standards, UNESCO AI competency framework, national curriculum frameworks, or any other competency-based system — and translates its abstract descriptors into classroom-ready observable indicators, progression levels, teaching tasks, and assessment criteria for a specific subject and year group. The critical problem this solves is that competency frameworks are written for policy audiences, not for teachers: "Critically evaluates the credibility and reliability of sources of data, information and digital content" (DigComp 2.2) is meaningful to a policy analyst but tells a Year 8 History teacher nothing about what to teach, what tasks to set, or how to assess. The output is a translation: the same competency, expressed as specific things students can DO at different levels, with tasks that make the competency visible and criteria that make it assessable. AI is specifically valuable here because this translation requires understanding both the framework's intent (what the competency is really asking for) and the classroom reality (what students at this age can be expected to do, in this subject, with these resources).
@@ -263,3 +279,12 @@ The translation is faithful to the DigComp intent but specific to the History cl
 3. **Competency frameworks are not curricula.** A competency framework describes what students should be able to do but not how to teach it, when to teach it, or how to assess it. The translation provides these elements, but they are pedagogical decisions informed by the framework, not dictated by it. Teachers should adapt the tasks and criteria to fit their specific curriculum and students.
 
 4. **Not all frameworks are equally well-evidenced.** DigComp and GreenComp are policy frameworks developed through stakeholder consultation, not through educational research trials. The competencies they describe are reasonable and important, but their specific descriptors and proficiency levels are not empirically validated in the way that, say, Hattie's effect sizes are. Teachers should treat framework descriptors as useful organising structures, not as scientifically established learning progressions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Classroom tech fit checker](https://useaiblocks.com/skills/classroom-tech-fit-checker). It takes the lesson plan.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

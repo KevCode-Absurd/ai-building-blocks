@@ -75,6 +75,7 @@ output_shape: |
   BACKEND KEYWORDS: <leftover phrases>
   NOTES TO YOU (not for the listing): <test the money-back note; title length to check>
   MISSING: <facts or phrases you did not give>
+  CHECKS MISSED: <checks that failed or could not run, or none>
 
 tweaks:
   - what: "Search phrases"

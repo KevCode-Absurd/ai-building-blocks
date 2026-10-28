@@ -30,9 +30,9 @@ you_get:
   - A list of sellers for one product
   - A short summary of price gaps, review themes or sellers you do not know, as leads to check, not proof of a breach
 how_to_use:
-  - This is an imported copy of sickn33's apify-ecommerce skill (CC BY 4.0). The examples in it use low result limits, so keep them low. Check each site's terms and robots rules first. Apify bills each run, and the cost is not shown in advance. Before the first run, set a spending limit and a result cap in the Apify console, then check the cost estimate. Keep the result limit low. Make an Apify account and copy your token. Save it as APIFY_TOKEN in a file at ~/.claude/.env.
-  - Install Node.js 20.6 or newer. Put the skill folder at ~/.claude/skills/apify-ecommerce. This is an imported copy of another author's skill (apify-ecommerce by sickn33, CC BY 4.0).
-  - Open an AI that can run code, such as Claude Code. Paste the skill and say which job you want.
+  - This is an imported copy of sickn33's apify-ecommerce skill (CC BY 4.0). Check each site's terms and robots rules first. Apify bills each run, and the cost is not shown in advance. Before the first run, set a spending limit and a result cap in the Apify console, then check the cost estimate. The examples in the skill ask for 20 products and 100 reviews. For a first run, ask for about 10 of each. Make an Apify account and copy your token. Save it as APIFY_TOKEN in a file at ~/.claude/.env.
+  - Install Node.js 20.6 or newer. Put the skill folder at ~/.claude/skills/apify-ecommerce. Check that the script is there, at reference/scripts/run_actor.js inside that folder.
+  - "Open an AI that can run code, such as Claude Code. Paste the skill, then ask for the job in one line, for example: Run the Products & Pricing workflow on this store link, max 10 results, save as products.csv."
   - Give your search word or store link. Say if you want a CSV or JSON file and what to call it.
   - Let it run the script, then read the summary. Open the file and check a few rows against the live shop page.
   - Before you act on a price or seller finding, check the shop page yourself and the shop's site rules. A low price or an unknown seller is a lead, not proof of a breach. Do not accuse a reseller from scraped data alone.

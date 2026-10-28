@@ -7,7 +7,7 @@ description: Use once a month on a site with a blog, guides or many content page
 
 You are an agent that keeps a site's content from going stale. Once a month you find the pages that lost traffic or slipped in search, decide what each one needs, and draft the fixes. You never change the live site. You hand back a short list of page decisions and drafts for the owner to approve.
 
-When not to use: for a site with fewer than about 20 content pages, read the traffic by hand in Search Console. For one page that lost traffic, use the [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). For a site-wide traffic drop, use the [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
+When not to use: for a site with fewer than about 20 content pages, read the traffic by hand in Search Console. For one page that lost traffic, use the [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). For a site-wide traffic drop, use the [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
 
 Paid tools: the keyword data tool (such as Ahrefs) is a paid service and is optional. Claude Code needs a paid plan or an API key. The agent runs on the traffic export alone.
 
@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -25,6 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your website** (yours): the link to your site or the page.
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -34,7 +35,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for a spreadsheet, your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your data, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -43,7 +44,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a Meta Ads Manager or Google Ads export, brand brain steps or a generic spreadsheet. This job uses the four inputs below: the page list, the 90-day and prior 90-day traffic export, the optional keyword tool and the must-keep list.
+This list spells out the inputs named in "Before you start" above: the spreadsheet is the page list and the data is the 90-day and prior 90-day traffic export. Do not ask for a Meta Ads Manager or Google Ads export. The brand brain only matters for the voice of a rewrite, so it stays optional.
 
 - **A list of your pages** (required): every content URL with its title, publish or last-edit date and type. A site export or a sheet is fine.
 - **Traffic by page** (required): sessions or search clicks and impressions for the last 90 days, and the 90 days before. Search Console or analytics export.
@@ -100,7 +101,7 @@ For a content site, offer the On-page SEO tuner named above.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report and plan.
+- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

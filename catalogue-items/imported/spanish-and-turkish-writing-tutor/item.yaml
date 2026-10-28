@@ -33,4 +33,4 @@ credits:
   - title: language-tutor skill
     by: dinqe
     url: https://github.com/dinqe/language-tutor/tree/946946b5dbac13c3e59058ae79273713fcc77abf
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

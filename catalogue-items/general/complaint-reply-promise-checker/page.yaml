@@ -35,7 +35,7 @@ you_get:
 how_to_use:
   - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
   - "Paste the customer's message in full, then your draft."
-  - "Paste your policy text or list what you can offer."
+  - "Paste your policy text or list what you can offer. With no policy, every promise is marked Not checked, and the reply should promise nothing new until you confirm it."
   - "Fill in each [CONFIRM] before you send."
 output_sample:
   input:

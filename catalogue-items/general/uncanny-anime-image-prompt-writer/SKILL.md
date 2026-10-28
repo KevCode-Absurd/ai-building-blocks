@@ -36,13 +36,13 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 ## Method
 
-1. Restate the scene idea in one line and start drafting from it. Offer two or three visual lanes only if the person asks for direction. Never ask for an artist’s name first.
+1. Restate the scene idea in one line and start drafting from it. If the idea is too vague to picture (no subject or no place), ask one short question, such as "Who or what is in the scene, and where?", then draft. Offer two or three visual lanes only if the person asks for direction. Never ask for an artist’s name first.
 
-2. Choose a descriptive lane such as dense retro cyberpunk, technical armor/urban detail, rough dark samurai drama, extreme-perspective ensemble, or deadpan psychic comedy.
+2. Choose a descriptive lane (a lane is the overall visual style the picture follows) such as dense retro cyberpunk, technical armor/urban detail, rough dark samurai drama, extreme-perspective ensemble, or deadpan psychic comedy.
 
-3. Write one sentence naming the uncanny hook and the single detail that shows it. Choose from a scale mismatch, an impossible observer position, ordinary behavior amid strange events, or uneasy empty space. Keep the person’s main concept.
+3. Write one sentence naming the uncanny hook (the one strange thing that makes a viewer look twice) and the single detail that shows it. Choose from a scale mismatch, an impossible observer position, ordinary behavior amid strange events, or uneasy empty space. Keep the person’s main concept.
 
-4. Write the camera angle, then the foreground, midground and background in that order, so a dense scene stays readable. Name the one focal action and rank the other details below it.
+4. Write the camera angle, then the foreground, midground (the middle distance, between the nearest and farthest parts) and background in that order, so a dense scene stays readable. Name the one focal action and rank the other details below it.
 
 5. Describe line quality, shading, palette, period and medium texture, and the energy of an animation frame, in visual words. Do not name living artists or franchise characters.
 

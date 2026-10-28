@@ -9,14 +9,14 @@ Give it your Google data and best video ads. Get a readiness call, a Demand Gen 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-When not to use: this workflow needs a Meta video ad that already works and Google Shopping or brand Search that already sells. If you do not have those yet, build Google Shopping and brand Search first with the [Bestseller Shopping campaign builder](https://useaiblocks.com/skills/bestseller-shopping-campaign-builder) and the [Branded Search and Shopping builder](https://useaiblocks.com/skills/branded-campaigns-builder). If you already ran a YouTube test and only want to read it, use the [YouTube ad results reader](https://useaiblocks.com/skills/youtube-ad-results-reader). If your sales dropped and you need to know why, use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst).
+When not to use: this workflow needs a Meta video ad that already works and Google Shopping or brand Search that already sells. If you do not have those yet, build Google Shopping and brand Search first with the [Google bestseller Shopping campaign builder](https://useaiblocks.com/skills/bestseller-shopping-campaign-builder) and the [Google branded Search and Shopping planner](https://useaiblocks.com/skills/branded-campaigns-builder). If you already ran a YouTube test and only want to read it, use the [YouTube ad results reader](https://useaiblocks.com/skills/youtube-ad-results-reader). If your sales dropped and you need to know why, use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.

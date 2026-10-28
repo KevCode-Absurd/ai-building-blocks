@@ -31,6 +31,7 @@ you_get:
   - Notes on any checks that could not run
 how_to_use:
   - "Before you start: a full run takes a while. The PageSpeed check works without a key. Only scan a site you own or have permission to scan."
+  - The audit fetches the live page and related pages, sending many requests to the site. Sites may slow or block repeat requests, and some site terms forbid automated reading, so check them first.
   - Install Python on your computer, and open an AI that can run code and reach the web. If your AI cannot, paste in your page's text and ask for the checks it can do from that. It will say which checks it could not run.
   - Every API key is optional. Google PageSpeed works without one but is rate-limited. The Search Console checks need a Google service-account file with Search Console access. The Knowledge Graph check needs a Google key. The GitHub checks need a GitHub token or a signed-in gh tool (read-only is enough). The screenshot checks need Playwright installed.
   - Download the skill folder, open a terminal in it and run pip install requests beautifulsoup4. If you have API keys, copy .env.example to .env and add them.

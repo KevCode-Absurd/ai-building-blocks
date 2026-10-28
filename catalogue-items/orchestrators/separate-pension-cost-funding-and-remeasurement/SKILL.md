@@ -71,6 +71,6 @@ Lead with the bridge: contributions apart, profit and loss cost against the repo
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Explain the other cash differences** in the same report with the [Reconcile working capital and tax cash](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
-- **Separate other financing effects from operating cash** with the [Separate financing effects from operating cash](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow.
+- **Explain the other cash differences** in the same report with the [Working capital and cash tax checker](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
+- **Separate other financing effects from operating cash** with the [Factoring and supplier-finance cash-flow reviewer](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

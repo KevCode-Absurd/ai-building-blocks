@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last accepted revenue model and review log, the record this agent wrote last time, and gross billings, returns, rebates and the sales policy if the way sales are shown changed.
 
-**The pieces it uses:** the [Build a comparable trailing revenue model](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model) workflow (the governing method), which runs the [Trailing-period financial bridge](https://useaiblocks.com/skills/trailing-period-financial-bridge), the [Constant-currency revenue bridge](https://useaiblocks.com/skills/constant-currency-revenue-bridge), the [Organic revenue perimeter bridge](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge) and the [Extra-week revenue comparability schedule](https://useaiblocks.com/skills/extra-week-revenue-comparability), and the [Gross-to-net revenue bridge](https://useaiblocks.com/skills/gross-to-net-revenue-bridge) (only if the way sales are shown changed). If you cannot open one, use the method written in steps 3 to 6 and say you did.
+**The pieces it uses:** the [Comparable annual revenue modeler](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model) workflow (the governing method), which runs the [Trailing year financial calculator](https://useaiblocks.com/skills/trailing-period-financial-bridge), the [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge), the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge) and the [Extra week sales growth checker](https://useaiblocks.com/skills/extra-week-revenue-comparability), and the [Gross to net revenue checker](https://useaiblocks.com/skills/gross-to-net-revenue-bridge) (only if the way sales are shown changed). If you cannot open one, use the method written in steps 3 to 6 and say you did.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.
@@ -63,6 +63,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Remove one effect on its own** with the [Constant-currency revenue bridge](https://useaiblocks.com/skills/constant-currency-revenue-bridge) or the [Organic revenue perimeter bridge](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge).
-- **Check how sales are shown** with the [Gross-to-net revenue bridge](https://useaiblocks.com/skills/gross-to-net-revenue-bridge).
+- **Remove one effect on its own** with the [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge) or the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge).
+- **Check how sales are shown** with the [Gross to net revenue checker](https://useaiblocks.com/skills/gross-to-net-revenue-bridge).
 Nothing here forecasts, files anything or contacts anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

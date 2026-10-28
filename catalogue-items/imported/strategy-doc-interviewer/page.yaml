@@ -11,7 +11,7 @@ explain: |
 
   After each answer it patches your words into the right section, never rewriting the whole file, then asks the next question or a follow-up if the answer was thin. It will not suggest content for you. That keeps the document honest, because the thinking is yours. It is a good fit for quarterly reviews or notes you will return to for years. It is not for day planning or task lists.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says MIT, and the original author is davidondrej. Credit goes to davidondrej and sickn33.
+  Licence: the skill file's own header (davidondrej) says MIT, and that covers the skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. This page text is ours. Keep the MIT notice and credit davidondrej and sickn33.
 when:
   - You need to write down your priorities but staring at a blank page stalls you.
   - You want a quarterly review that reflects your real thinking.
@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. A tool that can save and edit files works best. In a plain chat that cannot write files, ask the AI to show the full updated document after each answer, and copy it into your own file.
   - Tell it which document you want, such as principles, priorities, a vision or a ranked list.
   - Answer each question in your own words. It asks only one at a time.
-  - After each answer, check that the file now holds what you said. Ask for a fix if it does not.
+  - After each answer, check that the file now holds what you said. Ask for a fix if it does not. If an answer lands in the wrong section, restore the file from your backup, then ask the AI to patch only that one section again.
   - If you list items, say which one is first. The AI will not guess the order.
   - When the file is full, read it once through and fix any line that does not sound like you.
   - Save the file. Read it again at your next quarterly review, and update it by changing only the sections that moved.

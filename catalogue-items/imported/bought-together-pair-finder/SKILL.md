@@ -10,6 +10,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Applies market basket analysis to your order history to surface product pairs that customers naturally buy together. For every co-purchased pair it calculates **support** (how often the pair appears), **confidence** (given product A, how likely is B?), and **lift** (how much more likely than chance). The output is actionable input for product bundles, "frequently bought together" widgets, cross-sell email flows, and homepage recommendations. Read-only — no mutations are executed.
 
@@ -36,29 +49,35 @@ Applies market basket analysis to your order history to surface product pairs th
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `first: 250`, `query: "created_at:>='<date_range_start>' created_at:<='<date_range_end>'"`, pagination cursor; select `lineItems` with `product { id, title }` and `quantity`; skip orders with a single line item
-   **Expected output:** All multi-item orders in range; paginate until `hasNextPage: false`; build a product frequency map (`product_id → order_count`) and a pair frequency map (`(product_a_id, product_b_id) → co_occurrence_count`)
+   **Inputs:** `first: 250`, `query: "created_at:>='<date_range_start>' created_at:<='<date_range_end>'"`, pagination cursor; select `lineItems` with `product { id, title }`, `quantity` and the line items' `pageInfo`
+   **Expected output:** All orders in range, including single-item orders; paginate until `hasNextPage: false`. For any order whose `lineItems.pageInfo.hasNextPage` is true, fetch the rest of its line items with the `OrderLineItemsPage` query below before you count it, so no order is cut short.
 
-2. **In-memory analysis:**
-   - For each order with ≥ 2 distinct products, enumerate every unique unordered pair and increment the pair counter
+2. **Build the counts (keep every order):**
+   - `total_orders` = every order in range, single-item orders included.
+   - Product frequency map (`product_id → order_count`): count each distinct product once per order, across **all** orders, single-item ones included. Do not drop single-item orders here: they are part of how often A and B sell, and dropping them inflates confidence and lift.
+   - Pair frequency map (`(product_a_id, product_b_id) → co_occurrence_count`): only orders with 2 or more distinct products can add a pair. For each, enumerate every unique unordered pair once.
+
+3. **In-memory analysis:**
    - Compute metrics for each pair that meets `min_support`:
      - **Support** = `pair_count / total_orders`
      - **Confidence A→B** = `pair_count / count(orders containing A)`
      - **Confidence B→A** = `pair_count / count(orders containing B)`
-     - **Lift** = `support / (P(A) × P(B))`
+     - **Lift** = `support / (P(A) × P(B))`, where `P(A) = count(orders containing A) / total_orders`. This is the same as `pair_count × total_orders / (count_A × count_B)`.
+   - Worked check with round numbers: say 1,000 orders, A is in 100, B in 50, both in 20. Support = 0.02, confidence A→B = 20%, confidence B→A = 40%, lift = 20 × 1,000 / (100 × 50) = 4.
    - Filter by `min_confidence` and `min_lift`; sort by `sort_by`; truncate to `top_n`
+   - If the user asks to study multi-item baskets only, use multi-item orders for **every** count (total, A, B and pairs) and label the report "multi-item orders only". Never mix the two bases.
 
 ## GraphQL Operations
 
 ```graphql
-# orders:query (multi-item basket analysis) — validated against api_version 2025-01
+# orders:query (basket analysis, all orders kept) — validated against api_version 2025-01
 query OrdersForAffinityAnalysis($first: Int!, $after: String, $query: String) {
   orders(first: $first, after: $after, query: $query) {
     edges {
       node {
         id
         createdAt
-        lineItems(first: 50) { # orders with more than 50 line items are cut off at 50; say so in the report
+        lineItems(first: 50) { # if hasNextPage is true, fetch the rest with OrderLineItemsPage
           edges {
             node {
               quantity
@@ -69,12 +88,38 @@ query OrdersForAffinityAnalysis($first: Int!, $after: String, $query: String) {
               }
             }
           }
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
         }
       }
     }
     pageInfo {
       hasNextPage
       endCursor
+    }
+  }
+}
+
+# Rest of one order's line items, page by page, until hasNextPage is false
+query OrderLineItemsPage($id: ID!, $after: String) {
+  order(id: $id) {
+    lineItems(first: 50, after: $after) {
+      edges {
+        node {
+          quantity
+          product {
+            id
+            title
+            tags
+          }
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
     }
   }
 }
@@ -110,7 +155,8 @@ OUTCOME SUMMARY
   Unique products:      <n>
   Pairs evaluated:      <n>
   Pairs above threshold:<n>
-  Orders cut at 50 line items: <n>
+  Basis:                all orders (or: multi-item orders only)
+  Orders with extra line-item pages fetched: <n>
   Orders skipped (over 20 distinct products): <n>
   Date range:           <start> to <end>
   Sort by:              <lift|confidence|support>
@@ -134,14 +180,15 @@ For `format: json`, emit:
   "completed_at": "<ISO8601>",
   "dry_run": false,
   "steps": [
-    { "step": 1, "operation": "OrdersForAffinityAnalysis", "type": "query", "params_summary": "<date_range_start> to <date_range_end>", "result_summary": "<n> orders, <n> multi-item baskets", "skipped": false }
+    { "step": 1, "operation": "OrdersForAffinityAnalysis", "type": "query", "params_summary": "<date_range_start> to <date_range_end>", "result_summary": "<n> orders (all kept), <n> multi-item baskets", "skipped": false }
   ],
   "outcome": {
     "orders_analysed": 0,
     "unique_products": 0,
     "pairs_evaluated": 0,
     "pairs_above_threshold": 0,
-    "orders_cut_at_50_line_items": 0,
+    "basis": "all_orders",
+    "orders_with_extra_line_item_pages": 0,
     "orders_skipped_over_20_products": 0,
     "date_range_start": "<date_range_start>",
     "date_range_end": "<date_range_end>",
@@ -173,13 +220,22 @@ CSV file `product_affinity_<YYYY-MM-DD>.csv` with one row per qualifying pair:
 ## Next steps
 After the ranked table, tell the user: take `bundle_candidate` rows to product bundle setup, and `cross_sell` rows to post-purchase email flows or "frequently bought together" widgets.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product pack and quantity discount planner](https://useaiblocks.com/skills/bundle-and-quantity-break-builder).
+- The [Bundle stock checker](https://useaiblocks.com/skills/bundle-stock-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit from paginating large order history | Wait 2 s, retry up to 3 times; narrow date range if persistent |
 | `product` is null on line item | Product was deleted after purchase | Skip that item from pair analysis; count the order in the total |
 | Zero pairs above threshold | Store has few multi-item orders or thresholds too strict | Lower `min_support` to 2 and `min_confidence` to 0.05, or widen date range |
-| Combinatorial explosion | Stores with very large line item counts per order | Two limits apply and both drop data. The query reads at most 50 line items per order. The pair loop then skips any order with more than 20 distinct products to cap O(n²) growth. Count the orders hit by each limit and report both numbers in the outcome summary |
+| Combinatorial explosion | Stores with very large line item counts per order | Read every line item (page with `OrderLineItemsPage`). To cap O(n²) growth, the pair loop may skip pairs from any order with more than 20 distinct products, but that order still counts in `total_orders` and in each product's count. Report how many orders were skipped this way in the outcome summary |
+| `MAX_COST_EXCEEDED` | The query asks for too many orders and line items in one call | Shopify rejects any single query that could cost more than 1,000 points, and the cost grows with orders per page × line items per order. Lower both, for example `orders(first: 20)` with `lineItems(first: 20)`, check `extensions.cost` in the response, and keep paginating; `OrderLineItemsPage` picks up the rest of each order |
 
 ## Best Practices
 1. Use at least 90 days of order history — short windows produce noisy lift scores because the probability denominators are small.

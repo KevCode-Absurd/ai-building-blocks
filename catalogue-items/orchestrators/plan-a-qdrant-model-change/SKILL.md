@@ -64,15 +64,15 @@ Save run-state.md with the input revision or date window, completed steps, resul
 
 ## Deliver
 
-- **Embedding migration plan:** the strategy chosen and why, numbered phases, the checks before the swap and the rollback steps.
-- **Search relevance checks:** likely causes ranked, one test for each, fixes in order, and a before and after measure on your own searches.
-- **Monitoring and rollback gates:** the metrics, health checks and alerts to watch after the switch, and the point at which to go back.
+- **Embedding migration plan:** the strategy chosen and why in two or three sentences, then numbered phases (usually three to six), each with what changes, the check before moving on and its rollback step.
+- **Search relevance checks:** a table with columns `likely cause | test | fix | before | after`, one row per cause, ranked, measured on your own failing searches.
+- **Monitoring and rollback gates:** a table with columns `metric or check | normal range | alert when | action`, then one line naming the point at which to go back.
 
-Include source coverage, unresolved findings, missing facts and one next action.
+Include source coverage, unresolved findings, missing facts, `CHECKS MISSED:` (checks that failed or could not run, or "none") and one next action. If a step is blocked, the next action says what to send to unblock it: step 1 needs both model names, vector sizes, the point count and whether search must stay online; step 2 needs three to ten failing searches with the result you expected; step 3 needs your Qdrant version and where it runs.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer).
+- The [Qdrant search speed tuner](https://useaiblocks.com/skills/copilot-qdrant-performance-optimization).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

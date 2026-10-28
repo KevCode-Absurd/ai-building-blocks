@@ -34,10 +34,19 @@ you_get:
 how_to_use:
   - Open your AI tool where it can read your project files, such as Claude Code or Cursor. Both are paid tools. A free option is a plain chat with your code pasted in.
   - Paste the full skill text into the chat (the Design Audit, Upgrade Techniques and Fix Priority sections are the core). Then name the project folder.
-  - Tell your AI which pages to improve, and what must not change.
+  - "Gather first: your dependency file (such as package.json), the pages in scope, and the brand rules that must not change. Tell your AI which pages to improve, and what must not change."
   - Let it scan and list the generic patterns it found. Read the list before it changes anything.
-  - Check the result in your real app on a phone, a laptop and more than one browser. Make sure no placeholder name, number or date is left on a live page.
+  - Check the result in your real app on a phone, a laptop and more than one browser. Make sure no placeholder name, number or date is left on a live page. The skill may add stock placeholder photos from picsum.photos. Replace every one with your own images before launch.
   - Next, have the owner check every changed screen before launch. Pair the result with a copy review.
+output_shape: |
+  SCAN
+  Framework: <name> | Styling: <method> | Patterns already in place: <list>
+  FOUND
+  1. <generic pattern or weak point> | <file name> | <why it looks generic>
+  CHANGES
+  1. <one change per item above> | <file name> | <what changed>
+  CHECK BEFORE LAUNCH
+  <placeholder images, names or numbers to replace>
 output_sample:
   input:
     - Your site or app code

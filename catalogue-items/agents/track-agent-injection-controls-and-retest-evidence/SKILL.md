@@ -87,9 +87,9 @@ Finish with a source and assumption register, `MISSING:` lines, and a check tabl
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Human approval review planner](https://useaiblocks.com/skills/human-review-gate). It takes the test report and security report.
-- The [Test results analyst](https://useaiblocks.com/skills/agency-testing-test-results-analyzer). It takes the test report.
 - The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the test report.
-- **Build it** with the [A-Evolve agent improvement loop builder](https://useaiblocks.com/skills/agent-improvement-loop). It takes the test set.
+- The [Test results analyst](https://useaiblocks.com/skills/agency-testing-test-results-analyzer). It takes the test report.
+- The [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester). It takes the test set.
 - The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the test report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

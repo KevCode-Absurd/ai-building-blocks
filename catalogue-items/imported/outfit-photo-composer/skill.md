@@ -7,11 +7,24 @@ description: 多单品融合成一整套 Look。最多 8 张单品图 → 同一
 
 一次给**最多 8 张单品图**，融合成同一个模特身上的**一整套 Look**。
 
-> **English summary.** Give up to 8 photos, one item per photo, in wearing order (top, bottoms, coat, shoes, bag, extras). Each file must be 20KB to 15MB, no larger than 8192 x 8192, in jpg, jpeg, png, heic or webp. The skill names each item and where it is worn, writes one prompt that keeps every item's colour, weave, pattern and material unchanged, and adds basics for missing items. It then calls an image model (dLazy seedream-5.0, about 5 credits per image, so a paid account is needed). Run with `--dry-run` first to see the cost. Check item count, colours, layer order and patterns before you publish, and label the photo as AI-made. Never use it to fake a real person's endorsement.
+> **English summary.** Give up to 8 photos, one item per photo, in wearing order (top, bottoms, coat, shoes, bag, extras). Each file must be 20KB to 15MB, no larger than 8192 x 8192, in jpg, jpeg, png, heic or webp. The skill names each item and where it is worn, writes one prompt that keeps every item's colour, weave, pattern and material unchanged, and adds basics for missing items. It then calls an image model (dLazy seedream-5.0, about 5 credits per image, so a paid account is needed). Run with `--dry-run` first to see the cost. Check item count, colours, layer order and patterns before you publish, and label the photo as AI-made. Never use it to fake a real person's endorsement. (Note from AI Blocks: the flat-lay and wear-everything skills and the docs/image-fusion example images linked below are not in this folder. Skip those links; use your own item photos.)
 
 和 [flat-lay](../flat-lay/skill.md) 的「多件上身」（只支持上装+下装两张）不同，本技能是**任意品类的自由组合**：毛衣 + 阔腿裤 + 帽子 + 项链 + 包 + 鞋，一次出一张完整搭配图。
 
 ---
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## 生成效果示例
 
@@ -225,3 +238,11 @@ dlazy seedream-5.0 --dry-run --prompt '...' --images a.jpg b.jpg --size 3:4
 ## Tips
 
 Visit https://dlazy.com for more information.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+- The [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

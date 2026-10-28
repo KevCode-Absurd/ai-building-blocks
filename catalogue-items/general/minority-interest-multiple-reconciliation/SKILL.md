@@ -93,16 +93,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check how EBITDA was cleaned up with the [Deal EBITDA addback checker](https://useaiblocks.com/skills/deal-ebitda-addback-checker).
-- Test a return built on this multiple with the [EPS and multiple return bridge](https://useaiblocks.com/skills/eps-multiple-return-bridge).
-- Value a holding company's listed stakes with the [Listed holding look-through NAV](https://useaiblocks.com/skills/listed-holding-lookthrough-nav).
+- Check how EBITDA was cleaned up with the [Deal earnings adjustment checker](https://useaiblocks.com/skills/deal-ebitda-addback-checker).
+- Test a return built on this multiple with the [Share price return analyst](https://useaiblocks.com/skills/eps-multiple-return-bridge).
+- Value a holding company's listed stakes with the [Holding company value calculator](https://useaiblocks.com/skills/listed-holding-lookthrough-nav).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any investment conclusion unresolved.

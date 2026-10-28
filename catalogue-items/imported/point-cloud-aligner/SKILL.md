@@ -11,6 +11,19 @@ metadata:
 
 Select `pcregistericp` with `Metric="planeToPlane"` as the starting point, evaluate algorithm accuracy using RMSE, and align the point clouds using `pcalign`.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for map data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - User asks to register, align or match 3-D point clouds represented as `pointCloud` objects
@@ -238,7 +251,11 @@ gridSize = 100;
 gridStep = 0.5;
 [tform,rmse] = pcregistercorr(movingCorrected,fixedCorrected,gridSize,gridStep);
 
-movingReg = pctransform(movingPtCloud,rigidtform3d(tformFixed.A * tformMoving.A * tform.A));
+% tform was found between the corrected clouds: it maps movingCorrected onto fixedCorrected.
+% To map the ORIGINAL moving cloud into the ORIGINAL fixed frame, apply tformMoving,
+% then tform, then undo tformFixed. With the premultiply convention, read right to left.
+A = inv(tformFixed.A) * tform.A * tformMoving.A;
+movingReg = pctransform(movingPtCloud,rigidtform3d(A));
 pcshowpair(movingReg,fixedPtCloud)
 ```
 
@@ -363,3 +380,10 @@ pcshow(ptCloudMap)
 Copyright 2026 The MathWorks, Inc.
 
 ----
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MATLAB point cloud file reader and writer](https://useaiblocks.com/skills/point-cloud-file-handler). It takes the map data.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

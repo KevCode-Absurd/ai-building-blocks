@@ -26,7 +26,7 @@ not_for:
 pricing:
   model: subscription
   from: US$24 per month
-  note: "Checked 26 Oct 2026. Chat is US$24 a month billed yearly (US$288), or US$29 billed monthly, for 5 seats. Workflow plans are billed yearly. Growth is US$1,000 a month for 75 seats and 20K workflow credits a month. Expansion is US$2,000 for 150 seats and 45K credits. Scale is US$3,000 for 200 seats and 75K credits. Enterprise has no listed price. Credits measure what a workflow run uses, and the cost per run depends on its steps."
+  note: "Checked 26 Oct 2026. The free trial's length and terms are not confirmed, so do not assume the Chat price includes one. Chat is US$24 a month billed yearly (US$288), or US$29 billed monthly, for 5 seats. Workflow plans are billed yearly. Growth is US$1,000 a month for 75 seats and 20K workflow credits a month. Expansion is US$2,000 for 150 seats and 45K credits. Scale is US$3,000 for 200 seats and 75K credits. Enterprise has no listed price. Credits measure what a workflow run uses, and the cost per run depends on its steps."
 works_with:
   - Salesforce
   - HubSpot
@@ -45,6 +45,7 @@ first_result:
   - "On a workflow plan, connect the app that holds your records, such as HubSpot or Salesforce, and set up your Brand Voice."
   - "Choose one repeat job, such as an account plan, and build it as a workflow of linked steps."
   - "Run it on one record. Read the Credits used in the side panel and fix any weak step before you run a whole list."
+  - "Then read each draft before anyone sends it, and check every field the workflow changed in HubSpot or Salesforce. Only then run it on the full list."
 needs:
   - "A Copy.ai account and a plan: Chat, Growth, Expansion, Scale or Enterprise."
   - "One repeat job you can write as steps, with the input for each run, such as a lead record."
@@ -53,7 +54,7 @@ needs:
 example:
   task: "One repeat job you now do by hand, such as an account plan or an SEO article."
   cost: "Each run uses workflow credits. Growth includes 20K a month, Expansion 45K and Scale 75K. The cost of one run depends on its steps, and the side panel shows Credits used after each run. We did not find a price per run."
-  reply: "The result of the steps you built, such as research notes and a finished draft, or fields filled on a record. The pages we read show no sample run, so test with one record first."
+  reply: "You get what your last step makes. For an account plan, that is one document with the sections you set in the steps, such as company summary, key contacts and next actions. For a record update, it is the fields you chose, filled in on the record. Length depends on your prompts. The pages we read show no sample run, so test with one record first."
 not_verified:
   - "How long the free trial lasts, what it includes, and whether a card is needed."
   - "Monthly billing for Growth, Expansion and Scale. The page shows yearly billing only."

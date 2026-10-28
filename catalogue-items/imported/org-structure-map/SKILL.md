@@ -10,6 +10,22 @@ metadata:
 
 Design, restructure, and optimize organizational structures and operating models — from spans and layers analysis and RACI charting to restructuring plans and job architecture frameworks that align the organization to its strategy.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supported tasks
 
 - Designing organizational structures aligned to business strategy
@@ -65,3 +81,11 @@ Design, restructure, and optimize organizational structures and operating models
 - Communicate the rationale for structural changes clearly—ambiguity drives attrition during transitions.
 - Separate org design decisions from people placement decisions to reduce bias and politics.
 - Review organizational effectiveness 6-12 months after a major redesign to assess whether the structure is delivering intended outcomes.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Lead the team** with the [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the plan.
+- The [Workplace change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

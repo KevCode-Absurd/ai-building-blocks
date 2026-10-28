@@ -30,4 +30,4 @@ credits:
   - title: ux-researcher-designer skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ux-researcher-designer
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -53,14 +53,6 @@ Use these headings, in this order: POOL AND PERIOD, RATE, ALLOCATION (one line p
 
 If they ask for a spreadsheet and you can make files: put inputs, calculations and checks on separate sheets, mark input cells, change one input to confirm the results move, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check which work uses capacity best** with the [Product mix capacity checker](https://useaiblocks.com/skills/product-mix-capacity-checker). Bring the contribution per unit and the capacity limit.
-- **See margin on billable staff time** with the [Service utilization margin builder](https://useaiblocks.com/skills/service-utilization-margin-builder). Bring a month of hours, fees and costs.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, in USD for one month, not a real company. Cost pool 1,000. Normal capacity 100 units. Department A used 40 units. Department B used 30 units.
@@ -83,6 +75,14 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 - Idle cost is shown as unassigned, not pushed onto departments, unless the person's policy says so and it is labeled.
 - Negative unused capacity is flagged as an overload.
 - Every figure traces to a source, period and currency. A missing figure is `MISSING:`, never zero.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check which work uses capacity best** with the [Product mix capacity checker](https://useaiblocks.com/skills/product-mix-capacity-checker). Bring the contribution per unit and the capacity limit.
+- **See margin on billable staff time** with the [Service hours and margin calculator](https://useaiblocks.com/skills/service-utilization-margin-builder). Bring a month of hours, fees and costs.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

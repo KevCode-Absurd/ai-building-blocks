@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
@@ -67,7 +67,7 @@ You never do these yourself. You list them for approval:
 - **Thin reviews:** anyone whose evidence is too thin, and what to collect next quarter.
 - **Recognition plan:** yearly, or when the team grew.
 - **Files:** each person's file, and every `MISSING:` line.
-- **Next:** the manager holds the meetings, then saves each person's agreed goals in their folder. During the quarter, use the [Weekly one-on-one prep keeper](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper) so next quarter's evidence is already dated. For goals for one person only, use the [Objectives and key results writer](https://useaiblocks.com/skills/okr-goal-writer).
+- **Next:** the manager holds the meetings, then saves each person's agreed goals in their folder. During the quarter, use the [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper) so next quarter's evidence is already dated. For goals for one person only, use the [Objectives and key results writer](https://useaiblocks.com/skills/okr-goal-writer).
 
 ## Checks before you hand it back
 - Every claim in every review points at a result or a dated note.

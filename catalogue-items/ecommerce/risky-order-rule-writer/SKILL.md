@@ -51,7 +51,7 @@ MISSING: <what you did not give>
 ```
 
 Add: "This lowers risk. It does not guarantee no fraud."
-What next: after one month, take the monthly loop counts (blocked, held, released, disputed) to your payment processor and ask whether the rules and thresholds still fit. For 3D Secure and false-decline settings, use the [Fraud rules setter](https://useaiblocks.com/skills/fraud-rules-setter).
+What next: after one month, take the monthly loop counts (blocked, held, released, disputed) to your payment processor and ask whether the rules and thresholds still fit. For 3D Secure and false-decline settings, use the [Store fraud rules planner](https://useaiblocks.com/skills/fraud-rules-setter).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -67,4 +67,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The watch line uses the processor's own thresholds, or says they are missing. No threshold is invented.
 - Held orders have a review time limit, and customers are contacted before any cancel.
 
-For the full version with every check, use the [Fraud rules setter](https://useaiblocks.com/skills/fraud-rules-setter).
+For the full version with every check, use the [Store fraud rules planner](https://useaiblocks.com/skills/fraud-rules-setter).

@@ -81,15 +81,6 @@ CHECKS MISSED
 
 The bracketed parts show what goes in each slot. Replace them with the person's facts. Never leave one in the result.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Test the fix** with the [Plan inversion checker](https://useaiblocks.com/skills/plan-inversion-checker). Bring the fix and the prevention check.
-- **Look for waste in the process** with the [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). Bring the steps of the process the cause sits in.
-- **Stop the same mistake next time** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). Bring your list of mistakes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each answer in the chain is backed by something seen, or marked UNCONFIRMED.
@@ -98,6 +89,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The fix removes the cause, not just the symptom.
 - It says where five whys is too shallow for the case.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Test the fix** with the [Plan failure risk reviewer](https://useaiblocks.com/skills/plan-inversion-checker). Bring the fix and the prevention check.
+- **Look for waste in the process** with the [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). Bring the steps of the process the cause sits in.
+- **Stop the same mistake next time** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). Bring your list of mistakes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -47,14 +47,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 3 step files and the summary. Step 1's file holds the layout, step 2's the hardened workflow and alert, and step 3's the sub-workflows.
 
-## After this
-Suggest one next step in a short question, and say they can type their own:
-- **Test it before you rely on it** with the [Check a new automation before relying on it](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it) workflow.
-- **Add an AI agent** to the automation with the [n8n AI agent builder](https://useaiblocks.com/skills/n8n-ai-agent-builder).
-If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes, and nothing ran on live data.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Test it before you rely on it** with the [Automation reliability reviewer](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it) workflow.
+- **Add an AI agent** to the automation with the [n8n AI agent builder](https://useaiblocks.com/skills/n8n-ai-agent-builder).
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

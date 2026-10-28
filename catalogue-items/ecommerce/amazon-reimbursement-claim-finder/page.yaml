@@ -68,11 +68,11 @@ how_it_works:
   - title: Reviews fee lines
     text: Checks fee lines for overcharges each month.
   - title: Checks damaged and lost stock
-    text: Reads the damaged and lost reports, because Amazon refunds the price when it loses or damages stock.
+    text: Reads the damaged and lost reports. Amazon may pay what the stock cost you rather than the sale price, so it asks for your unit cost and tells you to check the current reimbursement policy in Seller Central.
   - title: Checks returns and storage
     text: Compares returns that went back to stock with those disposed, and reads the monthly storage line.
   - title: Checks seller feedback
-    text: Finds product reviews wrongly left as seller feedback that can be removed within 30 days.
+    text: Finds product reviews wrongly left as seller feedback that you can ask Amazon to remove. It tells you to check the current time limit.
   - title: Scores readiness
     text: Adds six areas to 100, based on what was checked and what has proof.
   - title: Sets the routine

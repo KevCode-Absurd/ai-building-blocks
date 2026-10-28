@@ -10,6 +10,8 @@ explain: |
   Find out what stops customers finding you in Google and in AI assistants, and get the actual files to fix it. The aim is to make your site easy to read and quote correctly. It does not try to trick any AI into recommending you.
 
   It crawls the site, then checks six AI-facing points: crawler access in robots.txt, whether text shows without JavaScript, an llms.txt file, structured data, clear facts such as hours and prices, and listings like Google Business Profile. Then it asks assistants the questions a customer would ask and records what comes back. You get the five fixes that matter most, plus a rewritten robots.txt and llms.txt.
+
+  Each run fetches your live public pages, with no login needed. Connecting Shopify or Wix is optional and uses your own login. Without it, the audit reads public pages only. This copy has the main skill file but not the original plugin's detailed checklists, so it works from the main file and lists any check it could not cover.
 when:
   - Customers say they asked an AI about your trade and you never came up.
   - You suspect a security plugin is blocking AI crawlers.
@@ -30,7 +32,7 @@ you_get:
   - The top five fixes in order
   - A corrected robots.txt and an llms.txt
 how_to_use:
-  - Open Claude, ChatGPT or Gemini in a chat that can open web pages. Paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini in a chat that can open web pages. Paste in the skill text from this page. It runs on its own, without the original plugin's reference files.
   - Type your website address, your business type and your service area. Add the questions customers ask, if you know them (optional).
   - Wait for the crawl report first. Check that it lists the pages it could not reach.
   - Read the top five fixes. Answer any question it asks about your hours, prices or services. It will not guess.

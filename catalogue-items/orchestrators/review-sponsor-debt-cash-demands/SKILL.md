@@ -58,6 +58,6 @@ Lead with the three results: cash and PIK interest, the sweep owed and repaid wi
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test a breach or a cure** with the [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow, using the leverage you just found.
-- **Test cover rules** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Test a breach or a cure** with the [Loan leverage and equity cure checker](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow, using the leverage you just found.
+- **Test cover rules** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

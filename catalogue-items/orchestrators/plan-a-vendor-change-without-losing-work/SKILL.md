@@ -109,8 +109,8 @@ Write MISSING: <what> next to the result it affects. Keep working on parts that 
 ## After this
 
 - Read the exit checklist with whoever signs the contract before anyone gives notice.
-- If a teammate will cover work while you move, run the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
-- If work starts slipping during the move, run the [Trace why work keeps missing deadlines](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow.
+- If a teammate will cover work while you move, run the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
+- If work starts slipping during the move, run the [Recurring work delay reviewer](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow.
 - Nothing is cancelled, sent or signed by this workflow.
 
 ## Avoid

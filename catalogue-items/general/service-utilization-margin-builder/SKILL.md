@@ -55,15 +55,6 @@ Use these headings, in this order: PERIOD AND SOURCES, HOURS, MONEY (revenue, lo
 
 If they ask for a spreadsheet and you can make files: put inputs, calculations and checks on separate sheets, mark input cells, change one input to confirm the results move, then restore it and reopen the saved file. If you can't make files, say so and give the table in the chat. Never claim a file you did not make.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Test a new fee** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). Bring your costs and what the work is worth to the client.
-- **See how a bad year hits the margin** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). Bring your business and its worst risks.
-- **Compare profit with cash** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). Bring your profit and cash figures.
-If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Practice figures
 
 Illustrative figures only, in USD, for one month, not a real team. Paid hours 160, fixed duties 40, leave 16, billable hours 80, fee earned 100 per hour, loaded labor 4,000, direct project cash 600.
@@ -86,6 +77,15 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 - Revenue uses fees earned, or is labeled a rate-card estimate.
 - Contribution = revenue - (loaded labor + direct project cash).
 - Every figure traces to a source, month and currency. A missing figure is `MISSING:`, never zero.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Test a new fee** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). Bring your costs and what the work is worth to the client.
+- **See how a bad year hits the margin** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). Bring your business and its worst risks.
+- **Compare profit with cash** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). Bring your profit and cash figures.
+If they pick one and that skill is added here, carry straight on with the figures you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limits
 

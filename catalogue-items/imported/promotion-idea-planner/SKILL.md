@@ -7,6 +7,26 @@ description: Use when designing a promotion that isn't just a price cut — pre-
 
 Pick the promotion mechanic and the framing that move sales without training customers to wait for markdowns. Gifts, bundles, invented occasions, and small token fees often beat a straight discount, and the wording of the same offer changes how lucky it feels.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Launch and pre-order campaigns
@@ -59,6 +79,13 @@ After the split test, keep the winning offer. Then track pre-order count and ret
 | Why | Launch 9 weeks out → gift beats discount; target product as gift; "$0" not "free"; deadline not unit cap |
 | Avoid | 15% off (rational, deferred reward); "only 500 units"; "FREE" |
 | Test | Gift vs 15% off on a split of the launch list |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

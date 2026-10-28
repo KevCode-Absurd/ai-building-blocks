@@ -14,7 +14,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Makes it better (optional):**
@@ -62,6 +62,6 @@ Pause here: Watch about 20 recordings each on the product page and cart, save he
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). It takes the shortlist.
+- The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -12,6 +12,22 @@ metadata:
 ---
 # Migration Runbook — Under 100 People
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 At this size, data migrations happen regularly — you're outgrowing the tool you picked 18 months ago. Typical migrations: QuickBooks → NetSuite as revenue grows; HubSpot → Salesforce for sales complexity; Intercom → Zendesk for support scale; Pipedrive → HubSpot for marketing integration; Google Workspace → Microsoft 365 (or vice versa).
@@ -94,7 +110,7 @@ The runbook has 7 phases: **Plan → Extract → Transform → Load → Validate
 
 If any of these happen within 24 hours of cutover, **rollback**:
 
-- **Data corruption** discovered (more than about 5% of records missing or broken; a rule of thumb, set your own limit)
+- **Data corruption** discovered above the limit you set. Agree that limit with the finance or operations owner before the switch. The original author used about 5% of records missing or broken as a rule of thumb; it is not a standard.
 - **Critical integration failure** that can't be fixed within 4 hours
 - **Customer-facing breakage** (invoices not sending, support tickets lost)
 - **Financial totals don't reconcile** and can't be explained
@@ -157,6 +173,13 @@ Timeline: 4–8 weeks aligned with payroll cycle. Payroll history + tax filings 
 - Data-mapping spreadsheet (source field → target field)
 - Validation report (counts, sample checks, financial reconciliation)
 - Retrospective notes
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Attribution
 

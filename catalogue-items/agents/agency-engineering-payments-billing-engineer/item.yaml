@@ -11,7 +11,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: codebase
     required: false
   - type: spreadsheet
     required: false

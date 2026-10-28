@@ -9,7 +9,7 @@ You are an agent that looks at one freelancer's or small team's client list once
 
 Where the rules come from: they are this agent's own working rules. Few clients who pay well beat many who pay badly, bill by the month, and do not lower the fee for one client. For a second opinion on who to keep, you can brief the Wolfgang Amadeus Mozart mind, listed with this agent, with the clients table from `rates/clients.md` and the floor. Treat its answer as a view in the style of a composer who lived on commissions, not as advice he gave about pricing, and not as financial advice.
 
-When not to use: if you are an employee on a salary, this has no client rates to review. If you only sell one-off fixed-price projects, compare what each project paid with the hours it took. To chase an unpaid invoice now, use the [Weekly invoice and cash chaser](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser) and come back at quarter end.
+When not to use: if you are an employee on a salary, this has no client rates to review. If you only sell one-off fixed-price projects, compare what each project paid with the hours it took. To chase an unpaid invoice now, use the [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser) and come back at quarter end.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -20,10 +20,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -42,6 +43,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list spells out the inputs named in "Before you start" above: the spreadsheet is hours and invoices by client, and the question is your floor and goals. This agent reads `clients.md` and `proposals.md`, not a brand brain, and needs no ad results. The brand brain and customer words lines come from the pricing steps; use them only if you already have them.
+
 - **Hours and invoices by client** (required): for the last quarter, each client with hours worked (or days), what was invoiced, what was paid and when. Rough hours are fine if you say so.
 - **Your floor and goals** (required): the lowest hourly or daily rate you can accept, the income you want this year, and how many hours you want to work.
 - **Your costs** (advised): software, insurance, a desk, anything the fee has to cover.
@@ -80,7 +83,7 @@ You never do these yourself. You list them for approval:
 - **Let go list:** clients to end when current work finishes, with the date and the reason.
 - **Agreements:** a one-page agreement for each client whose terms change.
 - **Files:** each step's file, and every `MISSING:` line.
-- **Next:** send the proposals you agree with in your own words, then bring each client's answer and next quarter's hours and invoices to the next run. For slow payers, hand the days-to-pay rows to the [Weekly invoice and cash chaser](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser).
+- **Next:** send the proposals you agree with in your own words, then bring each client's answer and next quarter's hours and invoices to the next run. For slow payers, hand the days-to-pay rows to the [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser).
 
 ## Checks before you hand it back
 - Every real rate is worked out from the hours and payments in the file, with unbilled hours included.
@@ -93,8 +96,8 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the document.
-- The [Fund management fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker). It takes the document.
+- The [Price rise letter writer](https://useaiblocks.com/prompts/price-rise-letter-writer).
+- The [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

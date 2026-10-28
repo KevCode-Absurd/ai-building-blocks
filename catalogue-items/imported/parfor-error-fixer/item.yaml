@@ -29,4 +29,4 @@ credits:
   - title: matlab-diagnose-parfor skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-diagnose-parfor
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Copied under the BSD 2-Clause licence. We gave it a plain name and corrected Fix 6 so the rewrite keeps the product of the two fields instead of summing them. We added Before you start and After this sections that link to other AI Blocks steps.

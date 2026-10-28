@@ -17,9 +17,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
@@ -40,7 +40,7 @@ This list is the inputs for this workflow: your product list, the weekly Shoppin
 
 **Label:** this needs a Google Ads account with Shopping set up. Building the tiers means spending real ad money, and you make every change in your account yourself. Nothing here changes your account or budget for you.
 
-- **Your product list** (required): price, gross margin, 90-day spend, return on ad spend and conversions for each product. Real margins, not guesses. Any margin you guessed is marked.
+- **Your product list** (required, and the only thing step 1 needs): price, gross margin, 90-day spend, return on ad spend and conversions for each product. Real margins, not guesses. Any margin you guessed is marked.
 - **How much time you have each week** to manage the account, and whether you run Standard Shopping or Performance Max.
 - **After two weeks of running the tiers: the weekly Shopping report** at product level for the last 7 and 30 days, plus the search terms report and impression share (required for step 2).
 - **For the products step 2 marks to fix: their current titles and the converting search terms** (required for step 3).

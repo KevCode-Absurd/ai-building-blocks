@@ -71,6 +71,19 @@ tags: ["inquiry", "Timperley", "practitioner-research", "action-research", "data
 
 # Teacher Inquiry Cycle Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a structured teacher inquiry cycle — a form of practitioner research where a teacher investigates a specific question about their practice and its impact on student learning, collects evidence, analyses what they find, and draws conclusions that inform their future teaching. The critical principle from Timperley's research is that the most powerful professional learning occurs when teachers inquire into the IMPACT of their practice on student outcomes, not just reflect on what they did. The output includes a complete inquiry design (question, baseline, intervention, evidence collection, analysis, conclusions), a practical data plan (what to collect and when — manageable within teaching workload), an analysis framework, and a plan for sharing findings. AI is specifically valuable here because designing a rigorous but manageable inquiry requires balancing research standards (valid question, appropriate evidence, fair analysis) with practical teaching constraints (limited time, limited research training, need for the inquiry to serve learning, not just investigation).
@@ -255,3 +268,11 @@ Answer the inquiry question honestly:
 2. **Inquiry requires a genuine question.** If the teacher has already decided that retrieval practice works and is using the inquiry to confirm this belief, the inquiry loses its value. Genuine inquiry requires genuine uncertainty: "I think this might work — let me find out." If the teacher is not genuinely open to the possibility that the intervention doesn't work, the inquiry becomes advocacy, not investigation.
 
 3. **Data collection must not harm teaching.** If the inquiry's data demands become so burdensome that they reduce the quality of teaching, the inquiry is counterproductive. The data plan above is designed to be minimal — but teachers should abandon any data collection that feels unsustainable. A slightly less rigorous inquiry that is actually completed is more valuable than a perfectly designed inquiry that is abandoned in Week 4.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -31,4 +31,4 @@ credits:
   - title: product-description-generator skill
     by: Nexscope AI
     url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, made pasted competitor text the default over page reading, and added notes on proof for claims and checking current character limits.

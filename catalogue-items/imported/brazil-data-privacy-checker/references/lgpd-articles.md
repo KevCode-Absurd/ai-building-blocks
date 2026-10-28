@@ -127,7 +127,7 @@ International transfers by public entities for international cooperation: follow
 
 ### Art. 33 — Transfer Mechanisms
 Personal data may only transfer internationally to:
-- Countries/org with adequate protection (ANPD adequacy decision)
+- Countries/org with adequate protection (ANPD adequacy decision). So far: the EU and the EEA states, under Resolution CD/ANPD 32/2026 (26 January 2026)
 - Agreements/standard contractual clauses (Art. 35)
 - Binding corporate rules (BCRs) — Art. 35, I
 - Specific consent for the transfer — Art. 33, VIII
@@ -147,7 +147,7 @@ Even where Art. 33 applies, ANPD may impose additional requirements for sensitiv
 ## Chapter VI — Controllers and Processors (Arts. 37–45)
 
 ### Art. 37 — Record of Processing Activities (RoPA)
-Controllers and processors must maintain RoPA. ANPD may require disclosure. ANPD Resolution No. 2/2022 made RoPA mandatory for agents that: process data at large scale; are public authorities; or process sensitive data.
+The controller and the operator (processor) must each keep a record of the processing operations they carry out, especially when based on legitimate interest. The duty applies to all controllers and operators. ANPD Resolution CD/ANPD No. 2/2022 lets small-scale processing agents keep the record in a simplified form; it does not remove the duty. ANPD may require the record to be disclosed.
 
 ### Art. 38 — DPIA / RIPD (Relatório de Impacto à Proteção de Dados)
 ANPD may require DPIA for high-risk processing. Content defined by ANPD. Must be considered by the controller before processing begins.

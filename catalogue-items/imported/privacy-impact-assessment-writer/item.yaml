@@ -31,4 +31,4 @@ credits:
   - title: pia-generation skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/privacy-legal/skills/pia-generation
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name and added a note on what to ask for when the plugin config file is not available.

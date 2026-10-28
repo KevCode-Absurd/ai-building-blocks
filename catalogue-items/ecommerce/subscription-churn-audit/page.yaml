@@ -151,4 +151,5 @@ terms:
     meaning: A repeat charge on a subscription after the first order.
   - term: Cohort
     meaning: A group of customers who started in the same period.
+before: []
 next: [subscription-cancel-flow-builder, billing-reminder-and-confirmation-writer, subscriber-retention-calendar, subscription-payback-checker]

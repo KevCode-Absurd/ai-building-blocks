@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fix the order of the talk** with the [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the deck outline and who is in the room.
-- **Rebuild the story** with the [Pitch arc planner](https://useaiblocks.com/skills/pitch-arc-planner). It takes your audience and your goal.
-Suggest a timed rehearsal before either. If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Slide count and timing are reported with numbers.
@@ -98,6 +90,14 @@ Suggest a timed rehearsal before either. If they pick one and that skill is adde
 - Every fix says which slide.
 - The score shows all five parts between 0 and 20, a total only when supported, and every estimate, proxy or unresolved input.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Fix the order of the talk** with the [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the deck outline and who is in the room.
+- **Rebuild the story** with the [Pitch arc planner](https://useaiblocks.com/skills/pitch-arc-planner). It takes your audience and your goal.
+Suggest a timed rehearsal before either. If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

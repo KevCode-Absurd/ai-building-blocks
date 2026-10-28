@@ -49,18 +49,52 @@ A force you have no facts for is rated "unknown" and listed under MISSING. It is
 
 ## What you hand back
 
-The industry and buyer segments. A rating and evidence for each force. The profit potential and your firm's place. The deciding forces and what could shift them. When to rerun. The score out of 100 with its six results. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+Use this layout:
+
+```
+INDUSTRY AND BUYERS
+<industry> | <buyer segments>
+
+THE FIVE FORCES
+New entrants: <strong, medium, weak> | <evidence>
+Suppliers: <> | <evidence>
+Buyers (by segment): <segment: force> | <evidence>
+Substitutes: <named substitute> | <evidence>
+Rivalry: <> | <evidence>
+
+PROFIT POTENTIAL
+<high, medium, low> | <why> | your firm's place: <>
+
+DECIDING FORCES
+<force> | what could shift it: <>
+
+RERUN WHEN
+<events or date>
+
+SCORE
+<n> out of 100: <six checks, pass or fail>
+
+MISSING
+<what was not given>
+
+CHECKS MISSED
+<one line per check missed, or none>
+```
 
 The score is about the read, not the industry. A low score means facts are missing, not that profit is poor. This is a thinking aid, not financial advice. To act on the deciding force, take it to the [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner).
 
 ## Check before you hand it back
 
+These are the same six checks scored in step 9:
+
 - Buyers are split by segment.
 - A substitute is named.
+- Every rating has stated evidence, or is marked unknown.
 - Only the one or two deciding forces are called out.
 - There is a note on what would change the read.
-- Every rating has stated evidence, or is marked unknown.
-- No market figure is invented.
+- The firm's place is separated from the industry's potential.
+
+A rule for the whole answer, not one of the six scored checks: no market figure is invented.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

@@ -11,6 +11,19 @@ metadata:
 
 This skill enables the agent to perform Static Application Security Testing (SAST) on source code repositories to detect security vulnerabilities without executing the application. The agent selects appropriate analysis tools based on the project's language, runs scans with relevant rule sets, triages findings to separate true positives from false positives, and integrates results into CI/CD pipelines. SAST catches issues such as SQL injection, cross-site scripting, hardcoded secrets, insecure deserialization, and cryptographic misuse early in the development lifecycle.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Detect Languages and Frameworks** — Analyze the repository to determine primary languages (Python, JavaScript, Java, Go, C#, etc.) and frameworks in use. This determines which SAST tools and rule sets are applicable. Check for existing tool configurations like `.semgrep.yml`, `codeql` query packs, or `.bandit` config files.
@@ -170,3 +183,11 @@ Fix: Replace ObjectInputStream with a safe alternative like JSON deserialization
 - **False positives in test code** — test files often contain intentionally insecure patterns (e.g., hardcoded test credentials, raw SQL for test setup). Configure separate rule sets or severity thresholds for test directories.
 - **Large monorepos with slow scan times** — full CodeQL analysis on a million-line monorepo can take over an hour. Use incremental analysis, scan only changed files on PRs, and run full scans on a nightly schedule.
 - **Secrets in historical commits** — SAST tools scan the current working tree, not Git history. Pair SAST with secret scanning tools like Gitleaks or TruffleHog to detect credentials committed in past revisions and still present in the Git log.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

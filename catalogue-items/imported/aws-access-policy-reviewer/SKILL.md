@@ -12,6 +12,24 @@ date_added: "2026-02-27"
 
 Review and harden IAM policies following AWS security best practices and least privilege principles.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **AWS IAM Policy Simulator:** Lets you test a replacement policy before you attach it.
+- **AWS IAM Access Analyzer:** Confirms what outside access your policies give.
+- **Any good chat AI:** Reviews pasted policy JSON without any setup.
+<!-- /needs -->
+
 ## When to Use
 Use this skill when you need to review IAM policies, implement least privilege access, or harden IAM security.
 
@@ -33,7 +51,8 @@ Never ask the user to paste access keys or secrets into chat. If a command outpu
 - Shell checks can miss things. Treat each result as a lead and say which checks you could not run. `jq` is needed for the policy checks.
 
 ## What to flag
-- `"Action": "*"` or `"Action": ["*"]` or a whole-service wildcard like `"s3:*"` on an Allow statement
+- `"Action": "*"` or `"Action": ["*"]` or a whole-service wildcard like `"s3:*"` on an Allow statement, including when it is one item in a longer list
+- `"NotAction"` on an Allow statement: it allows every action except the listed ones, so it is often close to full access
 - `"Resource": "*"` on actions that support a narrower resource
 - Allow statements with no condition where a condition (MFA, source IP, end date) would fit
 - Users with a console password and no MFA
@@ -66,7 +85,8 @@ Never ask the user to paste access keys or secrets into chat. If a command outpu
 ### Find overly permissive policies
 
 ```bash
-# Customer-managed policies with a wildcard Allow action (handles string or list form)
+# Customer-managed policies with a wildcard Allow action or an Allow + NotAction.
+# Handles a single statement or a list, and Action as a string or a list.
 aws iam list-policies --scope Local --query 'Policies[*].Arn' --output text | tr '\t' '\n' | \
 while read arn; do
   version=$(aws iam get-policy --policy-arn "$arn" --query 'Policy.DefaultVersionId' --output text)
@@ -74,10 +94,16 @@ while read arn; do
     --query 'PolicyVersion.Document' --output json | \
   jq -e '[.Statement | if type=="array" then .[] else . end
           | select(.Effect=="Allow")
-          | .Action | if type=="array" then .[] else . end
-          | select(. == "*" or endswith(":*"))] | length > 0' >/dev/null \
-    && echo "Wildcard Allow action in: $arn"
+          | select(has("NotAction") or
+                   ([.Action | if type=="array" then .[] elif type=="string" then . else empty end
+                     | select(. == "*" or endswith(":*"))] | length > 0))] | length > 0' >/dev/null \
+    && echo "Wildcard or NotAction Allow in: $arn"
 done
+
+# The loop above reads customer-managed policies only. Also check who holds the AWS-managed admin policy:
+aws iam list-entities-for-policy --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+# Inline policies on users, groups and roles are not covered above. Read them with
+# list-user-policies / get-user-policy (and the group and role versions) and apply the same test.
 
 # Inline policies on users (should usually be managed policies)
 aws iam list-users --query 'Users[*].UserName' --output text | tr '\t' '\n' | \
@@ -322,8 +348,10 @@ def wildcard_policies():
         for p in page["Policies"]:
             doc = iam.get_policy_version(PolicyArn=p["Arn"], VersionId=p["DefaultVersionId"])["PolicyVersion"]["Document"]
             for s in as_list(doc.get("Statement", [])):
+                if s.get("Effect") != "Allow":
+                    continue
                 actions = as_list(s.get("Action", []))
-                if s.get("Effect") == "Allow" and any(a == "*" or a.endswith(":*") for a in actions):
+                if "NotAction" in s or any(a == "*" or a.endswith(":*") for a in actions):
                     out.append(p["PolicyName"])
                     break
     return out
@@ -331,7 +359,7 @@ def wildcard_policies():
 if __name__ == "__main__":
     print("Users without MFA:", users_without_mfa())
     print("Keys older than 90 days:", old_keys())
-    print("Policies with wildcard Allow actions:", wildcard_policies())
+    print("Policies with wildcard or NotAction Allow statements:", wildcard_policies())
 ```
 
 ## Output Format
@@ -348,6 +376,14 @@ Return these parts in order.
 4. **How to test.** For each replacement: run it through the IAM Policy Simulator or `simulate-principal-policy`, attach it in a test account first, and keep the old policy version for rollback.
 5. **Hardening checklist** with `done`, `not done` or `not checked` for each line.
 6. **Next steps.** Three actions in order, and what to re-check after.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Example Prompts
 

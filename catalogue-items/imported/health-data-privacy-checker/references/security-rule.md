@@ -91,7 +91,7 @@ Implementation may consider:
 | → Testing and Revision | Addressable | Implement procedures for periodic testing of contingency plans |
 | → Applications and Data Criticality Analysis | Addressable | Assess relative criticality of applications |
 | **Evaluation** (§164.308(a)(8)) | Required | Periodic technical/non-technical evaluation |
-| **Business Associate Contracts** (§164.308(b)(1)) | Required | BAA with all BAs handling ePHI |
+| **Business Associate Contracts** (§164.308(b)(1)) | Required | BAA with every business associate that creates, receives, maintains or transmits ePHI for you (check the role first: see 45 CFR §160.103) |
 
 ---
 
@@ -274,7 +274,7 @@ HHS recommends NIST SP 800-30 for risk analysis methodology. NIST SP 800-66 is t
 - [ ] Create Data Backup Plan (test it)
 - [ ] Create Disaster Recovery Plan (test it)
 - [ ] Create Emergency Mode Operation Plan
-- [ ] Execute BAAs with all vendors handling ePHI
+- [ ] Execute BAAs with every vendor that is a business associate handling ePHI (check the role under 45 CFR §160.103)
 - [ ] Conduct periodic Security Rule evaluations
 
 ### Physical

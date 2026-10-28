@@ -18,7 +18,7 @@ Work out the cash it would take to buy back the shares you actually issued to st
 - You need the fair value of grants: ask an accountant or valuation adviser. This does not value awards.
 - You need diluted earnings per share: use your accounting team's EPS workings. This uses actual issued shares only.
 - You want to decide on or run a share buyback: talk to your finance lead and legal adviser. This only models cost.
-- You need incremental shares from options for diluted EPS: use the Treasury-stock option dilution.
+- You need incremental shares from options for diluted EPS: use the Employee option dilution calculator.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -98,6 +98,8 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 These links identify public methods and definitions. All instructions and practice fixtures in this pack are original; linked publications are not bundled or relicensed.
 
 ## What you hand back
+Use these headings, in order: SCOPE AND DATED SOURCES; INPUTS AND ASSUMPTIONS; SHARE LEDGER TIE-OUT; GROSS AND NET CASH OFFSET at each price tested; COMPARISON with reported expense, and the reason for the gap; FILE CHECKS (what ran); MISSING; CHECKS MISSED.
+
 Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

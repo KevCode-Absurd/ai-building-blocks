@@ -34,7 +34,8 @@ how_to_use:
   - "Gather first: your list of languages and regions, traffic or sales per market if you have it, your current URLs, and who can translate."
   - Open Claude, ChatGPT or Gemini and paste in the full contents of this item's SKILL.md file. No code running or paid tool is needed.
   - Paste in your gathered details. If something is missing, your AI should ask you before it plans.
-  - Read the URL choice and the translation workflow first. Check that you can keep up with them.
+  - Read the URL choice and the translation workflow first. Check that you can keep up with them. Budget for the translation route the plan picks. A translation agency charges per word and a translation management system (TMS) is a paid tool. In-house staff and a shared spreadsheet cost no extra fees. The skill says a TMS pays off only above about 10,000 words of content.
+  - Expect one short section for each of the nine parts listed below. Ask your AI for a shorter or longer version if you need one.
   - Give the plan to your web developer. Use it to build the site and to test each language before launch.
   - Once the plan is approved, build one language first. Then run a technical SEO check on it, such as the Technical SEO auditor, to confirm the hreflang tags before you add the rest.
 output_sample:

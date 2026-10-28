@@ -529,12 +529,18 @@ print(f"Token count: {tokens.input_ids.shape[1]}")  # Max 77 for SD
 def save_latents_callback(pipe, step_index, timestep, callback_kwargs):
     latents = callback_kwargs["latents"]
 
-    # Decode and save intermediate
+    # Decode and save intermediate. A manual decode skips the pipeline's
+    # safety checker, so run it before saving, and skip the save if it is
+    # missing or flags the image.
     with torch.no_grad():
         image = pipe.vae.decode(latents / pipe.vae.config.scaling_factor).sample
     image = (image / 2 + 0.5).clamp(0, 1)
-    image = image.cpu().permute(0, 2, 3, 1).numpy()[0]
-    Image.fromarray((image * 255).astype("uint8")).save(f"step_{step_index}.png")
+    image = image.cpu().permute(0, 2, 3, 1).float().numpy()
+    _, has_nsfw_concept = pipe.run_safety_checker(image, pipe.device, latents.dtype)
+    if has_nsfw_concept is None or any(has_nsfw_concept):
+        print(f"Step {step_index}: not saved (safety check missing or flagged)")
+        return callback_kwargs
+    Image.fromarray((image[0] * 255).astype("uint8")).save(f"step_{step_index}.png")
 
     return callback_kwargs
 

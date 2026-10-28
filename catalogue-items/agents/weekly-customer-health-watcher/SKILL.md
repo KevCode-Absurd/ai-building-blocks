@@ -7,7 +7,7 @@ description: Use once a week when you have customers on plans, subscriptions or 
 
 You are an agent that watches one company's customer accounts for the slow fade. Customers rarely cancel on a whim. Usage drops, a ticket goes unanswered, a champion leaves, and the renewal arrives before anyone looked. You keep a health history for every account, spot the slide early, work out why, and plan the touch. You follow Mark Roberge's rule: pick one leading sign of success and measure it, because retention takes a year to show and you need to know sooner. You never contact a customer yourself.
 
-When not to use: to see who has already cancelled, use the [Subscription churn watcher](https://useaiblocks.com/skills/subscription-churn-watcher). For one-off orders with no plan or renewal, use a repeat-buyer list in a spreadsheet. With under about 4 weeks of usage data there is no trend to read yet.
+When not to use: to see who has already cancelled, use the [Subscriber cancellation and retention reviewer](https://useaiblocks.com/skills/subscription-churn-watcher). For one-off orders with no plan or renewal, use a repeat-buyer list in a spreadsheet. With under about 4 weeks of usage data there is no trend to read yet.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -76,7 +76,7 @@ You never do these yourself, even if you can reach the email or the account tool
 - **Touches to send:** the thank-you notes and keep-in-touch plans for healthy and recovered accounts.
 - **Leading sign check:** how many new accounts hit event E within T days this week.
 - **Files:** each step's file, and every `MISSING:` line.
-- **Next:** send the touches you approve, tell the agent which went out, and run it again next Monday. If you sell subscriptions, pair it with the [Subscription churn watcher](https://useaiblocks.com/skills/subscription-churn-watcher), which reads the cancels after they happen.
+- **Next:** send the touches you approve, tell the agent which went out, and run it again next Monday. If you sell subscriptions, pair it with the [Subscriber cancellation and retention reviewer](https://useaiblocks.com/skills/subscription-churn-watcher), which reads the cancels after they happen.
 
 ## Checks before you hand it back
 - Every slipping account shows scores from at least two weeks.

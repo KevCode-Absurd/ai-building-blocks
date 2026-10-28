@@ -17,6 +17,19 @@ Loads a base agreement and all amendments, then either summarizes what
 changed over time or traces a specific provision to its current
 controlling language.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Instructions
 
 1. **Get the documents:** From files the user uploads or text they paste. Accept several documents in one go. If none are given, ask.
@@ -268,3 +281,12 @@ End with three to five plain options, such as: trace another clause, send the wa
 - It does not compare the contract against your own rules. Use Contract risk reviewer for that. This skill is purely historical.
 - It does not infer what an amendment means if the language is
   ambiguous — it quotes exactly and flags ambiguity for a lawyer.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [Vendor contract renewal reviewer](https://useaiblocks.com/skills/monthly-contract-renewal-keeper).
+- The [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

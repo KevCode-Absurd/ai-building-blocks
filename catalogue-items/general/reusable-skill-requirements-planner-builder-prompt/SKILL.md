@@ -8,8 +8,8 @@ description: Fill in a short template and paste it into Claude Code. It writes a
 A fill-in template. You describe a task you repeat. Claude Code turns it into a skill file you can run by typing a command.
 
 ## When not to use it
-- You already have a skill file and want it checked: use the [Skill file problem spotter](https://useaiblocks.com/skills/skill-file-problem-spotter).
-- You are in a chat AI, not Claude Code, and want a draft from a job you repeat: use the [Repeat job skill drafter](https://useaiblocks.com/skills/repeat-job-skill-drafter).
+- You already have a skill file and want it checked: use the [AI skill file checker](https://useaiblocks.com/prompts/skill-file-problem-spotter).
+- You are in a chat AI, not Claude Code, and want a draft from a job you repeat: use the [Reusable AI skill writer](https://useaiblocks.com/prompts/repeat-job-skill-drafter).
 - The task happens once: ask your AI directly.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -31,7 +31,7 @@ How to start:
 ## What you need
 
 - Claude Code, open in a folder. This folder is the "Codebase" in "Before you start": it only needs to be a place to save the new skill file. It writes the skill file into that folder. Claude Code runs on a paid Claude plan or an API account.
-- A task you do more than once, and a rough idea of its steps.
+- A task you do more than once, described in plain words, and a rough idea of its steps. This is the main input. The CHECKS MISSED line in Before you start does not apply here; the hand-back is the note under "What comes back".
 - What the task needs from you each time, and what the result should look like.
 
 ## Working rules
@@ -116,7 +116,7 @@ what you marked MISSING, and that it has not been tested yet.
 - A skill file at `.claude/skills/<command>/SKILL.md` with front matter and the six parts.
 - A short note: file path, command, what to give it, MISSING items, "not yet tested".
 
-What next: the [Skill file problem spotter](https://useaiblocks.com/prompts/skill-file-problem-spotter) checks the new file. The links under "After this" are about code changes, so use them only if you also changed code.
+What next: the [AI skill file checker](https://useaiblocks.com/prompts/skill-file-problem-spotter) checks the new file.
 
 ## How to use it
 
@@ -150,6 +150,6 @@ Give the skill file, the evidence used (the filled template), assumptions, missi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the code change.
+- The [AI skill file checker](https://useaiblocks.com/prompts/skill-file-problem-spotter).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

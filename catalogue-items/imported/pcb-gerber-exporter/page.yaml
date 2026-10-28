@@ -39,8 +39,10 @@ how_to_use:
   - Gather your design variable name, connector type, board thickness and board maker before you start.
   - Open MATLAB and load your design, so the pcbComponent variable is in your workspace.
   - "Paste the skill into your AI in one message. For example: My pcbComponent variable is called myBoard. Add two SMA_Cinch connectors and format the files for OSH Park. Write the gerberWrite code. Run the block that calls gerberWrite in MATLAB. It returns the writer object and the output folder path."
+  - Before you run it, check the code your AI wrote. The variable name must match your design, and the connector list must match the connectors you want.
   - Run the code in MATLAB. Pass several connectors as a cell array, like {C1, C2}.
   - Open the output folder. Check for the copper, solder mask, silkscreen and drill files. Preview the folder in a free Gerber viewer such as GerbLook, and open the copper layer first. Then upload the files to your board maker.
+  - Optional check before you send the files. Read the exported Gerber folder back into MATLAB with the PCB layout file reader, and confirm every layer is there.
 output_sample:
   input:
     - Your finished board design in MATLAB, saved as a pcbComponent or pcbStack variable

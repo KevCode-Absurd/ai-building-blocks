@@ -20,7 +20,8 @@ not_for:
   - 'You want to cut out objects by typing a word like "dog": use GroundingDINO with SAM, since this skill only takes clicks, boxes or masks.'
   - "You work with video clips: use SAM 2, the video version of this model."
 you_give:
-  - An image
+  - An image file in RGB or greyscale, such as a JPG or PNG
+  - A model checkpoint file (ViT-B, ViT-L or ViT-H), downloaded before the first run
   - A click point or a box around the object (optional)
   - Python with torch and segment-anything
 you_get:
@@ -36,7 +37,8 @@ how_to_use:
   - Load your image. Add a click point, or a box around the object. Or skip both to cut out every object.
   - Check the scores and pick the best mask. If the edge is off, add a click on the object or off it and run it again.
   - Save the mask or the cutout with a clear background, and use it in your tool or training data.
-  - Next, pass the saved masks to a labelling tool or a training pipeline, or export the model to ONNX for a browser tool. The ONNX export script is not in this copy, so get it from the original repository first.
+  - Next, pass the saved masks to a labelling tool or a training pipeline.
+  - Optional, needs the export script from the original repository. To run the model in a browser tool, export it to ONNX with scripts/export_onnx_model.py from facebookresearch/segment-anything. That script is not in this copy.
 output_sample:
   input:
     - Your image file

@@ -69,6 +69,27 @@ tags: ["hints", "scaffolding", "ITS", "VanLehn", "Aleven", "adaptive", "tutoring
 
 # Adaptive Hint Sequence Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A draft** with the [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). Bring your lesson plan, a plan (optional), your notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, a draft, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a cascading hint sequence for a specific problem type — a series of progressively more revealing hints that help students move past sticking points without simply giving them the answer. This is one of the most technically demanding aspects of intelligent tutoring system (ITS) design. The critical insight from VanLehn's (2011) meta-analysis is that the effectiveness of tutoring (human or AI) depends heavily on the quality of the scaffolding — and hint sequences are the primary scaffolding mechanism. Get the sequence wrong and you either frustrate students (hints too vague, too few) or steal their learning (hints too specific, too early). The output includes the complete hint cascade (typically 3–5 levels from general strategic guidance to specific procedural nudge), a design rationale explaining the cognitive function of each level, trigger conditions (when each hint fires), and a bottom-out strategy (what happens when hints are exhausted). AI is specifically valuable here because designing effective hint sequences requires simultaneously anticipating student errors, calibrating hint specificity, and ensuring that each hint level provides just enough information to unstick the student without bypassing the cognitive work that produces learning.
@@ -243,3 +264,12 @@ If the student's self-explanation is accurate, proceed to the next problem (a si
 2. **The optimal hint trigger is still an open research question.** Razzaq & Heffernan (2010) found that proactive hints help weaker students and reactive hints help stronger students, but the field has not converged on a definitive trigger model. The trigger conditions above are reasonable defaults, not empirically optimised thresholds. In a real ITS, these would need to be calibrated through A/B testing with the actual student population.
 
 3. **Hint quality depends on accurate diagnosis of the error.** The hint sequence above assumes specific error patterns (wrong operation order, one-sided operation, inverse confusion). If the student's actual error is different (e.g., an arithmetic mistake on 22 - 7), the hints will miss the mark. Effective hint systems need error-specific branching, not just linear cascades — which is significantly more complex to design.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the plan.
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper). It takes the plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

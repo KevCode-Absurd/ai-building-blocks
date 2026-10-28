@@ -7,7 +7,7 @@ role: make
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: true}
   - {type: spreadsheet, required: false}
 outputs:
   - {type: spreadsheet}

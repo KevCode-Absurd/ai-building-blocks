@@ -12,14 +12,15 @@ You cut "where is my order" (WISMO) contacts by telling the customer what is hap
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your brand brain and offer.
-2. This one.
+1. **An email flow** with the [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder). It uses your brand brain.
+2. **An email flow** with the [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner). Bring your results (optional). It uses your brand brain and offer.
+3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -108,10 +109,11 @@ When WISMO is under 5 percent, build the [Post-purchase flow builder](https://us
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
 - The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper).
 - The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
-- The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
 - The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

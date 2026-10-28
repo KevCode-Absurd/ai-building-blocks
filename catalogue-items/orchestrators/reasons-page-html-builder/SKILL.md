@@ -89,6 +89,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page and page layout spec.
 - **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
 - The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
-- The [Shopify theme code writer](https://useaiblocks.com/skills/shopify-theme-code-writer). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

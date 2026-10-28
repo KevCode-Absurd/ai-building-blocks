@@ -245,9 +245,9 @@ After running retros for 5+ closed searches, look across them for systemic patte
 | Agencies | | | |
 | GitHub/community | | | |
 
-4. **Identify stage drop-off patterns.** If candidates consistently drop off between "Interested" and "Screening," there's a scheduling or follow-up gap. If they drop off between "Interview" and "Offer," there's a closing or comp issue.
+4. **Identify stage drop-off patterns.** If candidates consistently drop off between "Interested" and "Screening," check for a scheduling or follow-up gap. If they drop off between "Interview" and "Offer," check closing and pay. A drop-off rate shows where to look; the reasons come from candidate feedback and the people involved, not from the rate alone.
 
-5. **Track calibration accuracy.** How often does the hired candidate match the original persona? If less than 50%, intake quality needs systemic improvement.
+5. **Track calibration accuracy.** How often does the hired candidate match the original persona? A low match rate is a prompt to review intake with the hiring manager; it may also mean the persona was revised for good reasons during the search.
 
 **Questions to ask across retros:**
 

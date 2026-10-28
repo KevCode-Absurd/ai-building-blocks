@@ -31,4 +31,4 @@ credits:
   - title: patent skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/research/patent/skills/patent
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and corrected the novelty method so it only counts art dated before your effective filing date, compares the whole document and not just its claims, and reviews every independent claim rather than claim 1 alone. We added Before you start and After this sections that link to other AI Blocks steps.

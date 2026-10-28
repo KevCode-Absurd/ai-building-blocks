@@ -19,9 +19,10 @@ not_for:
   - "You only need to pick where to host Qdrant: use the Qdrant hosting option adviser."
   - "You are upgrading Qdrant itself and keeping your model: use the Qdrant version upgrade planner."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your current and new embedding models, with vector sizes
+  - The number of points in the collection, and whether search must stay online
+  - Three to ten failing searches, each with the result you expected
+  - Your Qdrant version and where it runs
 you_get:
   - Embedding migration plan
   - Search relevance checks
@@ -56,9 +57,17 @@ how_it_works:
   - title: Qdrant health monitoring planner
     text: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search. It starts from your own setup and builds the alerts and rollback gates around the plan and the tests.
 output_shape: |-
-  Embedding migration plan
-  Search relevance checks
-  Monitoring and rollback gates
+  EMBEDDING MIGRATION PLAN
+    Strategy and why | numbered phases, each with its change, check and rollback step
+
+  SEARCH RELEVANCE CHECKS
+    Likely cause | test | fix | before | after (one row per cause, ranked)
+
+  MONITORING AND ROLLBACK GATES
+    Metric or check | normal range | alert when | action | the point to go back
+
+  MISSING FACTS AND NEXT ACTION
+    Source coverage | unresolved findings | MISSING lines | CHECKS MISSED | what to send to unblock a step
 tweaks:
   - what: Scope
     how: Name the date window, project or business to keep the work focused.

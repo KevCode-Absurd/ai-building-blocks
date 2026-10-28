@@ -1,6 +1,6 @@
 ---
 name: monetizing-innovation
-description: 'Design products and pricing around validated willingness to pay, from Ramanujam & Tacke''s "Monetizing Innovation". Use when the user mentions "pricing", "how much should we charge", "willingness to pay", "pricing page", "packaging", "freemium vs free trial", "are we leaving money on the table", "nobody buys at this price", "price increase", or "good-better-best". Also trigger when designing or auditing pricing and packaging, validating willingness to pay before building, segmenting customers by value, or choosing between subscription, usage-based, and freemium models. Covers price-before-product, willingness-to-pay talks, the four failures (feature shock, minivation, hidden gem, undead), leader/filler/killer packaging, and behavioral pricing. For offers and guarantees, see hundred-million-offers. For what customers value, see jobs-to-be-done.'
+description: 'Design products and pricing around validated willingness to pay, from Ramanujam & Tacke''s "Monetizing Innovation". Use when the user mentions "pricing", "how much should we charge", "willingness to pay", "pricing page", "packaging", "freemium vs free trial", "are we leaving money on the table", "nobody buys at this price", "price increase", or "good-better-best". Also trigger when designing or auditing pricing and packaging, validating willingness to pay before building, segmenting customers by value, or choosing between subscription, usage-based, and freemium models. Covers price-before-product, willingness-to-pay talks, the four failures (feature shock, minivation, hidden gem, undead), leader/filler/killer packaging, and behavioral pricing. For offers and guarantees, see the Offer builder that answers buyer doubts (offer-builder). For what customers value, see the Jobs-to-be-done framer (jobs-to-be-done-framer).'
 license: MIT
 metadata:
   author: wondelai
@@ -10,6 +10,28 @@ metadata:
 # Monetizing Innovation
 
 A framework for designing the product around the price, distilled from Simon-Kucher partners Madhavan Ramanujam and Georg Tacke's *Monetizing Innovation*. Use it to validate willingness to pay before building, dodge the four monetization failures, segment customers by value, package features into tiers people actually want, choose the right monetization model, and price with behavioral science instead of gut feel.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Core Principle
 
@@ -213,9 +235,17 @@ See [references/case-studies.md](references/case-studies.md) to watch the whole 
 
 ## Further Reading
 
-- [*"Monetizing Innovation: How Smart Companies Design the Product Around the Price"*](https://www.amazon.com/Monetizing-Innovation-Companies-Design-Product/dp/1119240867?tag=wondelai00-20) by Madhavan Ramanujam & Georg Tacke
-- [*"Confessions of the Pricing Man: How Price Affects Everything"*](https://www.amazon.com/Confessions-Pricing-Man-Affects-Everything/dp/3319203991?tag=wondelai00-20) by Hermann Simon
+- [*"Monetizing Innovation: How Smart Companies Design the Product Around the Price"*](https://www.amazon.com/Monetizing-Innovation-Companies-Design-Product/dp/1119240867) by Madhavan Ramanujam & Georg Tacke
+- [*"Confessions of the Pricing Man: How Price Affects Everything"*](https://www.amazon.com/Confessions-Pricing-Man-Affects-Everything/dp/3319203991) by Hermann Simon
 
 ## About the Authors
 
 **Madhavan Ramanujam** is a board member and partner at Simon-Kucher & Partners who has led hundreds of monetization projects and advised many of Silicon Valley's unicorns on pricing. **Georg Tacke** was co-CEO of Simon-Kucher, the world's largest pricing and monetization consultancy, with three decades advising executives worldwide. Together they distilled the firm's methodology into *Monetizing Innovation*.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SaaS pricing strategist](https://useaiblocks.com/skills/pricing-strategist).
+- **Make an offer people want** with the [Customer offer builder](https://useaiblocks.com/skills/offer-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

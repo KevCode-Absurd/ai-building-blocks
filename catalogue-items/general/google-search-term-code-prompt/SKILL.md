@@ -9,7 +9,7 @@ Plan and draft a search term classifier and a negative keyword analyzer for a Go
 
 Use this with a coding assistant that can open the project, such as Claude Code or Codex. A plain chat AI can write the plan and the draft code but cannot inspect the project or run tests.
 
-Not for: an account with no Google Ads API access (use the [Google Ads token and access check planner](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner) first), one export and no code (use the Search Query Analyst agent or the Google Ads report auditor), or sorting keywords by results (use the Keyword grouping coding prompt).
+Not for: an account with no Google Ads API access (use the [Google Ads developer access checker](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner) first), one export and no code (use the Search Query Analyst agent or the Google Ads report auditor), or sorting keywords by results (use the Keyword grouping coding prompt).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -19,6 +19,7 @@ not_for:
   - "You want binding strength or potency: DiffDock does not predict affinity, so use a separate scoring step such as GNINA, then lab tests."
   - "You want proof that a molecule does not bind: low confidence is not evidence of no binding, so check poses with PoseBusters and a chemist."
   - "You want to dock large biomolecules, covalent bonds or metal binding: ask a computational chemist, because this skill covers small molecules only."
+  - "You have no CUDA GPU and only a protein sequence: sequence folding needs a GPU, so use a hosted GPU machine or ask for a PDB structure first. A PDB file can run on a CPU, slowly."
 you_give:
   - Your protein as a PDB file or a full amino-acid sequence
   - Your molecule as a SMILES string or a ligand file (SDF, MOL2, PDB or PDBQT)
@@ -31,6 +32,7 @@ you_get:
   - Commands to set up DiffDock and run one pair or a batch
   - A plain note on what the scores cannot show
 how_to_use:
+  - Before you start: you need an NVIDIA GPU with CUDA for the best path, plus disk space for the model downloads. The setup, Docker, pretrained docking and GNINA commands were not run when this item was reviewed, so expect to debug them.
   - Use an AI that can run code and read files, on a computer with a GPU. Or use the DiffDock Docker image.
   - Give your AI the skill, your protein file or sequence, and your molecule.
   - Ask it to set up DiffDock v1.1.3 and run one pair or a batch. Treat the setup and docking commands as untested recipes, as noted above, and be ready to fix errors.

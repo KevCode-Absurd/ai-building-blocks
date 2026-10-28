@@ -37,7 +37,8 @@ from langchain_pinecone import PineconeVectorStore
 import pinecone
 
 # Initialize Pinecone
-pinecone.init(api_key="your-api-key", environment="us-west1-gcp")
+import os
+pinecone.init(api_key=os.environ["PINECONE_API_KEY"], environment="us-west1-gcp")  # key comes from your environment, never from code or chat
 
 # Create index (one-time)
 pinecone.create_index("my-index", dimension=1536, metric="cosine")
@@ -133,7 +134,8 @@ import os
 
 # Set environment variables
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = "your-langsmith-api-key"
+# LANGCHAIN_API_KEY must already be set in your shell or secrets manager. Never type the key into code or chat.
+assert "LANGCHAIN_API_KEY" in os.environ, "Set LANGCHAIN_API_KEY in your environment first"
 os.environ["LANGCHAIN_PROJECT"] = "my-project"
 
 # All chains/agents automatically traced
@@ -257,8 +259,8 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 # Build and run
 docker build -t langchain-app .
 docker run -p 8000:8000 \
-  -e OPENAI_API_KEY=your-key \
-  -e LANGCHAIN_API_KEY=your-key \
+  -e OPENAI_API_KEY \
+  -e LANGCHAIN_API_KEY \
   langchain-app
 ```
 
@@ -374,7 +376,7 @@ from langchain_community.tools import DuckDuckGoSearchRun, TavilySearchResults
 search = DuckDuckGoSearchRun()
 
 # Tavily (best quality)
-search = TavilySearchResults(api_key="your-key")
+search = TavilySearchResults()  # reads TAVILY_API_KEY from your environment
 ```
 
 ### Wikipedia
@@ -386,28 +388,15 @@ from langchain_community.utilities import WikipediaAPIWrapper
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
 ```
 
-### Python REPL
+### Code and shell tools: do not give these to an agent on your machine
 
-```python
-from langchain_experimental.tools import PythonREPLTool
+LangChain ships a Python REPL tool and a shell tool. Both run whatever code or command the model writes, with your
+user's rights, so one bad or injected instruction can delete files or leak keys. Do not hand them to an agent that
+runs on your computer or server. Instead:
 
-python_repl = PythonREPLTool()
-
-# Agent can execute Python code
-agent = create_agent(model=llm, tools=[python_repl])
-result = agent.invoke({"input": "Calculate the 10th Fibonacci number"})
-```
-
-### Shell commands
-
-```python
-from langchain_community.tools import ShellTool
-
-shell = ShellTool()
-
-# Agent can run shell commands
-agent = create_agent(model=llm, tools=[shell])
-```
+- Write a small tool that does one job, like the `calculator` in the agents guide, which only accepts plain arithmetic.
+- If you truly need the agent to run code, run it in a throwaway sandbox (a container or hosted code sandbox with no
+  network access, no secrets and no access to your files), and have a person approve each command.
 
 ### SQL databases
 

@@ -10,7 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: web_page, required: true}
   - {type: spreadsheet, required: false}
-  - {type: brief, required: true}
+  - {type: brief, required: false}
 outputs:
   - {type: plan}
   - {type: brief}

@@ -1,11 +1,11 @@
 ---
 name: leftover-mess-image-ad-maker
-description: Use when a story ad's picture should be the residue a problem leaves behind (shed hair, lint, scale, spilled powder, a worn-out part), photographed close like proof sent to a friend. It fixes what the residue is, its honest amount and the container that gives it away, then writes the brief and prompt and lists any check it missed.
+description: Use when a story ad's picture should be the residue a problem leaves behind (shed hair, lint, scale, spilled powder, a worn-out part), shot close in the plain look of a quick phone snap. It fixes what the residue is, its honest amount and the container that gives it away, then writes the brief and prompt and lists any check it missed.
 ---
 
 # Leftover mess image ad maker
 
-You write the brief and image prompt for one patch of residue, shot close on the surface where it was found, with nothing to explain it. The first look is "what is that?" The second look, for anyone with the problem, is "oh, I know that." Curiosity pulls hardest when people sense a small gap they can close quickly, and here the story's first line closes it.
+You write the brief and image prompt for one patch of residue, shot close on the surface where it was found, with nothing to explain it. The first look is "what is that?" The second look, for anyone with the problem, is "oh, I know that." Curiosity pulls hardest when people sense a small gap they can close quickly, and here the story's first line closes it. Unlike the problem-moment maker (the daily routine) or the circled-flaw maker (one marked spot), this picture shows only what the problem leaves behind.
 
 **Good for:** problems that leave something you can see or touch: hair, fur, lint, limescale, grease, powder, a worn sole, a pile of half-used things.
 
@@ -70,7 +70,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - **Where it was found:** the surface or container that gives it away once you look again: the lint tray, the drain cover, the scoop, the brush.
 3. **Frame it close.** The residue fills about a third to a half of the frame, looking down, or tilted the way you'd hold a phone over it. Keep the giveaway container partly in shot, cut by the edge, so the second look can happen.
 4. **Choose the light by tone.**
-   - **Flash:** hard and flat, like proof sent to a friend. Suits mess people complain about.
+   - **Flash:** hard and flat, like a quick phone snap. Suits mess people complain about.
    - **Room or window light:** softer. Suits mess people are a little embarrassed by.
 5. **Add one sign of the routine,** if the story has it: a damp cloth, a hand reaching in at the edge. No face.
 6. **Run the two-look test.** One second: can a stranger say "something spilled" or "some kind of hair"? Two seconds: would someone with the problem name it exactly? If the first look is already obvious, go closer. If the second never comes, show more of the container.

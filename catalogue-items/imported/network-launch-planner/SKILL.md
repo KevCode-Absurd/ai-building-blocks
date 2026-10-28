@@ -11,6 +11,19 @@ metadata:
 
 A framework for starting and scaling products that live or die by network effects — marketplaces, social apps, messaging, and collaboration tools — distilled from Andrew Chen's *The Cold Start Problem*. Use it to launch products that are worthless until other users show up, to sequence growth network by network, and to navigate the five stages: the cold start, the tipping point, escape velocity, hitting the ceiling, and the moat.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Network effects start as a liability, not an asset.** Value lives in connections between users, and on day one there are none — the same force that makes a dense network unstoppable makes an empty one useless. You don't escape by launching to a market; you escape by building one tiny, complete, self-sustaining network at a time, solving its hard side first, then tipping adjacent networks with a repeatable playbook until the market follows.
@@ -179,10 +192,17 @@ See [references/scale-ceiling-moat.md](references/scale-ceiling-moat.md) when gr
 
 ## Further Reading
 
-- [*"The Cold Start Problem: How to Start and Scale Network Effects"*](https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749?tag=wondelai00-20) by Andrew Chen
-- [*"Platform Revolution"*](https://www.amazon.com/Platform-Revolution-Networked-Markets-Transforming/dp/0393249131?tag=wondelai00-20) by Geoffrey Parker, Marshall Van Alstyne & Sangeet Paul Choudary
-- [*"Blitzscaling"*](https://www.amazon.com/Blitzscaling-Lightning-Fast-Building-Massively-Companies/dp/1524761419?tag=wondelai00-20) by Reid Hoffman & Chris Yeh
+- [*"The Cold Start Problem: How to Start and Scale Network Effects"*](https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749) by Andrew Chen
+- [*"Platform Revolution"*](https://www.amazon.com/Platform-Revolution-Networked-Markets-Transforming/dp/0393249131) by Geoffrey Parker, Marshall Van Alstyne & Sangeet Paul Choudary
+- [*"Blitzscaling"*](https://www.amazon.com/Blitzscaling-Lightning-Fast-Building-Massively-Companies/dp/1524761419) by Reid Hoffman & Chris Yeh
 
 ## About the Author
 
 **Andrew Chen** is a general partner at Andreessen Horowitz, where he invests in consumer technology, and previously led the rider growth team at Uber. His long-running essay series on growth, metrics, and network effects — read across the tech industry — became the foundation for *The Cold Start Problem*.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Grow on social** with the [Word of mouth planner](https://useaiblocks.com/skills/word-of-mouth-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

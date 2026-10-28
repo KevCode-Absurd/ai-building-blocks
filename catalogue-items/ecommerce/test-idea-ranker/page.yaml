@@ -117,7 +117,7 @@ terms:
 not_for:
   - "You have ideas but no research behind them. Use the Conversion research planner first, then come back."
   - "You are not sure your store has enough orders to test. Use the Store test readiness checker."
-  - "A test already ran and you need to know if the result holds. Use the Store test verdict maker."
+  - "A test already ran and you need to know if the result holds. Use the Store test evidence reviewer."
 output_sample:
   input:
     - "Your test ideas, each with the proof behind it (recording, heatmap, survey line or funnel drop)"

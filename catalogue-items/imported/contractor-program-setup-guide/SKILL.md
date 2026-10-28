@@ -10,6 +10,25 @@ metadata:
 
 Helps HR, procurement, and legal teams manage the non-employee workforce — contractors, freelancers, temporary staff, and staffing agency workers — including classification, vendor management, and program governance.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a planning and writing job. Claude, ChatGPT or Gemini all do it well.
+<!-- /needs -->
+
 ## How to run this skill
 
 1. **Ask once for what is missing.** You need: what work the contractors do, how they are directed and paid, how long they have stayed, and the country or state. Optional: current vendors, the contractor agreement. Ask the user to describe roles, not names or ID numbers. If the country or state is missing, say the check is general and mark `MISSING: country or state`.
@@ -90,3 +109,12 @@ This is guidance for HR and buying teams, not legal advice.
 - Allowing contractor engagements to run indefinitely without periodic reclassification review.
 - Granting contractors the same system access and benefits-adjacent perks as employees, increasing co-employment risk.
 - Lacking centralized visibility into total contingent workforce spend across departments and vendors.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contractor invoice and terms reviewer](https://useaiblocks.com/skills/monthly-contractor-roster-keeper).
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the plan and audit report.
+- The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, and any signed waiver with its date and scope.
 
-**The pieces it uses:** the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow (the governing method) and the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker) (the one-period rebuild). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow (the governing method) and the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker) (the one-period rebuild). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -72,6 +72,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check the fixed charge test on its own** with the [Fixed charge coverage bridge builder](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder).
-- **Check your daily cash** with the [Treasury settlement evidence reviewer](https://useaiblocks.com/agents/treasury-settlement-evidence-reviewer).
+- **Check the fixed charge test on its own** with the [Fixed payment cash coverage checker](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder).
+- **Check your daily cash** with the [Cash settlement forecast reviewer](https://useaiblocks.com/agents/treasury-settlement-evidence-reviewer).
 Nothing here contacts a lender or asks for a waiver. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

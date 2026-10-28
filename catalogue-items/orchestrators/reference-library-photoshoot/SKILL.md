@@ -43,7 +43,7 @@ How to start:
 7. Run the checks and build the review deck (section 6).
 8. Hand over the files and the record (section 7).
 
-When not to use: you only have rough phone photos and want a quick set (use [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot)). You only need the plan (use the [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner)). You already have pictures to check (use the [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector)).
+When not to use: you only have rough phone photos and want a quick set (use [Product photoshoot planner and producer](https://useaiblocks.com/workflows/phone-product-photoshoot)). You only need the plan (use the [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner)). You already have pictures to check (use the [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector)).
 
 ## 1. Verify the product before choosing looks
 Inspect as many supplied real photographs as needed to understand front, back, detail, scale and actual use. A white-background packshot does not establish worn, opened, held or installed geometry. Write a truth sheet using references/look-and-shot-record.md. Record exact size, colourway, pattern, finish, silhouette, closures, label text and which parts are visible in use. The truth sheet has these fields: exact variant, colourway, label text, the real anchor photos used, the in-use views you have, and what cannot change. Write `MISSING:` for any field you cannot fill from the photos.

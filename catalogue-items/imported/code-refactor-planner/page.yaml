@@ -33,6 +33,7 @@ how_to_use:
   - Paste the skill instructions into the chat. The skill also uses six reference files that ship in this item's references folder. Paste or attach them with it. If you cannot, say so: it then works from the main text alone and is less exact.
   - Paste the code you want to improve. Add your test command and any parts that must not change (optional).
   - Read the smells and score first. Check that each named move fits your code.
+  - No tests yet? Ask it first for a few simple tests that pin down what the code does today. Run them and make sure they pass before the first move.
   - Apply one move at a time. Run your tests after each move, and stop if one fails.
   - Ask for a new score when you finish.
   - Expect the first reply to be the smell list and the score. Reply by choosing one move to apply, then run your tests.

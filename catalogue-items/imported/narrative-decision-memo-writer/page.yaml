@@ -41,11 +41,12 @@ works_best_with:
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
   - Download the skill folder. Your AI needs to read its reference and template files. Or paste the instructions into a chat.
-  - Tell your AI the reader, the decision owner and the deadline.
+  - Tell your AI the reader, the decision owner and the deadline. A good first message puts it all in one go, for example "Memo for the leadership team. Owner is the head of operations. Decision needed by Friday. Should we move support to a new help desk tool? My evidence is below."
   - Paste your evidence and options. Say which are facts and which are guesses.
   - Read the form choice first. Ask for a different form if it misses.
   - Check the gaps list. Fill what you can, or keep the proposed test.
   - Ask for the review plan, then send the memo yourself. The skill does not send or schedule anything.
+  - Once the decision is made, file the memo where your team keeps decisions, and put the review date from the plan in your calendar. If the decision is later reversed, add a short note to the memo saying what changed and why.
 output_sample:
   input:
     - The reader and the decision owner

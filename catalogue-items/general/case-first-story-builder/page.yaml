@@ -137,7 +137,7 @@ improve:
   - "Add your own list of facts about people in your field."
   - "Add a rule that every case needs a date and a place."
   - "Save the cases you did not use for later pieces."
-  - "Pair it with \"Interview transcript trimmer\" to pull the best lines for the scene."
+  - "Pair it with \"Interview transcript trimmer\" to pull the best lines for the scene, then the Long-form writing planner or Draft proofreader to write and check the piece."
 
 works_best_with:
   tools:

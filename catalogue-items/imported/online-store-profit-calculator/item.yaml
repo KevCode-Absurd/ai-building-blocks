@@ -30,7 +30,7 @@ credits:
   - title: profit-margin-calculator-shopify skill
     by: Nexscope AI
     url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/profit-margin-calculator/profit-margin-calculator-shopify
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, replaced the bundled Amazon calculator with a Shopify one that uses the skill's own cost model and a correct break-even price, and added a worked check. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Nexscope AI
     url: https://github.com/nexscope-ai/eCommerce-Skills

@@ -29,4 +29,4 @@ credits:
   - title: codebase-audit-pre-push skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/codebase-audit-pre-push
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence. We gave it a plain name and made cleanup safe. It checks whether each file is tracked, used or someone's work, takes rebuildable junk out of git instead of deleting it, only lists vendored code, backups and notes for you to decide, and checks before removing unused code. We added Before you start and After this sections that link to other AI Blocks steps.

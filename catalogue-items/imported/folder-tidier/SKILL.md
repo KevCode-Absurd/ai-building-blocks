@@ -8,6 +8,19 @@ date_added: "2026-02-27"
 
 # File Organizer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When not to use this skill
 
 - A live code project. Moving files can break the build and the history. Use Git and move files by hand.
@@ -230,11 +243,11 @@ When a user requests file organization help:
 
    # Sort downloads by type
 
-   [custom command for their setup]
+   [one command for their system (Mac, Windows or Linux), marked untested]
 
    # Find duplicates
 
-   [custom command]
+   [one command for their system (Mac, Windows or Linux), marked untested; it only lists duplicates and never deletes]
    ```
 
    Want to organize another folder?
@@ -272,3 +285,10 @@ When a user requests file organization help:
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

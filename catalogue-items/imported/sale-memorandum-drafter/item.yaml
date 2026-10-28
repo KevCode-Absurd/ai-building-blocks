@@ -33,4 +33,4 @@ credits:
   - title: cim-builder skill
     by: nighomni123
     url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/investment-banking/skills/cim-builder
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name and wrote the India year and unit rules into SKILL.md, because the companion India skills are not included.

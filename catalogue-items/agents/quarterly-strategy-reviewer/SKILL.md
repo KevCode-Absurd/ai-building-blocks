@@ -13,10 +13,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Experiment results** (yours): observed dated results with cohort definitions, costs, account identities, activation, paid outcomes and retention.
 - **Competitors** (yours): the brands buyers compare you with.
 
 How to start:

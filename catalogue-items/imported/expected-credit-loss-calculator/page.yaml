@@ -2,14 +2,14 @@ thinking: high
 thinking_why: It models default risk with many judgment calls.
 new_slug: expected-credit-loss-calculator
 name: Expected credit loss calculator
-summary: Work out expected credit losses under IFRS 9 or CECL from your loan or receivable list. You get the allowance, stages and journal entry.
+summary: Estimate expected credit losses with a simplified IFRS 9 or CECL method from your loan list. Get the allowance, stages and journal entry to review.
 job: money-and-investing
 headline: Expected credit loss calculator
-subhead: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL. Have your loan or receivable list ready, with a balance and days past due for each line.
+subhead: Give it loan data. Get a simplified expected credit loss estimate under IFRS 9 or CECL, for an accountant to review. Have your loan or receivable list ready, with a balance and days past due for each line.
 explain: |
-  Expected credit losses for your loans or receivables, worked out the way IFRS 9 or CECL requires, with the number you need for the loss allowance.
+  A simplified estimate of expected credit losses for your loans or receivables, using the IFRS 9 or CECL approach, with a draft number for the loss allowance. It does not fully meet either standard, so a qualified accountant must review it before you use any figure.
 
-  It groups assets that behave alike, then puts each in a stage: performing, higher risk since the start, or credit-impaired. It estimates three inputs: probability of default, loss if default happens, and the amount exposed. These are multiplied and discounted to today's value. Base, upside and downside economic scenarios are weighted by their likelihood. For trade receivables it offers a simpler approach. It ends with the journal entry that books the allowance. The formula here is a simplified form of IFRS 9 and CECL, so a qualified accountant must review it before you use any figure.
+  It groups assets that behave alike, then puts each in a stage: performing, higher risk since the start, or credit-impaired. It estimates three inputs: probability of default, loss if default happens, and the amount exposed. These are multiplied and discounted to today's value. Base, upside and downside economic scenarios are weighted by their likelihood. For trade receivables it offers a simpler approach. It ends with the journal entry that books the allowance.
 when:
   - You are closing the books and need a loan loss provision.
   - Your receivables are aging and you must estimate what you will not collect.
@@ -35,7 +35,7 @@ how_to_use:
   - Download the skill folder, with its scripts folder, and open it in your AI.
   - Save your list as a CSV file with one row per loan or receivable. Include balance, days past due, asset type, start date and a default flag or rating.
   - Tell your AI the standard (IFRS 9 or CECL), the reporting date, and your base, upside and downside scenarios with their weights.
-  - Ask it to follow the skill and use the functions in scripts/calculate.py for every figure. Do not let it work out the sums in text.
+  - Ask it to follow the skill and use the functions in scripts/calculate.py for every figure. Do not let it work out the sums in text. The script does not read files, so your AI reads the CSV and passes the numbers to each function.
   - Check the allowance, the stage for each group and the journal entry. Send them to your accountant or auditor before you book anything.
 output_sample:
   input:

@@ -36,6 +36,7 @@ how_to_use:
   - Run it in preview first. Check the report and the CSV to see which orders would be tagged.
   - Ask it to apply the tags only when the preview looks right. This changes live orders.
   - Open the CSV to check the changes. Then filter orders by tag in Shopify admin.
+  - Next, use the tags. Export a tagged group from Shopify admin, or send high-risk orders to the Fraud review queue builder. Tags are never removed by this skill, so remove a wrong tag in the admin.
 output_sample:
   input:
     - Your store domain

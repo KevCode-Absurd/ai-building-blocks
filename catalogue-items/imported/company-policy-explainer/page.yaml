@@ -35,6 +35,7 @@ how_to_use:
   - Add your country or region if rules differ by place (optional).
   - Check the Source line against your handbook before you act. For anything that affects pay or leave, confirm it with HR first.
   - For a dispute, a legal issue or a big decision, ask HR.
+  - Next, copy the answer with its Source line into your HR ticket, onboarding note or team FAQ, so the next person gets the same answer.
 output_sample:
   input:
     - Your employee handbook or policy text

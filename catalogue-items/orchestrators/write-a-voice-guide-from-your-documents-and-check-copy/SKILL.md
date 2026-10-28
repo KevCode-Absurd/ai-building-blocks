@@ -69,7 +69,7 @@ Pause here: Read the open questions with whoever owns the brand. Answer each in 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Share the settled guide with every writer, then run step 3 on each new draft they send.
 - Check a draft against the guide any time with the [Brand voice consistency reviewer](https://useaiblocks.com/skills/brand-voice-reviewer).
 

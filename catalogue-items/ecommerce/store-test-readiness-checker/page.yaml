@@ -124,7 +124,7 @@ improve:
   - Add your real margins to the skill file, so the smallest gain worth shipping comes from your numbers.
   - Add your usual sale and email dates, so it warns you before you plan a test over them.
   - Save the verdicts in a test log with the date, so you see how your stage changes as orders grow.
-  - Pair it with the test idea ranker to choose what to test, and the test verdict maker to read the result.
+  - Pair it with the test idea ranker to choose what to test, and the Store test evidence reviewer to read the result.
 
 works_best_with:
   tools:
@@ -143,3 +143,4 @@ terms:
   - term: Guardrail
     meaning: A number that must not get worse, such as order value or margin, even if the main number improves.
 next: [big-swing-test-picker, shopify-test-setup-picker, store-test-verdict-maker]
+before: [test-idea-ranker]

@@ -9,7 +9,7 @@ Paste your holdings and what you paid. Get the market's mood read, each holding 
 
 The result is a one-page rule card for falls and jumps, with the half-value test and fixed look dates. It is a plan, not a trade, and it names no security to buy or sell. It is not investment advice, and the "would I buy it today" answer in step 2 is written with the price hidden. It is inspired by the Mr. Market idea in The Intelligent Investor by Benjamin Graham. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** a one-day dip with no change in your business or your money (do nothing, or note it). You are deciding whether to buy a new holding. You want to be told what to buy or sell (this names no security and is not investment advice, so ask a licensed adviser).
+**When not to use it:** a one-day dip with no change in your business or your money (do nothing, or note it). You are deciding whether to buy a new holding. You want to be told what to buy or sell (ask a licensed adviser).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -14,7 +14,7 @@ when:
 not_for:
   - "Your task has many roles or branches: use the Repeat task step guide writer."
   - "You want to review a runbook you already have: use the SOP and runbook checker."
-  - "You need a contract or long document made simple: use the Plain-words contract summary."
+  - "You need a contract or long document made simple: use the Contract plain-language summary writer."
 you_give:
   - The task name, how often and who does it
   - Your steps as you do them
@@ -67,6 +67,7 @@ output_shape: |-
   UNDO IT
   WHO TO ASK
   MISSING
+  CHECKS MISSED
 tweaks:
   - what: Detail
     how: Say the reader is new and every step gets more detail.

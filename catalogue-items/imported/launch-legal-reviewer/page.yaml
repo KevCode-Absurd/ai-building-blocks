@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - Do not rely on the memo for any launch decision until a qualified lawyer has reviewed it. The case names, laws and rules in it come from an AI's memory and may be wrong or invented, so check every one against the official source.
   - Before you start, know that a Clear to ship call in the memo is a first view for your own team. Do not show it to a launch owner as sign-off until a lawyer has signed it off.
-  - What you need first is a filled-in setup file. It is a file named CLAUDE.md in the product-legal folder of your Claude plugin settings, so your AI must be able to read that folder. The skill stops if any placeholder is left in it.
+  - What you need first is a filled-in setup file. It is a file at ~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md, so your AI must be able to read that folder. The skill stops if any placeholder is left in it.
   - "To fill it in, run the setup interview in this item's setup-interview folder. Your AI asks you questions and writes the file. It needs three things: the legal areas to check, what counts as a blocker and what is only a note, and the format you want the memo in."
   - Open your AI tool and add the skill. Use one that can read files. A legal research tool is optional. Westlaw is paid and CourtListener is free. Without one, the skill can fall back to web search and marks those sources "verify". Treat them as unchecked.
   - Paste your PRD, Drive link or ticket ID. Add related documents if you have them.

@@ -10,6 +10,26 @@ metadata:
 
 Evaluate AI tools and vendors being considered for HR use cases — screening, sourcing, chatbots, analytics — against accuracy, bias, transparency, and fit-for-purpose criteria before adoption.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [HR vendor selection planner](https://useaiblocks.com/skills/hr-vendor-selection-planner). Bring your question.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supported tasks
 
 - Building an AI vendor evaluation framework tailored to HR use cases
@@ -62,3 +82,11 @@ Evaluate AI tools and vendors being considered for HR use cases — screening, s
 - Evaluate the specific use case, not the tool in the abstract — an AI tool that's fine for scheduling may carry very different risk when used for screening or assessment.
 - Involve legal and DEI stakeholders in evaluation, not just IT and procurement — bias and compliance risk in HR AI tools is a cross-functional concern.
 - Re-evaluate periodically; vendors update models and regulations evolve, so an approval from a year ago may no longer hold.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
+- **Decide what to do** with the [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

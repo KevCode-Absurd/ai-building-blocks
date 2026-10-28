@@ -33,6 +33,7 @@ you_get:
   - Check results before saving
   - Conversion scripts you can rerun
 how_to_use:
+  - This is for simulation and driving-software engineers who already have paid MATLAB and RoadRunner licences. If your team does not use these tools, do not start here. Ask a simulation engineer, or import OpenDRIVE files straight into RoadRunner instead.
   - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start. The licence (BSD 2-Clause plus MathWorks terms, see LICENSE.md) lets you use this only with MathWorks products such as MATLAB.
   - Use an AI that can run MATLAB code and write files, through the MATLAB MCP tool. A plain chat window or any other code runner cannot finish this job. This copy leaves out eight supporting files from the original roadrunner-rrhd-authoring skill. Your AI should stop and ask you for them before it does the steps that need them.
   - Paste this skill into your AI and give it your .osm file, your project folder and where to save the result.
@@ -40,8 +41,7 @@ how_to_use:
   - Let your AI run the steps it can. When it reaches a step that needs one of the eight missing files, it must stop and ask you for them, not guess the geometry. Once you supply them, it carries on to the end.
   - Check that the results list shows all checks passed before the file is saved.
   - Open the new .rrhd file in RoadRunner and look over lanes, junctions and signs.
-  - Next, compare the junction, sign and speed-limit counts in the new .rrhd with the source .osm. Rerun the saved .m scripts after any edit.
-  - Next steps: the Road map author item is the required companion, because it holds the eight supporting files. Then open the finished .rrhd in RoadRunner, check lanes, junctions and signs, and import it into your scene with the Road scene importer.
+  - Next, compare the junction, sign and speed-limit counts in the new .rrhd with the source .osm. Rerun the saved .m scripts after any edit. Then import the file into your scene with the Road scene importer.
 next: [road-map-author, road-scene-importer]
 output_sample:
   input:

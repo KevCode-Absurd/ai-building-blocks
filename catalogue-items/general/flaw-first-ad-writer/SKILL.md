@@ -72,8 +72,8 @@ The weakness list with sources. The chosen weakness and why, and what it shows. 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy.
+- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
 - The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - The [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
 - The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.

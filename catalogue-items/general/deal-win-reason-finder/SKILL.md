@@ -24,6 +24,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the box above, "meeting notes" means your notes on deals won and lost, from sales calls or your sales tool.
+
+**When not to use:** with fewer than six deals or no sales yet (interview buyers first), or when you only have your own summary of each deal with no buyer words (ask the buyers why they chose you, then come back).
+
 - **Deal notes** (required): six or more recent deals, won and lost, with who the buyer was, what they compared you with, what they said, and the outcome. Buyer words matter most.
 - **What you sell** (required): the product or service in one paragraph.
 - **The alternatives** (advised): what buyers use instead of you, including doing nothing or doing it by hand.
@@ -59,6 +63,7 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Brand positioning sentence writer](https://useaiblocks.com/prompts/one-line-position-writer).
 - The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
 - The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

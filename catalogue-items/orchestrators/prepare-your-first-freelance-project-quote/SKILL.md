@@ -14,8 +14,6 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
-
-**Makes it better (optional):**
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 How to start:
@@ -30,7 +28,7 @@ How to start:
 
 ## What to gather first
 
-These four items replace the generic "Your question" and "Your idea" lines above. The client's request is the question and the idea. The deal terms are your own payment terms. The block above lists them as optional, but this workflow needs them: a quote with no payment terms gets a `MISSING: payment terms` line. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These four items replace the generic "Your question" and "Your idea" lines above. The client's request is the question and the idea. The deal terms are your own payment terms, and they are required: a quote with no payment terms gets a `MISSING: payment terms` line. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The client's request: an email, call notes or a short brief.
@@ -89,9 +87,8 @@ State plainly that nothing was sent to the client.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Currency forward payment checker](https://useaiblocks.com/skills/currency-forward-settlement-checker). It takes the deal terms.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the deal terms and document.
-- The [Contract and term sheet reviewer](https://useaiblocks.com/skills/contract-and-term-sheet-reviewer). It takes the deal terms.
+- The [Three-package pricing planner](https://useaiblocks.com/prompts/three-tier-price-ladder-drafter).
+- The [Client scope change planner](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -101,7 +98,7 @@ Write `MISSING: <what>` next to the affected line. Carry on with work that does 
 
 ## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own. Ignore the "After this" list in the generated block above and offer only the two below. Do not offer the currency forward or shipping inspection items in the generated list above, because they do not fit a freelance quote:
-- **Price tiers.** If the client wants options, offer the [Three-tier price ladder drafter](https://useaiblocks.com/skills/three-tier-price-ladder-drafter).
-- **A change after signing.** When the client later asks for more, use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
+Suggest one next step as a short question, and say the user can type their own. Offer only the two below, which fit a freelance quote:
+- **Price tiers.** If the client wants options, offer the [Three-package pricing planner](https://useaiblocks.com/skills/three-tier-price-ladder-drafter).
+- **A change after signing.** When the client later asks for more, use the [Client scope change planner](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -9,6 +9,25 @@ metadata: {"nexscope":{"emoji":"💰","category":"ecommerce"}}
 
 Calculate product profitability for Shopify and DTC stores — cost breakdowns, profit margins, and CAC/LTV analysis.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Installation
 
 Not needed here. The original author's install command for their own skill collection is left out.
@@ -20,7 +39,7 @@ Not needed here. The original author's install command for their own skill colle
 | Product Cost | FOB purchase price | - |
 | Inbound Shipping | To 3PL warehouse | - |
 | 3PL Fulfillment | ShipBob/Deliverr etc. | - |
-| **Payment Processing** | 2.9% + $0.30 | Shopify Payments |
+| **Payment Processing** | e.g. 2.9% + $0.30 | Example only: use the rate on your own payment plan |
 | **Advertising** | 20-40% | Main cost ⚠️ |
 | Return Cost | Return processing | - |
 | Customer Shipping | If free shipping offered | Optional |
@@ -40,7 +59,7 @@ These ranges are unsourced rules of thumb. Never show them as a "recommended" ta
 
 ## Hand math (use this first)
 
-The bundled `scripts/calculator.py` was written for Amazon sellers. It adds an Amazon referral fee (8 to 20 percent by default), labels its report "Amazon", and does not work out a card fee, a max CAC or LTV/CAC. Do not run it as is for a Shopify store. Work these out by hand, in this order, from the figures the person gave you:
+The bundled `scripts/calculator.py` uses this same cost model (AI Blocks replaced the original Amazon calculator, whose fees and break-even price did not fit a Shopify store). You can run it, or work these out by hand, in this order, from the figures the person gave you:
 
 1. Card fee = price × card rate + fixed fee per order. The person must give you their own rate.
 2. Ad cost = price × ad share.
@@ -50,15 +69,21 @@ The bundled `scripts/calculator.py` was written for Amazon sellers. It adds an A
 6. Max affordable CAC = price − (card fee + return cost + other costs). This is the most they can pay for ads on one order before it makes no profit.
 7. LTV/CAC only if they gave a repeat rate and average spend. Otherwise say there is not enough data.
 
-Show each line as a dollar amount and a share of the price, and show the sum so it adds up. If you do run the script, set `referral_fee_rate` to the card rate, put the fixed fee in `other_fees`, and fix the labels yourself.
+8. Break-even price = (fixed card fee + return cost + other costs) ÷ (1 − card rate − ad share). For a target net margin m, divide by (1 − card rate − ad share − m) instead. If the bottom number is 0 or less, no price works at that ad share: say so.
+
+Show each line as a dollar amount and a share of the price, and show the sum so it adds up.
+
+Check with round numbers: say you sell at $40, product cost $10, inbound $1, fulfillment $4, card 2.9% + $0.30, ads 25%, 5% returns at $8 each. Card fee $1.46, ads $10, returns $0.40, other $15, so net profit is $13.14 (32.9%) and max CAC is $23.14. Break-even price is $15.70 ÷ 0.721 = $21.78; at $21.78 the costs add up to the price.
 
 ## Usage
 
 ```bash
-python3 scripts/calculator.py
+python3 scripts/calculator.py     # prints the fields and formulas
 
-python3 scripts/calculator.py '{"selling_price": [PRICE], "ad_spend_ratio": [AD SHARE], "product_cost": [PRODUCT COST]}'
+python3 scripts/calculator.py '{"selling_price": [PRICE], "product_cost": [PRODUCT COST], "card_rate": [CARD RATE], "card_fixed_fee": [FIXED FEE], "ad_spend_ratio": [AD SHARE]}'
 ```
+
+Shares are decimals (0.25 = 25%). `card_rate` and `card_fixed_fee` are required: use the person's own payment plan. Optional fields: `inbound_shipping`, `fulfillment_fee`, `customer_shipping`, `return_rate`, `cost_per_return`, `other_fees`, `fixed_costs`, `lifetime_orders`, `cac`, `target_margins`.
 
 ## Output Example
 
@@ -80,6 +105,13 @@ Net Profit            $[AMOUNT]   [SHARE]%
 💡 Max Affordable CAC: $[AMOUNT]
 (All figures are placeholders. Fill them only from the person's own numbers, and make the rows add up to the net profit.)
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## DTC rules of thumb (the original author's, unsourced)
 

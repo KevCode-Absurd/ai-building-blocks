@@ -9,6 +9,25 @@ metadata: {"nexscope":{"emoji":"🛡️","category":"ecommerce"}}
 
 Protect your brand from hijackers, counterfeits, and unauthorized sellers on Amazon.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Installation
 
 ```bash
@@ -24,6 +43,7 @@ This skill has no live data feed and does not watch Amazon. You supply the selle
 - **Counterfeit Signals** — Flags reviews that use words like fake or not authentic. A keyword match is weak evidence. Confirm with a test buy before you send any complaint
 - **Trademark Abuse** — Title/keyword infringement detection
 - **Complaint Templates** — Brand Registry, C&D letters
+- **Know what counts** — Amazon's infringement tools are for intellectual property: counterfeits, trademark misuse and copied images or text. A seller who is not on your approved list, or who prices below your MAP, is not by itself grounds for an IP complaint. Reselling genuine goods is generally allowed, and MAP is an agreement between you and the resellers who signed it. Check Amazon's current Intellectual Property Policy in Seller Central and the Brand Registry help pages before you file
 - **Test Buy Guide** — Evidence collection procedure
 
 ## Detection Dimensions
@@ -104,7 +124,7 @@ Analysis Date: 2024-01-15
 ASIN: B08XXXXXX1
 ├── 3 unauthorized sellers detected
 ├── Lowest price: $19.99 (MAP: $29.99)
-└── Action: File Brand Registry complaint
+└── Action: Test buy from the new sellers. Report only a counterfeit or trademark problem. Send a MAP notice only to resellers who agreed to your MAP policy
 
 ━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -115,14 +135,23 @@ Reviews mentioning "not authentic": 2
 Recommendation: Order test buy
 ```
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon brand registry planner](https://useaiblocks.com/skills/amazon-brand-registry-planner).
+- The [Trademark name screener](https://useaiblocks.com/skills/trademark-name-first-check).
+- The [Amazon margins, stock and claim review](https://useaiblocks.com/skills/amazon-monthly-account-keeper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Complaint Templates Included
 
 | Template | Use Case |
 |----------|----------|
-| Brand Registry | Report to Amazon |
-| Cease & Desist | Direct seller contact |
+| Brand Registry | Report a counterfeit, trademark or copyright problem to Amazon |
+| Cease & Desist | Direct seller contact about counterfeits, after a test buy |
 | Test Buy Report | Evidence documentation |
-| MAP Notice | Seller pricing below your minimum advertised price |
+| MAP Notice | A reseller who agreed to your MAP policy is pricing below it (a business notice, not an IP complaint) |
 
 ## Action Workflow
 
@@ -133,7 +162,7 @@ Detect Violation
       ↓
 Collect Evidence (Test Buy)
       ↓
-Generate Complaint
+Generate Complaint (only for a counterfeit, trademark or copyright problem)
       ↓
 Submit to Amazon / Send C&D
       ↓

@@ -19,7 +19,7 @@ not_for:
   - "You only need reported revenue growth from the accounts: compare the two reported figures in a plain spreadsheet."
   - "You cannot document which businesses sit in both periods: ask your finance lead to define the comparable group first."
   - "You need an audit opinion or a legal view on the accounting: use a qualified accountant."
-  - "You only need to split growth into real growth and the currency effect: use the Constant-currency revenue bridge instead."
+  - "You only need to split growth into real growth and the currency effect: use the Revenue growth currency checker instead."
 you_give:
   - Reported revenue for the current and prior period.
   - Revenue from acquired businesses in the current period, with dates.
@@ -79,8 +79,8 @@ tweaks:
     how: "Take the period end from the revenue for both periods and the notes on acquisitions, disposals and currency. Use one currency and scale on every line."
   - what: "The order of the adjustments"
     how: "State the order you use: disposals from the prior year, then acquisitions, then currency from the current year. A different order changes the middle figures, so keep it fixed. The bridge must still add back to reported revenue."
-  - what: Acceptance
-    how: Acquisition, disposal and FX effects are mutually exclusive and use a documented ordering.
+  - what: What a correct bridge looks like
+    how: Each bought, sold or currency effect is taken out once, in the stated order, and the parts add back to reported revenue.
 judge:
   - Acquisition, disposal and FX effects are mutually exclusive and use a documented ordering.
   - Comparable prior revenue remains positive and both periods cover the same businesses.

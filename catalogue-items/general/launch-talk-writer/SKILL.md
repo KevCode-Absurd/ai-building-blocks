@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make it sound better aloud** with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the script.
-- **Check the slides that go with it** with the [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the deck text and the talk time.
-Suggest a run-through with a timer before either. If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The talk fits two minutes read aloud, or the length the user gave.
 - Every number makes one point and says what it means for a person.
@@ -97,6 +89,14 @@ Suggest a run-through with a timer before either. If they pick one and that skil
 - The last line is a belief, not a feature.
 - The story is true and comes from what was supplied, or the slot is marked MISSING.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make it sound better aloud** with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the script.
+- **Check the slides that go with it** with the [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the deck text and the talk time.
+Suggest a run-through with a timer before either. If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what> for <part>`. If the brief gives no numbers, write the talk without them.

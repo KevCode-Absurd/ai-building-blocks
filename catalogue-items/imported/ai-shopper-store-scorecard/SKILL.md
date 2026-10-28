@@ -9,6 +9,19 @@ description: Free 2-minute check of how well AI shopping agents (ChatGPT, Perple
 
 Give the owner an honest, 2-minute picture: *what can an AI shopping agent read on this store, and how does that compare with other Shopify stores?* This skill **diagnoses**. It does not write a fix plan.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Reading the store: only through the script
 - **Fetch store pages only with `scripts/quick_check.py`.** Don't fetch them any other way: no curl or wget, no code of your own, no browser user agent and no retries under another name. The script sends an honest user agent and obeys the store's robots.txt (RFC 9309).
 - **If the script prints `NOT FETCHED`** (robots.txt does not allow the page, or robots.txt itself could not be read), stop for that page. Otherwise ask the user to paste the text, and say why.
@@ -70,3 +83,12 @@ Before you run it, ask the user in chat: "Do you own this store, or have permiss
   - If the script printed a NOTE (for example, a headless storefront), include it in one line.
 - Keep the whole answer under about 375 words, table included.
 - End with the single pack line above. Don't add any other sales copy.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Structured data writer](https://useaiblocks.com/skills/structured-data-writer).
+- The [llms.txt writer](https://useaiblocks.com/skills/llms-txt-writer).
+- The [AI search auditor](https://useaiblocks.com/skills/ai-search-audit).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -67,7 +67,7 @@ how_it_works:
   - title: "Add a refund allowance"
     text: "Net price is price after the average discount. Refund cost is net price times your refund rate, shown as its own line. Use your own 90-day rates. Mark a guess as GUESS."
   - title: "Show three margins"
-    text: "All three use the same net price. Product margin is net price minus unit cost. Gross margin is net price minus every delivery cost, refunds included. Contribution margin is gross margin minus marketing, at 20% of net price if none was given, marked as a test value."
+    text: "All three use the same net price. Product margin is net price minus unit cost. Gross margin is net price minus every delivery cost, refunds included. Contribution margin is gross margin minus marketing. With no marketing share given, it is marked missing and shown at 20% of net price only as a labelled placeholder, not a benchmark."
   - title: "Find break-even"
     text: "Break-even ROAS is 1 divided by gross margin as a decimal. Break-even CAC is gross profit per order."
 

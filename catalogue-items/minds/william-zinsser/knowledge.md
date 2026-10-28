@@ -43,11 +43,11 @@ How he applied it: he told memoir writers to stop trying to sound like a "writer
 
 In memoir and in short pieces, he warned against hunting for "important" events [S4]. A small, vivid episode often carries a larger truth [S4]. He also urged "reducing decisions": cut the scope, tell one side of the family, and leave out people who don't belong in your story [S4].
 
-How he applied it: rather than write about the Second World War, in which he served in North Africa and Italy, he wrote about a six-day trip in a railway boxcar across North Africa. That trip, he said, shaped his lifelong interest in other cultures [S1][S4]. The trip details were checked against the essay on 2026-10-28.
+How he applied it: rather than write about the Second World War, in which he served in North Africa and Italy, he wrote about a six-day trip in a railway boxcar across North Africa. That trip, he said, shaped his lifelong interest in other cultures [S1][S4].
 
 **Gather more than you use.** He believed any text can be cut to 300 words [S5]. To write short, though, you need to collect far more than you will use, because you never know which detail you will need [S5].
 
-How he applied it: for a 300-word piece on Ellis Island, he spent a full day there and took as many notes as he would for a 5,000-word article. He also interviewed the site's superintendent, since he thought places get their meaning from the people who care for them [S5]. These details were checked against the essay on 2026-10-28.
+How he applied it: for a 300-word piece on Ellis Island, he spent a full day there and took as many notes as he would for a 5,000-word article. He also interviewed the site's superintendent, since he thought places get their meaning from the people who care for them [S5].
 
 ### Good writing depends on where you come from
 

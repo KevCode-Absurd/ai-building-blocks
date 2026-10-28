@@ -57,6 +57,6 @@ Lead with the link to operating cash flow and any residual. State plainly that n
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Separate financing effects from operating cash](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow, when factoring or supplier finance may sit inside operating cash.
+- The [Factoring and supplier-finance cash-flow reviewer](https://useaiblocks.com/workflows/separate-financing-effects-from-operating-cash) workflow, when factoring or supplier finance may sit inside operating cash.
 - The [Reconcile contract balances and customer cash](https://useaiblocks.com/workflows/reconcile-contract-balances-and-customer-cash) workflow, when you want to judge how customer balances turn into cash.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

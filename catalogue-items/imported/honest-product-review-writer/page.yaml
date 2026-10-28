@@ -56,7 +56,7 @@ output_sample:
     - name: Methodology block
       contains: A short note for readers naming the criteria, the evidence tiers used, any hands-on work, and the update line.
     - name: Affiliate disclosure
-      contains: Plain wording, placed beside the picks, that says the site earns a commission and the price stays the same.
+      contains: Plain wording, placed beside the picks, that says the site earns a commission. It says your reader's price stays the same only if you have confirmed that.
     - name: Schema advice
       contains: "Which markup is honest for the piece: list and article markup by default, review markup only if you tested."
     - name: Gap notes

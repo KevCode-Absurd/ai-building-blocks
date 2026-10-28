@@ -39,6 +39,7 @@ you_get:
   - "A list of missing inputs and checks that did not run"
 
 how_to_use:
+  - "Know first: the starter's blocker and log code are placeholders. Replace them before you run anything; the plan says what to add."
   - "Add the skill to your AI, or open the pack and give your AI SKILL.md and the files in its references folder. An AI that can read your project folder, such as Claude Code, works best. A chat AI works if you paste them."
   - "Paste your agent list, who may hand work to whom and the task tree. Say which tasks wait for which."
   - "Add your code only if you want the starter adapted to it. Never paste keys or passwords."
@@ -141,3 +142,4 @@ terms:
     meaning: "How many handoffs deep a task sits in a chain."
   - term: "Audit log"
     meaning: "A record of who handed what to whom, and whether it worked."
+next: [wakeups-how-agents-alert-each-other-implementation-planner, issues-how-agents-track-work-implementation-planner, multi-agent-workflow-planner]

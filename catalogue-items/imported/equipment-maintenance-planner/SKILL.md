@@ -7,6 +7,19 @@ description: When the user wants to optimize maintenance strategies, improve equ
 
 You are an expert in maintenance planning and reliability engineering. Your goal is to help organizations optimize maintenance strategies, improve equipment reliability, reduce unplanned downtime, and balance maintenance costs with equipment availability.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before developing maintenance strategies, understand:
@@ -157,13 +170,22 @@ class ReliabilityAnalysis:
             'std_dev': self.data['downtime_hours'].std()
         }
 
-    def calculate_availability(self, operating_hours_per_year=8760):
+    def calculate_availability(self, scheduled_hours):
         """
         Calculate equipment availability
 
         Availability = MTBF / (MTBF + MTTR)
         or
         Availability = Uptime / Total Time
+
+        scheduled_hours: hours each asset was scheduled to run in the period,
+        as a dict {equipment_id: hours}. List EVERY asset in the fleet, including
+        assets with no failures. A single number is applied to each asset that
+        appears in the failure data (assets with no failures are then left out).
+        Fleet availability divides total downtime by the SUM of scheduled hours,
+        never by one asset's hours.
+        Check: two assets, 100 scheduled hours each, 10 hours downtime each:
+        1 - 20 / 200 = 90%.
         """
 
         mtbf_result = self.calculate_mtbf()
@@ -175,9 +197,18 @@ class ReliabilityAnalysis:
         # Inherent availability (MTBF / (MTBF + MTTR))
         availability = mtbf / (mtbf + mttr) if (mtbf + mttr) > 0 else 0
 
-        # Actual availability based on data
+        # Actual availability based on data, over the whole fleet
         total_downtime = self.data['downtime_hours'].sum()
-        actual_availability = 1 - (total_downtime / operating_hours_per_year)
+        if isinstance(scheduled_hours, dict):
+            missing = set(self.data['equipment_id']) - set(scheduled_hours)
+            if missing:
+                raise ValueError(f"MISSING: scheduled hours for {sorted(missing)}")
+            total_scheduled = sum(scheduled_hours.values())
+        else:
+            total_scheduled = scheduled_hours * self.data['equipment_id'].nunique()
+        if total_scheduled <= 0:
+            raise ValueError("Scheduled hours must be above zero.")
+        actual_availability = 1 - (total_downtime / total_scheduled)
 
         return {
             'inherent_availability_pct': availability * 100,
@@ -185,6 +216,7 @@ class ReliabilityAnalysis:
             'mtbf_hours': mtbf,
             'mttr_hours': mttr,
             'total_downtime_hours': total_downtime,
+            'total_scheduled_hours': total_scheduled,
             'total_failures': len(self.data)
         }
 
@@ -326,7 +358,8 @@ print(f"\nMTTR Analysis:")
 print(f"  Overall MTTR: {mttr['overall_mttr_hours']:.2f} hours")
 
 # Availability
-availability = reliability.calculate_availability()
+# Example only: 8760 hours = one asset running all year. Use each asset's real schedule.
+availability = reliability.calculate_availability(scheduled_hours=8760)
 print(f"\nAvailability Analysis:")
 print(f"  Inherent Availability: {availability['inherent_availability_pct']:.2f}%")
 print(f"  Actual Availability: {availability['actual_availability_pct']:.2f}%")
@@ -565,8 +598,10 @@ class PredictiveMaintenanceAnalyzer:
                 trend = "Increasing (potential degradation)"
                 concern_level = "High" if slope > std_err * 2 else "Medium"
             else:
-                trend = "Decreasing (improving or cooling)"
-                concern_level = "Low"
+                # Falling is not always good: pressure, flow or thickness can
+                # fail by dropping. estimate_rul() judges it against the limit.
+                trend = "Decreasing"
+                concern_level = "Check against the failure direction"
         else:
             trend = "Stable (no significant trend)"
             concern_level = "Low"
@@ -579,7 +614,7 @@ class PredictiveMaintenanceAnalyzer:
             'concern_level': concern_level
         }
 
-    def estimate_rul(self, failure_threshold):
+    def estimate_rul(self, failure_threshold, failure_direction):
         """
         Estimate Remaining Useful Life
 
@@ -587,37 +622,52 @@ class PredictiveMaintenanceAnalyzer:
 
         Parameters:
         - failure_threshold: sensor value at which failure occurs
+        - failure_direction: "above" if failure is the reading rising past the
+          threshold (vibration, temperature), "below" if it is the reading
+          falling past it (pressure, flow, wall thickness). Required: ask the
+          user, never guess.
 
-        Returns estimated RUL
+        Returns estimated RUL. rul_cycles is None when the reading is not
+        moving toward the threshold. That is "no estimate", not "infinite life".
         """
 
-        trend = self.trend_analysis()
+        if failure_direction not in ("above", "below"):
+            raise ValueError('failure_direction must be "above" or "below"')
 
-        if trend['slope'] <= 0:
+        trend = self.trend_analysis()
+        current_value = self.data[-1]
+        slope = trend['slope']
+
+        # 1. Check the current reading FIRST, whatever the trend
+        exceeded = (current_value >= failure_threshold if failure_direction == "above"
+                    else current_value <= failure_threshold)
+        if exceeded:
             return {
-                'rul_cycles': float('inf'),
-                'message': 'No degradation detected - RUL cannot be estimated'
+                'current_value': current_value,
+                'failure_threshold': failure_threshold,
+                'degradation_rate': slope,
+                'rul_cycles': 0,
+                'message': "Warning: Failure threshold already reached or passed!"
             }
 
-        # Current value (most recent)
-        current_value = self.data[-1]
+        # 2. Only a trend toward the threshold gives an estimate
+        toward = slope > 0 if failure_direction == "above" else slope < 0
+        if not toward:
+            return {
+                'current_value': current_value,
+                'failure_threshold': failure_threshold,
+                'degradation_rate': slope,
+                'rul_cycles': None,
+                'message': "Not trending toward the threshold - RUL cannot be estimated"
+            }
 
-        # Cycles until threshold
-        rul_cycles = (failure_threshold - current_value) / trend['slope']
-
-        # Check if already exceeded
-        if rul_cycles < 0:
-            rul_cycles = 0
-            message = "Warning: Failure threshold already exceeded!"
-        else:
-            message = f"Estimated {rul_cycles:.0f} cycles remaining until failure threshold"
-
+        rul_cycles = (failure_threshold - current_value) / slope   # positive here
         return {
             'current_value': current_value,
             'failure_threshold': failure_threshold,
-            'degradation_rate': trend['slope'],
-            'rul_cycles': max(0, rul_cycles),
-            'message': message
+            'degradation_rate': slope,
+            'rul_cycles': rul_cycles,
+            'message': f"Estimated {rul_cycles:.0f} cycles remaining until failure threshold"
         }
 
     def maintenance_recommendation(self, rul_result, lead_time_cycles=50):
@@ -631,8 +681,8 @@ class PredictiveMaintenanceAnalyzer:
 
         rul = rul_result['rul_cycles']
 
-        if rul == float('inf'):
-            recommendation = "Continue monitoring - no immediate action needed"
+        if rul is None:
+            recommendation = "Continue monitoring - no trend toward the threshold, so no RUL estimate"
             priority = "Low"
         elif rul <= 0:
             recommendation = "URGENT: Schedule immediate maintenance"
@@ -740,7 +790,7 @@ print(f"  Concern Level: {trend['concern_level']}")
 
 # RUL estimation
 failure_threshold = 150  # Failure occurs at 150 mm/s
-rul = pdm.estimate_rul(failure_threshold)
+rul = pdm.estimate_rul(failure_threshold, failure_direction="above")  # vibration fails by rising
 print(f"\nRUL Estimation:")
 print(f"  Current Value: {rul['current_value']:.1f}")
 print(f"  Failure Threshold: {rul['failure_threshold']}")
@@ -1324,13 +1374,18 @@ print(abc_classification.groupby('abc_class').agg({
 - Phase 4 (Q4): Integrate with CMMS and production scheduling
 
 **Expected Benefits:**
-- Unplanned downtime reduction: 40-50%
-- Maintenance cost reduction: 15-25%
-- Equipment availability improvement: +2-3%
-- Spare parts inventory reduction: 20%
-- Equipment life extension: 10-15%
+- Estimate each benefit from this site's own data (current downtime, costs, parts stock), with the method shown. Do not quote fixed industry percentages.
+- Where there is no baseline data, write `MISSING: baseline` and say what to measure first.
+- Present them as targets to check after a trial period, not promises.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Production schedule planner](https://useaiblocks.com/skills/production-schedule-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

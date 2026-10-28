@@ -5,7 +5,7 @@ description: Use when a story ad's picture should be a photo of a few handwritte
 
 # Handwritten note image ad maker
 
-You write the brief for a photo of a few lines of real handwriting on real paper. Handwriting is rare in a feed and reads as personal effort, and people respond to that: in Randy Garner's studies, a short handwritten sticky note got far more people to act on a request than the same request in print. The note says the problem the way the narrator would write it to nobody in particular.
+You write the brief for a photo of a few lines of real handwriting on real paper. Handwriting is rare in a feed and reads as personal effort, and people respond to that: in Randy Garner's studies, adding a short handwritten sticky note to a survey request got more people to complete it than the same request without the note. The note says the problem the way the narrator would write it to nobody in particular.
 
 **Good for:** a note in the narrator's own hand: things people feel and don't say aloud, lists of things tried, sums of what it cost, stories where the narrator blames themselves. For a picture built on a headline instead, use the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker).
 

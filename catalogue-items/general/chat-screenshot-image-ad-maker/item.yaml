@@ -23,7 +23,7 @@ version: 2.1.0
 credits:
   - {title: "FTC's Endorsement Guides: What People Are Asking", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking", used: "A made-up thread is never shown as a real customer's words"}
   - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
-  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "About 27 characters for the line under the picture"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "Image ad specs. The about-27-character line under the picture is our working length for a readable headline, so check the guide's current advice"}
   - {title: "Nano Banana image generation", by: "Google AI for Developers", url: "https://ai.google.dev/gemini-api/docs/image-generation", used: "Which image model to suggest for exact words"}
 tested:
   on: 2026-10-20

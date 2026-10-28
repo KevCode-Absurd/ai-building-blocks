@@ -9,22 +9,22 @@ You plan how a store's Meta ads account should be laid out. Two rules come first
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** It only works on text and numbers you paste, so any current chat AI will do.
@@ -54,11 +54,11 @@ The rules below come from agencies running large stores (mostly above $5M a year
 7. **Lay out the tier.**
    - Under $50k a month: one testing campaign (ABO or CBO), ad sets by concept, existing customers excluded, 7-day click attribution. Add a scaling campaign only when winners spend about $400 a day or more. That $400 is our starting point, not a rule. See the Meta scaling campaign planner. A small existing-customer campaign is optional.
    - $50k to $250k: the same layout with more ad sets, plus 2 or 3 cold campaigns only when a funnel or buyer group truly differs (an older-adult and a younger-adult funnel need different pages and ads). Aim for 100 to 300 new ads a month, for example 20 ad sets of 5 to 15 ads. Say if the team cannot make that many.
-   - $250k and up: add a promo campaign kept apart from evergreen, an advertorial campaign once it takes about 30 percent of spend, a small DPA campaign judged on incremental ROAS, a bidding mix, and a second ad account (different bid logic, and a backup if one is banned).
+   - $250k and up: add a promo campaign kept apart from evergreen, an advertorial campaign once it takes about 30 percent of spend, a small DPA campaign judged on incremental ROAS, and a bidding mix. Keep the bidding mix inside the same ad account unless step 11 gives a reason for a second one. Never plan a second account as a backup in case one is banned. Meta's Account Integrity policy lets it restrict or disable ad accounts made to get around an earlier enforcement action (transparency.meta.com/policies/community-standards/account-integrity). If an account is restricted, fix the cause and request a review in Account Quality.
 8. **Apply the beginner exception.** Under about $10k a month, or on a brand-new account, split by format (images, video, DPA). Meta over-favours cheap-CPM images and DPAs before it has sales data. Mature accounts should not split this way.
 9. **Set KPIs at ad set level.** Meta credits the last click, so a warm-up ad can look poor while the follow-up takes the credit. Read whether the whole concept bundle hits its KPI, and use which ads spend as the proxy for what works. State the KPI (target CPA or ROAS from the store's break-even) and a read window. Starting point to adjust: read on 7-day click over at least 7 days, longer when sales are few. This window is our suggestion, not a source's rule.
 10. **Cap the winner.** Expect a Pareto pattern: about 20 percent of concepts take 80 percent of spend. After a month, shift creative effort to the winner (example: 120 ads for it and 40 for the rest, instead of 50 each) or cap it, for example at 40 percent of spend, and keep rotating new concepts in. Do a capacity check: 4 concepts at 50 ads each is 200 new ads a month. Scale the plan to what the team can make.
-11. **Handle regions and the page cap.** One warehouse serving several countries means one campaign. Separate campaigns only when stock or targets differ. Separate ad accounts only to bill in local currency. A source's claim: a Facebook page holds roughly 300 to 500 live ads. Check the current cap in your account. Plan more pages, creator or partnership ads, or regional pages before you reach the cap.
+11. **Handle regions and the page cap.** One warehouse serving several countries means one campaign. Separate campaigns only when stock or targets differ. Open a separate ad account only for a real business need, such as billing in a local currency or a different advertiser or client. Never as a backup against a ban. A source's claim: a Facebook page holds roughly 300 to 500 live ads. Check the current cap in your account. Plan more pages, creator or partnership ads, or regional pages before you reach the cap.
 12. **List settings to switch off.** Flexible ads (you cannot read which asset works). Automatic creative enhancements, also at advertiser level where rules can flip them back on. One-day view reporting. Check the customer-list sync so existing customers stay excluded.
 13. **Say how to grow a working concept.** To add ads to a concept that works, open a new ad set next to it. Do not edit the winner. Raise budgets in 20 percent steps (a habit, not a Meta rule).
 14. **Write the naming rule.** Name ad sets by buyer group, angle, offer, format and launch date, so results read by concept.
@@ -93,11 +93,7 @@ CHECKS MISSED: <list or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Next-dollar budget allocator](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
+- The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

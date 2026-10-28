@@ -8,7 +8,6 @@ job: strategy
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: persona, required: false}
   - {type: plan, required: false}
 outputs:
   - {type: plan}

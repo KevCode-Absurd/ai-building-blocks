@@ -87,9 +87,9 @@ Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One n
 
 Offer one next step and say they can type their own:
 
-- Fix each mismatch in the file, or hand the list to the [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher) to update the slides.
+- Fix each mismatch in the file, or hand the list to the [Slide deck number updater](https://useaiblocks.com/skills/deck-number-refresher) to update the slides.
 - Send the open items to the person who made the revision. Settle them before you share the deck.
-- For next month's cycle, use [Build a monthly Excel and PowerPoint update](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update).
+- For next month's cycle, use [Excel report and PowerPoint update writer](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update).
 
 ## Check before you hand it back
 

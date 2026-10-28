@@ -7,9 +7,9 @@ role: make
 job: analysis
 level: intermediate
 inputs:
-  - type: plan
-    required: true
   - type: question
+    required: true
+  - type: plan
     required: false
 outputs:
   - type: plan

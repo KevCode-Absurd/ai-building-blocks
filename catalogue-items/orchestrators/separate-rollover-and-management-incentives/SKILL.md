@@ -58,6 +58,6 @@ Lead with the three results: seller cash and ownership, the closing sources and 
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test the debt side of the same closing** with the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow.
-- **Check seller proceeds and escrow** with the [Reconcile seller closing cash](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow.
+- **Test the debt side of the same closing** with the [Debt interest and leverage checker](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow.
+- **Check seller proceeds and escrow** with the [Seller closing proceeds and retained cash checker](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

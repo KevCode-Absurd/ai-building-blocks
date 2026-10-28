@@ -5,9 +5,11 @@ name: Multi-provider image maker
 summary: Make images from a prompt with one image maker that works with many services. Pick the service and size, and get a saved image file.
 job: make-images
 headline: Multi-provider image maker
-subhead: An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
+subhead: An image made by the image service you choose, in the size you pick, from a single prompt. The same prompt and size settings work across services, though each service has its own limits.
 explain: |
   The skill runs a script that connects to many services, including OpenAI, Google, Azure, Replicate, Alibaba, MiniMax and Seedream. On first use it asks you to save your preferences: default service, model and size. Then it takes your prompt, asks for the service, model, quality and image shape, and calls the service with your own API key. Batches are possible, so you can run many prompts together. It needs Bun or Node to run and an API key for the service you pick. Each image is billed to your own account, so check that service's pricing first.
+
+  One route works differently. The codex-cli option uses your logged-in Codex or ChatGPT subscription instead of an API key, and it is only used if you pick it. Check that your subscription's terms allow this kind of use before you rely on it, and never paste a Codex sign-in token where an OpenAI API key should go.
 when:
   - You want to try the same prompt on two image services.
   - You need a batch of images in one size for a campaign.

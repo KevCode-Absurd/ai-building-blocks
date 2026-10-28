@@ -60,7 +60,7 @@ How he applied it: for the Florida project, he bought land quietly through shell
 
 ### Learn from the setbacks
 
-A 1957 book quotes Disney saying that a kick in the teeth may turn out to be the best thing for you [S1]. He described Mickey Mouse as a symbol of independence, born when the studio needed a new character and freeing it from immediate worry [S1].
+A 1957 book quotes Disney saying that a kick in the teeth may turn out to be the best thing for you [S1]. The same book reports him describing Mickey Mouse as a symbol of independence, born when the studio needed a new character [S1]. This is a second-hand report we have not checked against his own words, so do not quote it as his.
 
 In 1965 he joked to the cast about scrambling to finish the landscaping after opening, and called the park's early stage a rehearsal, not a finished product [S7].
 

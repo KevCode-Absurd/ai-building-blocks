@@ -3,6 +3,19 @@ name: listing-optimizer
 description: 主图 A/B 组与转化复盘。商品图 + 卖点 → 多组对照主图 + 每组的差异假设 + 复盘模板。当用户说「A/B 测试」「主图优化」「提点击率」「哪版更好」「换个版本试试」时使用。
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## English summary (added for this catalogue)
 
 The rest of this file is in Chinese. Follow it as written. In short:
@@ -157,3 +170,10 @@ python3 scripts/check_listing.py out/ab/*.jpg --platform amazon
 - **一次一个变量，一轮两周**。急着一周出结论通常是自欺。
 - **先测大变量**。有没有模特、白底还是场景，这类差异远大于色温微调。
 - **赢的那版存进 你自己的品牌文件（原文提到的 brand-kit 技能不在本目录里）**，让它成为之后的默认，实验成果才会沉淀。
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make product photos** with the [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

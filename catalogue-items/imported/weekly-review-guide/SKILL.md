@@ -15,6 +15,28 @@ metadata:
 > in scripts. Needs an AI that can run Python scripts and read a notes folder (for example Claude Code or Codex). A plain chat can follow the steps by hand but cannot run the scripts. The scripts do the inventory and the
 > gating; Claude and the user do the thinking.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer). Bring a tool connection.
+2. **A plan** with the [Brain dump organizer](https://useaiblocks.com/skills/brain-dump-organizer). Bring source text.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this does
 
 A personal system is only trustworthy if it gets reviewed — David Allen calls the weekly review
@@ -105,3 +127,12 @@ issues HEALTHY / DRIFTING / OVERCOMMITTED. End the review with one named next ac
 ---
 
 **Version:** 1.0.0 · **Build pattern:** Path-B ritual skill — GTD weekly-review loop preserved + deterministic gate/scanner/auditor scripts added.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Weekly task focus planner](https://useaiblocks.com/skills/weekly-review-keeper). It takes the plan.
+- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
+- The [Deep work day planner](https://useaiblocks.com/skills/deep-work-day-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

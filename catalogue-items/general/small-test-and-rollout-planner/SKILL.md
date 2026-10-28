@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

@@ -10,6 +10,8 @@ explain: |
   Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can open and run your code in a browser with MATLAB Online, without installing MATLAB. They need a MathWorks account, and what they can run depends on their access.
 
   The skill first checks where your files are: only on your computer, already on GitHub, on MATLAB Drive, or on File Exchange. Local files get uploaded first. Then it builds the correct link for that place, for example leaving out the file name to open a whole GitHub repository, or pointing to the root for a shared Drive folder. For GitHub it can also make an Open in MATLAB Online badge for your README.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You want classmates or colleagues to run your script without setup.
   - Your README needs an Open in MATLAB Online badge.
@@ -36,6 +38,7 @@ how_to_use:
   - Check the files before you say yes to a public GitHub repo. A public repo shows your code to anyone on the internet.
   - For MATLAB Drive or File Exchange, follow the upload steps on the MathWorks site. Paste the share link, or the ID from the File Exchange page address, back to your AI. It builds the final link from that.
   - Click the finished link to test it. Then send it, or add the badge to your README.
+  - After you change the code, click the link again to check it. A GitHub link always opens the repo's default branch, not a fixed version, so people get whatever is there now.
 output_sample:
   input:
     - Your MATLAB files, or the link to your GitHub repo, Drive share or File Exchange page

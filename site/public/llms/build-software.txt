@@ -1,6 +1,6 @@
 # Build and ship software: AI Blocks
 
-> 399 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 416 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Build a 5G NR test waveform in MATLAB from a standard test model or your own settings. You get the code, IQ samples and a config.
 - [A-Evolve agent improvement loop builder](https://useaiblocks.com/skills/agent-improvement-loop): Share a working agent and scored test tasks. Get an A-Evolve loop design that proposes instruction changes and checks their results.
@@ -16,8 +16,10 @@
 - [Agent role loader builder](https://useaiblocks.com/skills/giving-your-agent-a-soul-implementation-planner): Plan a safer loader for your AI agent's role files, with checked fields, trimming that keeps the rules, clear failures and tests. Draft code only.
 - [Agent spending cap builder](https://useaiblocks.com/skills/execution-policies-and-budget-enforcement-implementation-planner): Plan hard spending caps for your AI agents. Hold cost before each call, stop at the limit and report real spend. Draft code only.
 - [Agent task ownership workflow builder](https://useaiblocks.com/skills/issues-how-agents-track-work-implementation-planner): Plan a task table where one AI agent claims a task at a time, with expiring claims, blocked tasks and tests. Draft code only.
+- [Agent team builder](https://useaiblocks.com/skills/agent-team-builder): Plan an AI agent team with roles, tasks and shared memory, built with CrewAI. Give it your jobs. You get code and config files to run.
 - [Agent wakeup and claim recovery builder](https://useaiblocks.com/skills/wakeups-how-agents-alert-each-other-implementation-planner): Build an agent wakeup flow with scoped events, duplicate checks, claim leases, retries and recovery.
 - [AI agent monitoring planner](https://useaiblocks.com/skills/ai-agent-monitoring-planner): Describe your agent and failure questions. Get a monitoring plan for steps, latency, costs and errors, with privacy and retention rules.
+- [AI app and chatbot builder](https://useaiblocks.com/skills/ai-app-and-chatbot-builder): Describe the chatbot, document question answerer or tool-using agent you want. Get starter code for your AI app in Python with LangChain.
 - [AI approval gate designer](https://useaiblocks.com/skills/ai-approval-gate-designer): Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
 - [AI coding attempt reviewer](https://useaiblocks.com/skills/competing-agent-racer): Give it a coding task, isolated workspaces and a score rule. Get separate attempts compared against that rule and a result to review.
 - [AI coding practice coach](https://useaiblocks.com/skills/careful-coding-rules): Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
@@ -42,6 +44,7 @@
 - [Backend architect agent](https://useaiblocks.com/agents/agency-engineering-backend-architect): Get a backend design with a right-sized setup, data tables, an API outline, a failure plan and a safe way to change the database.
 - [Backend builder](https://useaiblocks.com/skills/backend-builder): Share the service needs and existing code. Get server code, data design, login flows or fixes, with checks and open gaps.
 - [Blender add-on developer](https://useaiblocks.com/agents/agency-blender-addon-engineer): Turn a repeated Blender chore into a Blender add-on plan and starter Python code. Check asset names, scale and materials before export.
+- [Bluetooth LE waveform generator](https://useaiblocks.com/skills/bluetooth-le-waveform-generator): Generate a Bluetooth LE waveform in MATLAB with the right functions. Name the packet type or test and get working code for LE1M, LE2M, LE500K or LE125K.
 - [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer): Share a planned change and usage evidence. Get affected groups, compatibility gaps, a custom checklist score and a safer rollout proposal.
 - [Bug report writer](https://useaiblocks.com/skills/bug-report-writer): Turn logs, screenshots, or rough notes into a GitHub issue draft with steps and impact.
 - [Business domain code designer](https://useaiblocks.com/skills/business-model-code-designer): Share business rules and team terms. Get a shared glossary, software boundaries, data groups and rules for keeping them consistent.
@@ -91,6 +94,10 @@
 - [Developer tools engineer](https://useaiblocks.com/agents/agency-engineering-developer-tooling-engineer): Design a command-line tool your team will like: clear commands, helpful errors, fast startup and safe updates. Bring your scripts and goal.
 - [Digital twin design planner](https://useaiblocks.com/skills/digital-twin-design-planner): Bring the system and the decision it should support. Get a twin plan with data, checks and action limits.
 - [Display ad audit tool planner](https://useaiblocks.com/prompts/build-the-display-placement-auditor-builder-prompt): Get a coding brief that finds Google Ads Display placements wasting spend, with proposed exclusions and the numbers behind each. Read-only.
+- [Driving scenario builder](https://useaiblocks.com/skills/driving-scenario-builder): Turn recorded GPS, camera and lidar drive data into a driving scenario you can replay in RoadRunner. Built in MATLAB with Scenario Builder.
+- [Driving scenario simulator](https://useaiblocks.com/skills/driving-scenario-simulator): Run a RoadRunner scenario simulation from MATLAB or Simulink, step through it, add sensors and read the logs. Needs MATLAB with RoadRunner.
+- [Drone autopilot connector](https://useaiblocks.com/skills/drone-autopilot-connector): Connect MATLAB to a PX4 or ArduPilot drone over MAVLink. Get working code and a check that your drone is found. Needs paid MATLAB.
+- [DSPy prompt optimizer](https://useaiblocks.com/skills/dspy-prompt-optimizer): Tune your AI prompts with data, not guesswork. Give a task and examples, and get DSPy code that scores your prompts before and after.
 - [Electrical design reviewer](https://useaiblocks.com/agents/agency-engineering-electrical-engineer): Get an electrical design review with checked units, sizing sums, standards and open risks. A licensed engineer must sign off before building.
 - [Embedded firmware engineer](https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer): Plan embedded firmware for ESP32, STM32 or Nordic chips: tasks, pin map, memory limits and failure handling. Bring your chip and goal.
 - [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer): Plan how a system spots mistakes and helps people recover. Get clear alarms, who must act and checks for a safe restart.
@@ -122,6 +129,8 @@
 - [Google Ads report code planner](https://useaiblocks.com/prompts/google-ads-report-code-builder-prompt): Get a coding brief to build a Google Ads monthly report generator, with correct dates, spend math, tests and clear gaps. Needs your code.
 - [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt): Get a coding brief that sorts Google Ads search terms into four groups and drafts negative keywords for wasted spend. Read-only, with tests.
 - [Graceful shutdown code writer](https://useaiblocks.com/skills/safe-shutdown-code-writer): Share a server or worker. Get a shutdown routine for stopping new work, draining active work and handling a deadline.
+- [GraphQL schema designer](https://useaiblocks.com/skills/graphql-schema-designer): Design a GraphQL schema from your data. Get types, resolvers that avoid slow repeat queries, cursor paging and limits on costly queries.
+- [Guaranteed format generator](https://useaiblocks.com/skills/guaranteed-format-generator): Say what shape each answer must take. Get Python code that makes a local AI model return valid JSON, a fixed choice or matching text.
 - [Hugging Face Accelerate training planner](https://useaiblocks.com/skills/multi-gpu-training-setup-helper): Share your PyTorch script and hardware. Adapt it with Hugging Face Accelerate and prepare launch, precision and checkpoint checks.
 - [Image and text matcher](https://useaiblocks.com/skills/image-and-text-matcher): Match pictures to words. Search a photo set by description, sort images into your own labels, or check what a picture shows, with no training.
 - [Image object mask maker](https://useaiblocks.com/skills/image-object-cutter): Give it an image and a point or box. Get an object mask with confidence, or masks for all objects.
@@ -219,6 +228,7 @@
 - [MATLAB product lifetime analyst](https://useaiblocks.com/skills/product-lifetime-analyst): Share failure and censoring data. Get reliability-model code, life estimates and uncertainty checks using MATLAB and its statistics tools.
 - [MATLAB project setup planner](https://useaiblocks.com/skills/matlab-project-setup-helper): Share your project folders and needs. Get a matlab.toml file for paths, package dependencies and startup steps.
 - [MATLAB radio transmit and capture planner](https://useaiblocks.com/skills/radio-transmit-capture): Give it a test signal and saved USRP configuration. Get MATLAB steps for transmission and IQ capture, with required settings checked first.
+- [MATLAB RF PCB dimension tuning](https://useaiblocks.com/skills/pcb-design-optimizer): Bring an RF PCB design, goals, and bounds. Get MATLAB tuning code and response comparisons.
 - [MATLAB rotating machine feature extractor](https://useaiblocks.com/skills/machine-fault-feature-extractor): Share evenly sampled signals from rotating machines. Get ranked features, a health measure and MATLAB code for fault detection.
 - [MATLAB signal data cleaner](https://useaiblocks.com/skills/signal-data-cleaner): Share raw signals and problems. Get MATLAB code for selected cleaning steps and labels.
 - [MATLAB signal filter designer](https://useaiblocks.com/skills/digital-filter-designer): Share a signal, sample rate and filtering needs. Design and check a MATLAB filter, with code, plots and measured limits where run.
@@ -271,12 +281,19 @@
 - [Oracle to PostgreSQL procedure migrator](https://useaiblocks.com/skills/copilot-migrating-oracle-to-postgres-stored-procedures): Convert Oracle PL/SQL stored procedures into PostgreSQL PL/pgSQL, one file per procedure, with signatures kept and behavior changes listed.
 - [OrgScript model designer](https://useaiblocks.com/agents/agency-engineering-orgscript-engineer): Turn a written procedure into an OrgScript process file with triggers, rules, roles and state changes, plus a plain check. Bring your SOP.
 - [Parallel branch manager](https://useaiblocks.com/skills/parallel-branch-manager): Set up a parallel branch manager for git. Each task gets its own worktree folder, free ports and clean-up, so branches stop clashing.
+- [Parallel worker setup helper](https://useaiblocks.com/skills/parallel-worker-setup-helper): Fix parallel MATLAB code that fails on workers. Give it your code and get the right setup for paths, libraries, connections and data.
 - [Payments and billing engineer agent](https://useaiblocks.com/agents/agency-engineering-payments-billing-engineer): Plan a Stripe, Adyen, Braintree or PayPal build with no double charges, safe webhooks, a small card-data footprint and daily reconciliation.
+- [PCB via modeler](https://useaiblocks.com/skills/pcb-via-modeler): Model a PCB via with pads, antipads and ground return vias, then check its signal quality. Give it your stackup and via position.
 - [Performance Max check code planner](https://useaiblocks.com/prompts/build-the-performance-max-diagnostics-module-builder-prompt): Get a coding brief for Google Ads Performance Max checks on asset groups, brand overlap and audience signals, with the data used and gaps shown.
+- [Phoenix AI app tracer](https://useaiblocks.com/skills/phoenix-ai-app-tracer): Trace every step of your AI app and score its answers with test sets. Phoenix itself is free and open source. Judge runs need a paid model key.
 - [Plain-text file reader code planner](https://useaiblocks.com/prompts/read-any-file-in-plain-english-builder-prompt): Name a code file in your project. Claude Code explains it block by block in plain English, then sums up what the file does in one paragraph.
 - [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner): Share a plan and tracker. Get small, linked tickets to review before they are posted.
+- [PLL circuit modeler](https://useaiblocks.com/skills/pll-circuit-modeler): Build a PLL circuit model in Simulink from a datasheet or your targets. Get a working loop with the right solver, then check lock time and noise.
+- [Point cloud aligner](https://useaiblocks.com/skills/point-cloud-aligner): Line up two 3D scans into one point cloud. This point cloud aligner picks a method, tunes it and reports the fit. Needs MATLAB.
 - [Postgres performance tuner](https://useaiblocks.com/skills/postgres-performance-tuner): Review Postgres queries, tables, and settings to get ranked fixes for speed, connections, and access rules.
 - [Postgres query tuner](https://useaiblocks.com/skills/postgres-query-tuner): Share SQL, table details and query plans. Get index, type and setting changes to test, with reasons and priorities.
+- [Postgres schema designer](https://useaiblocks.com/skills/postgres-schema-designer): Describe your data and get a Postgres schema design with the right types, keys, indexes and rules, ready to test before you ship.
+- [Postman collection maker](https://useaiblocks.com/skills/postman-collection-maker): Make Postman files from API details or cURL commands, with a file for host and token values.
 - [Power Platform solution planner](https://useaiblocks.com/skills/plan-a-power-platform-solution): Share a business process and its rules. Get a plan for apps, data and workflows.
 - [Private bug evidence assistant](https://useaiblocks.com/agents/prepare-private-bug-evidence-for-developers): Turn rough bug notes and a screenshot into a developer-ready bug report. You get a privacy checklist and a list of files that are safe to share.
 - [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split): Split a messy change into small tidy-up steps and new-behaviour steps, so each one is easy to review and undo. Paste your diff or edit list.

@@ -18,7 +18,7 @@ not_for:
   - "You need a full company valuation: build a full discounted cash flow model, since this checks only the terminal value part."
   - "You value a bank or insurer: use a method made for financial firms, because this covers one operating business."
   - "Your discount rate is not above your growth rate: fix those inputs first, because the terminal value cannot be worked out."
-  - "You already have a terminal value and want the reinvestment hidden inside it: use the Implied terminal reinvestment schedule instead."
+  - "You already have a terminal value and want the reinvestment hidden inside it: use the Business terminal value assumption checker instead."
 you_give:
   - First stable-year NOPAT, stable growth, stable ROC and matching WACC.
   - "The terminal date, plus the currency and scale used for the terminal reinvestment check."
@@ -69,7 +69,7 @@ output_shape: |-
   MISSING: and CHECKS MISSED
 tweaks:
   - what: "Terminal date"
-    how: "Take the terminal date from the stable-year NOPAT, growth, return on capital and WACC. Use one currency and scale on every line."
+    how: "Take the terminal date from the end of your forecast period, and the valuation date from your model. The gap between them sets the discounting. Use one currency and scale on every line."
   - what: "Stable return on capital"
     how: "Change the stable return on capital and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance

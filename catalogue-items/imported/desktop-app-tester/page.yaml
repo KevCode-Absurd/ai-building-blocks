@@ -9,7 +9,7 @@ subhead: Your Electron app, opened and used by the AI the way a person would, wi
 explain: |
   Your Electron app, opened and used by the AI the way a person would, with screenshots and logs to show what happened. You can confirm a UI change works in the real app, not just in unit tests.
 
-  A script launches the app under Playwright in the background and keeps it running between commands. The AI reads an accessibility snapshot to find buttons and fields by name, then clicks, types, waits for text, and takes screenshots it can look at. Each run uses a fresh profile. It suits first-run screens and bugs that only show in a built app. It needs Electron and Playwright installed, and it handles one window at a time.
+  A script launches the app under Playwright in the background and keeps it running between commands. The AI reads an accessibility snapshot to find buttons and fields by name, then clicks, types, waits for text, and takes screenshots it can look at. Each run reuses a scratch profile named default, unless you ask for --fresh, which wipes it and shows the first-run screens. It suits first-run screens and bugs that only show in a built app. It needs Electron and Playwright installed, and it handles one window at a time.
 when:
   - You changed a screen in your Electron app and want proof it works before you ship.
   - A bug only shows up in the built app, not in development.
@@ -30,12 +30,13 @@ you_get:
   - Console and app logs
   - A plain report of what worked and what broke
 how_to_use:
+  - "Caution first: the eval and main commands run code with the app's full rights, and start --build runs the build command from drive.config.json. Read that file first in any project you did not set up. The app's data goes to the scratch profile only if drive.config.json points it there through env (for example APP_DATA_DIR). Without that, the app may read and change its real data files."
   - Open your AI tool in a place where it can run code in your project folder. A plain chat window will not work.
   - Check that Electron and Playwright are already installed in the project. Your AI will ask you to install them, not do it itself.
   - Paste or attach this skill. Tell your AI what to click or check, for example the first-run screen.
   - Ask it to look at a snapshot or screenshot before each action, and to read the logs after each step.
   - Read the report. Check the screenshots and any error lines in the logs, then ask it to stop the app.
-  - "Caution: the eval and main commands run code with the app's full rights, and start --build runs the build command from drive.config.json. Read that file first in any project you did not set up."
+  - Next, fix the bug in your code, then run start --build again to confirm the fix in the built app.
 output_sample:
   input:
     - Your Electron project folder

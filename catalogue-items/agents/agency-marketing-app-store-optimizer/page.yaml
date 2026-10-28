@@ -159,3 +159,4 @@ judge:
 test:
   - Try a small task whose result you can check yourself.
   - Omit one important fact and check whether the agent names the gap.
+next: [app-store-release-notes-writer, review-reply-batch-writer]

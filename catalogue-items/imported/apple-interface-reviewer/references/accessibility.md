@@ -11,7 +11,7 @@ Information and UI components must be presentable to users in ways they can perc
 
 ### 2. Operable
 User interface components and navigation must be operable.
-- **Tap Targets**: 44x44 points minimum.
+- **Tap Targets**: use the platform's recommended control size. Recommended / minimum, in points (HIG Accessibility, Mobility): iOS and iPadOS 44x44 / 28x28, macOS 28x28 / 20x20, tvOS 66x66 / 56x56, visionOS 60x60 / 28x28, watchOS 44x44 / 28x28.
 - **Motor Control**: Support Switch Control and AssistiveTouch.
 
 ### 3. Understandable
@@ -40,7 +40,7 @@ Apps must respond to system-wide font size changes.
 ## Checklist for Designers
 
 - [ ] Does the app work in Grayscale mode?
-- [ ] Are all buttons at least 44pt tall?
+- [ ] Do all buttons meet the platform's recommended control size (44x44 pt on iOS)?
 - [ ] Is every icon labeled for VoiceOver?
 - [ ] Does the layout remain usable at the largest Dynamic Type size?
 - [ ] Have you tested with "Reduce Transparency" enabled in system settings?
@@ -49,7 +49,8 @@ Apps must respond to system-wide font size changes.
 ## Sources
 
 - Apple HIG — Accessibility: https://developer.apple.com/design/human-interface-guidelines/accessibility
-- Apple HIG — Buttons (44x44 pt minimum hit region): https://developer.apple.com/design/human-interface-guidelines/buttons
+- Apple HIG — Accessibility, Mobility (default and minimum control size per platform): https://developer.apple.com/design/human-interface-guidelines/accessibility
+- Apple HIG — Buttons: https://developer.apple.com/design/human-interface-guidelines/buttons
 - Apple HIG — Typography (Dynamic Type text styles): https://developer.apple.com/design/human-interface-guidelines/typography
 - Apple Accessibility for developers: https://developer.apple.com/accessibility/
 - WCAG 2.x contrast minimums (4.5:1 / 3:1), which the HIG color guidance mirrors: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html

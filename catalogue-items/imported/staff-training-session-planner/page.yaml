@@ -34,6 +34,7 @@ you_get:
   - A follow-up plan
   - Evidence behind the design
 how_to_use:
+  - "Before you start, gather: the topic, how many staff and their mix of experience, how long the session runs, and any school priority or follow-up plan."
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Copy the Prompt section from the skill file and paste it into a new chat.
   - Replace the placeholders {{pd_topic}}, {{audience}} and {{session_duration}} with your topic, your group and your time.
@@ -41,6 +42,7 @@ how_to_use:
   - Read the plan and check the timings fit your room and your staff.
   - Change any task that does not suit your school, then share the plan with whoever is leading the session.
   - The plan names studies as its evidence. Check them against the listed sources before you share the plan with staff. Do not quote their findings as settled fact.
+  - Put the follow-through plan's dates into the staff diary or the coaching schedule, so each check-in has an owner and a date.
   - Next, pair it with the Lesson study cycle planner for the follow-up stage.
 output_sample:
   input:

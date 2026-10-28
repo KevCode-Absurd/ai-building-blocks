@@ -49,7 +49,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Run the small tests from step 4, then note the pass or fail numbers.
 - If step 3 shows a reward drove the result, run the [Incentive checker](https://useaiblocks.com/skills/incentive-checker) on your own team before you copy the idea.
 

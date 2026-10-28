@@ -71,6 +71,22 @@ tags: ["disciplinary-literacy", "writing", "genre-pedagogy", "scaffold", "academ
 
 # Disciplinary Writing Scaffold
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Produces a scaffold for a specific disciplinary writing genre — a lab report, a historical argument, a literary analysis, a mathematical explanation, a geographical case study — that reflects the actual conventions of that discipline rather than applying a generic "essay structure." Each discipline has its own way of constructing knowledge through writing: scientists write to report and explain phenomena through evidence; historians write to interpret and argue about significance; literary critics write to analyse authorial craft and effect. A science scaffold that looks like an English essay scaffold has failed. The output includes the structural scaffold, a discipline-specific language toolkit (vocabulary, sentence starters, hedging language, connectives), an annotated model, and differentiation options. AI is specifically valuable here because most teachers are experts in their discipline's content but not its writing conventions — they know what good disciplinary writing looks like but struggle to make its features explicit and teachable.
@@ -285,3 +301,11 @@ Sentence starters:
 2. **Disciplinary writing conventions exist on a spectrum, not in rigid categories.** The scaffold presents clear genre structures, but real disciplinary writing is more fluid — a historical argument might include scientific evidence, a literary analysis might draw on historical context. The scaffold teaches the core genre conventions first; blending genres is an advanced skill that should come after students have mastered the basic structures.
 
 3. **Writing scaffolds cannot replace content knowledge.** A student who doesn't understand why enzymes denature at high temperatures cannot write a good science conclusion, no matter how strong the scaffold. The scaffold structures the expression of understanding — it cannot create understanding where none exists. Teachers should ensure the science (or history, or literary understanding) is secure before asking students to write about it.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student rubric feedback writer](https://useaiblocks.com/skills/student-work-marking-desk). It takes the document.
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

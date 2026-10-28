@@ -92,7 +92,7 @@ He'd say find the person on the client side who truly cares. His best work came 
 
 #### Outside his field: your hiring and your team's space
 
-Accounts of his agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Culture was part of the product. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
+Our application, not his stated advice: culture was part of the product at Chiat/Day, which was named U.S. Agency of the Decade in 1989 [S7]. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
 
 #### Your life and career
 
@@ -241,7 +241,7 @@ How to use it: find the person on the client side who truly cares, and build the
 
 #### Place and culture shape the work
 
-Accounts of Clow's agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Chiat/Day was named U.S. Agency of the Decade in 1989 [S7]. The culture was part of the product.
+Chiat/Day was named U.S. Agency of the Decade in 1989 [S7]. The culture was part of the product.
 
 How to use it: give creative people a place they want to be, and leaders who clear the way.
 
@@ -280,7 +280,7 @@ In 1997 Clow and art director Jessica Edelstein met Jobs and Apple staff every w
 
 #### Building the agency around a place and a culture
 
-Accounts of the agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Chiat/Day was named U.S. Agency of the Decade in 1989 [S7].
+Chiat/Day was named U.S. Agency of the Decade in 1989 [S7].
 
 #### Launching the Taco Bell chihuahua, 1997
 

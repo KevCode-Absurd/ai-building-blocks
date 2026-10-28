@@ -19,8 +19,7 @@ Quick reference for compliance checking. Organized by category.
 | Trigger Word/Phrase | Compliant Substitution |
 |---|---|
 | Diabetes / Diabetics | Platforms flag disease names. Do not just rename the condition. Fix the claim itself, check the platform's current policy and get a compliance review. |
-| High blood sugar | Erratic blood sugar, blood sugar concerns |
-| Blood sugar spike | Blood sugar fluctuations |
+| High blood sugar, blood sugar spike | Do not rename the condition. Fix the claim, check the platform's current policy and get a compliance review. |
 | Regulate blood sugar | Helps support blood sugar, promotes balanced blood sugar |
 | Manage blood sugar | Help sustain blood sugar, support balanced glucose levels |
 | Cure diabetes / reverse diabetes | Do not make this claim at all. Remove it. |

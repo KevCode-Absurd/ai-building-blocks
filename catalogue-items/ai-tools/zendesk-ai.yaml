@@ -19,7 +19,7 @@ best_for:
   - "Teams with many repeat questions that AI can help answer."
   - "Leaders who compare results from different kinds of support messages."
 not_for:
-  - Small teams that only need a shared inbox.
+  - Small teams that only need a shared inbox. Gorgias suits small online stores, or a plain shared inbox may be enough.
   - Anyone who wants a single flat price for support and AI.
 pricing:
   model: subscription
@@ -44,6 +44,7 @@ first_result:
   - "Test it with real past questions. Read every reply it gives. Fix the articles that lead to a wrong answer."
   - "Turn it on for one channel and one type of question first. Watch the resolutions, and read some tickets it closed."
   - "Add Copilot for your team once the AI agent works. It drafts replies for your staff to edit and send."
+  - "You end with AI replies on one channel, drafted replies for staff, and tickets tagged for the right team. Next: each month, check how many resolutions the AI closed, what they cost at US$2.00 each, and a sample of closed tickets. Add the next channel only when wrong answers are rare."
 needs:
   - "A Zendesk Support plan."
   - "Help centre articles or written answers for your common questions."

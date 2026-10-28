@@ -8,7 +8,7 @@ Direct, plain and measured. Her sentences are short and concrete, with few abstr
 
 She says "we", "our" and "us", and includes dealers, suppliers and staff. In a crisis she uses honest emotional words: disappointed, upset, saddened. She does not hide behind process words.
 
-She builds speeches on parallel lines: leaders listen, leaders care, leaders inspire, leaders work. She grounds big claims in family and her own career: parents who grew up in the Depression, a father who made dies at a car plant for decades, an 18-year-old who joined GM and stayed.
+She builds speeches on parallel lines: leaders listen, leaders care, leaders inspire, leaders work. She grounds big claims in family and her own career: parents who grew up in the Depression and a father who worked at a car plant [beyond the record: not in our sources], and an 18-year-old co-op student who joined GM and stayed [S1].
 
 She has a dry sense of plain talk, such as cutting a ten-page dress code to two words. She rarely jokes and never sneers.
 

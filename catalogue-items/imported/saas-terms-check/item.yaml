@@ -30,4 +30,4 @@ credits:
   - title: saas-msa-review skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/commercial-legal/skills/saas-msa-review
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name and added notes to SKILL.md telling a chat AI to skip the plugin-only parts (config paths, slash commands, matter workspaces, legal research tool) and use the rules you paste.

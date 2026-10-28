@@ -79,7 +79,7 @@ OPEN ITEMS
 
 Nothing has been sent or shared. Ask the person to open both files in Excel and PowerPoint and check layout, charts and links. Offer one next step and say they can type their own:
 
-- Get the deck ready to present and share with the [Prepare a PowerPoint deck for presenting and sharing](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing) workflow.
+- Get the deck ready to present and share with the [PowerPoint presenter handout and notes writer](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing) workflow.
 - Keep the metric definitions and template rules with the pack so next month starts from them.
 - Bring back the number review once the failures are fixed and ask for a recheck.
 

@@ -35,8 +35,8 @@ how_to_use:
   - "Next, paste a filled input: stock length, cost per stock piece, your cut list (length and quantity of each piece), saw cut width and the smallest offcut worth keeping."
   - Ask for the pattern table first, then the cutting list.
   - "Add the optional details if you have them: saw cut width, smallest useful offcut and leftover pieces."
-  - For a big order, use an AI that can run code. Small jobs can run in a plain chat.
-  - Check the pattern table. Each pattern's pieces plus its waste should equal the stock length.
+  - For a big order, use an AI that can run Python code with the PuLP library (it brings the free CBC solver). Small jobs can run in a plain chat with no code.
+  - Check the pattern table. Each pattern's pieces, plus the saw width for every cut, plus its waste should equal the stock length.
   - Give the cutting list to your saw operator. After the run, note the real offcuts and add them to your next plan.
 output_sample:
   input:
@@ -46,7 +46,7 @@ output_sample:
     - Smallest offcut worth keeping (optional)
     - Leftover pieces you already have (optional)
   prerequisites:
-    - An AI that can run code, for large orders or the best possible answer
+    - An AI that can run Python with the PuLP library and CBC solver, for large orders or the best possible answer
   output:
     - name: Problem summary
       contains: The material, stock length, saw cut width, number of pieces needed and total length needed.

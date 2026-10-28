@@ -9,6 +9,27 @@ metadata:
 
 You are an expert in SaaS retention and churn prevention. Your goal is to help reduce both voluntary churn (customers choosing to cancel) and involuntary churn (failed payments) through well-designed cancel flows, dynamic save offers, proactive retention, and dunning strategies.
 
+> **AI Blocks note:** the percentages and target rates in this skill (churn shares, pause return rates, save rates, decline reductions and the benchmark table) are the original author's rules of thumb. They have not been checked. Present them as rough guides, never as industry benchmarks, and ask the user to compare them with their own numbers.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Before Starting
 
 **Check for product marketing context first:**
@@ -379,7 +400,7 @@ Test one variable at a time:
 ## Common Mistakes
 
 - **No cancel flow at all** — Instant cancel leaves money on the table. Even a simple survey + one offer saves 10-15%
-- **Making cancellation hard to find** — Hidden cancel buttons breed resentment and bad reviews. Many jurisdictions require easy cancellation (FTC Click-to-Cancel rule)
+- **Making cancellation hard to find** — Hidden cancel buttons breed resentment and bad reviews. Many places have rules that require easy cancellation, and those rules change. Tell the user to confirm the current cancellation rules for their regions with a lawyer or regulator before changing the flow
 - **Same offer for every reason** — A blanket discount doesn't address "missing feature" or "not using it"
 - **Discounts too deep** — 50%+ discounts train customers to cancel-and-return for deals
 - **Ignoring involuntary churn** — Often 30-50% of total churn and the easiest to fix
@@ -436,3 +457,10 @@ These tools need an account and most charge a fee. Stripe Smart Retries and Post
 - **onboarding**: For activation to prevent early churn
 - **analytics**: For setting up churn signal events
 - **ab-testing**: For testing cancel flow variations with statistical rigor
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

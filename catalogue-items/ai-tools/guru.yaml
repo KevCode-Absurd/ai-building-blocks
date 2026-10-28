@@ -45,7 +45,7 @@ first_result:
   - "Bring a list of the tools your team keeps answers in, who answers repeat questions today, and your security rules."
   - "Agree with Guru which apps to connect first. Start with one team and one set of questions."
   - "Name an expert for each topic. They check the content the AI draws on."
-  - "Ask five real questions your staff ask often. Compare each answer with what the expert would say."
+  - "Ask five real questions your staff ask often. Write each AI answer next to the expert's answer and mark any mismatch. For each mismatch, the expert fixes the source content, then you ask again. Roll out only when all five match."
   - "You end with answers staff can ask for in Slack or Teams, backed by content a named expert has checked. Next: if you have many apps to search, compare Glean. For customer-facing chat, compare Intercom Fin."
 needs:
   - "A company plan agreed with Guru's sales team."

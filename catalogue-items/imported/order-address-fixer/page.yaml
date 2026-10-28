@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Sign in to the Shopify CLI for your store. This tool needs an AI that can run commands and files, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Give your AI the skill file and your store domain.
-  - Paste the order ID and the corrected address.
-  - Ask for a preview first. Check the current address and the order status it shows.
-  - Ask it to run the change. The live order is updated right away.
+  - Paste the order ID and the corrected address. If you only have the order number or the customer's email, use the Order lookup assistant first to find the order ID. The skill file calls it order-lookup-and-summary.
+  - Ask for a preview first, since the skill's default is to run. Check the current address and the order status it shows.
+  - Confirm the old and new address against what the customer asked for. Then ask it to run the change. The live order is updated right away.
   - If you use a fulfilment partner, tell them about the new address yourself.
+  - Next, look the order up again with the Order lookup assistant to confirm the new address saved, and reply to the customer.
 output_sample:
   input:
     - Your store domain

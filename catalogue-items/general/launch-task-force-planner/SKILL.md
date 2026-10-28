@@ -58,15 +58,6 @@ In this order:
 7. **Sell tests:** two results with reasons.
 8. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you want a hard check before you commit money** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- **If the product is set and you need the launch order** with the [Launch teaser to preview planner](https://useaiblocks.com/skills/launch-teaser-to-preview-planner). It takes the plan.
-- **If you want to lead with press** with the [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner). Bring your product, brand brain and product facts.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every role is in the kickoff.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A parallel option team is named.
 - The test of easy to advertise and sell is applied, with a reason for each.
 - Roles the team does not have are listed as gaps.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you want a hard check before you commit money** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
+- **If the product is set and you need the launch order** with the [Launch teaser and preview planner](https://useaiblocks.com/skills/launch-teaser-to-preview-planner). It takes the plan.
+- **If you want to lead with press** with the [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner). Bring your product, brand brain and product facts.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

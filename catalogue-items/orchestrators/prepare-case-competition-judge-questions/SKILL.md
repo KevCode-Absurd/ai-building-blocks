@@ -77,15 +77,6 @@ Files | Sources used | MISSING lines | CHECKS MISSED
 
 The files are `outputs/step-01-source-note-summariser.md` to `outputs/step-04-proofreader.md`. The question bank and the slide briefs are in the files from steps 2 and 3, in the corrected form from step 4.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Check the deck and the numbers** with the [Stress test a case competition recommendation](https://useaiblocks.com/workflows/stress-test-a-case-competition-recommendation) workflow. Bring the deck and the exhibits. Use it if the weak-spot list shows numbers that do not add up.
-- **Re-check after every change** with the [Case competition evidence review assistant](https://useaiblocks.com/skills/case-competition-evidence-review-assistant). Bring the revised deck and the earlier review.
-- **Rehearse out loud.** Ask a teammate to read the questions and judge each answer against its note. Tell your AI how it went so it can update the notes. It never records a rehearsal on its own.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -94,6 +85,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - Every figure in a note or brief matches its exhibit, or is a `MISSING:` line with both values.
 - The original deck and exhibits were not changed. New files have their own names.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Check the deck and the numbers** with the [Case competition financial-assumption reviewer](https://useaiblocks.com/workflows/stress-test-a-case-competition-recommendation) workflow. Bring the deck and the exhibits. Use it if the weak-spot list shows numbers that do not add up.
+- **Re-check after every change** with the [Case competition slide reviewer](https://useaiblocks.com/skills/case-competition-evidence-review-assistant). Bring the revised deck and the earlier review.
+- **Rehearse out loud.** Ask a teammate to read the questions and judge each answer against its note. Tell your AI how it went so it can update the notes. It never records a rehearsal on its own.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If the deck or the exhibits are absent, stop that step and return what you have with the exact file you need. Do not turn an unknown fact into an assumption just to finish.

@@ -11,7 +11,7 @@ subhead: Service level targets that people believe in, with an error budget and
   percent on everything, with no clear measure and no plan for when the budget
   runs out.
 explain: |
-  Service level targets that people believe in, with an error budget and alerts that fire at the right time. Many targets are copied numbers, like 99.9 percent on everything, with no clear measure and no plan for when the budget runs out. This skill uses the method from Google's SRE Workbook.
+  It turns your traffic and error numbers into targets, using the method from Google's SRE Workbook.
 
   It picks the right measure of how users feel the service, such as request success rate instead of CPU. It sets a target users care about and works out the error budget. It builds burn-rate alerts over several time windows, so a short spike stays quiet but a slow leak is caught. It also writes the policy for what the team does when the budget is gone.
 when:
@@ -21,7 +21,7 @@ when:
   - You want burn-rate alerts that are neither too jumpy nor too slow.
 you_give:
   - The service and its users
-  - Current traffic and error data
+  - About 30 days of daily counts, total requests and good (successful) requests per day
   - Existing targets (optional)
   - Alerting tool in use (optional)
 you_get:

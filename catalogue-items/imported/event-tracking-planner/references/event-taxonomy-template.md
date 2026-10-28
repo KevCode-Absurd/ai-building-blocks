@@ -30,7 +30,7 @@ User-level lifecycle.
 | Event | Fires when | Required properties | Notes |
 |---|---|---|---|
 | `user_signed_up` | A user creates an account or joins an existing account. | `user_id`, `account_id`, `signup_source`, `referrer_source` | Distinct from `account_created`; one account, many users. |
-| `user_invited` | An existing user invites a new user. | `inviter_user_id`, `invited_email`, `account_id`, `invitation_role` | The invitation event; `user_signed_up` fires later when the invite is accepted. |
+| `user_invited` | An existing user invites a new user. | `inviter_user_id`, `invite_id`, `account_id`, `invitation_role` | The invitation event; `user_signed_up` fires later when the invite is accepted. Do not send the invited person's email to analytics (see the PII rule in property-design-patterns.md). Keep the email in your own invites table and link to it by `invite_id`; put `invite_id` on `user_signed_up` too, to join invite to signup. |
 | `user_role_changed` | A user's role within the account changes. | `user_id`, `account_id`, `from_role`, `to_role`, `changed_by_user_id` | |
 | `user_logged_in` | A user authenticates after a logged-out state. | `user_id`, `auth_method`, `device_type` | Different from session start. Logged-in across multiple sessions. |
 | `user_logged_out` | A user explicitly signs out. | `user_id`, `logout_reason` | Often missed; explicit signout vs session timeout. |

@@ -24,9 +24,11 @@ how_it_works:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions, or upload the skill folder if your AI accepts files.
   - Paste your Spanish or Turkish text. Add your exam, deadline, target level and Spanish variety if you have them.
-  - Read the corrected text and the numbered reasons. The Spanish and Turkish guides have not had a native-speaker review. Check anything that surprises you against your course or teacher before it goes into the mistake log.
+  - Read the corrected text and the numbered reasons. The Spanish and Turkish guides have not had a native-speaker review. The Spanish guide is marked high confidence, the Turkish one medium. Check anything that surprises you against your course or teacher, or the references the guides name, before it goes into the mistake log. For Spanish, that is Gramática de uso del español or the Instituto Cervantes DELE sample papers. For Turkish, the Yedi İklim Türkçe or İstanbul Yabancılar İçin Türkçe course books.
+  - If your AI cannot write files, keep the mistake log in the chat. Copy it at the end of each session and paste it back at the start of the next one.
   - For ongoing study, say yes when it offers a mistake log. It saves files, so use an AI that can write files to your folder.
   - Come back each session. It re-tests your open mistakes first, then teaches one new structure.
+  - About every seven sessions, ask for the pattern review. It names your top three to five repeated mistakes, so you know which ones to drill until they close.
 output_sample:
   input:
     - A Spanish or Turkish paragraph, about 120 to 200 words, written without help

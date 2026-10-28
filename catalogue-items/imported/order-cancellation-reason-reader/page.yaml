@@ -32,7 +32,7 @@ you_get:
   - A readable table or JSON
 how_to_use:
   - Check you have an AI that can run commands, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
-  - Sign in to your store with Shopify CLI and give it read access to orders.
+  - Sign in to your store with Shopify CLI and give it read access to orders and customers (read_orders and read_customers). The query also reads which staff member cancelled, which needs read_users. If your app cannot get that, ask your AI to drop the staff field.
   - Add the skill to your AI and give it your store domain. Add how many days to look back if you want something other than 30.
   - Add a grouping, a minimum order value or one reason if you want a narrower view. All three are optional.
   - Read the summary first, then check the flagged weeks. Compare the rates with your own past numbers, not a general figure.

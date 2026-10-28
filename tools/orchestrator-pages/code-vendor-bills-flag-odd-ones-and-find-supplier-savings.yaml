@@ -1,22 +1,22 @@
 new_slug: code-vendor-bills-flag-odd-ones-and-find-supplier-savings
 name: Code vendor bills, flag odd ones and find supplier savings
-summary: Code vendor bills in one run. Get each bill coded, odd ones flagged, and supplier savings ranked, with nothing paid until you say yes.
+summary: Code vendor bills in one run. Get each bill coded, odd ones flagged, and supplier savings ranked from your own bills. Nothing is entered or paid.
 job: money-and-investing
 thinking: medium
 thinking_why: The work is reading and sorting. A mid-level model is enough, but check the flagged bills yourself.
 headline: Get your vendor bills coded, the odd ones flagged and the savings ranked
-subhead: Give it the pile of vendor bills. It reads each one, codes it to your accounts, matches it to the order and receipt, and stages a payment run for your yes. It flags repeats and jumps, then ranks where you could spend less.
+subhead: Give it the pile of vendor bills. It reads each one and codes it to your accounts, for you or your bookkeeper to check. It flags repeats and jumps, then ranks where you could spend less.
 explain: |
   A pile of vendor bills hides two problems. The first is time: reading, coding and matching each bill takes hours. The second is what you cannot see in a pile: the same bill that arrived twice, a price that jumped, three suppliers doing one job. Coding alone fixes the first and leaves the second.
 
-  The steps do both. First it reads each bill, removes copies, codes it using your accounts and your past coding for that vendor, matches it to the purchase order and receipt, and stages a payment run. Nothing is entered or paid until you say yes. Then it scans the coded table for odd bills: repeats, jumps against a vendor's usual amount and gaps in the pattern. The last step groups spend by type, supplier and team, finds overlap, sizes the saving from joining or switching, and ranks the chances by amount and effort. A person checks every flag before anything is acted on.
+  The steps do both. First it reads each bill and codes it to your chart of accounts in one table. Nothing is entered or paid: you or your bookkeeper check the coding. Then it scans the coded table for odd bills: repeats, jumps against a vendor's usual amount and gaps in the pattern. Purchase orders and receipts, if you give them, help it tell a real repeat from a duplicate. The last step groups spend by type, supplier and team, finds overlap, gives a rough saving range from your own bills (never a made-up supplier price), and ranks the chances by amount and effort. A person checks every flag before anything is acted on.
 when:
   - Bills pile up in an inbox or a folder and coding them takes hours.
   - You suspect a double payment or a price creep but have no way to see it.
   - You want to renegotiate or cut suppliers and need a ranked list to start from.
 not_for:
   - "You have only a handful of bills: code them by hand, or ask your bookkeeper."
-  - "You need bills entered into QuickBooks or Xero for you: this stages entries and a payment run, and you enter them yourself."
+  - "You need bills entered into QuickBooks or Xero or paid for you: this makes a coded table, and you enter and pay them yourself."
   - "You want to chase a flagged bill with a supplier: check it in your records first, then email the supplier yourself."
 you_give:
   - Vendor bills as PDFs, photos or emails
@@ -24,14 +24,14 @@ you_give:
   - Purchase orders and receipts, if you use them (optional)
   - What counts as odd for you, like any bill over a set amount (optional)
 you_get:
-  - One coded table of bills with unreadable fields named, and a payment run to approve
+  - One coded table of bills, with unreadable fields named
   - A short list of odd bills, each with a reason
   - Spend grouped by type, supplier and team
   - Savings chances ranked by amount and effort, with quick wins and what to ask each supplier
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Attach the bills and your account list. Step 1 stages the entries and a payment run. Approve or change it yourself.
+  - Attach the bills and your account list. Step 1 makes the coded table. Check it, then enter the bills in your own system.
   - Look at the flagged bills with the supplier or your records before you act.
   - Use the savings list as a start for conversations, not as a final answer.
 output_sample:
@@ -44,7 +44,7 @@ output_sample:
     - An AI that can read files, such as Claude with files in a Project or Claude Code
   output:
     - name: "Step 1: Coded bills"
-      contains: One table with vendor, number, dates, lines, account, order match and unreadable fields, plus a payment run to approve.
+      contains: One table with vendor, number, dates, lines, account and unreadable fields.
     - name: "Step 2: Odd bills"
       contains: The bills that look repeated, jumped in price or break a vendor's pattern, each with a short reason.
     - name: "Step 3: Savings"
@@ -53,14 +53,14 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read and code the bills
-    text: Removes repeat copies, reads vendor, number, dates, lines and totals, codes each bill from your accounts and past habits, matches it to the order and receipt, and stages a payment run.
+    text: Reads vendor, number, dates, lines and totals, and codes each bill to your chart of accounts in one table.
   - title: Flag the odd ones
     text: Compares each bill with that vendor's usual amount and timing, finds repeats and jumps, scores each line and gives a short reason for each flag.
   - title: Find the savings
-    text: Groups spend by type, supplier and team, finds overlap, sizes the saving from joining or switching, and ranks by amount and effort.
+    text: Groups spend by type, supplier and team, finds overlap, gives a rough saving range from your own bills, and ranks by amount and effort.
 output_shape: |-
   STEP 1: CODED BILLS
-    Vendor | number | dates | lines | account | match to order | unreadable fields | payment run for approval
+    Vendor | number | dates | lines | account | unreadable fields
 
   STEP 2: ODD BILLS
     Flagged bills: reason | score | what to check

@@ -15,7 +15,7 @@ description: Use view counts to place video ads in a hook and hold matrix. Get f
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -25,7 +25,7 @@ How to start:
 
 ## What you need
 "Your results" in the box above means the video ad data below.
-- Impressions, three-second video views and the later-view count you chose (for example ThruPlay), for each ad (required).
+- Impressions, three-second video views and the later-view count you chose, for each ad (required). Where to find them: in Meta Ads Manager, the 3-second video plays and ThruPlays columns (add them under video engagement columns); in TikTok Ads Manager, the 2-second and 6-second video views; in Google Ads for YouTube, the "video played to 25%" (or 50%) columns. Column names change, so check the exact name in your report and say which one you used.
 - Video length, spend and conversions for the same dates (required).
 - Link clicks or outbound clicks (optional).
 - Your own high and low cutoffs for hook and hold (optional).
@@ -42,6 +42,15 @@ How to start:
 - A campaign change is a proposal, never an action you take.
 
 These rules control the method below. If an example assumes a number, replace it with the user's verified setting.
+
+## Steps in short
+1. Collect the counts for each ad for the same dates.
+2. Work out hook rate and hold rate, showing the sums.
+3. Set the high and low cutoffs, then place each ad in the matrix.
+4. Read what each quadrant suggests, as ideas to test.
+5. Rank the tests to run first.
+
+The method below gives the counting rules for each step.
 
 ## Method
 
@@ -69,7 +78,7 @@ Use these sections, in this order:
 3. **Matrix:** each ad's quadrant, or "unsure" near a cutoff or with thin data.
 4. **Creative hypotheses:** one line per quadrant that has ads in it.
 5. **Ranked tests:** the tests to run first, each with what changes and what to compare.
-6. **Review plan:** when to look again and at what number.
+6. **Review plan:** when to look again and the one number to recheck after the first ranked test (hook rate after an opening test, hold rate after a body test).
 7. **CHECKS MISSED:** any check that failed or could not run, such as a missing later-view count, or "none". Add `MISSING:` for inputs not given.
 
 ## Final check

@@ -61,9 +61,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
-- Price each planned hire from the new bands with [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost).
-- When you make an offer, check the letter with [Hire fairly, from job post to a checked offer letter](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter).
+Use these instead of the general "After this" list below:
+- Price each planned hire from the new bands with [Annual hiring and staff-cost planner](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost).
+- When you make an offer, check the letter with [Hiring document and candidate reviewer](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter).
 
 ## What you hand back
 3 step files and the summary. The last file holds the pay and benefits plan.

@@ -29,4 +29,4 @@ credits:
   - title: skill-security-auditor skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/skill-security-auditor
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, changed the PASS line so it no longer says a skill is safe to install, and labelled the example report as illustrative.

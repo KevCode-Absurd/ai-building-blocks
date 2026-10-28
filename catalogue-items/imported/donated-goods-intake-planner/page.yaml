@@ -8,10 +8,11 @@ headline: Donated goods intake planner
 subhead: Share the goods you accept, intake space, staff, and current bottlenecks. It separates acceptance, sorting, grading, and routing for a resale store. You get clear intake steps, grading rules, safe handling checks, and receipt wording that leaves value decisions to the donor.
 when:
   - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Your store is in the US. The receipt and tax wording follows US rules (IRS, EIN). Elsewhere, check your local donor-receipt rules with an adviser before you use it.
 not_for:
   - "You need to value a gift for tax, or handle Form 8283 or an appraisal: ask your tax adviser, since this plan leaves value to the donor."
-  - "You want shelf prices or display ideas for graded items: use a retail pricing step or a pricing guide, not this plan."
-  - "You want to list high-value items online: this plan only flags them for review, so use an online resale guide for the listing."
+  - "You want shelf prices or display ideas for graded items: there is no pricing skill in this library yet, so set prices with your store lead."
+  - "You want to list high-value items online: this plan only flags them for review, so use the Donated goods online resale planner for the listing."
 you_give:
   - The goods you accept now and the goods you turn away
   - Your monthly item volume by category (optional)
@@ -25,9 +26,9 @@ how_it_works:
   - title: Define what you accept
     text: Write what goods you accept. Plan staffed drop-offs or booked pickups.
   - title: Sort, test, and grade
-    text: Sort goods into groups and use clear grades for their condition. Test electrical items and send high-value goods for review.
+    text: Sort goods into groups and grade each item Premium or Boutique (like new, name brand), Standard (normal wear), Value or As-Is (worn but working) or Reject. Test electrical items and send high-value goods for review.
   - title: Route and record goods
-    text: Choose shop floor, online sale, recycling, or discard. Plan basic receipts without assigning a donor tax value.
+    text: Route each graded item to one of four lanes, shop floor, online sale, salvage or recycling, or discard as a last resort. Plan basic receipts without assigning a donor tax value.
 works_best_with:
   tools:
     - name: A chat AI that can read your files

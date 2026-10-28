@@ -11,6 +11,19 @@ metadata:
 
 This skill enables the agent to perform Dynamic Application Security Testing (DAST) against running web applications and APIs. Unlike static analysis, DAST interacts with the application at runtime — sending crafted HTTP requests, fuzzing input parameters, and analyzing responses to detect vulnerabilities such as SQL injection, cross-site scripting, server misconfigurations, broken authentication, and insecure API endpoints. The agent configures scan profiles, handles authenticated scanning, interprets results, and produces actionable remediation reports.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A web app** (yours): a working web page or app, built and ready to open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a web app. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Approval gate (do this before anything else)
 
 Before you run any scanner, write the scope back to the user: the exact target address, the proof they gave that they own it or may test it, and what is out of scope. Ask them to reply "confirmed". If the target looks like a production site, or the user cannot show permission, stop. Do not run the active full scan (Example 1, Step 2) or any attack-payload step until that reply has arrived, and never against any address other than the confirmed one.
@@ -176,3 +189,11 @@ nuclei -u https://staging.example.com -t exposed-debug-endpoints.yaml -t cves/ -
 - **Rate-limited or WAF-protected targets** — aggressive scanning may trigger rate limits or WAF blocks, producing false negatives. Throttle the scan rate, allowlist the scanner IP in the WAF, or test the origin server directly to get accurate results.
 - **WebSocket and real-time endpoints** — most DAST tools focus on HTTP request/response patterns. WebSocket connections require specialized tooling or manual testing to probe for injection and authorization issues in real-time message flows.
 - **Stateful multi-step workflows** — vulnerabilities in flows like checkout, password reset, or MFA enrollment require the scanner to follow a specific sequence of steps. Define scan sequences or use recorded macros to test these workflows end-to-end.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

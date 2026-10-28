@@ -31,7 +31,7 @@ credits:
   - title: meeting-scheduler skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/productivity-and-workflow/meeting-scheduler
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

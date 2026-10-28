@@ -34,11 +34,12 @@ you_get:
   - A saved .duckdb file for repeat use (optional)
 how_to_use:
   - Check that you have MATLAB R2026a or later with Database Toolbox. Both are paid MathWorks products, so check your licence and cost before you start. This skill needs MATLAB code to run.
-  - Compare your file size to your computer's memory. If the file fits easily, use readtable instead. The first check in the skill depends on this ratio.
+  - Divide your file size by your computer's free memory. If the answer is under 0.5 and it is a single file, use readtable instead. If you have many files, the skill points you to datastore or tall first. The first check in the skill depends on this ratio.
   - Paste the skill into your AI. Add the file path and the question you want answered.
   - Ask for the profile query first. Run it to see the columns and row count.
   - Run the full query next. Check the result table has the columns you expect.
   - Say so if you want the data saved to a .duckdb file (a saved database on your disk) for later queries. Then feed the result table into your MATLAB analysis, or export it for a report.
+  - Next, if the file turned out small enough, switch to readtable. If the work is maths-heavy rather than filtering or grouping, or the data still does not fit after the query, move it to datastore or tall in MATLAB.
 output_sample:
   input:
     - Paths to your CSV, Parquet or JSON files

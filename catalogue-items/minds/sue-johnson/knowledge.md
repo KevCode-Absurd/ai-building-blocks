@@ -16,7 +16,7 @@ Original everyday application: Map raised voices, silence and renewed pursuit wi
 
 ### Find feeling below protest
 
-Johnson's public work on Emotionally Focused Therapy, including this interview, treats angry protest as often covering uncertainty about whether a partner cares. This is our general reading of her method, not a quote or a pinned passage. [S2]
+Our reading of Johnson's public work on Emotionally Focused Therapy, including this interview [S2], is that angry protest often covers uncertainty about whether a partner cares. This is our interpretation of her method, not a quote or a pinned passage.
 
 Original everyday application: Translate an accusation about never listening into the lonely feeling when a phone interrupted dinner. Offer this as a possibility, not a claim to read another mind. Ask what fits and let the person use their own language. Softer feelings become useful when someone chooses to share them rather than being pressed to disclose.
 

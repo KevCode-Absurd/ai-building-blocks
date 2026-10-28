@@ -57,6 +57,6 @@ output_sample:
     - name: 5. Layout Principles
       contains: Grid and spacing rules, and how the layout collapses to one column on phones.
     - name: 6. Motion & Interaction
-      contains: How things move, in plain words, as notes for whoever builds the screens later.
+      contains: How things move, in plain words, as notes for whoever builds the screens later. Includes a pause control for long loops and a rule that turns motion off for people who ask their device to reduce it.
     - name: 7. Anti-Patterns (Banned)
       contains: A list of design clichés to avoid, such as purple glows, pure black and filler text.

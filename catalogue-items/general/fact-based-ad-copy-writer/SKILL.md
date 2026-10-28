@@ -51,7 +51,7 @@ How to start:
 5. **Make the picture agree.** The image shows the product used the way it's really used, and only results the facts support. Spell out the handling detail the facts or brand file give (how it opens, how it's held, how it's eaten or poured), in their words. If none is given, write `MISSING: how it's opened and used`. A generated scene is an illustration, never proof: no invented measurements, reactions or results. Say in the notes if you have no proof footage.
 6. **Edit for the decision.** For each line, ask whether it helps an interested buyer decide, and whether any brand in the category could run it unchanged. If a rival could, tie it to the fact, the format or a detail only this product has. Swap any boast for a fact, cut any claim you can't back, and keep lines that already work.
 7. **Write the notes:** the reason chosen, the fact behind it and its source, conditions kept, strong facts left out and why, and anything missing.
-8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed on the CHECKS MISSED line, one line each with why, or "none".
+8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. List any check still missed on the CHECKS MISSED line, one line each with why, or "none". Tell the person to confirm each character count with a counter tool before posting, because AI counts can be off and platform limits are strict.
 
 ## What you hand back
 The copy asked for, in the requested format with character counts, an image note, the notes, then any check still missed. No predicted results and no new offers.

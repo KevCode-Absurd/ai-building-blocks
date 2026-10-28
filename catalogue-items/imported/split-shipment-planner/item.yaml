@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-split-shipment-planner skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops/shopify-admin-split-shipment-planner
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, put the dry-run step before the live split, made the JSON summary report the real run mode, and added how to check the order is open.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

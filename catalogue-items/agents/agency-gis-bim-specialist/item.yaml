@@ -10,7 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: design_file
+  - type: dataset
+    required: false
+  - type: map_data
     required: false
 outputs:
   - type: plan

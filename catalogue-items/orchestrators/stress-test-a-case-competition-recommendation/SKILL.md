@@ -79,14 +79,6 @@ Files | Sources used | MISSING lines | CHECKS MISSED
 
 The files are `outputs/step-01-case-competition-slide-deck-builder.md` and `outputs/step-02-unsupported-claim-spotter.md`, plus the deck file from step 1.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Practise the Q&A** with the [Prepare case competition judge questions](https://useaiblocks.com/workflows/prepare-case-competition-judge-questions) workflow. Bring the revised deck and the exhibits.
-- **Re-check after every change** with the [Case competition evidence review assistant](https://useaiblocks.com/skills/case-competition-evidence-review-assistant). Bring the revised deck and this challenge register.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The recommendation is on the slide after the title, and each rubric criterion points to a slide, or is marked `MISSING: rubric`.
@@ -95,6 +87,14 @@ If they pick one and that item is added here, carry on with what you just made. 
 - If a .pptx was built, it was reopened and every slide was rendered and looked at. If not, the hand-back says the file was not built and the outline is unchecked as a file.
 - The original case files were not changed. Revised files have their own names.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Practise the Q&A** with the [Prepare case competition judge questions](https://useaiblocks.com/workflows/prepare-case-competition-judge-questions) workflow. Bring the revised deck and the exhibits.
+- **Re-check after every change** with the [Case competition slide reviewer](https://useaiblocks.com/skills/case-competition-evidence-review-assistant). Bring the revised deck and this challenge register.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If a required source or tool is absent, stop that step and return what you have with the exact input or action needed to resume. Do not turn an unknown fact into an assumption just to finish.

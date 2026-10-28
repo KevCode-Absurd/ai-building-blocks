@@ -10,6 +10,8 @@ explain: |
   Find a Bluetooth Low Energy device near you, connect to it from MATLAB, and read, write or subscribe to its data. This is the setup step for anything that needs live sensor or wearable data.
 
   The skill scans with filters instead of listing every device nearby, then connects and walks the device's services to find the right characteristic. It uses the correct function signatures, so you avoid made-up calls. You can read a value, write one, or subscribe to notifications for a stream such as heart rate or acceleration. BLE support is built into MATLAB, so no extra toolbox is needed. It does not cover Bluetooth Classic or acting as a peripheral.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file in this folder says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file's header links MathWorks' own reuse licence page, which says the same kind of thing. LICENSE.md governs this copy.
 when:
   - You want to read a heart rate or motion sensor into MATLAB.
   - You need to scan for a nearby BLE device by name or address.
@@ -36,6 +38,7 @@ how_to_use:
   - Pick your device from the scan list when your AI asks. It never picks for you.
   - Check the connection summary, then run the read, write or subscribe code.
   - To log data, ask for a notification log. Then open the text file in MATLAB to look at the data.
+  - Next, load the log or the subscribed values into a MATLAB table or timetable and plot them. Ask your AI to write that analysis script once the data looks right.
 output_sample:
   input:
     - Your device name, address or service ID

@@ -118,6 +118,7 @@ judge:
   - "Each piece answers the question without needing a click."
   - "The brand appears once per piece, as the source."
   - "Every hook is a fact you gave."
+  - "Health and money claims stay inside your approved claims, or are held back as MISSING."
   - "The places are ones you have evidence for."
   - "Clicks are not the first measure anywhere."
 

@@ -30,4 +30,4 @@ credits:
   - title: unit-economics skill
     by: nighomni123
     url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/unit-economics
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name, added notes on files not in this copy, and corrected the Excel format warning (marked at the end of the file).

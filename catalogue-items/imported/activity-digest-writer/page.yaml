@@ -30,11 +30,11 @@ you_get:
   - Mentions of you
   - A note on any source that was unavailable
 how_to_use:
-  - Check that your AI can reach your chat, email or document tools. If it cannot, it cannot build the digest.
+  - Check that your AI can reach your chat, email or document tools, such as Slack, Gmail or Google Drive. Connect them in your AI's settings first. Then ask it to list one recent message from each to test. If it cannot reach any of them, it cannot build the digest.
   - Paste the skill into your AI chat, or add it to your AI tool.
   - "Say how far back to look: a day, a week, or a date such as since Monday. A day is the default."
   - Name the projects to focus on if you want (optional).
-  - Read the action items first and start with the top one.
+  - Read the action items first and start with the top one. To plan your day or week from them, paste the list into your task tool or ask your AI to turn it into a task list with due dates.
   - Check the note on any source your AI could not reach. Look in that tool yourself.
 output_sample:
   input:

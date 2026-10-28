@@ -7,8 +7,6 @@ job: design-work
 headline: Raw brutalist style guide writer
 subhead: A style guide for a raw, blunt, anti-polish look, ready for designers and developers to build from. It covers type, colour, spacing, states and checks, so the harsh look stays consistent and still works for people.
 explain: |
-  A style guide for a raw, blunt, anti-polish look, ready for designers and developers to build from. It covers type, colour, spacing, states and checks, so the harsh look stays consistent and still works for people.
-
   You describe your product. The guide draws on the feel of raw concrete buildings: heavy type, sharp edges, flat blocks of colour and jarring layouts that put function first. It sets a type scale and fonts, a colour palette with named tokens, and a spacing scale. It then defines how buttons, inputs and focus states look. Accessibility is kept in: it targets WCAG 2.2 AA and visible keyboard focus, so rough does not mean unusable.
 when:
   - You are a small team building one bold, blunt site and want a single style guide to build from.

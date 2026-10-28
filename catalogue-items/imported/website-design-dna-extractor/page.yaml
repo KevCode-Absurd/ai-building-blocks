@@ -30,11 +30,13 @@ you_get:
   - Screenshots and notes about missing or approximate measurements.
   - A coding-tool rules draft when requested.
 how_to_use:
+  - "Set up Playwright MCP first. In Claude Code run: claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --isolated. The first run downloads a browser of about 100 MB. Restart your AI tool before you start."
   - Download the complete skill folder and give it to your AI. Keep its references beside SKILL.md.
   - Read AI-BLOCKS-USAGE.md, then ask your AI to follow SKILL.md for the public URL you supply.
   - Choose the page scope and output location. The basic output is the Markdown guide and JSON file.
   - Review the measured evidence and any proposed coding-tool configuration changes before applying them. A coding-tool export can add to or change your existing instruction files, so confirm before it writes.
   - Read the reasons as inferred, not as what the company said. Only the measured values are facts.
+  - Next, give the JSON file to the Design token builder. It turns the measured colours, fonts and spacing into tokens your own site can use.
 output_sample:
   input:
     - A public website link that opens without signing in

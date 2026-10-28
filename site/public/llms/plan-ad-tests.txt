@@ -1,6 +1,6 @@
 # Plan what ads to test: AI Blocks
 
-> 48 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 50 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner): Plan a fair split-run test of two ads, emails or pages. Get one change, a key on each, the audience size and a winner rule.
 - [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one core ad idea, plus product, offer and audience. Get 10 to 15 distinct angles, each with a hook.
@@ -24,6 +24,7 @@
 - [Core customer benefit finder](https://useaiblocks.com/skills/what-you-really-sell-finder): Find what you really sell. Paste your product and buyer, get ten or more reasons to buy, scored, and the best three as test angles.
 - [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer): Turn your customer reviews and product facts into an ad brief. It picks one problem, writes a one-line angle, and backs every claim with a shot.
 - [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner): Plan a fair copy test across different places. Swap versions halfway and compare cost per sale to pick the better copy. A cross-over copy test planner.
+- [Customer acquisition cost limit and ad-lift test planner](https://useaiblocks.com/workflows/set-your-cac-limit-and-test-what-ads-really-add): Share ad spend, first-order data and profit assumptions. Get a buyer-cost limit, return checks, an ad-lift test plan and later budget options.
 - [Existing image ad test planner](https://useaiblocks.com/workflows/image-ad-test-plan): Share current image ads, brand facts and results. Get coverage gaps, a test brief, copy drafts and opening-line scores.
 - [Experiment designer](https://useaiblocks.com/skills/experiment-designer): Turn a proposed change, conversion rate, and traffic figures into an A/B test plan.
 - [Experiment platform picker](https://useaiblocks.com/skills/experiment-tool-picker): Share your team, traffic and data setup. Get a platform choice, migration path and governance advice.
@@ -37,6 +38,7 @@
 - [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner): Share ad concepts, target cost per sale and budget. Get test groups, naming rules, settings checks and bounded spend plans.
 - [Monthly ad production planner](https://useaiblocks.com/skills/creative-volume-planner): Plan how many new ads to make each month. Give it your spend, target and hit rate. You get three estimates, a budget and a weekly quota.
 - [Paid campaign builder](https://useaiblocks.com/skills/paid-campaign-builder): Plan your paid ad campaigns on Google, Meta or LinkedIn. Give your goal and budget. Get structure, audiences, bids and scale or stop rules.
+- [Paid media budget planner](https://useaiblocks.com/skills/paid-media-budget-planner): Plan your paid media budget: give your goal and spend, and get channel picks, a budget split, test ideas with stop and scale numbers, and what to skip.
 - [Paid social advertising strategist](https://useaiblocks.com/agents/agency-paid-media-paid-social-strategist): Plan paid ads on Meta, LinkedIn and TikTok. Get platform picks, a funnel, audiences, creative briefs, a budget split and a test plan.
 - [Programmatic display media planner](https://useaiblocks.com/agents/agency-paid-media-programmatic-buyer): Plan display and programmatic ad buying. Get a media plan with channels, audiences, placement rules, brand safety checks and a budget split.
 - [Retargeting objection ad planner](https://useaiblocks.com/skills/retargeting-objection-ad-planner): Plan retargeting ads that answer why visitors left. Give it your conversion rate and exit reasons. You get one ad per objection and a test order.

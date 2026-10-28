@@ -9,7 +9,7 @@ When two estimates for the same event are far apart, one of them rests on someth
 
 ## When to use it
 
-Use it when two sides give different numbers for the same event. Do not use it when you have only one estimate and no second side: do a plain risk review instead. Do not use it to settle one final number: it shows the gap, and the people who made each estimate must close it. To turn what you find into a lasting rule, use the [Mistake-to-principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer).
+Use it when two sides give different numbers for the same event. Do not use it when you have only one estimate and no second side: do a plain risk review instead. Do not use it to settle one final number: it shows the gap, and the people who made each estimate must close it. To turn what you find into a lasting rule, use the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer).
 
 ## What you need
 
@@ -38,7 +38,7 @@ The event and units. Both numbers with their basis and the gap as a ratio. Each 
 ## What next
 
 When you've handed it back, ask in one short question what they want to do next. Offer this, and say they can type their own:
-- **Turn the finding into a lasting rule** with the [Mistake-to-principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring the audit.
+- **Turn the finding into a lasting rule** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring the audit.
 
 ## Check before you hand it back
 

@@ -87,15 +87,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Hand off a job** with the [Results agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the week brief.
-- **Plan the week** with the [Values-to-week planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the week brief.
-- **Check your hours again next month** with the [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - "Important" is defined from the person's own roles, goals or values.
@@ -104,6 +95,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every Box I item has a prevention idea.
 - Time for Box II comes only from Boxes III and IV.
 - The brief names what to book first and what to hand off.
+
+<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Hand off a job** with the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the week brief.
+- **Plan the week** with the [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the week brief.
+- **Check your hours again next month** with the [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

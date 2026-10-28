@@ -63,15 +63,6 @@ In this order:
 7. **Honesty and fairness:** what was removed, and how to deserve the success.
 8. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you want the holes found before you spend** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- **If you want to try the cue on real buyers** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **If the reach map shows buyers can't find you** with the [Brand reach audit](https://useaiblocks.com/skills/brand-reach-audit). Bring your sales numbers.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The response is one action with a named cue (a proposed cue is marked PROPOSED).
@@ -80,6 +71,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The reach map names the gap a rival could use.
 - At least four forces are linked into a chain, or the stack is called thin.
 - The plan says how to deserve its success.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you want the holes found before you spend** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- **If you want to try the cue on real buyers** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **If the reach map shows buyers can't find you** with the [Brand reach reviewer](https://useaiblocks.com/skills/brand-reach-audit). Bring your sales numbers.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

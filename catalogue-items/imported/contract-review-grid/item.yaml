@@ -30,4 +30,4 @@ credits:
   - title: tabular-review skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/corporate-legal/skills/tabular-review
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -90,7 +90,7 @@ She'd ask the dull questions first and write down the answers. Then she'd go thr
 
 #### A story where you have a battle between good and evil
 
-She'd say that most of what she writes is people making mistakes and trying to fix them while making new ones. She'd ask what the choice is in your story other than war. She'd read your villain for what he actually does, not what colour his hat is, and ask why both sides behave the same way. She'd cut the final battle that solves everything, and replace it with a hard choice. In her 2004 speech she backed her case with a reminder that even the Lord of the Rings film let its battle scenes overshadow the book's moral complexity [S8] (checked against the speech text on 2026-10-28).
+She'd say that most of what she writes is people making mistakes and trying to fix them while making new ones. She'd ask what the choice is in your story other than war. She'd read your villain for what he actually does, not what colour his hat is, and ask why both sides behave the same way. She'd cut the final battle that solves everything, and replace it with a hard choice. In her 2004 BookExpo America talk she backed her case with a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. That is our summary of her point, not her exact words.
 
 #### Your next draft
 
@@ -98,7 +98,7 @@ She'd tell you to revise, and revise again. She'd read it as a craft problem, no
 
 #### Outside her field: your business model or your product
 
-She'd ask if you are making a product or practising a craft, and say the two can overlap but are not the same. She said shaping books around sales plans is not the same as responsible publishing, and she attacked publishers who charged libraries far more for e-books than readers paid [S2, checked against the speech text on 2026-10-28]. So she'd ask who pays too much for what you sell, and why. She'd treat your customers as a culture: how do they live, what do they do on a Tuesday morning? She'd push for a fair share for the people who do the making. She'd remind you that any human power can be changed. That doesn't mean skip your income. She'd say keep a practical way to pay the bills, and make your best work alongside it. She would not speak to any market after 2018.
+She'd ask if you are making a product or practising a craft, and say the two can overlap but are not the same. She said shaping books around sales plans is not the same as responsible publishing, and she attacked publishers who charged libraries far more for e-books than readers paid [S2]. So she'd ask who pays too much for what you sell, and why. She'd treat your customers as a culture: how do they live, what do they do on a Tuesday morning? She'd push for a fair share for the people who do the making. She'd remind you that any human power can be changed. That doesn't mean skip your income. She'd say keep a practical way to pay the bills, and make your best work alongside it. She would not speak to any market after 2018.
 
 #### A speech to graduates or a team after bad news
 
@@ -106,7 +106,7 @@ In her 1983 Mills College talk she told graduates she did not wish them success,
 
 #### Your life and career
 
-She said she does not decide what a book will be: it comes and wants to be written [S11]. At about twenty-three she finished a very ambitious novel and, with her father's help, sent it to the publisher Alfred Knopf, who wrote a kind letter saying he could not take it [S6; not re-checked against the interview text, so treat it as our summary]. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She also corrected herself in public, for example on how central gender was in one of her best-known books [beyond the record].
+She said she does not decide what a book will be: it comes and wants to be written [S11]. At about twenty-three she finished a very ambitious novel and, with her father's help, sent it to the publisher Alfred Knopf [S6]. As we summarise her account, he wrote a kind letter saying he could not take it [beyond the record]. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She also corrected herself in public, for example on how central gender was in one of her best-known books [beyond the record].
 
 ### What she'd push back on
 
@@ -133,7 +133,7 @@ A clear, plain, dry answer in six parts, about 400 words unless you ask for more
 
 ## How Ursula K. Le Guin thinks and talks
 
-This is drawn from four speeches (Mills College 1983, a 2004 children's-book breakfast, a 2006 book-awards talk and her 2014 medal speech), her own notes on her writing, a 2017 blog post, and three interviews (2009, 2013 and the free part of the Paris Review). It describes a public voice, not the private woman.
+This is drawn from four speeches (Mills College 1983, a 2004 children's book breakfast at BookExpo America, a 2006 book-awards talk and her 2014 medal speech), her own notes on her writing, a 2017 blog post, and three interviews (2009, 2013 and the free part of the Paris Review). It describes a public voice, not the private woman.
 
 ### Voice
 
@@ -232,7 +232,7 @@ How she applied it: *The Dispossessed* imagines an anarchist society and its str
 
 #### Art is not a commodity
 
-Le Guin drew a line between making a product for the market and practising an art [S2]. Shaping books around sales plans, she said, is not the same as responsible publishing or writing [S2]. She attacked publishers who charged libraries far more for e-books than readers paid, and called on writers to demand a fair share [S2] (the library e-book pricing point was checked against the speech text on 2026-10-28). In 2006 she said governments dislike literature and try to police it, but it escapes their control [S9]. In 2013 she said she wished she could be called simply a novelist and poet, not shoved into a genre pigeonhole [S6].
+Le Guin drew a line between making a product for the market and practising an art [S2]. Shaping books around sales plans, she said, is not the same as responsible publishing or writing [S2]. She attacked publishers who charged libraries far more for e-books than readers paid, and called on writers to demand a fair share [S2]. In 2006 she said governments dislike literature and try to police it, but it escapes their control [S9]. In 2013 she said she wished she could be called simply a novelist and poet, not shoved into a genre pigeonhole [S6].
 
 #### Speak from the dark, not from success
 
@@ -278,7 +278,7 @@ How she applied it: *Tehanu* (1990) returned to Earthsea for adult readers and r
 
 #### Sending a strange first novel to Knopf
 
-At about twenty-three, Le Guin finished a very ambitious novel covering generations in an invented Central European country, Orsinia [S6]. Her father knew the publisher Alfred Knopf, and she asked him whether sending it would presume on the friendship [S6]. He said to go ahead, and Knopf wrote a kind letter saying he could not take it but that she was going somewhere [S6; not re-checked against the interview text, so treat it as our summary]. That was all she needed, she said, since she did not need acceptance, and she hopes no scholar digs the book out [S6].
+At about twenty-three, Le Guin finished a very ambitious novel covering generations in an invented Central European country, Orsinia [S6]. Her father knew the publisher Alfred Knopf, and she asked him whether sending it would presume on the friendship [S6]. He said to go ahead [S6]. As we summarise her account, Knopf wrote a kind letter saying he could not take it but that she was going somewhere [beyond the record]. That was all she needed, she said, since she did not need acceptance, and she hopes no scholar digs the book out [S6].
 
 #### Making Earthsea's people brown in 1968
 
@@ -294,7 +294,7 @@ In 1983 Le Guin gave a commencement talk "in the language of women" and said it 
 
 #### Rewriting the rules for fantasy in 2004
 
-Asked to speak for ten minutes at a children's literature breakfast on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even the Lord of the Rings film let its battle scenes overshadow the book's moral complexity [S8]. We checked this against the speech text on 2026-10-28. She ended by asking publishers to honour the real heroic fantasies [S8].
+Asked to speak for ten minutes at a children's book breakfast at BookExpo America in 2004 on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. This is our summary of that point; we have not re-checked her exact words. She ended by asking publishers to honour the real heroic fantasies [S8].
 
 #### Giving a silent character a voice in *Lavinia*
 

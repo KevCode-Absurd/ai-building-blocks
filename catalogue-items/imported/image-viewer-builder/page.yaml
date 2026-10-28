@@ -36,9 +36,10 @@ you_get:
 how_to_use:
   - Open a chat with your AI and paste in the skill text, or upload the skill file.
   - "Say what you want: a short script or a full app. Describe your images and the regions or masks to show."
-  - Paste the code your AI writes into MATLAB. You need the Image Processing Toolbox.
+  - Paste the code your AI writes into MATLAB. You need MATLAB R2026a or newer with the Image Processing Toolbox, as the skill's manifest says.
   - Run it. Check that the overlays line up with your image and that zoom works.
   - Ask your AI to fix anything that looks off, such as colours or transparency.
+  - If the script errors on viewer2d or CameraViewport, check your MATLAB release first. Then call drawnow before setting CameraViewport, because the viewer needs a moment to start.
   - Next, ask for paintbrush labelling to make your own masks, or turn the viewer into a full app with the MATLAB app builder. The licence limits use of this skill to MathWorks products.
 next: [matlab-app-builder, huge-image-processor, image-processing-coder]
 output_sample:
@@ -48,7 +49,7 @@ output_sample:
     - The regions or overlays you want shown
     - Whether you want a full app or a short script
   prerequisites:
-    - MATLAB with the Image Processing Toolbox
+    - MATLAB R2026a or newer with the Image Processing Toolbox
     - An AI that can run MATLAB code (optional, to test the result)
   output:
     - name: Standard image display

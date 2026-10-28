@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-bulk-fulfillment-creation skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops/shopify-admin-bulk-fulfillment-creation
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, moved the location filter into the query string, listed the fulfillment order scopes and staff permission Shopify needs, corrected the claim that fulfilments cannot be cancelled, and made it check an order before retrying after a timeout. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

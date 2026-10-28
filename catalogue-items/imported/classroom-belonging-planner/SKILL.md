@@ -69,6 +69,19 @@ tags: ["belonging", "inclusion", "classroom-culture", "relationships", "equity",
 
 # Belonging & Classroom Culture Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates specific, implementable classroom practices that build belonging for all students — with particular attention to students who are most likely to experience belonging uncertainty (new students, minority students, students with SEN, EAL students, students transitioning between schools). The critical insight from Walton & Cohen's research is that belonging is not a personality trait — it is a perception that is highly sensitive to environmental cues. Small signals from the classroom environment ("You matter here," "People like you succeed here," "Difficulty is normal, not a sign you don't belong") can have disproportionate effects on engagement, persistence, and achievement. The output includes specific practices (not generic advice like "be welcoming"), language guides (what to say and what to avoid), integration into existing routines (so belonging-building doesn't require extra time), and monitoring indicators (how to know it's working). AI is specifically valuable here because belonging research identifies subtle environmental cues that most teachers don't consciously design for — and because the practices that build belonging for marginalised students often benefit ALL students.
@@ -263,3 +276,10 @@ Watch for these changes over 4–6 weeks:
 2. **Some belonging threats originate outside the classroom.** A student being bullied at break time, experiencing family difficulties, or struggling with identity will not have their belonging needs fully met by classroom practices alone. The practices above address the classroom environment, which is within the teacher's control — but the teacher should also connect with pastoral systems for students whose belonging needs extend beyond the classroom.
 
 3. **Belonging practices must be genuine.** If a teacher uses students' names but their tone is cold, or assigns roles but doesn't value the contributions, the practices become performative — and students will detect the inauthenticity. The practices work because they communicate genuine regard. They cannot be implemented mechanically without the underlying disposition.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

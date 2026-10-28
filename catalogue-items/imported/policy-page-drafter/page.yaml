@@ -34,13 +34,15 @@ you_get:
   - A checklist for each law
   - A list of open questions for your lawyer
 how_to_use:
+  - "This writes a legal draft, not legal advice. Plan for a lawyer to review it before it goes live."
   - Write down the facts in the list above. Be exact about the tools you use.
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions, then your facts. No code or paid tools are needed.
   - "Say which document you want: privacy policy, terms or cookie notice. Tell your AI today's date."
-  - Your AI may not be able to look up current law. Check each law it names against your regulator's own website before you publish.
+  - Your AI may not be able to look up current law. If you need a law checked, paste its current text from the regulator's website. Otherwise check each law it names there yourself before you publish.
   - Note which laws your AI named and the date you checked them, so your lawyer can confirm those points first.
   - Check each open question against your real tools and settings. Fix anything the draft got wrong.
   - Before you publish, send the draft and the open questions to a qualified lawyer. Do not put it live until the lawyer has signed it off. The draft is not legal advice and the skill cannot check current law.
+  - "Next: once it is live, run the GDPR privacy checker on your site. Then set up the consent tool your cookie notice describes, since the notice alone does not ask visitors for consent."
 output_sample:
   input:
     - Your business description and country

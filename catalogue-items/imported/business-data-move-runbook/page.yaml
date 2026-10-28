@@ -40,6 +40,9 @@ how_to_use:
   - Read the field map first. Fix gaps, then ask for the test import checks.
   - "Before switch day, ask for the recovery plan. If you have no engineer, ask for the simple version: freeze both tools, export both, and let a finance or operations owner approve the way back."
   - Your AI only plans. It cannot change your live systems, so a person must run each step.
+  - Migration tools, implementation partners and consultant hours can cost money. Your AI does not check prices or vendor terms, so get quotes yourself.
+  - If you move books, invoices, bills or payroll, have your accountant or auditor sign off the field map and the test results before the final switch.
+  - Next, hand the field map and the check report to the named owner and the person who approves the switch. Run the test batch before any full load.
 output_sample:
   input:
     - The old tool and the new tool

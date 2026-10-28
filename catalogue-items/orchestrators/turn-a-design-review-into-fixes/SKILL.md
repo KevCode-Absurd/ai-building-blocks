@@ -69,7 +69,6 @@ Lead with the issue list, then the revised brief and the test script. Then give 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
 - The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
-- The [Product-specific interface designer](https://useaiblocks.com/skills/product-true-ui-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -81,8 +80,8 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 Suggest one next step in a short question, and say they can type their own:
 - **Run the test** with three to five people who have not seen the screen, then fix what they stall on.
-- **Check the plan for blockers** with the [Check a prototype before user testing](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
-- **Review the next new screen** with the [New screen design reviewer](https://useaiblocks.com/agents/new-screen-design-reviewer).
+- **Check the plan for blockers** with the [Prototype usability test planner](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
+- **Review the next new screen** with the [Screen usability reviewer](https://useaiblocks.com/agents/new-screen-design-reviewer).
 Nothing here edits your design.
 
 ## Avoid

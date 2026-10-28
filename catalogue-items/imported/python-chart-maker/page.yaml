@@ -33,6 +33,7 @@ you_get:
   - Multi-panel layout if needed
 how_to_use:
   - Open your AI tool and paste the skill text, or upload the skill folder. Pick one that can run Python code and save files, such as Claude with code running turned on. If yours cannot run code, ask it for the Python script and run the script on your own computer.
+  - "Cost: code running in Claude, ChatGPT and Gemini depends on your plan and its limits, so check your plan first. Python and Matplotlib are free, so running the script yourself costs nothing. No API key is needed."
   - Add your data as a CSV file or pasted table. Say which chart you want, or what question it should answer.
   - "Say which file type you want: PNG for slides, PDF or SVG for print."
   - Open the saved chart and check the labels, colours and numbers. Ask for changes until it looks right.

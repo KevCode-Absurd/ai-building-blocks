@@ -10,6 +10,19 @@ argument-hint: "<line item> <period> vs <comparison>"
 
 Techniques for decomposing variances, materiality thresholds, narrative generation, waterfall chart methodology, and budget vs actual vs forecast comparisons.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Variance Decomposition Techniques
 
 ### Price / Volume Decomposition
@@ -22,20 +35,30 @@ Total Variance = Actual - Budget (or Prior)
 
 Volume Effect  = (Actual Volume - Budget Volume) x Budget Price
 Price Effect   = (Actual Price - Budget Price) x Actual Volume
-Mix Effect     = Residual (interaction term), or allocated proportionally
 
-Verification:  Volume Effect + Price Effect = Total Variance
-               (when mix is embedded in the price/volume terms)
+Verification:  Volume Effect + Price Effect = Total Variance, exactly.
+               (Pricing the price effect at ACTUAL volume puts the
+               price x volume interaction inside the price effect, so
+               nothing is left over.)
 ```
 
-**Which method to use:** if the data has a mix column, use the three-way decomposition below, where mix is its own term. If it has none, use the two-way formula above and treat mix as the residual.
+**Which method to use:** for a single product, or when you only have totals, use the two-way formula above. When several products (or segments) sell at different prices and you have volume and price for each, use the three-way decomposition below, where mix is its own term.
 
-**Three-way decomposition (separating mix):**
+**Three-way decomposition (separating mix), for products i:**
 ```
-Volume Effect = (Actual Volume - Budget Volume) x Budget Price x Budget Mix
-Price Effect  = (Actual Price - Budget Price) x Budget Volume x Actual Mix
-Mix Effect    = Budget Price x Budget Volume x (Actual Mix - Budget Mix)
+Q        = total volume across products;  share_i = Volume_i / Q
+Budget avg price = Sum of (Budget share_i x Budget Price_i)
+
+Volume Effect = (Actual Q - Budget Q) x Budget avg price
+Mix Effect    = Actual Q x Sum of ((Actual share_i - Budget share_i) x Budget Price_i)
+Price Effect  = Sum of (Actual Volume_i x (Actual Price_i - Budget Price_i))
+
+Verification:  Volume + Mix + Price = Actual revenue - Budget revenue, exactly.
 ```
+
+Check with one product (mix share 1 in both): budget 100 units x $10 = $1,000; actual 110 units x $12 = $1,320; total variance +$320. Volume = 10 x $10 = +$100. Mix = 0. Price = 110 x $2 = +$220. Sum = +$320. (Pricing the price effect at budget volume would give only +$200 and leave $20 unexplained, so always use actual volume there.)
+
+Check with two products (say A at $10 and B at $20, both prices unchanged): budget 50 A + 50 B = $1,500; actual 40 A + 70 B = $1,800; total +$300. Budget avg price = 0.5 x $10 + 0.5 x $20 = $15. Volume = (110 - 100) x $15 = +$150. Mix = 110 x ((40/110 - 0.5) x $10 + (70/110 - 0.5) x $20) = 110 x (-$1.364 + $2.727) = +$150. Price = 0. Sum = +$300.
 
 **Example — Revenue variance:**
 - Budget: 10,000 units at $50 = $500,000
@@ -70,7 +93,10 @@ Total Comp Variance = Actual Compensation - Budget Compensation
 
 Decompose into:
 1. Headcount variance    = (Actual HC - Budget HC) x Budget Avg Comp
-2. Rate variance         = (Actual Avg Comp - Budget Avg Comp) x Budget HC
+2. Rate variance         = (Actual Avg Comp - Budget Avg Comp) x Actual HC
+   (Use ACTUAL headcount here so items 1 and 2 add up to the total when there is
+   no mix, timing or attrition effect. Say budget 10 people at $100K and actual 12 at
+   $110K: total +$320K = headcount 2 x $100K = +$200K plus rate $10K x 12 = +$120K.)
 3. Mix variance          = Difference due to level/department mix shift
 4. Timing variance       = Hiring earlier/later than planned (partial-period effect)
 5. Attrition impact      = Savings from unplanned departures (partially offset by backfill costs)
@@ -266,3 +292,14 @@ Track how variances evolve over the year to identify systematic bias:
 - **Growing unfavorable:** Deteriorating performance or unrealistic targets
 - **Shrinking variance:** Forecast accuracy improving through the year (normal pattern)
 - **Volatile:** Unpredictable business or poor forecasting methodology
+
+Changed by AI Blocks (2026-10-28): rebuilt the three-way volume/mix/price formulas so they add up to the total variance, priced the headcount rate variance at actual headcount, and added worked checks.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper).
+- The [Freelancer transaction and cash review](https://useaiblocks.com/skills/monthly-freelancer-books-closer).
+- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

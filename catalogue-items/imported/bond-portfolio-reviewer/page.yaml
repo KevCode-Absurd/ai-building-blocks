@@ -9,7 +9,7 @@ subhead: Give it a list of your bond holdings with prices, coupons and maturitie
 explain: |
   A bond portfolio review shows how much interest your holdings pay, how sensitive they are to rate moves and where the risk sits. This skill builds that review from your own holdings list.
 
-  It weights every measure by market value. It then projects cash flows by quarter to show where coupons and repayments bunch up. Last, it shifts the whole rate curve up and down and shows the gain or loss for each move, and which bonds drive it.
+  It weights yield, duration and convexity by market value, and adds up DV01, which is already in money. It then projects cash flows by quarter to show where coupons and repayments bunch up. Last, it shifts the whole rate curve up and down and shows the gain or loss for each move, and which bonds drive it.
 
   It has limits. Free sources give index and bond ETF data, not prices for single corporate bonds, and no Indian bond prices are bundled. So you bring the prices. If a number is missing, the report says so. It never uses an ETF as a stand-in for a single bond. Web data comes from public sites and can be delayed or break.
 when:

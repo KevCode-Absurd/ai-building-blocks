@@ -11,7 +11,7 @@ Read [the original role profile](references/source-agent.md) before you start. I
 
 When not to use it: to hire outside China, use the Candidate sourcing planner or the New country hiring planner. For a job post only, use the Job post writer or the Inclusive job post writer. To sort real resumes, use the Applicant shortlist builder. For a small hire through people you know, use the Interview scorecard builder. For legal advice on a contract, probation term or dismissal, ask a labour lawyer in the city.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Any chat AI can build the plan. Check that it handles Chinese site names and terms well if you work in Chinese.
@@ -68,11 +68,11 @@ Use these headings, in this order:
 7. Funnel to track
 8. Open questions (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer). It takes the job description.
 - The [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). It takes the job description.
+- The [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer). It takes the job description.
 - The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the job description.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

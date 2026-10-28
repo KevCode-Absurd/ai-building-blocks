@@ -11,6 +11,19 @@ metadata:
 
 A practical framework for managing the fundamental challenge of software engineering: complexity. Apply these principles when designing modules, reviewing APIs, refactoring code, or advising on architecture decisions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **The greatest limitation in writing software is our ability to understand the systems we are creating.** Complexity is the enemy: it makes systems hard to understand, hard to modify, and a source of bugs. Evaluate every design decision by asking "Does this increase or decrease the overall complexity of the system?" — the goal is not zero complexity, but minimizing unnecessary complexity and concentrating the necessary kind where it can be managed.
@@ -192,8 +205,15 @@ See [references/strategic-programming.md](references/strategic-programming.md) w
 
 For the complete methodology with detailed examples:
 
-- [*"A Philosophy of Software Design"*](https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X?tag=wondelai00-20) by John Ousterhout (2nd edition)
+- [*"A Philosophy of Software Design"*](https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X) by John Ousterhout (2nd edition)
 
 ## About the Author
 
 **John Ousterhout** is the Bosack Lerner Professor of Computer Science at Stanford and the creator of the Tcl scripting language and Tk toolkit. He developed *A Philosophy of Software Design* from his Stanford CS 190 course, distilling decades of systems-building experience into principles that apply across languages and scales.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Module design coach](https://useaiblocks.com/skills/module-design-coach). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

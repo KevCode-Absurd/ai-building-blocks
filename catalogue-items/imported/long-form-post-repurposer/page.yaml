@@ -22,8 +22,8 @@ not_for:
   - "You only want a short summary with a link attached: paste the link into your post by hand. This skill will not write that."
   - "You need a promise of reach, clicks or likes: no tool can give that, so plan to test and track your posts."
 you_give:
-  - The article, transcript or draft
-  - The platform, X or LinkedIn
+  - The full text of the article, transcript or draft
+  - The platform, X or LinkedIn, and your account's length limit (for example 280 characters on a free X account)
   - Your link (optional)
   - Your voice or past posts (optional)
 you_get:
@@ -40,6 +40,16 @@ how_to_use:
   - Check any number or quote in the post against your source. Then choose where the link goes.
   - Note each post's date, reach, replies and link clicks in a simple list for a week, so you can see which idea works for your audience.
   - Ask for the other ideas as later posts, spaced over several days. Post them yourself. The skill does not publish for you unless you connect the paid VoiceMoat connector.
+output_shape: |
+  IDEAS
+  1. <claim one> | 2. <claim two> | 3. <claim three, if there is one>
+  POST
+  <the finished post as plain text, no headings>
+  Length: <characters or words> of <your limit>
+  LINK
+  <no link / link in a reply / link in the post, with the one-line trade-off; the link itself goes last>
+  LATER
+  <the other ideas, offered as later posts>
 output_sample:
   input:
     - Your article, newsletter, transcript, video text or draft

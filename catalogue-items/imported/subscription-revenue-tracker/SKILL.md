@@ -10,6 +10,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 For stores selling subscription products via Shopify's native subscriptions, this skill aggregates active subscription contracts into the standard SaaS-style metrics finance teams care about: monthly recurring revenue (MRR), annualized recurring revenue (ARR), active subscriber count, average revenue per subscriber (ARPU), and a rolling churn rate. Read-only — no mutations.
 
@@ -66,9 +79,9 @@ Aggregations:
 
 4. Aggregate MRR / ARR / subscribers / ARPU
 
-5. For churn: count cancellations where `updatedAt` is within `churn_window_days` and status moved to `CANCELLED` (`updatedAt` can also change for reasons other than cancelling, so say in the report that churn is approximate); count contracts that existed and were `ACTIVE` at `as_of - churn_window_days`
+5. For churn: count cancellations where `updatedAt` is within `churn_window_days` and status moved to `CANCELLED` (`updatedAt` can also change for reasons other than cancelling, so say in the report that churn is approximate). The query only returns each contract's current status, so you cannot see exactly which contracts were `ACTIVE` at `as_of - churn_window_days`. If the user has a saved CSV from a run at the start of the window, use its `ACTIVE` count as the starting figure. Otherwise estimate it as contracts now `ACTIVE` or `PAUSED` with `createdAt` before the window start, plus the cancellations counted above, and label the churn rate "rough proxy (no starting snapshot)".
 
-6. Build a per-product breakdown so finance can see which subscription SKUs drive MRR
+6. Build a per-product breakdown so finance can see which subscription SKUs drive MRR. Group by each line's `productId` (show its `title`). Each line's share of MRR is its `currentPrice.amount × quantity`, normalised to a month with the contract's billing interval, so a contract with two products adds to both. Count a subscriber under every product they hold.
 
 ## GraphQL Operations
 
@@ -179,7 +192,17 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `subscription_mrr_<YYYY-MM-DD>.csv` with columns:
-`contract_id`, `status`, `customer_id`, `customer_email`, `created_at`, `next_billing_date`, `interval`, `interval_count`, `billing_amount`, `mrr_contribution`, `currency`, `product_titles`
+`contract_id`, `status`, `customer_id`, `created_at`, `next_billing_date`, `interval`, `interval_count`, `billing_amount`, `mrr_contribution`, `currency`, `product_titles`
+
+The query does not fetch customer emails, so the CSV has no email column. Customer IDs still link to real people: tell the user to store the file securely and remove `customer_id` before sharing it outside finance.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Understand your buyers** with the [Customer cancellation risk finder](https://useaiblocks.com/skills/churn-risk-finder).
+- **Shape the product** with the [Subscription churn prevention planner](https://useaiblocks.com/skills/churn-reducer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

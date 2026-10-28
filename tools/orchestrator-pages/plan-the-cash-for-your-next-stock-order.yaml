@@ -23,7 +23,7 @@ you_give:
   - Your lead times from order to shelf, and how and when you pay the supplier
   - Your starting cash, stock on hand and sales per month by product
   - Your price and cost per product
-  - Your last three months of profit and loss
+  - Your last three months of profit and loss (needed for the last step only)
   - Your ad results (optional)
 you_get:
   - Landed cost per unit with each layer shown, and margin per unit
@@ -88,7 +88,7 @@ output_shape: |-
     Six levers tested | ranking | best combination | what to watch for 90 days | score out of 100
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How you pay your supplier
     how: Full prepay, a deposit with the balance on shipping, or credit terms each change the cash sums. State yours exactly.

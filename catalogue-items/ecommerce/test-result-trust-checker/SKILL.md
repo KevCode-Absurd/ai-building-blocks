@@ -12,7 +12,7 @@ Checks a finished test for traps first, then reads the lift as a range in money 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
@@ -65,4 +65,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A fully powered test with no effect is called INCONCLUSIVE, not extended.
 - No segment is read that was not agreed before the test.
 
-For the full version with every check, use the [Store test verdict maker](https://useaiblocks.com/skills/store-test-verdict-maker).
+For the full version with every check, use the [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker).

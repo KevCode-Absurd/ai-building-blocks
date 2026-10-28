@@ -7,9 +7,7 @@ job: secure-code
 headline: Open-source license checker
 subhead: A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 explain: |
-  This is an imported MIT-licensed skill. It spots issues from the files you paste, so check each package's own LICENSE file before you rely on it.
-
-  A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
+  This is an imported MIT-licensed skill. It is not legal advice. It spots issues from the files you paste, so check each package's own LICENSE file before you rely on it.
 
   The skill reads only the files you paste. It reads the license of each package it can see in them, and marks any license it cannot see as unverified. It then checks how they fit together given how you share your software: as a service, a download, a library or an internal tool. It flags strong copyleft licenses such as GPL and AGPL and weaker ones such as LGPL and MPL. The report lists notices you must include and suggests fixes. It is not legal advice.
 

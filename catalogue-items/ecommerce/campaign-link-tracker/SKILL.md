@@ -77,10 +77,10 @@ MISSING: <what you need to give>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the spreadsheet.
+- The [Analytics events and tracking gap review](https://useaiblocks.com/skills/monthly-tracking-health-keeper). It takes the spreadsheet.
 - The [New and returning customer profit analyst](https://useaiblocks.com/skills/new-and-returning-pl-splitter). It takes the spreadsheet.
 - The [Lead to ad matcher](https://useaiblocks.com/skills/lead-to-ad-matcher). It takes the spreadsheet.
-- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the spreadsheet.
-- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -18,6 +18,7 @@ not_for:
   - Your full price was never really charged. Use a plain price with no crossed-out number, or ask a qualified person about your local rules.
   - You are clearing old stock and a deep cut is expected. Use a bundle or a free gift offer, or just state the clearance price.
   - You need help choosing how big the discount should be. Work that out first with your margins, or ask your accountant.
+  - You want the full checklist for every discount display on a store. Use the Discount wording planner; this prompt is the quick version for one price.
 you_give:
   - The full price and the sale price
   - Where it will show (optional)
@@ -72,6 +73,7 @@ output_shape: |
         BANNER OR EMAIL LINE: <text>
         WARNINGS: <...>
         CHECK WITH A QUALIFIED PERSON: <...>
+        CHECKS MISSED: <checks that could not run, or none>
 tweaks:
   - what: Where it shows
     how: A banner, badge and coupon each get their own wording.

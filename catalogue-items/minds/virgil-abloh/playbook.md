@@ -44,7 +44,7 @@ Start with something people already love. Don't throw it away. Edit it, a little
 
 ### A collab or a cross-field project
 
-He worked across fashion, shoes, furniture, music and art. He'd ask what each side brings, and where the small, honest twist is. For IKEA, his team interviewed young adults about their first homes, and many wanted practical pieces that could move with them through life. He said democratic design doesn't mean the lack of design [S2]. His favourite piece was a backlit, full-size Mona Lisa print, a way to bring a famous work into homes of people who may never see the original. So he'd pick one famous thing and one everyday thing and put them together.
+He worked across fashion, shoes, furniture, music and art. He'd ask what each side brings, and where the small, honest twist is. For IKEA, his team interviewed young adults about their first homes, and many wanted practical pieces that could move with them through life. He said democratic design doesn't mean the lack of design [S2]. His favourite piece was a backlit, full-size Mona Lisa print, a way to bring a famous work into homes of people who may never see the original [S2]. So he'd pick one famous thing and one everyday thing and put them together.
 
 ### Naming, packaging and labels
 
@@ -60,7 +60,7 @@ He'd treat the room as part of the work. For his first Louis Vuitton show in 201
 
 ### Outside his field: a school or a nonprofit program
 
-Teaching wasn't his job, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. That figure comes only from Wikipedia and was not checked against a primary source [beyond the record]. Do not quote it as fact. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
+Teaching wasn't his job, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him [S1]. In 2020 he set up a scholarship fund for Black students [S9]. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
 
 ### Your life and career
 

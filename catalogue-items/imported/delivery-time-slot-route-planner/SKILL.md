@@ -7,6 +7,19 @@ description: When the user wants to solve VRP with time windows (VRPTW), optimiz
 
 You are an expert in the Vehicle Routing Problem with Time Windows and temporal constraint optimization. Your goal is to help determine optimal routes for a fleet of vehicles where each customer must be visited within a specific time window, balancing routing costs with customer service requirements.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before solving VRPTW instances, understand:
@@ -62,7 +75,8 @@ Before solving VRPTW instances, understand:
 
 **Decision Variables:**
 - x_{ijk} ∈ {0,1}: 1 if vehicle k travels from i to j
-- w_i ≥ 0: Arrival time at customer i
+- w_i ≥ 0: Service start time at customer i
+- w_{0k} ≥ 0: Departure time of vehicle k from the depot; r_k ≥ 0: its return time (two separate depot times, or no closed route is feasible)
 
 **Objective Function:**
 ```
@@ -94,11 +108,14 @@ Minimize: Σ_{k∈K} Σ_{j∈V\{0}} x_{0jk} + α * Σ_{k∈K} Σ_{i,j∈V} c_{ij
 6. Time window constraints:
    e_i ≤ w_i ≤ l_i,  ∀i ∈ V
 
-7. Time consistency (if vehicle k goes from i to j):
-   w_i + s_i + t_{ij} ≤ w_j + M*(1 - Σ_k x_{ijk}),  ∀i,j ∈ V, i≠j
+7. Time consistency (if vehicle k goes from i to customer j; i may be the depot):
+   w_{ik} + s_i + t_{ij} ≤ w_{jk} + M*(1 - x_{ijk}),  ∀i ∈ V, j ∈ V\{0}, i≠j, ∀k ∈ K
+   (Do not apply this to arcs into the depot: with a single depot time,
+   w_0 + positive travel ≤ w_0 makes every closed route infeasible.)
 
-8. Maximum route duration:
-   w_i + s_i + t_{i0} ≤ T_max,  ∀i ∈ V\{0}
+8. Return time and maximum route duration:
+   w_{ik} + s_i + t_{i0} ≤ r_k + M*(1 - x_{i0k}),  ∀i ∈ V\{0}, ∀k ∈ K
+   e_0 ≤ r_k ≤ l_0,  r_k - w_{0k} ≤ T_max,  ∀k ∈ K
 
 9. Binary variables:
    x_{ijk} ∈ {0,1},  ∀i,j ∈ V, ∀k ∈ K
@@ -128,7 +145,11 @@ w_i - β_i ≤ l_i,  ∀i
 
 ## Exact Algorithms
 
-### 1. Branch-and-Price for VRPTW
+### 1. Compact MIP (solved by CBC branch-and-bound)
+
+This is a compact three-index MIP, solved with CBC's branch-and-bound. It is fine for small instances (roughly up to 20–30 customers). Branch-and-price with column generation is the exact method that scales further, and it is not shown here.
+
+The depot needs two times per vehicle: a departure time and a return time. Using one depot time for both (w[depot] ≥ w[last] + travel ≥ w[depot] + positive) makes every route infeasible, so the code below links times only on arcs **out of** the depot and **between customers**, and handles the return with its own constraint.
 
 ```python
 from pulp import *
@@ -138,7 +159,7 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
               service_times, vehicle_capacity, num_vehicles,
               depot=0, max_route_time=480):
     """
-    VRPTW using MIP formulation
+    VRPTW using a compact MIP formulation
 
     Args:
         dist_matrix: n x n distance matrix
@@ -149,13 +170,15 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
         vehicle_capacity: vehicle capacity
         num_vehicles: number of vehicles
         depot: depot index
-        max_route_time: maximum route duration (minutes)
+        max_route_time: maximum route duration, return minus departure (minutes)
 
     Returns:
-        solution dictionary
+        solution dictionary. 'status' is 'Optimal' only when CBC proved
+        optimality; a time-limited incumbent is reported as 'Feasible'.
     """
     n = len(dist_matrix)
     customers = [i for i in range(n) if i != depot]
+    K = range(num_vehicles)
 
     # Create problem
     prob = LpProblem("VRPTW", LpMinimize)
@@ -165,60 +188,77 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
     for i in range(n):
         for j in range(n):
             if i != j:
-                for k in range(num_vehicles):
+                for k in K:
                     x[i,j,k] = LpVariable(f"x_{i}_{j}_{k}", cat='Binary')
 
-    # Arrival time variables
+    # Time variables: service start at customers; for the depot this is the
+    # DEPARTURE time. The return time is a separate variable r[k].
     w = {}
     for i in range(n):
-        for k in range(num_vehicles):
+        for k in K:
             w[i,k] = LpVariable(f"w_{i}_{k}",
                                lowBound=time_windows[i][0],
                                upBound=time_windows[i][1],
                                cat='Continuous')
+    r = {k: LpVariable(f"return_{k}",
+                       lowBound=time_windows[depot][0],
+                       upBound=time_windows[depot][1],
+                       cat='Continuous') for k in K}
 
     # Objective: Minimize total distance
     prob += lpSum([dist_matrix[i][j] * x[i,j,k]
                    for i in range(n) for j in range(n) if i != j
-                   for k in range(num_vehicles)]), "Total_Distance"
+                   for k in K]), "Total_Distance"
 
     # Constraints
 
     # 1. Each customer visited exactly once
     for j in customers:
         prob += lpSum([x[i,j,k] for i in range(n) if i != j
-                      for k in range(num_vehicles)]) == 1, f"Visit_{j}"
+                      for k in K]) == 1, f"Visit_{j}"
 
-    # 2. Flow conservation
+    # 2. Flow conservation (per vehicle, at every node)
     for h in range(n):
-        for k in range(num_vehicles):
+        for k in K:
             prob += (lpSum([x[i,h,k] for i in range(n) if i != h]) ==
                     lpSum([x[h,j,k] for j in range(n) if j != h])), \
                     f"Flow_{h}_{k}"
 
-    # 3. Capacity constraints
-    for k in range(num_vehicles):
+    # 3. Each vehicle leaves the depot at most once (one trip per vehicle)
+    for k in K:
+        prob += lpSum([x[depot,j,k] for j in customers]) <= 1, f"OneTrip_{k}"
+
+    # 4. Capacity constraints
+    for k in K:
         prob += lpSum([demands[j] * x[i,j,k]
                       for i in range(n) for j in customers if i != j]) \
                 <= vehicle_capacity, f"Capacity_{k}"
 
-    # 4. Time consistency constraints
-    M = 10000  # Big-M
+    # 5. Time consistency on arcs INTO customers only (i may be the depot).
+    #    Arcs into the depot are handled by the return constraint below.
+    #    Big-M sized from the data so it never cuts off a valid schedule.
+    M = max(time_windows[i][1] + service_times[i] + time_matrix[i][j] - time_windows[j][0]
+            for i in range(n) for j in range(n) if i != j)
+    M = max(M, 0) + 1
     for i in range(n):
-        for j in range(n):
+        for j in customers:
             if i != j:
-                for k in range(num_vehicles):
+                for k in K:
                     prob += (w[i,k] + service_times[i] + time_matrix[i][j] <=
                             w[j,k] + M * (1 - x[i,j,k])), \
                             f"Time_{i}_{j}_{k}"
 
-    # 5. Time windows already enforced by variable bounds
-
-    # 6. Maximum route duration
-    for k in range(num_vehicles):
+    # 6. Return to depot: r[k] is after the last customer's service plus travel,
+    #    within the depot window (variable bounds), and within max_route_time.
+    for k in K:
         for i in customers:
             prob += (w[i,k] + service_times[i] + time_matrix[i][depot] <=
-                    time_windows[depot][1]), f"MaxTime_{i}_{k}"
+                    r[k] + M * (1 - x[i,depot,k])), f"Return_{i}_{k}"
+        prob += r[k] - w[depot,k] <= max_route_time, f"Duration_{k}"
+
+    # 7. Time windows are enforced by the variable bounds.
+    #    Note: subtours among customers are ruled out by constraint 5 only when
+    #    every service time + travel time is positive.
 
     # Solve
     import time
@@ -226,12 +266,20 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
     prob.solve(PULP_CBC_CMD(msg=1, timeLimit=600))
     solve_time = time.time() - start_time
 
-    # Extract solution
-    if LpStatus[prob.status] in ['Optimal', 'Feasible']:
+    # sol_status: 1 = proven optimal, 2 = integer feasible (e.g. time limit hit)
+    sol_status = getattr(prob, 'sol_status', None)
+    if sol_status == 1:
+        status = 'Optimal'
+    elif sol_status == 2:
+        status = 'Feasible'
+    else:
+        status = LpStatus[prob.status]
+
+    if status in ['Optimal', 'Feasible']:
         routes = []
         arrival_times = []
 
-        for k in range(num_vehicles):
+        for k in K:
             route = [depot]
             times = [w[depot,k].varValue]
             current = depot
@@ -246,9 +294,7 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
 
                 if next_node is None or next_node == depot:
                     route.append(depot)
-                    times.append(w[depot,k].varValue +
-                               sum(service_times[route[i]] + time_matrix[route[i]][route[i+1]]
-                                   for i in range(len(route)-1)))
+                    times.append(r[k].varValue)
                     break
 
                 route.append(next_node)
@@ -260,7 +306,7 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
                 arrival_times.append(times)
 
         return {
-            'status': LpStatus[prob.status],
+            'status': status,
             'total_distance': value(prob.objective),
             'routes': routes,
             'arrival_times': arrival_times,
@@ -269,7 +315,7 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
         }
     else:
         return {
-            'status': LpStatus[prob.status],
+            'status': status,
             'total_distance': None,
             'routes': None,
             'solve_time': solve_time
@@ -282,14 +328,37 @@ def vrptw_mip(dist_matrix, time_matrix, demands, time_windows,
 
 ### 1. Solomon's I1 Insertion Heuristic
 
+Both constructive heuristics below check every route they build against capacity, every time window and the depot's closing time. A customer that cannot be served even on its own route (`depot → customer → depot` breaks a window, or its demand is over capacity) is returned in `unserved` instead of being forced onto a route.
+
 ```python
+def route_schedule(route, time_matrix, time_windows, service_times):
+    """
+    Forward-schedule a route that starts and ends at the depot.
+
+    Returns (feasible, start_times): start_times[p] is the service start at
+    route[p] (departure time for the first depot, arrival for the last).
+    Feasible means every stop, including the return to the depot, is reached
+    no later than its window closes. Early arrivals wait.
+    """
+    t = time_windows[route[0]][0]
+    starts = [t]
+    for p in range(1, len(route)):
+        prev, node = route[p - 1], route[p]
+        arrival = t + service_times[prev] + time_matrix[prev][node]
+        if arrival > time_windows[node][1]:
+            return False, None
+        t = max(arrival, time_windows[node][0])
+        starts.append(t)
+    return True, starts
+
+
 def solomon_i1_insertion(dist_matrix, time_matrix, demands, time_windows,
                         service_times, vehicle_capacity, depot=0,
                         alpha=1.0, mu=1.0, lambda_param=1.0):
     """
     Solomon's I1 insertion heuristic for VRPTW
 
-    One of the best constructive heuristics for VRPTW
+    One of the best-known constructive heuristics for VRPTW
 
     Args:
         dist_matrix: distance matrix
@@ -302,29 +371,31 @@ def solomon_i1_insertion(dist_matrix, time_matrix, demands, time_windows,
         alpha, mu, lambda_param: criterion weights
 
     Returns:
-        solution dictionary
+        solution dictionary (includes 'unserved': customers no route can serve)
     """
     n = len(dist_matrix)
     customers = set(range(n)) - {depot}
     routes = []
     route_loads = []
-    route_times = []
+    unserved = []
+
+    def sched(route):
+        return route_schedule(route, time_matrix, time_windows, service_times)
 
     while customers:
-        # Initialize new route with seed customer
-        # Select farthest customer from depot
-        seed = max(customers, key=lambda c: dist_matrix[depot][c])
+        # Seed a new route with the farthest customer that can be served alone
+        seed = None
+        for c in sorted(customers, key=lambda c: -dist_matrix[depot][c]):
+            if demands[c] <= vehicle_capacity and sched([depot, c, depot])[0]:
+                seed = c
+                break
+        if seed is None:
+            # Nobody left can be served even on a dedicated route
+            unserved.extend(sorted(customers))
+            break
 
         route = [depot, seed, depot]
-        current_time = [time_windows[depot][0],
-                       max(time_windows[depot][0] + time_matrix[depot][seed],
-                           time_windows[seed][0]),
-                       0]
-
-        # Update current_time[2] (return to depot)
-        current_time[2] = (current_time[1] + service_times[seed] +
-                          time_matrix[seed][depot])
-
+        _, current_time = sched(route)
         current_load = demands[seed]
         customers.remove(seed)
 
@@ -344,54 +415,25 @@ def solomon_i1_insertion(dist_matrix, time_matrix, demands, time_windows,
                     i = route[pos - 1]
                     j = route[pos]
 
-                    # Calculate feasibility
-                    # Arrival time at customer
-                    arrival_at_customer = (current_time[pos-1] +
-                                         service_times[i] +
-                                         time_matrix[i][customer])
-
-                    # Check time window feasibility
-                    if arrival_at_customer > time_windows[customer][1]:
-                        continue  # Too late
-
-                    # Start service time (wait if early)
-                    start_service = max(arrival_at_customer,
-                                      time_windows[customer][0])
-
-                    # Check if rest of route is still feasible
-                    push_forward = max(0, start_service + service_times[customer] +
-                                     time_matrix[customer][j] - current_time[pos])
-
-                    # Check if pushing forward violates time windows
-                    feasible = True
-                    temp_time = current_time[pos] + push_forward
-
-                    for k in range(pos, len(route) - 1):
-                        if temp_time > time_windows[route[k]][1]:
-                            feasible = False
-                            break
-                        temp_time = (max(temp_time, time_windows[route[k]][0]) +
-                                   service_times[route[k]] +
-                                   time_matrix[route[k]][route[k+1]])
-
+                    # Full feasibility check of the candidate route
+                    # (all later stops and the return to the depot)
+                    candidate = route[:pos] + [customer] + route[pos:]
+                    feasible, new_times = sched(candidate)
                     if not feasible:
                         continue
 
-                    # Calculate insertion criterion (c1)
                     # c11: distance increase
                     c11 = (dist_matrix[i][customer] + dist_matrix[customer][j] -
                           mu * dist_matrix[i][j])
 
-                    # c12: time increase
-                    c12 = (start_service - current_time[pos-1])
+                    # c12: push-forward of service start at j
+                    c12 = new_times[pos + 1] - current_time[pos]
 
                     c1 = alpha * c11 + (1 - alpha) * c12
 
-                    # c2: distance from depot (encourages early insertion)
-                    c2 = dist_matrix[depot][customer]
-
-                    # Combined criterion
-                    criterion = lambda_param * c1 - c2
+                    # Solomon: maximise c2 = lambda * d(depot, u) - c1,
+                    # i.e. minimise c1 - lambda * d(depot, u)
+                    criterion = c1 - lambda_param * dist_matrix[depot][customer]
 
                     if criterion < best_criterion:
                         best_criterion = criterion
@@ -399,22 +441,12 @@ def solomon_i1_insertion(dist_matrix, time_matrix, demands, time_windows,
                         best_position = pos
 
             if best_customer is None:
-                break  # No more customers fit
+                break  # No more customers fit this route
 
-            # Insert best customer
+            # Insert best customer and update the schedule
             route.insert(best_position, best_customer)
             current_load += demands[best_customer]
-
-            # Update arrival times
-            new_times = [current_time[0]]
-            for k in range(1, len(route)):
-                arrival = (new_times[k-1] +
-                          service_times[route[k-1]] +
-                          time_matrix[route[k-1]][route[k]])
-                start = max(arrival, time_windows[route[k]][0])
-                new_times.append(start)
-
-            current_time = new_times
+            _, current_time = sched(route)
             customers.remove(best_customer)
 
         routes.append(route)
@@ -430,7 +462,8 @@ def solomon_i1_insertion(dist_matrix, time_matrix, demands, time_windows,
         'routes': routes,
         'route_loads': route_loads,
         'total_distance': total_distance,
-        'num_vehicles': len(routes)
+        'num_vehicles': len(routes),
+        'unserved': unserved
     }
 ```
 
@@ -451,11 +484,13 @@ def nearest_neighbor_tw(dist_matrix, time_matrix, demands, time_windows,
         depot: depot index
 
     Returns:
-        solution dictionary
+        solution dictionary (includes 'unserved': customers no route can serve)
     """
     n = len(dist_matrix)
     unrouted = set(range(n)) - {depot}
     routes = []
+    unserved = []
+    depot_close = time_windows[depot][1]
 
     while unrouted:
         route = [depot]
@@ -475,9 +510,13 @@ def nearest_neighbor_tw(dist_matrix, time_matrix, demands, time_windows,
 
                 # Check time window feasibility
                 arrival_time = current_time + time_matrix[current_location][customer]
-
                 if arrival_time > time_windows[customer][1]:
                     continue  # Too late
+
+                # Check the vehicle can still get back before the depot closes
+                finish = max(arrival_time, time_windows[customer][0]) + service_times[customer]
+                if finish + time_matrix[customer][depot] > depot_close:
+                    continue
 
                 # This customer is feasible
                 distance = dist_matrix[current_location][customer]
@@ -498,6 +537,12 @@ def nearest_neighbor_tw(dist_matrix, time_matrix, demands, time_windows,
             current_location = best_customer
             unrouted.remove(best_customer)
 
+        if len(route) == 1:
+            # A fresh vehicle could not serve anyone left: stop instead of
+            # adding empty routes forever, and report them.
+            unserved.extend(sorted(unrouted))
+            break
+
         # Return to depot
         route.append(depot)
         routes.append(route)
@@ -511,7 +556,8 @@ def nearest_neighbor_tw(dist_matrix, time_matrix, demands, time_windows,
     return {
         'routes': routes,
         'total_distance': total_distance,
-        'num_vehicles': len(routes)
+        'num_vehicles': len(routes),
+        'unserved': unserved
     }
 ```
 
@@ -799,13 +845,21 @@ def alns_vrptw(dist_matrix, time_matrix, demands, time_windows,
                                 best_position = pos
 
             if best_customer is None:
-                # Create new route
-                routes.append([depot, uninserted.pop(0), depot])
+                # Open a new route only if it is feasible on its own
+                opened = False
+                for customer in list(uninserted):
+                    if check_insertion_feasibility([depot, depot], customer, 1):
+                        routes.append([depot, customer, depot])
+                        uninserted.remove(customer)
+                        opened = True
+                        break
+                if not opened:
+                    break  # remaining customers cannot be served by any route
             else:
                 routes[best_route_idx].insert(best_position, best_customer)
                 uninserted.remove(best_customer)
 
-        return routes
+        return routes, uninserted
 
     # ALNS main loop
     current_routes = copy.deepcopy(initial_solution)
@@ -827,7 +881,9 @@ def alns_vrptw(dist_matrix, time_matrix, demands, time_windows,
         partial_routes, removed = shaw_removal_tw(current_routes, num_remove)
 
         # Repair
-        new_routes = greedy_insertion_tw(partial_routes, removed, depot)
+        new_routes, not_inserted = greedy_insertion_tw(partial_routes, removed, depot)
+        if not_inserted:
+            continue  # incomplete repair: never accept a solution that drops customers
 
         # Evaluate
         new_cost = calculate_cost(new_routes)
@@ -912,10 +968,11 @@ def solve_vrptw_ortools(dist_matrix, time_matrix, demands, time_windows,
     time_callback_index = routing.RegisterTransitCallback(time_callback)
 
     # Add time window constraints
+    horizon = int(time_windows[depot][1])
     routing.AddDimension(
         time_callback_index,
-        30,  # allow waiting time
-        3000,  # maximum time per vehicle
+        horizon,  # allow waiting up to the planning horizon
+        horizon,  # maximum cumul time per vehicle
         False,  # don't force start cumul to zero
         'Time')
 
@@ -923,6 +980,8 @@ def solve_vrptw_ortools(dist_matrix, time_matrix, demands, time_windows,
 
     # Add time window constraints for each location
     for location_idx in range(n):
+        if location_idx == depot:
+            continue  # depot windows are set on each vehicle's start/end below
         index = manager.NodeToIndex(location_idx)
         time_dimension.CumulVar(index).SetRange(
             int(time_windows[location_idx][0]),
@@ -1008,7 +1067,9 @@ def solve_vrptw_ortools(dist_matrix, time_matrix, demands, time_windows,
                 total_distance += route_distance
 
         return {
-            'status': 'Optimal' if solution.ObjectiveValue() > 0 else 'Feasible',
+            # OR-Tools routing search is heuristic: it returns the best
+            # solution found within the time limit and never proves optimality.
+            'status': 'Feasible (best found; optimality not proven)',
             'routes': routes,
             'arrival_times': arrival_times,
             'total_distance': total_distance,
@@ -1241,6 +1302,8 @@ if __name__ == "__main__":
 
 ### VRPTW Solution Report
 
+*Example layout with made-up numbers. Fill it from your solver's output, and say whether the solution is proven optimal or only the best found.*
+
 **Problem Instance:**
 - Customers: 50
 - Time Horizon: 8:00 AM - 6:00 PM (600 minutes)
@@ -1256,6 +1319,8 @@ if __name__ == "__main__":
 | Vehicles Used | 5 / 5 |
 | Average Route Duration | 3.64 hours |
 | Time Window Violations | 0 (feasible) |
+| Unserved Customers | 0 (list any the solver could not fit) |
+| Solver Status | Best found in 60 s (optimality not proven) |
 | Average Waiting Time | 12.3 minutes |
 
 **Route Schedule:**
@@ -1282,6 +1347,14 @@ if __name__ == "__main__":
 - Average slack in time windows: 23 minutes
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Delivery route planner (vehicle routing)](https://useaiblocks.com/skills/delivery-route-planner).
+- The [Last-mile delivery planner](https://useaiblocks.com/skills/last-mile-delivery-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

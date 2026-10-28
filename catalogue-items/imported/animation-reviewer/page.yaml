@@ -36,7 +36,7 @@ how_to_use:
   - Add the nearby CSS or component code. Your AI needs it to judge where motion starts and whether it can be interrupted.
   - Say your animation library and target devices if you know them. Framer Motion is a React animation library. WAAPI is the browser's built-in Web Animations API. A cubic-bezier is the curve that sets how an animation speeds up and slows down. If you use none of these, the review still covers plain CSS motion.
   - Read the findings table first, then the verdict.
-  - If your AI can read your project files, point it at the folder. If not, paste the code.
+  - If your AI can read your project files, point it at the folder. If not, paste the code. If you install the skill folder in Claude Code instead of pasting, it will not start on its own. Call it by its name when you want a review.
   - Fix the items marked Block first, then run the review again on the updated change before release.
   - Try the fixed motion in slow motion and on a real phone before release. A review of code cannot feel the motion for you.
 next: [animation-speed-fixer]

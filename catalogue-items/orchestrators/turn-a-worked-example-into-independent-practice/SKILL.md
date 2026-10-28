@@ -77,7 +77,7 @@ Files | MISSING | checks not run with real answers | one next step
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Nothing has been given to learners. Offer one next step and say the teacher can type their own:
+Use these instead of the general "After this" list below. Nothing has been given to learners. Offer one next step and say the teacher can type their own:
 
 - Turn the skill into a quiz for later weeks with the [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer).
 - Map where the skill sits in a sequence with the [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder).

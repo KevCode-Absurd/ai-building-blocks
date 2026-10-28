@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Paste your diff or a list of what changed.
-  - Add your before and after proof, such as a test run or screenshots. Say if the change can be undone.
+  - Add your before and after proof, such as a test run or screenshots. Say if the change can be undone. With no proof, it marks Evidence as missing rather than making it up.
   - Paste your project glossary if you have one (optional). Your AI will use your own terms.
   - Check the Summary picture and the Merge Danger note, then paste the result into your pull request and attach the test run.
 output_sample:

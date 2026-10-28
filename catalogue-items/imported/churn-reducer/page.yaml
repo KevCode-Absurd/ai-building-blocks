@@ -9,7 +9,9 @@ subhead: "A plan to keep more subscribers: a cancel flow that asks why, save off
 explain: |
   A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments. You describe your product, billing setup and why people leave, and you get the full set.
 
-  It treats two kinds of loss separately. Voluntary churn is people choosing to cancel, so it designs exit questions, pause and downgrade options and offers that fit the reason given. Involuntary churn is cards that fail, so it plans retry timing, reminder emails and updates to saved cards. It also looks for usage drops that warn of a cancel before it happens, and checks local rules that require easy cancelling.
+  It treats two kinds of loss separately. Voluntary churn is people choosing to cancel, so it designs exit questions, pause and downgrade options and offers that fit the reason given. Involuntary churn is cards that fail, so it plans retry timing, reminder emails and updates to saved cards. It also looks for usage drops that warn of a cancel before it happens, and checks local rules that require easy cancelling. Those rules change, so confirm them for your regions with a lawyer before you change your flow.
+
+  The rates and benchmarks in the skill are rough rules of thumb from its author, not checked figures. Compare them with your own numbers before acting.
 when:
   - Your monthly cancel rate is climbing and you do not know why.
   - Cancelling takes one click and you offer nothing in return.
@@ -33,7 +35,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. The skill also refers to two files, cancel-flow-patterns.md and dunning-playbook.md. Paste them too or attach the folder, or it works from the main text with less detail.
   - Tell your AI about your product, your billing tool, your plan types and your average revenue per customer.
-  - Add your churn rate and any cancel reasons you already know. Say if you track feature use.
+  - Add your churn rate and any cancel reasons you already know. Say if you track feature use. The health score needs usage and billing data from your own tools. Without it, skip that part.
   - Read the cancel flow and save offers first. Check that each offer fits the reason it is paired with.
   - Set up the failed payment steps in your billing tool, then test the new cancel flow with a small group.
 output_sample:

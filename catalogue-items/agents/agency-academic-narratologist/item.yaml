@@ -8,11 +8,11 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: source_text
-    required: true
-  - type: question
-    required: false
   - type: story_outline
+    required: true
+  - type: document
+    required: false
+  - type: question
     required: false
 outputs:
   - type: audit_report

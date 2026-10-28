@@ -18,7 +18,7 @@ not_for:
   - "You need trailing EPS, margins or average-balance ratios: these need a different method, so work them out with your finance lead or accountant."
   - "You need a balance-sheet figure such as cash or debt: use the closing balance from the latest statement, not a trailing sum."
   - "You want to trade, file or move money from the result: this only checks the numbers, so ask a qualified person to act on it."
-  - "You need one extra fiscal week taken out of this year's revenue: use the Extra-week revenue comparability schedule instead."
+  - "You need one extra fiscal week taken out of this year's revenue: use the Extra week sales growth checker instead."
 you_give:
   - Last full-year flow, current YTD flow, comparable prior YTD flow and fiscal-period definitions.
   - "The year-to-date cut-off, plus the currency and scale used for the trailing twelve months."
@@ -63,7 +63,7 @@ how_it_works:
   - title: Tie it to the quarters
     text: Compare the result with the last four quarter records where you have them, and show any gap. Keep balance-sheet figures, margins and EPS out of this sum.
 output_shape: |-
-  A trailing-period additive-flow reconciliation with period-boundary checks.
+  A trailing 12-month sum for one income or revenue flow, checked against matching periods.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations

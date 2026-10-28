@@ -113,7 +113,7 @@ Write `MISSING: <what>`. No copy: write it with the prompt shape in step 9 and m
 
 ## Not for
 - Writing the copy itself: use the [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer) first.
-- Scoring a finished email design: use the [Email design checker](https://useaiblocks.com/skills/email-design-checker).
+- Scoring a finished email design: use the [Email layout and delivery reviewer](https://useaiblocks.com/skills/email-design-checker).
 - Receipts, password resets and other system emails: use your email tool's built-in template.
 
 ## Avoid

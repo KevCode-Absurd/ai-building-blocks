@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
@@ -93,7 +93,8 @@ MISSING: <what you did not give>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Monthly store profit reviewer](https://useaiblocks.com/skills/monthly-profit-close).
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- The [Store profit and loss builder](https://useaiblocks.com/skills/store-pl-builder). It takes the audit report.
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper).
+- **Check the money** with the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the audit report.
 - The [Stock reorder and cash reviewer](https://useaiblocks.com/skills/weekly-stock-and-cash-reorder-watcher).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

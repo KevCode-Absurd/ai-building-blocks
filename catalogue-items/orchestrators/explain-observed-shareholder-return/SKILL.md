@@ -59,6 +59,6 @@ Lead with three results: the price change split into an earnings effect and a mu
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test a buyback's effect** with the [Reconcile buybacks with owner cash](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow.
-- **Challenge a valuation** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
+- **Test a buyback's effect** with the [Share buyback accounting checker](https://useaiblocks.com/workflows/reconcile-buybacks-with-owner-cash) workflow.
+- **Challenge a valuation** with the [Equity valuation scenario reviewer](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

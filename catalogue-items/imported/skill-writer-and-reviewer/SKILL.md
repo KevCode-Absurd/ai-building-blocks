@@ -16,6 +16,32 @@ license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 
 # Agent Skills: A Complete Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Skill files** (yours): a skill's folder: its SKILL.md and any files it needs.
+- **Your notes** (yours): what to keep, change or drop.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Skill trigger auditor](https://useaiblocks.com/skills/skill-trigger-auditor). Bring skill files.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, skill files, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** Claude, ChatGPT or Gemini can all write and review a SKILL.md as text.
+- **Claude Code:** It reads skill folders directly, so you can test that the skill fires on its own.
+<!-- /needs -->
+
 ## When to Use
 
 - Use when creating, editing, reviewing, or debugging an agent SKILL.md file.
@@ -353,3 +379,13 @@ Before publishing a skill:
 
 - Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.
 - For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Skill safety checker](https://useaiblocks.com/skills/skill-safety-checker). It takes the skill files.
+- The [Skill trigger auditor](https://useaiblocks.com/skills/skill-trigger-auditor). It takes the skill files.
+- The [Skill writer](https://useaiblocks.com/skills/skill-writer). It takes the skill files.
+- The [Skill safety reviewer](https://useaiblocks.com/skills/skill-safety-reviewer). It takes the skill files.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

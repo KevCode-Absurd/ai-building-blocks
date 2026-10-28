@@ -65,13 +65,14 @@ You never do these. You list them for the person:
 - deleting or rewriting a register row the person did not ask you to change
 
 ## What you hand back
-- **Type and rating:** what the document is, green, yellow or red, and the clause that set it.
+- **Type and rating:** what the document is, green, yellow or red, and the clause that set it. Put this line right beside the rating: "Green is not clear to sign. This is a first check. A qualified lawyer checks it before you sign."
 - **Clauses to question:** each flagged clause, in plain words, what it could cost or limit, and whether it breaks your rules. Most serious first. At most 10; the rest under "Also noted".
 - **Questions to ask the other side:** drafted, not sent.
 - **Dates that matter:** start, end, renewal, notice period and any deadline to sign.
 - **Summary:** the two-minute plain summary, if you made one.
 - **Register row** you added or changed.
 - **Files and `MISSING:` lines** in one list.
+- **CHECKS MISSED:** any check that failed or could not run, or "none".
 - **The reminder:** this is a first check, not legal advice. Check with a qualified lawyer before you sign, and especially for anything yellow or red.
 
 ## Checks before you hand it back
@@ -86,7 +87,8 @@ You never do these. You list them for the person:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+- **Sell it** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner).
+- The [Vendor contract renewal reviewer](https://useaiblocks.com/skills/monthly-contract-renewal-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

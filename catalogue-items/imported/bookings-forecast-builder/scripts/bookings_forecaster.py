@@ -111,17 +111,53 @@ def parse_date(s: str | None) -> date | None:
         return None
 
 
+def valid_rate(value: Any, label: str, warnings: list[str] | None = None) -> float | None:
+    """Return value as a conversion rate in [0, 1], or None if it is missing or invalid.
+
+    Rates must be fractions (0.35 means 35%). Values above 1, below 0, NaN,
+    infinite or non-numeric are rejected with a warning instead of being used.
+    """
+    if value is None:
+        return None
+    try:
+        rate = float(value)
+    except (TypeError, ValueError):
+        rate = math.nan
+    if not math.isfinite(rate) or rate < 0.0 or rate > 1.0:
+        if warnings is not None:
+            warnings.append(
+                f"Ignored invalid conversion rate {value!r} for {label}: rates must be "
+                f"fractions between 0 and 1 (for example 0.35 for 35%)."
+            )
+        return None
+    return rate
+
+
+def valid_amount(value: Any) -> float | None:
+    """Return a finite, non-negative opportunity amount, or None if missing or invalid."""
+    if value is None or value == "":
+        return None
+    try:
+        amount = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(amount) or amount < 0.0:
+        return None
+    return amount
+
+
 def blend_conversion(
     stage: str,
     hist: dict[str, Any],
     profile: str,
+    warnings: list[str] | None = None,
 ) -> StageConversion:
     """Return blended conversion rate for a stage with surfaced window."""
     last4 = hist.get("stage_X_to_Y_pct_last_4q") or {}
     last12 = hist.get("stage_X_to_Y_pct_last_12q") or {}
 
-    r4 = last4.get(stage)
-    r12 = last12.get(stage)
+    r4 = valid_rate(last4.get(stage), f"stage '{stage}' (last 4Q)", warnings)
+    r12 = valid_rate(last12.get(stage), f"stage '{stage}' (last 12Q)", warnings)
 
     if r4 is not None and r12 is not None:
         rate = W_LAST_4Q * float(r4) + W_LAST_12Q * float(r12)
@@ -210,21 +246,28 @@ def compute_forecast(ctx: dict[str, Any], profile: str) -> ForecastResult:
         by_stage_age.setdefault(stage, []).append(age)
     median_stage_age = {s: int(statistics.median(ages)) for s, ages in by_stage_age.items() if ages}
 
-    # Resolve conversion per unique stage encountered
-    unique_stages = sorted({str(o.get("stage", "")).lower() for o in opps})
-    stage_conversions = [blend_conversion(s, hist, profile) for s in unique_stages]
-    sc_map = {sc.stage: sc for sc in stage_conversions}
-
     commit_total = 0.0
     best_case_total = 0.0
     pipe_only_total = 0.0
     contributions: list[OppContribution] = []
     warnings: list[str] = []
+    missing_amount_ids: list[str] = []
+    total_pipeline = 0.0
+
+    # Resolve conversion per unique stage encountered
+    unique_stages = sorted({str(o.get("stage", "")).lower() for o in opps})
+    stage_conversions = [blend_conversion(s, hist, profile, warnings) for s in unique_stages]
+    sc_map = {sc.stage: sc for sc in stage_conversions}
 
     for o in opps:
         opp_id = str(o.get("opp_id") or o.get("id") or "?")
         stage = str(o.get("stage", "")).lower()
-        amount = float(o.get("amount") or 0)
+        amount = valid_amount(o.get("amount"))
+        if amount is None:
+            # Never treat a missing or invalid amount as $0: leave the opp out and say so.
+            missing_amount_ids.append(opp_id)
+            continue
+        total_pipeline += amount
         close_date = parse_date(o.get("close_date"))
         age_days = int(o.get("age_days") or 0)
         last_activity_days = int(o.get("last_activity_days") or 0)
@@ -261,8 +304,14 @@ def compute_forecast(ctx: dict[str, Any], profile: str) -> ForecastResult:
             contribution_pipe_only=contrib_pipe,
         ))
 
-    # Pipeline coverage ratio = total pipeline $ / commit number
-    total_pipeline = sum(float(o.get("amount") or 0) for o in opps)
+    if missing_amount_ids:
+        warnings.append(
+            f"{len(missing_amount_ids)} opportunity(ies) left out because the amount is missing "
+            f"or invalid: {', '.join(missing_amount_ids)}. Totals cover only opps with an amount; "
+            f"add the amounts and re-run before you present these numbers."
+        )
+
+    # Pipeline coverage ratio = total pipeline $ (opps with a valid amount) / commit number
     coverage = (total_pipeline / commit_total) if commit_total > 0 else 0.0
 
     if coverage > 0 and coverage < 3.0:

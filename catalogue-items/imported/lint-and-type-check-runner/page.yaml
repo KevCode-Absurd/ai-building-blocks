@@ -10,6 +10,8 @@ explain: |
   A clear pass or fail on your project's lint and type checks after a change, with an honest line for any check that never ran. A check that did not run is not the same as a check that passed.
 
   It first finds your languages, configured commands and installed tools. It reads your scripts before running them, since a script called lint can change files. For Node it uses your declared lint and typecheck scripts, and for Python it uses tools already installed, such as ruff and mypy. It fixes real failures without weakening rules, then reports each command, its result and what was left uncovered.
+
+  This is a copy of the lint-and-validate skill from sickn33's collection, shared under CC BY 4.0 (see the LICENSE-CONTENT file).
 when:
   - You changed code and want to know it is clean before you commit.
   - Your AI says the checks pass and you want proof.
@@ -42,7 +44,7 @@ how_to_use:
   - The two helper scripts in the skill folder (lint_runner.py and type_coverage.py) are optional. Your AI must show you the exact command first and wait for your yes. type_coverage.py only reads files. lint_runner.py starts your project's own checks.
   - The skill is marked critical risk in its own file because it runs your project's commands, which can change files or use the network. That is why it must wait for your yes. It does not install anything for you, so missing tools are reported, not fetched.
   - Run this only on projects you trust. It runs your project's own commands, and those can change your files or reach the network.
-  - The run has two phases. Phase one only checks and reports. Phase two fixes errors, and starts only after you approve each change.
+  - The run has two phases. Phase one checks and reports, but your project's scripts can still change files or use the network, so it only runs scripts you have approved. Phase two fixes errors, and starts only after you approve each change.
   - After a pass, commit your change. After a fail, ask your AI to fix the listed errors and run the checks again.
   - Next, run your project's own test runner for runtime bugs, and let your CI (the automatic checks that run when you push code) cover security and the full build. A lint pass does not replace either.
 output_sample:

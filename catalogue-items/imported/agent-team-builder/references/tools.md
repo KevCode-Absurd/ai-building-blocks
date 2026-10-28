@@ -108,6 +108,7 @@ agent = Agent(
 ### Database Tools
 
 ```python
+import os
 from crewai_tools import (
     MySQLSearchTool,              # MySQL queries
     PostgreSQLTool,               # PostgreSQL
@@ -122,7 +123,7 @@ mysql_tool = MySQLSearchTool(
     port=3306,
     database="mydb",
     user="user",
-    password="pass"
+    password=os.environ["MYSQL_PASSWORD"]  # from your password manager or env, never hard-coded
 )
 
 # Qdrant
@@ -178,6 +179,7 @@ interpreter = CodeInterpreterTool()
 ### Cloud Platform Tools
 
 ```python
+import os
 from crewai_tools import (
     BedrockInvokeAgentTool,     # AWS Bedrock
     DatabricksQueryTool,        # Databricks
@@ -194,7 +196,7 @@ bedrock = BedrockInvokeAgentTool(
 # Databricks
 databricks = DatabricksQueryTool(
     host="your-workspace.databricks.com",
-    token="your-token"
+    token=os.environ["DATABRICKS_TOKEN"]
 )
 ```
 
@@ -243,6 +245,7 @@ agent = Agent(
 ### Tool with Parameters
 
 ```python
+import os
 from crewai.tools import BaseTool
 from pydantic import Field
 from typing import Optional
@@ -265,39 +268,59 @@ class APITool(BaseTool):
         return response.json()
 
 # Configure tool
-api_tool = APITool(api_key="your-key", base_url="https://api.example.com")
+api_tool = APITool(api_key=os.environ["EXAMPLE_API_KEY"], base_url="https://api.example.com")
 ```
 
 ### Tool with Validation
 
 ```python
+import ast
+import operator
+
 from crewai.tools import BaseTool
-from pydantic import Field, field_validator
+
+# AI Blocks note: the original filtered out letters and then called eval().
+# That is not safe: eval can still be abused (for example a huge power like
+# 9**9**9 hangs the process). Never eval text an agent or user supplies.
+# This version parses the expression and only allows numbers, brackets and
+# + - * / // % **, with limits on length, exponent and result size.
+_OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+        ast.Div: operator.truediv, ast.FloorDiv: operator.floordiv, ast.Mod: operator.mod,
+        ast.Pow: operator.pow, ast.USub: operator.neg, ast.UAdd: operator.pos}
+_LIMIT = 1e300
+
+def safe_calc(expression: str):
+    if len(expression) > 200:
+        raise ValueError("Expression is too long")
+
+    def check(value):
+        if abs(value) > _LIMIT:
+            raise ValueError("Number is too large")
+        return value
+
+    def walk(node):
+        if isinstance(node, ast.Constant) and type(node.value) in (int, float):
+            return check(node.value)
+        if isinstance(node, ast.BinOp) and type(node.op) in _OPS:
+            left, right = walk(node.left), walk(node.right)
+            if isinstance(node.op, ast.Pow) and abs(right) > 100:
+                raise ValueError("Exponent is too large")
+            return check(_OPS[type(node.op)](left, right))
+        if isinstance(node, ast.UnaryOp) and type(node.op) in _OPS:
+            return check(_OPS[type(node.op)](walk(node.operand)))
+        raise ValueError("Only numbers, brackets and + - * / // % ** are allowed")
+
+    return walk(ast.parse(expression, mode="eval").body)
 
 class CalculatorTool(BaseTool):
     name: str = "Calculator"
     description: str = "Perform math calculations. Input: expression (e.g., '2 + 2')"
 
-    allowed_operators: list = Field(default=["+", "-", "*", "/", "**"])
-
-    @field_validator("allowed_operators")
-    def validate_operators(cls, v):
-        valid = ["+", "-", "*", "/", "**", "%", "//"]
-        for op in v:
-            if op not in valid:
-                raise ValueError(f"Invalid operator: {op}")
-        return v
-
     def _run(self, expression: str) -> str:
         try:
-            # Simple eval with safety checks
-            for char in expression:
-                if char.isalpha():
-                    return "Error: Letters not allowed"
-            result = eval(expression)
-            return f"Result: {result}"
+            return f"Result: {safe_calc(expression)}"
         except Exception as e:
-            return f"Error: {str(e)}"
+            return f"Error: {e}"
 ```
 
 ### Async Tool

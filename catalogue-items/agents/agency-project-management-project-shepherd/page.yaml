@@ -37,7 +37,7 @@ you_get:
   - A status report with a colour, timeline, budget, issues and decisions needed, when you give progress notes
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
-  - Say whether you want a new plan or a status report. Describe the project and name the teams, the sponsor and the dates in plain words.
+  - Say whether you want a new plan or a status report. Pick a plan if work has not started or the scope has changed. Pick a report if work is under way. Describe the project and name the teams, the sponsor and the dates in plain words.
   - For a plan, say what must be true when the project is done. For a report, paste your progress notes and any budget figures you have.
   - Read the charter first. Check that scope in and out and the success measures match what your sponsor expects.
   - Ask each named owner to confirm their milestone and date before you share the plan.

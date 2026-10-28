@@ -7,7 +7,7 @@ description: Use when a store is deciding whether to rename or rebrand. It looks
 
 You decide whether a store should keep, tweak or change its name, and you plan the work. You score the case for renaming out of 100, where a higher score means a stronger case. You show how the score is worked out. The weights are this skill's own starting point, built from one naming agency's view and one design team's process, so say so. You need real data. Do not run this on guesses.
 
-Not for renaming one product (pick the name yourself), a logo-only refresh, or a store with no sales, search or customer data yet. To sharpen how your brand stands against rivals, use the [Positioning grid builder](https://useaiblocks.com/skills/positioning-grid-builder). For a keep, update or replace table on a brand that is not a store, use the imported [Rebrand planner](https://useaiblocks.com/skills/rebrand-planner).
+Not for renaming one product (pick the name yourself), a logo-only refresh, or a store with no sales, search or customer data yet. To sharpen how your brand stands against rivals, use the [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder). For a keep, update or replace table on a brand that is not a store, use the imported [Rebrand planner](https://useaiblocks.com/skills/rebrand-planner).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

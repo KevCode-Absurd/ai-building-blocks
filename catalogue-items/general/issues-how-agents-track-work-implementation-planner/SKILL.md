@@ -113,7 +113,7 @@ CHECKS MISSED
 
 The first tests to list: two checkouts at the same moment on one issue (exactly one wins), a blocked issue (cannot be claimed), an expired claim (can be taken, and the take-over is logged), a release by the wrong run (refused), and a renewal after expiry (refused).
 
-Next steps: the Simple code coach can help you apply the draft in small steps. The Stripe payments builder in the list above does not fit this job. Skip it.
+Next steps: the Simple code coach can help you apply the draft in small steps. The Stripe payments builder in the "After this" list below does not fit this job. Skip it.
 
 ## If something is missing
 

@@ -7,8 +7,6 @@ job: make-offer
 headline: Promotion idea planner
 subhead: A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
 explain: |
-  A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
-
   The skill first classifies your product as bought for pleasure or for a job, since that changes what works. For pre-orders it picks gift or discount based on how far away the launch is: a gift for three weeks or more, and a gift or a discount if it is within a week. For the middle range, you split-test the two. It then advises on bundles, free bonus wording, unit caps and urgency, and warns about promo mechanics that backfire. It sticks to promotions, not plain price cuts or everyday pricing.
 when:
   - You are launching a product and want pre-orders.
@@ -36,6 +34,9 @@ how_to_use:
   - Add your launch date and today's date. Say if buyers usually take one item or a basket.
   - Add a product that pairs well with it, if you have one.
   - Read the result. Check the offer wording and the deadline before you publish.
+  - The percentages in the skill each come from one study, listed in the reference.md file. Treat them as a guide, not a promise.
+  - If you theme the sale on a special day, use a real day or your own brand date, like your founding day. Never present a made-up day as an official holiday.
+  - "Before you publish, check your market's rules on price display and promotions: what counts as a real discount, and when you can call an item free or $0."
   - Run the suggested split test, then track pre-order count and returns.
 output_sample:
   input:

@@ -8,7 +8,7 @@ job: research
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: product_data, required: true}
+  - {type: product_data, required: false}
   - {type: store_capture, required: false}
   - {type: voc_reviews, required: false}
   - {type: idea, required: true}

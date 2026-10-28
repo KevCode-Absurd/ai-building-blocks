@@ -18,6 +18,19 @@ allowed-tools: Read, WebFetch
 
 # Month End Prep
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Quick start
 
 Connect your bookkeeping ledger and at least one payment processor, then say "let's
@@ -169,9 +182,23 @@ Pull what was actually paid in the month, totals only:
   recent run; earlier runs in the month come from the payroll summary export.
   (Confirm before the first close.)
 
-Cross-check against the ledger: net pay plus employer taxes plus contractor wages should
-appear as the month's payroll expense lines. A difference above 0.50 is a reconciliation
-item — usually a run posted to the wrong month, or a payroll journal not yet posted.
+Cross-check against the ledger, comparing like with like. Employee taxes and other
+withholdings come out of net pay, but they are still part of the wages the business
+earned and owes, so they stay in the expense:
+
+- **Expense check:** gross pay + employer taxes + contractor wages should match the
+  month's payroll expense lines (wages, employer payroll taxes, contractor costs). If the
+  ledger also books employer-paid benefits as payroll expense, add them on both sides.
+- **Cash check:** net pay should match the payroll payments out of the bank, and
+  employee taxes + employer taxes should match the payroll tax liability (paid to the tax
+  authority, or still owed at month end).
+- First confirm how this ledger records payroll: which accounts hold wages, employer
+  taxes, contractors and payroll liabilities, and whether it posts on the check date or
+  accrues by pay period. State that mapping in the packet. If the ledger posts only net
+  pay to expense, say so as a finding rather than matching against net pay.
+
+A difference above 0.50 is a reconciliation item — usually a run posted to the wrong
+month, a payroll journal not yet posted, or withholdings booked to the wrong account.
 
 **Totals only, never people.** The packet carries the month's totals and the count of
 runs. No employee name, rate, or per-person amount leaves the connector — that is
@@ -329,3 +356,14 @@ Same close sequence, same packet. More sources reconciled.
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+Changed by AI Blocks (2026-10-28): the payroll cross-check now compares gross pay plus employer taxes plus contractor wages with the ledger payroll expense, and net pay with bank payments, after mapping the ledger accounts and posting basis.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Freelancer transaction and cash review](https://useaiblocks.com/skills/monthly-freelancer-books-closer). It takes the document.
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
+- The [Legal billing reviewer](https://useaiblocks.com/skills/agency-legal-billing-time-tracking). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

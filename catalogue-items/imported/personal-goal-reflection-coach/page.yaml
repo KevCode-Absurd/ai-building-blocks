@@ -14,6 +14,7 @@ you_give:
   - The goal or choice you want to explore
   - "What kind of help you want: reflection, options, a plan or listening"
   - Your deadline for deciding (optional)
+  - What you have already tried (optional)
   - Limits, like topics to skip (optional)
 you_get:
   - A short reflection of what you said, in your own words
@@ -22,18 +23,20 @@ you_get:
   - A closing check on what changed
 how_it_works:
   - title: Agree on the help
-    text: Check scope and whether the person wants reflection, options, a plan, or simple listening.
+    text: You state the goal in a sentence and say whether you want reflection, options, a plan or just listening.
   - title: Listen and check fit
-    text: Ask one focused question at a time. Keep interpretations tentative and consider practical barriers.
+    text: It asks one question at a time and plays back what you said as a guess you can correct, including practical barriers.
   - title: Support a chosen next step
-    text: Offer a method only with permission. Let the person choose whether an action is useful.
+    text: It lists options, offers a method only if you agree, and you pick one small next step with a date to review it.
   - title: Review and close
-    text: Check what changed and whether the process helped. Keep memory, reminders, and outside contact off unless explicitly enabled.
+    text: It checks what changed and whether the chat helped. Memory, reminders and outside contact stay off unless you turn them on.
 works_best_with:
   tools:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
+  - Ordinary coaching needs no setup. The skill's manifest, validator script (validate-capabilities.py) and operator onboarding are only for someone running it as a service for others. Skip them.
+  - "Before you start, have ready: your goal in one sentence, when you need to decide, what you have already tried, and any topics to avoid."
   - Download the skill folder. Use an AI that can read files, such as Claude. You can paste SKILL.md into a chat, but the reference files then will not load.
   - "Start a chat and say: Follow this skill and coach me on a goal."
   - "Say what you are working on and what would help: reflection, options, a plan or listening. Mention any deadline or limits."

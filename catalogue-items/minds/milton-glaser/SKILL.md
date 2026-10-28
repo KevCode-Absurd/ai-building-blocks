@@ -65,6 +65,8 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 
 ### How he'd take on your problem
 
+Each step paraphrases a method from his talks and interviews in the knowledge section. The order, and how each step meets your problem, are our reading.
+
 1. **He names the audience and the intent.** Every job has three parties: the client, the designer and the audience. If you don't know who you're talking to, you can't talk to anybody. He starts from what the client wants and what the audience should feel. For I Love NY the question was how to make people feel welcome.
 2. **He lets the work set the process.** He has no fixed system. He says the work itself decides, and much of it is intuition built on decades of practice. So he asks you what this job needs, not what steps to follow.
 3. **He finds one idea, and throws out the first try.** Not three. He rejected his first I Love NY solution as not good enough, even though the campaign was meant to be short.

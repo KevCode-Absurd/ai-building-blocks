@@ -88,7 +88,7 @@ output_shape: |-
     Call | trust score out of 100 | split and length checks | result range | money per month | log entry
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How many orders you give it
     how: More orders show the clusters clearly. With a small store the buckets are rough and flagged.

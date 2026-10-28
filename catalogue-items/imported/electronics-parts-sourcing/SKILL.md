@@ -7,6 +7,23 @@ description: When the user wants to optimize electronics manufacturing supply ch
 
 You are an expert in electronics manufacturing supply chain management and semiconductor operations. Your goal is to help optimize complex global supply networks, manage component sourcing and allocation, implement efficient assembly operations, and navigate the unique challenges of electronics manufacturing.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file upload:** You can attach your parts list as a spreadsheet instead of pasting it.
+- **A tool that can run code:** It can work through a long parts list and show the scores line by line.
+<!-- /needs -->
+
 ## How to run this in a chat (added by AI Blocks)
 
 **Who this is for.** A team that builds or buys products with electronic parts and needs to protect the build from scarce chips, long lead times and leftover stock. For general factory scheduling use the Production schedule planner. For quality problems use a quality skill.
@@ -157,6 +174,14 @@ class ComponentAllocationManager:
             ]) > 0 else None
 
             if comp_info is None:
+                # A BOM part with no component master data is an UNKNOWN supply risk.
+                # Never drop it: list it so the user can supply the data.
+                risk_assessment.append({
+                    'part_number': part_number,
+                    'manufacturer': '',
+                    'risk_score': float('nan'),
+                    'risk_category': 'MISSING: part not in component master data',
+                })
                 continue
 
             # Calculate requirements
@@ -349,58 +374,69 @@ class SMTLineOptimizer:
 
     def calculate_line_capacity(self, board_config):
         """
-        Calculate SMT line capacity for given board
+        Calculate SMT line capacity for a given board.
 
-        Parameters:
-        - board_config: PCB specifications and component placement
+        An SMT line is a pipeline: the printer, placement machine(s), reflow oven
+        and inspection each work on a different board at the same time. So boards
+        per hour are set by the SLOWEST station (the bottleneck), not by adding all
+        station times together. The sum is the flow time: how long one board takes
+        to go through the line.
+
+        Every time below must come from the user's own line (machine programs,
+        machine reports or a stopwatch study). There are no safe defaults; the
+        function stops if one is missing.
+
+        Parameters (seconds per board unless noted):
+        - board_config['print_time_sec']: printer cycle per board
+        - board_config['placement_time_sec']: placement time per board on each
+          placement machine, as a dict {machine_name: seconds}
+          (from the machine's program or report for this board)
+        - board_config['reflow_time_per_board_sec']: time between boards leaving
+          the oven, about (board length + gap) / conveyor speed. This is not the
+          oven dwell time: several boards are inside the oven at once.
+        - board_config['inspection_time_sec']: AOI or inspection cycle per board
+        - line_config['efficiency']: the user's measured availability or OEE (0-1)
 
         Returns:
-        - theoretical capacity (boards/hour)
+        - capacity (boards/hour), bottleneck station, and flow time
         """
 
-        # Component placement time
-        num_components = board_config['component_count']
-        avg_placement_time_sec = board_config.get('avg_placement_time', 0.3)
+        required = ['print_time_sec', 'placement_time_sec',
+                    'reflow_time_per_board_sec', 'inspection_time_sec']
+        missing = [k for k in required if board_config.get(k) is None]
+        if self.line_config.get('efficiency') is None:
+            missing.append("line_config['efficiency']")
+        if missing:
+            raise ValueError(f"Ask the user for these measured values: {missing}")
 
-        # Machine parameters
-        num_placement_heads = self.line_config.get('placement_heads', 8)
-        machine_efficiency = self.line_config.get('efficiency', 0.85)
+        stations = {'screen_print': board_config['print_time_sec']}
+        for machine, secs in board_config['placement_time_sec'].items():
+            stations[f'placement:{machine}'] = secs
+        stations['reflow'] = board_config['reflow_time_per_board_sec']
+        stations['inspection'] = board_config['inspection_time_sec']
 
-        # Calculate placement time per board
-        placement_time = (num_components * avg_placement_time_sec) / num_placement_heads
+        efficiency = self.line_config['efficiency']
+        bottleneck = self._identify_bottleneck(stations)
 
-        # Add process times
-        screen_print_time = 15  # seconds
-        reflow_time = 180  # seconds
-        inspection_time = 30  # seconds
-        board_handling_time = 10  # seconds
-
-        total_cycle_time = (placement_time + screen_print_time +
-                           reflow_time + inspection_time + board_handling_time)
-
-        # Apply efficiency factor
-        effective_cycle_time = total_cycle_time / machine_efficiency
-
-        # Capacity (boards per hour)
+        # Throughput is set by the bottleneck station
+        effective_cycle_time = stations[bottleneck] / efficiency
         capacity_per_hour = 3600 / effective_cycle_time
 
         return {
             'capacity_boards_per_hour': capacity_per_hour,
             'cycle_time_seconds': effective_cycle_time,
-            'placement_time': placement_time,
-            'bottleneck': self._identify_bottleneck(
-                placement_time, screen_print_time, reflow_time
-            )
+            'bottleneck': bottleneck,
+            'station_times_seconds': stations,
+            # Time for one board to pass through, for WIP and lead time, not capacity.
+            # Oven flow time is its dwell time, which the user should add if needed.
+            'flow_time_seconds_excluding_oven_dwell': sum(
+                v for k, v in stations.items() if k != 'reflow'
+            ),
         }
 
-    def _identify_bottleneck(self, placement_time, print_time, reflow_time):
-        """Identify process bottleneck"""
-        times = {
-            'placement': placement_time,
-            'screen_print': print_time,
-            'reflow': reflow_time
-        }
-        return max(times, key=times.get)
+    def _identify_bottleneck(self, station_times):
+        """Return the station with the longest time per board"""
+        return max(station_times, key=station_times.get)
 
     def optimize_feeder_setup(self, bom_df, feeder_slots=120):
         """
@@ -417,22 +453,24 @@ class SMTLineOptimizer:
         # Sort components by usage frequency
         bom_sorted = bom_df.sort_values('quantity_per_board', ascending=False)
 
+        # Slot order: start at the center of the feeder bank (closest to the
+        # placement area) and work outward, so the most-used parts get the
+        # center slots. Each slot appears once, so no two parts share a slot.
+        center = feeder_slots // 2
+        slot_order = sorted(range(feeder_slots), key=lambda s: (abs(s - center), s))
+
         # Assign to feeders (most used components get priority positions)
         feeder_assignments = []
 
-        for idx, component in bom_sorted.iterrows():
-            if idx < feeder_slots:
-                # Optimal position: center positions for high-usage parts
-                if idx < 20:
-                    position = 60 + (idx - 10)  # Center positions
-                else:
-                    position = idx
-
+        # Use the rank after sorting, not the DataFrame index (the index keeps
+        # the original row order and would put parts in the wrong slots)
+        for rank, (_, component) in enumerate(bom_sorted.iterrows()):
+            if rank < feeder_slots:
                 feeder_assignments.append({
                     'part_number': component['part_number'],
-                    'feeder_position': position,
+                    'feeder_position': slot_order[rank],
                     'quantity_per_board': component['quantity_per_board'],
-                    'priority': 'high' if idx < 20 else 'medium'
+                    'priority': 'high' if rank < 20 else 'medium'
                 })
             else:
                 # Bulk feeders or manual loading required
@@ -446,14 +484,17 @@ class SMTLineOptimizer:
 
         return pd.DataFrame(feeder_assignments)
 
-    def calculate_changeover_time(self, current_bom, next_bom, feeder_change_time=60):
+    def calculate_changeover_time(self, current_bom, next_bom, feeder_change_time,
+                                  program_change=300, first_article_inspection=600):
         """
         Calculate line changeover time between products
 
         Parameters:
         - current_bom: current product BOM
         - next_bom: next product BOM
-        - feeder_change_time: seconds per feeder change
+        - feeder_change_time: seconds per feeder change, measured on the user's line
+        - program_change, first_article_inspection: seconds; the defaults are
+          placeholders, replace them with the user's measured times
 
         Returns:
         - estimated changeover time
@@ -471,8 +512,6 @@ class SMTLineOptimizer:
 
         # Changeover time
         feeder_changeover = total_changes * feeder_change_time
-        program_change = 300  # 5 minutes for program change
-        first_article_inspection = 600  # 10 minutes
 
         total_changeover = feeder_changeover + program_change + first_article_inspection
 
@@ -485,17 +524,18 @@ class SMTLineOptimizer:
         }
 
 
-# Example
+# Example. These times are made-up placeholders that show the method.
+# Replace every one with times measured on the user's own line.
 line_config = {
-    'placement_heads': 8,
     'efficiency': 0.85,
     'feeder_slots': 120
 }
 
 board_config = {
-    'component_count': 450,
-    'avg_placement_time': 0.3,
-    'board_size': '300x200mm'
+    'print_time_sec': 20,
+    'placement_time_sec': {'chip_shooter': 40, 'fine_pitch': 35},
+    'reflow_time_per_board_sec': 25,
+    'inspection_time_sec': 30,
 }
 
 optimizer = SMTLineOptimizer(line_config)
@@ -654,17 +694,22 @@ class EOInventoryManager:
         self.bom = bom_df
         self.forecast = forecast_df
 
-    def identify_excess_obsolete(self, time_horizon_months=12):
+    def identify_excess_obsolete(self, time_horizon_months=12, as_of=None):
         """
         Identify excess and obsolete inventory
 
         Parameters:
         - time_horizon_months: planning horizon for demand
+        - as_of: analysis date (defaults to today)
+
+        forecast_df needs a 'forecast_date' column (the date or period start of
+        each forecast row). Only rows from as_of up to as_of + horizon count.
 
         Returns:
         - E&O classification by component
         """
 
+        as_of = pd.Timestamp(as_of) if as_of is not None else pd.Timestamp(datetime.now()).normalize()
         eo_analysis = []
 
         for idx, inv in self.inventory.iterrows():
@@ -672,9 +717,9 @@ class EOInventoryManager:
             on_hand_qty = inv['on_hand_quantity']
             unit_cost = inv['unit_cost']
 
-            # Calculate future demand
+            # Calculate future demand within the horizon only
             future_demand = self._calculate_future_demand(
-                part_number, time_horizon_months
+                part_number, time_horizon_months, as_of
             )
 
             # Calculate excess
@@ -682,9 +727,19 @@ class EOInventoryManager:
             excess_value = excess_qty * unit_cost
 
             # Determine obsolescence risk
-            lifecycle_status = inv.get('lifecycle_status', 'active')
-            last_usage_date = inv.get('last_usage_date', datetime.now())
-            months_since_use = (datetime.now() - last_usage_date).days / 30
+            lifecycle_status = inv.get('lifecycle_status')  # blank means MISSING, not 'active'
+            last_usage_date = inv.get('last_usage_date')
+            months_since_use = (
+                (as_of - pd.Timestamp(last_usage_date)).days / 30
+                if last_usage_date is not None and not pd.isna(last_usage_date) else None
+            )
+            if lifecycle_status is None or pd.isna(lifecycle_status) or months_since_use is None:
+                eo_analysis.append({
+                    'part_number': part_number,
+                    'on_hand_qty': on_hand_qty,
+                    'classification': 'MISSING data: lifecycle status or last usage date',
+                })
+                continue
 
             # Classification
             if lifecycle_status == 'discontinued' or months_since_use > 24:
@@ -699,7 +754,8 @@ class EOInventoryManager:
             eo_analysis.append({
                 'part_number': part_number,
                 'on_hand_qty': on_hand_qty,
-                'future_demand_12m': future_demand,
+                'horizon_months': time_horizon_months,
+                'future_demand_in_horizon': future_demand,
                 'excess_qty': excess_qty,
                 'excess_value': excess_value,
                 'unit_cost': unit_cost,
@@ -713,8 +769,15 @@ class EOInventoryManager:
 
         return pd.DataFrame(eo_analysis)
 
-    def _calculate_future_demand(self, part_number, months):
-        """Calculate future demand for component"""
+    def _calculate_future_demand(self, part_number, months, as_of):
+        """Future demand for a component from forecast rows inside the horizon"""
+
+        if 'forecast_date' not in self.forecast.columns:
+            raise ValueError("forecast_df needs a 'forecast_date' column to apply the horizon")
+
+        horizon_end = as_of + pd.DateOffset(months=months)
+        dates = pd.to_datetime(self.forecast['forecast_date'])
+        in_horizon = self.forecast[(dates >= as_of) & (dates < horizon_end)]
 
         # Get products using this part
         products_using = self.bom[self.bom['part_number'] == part_number]
@@ -724,12 +787,10 @@ class EOInventoryManager:
             product_id = product['product_id']
             qty_per_unit = product['quantity_per_unit']
 
-            # Get forecast for product
-            product_forecast = self.forecast[
-                self.forecast['product_id'] == product_id
-            ]['forecast_units'].sum() if len(
-                self.forecast[self.forecast['product_id'] == product_id]
-            ) > 0 else 0
+            # Forecast for this product inside the horizon only
+            product_forecast = in_horizon[
+                in_horizon['product_id'] == product_id
+            ]['forecast_units'].sum()
 
             total_demand += product_forecast * qty_per_unit
 
@@ -1139,6 +1200,15 @@ The part numbers, makers, lead times, dollar values and targets in the tables be
 5. Reduce E&O inventory to <$2M - broker sales and returns program
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Production schedule planner](https://useaiblocks.com/skills/production-schedule-planner). It takes the plan.
+- The [Sourcing plan builder](https://useaiblocks.com/skills/sourcing-plan-builder).
+- The [Supplier order splitter](https://useaiblocks.com/skills/supplier-order-splitter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

@@ -10,6 +10,27 @@ metadata:
 
 Translate business strategy and operational plans into accurate headcount demand forecasts — from gathering demand signals and modeling capacity requirements to prioritizing critical roles and aligning recruiting resources.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A spreadsheet** with the [Headcount and hiring forecast planner](https://useaiblocks.com/skills/headcount-forecast-builder). Bring your question, a spreadsheet (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What you need
 
 Your growth goals and budget. If you have them, also bring a spreadsheet of current headcount by team and a headcount and turnover report, which the plan uses to allow for exits, transfers and backfills.
@@ -76,3 +97,12 @@ Your growth goals and budget. If you have them, also bring a spreadsheet of curr
 - Build rolling 90-day and 6-month demand horizons; annual plans become stale quickly in high-growth or volatile environments.
 - Segment demand by criticality (revenue-generating, compliance-critical, backfill, growth) to make prioritization discussions with leadership easier and more defensible.
 - Demand planning accuracy improves significantly when HR partners attend business planning meetings rather than receiving the output after decisions are made.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Headcount scenario planner](https://useaiblocks.com/skills/headcount-scenario-planner). It takes the plan.
+- The [Hire or contract cost checker](https://useaiblocks.com/skills/headcount-business-case-builder).
+- The [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

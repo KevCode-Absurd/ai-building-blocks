@@ -30,7 +30,7 @@ credits:
   - title: api-graphql skill
     by: dragnoir
     url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/api-graphql
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, labelled the request example as Remix-only with a note for other setups, and added a version note on product variants.
   - title: Original author
     by: dragnoir
     url: https://github.com/dragnoir

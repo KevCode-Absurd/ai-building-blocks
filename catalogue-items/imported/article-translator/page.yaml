@@ -30,9 +30,9 @@ you_get:
   - A consistent term list
   - A reviewed, polished final version (refined mode)
 how_to_use:
-  - Use an AI that can run code and save files. The skill needs bun or npx to split long articles.
+  - Use an AI that can run code and save files. The skill needs bun or npx to split long articles. It runs the scripts in its folder on your computer, and "npx -y bun" downloads Bun first if you do not have it. Look over the scripts folder before you let it run.
   - Add the skill to your AI, or paste its instructions into a chat.
-  - "Answer the first-time questions: target language, mode, audience and style. Your answers are saved for next time."
+  - "Answer the first-time questions: target language, mode, audience and style. It will not start translating until they are answered. Your answers are saved for next time."
   - Paste your article, attach the file or share the link.
   - Open translation.md in the output folder. In normal and refined modes, read 01-analysis.md to check the key terms.
   - If the result needs more care, ask your AI to run the refined mode.

@@ -10,9 +10,29 @@ description: Track and analyze portfolio company performance against plan. Inges
 This skill is set up for **Indian companies**. The helper files the original skill pointed to (`india-market-conventions`, `india-market-data`) and its `NOT-ADAPTABLE.md` list are **not included here**. Use the rules below instead. Two rules cause most Indian errors:
 
 - **Fiscal year is April to March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr to Jun 2025. Label periods `Q3 FY26 (Oct-Dec 25)`, never a bare calendar year. Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10^5) and crore (10^7).** Never use the Excel format `#,##0,," Cr"`. Each trailing comma divides by 1,000, so that format shows **lakh under a crore label: a 100x error**. Divide by `10000000` in a live formula and label the column `Total Revenue (Rs Cr)`.
+- **Units are lakh (10^5) and crore (10^7).** Never use the Excel format `#,##0,," Cr"`. Each trailing comma divides by 1,000, so two commas divide by 1,000,000 and the format shows **millions (ten lakh) under a crore label: a 10x error**. For example, Rs 1 crore (10,000,000) would display as "10 Cr". Divide by `10000000` in a live formula and label the column `Total Revenue (Rs Cr)`.
 
 If a figure has no Indian source or no matching measure, say so. Never swap in a stand-in and present it as the real thing. If the pack is not Indian, say which convention you used instead.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for financial statements, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude:** It reads Excel and PDF packs well and keeps long tables in order.
+- **ChatGPT:** Its file upload handles spreadsheets, and it can chart a trend.
+<!-- /needs -->
 
 ## What you need
 
@@ -87,3 +107,5 @@ This is a monitoring summary from the pack you were given. It does not audit the
 Suggest: send the questions for management to the company, then rerun next period with this month's pack as the prior period. For a deeper value view of one company, use the DCF model builder for India.
 
 - **Runbook:** [`references/runbook-portfolio.md`](references/runbook-portfolio.md): the end-to-end walkthrough and output contract.
+
+Changed by AI Blocks (2026-10-28): corrected the Excel crore-format warning (two trailing commas show millions, a 10x error, not lakh and 100x).

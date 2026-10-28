@@ -32,7 +32,7 @@ you_get:
   - The order to fix them in
 how_to_use:
   - Open your AI tool and paste in the skill instructions. If it can read files, give it your project folder.
-  - Paste your API, library interface or config schema. Add the language and any past misuse cases if you have them.
+  - "Gather the files that shape how developers use your code: the public API (an OpenAPI or GraphQL schema, or the exported functions and their types), the config schema and example config files, and the login, permission and crypto settings. Paste them, or give their paths. Add the language and any past misuse cases if you have them."
   - Ask it to review the design for easy-to-misuse parts.
   - Check the top findings first. Make sure each misuse could really happen in your code.
   - Take the Critical and High fixes into a code change. Then run the review again on the changed design.

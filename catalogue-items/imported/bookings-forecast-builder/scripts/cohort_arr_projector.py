@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import statistics
 import sys
 from dataclasses import dataclass, field
@@ -51,11 +52,49 @@ class ProjectionResult:
     horizon_q: int
     leaky_cohorts: list[str]
     assumptions: dict[str, Any]
+    warnings: list[str] = field(default_factory=list)
 
 
-def project_cohort(cohort: dict[str, Any], horizon_q: int) -> CohortProjection:
+def _finite(value: Any) -> float | None:
+    """Return value as a finite float, or None if missing, blank or non-numeric."""
+    if value is None or value == "":
+        return None
+    try:
+        x = float(value)
+    except (TypeError, ValueError):
+        return None
+    return x if math.isfinite(x) else None
+
+
+def _pct_or_default(cohort: dict[str, Any], key: str, default: float, lo: float, hi: float,
+                    cohort_id: str, warnings: list[str]) -> float:
+    """Read a percentage field; fall back to the default curve (with a warning) if invalid."""
+    raw = cohort.get(key)
+    if raw is None:
+        return default
+    x = _finite(raw)
+    if x is None or x < lo or x > hi:
+        warnings.append(
+            f"Cohort {cohort_id}: ignored invalid {key}={raw!r} (must be a number from {lo:g} to {hi:g}, "
+            f"in percent); used the default curve value {default:g}% instead."
+        )
+        return default
+    return x
+
+
+def project_cohort(cohort: dict[str, Any], horizon_q: int,
+                   warnings: list[str] | None = None) -> CohortProjection | None:
+    if warnings is None:
+        warnings = []
     cohort_id = str(cohort.get("cohort_id", "?"))
-    starting_arr = float(cohort.get("starting_arr") or 0)
+    starting_arr = _finite(cohort.get("starting_arr"))
+    if starting_arr is None or starting_arr < 0:
+        # Never treat a missing starting ARR as $0: leave the cohort out and say so.
+        warnings.append(
+            f"Cohort {cohort_id} left out: starting_arr is missing or invalid "
+            f"({cohort.get('starting_arr')!r}). Add it and re-run before presenting NRR."
+        )
+        return None
     acq_q = str(cohort.get("acquisition_quarter", "?"))
 
     nrr_list: list[float] = []
@@ -66,8 +105,8 @@ def project_cohort(cohort: dict[str, Any], horizon_q: int) -> CohortProjection:
     for q in range(1, horizon_q + 1):
         gr_key = f"gross_retention_pct_q{q}"
         exp_key = f"expansion_arr_pct_q{q}"
-        gr = float(cohort.get(gr_key) if cohort.get(gr_key) is not None else _default_grr(q)) / 100.0
-        exp = float(cohort.get(exp_key) if cohort.get(exp_key) is not None else _default_exp(q)) / 100.0
+        gr = _pct_or_default(cohort, gr_key, _default_grr(q), 0.0, 100.0, cohort_id, warnings) / 100.0
+        exp = _pct_or_default(cohort, exp_key, _default_exp(q), 0.0, 1000.0, cohort_id, warnings) / 100.0
         # NRR = GRR + expansion; multiplicative on the original cohort base
         nrr = gr + exp
         cohort_arr = starting_arr * nrr
@@ -140,7 +179,8 @@ def project(ctx: dict[str, Any]) -> ProjectionResult:
     cohorts_in = ctx.get("cohorts") or []
     horizon_q = int(ctx.get("projection_horizon_quarters") or 4)
 
-    projected = [project_cohort(c, horizon_q) for c in cohorts_in]
+    warnings: list[str] = []
+    projected = [p for p in (project_cohort(c, horizon_q, warnings) for c in cohorts_in) if p is not None]
     detect_leaky_cohorts(projected)
     cons_nrr, cons_grr, cons_arr = consolidate(projected, horizon_q)
     leaky = [c.cohort_id for c in projected if c.leaky]
@@ -165,6 +205,7 @@ def project(ctx: dict[str, Any]) -> ProjectionResult:
         horizon_q=horizon_q,
         leaky_cohorts=leaky,
         assumptions=assumptions,
+        warnings=warnings,
     )
 
 
@@ -174,6 +215,12 @@ def render_markdown(r: ProjectionResult) -> str:
     L.append("")
     L.append(f"**Horizon:** {r.horizon_q} quarters  •  **Cohorts:** {len(r.cohorts)}  •  **Leaky cohorts:** {len(r.leaky_cohorts)}")
     L.append("")
+    if r.warnings:
+        L.append("## Data warnings")
+        L.append("")
+        for w in r.warnings:
+            L.append(f"- ⚠️  {w}")
+        L.append("")
     if r.leaky_cohorts:
         L.append("## Leaky-cohort callout")
         L.append("")

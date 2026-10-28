@@ -9,6 +9,23 @@ Architecture design and analysis tools for making informed technical decisions.
 
 You need a description of what you are building, or a project folder. If you have a plan for the system from an earlier step, use it as that description.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Table of Contents
 
 - [Quick Start](#quick-start)
@@ -343,3 +360,11 @@ python scripts/project_architect.py . --output json
 1. Run any script with `--help` for usage information
 2. Check reference documentation for detailed patterns and workflows
 3. Use `--verbose` flag for detailed explanations and recommendations
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision record writer](https://useaiblocks.com/skills/decision-record-writer). It takes the plan.
+- The [Codebase architecture reviewer](https://useaiblocks.com/skills/codebase-architecture-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

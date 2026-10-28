@@ -9,6 +9,25 @@ Turn a finished research report into an executive summary, a slide brief and a f
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. It writes short versions and checks. It publishes nothing, and it stays inside the sharing limits the person sets.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file support:** They can read a long report as a file and keep track of figures across versions.
+<!-- /needs -->
+
 ## What you need
 
 - **The finished report** (required): Word, PDF or pasted text.
@@ -77,3 +96,11 @@ Nothing has been published or sent. The person checks the fact-check list and ap
 - Nothing private appears unless the sharing rules allow it.
 - The summary can be read at about grade 8 by the named reader.
 - Every unchecked fact appears as a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Report-to-slide briefing deck builder and reviewer](https://useaiblocks.com/workflows/turn-a-report-into-an-editable-briefing-deck). It takes the document.
+- The [Research poster content and source planner](https://useaiblocks.com/workflows/prepare-research-poster-source-notes).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

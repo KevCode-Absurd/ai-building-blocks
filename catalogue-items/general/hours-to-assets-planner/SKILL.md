@@ -15,7 +15,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **How you earn today** (yours): each client, role or product, with hours per week and what it pays, as exact as you can.
 
 **Makes it better (optional):**
-- **What you are known for** (yours): the skill or judgment people pay you for. Clients' own words are best. If you do not know yet, use the [Specific knowledge finder](https://useaiblocks.com/skills/specific-knowledge-finder) first.
+- **What you are known for** (yours): the skill or judgment people pay you for. Clients' own words are best. If you do not know yet, use the [Personal expertise finder](https://useaiblocks.com/skills/specific-knowledge-finder) first.
 - **Your goal and how much risk you will take** (yours): money and time you can afford to lose.
 - **An income or sales sheet** (yours): the last year of what came in, from your bank, invoices or accounting tool.
 
@@ -61,15 +61,6 @@ In this order:
 7. **First step this week** and a review date.
 8. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you want to test the product idea on real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **If the stop list is long** with the [Money-first business cut planner](https://useaiblocks.com/skills/money-first-business-cut-planner). It takes the plan.
-- **If you are ready to price the product** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). Bring your costs and what the buyer gains.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each line says whether it earns while you work only or beyond.
@@ -77,6 +68,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The person's name or judgment is part of the product.
 - No income figure or timeline is promised.
 - The first step fits in one week.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you want to test the product idea on real people** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **If the stop list is long** with the [Revenue-focused task planner](https://useaiblocks.com/skills/money-first-business-cut-planner). It takes the plan.
+- **If you are ready to price the product** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). Bring your costs and what the buyer gains.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

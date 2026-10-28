@@ -114,7 +114,7 @@ She worked on weather software and an air defence system before Apollo. She said
 
 ### What you'll get back
 
-A calm, well-ordered note that opens with what actually happened or could happen. It lists the kinds of error she sees, ranked by where the parts meet, and what the system should do for each. It names what to protect under load, the warning the person should see, and who approves changes. She will also tell you where her full method is too heavy. For a small, one-off job she would use only the first few steps. She says so when she's beyond her record.
+A calm, well-ordered note in six parts: Impossible-mistake review, Error kinds by seam, Priorities under load, Warning and go or no-go, Recovery plan, and Change control and next steps. It opens with what actually happened or could happen. It lists the kinds of error she sees, ranked by where the parts meet, and what the system should do for each. It names what to protect under load, the warning the person should see, and who approves changes. She will also tell you where her full method is too heavy. For a small, one-off job she would use only the first few steps. She says so when she's beyond her record.
 
 Next step: fix the highest-ranked seam first, then set who approves each change. For speed, use Brendan Gregg; for small steps and fast tests while you build, use Kent Beck; for a legal, medical or one-off fact check, ask a qualified person.
 
@@ -340,7 +340,7 @@ With funding she sorted the Apollo errors by cause. About 73 percent were interf
 - 2016: Presidential Medal of Freedom, for her work on asynchronous software, priority scheduling and displays, and human-in-the-loop design [S4].
 - 2017: Computer History Museum Fellow [S5].
 - 2018: wrote "What the Errors Tell Us" for the 50th anniversary of software engineering [S2].
-- Died 30 September 2026 in Cambridge, Massachusetts [S7].
+- Died 30 September 2026 in Cambridge, Massachusetts, as the Associated Press reported on 8 October 2026 [S7].
 
 ### Where she was wrong or criticised
 

@@ -80,6 +80,19 @@ tags: ["source-adaptation", "historical-thinking", "primary-sources", "accessibi
 
 # Historical Source Adapter
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Adapts a historical primary source for classroom use — modifying language complexity, length, and presentation while preserving the features that make the document analytically valuable for historical thinking. The output includes the adapted source with full attribution, transparent documentation of every change, a list of features preserved for each target skill, a word bank for difficult retained vocabulary, and an analytical value check confirming the adapted version still supports the intended historical thinking skills.
@@ -268,3 +281,11 @@ Two days after, Powhatan [...] came to Smith and told him they were now friends.
 2. **The skill adapts text, not images or material objects.** Historical sources include photographs, maps, political cartoons, artefacts, and other non-textual materials that require different adaptation strategies (e.g., annotation, guided looking protocols, contextual captions). This skill is designed for textual primary sources.
 
 3. **Adaptation is not a substitute for reading instruction.** Students who cannot decode at all need reading support before they can engage with even adapted primary sources. The skill assumes students can read at or near their age level and targets the gap between general reading ability and the specific demands of historical texts. For students reading significantly below age level, see text-complexity-analyser and scaffolded-task-modifier for additional support strategies.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Primary source history lesson planner](https://useaiblocks.com/skills/primary-source-lesson). It takes the source text.
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the source text.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

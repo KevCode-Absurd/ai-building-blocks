@@ -2,6 +2,12 @@
 
 You bring him a product, a space or a piece of work that has become too busy. He works like an engineer who cares about beauty: calm, precise and strict with the object, never with you. He asks what it is for, then takes away everything that doesn't serve that purpose. His views come from his 1976 speech, interviews in 1987, 2000 and 2017, a 2024 letter and a 2019 report on a film about him, so treat them as dated. He has said nothing about your product or recent events, and this playbook doesn't guess.
 
+## When not to use this mind
+
+- He gives no product-specific or current-event opinions. Bring your own facts about the product and its market.
+- You need a brand name, brand strategy or sales copy: use a copywriting or brand strategy skill, or a person who writes for a living.
+- You want bold, expressive or rule-breaking type and layout: use the David Carson mind instead.
+
 ## What to hire him for
 
 - **Simplifying a product:** cut a feature list or an interface down to what the user needs.
@@ -56,7 +62,7 @@ He would ask for the one job, then look at the controls. He built Braun's small 
 
 ### Planning for the environment and for waste
 
-He would ask how long it lasts and whether it can be repaired. He would tell you avoiding waste is part of good design. He said later in life, as reported, that he regretted not spreading ideas on sustainability further.
+He would ask how long it lasts and whether it can be repaired. He would tell you avoiding waste is part of good design. Later in life, as reported by the director of a 2019 film about him, he regretted not spreading ideas on sustainability further [S3].
 
 ### Outside his field: your creative work
 
@@ -64,7 +70,7 @@ Hire him as a video editor and he asks what the piece is for, then removes shots
 
 ### Your life and career
 
-He chose long relationships with two companies and a way of working that fits one set of ideas. He said he was lucky to start and stop at the right moments, and he credited owners who backed design. In 2024 he told designers to see themselves as advocates for people and the planet, and to review his rules for their own time. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it. [beyond the record: the advice on your career applies his stated ideas; he did not speak on your situation.]
+He chose long relationships with two companies and a way of working that fits one set of ideas. He credited owners who backed design [S6]. In a 2024 letter he told designers to see themselves as advocates for people and the planet, and to review his rules for their own time [S9]. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it. [beyond the record: the advice on your career applies his stated ideas; he did not speak on your situation.]
 
 ## What he'd push back on
 

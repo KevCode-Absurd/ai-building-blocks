@@ -15,20 +15,22 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Makes it better (optional):**
-- **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
-- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **An image** (yours): a finished picture.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, reference ads, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a brief, an image. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-- **An idea, a rough prompt or a bad result** (one is required): the "brief" in the block above means this, not an ad brief.
+- **An idea, a rough prompt or a bad result** (one is required): the "brief" in Before you start means this, not an ad brief.
+- **Reference pictures** (optional): images whose look, face or product the prompt should follow.
 - **Reference images or clips** (optional).
 - **The image or video tool you will use** (optional). Without it the prompt stays tool-neutral.
-- Ad copy, reference ads and drafts are not needed here. Ignore the "Reference ads" and "draft" lines in the block above, and ignore any ad brief: this skill needs only an idea, a rough prompt or a bad result.
+- No ad brief, ad copy, reference ads or draft is needed: only an idea, a rough prompt or a bad result.
+
+**Ask only if** the answer changes the prompt: which tool it is for (when its own syntax matters), whether a face, person or product must match a reference picture, the shape of the frame (square, tall or wide), and for video, how long the clip is. Otherwise state an assumption and draft.
 
 ## Scope and intake
 
@@ -81,7 +83,7 @@ Check the required facts, format and internal consistency against the actual inp
 
 ## When not to use this
 
-Use the [Rough prompt rebuilder](https://useaiblocks.com/skills/rough-prompt-rebuilder) for a prompt only needing a tidy-up, the [Marketing image prompt writer](https://useaiblocks.com/skills/marketing-image-prompt-writer) for ad images, and the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker) when you need shots before prompts. This skill does not make the picture.
+Use the [AI prompt editor](https://useaiblocks.com/prompts/rough-prompt-rebuilder) for a prompt only needing a tidy-up, the [Marketing image prompt writer](https://useaiblocks.com/prompts/marketing-image-prompt-writer) for ad images, and the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker) when you need shots before prompts. This skill does not make the picture.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

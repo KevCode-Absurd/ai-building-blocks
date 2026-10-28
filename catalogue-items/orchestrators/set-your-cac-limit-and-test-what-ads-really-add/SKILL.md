@@ -13,6 +13,24 @@ Not for: one channel with no order export (use the New-customer profit dashboard
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, a spreadsheet, your customer list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 To start steps 1 to 3 you need the orders with a new or returning flag, ad spend by day and channel, and your product and fulfilment costs. If the new or returning flag cannot be built from the export, say so, do not guess it, and write `MISSING: new or returning flag`. Step 1 then gives blended figures only, and every new-customer figure is marked unavailable. Step 4 also needs sales by region. If you have no regional sales data, stop after step 3 and mark steps 4 and 5 not run. Do not plan a lift test without it.
 
@@ -59,17 +77,6 @@ Pause here: Run the test for the planned weeks, then pull spend and new-customer
 - **Step 4, lift test plan:** whether to test, the test type, the groups, the change and dates, the cost, the read-out formula and the rule.
 - **Step 5, budget split:** a ranking for the next $10,000, a stop point per channel, an evidence grade and a move test.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [AI recommendation panel runner](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -78,3 +85,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each metric is defined once, and blended CAC is ad spend divided by new customers, not platform cost per sale.
 - The CAC limit names its window and never mixes 30, 90 and 180 day figures, with the first-order check and the window ratio both shown.
 - The test plan says plainly if you should not test yet, and the ranking states how strong the evidence is for each channel.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -34,9 +34,10 @@ how_to_use:
   - "Install the tools once: Python 3, then run pip install networkx."
   - Open a terminal in the root folder of your repository.
   - Ask your AI to run the ownership map, with a time window if you want one, such as the last 12 months.
-  - Read summary.json first. Look at the orphaned_sensitive_code list (sensitive files with few owners that nobody has touched in a long time), the hidden_owners list (people who control a large share of a sensitive area) and the bus_factor_hotspots (sensitive files with few owners).
+  - Read summary.json first. The bus_factor_hotspots list shows sensitive files with one owner or fewer (the bus factor is how many people would need to leave before nobody knows the file). The orphaned_sensitive_code list is the part of those nobody has touched in 365 days, the default you can change. The hidden_owners list shows people who control a large share of a sensitive area.
   - Compare the result with your CODEOWNERS file to see where real owners differ.
   - Bring the orphaned and single-owner files to your engineering lead. Update CODEOWNERS for the files that have only one owner.
+  - The results name real people, their commit counts and the time zone they usually work in. Share them only with the people who need them, such as the engineering lead. Do not use them for performance reviews.
 output_sample:
   input:
     - Your git repository

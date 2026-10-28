@@ -94,13 +94,6 @@ CHECKS MISSED
 <one line each, or none>
 ```
 
-<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set the pass numbers and run it** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan, so paste in the guess, the test form and the fail line.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The test answers one guess, not several.
@@ -109,6 +102,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cut list names at least three things left out, or says why there are none.
 - A fail line exists, and a result below it would change what you do.
 - The test group is named and reachable this week.
+
+<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Set the pass numbers and run it** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan, so paste in the guess, the test form and the fail line.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

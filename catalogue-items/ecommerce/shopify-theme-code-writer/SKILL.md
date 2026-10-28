@@ -74,8 +74,8 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder).
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the theme files.
 - The [Leftover app code finder](https://useaiblocks.com/skills/leftover-app-code-finder). It takes the theme files.
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the theme files.
 - The [Shopify script and style loader](https://useaiblocks.com/skills/theme-script-and-style-loader). It takes the theme files.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

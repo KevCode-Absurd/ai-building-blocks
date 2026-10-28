@@ -7,7 +7,7 @@ description: "Use when a capstone or group project team needs a working agreemen
 
 Write a team working agreement from the assignment rubric and each person's real availability. Then turn the team's meeting notes into a task register that shows who agreed to what. Two steps run in order. Each saves a file and hands the next step what it needs.
 
-When not to use: you work alone, or your course already sets the team rules (follow the course rules as they are). You only need the action items from one meeting (use the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register)). You are starting a project for a paying client (use the [Prepare a clear client project kickoff](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff) workflow).
+When not to use: you work alone, or your course already sets the team rules (follow the course rules as they are). You only need the action items from one meeting (use the [Action item tracker](https://useaiblocks.com/skills/executive-action-register)). You are starting a project for a paying client (use the [Client project kickoff planner](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff) workflow).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -105,7 +105,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use this in place of the generic list above. Suggest one next step in a short question, and say they can type their own:
 
 - **Each person reads the agreement and says yes in the team chat.** A person does this, not your AI.
-- **Keep the register current** by bringing each week's notes to the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
+- **Keep the register current** by bringing each week's notes to the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
 - **Send a progress update to your supervisor** with the [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer).
 
 Nothing here sends or signs anything.

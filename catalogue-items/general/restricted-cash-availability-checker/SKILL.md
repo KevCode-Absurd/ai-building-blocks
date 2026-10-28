@@ -101,15 +101,15 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked page is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the reconciliations, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal, tax or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Order the day's payments with the [Settlement liquidity ladder builder](https://useaiblocks.com/skills/settlement-liquidity-ladder-builder).
-- Test cash against a lender's covenant with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Order the day's payments with the [Payment timing cash balance planner](https://useaiblocks.com/skills/settlement-liquidity-ladder-builder).
+- Test cash against a lender's covenant with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the reconciliations, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal, tax or investment conclusion unresolved.

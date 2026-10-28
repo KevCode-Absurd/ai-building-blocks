@@ -12,11 +12,13 @@ not_for:
   - "Your code builds or inherits from the generated resource class and you cannot make it static: ask a developer to refactor first, or keep the old designer file."
 how_to_use:
   - Open your AI tool in a place where it can read and edit your project files. This job needs file access and a way to run a build.
+  - Commit or stash your work in git first, so you can undo the deleted designer files and edits if something goes wrong.
   - Paste the skill, then give it the path to your .csproj or its folder.
   - If a file sets a custom namespace, pick one of the two options your AI offers before it starts.
   - Let it edit the project, delete the designer files and build.
   - Read the list of changes and the build result. Check that no WinForms files or non-string resources were touched.
   - Run your own test suite to confirm the text still loads.
+  - Next, once the build and tests pass, commit the migration as its own change and open a pull request for review.
 output_sample:
   input:
     - The path to your project file (.csproj) or the folder that holds it

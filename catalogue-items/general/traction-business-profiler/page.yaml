@@ -43,10 +43,8 @@ output_sample:
       contains: Your buyer, problem, offer, price, first useful action, sales motion, stage, goal, deadline, limits and past tests.
     - name: Source ledger
       contains: The link and access date for each fact it read, kept apart from facts you gave and guesses.
-    - name: Channel fit and risk
-      contains: Why one channel suits your business now, and the strongest reason it might fail.
-    - name: Bounded experiment
-      contains: One cheap pilot with audience, offer, owner, time window, cash cap, tracking and go, revise or stop rules.
+    - name: Limits and tracking
+      contains: Your cash cap, hours a week, who could own a test, how sales are tracked and how long the sales cycle is, for the channel pickers to use.
     - name: MISSING
       contains: The private facts only you know, such as revenue, retention and acquisition cost, still needed before you act.
 how_it_works:

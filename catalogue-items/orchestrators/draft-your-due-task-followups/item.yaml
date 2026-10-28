@@ -11,10 +11,10 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: question
-    required: true
   - type: plan
-    required: false
+    required: true
+  - type: source_text
+    required: true
   - type: brand_brain
     required: false
 outputs:

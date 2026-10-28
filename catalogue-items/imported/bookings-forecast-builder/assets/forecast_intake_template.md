@@ -48,7 +48,7 @@ Export from your CRM (Salesforce / HubSpot / Pipedrive). One row per opportunity
 
 ## Section 3 — Historical conversion (last 4Q and last 12Q)
 
-Stage-to-stage conversion percentage, computed from your CRM history.
+Stage-to-stage conversion rate, computed from your CRM history. In the tables you can think in percent, but in the JSON write each rate as a fraction from 0 to 1 (32% → 0.32). The forecaster rejects values above 1.
 
 **Last 4 quarters (recent regime):**
 

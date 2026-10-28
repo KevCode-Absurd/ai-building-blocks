@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
 outputs:
   - {type: audit_report}
 uses: []

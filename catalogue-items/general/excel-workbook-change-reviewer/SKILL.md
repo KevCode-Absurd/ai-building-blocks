@@ -53,7 +53,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 4. Review changed names, validation ranges, hidden sheets, print settings, external links and data connections. State features the inspection tool cannot preserve or compare.
 
-5. Recalculating and rendering need Excel or LibreOffice on the user's side. In a chat-only run, return the register with those checks marked not run. Otherwise recalculate the copies in Excel (or LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
+5. Recalculating and rendering need Excel or LibreOffice on the user's side. In a chat-only run, return the register with those checks marked not run. Otherwise recalculate the copies in Excel (or LibreOffice). List each cell whose value differs by more than the agreed tolerance, with its sheet, cell, before value and after value, and whether the change was intended. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
 
 ## Acceptance checks
 - Reordering is not reported as every record changing.
@@ -62,7 +62,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Make no repairs unless the user asks; report what you find and stop.
 
 ## Deliverables
-The files are workbook-change-review.xlsx and change-register.md. The report has three sections: SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS. Use OPEN ITEMS as the one list of unrun or failed checks. Where any text above says CHECKS MISSED, write OPEN ITEMS.
+The files are workbook-change-review.xlsx and change-register.md. The report has three sections: SOURCE MAP, CHECKS and OPEN ITEMS. Under CHECKS, mark each check pass, fail or not run. Under OPEN ITEMS, list only the failed and not-run checks: OPEN ITEMS is this skill's CHECKS MISSED list, so there is no separate CHECKS MISSED section.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
 ## What next

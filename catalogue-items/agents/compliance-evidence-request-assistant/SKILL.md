@@ -17,7 +17,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record and gap list, any requirement that changed, the user's rule for how old evidence may be, and the name of the person who reviews proof.
 
-**The pieces it uses:** the [Prepare evidence for a compliance review](https://useaiblocks.com/workflows/prepare-evidence-for-a-compliance-review) workflow and the [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). Read both in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Compliance evidence and gap organizer](https://useaiblocks.com/workflows/prepare-evidence-for-a-compliance-review) workflow and the [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). Read both in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:** an AI that reads uploaded files and can save files. In plain chat, return the same tables as text, say nothing was saved, and give the record for the user to keep.
 

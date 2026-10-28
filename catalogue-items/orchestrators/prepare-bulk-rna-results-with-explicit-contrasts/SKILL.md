@@ -36,7 +36,7 @@ Gather these files before step 1:
 - RUN_SCOPE: identify the permitted local environment, package versions and output folder.
 
 ## Setup and tool limits
-The three named skills (`rna-seq-comparison-preparer`, `rna-seq-group-difference-finder` and `journal-ready-figure-maker`) must be in the folder before you start. If one is missing, stop and ask for it. START_HERE.txt comes with the downloaded pack; if it is not there, follow this file. Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
+The three named skills must be in the folder before you start: [RNA-seq comparison preparer](https://useaiblocks.com/skills/rna-seq-comparison-preparer) (`rna-seq-comparison-preparer`), [RNA-seq group difference finder](https://useaiblocks.com/skills/rna-seq-group-difference-finder) (`rna-seq-group-difference-finder`) and [Journal-ready figure maker](https://useaiblocks.com/skills/journal-ready-figure-maker) (`journal-ready-figure-maker`). The downloaded pack includes them. If one is missing, stop and ask for it. START_HERE.txt comes with the downloaded pack; if it is not there, follow this file. Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
 1. **Validate the count handoff** Use `rna-seq-comparison-preparer`. Confirm bulk biological replication, count provenance, reference build and quantification path. Assemble gene-level counts with the explicit conversion policy: accept raw gene counts from STAR or featureCounts, and Salmon output imported as length-scaled counts (rounded to integers, and labelled as estimates). Reject fractional featureCounts values. If only TPM, FPKM or normalized values are supplied, stop and ask for raw counts or the quantification files; do not relabel them. Hand counts, metadata, QC and exclusions to statistical fitting.
@@ -67,11 +67,11 @@ Return the listed deliverables, source and assumption register, missing inputs a
 - Figures and captions match full result tables.
 
 ## Next steps
-Share the validated tables, figures and the version and parameter manifest with a reviewer who knows the experiment. They check the contrast against the original question. Do not draw biological conclusions from the figures alone.
+Share the validated tables, figures and the version and parameter manifest with a reviewer who knows the experiment. They check the contrast against the original question. Do not draw biological conclusions from the figures alone. Once the reviewer agrees the contrast, the ranked gene table can go to the [Gene list pathway finder](https://useaiblocks.com/skills/gene-list-pathway-finder) to see which pathways stand out.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Genome position converter](https://useaiblocks.com/skills/genome-position-converter). It takes the spreadsheet.
+- The [Gene list pathway finder](https://useaiblocks.com/skills/gene-list-pathway-finder). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

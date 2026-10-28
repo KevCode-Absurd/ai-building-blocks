@@ -48,15 +48,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. The second file holds the tiers and prices. The last holds the test plan.
 
-## After this
-Suggest one next step in a short question, and say they can type their own:
-- **Check the tiers with buyers first** with the [Set your price from what buyers say, then test it](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely) workflow.
-- **Help hesitant visitors say yes** with the [Make visitors who hesitate at the price say yes](https://useaiblocks.com/workflows/make-visitors-who-hesitate-at-the-price-say-yes) workflow.
-If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - No live price was changed. The test plan names the rollback and the number that decides.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Check the tiers with buyers first** with the [Buyer pricing survey test planner](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely) workflow.
+- **Help hesitant visitors say yes** with the [Price objection copy planner](https://useaiblocks.com/workflows/make-visitors-who-hesitate-at-the-price-say-yes) workflow.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

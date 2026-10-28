@@ -1,9 +1,10 @@
 # Design things people love: AI Blocks
 
-> 114 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 116 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
 - [Apple app design checker](https://useaiblocks.com/skills/apple-app-design-checker): Share an Apple app screen or code and target platforms. Get design findings, reasons and concrete fixes to review.
+- [Apple interface reviewer](https://useaiblocks.com/skills/apple-interface-reviewer): Check your iOS or Mac screen against Apple's design rules, with contrast and tap target checks, a score and a fix list for Liquid Glass too.
 - [Art pipeline planner](https://useaiblocks.com/agents/agency-technical-artist): Plan a game art pipeline with budgets for models, textures and effects, LOD and import rules, and a review routine, for any engine or platform.
 - [Bento grid style guide writer](https://useaiblocks.com/skills/bento-grid-style-guide-writer): Describe your product. Get a card-grid style guide with shared colours, spacing, interaction states and design checks.
 - [Bold-border style guide writer](https://useaiblocks.com/skills/bold-border-style-guide-writer): Get a bold-border style guide with thick borders, vivid colour and rules for each part, plus a contrast check so it stays readable.
@@ -26,6 +27,7 @@
 - [Design rule consistency reviewer](https://useaiblocks.com/agents/monthly-design-system-keeper): Check code against your design rules. Find inconsistent styles, changed colour pairs and missing component specs.
 - [Design style and page builder](https://useaiblocks.com/skills/design-style-analyst): Share design references or a saved style profile. Get a structured look, feel and effects guide, or build a page from it.
 - [Design system change and migration planner](https://useaiblocks.com/workflows/prepare-a-design-system-migration): Share current components, proposed changes and release limits. Get a change list, replacement rules and a staged adoption plan.
+- [Design system file writer](https://useaiblocks.com/skills/design-system-file-writer): Describe your product's feel and get a DESIGN.md design system file with colours, fonts, layout, motion and a ban list, ready for Google Stitch.
 - [Design system reviewer](https://useaiblocks.com/skills/design-system-auditor): Share components and style rules. Check consistency, document variants and states, or propose a new pattern that fits the system.
 - [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder): Share brand colours and style needs. Get shared style values, component notes and files that developers can check in the project.
 - [Developer component brief planner](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief): Share a component design and current design-system rules. Get a brief for states, keyboard use, focus and existing design values.

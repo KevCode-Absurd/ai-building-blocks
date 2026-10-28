@@ -32,12 +32,13 @@ you_get:
   - A list of people who are not yet in your CRM
   - One relationship action for this week
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page. The full version reads your CRM, email and calendar, which needs Claude with those connectors. In ChatGPT or Gemini, or any chat without connectors, it works from what you paste and skips the parts about connectors, Pages and saving records.
   - Type the deal or account name.
   - Paste your contact list with names, titles and roles. Paste attendee lists or call notes too if you have them.
   - If your AI is connected to your CRM, email and calendar, say so and it will read them. If not, the pasted text is enough.
-  - Check the map. Anything marked unknown means there was no evidence, so add notes and run it again.
+  - Check the map. Anything marked unknown means there was no evidence, so add notes and run it again. Mood and stance are its reading of emails and notes about real people, not facts. Check them before you act on them.
   - Your AI will ask before it adds any new contact to your CRM. Check each name and source first.
+  - Next, do the one relationship action it suggests this week, such as asking your champion for an intro to the economic buyer, then run the map again after the next meeting.
 output_sample:
   input:
     - Your deal or account name

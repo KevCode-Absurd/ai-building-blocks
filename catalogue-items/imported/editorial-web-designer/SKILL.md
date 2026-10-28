@@ -12,6 +12,27 @@ tags: [frontend, design, minimalism, ui]
 tools: [claude, cursor, codex, antigravity]
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **An image** (yours): a finished picture.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, a codebase, an image. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude:** Writes clean front-end code and keeps to a long rulebook like this one.
+- **Cursor:** Lets you drop the code into your project and see the result in the same place.
+<!-- /needs -->
+
 ## When not to use (added by AI Blocks)
 
 - The screen is dense with data, such as a trading table or an admin grid. Flat greys can hide what matters most, so check hierarchy first.
@@ -52,6 +73,17 @@ After the output, suggest one next step, such as building the next screen or che
 - Use when the user wants a refined minimalist UI inspired by tools like Notion, Linear, or editorial workspace products.
 - Use when designing warm monochrome interfaces with crisp borders, generous whitespace, muted pastel accents, and quiet motion.
 - Use when the task should avoid gradients, heavy shadows, saturated colors, pill-heavy components, and generic SaaS visuals.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Image and video pipeline planner](https://useaiblocks.com/skills/image-and-video-pipeline-planner). It takes the web app.
+- The [Industry site layout planner](https://useaiblocks.com/skills/industry-look-site-composer). It takes the design direction.
+- The [Multi-language site planner](https://useaiblocks.com/skills/multi-language-site-planner). It takes the web app.
+- **Design it** with the [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction.
+- The [Poster designer](https://useaiblocks.com/skills/poster-designer). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Example
 

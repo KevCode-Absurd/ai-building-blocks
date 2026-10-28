@@ -5,9 +5,9 @@ name: AI search audit
 summary: Run an AI search audit on your website. You get a score out of 100 for how likely AI tools are to cite it, plus fixes ranked by urgency.
 job: get-found-in-search
 headline: AI search audit
-subhead: A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
+subhead: A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI are to cite your site, with fixes sorted by urgency. It shows where you stand and what to fix first.
 explain: |
-  A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
+  A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI are to cite your site, with fixes sorted by urgency. The score is a rough guide. The six area weights are the skill author's own choice, not a measure of how often AI tools really cite you.
 
   It reads your home page to tell whether you are a shop, a local business, a software firm, a publisher or an agency. Then it crawls up to 50 pages from your sitemap. Separate checks run in parallel on six areas: how quotable your content is, brand authority, expertise signals, technical setup, structured data and platform fit. The report lists critical, high, medium and low issues, quick wins and a 30 day plan. It fetches live web pages.
 when:
@@ -32,7 +32,7 @@ how_to_use:
   - Use an AI that can open web pages, such as Claude, ChatGPT or Gemini with browsing turned on.
   - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
   - Before you start, check that your AI can open live web pages. It reads up to 50 pages from your site, one second apart.
-  - If your AI does not have the five checking skills, it runs those checks itself.
+  - The skill hands parts of the work to five checking skills from the same author, for quotable content, platform fit, technical setup, content quality and structured data. Two are in this library as the AI citation scorer and the AI search platform checker. If your AI does not have them, it runs those checks itself from the page data.
   - Add your website address. Add your topic and a rival's site if you have them (optional).
   - Ask your AI to run the audit and save the result as GEO-AUDIT-REPORT.md.
   - Read the critical and high issues first, then do the quick wins this week.

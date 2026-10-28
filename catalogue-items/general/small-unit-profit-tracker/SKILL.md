@@ -62,7 +62,7 @@ The units, each with a leader and a draft plan. This period's income, costs, hou
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner).
-- The [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker). It takes the plan.
+- The [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -68,6 +68,6 @@ Lead with the two outcomes side by side: the base offer value, and the holder's 
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Take out deal fees** with the [Check adviser fees in seller proceeds](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds) workflow, if you need what the seller keeps.
-- **Test share count and earnings** with the [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow, once the new shares are counted.
+- **Take out deal fees** with the [Seller adviser fee and proceeds checker](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds) workflow, if you need what the seller keeps.
+- **Test share count and earnings** with the [Basic and diluted earnings per share checker](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow, once the new shares are counted.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -90,7 +90,7 @@ Offer one next step and say they can type their own:
 
 - Answer the recall exercise today. Run it again on the same notes in a week and see what stuck.
 - Turn the notes into a quiz with the [Recall quiz writer](https://useaiblocks.com/skills/recall-quiz-writer).
-- Keep a long-running notebook with the [Personal study notebook](https://useaiblocks.com/skills/personal-study-notebook).
+- Keep a long-running notebook with the [Personal study planner](https://useaiblocks.com/skills/personal-study-notebook).
 
 ## Check before you hand it back
 

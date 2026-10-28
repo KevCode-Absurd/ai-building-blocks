@@ -19,6 +19,7 @@ not_for:
   - "You need a treatment or clinical decision: use clinical trial or patient data, and talk to a doctor or trial team."
   - "You want proof that a drug works or that two genes interact: test it in the lab with matched experiments."
   - "You cannot run code or download files: ask a bioinformatics colleague, or browse the DepMap portal by hand."
+  - "You cannot confirm that DepMap's terms allow automated downloads: fetch the files by hand instead of letting the helper fetch them."
 you_give:
   - A gene name or cell line
   - The cancer type or group to compare (optional)

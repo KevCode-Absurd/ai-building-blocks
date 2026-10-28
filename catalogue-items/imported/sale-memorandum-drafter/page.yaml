@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - "Gather first: three to five years of accounts as PDF or Excel with the year labels (FY, April to March), your latest forecast, management slides, and customer and org chart details if you have them."
   - Before you paste anything, check your confidentiality and NDA terms. Send financial and customer data only to an AI tool your NDA allows, because a general consumer AI tool may breach those terms. Remove or anonymise names of customers and staff first.
-  - "Open Claude, ChatGPT or Gemini. Paste in the full skill text, the whole SKILL.md for this item, from this page. The two companion India skills are not part of this item, so the rules are written into the skill: years run April to March, and amounts use lakh and crore. In Excel, never use a number format with trailing commas to show crore. It shows lakh under a crore label, a 100 times error. Divide by 10000000 in a formula instead."
+  - "Open Claude, ChatGPT or Gemini. Paste in the full skill text, the whole SKILL.md for this item, from this page. If your AI can open files, also add references/runbook-cim.md from the download; the skill works without it. The two companion India skills are not part of this item, so the rules are written into the skill: years run April to March, and amounts use lakh and crore. In Excel, never use a number format with trailing commas to show crore. It shows lakh under a crore label, a 100 times error. Divide by 10000000 in a formula instead."
   - Add your slides, accounts, forecast and any customer or org chart details. Paste the text or upload the files.
   - Ask your AI to draft the memorandum. It will ask for anything missing.
   - Check each number and each year label. Indian years run April to March.

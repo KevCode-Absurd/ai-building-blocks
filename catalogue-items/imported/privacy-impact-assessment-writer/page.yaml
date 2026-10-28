@@ -7,8 +7,6 @@ job: check-contracts
 headline: Privacy impact assessment writer
 subhead: A privacy impact assessment for a new feature that uses personal data, with conditions, named owners and a route to sign-off. It is a first check, not legal advice.
 explain: |
-  A privacy impact assessment for a new feature that uses personal data, with conditions, named owners and a route to sign-off. It is a first check, not legal advice.
-
   The skill starts by asking whether an assessment is needed at all, using your house trigger and the rules in each region you serve. Then it asks the product team questions, or reads a product requirements doc. It writes the assessment in your own format, checks whether the privacy policy matches the new practice, and ends with a list of conditions that must be met before launch, each with an owner.
 when:
   - A team wants to ship location sharing next month.
@@ -32,7 +30,7 @@ you_get:
 how_to_use:
   - Open your AI tool and paste in the skill instructions. If your AI can read files, upload the skill folder instead.
   - Paste your feature description or requirements doc. Say which data types and regions are involved.
-  - Add your house assessment format or a past one if you have it. If not, say so and your AI will ask for your review trigger and privacy policy promises.
+  - Add your house assessment format or a past one if you have it. If not, say so. Your AI will ask for your review trigger, house format, privacy policy promises and who signs off. The setup-interview/SKILL.md file in the folder asks the same questions if you want to save the answers.
   - Answer the product team questions it asks. It marks anything missing rather than guessing.
   - Check the risks, the policy check and the conditions list. Make sure each condition has an owner.
   - Send the result to a privacy lawyer before you file anything or decide to launch.

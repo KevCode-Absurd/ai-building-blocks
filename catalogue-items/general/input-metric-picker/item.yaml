@@ -9,8 +9,6 @@ level: intermediate
 inputs:
   - type: performance_sheet
     required: true
-  - type: copy_draft
-    required: false
 outputs:
   - type: plan
 origin: rebuilt

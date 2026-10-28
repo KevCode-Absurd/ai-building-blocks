@@ -11,6 +11,19 @@ metadata:
 
 Context optimization is the process of refining the raw context assembled for an AI model so that every token contributes meaningfully to the task. In a typical RAG or agent pipeline, the retrieved context often contains redundant passages, marginally relevant chunks, and poorly ordered information. Optimization transforms this raw material into a lean, high-signal context block that improves answer quality, reduces inference cost, and makes the most of the model's attention budget.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Audit the Raw Context**: Inventory every piece of context that has been gathered -- retrieved documents, conversation history, tool outputs, and metadata. Measure the total token count and compare it against the available context budget. Identify the compression ratio needed if the raw context exceeds the budget.
@@ -104,3 +117,10 @@ Provide the raw context (a list of text chunks with optional metadata and scores
 - **Very small context windows (4K tokens)**: With tight budgets, aggressive compression after optimization may still be needed. Optimize first to remove waste, then compress the remainder if it still exceeds the budget.
 - **Rapidly changing source data**: In live systems where documents are updated frequently, cached optimization results may become stale. Invalidate and re-optimize when source documents change.
 - **Context with mixed content types**: When context includes prose, code, tables, and JSON, apply type-specific density scoring -- a 10-line code snippet is typically denser than a 10-line prose paragraph.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI context editor](https://useaiblocks.com/skills/context-shrinker). It takes the source text.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

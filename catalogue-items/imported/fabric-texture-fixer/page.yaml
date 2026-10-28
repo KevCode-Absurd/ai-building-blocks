@@ -19,6 +19,7 @@ not_for:
   - "Your garment has the wrong shape or a broken structure: make the photo again, because this only fixes the fabric surface."
   - "You want to swap one fabric for another: use the fabric swap sample maker."
   - "Your photo is very low resolution: take a new photo or ask your supplier for a better one."
+  - "Buyers will judge the real fabric from this picture: use a real photo of the actual item instead."
 you_give:
   - The blurry garment photo
   - A clear product photo of the same item
@@ -29,7 +30,7 @@ you_get:
   - Prompt used for repeat runs
 how_to_use:
   - Check both photos show the same item. Each file should be over 400 by 400 pixels and between 20KB and 15MB. The skill file is written in Chinese. Your AI can read it and answer in English.
-  - Use an AI that can run code. You also need the dlazy tool set up with credits. Chat alone will only write the prompt.
+  - Use an AI that can run code. You also need the dlazy tool set up with credits, which are paid. Chat alone will only write the prompt. Run with --dry-run first to see the credit cost before you spend any.
   - Give your AI both photos, with the blurry one first, and the garment type. Results save to one default path, docs/material-enhancement/output-<sku>-enhanced.jpg, apart from your original.
   - Ask it to follow this skill. It writes the prompt and runs the image model. Ask for two variants with --batch 2, because the default is one image.
   - Compare each result with your sharp photo. Check the face, background and colour did not change.

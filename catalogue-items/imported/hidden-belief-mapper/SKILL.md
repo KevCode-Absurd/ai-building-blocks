@@ -64,6 +64,19 @@ tags: ["mental-models", "assumptions", "systems-thinking", "compassionate-system
 
 # Mental Model Mapper
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Surfaces the beliefs, assumptions, stories, values, identities, fears, and definitions of success that shape a system. A mental model is not merely an opinion. It is a way of interpreting reality that influences what people notice, what they treat as normal, what they design for, and what they consider possible.
@@ -178,3 +191,11 @@ Self-check: Do not claim to know what people believe. Do not moralise mental mod
 - [ ] Protective functions are considered.
 - [ ] Alternative models include enabling structures.
 - [ ] Dialogue prompts are safe enough for classroom or staff use.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Community workshop guide builder](https://useaiblocks.com/skills/community-workshop-guide-builder). It takes the document.
+- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

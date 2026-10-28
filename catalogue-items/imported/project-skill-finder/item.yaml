@@ -29,4 +29,8 @@ credits:
   - title: project-skill-audit skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/project-skill-audit
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Used under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file's header says MIT, the original author's licence. We gave it a plain name and added a privacy note about reading memory folders.
+  - title: Original author
+    by: Dimillian
+    url: https://github.com/Dimillian/Skills
+    used: Wrote the skill under MIT; sickn33 shared it in their collection.

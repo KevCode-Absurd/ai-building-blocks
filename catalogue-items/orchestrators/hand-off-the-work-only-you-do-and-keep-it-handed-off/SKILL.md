@@ -29,6 +29,8 @@ How to start:
 - **What worries you about handing off** (optional)
 - **Jobs you want to keep, and why** (optional)
 
+If the hours are missing, step 1 asks once, then works from your rough guesses and marks each one `estimate`. If the person taking the job has no experience with it, step 2 sets an earlier first review date and step 3 plans weekly meetings until the first review passes.
+
 **When not to use it:**
 - A person who is not doing the job well now. That is a performance talk, not a hand-off. Talk to them directly, or ask your HR adviser.
 - A job nobody on your team could learn. Keep it, or hire for it first.

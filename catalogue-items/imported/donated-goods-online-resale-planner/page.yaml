@@ -12,7 +12,7 @@ when:
   - Buyers complain about shipping or item condition on online orders.
   - You want a clear rule for which donations go online and which go on the floor.
 not_for:
-  - "You only need shelf prices for the shop floor: use a pricing and merchandising guide or your store lead, not this planner."
+  - "You only need shelf prices for the shop floor: there is no floor pricing guide in this library yet, so set them with your store lead."
   - "You need a tax value or appraisal for the donor: ask an appraiser or your tax adviser. Do this alongside the listing, not instead of it."
   - "You want a one-off sale to a local buyer: a simple note on your own page or a call to the buyer is enough."
 you_give:
@@ -30,7 +30,7 @@ you_get:
   - A monthly review plan for sale price, shipping cost and returns
 how_it_works:
   - title: Research suitable items
-    text: Check what the item is. Look at prices from past sales before choosing online sale or the shop floor.
+    text: Confirm what the item is. Search the marketplace's sold listings for 5 to 10 similar items and note each price, date and condition. If there are no sold matches, keep it on the shop floor.
   - title: Prepare an honest listing
     text: Specify needed photos, dimensions, condition, and flaws. Choose a sale format based on the available price evidence.
   - title: Plan safe delivery
@@ -40,11 +40,11 @@ works_best_with:
     - name: A chat AI that can read your files
       why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
   inputs:
-    - Marketplace listings and photos; mistakes are relisted.
+    - What to gather first, for each item: the marketplace's listing fields, clear photos, measurements, and sold prices for similar items with the date of each sale.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
   - Paste in the item details, flaws, measurements and your marketplace.
-  - Add sold prices for similar items. If your AI has web access, ask it to find them and show its sources.
+  - Add sold prices for similar items. If your AI has web access, ask it to find them and give a link and sale date for every price. Drop any price it cannot link.
   - Make sure you have a seller account on the marketplace. Check its fees and shipping charges before you list.
   - Read the listing fields and check every flaw is stated honestly. Then take the photos on the checklist.
   - Use the monthly review plan to adjust which items you send online. Run the first review after 30 days of listings. Pair this with the Donated goods intake planner, which routes items to this channel.

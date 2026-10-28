@@ -6,7 +6,7 @@
 |---|---|---|
 | `cy.visit('/page')` | `await page.goto('/page')` | Use `baseURL` in config |
 | `cy.get('.selector')` | `page.locator('.selector')` | Prefer `getByRole()` |
-| `cy.get('[data-cy=x]')` | `page.getByTestId('x')` | |
+| `cy.get('[data-cy=x]')` | `page.locator('[data-cy=x]')`, or `page.getByTestId('x')` only after setting `use: { testIdAttribute: 'data-cy' }` in `playwright.config.ts` | `getByTestId()` reads `data-testid` by default (playwright.dev/docs/locators), so without that setting it finds nothing |
 | `cy.contains('text')` | `page.getByText('text')` | |
 | `cy.find('.child')` | `parent.locator('.child')` | Chain from parent locator |
 | `cy.first()` | `locator.first()` | |
@@ -39,7 +39,8 @@
 | Cypress | Playwright | Notes |
 |---|---|---|
 | `.should('be.visible')` | `await expect(locator).toBeVisible()` | Web-first, auto-retry |
-| `.should('not.exist')` | `await expect(locator).not.toBeVisible()` | Or `.toHaveCount(0)` |
+| `.should('not.exist')` | `await expect(locator).toHaveCount(0)` | Absence from the page. Do not use `not.toBeVisible()` here: it also passes when the element exists but is hidden |
+| `.should('not.be.visible')` | `await expect(locator).toBeHidden()` | The element may exist but must not be visible |
 | `.should('have.text', 'x')` | `await expect(locator).toHaveText('x')` | |
 | `.should('contain', 'x')` | `await expect(locator).toContainText('x')` | |
 | `.should('have.value', 'x')` | `await expect(locator).toHaveValue('x')` | |

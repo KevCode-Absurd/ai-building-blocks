@@ -21,7 +21,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last accepted model and review log, and the record this agent wrote last time.
 
-**The pieces it uses:** the [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow (the governing method), which runs the [LIFO reserve earnings bridge](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge), the [Inventory charge margin bridge](https://useaiblocks.com/skills/inventory-charge-margin-bridge) and the [Noncash working-capital bridge](https://useaiblocks.com/skills/noncash-working-capital-bridge), and the [Trailing-period financial bridge](https://useaiblocks.com/skills/trailing-period-financial-bridge) (only for a trailing comparison). If you cannot open them, use the method written in steps 3 to 6 and say you did. Do not rebuild a missing piece from memory beyond what those steps say.
+**The pieces it uses:** the [Inventory cost and margin reviewer](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow (the governing method), which runs the [LIFO to FIFO comparison calculator](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge), the [Inventory write-down margin checker](https://useaiblocks.com/skills/inventory-charge-margin-bridge) and the [Working capital cash change checker](https://useaiblocks.com/skills/noncash-working-capital-bridge), and the [Trailing year financial calculator](https://useaiblocks.com/skills/trailing-period-financial-bridge) (only for a trailing comparison). If you cannot open them, use the method written in steps 3 to 6 and say you did. Do not rebuild a missing piece from memory beyond what those steps say.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.
@@ -65,6 +65,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Look at one year's LIFO adjustment** with the [LIFO reserve earnings bridge](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge).
-- **Check the cash side on its own** with the [Noncash working-capital bridge](https://useaiblocks.com/skills/noncash-working-capital-bridge).
+- **Look at one year's LIFO adjustment** with the [LIFO to FIFO comparison calculator](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge).
+- **Check the cash side on its own** with the [Working capital cash change checker](https://useaiblocks.com/skills/noncash-working-capital-bridge).
 Nothing here values stock, files anything or contacts anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -19,6 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 - **A transcript** (yours): the words from a recording, written out, with who said what.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Competitors** (yours): the brands buyers compare you with.
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.

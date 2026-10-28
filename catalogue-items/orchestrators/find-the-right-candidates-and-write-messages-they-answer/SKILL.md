@@ -13,22 +13,23 @@ Not for: a role that already gets a steady stream of applicants (a job post or a
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (use your own material or the linked skill):
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with a buyer brief. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the job description, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
+The shared block above is generated for many workflows and may suggest a buyer brief. Skip it: for hiring, the hiring manager's must-haves below take its place.
+
 - **The job description or a short brief of the role**, with the real day-to-day work (required)
 - **What the hiring manager cares about most**, including anything they would never compromise on (optional)
 - **Where you can send from and how many messages a week** (optional)
@@ -55,19 +56,20 @@ Pause here: Send the messages for two weeks. Count how many you sent, how many r
 ## What you hand back
 Four step files and the summary: the candidate profile, the search plan, the first messages with follow-ups, and the pipeline update with changes for the next two weeks.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
-- The [Brand facts accuracy fixer](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Email setup health checker](https://useaiblocks.com/skills/email-setup-health-checker). It takes the document.
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
-- The [Analysis checker](https://useaiblocks.com/skills/analysis-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+## Next steps for this workflow
+Use these, not the generated links below. Once the first candidates say yes, build what they will see with the [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder), then plan the interviews with the [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). Bring the candidate profile from step 1.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer). It takes the document.
+- The [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer). It takes the document.
+- The [Nonprofit board recruitment planner](https://useaiblocks.com/skills/nonprofit-board-recruitment-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

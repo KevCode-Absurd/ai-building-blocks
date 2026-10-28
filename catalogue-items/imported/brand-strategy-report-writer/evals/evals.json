@@ -4,9 +4,9 @@
     {
       "id": 1,
       "prompt": "I have a new branding client — it's a sustainable skincare brand for Indian women aged 25-40. They filled out the questionnaire. Help me build the brand strategy.",
-      "expected_output": "Should recognize this is a filled-questionnaire scenario and proceed to generate the full brand strategy report. Should produce all 12 sections: brand origin, vision, mission, values, goals, target audience with personas, brand personality, brand voice, competitor analysis, positioning, differentiation, and tagline suggestions. Should write in a confident, editorial voice — not generic or AI-sounding. Should include India-specific context in audience and competitor sections. Should offer 3-5 tagline options.",
+      "expected_output": "Should recognize this is a filled-questionnaire scenario and proceed to generate the full brand strategy report. Should produce all 13 sections: brand origin, vision, mission, values, goals, target audience with personas, brand personality, brand voice, competitor analysis, positioning, differentiation, tagline suggestions, and assumptions to check. Should write in a confident, editorial voice — not generic or AI-sounding. Should include India-specific context in audience and competitor sections. Should offer 3-5 tagline options.",
       "assertions": [
-        "Generates all 12 report sections",
+        "Generates all 13 report sections, including the closing assumptions-to-check list",
         "Writes in confident editorial voice, not AI-sounding",
         "Includes audience personas with real-feeling detail",
         "Includes competitor analysis with named competitors",

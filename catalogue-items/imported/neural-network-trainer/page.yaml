@@ -7,8 +7,6 @@ job: build-software
 headline: Neural network trainer
 subhead: A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
 explain: |
-  A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
-
   The skill first decides the right route. For table data, it uses fitcnet or fitrnet. For images, signals and sequences, it uses the newer trainnet approach with dlnetwork, and can start from a pretrained network for transfer learning. After training it scores the model with testnet and predicts with minibatchpredict. It can export the result to Simulink. It also migrates older patternnet, fitnet, narxnet and trainNetwork code, and can speed up slow deep learning code with dlaccelerate. You need MATLAB with the right toolboxes. These are paid MathWorks products, and the licence allows use only with MathWorks products such as MATLAB.
 
   In plain words: fitcnet and fitrnet train a simple network on a table, one to sort things into groups and one to predict a number. trainnet with dlnetwork is the newer route for images, signals and sequences. testnet scores the result on data the network has not seen. minibatchpredict makes the predictions. dlaccelerate speeds up slow code.
@@ -28,7 +26,7 @@ you_give:
   - Existing MATLAB code to update (optional)
   - Whether you need a Simulink export (optional)
 you_get:
-  - A reply in this order: the route chosen, the trained network, the test table, the updated code, the export and a speed-up note
+  - "A reply in this order: the route chosen, the trained network, the test table, the updated code, the export and a speed-up note"
   - MATLAB code that trains the network
   - A table of test results on data the network has not seen
   - Updated code using current functions
@@ -39,6 +37,7 @@ how_to_use:
   - Add your data, say what you want to predict, and paste any old code you want updated.
   - Say if you want a Simulink export. Skip this if you do not.
   - Read the test results first. Check them before you use the network.
+  - Ask your AI to list the MATLAB functions and the script it used, and save that script, so you can run it again in MATLAB without the AI.
   - Next, export a small dlnetwork to Simulink with exportNetworkToSimulink, or use the Predict block for a large one. Or ask for dlaccelerate on a slow inference loop.
 output_sample:
   input:

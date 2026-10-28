@@ -72,9 +72,9 @@ Four step files and the summary. The step 4 file holds the supplier plan.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the deal terms and plan.
 - The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the deal terms.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
 - The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
-- **Check the money** with the [Indian merger earnings model builder](https://useaiblocks.com/skills/merger-effect-modeler). It takes the deal terms.
+- The [Supplier quote reviewer](https://useaiblocks.com/skills/supplier-quote-comparer). It takes the deal terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

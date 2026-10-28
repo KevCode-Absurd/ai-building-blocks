@@ -14,7 +14,7 @@ A test needs replies, and replies need something to reply to. If the offer is we
 This skill runs in any chat AI. It needs no files, web access or paid tools.
 
 **What you need:**
-- **The test plan** (yours, or from the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner)): the two versions, the audience size and the reply target.
+- **The test plan** (yours, or from the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner)): the two versions, the audience size and the reply target.
 
 **Makes it better (optional):**
 - **Your real offer and price** (yours): so the reply item leads into it.
@@ -67,14 +67,6 @@ How to start:
 
 The one-line aim. The chosen offer and back-up, with cost per piece. Shown or hidden, with the reason. The screen, if any. The sum showing expected replies against the target and the order of any boosts. The offer lines. The follow-up note. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: hand-written (needs_mode: manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **When the test has run** with the [Split-run result reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the reply counts for each key.
-- **If the two versions must run in different places** with the [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner). It takes the versions and the offer lines.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The offer is identical in both versions: same item, wording, size and place.
@@ -82,6 +74,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Expected replies are compared with the target, with figures or a labelled range.
 - Any "free" claim has its conditions beside it in the same line.
 - Replies can be matched to buyers later.
+
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **When the test has run** with the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the reply counts for each key.
+- **If the two versions must run in different places** with the [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner). It takes the versions and the offer lines.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

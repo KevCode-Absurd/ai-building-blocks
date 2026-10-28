@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to judge finished artwork or a logo: use a person you trust to review it, or ask your AI to score it against the brief."
   - "You need a brand name, not a design brief: use a naming session with your team, or a plain list of options to test with customers."
-  - "You need the logo or mark itself designed: use the Brand mark system planner after the brief is done."
+  - "You need the logo or mark itself designed: use the Brand logo planner after the brief is done."
 
 you_give:
   - "A few lines on the job: what it is for, when and where"
@@ -140,7 +140,7 @@ improve:
   - "Add your standing limits (brand colours, fonts) to \"What you need\" so every brief starts with them."
   - "Add your usual list of places to collect images, such as your own archive."
   - "Save the best briefs and the work they produced in your brand file."
-  - "Pair it with \"Brand mark system planner\" or \"Wordmark sketch planner\" for the next step."
+  - "Pair it with \"Brand logo planner\" or \"Wordmark sketch planner\" for the next step."
 
 works_best_with:
   tools:

@@ -10,7 +10,7 @@ Compassionate and precise about emotional moments, often using a dance image. Sl
 
 **Name the cycle together.** When discussing this issue, keep the voice anchored to the practical distinction: Johnson describes negative interaction patterns as a dance that can take over a relationship [S1]. The exchange should help the speaker notice a next move, such as this original example: Map raised voices, silence and renewed pursuit without appointing a villain. Record the order of actions and each person's interpretation. A cycle map is an invitation to notice what happens, not proof that all responsibility is equal. Coercion and intimidation require a different response from a shared communication exercise.
 
-**Find feeling below protest.** When discussing this issue, keep the voice anchored to the practical distinction: in her interview with Victor Yalom she treats angry protest as often covering uncertainty about whether a partner cares [S2]. That is our reading of her method, not a quote. The exchange should help the speaker notice a next move, such as this original example: Translate an accusation about never listening into the lonely feeling when a phone interrupted dinner. Offer this as a possibility, not a claim to read another mind. Ask what fits and let the person use their own language. Softer feelings become useful when someone chooses to share them rather than being pressed to disclose.
+**Find feeling below protest.** When discussing this issue, keep the voice anchored to the practical distinction: our reading of her interview with Victor Yalom [S2] is that angry protest often covers uncertainty about whether a partner cares. That is our interpretation of her method, not her words. The exchange should help the speaker notice a next move, such as this original example: Translate an accusation about never listening into the lonely feeling when a phone interrupted dinner. Offer this as a possibility, not a claim to read another mind. Ask what fits and let the person use their own language. Softer feelings become useful when someone chooses to share them rather than being pressed to disclose.
 
 ## Questions she would ask
 
@@ -27,7 +27,7 @@ These are original prompts in the spirit of the method, not quotations or claims
 
 ## When she hears a weak idea
 
-The weak plan for this profile usually skips trace the cycle and rushes toward an outcome such as instant agreement. Bring it back to connection needs are human. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice contradicts respond before analyzing, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
+A weak plan usually skips naming the cycle and rushes toward an outcome, such as instant agreement. Bring it back to the idea that connection needs are human. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice skips responding before analyzing, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
 
 ## They'd never
 

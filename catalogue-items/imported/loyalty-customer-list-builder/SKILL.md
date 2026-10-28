@@ -11,6 +11,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Segments your highest-value customers by order count and total lifetime spend, tags them in Shopify, and exports a list ready for loyalty program enrollment or VIP campaign targeting. This skill handles the data layer; managing rewards points or sending loyalty emails requires an external tool.
 
@@ -70,7 +83,7 @@ query LoyaltyCustomers($first: Int!, $after: String, $query: String) {
 ```
 
 ```graphql
-# tagsAdd:mutation — validated against api_version 2025-01
+# tagsAdd:mutation — written for api_version 2025-01; check it against Shopify's docs for your version
 mutation TagsAdd($id: ID!, $tags: [String!]!) {
   tagsAdd(id: $id, tags: $tags) {
     node { id }
@@ -78,6 +91,8 @@ mutation TagsAdd($id: ID!, $tags: [String!]!) {
   }
 }
 ```
+
+> Note from AI Blocks: before a live run, check every field name above against the current Shopify Admin API docs for your API version. Newer versions rename some customer fields (for example `numberOfOrders` and `amountSpent` in place of `ordersCount` and `totalSpentV2`), and an old name can fail or return wrong totals.
 
 ## Session Tracking
 
@@ -118,6 +133,17 @@ For `format: json`, emit the standard JSON schema with `outcome` keys: `vip_cust
 CSV `loyalty_segment_<YYYY-MM-DD>.csv` with columns:
 `customer_id`, `email`, `first_name`, `last_name`, `orders_count`, `total_spent`, `currency`, `tag_applied`
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer churn risk scorer](https://useaiblocks.com/skills/customer-churn-risk-scorer). It takes the customer list.
+- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the customer list.
+- The [Repeat order bottleneck finder](https://useaiblocks.com/skills/repeat-order-bottleneck-finder). It takes the customer list.
+- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the customer list.
+- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the customer list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
@@ -126,6 +152,7 @@ CSV `loyalty_segment_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 - The export holds customer names and emails. Tell the user to store and share it under their own privacy rules and customer consent terms.
+- The list reflects your customers on the day you run it. Running it later adds new customers who now qualify, but it never removes the tag from people who no longer do. To refresh the list, remove the old tag first or use a new tag name.
 - The query in step 1 already skips customers who have the tag. Remove that filter only if the user wants to re-export people already tagged.
 - Export and review the customer list before tagging if you're unsure about the threshold values — use `dry_run: true` to see the count, then adjust `min_orders` and `min_spend` before committing.
 - Combine with `customer-win-back`: tag high-LTV lapsed customers with both `loyalty-vip` and a win-back tag to identify your highest-priority re-engagement targets.

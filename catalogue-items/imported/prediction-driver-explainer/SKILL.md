@@ -19,6 +19,24 @@ This skill is aligned with **SHAP 0.52.0** (released 2026-05-28). That release r
 
 The maintained examples were checked on Python 3.12.10 with SHAP 0.52.0, NumPy 2.5.3, pandas 3.0.6, scikit-learn 1.9.1, and matplotlib 3.11.2. Native tests cover small tree, exact, permutation, partition, linear, additive, kernel, text, and constant-image games; additional numeric XGBoost 3.4.1 smoke checks cover raw, probability, loss, and interaction outputs. Reference snippets that require a project model, framework, or data are adaptation templates; optional pretrained/deep, GPU, and distributed integrations remain illustrative and require their own runtime validation.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **The AI model** (yours): the trained model file, such as a checkpoint or ONNX file.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, the AI model. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can set up Python 3.12, run SHAP and save the plots and CSV files. It is a paid tool that needs a subscription. Any other AI that can run Python and save files also works.
+- **Any chat AI that runs Python:** It can run the bundled script on a small table to learn the plots first.
+<!-- /needs -->
+
 ## What you need first
 
 - A trained model the person owns or trusts, and the code that prepares its inputs. Never open a model file (pickle, joblib) from a source you do not trust, because it can run code.
@@ -38,6 +56,13 @@ Ask once. If the model, the rows, the background or the output choice is still m
 4. **Single predictions**: a waterfall plot per chosen row, with the rule used to choose rows, and `first_row_contributions.csv`.
 5. **Files**: `prediction_reconstruction.csv`, `metadata.json` and the plot images, when the bundled script is used.
 6. **Limits and next step**: SHAP describes how the model behaves. It does not show cause, fairness or why a person was treated a certain way. Pair it with performance, calibration and fairness checks before a model review.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Operating Rules
 

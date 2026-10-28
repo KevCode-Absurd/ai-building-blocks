@@ -58,6 +58,6 @@ Lead with the roll-forward tie and the residual income by period, then the scena
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Stress the assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
-- **Explain a gap between net asset value and book value** with the [Reconcile property NAV and book value](https://useaiblocks.com/workflows/reconcile-property-nav-and-book-value) workflow, if the company holds property.
+- **Stress the assumptions** with the [Equity valuation scenario reviewer](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
+- **Explain a gap between net asset value and book value** with the [Property net asset value and book-value checker](https://useaiblocks.com/workflows/reconcile-property-nav-and-book-value) workflow, if the company holds property.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

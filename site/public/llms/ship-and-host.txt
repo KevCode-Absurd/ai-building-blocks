@@ -1,6 +1,6 @@
 # Ship and host your app: AI Blocks
 
-> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 101 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app, scale and budget. Get an AWS design, setup code, cost estimates and a path to test and deploy.
 - [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review): Review your AWS setup for gaps in security, reliability and cost. Get an AWS Well-Architected review with fixes, then GitHub issues to track them.
@@ -10,6 +10,7 @@
 - [AWS resource cost reviewer](https://useaiblocks.com/skills/copilot-aws-cost-optimize): Find where your AWS setup wastes money. Get an AWS cost optimization review with fixes, saved as GitHub issues you can track.
 - [AWS service health investigator](https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose): Check an AWS resource's health from its CloudWatch logs and metrics. Get the issues found, their causes and a step-by-step fix plan.
 - [Azure access role picker](https://useaiblocks.com/skills/copilot-azure-role-selector): Pick the narrowest Azure role for a person, group or app. Get the role, the scope, the CLI command and a Bicep snippet to assign it.
+- [Azure architecture designer](https://useaiblocks.com/skills/azure-architecture-designer): Get an Azure architecture design for your app, with Bicep templates, a deployment pipeline and cost-saving tips. Give it your traffic and budget.
 - [Azure architecture reviewer](https://useaiblocks.com/skills/copilot-azure-well-architected-review): Review your Azure setup against the five Well-Architected pillars. Get risk-ranked findings, fixes, and GitHub issues you can track.
 - [Azure deployment access reviewer](https://useaiblocks.com/workflows/check-azure-access-before-deploy): Match Azure access to the task, check a proposed Bicep deployment and plan rollout and rollback before release.
 - [Azure price estimate researcher](https://useaiblocks.com/skills/copilot-azure-pricing): Name the Azure services you need. Get current retail prices and an estimate with its assumptions shown.
@@ -19,9 +20,11 @@
 - [Azure service health investigator](https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose): Find out why an Azure resource is unhealthy. Give it the resource name and symptoms. You get log findings and a fix plan by priority.
 - [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight): Check your Bicep files before you deploy to Azure. Get syntax checks, a preview of changes and a permission check in one report.
 - [BigQuery cost and reliability reviewer](https://useaiblocks.com/skills/copilot-bigquery-pipeline-audit): Check your BigQuery pipeline for cost risks before you run it. Get a pass or fail report with the exact functions to fix.
+- [Build and release pipeline planner](https://useaiblocks.com/skills/build-pipeline-setter): Turn your build tools and release steps into ordered code checks and a deployment plan.
 - [Build pipeline writer](https://useaiblocks.com/skills/build-pipeline-writer): Turn project files into starter build steps for GitHub Actions or GitLab CI, with checks to review.
 - [Changelog entry writer](https://useaiblocks.com/skills/changelog-entry-writer): Share a commit range or pull request. Get a release entry grouped by what changed.
 - [CI/CD pipeline builder](https://useaiblocks.com/skills/ci-cd-pipeline-setup): Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+- [Cloud and AI bills, waste and spend limits](https://useaiblocks.com/agents/monthly-cloud-and-ai-bill-keeper): Compare cloud and AI bills. Find the largest changes, check spending limits and rank possible savings.
 - [Cloud cost analyst](https://useaiblocks.com/agents/agency-engineering-finops-engineer): Find where your cloud bill goes and what to cut safely. Get spend by owner, ranked savings with their risk, and what to commit to last.
 - [Cloud GPU job runner](https://useaiblocks.com/skills/cloud-gpu-job-runner): Run your Python code on rented GPUs or put it online as a web API, with no server to manage. Pay by the second and scale to zero.
 - [Cloud infrastructure code writer](https://useaiblocks.com/skills/cloud-setup-coder): Describe cloud resources and limits. Get Terraform, Pulumi or CloudFormation code, a review and state plan.
@@ -35,6 +38,8 @@
 - [Database recovery planner](https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer): Check that your database can be restored and will fail over safely. Get a backup test plan, a failover drill and a safe way to change tables.
 - [Deployment pipeline designer](https://useaiblocks.com/agents/agency-engineering-devops-automator): Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps.
 - [Docker Compose file writer](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services and data needs. Get Compose files with networks, volumes, and health checks.
+- [Docker setup builder](https://useaiblocks.com/skills/docker-setup-builder): Share your app or Dockerfile. Get revised Docker files, service settings, and suggested security fixes.
+- [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): Share your domain list and service needs. Get DNS records, redirect maps, and renewal plans.
 - [Domain and redirect layout planner](https://useaiblocks.com/prompts/domain-redirect-layout-planner): Paste your domains and what each is for. Get a domain redirect plan: the main address, where each other name points, and what to do with spares.
 - [Expo app deployment engineer](https://useaiblocks.com/skills/mobile-app-release-shipper): Share your Expo app and release target. Configure builds, store submissions or web deployment, with version and status checks.
 - [Expo build workflow writer](https://useaiblocks.com/skills/expo-build-workflow-writer): Describe your Expo build and release steps. Get an EAS workflow YAML file to review and run.
@@ -45,6 +50,7 @@
 - [GitHub Actions workflow reviewer](https://useaiblocks.com/workflows/cut-ci-cost-without-weakening-checks): Review wasted build work, risky permissions and outdated action runtimes. Get proposed changes that keep the required checks intact.
 - [GitHub build cost reviewer](https://useaiblocks.com/skills/copilot-github-actions-efficiency): Find wasted build minutes in your GitHub Actions workflows. Get the top 3 fixes to cut repeat work, slow jobs and CI cost.
 - [Google Cloud architecture planner](https://useaiblocks.com/skills/google-cloud-architect): Share app needs, traffic, budget and constraints. It proposes services, estimates costs from stated assumptions and drafts deployment steps.
+- [Helm chart builder](https://useaiblocks.com/skills/helm-chart-builder): Build a Helm chart for your Kubernetes service. Describe it and get a chart with clear values, safe defaults and lint and test steps.
 - [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem): Write a blameless incident post-mortem from your outage timeline and evidence. Get root causes, action items with owners and open questions.
 - [Incident response coordinator](https://useaiblocks.com/agents/agency-engineering-incident-response-commander): Get a clear severity call, roles, update messages and a blameless post-mortem for a tech outage. Bring the timeline, alerts and who is on call.
 - [Infrastructure maintenance planner](https://useaiblocks.com/agents/agency-support-infrastructure-maintainer): Check your servers and cloud setup for gaps. Get alerts to set, backup and restore checks, patch and access fixes and a ranked to-do list.
@@ -61,6 +67,7 @@
 - [Monitoring system planner](https://useaiblocks.com/skills/monitoring-system-planner): Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts to build step by step.
 - [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher): Share the web project and target Netlify site. Check build settings, deploy a preview or production version and return the verified link.
 - [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader): Run your outage with a clear plan: score how bad it is, get update templates, build a timeline, and write a blame-free incident review.
+- [Pre-push repo cleaner](https://useaiblocks.com/skills/pre-push-repo-cleaner): Share your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
 - [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Review a service with stability patterns. Get risks to investigate and options such as timeouts or health checks.
 - [Qdrant cluster capacity planner](https://useaiblocks.com/skills/copilot-qdrant-scaling): Get a Qdrant scaling plan: how much RAM or how many nodes you need, in what order to add them, and what to measure first.
 - [Qdrant embedding migration planner](https://useaiblocks.com/skills/copilot-qdrant-model-migration): Switch your Qdrant search to a new embedding model with no downtime. Get a step-by-step migration plan with checks and a rollback.
@@ -78,6 +85,7 @@
 - [Render publisher](https://useaiblocks.com/skills/render-publisher): Deploy your app to Render from a Git repo. Get a render.yaml setup file, a Blueprint link and a list of settings left to fill in.
 - [Runbook writer](https://useaiblocks.com/skills/runbook-writer): Build a runbook for your service with deploy, incident, maintenance and rollback sections. Name the service and get a markdown file to fill in.
 - [Service error budget planner](https://useaiblocks.com/skills/service-target-planner): Describe your service. Get targets from measured results, error budgets and alert rules.
+- [Service reliability target planner](https://useaiblocks.com/skills/error-budget-planner): Use service metrics and user needs to plan service targets, allowed failures, and ways to track them.
 - [Service reliability target planner](https://useaiblocks.com/skills/reliability-target-setter): Use service goals and data to set targets, allowed failure shares, and draft alert rules.
 - [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan): Plan a safe service rollout and rollback. Share your release or infrastructure change and get preflight checks, stages, health signals and a rollback plan.
 - [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Write a site go-live runbook with launch checks, DNS cutover steps, post-launch watching and a rollback plan. Give it your scope, window and team.

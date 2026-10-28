@@ -5,6 +5,23 @@ description: Structure and draft a Confidential Information Memorandum for sell-
 
 # CIM Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, financial statements, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## India
 
 This skill operates on **Indian markets**. The companion skills
@@ -125,3 +142,13 @@ Standard CIM table of contents:
 - The CIM sets expectations on valuation — make sure the narrative supports the asking price
 
 - **Runbook:** [`references/runbook-cim.md`](references/runbook-cim.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+Changed by AI Blocks (2026-10-28): wrote the India fiscal-year and lakh/crore rules into the India section, because the companion skills and NOT-ADAPTABLE.md are not included in this item.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Indian company sale teaser writer](https://useaiblocks.com/skills/anonymous-company-teaser-writer). It takes the document.
+- The [Sale process letter drafter](https://useaiblocks.com/skills/sale-process-letter-drafter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

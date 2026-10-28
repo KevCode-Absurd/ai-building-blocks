@@ -14,7 +14,7 @@ Not for a test with only one version: there is no gap to read, so wait for a sec
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
@@ -74,4 +74,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A small test is not called a win.
 - The call is keep, rerun or stop, with a reason.
 
-For the full version with every check, use the [Split-run result reader](https://useaiblocks.com/skills/split-run-result-reader).
+For the full version with every check, use the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader).

@@ -16,7 +16,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. Two
 - **How you do the work** (yours): the main activities, from sourcing to delivery.
 
 **Makes it better (optional):**
-- **What your main rivals do** (yours): or a grid from the [Competitor white space mapper](https://useaiblocks.com/skills/competitor-white-space-mapper).
+- **What your main rivals do** (yours): or a grid from the [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper).
 - **New ideas you are considering** (yours).
 - **What you would never give up** (yours).
 
@@ -84,16 +84,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the position as a statement** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the plan.
-- **Cut what blurs it** with the [Give-up list planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the plan.
-- **Trim the range to fit** with the [Product line cutter](https://useaiblocks.com/skills/product-line-cutter). It takes the plan.
-- **Score how hard it is to copy** with the [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - It names what you will not do.
@@ -102,6 +92,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It is free of both-ways claims such as cheapest and best.
 - Each no names what the idea would blur.
 - Every fact about the business comes from the input.
+
+<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the position as a statement** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the plan.
+- **Cut what blurs it** with the [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the plan.
+- **Trim the range to fit** with the [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). It takes the plan.
+- **Score how hard it is to copy** with the [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

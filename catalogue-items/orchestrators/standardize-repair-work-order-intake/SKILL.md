@@ -83,9 +83,9 @@ Write `MISSING: <what>` beside the affected line and carry on with the rest. Sto
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
+Use these instead of the general "After this" list below. Suggest one next step in a short question, and say they can type their own:
 - **Check the procedure** with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker), which takes the finished document.
-- **Keep the open list moving** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
+- **Keep the open list moving** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
 Nothing here contacts a customer or starts a repair. A person does that.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

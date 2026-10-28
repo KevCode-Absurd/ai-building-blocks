@@ -100,6 +100,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the spreadsheet.
 - The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder). It takes the spreadsheet.
 - The [Content traffic decline reviewer](https://useaiblocks.com/skills/monthly-content-decay-keeper). It takes the spreadsheet.
+- The [Analytics events and tracking gap review](https://useaiblocks.com/skills/monthly-tracking-health-keeper). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

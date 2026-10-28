@@ -14,9 +14,10 @@ how_to_use:
   - Use an AI that can run the Azure CLI (az) or Azure MCP tools, and sign in to Azure first. A plain chat window cannot read your resources.
   - Paste the skill into your AI, or load the skill folder if your tool supports it.
   - Tell your AI the resource group name. If you do not know it, ask it to list your groups and pick one.
-  - Let it read the resources. It only reads and does not change anything in Azure.
+  - Let it read the resources. It only reads and does not change anything in Azure. It does read resource settings, such as names, addresses and network rules, and sends them to your AI tool, so check that this is allowed for your account.
   - Open the new markdown file in a viewer that shows Mermaid diagrams.
-  - Check the diagram against the live resource group before you share it with your team.
+  - Check the diagram against the live resource group before you share it with your team. Remove secrets, keys, IP addresses and any names you would not want outside the team first.
+  - Next, use the map in an architecture review, or to plan a clean-up of resources nobody uses.
 output_sample:
   input:
     - The name of your Azure resource group (or ask your AI to list them)

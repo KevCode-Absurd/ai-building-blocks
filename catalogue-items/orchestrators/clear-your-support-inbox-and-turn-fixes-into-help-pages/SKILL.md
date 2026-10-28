@@ -16,16 +16,12 @@ This workflow chains 4 skills into one job. You run them one after another, and 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-**Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **The policy** (yours): the written policy or rules, with the date they start.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, your question, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for customer words, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -73,6 +69,7 @@ Four step files and the summary. The last step file holds the help pages.
 Use these first. Suggest one next step as a short question:
 - Publish the help pages yourself, on your site or help desk. Nothing here posts them.
 - Send the approved replies yourself, then mark the tickets closed. Bring back any customer reply that was not what you expected.
+- Next week, run step 1 on the new tickets and count how many repeat questions a help page now answers. Any question that still repeats needs a clearer page.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

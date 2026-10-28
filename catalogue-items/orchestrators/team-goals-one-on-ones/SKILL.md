@@ -56,7 +56,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Write an agreement with each person using the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer), so their goals match the key results.
 - At the end of the quarter, write each review with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper).
 

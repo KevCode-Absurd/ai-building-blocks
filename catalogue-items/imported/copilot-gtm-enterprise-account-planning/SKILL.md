@@ -13,6 +13,23 @@ Strategic account planning and execution for enterprise deals. Turn complex sale
 
 Start from the account and deal context. If you have call notes or a current mutual action plan, add them and use them for the buyer roles and deal risks.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, meeting notes, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Run order (added by AI Blocks)
 
 1. Gather inputs: account, what you sell, deal size, cycle length, people and titles, and the date the MAP was last updated.
@@ -22,6 +39,8 @@ Start from the account and deal context. If you have call notes or a current mut
 5. Check the deal against MEDDICC, using only validated facts.
 6. Answer whether to send the proposal now.
 The stage-gate and LinkedIn keyword sections are optional extras.
+
+Output format: return these sections in this order, each a few short lines or a small table: Full plan or simple plan, Deal health, Account plan, Personal win map, LinkedIn keyword analysis (only if the user gave keywords), Proposal check (yes or no, with reasons). Mark any missing fact as missing.
 
 ## When to Use
 
@@ -149,7 +168,7 @@ Before sending proposal, validate:
 
 **Common Mistake:**
 
-Treating EB meeting as "nice to have." The author's rule of thumb (not an established fact, and the $50K line is the author's own) is that it is a must for any large deal. No EB access is a serious warning sign.
+Treating EB meeting as "nice to have." The author's rule of thumb (not an established fact) is that it is a must for any large deal. The author sets no exact deal size, so ask the user what counts as large for them. No EB access is a serious warning sign.
 
 ---
 
@@ -441,3 +460,10 @@ Have you met the Economic Buyer?
 ---
 
 *This copy comes from github/awesome-copilot; the author's own repository is github.com/beingsmit/technical-product-gtm. The line below is the author's description of their experience and we have not checked it. Based on enterprise sales at a platform company during hypergrowth, with patterns from closing strategic accounts, navigating complex procurement processes, and learning the hard way that stale MAPs = dead deals. Not theory — lessons from watching deals die because we didn't track health metrics and closing deals because we validated EB alignment early.*
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Enterprise customer onboarding planner](https://useaiblocks.com/skills/copilot-gtm-enterprise-onboarding). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

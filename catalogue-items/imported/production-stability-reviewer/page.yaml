@@ -31,7 +31,8 @@ you_get:
   - A rollout order for the changes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code running or paid tool is needed.
-  - Describe your service in plain words. Say what it calls outside itself, such as partner APIs, databases or payment tools.
+  - "Before you start, make a list of every outside call your service makes, such as partner APIs, databases or payment tools, with the timeout set on each. Write 'none' where there is no timeout."
+  - Describe your service in plain words and paste that list.
   - Add how you deploy and how you watch it, plus your expected peak traffic.
   - Paste any past outage notes or crash reports if you have them (optional).
   - Read the score and the failing checks first. Then ask your AI to explain any fix you do not follow.

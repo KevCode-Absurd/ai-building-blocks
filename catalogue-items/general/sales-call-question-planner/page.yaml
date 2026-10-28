@@ -18,7 +18,7 @@ when:
   - Your calls end with "send me a quote" and no real need was found.
   - You sell something expensive that several people at the buyer must agree to.
 not_for:
-  - "You need answers to push-back after the call: use the Hardest objections answer writer."
+  - "You need answers to push-back after the call: use the Pitch objection and answer writer."
   - "The buyer already knows what they want and only asks for a price: send the quote and a short check on what they need, not a question plan."
   - "You are renewing a current customer: ask them directly what changed since they signed, with your own account notes."
 
@@ -133,7 +133,7 @@ improve:
   - Add the problems your buyers name most often to step 3, so the questions start closer to home.
   - Add your own rule on how many background questions are too many.
   - Save good questions after each call, and paste them in next time.
-  - Pair it with "Hardest objections answer writer" for the push-back you will still get.
+  - Pair it with "Pitch objection and answer writer" for the push-back you will still get.
 
 works_best_with:
   tools:

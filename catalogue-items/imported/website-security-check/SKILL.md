@@ -12,6 +12,20 @@ Establish the security floor for any production website or web app. Stack-agnost
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A web app** (yours): a working web page or app, built and ready to open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a web app. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Pre-launch security review
@@ -23,11 +37,13 @@ Establish the security floor for any production website or web app. Stack-agnost
 
 ## When NOT to use
 
-- Active incident response (use `incident-response`)
-- Code-level security review (use `code-review-web`)
-- Email-specific authentication (SPF/DKIM/DMARC) (use `email-deliverability`)
-- DNS-level security (CAA, DNSSEC) (use `domain-strategy`)
-- Performance-related security (DDoS protection sizing) (use `performance-optimization`)
+- Active incident response (call your host or a security professional; the upstream `incident-response` skill is not in this library)
+- Code-level security review (ask a developer for a code review; the upstream `code-review-web` skill is not in this library)
+- Email-specific authentication (SPF/DKIM/DMARC) (use the Inbox delivery fixer, upstream `email-deliverability`)
+- DNS-level security (CAA, DNSSEC) (use the Domain and DNS planner, upstream `domain-strategy`)
+- Performance-related security (DDoS protection sizing) (use the Speed tuner, upstream `performance-optimization`)
+
+Backups: see the Backup and recovery planner (upstream `backup-and-disaster-recovery`). Where this file says "see `incident-response`", that skill is not in this library.
 
 ---
 
@@ -290,6 +306,14 @@ A security baseline document includes:
 - **Re-audit cadence:** when this is reviewed next
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If required data is unavailable
 

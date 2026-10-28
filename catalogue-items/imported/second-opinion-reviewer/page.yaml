@@ -9,7 +9,7 @@ subhead: A set of the hardest objections to a plan or change you feel sure about
 explain: |
   A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts. This skill breaks that by handing your work to a fresh reviewer who has not seen your reasoning and is told to find what is wrong.
 
-  This is an imported skill under the MIT licence. Pasting your work into a new chat to act as the reviewer is the default path. The terminal steps for a second AI tool are optional. One file it mentions, references/orchestration-patterns.md, is not included, and the five steps work without it.
+  This is an imported skill under the MIT licence. Pasting your work into a new chat to act as the reviewer is the default path. The terminal steps for a second AI tool are optional. One file it mentions, references/orchestration-patterns.md, and the agents/ reviewer folder are not included, and the five steps work without them.
 
   It applies only to non-trivial decisions: new branching logic, anything crossing a module boundary, claims such as "this is safe", or changes you cannot undo. Typos and renames are skipped. The reviewer sees only the artifact and the requirements, returns objections, and you decide which hold up. It is meant for the main session, since a helper cannot start another.
 when:
@@ -31,7 +31,7 @@ you_get:
   - Which points to fix and which to dismiss
   - A revised decision
 how_to_use:
-  - Open your AI in a chat where it can start a second, fresh reviewer and read your files. If it can't, paste the work into a new chat to act as the reviewer.
+  - Open your AI in a chat where it can start a second, fresh reviewer and read your files. If it can't, paste the work into a new chat to act as the reviewer. Give that chat only the work itself and what it must achieve, never your own conclusion or reasoning.
   - Paste the skill's instructions into your AI.
   - Add your plan, change or claim, and what it must achieve. Add limits you already know (optional).
   - Ask your AI to follow the skill. It writes down your claim, picks the smallest piece to review, and sends it to the fresh reviewer.

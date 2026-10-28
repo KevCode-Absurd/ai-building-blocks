@@ -66,6 +66,19 @@ tags: ["self-explanation", "Chi", "metacognition", "worked-examples", "comprehen
 
 # Self-Explanation Prompt Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs self-explanation prompts — the specific questions placed at key points in learning material that prompt students to explain TO THEMSELVES why something is true, how it works, or what it means. Chi et al. (1989) discovered that students who spontaneously self-explain while studying worked examples learn dramatically more than those who don't — and crucially, Chi et al. (1994) showed that students who are PROMPTED to self-explain also show significant learning gains, even if they wouldn't have self-explained spontaneously. The self-explanation effect is one of the most robust findings in learning science: it works across ages, domains, and material types. The mechanism is that self-explaining forces the learner to generate inferences, fill in gaps, connect new information to existing knowledge, and notice their own confusion — all of which strengthen understanding. The challenge is designing prompts that actually elicit deep self-explanation rather than shallow restating. "Why does this step follow from the previous one?" is a good self-explanation prompt. "What happens in this step?" is not — it elicits description, not explanation. AI is specifically valuable here because it can deliver prompts at exactly the right moment (during study, not after) and can evaluate the quality of student responses in real time.
@@ -228,3 +241,11 @@ The sequence moves from maximum generation (Level 1) to maximum scaffolding (Lev
 3. **Self-explanation works best with conceptually rich material.** Procedural content with minimal conceptual depth (e.g., formatting a spreadsheet, conjugating regular verbs) benefits less from self-explanation prompts because there is less to EXPLAIN. Self-explanation is most powerful when the material contains non-obvious reasoning, hidden connections, or common misconceptions.
 
 4. **Students may need training to self-explain.** Chi et al. (1994) found that prompting alone was effective, but other studies suggest that students benefit from initial training in what a good self-explanation looks like. The scaffolding sequence above addresses this, but in the first session using self-explanation prompts, the teacher may need to model the process explicitly.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Text and diagram explainer designer](https://useaiblocks.com/skills/word-picture-explainer). It takes the draft.
+- The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

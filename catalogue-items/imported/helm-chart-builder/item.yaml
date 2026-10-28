@@ -29,4 +29,4 @@ credits:
   - title: helm-chart-builder skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/helm-chart-builder/skills/helm-chart-builder
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: "Copied under the MIT licence. We gave it a plain name and corrected the library chart rule: a library chart keeps its named templates in templates/ underscore files, it just renders no resources (per the Helm docs). We added Before you start and After this sections that link to other AI Blocks steps."

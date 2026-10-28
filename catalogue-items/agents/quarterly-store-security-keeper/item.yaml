@@ -7,9 +7,8 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: store_capture, required: true}
-  - {type: question, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: document, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}
@@ -20,7 +19,7 @@ steps:
   - {uses: store-script-and-app-risk-auditor, note: "Only when the checkup lost points on apps, or apps or scripts were added since last quarter. Uses your script and app lists, with the checkup's app findings; hands the risky apps and scripts to the final merge."}
   - {uses: domain-and-certificate-watch-checker, note: "In the first run, then whenever a domain, DNS record or registrar user changed, and at least once a year. Starts from your domain list and who can log in to the registrar and DNS, not step 3's report; hands the domain and certificate fixes to the final merge."}
   - {uses: fraud-rules-setter, note: "Only when the chargeback rate is at or above half a percent, or false holds rose, and the store takes about 100 orders a month or more. Starts from your order and chargeback numbers and payment setup, not step 4's report; hands the rules plan to the final merge."}
-schedule: "Once a quarter, in the first week"
+schedule: "Once a quarter, in the first week. It runs only when you ask, so set your own quarterly reminder."
 asks_before: [removing an app or a staff account, changing a sign-in rule or a DNS record, changing payment or fraud settings, emailing staff or customers]
 origin: own
 version: 1.0.0

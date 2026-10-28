@@ -34,10 +34,10 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run code and open a browser, such as Claude Code.
   - Before you start, gather the page address or file path, the settings you want to adjust, and a reference look if you have one.
-  - Paste the skill, then say what you want to tune, for example the colors and spacing of your landing page.
+  - Paste the skill, then say what you want to tune, for example the colors and spacing of your landing page. For a simple page, tell your AI to skip the skill's advanced sections (gesture capture, linked control ranges and undo).
   - Share the files or page involved. Say which settings matter, if you know.
   - Your AI builds a local page. Open it and adjust the controls by eye, or edit and comment on the text.
-  - Save your choices. Copy the settings JSON or the captured edits back into the chat. Your AI applies them to the files you named.
+  - Save your choices before you close the studio. Click its Copy button and paste the settings JSON or the captured edits back into the chat, or save them to a file. The page keeps them only in this browser, so clearing it or switching browsers can lose them. Your AI applies them to the files you named.
   - "Check the result after the apply step: reload the real page and compare it with the look you chose in the studio, or with your reference look. If no code-running AI is available, ask a chat AI for a short list of 3 or 4 looks to compare by eye, then give your pick back in words."
 output_sample:
   input:

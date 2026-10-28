@@ -9,7 +9,7 @@ subhead: Give it your offer and a list of how each paying customer found you. It
 explain: |
   Outbound sales stalls for three reasons. The offer is spread over too many customers, so the message fits none of them. The first message is long and clever, and a stranger gives it five seconds. And one person does prospecting, closing and account care at once, so none of it gets done well.
 
-  The steps go in the order that fixes them. First it counts the customers who found you cold and decides whether your niche is ready or still too wide. Then it writes a short first message for that niche, with a referral ask in place of a pitch. Last, it lists every sales job and picks the first one to hand off, with a clear line for what counts as a qualified lead. The order comes from From Impossible to Inevitable by Aaron Ross and Jason Lemkin, plus a note on specialised sales teams based on an interview with David Skok.
+  The steps go in the order that fixes them. First it counts the customers who found you cold and decides whether your niche is ready or still too wide. Then it writes a short first message for that niche, with a referral ask in place of a pitch. Last, it lists every sales job and picks the first one to hand off, with a clear line for what counts as a qualified lead. The order comes from From Impossible to Inevitable by Aaron Ross and Jason Lemkin. The role split also uses our own summary of a David Skok interview on specialised sales teams. The summary is ours, not his words.
 when:
   - You want outbound sales to work and need to know who to write to first.
   - Your leads come from friends, past clients and referrals, and you cannot tell whether strangers would buy.
@@ -70,7 +70,7 @@ output_shape: |-
     Jobs and time shares | first job to split | who owns it | qualified lead rule | result numbers
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How honestly you count cold customers
     how: Leave out friends, past clients and referrals. A short, honest count gives a better verdict than a long one that flatters you.

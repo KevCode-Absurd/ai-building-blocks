@@ -74,14 +74,13 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 Suggest one next step in a short question, and say they can type their own:
 - **Run the walkthrough** with a fresh account, then fix any failed row.
 - **Write the matching emails** with the [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer).
-- **Watch new users try the path** with the [Check a prototype before user testing](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
+- **Watch new users try the path** with the [Prototype usability test planner](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
 Nothing here edits your product.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interface interaction details designer](https://useaiblocks.com/skills/small-interface-details-designer). It takes the draft.
-- The [Design handoff completeness reviewer](https://useaiblocks.com/skills/design-handoff-completeness-assistant). It takes the document.
+- **Shape the product** with the [API first-call experience reviewer](https://useaiblocks.com/skills/developer-onboarding-improver). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -20,7 +20,7 @@ not_for:
   - "You only need a plain profit forecast: use a simple income forecast in your own spreadsheet instead."
   - "You are sizing debt or setting loan terms: ask your lender or financial adviser, because this bridge does not do that."
   - "Your data is actual cash receipts and payments, and you have not checked how it treats working capital: confirm that first, or ask your accountant."
-  - "You need to split project cash across senior debt, reserve top-up and junior debt: use the Project payment waterfall builder instead."
+  - "You need to split project cash across senior debt, reserve top-up and junior debt: use the Project payment priority planner instead."
 you_give:
   - The financing agreement's definition of cash available for debt service
   - Operating revenue and operating costs without depreciation and other non-cash costs, before working-capital movements

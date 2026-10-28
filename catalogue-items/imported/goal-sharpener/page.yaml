@@ -30,11 +30,12 @@ you_get:
   - A finish line
   - Notes on what was weak and fixed
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. The skill was written by OpenAI for Codex, which has goal tools named get_goal and create_goal. A plain chat does not have them. Tell your AI to skip those steps and just write the goal text.
   - Type your rough aim in one or two lines. Add your deadline, limits or current numbers if you have them.
   - Answer the one short question it may ask. It only asks when a wrong guess would change the goal.
   - Check the goal. Is there a number or clear check, a finish line and a limit on scope? Ask for changes if not.
   - Paste the goal into your AI task. If your tool has a goal feature, set it there. If not, the pasted text works the same.
+  - When the work is done, check it against the proof you agreed in the goal. If the proof is not there, the goal is not done.
 output_sample:
   input:
     - Your rough aim, in your own words

@@ -35,7 +35,7 @@ These replace the generic brief in the list above.
 - **Acceptance criteria and sign-offs** (required): what counts as accepted, and any written approvals.
 - **Client feedback and open requests** (advised): emails or meeting notes.
 - **Support terms after closeout** (optional): the period and what it covers.
-- **Closeout date and your timezone** (advised).
+- **Closeout date and your timezone** (needed to sort commitments into open or overdue). If no date is given, use the date of the latest source, mark it `MISSING: closeout date`, and say which date was used.
 
 Ask once, in one short message, for only what you cannot work without. If there is no written acceptance for a deliverable, do not ask the client for one in your own name. Record it as not accepted and move on.
 
@@ -69,7 +69,7 @@ Ask once, in one short message, for only what you cannot work without. If there 
 ```
 SCOPE AND SOURCES      <contract, evidence and dates you were given>
 DELIVERY REGISTER      <deliverable | agreed in | delivered (date, proof) | reviewed (by, date) | accepted (by, date, proof) | status>
-OPEN COMMITMENTS       <ID | task | owner | due | status | source>
+OPEN COMMITMENTS       <ID | task | owner | due | timezone | status | depends on | source>
 CLOSEOUT HANDOVER      <read first | file locations | open issues | support period | sign-offs needed | contacts>
 QUESTIONS              <what needs confirming | who can answer>
 MISSING                <each gap and what it stops>
@@ -81,7 +81,7 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -92,5 +92,6 @@ Write `MISSING: <what>` beside the affected row and carry on with the rest. A de
 ## What to do with the result
 
 Suggest one next step in a short question, and say they can type their own. This fits closeout better than the generic suggestion above:
-- **Keep tracking open items** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
+- **Keep tracking open items** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
+- **Start the delivery register on day one of the next project,** with the same columns, so the next closeout is short.
 Nothing here sends the handover or an invoice. A person does that.

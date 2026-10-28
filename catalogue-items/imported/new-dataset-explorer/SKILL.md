@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to perform structured exploratory data analysis (EDA) on any tabular dataset. The agent systematically profiles the data's shape and types, examines distributions, computes correlations, detects outliers, and produces a summary of findings. EDA is the critical first step before any modeling or reporting — it reveals what the data actually contains versus what it is assumed to contain.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your data** (yours): the data files, with their format and where they came from.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Load and inspect basic structure.** Read the dataset and immediately report its shape (rows, columns), column names, data types, and memory footprint. Display the first 5 and last 5 rows to catch header issues, trailing garbage rows, or encoding artifacts. This takes under a second but prevents hours of downstream confusion.
@@ -152,3 +165,11 @@ print("Report saved to eda_report.html")
 - **All-null columns or zero-variance columns.** Drop them automatically during EDA and document them in the findings, as they contribute no analytical value.
 - **String columns that are actually numeric.** Detect columns where >90% of values parse as numbers and recommend type coercion before proceeding with statistical analysis.
 - **Datetime columns requiring timezone awareness.** Flag timezone-naive datetime columns when the dataset contains records from multiple regions to prevent silent aggregation errors.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Dataset cleaner and validator](https://useaiblocks.com/skills/data-cleaner).
+- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

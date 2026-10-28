@@ -39,6 +39,7 @@ how_to_use:
   - Ask for a spreadsheet if you want one. This works best when your AI can run code and make files.
   - Change one assumption at a time, such as growth or churn, and rerun the scenarios.
   - Ask an accountant or adviser to check the model before you share it with investors.
+  - Next, compare each month's real results with the model, for example with the Monthly budget versus actual keeper, and update your assumptions when they drift.
 output_sample:
   input:
     - Your revenue and growth assumptions

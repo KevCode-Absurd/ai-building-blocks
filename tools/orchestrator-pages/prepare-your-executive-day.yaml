@@ -28,6 +28,7 @@ you_get:
 how_to_use:
   - Add the complete skill pack to your AI.
   - Share the date, that day's calendar and your notes and email threads.
+  - No calendar export? Paste each meeting's title, time and attendees. Without a date or a calendar, it stops at step 1 and writes MISSING.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
 how_it_works:

@@ -7,11 +7,12 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: plan, required: true}
+  - {type: story_outline, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, agatha-christie]
 credits:
-  - {title: "Misery", by: "Stephen King", used: "A fairness rule for cliffhangers, voiced by characters in the novel: an escape need not be likely, but it must use what the story has already shown. Also the story game in which a speaker has ten seconds to free the hero and the group judges if it was fair"}
+  - {title: "Misery", by: "Stephen King", used: "A fairness rule for cliffhangers, voiced by characters in the novel: an escape need not be likely, but it must use what the story has already shown. Also a childhood story game the novel describes, in which a player must get the hero out of a fix and the listeners judge whether it was fair"}

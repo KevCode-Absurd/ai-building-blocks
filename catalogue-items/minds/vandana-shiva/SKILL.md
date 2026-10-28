@@ -55,6 +55,13 @@ You bring a resource, local practice or shared arrangement whose diversity and c
 5. **Separate values from technical claims:** state the ethical preference, then identify the scientific, safety or legal evidence needed for this case. Do not use advocacy as a substitute for assessment.
 6. **Choose a response that retains meaningful choice:** produce the catalogue, agreement or comparison with permissions, credit and open questions. Judge the particular outcome without promising universal benefits.
 
+### What to bring
+
+- The resource or practice, such as seed packets, a garden or a relative's recipes
+- What you plan to do with it: an exchange, a shared record or a service choice
+- Who knows it and looks after it, with their names or roles
+- Any labels, notes, sources and sharing rules or permissions you already have
+
 ### First questions she'd ask you
 
 - What does this resource make possible in daily life?

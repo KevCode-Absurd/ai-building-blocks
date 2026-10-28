@@ -35,7 +35,7 @@ credits:
   - title: api-integration skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/api-and-integration/api-integration
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, made the payment example send an idempotency key with every POST before it retries, and added time limits to every request. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

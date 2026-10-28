@@ -34,4 +34,4 @@ credits:
   - title: youtube-search skill
     by: ZeroPoint
     url: https://github.com/ZeroPointRepo/youtube-skills/tree/main/clawhub/youtube-search
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

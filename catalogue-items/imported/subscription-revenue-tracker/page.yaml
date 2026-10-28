@@ -7,8 +7,6 @@ job: run-your-store
 headline: Subscription revenue tracker
 subhead: "A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed."
 explain: |
-  A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed.
-
   The skill queries subscription contract data through the store's API, then converts each plan to a monthly amount so weekly, monthly and yearly plans can be added together. It counts active subscribers, then tracks rolling churn by comparing who stayed and who cancelled over the period. It records the session and handles errors, such as missing permissions or large stores that need paging. It needs API access to a store with subscription products.
 when:
   - You sell subscription boxes and want one number for monthly recurring revenue.
@@ -29,7 +27,7 @@ you_get:
   - Monthly recurring revenue
   - Annual recurring revenue
   - Active subscriber count
-  - Rolling churn rate
+  - Rolling churn rate (a rough proxy unless you give it last period's CSV)
   - A short session log
 how_to_use:
   - Check your store sells subscriptions in Shopify. If it does not, the result will be $0.
@@ -37,8 +35,8 @@ how_to_use:
   - "Log in with: shopify store auth --store your-store.myshopify.com --scopes read_own_subscription_contracts"
   - Paste the skill into your AI. Give it your store domain and, if you want, a churn period.
   - Read the report. Check the contract counts first, then the revenue and churn figures.
-  - Open the CSV to see each contract. Stores with many currencies get one total per currency.
-  - Cancel dates are guessed from each contract's last update date, so the churn figure is approximate. Check it against your own records before you put it in a board update.
+  - Open the CSV to see each contract. Stores with many currencies get one total per currency. The file has customer IDs, which link to real people. Store it securely and remove the customer_id column before you share it outside finance.
+  - Cancel dates are guessed from each contract's last update date, so the churn figure is approximate. A true churn rate also needs the count of active contracts at the start of the period. Keep this run's CSV and give it to the next run as that starting count. Without one, the skill labels churn a rough proxy. Check it against your own records before you put it in a board update.
   - Next, find who is likely to leave with the churn risk finder, then plan how to keep them with the churn reducer. Save the CSV for your finance records.
 next: [churn-risk-finder, churn-reducer]
 output_sample:

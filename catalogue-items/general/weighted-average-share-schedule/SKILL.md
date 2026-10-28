@@ -105,9 +105,9 @@ Add the editable workbook and the source list when asked.
 <!-- next: hand-written (needs_mode: manual in item.yaml). -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If the company has options** with the [Treasury-stock option dilution](https://useaiblocks.com/skills/treasury-stock-option-dilution). It takes the share timeline and the average share price.
-- **If it has convertible notes** with the [Convertible EPS inclusion test](https://useaiblocks.com/skills/convertible-eps-inclusion-test). It takes the basic EPS.
-- **If a rights issue happened** with the [Rights-issue EPS adjustment](https://useaiblocks.com/skills/rights-issue-eps-adjustment). It takes the weighted shares and EPS.
-- **If a stock split happened** with the [Stock-split EPS restatement](https://useaiblocks.com/skills/stock-split-eps-restatement). It takes past share counts and EPS.
+- **If the company has options** with the [Employee option dilution calculator](https://useaiblocks.com/skills/treasury-stock-option-dilution). It takes the share timeline and the average share price.
+- **If it has convertible notes** with the [Convertible earnings per share checker](https://useaiblocks.com/skills/convertible-eps-inclusion-test). It takes the basic EPS.
+- **If a rights issue happened** with the [Rights issue earnings adjustment calculator](https://useaiblocks.com/skills/rights-issue-eps-adjustment). It takes the weighted shares and EPS.
+- **If a stock split happened** with the [Stock split earnings adjustment calculator](https://useaiblocks.com/skills/stock-split-eps-restatement). It takes past share counts and EPS.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

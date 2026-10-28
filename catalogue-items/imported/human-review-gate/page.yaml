@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Open your AI tool with code running and file access, and Python 3 installed. Add the skill folder and your plan or document.
   - Tell your AI the reviewer's name and whether the work can be undone.
-  - "Ask it to run: python3 engineering/human-gate/skills/human-gate/scripts/human_gate.py open plan.md --launch. Use your own file name. It builds the page and your AI stops."
+  - "Ask it to run: python3 <skill folder>/scripts/human_gate.py open plan.md --launch. Put in the path where you saved the skill folder, and your own file name. The engineering/human-gate path in the skill is the source repo's layout. It builds the page and your AI stops."
   - Open the page and add comments. Save the feedback file next to your document.
   - Ask your AI to run the collect step, apply every item, then run close. If close fails, fix what it names.
   - Check the result. Status 0 means clear, 2 means blocked, 3 means feedback is waiting to be collected and 4 means nobody has reviewed yet. Only call the work done when close passes.
+  - If close refuses, it names a gate. G1 means no review round was collected yet, G2 a blocker or major comment is still open, G3 no named reviewer, G4 the feedback file changed after the last collect, G5 the round limit was used up, G6 a waiver has no reason, and G7 the feedback has errors such as a mistyped severity.
   - Then hand the signed-off file to the next step, such as shipping or sharing it. Run your machine checks first or after, as they test different things.
 output_sample:
   input:

@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -35,6 +35,7 @@ How to start:
 ## What you need
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
 - **Your cost per order** (required for step 3): product cost, shipping, payment fees and packaging for each order. Without them, step 3 cannot say if the deal pays and stops with `MISSING: cost per order`.
+- **How many orders you can handle well during the sale** (required for step 4): stock on hand and how many orders you can pack and ship per day.
 - **Ad or store performance export for a closed date window, with definitions** (optional)
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional)
 - **A buyer grounded in real review language: problem, trigger, wants, doubts, words they use** (optional)
@@ -52,8 +53,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Store offer picker.** Use the skill `store-offer-picker`. Starts the chain: the offer types worth testing, ranked, with the maths. Saved as `outputs/step-01-store-offer-picker.md`.
 2. **Reason-why deal writer.** Use the skill `reason-why-deal-writer`. Give it the shortlist from the steps before. Takes the top offer type from the step before and writes the deal with a reason a buyer will believe. Reads `outputs/step-01-store-offer-picker.md`. Saved as `outputs/step-02-reason-why-deal-writer.md`. The reason must be true. Do not invent one.
 3. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Runs the deal from step 2 through your costs to find the return you must hit. If it says the deal does not pay, fix the deal with step 2 and run step 3 again. Do not go to step 4. Saved as `outputs/step-03-discount-impact-checker.md`.
-4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Uses the deal from step 2 and your own capacity (not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep. Saved as `outputs/step-04-honest-urgency-planner.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Once step 3 says the deal pays, give it the deal from `outputs/step-02-reason-why-deal-writer.md` and your own capacity: how many orders you can pack and ship well during the sale, and by when. It does not use step 3's report. If capacity is not given, write `MISSING: capacity` and set no cap. Hands back a limit and date you can keep. Saved as `outputs/step-04-honest-urgency-planner.md`.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.

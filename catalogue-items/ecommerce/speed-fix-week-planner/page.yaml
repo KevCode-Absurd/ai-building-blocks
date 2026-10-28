@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store already passes Core Web Vitals on mobile: review your offers, page copy or ads first, since more speed work will likely move little."
   - "You have no speed problem list yet: run a speed report first, or ask a developer for an audit, then come back."
-  - "You want every check in full detail: use the Speed fix ranker instead."
+  - "You want every check in full detail: use the Website performance fix ranker instead."
 
 you_give:
   - "The problems (required): from a speed report or an audit."

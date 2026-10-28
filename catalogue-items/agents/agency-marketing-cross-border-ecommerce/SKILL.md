@@ -9,7 +9,7 @@ Builds a plan for selling products in other countries through online marketplace
 
 Read [the original role profile](references/source-agent.md) before you start. Use its methods: the per-product cost breakdown, the product scorecard (market, margin, compliance), the platform comparison, the compliance red lines, listing localization and the phased ad plan. Its role language, experience claims, margin ranges and success targets are not facts about this user's business. They are goals or examples from the original author. Never present them as benchmarks, and never use them to fill a missing number.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
 2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** It reads your price sheet or supplier quote and builds the cost line from your real figures.
@@ -77,7 +77,7 @@ Return these sections in order. If your AI can save files, save each as its own 
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [China ecommerce operations planner](https://useaiblocks.com/skills/agency-marketing-china-ecommerce-operator).

@@ -89,7 +89,7 @@ Nothing outside your working files has changed. Offer one next step and say they
 
 - Find the missing receipts you can and run the gaps again, or send the list to your bookkeeper as it stands.
 - Send the file and the questions to your bookkeeper. They decide categories and tax treatment.
-- For full books and a profit and loss, use the [Match bank to books and issue a clean P&L](https://useaiblocks.com/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l) workflow.
+- For full books and a profit and loss, use the [Bank-to-ledger reconciliation and financial statement preparer](https://useaiblocks.com/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l) workflow.
 
 ## Check before you hand it back
 

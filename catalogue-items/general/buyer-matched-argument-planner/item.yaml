@@ -7,7 +7,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
+  - {type: product_data, required: false}
   - {type: persona, required: false}
 outputs:
   - {type: angle_library}

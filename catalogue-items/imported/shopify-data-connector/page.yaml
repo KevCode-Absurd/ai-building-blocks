@@ -36,7 +36,8 @@ how_to_use:
   - Add your store address. Say if you need Admin or Storefront access, and name your language if you have one.
   - Never paste secret keys into the chat. Use placeholders and add the real keys in your own code.
   - Run the code on your own computer or server. Check a small test first, such as 10 items, before a full run.
-  - Next, add paging for the full list, then rate-limit handling. The examples use API version 2025-01 and a Remix sign-in, so check both against Shopify's current docs. For simple data, Shopify's built-in export is quicker.
+  - Before you run any code, open Shopify's API versions page and pick a version that is still supported. The examples use 2025-01 and a Remix sign-in. Ask your AI to set your chosen version and to check each query against that version's docs.
+  - Next, add paging for the full list, then rate-limit handling. For simple data, Shopify's built-in export is quicker.
 output_sample:
   input:
     - What store data you want to read or change

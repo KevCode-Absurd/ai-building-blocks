@@ -79,6 +79,19 @@ tags: ["contextualisation", "historical-thinking", "disciplinary-literacy", "doc
 
 # Contextualisation Skill Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs targeted instruction to develop students' contextualisation practice — reasoning about how the temporal, spatial, and social circumstances of a document's creation shape its content, meaning, and reliability. The output includes a developmental progression, an explicit instruction sequence adapted for contextualisation's greater complexity, prompts that guide students to connect documents to their historical moment, common failure patterns, and assessment indicators.
@@ -258,8 +271,8 @@ Teacher monitors for whether students spontaneously reach for context or need pr
    *Sentence starter:* "At the time this was written, ___ was happening, which helps explain why the author..."
 
 2. **Would this document have been different if it had been written 20 years earlier or 20 years later? How and why?**
-   *Why it matters:* Forces students to see the document as time-bound rather than timeless. If the answer is "no, it would be the same," the student isn't contextualising.
-   *Sentence starter:* "If this had been written in [different year], it would probably be different because..."
+   *Why it matters:* Forces students to see the document as time-bound rather than timeless. Judge the reasoning, not the answer. "It would be different" and "it would be much the same" can both be strong answers, if the student names specific circumstances of each period and links them to features of the document. An answer of "the same" is weak only when it gives no evidence about either period.
+   *Sentence starters:* "If this had been written in [different year], it would probably be different because..." or "Even in [different year], it would probably say much the same, because [circumstance] was still true then..."
 
 3. **What problem or situation was the author responding to?**
    *Why it matters:* Documents are not produced in a vacuum. They are responses to circumstances. This prompt pushes students to identify the circumstance that made the document necessary.
@@ -283,14 +296,14 @@ Teacher monitors for whether students spontaneously reach for context or need pr
 
 **3. "Context as decoration" — adding background information without using it**
 *What it looks like:* The student writes a paragraph of background information about the period, then a separate paragraph analysing the document. The two paragraphs don't connect. Context appears as scene-setting rather than as an analytical tool.
-*Why:* Students have learned that "context" means "write about the historical background." They haven't learned that context should CHANGE how they interpret the document.
+*Why:* Students have learned that "context" means "write about the historical background." They haven't learned that context should SHAPE how they interpret the document: it should explain, support or challenge a reading, even when the reading ends up where it started.
 *Response:* Require the word "because" or "which explains why" at the connection point. The student must write a sentence that explicitly links a contextual fact to a specific feature of the document: "Because mass immigration was creating anti-Catholic sentiment in the 1890s, Harrison's celebration of Columbus — an Italian Catholic — was a political act, not just a historical commemoration."
 
 ### Assessment Indicators
 
 **In discussion:** Listen for students who spontaneously ask about the time period before or during discussion of a document: "When was this written? What was going on then?" More advanced: listen for students who connect the document to contemporary events without prompting — "This reminds me of what was happening with immigration at the time."
 
-**In written work:** Look for sentences that use context to CHANGE the interpretation, not just set the scene. The test: can you remove the context paragraph without changing the analysis paragraph? If yes, the student is decorating, not contextualising. If removing the context would make the analysis collapse, the student is genuinely deploying context.
+**In written work:** Look for sentences that use context to shape or support the interpretation, not just set the scene. The conclusion does not have to change; what matters is whether the analysis depends on the context. The test: can you remove the context paragraph without weakening the analysis paragraph? If yes, the student is decorating, not contextualising. If removing the context would make the analysis collapse, the student is genuinely deploying context.
 
 **The key test:** Give students a document from a period they have studied, with the date visible but no instruction to contextualise. Do they spontaneously connect the document to what they know about the period, or do they engage with the content in isolation? The gap between what students do when prompted ("What was happening in 1892?") and what they do unprompted is the measure of how far contextualisation has developed from a school exercise into a thinking disposition.
 
@@ -303,3 +316,12 @@ Teacher monitors for whether students spontaneously reach for context or need pr
 2. **Contextualisation depends on background knowledge in a way that sourcing and close reading do not.** A student cannot contextualise a document about the 1890s if they know nothing about the 1890s. This means contextualisation instruction must be preceded by or paired with content instruction. The skill addresses the deployment problem (students who know the context but don't use it) more effectively than the knowledge gap problem (students who lack the context entirely). Teachers should diagnose which problem their students have before selecting instructional strategies.
 
 3. **The distinction between contextualisation and presentism is pedagogically sensitive.** Teaching students to understand a document "in its time" can be misread as asking them to suspend moral judgement — to accept that slavery was acceptable because "people thought differently then." This is not what contextualisation means. Contextualisation means understanding WHY people in the past acted and thought as they did, not approving of it. Teachers should make this distinction explicit to avoid the impression that historical understanding requires moral relativism.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Close reading lesson builder for history](https://useaiblocks.com/skills/history-close-reading).
+- The [History think-aloud script writer](https://useaiblocks.com/skills/history-think-aloud).
+- The [History lesson source set planner](https://useaiblocks.com/skills/history-source-set-picker). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

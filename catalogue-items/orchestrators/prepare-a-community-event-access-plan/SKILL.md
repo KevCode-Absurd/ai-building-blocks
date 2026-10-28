@@ -108,8 +108,8 @@ Write MISSING: <what> next to the result it affects. Keep working on parts that 
 
 - Send the confirmation requests yourself and write each answer back into the plan. Then run step 2 again.
 - Brief your helpers from the run sheet before the day.
-- If the event includes an overnight stay, run the [Prepare a hotel group booking handover](https://useaiblocks.com/workflows/prepare-a-hotel-group-booking-handover) workflow.
-- For a staff event, run the [Prepare a small team offsite](https://useaiblocks.com/workflows/prepare-a-small-team-offsite) workflow.
+- If the event includes an overnight stay, run the [Hotel group booking handover checker](https://useaiblocks.com/workflows/prepare-a-hotel-group-booking-handover) workflow.
+- For a staff event, run the [Team offsite decision and agenda planner](https://useaiblocks.com/workflows/prepare-a-small-team-offsite) workflow.
 
 ## Avoid
 

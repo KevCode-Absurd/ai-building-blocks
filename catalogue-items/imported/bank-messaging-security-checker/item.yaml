@@ -30,4 +30,4 @@ credits:
   - title: swift-csp skill
     by: Hemant Naik
     url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/swift-csp/skills/swift-csp
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, removed the advisory labels on 1.3, 1.5 and 2.9 that clashed with the reported CSCF v2026 split of 26 mandatory and 6 advisory controls (their status now says to check the current CSCF document, as it could not be confirmed from an official Swift page), fixed the 2.4 row for architecture B, and replaced the outdated counts, July 31 deadline and unsourced v2025 change list in the assessment notes. We added Before you start and After this sections that link to other AI Blocks steps.

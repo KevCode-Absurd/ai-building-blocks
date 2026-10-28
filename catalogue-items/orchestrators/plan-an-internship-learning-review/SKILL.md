@@ -77,7 +77,7 @@ Nothing has been shared with the host or the intern. Offer one next step and say
 
 - Share the plan with the supervisor and ask them to remove any skill the host cannot support.
 - Break one skill into small steps with the [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder).
-- After the placement, use the [Check training transfer after a course](https://useaiblocks.com/workflows/check-training-transfer-after-a-course) workflow with the work samples.
+- After the placement, use the [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course) workflow with the work samples.
 
 ## Check before you hand it back
 

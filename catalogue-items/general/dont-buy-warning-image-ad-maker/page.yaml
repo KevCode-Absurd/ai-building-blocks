@@ -68,7 +68,7 @@ output_sample:
     - name: LINE UNDER IMAGE
       contains: The short line under the picture, its type and its exact character count.
     - name: FLAGS
-      contains: Words written just for the image and claims to keep in the story.
+      contains: Whether the card is a labelled dramatisation or a real customer's note with permission on file, words written just for the image and claims to keep in the story.
     - name: IMAGE PROMPT
       contains: A 60 to 120 word prompt with the card words in quotes once.
     - name: CHECKS MISSED
@@ -96,7 +96,7 @@ output_shape: |
   WORDS ON IMAGE    "<words>" (<word count>)
   BLANK VERSION     <the same scene with the card blank>
   LINE UNDER IMAGE  <words> (<which line>, <characters>)
-  FLAGS             <words written for the image, claims to keep in the story>
+  FLAGS             <required first: labelled dramatisation, or real customer's note with written permission on file>, <words written for the image, claims to keep in the story>
   IMAGE PROMPT      <60 to 120 words, the words in quotes once>
   CHECKS MISSED     <one line each, or none>
 

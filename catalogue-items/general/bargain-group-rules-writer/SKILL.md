@@ -9,7 +9,7 @@ A margin of safety does not promise that any one stock works out. The idea in th
 
 Who it suits: someone who already holds a plain fund plan, picks stocks as an extra, and can afford to lose part of this money. It is not personal financial advice. For a large or personal decision, talk to a licensed adviser.
 
-Before this, find and test the candidates with the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
+Before this, find and test the candidates with the [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -18,9 +18,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). Bring an audit report.
+2. This one.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**

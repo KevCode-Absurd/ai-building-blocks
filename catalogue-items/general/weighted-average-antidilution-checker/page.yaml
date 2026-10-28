@@ -87,7 +87,7 @@ output_shape: |-
   MISSING: and CHECKS MISSED
 tweaks:
   - what: "Issue date"
-    how: "Take the issue date from the charter clause and the share counts. Use one currency and scale on every line."
+    how: "Take the issue date from the closing papers or the board consent for the new shares, not from the charter clause. Use one currency and scale on every line."
   - what: "Cash consideration"
     how: "Change the cash consideration and have your AI recalculate. Keep the actual figures you supplied."
   - what: Broad or narrow count

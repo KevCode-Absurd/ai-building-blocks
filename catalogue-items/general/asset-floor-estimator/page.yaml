@@ -18,8 +18,8 @@ when:
   - A share price looks very low next to what the business owns.
   - You want to know if a company could pay its short-term bills in a bad year.
 not_for:
-  - "You want to value a bank or insurer, or a firm that mostly owns brands and software: asset floors mislead there, so use the Earnings value range builder."
-  - "You want to know if the price is a bargain against earnings: use the Earnings value range builder first, then the Price versus value gap judge."
+  - "You want to value a bank or insurer, or a firm that mostly owns brands and software: asset floors mislead there, so use the Earnings-based share value calculator."
+  - "You want to know if the price is a bargain against earnings: use the Earnings-based share value calculator first, then the Investment margin of safety reviewer."
   - "You need advice on a large or personal money decision: talk to a licensed financial adviser."
 
 you_give:
@@ -39,7 +39,7 @@ how_to_use:
   - Paste the balance sheet with the notes on debts and preferred shares.
   - Add the share count, the price and the earnings range.
   - Read the comparison with the price and the burn before the figures.
-  - Take the result to the Price versus value gap judge.
+  - Take the result to the Investment margin of safety reviewer.
 output_sample:
   input:
     - The latest balance sheet, and the one before it (optional)
@@ -125,7 +125,7 @@ test:
 improve:
   - Add your own markdown rates by industry, from sales you have seen.
   - Keep a record of sale values against what companies later fetched.
-  - Pair it with "Earnings value range builder" and "Price versus value gap judge".
+  - Pair it with "Earnings-based share value calculator" and "Investment margin of safety reviewer".
   - Compare three similar companies side by side.
 
 works_best_with:

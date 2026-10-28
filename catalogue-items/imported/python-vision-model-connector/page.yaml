@@ -22,7 +22,8 @@ not_for:
 you_give:
   - The GitHub link or pip package name of the vision model
   - A sample image to test with
-  - Details of your MATLAB and Python setup
+  - Details of your MATLAB and Python setup, your operating system, and whether you have a GPU
+  - About 15 GB of free disk space for Python, packages and model weights
   - Where your model weights are kept (optional)
 you_get:
   - A MATLAB function that runs the model on your image
@@ -39,7 +40,7 @@ how_to_use:
   - "Before you run the setup section, read the GitHub repo and its requirements file. The generated setup auto-accepts downloads, so it installs packages and downloads model weights from that repo without asking you again. Only run it if you trust the repo."
   - You get one demo file, named demo plus the model name. Its first section sets up Python. Run that section first, then the later sections on your sample image.
   - If something fails, read the handoff report. It lists what works and what to fix next.
-  - When the demo works, call the MATLAB function from your own MATLAB code.
+  - When the demo works, call the MATLAB function from your own MATLAB code. Then run the MATLAB code reviewer on it, and the MATLAB app builder if you want a simple app around it.
 output_sample:
   input:
     - The GitHub link or pip package name of the vision model

@@ -11,6 +11,27 @@ metadata:
 
 # Prompt Engineer Toolkit
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your prompt** (yours): the full prompt or instructions you give the AI.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A test set** (yours): test cases for the AI, each with the answer that counts as a pass.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Prompt tester and tuner](https://useaiblocks.com/skills/prompt-tester-and-tuner). Bring your question, your prompt (optional), a test set (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your prompt, an audit report, a test set. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Use this skill to move prompts from ad-hoc drafts to production assets with repeatable testing, versioning, and regression safety. It emphasizes measurable quality over intuition. Apply it when launching a new LLM feature that needs reliable outputs, when prompt quality degrades after model or instruction changes, when multiple team members edit prompts and need history/diffs, when you need evidence-based prompt choice for production rollout, or when you want consistent prompt governance across environments.
@@ -136,3 +157,12 @@ This enables deterministic grading across prompt variants.
 3. Run A/B suite against same cases.
 4. Promote only if winner improves average and keeps violation count at zero.
 5. Track post-release feedback and feed new failure cases back into test suite.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer). It takes the prompt and test report.
+- The [Prompt and skill improvement tester](https://useaiblocks.com/skills/prompt-and-skill-tuner). It takes the prompt.
+- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -10,6 +10,29 @@ metadata:
 
 Comprehensive learning and development support — from needs assessments and training design to e-learning, coaching programs, mentorship, competency models, and learning assessments.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [Leadership program designer](https://useaiblocks.com/skills/leadership-program-designer). Bring your question.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a planning and writing job. Claude, ChatGPT and Gemini all do it well.
+<!-- /needs -->
+
 ## Steps
 
 Run these in order. After each step, say what the user now has.
@@ -98,3 +121,11 @@ Not for one person's improvement plan or a legal training requirement. Use your 
 - Write specific, measurable learning objectives before designing any training content — objectives drive the right assessment design, content depth, and method choice, and prevent building a program that is engaging but ineffective.
 - Measure training impact at all four Kirkpatrick levels — especially behavior change and business results.
 - Make learning continuous, not a one-time event — follow up with coaching, job aids, and practice opportunities.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
+- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

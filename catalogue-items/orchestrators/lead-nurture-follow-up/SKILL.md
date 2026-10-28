@@ -50,13 +50,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Information-led lead offer planner.** Use the skill `lead-offer-planner`. Names who has the costly problem and what it costs them, picks the one piece of information they would ask for and makes it the offer, defines what counts as a reply, routes each reply to a named person, and writes the short ad or letter and the plan to count replies and sales. Saves this as the step 1 file.
 2. **Almost-buyer follow-up writer.** Use the skill `almost-buyer-follow-up-writer`. Give it the step 1 file (the information offer and what counts as a reply), your offer terms and what the stalled leads did. First it sorts the leads into groups by how far they got. Then it writes one email per group, each with a subject, one next step and a new reason (proof, an answer to a doubt, a change in what they get, or a real deadline). Last it sets the send schedule and the stop rule, and a plan for people who never reply. Saves this as the step 2 file.
-3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 Two step files and the summary. The last file holds the email flow.
 - **Step 1, information offer:** who has the problem and what it costs, the one piece of information offered, what counts as a reply, the short ad or letter, the routing and counting plan.
 - **Step 2, follow-up emails:** the group each email is for, with its subject, body, one next step and new reason; the send schedule; the stop rule; how each email links to a sale; the plan for non-responders.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
+
+Next: load the emails into your email tool and send them yourself, then count replies and sales by group as step 1 planned. The Store drop and urgency planner below fits only if you have a real launch or restock date: bring it your offer terms and that date.
 
 ## Check before you hand it back
 - The offer is information the buyer would ask for, not a pitch in disguise.

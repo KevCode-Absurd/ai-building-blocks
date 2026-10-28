@@ -82,16 +82,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Say the thirty-second version out loud to a stranger and see if they can repeat it. Then offer these, and say they can type their own:
-- **Check the slides that carry it** with the [Pitch deck 10/20/30 checker](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
-- **Prepare for the hardest questions** with the [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
-- **Turn it into a position for your team** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the draft.
-- **If no edge was found** use the [Ten-times-better checker](https://useaiblocks.com/skills/ten-times-better-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No rival name, "cheaper", "like X" or fight word remains in the pitch.
@@ -99,6 +89,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The one-line version is under 15 words.
 - The pitch passes the stranger, delete and fight tests.
 - The private note holds the honest comparison.
+
+<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Say the thirty-second version out loud to a stranger and see if they can repeat it. Then offer these, and say they can type their own:
+- **Check the slides that carry it** with the [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
+- **Prepare for the hardest questions** with the [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
+- **Turn it into a position for your team** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the draft.
+- **If no edge was found** use the [Product alternative comparison reviewer](https://useaiblocks.com/skills/ten-times-better-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

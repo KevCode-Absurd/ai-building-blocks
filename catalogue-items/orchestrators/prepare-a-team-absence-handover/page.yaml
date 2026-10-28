@@ -106,6 +106,7 @@ works_best_with:
   inputs:
     - An export from your task tracker.
     - The person's own notes on where files and tools live.
+next: [weekly-team-coverage-review-assistant, plan-coverage-for-a-critical-role]
 terms:
   - term: Cover
     meaning: The person who takes a task while the owner is away.

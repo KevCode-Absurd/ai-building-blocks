@@ -9,7 +9,7 @@ Designs how AI agents prove who they are, what they are allowed to do, and what 
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: threat-model first, then identity issuance, trust rules based on checkable evidence, an append-only evidence record, delegation chains that only narrow, peer verification, and a plan for changing algorithms later. Its role language, experience claims, code samples and success targets (for example response times or "100% enforcement") are not facts about this system. They are goals and sketches from the original author. They do not grant tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** A strong reasoning model gives a better threat list. For sample code, use one that can also run code so you can try it.
@@ -74,7 +74,7 @@ Return these sections in order. If your AI can save files, save each as its own 
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample code only if the user asked for it, and label it "sketch, not tested".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.

@@ -5,11 +5,11 @@ name: Low-memory fine-tuning guide
 summary: Give it a big model and your GPU size. Get a low-memory fine-tuning setup in Python that trains under 1% of the model and fits your card.
 job: build-software
 headline: Low-memory fine-tuning guide
-subhead: A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
+subhead: A fine-tuning script and settings that train less than one percent of a large model, so a 7B or 8B model can fit on one GPU. A 70B model still needs a 48 GB or 80 GB card, or several cards. The small add-on layers it trains, called adapters, can be around 6 MB instead of a 14 to 16 GB full copy of a 7B or 8B model.
 explain: |
   This is an MIT-licensed skill by Orchestra Research (peft-fine-tuning) that we copied. It was not written for AI Blocks.
 
-  A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
+  What it does not do: it gives you code and settings only. It does not run the training, and the speed and quality figures in it come from the source, on hardware it does not always name.
 
   Tell it your model and GPU. It picks LoRA for standard fine-tuning of 7B to 70B models, or QLoRA when memory is tight. QLoRA saves memory and may cost a little quality. The source's own table shows a drop of under one point on one benchmark, but it does not say what hardware it used, so test on your own task. It gives Python code using the peft, transformers and bitsandbytes libraries, along with settings like rank. It also covers saving several adapters for different tasks on one base model, and when full fine-tuning is the better choice instead.
 when:

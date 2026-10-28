@@ -32,7 +32,7 @@ credits:
   - title: editorial-qa skill
     by: RampStack
     url: https://github.com/rampstackco/claude-skills/tree/main/skills/editorial-qa
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: RampStack
     url: https://github.com/rampstackco/claude-skills

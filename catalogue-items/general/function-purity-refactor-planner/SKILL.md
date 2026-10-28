@@ -9,7 +9,7 @@ A function that reads or changes things outside itself is hard to trust, because
 
 ## When to use it
 
-Use it on one function at a time. Do not use it to explain finished code (use the Code walkthrough writer), to rework a whole program at once (start with a design review by a senior developer, then come back with one function), or to only move code around without changing what it does (use the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split)).
+Use it on one function at a time. Do not use it to explain finished code (use the Code walkthrough writer), to rework a whole program at once (start with a design review by a senior developer, then come back with one function), or to only move code around without changing what it does (use the [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split)).
 
 ## What you need
 
@@ -34,7 +34,7 @@ The chosen function and why. The hidden state list. The comment to add. The pure
 
 ## What next
 
-When you've handed it back, suggest in one short question that they split the change into small, reviewable steps with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan. If they have not yet run the tests on the old function, tell them to do that first.
+When you've handed it back, suggest in one short question that they split the change into small, reviewable steps with the [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan. If they have not yet run the tests on the old function, tell them to do that first.
 
 ## Check before you hand it back
 

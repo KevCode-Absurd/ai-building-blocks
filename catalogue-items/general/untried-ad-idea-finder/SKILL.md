@@ -7,6 +7,8 @@ description: Use when a brand's ads feel stuck and you want to know what hasn't 
 
 You hand back a gap map of a brand's ads and five new ideas, each one a test. Every past ad is placed through five lenses: buying moment, value, buyer knowledge, opening, and form (format and product). The empty places that matter, and that the brand holds proof for, become the ideas. Four rules hold: a gap is only a gap when the thing hasn't run; each idea fills one gap and answers its own question; only proof on file can carry an idea; nothing is a winner unless it was measured.
 
+**When not to use:** with no ad history and no brand file (write down your products, buyers and proof first), for a health check of a running ad account (use your ad platform's own reports), or when you already picked an idea and need the final ad written.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -15,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
@@ -80,6 +82,7 @@ A markdown file `ad-gap-map.md`: evidence line, record, proof on hand, the five 
 - Who and gain land in the first second, and every idea is labelled "guess" or "measured".
 - No invented claim, price, offer, deadline or proof. Every claim, price and offer is the brand's own.
 - Saying two ads look alike is a review aid only. Make no claim about how a platform picks ads.
+- Any idea that touches health, digestion or a result in the body uses only the brand's approved claim wording, and is flagged for an ad-policy check before it is briefed.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

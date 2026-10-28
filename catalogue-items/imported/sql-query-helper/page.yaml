@@ -7,7 +7,7 @@ job: build-software
 headline: SQL query helper
 subhead: Describe the data you need in plain words. Your AI writes a SQL query and checks it for common mistakes. It can also suggest faster versions and write database migrations. It does not run anything against your database.
 explain: |
-  A SQL query that has been written, tested or sped up, or a database migration ready to run. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.
+  A SQL query that has been written or sped up and checked for common mistakes, or a database migration ready for you to test. It is not run against your database. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.
 
   It writes for your database, whether Postgres, MySQL, SQLite or SQL Server. For slow queries it reads the execution plan, spots repeated query patterns and suggests indexes. For schema changes it writes up and down migration scripts with a rollback plan. It also helps with Prisma, Drizzle, TypeORM and SQLAlchemy.
 when:
@@ -36,8 +36,10 @@ how_to_use:
   - Say what data you want in plain words and name your database type.
   - Paste your table layout. If the query is slow, paste it and its plan too.
   - Read the query and the notes. Ask for changes until it fits.
+  - The scripts folder (query checker, migration maker, schema explorer) is optional. It needs Python 3 on your computer, or an AI that can run code. In a plain chat, the AI does the same checks from your pasted text.
   - Run the query on a test copy of your data first. The skill does not run it for you.
   - For a migration, test it on a staging copy and take a backup before you touch live data.
+  - Next, if the query shows your tables need a new layout, plan it with the Database schema planner, then come back for the migration.
 output_sample:
   input:
     - A plain description of the data you need

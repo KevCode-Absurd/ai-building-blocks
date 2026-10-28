@@ -11,7 +11,7 @@ explain: |
 
   It starts by reading the room: who visits, what feel suits them, and one signature detail to make the page memorable. It then builds on a set floor of rules for type, colour, layout, button states and motion, and bans familiar AI looks like purple glow gradients and emoji icons. The last step renders the page at both sizes and keeps the work open while any hard problem remains, such as overlapping text or sideways scrolling. It needs a browser it can control.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (stas4000) said MIT. We relabelled it in the skill file, so the one licence that applies here is CC BY 4.0. Credit goes to stas4000 and sickn33.
+  Licence: two labels apply. The skill file keeps its author's own MIT header (stas4000). sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to stas4000 and sickn33.
 when:
   - You asked an AI for a landing page and it looks like every other one.
   - You want proof the page works on a phone, not a guess.
@@ -35,7 +35,7 @@ how_to_use:
   - Open an AI that can run code and open a browser, such as Claude Code or Cursor. A plain chat window cannot run the browser check.
   - Paste the skill, then tell your AI what the page is for and who visits. Add your page code or a short brief. The check opens whatever address or file you give it, so point it only at your own page or a local server.
   - Add your brand fonts or colours if you have them (optional). They override the skill's design rules.
-  - Let your AI write the direction line, build the page, then run the browser check. The first run installs Playwright and Chromium.
+  - Let your AI write the direction line, build the page, then run the browser check. The first run installs Playwright and Chromium with pip, in the terminal of the computer that runs the check, and it needs internet access for that download.
   - Ask it to fix every failed finding and run the check again. Then open the two screenshots yourself and judge the look.
   - The result is a built page, two PNG screenshots (desktop.png and mobile.png) and a final pass or fail line from the check.
   - Next, hand the checked page to your developer to ship. Before launch, run a check with real visitors using the Small usability test planner, and run the Accessibility checker on the page. The gate does not test either.

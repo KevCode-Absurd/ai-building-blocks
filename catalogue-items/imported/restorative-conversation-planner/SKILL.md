@@ -72,6 +72,19 @@ tags: ["restorative-practice", "conflict-resolution", "relationships", "accounta
 
 # Restorative Practice Protocol Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a specific restorative practice protocol for a classroom or school incident — selecting the right restorative approach (restorative chat, conference, or circle), providing the exact question sequence adapted for the situation and age group, guiding preparation of participants, and establishing an agreement framework for moving forward. The critical principle is that restorative practice is not the absence of consequences — it is a different KIND of consequence, one that requires the person who caused harm to understand the impact of their actions, take responsibility, and actively repair the damage. This is more demanding than a detention (which requires only that you sit in a room) and more effective (because it addresses the harm rather than just punishing the behaviour). The output is a ready-to-use protocol that a teacher or pastoral leader can follow step by step. AI is specifically valuable here because selecting the right restorative approach and calibrating the questions for the specific situation and age group requires both restorative justice expertise and practical school knowledge.
@@ -304,3 +317,12 @@ If the agreement has been broken: reconvene. "We agreed on [specific terms] last
 2. **Restorative practice is not appropriate for all situations.** Situations involving significant power imbalances (persistent bullying, abuse, harassment) may not be suitable for a face-to-face restorative conference, as the affected person may feel unsafe speaking directly to the person who harmed them. In these cases, the facilitator can shuttle between the parties rather than bringing them together, or an alternative approach may be needed.
 
 3. **Restorative practice takes more time than punishment.** A detention takes zero preparation and zero facilitator skill. A restorative conference takes 30–40 minutes plus preparation. The investment pays off in reduced repeat incidents and improved relationships, but the initial time cost is significant and must be supported by school leadership.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the plan.
+- The [Student systems change planner](https://useaiblocks.com/skills/intervention-impact-planner). It takes the plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -38,32 +38,58 @@ The standard progress-table format used by `Rule 1` in `SKILL.md`:
 ## Rule 5 — Timestamp Scale Detection & Synchronization Code
 
 ```matlab
-%% Detect timestamp scale and convert to seconds BEFORE creating objects
+%% Establish the timestamp unit and convert to seconds BEFORE creating objects
 %
-% Two checks — the first matches POSIX-anchored timestamps; the second
-% catches relative timestamps that start near 0. HERE HD / OpenDRIVE
-% datasets often store timestamps in microseconds-since-trip-start, so
-% the first sample is small but the *span* (end - start) is huge.
-% Without the span check, you build a 23-million-second trajectory.
+% Epoch-anchored timestamps (first sample is an absolute time since 1970)
+% can be read by magnitude. Relative timestamps (first sample near 0)
+% CANNOT: a span of 2e6 is 2000 s in ms or 2 s in us. For those, the unit
+% must come from dataset docs/metadata, the sample interval vs the
+% sensor's known rate, or another sensor with a known unit.
 sampleTs = rawTimestamps(1);
-spanTs   = rawTimestamps(end) - rawTimestamps(1);
-if sampleTs > 1e15 || spanTs > 1e9
-    rawTimestamps = rawTimestamps / 1e6;  % microseconds → seconds
-elseif sampleTs > 1e12 || spanTs > 1e6
-    rawTimestamps = rawTimestamps / 1e3;  % milliseconds → seconds
+if sampleTs > 1e17
+    scale = 1e9;   % nanoseconds since epoch
+elseif sampleTs > 1e14
+    scale = 1e6;   % microseconds since epoch
+elseif sampleTs > 1e11
+    scale = 1e3;   % milliseconds since epoch
+elseif sampleTs > 1e8
+    scale = 1;     % POSIX seconds
+else
+    % Relative timestamps: set unitFromEvidence ("s","ms","us","ns") from
+    % docs/metadata or a rate check, and record the evidence. If you cannot,
+    % stop and ask the user.
+    dtMedian = median(diff(rawTimestamps));
+    fprintf("Relative timestamps. Median step %g raw units -> %g Hz if s, %g Hz if ms, %g Hz if us\n", ...
+        dtMedian, 1/dtMedian, 1e3/dtMedian, 1e6/dtMedian);
+    assert(exist("unitFromEvidence","var") == 1, ...
+        "Timestamp unit is ambiguous: confirm it from documentation or ask the user before continuing.");
+    scale = containers.Map(["s","ms","us","ns"], [1 1e3 1e6 1e9]);
+    scale = scale(unitFromEvidence);
 end
-% Apply the SAME conversion to every sensor's raw timestamps before
-% constructing scenariobuilder.* objects — mismatched units cause silent
-% sync failures (durations of millions of seconds, empty crops, etc.).
+rawTimestamps = rawTimestamps / scale;
+% Work out the scale for EACH sensor this way (units can differ between
+% sensors), and write it with its evidence in the Rule 6 table.
 
-%% After creating sensor objects — normalize and synchronize
+%% After creating sensor objects — one shared time origin
 convertTimestamps(gpsData, "numeric");
 convertTimestamps(trackData, "numeric");
-timeRef = normalizeTimestamps(gpsData);
-try
+% Record each sensor's original start BEFORE normalizing, so real offsets survive.
+startGps   = gpsData.Timestamps(1);
+startTrack = trackData.Timestamps(1);
+fprintf("Original starts: GPS %.6f s, tracks %.6f s (offset %.6f s)\n", ...
+    startGps, startTrack, startTrack - startGps);
+% If one sensor is relative (starts near 0) and the other absolute, its
+% origin on the shared timeline is unknown: stop and ask for its start time
+% or offset. Never zero each sensor on its own.
+assert((startGps > 1e8) == (startTrack > 1e8), ...
+    "One sensor is relative and one absolute: get the relative sensor's start time before synchronizing.");
+% Normalize on the sensor that starts first, then reuse its timeRef for all.
+if startGps <= startTrack
+    timeRef = normalizeTimestamps(gpsData);
     normalizeTimestamps(trackData, timeRef);
-catch
-    normalizeTimestamps(trackData);  % normalize independently if shared ref fails
+else
+    timeRef = normalizeTimestamps(trackData);
+    normalizeTimestamps(gpsData, timeRef);
 end
 synchronize(trackData, gpsData);
 assert(isnumeric(gpsData.Timestamps), "GPS timestamps must be numeric seconds");
@@ -71,7 +97,7 @@ fprintf("All sensors synchronized: %d samples, duration %.2f s\n", ...
     gpsData.NumSamples, gpsData.Duration);
 ```
 
-**`normalizeTimestamps` pitfall:** `convertTimestamps(obj, "numeric")` may internally normalize timestamps to start at 0 for some sensors but not others. After calling `convertTimestamps`, check if timestamps already start near 0 before calling `normalizeTimestamps` with a shared reference. If one sensor is already normalized but another still has POSIX values, normalize each independently first, then synchronize.
+**`normalizeTimestamps` pitfall:** `convertTimestamps(obj, "numeric")` may internally normalize timestamps to start at 0 for some sensors but not others. After calling `convertTimestamps`, check whether timestamps already start near 0. If one sensor is relative but another still has POSIX values, do not normalize each one on its own: that erases the real offset between them. Get the relative sensor's start time on the absolute timeline (metadata, a shared trigger, or the user), shift it onto that timeline, then normalize all sensors with one shared `timeRef`. If no start time is available, stop and ask.
 
 ## Rule 6 — Data Format / Mapping Table
 
@@ -101,7 +127,7 @@ Present this table to the user before importing. Fill the "Your Data" and "Raw M
 | Polysync | microseconds since epoch | ~1.46e15 | `/1e6` |
 | nuScenes | microseconds since epoch | ~1.5e15 | `/1e6` |
 | KITTI raw | POSIX seconds | ~1.3e9 | `/1` |
-| HERE HD recordings | microseconds-since-trip-start (small first sample, large span) | sample ~0, span ~1e7 | `/1e6` (span check) |
+| HERE HD recordings | microseconds-since-trip-start (small first sample) | sample ~0 | `/1e6` once confirmed from the dataset docs or a rate check (span alone cannot confirm it) |
 | OEM CAN (AH_ACC) | POSIX seconds (GPS) / relative seconds (CAN) | ~1.5e9 (GPS), variable (CAN) | `/1` — but check Y-axis flip |
 
 **Field name case sensitivity:** MATLAB table variable names are case-sensitive. Datasets vary in naming (e.g., `timestamp` vs `timeStamp`, `filename` vs `fileName`, `TrackID` vs `trackID`). Always inspect `.Properties.VariableNames` before accessing any field:

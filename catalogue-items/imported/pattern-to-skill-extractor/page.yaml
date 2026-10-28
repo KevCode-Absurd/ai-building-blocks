@@ -48,7 +48,7 @@ output_sample:
   prerequisites:
     - Claude Code, which can run commands and save files
     - Auto-memory turned on, if you want it to search your saved notes
-    - A skill-extractor agent, which the skill calls to write the files and is not in this folder
+    - A skill-extractor agent (optional, not in this folder). Without it, your AI writes the files itself
   output:
     - name: SKILL.md
       contains: The main skill file with a name, a trigger description, a quick reference table, solutions, trade-offs and edge cases.

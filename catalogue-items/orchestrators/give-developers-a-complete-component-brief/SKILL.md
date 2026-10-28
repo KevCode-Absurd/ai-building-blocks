@@ -66,8 +66,8 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 ## Next steps
 
 Suggest one next step in a short question, and say they can type their own:
-- **Check the built component** with the [Design handoff completeness assistant](https://useaiblocks.com/agents/design-handoff-completeness-assistant), once developers change it.
-- **Review the whole screen it sits on** with the [New screen design reviewer](https://useaiblocks.com/agents/new-screen-design-reviewer).
+- **Check the built component** with the [Design handoff completeness reviewer](https://useaiblocks.com/agents/design-handoff-completeness-assistant), once developers change it.
+- **Review the whole screen it sits on** with the [Screen usability reviewer](https://useaiblocks.com/agents/new-screen-design-reviewer).
 - **Turn the brief into code** with the [Accessible UI builder](https://useaiblocks.com/skills/accessible-ui-builder).
 Nothing here sends the brief. A person hands it to the developers.
 

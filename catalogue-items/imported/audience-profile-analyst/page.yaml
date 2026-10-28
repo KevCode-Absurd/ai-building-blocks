@@ -40,7 +40,7 @@ how_to_use:
   - Pick one public account and one platform. Decide what you want to learn, such as who engages or whether comments look real.
   - Create an Apify account and an API token. Save the token in a file called .env as APIFY_TOKEN=your token. Do not paste it into chat. Apify charges for runs, so check the Actor's price first.
   - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer. Read the Actor's settings on its public page at apify.com, so your token never goes on a command line. Your Apify account needs credit before the run starts.
-  - Before each run, check that the platform's terms allow collecting this data, and check the privacy rules where you and the audience live, such as GDPR in the EU. Also check that the Actor your AI picks still exists on apify.com.
+  - Before each run, check that the platform's terms allow collecting this data, and check the privacy rules where you and the audience live, such as GDPR in the EU. Also check that the Actor your AI picks still exists on apify.com. The export will hold personal data about followers, so decide where you will keep it and set a date to delete it before you run.
   - Paste the skill and give your account link, platform and a small cap, such as 100 results, to start.
   - Ask your AI to name the Actor it picked and what the run will cost before it runs. Try the quick answer first, which shows the top 5 results, to check you have the right data.
   - Run the full export, then read the summary. Treat age, gender and location as guesses, and do not accuse a creator of faking engagement on counts alone. Then delete or lock the exported file, because it holds personal data about followers.

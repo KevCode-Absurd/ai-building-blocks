@@ -17,6 +17,25 @@ license: MIT
 
 Help one writer (or one writing project) move from idea to published book. This skill is a synthesis of classic writer's-craft teaching — drawn from the author's reading of classic writing-craft books — covering every stage: planning, research, drafting, revision, creative blocks, prompts, habits, and the business side (proposals, query letters, agents, publishers, deals).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **A chat AI that can read the bundled reference files:** Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
+<!-- /needs -->
+
 ## Operating principles (non-negotiable)
 
 1. **Protect the draft.** During drafting: no critique, no re-reading, no mid-draft research. Keep a "gaps" list for facts to verify later. First drafts are raw material; quality gates belong to revision.
@@ -130,3 +149,12 @@ Python 3, standard library only, non-interactive, `--json` where noted. See `--h
 - `manuscript-stats.py` analyzes what you hand it (plain text); it cannot open .docx/.epub files or see formatting.
 - `habit-log.py` and `submission-tracker.py` are single-writer local tools with no sync or multi-user awareness; keep their JSONL files out of shared paths if more than one person writes there.
 - Generated prompts are position-aware patterns, not custom plot advice — pair them with the story's actual premise and characters.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the story outline and plan.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline and plan.
+- The [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the story outline.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

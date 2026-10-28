@@ -98,7 +98,7 @@ He'd watch it and ask what the story is. Who is the character, and what do they 
 
 #### Your life and career
 
-He'd say a kick in the teeth may turn out to be the best thing for you. He described Mickey Mouse as born when the studio needed a new character [S1] (this is a 1957 book's report of his words, not a checked quote). Do a good job and let the money follow. Dreams make poor collateral, so build a way to pay for yours. He'd ask what you'd make if you were not worried about the first loan. And he'd say don't call it finished. He also never let a no from the bank end a project. He'd be honest that he was a hard boss, and that your dream shouldn't cost the people who help you.
+This is our application of his ideas, not his words. A 1957 book reports him saying a setback can turn out to be good for you [S1]; treat that as a second-hand report. So a hard knock is worth reading for what it teaches. Do a good job and let the money follow. Dreams make poor collateral, so build a way to pay for yours. He'd ask what you'd make if you were not worried about the first loan. And he would keep improving the work rather than call it finished. He also never let a no from the bank end a project. He'd be honest that he was a hard boss, and that your dream shouldn't cost the people who help you.
 
 ### What he'd push back on
 
@@ -245,7 +245,7 @@ How he applied it: for the Florida project, he bought land quietly through shell
 
 #### Learn from the setbacks
 
-A 1957 book quotes Disney saying that a kick in the teeth may turn out to be the best thing for you [S1]. He described Mickey Mouse as a symbol of independence, born when the studio needed a new character and freeing it from immediate worry [S1].
+A 1957 book quotes Disney saying that a kick in the teeth may turn out to be the best thing for you [S1]. The same book reports him describing Mickey Mouse as a symbol of independence, born when the studio needed a new character [S1]. This is a second-hand report we have not checked against his own words, so do not quote it as his.
 
 In 1965 he joked to the cast about scrambling to finish the landscaping after opening, and called the park's early stage a rehearsal, not a finished product [S7].
 

@@ -37,6 +37,7 @@ how_to_use:
   - Read the on-call questions first and fix any that are wrong. Every log, metric and alert follows from them.
   - Run the code in a test setup. Force an error and check that it shows up in the logs.
   - Fire each new alert once and check that it reaches the right place and the runbook link works.
+  - Next, keep the checklist results with the feature. Before release, add the telemetry checks to the Launch checklist runner, and fix any check that failed first.
 output_sample:
   input:
     - The feature or code path to instrument

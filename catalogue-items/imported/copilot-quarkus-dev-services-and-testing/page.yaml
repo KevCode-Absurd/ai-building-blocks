@@ -38,8 +38,9 @@ how_to_use:
   - Share your pom.xml and the class you want to test. Say your Quarkus version and which services the app uses.
   - Start Docker or Podman before you run anything. Dev Services needs one of them to start containers.
   - Read the test before you run it. Check that it asserts something real, such as a status code and a body.
-  - Run ./mvnw test for @QuarkusTest classes. Run ./mvnw verify -DskipITs=false to include the IT classes.
+  - Run ./mvnw test for @QuarkusTest classes. Run ./mvnw verify -DskipITs=false to include the IT classes. Check the skipITs and failsafe settings in your own pom.xml first, since they depend on your Quarkus version. The version notes in the skill are its author's own tests, not checks on your setup.
   - Paste any failure back to your AI. It needs a running machine for this, so the AI cannot run the tests unless it has a shell.
+  - Next, once the tests pass, add the run commands to your CI pipeline. For new code, use Build a Quarkus application feature.
 output_sample:
   input:
     - Your pom.xml and the class or endpoint to test

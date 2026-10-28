@@ -103,6 +103,6 @@ Write `MISSING: <what>` next to the affected line. Carry on with work that does 
 
 This is the one next-step list for this run. Suggest one step as a short question, and say the user can type their own:
 - **Fill the unknowns.** Find the missing facts, then run the checklist again.
-- **Keep reviewing results as the pilot grows.** Use the [AI pilot evaluation review assistant](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant).
-- **Check the build.** If the pilot used an agent, use the [Review an agent before launch](https://useaiblocks.com/workflows/review-an-agent-before-launch) workflow.
+- **Keep reviewing results as the pilot grows.** Use the [AI pilot results reviewer](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant).
+- **Check the build.** If the pilot used an agent, use the [AI agent launch security reviewer](https://useaiblocks.com/workflows/review-an-agent-before-launch) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

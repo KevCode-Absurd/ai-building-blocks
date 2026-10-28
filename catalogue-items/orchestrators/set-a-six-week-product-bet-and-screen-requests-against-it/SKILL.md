@@ -58,10 +58,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these in place of the generic "After this" list above. Offer them in one short question:
+Use these in place of the generic "After this" list below. Offer them in one short question:
 - Review the "later" and "not now" pile every six weeks. Run step 3 again on that pile against the next bet.
-- If the plan is set and you must hit a launch date, use [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch).
-- To turn the bet into a task list for a sprint, use the [Sprint prioritizer agent](https://useaiblocks.com/agents/agency-product-sprint-prioritizer).
+- If the plan is set and you must hit a launch date, use [Small product launch planner](https://useaiblocks.com/workflows/smaller-product-launch).
+- To turn the bet into a task list for a sprint, use the [Sprint priority planner](https://useaiblocks.com/agents/agency-product-sprint-prioritizer).
 
 The three skills named in the steps come in the downloaded pack. Keep them in the same folder as this file before you start. If one is missing, fetch it from https://useaiblocks.com/skills/<slug> or ask for the file.
 

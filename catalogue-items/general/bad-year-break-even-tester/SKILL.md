@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -64,10 +64,8 @@ The earnings base. The list of events with LIKELY, POSSIBLE, UNLIKELY or UNKNOWN
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the audit report.
 - **Check the money** with the [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Store profit and loss builder](https://useaiblocks.com/skills/store-pl-builder). It takes the audit report.
-- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

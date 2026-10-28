@@ -33,10 +33,11 @@ you_get:
 how_to_use:
   - Open your AI tool and paste in the skill, or upload the skill folder.
   - Tell it what you are deploying, where, and which version you expect.
-  - Give it your version or health page address. It needs this for the final check.
+  - Give it your version or health page address. It needs this for the final check. The page should show which version or commit is running, for example a JSON field such as version or revision. If your service has no version field, use the release pointer or the changed asset fingerprint from the pre-flight instead, and add a version field for next time.
   - Answer its pre-flight check. Fix anything marked BLOCK before you deploy.
-  - Run the deploy yourself or with your usual tools.
+  - Run the deploy yourself or with your usual tools. A person confirms the deploy command before anything goes to production. The skill never runs the production deploy itself.
   - Ask it to check the live version. Only call the release shipped when the versions match. Checking a live site works best when your AI can run commands.
+  - Next, if the versions do not match, hold the release and roll back with your host's own command, then run the check again on the restored version.
 output_sample:
   input:
     - What you are deploying and where it goes

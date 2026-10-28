@@ -7,6 +7,8 @@ job: study-competitors
 headline: Amazon market researcher
 subhead: "Give it a product, keyword or category on Amazon. It reads live data through the Pangolinfo service and builds a short report. Every point comes with a source link so you can check it."
 explain: |
+  This skill was written by Pangolinfo, the company that sells the data service it uses, and shared in sickn33's collection. It is not AI Blocks' own work.
+
   A research report on an Amazon product or category built from live data: search results, rankings, Best Sellers, New Releases, seller catalogues and reviews. Each point comes with the source link so you can check it.
 
   You set a narrow question, a marketplace and a scope. The skill turns it into read-only data requests through the Pangolinfo service, then compares a small set of named products or pulls out review themes with evidence. It never invents tool names. It only reads data. It cannot place orders, contact sellers or crawl beyond the documented service. Amazon's conditions and Pangolinfo's terms still apply to the data you collect. The service needs your own API key, kept in your tool's secret settings, and it may use plan credits.
@@ -34,7 +36,8 @@ you_get:
   - A list of missing data and what to query next
 how_to_use:
   - Sign up with Pangolinfo and get an API key. Plan credits may be used.
-  - Connect the Pangolinfo MCP bridge in your AI tool. Check the setup guide on the official Pangolinfo site first. Keep the key in your tool's secret settings, never in chat.
+  - Connect the Pangolinfo MCP bridge in your AI tool. Check the setup guide on the official Pangolinfo site first. Pin the package to an exact version in the setup, as the skill file shows, rather than running the newest one. Keep the key in your tool's secret settings, never in chat.
+  - Check your plan's credit cost per request before the first run, so you know what a search will use.
   - Open a chat and paste this skill. Ask your AI to list the bridge's tools first, and compare them with the tools named in the skill. If they do not match, stop and check the setup guide before you run anything. Say your product or keyword, marketplace and goal.
   - If your AI cannot list the bridge's tools, or the list comes back empty, stop. The bridge is not connected. Check your key and the setup guide. Do not let your AI guess tool names.
   - Start small, with no more than three products or one page of results on the first run, so credit use stays low and predictable. Widen only after you check the first result.

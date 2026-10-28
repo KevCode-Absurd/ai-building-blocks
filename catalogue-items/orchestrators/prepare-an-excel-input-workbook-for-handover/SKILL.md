@@ -40,9 +40,9 @@ If a field has no allowed values or the record key is unknown, write `MISSING:` 
 Use an actual tool that can read and write the required native format. Plain text, JSON, HTML or a screenshot is not a finished XLSX/PPTX file. Inventory unsupported features before changing an existing file. Preserve macros, pivots, connections, masters and linked objects by using a compatible native engine when required; otherwise stop or return a clearly scoped review/plan. A formula string, cached value or successful export is not proof of recalculation, native refresh, accessibility compliance or layout. Render real output where the method calls for it and record any check that could not run.
 
 ## Method
-1. Read `skills/excel-input-form-builder/SKILL.md` completely and run its full method. Confirm the field rules with the user. Build the empty native input table with dropdowns and checks. Then, on a separate copy, test one valid record, one with a required field left empty and one duplicate of the record key, and confirm the checks catch the last two. Keep those test records out of the delivered form. Hands step 2: the delivered workbook, the field rules and the test results.
+1. Read `skills/excel-input-form-builder/SKILL.md` completely and run its full method. Confirm the field rules with the user. Build the empty native input table with dropdowns and checks. Then, on a separate copy, test one valid record, one with a required field left empty and one duplicate of the record key, and confirm the checks catch the last two. Keep those test records out of the delivered form. Hands to step 2: the delivered workbook (`input-form.xlsx`), the confirmed field rules (`field-rules.md`) and the three test results with what each check did.
 
-2. Read `skills/excel-handover-guide-writer/SKILL.md` completely and run its full method. Open the delivered workbook from step 1, not the field list. Document the sheet map, allowed entries, calculated fields, what the checks cannot catch and the update steps. Hands back: the guide.
+2. Read `skills/excel-handover-guide-writer/SKILL.md` completely and run its full method. Open the delivered workbook from step 1, not the field list. Document the sheet map, allowed entries, calculated fields, what the checks cannot catch and the update steps. Hands back: the guide (`workbook-handover.md`).
 
 3. Review the check results. List each check as passed, failed or not run, with the evidence. Fix confirmed problems within scope and recheck at most twice. Write the run register and the unresolved-input list.
 
@@ -54,7 +54,20 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Repair confirmed issues within scope, then recheck at most twice. Stop if a required gate still fails.
 
 ## Deliverables
-The native files and reports produced by the component methods, plus a run register and unresolved-input list.
+The native files and reports produced by the component methods, plus a run register and unresolved-input list, in this shape:
+
+```
+FILES
+  input-form.xlsx | field-rules.md | workbook-handover.md | run register
+SOURCE MAP
+  <file and version> | <sheet, cell or slide> | <what it supports>
+CHECKS
+  <check> | <passed, failed or not run> | <evidence>
+OPEN ITEMS
+  <missing fact or unsupported check> | <next action>
+CHECKS MISSED <each check that failed or could not run, or none>
+```
+
 Next step: ask the owner to open the workbook, enter one real record and one bad record, and confirm the check catches the bad one. Send the workbook and the guide to the named owner only after every CHECKS row is passed or clearly marked not run. Open items stay in the guide, with a person named for each. Nothing is sent for the user.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
@@ -68,4 +81,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Verification cases
-Read each component’s packaged tests/cases.json and run the applicable cases. Verify the semantic handoff between component outputs and inputs. A matching type name alone does not prove compatibility.
+If a component's pack includes `tests/cases.json` (in that skill's folder under `skills/`), run its applicable cases. If it has none, say so in the run register and rely on the three test records from step 1. Verify the semantic handoff between component outputs and inputs. A matching type name alone does not prove compatibility.

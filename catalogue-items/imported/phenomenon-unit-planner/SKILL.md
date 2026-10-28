@@ -73,6 +73,19 @@ tags: ["phenomenon-based-learning", "Finland", "POPS-2016", "Lonka", "cross-curr
 
 # Phenomenon-Based Unit Anchor
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a phenomenon-based learning unit anchored in a real-world phenomenon that requires multiple subject disciplines to understand — following the approach central to Finland's 2016 National Core Curriculum (POPS 2016). The critical insight from the Finnish model is that phenomena are not "topics" or "themes" — they are complex real-world situations that genuinely REQUIRE multiple disciplinary lenses because no single subject can fully explain them. A phenomenon like "water quality in our local river" requires science (chemistry of pollutants, ecology of aquatic life), geography (land use, water systems), mathematics (data analysis, measurement), and civic education (policy, community responsibility). The skill designs the unit so that each subject's contribution is necessary and the integration is genuine — subjects connect because the phenomenon demands it, not because the teacher artificially stitches them together. The output includes the unit design, each subject's contribution, specific integration points, a student inquiry pathway, and an assessment design that tests integrated understanding. AI is specifically valuable here because designing authentic phenomenon-based units requires simultaneously mapping curriculum objectives from multiple subjects onto a single phenomenon while ensuring genuine integration — a complex design challenge that benefits from systematic cross-referencing.
@@ -268,3 +281,11 @@ Each contributing subject teacher assesses the accuracy of their disciplinary co
 2. **Not all subjects integrate naturally with all phenomena.** The fast fashion example integrates Geography, Science, Maths, and Ethics convincingly — each subject contributes something genuinely necessary. But forced integration ("Let's include Art by having students design a sustainable fashion collection") weakens the unit. It is better to have three genuinely integrated subjects than five artificially connected ones.
 
 3. **Phenomenon-based learning complements subject teaching; it does not replace it.** The Finnish model includes phenomenon-based modules alongside subject-specific teaching — not instead of it. Students still need dedicated subject lessons to build the disciplinary knowledge and skills they bring to the phenomenon. A school that replaced all subject teaching with phenomenon-based learning would likely produce students with broad awareness but shallow disciplinary understanding.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Community project unit planner](https://useaiblocks.com/skills/community-project-unit-planner). It takes the lesson plan.
+- The [Local place lesson planner](https://useaiblocks.com/skills/local-place-lesson-planner). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

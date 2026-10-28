@@ -34,4 +34,4 @@ credits:
   - title: travel-guide skill
     by: Magnus Hedemark
     url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/travel-guide
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

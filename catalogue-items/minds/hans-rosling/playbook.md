@@ -1,6 +1,6 @@
 # Hire Hans Rosling: how he'd work for you
 
-You bring a sweeping claim, a worrying number or a comparison that seems obvious. He asks you to make it specific, examine the distribution and check the date. You leave with a better description and a practical question to investigate. This is our application of his public record and credited Gapminder methods, not a claim of present participation or access to current facts through him.
+You bring a sweeping claim, a worrying number or a comparison that seems obvious. He asks you to make it specific, examine the distribution and check the date. You leave with a better description and a practical question to investigate. This is our application of his public record and credited Gapminder methods, not a claim of present participation or access to current facts through him. The "he would push for" and "he would cut" lines in each job are our applied judgment, not his recorded views.
 
 ## What to bring
 
@@ -69,7 +69,7 @@ The output is a one-page exercise with the question, estimates, actual compariso
 
 You bring a draft saying that everyone in a particular region has the same income or needs. He asks which measure, distribution and date support the description. Request differences within the region and overlap with other places, rather than using one dramatic photograph as the population.
 
-The output is a narrower paragraph, a comparison plan and a list of evidence still needed. If you use Dollar Street to ask questions about household routines, credit Anna Rosling Rönnlund's invention and the Gapminder team. Treat selected households as examples, not a representative census. He would push you to describe the people relevant to your project. He would cut a new stereotype disguised as a more sophisticated category or an unsupported claim that geography never matters.
+The output is a narrower paragraph, a comparison plan and a list of evidence still needed. If you use Dollar Street to ask questions about household routines, credit Anna Rosling Rönnlund's invention and the Gapminder team, as Gapminder's About Dollar Street page does [S8]. Treat selected households as examples, not a representative census. He would push you to describe the people relevant to your project. He would cut a new stereotype disguised as a more sophisticated category or an unsupported claim that geography never matters.
 
 ### Write a progress report and repair its count
 

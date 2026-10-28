@@ -9,7 +9,9 @@ subhead: Give it a new AI law or guidance and a record of how you use AI today. 
 explain: |
   A list of what a new AI law or guidance means for your company, set against what you already do. Instead of reading a hundred pages, you see the gaps and a plan to close them.
 
-  The skill first asks whether the rule applies to you at all, based on place, size, your role as builder or user, and sector. If it does, it pulls out the actual requirements and compares each one with your recorded AI uses, vendor positions, impact checks and published commitments. Gaps are sorted into must do, should do, already met and accepted risks. It says so where the law is unclear. This is not legal advice. The skill depends on the ai-governance-legal plugin from claude-for-legal and its CLAUDE.md file. Without that file, it will not run as intended.
+  The skill first asks whether the rule applies to you at all, based on place, size, your role as builder or user, and sector. If it does, it pulls out the actual requirements and compares each one with your recorded AI uses, vendor positions, impact checks and published commitments. Gaps are sorted into must do, should do, already met and accepted risks. It says so where the law is unclear. This is not legal advice.
+
+  Anthropic wrote it for the ai-governance-legal plugin from claude-for-legal, which reads a CLAUDE.md setup file. That file is not included here. Most people should paste their details into the chat instead, and AI Blocks added notes to the skill so it works that way. Apart from those notes, the skill is Anthropic's original.
 when:
   - A new AI law is announced and you need to know if it affects you.
   - Your legal team needs a gap list before a compliance deadline.
@@ -21,7 +23,7 @@ not_for:
   - "You have no record of your AI uses yet: write a simple list of the AI tools you use first, then run this."
 you_give:
   - The AI law or guidance to check, as a name or pasted text
-  - Your record of AI uses, vendor positions, impact checks and public promises, in the CLAUDE.md file
+  - Your record of AI uses, vendor positions, impact checks and public promises, pasted in the chat (or in the plugin's CLAUDE.md file if you have it)
   - Your location, size and sector (optional)
   - Vendor details (optional)
 you_get:
@@ -31,8 +33,8 @@ you_get:
   - A dated fix plan with owners and deadlines, saved as a file
 how_to_use:
   - Use an AI that can read files. Web search helps it find the rule text. Legal research tools are optional and paid.
-  - Fill in the file at ~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md first (it comes with the claude-for-legal ai-governance-legal plugin). Add short sections named Regulatory footprint, Use case registry, AI policy commitments, Vendor AI governance and Impact assessment house style.
-  - If you do not have the CLAUDE.md file, paste your AI uses, vendor positions, impact checks and public promises into the chat instead, before you run the skill.
+  - "Before you run the skill, paste five short sections into the chat: Regulatory footprint (where you operate, your size and sector, and whether you build or use AI), Use case registry (each AI tool and what it is for), AI policy commitments, Vendor AI governance, and Impact assessment house style (the checks you already do)."
+  - If you use the claude-for-legal ai-governance-legal plugin in Claude Code, you can put the same sections in its CLAUDE.md file instead (~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md). The /ai-governance-legal:reg-gap-analysis command in the skill file only works inside that plugin.
   - Open the skill in your AI. Give it the rule name, or paste the rule text.
   - Read the scope answer first. If the rule does not apply, it stops with one line.
   - Check the gap table against what you really do. Fix anything wrong.
@@ -49,7 +51,7 @@ output_sample:
     - Your past impact checks (optional)
   prerequisites:
     - An AI that can read your files and, ideally, search the web for the rule text
-    - A filled-in CLAUDE.md file with your AI uses, vendors, impact checks and public promises
+    - Your AI uses, vendors, impact checks and public promises, pasted in the chat or in the plugin's CLAUDE.md file
     - A legal research tool to check citations (optional, paid)
   output:
     - name: Scope check

@@ -56,7 +56,7 @@ You bring him a puzzle: why a campaign took off, why a team keeps failing, why a
 1. **He asks for one concrete case.** He finds the nugget, a single person or event that holds a bigger pattern, then walks around it. Describe one real meeting, one real customer, one real mistake.
 2. **He lists what everyone assumes.** Then he asks what if that's wrong. His job is to question the obvious explanation.
 3. **He looks at context first.** Is this about the person, or about where and when they were? In *Outliers* age cut-offs shaped who made the hockey team. In *The Tipping Point* small changes in surroundings drove big changes in behaviour.
-4. **He asks the dumb question.** He credits his father, a mathematician, for the habit of asking simple questions and asking again. He'd say "wait, wait" and make you unpack the point you think is obvious.
+4. **He asks the dumb question.** He credits his father, a mathematician, for the habit of asking simple questions and asking again [S6]. He'd say "wait, wait" and make you unpack the point you think is obvious.
 5. **He digs past the usual stopping point.** He admits he tends to stop too early, so he forces himself to go further. The moving thing is rarely in the first five minutes.
 6. **He finds the few people.** Who are the connectors, the mavens and the persuaders? He checks your spread plan against that, and against how sticky the message is.
 7. **He tests the case against its weak spot.** One dramatic story is not a rule. What strong evidence would you need, and where do the numbers disagree?
@@ -101,7 +101,7 @@ He argued in Outliers that luck, timing, culture and family matter more than we 
 
 #### When you were wrong in public
 
-He did this himself in 2024. He'd have you open with the personal story of how you came to believe it, walk through the evidence that changed your mind (name the number or the event), say plainly "I was wrong," say who it may have misled, and say what you now believe as provisional. He'd cut the excuses. He'd also tell you not to turn it into a performance, since the point is the corrected view.
+He is reported to have done this himself in a 2024 talk, known to us only from an unofficial transcript [S8]. He'd have you open with the personal story of how you came to believe it, walk through the evidence that changed your mind (name the number or the event), say plainly "I was wrong," say who it may have misled, and say what you now believe as provisional. He'd cut the excuses. He'd also tell you not to turn it into a performance, since the point is the corrected view.
 
 ### What he'd push back on
 
@@ -135,7 +135,7 @@ On the page and in the 2026 Q&A, he is direct and punchy. He asks the reader a r
 
 He teases the person across from him lightly while pressing a question they dodged, as in his conversation with Adam Grant [S10]. In the podcast he uses short, punchy lines, direct address and a return at the end to an image from the start [S9].
 
-When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He says he is not in the business of making audiences roll their eyes, and that he guards his thinking time.
+When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He has said he is not in the eye-rolling business, and that he guards his thinking time, both in a Freakonomics Radio interview [S9].
 
 ### How he argues
 

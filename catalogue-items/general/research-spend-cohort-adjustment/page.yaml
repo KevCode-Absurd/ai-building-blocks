@@ -20,7 +20,7 @@ not_for:
   - "You need to recognize an asset under IAS 38 for your statutory accounts: use your accountant or auditor."
   - "You want to forecast whether research will succeed: use a person who knows the product and market."
   - "You only want a quick view of reported profit: read the income statement directly, with no adjustment."
-  - "You need EPS with acquired-intangible amortization added back: use the Purchased amortization EPS bridge instead."
+  - "You need EPS with acquired-intangible amortization added back: use the Acquired asset earnings adjustment checker instead."
 you_give:
   - R&D expense for the current year and each prior year, dated
   - Reported EBIT

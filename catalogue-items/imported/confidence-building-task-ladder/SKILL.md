@@ -69,6 +69,22 @@ tags: ["self-efficacy", "confidence", "Bandura", "mastery-experiences", "attribu
 
 # Self-Efficacy Builder Sequence
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a structured sequence of tasks that systematically builds self-efficacy for a student who believes they "can't do" a specific skill — using Bandura's four sources of self-efficacy (mastery experiences, vicarious experience, verbal persuasion, and physiological states) in the right order and combination for the specific student. The critical insight from Bandura's research is that self-efficacy is not built by telling students they can do it (verbal persuasion alone is weak) but by engineering genuine success experiences — starting from what the student CAN do and building incrementally so that each step provides evidence of capability. The output is a ready-to-use task sequence plus specific teacher language for attribution coaching — helping students attribute their success to effort and strategy (which they control) rather than to ability (which feels fixed) or luck (which feels random). AI is specifically valuable here because designing an effective self-efficacy sequence requires knowing the prerequisite structure of the skill (what simpler version can the student succeed at?), the student's current starting point, and the precise increments that feel challenging but achievable — a calibration that varies for every student-skill combination.
@@ -269,3 +285,12 @@ For each task (4–6 tasks):
 2. **The sequence assumes the student's difficulty is primarily motivational, not cognitive.** If the student genuinely cannot write at the expected level (not "believes they can't" but actually cannot due to a specific learning difficulty), the self-efficacy sequence alone will not be sufficient. It must be combined with skill-building instruction. The verbal articulation strength described in the example suggests the gap IS motivational — but the teacher must verify this.
 
 3. **Self-efficacy is domain-specific.** Building writing self-efficacy does not automatically improve self-efficacy in mathematics or science. Each domain requires its own sequence. However, meta-cognitive awareness ("I used a strategy and it worked") can transfer — the student may learn to apply the strategy-based approach to other areas of difficulty.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the lesson plan and plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

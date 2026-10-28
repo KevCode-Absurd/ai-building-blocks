@@ -73,6 +73,26 @@ tags: ["explicit-instruction", "gradual-release", "modelling", "direct-instructi
 
 # Explicit Instruction Sequence Builder (I Do / We Do / You Do)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your notes** with the [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). Bring a document, an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a complete gradual release of responsibility sequence for teaching a specific skill: a scripted "I Do" (teacher models with think-aloud), a structured "We Do" (guided practice with teacher-student interaction), and a designed "You Do" (independent practice with monitoring points). The output includes checking-for-understanding moments at each transition and a timing guide. AI is specifically valuable here because effective explicit instruction requires the teacher to make invisible expert thinking visible — breaking down a skill they perform automatically into discrete, teachable steps with articulated reasoning. This decomposition of expert performance is cognitively demanding and is where most explicit instruction falls short.
@@ -284,3 +304,12 @@ Write a topic sentence for a subject of your choice (History, Science, Geography
 2. **The quality of the I Do phase depends entirely on the teacher's ability to articulate their thinking.** The script provides a model, but the teacher must deliver it in their own voice and adapt to their students' responses. A robotically read script is worse than a slightly less polished but authentic think-aloud. Teachers should rehearse the think-aloud, not read it.
 
 3. **There is a risk of over-scaffolding in the We Do phase.** If the teacher does too much and students contribute too little, the "guided practice" becomes a second demonstration. The interaction plan specifies where students take over, but teachers must resist the urge to jump in when students hesitate — productive struggle during We Do is appropriate as long as the success rate stays above 80%.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Worked-example practice ladder builder](https://useaiblocks.com/skills/worked-example-practice). It takes the lesson plan and plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Online worked example builder](https://useaiblocks.com/skills/online-worked-example-builder). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

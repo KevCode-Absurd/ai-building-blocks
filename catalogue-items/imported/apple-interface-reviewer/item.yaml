@@ -31,4 +31,4 @@ credits:
   - title: apple-hig-expert skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/apple-hig-expert/skills/apple-hig-expert
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, made the checker reject invalid colours and sizes instead of passing them, and made tap-target checks use Apple's size table for each platform. We added Before you start and After this sections that link to other AI Blocks steps.

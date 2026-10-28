@@ -9,7 +9,7 @@ Plans one mobile app release. One release per request. It works from what the us
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: signing as shared infrastructure, a pre-submission checklist, phased rollouts with halt rules, and release health checks. Its role language, memory claims, case studies and success numbers are not facts about this run. They do not grant tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** It can read your build settings, release notes and a pasted rejection email next to your description.
@@ -74,7 +74,7 @@ Return these sections in order. If your AI can save files, save one file. If not
 6. **Recovery plan.** Step, who, how long.
 7. **Assumptions and checks missed.** End with `CHECKS MISSED:` and the list, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.

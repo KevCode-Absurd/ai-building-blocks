@@ -11,6 +11,8 @@ argument-hint: "[feature name or description]"
 
 # /pia-generation
 
+**Working without the config file.** This skill was written for a plugin setup with a saved config CLAUDE.md. That file is not included here. If you cannot open it, ask the user once for: their review trigger (when a PIA is needed), their house PIA format or a past PIA, the promises in their privacy policy, and who signs PIAs off. Or run `setup-interview/SKILL.md` from this folder to gather them. Wherever the steps below say to read the config CLAUDE.md, use those answers instead, and mark anything not given as `[MISSING]`.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → PIA house style (trigger, structure, depth, sign-off).
 2. Run the workflow below.
 3. Check: is a PIA actually needed? (House trigger + research the mandatory-assessment triggers for each applicable regime — cite primary sources, verify currency.)
@@ -30,6 +32,26 @@ PRD: [Drive link]
 ---
 
 # PIA Generation
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [New data use privacy screener](https://useaiblocks.com/skills/new-data-use-screener). Bring your question, a document (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Matter context
 
@@ -280,3 +302,14 @@ End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the 
 - It doesn't approve the processing. A human signs the PIA.
 - It doesn't write a DPIA for a supervisory authority — that's a more formal document with specific regulatory requirements. This is the internal assessment.
 - It doesn't design the mitigation. It describes what needs mitigating; engineering designs the fix.
+
+Changed by AI Blocks (2026-10-28): added a note at the top on what to ask for when the config CLAUDE.md file is not available.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer). It takes the document.
+- The [Product feature legal risk reviewer](https://useaiblocks.com/skills/feature-legal-risk-assessor). It takes the document.
+- The [India data privacy checker](https://useaiblocks.com/skills/india-data-privacy-checker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

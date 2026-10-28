@@ -19,10 +19,30 @@ This is the **ReAct pattern** (Reasoning + Acting).
 from langchain.agents import create_agent
 from langchain_anthropic import ChatAnthropic
 
-# Define tools
+# Define tools. Never call eval() on text a model gives you: it can run any code.
+# This parser only allows plain arithmetic.
+import ast, operator
+
+_OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+        ast.Div: operator.truediv, ast.Pow: operator.pow, ast.USub: operator.neg}
+
+def safe_calc(expression: str) -> float:
+    def walk(node):
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.BinOp) and type(node.op) in _OPS:
+            left, right = walk(node.left), walk(node.right)
+            if isinstance(node.op, ast.Pow) and abs(right) > 100:
+                raise ValueError("Exponent too large")
+            return _OPS[type(node.op)](left, right)
+        if isinstance(node, ast.UnaryOp) and type(node.op) in _OPS:
+            return _OPS[type(node.op)](walk(node.operand))
+        raise ValueError("Only plain arithmetic is allowed")
+    return walk(ast.parse(expression, mode="eval").body)
+
 def calculator(expression: str) -> str:
-    """Evaluate a math expression."""
-    return str(eval(expression))
+    """Do plain arithmetic, for example 25 * 17."""
+    return str(safe_calc(expression))
 
 def search(query: str) -> str:
     """Search for information."""

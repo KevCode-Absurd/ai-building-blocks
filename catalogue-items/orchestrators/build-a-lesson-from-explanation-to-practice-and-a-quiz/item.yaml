@@ -7,13 +7,13 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
+  - {type: question, required: true}
   - {type: source_text, required: false}
-  - {type: lesson_plan, required: true}
 outputs:
   - {type: plan}
   - {type: copy_draft}
   - {type: audit_report}
-  - {type: lesson_plan, required: true}
+  - {type: lesson_plan}
 uses: [direct-teaching-lesson-builder, online-worked-example-builder, practice-problem-set-writer, retrieval-quiz-writer, overloaded-lesson-checker]
 steps:
   - {uses: direct-teaching-lesson-builder, note: "What to say, what to show, in what order, with a check for understanding after each new idea, for these learners and this time. Hands the lesson plan to the worked-example step."}

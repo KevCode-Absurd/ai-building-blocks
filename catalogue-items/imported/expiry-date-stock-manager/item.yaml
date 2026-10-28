@@ -29,4 +29,4 @@ credits:
   - title: shelf-life-management skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/shelf-life-management
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, marked the code's numbers as placeholders to replace, and said the markdown day is a hypothesis to test first. We added Before you start and After this sections that link to other AI Blocks steps.

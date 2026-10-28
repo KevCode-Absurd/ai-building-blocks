@@ -7,7 +7,7 @@ job: document-work
 headline: Status report writer
 subhead: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed. Bring notes on what happened this period. Use the result to plan your next step.
 explain: |
-  A status report you can send to leadership today, built from the rough updates you already have. It opens with a short summary, an overall green, amber or red rating, and then lays out what is done, what is in progress, what could go wrong and what you need someone to decide.
+  A status report you can send to leadership today, built from the rough updates you already have. It opens with a short summary, an overall green, yellow or red rating, and then lays out what is done, what is in progress, what could go wrong and what you need someone to decide.
 
   The layout is fixed so readers learn where to look. A metrics table compares target to actual with a trend arrow. Risks list the impact, the plan and the owner. A decisions table gives the deadline and your recommended answer, so the reader can reply with a yes. It ends with next-period priorities. If your project tracker or chat tools are connected, it can pull updates from them.
 when:
@@ -36,7 +36,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
   - Say if the report is weekly, monthly or quarterly, and name the project or team. Paste your notes and numbers.
   - Read the result. Check that every risk and every decision has the right owner and a deadline.
+  - Any cell marked TBD is a figure you did not give. Fill it in or say why it is missing.
   - Fix anything that is wrong, then send it. If your AI is linked to your tracker or chat, it can pull updates for you. This is optional.
+  - Next, post the report where your readers look (email or the team channel), and chase each open decision by its deadline. Keep this report to reuse as next period's starting point.
 output_sample:
   input:
     - Your notes on what happened this period

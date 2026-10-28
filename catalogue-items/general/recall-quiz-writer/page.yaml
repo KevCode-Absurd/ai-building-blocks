@@ -80,6 +80,8 @@ output_shape: |
   <one line per level>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line per check that failed, or none>
 
 tweaks:
   - what: "Learners"

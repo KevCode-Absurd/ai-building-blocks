@@ -39,6 +39,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder too.
   - Tell it your GPUs, your goal, your data and your tool. Say if you want DeepSpeed, Megatron-DeepSpeed or Hugging Face.
   - Read the setup it recommends before you run anything. Check the flag names against the DeepSpeed version you install.
+  - "Before the first run, write down five things: your GPU count and type, the path to your data, the tool you chose, the cost estimate, and the exact short test command with its step count. Then run deepspeed pretrain_gpt_moe.py --help (or the entry point your checkout has) and fix any flag it does not list."
   - Run a short test first, such as a few hundred steps. Watch the loss and how evenly the experts are used.
   - If one expert gets most words or the loss jumps, tell your AI. It will suggest a change to the loss weights.
 how_it_works:

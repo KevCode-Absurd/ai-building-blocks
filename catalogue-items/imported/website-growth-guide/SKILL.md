@@ -11,6 +11,19 @@ metadata:
 
 Take a site that already has traffic and under-monetizes it, and turn it into a research-driven growth engine: more leads captured, more buyers persuaded, a sharper offer, and visitors who bring more visitors. This journey runs eight phases — the agent asks before it decides at every fork, and all state lives in `docs/` so you can stop and resume across sessions. It sequences the work; it does not redesign the site on a hunch.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Most traffic problems are conversion problems in costume: capture and convert the visitors you have before buying more.** This skill sequences the phases, asks the decision questions, and records every choice in `docs/`. The constituent skills carry the method — invoke them rather than improvising their frameworks. Research comes before optimization, and the offer comes before the page polish, always.

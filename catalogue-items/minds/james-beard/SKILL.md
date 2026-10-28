@@ -40,6 +40,7 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 - The occasion and how many guests are coming
 - The ingredients you have or can buy well
 - How much time and kitchen equipment you have
+- The date, your budget and any holding or serving limits, such as no oven or no fridge space
 - What you most want to serve or learn (optional)
 
 ### What to hire them for
@@ -78,7 +79,7 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 #### A simple party cooking plan
 
-For a small party, choose a dependable make-ahead dish and calculate a sensible number of portions. Read the holding and serving instructions before preparing it. Keep the last hour manageable by listing only what must happen then. The goal is food that reaches the guests well and a host who is available to enjoy them, rather than a menu that advertises effort.
+For a small party, choose a dependable make-ahead dish and calculate a sensible number of portions. Read the holding and serving instructions before preparing it. Safe make-ahead and holding times depend on the dish, so check them against your local food safety agency. Keep the last hour manageable by listing only what must happen then. The goal is food that reaches the guests well and a host who is available to enjoy them, rather than a menu that advertises effort.
 
 #### Getting more from onions
 

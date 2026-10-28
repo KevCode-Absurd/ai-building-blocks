@@ -62,10 +62,10 @@ Pause here: Write the script or draft from the scene list.
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Write the script from the scene list, fixing the flagged scenes first, then bring it back for step 3.
 - If you have notes from real readers, sort them into themes with the [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter).
-- If the story is an ad for Meta, check it against ad rules with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
+- If the story is an ad for Meta, check it against ad rules with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
 
 ## What you hand back
 3 step files and the summary. The last file holds the voice-over test and a shorter script. Each file has this shape:
@@ -87,8 +87,8 @@ Use these instead of the general "After this" list above:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the story outline.
 - The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
-- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the story outline.
 - **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

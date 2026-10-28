@@ -1,6 +1,6 @@
 # Write and build a landing page: AI Blocks
 
-> 45 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad landing page designer](https://useaiblocks.com/workflows/ad-landing-page): Create page copy that matches your ad, three design options and a 30-point review from your site facts and offer.
 - [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer): Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated.
@@ -8,6 +8,7 @@
 - [Animated landing page builder](https://useaiblocks.com/skills/animated-landing-page-builder): Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
 - [Article-style ad draft editor](https://useaiblocks.com/skills/advertorial-draft-editor): Share an article-style ad draft and your proof. Get clearer wording, stronger openings, exact proof lines and a change log.
 - [Article-style landing page writer](https://useaiblocks.com/skills/article-landing-page): Write an article-style landing page for ad clicks. Give it your facts, offer and ad. You get ten sections, labelled as an ad, plus an image list.
+- [Bridge page writer](https://useaiblocks.com/skills/bridge-page-writer): Write a short bridge page between your ad and your offer, using only your real proof. You get 2 or 3 versions to test and a list of facts to fill in.
 - [Buyer research sales-letter planner](https://useaiblocks.com/workflows/sales-letter-outline): Share product facts and real customer words. Get sorted research, buyer-feeling ideas and a sales-letter outline with proof needs.
 - [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer): Name the rival and your offer. Get a fair comparison or alternatives page with dated facts, buyer-fit advice and clear next steps.
 - [Competitor landing page layout planner](https://useaiblocks.com/skills/competitor-landing-layout): Turn a landing page screenshot into your own page layout plan. Get a section map and slot-by-slot copy built from your facts, not theirs.

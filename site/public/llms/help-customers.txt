@@ -1,6 +1,6 @@
 # Help your customers: AI Blocks
 
-> 71 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 72 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker): Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
 - [Angry customer reply writer](https://useaiblocks.com/prompts/angry-customer-reply-writer): Share the angry message and your policy. Get a private reply and short public version using only fixes you can offer.
@@ -35,6 +35,7 @@
 - [Gorgias refund review brief writer](https://useaiblocks.com/skills/gorgias-refund-review-brief): Share a refund ticket and policy. Get known facts, eligibility gaps, a proposed decision and a customer reply draft for review.
 - [Gorgias response deadline checker](https://useaiblocks.com/skills/gorgias-response-deadline-checker): Share reply and resolution targets. Get Gorgias tickets that are late or nearing a deadline, with the timing and evidence gaps.
 - [Gorgias satisfaction follow-up writer](https://useaiblocks.com/skills/gorgias-satisfaction-follow-up-writer): Choose recently closed Gorgias tickets. Get short rating-request emails to review, then approve which ones to send through Gmail.
+- [Gorgias shift handover writer](https://useaiblocks.com/skills/gorgias-shift-handover-writer): Write a Gorgias shift handover note from your open tickets and those closed in the last four hours. You get urgent tickets, waiting replies, work in progress, recent fixes and blockers for the next agent.
 - [Gorgias support metrics reporter](https://useaiblocks.com/skills/gorgias-support-metrics-report): Choose report dates. Get ticket-sample counts, issue groups and response measures, with coverage limits and an optional Google Sheets export.
 - [Gorgias support queue action planner](https://useaiblocks.com/skills/gorgias-support-queue-action-planner): Review Gorgias tickets in small batches. Get one suggested next step per ticket, with reply drafts and gaps to check before acting.
 - [Gorgias support reply writer](https://useaiblocks.com/skills/gorgias-support-reply-writer): Share a Gorgias ticket number. Get a reply based on the recorded thread, ready to review or save as a Gmail draft.

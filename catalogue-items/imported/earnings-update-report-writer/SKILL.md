@@ -5,6 +5,19 @@ description: Create professional equity research earnings update reports (8-12 p
 
 # Equity Research Earnings Update
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## India
 
 This skill operates on **Indian markets**. The rules below are all you need. Two rules cause
@@ -135,7 +148,7 @@ Earnings Materials (Q[N] FY[YY]):
 
 ## High-Level Workflow
 
-Steps in order: 1) collect the BSE or NSE results filing, press release, concall transcript and consensus; 2) check that their dates match the latest quarter; 3) build the beat or miss table against consensus; 4) update estimates and check the thesis; 5) draft the report and charts; 6) compliance review before anyone publishes it. The five phases below give the detail.
+Steps in order: 1) collect the BSE or NSE results filing, press release, concall transcript and consensus; 2) check that their dates match the quarter you are updating (the one the user named, or the latest if they did not name one); 3) build the beat or miss table against consensus; 4) update estimates and check the thesis; 5) draft the report and charts; 6) compliance review before anyone publishes it. The five phases below give the detail.
 
 The earnings update process follows 5 phases:
 
@@ -143,20 +156,26 @@ The earnings update process follows 5 phases:
 
 **🚨🚨🚨 CRITICAL: TRAINING DATA IS OUTDATED 🚨🚨🚨**
 
+**FIRST, FIX THE PERIOD (added by AI Blocks):**
+- **The user named a quarter** (for example "Q2 FY24"): that quarter is the target, even if it is years old. Search for that quarter's results filing, press release and concall by name. Check that each document is for that quarter. Never swap in a newer quarter, and never reject the request because the release is more than 3 months old. Say in the report that it is a historical update and give the release date.
+- **The user asked for the latest quarter, or did not name one**: the target is the most recent quarter the company has reported. Use the 3-month check below to make sure you found it.
+- **You cannot tell which they mean**: ask once before you collect anything.
+
 **BEFORE STARTING - COMPLETE THESE 4 STEPS IN ORDER:**
 1. **CHECK TODAY'S DATE** - Write down the current date
-2. **SEARCH FOR LATEST** - Use web search: "[Company] latest earnings results"
-3. **VERIFY THE DATE** - Confirm earnings release is within last 3 months
+2. **SEARCH FOR THE TARGET QUARTER** - Use web search: "[Company] Q[N] FY[YY] results" for a named quarter, or "[Company] latest earnings results" for the latest
+3. **VERIFY THE DATE** - Named quarter: confirm the documents are for that quarter. Latest quarter: confirm the release is within the last 3 months
 4. **CHECK TRANSCRIPT DATE** - Verify transcript date matches release date
 
-**COMMON MISTAKE**: Using outdated earnings calls from training data instead of searching for the latest.
+**COMMON MISTAKE**: Using outdated earnings calls from training data instead of searching. For a named older quarter, the other mistake is replacing it with the latest one.
 
 **REQUIREMENTS:**
-- ✅ Search for latest earnings - do NOT rely on training data
-- ✅ Write down today's date and the release date found
-- ✅ Verify release date is within 3 months of today
+- ✅ Search for the target quarter - do NOT rely on training data
+- ✅ Write down today's date, the target quarter and the release date found
+- ✅ Latest-quarter requests only: verify release date is within 3 months of today, and if it is older, search again
+- ✅ Named-quarter requests: verify every document is for that quarter, whatever its age
 - ✅ Verify transcript date matches release date
-- ✅ If dates don't match or are old (>3 months), search again
+- ✅ If dates don't match the target quarter, search again
 
 **See [references/workflow.md](references/workflow.md)** for detailed search procedures and verification steps.
 
@@ -218,6 +237,15 @@ Verify content, formatting, accuracy, and timeliness before delivery.
 
 **Optional Deliverable**: XLS model update (optional for earnings updates)
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [India business sale memo writer](https://useaiblocks.com/skills/sale-memorandum-drafter). It takes the document.
+- The [Employee option dilution calculator](https://useaiblocks.com/skills/treasury-stock-option-dilution). It takes the document.
+- The [Excess earnings calculator](https://useaiblocks.com/skills/one-period-residual-income-bridge). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Key Differences from Initiation Report
 
 | Aspect | Earnings Update | Initiation Report |
@@ -253,3 +281,5 @@ Examples of good/bad headlines, tips for success, common mistakes to avoid, and 
 - XLS skill for model updates (not required for earnings updates)
 
 - **Runbook:** [`references/runbook-earnings.md`](references/runbook-earnings.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+Changed by AI Blocks (2026-10-28): a quarter the user names is now used as asked, even if it is old; the latest-quarter and 3-month checks apply only when the user asks for the latest quarter or names none.

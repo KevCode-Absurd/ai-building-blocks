@@ -16,6 +16,19 @@ license_source: "https://github.com/hafiz-actyte/idea-autopsy/blob/main/LICENSE"
 
 # Idea Autopsy
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your idea. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Turns the agent into a ruthless business-idea pathologist: instead of encouraging
@@ -42,8 +55,13 @@ or SURVIVED with the one cheapest test that could still kill it.
 ### Step 1: Kill-list check
 
 If the project contains a `REJECTION.md` (the user's personal kill-list), read it
-first. A NICHE match (same niche as a killed row) = verdict DEAD, cite the row,
-stop. A KILL-PATTERN match alone (new niche, previously-seen pattern) is a strong
+first. A NICHE match (same niche as a killed row) is the strongest prior, but
+an old row records an old offer, buyer and market. Cite the row, then ask one
+question: has the offer, the buyer, the price, the channel or the evidence
+changed since that kill? If nothing has changed and the row's hard reason still
+holds today, the verdict is DEAD, citing the row. If something material has
+changed, or the old reason no longer holds, run the full autopsy below on the
+new version. A KILL-PATTERN match alone (new niche, previously-seen pattern) is a strong
 prior, NOT a verdict: name the matching pattern, then run the specific check for
 that pattern (the relevant filter or test below) to confirm it actually applies
 before declaring death. If no kill-list exists, ask the user for permission to create one
@@ -65,7 +83,10 @@ with exactly this schema — this autopsy writes its first row:
 
 ### Step 2: The five filters
 
-Demand evidence, not optimism. One hard NO = dead.
+Demand evidence, not optimism. One hard NO = dead. A hard NO rests on a fact
+(a named law, a buyer who cannot pay, no pain anyone will describe), not on a
+proxy or a hunch. If a filter cannot be answered with evidence yet, it is not a
+NO: the idea survives for now, and that filter becomes the NEXT test.
 
 1. **Real pain?** 2am-problem, or a nice-to-have "vitamin"?
 2. **Buyer has money?** Right now — not after the product helps them.
@@ -83,7 +104,9 @@ kill-pattern `free-AI`: the user doesn't have a product, they have a prompt.
 
 Desk research lies. Walk the user through the Meta Ad Library (or equivalent) with
 an explicit checklist: number of ACTIVE advertisers, age of the oldest running ad
-(90+ days = someone is paying because it works), and the three traps — zero ads
+(an ad running for months, say 90+ days, means someone keeps paying for it. That
+hints it may pay off, but the ad library shows no sales, costs or profit, so it is
+a signal, not proof), and the three traps — zero ads
 (`wrong-channel`), a few giants (`incumbent-owned`), or hundreds of ads
 (`crowded` commodity knife-fight: demand ≠ room for you).
 
@@ -94,6 +117,7 @@ VERDICT: DEAD | SURVIVED
 KILL-PATTERN: <name>            (if dead)
 THE ONE SENTENCE: <the single finding that decided it>
 EVIDENCE: <2-4 hard facts with sources/numbers>
+LIMITS: <what this evidence does not show, e.g. ad counts are not sales>
 NEXT: <if survived: the ONE cheapest test that could still kill it>
 ```
 
@@ -141,7 +165,8 @@ Agent: Step 4 confirms [NUMBER] active advertisers — and that's the trap. The 
 ## Limitations
 
 - This skill does not replace legal advice, financial advice, or professional market research.
-- Kill-patterns are priors, not verdicts — a new niche matching an old pattern still deserves a fresh check that the pattern applies.
+- Kill-patterns and old kill-list rows are priors, not verdicts — a new niche matching an old pattern, or an old niche with a changed offer or buyer, still deserves a fresh check that the reason applies today.
+- Ad-library signals (ad count, ad age) are proxies. They show who is paying for ads, not whether those ads make money.
 - Ad-library checks reflect one acquisition channel; some categories legitimately sell through search or app stores.
 - Stop and ask for clarification if the idea's target market, buyer, or deliverable is unclear.
 
@@ -150,3 +175,11 @@ Agent: Step 4 confirms [NUMBER] active advertisers — and that's the trap. The 
 - This skill performs no shell commands, network calls, or credential handling.
 - It modifies project state in exactly one place: creating or appending rows to the project's own `REJECTION.md` (hence `risk: critical`). It never edits other files; ask permission before creating the file on first run.
 - Web checks (ad libraries) are performed by the USER in their own browser; the skill only provides the checklist.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Five-day idea test planner](https://useaiblocks.com/skills/five-day-idea-test-planner).
+- **Understand your buyers** with the [Customer interview coach](https://useaiblocks.com/skills/customer-interview-coach).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

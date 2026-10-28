@@ -137,7 +137,7 @@ terms:
   - term: First-cut multiple
     meaning: Price divided by one year of earnings. A low number means cheap.
   - term: Net current assets
-    meaning: Cash, debts owed to the company and stock, less everything the company owes.
+    meaning: Current assets (cash, money owed to the company and stock) less current liabilities, the bills due within a year.
   - term: Tangible assets
     meaning: Things a company owns that are not goodwill or brand value, such as cash, stock, buildings and machines.
   - term: Winnowing

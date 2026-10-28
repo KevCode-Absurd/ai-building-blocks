@@ -95,16 +95,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test a fix if the room is negative with the [Equity cure scenario checker](https://useaiblocks.com/skills/equity-cure-scenario-checker).
-- Check the cash side of the loan with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Split a loan's interest into cash and PIK with the [Cash and PIK interest checker](https://useaiblocks.com/skills/cash-and-pik-interest-checker).
+- Test a fix if the room is negative with the [Loan covenant equity cure checker](https://useaiblocks.com/skills/equity-cure-scenario-checker).
+- Check the cash side of the loan with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Split a loan's interest into cash and PIK with the [Cash and added interest calculator](https://useaiblocks.com/skills/cash-and-pik-interest-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion unresolved.

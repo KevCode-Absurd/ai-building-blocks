@@ -41,6 +41,8 @@ how_to_use:
   - Answer its questions. If you have no history, say so. It will not make up a lift.
   - Check the lift for each deal type against what you remember. Does the best deal match your gut?
   - Fitting the lift needs an AI that can run Python. A small table can be done in plain chat.
+  - "If you run the code, name the units-sold column the same everywhere: the code reads 'volume' in one place and 'sales' in another, so rename your sheet's column to match. Feature and display lifts are used as multipliers, so 1.5 means 50% more."
+  - Trust a lift only when a deal type has at least three past runs and some normal weeks around them. With less, treat it as a rough guide.
   - Next, take the go, change or stop list into the Production plan builder, and use the Demand forecast planner for normal weeks. After each promotion, update the lift with the actual units sold.
 how_it_works:
   - title: Gather your history

@@ -1,6 +1,6 @@
 # Thomas Edison: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Edison's own words here come from magazine articles he wrote in 1878 [S11], 1888 [S4] and 1889 [S13], an introduction he wrote in 1894 [S12] and an interview printed in 1901 [S3]. All are in the public domain. The 1889 text is read in a transcription on Tesla Universe, whose scan we could not open, so wording may differ slightly [S13]. The 1910 biography by Frank Dyer and Thomas Martin quotes him often, but Dyer was general counsel for the Edison laboratory and the book calls itself an authorized record, so read its praise with care [S5]. Edison is the subject of many myths, and some need flags. He did not invent the first electric light bulb. Others made lamps before him, and his work was a long-lasting lamp and a full lighting system [S1][S2]. He had nothing to do with the 1903 killing of Topsy the elephant [S7]. The story that he offered Nikola Tesla a $50,000 bonus and broke his word is disputed. Tesla's own account blames a manager, not Edison [S9]. His famous line about genius being mostly perspiration was printed in several versions (disputed wording) [S8]. A popular line about finding thousands of ways that don't work is widely quoted, but we could not trace it to a source we opened, so it is left out.
 

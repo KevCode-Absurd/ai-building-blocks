@@ -9,6 +9,19 @@ description: "Code review through the lens of real engineers' documented philoso
 
 **Triggers:** "review this PR with real engineers" | "named persona review" | "philosophy-grounded review"
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Example Output
 
 ```
@@ -43,7 +56,7 @@ This skill puts named, real people's *principles* to work. That power is also it
 
 ## Rules
 
-- **Ground before role-play.** Anchor each persona in `references/persona_principles.md` (or a verifiable search) first. Ungrounded = invalid.
+- **Ground before role-play.** Anchor each persona in `references/persona_principles.md` first. Ungrounded = invalid.
 - **Findings stand on technical merit**, with the persona's principle as the lens — see the discipline above.
 - **Product persona mandatory every round.** Engineers miss UX. Always include one.
 - **Honesty over quantity.** Don't fabricate findings *or* citations. Clean dimensions get reported clean (with the zero-finding burden below).
@@ -97,7 +110,7 @@ Each persona's documented principles + sources + confidence live in [`references
 2. **Bottom-up** (adversarial): read function by function, last to first. Ask what each function *actually* guarantees vs. what its name implies, where it can fail, and what it assumes about callers. Reading bottom-up breaks the author's mental model. Multi-file → trace one end-to-end path.
 
 ### Step 1: Ground the principles first
-For each persona, pull their documented principles from `references/persona_principles.md` (or search `"[Name] engineering philosophy principles"` and extract only sourced positions) **before** looking at the code, so you apply the principle rather than retrofitting one to an opinion you already formed.
+For each persona, pull their documented principles from `references/persona_principles.md` only. If a persona has no entry there, drop that persona instead of searching the web. Do this **before** looking at the code, so you apply the principle rather than retrofitting one to an opinion you already formed.
 
 ### Step 2: Review (3 independent — 2 engineers + 1 product)
 Each persona gets: **Mindset** (one sentence from their principles), **Priorities** (3-5 criteria), **Findings** (each mapped to a documented principle + confidence level), or the **zero-finding burden** (3+ principles the code satisfies, with how).
@@ -162,3 +175,11 @@ Inherits all from `adversarial-reviewer`. Plus:
 ---
 
 **Attribution:** Concept contributed by [@YuhaoLin2005](https://github.com/YuhaoLin2005) (PR #866). Hardened for this repo: consolidated to one location, anti-fabrication/confidence discipline added, principles sourced in `references/`.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
+- The [Pull request review tracker](https://useaiblocks.com/skills/pull-request-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

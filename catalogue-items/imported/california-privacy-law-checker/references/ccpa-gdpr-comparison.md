@@ -10,7 +10,7 @@ For organisations subject to both laws (e.g., a US company with EU customers, or
 |---|---|---|
 | **Jurisdictional trigger** | Doing business in California | Processing EU/EEA/UK residents' personal data |
 | **Who is covered** | For-profit businesses meeting threshold criteria | Any controller or processor, regardless of size or location |
-| **Size/revenue thresholds** | Yes — $25M revenue OR 100K+ consumers OR 50%+ revenue from PI sale/sharing | No — applies to any organisation processing EU personal data |
+| **Size/revenue thresholds** | Yes — over $26,625,000 revenue (the statute's $25M, CPI-adjusted from 1 Jan 2025; check cppa.ca.gov/regulations/cpi_adjustment.html) OR 100K+ consumers OR 50%+ revenue from PI sale/sharing | No — applies to any organisation processing EU personal data |
 | **Non-profits** | Generally exempt | Covered |
 | **Government entities** | Exempt | Covered (public authorities have specific rules) |
 | **B2B data** | Generally excluded (employee data limited exemption extended by CPRA) | Covered |
@@ -87,10 +87,10 @@ For organisations subject to both laws (e.g., a US company with EU customers, or
 | Aspect | CCPA/CPRA | GDPR |
 |---|---|---|
 | **Enforcement body** | California Privacy Protection Agency (CPPA) + California AG | Data Protection Authorities (DPAs) in each EU/EEA Member State |
-| **Civil penalties** | $2,500 per unintentional / $7,500 per intentional violation | Up to €10M or 2% (lower tier) / €20M or 4% (higher tier) of global annual turnover |
-| **Private right of action** | Yes — but limited to data breaches: $100–$750 per consumer per incident | Limited; EU Member States vary; class actions being developed |
+| **Civil penalties** | $2,663 per violation / $7,988 per intentional violation or known-under-16 violation (CPI-adjusted from 1 Jan 2025) | Up to €10M or 2% (lower tier) / €20M or 4% (higher tier) of global annual turnover |
+| **Private right of action** | Yes — but limited to data breaches: $107–$799 per consumer per incident (CPI-adjusted from 1 Jan 2025) | Limited; EU Member States vary; class actions being developed |
 | **Criminal penalties** | No direct CCPA criminal liability | Some Member States have criminal provisions |
-| **Cure period** | 30-day cure notice period (for AG actions; CPPA administrative actions may differ) | No formal cure period |
+| **Cure period** | No required cure period before AG enforcement since 1 Jan 2023 (oag.ca.gov/privacy/ccpa); 30-day notice and cure still applies to private breach claims for statutory damages (§1798.150(b)) | No formal cure period |
 
 ---
 

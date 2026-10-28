@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

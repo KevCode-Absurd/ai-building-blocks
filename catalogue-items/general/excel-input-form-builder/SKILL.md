@@ -36,7 +36,7 @@ Gather these first. Read "your question" in the Before you start list as this fi
 - Allowed values for each field, such as a list for status.
 - Which fields are required.
 - The record key: the field that must be unique, such as an ID.
-- Your Excel version.
+- Your Excel version (for example Excel 365 or Excel 2019), and whether your AI can open and save Excel files. If it cannot, it writes the form plan and field rules and marks the Excel-only checks "not run".
 
 A blank workbook is enough to start. An existing workbook helps only if you want its layout copied.
 
@@ -52,7 +52,7 @@ Up front, say which checks need Excel itself: reopening the saved file, testing 
 
 4. Give the entry cells a light fill, freeze the top row of the table and keep any existing formulas. Add a duplicate flag column (for example a COUNTIF check on the key). Lock calculation cells only if asked, and say that worksheet protection is not encryption.
 
-5. Test valid, missing, duplicate and pasted-invalid records in a disposable copy. Reopen the saved workbook and deliver the empty form with its rules and unresolved limitations.
+5. Test valid, missing, duplicate and pasted-invalid records in the illustrative test copy, never in the production table. Reopen the saved workbook and deliver the empty production table with its rules and unresolved limitations.
 
 ## Acceptance checks
 - No invented production records.

@@ -38,4 +38,4 @@ credits:
   - title: migration-runbook skill
     by: erphq
     url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/templates/01-org-under-100/migration-runbook
-    used: Adapted under the MIT licence. The local recovery steps preserve new work before moving back. Original notice retained in LICENSE.
+    used: Adapted under the MIT licence. The local recovery steps preserve new work before moving back, and the rollback limit is set with the data owner instead of a fixed 5%. Original notice retained in LICENSE.

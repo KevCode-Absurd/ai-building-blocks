@@ -5,13 +5,13 @@ job: read-ad-results
 thinking: medium
 thinking_why: "The design follows a fixed pattern, but it has to fit the questions and sample to your product and audience."
 
-headline: "A short survey that shows whether your ad does anything, apart from everything else that moves sales"
+headline: "A short survey that shows whether people who remember your ad buy more than people who do not"
 subhead: "Give it your ad and your likely buyers. It writes the few questions, tells you how many people to ask and how to score their answers. The result separates people who remember your ad from those who do not, so you can see whether the first group buys more."
 
 explain: |
   Sales go up and down for many reasons: price, stock, season, a rival's deal. So sales alone cannot tell you whether the ad is working.
 
-  This survey splits your buyers into two groups. One group can say, correctly, what your ad says. The other cannot. You then compare how many in each group buy your product. If the group that knows the ad buys at a higher rate, the ad is pulling people over. If the rates match, the ad is not helping. If the first group buys less, the ad may be driving people away. The skill writes the questions, the sample size, the scoring rule for vague answers and the sheet to record answers on.
+  This survey splits your buyers into two groups. One group can say, correctly, what your ad says. The other cannot. You then compare how many in each group buy your product. If the group that knows the ad buys at a higher rate, the ad may be pulling people over. If the rates match, it is probably not helping. If the first group buys less, the ad may be driving people away. The result is a link, not proof: people who already buy may also remember the ad more. A holdout or sales test can check it further. The skill writes the questions, the sample size, the scoring rule for vague answers and the sheet to record answers on.
 
 when:
   - "Sales moved and you cannot tell whether the ad had anything to do with it."
@@ -19,7 +19,7 @@ when:
   - "You have a small budget and need a cheap way to judge an ad."
 not_for:
   - "You can run a sales test or a holdout test, where one area sees the ad and another does not: use that, it gives a cleaner answer."
-  - "You already have filled-in answers and want the numbers worked out: use the Ad recall and pull calculator."
+  - "You already have filled-in answers and want the numbers worked out: use the Ad survey results calculator."
   - "You have no way to reach any buyers, not even your own customers: ask a few customers in person first, or wait until you can reach more."
 
 you_give:
@@ -36,7 +36,7 @@ how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Paste your ad and say who buys and how you can reach people."
   - "Ask the questions exactly as written, in order, to at least the number it gives."
-  - "Take the filled-in sheet to the Ad recall and pull calculator."
+  - "Take the filled-in sheet to the Ad survey results calculator."
 output_sample:
   input:
     - Your ad, or the claim it makes
@@ -55,7 +55,7 @@ output_sample:
     - name: How many
       contains: How many people to ask so about 100 of them know the ad, based on expected recall.
     - name: Answer sheet
-      contains: The columns to fill in for each person, ready for the Ad recall and pull calculator.
+      contains: The columns to fill in for each person, ready for the Ad survey results calculator.
     - name: When to repeat
       contains: A date to ask again with the same questions and the same scoring rule.
     - name: MISSING and CHECKS MISSED
@@ -130,7 +130,7 @@ test:
   - "Ask five friends the questions out loud. Check the order and wording feel natural."
   - "Score ten made-up answers with the rule. Two people should agree on most."
   - "Run a first wave with your small list and see what the recall rate looks like."
-  - "Take the answers to the Ad recall and pull calculator."
+  - "Take the answers to the Ad survey results calculator."
 
 improve:
   - "Repeat the survey each six months with the same questions."

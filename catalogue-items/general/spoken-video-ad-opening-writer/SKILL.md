@@ -1,6 +1,6 @@
 ---
 name: spoken-video-ad-opening-writer
-description: Use when you need short talking openings (6 or 8 seconds) to put in front of an ad you already run. A made-up adult presenter says one line to a phone with the real product in frame from the first frame. Writes three openings that each make a different move, sizes every line to the clip, then runs the video process for them (presenter card, sheets, a storyboard frame per opening, clip prompts), reusing the ad's approved presenter where there is one. Ends with any of its own checks the set still misses.
+description: Use when you need short talking openings (6 or 8 seconds) to put in front of an ad you already run. A made-up adult presenter says one line to a phone with the real product in frame from the first frame. Writes three openings that each make a different move, sizes every line to the clip, then runs the video process for them (presenter card, sheets, a storyboard frame per opening, clip prompts), reusing the ad's approved presenter where there is one. Ends with any of its own checks the set still misses. Not for a full new ad, a real creator speaking about their own results, or an opening with no talking.
 ---
 
 # Spoken video ad opening writer
@@ -133,9 +133,9 @@ Write `MISSING: <what>`, ask once for what you can't work without, then carry on
 
 ## Optional product-aligned hook batch ledger
 
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-ai-ugc-hooks.md.
+Use this only when the person asks for more than three openings. The default job is still three. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-ai-ugc-hooks.md.
 
-For a larger test, extend the three-opening process into the requested batch; ten is an example, not a minimum. Keep one exact product per clip, a distinct buyer situation or message move, a pacing choice and a fictional licensed presenter. Casting variety must not rely on stereotypes.
+For that larger test, extend the three-opening process to the number the person asked for. Keep one exact product per clip, a distinct buyer situation or message move, a pacing choice and a made-up adult presenter, as in the steps above, that your video tool allows for ad use. Casting variety must not rely on stereotypes.
 
 Create a ledger: clip ID, variant, real anchor, approved line, presenter, pace, duration, size, actual tool, job ID, status and real cost. Reuse a canonical imported product record only for that exact variant. Discover actual provider fields and limits rather than copy old CLI forms or prices.
 
@@ -144,7 +144,7 @@ Make a pilot when needed, then submit only inside the authorized count and cost.
 
 ## Optional fifteen buyer-callout templates
 
-Use five families with three prompt patterns each. Treat them as draft slots, not facts to fill by invention.
+Use these only when the person asks for buyer callouts or a larger batch; for the three openings, take a pattern only if it fits one of the moves above. Five families with three prompt patterns each. Treat them as draft slots, not facts to fill by invention.
 
 Audience/role: for a real use role; for people in a named situation; for a relevant task context. Avoid protected-attribute assumptions or claiming the ad platform will target more precisely because of a callout. Pain/friction: recurring task problem; repeated inconvenience; actual wasted cost only if evidenced. Identity/value: a real value, a chosen behaviour, a busy-role constraint. Situation: a genuine event, a stated life/task change, a supported new routine. Skeptic: real doubt, evidence that addresses it, or an authorized true change of mind.
 

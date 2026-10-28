@@ -7,7 +7,7 @@ description: Use when a choice is stuck, too slow or too quick. Needs the choice
 
 Not every decision needs the same care. Some can be tried and undone cheaply. Others cannot. Teams that treat them all alike go too slow on the first kind and too fast on the second. This skill sorts a choice by how easily it can be reversed, matches the process to that, and writes the call down so people can commit. It works for any business, team or personal choice. The idea comes from Jeff Bezos's 2015 shareholder letter. The skill is our version.
 
-Use [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter) instead when the team keeps asking for more data and you need to know how much evidence is enough and when to decide.
+Use [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter) instead when the team keeps asking for more data and you need to know how much evidence is enough and when to decide.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -80,15 +80,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set a stop line for a one-way choice** with the [Decision options and tripwire planner](https://useaiblocks.com/skills/decision-tripwire-planner). Bring the choice and the door sort.
-- **Find every way the plan fails** with the [Plan inversion checker](https://useaiblocks.com/skills/plan-inversion-checker). Bring the plan you are about to commit to.
-- **Name one owner and gather dissent** with the [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decisions). Bring the call and who disagreed.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every decision has a door type with a reason.
@@ -97,6 +88,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A review date or a missing-information list is attached.
 - No one-way choice is labelled easy to undo just to go faster.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Set a stop line for a one-way choice** with the [Decision backup planner](https://useaiblocks.com/skills/decision-tripwire-planner). Bring the choice and the door sort.
+- **Find every way the plan fails** with the [Plan failure risk reviewer](https://useaiblocks.com/skills/plan-inversion-checker). Bring the plan you are about to commit to.
+- **Name one owner and gather dissent** with the [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). Bring the call and who disagreed.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

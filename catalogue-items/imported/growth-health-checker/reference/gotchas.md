@@ -6,7 +6,7 @@ Failure modes that produce confidently wrong growth advice. Owners move real bud
 
 ## Gotcha: recommending more spend on a saturating channel
 
-**Why it matters:** Rising spend with rising cost per lead means the channel is running out of audience, not scaling. "It's working, spend more" is the single most expensive wrong call this skill can make.
+**Why it matters:** Rising spend with rising cost per lead can mean the channel is running out of audience, not scaling. "It's working, spend more" is the single most expensive wrong call this skill can make.
 
 ### Bad
 
@@ -19,12 +19,14 @@ Spend went from USD 900 to USD 3,200 and cost per lead went from USD 31 to USD 6
 ### Good
 
 ```
-Paid-social volume is up but cost per lead rose from USD 31 to USD 68 as spend tripled.
-That's saturation, not scale. Hold budget flat and fix creative before adding
-more — another 50% of budget likely buys leads at USD 90.
+Paid-social volume is up but cost per lead rose from USD 31 to USD 68 as spend went
+from USD 900 to USD 3,200 (900 / 29 and 3,200 / 47). That can be saturation, but it can
+also be tired creative or a targeting change, so it does not prove the cause. Hold
+budget flat, check ad frequency and creative age, and only test a budget increase as
+a small, time-boxed step if you want to see what more spend buys.
 ```
 
-Always check cost per lead against spend before recommending budget in either direction.
+Always check cost per lead against spend before recommending budget in either direction. Never forecast the cost of the next lead from two months of data.
 
 ---
 
@@ -66,7 +68,7 @@ Derived by assuming every new customer that month came from paid social.
 ### Good
 
 ```
-Paid social: USD 3,200 spend, 47 leads at USD 18 each. Revenue attribution unavailable —
+Paid social: USD 846 spend, 47 leads at USD 18 each (846 / 47). Revenue attribution unavailable —
 the CRM isn't capturing source on closed deals. Cost per lead is solid; whether
 those leads convert is the open question. Turning on source tracking would
 answer it next month.
@@ -173,3 +175,5 @@ opportunities.
 ```
 
 Same finding. One of them gets acted on.
+
+Changed by AI Blocks (2026-10-28): fixed the cost-per-lead sums in the examples and removed the claim that rising spend and cost per lead prove saturation or predict the next lead's cost.

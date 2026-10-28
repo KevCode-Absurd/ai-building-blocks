@@ -46,6 +46,23 @@ gitGraph, journey, quadrantChart, timeline
 4. Add meaningful labels and descriptions
 5. Test rendering before delivery
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It only writes text, so any chat AI can do it.
+- **mermaid.live:** A free page where you paste the code and see the picture at once.
+<!-- /needs -->
+
 ## What you need first
 
 - A plain description of the process, system, schema, plan or states to draw. If the user only gives a topic, ask what the steps, actors or tables are. Do not invent steps, tables, fields or timings. Mark any gap as `MISSING: <what>` and ask once.
@@ -68,6 +85,13 @@ Give these, in order:
 6. **Styling and accessibility notes**: colors used, and a short title and description for screen readers.
 
 Provide the requested version; add alternatives only when useful. Include comments explaining complex syntax.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [Lab hardware designer](https://useaiblocks.com/skills/lab-hardware-designer). It takes the design file.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

@@ -12,6 +12,26 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 Per-deal review and discount-approval routing. Scores deal margin + risk, routes discount approval to the right human, redlines T&Cs against commercial policy. **Never auto-approves.** Every output is a score plus a routing recommendation to a named human approver.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
+
+**Makes it better (optional):**
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **The deal terms** with the [Sales proposal writer](https://useaiblocks.com/skills/sales-proposal-writer). Bring your question, your offer (optional), meeting notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the deal terms, the contract. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 Deal Desk / RevOps / sales leadership live at the moment between *sales-team-asks-for-discount* and *CFO/CRO/legal-signs*. This skill quantifies the asks and routes them.
@@ -140,3 +160,11 @@ Walk these one at a time. The `/cs:grill-commercial` command from the original c
    Why it matters: a named person is accountable for each approval, which keeps discounts from drifting from deal to deal.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all 7 are answered, invoke `deal_scorer.py` → `discount_approval_router.py` → `terms_redliner.py` in sequence.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract risk reviewer](https://useaiblocks.com/skills/contract-risk-reviewer).
+- The [Discount policy designer](https://useaiblocks.com/skills/discount-policy-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -15,6 +15,23 @@ license_source: https://github.com/czlonkowski/n8n-skills/blob/main/LICENSE
 
 **In plain words (added by AI Blocks).** This is an instruction file for an AI that is connected to n8n through MCP tools. If those tools are not connected (the first call, `n8n_list_workflows`, returns nothing or an error), stop and tell the user to connect them first. Without them you can only write the plan and edit list for the user to build in n8n by hand.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The automation** (yours): the n8n, Zapier or Make workflow, exported or described step by step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **The automation** with the [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). Bring your question, the automation, a tool connection (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the automation. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 Use this skill when shared or multi-step logic should become a typed reusable workflow, when an existing workflow is growing difficult to reason about, or when an agent needs a workflow exposed as a tool.
@@ -271,6 +288,15 @@ Before shipping a sub-workflow:
 - Validation does not detect every caller contract mismatch, side effect, or item-linking error.
 - Tags and some workflow settings remain UI-only and may not be discoverable through the connected MCP server.
 - Refactoring shared logic requires checking every caller; this skill cannot prove that external callers were migrated.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the automation and tool connection.
+- The [AWS resource inventory reader](https://useaiblocks.com/skills/aws-resource-inventory-reader). It takes the tool connection.
+- The [MCP server sign-in builder](https://useaiblocks.com/skills/mcp-server-sign-in-builder). It takes the tool connection.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Licence note
 

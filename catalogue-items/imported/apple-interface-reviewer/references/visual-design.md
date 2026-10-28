@@ -51,7 +51,7 @@ You MUST support Dynamic Type.
 ### The 8pt Rule
 All spacing should be increments of 8 (8pt, 16pt, 24pt, 32pt).
 - **Margins**: Typically 16pt or 24pt for standard layouts.
-- **Tap Targets**: 44pt minimum vertical height.
+- **Tap Targets**: the platform's recommended control size (44x44 pt on iOS; see `accessibility.md` for other platforms).
 
 ### Margin Logic
 - **iOS**: Match the Dynamic Island or Safe Area insets.

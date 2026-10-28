@@ -7,11 +7,11 @@ job: test-and-fix-code
 headline: Test suite auditor
 subhead: A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 explain: |
-  A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
+  Before you install: the runner is downloaded from GitHub with uvx and runs code on your computer, with access to your project files. Read it first and use it only in a project you trust.
 
   A pinned runner measures the suite. The key check is mutation testing: it makes small deliberate breaks in your code and sees whether any test fails. Tests that never catch a break are weak. It also reruns tests to find flaky ones, times each test to find slow ones, and spots tests that duplicate others without adding detection. Quick mode runs one baseline with timings and coverage and no mutants. Deep mode adds the mutation checks. The skill reports only and changes none of your tests. It needs Python and pytest.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Tim Richardson) says MIT. Credit goes to Tim Richardson and sickn33.
+  Licence: the author's own file header (Tim Richardson) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit Tim Richardson and sickn33.
 when:
   - Your tests pass but bugs still reach production.
   - The test run takes so long that people skip it.

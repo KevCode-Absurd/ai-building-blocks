@@ -36,7 +36,7 @@ how_to_use:
   - Say what the first win should be. If you are not sure, your AI will ask.
   - Add time or platform limits (optional).
   - Read the flow. Check that each step leads to the first win and that the cut list matches what you can remove.
-  - Take the first-win definition into your product plan, then test the flow with about five new users. Watch where they stall.
+  - Take the first-win definition into your product plan, then test the flow with about five new users. Watch where they stall. Remove the cut-list items in that test build, and add back only what users miss. Then ask your AI to redo the flow from what you saw.
   - The research names inside the skill text are the author's background and are not checked. Do not quote them as proof.
 output_sample:
   input:

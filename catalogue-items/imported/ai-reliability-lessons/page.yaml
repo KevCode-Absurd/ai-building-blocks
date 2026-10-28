@@ -32,12 +32,13 @@ you_get:
   - A comparison and recording protocol
   - A reliability framework and discussion guide
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Copy the skill text (the SKILL.md file, from the copy or download button on this page) and paste it in.
   - The skill text has {{placeholders}} for the subjects, year group and optional details. Replace each one with your own, or just tell your AI the subjects and year group in chat.
   - Add the question type and your time limit if you have them (optional).
   - Read the plan and check the questions fit your syllabus.
   - Give students the same AI chatbot and the comparison protocol, then run the lesson.
   - Use the discussion guide to help them draw conclusions together.
+  - Next, turn the students' conclusions into practice with the Self-explanation question writer, so they explain why an AI answer holds up. Then run your written comments on their work through the Written feedback checker.
 output_sample:
   input:
     - The two or three subjects to compare

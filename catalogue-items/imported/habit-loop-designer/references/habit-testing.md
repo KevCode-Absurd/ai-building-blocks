@@ -1,6 +1,6 @@
 # Habit Testing Framework
 
-Systematic approach to measuring whether your product is forming habits. Based on the 5% rule: if at least 5% of users show unprompted, frequent usage, a habit may be forming.
+Systematic approach to measuring whether your product is forming habits. Based on Nir Eyal's 5% rule of thumb (https://www.nirandfar.com/hooking-users-in-3-steps/): define the expected use first; if fewer than about 5% of users reach it, go back to the product; if more do, study those users. The 5% figure is a starting point for investigation, not proof that use is automatic.
 
 ## The Three Questions
 
@@ -51,7 +51,7 @@ Systematic approach to measuring whether your product is forming habits. Based o
 | Time-of-day pattern | "Always uses during morning commute" |
 
 **The "Aha Moment":**
-Find the action that correlates with retention:
+Find the action that correlates with retention in your own data. Often-quoted company anecdotes (not verified figures, and not targets for your product):
 - Facebook: Adding 7 friends in 10 days
 - Slack: Sending 2,000 team messages
 - Dropbox: Saving 1 file to folder
@@ -102,12 +102,12 @@ Calculate what percentage of your user base meets the habitual criteria.
 Habitual User Rate = (Habitual Users / Total Active Users) × 100
 ```
 
-| Rate | Status |
+| Rate | What it tells you |
 |------|--------|
-| < 5% | Habit not forming |
-| 5-15% | Emerging habit |
-| 15-30% | Strong habit formation |
-| > 30% | Highly habitual product |
+| Under about 5% | Below Eyal's rule-of-thumb floor. Check your expected-use definition, then revisit the product before optimising the hook. |
+| About 5% or more | Enough devoted users to study. Move to Step 3. This alone does not show that use is automatic. |
+
+There are no universal bands above 5%. What counts as a healthy share depends on the product, the expected use you chose and the business model, so compare with your own earlier cohorts. To show that use is becoming automatic, look for more than a rate: unprompted sessions, steady use at the same time or in the same situation, and what users say in interviews (Step 3 and "Why Are They Doing It?").
 
 ### Step 3: Analyze the Habitual Cohort
 
@@ -139,8 +139,8 @@ Once you know what habitual users do differently:
 
 | Metric | Formula | Target |
 |--------|---------|--------|
-| Habitual User Rate | Habitual / Active × 100 | > 5% |
-| DAU/MAU | Daily Active / Monthly Active | > 20% |
+| Habitual User Rate | Habitual / Active × 100 | About 5% or more to start studying users (a floor, not a goal) |
+| DAU/MAU | Daily Active / Monthly Active | Increasing against your own earlier cohorts (only meaningful for products meant for daily use) |
 | Organic Session Rate | Organic / Total Sessions | Increasing |
 | Time to Habit | Days from signup to habitual status | Decreasing |
 | Habit Path Completion | Users completing key actions | Increasing |
@@ -158,7 +158,7 @@ Track these by cohort (week/month of signup):
 
 ### Leading Indicators
 
-Early signals that predict habit formation:
+Early signals that may predict habit formation. The thresholds below are starting guesses; check each against retention in your own data before relying on it:
 
 | Indicator | Threshold | Why It Matters |
 |-----------|-----------|----------------|
@@ -175,7 +175,7 @@ Early signals that predict habit formation:
 
 | Symptom | Possible Cause | Investigation |
 |---------|---------------|---------------|
-| Low 5% rate | Weak hook model | Audit each phase |
+| Under about 5% reach expected use | Weak hook, weak product, or an expected-use definition that does not fit | Check the definition, then audit each phase |
 | High churn after Week 1 | Weak first reward | Check onboarding experience |
 | Engagement drops after Month 1 | Novelty wore off | Add reward variability |
 | Users return only with triggers | No internal trigger | Research user emotions |

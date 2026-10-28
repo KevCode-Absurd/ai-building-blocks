@@ -73,8 +73,8 @@ The offer in one line. The score and how it was worked out. The checklist result
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the offer and plan.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
 - The [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner). It takes the offer.
+- The [Offer profitability test reviewer](https://useaiblocks.com/skills/offer-refresh-keeper). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -23,6 +23,22 @@ Buy what sells, before it runs out, and stop buying what doesn't.
 
 Stock is cash the owner already spent. Two things go wrong: running out of the item customers came for, and sitting on a pallet of something nobody wants. Both are visible in the sales history well before they become a problem, which is what this skill reads for.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Get sales and stock
 
 **Preferred:** Shopify for sales and inventory levels. Square and NetSuite work the same way. These connectors may need a paid plan or API access. The CSV path below needs neither.
@@ -124,3 +140,13 @@ Close with one line on what was decided — the total buy and the items about to
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock and reorder planner](https://useaiblocks.com/skills/stock-and-reorder-planner). It takes the spreadsheet.
+- The [Online order fulfillment planner](https://useaiblocks.com/skills/online-order-fulfillment-planner). It takes the spreadsheet.
+- The [Dead stock finder](https://useaiblocks.com/skills/dead-stock-finder). It takes the spreadsheet.
+- The [Inbound shipment tracker builder](https://useaiblocks.com/skills/inbound-shipment-tracker-builder). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

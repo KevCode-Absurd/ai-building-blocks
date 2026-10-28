@@ -9,7 +9,7 @@ subhead: Do customers you win in March come back more than the ones from January
 explain: |
   Do customers you win in March come back more than the ones from January? This groups your Shopify customers by the month of their first order and shows how each group behaves afterwards.
 
-  For each cohort you see how many customers bought again, how many orders they placed and how much revenue they brought in during the following months. You choose how many months of cohorts to review and how long to follow each one. The result shows whether your retention is improving or slipping, and which acquisition months were best. It only reads data and changes nothing. It needs Shopify access.
+  For each cohort you see how many customers bought again, how many orders they placed and how much revenue they brought in during the following months. You choose how many months of cohorts to review and how long to follow each one. The result shows whether your retention is improving or slipping, and which acquisition months were best. Shopify's own reports show totals, but this follows each month's new customers on their own, so you can compare one month's customers with another's. It only reads data and changes nothing. It needs Shopify access.
 when:
   - You changed your offer and want to know if repeat buying improved.
   - You ran a big sale and need to see if those customers stayed.
@@ -30,7 +30,7 @@ you_get:
   - A plain summary of the best and weakest cohorts
 how_to_use:
   - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands, not a plain chat window.
-  - Sign in to your store with the Shopify CLI, giving read access to customers and orders.
+  - Sign in to your store with the Shopify CLI, giving read access to customers, orders and all orders (the read_all_orders scope). Without that last one, Shopify only returns about 60 days of orders and older months look worse than they are.
   - Paste the skill, then add your store domain. Add the number of cohort months and follow months if you want to change the defaults of 6 and 3.
   - Check the cohort table first. Look for months where the repeat rate is clearly higher or lower than the rest.
   - Open the CSV file to sort or chart the results in Google Sheets or Excel.

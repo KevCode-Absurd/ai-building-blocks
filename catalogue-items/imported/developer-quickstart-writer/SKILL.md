@@ -14,6 +14,26 @@ license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICE
 
 Get a new developer from sign-up to a first working result as fast as you can, then lead them to deeper use of your product.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude or ChatGPT:** Either can write the steps and outline. Neither can run your code, so test it yourself.
+- **Your own terminal:** Running the quickstart on a clean machine is the only real test of it.
+<!-- /needs -->
+
 ## Detailed Guide
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. For focused work, load the relevant sections; for end-to-end work, read the guide completely. The guide's time bands, benchmarks, funnel numbers and named-company examples are the original author's rules of thumb, not checked data. Never state them as facts.
@@ -52,6 +72,13 @@ Return these sections, in this order. Keep the whole answer under about 1,200 wo
 4. **Sample app plan**: a minimal example (one file), a starter template and, if worth it, a production template. For each: purpose, files, how long to run it. Say which to build first.
 5. **Patterns to avoid**: 3 to 5 items from the list below that this product is most at risk of, each with the fix.
 6. **Missing**: every input marked MISSING and every placeholder the person must fill in.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [README first-run tester](https://useaiblocks.com/skills/readme-first-run-tester). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

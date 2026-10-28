@@ -20,6 +20,27 @@ Build comprehensive 3-5 year financial models with revenue projections, cost str
 - You need tax, audited accounts or a model an investor has signed off. Use an accountant or finance lead
 - You only want runway from past cash data, or advice on a raise. Use the Startup runway forecaster or the Startup finance advisor
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your business plan** (yours): the idea, customers, market, how it makes money and the key numbers.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan, your business plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude:** It can build an Excel workbook with live formulas when file tools are on.
+- **ChatGPT:** Its data analysis tool can build and test a spreadsheet from your inputs.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing, then mark what stays missing as `MISSING: <what>`. Never invent an input.

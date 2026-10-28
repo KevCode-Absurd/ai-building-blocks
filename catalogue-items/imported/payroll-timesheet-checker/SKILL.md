@@ -23,6 +23,19 @@ Get the hours right before anyone gets paid.
 
 Payroll is the finance workflow with the least room for error. A wrong invoice gets corrected next week. A wrong paycheck is a person who cannot cover rent, and it is the fastest way for an owner to lose a crew. Everything in this skill is built around that asymmetry: the machine assembles and checks, the owner decides.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Fix the period before anything else
 
 Confirm the pay period start and end dates, the pay date, and who is in this run. Getting the period wrong duplicates or skips a week of someone's pay, and it is a surprisingly easy mistake when a period straddles a month end.
@@ -33,7 +46,7 @@ Confirm the roster too: new hires who started mid-period, anyone terminated, any
 
 **With Gusto connected**, first ask Gusto itself what stands in the way: call its payroll-blockers check (`list_payroll_blockers`) before building anything. If blockers come back, translate each into plain English — what it means, who fixes it, and where. For example: "check payments unsupported" means this company pays by paper check, which the integration cannot stage, so the owner runs that part in Gusto directly; "bank account not connected via Plaid" means the owner connects the bank in Gusto's settings; "hourly employees unsupported" can block at the account level even when this run is salaried-only. Blockers are a routing signal, not a failure — the run still gets built and validated here, and the deliverable becomes the run sheet with the blocker list riding along.
 
-Then pull the period's inputs, each from its own tool. **Hours:** `list_time_records` for the pay period; read its `source` field before anything else. `native` returns shifts with clock-in, clock-out, and breaks; `third_party` returns timesheets from the company's time-tracking partner, and `get_time_sheet` gives the per-day line items for any one of them (it refuses native shift ids); `none` means Gusto holds no hours for this company, so the spreadsheet path below supplies them. **Leave:** `list_time_off_requests` for the period with `status: approved` — every approved day is paid as PTO or sick, never as worked, and a pending request is a flag, not a paid day. **Balances:** `get_time_off_balances`, which is what the "PTO beyond available balance" check in Step 4 reads against. **Rates and classifications:** the roster from `list_employees` with each person's compensations. Rates come from Gusto, never from a timesheet. Call shapes for these are in `../../shared/connector-call-shapes.md`.
+Then pull the period's inputs, each from its own tool. **Hours:** `list_time_records` for the pay period; read its `source` field before anything else. `native` returns shifts with clock-in, clock-out, and breaks; `third_party` returns timesheets from the company's time-tracking partner, and `get_time_sheet` gives the per-day line items for any one of them (it refuses native shift ids); `none` means Gusto holds no hours for this company, so the spreadsheet path below supplies them. **Leave:** `list_time_off_requests` for the period with `status: approved` — an approved day is never paid as worked. Read each request's leave type or policy before you pay it: paid types (PTO, vacation, paid sick) go in as PTO or sick hours, and an unpaid type (unpaid leave, unpaid time off, leave without pay) goes in as unpaid hours at zero pay. If the type is missing or you cannot tell whether it is paid, flag it and ask the owner; do not assume it is paid. A pending request is a flag, not a paid day. **Balances:** `get_time_off_balances`, which is what the "PTO beyond available balance" check in Step 4 reads against. **Rates and classifications:** the roster from `list_employees` with each person's compensations. Rates come from Gusto, never from a timesheet. Call shapes for these are in `../../shared/connector-call-shapes.md`.
 
 **A missing punch the owner can fill.** When Step 4 flags a shift with no clock-out and the owner gives the real times, `record_time` writes them — only the times the owner stated, shown to them first, and as an `update` of the existing shift rather than a second entry. The parameters that refuse if missing (timezone, job on Gusto's own tracking, which id counts as the shift) and the one re-read trap (a contractor's confirmed hours come back with blank clock times; do not write again) are in the `record_time` row of `../../shared/connector-call-shapes.md`. Read that row before the call. This is the only way the skill ever changes a punch; an assumed time is never written.
 
@@ -45,7 +58,7 @@ Two cautions specific to this source. Employees carry an employment status separ
 
 **Without either**, take an uploaded spreadsheet or CSV. This is a fully supported path — a validated run sheet the owner keys into their payroll provider is a complete outcome. Many small crews still run on a paper timesheet photographed at the end of the week, and that works too.
 
-Normalize into one row per person per day: date, in, out, break, regular hours, overtime hours, PTO, and the job or class if the business tracks labor to jobs.
+Normalize into one row per person per day: date, in, out, break, regular hours, overtime hours, PTO, unpaid leave, and the job or class if the business tracks labor to jobs.
 
 ## Step 3 — Total the hours
 
@@ -122,6 +135,13 @@ After the run is submitted, post the journal entry to the ledger: gross wages, e
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why.
 - **Best for skill:** use the visual artifact — this output is a sheet the owner approves person by person.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## After the run
 
 The run is staged, the flags are resolved, and the books entry is posted. If cash was the worry going in, the natural next step is "can I make payroll" — `/plan-payroll` runs the forecast and the invoice chase in front of the next run. Also nearby: "cash forecast" (`cash-flow-snapshot`) to see what this run does to the next 30 days, and "taxes" (`/tax-prep`) when quarterly estimates or 1099s are coming due. Offer at most three, and skip any offer the owner already declined this session.
@@ -137,3 +157,5 @@ The run is staged, the flags are resolved, and the books entry is posted. If cas
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+Changed by AI Blocks (2026-10-28): approved leave now keeps its paid or unpaid type, so unpaid leave is never turned into paid PTO; unclear leave types are flagged.

@@ -38,7 +38,7 @@ Ask only for facts that would change the decision. Do not ask twice for what was
 
 ## How you work
 
-Run on request. Work in the user's chosen folder. Both companion skills must be installed before a first run: the [Traction business profile builder](https://useaiblocks.com/skills/traction-business-profiler) (`traction-business-profiler`) and the [Traction channel test picker](https://useaiblocks.com/skills/traction-channel-ranker) (`traction-channel-ranker`). Read each from the installed pack. If one is missing, read it from its link or ask for it. If you still cannot get it, write `MISSING: <slug>`, say which step cannot run and stop that step. Do not imitate it.
+Run on request. Work in the user's chosen folder. Both companion skills must be installed before a first run: the [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler) (`traction-business-profiler`) and the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker) (`traction-channel-ranker`). Read each from the installed pack. If one is missing, read it from its link or ask for it. If you still cannot get it, write `MISSING: <slug>`, say which step cannot run and stop that step. Do not imitate it.
 
 What a first run returns: with only a product link and no private numbers, return a provisional plan. It has the profile built from public pages, the full channel table and up to three tests with proposed limits marked as assumptions for approval. Private metrics (revenue per customer, retention, ad costs) stay MISSING. No channel is called proven.
 
@@ -66,7 +66,7 @@ Sending, spending, booking, publishing, changing accounts or starting a schedule
 - **One next action.**
 - **Files saved.**
 
-Next: approve one test, run it yourself, then bring the results to the [Traction experiment review agent](https://useaiblocks.com/skills/traction-experiment-keeper). To judge one finished result, use the [Traction experiment result reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). This agent is not for a business with no public page and no written description yet. Write a short description of what you sell and who buys it first.
+Next: approve one test, run it yourself, then bring the results to the [Growth channel experiment tracker](https://useaiblocks.com/skills/traction-experiment-keeper). To judge one finished result, use the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). This agent is not for a business with no public page and no written description yet. Write a short description of what you sell and who buys it first.
 
 ## Check before you hand it back
 

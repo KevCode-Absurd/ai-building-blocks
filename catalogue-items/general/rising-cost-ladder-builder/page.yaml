@@ -20,7 +20,7 @@ when:
 not_for:
   - "You are writing nonfiction or a plot with no trapped character: use a plain outline in your own notes or a simple three-act list."
   - "You only want to test whether the escape is fair: use the Fair escape checker."
-  - "You have no story plan yet and no idea where the trap is: use the Closed setting planner first."
+  - "You have no story plan yet and no idea where the trap is: use the Closed story setting planner first."
 
 you_give:
   - Your story plan, or the output of the earlier steps
@@ -43,8 +43,8 @@ output_sample:
     - What your character would hate to lose (optional)
     - How long the story should run (optional)
   prerequisites:
-    - A setting plan from the Closed setting planner (helps, not required)
-    - A mood scale from the Volatile antagonist mood mapper (helps, not required)
+    - A setting plan from the Closed story setting planner (helps, not required)
+    - A mood scale from the Antagonist behavior planner (helps, not required)
   output:
     - name: What they would hate to lose
       contains: Three things the character values, in order. These are what each attempt pays in.
@@ -122,8 +122,8 @@ works_best_with:
     - {name: "Any good chat AI", why: "Ordering and pricing attempts is text work any strong chat AI does well with this skill."}
     - {name: "Index cards", why: "One rung per card lets you reorder the ladder on a table."}
   inputs:
-    - "A setting plan from Closed setting planner"
-    - "A mood scale from Volatile antagonist mood mapper"
+    - "A setting plan from Closed story setting planner"
+    - "A mood scale from Antagonist behavior planner"
 
 terms:
   - term: Ladder

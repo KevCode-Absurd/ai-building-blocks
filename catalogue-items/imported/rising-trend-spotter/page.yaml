@@ -7,6 +7,8 @@ job: plan-strategy
 headline: Rising trend spotter
 subhead: Give it a topic and the sites to scan. It runs ready-made Apify scrapers on Google Trends, Instagram, Facebook, YouTube and TikTok, then tells you what is climbing. You get a short summary and, if you ask, a saved CSV or JSON file.
 explain: |
+  Before you start: scraping Instagram, Facebook, TikTok or YouTube can break those sites' terms, so check each site's rules first. Apify runs cost credits and the script has no spend cap, so set a usage limit in your Apify account before the first run.
+
   A rising trend spotter answers one question: what are people searching for and watching more of right now in my topic? It checks public data on Google Trends and four social sites, so your content and product ideas follow real interest and not a guess.
 
   You name a topic and the sites. The skill picks matching scrapers from Apify, a service that runs scrapers for you. Examples are Google search trends, Instagram hashtags, trending TikTok sounds and YouTube Shorts. It reads what each scraper needs, asks how you want the results saved, runs it and sums up what is climbing.

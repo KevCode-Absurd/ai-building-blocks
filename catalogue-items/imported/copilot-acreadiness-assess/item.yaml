@@ -29,4 +29,4 @@ credits:
   - title: acreadiness-assess skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/acreadiness-assess
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added safety steps, so it asks before sending repo files, checks secrets are removed, and only runs a pinned AgentRC version. We added Before you start and After this sections that link to other AI Blocks steps.

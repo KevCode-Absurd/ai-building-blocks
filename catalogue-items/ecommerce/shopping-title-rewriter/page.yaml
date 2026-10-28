@@ -73,6 +73,7 @@ output_shape: |
   TITLES: <product> | old: <title> | new: <title> | <characters>
   WHY: <the search term each title leads with>
   ROLLOUT: <batches and what to check after 2 to 4 weeks>
+  CHECKS MISSED: <none, or the checks that could not run and why>
   MISSING: <facts or search terms you did not give>
 
 tweaks:

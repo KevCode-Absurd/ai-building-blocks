@@ -15,11 +15,11 @@ when:
   - Your customer description is a list of ages, incomes and titles.
   - You are about to design or sell something and cannot say what it is hired to do.
 not_for:
-  - "You have no leads or notes yet: use the Job hunting spot finder first to find where to watch customers."
-  - "You want to see who else competes for the same job: use the Job rival mapper once your spec is written."
+  - "You have no leads or notes yet: use the Unmet customer need researcher first to find where to watch customers."
+  - "You want to see who else competes for the same job: use the Customer alternatives researcher once your spec is written."
   - "You need a price or a feature decision: this spec shows the job, so make that call with your own sales data."
 you_give:
-  - A ranked list of leads, from the Job hunting spot finder or your own
+  - A ranked list of leads, from the Unmet customer need researcher or your own
   - Notes and customer words from watching or talking to people
   - Your current product (optional)
 you_get:
@@ -33,15 +33,15 @@ how_to_use:
   - Paste the leads and your notes as they are.
   - Say which lead you want written first.
   - Read the one-line job to a customer if you can. Ask if it sounds like them.
-  - Carry the spec to the Job rival mapper.
+  - Carry the spec to the Customer alternatives researcher.
 output_sample:
   input:
-    - Your ranked leads, from the Job hunting spot finder or your own list
+    - Your ranked leads, from the Unmet customer need researcher or your own list
     - Notes and customer words from watching or talking to people
     - Your current product (optional)
   prerequisites:
     - Notes with the customer's own words, ideally word for word
-    - The Job hunting spot finder result, if you have it
+    - The Unmet customer need researcher result, if you have it
   output:
     - name: Circumstance
       contains: Who, where, when and what they were doing, plus what came before and what comes next.
@@ -131,7 +131,9 @@ improve:
   - Run it for each circumstance you find and keep the specs together.
   - Add the customer's own words from new interviews and rewrite the spec.
   - Read the one-line job to three customers. Change it until they say it sounds like them.
-  - Pair it with "Job rival mapper" and "Job experience mapper".
+  - Pair it with "Customer alternatives researcher" and "Customer experience journey mapper".
+before: [job-hunting-spot-finder]
+
 works_best_with:
   tools:
     - name: Any good chat AI
@@ -139,7 +141,7 @@ works_best_with:
     - name: A voice recorder
       why: Recorded talks let you paste exact words, which this skill depends on.
   inputs:
-    - Leads from the Job hunting spot finder
+    - Leads from the Unmet customer need researcher
     - Notes from a day of watching customers
     - Interview transcripts
 terms:

@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-discount-cost-trend skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/finance/shopify-admin-discount-cost-trend
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and changed how it splits discounts by code. It now adds up Shopify's per-line discount allocations instead of crediting the first code, pages long orders, and lists any order whose numbers do not add up. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

@@ -89,6 +89,24 @@ tags: ["lesson-design", "document-based-lessons", "historical-thinking", "primar
 
 # Document-Based Lesson Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Source text** with the [History source text simplifier](https://useaiblocks.com/skills/history-source-simplifier). Bring source text.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a complete document-based history lesson following the four-part activity structure from the Reading Like a Historian curriculum: (1) background knowledge, (2) central historical question, (3) primary source investigation with explicit strategy instruction, and (4) whole-class discussion. The output is a lesson plan with timing, teacher actions, student actions, strategy instruction points, a discussion plan, differentiation notes, and formative assessment opportunities.
@@ -376,3 +394,13 @@ The Phase 4 discussion is the most important and most easily skipped part of the
 2. **The lesson assumes a document set has already been curated and sources have been adapted.** If the teacher provides raw, unadapted sources, the lesson plan may overestimate what students can accomplish. Teachers should use historical-source-adapter to prepare documents for their specific student level before designing the lesson.
 
 3. **The four-part structure is a design framework, not a rigid template.** Some lessons may require a longer background phase (if students lack critical context), a shorter discussion phase (if time is limited), or additional document rounds (if the document set is rich). The skill designs within the framework but the teacher should adjust based on their professional judgement and knowledge of their students.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [History lesson source set planner](https://useaiblocks.com/skills/history-source-set-picker). It takes the lesson plan.
+- The [History source text simplifier](https://useaiblocks.com/skills/history-source-simplifier).
+- The [Class discussion format picker](https://useaiblocks.com/skills/class-discussion-format-picker). It takes the lesson plan.
+- The [Argument writing frame builder](https://useaiblocks.com/skills/argument-writing-scaffold-maker). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -25,6 +25,13 @@ Pause before an irritated reply and choose a response with more clarity and care
 
 6. **Resume with a chosen response:** Return to the actual message, revised plan or conversation. Ask what action is helpful now, including a clear boundary or a question about the support another person wants.
 
+## What to bring
+
+- The situation in a few lines, such as a changed plan or a rejected proposal
+- Your draft reply or message, if you have one
+- Who is involved and what they have asked of you
+- What you want from the pause: a reply, a plan or a question to ask
+
 ## First questions she'd ask you
 
 - Is this a moment for immediate action, or is there room to pause?
@@ -94,6 +101,6 @@ Looking inward can hide an external problem that needs changing. Preserve the ne
 
 Return a short RAIN-informed note: the event and reaction recognized, what can be allowed internally, a gentle present-focused question and an appropriate care response. Finish with the actual reply, plan or listening question that follows the pause.
 
-Keep the patient questions and the distinct RAIN movements. Cut spiritual certainty, compulsory vulnerability and promises that a pause will reveal the right answer. Return a usable response and permission to choose a different approach.
+Keep the patient questions and the distinct RAIN movements. Cut spiritual certainty, compulsory vulnerability and promises that a pause will reveal the right answer. Return a usable response and permission to choose a different approach. Then send the reply, act on the plan or ask the listening question in your next conversation.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.

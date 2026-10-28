@@ -13,6 +13,19 @@ description: >
 
 # SaaS Valuation Compression Analyzer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 For a given SaaS company, research its funding history and compute ARR-based valuation
@@ -50,7 +63,7 @@ For each funding round, extract or estimate:
 | ARR multiple | `valuation / ARR` |
 | Lead investor | Direct |
 
-**Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Do not show them as findings. Use them only when nothing better is found, and label the result `estimate`.
+**Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Do not show them as findings. Before using one, ask the user for an ARR figure or a customer count and price. Use a range only when neither exists, label the result `estimate` with the range, and say in the verdict that the multiple rests on a guess.
 
 **ARR estimation heuristics (when not public):**
 - Seed/Series A: ARR often $500K–$3M (unverified guess)
@@ -139,6 +152,14 @@ Give these parts in this order. Put the chart first if your chat can draw one. I
 6. **Data confidence.** One line on which ARR figures were estimated, and a list of every benchmark you quoted that is unverified. Do not present any unverified benchmark, the ZIRP premium or the April 2026 drawdowns as a finding.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Valuation method comparer](https://useaiblocks.com/skills/valuation-method-comparer).
+- The [Financial risk mapper](https://useaiblocks.com/skills/financial-risk-mapper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Edge Cases
 

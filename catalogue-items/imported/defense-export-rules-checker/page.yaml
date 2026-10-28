@@ -11,7 +11,7 @@ explain: |
 
   It works through the jurisdiction test: match the item to the US Munitions List, then fall back to the commercial rules if it does not fit. From there it covers company registration, licence forms, technical assistance and manufacturing agreements, brokering, and sharing technology with foreign employees. It can also walk you through a voluntary disclosure. It is an AI guide, so confirm real decisions with trade counsel.
 
-  Fees, penalty amounts, country lists and rule-change notes in the skill file are the author's dated notes and have not been verified here. Check each on the DDTC site or in the Federal Register before you use it, and say "not confirmed" if you cannot. A wrong answer here can mean an illegal export, so do not ship or share data on this result alone. This is Hemant Naik's ITAR skill, shared under the MIT licence.
+  Fees, penalty amounts, country lists and rule-change notes in the skill file are the author's dated notes and have not been verified here. Check each on the DDTC site or in the Federal Register before you use it, and say "not confirmed" if you cannot. A wrong answer here can mean an illegal export, so do not ship or share data on this result alone. This is Hemant Naik's ITAR skill, shared under the MIT licence. It covers the defense rules (ITAR) only. For commercial items under the EAR, or for contract security readiness, use the checkers named below.
 when:
   - You want to sell a component overseas and are not sure it is controlled.
   - A foreign national joins your team and will see technical data.

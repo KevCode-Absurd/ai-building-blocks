@@ -7,6 +7,25 @@ description: Use when pricing or promoting a digital product sold online — an 
 
 Digital products have no cost signal from materials or shipping, so the price digits carry more of the quality judgment than for a physical good. This skill covers only what changes for digital products. The general pricing, promotion and discount skills it was built beside are not in this library, so every rule you need is written here. Memberships and recurring plans are not covered yet.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Choosing the digits of a one-off digital price (rounded vs just-below)
@@ -59,6 +78,15 @@ Individual creator, LinkedIn-growth course, plan: $97, "FREE download" checklist
 | Lead magnet wording | "Get the [ITEM] for $0" |
 | Participative pricing | Ebook at [LOW] / [MIDDLE] / [HIGH], not pay-what-you-want |
 | Why | one line per choice |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Event ticket price planner](https://useaiblocks.com/skills/event-ticket-pricer). It takes the offer.
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the offer and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

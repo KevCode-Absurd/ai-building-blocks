@@ -114,8 +114,8 @@ Before the final hand-back, check the run against the 7 checks under "Check befo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Clay town video clip prompt writer](https://useaiblocks.com/skills/clay-town-video-prompts).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

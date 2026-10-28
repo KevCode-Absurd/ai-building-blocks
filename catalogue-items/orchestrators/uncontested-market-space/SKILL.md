@@ -78,7 +78,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the audit report.
 - The [Brand focus word picker](https://useaiblocks.com/skills/ownable-word-picker). It takes the audit report.
+- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

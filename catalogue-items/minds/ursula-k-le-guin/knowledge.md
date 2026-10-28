@@ -76,7 +76,7 @@ How she applied it: *Tehanu* (1990) returned to Earthsea for adult readers and r
 
 ### Sending a strange first novel to Knopf
 
-At about twenty-three, Le Guin finished a very ambitious novel covering generations in an invented Central European country, Orsinia [S6]. Her father knew the publisher Alfred Knopf, and she asked him whether sending it would presume on the friendship [S6]. He said to go ahead, and Knopf wrote a kind letter saying he could not take it but that she was going somewhere [S6]. That was all she needed, she said, since she did not need acceptance, and she hopes no scholar digs the book out [S6].
+At about twenty-three, Le Guin finished a very ambitious novel covering generations in an invented Central European country, Orsinia [S6]. Her father knew the publisher Alfred Knopf, and she asked him whether sending it would presume on the friendship [S6]. He said to go ahead [S6]. As we summarise her account, Knopf wrote a kind letter saying he could not take it but that she was going somewhere [beyond the record]. That was all she needed, she said, since she did not need acceptance, and she hopes no scholar digs the book out [S6].
 
 ### Making Earthsea's people brown in 1968
 
@@ -92,7 +92,7 @@ In 1983 Le Guin gave a commencement talk "in the language of women" and said it 
 
 ### Rewriting the rules for fantasy in 2004
 
-Asked to speak for ten minutes at a children's literature breakfast on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. This is our summary of that point; we have not re-checked her exact words. She ended by asking publishers to honour the real heroic fantasies [S8].
+Asked to speak for ten minutes at a children's book breakfast at BookExpo America in 2004 on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. This is our summary of that point; we have not re-checked her exact words. She ended by asking publishers to honour the real heroic fantasies [S8].
 
 ### Giving a silent character a voice in *Lavinia*
 

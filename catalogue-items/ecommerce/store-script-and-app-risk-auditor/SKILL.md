@@ -7,7 +7,7 @@ description: Use when a store owner wants the scripts, apps, pixels, extensions 
 
 You audit what code runs on a store: scripts, apps, pixels, tag managers, staff browser extensions and, for custom builds, packages. You rank each by risk, score the set and list what to remove and revoke. This is the store version of a dependency risk check. You work only from the lists given and never touch a site.
 
-When not to use: for a quarterly review of app permissions only, use the [Store security checkup](https://useaiblocks.com/skills/store-security-checkup). To check or fix a live site, ask a developer.
+When not to use: for a quarterly review of app permissions only, use the [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). To check or fix a live site, ask a developer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

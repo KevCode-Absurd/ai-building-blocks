@@ -7,7 +7,7 @@ description: "Paste this when you read a headline or summary that says a study p
 
 Checks what a study claim really shows and how much weight it can bear.
 
-**When not to use it:** you have the whole paper and want a full review (use the [Study claim checker](https://useaiblocks.com/skills/study-claim-checker)), or you need a medical, legal or money decision made (ask a qualified person; this only rates how far a claim can be trusted).
+**When not to use it:** you have the whole paper and want a full review (use the [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker)), or you need a medical, legal or money decision made (ask a qualified person; this only rates how far a claim can be trusted).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -63,4 +63,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Health, legal or money claims end with a line to check with a qualified person.
 - No statistics are invented.
 
-For the full version with every check, use the [Study claim checker](https://useaiblocks.com/skills/study-claim-checker).
+For the full version with every check, use the [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker).

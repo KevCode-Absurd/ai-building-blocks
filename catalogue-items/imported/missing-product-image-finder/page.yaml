@@ -35,6 +35,7 @@ how_to_use:
   - Tell your AI your store domain. Add your minimum images (10 or less, because only the first 10 images per product are counted), whether to check variants, and which product status to scan.
   - Read the summary and the list of flagged products. Fix the zero-image products first.
   - Open the CSV file to see each gap by product and variant. Note that only the first 10 images and 50 variants per product are read.
+  - Next, add images to the flagged products in Shopify admin or by product import. Run the check again to confirm the count drops. For other missing product details, use the Product data gap filler.
 output_sample:
   input:
     - Your store domain

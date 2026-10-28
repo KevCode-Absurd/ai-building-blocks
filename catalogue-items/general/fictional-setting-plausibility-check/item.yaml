@@ -9,7 +9,7 @@ role: check
 job: copy
 level: intermediate
 inputs:
-  - type: source_text
+  - type: document
     required: true
   - type: question
     required: false
@@ -39,7 +39,8 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md
     used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
-      profile retained only as provenance/background.
+      profile retained only as provenance/background. On 2026-10-28 AI Blocks
+      reworded the "What you need" note so it matches the listed inputs.
   - title: Geographer
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-geographer.md

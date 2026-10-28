@@ -38,8 +38,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
   - Paste your stops, depot, vehicle count and capacity, shift length and time at each stop. Add delivery windows if you have them.
   - Answer any question it asks. If you do not know something, say so and it will mark it missing.
-  - For more than about 15 stops, use an AI that can run Python. Small lists work in a plain chat.
-  - Check that every stop appears once, and that no route is longer than a shift. Ask it to fix any that break these.
+  - For more than about 15 stops, use an AI that can run Python. Small lists work in a plain chat. The exact method needs the free PuLP library, so ask your AI to install it first. For long stop lists, ask for one of the quicker methods instead.
+  - The code is untested sample code. Check each route by hand before you use it. Every stop should appear once, the miles should look right, the load should fit the vehicle, and no route should be longer than a shift. Ask your AI to fix any that break these.
   - Try the new plan on one or two drivers first. Road distance can differ from the straight-line estimate.
 how_it_works:
   - title: Ask about your operation
@@ -49,7 +49,7 @@ how_it_works:
   - title: Pick a method for your size
     text: Small lists can use an exact method. Bigger ones use savings, sweep or nearest-neighbor builds, then local swaps to shorten the routes.
   - title: Build the routes
-    text: It assigns stops to drivers, orders them, and checks capacity, shift length and windows.
+    text: It assigns stops to drivers and orders them. The sample code checks capacity, and its delivery-window version checks windows. Shift length is not checked in the code, so check each route against your shift yourself.
   - title: Compare and report
     text: It lays out miles and time per route, sets them against your current routes, and lists stops that cause trouble.
 output_shape: |

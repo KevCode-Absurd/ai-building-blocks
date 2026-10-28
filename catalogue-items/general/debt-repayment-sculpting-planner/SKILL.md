@@ -142,8 +142,8 @@ The link names a public method. The instructions and practice numbers in this pa
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test the cash cushion in each test period with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Check cover across the whole loan life with the [Loan life cash cover checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker).
+- Test the cash cushion in each test period with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Check cover across the whole loan life with the [Loan lifetime cash coverage checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
 

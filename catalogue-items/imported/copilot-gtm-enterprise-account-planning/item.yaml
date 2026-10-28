@@ -34,7 +34,7 @@ credits:
   - title: gtm-enterprise-account-planning skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-enterprise-account-planning
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, added a run order and output format, and marked the author's rules of thumb as his own. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Smit Patel (https://linkedin.com/in/smitkpatel)
     url: ""

@@ -15,7 +15,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **The plan** (yours): what you will do, by when, with what team and money.
 
 **Makes it better (optional):**
-- **A rival comparison**, made by the [Rival matchup scorer](https://useaiblocks.com/skills/rival-matchup-scorer): you and the other side, side by side. Without it the rival fault is marked MISSING and the best verdict is WAIT.
+- **A rival comparison**, made by the [Competitor comparison reviewer](https://useaiblocks.com/skills/rival-matchup-scorer): you and the other side, side by side. Without it the rival fault is marked MISSING and the best verdict is WAIT.
 - **How decisions and orders move** (yours): who decides, who passes it on.
 - **Doubts the team has voiced** (yours): written down by them, not by you.
 
@@ -65,15 +65,6 @@ In this order:
 6. **Fixes:** one per fault found.
 7. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you want every other way it could fail** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- **If the date is the weak part** with the [Work-backwards plan checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
-- **If the verdict is go and you want to try it small first** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each of the six faults is marked present, absent or missing, with a reason.
@@ -81,6 +72,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The verdict is go, wait or no, and not a maybe.
 - Anger or pride as a driver is asked about.
 - Every fault marked present has a fix.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you want every other way it could fail** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- **If the date is the weak part** with the [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- **If the verdict is go and you want to try it small first** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

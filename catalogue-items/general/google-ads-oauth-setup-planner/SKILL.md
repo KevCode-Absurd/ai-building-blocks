@@ -5,7 +5,7 @@ description: Plan Google Cloud, Ads API and OAuth client setup. Get the fields, 
 
 # Google Ads Cloud and OAuth client planner
 
-Use this for the first setup: the Cloud project, the OAuth client and the link to your Ads manager account. Do not use it to test the developer token or make a first read-only call (use the [Google Ads token and access check planner](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner)), to audit the campaigns (use the [Google Ads store account auditor](https://useaiblocks.com/skills/google-ads-store-account-auditor)), or to write the connector code (use the [API connector builder](https://useaiblocks.com/skills/api-connector-builder)).
+Use this for the first setup: the Cloud project, the OAuth client and the link to your Ads manager account. Do not use it to test the developer token or make a first read-only call (use the [Google Ads developer access checker](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner)), to audit the campaigns (use the [Google Ads store account auditor](https://useaiblocks.com/skills/google-ads-store-account-auditor)), or to write the connector code (use the [API connector builder](https://useaiblocks.com/skills/api-connector-builder)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

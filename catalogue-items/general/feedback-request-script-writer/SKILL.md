@@ -85,14 +85,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **When you have feedback to give back** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft.
-- **To plan the meeting you will ask in** with the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The question cannot be answered yes or no.
@@ -102,6 +94,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The second question names a real project, or is marked `MISSING:`.
 - No line argues with or defends against feedback.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **When you have feedback to give back** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft.
+- **To plan the meeting you will ask in** with the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

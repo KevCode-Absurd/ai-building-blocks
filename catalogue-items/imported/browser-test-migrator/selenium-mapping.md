@@ -23,7 +23,7 @@
 
 | Selenium | Playwright | Preferred |
 |---|---|---|
-| `By.id('x')` | `page.locator('#x')` | `page.getByTestId('x')` |
+| `By.id('x')` | `page.locator('#x')` | `page.getByRole(...)` if the element has a role and name. `getByTestId()` reads `data-testid`, not `id`, so use it only if that attribute is on the element |
 | `By.css('.x')` | `page.locator('.x')` | `page.getByRole(...)` |
 | `By.xpath('//div')` | `page.locator('xpath=//div')` | Avoid — use role-based |
 | `By.name('x')` | `page.locator('[name=x]')` | `page.getByLabel(...)` |

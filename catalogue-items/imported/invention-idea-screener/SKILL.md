@@ -17,6 +17,22 @@ and registered-practitioner review, that it needs more information, or that
 it hits a disqualifier. A prior-art search is a separate step; this skill
 does not do one.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Instructions
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If you
@@ -473,3 +489,11 @@ memo with:
 > underlying disclosure) with patent counsel. If there is no counsel engaged
 > yet, [contact from profile / "your professional regulator's IP referral service — state bar in the US, SRA/Bar Standards Board in England & Wales, Law Society in Scotland/NI/Ireland/Canada/Australia, or your jurisdiction's equivalent"] is the
 > starting point.**
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker). It takes the audit report.
+- The [Privacy policy drift checker](https://useaiblocks.com/skills/privacy-policy-drift-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

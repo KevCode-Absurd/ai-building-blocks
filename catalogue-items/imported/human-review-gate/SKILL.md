@@ -20,9 +20,34 @@ severity-graded, countable — and a gate either passes or names what is still o
 person, not "the team" — G3 enforces it), whether the work is reversible, and whether a human
 is available now. Read `human-gate-context.md` first if it exists.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **A test report** (yours): what was tested, what passed, what failed and why.
+- **A security report** (yours): the risks found in the code, ranked, each with a fix.
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A test report** with the [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). Bring a code change, a codebase, a test report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, a code change, a test report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## The loop
 
 ```sh
+# Set S to the scripts folder inside this skill folder, wherever you installed it.
+# engineering/human-gate/... is the source repo's layout.
 S=engineering/human-gate/skills/human-gate/scripts
 
 python3 $S/human_gate.py open plan.md --launch   # build page, start round N → END YOUR TURN
@@ -98,3 +123,10 @@ Reasoning lives in `references/` — human-in-the-loop canon, feedback batching,
 Conceptual derivation of the batched-review pattern from
 [`petergyang/human-review`](https://github.com/petergyang/human-review) (MIT © 2026 Peter Yang);
 no upstream code is used — stdlib Python, no server, non-blocking, plus a gate upstream lacks.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request review tracker](https://useaiblocks.com/skills/pull-request-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

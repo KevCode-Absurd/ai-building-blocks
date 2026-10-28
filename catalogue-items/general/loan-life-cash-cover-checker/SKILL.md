@@ -96,16 +96,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public source. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test cash against each year's repayment with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Build the cash pack a lender asks for with the [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow.
-- Work out how much cash is really available first with the [Project cash available bridge](https://useaiblocks.com/skills/project-cash-available-bridge).
+- Test cash against each year's repayment with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Build the cash pack a lender asks for with the [Project debt repayment modeler](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow.
+- Work out how much cash is really available first with the [Project cash for debt checker](https://useaiblocks.com/skills/project-cash-available-bridge).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.

@@ -11,10 +11,10 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: question
+  - type: business_profile
     required: true
-  - type: brief
-    required: true
+  - type: competitor_set
+    required: false
 outputs:
   - type: plan
   - type: document

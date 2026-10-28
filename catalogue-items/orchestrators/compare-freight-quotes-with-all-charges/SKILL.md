@@ -96,6 +96,6 @@ Use these with the general suggestion above. Suggest one next step in a short qu
 
 - **Send the questions** to each carrier. A person sends them.
 - **Work out cost per unit** after freight and duty with the [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator).
-- **Compare the goods prices too** with the [Compare supplier prices on the same basis](https://useaiblocks.com/workflows/compare-supplier-prices-on-the-same-basis) workflow.
+- **Compare the goods prices too** with the [Supplier quote cost and risk analyst](https://useaiblocks.com/workflows/compare-supplier-prices-on-the-same-basis) workflow.
 
 Nothing here books or accepts a quote.

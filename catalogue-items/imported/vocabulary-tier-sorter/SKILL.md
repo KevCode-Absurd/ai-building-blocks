@@ -69,6 +69,19 @@ tags: ["vocabulary", "tiering", "Tier-2", "academic-language", "EAL", "word-teac
 
 # Vocabulary Tiering Tool
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a text extract or topic and tiers all significant vocabulary into Tier 1 (everyday), Tier 2 (academic, cross-subject), and Tier 3 (technical, subject-specific), then generates a prioritised teaching sequence focusing on Tier 2 words — the high-utility academic words that appear across subjects but are rarely taught explicitly in any. The output includes the tiered analysis, a teaching sequence with recommended methods for each word, word teaching cards with definitions, context examples, visual cues, and common confusions, and a quick vocabulary check activity. AI is specifically valuable here because vocabulary tiering requires both frequency data (how common is this word in general English vs. academic English?) and pedagogical judgement (which words will this specific group of students already know, and which will unlock access to the curriculum content?).
@@ -291,3 +304,12 @@ Display six sentences on the board, each with a gap. Students choose the correct
 2. **Pre-teaching vocabulary is necessary but not sufficient.** Students need multiple exposures (Stahl & Nagy suggest 10–12) in varied contexts before a word is truly acquired. A single pre-teaching session introduces the word; it must be revisited throughout the lesson, the week, and the unit. The teaching cards provide the initial exposure; the teacher must plan for repetition.
 
 3. **The tool analyses vocabulary at the word level but academic language is also about phrases and structures.** "On the other hand," "as a result of," "in contrast to" are multi-word expressions that function as single vocabulary items. The tool identifies individual words but may not capture all the significant multi-word phrases that students need.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
+- The [Subject writing frame maker](https://useaiblocks.com/skills/subject-writing-frame-maker). It takes the document.
+- The [Course scope and sequence planner](https://useaiblocks.com/skills/course-scope-sequence). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

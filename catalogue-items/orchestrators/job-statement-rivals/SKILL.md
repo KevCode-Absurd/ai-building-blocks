@@ -79,6 +79,5 @@ Four step files, then the HAND-BACK SUMMARY as the last file: ranked leads with 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Test the idea with real people** with the [Product alternative comparison reviewer](https://useaiblocks.com/skills/ten-times-better-checker). It takes the audit report.
-- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

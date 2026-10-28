@@ -72,7 +72,7 @@ Pause here: Fix the script with both reports. Paste the fixed script back with a
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Offer these next steps:
 - If the script needs a rewrite, not just fixes, write a new one with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script).
 - Before you pay to run it, check the ad against Meta rules with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
 

@@ -32,7 +32,8 @@ you_get:
   - A markdown timing plan
 how_to_use:
   - Open your AI tool. Use Claude, ChatGPT or Gemini. For the code tests, pick one that can run Python.
-  - Paste the skill text from this page into the chat. The code in it needs an AI that can run Python, such as Claude with code tools, ChatGPT data analysis or the free Google Colab. If yours cannot, ask it for the buy logic in plain steps and work the quantities in a spreadsheet. The skill text is long, so paste only the sections you need.
+  - Paste the skill text from this page into the chat. The code in it needs an AI that can run Python, such as Claude with code tools, ChatGPT data analysis or the free Google Colab. The skill text is long. For one season buy, paste "Initial Assessment", "Required inputs before any code runs" and "Buy Planning & Optimization" first, then "In-Season Management" later.
+  - "No Python? Work each style in a spreadsheet: 1) overstock cost = unit cost minus markdown price; 2) understock cost = (full price minus unit cost) times your stockout cost multiplier; 3) critical ratio = understock cost / (understock cost + overstock cost); 4) buy quantity = NORM.INV(critical ratio, forecast mean, forecast standard deviation)."
   - Add last season's weekly sales sheet. Use one row per style per week, with units sold, price, stock on hand and markdowns.
   - Answer its questions about your category, season length, budget, margin targets and supplier lead times.
   - "Check the plan. The example numbers in the code (30% demand variation, a 50% markdown rate, a 1.5x cost for running out of stock, and the random sample products) are made-up demo values. The skill should ask you for your own figures first. Do not use any buy quantity that came from the demo values."

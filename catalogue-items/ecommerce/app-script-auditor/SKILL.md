@@ -94,9 +94,9 @@ CHECKS MISSED lists only checks you could not run, or write "none". Always inclu
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Website performance fix ranker](https://useaiblocks.com/skills/speed-fix-ranker). It takes the audit report.
 - The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the audit report.
-- The [Website speed repair planner](https://useaiblocks.com/prompts/speed-fix-week-planner). It takes the audit report.
+- The [Leftover app code finder](https://useaiblocks.com/skills/leftover-app-code-finder).
+- The [Store speed reports and fix review](https://useaiblocks.com/skills/monthly-store-speed-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

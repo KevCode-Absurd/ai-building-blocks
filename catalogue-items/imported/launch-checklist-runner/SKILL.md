@@ -3,6 +3,22 @@ name: shipping-and-launch
 description: Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supporting material availability
 
 This catalog copy does not include these files:
@@ -27,6 +43,16 @@ Ship with confidence. The goal is not just to deploy — it's to deploy safely, 
 - Migrating data or infrastructure
 - Opening a beta or early access program
 - Any deployment that carries risk (all of them)
+
+## What to gather first
+
+Ask the user for these before the checklist. Mark any that are missing as MISSING.
+
+- What is being released, in one or two lines
+- Where it runs (hosting, environments)
+- The tests and monitoring in place now
+- Who approves the launch
+- The version or commit to roll back to, and the command that undoes any database change. If there is no database rollback command, say the launch is not ready until one exists.
 
 ## The Pre-Launch Checklist
 
@@ -273,7 +299,8 @@ Every deployment needs a rollback plan before it happens:
 ## Rollback Plan for [Feature/Release]
 
 ### Trigger Conditions
-- Error rate > 2x baseline
+(Every number in this template is a placeholder. Set each one for your own system from its normal baseline.)
+- Error rate > [your threshold, for example 2x baseline]
 - P95 latency > [X]ms
 - User reports of [specific issue]
 
@@ -288,14 +315,21 @@ Every deployment needs a rollback plan before it happens:
 - Migration [X] has a rollback: <verified command or runbook link>
 - Data inserted by new feature: [preserved / cleaned up]
 
-### Time to Rollback
-- Feature flag: < 1 minute
-- Redeploy previous version: < 5 minutes
-- Database rollback: < 15 minutes
+### Time to Rollback (measure these on your own system; the examples are not targets)
+- Feature flag: [measured time, for example under 1 minute]
+- Redeploy previous version: [measured time, for example under 5 minutes]
+- Database rollback: [measured time, for example under 15 minutes]
 ```
 ## Next steps
 
 Once the plan is agreed, hand the monitoring list and the first-hour checks to whoever watches the launch. Keep the rollback plan where the whole team can find it on launch day. After the full rollout, remove the feature flag.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## See Also
 

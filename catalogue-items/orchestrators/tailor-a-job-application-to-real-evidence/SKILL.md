@@ -94,7 +94,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Suggest the user check the gap list and apply themselves. Nothing is sent. If an interview follows, suggest the [Prepare work examples for a job interview](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview) workflow.
+Use these instead of the general "After this" list below. Suggest the user check the gap list and apply themselves. Nothing is sent. If an interview follows, suggest the [Job interview work-example coach](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview) workflow.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

@@ -7,9 +7,9 @@ role: check
 job: analysis
 level: expert
 inputs:
-  - {type: question, required: true}
+  - {type: deal_terms, required: true}
+  - {type: question, required: false}
   - {type: offer, required: false}
-  - {type: persona, required: false}
   - {type: plan, required: false}
 outputs:
   - {type: plan}

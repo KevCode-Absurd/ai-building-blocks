@@ -106,8 +106,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## After this
 
 Offer one next step in a short question, and say the user can type their own:
-- **Build backups for the biggest gaps** with the [Plan coverage for a critical role](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role) workflow.
-- **Plan cover for a planned absence** with the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
+- **Build backups for the biggest gaps** with the [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role) workflow.
+- **Plan cover for a planned absence** with the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
 - **Update a note later** with the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer).
 
 ## Avoid

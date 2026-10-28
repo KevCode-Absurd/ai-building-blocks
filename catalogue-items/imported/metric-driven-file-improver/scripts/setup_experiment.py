@@ -39,6 +39,7 @@ GITIGNORE_CONTENT = """# autoresearch — experiment logs are local state
 **/results.tsv
 **/run.log
 **/run.*.log
+**/notes.md
 config.yaml
 """
 
@@ -155,21 +156,25 @@ def copy_evaluator(experiment_dir, evaluator_name):
 
 
 def create_branch(path, domain, name):
-    """Create and checkout the experiment branch."""
+    """Create and checkout a new experiment branch from the current commit.
+
+    Never switches to an existing branch: an old branch may hold a different
+    history, and the runner's rollback is measured from the recorded baseline.
+    """
     branch = f"autoresearch/{domain}/{name}"
+    exists = subprocess.run(
+        ["git", "rev-parse", "--verify", "--quiet", f"refs/heads/{branch}"],
+        cwd=path, capture_output=True, text=True
+    )
+    if exists.returncode == 0:
+        print(f"  Error: branch '{branch}' already exists. Pick a new --name, or remove the old branch yourself.")
+        return None
     result = subprocess.run(
         ["git", "checkout", "-b", branch],
         cwd=path, capture_output=True, text=True
     )
     if result.returncode != 0:
-        if "already exists" in result.stderr:
-            print(f"  Branch '{branch}' already exists. Checking out...")
-            subprocess.run(
-                ["git", "checkout", branch],
-                cwd=path, capture_output=True, text=True
-            )
-            return branch
-        print(f"  Warning: could not create branch: {result.stderr}")
+        print(f"  Error: could not create branch: {result.stderr}")
         return None
     print(f"  Created branch: {branch}")
     return branch
@@ -308,6 +313,16 @@ def main():
         sys.exit(1)
     print("  Git repository found")
 
+    # Require a clean tree: the runner later rolls back with git reset --hard
+    status = subprocess.run(
+        ["git", "status", "--porcelain", "--untracked-files=no"],
+        cwd=str(project_root), capture_output=True, text=True
+    )
+    if status.stdout.strip():
+        print("  Error: tracked files have uncommitted changes. Commit or stash them, then run setup again.")
+        sys.exit(1)
+    print("  Working tree clean")
+
     # Check target file
     target_path = project_root / args.target
     if not target_path.exists():
@@ -344,7 +359,9 @@ def main():
 
     # Create git branch
     if not args.skip_branch:
-        create_branch(str(project_root), args.domain, args.name)
+        if create_branch(str(project_root), args.domain, args.name) is None:
+            print("  Setup stopped before any experiment runs. Fix the branch problem above.")
+            sys.exit(1)
 
     # Test evaluation command
     print(f"\n  Testing evaluation: {args.eval_cmd}")
@@ -375,7 +392,9 @@ def main():
     print(f"  Budget: {args.time_budget} min/experiment")
     if not args.skip_branch:
         print(f"  Branch: autoresearch/{args.domain}/{args.name}")
-    print(f"\n  To start:")
+    print(f"\n  To start, record the baseline on the unchanged file first:")
+    print(f"  python scripts/run_experiment.py --experiment {args.domain}/{args.name} --baseline")
+    print(f"  Then, for each try, commit one change to the target and run:")
     print(f"  python scripts/run_experiment.py --experiment {args.domain}/{args.name} --single")
 
 

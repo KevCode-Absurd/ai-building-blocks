@@ -11,6 +11,19 @@ metadata:
 
 Use the local Node.js modules to make identity and attribution decisions reproducible. They take caller-owned records and return decisions; they do not authenticate webhooks, provision infrastructure, persist data, or send conversions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Before you run it (AI Blocks notes)
 
 This skill links visits to people. Before you run anything, ask the user to confirm they have consent or another lawful basis to link these visits to contacts, and that the data stays in their own environment. Hashes are pseudonymous, not anonymous, so treat them as personal data. If the user cannot confirm, stop and say why.
@@ -32,6 +45,13 @@ Never print raw emails or phone numbers in your reply. Refer to contacts by thei
 5. **Form matches** (if webhooks were supplied): the method used, the confidence score, any diagnostics, and whether it was a replay. Say these scores are operating settings, not probabilities.
 6. **Limits**: what the data cannot prove.
 7. **MISSING**: inputs not given, or none.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Identity graph designer](https://useaiblocks.com/skills/agency-identity-graph-operator). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 
 ## Choose the relevant contract

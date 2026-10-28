@@ -31,4 +31,4 @@ credits:
   - title: bulk-rnaseq skill
     by: K-Dense
     url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/bulk-rnaseq
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence with small edits. We gave it a plain name and noted which named skills and scripts are not in this library. We added Before you start and After this sections that link to other AI Blocks steps.

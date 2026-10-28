@@ -11,6 +11,22 @@ metadata:
 
 This skill enables the agent to produce wireframes at three fidelity levels — low-fi (block layouts and content hierarchy), mid-fi (defined components with placeholder content), and high-fi (pixel-accurate specs with real content, spacing values, and interaction notes). Since the agent works in text, wireframes are rendered as ASCII/box-drawing layouts or structured component specifications with precise dimensions. Each wireframe includes a component inventory, interaction annotations, and responsive breakpoint behavior.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A design direction** (yours): the page's type, colours and layout rules.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a design direction. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Clarify the Screen and Its Purpose**: Identify which screen or view to wireframe, its role in the user flow, and the primary user action on that screen. Determine the target platform (desktop web, tablet, mobile) and any framework constraints (e.g., Bootstrap grid, Material Design components). This scoping prevents wireframes from growing beyond their intended focus.
@@ -164,3 +180,10 @@ Provide the agent with the screen name, its purpose, the target platform, and th
 - **Screen must support multiple user roles**: If an admin sees edit/delete buttons that a viewer does not, wireframe both variants and label them clearly. Note which elements are conditionally visible and what controls their visibility.
 - **Offline or slow connection state**: Wireframe a skeleton/placeholder version of the screen that appears while data loads. Include an explicit error state for failed network requests with a retry action.
 - **Accessibility requirements affect layout**: If the wireframe includes color-only status indicators (red/yellow/green dots), add a text label or icon alternative. Note minimum tap target sizes (44x44px) for all interactive elements in the mobile wireframe.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Website designer](https://useaiblocks.com/skills/website-art-director). It takes the page layout spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

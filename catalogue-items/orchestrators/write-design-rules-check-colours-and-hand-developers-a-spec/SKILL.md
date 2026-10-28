@@ -70,14 +70,6 @@ HAND-BACK SUMMARY
 Files: ... | Ratios measured by: script or by hand | MISSING: ...
 ```
 
-## After this
-
-Ask what they would like to do next in one short question. It is a suggestion. Offer these, and say they can type their own:
-
-- **Check a finished design against the rules** with the [Design principles checker](https://useaiblocks.com/skills/design-principles-checker).
-- **Style slides and pages from the rules** with the [Slide and page styler](https://useaiblocks.com/skills/slide-and-page-styler).
-- **Turn design feedback into fixes** with the [Turn a design review into fixes](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
-
 ## Check before you hand it back
 
 - Each colour has a meaning tied to where it will be seen.
@@ -85,3 +77,11 @@ Ask what they would like to do next in one short question. It is a suggestion. O
 - The token file matches the rule sheet. Any colour that differs is fixed or explained.
 - The spec shows every state, not only the default.
 - Each gap is a `MISSING:` line. Nothing was invented to fill it.
+
+## After this
+
+Ask what they would like to do next in one short question. It is a suggestion. Offer these, and say they can type their own:
+
+- **Check a finished design against the rules** with the [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker).
+- **Style slides and pages from the rules** with the [Slide and page style designer](https://useaiblocks.com/skills/slide-and-page-styler).
+- **Turn design feedback into fixes** with the [Design revision usability test planner](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.

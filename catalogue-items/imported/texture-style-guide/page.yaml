@@ -7,11 +7,11 @@ job: design-work
 headline: Real-world texture style guide writer
 subhead: "A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses."
 explain: |
-  A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses.
+  What sets it apart from the other style guide writers here: rules for named materials, one light direction, shadow depths and pressed states, and a rule that texture never sits under body text.
 
   You describe the product and its mood. The skill restates the design intent, then sets colors, type sizes, spacing and shadow depth before moving to parts such as buttons, cards and inputs. For each part it lists states, variants and how it behaves when touched. It adds accessibility rules, do and don't lists, plain-language writing tone, and ends with a checklist your team can use in code review.
 
-  Licence: MIT, as the LICENSE file in this item says. Credit goes to Bergside (typeui.sh). What we changed: we added a short section of rules specific to the real-world texture look (materials, shadow depths, pressed states, one light direction). The rest is the original skill.
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Bergside (typeui.sh). What we changed: we added a short section of rules specific to the real-world texture look (materials, shadow depths, pressed states, one light direction) and a contrast note on the placeholder colours. The rest is the original skill.
 when:
   - You want an interface that feels physical and familiar.
   - Your team keeps making buttons and cards that do not match.

@@ -69,6 +69,19 @@ tags: ["tutoring", "dialogue", "ITS", "VanLehn", "AutoTutor", "Graesser", "Chi",
 
 # Intelligent Tutoring Dialogue Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs the dialogue logic for an AI tutoring interaction — when to ask a question, when to give a hint, when to explain, when to prompt for self-explanation, and when to stay silent. This is the hardest design problem in intelligent tutoring: too much intervention prevents productive struggle and creates dependency; too little leaves students stuck and frustrated. VanLehn (2011) showed that the effectiveness of tutoring (human or AI) depends on the quality of the step-level interaction — systems that engage students in active reasoning at each step dramatically outperform systems that simply present content and evaluate final answers. Chi et al. (2001) analysed what makes human tutoring effective and found, counter-intuitively, that the most effective tutors were NOT the ones who explained the most — they were the ones who asked the right questions and created opportunities for students to self-explain. The output includes a complete dialogue architecture (the phases and branching logic of the interaction), a library of dialogue moves (the specific things the tutor can say or do), decision rules (when to use each move based on student responses), and a worked example showing the system in action. AI is specifically valuable here because it can sustain one-to-one dialogue at scale — but the dialogue must be deliberately designed or the AI will default to lecturing, which is the least effective tutoring strategy.
@@ -297,3 +310,12 @@ The dialogue follows a deliberate three-phase structure based on conceptual chan
 4. **The evidence base is primarily from STEM domains.** VanLehn (2011), Graesser et al. (2005), and Koedinger & Aleven (2007) conducted their research primarily in mathematics and science. The dialogue principles transfer to other domains (the "elicit before explain" pattern works in humanities too), but the specific patterns of misconception and conflict may differ. Tutoring dialogue in essay writing or historical analysis looks different from tutoring dialogue in physics, even though the underlying principles are the same.
 
 5. **Silence is difficult in text-based AI interactions.** The dialogue prescribes deliberate silence as a tutoring move, but in a text-based interface, silence can be indistinguishable from system failure. Implementing "productive silence" in a chatbot requires explicit design — a visible timer, a "Take your time" message, or a deliberate delay before the next prompt.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Text difficulty checker](https://useaiblocks.com/skills/text-difficulty-checker). It takes the draft.
+- The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the draft.
+- The [Text and diagram explainer designer](https://useaiblocks.com/skills/word-picture-explainer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

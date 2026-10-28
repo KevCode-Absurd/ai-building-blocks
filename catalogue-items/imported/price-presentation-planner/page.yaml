@@ -7,8 +7,6 @@ job: set-prices
 headline: Price presentation planner
 subhead: A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
 explain: |
-  A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
-
   The skill starts with who the buyer is, what you want them to choose, and your ethical limits. It sets the reference point people will compare against, then designs the tiers and the anchor price. It tests ideas like a high-priced option beside the plan you want chosen, and a split of cost into smaller units. Each idea comes with the reason it works and a way to test it. Nothing misleading is used.
 when:
   - Visitors view your pricing page but pick the cheapest plan.
@@ -19,6 +17,7 @@ not_for:
   - "You sell one flat price with nothing to compare it to: use a plain price list."
   - "You want to prove a price effect works: run a real test, since the studies it cites need checking before you quote them."
   - "You want to hide fees or push people with fake countdowns: this skill will not do that."
+  - "You must follow legal rules on how prices and fees are shown, such as in finance, travel or telecoms: check those rules with a compliance person first."
 you_give:
   - Product and current prices
   - Target buyer
@@ -31,10 +30,10 @@ you_get:
   - Test ideas
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - Gather first: your price list with currency and billing period, your buyer segment, the option buyers would otherwise choose, and your renewal and cancellation terms.
+  - "Gather first: your price list with currency and billing period, your buyer segment, the option buyers would otherwise choose, and your renewal and cancellation terms."
   - Paste your product, your current prices, your target buyer and your goal.
   - Add your limits or market norms if you have them (optional).
-  - Read the plan in order: the reference point, the price structure, the tiers and anchors, the quality-signal check, then the test ideas. At each stage, check the choice against your real offer.
+  - "Read the plan in order: the reference point, the price structure, the tiers and anchors, the quality-signal check, then the test ideas. At each stage, check the choice against your real offer."
   - Any anchor or annual saving shown must be a real, approved price, with its renewal and cancellation terms shown.
   - Check any study the plan mentions before you quote it to others.
   - Test the layout on a draft page before you change live prices.

@@ -7,7 +7,7 @@ job: research-topics
 headline: Research project runner
 subhead: "A research project run from question to write-up: a series of tested ideas, a log of what you learned, and a findings report. The agent keeps going without asking you at every step."
 explain: |
-  A research project run from question to write-up: a series of tested ideas, a log of what you learned, and a findings report. The agent keeps going without asking you at every step.
+  Before you start: set three limits, a spend cap, a time limit and a maximum number of cycles. The agent loops on its own every 20 minutes and keeps spending until a limit stops it. It also writes a draft paper without your sign-off, so check every result and citation before you share it.
 
   It uses two loops. The inner loop runs quick experiments with a clear measure of success. The outer loop steps back to review results, change direction and combine findings. State lives in files, such as a research state file, so work survives restarts, and a continuity loop is set up first. It acts as project manager and hands the actual domain work to other skills. It works on AI research, and you should expect it to make its own calls.
 when:
@@ -55,10 +55,10 @@ output_sample:
     - name: research-log.md
       contains: A timeline of each decision and why it was made.
     - name: findings.md
-      contains: "The project memory: what the experiments show so far and what to try next."
+      contains: "The project memory, in set sections: research question, current understanding, key results, patterns, lessons and limits, open questions, and the experiment trajectory. A reader should be able to write an abstract from it."
     - name: Experiment trajectory
       contains: A record of each experiment and its measure, so you can see progress over time.
     - name: Progress presentation
       contains: An HTML or PDF story of results, plots and next plans, made when there is something worth sharing.
     - name: Draft paper
-      contains: A write-up of the research question, methods and findings, made when the project concludes.
+      contains: A write-up of the research question, methods and findings, saved in the paper/ folder when the project concludes. It is written by the separate ml-paper-writing skill, so its sections and length follow that skill. Without it you get a plain draft from findings.md.

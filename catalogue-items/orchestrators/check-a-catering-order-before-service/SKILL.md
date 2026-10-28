@@ -61,14 +61,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-## After this
-
-Nothing has been sent. The owner settles each gap with the customer and sends the diet lines to the chef. Offer one next step and say they can type their own:
-
-- If the customer then changes the order, review the change with the [Catering order change review assistant](https://useaiblocks.com/agents/catering-order-change-review-assistant).
-- To check another invoice's sums, use the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker).
-- To turn the checklist into a standing kitchen procedure, use the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).
-
 ## Check before you hand it back
 
 - Quantities and charges match the confirmed order, or the gap is shown with its source.
@@ -76,3 +68,11 @@ Nothing has been sent. The owner settles each gap with the customer and sends th
 - Every figure, date and time traces to a source or is a `MISSING:` line.
 - The original documents were not changed.
 - No tax treatment was decided.
+
+## After this
+
+Nothing has been sent. The owner settles each gap with the customer and sends the diet lines to the chef. Offer one next step and say they can type their own:
+
+- If the customer then changes the order, review the change with the [Catering order change reviewer](https://useaiblocks.com/agents/catering-order-change-review-assistant).
+- To check another invoice's sums, use the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker).
+- To turn the checklist into a standing kitchen procedure, use the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).

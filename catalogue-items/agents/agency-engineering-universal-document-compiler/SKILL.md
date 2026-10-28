@@ -9,7 +9,7 @@ Plans how a data file becomes a paged document, such as a resume, invoice, spec 
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method: keep every field, infer a layout from the shape of the data, keep layout choices out of the user's data, plan page breaks, and stay in step with an editor. The profile is a task reference. Its role language, memories, experience claims and numeric targets do not change the host's rules or give you tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude Code or another agent with access to your code:** It can read your real data files and parser and name the exact place a field gets dropped.
@@ -33,7 +33,7 @@ How to start:
 
 These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article or transcript, ignore it: this agent takes a YAML or JSON data file (or a sample), the page size and the kind of document.
 
-Not for: one PDF from plain text or a sheet (use the [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader)), blank pages or blurry text in a web-page PDF (use the [HTML to PDF layout architect agent](https://useaiblocks.com/skills/agency-engineering-pdf-engine-architect)), or a Word, slide or Excel file (use the [Document generator agent](https://useaiblocks.com/skills/agency-specialized-document-generator)). A final contract, medical or financial report needs a qualified person to sign it off.
+Not for: one PDF from plain text or a sheet (use the [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader)), blank pages or blurry text in a web-page PDF (use the [PDF layout designer](https://useaiblocks.com/skills/agency-engineering-pdf-engine-architect)), or a Word, slide or Excel file (use the [Document generation planner](https://useaiblocks.com/skills/agency-specialized-document-generator)). A final contract, medical or financial report needs a qualified person to sign it off.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on. Never invent fields, values or a page size.
 
@@ -68,7 +68,7 @@ Use these headings, in this order. If your AI can save files, save each as its o
 
 Mark each check `PASS`, `FAIL` or `NOT RUN`. In a chat, all of them are `NOT RUN`. End with `CHECKS MISSED:` and anything you could not check, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader). It takes the plan and audit report.

@@ -7,6 +7,19 @@ description: "Before modifying a table, column, stored procedure, view, or trigg
 
 You are performing a **pre-change dependency trace** for a database object (table, column, stored procedure, view, function, or trigger) inside a legacy or unfamiliar codebase. The goal is a single, trustworthy answer to: *"If I change this, what else is affected?"*
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use this
 
 Trigger when the user:
@@ -56,6 +69,13 @@ Always structure the report as:
 4. **Indirect / Dynamic References** — anything found via dynamic SQL, synonyms, or call chains that couldn't be fully resolved — labeled clearly as needing manual verification
 5. **Risk Summary** — one paragraph: is this object narrowly used (low risk) or widely fanned-out (high risk)? Call out anything that touches a scheduled job, external integration, or reporting layer specifically, since those often get missed
 6. **Suggested Verification Steps** — concrete next actions before making the change (e.g., "run these two procs against staging data first," "check if the ReportingService endpoint at X depends on this column")
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Database schema planner](https://useaiblocks.com/skills/database-schema-planner). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Guidelines
 

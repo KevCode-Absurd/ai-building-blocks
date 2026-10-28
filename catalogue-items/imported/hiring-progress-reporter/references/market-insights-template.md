@@ -1,10 +1,8 @@
-# Branded Market Insights HTML Template
+# Market Insights HTML Template
 
 ## Overview
 
-Self-contained HTML template for market insights reports with "Your Company Name" brand guidelines applied. Designed for browser-to-PDF export via Ctrl+P / Cmd+P with "Background graphics: ON".
-
-**Brand compliance:** Follows `.claude/skills/stakeholder-reporting/references/brand-guidelines.md`
+Self-contained HTML template for market insights reports. It uses neutral placeholder colours and no logo, so it works as it is. If you have your own brand colours, fonts or logo, swap them in where the comments say. No brand guide or logo files come with this copy. You can optionally save the page as a PDF with your browser's print dialog (Ctrl+P / Cmd+P, "Background graphics: ON").
 
 ## Usage
 
@@ -12,8 +10,8 @@ Self-contained HTML template for market insights reports with "Your Company Name
 2. Replace all `<!-- PLACEHOLDER -->` comments with actual data
 3. Populate Chart.js data arrays with numbers
 4. Open in browser, verify layout
-5. Print to PDF (Ctrl+P, Save as PDF, Background graphics ON)
-6. Save PDF to `roles/[role-name]/reports/`
+5. Optional: print to PDF (Ctrl+P, Save as PDF, Background graphics ON)
+6. Optional: save the PDF wherever you keep reports
 
 ## Template
 
@@ -27,17 +25,17 @@ Self-contained HTML template for market insights reports with "Your Company Name
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
-        /* === CSS Custom Properties (from brand-guidelines.md) === */
+        /* === Colours: neutral placeholders. Replace with your own brand colours if you have them === */
         :root {
-            --main: #D8512B;
-            --sec: #2C3085;
+            --main: #3b82f6;
+            --sec: #1e3a8a;
             --white: #F7FEFE;
             --light-grey: #DFE3E7;
             --dark-grey: #333333;
             --black: #0D090F;
-            /* Functional status colors (not in brand palette — extended for data visualization) */
+            /* Functional status colors for data visualization */
             --color-success: #10b981;
             --color-warning: #f59e0b;
             --color-danger: #ef4444;
@@ -120,7 +118,7 @@ Self-contained HTML template for market insights reports with "Your Company Name
 
         /* === Executive Summary === */
         .exec-summary {
-            background: rgba(44, 48, 133, 0.04);
+            background: rgba(30, 58, 138, 0.04);
             border-left: 4px solid var(--sec);
             padding: var(--spacing-lg);
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -235,7 +233,7 @@ Self-contained HTML template for market insights reports with "Your Company Name
             border-bottom: 1px solid var(--light-grey);
         }
         tbody tr:nth-child(even) { background: rgba(223, 227, 231, 0.3); }
-        tbody tr:hover td { background: rgba(216, 81, 43, 0.04); }
+        tbody tr:hover td { background: rgba(59, 130, 246, 0.04); }
 
         /* === Charts === */
         .grid-2 {
@@ -278,7 +276,7 @@ Self-contained HTML template for market insights reports with "Your Company Name
 
         /* === Callout box === */
         .callout {
-            background: rgba(216, 81, 43, 0.06);
+            background: rgba(59, 130, 246, 0.06);
             border-left: 4px solid var(--main);
             padding: var(--spacing-md) var(--spacing-lg);
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -399,7 +397,7 @@ Self-contained HTML template for market insights reports with "Your Company Name
     <!-- ============ HEADER ============ -->
     <div class="header">
         <div class="header-content">
-            <img src="x.png" alt="x" class="header-logo">
+            <!-- OPTIONAL LOGO: <img src="your-logo.png" alt="Your company" class="header-logo"> -->
 
             <h1><!-- REPORT_TITLE --></h1>
             <div class="subtitle"><!-- REPORT_SUBTITLE e.g. "job title" --></div>
@@ -593,7 +591,7 @@ Self-contained HTML template for market insights reports with "Your Company Name
                         <td><strong><!-- SCORE --></strong></td>
                         <td><!-- DETAIL --></td>
                     </tr>
-                    <tr style="background: rgba(44, 48, 133, 0.06);">
+                    <tr style="background: rgba(30, 58, 138, 0.06);">
                         <td><strong>Average</strong></td>
                         <td><strong style="color: var(--main); font-size: 16px;"><!-- AVG_SCORE --></strong></td>
                         <td><strong><!-- OVERALL_RATING --></strong></td>
@@ -650,23 +648,23 @@ Self-contained HTML template for market insights reports with "Your Company Name
 
     <!-- ============ FOOTER ============ -->
     <div class="footer">
-        <img src="x.png" alt="x" class="footer-logo"><br>
-        yourcompanyname &mdash; Generated <!-- DATE -->
+        <!-- OPTIONAL LOGO: <img src="your-logo.png" alt="Your company" class="footer-logo"><br> -->
+        <!-- YOUR COMPANY NAME --> &mdash; Generated <!-- DATE -->
     </div>
 
 </div><!-- /container -->
 
 <!-- ============ CHARTS ============ -->
 <script>
-// Brand color palette
-// Brand palette + derived tints for multi-series charts
+// Neutral placeholder palette for multi-series charts.
+// Replace with your own brand colours if you have them.
 const BrandColors = [
-    '#2C3085',  // Sec Blue (brand)
-    '#D8512B',  //  Main Orange (brand)
-    '#4a4db0',  // Blue lighter (derived tint — not in brand palette)
-    '#e07a5a',  // Orange lighter (derived tint — not in brand palette)
-    '#DFE3E7',  // Light Grey (brand)
-    '#333333',  // Dark Grey (brand)
+    '#1e3a8a',  // dark blue
+    '#3b82f6',  // blue
+    '#10b981',  // green
+    '#f59e0b',  // amber
+    '#DFE3E7',  // light grey
+    '#333333',  // dark grey
 ];
 
 // Compensation Chart (grouped bar)
@@ -741,21 +739,20 @@ new Chart(document.getElementById('supplyDemandChart'), {
 
 ## Customization Notes
 
-### Embedding Logos as Base64
+### Embedding Your Own Logo as Base64 (optional)
 
-For fully self-contained HTML (works offline and in PDF), replace the logo `src` attributes:
+No logo comes with this copy. If you have your own logo files and want fully self-contained HTML (works offline and in PDF), uncomment the logo lines and use base64 `src` attributes:
 
 **Header logo (white on blue):**
 ```html
-<img src="data:image/png;base64,PASTE_LOGO_NEGATIVE_BASE64_HERE" alt="x" class="header-logo">
+<img src="data:image/png;base64,PASTE_YOUR_LOGO_NEGATIVE_BASE64_HERE" alt="Your company" class="header-logo">
 ```
 
 **Footer logo (dark on white):**
 ```html
-<img src="data:image/png;base64,PASTE_LOGO_POSITIVE_BASE64_HERE" alt="x" class="footer-logo">
+<img src="data:image/png;base64,PASTE_YOUR_LOGO_POSITIVE_BASE64_HERE" alt="Your company" class="footer-logo">
 ```
 
-The base64-encoded logos are generated from `.claude/assets/*/*` and `.claude/assets/*/*`.
 
 ### Adding Chart Types
 
@@ -776,11 +773,11 @@ Set the badge class based on the hiring difficulty score:
 | 3.1 - 4.0 | `difficulty-high` | Red |
 | 4.1 - 5.0 | `difficulty-very-high` | Dark Red |
 
-### PDF Export Checklist
+### Checklist (and optional PDF export)
 
 - [ ] All `<!-- PLACEHOLDER -->` comments replaced with real data
 - [ ] Chart.js data arrays populated with numbers
-- [ ] Logo images embedded as base64 (or accessible via file path)
+- [ ] Optional: your own logo embedded as base64, or the logo lines left commented out
 - [ ] Difficulty badge class matches the score
 - [ ] Badge classes on competitor table match threat levels
 - [ ] Print preview checked with "Background graphics: ON"

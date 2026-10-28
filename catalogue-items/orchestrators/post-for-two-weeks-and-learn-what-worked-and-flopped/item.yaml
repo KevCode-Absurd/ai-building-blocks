@@ -7,8 +7,8 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
-  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+  - {type: dataset, required: false}
   - {type: brand_brain, required: false}
   - {type: persona, required: false}
 outputs:

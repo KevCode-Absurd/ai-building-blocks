@@ -2,6 +2,8 @@
 
 Detailed analysis of how successful products implement the Hook Model, including both successes and instructive failures.
 
+> **Note:** the "Key Metrics" figures in these case studies come from the original author without sources. Treat them as rough illustrations, not verified data, and do not quote them as facts.
+
 
 ## Table of Contents
 1. [Instagram: The Visual Tribe Hook](#instagram-the-visual-tribe-hook)

@@ -16,6 +16,19 @@ license_source: "https://github.com/Pazificateur69/tokenleak/blob/main/LICENSE"
 
 # tokenleak
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Every tool result an agent pulls into context is re-sent on every later call until compaction, so a 6k-token log read early in a 60-call session is paid about 55 more times. These rules make the agent let in only what the next decision needs: locate before reading, compute instead of reading data, bound command output, never re-read, batch independent calls. Over 80 A/B runs in Claude Code (Sonnet 5) they cut cost by 32% with the same 40/40 pass rate; on Haiku 4.5 they only help together with the plugin's read guard (-20%). Method and raw results are in the source repo.
@@ -77,3 +90,10 @@ Count instead of pasting data into context:
 ```bash
 python3 -c "import json;print(len(json.load(open('events.json'))))"
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [Database performance analyst](https://useaiblocks.com/skills/agency-engineering-database-optimizer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

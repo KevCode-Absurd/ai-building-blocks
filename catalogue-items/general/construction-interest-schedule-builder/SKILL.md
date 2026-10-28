@@ -96,16 +96,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any accounting, tax or legal conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check there is enough money to finish with the [Completion funding gap checker](https://useaiblocks.com/skills/completion-funding-gap-checker).
-- Plan which source pays each draw with the [Construction funding draw planner](https://useaiblocks.com/skills/construction-funding-draw-planner).
+- Check there is enough money to finish with the [Project completion funding checker](https://useaiblocks.com/skills/completion-funding-gap-checker).
+- Plan which source pays each draw with the [Construction funding schedule planner](https://useaiblocks.com/skills/construction-funding-draw-planner).
 - Run all three together in the [Construction funding and interest checker](https://useaiblocks.com/workflows/reconcile-construction-draws-and-completion-funding) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any accounting, tax or legal conclusion unresolved.

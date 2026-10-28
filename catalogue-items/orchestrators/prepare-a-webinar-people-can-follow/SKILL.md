@@ -7,6 +7,31 @@ description: "Use when you plan a live webinar and want the teaching order, the 
 
 Plan one live session so the teaching, the slides and the promotion say the same thing. Three skills run in order. The user approves the outline before slides are planned. Nothing is sent or scheduled.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, a document, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **An AI that can make and show PowerPoint files:** It can build the editable deck and check each slide as it looks. Check what your AI offers before you start. Otherwise you get the slide brief to build in your own slide tool.
+- **A webinar platform such as Zoom (optional):** You run the live session there. This workflow does not connect to it or send invites.
+<!-- /needs -->
+
 ## Before you start
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
@@ -65,6 +90,17 @@ State plainly that nothing was sent or scheduled.
 - Every claim traces to something the user gave.
 - The slide brief says whether a deck file exists and whether each slide was inspected.
 - CHECKS MISSED lists any check that did not run, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach). It takes the document.
+- The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer). It takes the slide deck.
+- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the slide deck.
+- The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

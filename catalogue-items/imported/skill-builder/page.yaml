@@ -7,8 +7,6 @@ job: make-skills
 headline: Skill builder
 subhead: A finished skill folder with clear instructions and helper files, built from your description of what the AI should learn. The result loads into your assistant and gives it know-how it did not have.
 explain: |
-  A finished skill folder with clear instructions and helper files, built from your description of what the AI should learn. The result loads into your assistant and gives it know-how it did not have.
-
   It starts by asking what the skill must do and with which examples. It treats the context window as shared space, so it keeps the main file short and puts the rest in separate reference files, scripts and assets that load only when needed. It also sets how rigid each part should be: free text where many approaches work, set scripts where steps are fragile. The folder is then built and checked.
 when:
   - You repeat the same instructions to your AI every week.
@@ -48,12 +46,12 @@ output_sample:
     - name: SKILL.md
       contains: The main instruction file, with a short name and description that tell your AI when to use the skill.
     - name: scripts/
-      contains: Helper scripts for steps that are fragile or must be done the same way each time.
+      contains: Helper scripts for steps that are fragile or must be done the same way each time. Skipped in a plain chat.
     - name: references/
       contains: Longer notes, rules or schemas that your AI reads only when the task needs them.
     - name: assets/
       contains: Templates or files the skill uses in its results, such as a document layout.
     - name: agents metadata
-      contains: A short description of the skill, so your AI tool can list it.
+      contains: A short description of the skill, so your AI tool can list it. Skipped in a plain chat.
     - name: Test and iterate notes
       contains: Steps to try the skill on real tasks and improve it after each run.

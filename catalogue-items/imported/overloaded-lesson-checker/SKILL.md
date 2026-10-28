@@ -63,6 +63,24 @@ tags: ["cognitive-load", "task-design", "scaffolding", "instructional-design", "
 
 # Cognitive Load Analyser
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Evaluates a learning task, instruction set, or resource for cognitive load across three dimensions: intrinsic load (inherent complexity of the content), extraneous load (unnecessary difficulty caused by poor design), and germane load (productive cognitive effort directed at schema building). Produces a specific diagnosis of where load is excessive and concrete modification suggestions. AI is specifically valuable here because cognitive load analysis requires simultaneously evaluating content complexity, instructional design quality, and learner expertise level — a skill that typically requires training in instructional design that most teachers lack.
@@ -226,3 +244,12 @@ This task is designed for novice learners, and the modifications above are appro
 2. **Intrinsic load cannot be reduced without changing the content.** If the content itself is inherently complex (high element interactivity), this analysis can only reduce extraneous load and optimise sequencing — it cannot make complex content simple. For high-intrinsic-load content, the answer is often to break the content into sub-elements taught across multiple lessons, not to simplify it within one lesson.
 
 3. **The expertise reversal effect means recommendations are expertise-dependent.** What helps a novice hinders an expert and vice versa. If the student level is inaccurate (e.g., described as "novice" but students actually have substantial prior knowledge), the modifications may be counterproductive. Teachers must calibrate based on actual student knowledge, not assumed knowledge.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the audit report.
+- The [English learner task support planner](https://useaiblocks.com/skills/ell-task-scaffolds). It takes the audit report.
+- The [Learning option planner](https://useaiblocks.com/skills/learning-options-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

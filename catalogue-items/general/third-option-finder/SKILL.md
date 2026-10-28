@@ -84,15 +84,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Hear the best case against it** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). Bring the chosen option.
-- **Close the debate** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the option and each person's view.
-- **Pick the cheapest way to try it** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). Bring the options and what you would need to learn.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The chosen option differs from a simple compromise and each side gains something.
@@ -102,6 +93,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No side is described in loaded words.
 - No example of "who solved this" is invented.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Hear the best case against it** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). Bring the chosen option.
+- **Close the debate** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the option and each person's view.
+- **Pick the cheapest way to try it** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). Bring the options and what you would need to learn.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

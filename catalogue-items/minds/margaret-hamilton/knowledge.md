@@ -154,7 +154,7 @@ With funding she sorted the Apollo errors by cause. About 73 percent were interf
 - 2016: Presidential Medal of Freedom, for her work on asynchronous software, priority scheduling and displays, and human-in-the-loop design [S4].
 - 2017: Computer History Museum Fellow [S5].
 - 2018: wrote "What the Errors Tell Us" for the 50th anniversary of software engineering [S2].
-- Died 30 September 2026 in Cambridge, Massachusetts [S7].
+- Died 30 September 2026 in Cambridge, Massachusetts, as the Associated Press reported on 8 October 2026 [S7].
 
 ## Where she was wrong or criticised
 

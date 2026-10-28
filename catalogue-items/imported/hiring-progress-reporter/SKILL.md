@@ -3,6 +3,19 @@ name: stakeholder-reporting
 description: This skill should be used when the user asks to "create a sourcing report", "build a dashboard", "generate a pipeline update", "update for hiring manager", "stakeholder report", "sourcing metrics", "pipeline report", "weekly sourcing update", "market insights report", "talent map presentation", or needs to compile sourcing data into structured reports or visual dashboards for stakeholders.
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supporting material availability
 
 This copy includes `references/market-insights-template.md`, `references/dashboard-templates.md` and `references/chart-examples.md`. It does not include a brand guide PDF, and no PDF or brand build scripts. Do not say you read or ran anything that is not in the folder. Give a plain markdown report. For a chart page, use `references/dashboard-templates.md` and `references/chart-examples.md`, or write a simple standalone HTML file with Chart.js yourself.
@@ -130,7 +143,7 @@ For visual dashboards, generate standalone HTML files using Chart.js for charts.
 
 ### Dashboard Template
 
-The full template file is not included in this copy. Build a simple standalone page with HTML structure, CSS, Chart.js setup, KPI cards, a pipeline funnel, a source channel doughnut, and a candidate table. Fill it only with the user's own numbers.
+Start from `references/dashboard-templates.md`, or build a simple standalone page with HTML structure, CSS, Chart.js setup, KPI cards, a pipeline funnel, a source channel doughnut, and a candidate table. Fill it only with the user's own numbers.
 
 ### Chart Types for Sourcing
 
@@ -198,6 +211,15 @@ This copy gives two outputs only: a plain markdown report and a simple HTML char
 
 ### Reference Files
 
-- **`references/market-insights-template.md`** - HTML template for market insights reports. Ignore its brand colours and PDF steps unless the user supplies their own
+- **`references/market-insights-template.md`** - HTML template for market insights reports, with neutral placeholder colours and no logo. Swap in the user's own colours, fonts or logo only if they supply them; PDF export is optional
 - **`references/dashboard-templates.md`** - Complete HTML dashboard templates for pipeline dashboards
 - **`references/chart-examples.md`** - Chart.js code snippets for common sourcing visualizations
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Applicant evidence and hiring reply drafts](https://useaiblocks.com/skills/hiring-pipeline-runner).
+- The [Team size, hiring plan and budget review](https://useaiblocks.com/skills/quarterly-headcount-plan-keeper).
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

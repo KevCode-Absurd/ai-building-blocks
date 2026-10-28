@@ -11,7 +11,9 @@ explain: |
 
   The skill does two fast checks first. It runs listArduinoLibraries to see if native support exists, and it searches MathWorks contributions on File Exchange for a ready add-on. If either exists, it stops and tells you. If not, it builds a custom add-on that wraps the Arduino C++ library for MATLAB, using the LibraryBase structure and the arduinoioaddons folder. It does not handle plain I2C or SPI, standalone Arduino code or Simulink.
 
-  Licence: this copy is under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Credit goes to MathWorks.
+  This is MathWorks' own skill (matlab-create-custom-arduino-library), imported into this library. We changed only its name and this page.
+
+  Licence: BSD 2-Clause (see LICENSE.md), with one extra MathWorks condition: you may use it only with MathWorks products such as MATLAB. The skill file also links MathWorks' own reuse licence. Credit goes to MathWorks.
 when:
   - You want temperature readings from a DHT22 sensor in MATLAB.
   - You need to drive an OLED screen or motor driver from MATLAB.
@@ -33,7 +35,7 @@ you_get:
   - MATLAB functions for the part
   - Setup and test steps
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill's text.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's text. The skill depends on MATLAB commands such as listArduinoLibraries and arduino(). A chat AI cannot run them, so you run them in MATLAB and paste the results back, or use an AI tool that can run MATLAB.
   - Tell your AI the sensor or part name and your Arduino board model.
   - "Run the native support check in MATLAB: type listArduinoLibraries. If your part is listed, stop and use it."
   - If no MathWorks add-on exists, give your AI a custom library name and an output folder. Add the Arduino library name if you have one.

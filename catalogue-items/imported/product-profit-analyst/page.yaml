@@ -31,11 +31,12 @@ you_get:
   - Cost allocation notes
   - Keep, cut or grow recommendations
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. The skill also points to scripts/calculate.py and a references folder. Upload those files too if your AI can run code. If not, tell it to do the sums from the formulas in the skill text and show its working.
   - Paste your table with one row per product. Add columns for product name, revenue, variable cost and the time period it covers.
   - Add your fixed and shared cost totals. If you have no way to split them, say so and ask your AI to suggest a fair split, such as by share of revenue.
   - Add budget figures if you have them (optional).
   - Check the Stack Rank first. Confirm the products and totals match your own books before you act on the advice.
+  - "Next: pick one or two changes from the Optimization Plan to test first, such as a price rise on a laggard. Run the skill again with the next period's real numbers to see if they worked."
 output_sample:
   input:
     - Revenue by product, SKU, category or service line, for one time period

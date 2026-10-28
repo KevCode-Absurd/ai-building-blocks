@@ -9,7 +9,7 @@ subhead: Paste your product and your main rivals. It finds the one idea you can 
 explain: |
   A brand that tries to stand for everything stands for nothing. Buyers already hold a ladder of brands in their heads for each category, and a new name that blurs what you mean makes the whole brand weaker. Many launches also start with ads, which people trust less than a story someone else tells.
 
-  This workflow picks one attribute to own and writes it as one plain line. It then tests whether your brand name can cover a new product or needs its own, and plans a launch that starts with a news angle and third-party stories before you spend on ads. The order comes from Al Ries and Jack Trout, who wrote "The Positioning Era Cometh" in 1972, and from Ries's later writing on branding and publicity.
+  This workflow picks one attribute to own and writes it as one plain line. It then tests whether your brand name can cover a new product or needs its own, and plans a launch that starts with a news angle and third-party stories before you spend on ads. The ideas on positioning, brand names and press-first launches come from Al Ries and Jack Trout, who wrote "The Positioning Era Cometh" in 1972, and from Ries's later writing on branding and publicity. How the three steps fit together is this workflow's own design.
 when:
   - You are launching a product and need one clear idea to own against rivals.
   - You want to add a product under your brand name and fear it will blur what the brand means.
@@ -78,7 +78,7 @@ output_shape: |-
 
   STEP 2: BRAND NAME STRETCH CHECK
     What the name means now: <one word or line>
-    Stretch score: <n>/100 (how safely the name can cover this product)
+    Stretch score: <n>/100 (a judgement of how safely the name can cover this product, with the reason for each factor; not a measured figure)
     Call: <use the name / make a new one / skip> | cost to the core if it fails <what>
 
   STEP 3: PRESS-FIRST LAUNCH PLAN
@@ -88,7 +88,7 @@ output_shape: |-
     Ads begin when: <point of trust> | budget <amount>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: The rivals you list
     how: List the brands buyers really compare you with, not the ones you admire. Wrong rivals give a position nobody needs.

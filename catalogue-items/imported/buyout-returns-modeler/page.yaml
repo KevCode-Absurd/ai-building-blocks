@@ -31,12 +31,13 @@ you_get:
   - A sensitivity table on price, exit and growth
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - Paste the company's financials. Add the entry multiple, exit multiple, holding period, debt amounts, interest rates and capital spending.
+  - Paste the company's financials, as a table or a spreadsheet export. Add the entry multiple, exit multiple, holding period, debt amounts, interest rates and capital spending.
   - If your AI is missing any of these, it will ask you. Answer each one.
-  - For exact numbers, use an AI that can run Python code, so it can use the calculation script.
+  - For exact numbers, use an AI that can run Python code and upload the whole skill folder, including scripts/calculate.py. Pasting the text alone does not include the script. Without it, your AI works the sums in the chat, so check the IRR yourself.
   - Check the sources and uses first. Debt plus equity must equal the total price.
   - Read the returns matrix to see how IRR changes when the exit multiple or growth changes.
   - Pass the returns and the debt schedule to a finance professional before you use them for a decision.
+  - Next, the skill suggests three follow-up checks from its original collection, not in this library. Look at business quality, test whether the EBITDA will last, and check the risk of the debt load. Ask your AI to run each as a separate review.
 output_sample:
   input:
     - Company financials and expected EBITDA growth

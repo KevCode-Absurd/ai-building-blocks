@@ -137,6 +137,8 @@ improve:
   - "Save your weekly counts in a notes file."
   - "Pair it with \"Negotiation call prep planner\" for the harder talks."
 
+next: [stranger-first-message-writer, negotiation-call-prep-planner]
+
 works_best_with:
   tools:
     - {name: "A calendar app", why: "Block the time as a fixed, repeating event."}

@@ -94,7 +94,7 @@ Begin with one line: "Have a finance lead check the sources before this goes to 
 
 ## What next
 
-To keep these numbers in view every week, design a one-page sheet with the [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer). When a number drops, find out why with the [Numbers drop explainer](https://useaiblocks.com/prompts/numbers-drop-explainer). Bring the before and after figures.
+To keep these numbers in view every week, design a one-page sheet with the [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer). When a number drops, find out why with the [Business results drop investigator](https://useaiblocks.com/prompts/numbers-drop-explainer). Bring the before and after figures.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

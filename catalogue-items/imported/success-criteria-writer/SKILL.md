@@ -69,6 +69,19 @@ tags: ["competency", "standards", "success-criteria", "unpacking", "curriculum"]
 
 # Competency Unpacker
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a standard, learning objective, or competency descriptor — often written in abstract, compressed language — and unpacks it into four actionable components: observable indicators (what a student who has achieved this actually DOES), prerequisite knowledge (what must be in place first), common misconceptions (what typically goes wrong), and success criteria at multiple levels (beginning through extending). The output transforms opaque curriculum language into concrete, assessable, teachable components. AI is specifically valuable here because competency descriptors are deliberately compressed — a single sentence like "analyse how writers use language and structure to achieve effects" contains multiple skills, knowledge domains, and levels of sophistication that must be unpacked before they can be taught or assessed.
@@ -241,3 +254,11 @@ A student who has achieved this competency:
 2. **Success criteria at four levels necessarily simplify a continuum.** Student work exists on a spectrum, not in neat categories. Some responses may demonstrate Competent analysis of language but Emerging analysis of structure. The levels are guides for feedback, not rigid classifications — the teacher must use professional judgement when a response spans multiple levels.
 
 3. **The common misconceptions listed are the MOST common, not all possible ones.** Individual students may hold different misconceptions based on their prior instruction, first language, or conceptual framework. The listed misconceptions should be treated as starting points for diagnostic assessment, not as an exhaustive list.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Backwards unit planner](https://useaiblocks.com/skills/backwards-unit-planner).
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to design and implement automations for repetitive tasks and workflows. The agent identifies manual processes suitable for automation, selects the right automation pattern (scripts, file watchers, cron jobs, CI/CD triggers, API polling), writes the implementation, and validates it works correctly. The goal is to eliminate toil — repetitive, manual work that scales linearly with workload — and replace it with reliable, hands-off automation.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the Task:** Understand what the user wants to automate, including the trigger (what starts the task), the steps involved, the inputs and outputs, and the current frequency of manual execution. Determine whether the task is event-driven (triggered by a change) or time-driven (runs on a schedule).
@@ -78,12 +91,23 @@ logging.basicConfig(
 )
 
 
+def wait_until_stable(path, checks=3, interval=2):
+    """Wait until the file size stops changing, so a half-written CSV is not read."""
+    last, same = -1, 0
+    while same < checks:
+        size = path.stat().st_size
+        same = same + 1 if size == last else 0
+        last = size
+        time.sleep(interval)
+
+
 class CSVHandler(FileSystemEventHandler):
     def on_created(self, event):
         if not event.src_path.endswith(".csv"):
             return
         filepath = Path(event.src_path)
         try:
+            wait_until_stable(filepath)
             with open(filepath, "r") as f:
                 reader = csv.DictReader(f)
                 headers = reader.fieldnames or []

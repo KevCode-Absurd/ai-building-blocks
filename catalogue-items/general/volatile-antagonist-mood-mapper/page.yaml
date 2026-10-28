@@ -19,11 +19,11 @@ when:
   - You want warm scenes that still carry a threat.
 not_for:
   - "Your villain has no power over the trapped character: write a plain rival or foe scene yourself, since a mood scale needs someone who can make the other pay."
-  - "You already have the mood scale and want the stakes to grow scene by scene: use the Rising cost ladder builder."
-  - "You have no setting yet: use the Closed setting planner first, then come back here."
+  - "You already have the mood scale and want the stakes to grow scene by scene: use the Story conflict escalation planner."
+  - "You have no setting yet: use the Closed story setting planner first, then come back here."
 
 you_give:
-  - A setting plan from "Closed setting planner", or a short description of the place
+  - A setting plan from "Closed story setting planner", or a short description of the place
   - Who holds the power, what they want and how they talk
   - Any history that explains them (optional)
 you_get:
@@ -37,7 +37,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your setting plan and describe the person who holds the power.
   - Say how they speak, what they love and what they cannot stand.
-  - Use the mood scale to decide the mood each scene starts in. Next, use "Rising cost ladder builder".
+  - Use the mood scale to decide the mood each scene starts in. Next, use "Story conflict escalation planner".
 output_sample:
   input:
     - Your setting plan, or a short description of the place and who is trapped
@@ -122,12 +122,14 @@ improve:
   - Write one scene where a sign is misread.
   - Add the history behind each trigger.
 
+next: [rising-cost-ladder-builder]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Building and testing the scale is text work any strong chat AI does well with this skill."}
     - {name: "A notebook", why: "Keep the signs on a card beside your draft so each scene starts in the right mood."}
   inputs:
-    - "A setting plan from Closed setting planner"
+    - "A setting plan from Closed story setting planner"
     - "A sample of the person's dialogue"
 
 terms:

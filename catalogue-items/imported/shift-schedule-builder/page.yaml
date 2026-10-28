@@ -40,7 +40,9 @@ how_to_use:
   - Answer its questions. It marks anything you cannot answer as missing.
   - Read the rule list. Any rule marked not checked is yours to check by hand.
   - Have a manager review the plan, and check local employment law, before you share it with staff.
-  - For more than about 10 people, use an AI that can run Python. Small teams work in a plain chat.
+  - For more than about 10 people, use an AI that can run Python with the free pandas and PuLP packages (PuLP brings the CBC solver). Small teams work in a plain chat.
+  - The code in the skill uses example numbers, such as 8-hour shifts, a 40-hour week, random demand and set pay rates. Make sure your AI swaps in your own shift lengths, overtime rules, demand and pay before you trust any result.
+  - Next, compare the options, get a manager's sign-off, then publish. After the period, compare planned hours with actual hours and adjust your rules for the next schedule.
 how_it_works:
   - title: Collect demand and supply
     text: It asks for demand by hour, headcount, skills, availability and shift lengths.

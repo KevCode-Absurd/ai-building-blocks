@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -32,7 +32,7 @@ How to start:
 ## What you need
 - **Your products with prices and margins**, and which ones sell best (required).
 - **Your daily budget, conversions per month and average cost per sale on non-brand search** (required). Step 1 works out the budget floor from these.
-- **Your break-even numbers** (required): the cost per sale or return you need to break even, from your real margin after shipping and fees. If you do not have them, say so and the gap is marked `MISSING:`.
+- **Your break-even numbers** (required): the cost per sale or return you need to break even, from your real margin after shipping and fees. If you do not have them, say so and the gap is marked `MISSING:`. To work them out: margin after shipping and fees, as a share of the price, times your average order value is your break-even cost per sale; 1 divided by that share is your break-even return on ad spend.
 - **Whether your feed and purchase tracking work** (required). Your brand words help too (optional), so brand can be excluded.
 - **After the pause: the asset group, product, search term and placement reports** from Google Ads, exported three to four weeks after you build the campaign (required for steps 2 and 3).
 
@@ -50,8 +50,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Build the campaign as planned and leave the big settings alone for three to four weeks. Then export the asset group, product, search term and placement reports.
 
 2. **Performance Max routine keeper.** Use the skill `performance-max-routine-keeper`. Give it the launch plan from step 1 and the reports you exported. Checks the live campaign against the plan and lists what to exclude or replace. Hands step 3 the clean-up findings.
-3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Give it the clean-up findings from step 2 and the launch plan from step 1, plus your break-even numbers and feed, tracking and campaign setup facts. It checks five gates and your return against break-even, then decides whether raising spend is safe.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Give it the clean-up findings from step 2 and the launch plan from step 1, plus your break-even numbers and feed, tracking and campaign setup facts. It checks five gates in this order: feed, tracking, structure, creative and bid maturity. Then it checks your return against break-even and decides whether raising spend is safe.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 Three step files and the summary. The last file holds the scale check.
@@ -71,8 +71,8 @@ Three step files and the summary. The last file holds the scale check.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
 - The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
+- The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

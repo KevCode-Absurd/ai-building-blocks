@@ -59,15 +59,6 @@ How to start:
 
 Use these headings, in this order: TIMELINE, CHECKS (against its own past, notes test, belief of the team, lead wants this version, hurry, cost), THE CALL (with evidence, the date to look again and what would flip it), MISSING, CHECKS MISSED (one line per check missed, or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer the one that fits the call, and say they can type their own:
-- **If the call is keep protecting,** use the [New idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). Bring the report.
-- **If the call is change the approach,** use the [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). Bring the problems the notes raised.
-- **If the team is split on the call,** use the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the call and each person's view.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The project was judged against its own earlier versions.
@@ -75,6 +66,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The belief of the people on the work is addressed, with evidence or a missing line.
 - The call is one of the four, with a date and a flip condition.
 - Nothing was invented about the team or the rounds.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer the one that fits the call, and say they can type their own:
+- **If the call is keep protecting,** use the [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). Bring the report.
+- **If the call is change the approach,** use the [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). Bring the problems the notes raised.
+- **If the team is split on the call,** use the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the call and each person's view.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

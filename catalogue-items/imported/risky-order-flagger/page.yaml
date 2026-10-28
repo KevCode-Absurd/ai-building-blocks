@@ -34,7 +34,7 @@ how_to_use:
   - Check that your AI can run Shopify CLI commands and sign in to your store. This skill needs code running and live store access.
   - Decide on holds first. They are off by default, so the first run only adds tags. Holds stop real customers' orders from shipping until you release them, which delays those customers. Ask your AI to turn holds on only when you want them.
   - Paste the skill into your AI. Give it your store address, how many days back to check and your hold choice.
-  - Leave dry run on. Read the list of orders it would tag or hold. The dry run count should be close to the number of high-risk orders your Shopify admin shows for the same days. If the list is empty, the count is far off, or it looks wrong, stop and ask your AI to check the risk filter against your store's API version.
+  - Leave dry run on. Read the list of orders it would tag or hold. To pass, the dry run count must match the number of high-risk orders your Shopify admin shows for the same days, give or take orders placed while it ran. Open three listed orders in the admin and check each one shows high risk. If the list is empty when you expect orders, the count is off, or a checked order is not high risk, stop and ask your AI to check the risk filter against your store's API version.
   - Run it again with dry run off. Check the CSV file it writes.
   - Review each held order, then release the good ones with the Order hold manager.
 next: [order-hold-manager, fraud-review-queue-builder]

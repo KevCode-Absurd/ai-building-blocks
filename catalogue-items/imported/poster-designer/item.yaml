@@ -32,4 +32,4 @@ credits:
   - title: canvas-design skill
     by: Anthropic
     url: https://github.com/anthropics/skills/tree/main/skills/canvas-design
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name, added numbered steps and a plain quality bar, and made the font rule one clear rule.

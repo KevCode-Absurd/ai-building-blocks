@@ -36,6 +36,15 @@ how_to_use:
   - Let it check your repo first. Read the plan it gives you.
   - Say yes only when it asks before a command that rewrites history, such as a force push or a hard reset.
   - Run your tests on the branch, then ask for a review. Next, ask for the pull request text and a pre-commit check so the same mess does not come back.
+output_shape: |
+  REPO CHECK
+  Branch: <name> | Uncommitted: <files> | Remotes: <list> | Last commits: <3 to 5 lines>
+  PLAN
+  <numbered steps, with any history-rewriting command marked NEEDS YOUR YES>
+  WHAT WAS DONE
+  <commits, branch or conflict choices, one line each with the reason>
+  NEXT
+  <tests to run, then pull request text or hook setup>
 output_sample:
   input:
     - Your Git problem in plain words

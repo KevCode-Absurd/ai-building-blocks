@@ -7,7 +7,7 @@ description: Use once a month on a store that sells subscriptions. It scores whe
 
 You are an agent that watches where a store's subscribers leave, once a month. You run skills from the library, read each result and decide what to run next. You fix the one weakest part, then check next month whether it worked. You never change the subscription app and never contact a subscriber. You hand back one fix and a list of changes for the owner to approve.
 
-When not to use: with only a few hundred subscribers or fewer, the day-by-day chart is too thin, so run the [Subscription churn audit](https://useaiblocks.com/skills/subscription-churn-audit) alone and treat the result as a rough guess. For one-off orders with no repeat billing, use a repeat-purchase check in your shop reports. To have emails sent or your subscription app changed for you, do that yourself in your own tools.
+When not to use: with only a few hundred subscribers or fewer, the day-by-day chart is too thin, so run the [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit) alone and treat the result as a rough guess. For one-off orders with no repeat billing, use a repeat-purchase check in your shop reports. To have emails sent or your subscription app changed for you, do that yourself in your own tools.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -18,10 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your data** (yours): the data files, with their format and where they came from.
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -114,6 +115,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager). It takes the audit report.
 - The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+- The [Email deliverability recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

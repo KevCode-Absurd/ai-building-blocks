@@ -69,6 +69,27 @@ tags: ["erroneous-examples", "McLaren", "error-detection", "worked-examples", "m
 
 # Erroneous Example Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Concept comparison task designer](https://useaiblocks.com/skills/concept-contrast-task). Bring your lesson plan, a plan (optional), your notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs worked examples that contain deliberate, realistic errors for students to identify, explain, and correct — a technique that produces learning effects comparable to or exceeding correct worked examples, with the additional benefit of developing error-detection skills. The critical insight from McLaren et al. (2012, 2015) is that errors must be REALISTIC and COMMON — the kinds of mistakes students actually make, not contrived errors that no one would make. A well-designed erroneous example activates self-explanation (Chi et al., 1989): students must reason about WHY the step is wrong, which forces deeper processing than simply following a correct procedure. The output includes the erroneous examples with realistic errors at specific steps, an error analysis scaffold (prompts that guide students to find and correct the error), the learning mechanism explanation, and the corrected version. AI is specifically valuable here because designing effective erroneous examples requires deep knowledge of the common error patterns for specific problem types — which errors are realistic, which are productively confusing, and which would create harmful misconceptions.
@@ -266,3 +287,11 @@ By presenting all three, students develop a taxonomy of error types: "When I add
 2. **The learning effect is often DELAYED (McLaren et al., 2012).** Students who study erroneous examples may not outperform students who study correct examples on an immediate test — but they show superior retention and transfer on delayed tests (one week later). Teachers should be aware that the benefit may not be immediately visible, and should not conclude the approach has failed based on a same-day assessment.
 
 3. **The quality of the error-analysis scaffold determines the learning effect.** Simply showing students an error and saying "find the mistake" produces much weaker effects than providing structured prompts that require explanation and correction (Tsovaltzi et al., 2010). The scaffold above is designed to force self-explanation — but if students skip the explanation step and just identify the error without reasoning about it, the learning benefit is significantly reduced.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Online worked example builder](https://useaiblocks.com/skills/online-worked-example-builder).
+- The [Worked-example practice ladder builder](https://useaiblocks.com/skills/worked-example-practice).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

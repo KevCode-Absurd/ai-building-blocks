@@ -12,6 +12,28 @@ description: >
 
 # Board Minutes
 
+> **AI Blocks note: using this in a plain chat.** The `~/.claude/plugins/config/...CLAUDE.md` file, matter workspaces, the calendar connector and the `/corporate-legal:...` slash commands belong to the original legal plugin. If you do not have them, do this instead:
+>
+> - Skip the Matter context section.
+> - In place of the settings file, ask the user to paste two or three sets of past minutes (or a house format). Use them as the template. If they have none, say so, use a plain standard format, and mark the draft "format not confirmed".
+> - In place of the calendar, ask for the meeting, date and type (full board or which committee) and the attendee list.
+> - Treat the user as a non-lawyer unless they say otherwise, and keep the lawyer-review step.
+> - Do not research state law yourself. Where the skill says to check state law or ask counsel, write the question as a placeholder for the lawyer.
+> - For a written consent instead of a meeting, the slash command is not available. Tell the user to ask their lawyer to draft it.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Matter context
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/corporate-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/corporate-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
@@ -247,3 +269,12 @@ For drafting written consents in lieu of a meeting, use `/corporate-legal:writte
 - It does not determine whether a resolution is legally valid or sufficient — it drafts in house format; legal judgment on adequacy is the attorney's call.
 - It does not finalize minutes — the draft requires attorney review before circulation.
 - It does not distribute minutes — output is for the attorney to review, edit, and circulate via their own process.
+
+Changed by AI Blocks (2026-10-28): added a plain-chat note at the top that replaces the plugin settings file, calendar, matter workspace and slash commands, and keeps state-law questions for the lawyer.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

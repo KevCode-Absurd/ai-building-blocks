@@ -85,14 +85,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **To put the agreed step in writing** with the [Results agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
-- **If the decision stays split** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No rebuttal is planned in the listening part.
@@ -101,6 +93,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The plan ends with one agreed next step.
 - It contains no contempt for the other person.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **To put the agreed step in writing** with the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
+- **If the decision stays split** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

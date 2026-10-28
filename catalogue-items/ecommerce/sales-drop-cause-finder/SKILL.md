@@ -7,14 +7,14 @@ description: Paste two periods of store numbers when sales fell and you do not k
 
 Splits a sales drop into traffic, conversion and order value, so you chase the one thing that moved.
 
-What to use: "your results" in the note below means your store's own numbers for two periods, from your store platform and analytics (not a Meta Ads Manager export). You need the store platform's sales report, your analytics sessions for both date ranges, and a refund or returns report. Ad numbers are needed only if sessions or ad traffic moved.
+What to use: "your results" in the note below means your store's own numbers for two periods: the store platform's sales report, your analytics sessions for both date ranges, and a refund or returns report. Numbers from your ad accounts are needed only if sessions or ad traffic moved.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 - **Two periods** (required): net sales plus shipping, sessions, conversion rate and average order value, before and after the drop.
-- **Ad numbers** (required when sessions or ad-driven traffic moved): spend, CPM and CPC for both periods. If only conversion or order value moved, skip them.
+- **Ad numbers** (needed only when sessions or ad traffic moved): spend, CPM and CPC for both periods. If only conversion or order value moved, skip them.
 - **Refunds processed** in each period (strongly advised).
 - **Changes you made** (optional): prices, pages, apps, campaigns.
 
@@ -68,4 +68,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A cause is called a guess until a check confirms it.
 - No noise limit or lift is made up.
 
-For the full version with every check, use the [Store sales drop splitter](https://useaiblocks.com/skills/store-sales-drop-splitter).
+For the full version with every check, use the [Store sales decline investigator](https://useaiblocks.com/skills/store-sales-drop-splitter).

@@ -7,7 +7,7 @@ job: build-software
 headline: Structured data extractor
 subhead: Code that turns an AI's free-text reply into clean, checked data your program can use. You say which fields you want, such as name, date and amount, and get a short Python setup with the Instructor library.
 explain: |
-  Code that turns an AI's free-text reply into clean, checked data your program can use. You say which fields you want, such as name, date and amount, and get a short Python setup with the Instructor library.
+  This is Orchestra Research's Instructor skill (orchestra-research/AI-research-SKILLs), shared under the MIT licence. We only gave it a plain name.
 
   You define the shape of the answer with Pydantic, and each reply is checked against it. If a field is missing or the wrong type, the error goes back to the AI and it tries again, up to a limit you set. It handles nested data, lists and optional fields, can stream partial results, and works with Claude, OpenAI and other providers. You need Python, a package install and an API key for your AI provider.
 when:
@@ -30,15 +30,16 @@ you_get:
   - A data model for your fields
   - Extraction code with automatic retries
   - Validation rules
-  - Example runs on your text
+  - Example calls set up for your text, to run yourself
   - Optional streaming code. Streaming calls change between versions, so check them against the docs for your pinned version.
-  - In the end, one Python file you can run, plus a sample run on your text so you can see the checked data
+  - In the end, one Python file you can run, plus the steps to run it yourself. You only see checked data after you run the code with your own API key. Any sample output shown in the chat is not a real run.
 how_to_use:
   - "Your chat AI only drafts the code. It does not run it. Open Claude, ChatGPT or Gemini and paste this skill into the chat. You then run the code yourself, on your own computer, with Python and your own API key. API calls are billed by your AI provider."
   - Check you have Python 3.9 or newer. The code needs Instructor 1.x and Pydantic 2.x, so install with pins such as pip install "instructor>=1,<2" "pydantic>=2,<3".
   - List the fields you want, with a type for each, such as text, number or date.
   - Paste a sample of the text you want to read. Say which AI provider you use.
   - Add rules for valid values if you have any, such as an age range or a fixed list of choices.
+  - Before you run it, confirm the package versions and the model name against your provider's current docs.
   - Copy the code it writes. You need Python and an API key to run it. Run the pip install line first.
   - Test it on 10 to 20 sample documents, then load the checked results into your database or spreadsheet. Send documents that fail all retries to a person to check by hand.
   - The code uses Pydantic v2 and example model names that change often. Update the model name to one your provider offers today before you run it.

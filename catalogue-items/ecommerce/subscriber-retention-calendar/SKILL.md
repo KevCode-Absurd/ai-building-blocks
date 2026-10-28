@@ -12,7 +12,7 @@ You plan what active subscribers receive and when they get a gift. You protect t
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **An audit report** with the [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). Bring your results, a spreadsheet (optional), an email flow (optional).
+2. **An audit report** with the [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). Bring your data, a spreadsheet (optional), an email flow (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.

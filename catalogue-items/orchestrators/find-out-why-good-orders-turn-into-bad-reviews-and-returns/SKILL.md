@@ -20,6 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your data** (yours): the data files, with their format and where they came from.
 - **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
 How to start:
@@ -47,14 +48,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Best and worst customer profiler.** Use the skill `best-and-worst-customer-profiler`. Give it the order data, the reviews and any focus question. It ranks customers by profit, compares the top and bottom 20 percent, splits by discount code and traces them to the ad angles that brought them in. Saved as `outputs/step-01-best-and-worst-customer-profiler.md`. Check before moving on: it names any data it lacked and does not judge on ad return alone.
-2. **Wrong-buyer review checker.** Use the skill `wrong-buyer-review-checker`. Give it the low reviews, the page copy or ad text, and `outputs/step-01-best-and-worst-customer-profiler.md` (the buyer profiles). It tags each low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault, traces the wrong-job groups to the claim that drew them, and writes a not-for line. Saved as `outputs/step-02-wrong-buyer-review-checker.md`. Check before moving on: every wrong-job group has a real quote, a date and a claim.
+1. **Best and worst customer profiler.** Use the skill `best-and-worst-customer-profiler`. Give it the order data, the reviews and any focus question. It ranks customers by profit, compares the top and bottom 20 percent, splits by discount code and traces them to the ad angles that brought them in. Saved as `outputs/step-01-best-and-worst-customer-profiler.md`. Its score out of 100 is the acquisition fit score: the share of the window's orders, in percent, that came from buyers who match the top 20 percent profile. Show the sum. Check before moving on: it names any data it lacked and does not judge on ad return alone.
+2. **Wrong-buyer review checker.** Use the skill `wrong-buyer-review-checker`. Give it the low reviews, the page copy or ad text, and `outputs/step-01-best-and-worst-customer-profiler.md` (the buyer profiles). It tags each low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault, traces the wrong-job groups to the claim that drew them, and writes a not-for line. Saved as `outputs/step-02-wrong-buyer-review-checker.md`. The promise match score is 100 minus the percentage of low reviews tagged wrong-job buyer or promise you set. Show the sum, and give no score with fewer than 30 low reviews. Check before moving on: every wrong-job group has a real quote, a date and a claim.
 3. **Switch friction remover.** Use the skill `switch-friction-remover`. Give it the wrong-job groups, claims and not-for lines in `outputs/step-02-wrong-buyer-review-checker.md`, and any focus question. It ranks the worries and habits behind each gap, gives two fixes each and picks one small change to test. Saved as `outputs/step-03-switch-friction-remover.md`. Check before moving on: each fix matches a named worry.
 4. **Customer progress measure picker.** Use the skill `customer-progress-measure-picker`. Give it `outputs/step-03-switch-friction-remover.md` and the numbers you track now. It picks three to five measures that show buyers making progress after the fix, each with a formula, a source and an owner. Saved as `outputs/step-04-customer-progress-measure-picker.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
+
+Next: make the one change from step 3. After 30 days, rerun step 2 on the new low reviews (the 30-day re-measure) and compare the promise match score with this run.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

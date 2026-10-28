@@ -7,6 +7,8 @@ description: "Use when you need a plain-words explanation of your own booking te
 
 Explain a business's booking terms to customers in plain words without changing what the terms say. Two steps run in order: a clause-linked summary, then an edit of the customer explanation.
 
+This is a plain-words explanation, not legal advice. Have your lawyer confirm the unclear points before you publish it.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

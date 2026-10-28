@@ -138,7 +138,7 @@ He shortened Girardi to Girard to avoid bias against Sicilian and Italian custom
 
 ## Short phrases on the record
 
-- "a long term marriage" (on the customer relationship) [S4]
+- "a long term marriage" (on the customer relationship; from a post put up under his name after his death) [S4]
 - "never letting up on the servicing of your customers" [S3]
 - "Satisfied customers are the best bet for future sales." [S6]
 - "wherever there are people, there are prospects" [S6]

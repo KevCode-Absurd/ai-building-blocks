@@ -7,6 +7,8 @@ description: "Use when you need a design brief. Pulls out what, why, when and wh
 
 Limits help a designer more than freedom does, because they give the work something to push against. This skill turns a loose job description into a brief with a few hard limits and a clear space to play. For judging the work that comes back, use "Logo strength tester" or "Real feeling checker".
 
+The ideas come from the published essays and interviews of Paul Rand, Milton Glaser and Charles and Ray Eames, listed in the credits. They are credited as influences and paraphrased, never quoted as their words, and none of them endorsed this skill. Brand facts are only needed if you have them: a brand file is optional.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

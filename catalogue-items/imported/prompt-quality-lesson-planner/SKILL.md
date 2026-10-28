@@ -69,6 +69,19 @@ tags: ["AI-literacy", "prompt-engineering", "prompt-literacy", "specificity", "A
 
 # Prompt Literacy Sequence Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a structured learning sequence that teaches students why prompt quality determines AI output quality — and what specific prompt moves produce more useful, accurate, and contextually appropriate responses. The sequence follows a compare-contrast structure: students run vague and refined prompts on the same question, analyse the difference in output quality, and abstract the principles. The core insight is that AI fills missing context with the most statistically common response — so a prompt with no context about audience, purpose, discipline, or constraints will receive an answer calibrated for the average case, not the student's specific situation. The Pricing Exercise (credited to Kharbach, 2026 in the original skill; this credit and the papers listed above have not been checked against the originals) is included as the anchor activity: students take a context-free AI answer ("What should I charge for a service?") and iteratively add constraints (type of service, location, target market, quality level), showing in real time how specificity transforms output from generically unhelpful to genuinely useful. The sequence teaches five prompt dimensions: context (who am I, what am I doing?), task (exactly what do I want?), constraints (what limits apply?), format (how should the output be structured?), and persona (what role should the AI take?). Prompt literacy is a prerequisite for effective AI use and a direct complement to AI output evaluation skills.
@@ -275,3 +288,11 @@ Return your output in this exact format:
 3. **Teaching prompt literacy may increase AI dependence.** Students who learn to write better prompts will get more useful AI outputs — which may reduce their motivation to develop independent skills. This skill should always be paired with `ai-output-critical-audit-designer` and `metacognitive-monitoring-ai-contexts` to ensure prompt literacy is part of a critical AI literacy framework, not a pure productivity optimisation.
 
 4. **Prompt outcomes are probabilistic, not deterministic.** The same prompt can produce different outputs on different runs. Compare-contrast activities should acknowledge this — students may need to run prompts 2-3 times to see consistent patterns, and "the refined prompt is always better" is not quite accurate (it's usually better, in ways consistent with the principles, but not always).
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI answer review worksheet builder](https://useaiblocks.com/skills/ai-answer-critique-lesson). It takes the lesson plan.
+- The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

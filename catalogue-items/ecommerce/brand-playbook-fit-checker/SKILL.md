@@ -39,11 +39,11 @@ This skill runs on its own. All it needs to start is the brand and the tactic. I
 
 When not to use:
 - The brand runs no public ads or pages. Study a competitor's own site and reviews by hand, or use the Ad library teardown counter on a brand that does run ads.
-- You have no budget for even a small test. Save the result for when you can fund one, and check a free option first: read the brand's reviews and landing pages by hand.
+- You have no budget for even a small test. Save the result for when you can fund one. The free check meanwhile: look the brand up in the Meta Ad Library (free, no account needed), and read its reviews and landing pages by hand.
 - You only want a count of a brand's ads by format. Use the Ad library teardown counter first.
 
 - **The brand and the tactic** (required), and why the person wants it.
-- **Its ad library and landing pages** (strongly advised): attach screenshots or links. Read attached images directly.
+- **Its ad library and landing pages** (strongly advised): screenshots of its ads from the Meta Ad Library with the date taken, and links or screenshots of two or three landing pages with the date viewed. Read attached images directly.
 - **Public financials** (optional): if the company is listed.
 - **The person's own situation** (strongly advised): price, cash, team size and how well known the brand is.
 

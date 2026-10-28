@@ -22,6 +22,22 @@ The owner describes a report once. You build it, run it, and save the definition
 
 Owners are pulling numbers out of three dashboards by hand and trying to find the story themselves. The job is to end that.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Check for an existing definition
 
 Before anything else, read `reference/saved_reports.md` and check whether this report already exists. Also check for a `report-definitions.md` in the working directory — that's where definitions land when the skill folder isn't writable (see Step 7).
@@ -141,3 +157,11 @@ Max two offers. Never repeat an offer the owner declined this session.
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, tell them it needs a connector that is not in this item. Either they export a CSV or XLSX from that tool and upload it here, or they set up the connection in their own AI tool (Zapier is one option, and needs its own paid account). Never hand-build calls against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Business snapshot writer](https://useaiblocks.com/skills/business-snapshot-writer). It takes the spreadsheet.
+- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

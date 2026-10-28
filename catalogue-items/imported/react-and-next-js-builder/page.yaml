@@ -7,8 +7,6 @@ job: build-websites
 headline: React and Next.js builder
 subhead: React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
 explain: |
-  React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
-
   The skill starts with a project scaffold if you need one, then generates components in a set structure. It applies common React patterns and Next.js performance rules, such as splitting code and loading images well. A bundle analyser shows what is making the app heavy, so you cut the real cause. It also covers accessibility checks and testing set-up. Python scripts do the scaffolding and analysis, and you need Node installed to run the result.
 
   The skill file names an agent, a slash command and other skills (cs-frontend-engineer, /cs:frontend-review, performance-profiler, a11y-audit). They belong to the author's full pack and are not in this item. The load-time targets and bundle budgets in its profiles, and the package sizes it quotes, are the author's starting points, not measured facts. Set your own from your users and pages, and check package sizes on bundlephobia or npm.
@@ -21,6 +19,7 @@ not_for:
   - "You only need a simple site with pages and text: use a website builder such as Shopify or WordPress."
   - "You need backend-only work like databases or servers: ask a backend developer or your AI for server code."
   - "Your site does not use React: use a developer who knows your current setup."
+  - "You only need one small component in a project you already have: ask your AI for it directly. You do not need the scaffold or bundle scripts."
 you_give:
   - A plain description of the screen you want
   - Your project folder, or a name for a new project
@@ -34,8 +33,9 @@ how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Make sure Node and Python are installed.
   - Add the skill folder to your AI, or paste the skill text into the chat.
   - The agent, slash command and extra skills named in the skill file are not included. Answer your AI's questions yourself and carry on with the scripts.
-  - Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask first. The decision script needs five answers before it runs: the main device and network, the load-time target in milliseconds, whether the pages must rank in search, whether the whole site sits behind a sign-in, and your team size. The skill also asks about your bundle budget, design system and accessibility target, but the script does not need those.
+  - "Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask first. The decision script needs five answers before it runs: the main device and network, the load-time target in milliseconds, whether the pages must rank in search, whether the whole site sits behind a sign-in, and your team size. The skill also asks about your bundle budget, design system and accessibility target, but the script does not need those."
   - Let your AI build the project and the component. Run it on your computer with npm run dev.
+  - The scripts and packages are free. The optional sign-in feature adds NextAuth.js, and sign-in providers such as Google or GitHub need their own keys from those services.
   - Ask for the bundle check. Fix the heavy packages it lists, then run the check again.
   - Open your site in the Chrome browser and run Lighthouse to measure real load speed. Lighthouse needs a live page URL, so run your site first. The bundle check alone does not show load speed.
   - Before you swap any package, check its real size on bundlephobia. The sizes in the skill are rough.

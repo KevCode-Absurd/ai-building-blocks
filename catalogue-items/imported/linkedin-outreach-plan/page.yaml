@@ -38,6 +38,8 @@ how_to_use:
   - Write your own comments from the roster. The plan will not write them for you.
   - Check your invitation volume before you write notes. Then ask for one note per person, with a line about them.
   - Send each message yourself. Comment for two weeks before you invite.
+  - Each week, run the volume check again and note how many invites were accepted. Slow down if acceptance drops.
+  - The figures in the skill, such as about 26.4% acceptance and a weekly invite limit near 100, come from the studies listed in references/outreach_ethics_and_benchmarks.md. Treat them as rough guides, not LinkedIn rules. The ban on automated messaging is in section 8.2 of LinkedIn's User Agreement (linkedin.com/legal/user-agreement), so read it there.
 output_sample:
   input:
     - Who you want to reach

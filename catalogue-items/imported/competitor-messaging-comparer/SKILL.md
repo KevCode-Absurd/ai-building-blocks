@@ -10,6 +10,24 @@ argument-hint: "<competitor or market segment>"
 
 Research competitors and generate a structured competitive analysis comparing positioning, messaging, content strategy, and market presence.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Competitors** (yours): the brands buyers compare you with.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Competitors** with the [Competitor ad format analyst](https://useaiblocks.com/skills/ad-library-teardown-counter). Bring reference ads, a spreadsheet (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for competitors, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Trigger
 
 User asks for a competitive analysis, competitor research, or market comparison. In Claude Code this can also be started with `/competitive-brief`; in ChatGPT, Gemini or a plain chat, just ask in words.
@@ -55,7 +73,7 @@ Gather intelligence from these categories of sources:
 - **Website**: homepage, product pages, pricing, about page, careers
 - **Blog and resource center**: content themes, publishing frequency, depth
 - **Social media profiles**: messaging, engagement, content strategy
-- **Product demos and free trials**: UX, features, onboarding experience
+- **Public product demos and tours**: UX, features, onboarding experience. Use only demo videos and tours that need no sign-up; never create an account or start a free trial for a rival
 - **Webinars and events**: topics, speakers, audience engagement
 - **Press releases and newsroom**: announcements, partnerships, milestones
 - **Job postings**: hiring signals that reveal strategic priorities (e.g., hiring for a new product line or market)
@@ -67,7 +85,7 @@ Gather intelligence from these categories of sources:
 - **Social listening**: mentions, sentiment, share of voice across social platforms
 - **SEO tools**: keyword rankings, organic traffic estimates, content gaps
 - **Financial filings**: revenue, growth rate, investment areas (for public companies)
-- **Community forums**: community forums (e.g. Reddit, Discourse), industry chat groups (e.g. Slack communities) — user sentiment
+- **Community forums**: community forums (e.g. Reddit, Discourse), industry chat groups (e.g. Slack communities) — user sentiment. Use only public posts or groups the user already belongs to; never create an account to join one
 
 ### Research Cadence
 - **Deep competitive analysis**: quarterly (full research across all sources)
@@ -333,3 +351,16 @@ After the brief, ask:
 - Draft messaging that exploits the positioning gaps identified?
 - Dive deeper into any specific competitor?
 - Set up a competitive monitoring plan?"
+
+Changed by AI Blocks (2026-10-28): added rules to read public pages one at a time, check site terms, and never log in, pass a paywall, create accounts or start free trials; demos and chat groups limited to public or already-joined sources.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the competitors.
+- The [Competitor store analyst](https://useaiblocks.com/skills/rival-store-comparer). It takes the competitors.
+- The [Competitor ad teardown writer](https://useaiblocks.com/skills/competitor-ad-teardown-writer). It takes the competitors.
+- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
+- **Plan your strategy** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the competitors.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -40,7 +40,7 @@ how_to_use:
   - Give it your product, key points, platform and the persona you want.
   - Read the compliance note and the script. Check every claim about the product (washing, warmth, fit, results) is true for your product. The example lines in the skill are placeholders, so replace them with facts you have checked.
   - Edit the script until it sounds like a real person talking.
-  - To make video, you need an AI that can run code, plus your own paid fal or Replicate key. Each clip costs money, so run the dry run first.
+  - To make video, you need an AI that can run code, plus your own paid fal or Replicate key. Each clip costs money, so run the dry run first. The skill's command is set up for the dLazy service. To use your own key, set FAL_KEY and add --provider fal, or set REPLICATE_API_TOKEN and add --provider replicate. Pass the video model ID from that service with --model, instead of the DLAZY_VIDEO_MODEL line.
   - The video command reads the shot list in examples/ugc-board.json. Replace the image paths in that file with your own consented face image and your own product photo, because the example images are not included. The --brand option and the model.reference setting are optional. You can skip both, but then the clips will not share one face.
   - Add a face image so every clip shows the same person. Use a model who has given written consent, never a customer or a public figure. If you have none, leave the face out and use hand and product shots. The skill's file paths (such as assets/model/face-a.jpg) are examples, so point them at your own files.
   - Join the clips with ffmpeg.

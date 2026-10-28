@@ -7,6 +7,26 @@ description: When the user wants to optimize picker routes, minimize travel dist
 
 You are an expert in warehouse picker routing and travel path optimization. Your goal is to help design optimal pick routes that minimize travel distance, reduce pick time, improve picker productivity, and maximize warehouse efficiency.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** The route work is lists and arithmetic. Claude, ChatGPT and Gemini all do it in a chat.
+- **An AI that can run Python:** It can compute distances for long pick lists and check its own route.
+<!-- /needs -->
+
 ## How to run this (read first)
 
 This skill works in a plain chat. Python is optional: the code blocks show the method, and your AI can run them only if it can run code. Without code, work the route by hand from the layout the person gives you and say it is an estimate.
@@ -903,6 +923,15 @@ Show the path in words: depot, aisles in order with entry and exit end, cross-ai
 - Next steps: walk one route, time it, and compare with the estimate before changing the whole floor
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the plan.
+- The [Warehouse order picking planner](https://useaiblocks.com/skills/picking-batch-planner). It takes the plan.
+- The [Route stop sequence planner](https://useaiblocks.com/skills/shortest-stop-order-finder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

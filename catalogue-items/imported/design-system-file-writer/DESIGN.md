@@ -74,7 +74,7 @@ The Hero is the first impression — it must be striking, creative, and never ge
 - **Feature Sections:** The "3 equal cards in a row" pattern is BANNED. Use 2-column Zig-Zag, asymmetric Bento grids (2fr 1fr 1fr), or horizontal scroll galleries
 - **Containment:** All content within `max-width: 1400px`, centered. Generous horizontal padding (`1rem` mobile, `2rem` tablet, `4rem` desktop)
 - **Full-Height:** Use `min-height: 100dvh` — never `height: 100vh` (iOS Safari address bar jump)
-- **Bento Architecture:** For feature grids, use Row 1: 3 columns | Row 2: 2 columns (70/30 split). Each tile contains a perpetual micro-animation
+- **Bento Architecture:** For feature grids, use Row 1: 3 columns | Row 2: 2 columns (70/30 split). A tile may carry a subtle micro-animation, following the pause and reduced-motion rules in section 8
 
 ## 7. Responsive Rules
 Every screen must work flawlessly across all viewports. **Responsive is not optional — it is a hard requirement. Every single element must be tested at 375px, 768px, and 1440px.**
@@ -92,11 +92,13 @@ Every screen must work flawlessly across all viewports. **Responsive is not opti
 > **Note:** Stitch generates static screens — it does not animate. This section documents the **intended motion behavior** so that the coding agent (Antigravity, Cursor, etc.) knows exactly how to implement animations when building the exported design into a live product.
 
 - **Physics Engine:** Spring-based exclusively. `stiffness: 100, damping: 20`. No linear easing anywhere. Premium, weighty feel on all interactive elements
-- **Perpetual Micro-Loops:** Every active dashboard component has an infinite-loop state — Pulse on status dots, Typewriter on search bars, Float on feature icons, Shimmer on loading states
-- **Staggered Orchestration:** Lists and grids mount with cascaded delays (`animation-delay: calc(var(--index) * 100ms)`). Waterfall reveals, never instant mount
+- **Access Needs First:** The product's access needs and the brief override every rule in this section
+- **Micro-Loops (optional):** Live-status components may loop — Pulse on status dots, Shimmer on loading states (it stops when loading ends). Any motion that starts on its own, lasts more than five seconds and sits beside other content gets a visible pause, stop or hide control (WCAG 2.2, success criterion 2.2.2 Pause, Stop, Hide)
+- **Staggered Orchestration (optional):** Lists and grids may mount with short cascaded delays (`animation-delay: calc(var(--index) * 100ms)`). Content stays readable and clickable without waiting for it
+- **Reduced Motion (required):** Under `@media (prefers-reduced-motion: reduce)`, turn off loops, cascades, layout swaps and spring movement, and show content in place at once. A short fade is fine
 - **Layout Transitions:** Smooth re-ordering via shared element IDs. Items swap positions with physics, simulating real-time intelligence
 - **Hardware Rules:** Animate ONLY `transform` and `opacity`. Never `top`, `left`, `width`, `height`. Grain/noise filters on fixed, pointer-events-none pseudo-elements only
-- **Performance:** CPU-heavy perpetual animations isolated in microscopic leaf components. Never trigger parent re-renders. Target 60fps minimum
+- **Performance:** CPU-heavy looping animations isolated in microscopic leaf components. Never trigger parent re-renders. Target 60fps minimum
 
 ## 9. Anti-Patterns (Banned)
 - No emojis — anywhere in UI, code, or alt text

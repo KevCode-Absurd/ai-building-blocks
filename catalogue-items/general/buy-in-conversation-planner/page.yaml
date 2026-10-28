@@ -159,3 +159,4 @@ terms:
     meaning: "A point you both already agree on, used to start the talk warmly."
   - term: "Objection map"
     meaning: "A list of doubts each paired with an answer or a question."
+before: [other-person-view-mapper]

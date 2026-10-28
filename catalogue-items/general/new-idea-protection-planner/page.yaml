@@ -19,11 +19,11 @@ when:
   - You need to protect a new program, product or format for a fixed time.
 not_for:
   - "Your work is finished or already established: it needs no shield, so use a normal review with your team."
-  - "You are not sure whether the idea is early or just broken: run the Early or broken checker first."
+  - "You are not sure whether the idea is early or just broken: run the Early project progress reviewer first."
   - "You want to map who is pulling on the idea and why: use the Incentive checker first, then bring its result here."
 
 you_give:
-  - The verdict from the Early or broken checker
+  - The verdict from the Early project progress reviewer
   - The pressure map from the Incentive checker (optional)
   - Your idea in a few lines (optional)
 you_get:
@@ -40,11 +40,11 @@ how_to_use:
   - Review it on the funding review date and again at the hand-off.
 output_sample:
   input:
-    - The verdict from the Early or broken checker
+    - The verdict from the Early project progress reviewer
     - The pressure map from the Incentive checker (optional)
     - Your idea in a few lines (optional)
   prerequisites:
-    - A verdict from the Early or broken checker
+    - A verdict from the Early project progress reviewer
   output:
     - name: What is protected
       contains: The idea as it stands today in two lines, plus three signs it is ready to be seen more widely.
@@ -140,14 +140,16 @@ improve:
   - Add the people in your business who tend to kill early ideas, so they are named as kept away for now.
   - Keep the three signs from each plan and see which predicted readiness.
   - Review the plan on its funding date and rewrite it if the idea changed.
-  - Pair it with "Early or broken checker" at every review.
+  - Pair it with "Early project progress reviewer" at every review.
+
+next: [early-or-broken-checker]
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Writing a plan with clear reasons is text work any strong chat AI does well with this skill."}
     - {name: "A shared calendar", why: "Review and hand-off dates belong where everyone can see them."}
   inputs:
-    - "A verdict from the Early or broken checker"
+    - "A verdict from the Early project progress reviewer"
     - "A pressure map from the Incentive checker"
     - "A list of the people who see the work today"
 

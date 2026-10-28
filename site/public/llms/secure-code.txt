@@ -1,17 +1,23 @@
 # Keep your code secure: AI Blocks
 
-> 92 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 101 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent injection evidence review assistant](https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence): Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner's written approval.
 - [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Share the agent and authorised test scope. Get a test plan, evidence-backed findings and retest results for checks that actually run.
 - [AI agent identity designer](https://useaiblocks.com/agents/agency-agentic-identity-trust): Design how your AI agents prove who they are, what they may do and what they did, with a threat list, permission map and tamper-proof log.
 - [AI agent launch security reviewer](https://useaiblocks.com/workflows/review-an-agent-before-launch): Share agent code, design, tools and packages. Get permission, OWASP and dependency findings with an evidence check and ranked fixes.
+- [AI app injection defender](https://useaiblocks.com/skills/ai-app-injection-defender): Find where hijacked instructions can reach your AI app, then add layers of defence. Get screening code and attack tests for prompt injection.
+- [AI app instruction and spending safeguards](https://useaiblocks.com/workflows/harden-an-ai-app-against-hijacked-instructions-and-runaway-bills): Share your app code and test setup. Get proposed code safeguards, test gaps, spending limits and an attack-test report where checks can run.
+- [AI spend limit checker](https://useaiblocks.com/skills/ai-spend-limit-checker): Check code that calls paid AI services for spend limits. Get a cost cap on every call, a hard count on every loop and retry, and a list of caps to set.
+- [AI system attack tester](https://useaiblocks.com/skills/ai-system-attack-tester): Find prompt injection, jailbreak and tool abuse risks in your AI app prompts. Get ranked findings with a fix for each. No live app needed.
 - [AI-written code security reviewer](https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor): Paste AI-written app code. Get a ranked list of leaked keys, open database rules and prompt injection holes, each with the fix and a rescan list.
 - [API security checker](https://useaiblocks.com/skills/api-security-checker): Share your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
 - [API security repair reviewer](https://useaiblocks.com/workflows/fix-api-security-gaps-with-tests-and-a-clear-pull-request): Review API sign-in, access and input checks, make fixes and review the tests and change risk before writing the pull request.
 - [App privacy engineering reviewer](https://useaiblocks.com/skills/copilot-gdpr-compliant): Check your code and pull requests against GDPR engineering practice. Get each gap with its file, the rule it breaks and a fix. Not legal advice.
 - [App security threat planner](https://useaiblocks.com/prompts/threat-list-maker): Describe your app, users and sensitive data. Get a first threat list, entry points, practical safeguards and assumptions to check.
 - [Application security reviewer](https://useaiblocks.com/agents/agency-security-appsec-engineer): Get a threat model and secure code review for your feature, with bugs to fix before merge, hardening tips and security requirements you can test.
+- [AWS access policy reviewer](https://useaiblocks.com/skills/aws-access-policy-reviewer): Share AWS access policies and role needs. Get permission risks, narrower drafts, and security checks.
+- [AWS security checker](https://useaiblocks.com/skills/aws-security-checker): Check your AWS account with read-only commands. Get a ranked list of security gaps in access, network, data and logs, each with a fix.
 - [Blockchain security reviewer](https://useaiblocks.com/agents/agency-security-blockchain-security-auditor): Paste your smart contract scope. Get an audit plan with reentrancy, oracle and access-control checks, ranked by how much user money is at risk.
 - [Cloud misconfiguration finder](https://useaiblocks.com/skills/cloud-misconfiguration-finder): Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
 - [Cloud security designer](https://useaiblocks.com/agents/agency-security-cloud-security-architect): Describe your AWS, Azure or GCP setup. Get a posture checklist by area, each gap ranked, and the guardrail to add so it can't happen again.
@@ -62,8 +68,11 @@
 - [Penetration test planner](https://useaiblocks.com/agents/agency-security-penetration-tester): Name your scope and confirm you have permission. Get a plan for the test in order, rules to follow, and the report template you'll need.
 - [Privacy engineer agent](https://useaiblocks.com/agents/agency-engineering-privacy-engineer): Get a privacy design for your product with a map of where personal data lives, deletion that reaches every system and consent that is enforced.
 - [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer): Describe the data your app collects. Get a privacy-first app design with less data kept, clear consent, set retention and safe storage.
+- [Project secrets and package risk review](https://useaiblocks.com/agents/weekly-dependency-and-security-sweep): Review exposed secrets and package risks. Compare earlier findings and get a cautious upgrade order with skipped checks named.
 - [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender): Describe your AI app. Map prompt-injection risks and safeguards for text it reads.
 - [Repeat-return reviewer](https://useaiblocks.com/skills/serial-returner-spotter): Check Shopify orders and returns for patterns that staff should review.
+- [Secret exposure review and storage setup](https://useaiblocks.com/workflows/find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site): Review project secrets and plan key rotation. Set up secret storage and check the deployed site for remaining exposure.
+- [Secret leak checker](https://useaiblocks.com/skills/secrets-hygiene-checker): Find likely leaked credentials without copying their values into reports, then get a safe triage plan.
 - [Secret storage and access manager](https://useaiblocks.com/skills/safe-secrets-manager): Check that your API keys and env variables are set and loaded, without showing the secret values in chat, logs or shell history.
 - [Secure development checker](https://useaiblocks.com/skills/secure-development-checker): Scan your project for code flaws, weak packages and exposed secrets. Get a secure development check with fixes ranked by severity.
 - [Security advisory exposure checker](https://useaiblocks.com/skills/advisory-exposure-checker): Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.

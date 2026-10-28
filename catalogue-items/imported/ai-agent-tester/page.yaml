@@ -7,7 +7,7 @@ job: test-and-fix-code
 headline: AI agent tester
 subhead: A test set, scoring rules and a release memo for your AI agent, built so a decision-maker can trust the result. It avoids cherry-picked demos.
 explain: |
-  A test set, scoring rules and a release memo for your AI agent, built so a decision-maker can trust the result. It avoids cherry-picked demos.
+  You start by describing your agent's job, its users and what must never happen. From that you get evidence a release owner can act on, not a handful of good demos.
 
   First it states what is being tested and what decision the test supports. Then it builds cases from real use, plus odd ones: bad input, long-tail requests, broken tools and attacks. A holdout set stays hidden while you tweak prompts. Each check uses the plainest fair judge: exact checks for facts, a rubric-driven AI judge for quality, and blind human review for risky or disputed cases. Everything is frozen and run against a baseline, repeated where results vary. Failures are read case by case before any average is trusted.
 when:
@@ -33,10 +33,20 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - "Describe your agent: its job, its users and what must never happen. Add your current version and any real examples."
+  - Leave out customer data, passwords, keys and private outputs unless your company's rules allow you to share them with this AI tool. Swap real names for labels such as Customer A.
   - Read the evaluation brief and the test set first. Fix anything that does not match how your agent is really used.
   - Run the cases on your agent and the baseline. The skill needs you to do this, or an AI that can run code and has permission to call your agent.
   - "Optional: run the aggregate_results.py script on your results file to get a summary with pass rates."
   - Give the decision memo to the release owner. They choose to ship, hold or roll out in part, and any failed critical case blocks release until they accept the risk.
+terms:
+  - term: Holdout set
+    meaning: Test cases kept hidden while you tune prompts, so the final score is not just the agent learning the tests.
+  - term: Contamination
+    meaning: When test cases leak into the prompts or examples the agent was tuned on, which makes scores look better than they are.
+  - term: Baseline
+    meaning: The current version you compare the new one against. The baseline delta is the change in score between them.
+  - term: Regression gate
+    meaning: A rule that blocks a release when a case that used to pass now fails.
 output_sample:
   input:
     - What your agent is for and who uses it

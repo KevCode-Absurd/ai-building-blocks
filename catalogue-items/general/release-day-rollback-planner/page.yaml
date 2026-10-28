@@ -98,7 +98,7 @@ output_shape: |
 
 tweaks:
   - what: "Name your platform"
-    how: "Say where it runs so steps match it. Otherwise they stay general and no commands are written."
+    how: "Say where it runs so steps match it. If you do not, it asks once, then keeps the steps general with no commands."
   - what: "Last known-good version"
     how: "Give the tag, build or backup point you would go back to. The undo steps start from it."
   - what: "Database changes"

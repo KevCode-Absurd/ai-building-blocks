@@ -71,6 +71,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
 - The [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
 - The [Weekly task focus planner](https://useaiblocks.com/skills/weekly-review-keeper). It takes the plan.
-- The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
+- **Plan your strategy** with the [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

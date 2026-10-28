@@ -121,3 +121,4 @@ works_best_with:
   inputs:
     - A list of pages you must never merge or delete
     - A note of any page you changed last month
+next: [on-page-seo-tuner]

@@ -1,6 +1,6 @@
 # Study competitor ads: AI Blocks
 
-> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Run an ad library teardown on any rival. Give a brand name, get their live ads sorted into hooks, offers, calls to action and tests to run.
 - [Amazon market researcher](https://useaiblocks.com/skills/amazon-market-researcher): Name an Amazon product, market and research question. Get a sourced report through Pangolinfo, with missing data clearly marked.
@@ -39,6 +39,7 @@
 - [Foreplay ad strategy planner](https://useaiblocks.com/workflows/foreplay-creative-strategy-runner): Share your Foreplay ads. Get groups by ad type, notes on what they show and an HTML test brief.
 - [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper): Find gaps in your market that no rival serves well. Paste your rivals and what buyers value to get a white space map and a small test.
 - [Meta competitor image ad writer](https://useaiblocks.com/workflows/competitor-gap-image-ads): Study competitor ads and map useful gaps. Write image ad copy from your proof, then check it against Meta ad rules.
+- [Patent prior-art searcher](https://useaiblocks.com/skills/patent-prior-art-searcher): Describe your invention and search goal. Get ranked related patents in an editable Word report.
 - [Reference layout image ad maker](https://useaiblocks.com/workflows/copy-winning-ad-layout): Rebuild an ad layout with your real product, supported claims and brand style. Get feed and story versions with a review record.
 - [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder): Find a rival's weak spot that matches your real strength. Get a message you can defend that buyers can check, plus the rival's likely reply.
 - [Store product data collector](https://useaiblocks.com/skills/store-product-data-collector): Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.

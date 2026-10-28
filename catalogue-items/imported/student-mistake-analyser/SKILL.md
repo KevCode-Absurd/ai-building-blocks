@@ -69,6 +69,26 @@ tags: ["error-analysis", "formative-assessment", "misconceptions", "diagnosis", 
 
 # Error Analysis Protocol
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). Bring a document.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Structures the analysis of student errors to distinguish between procedural errors (wrong method applied correctly), conceptual misunderstandings (fundamental misconception driving the error), and careless mistakes (correct understanding, faulty execution) — then generates targeted follow-up actions appropriate to each error type. Critically, the skill also produces a student self-analysis scaffold so learners can develop their own error-detection skills over time. AI is specifically valuable here because most teachers respond to all errors the same way ("try again" or "here's the correct answer"), when the research shows that each error type requires a fundamentally different response — re-teaching for conceptual errors, practice for procedural errors, and metacognitive monitoring for careless mistakes.
@@ -268,3 +288,12 @@ Write one specific thing: _______________________________________________
 2. **This skill analyses individual student errors; it does not address whole-class error patterns.** If 80% of the class makes the same error, the problem is likely with the instruction, not the students. For whole-class error patterns, the response should be re-teaching to the whole class, not individual error analysis. Chain with Gap Analysis from Student Work for class-level analysis.
 
 3. **Error analysis takes time, and time is the scarcest resource in teaching.** Detailed analysis of every student's errors is impractical for a class of 30. Use this skill selectively — for errors that are persistent, surprising, or shared by multiple students. For quick identification of common errors across a class set, a whole-class diagnostic approach (exit tickets, hinge questions) is more efficient than individual error analysis.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the notes.
+- The [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). It takes the notes.
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

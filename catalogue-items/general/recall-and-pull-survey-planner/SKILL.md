@@ -5,7 +5,7 @@ description: Use when you want to know whether an ad is working apart from price
 
 # Recall and pull survey planner
 
-Sales cannot tell you whether an ad works, because many other things move sales. This survey compares two groups: people who can say what the ad says, and people who cannot. If the first group buys more, the ad is pulling people over. This skill plans the survey. The Ad recall and pull calculator reads the answers.
+Sales cannot tell you whether an ad works, because many other things move sales. This survey compares two groups: people who can say what the ad says, and people who cannot. If the first group buys more, the ad may be pulling people over. That is a link, not proof: people who already buy may also remember the ad more, so a holdout or sales test is the next check. This skill plans the survey. The Ad survey results calculator reads the answers.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

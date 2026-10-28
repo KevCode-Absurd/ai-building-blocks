@@ -111,9 +111,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## After this
 
 Offer one next step in a short question, and say the user can type their own:
-- **Track the actions** with the [Employee feedback action review assistant](https://useaiblocks.com/agents/employee-feedback-action-review-assistant).
-- **Check a policy that came up** with the [Review staff adoption of a policy change](https://useaiblocks.com/workflows/review-staff-adoption-of-a-policy-change) workflow.
-- **Plan the next survey** with the [Employee survey designer](https://useaiblocks.com/skills/employee-survey-designer).
+- **Track the actions** with the [Employee feedback action reviewer](https://useaiblocks.com/agents/employee-feedback-action-review-assistant).
+- **Check a policy that came up** with the [Policy adoption support planner](https://useaiblocks.com/workflows/review-staff-adoption-of-a-policy-change) workflow.
+- **Plan the next survey** with the [Employee feedback survey planner](https://useaiblocks.com/skills/employee-survey-designer).
 
 ## Avoid
 

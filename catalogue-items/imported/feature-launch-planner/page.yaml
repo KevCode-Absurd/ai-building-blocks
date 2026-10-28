@@ -36,7 +36,7 @@ how_to_use:
   - Tell your AI the feature name, who it is for and your target date.
   - Paste your spec or notes, and list the teams involved, if you have them.
   - Ask for a launch plan. Check that the tier fits the size of your feature.
-  - Read the rollback triggers with your team and agree on them before go-live.
+  - Read the rollback triggers with your team and agree on them before go-live. The skill's example numbers, such as a 1 percent error rate, are placeholders. Set each one from your own numbers before launch.
   - Share the task list with each owner, then ask your AI to help you review the launch after it goes live.
   - Before you start, write the feature spec with the feature spec writer. Plan the rollout switch with the feature flag planner.
 output_sample:

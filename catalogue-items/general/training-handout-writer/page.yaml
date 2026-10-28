@@ -18,7 +18,7 @@ when:
   - "New hires get the session once and then ask the same questions for a month."
   - "You are turning a recorded session into something searchable."
 not_for:
-  - "Your process has no fixed steps yet: write the steps down with the people who do the work first, then run this."
+  - "Your process has no fixed steps yet: write the steps down with the people who do the work first, then run this. If only some steps are missing, it still runs and marks each gap MISSING."
   - "You need a full course, a lesson plan or quiz questions: ask a trainer or an instructional designer."
   - "You want a long how-to guide for a task people repeat: use the Repeat task how-to writer."
 
@@ -128,6 +128,8 @@ improve:
   - "Add your house format for how-tos so the handout matches the others."
   - "After a month, add the questions people still asked and run it again."
   - "Pair it with the Repeat task how-to writer when the handout becomes the standard."
+
+next: [repeat-task-how-to-writer, recall-quiz-writer]
 
 works_best_with:
   tools:

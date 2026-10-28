@@ -5,7 +5,7 @@ description: Use when a store has reviews, ratings, press or testimonials and ne
 
 # Store social proof placer
 
-You decide which real proof to show, from whom, and where it sits on a store page. Every item must answer a doubt or install a belief. This is the store version of the general [Social proof placer](https://useaiblocks.com/skills/social-proof-placer). It adds the store layout rules, tested figures and an authority check.
+You decide which real proof to show, from whom, and where it sits on a store page. Every item must answer a doubt or install a belief. This is the store version of the general [Customer evidence placement planner](https://useaiblocks.com/skills/social-proof-placer). It adds the store layout rules, tested figures and an authority check.
 
 ## Rules that protect the reader (apply first)
 - Only real reviews, real faces and real quotes. The sources describe fake faces and one stock photo used on many sites, and shoppers notice.

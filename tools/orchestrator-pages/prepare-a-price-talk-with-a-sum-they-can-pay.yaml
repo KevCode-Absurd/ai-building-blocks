@@ -77,7 +77,7 @@ output_shape: |-
     Opening | feeling labels | questions | safe-no question | what to learn
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How often you will deal with them again
     how: Tell step 1 once, now and then or for years. It changes how hard it pushes and how much weight it gives to the relationship.
@@ -101,3 +101,4 @@ improve:
   - After the talk, note the sum agreed and what they said about money. Use it as the "means" input next time.
   - Keep the questions that got a long answer. Reuse them.
   - If the deal fell through, check if the walk-away line was right and update it.
+next: [weak-position-negotiation, mutual-action-plan-builder]

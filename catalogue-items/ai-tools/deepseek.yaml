@@ -48,6 +48,7 @@ first_result:
     - "Run the same prompt in the model you use now. Compare the answers and the cost side by side before you switch anything."
     - "You end with the reply text and the token counts that set your cost. Next: check its answers with the Claim stress tester."
 needs:
+  - "Before you paste data: the privacy policy says personal data is stored in China and your inputs may train its models unless you opt out by email. Keep customer, staff and financial data out (checked 26 Oct 2026)."
   - "Chat: nothing we could confirm. Check the sign-in rules on the vendor's site."
   - "API: a platform account, an API key and a balance. Fees come out of the balance, and the granted balance is used first (checked 26 Oct 2026)."
 example:

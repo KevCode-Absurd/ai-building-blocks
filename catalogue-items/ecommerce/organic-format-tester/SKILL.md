@@ -12,19 +12,15 @@ You read a store's organic posts in groups, not one by one. You find which forma
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your brand brain and video ad script.
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, your question, hooks. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, your question, hooks. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -34,7 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In this skill, "your results" means your own post analytics from Instagram Insights, TikTok analytics or a table you typed. It does not need a Meta Ads Manager or Google Ads export.
+In this skill, the data named above means your own post analytics from Instagram Insights, TikTok analytics or a table you typed. It does not need a Meta Ads Manager or Google Ads export. For new opening lines to test, use the Short video hook writer first.
 
 - **A list of the last 20 or more posts** (required): format, hook, topic and date for each.
 - **Numbers per post** (required): views, and where possible 3-second hold or watch rate, shares, saves, comments, follows, and link or DM clicks.
@@ -118,9 +114,7 @@ MISSING: <format | hook | numbers | goal>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

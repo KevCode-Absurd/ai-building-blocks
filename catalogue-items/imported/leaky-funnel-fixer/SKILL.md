@@ -15,6 +15,22 @@ before every decision and records the outcome in your project's `docs/` folder, 
 any phase and pick up later. It works on websites and inside products alike; the unit of work is the
 flow and its ONE action, not the whole site.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Find the leak with numbers, learn the reason from customers, fix message → offer → proof → friction
@@ -250,3 +266,11 @@ Exit checklist — every box tied to an artifact:
 - [ ] Each shipped change is an Experiment Card with a pre-committed metric and a recorded verdict (EXPERIMENTS.md).
 
 Close the tracker: remaining Next Actions carried into FUNNEL.md and EXPERIMENTS.md so nothing is lost. Then route forward: when the flow converts and needs more qualified traffic, continue with the `grow-website` skill; when the leak has moved past conversion into engagement and retention, continue with the `improve-app` skill; when the whole site — look, typography, speed, message — needs the broader pass, continue with the `improve-website` skill.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Website speed repair planner](https://useaiblocks.com/prompts/speed-fix-week-planner). It takes the audit report.
+- The [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

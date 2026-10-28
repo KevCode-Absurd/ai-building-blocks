@@ -12,10 +12,10 @@ A product wins and keeps the job through the experiences around it: how easy it 
 This skill runs in any chat AI. It needs no files, web access or paid tools. One thing is required: a job spec for one situation. Everything else makes the result better.
 
 **What you need:**
-- **A job spec** (yours, or made by the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer)): one situation, the progress the customer wants, the practical, social and emotional sides, the struggle and the trade-offs.
+- **A job spec** (yours, or made by the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer)): one situation, the progress the customer wants, the practical, social and emotional sides, the struggle and the trade-offs.
 
 **Makes it better (optional):**
-- **Buyer stories** (yours): a story map from the [Switch story mapper](https://useaiblocks.com/skills/switch-story-mapper).
+- **Buyer stories** (yours): a story map from the [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper).
 - **Customer words** (yours): reviews, complaints, support emails and returns reasons. Paste them untouched.
 - **Your price and what the struggle costs the customer today** (yours): so the premium test uses real figures.
 
@@ -61,15 +61,6 @@ In this order:
 7. **The top three changes,** scored, each with owner, first step and measure.
 8. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If features crowd the weak moments** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
-- **If you want to track whether the fixes work** with the [Customer progress measure picker](https://useaiblocks.com/skills/customer-progress-measure-picker). Bring your job spec and the numbers you track.
-- **If you want to see which moments rivals could copy** with the [Job rival mapper](https://useaiblocks.com/skills/job-rival-mapper). Bring your job spec.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The JOB line is written, with MISSING for any part the spec lacks.
@@ -80,6 +71,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Use after buying is covered, not only the purchase.
 - The premium test uses the customer's cost of the struggle, with figures or MISSING.
 - The top three changes are scored and have a first step.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If features crowd the weak moments** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
+- **If you want to track whether the fixes work** with the [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). Bring your job spec and the numbers you track.
+- **If you want to see which moments rivals could copy** with the [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). Bring your job spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

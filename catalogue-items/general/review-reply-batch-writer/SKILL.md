@@ -10,7 +10,7 @@ A specific public reply to each review, with the risky ones flagged for you. It 
 ## When not to use it
 - You need to answer a private support ticket or email: write it yourself or use your help desk. This writes public replies only.
 - Your platform does not allow public replies to reviews: contact the customer another way.
-- You already wrote a reply and want it checked for risky promises: use the [Complaint reply promise checker](https://useaiblocks.com/skills/complaint-reply-promise-checker).
+- You already wrote a reply and want it checked for risky promises: use the [Customer reply promise checker](https://useaiblocks.com/skills/complaint-reply-promise-checker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

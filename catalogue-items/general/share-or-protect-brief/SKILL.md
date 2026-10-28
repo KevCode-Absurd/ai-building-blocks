@@ -81,15 +81,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the downside** with the [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). Bring the decision if your income or name is at stake.
-- **Hear the best case against it** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). Bring the one-sentence decision.
-- **Close the debate with partners** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the brief and each person's view.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Both options are shown with who gains and who pays.
@@ -99,6 +90,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Costs are listed for both options, not only the one not chosen.
 - No legal rule is stated as fact.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the downside** with the [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). Bring the decision if your income or name is at stake.
+- **Hear the best case against it** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). Bring the one-sentence decision.
+- **Close the debate with partners** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). Bring the brief and each person's view.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

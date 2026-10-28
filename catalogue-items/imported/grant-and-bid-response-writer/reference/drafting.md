@@ -42,7 +42,7 @@ Key personnel            20 pts
 Price                    10 pts
 ```
 
-That means past performance gets three times the care of key personnel. Small organizations routinely write the section they find most interesting rather than the one worth the most points, and then lose by a margin the reallocation would have covered.
+That means past performance is worth one and a half times as much as key personnel (30 points against 20), and technical approach is worth four times as much as price (40 against 10). Give each section care in proportion to its points. Small organizations routinely write the section they find most interesting rather than the one worth the most points, and then lose by a margin the reallocation would have covered.
 
 **Mirror the evaluators' language.** If the criterion says "demonstrated experience with occupied-facility work," use that phrase. Evaluators score against a sheet, often quickly, and making the match findable is not a trick — it is basic courtesy to the reader.
 
@@ -127,3 +127,5 @@ Run before anything is sent:
 **Then the owner approves the submission explicitly.** They see what is going, to whom, by when, and what it commits the organization to — the certifications, the delivery obligation, and the reporting that follows a win.
 
 **Submit early.** Portal traffic on deadline day is a real and recurring cause of missed submissions, and there is no appeal.
+
+Changed by AI Blocks (2026-10-28): corrected the points example, which said 30 points is three times 20; it is one and a half times.

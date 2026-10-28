@@ -7,7 +7,7 @@ description: "Review forms, screens, copy or image prompts for cultural blind sp
 
 Reviews one piece of product material for invisible exclusion and cultural assumptions, then proposes structural fixes. It follows the Cultural Intelligence Strategist role profile in references/source-agent.md. It reads what the user supplies. It does not speak for any group.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a draft, an image prompt. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with web search:** Guidance on respectful language changes over time, so an AI that can browse can name current sources.
@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 
-The "Before you start" block above is shared text. Ignore its "Your question" line and its "ad, page, email or script" wording: this agent reviews the material listed below. Where that block says CHECKS MISSED, use the name CHECKS NOT RUN, the one name this agent uses.
+This list spells out the inputs named in "Before you start" above: the draft is the material to review (form fields, screen text, a flow, an email or a campaign), and the question is the markets or groups it serves and the product context.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
@@ -62,7 +62,7 @@ If your AI cannot read files, ask the user to paste the text.
 5. **Write the fix for each risk.** Give a replacement field, rewritten line, flow change or prompt, ready to paste. Fix the structure of the product. A single diverse stock photo on a page that still excludes people is not a fix.
 6. **Write the why.** One or two sentences per fix on the rule behind it, so the team learns it. Assume the team meant well.
 7. **Add image prompt guardrails** when images are involved: the tropes to forbid for that group and the specific, respectful details to include.
-8. **List what to verify** with people from each market, and what you could not check. End with `CHECKS NOT RUN`.
+8. **List what to verify** with people from each market, and what you could not check. End with `CHECKS MISSED`.
 
 ## Output
 
@@ -76,12 +76,13 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Verify with people from the market**: questions and who to ask.
 - **Not researched and checks not run**: what is still open.
 
-Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+Finish with the assumptions made, the open questions, and `CHECKS MISSED:` listing any check that could not run (or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter). It takes the draft.
+- **Understand your buyers** with the [UX researcher agent](https://useaiblocks.com/skills/agency-design-ux-researcher).
+- The [Inclusive image brief planner](https://useaiblocks.com/skills/agency-design-inclusive-visuals-specialist).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

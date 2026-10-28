@@ -91,6 +91,7 @@ MISSING: <free thing | post | email tool | discount>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
+- The [Email flow results and rebuild review](https://useaiblocks.com/skills/monthly-email-flow-keeper). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,6 +11,27 @@ metadata:
 
 This skill enables an AI agent to perform end-to-end keyword research for any niche, product, or content initiative. The agent starts from seed keywords, expands into long-tail variations, classifies search intent, analyzes competitor keyword portfolios, and delivers a prioritized keyword strategy. The output helps content teams, SEO specialists, and product marketers target the right search terms to drive qualified organic traffic.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Google Search Console:** It is free and shows the real searches that already bring people to your site.
+- **Google Trends:** It is free and shows whether a term is rising, steady or seasonal.
+- **A paid keyword tool such as Semrush or Ahrefs:** It gives real volume, difficulty and rival rankings to paste in.
+<!-- /needs -->
+
 ## How to run this skill
 
 AI Blocks added these notes, and one line under Examples. The rest of the original skill below is unchanged. Where a note here disagrees with it, follow the note.
@@ -111,3 +132,12 @@ Source of the numbers: [YOUR EXPORT or ESTIMATE]
 - **Highly seasonal or trending keywords.** For topics driven by events (elections, product launches, holidays), standard volume averages are misleading. Use Google Trends to identify the spike window and plan content publication 4–6 weeks before the peak.
 - **Multilingual or regional keyword variations.** The same product may be searched differently by region — "mobile phone" (UK) vs "cell phone" (US). Run separate research per locale and avoid assuming translation equivalence.
 - **YMYL (Your Money or Your Life) topics.** Keywords in health, finance, and legal niches face stricter E-E-A-T requirements. Content must demonstrate author expertise and cite authoritative sources, or it will not rank regardless of keyword targeting.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). It takes the plan.
+- The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the keyword list and plan.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

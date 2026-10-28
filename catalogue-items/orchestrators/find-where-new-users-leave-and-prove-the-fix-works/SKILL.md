@@ -16,7 +16,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run the test with three people and one outsider. Implement the first-visit fix only with the owner’s approval. Export results only after the post-change cohort has completed the full observation window for the measure being reviewed. For 30-day retention, every included user must have had 30 days to return. Use the same cohort rules and complete window for the before and after groups. Earlier first-use results may be reviewed separately, labelled with their shorter window; they do not establish a 30-day retention result.
 
-3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan in `outputs/step-02-small-usability-test-planner.md`, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. If the post-fix export is not yet 30 days old for every user in it, write `MISSING: post-fix export with a full 30-day window`, hand back steps 1 and 2 and say to return once the window has passed. Read the supported before-and-after change as an observation, not proof that the fix caused it.
+3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan in `outputs/step-02-small-usability-test-planner.md`, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Date rule: the post-fix export date must be at least 30 days after the last sign-up in the post-fix cohort. Stop the affected comparison if either group is too young or the windows differ. If the post-fix export is not yet 30 days old for every user in it, write `MISSING: post-fix export with a full 30-day window`, hand back steps 1 and 2 and say to return once the window has passed. Read the supported before-and-after change as an observation, not proof that the fix caused it.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back

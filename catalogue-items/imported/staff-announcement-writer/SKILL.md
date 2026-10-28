@@ -10,6 +10,25 @@ metadata:
 
 Plan and write clear, consistent internal communications — routine updates, policy changes, benefits announcements, and sensitive messages — that employees actually read, understand, and trust.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a writing job that any strong chat AI does well.
+<!-- /needs -->
+
 ## Steps
 
 1. Ask for what you need in one message: what is changing and why, who it affects, the date, and which channels you will use. Facts you cannot share yet, and a request for a routine or sensitive tone, are optional.
@@ -76,3 +95,13 @@ Do not use this for one person's performance or discipline. Use a one-to-one or 
 - Equip managers before the broader announcement goes out; employees often hear news from their manager first, and managers need to be ready.
 - Avoid corporate euphemism in sensitive communications — vague language erodes trust faster than direct, honest language delivered with empathy.
 - Follow up after major announcements with an FAQ or open Q&A channel; a single announcement rarely answers every question employees have.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
+- **Lead the team** with the [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement). It takes the document.
+- The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer). It takes the document.
+- The [HR policy drafter](https://useaiblocks.com/skills/hr-policy-drafter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

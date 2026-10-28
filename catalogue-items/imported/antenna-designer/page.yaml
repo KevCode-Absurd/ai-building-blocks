@@ -7,7 +7,7 @@ job: build-software
 headline: Antenna designer
 subhead: Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
 explain: |
-  Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
+  This is for RF engineers and MATLAB users. It is not a general business tool. The result starts with a summary of frequency, gain, beamwidth and return loss, then the plots, then any board files you asked for.
 
   The skill drives MATLAB's Antenna Toolbox, so you need MATLAB with that toolbox. For standard types such as dipoles, patches and horns, it picks a catalogue design and analyses gain, beamwidth and return loss. For odd shapes it builds a custom design from basic shapes. For printed boards it sets up the layers and can export files for manufacture. For arrays it handles beam steering and grating lobes. It can also optimise size for gain or bandwidth.
 

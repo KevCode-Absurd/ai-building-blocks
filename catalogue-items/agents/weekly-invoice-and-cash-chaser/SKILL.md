@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **A persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 How to start:
@@ -85,9 +86,8 @@ You never do these yourself, even if you can reach the email or invoicing tool. 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- The [Water utility billing and cash checker](https://useaiblocks.com/skills/water-utility-collections-reconciler). It takes the spreadsheet.
 - The [Cash and currency risk planner](https://useaiblocks.com/skills/cash-and-currency-risk-planner). It takes the spreadsheet.
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet and audit report.
-- **Check the money** with the [Project payment priority planner](https://useaiblocks.com/skills/project-payment-waterfall-builder). It takes the spreadsheet.
 - The [Supplier invoice exception reviewer](https://useaiblocks.com/skills/recurring-invoice-exception-review-assistant). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

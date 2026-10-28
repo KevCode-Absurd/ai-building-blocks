@@ -7,7 +7,7 @@ job: teach-and-train
 headline: Student-led project planner
 subhead: A student has a project idea. You need to turn it into something doable, checked along the way, and tied to what the curriculum asks for.
 explain: |
-  A student has a project idea. You need to turn it into something doable, checked along the way, and tied to what the curriculum asks for. This skill drafts that plan.
+  This skill drafts the plan. Two terms from the author's framework appear in it. LT means learning target, a goal from your curriculum. A band, such as Band D, is the author's name for a developmental level; give your own year level or stage instead.
 
   Give it the idea, the student's level, the time they have, and the learning targets you must cover. It walks through five phases. Ideation checks whether the idea is feasible. A gap analysis lists what the student still needs to learn. Planning sets milestones. Execution adds mentor check-ins. Completion ends with a defence of the work. You also get a tracking sheet and a guide for judging whether the scope is realistic.
 
@@ -35,7 +35,7 @@ you_get:
   - A feasibility check for the scope
 how_to_use:
   - "Gather first: the student's year level and age band, their weekly time, the curriculum targets you must cover and any work they have done in this area."
-  - Open a chat with your AI and paste the skill text from the download. This page only shows a summary, so use the full text from the download.
+  - Open a chat with your AI and paste the skill text from the download. This page only shows a summary. The part to paste is the block under the "Prompt" heading in SKILL.md; the sections above it describe the inputs.
   - Paste the student's idea and the details above. Say how much you know about the topic (optional).
   - Read Phase 1 first, then stop. Have the mentor check the feasibility result. If the scope is too big, ask your AI to narrow it. Go on to the other phases only when the mentor agrees the scope is doable.
   - Share the plan and tracking sheet with the student. Next, run the learning target authoring guide and the coherent rubric logic builder to set targets and marking.

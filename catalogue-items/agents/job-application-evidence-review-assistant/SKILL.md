@@ -17,7 +17,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the application's questions and limits, corrections from earlier runs and last time's record.
 
-**The pieces it uses:** the [Tailor a job application to real evidence](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence) workflow, which runs the [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder), the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor) and the [Proofreader](https://useaiblocks.com/skills/proofreader). Read the workflow and the Proofreader in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
+**The pieces it uses:** the [Resume and application evidence writer](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence) workflow, which runs the [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder), the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor) and the [Text proofreader](https://useaiblocks.com/skills/proofreader). Read the workflow and the Proofreader in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
 
 **Tools that do this best:** an AI that reads pasted text or uploaded files and can save files. In plain chat, return the same tables as text, say nothing was saved, and give the record for the user to keep.
 

@@ -65,7 +65,7 @@ Then say what to do next: run the Scene detail picker if the place needs facts, 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
 - The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the story outline.
-- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the story outline.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

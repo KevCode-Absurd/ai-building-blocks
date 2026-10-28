@@ -84,9 +84,9 @@ terms:
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
 not_for:
-  - "You need to recheck a loan net debt limit after earnings or cash change: use the Net leverage covenant checker."
-  - "You want to see how much cash really went into working capital: use Noncash working-capital bridge."
-  - "You want to bridge one period's results to a trailing twelve-month figure: use the Trailing-period financial bridge. It does not handle supplier-finance balances."
+  - "You need to recheck a loan net debt limit after earnings or cash change: use the Net debt covenant checker."
+  - "You want to see how much cash really went into working capital: use Working capital cash change checker."
+  - "You want to bridge one period's results to a trailing twelve-month figure: use the Trailing year financial calculator. It does not handle supplier-finance balances."
   - "You want a ruling on how the accounts must classify these balances. Ask the auditor; this is a what-if view."
 output_sample:
   input:

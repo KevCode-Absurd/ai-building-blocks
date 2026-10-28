@@ -5,7 +5,7 @@ description: "Check an adviser's success fee against the engagement letter, cred
 
 # Check adviser fees in seller proceeds
 
-Check an adviser's success fee and see how the unpaid invoice reduces what the seller receives at closing. The fee has two tiers, a minimum and a retainer credit. The tier rate applies only to the slice of value inside its band.
+Check an adviser's success fee and see how the unpaid invoice reduces what the seller receives at closing. The fee has two tiers, a minimum and a retainer credit. The tier rate applies only to the slice of value inside its band. This is for a sell-side closing: it checks the adviser's invoice and the cash it takes from the seller, not an earnout or escrow (for those, use Check an escrow-funded earnout).
 
 **When not to use it:** You want the whole seller cash bridge with working capital and escrow (use Reconcile seller closing cash). Your price depends on leakage between the locked-box date and closing (use Reconcile a locked-box closing price). The adviser charges a flat fee with no tiers (check the invoice by hand).
 

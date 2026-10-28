@@ -12,6 +12,19 @@ Diagnose why organic traffic moved (down, flat, or unexpectedly up) using Ahrefs
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a search query report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Organic traffic dropped sharply
@@ -74,15 +87,19 @@ Segment by:
 
 A change in one segment requires different diagnosis than a change everywhere.
 
-| Pattern | Likely cause |
+The table says where to look first, not what the cause is. Each row assumes Layer 1 already ruled out tracking, reporting and seasonal effects for that segment. A cause is only confirmed by the evidence in Layers 3 to 5.
+
+| Pattern | Look first at (candidates, not conclusions) |
 | --- | --- |
-| One country dropped | Local algorithm update, hreflang issue, geo redirect issue |
-| Mobile dropped, desktop flat | Mobile usability or page speed regression |
-| One section dropped | Topical algorithm update or section-specific quality issue |
-| Branded queries dropped | Brand-level issue: site outage, reputation, manual action |
-| Non-branded dropped | Algorithmic ranking issue |
+| One country dropped | Local algorithm update, hreflang issue, geo redirect issue, local demand or holiday |
+| Mobile dropped, desktop flat | Mobile usability or page speed regression, mobile SERP layout change |
+| One section dropped | Topical algorithm update, section-specific quality or technical issue, falling demand for that topic |
+| Branded queries dropped | Fewer people searching the brand name (check impressions and search demand: less advertising, PR fading, seasonal demand), SERP changes on brand terms, site outage, reputation, manual action |
+| Non-branded dropped | Ranking losses, falling search demand, SERP features (ads, AI overviews, snippets) taking clicks, technical issues on the ranking pages |
 | Single page dropped | Page-level issue: content, technical, or competitive |
 | Sitewide dropped | Sitewide issue: penalty, technical, migration, or algorithm |
+
+To tell a demand change from a ranking change, compare impressions and average position in Search Console for the same queries: impressions down with steady position points to less demand; position down points to ranking.
 
 ### Layer 3: Page-level analysis
 
@@ -153,7 +170,7 @@ External-factor diagnosis benefits from competitive context: did your traffic dr
 - **Solving the wrong problem.** A drop diagnosed as "content quality" when the real cause was an accidental noindex on a deploy. Validate the hypothesis before fixing.
 - **No baseline for "normal."** Without a baseline, every fluctuation looks alarming. Establish what normal noise looks like before reacting.
 - **Treating one page as the site.** Site-wide and page-level diagnoses are different. Confirm scope first.
-- **Ignoring branded vs non-branded.** A drop in branded queries means a brand-level problem. A drop in non-branded means an SEO problem. Different teams own them.
+- **Ignoring branded vs non-branded.** Split them, because the likely causes and owners differ: branded drops often trace to brand demand (marketing, PR), non-branded drops to rankings or search demand (SEO). The split narrows the search. It does not prove a cause: check seasonality, measurement and demand for that segment before you assign it.
 - **Comparing wrong date ranges.** Comparing 28 days to the previous 28 days during a holiday distorts the picture. Use year-over-year for seasonal businesses.
 - **Stopping at correlation.** A deploy and a drop on the same day is a strong correlation, not proof. Find the mechanism.
 - **Single-source diagnosis.** Ahrefs sees position. Search Console sees clicks and queries. Analytics sees behavior. Logs see crawl. Use them together.
@@ -176,6 +193,13 @@ A diagnosis document with:
 Length: 4-10 pages. Stakeholders read this fast.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If required data is unavailable
 

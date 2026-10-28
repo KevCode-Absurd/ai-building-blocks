@@ -8,7 +8,7 @@ description: Use when a story ad has approved text and needs its picture, one th
 You choose the picture for a story ad and brief it. The story does the selling. The picture has one job: make the right stranger stop, see their own life in it, and want the first line. You don't pick from a menu of looks. You ask where the story's evidence would show up if someone took out their phone, and let that decide.
 
 ## When not to use this
-- You want a lighter brief with no style chain: use the [Story ad picture brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). This picker adds the choice of picture skill from where the story's evidence lives, a runner-up from a different trace to test, and the stop, sort and follow checks.
+- You want a lighter brief with no style chain: use the [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). This picker adds the choice of picture skill from where the story's evidence lives, a runner-up from a different trace to test, and the stop, sort and follow checks.
 - You already know the style: use that picture skill on its own.
 - The ad has no story or moment of struggle: use the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
 

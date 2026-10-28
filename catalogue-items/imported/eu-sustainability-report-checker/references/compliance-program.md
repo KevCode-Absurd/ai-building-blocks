@@ -7,10 +7,10 @@
 ## 1. CSRD Implementation Roadmap
 
 ### Phase 0 — Scoping (Months 1–2)
-- [ ] Confirm in-scope status: check size thresholds (employees, turnover, assets), listing status, PIE status
-- [ ] Determine first mandatory reporting year (FY 2024, 2025, 2026, or 2028)
+- [ ] Confirm in-scope status with the one scope rule in SKILL.md: more than 1,000 employees AND net turnover above €450 million. Do not use the older employees/turnover/assets tests
+- [ ] Determine first mandatory reporting year from SKILL.md's dates list, and confirm it with counsel. The old FY 2024 / 2025 / 2026 / 2028 waves were changed by the 2026 Omnibus
 - [ ] Identify group structure: parent, subsidiaries; check if subsidiary can rely on group CSRD report
-- [ ] Assess non-EU company obligations if applicable (>€150M EU turnover)
+- [ ] Assess non-EU company obligations if applicable (the Omnibus line is €450M turnover generated in the EU; confirm the other conditions with counsel)
 - [ ] Identify existing ESG reporting: GRI, TCFD, CDP, SASB, NFRD — baseline assessment
 
 ### Phase 1 — Foundation (Months 2–5)
@@ -57,7 +57,7 @@
 - [ ] Update DMA annually
 - [ ] Track ESRS amendments and Commission guidance
 - [ ] Monitor Omnibus Package simplifications (post-2025 legislative changes)
-- [ ] Begin preparation for reasonable assurance (phased in post-2028)
+- [ ] Check whether reasonable assurance will ever apply. This is unconfirmed (see SKILL.md, Third-Party Assurance); plan for limited assurance
 
 ---
 
@@ -191,14 +191,14 @@ Complete this table after DMA. For each material ESRS topic, assess current data
 
 ### Limited Assurance vs. Reasonable Assurance
 
-| Aspect | Limited Assurance (Current) | Reasonable Assurance (Future) |
+| Aspect | Limited Assurance (Current) | Reasonable Assurance (only if it is ever required; unconfirmed) |
 |--------|----------------------------|------------------------------|
 | Standard | ISAE 3000 (Revised) | ISAE 3000 (Revised) — higher standard |
 | Procedures | Inquiries + analytical procedures | As above + substantive testing |
 | Evidence | Less extensive | More extensive; site visits typical |
 | Conclusion | "Nothing came to our attention" | "The information is fairly presented" |
 | Documentation | Less detailed | Detailed audit-like evidence file |
-| Timeline | CSRD Phase 1 (now) | Commission review by 2028 |
+| Timeline | Required now | Not confirmed; check Directive (EU) 2026/470 on EUR-Lex |
 
 **Practical Tip:** Build reasonable assurance-quality documentation from day one — retroactively improving evidence trails is very difficult and expensive.
 
@@ -255,8 +255,8 @@ Where value chain data is not directly available, companies must disclose:
 
 | Aspect | NFRD (old) | CSRD (new) |
 |--------|-----------|-----------|
-| Companies in scope | ~11,000 (PIEs >500 employees) | ~50,000 (all large + listed SMEs) |
-| Non-EU companies | Not covered | >€150M EU turnover |
+| Companies in scope | ~11,000 (PIEs >500 employees) | Original 2022 text: ~50,000 (all large + listed SMEs). After the 2026 Omnibus: more than 1,000 employees AND net turnover above €450M |
+| Non-EU companies | Not covered | Original 2022 text: >€150M EU turnover. After the 2026 Omnibus: €450M turnover generated in the EU |
 | Standards | No mandatory standards | Mandatory ESRS |
 | Materiality | Financial only | Double materiality (impact + financial) |
 | Value chain | Not required | Required where material |
@@ -270,8 +270,10 @@ Where value chain data is not directly available, companies must disclose:
 
 The European Commission proposed CSRD simplifications in the "Omnibus Package" (February 2025):
 
-**Proposed changes (not yet final as of ESRS publication date):**
-- Narrowing scope: may raise employee threshold to 1,000 (from 250)
+**Status:** these changes were adopted. The European Parliament's Omnibus I page says the text was published in the Official Journal on 26 February 2026 and entered into force on 18 March 2026, with the scope rule now more than 1,000 employees AND net turnover above €450M. SKILL.md holds the one scope rule and the list of dates to confirm.
+
+**What the 2025 proposal covered:**
+- Narrowing scope: raise the employee threshold to 1,000 (from 250)
 - Reducing mandatory datapoints
 - Delaying listed SME obligations
 - Simplifying value chain reporting requirements
@@ -279,3 +281,5 @@ The European Commission proposed CSRD simplifications in the "Omnibus Package" (
 **Important:** Always verify the current legislative status before advising clients on scope and datapoint requirements. Check EUR-Lex and the European Commission website for latest developments.
 
 The underlying ESRS standards issued under Commission Delegated Regulation (EU) 2023/2772 remain the definitive source until amended.
+
+Changed by AI Blocks (2026-10-28): replaced the old size tests, reporting waves and non-EU line with the 2026 Omnibus scope rule, and marked reasonable assurance as unconfirmed.

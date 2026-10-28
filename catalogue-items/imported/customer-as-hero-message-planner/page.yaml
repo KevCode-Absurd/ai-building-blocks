@@ -31,11 +31,13 @@ you_get:
   - Homepage and landing page copy
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the SKILL.md text. No code or paid tools are needed.
+  - Gather first: what you sell, the customer role who buys it, the problem they face, your current homepage or pitch copy, and any proof you can check (results, reviews, case studies). If you have no proof you can check, say so and leave it out.
   - Tell your AI what you sell, who buys it and the problem your customer faces.
   - Add your current homepage or pitch copy and your proof if you have them. Say if you have none.
   - Read the score, then the brand script. Check that the customer is the hero and you are the guide.
   - Replace any placeholder such as [your real figure] with a true fact. Do not publish proof you cannot verify. If you have no proof, leave the proof line out and show a plain process instead.
   - Use the one-liner, pitch and website copy once you are happy with the script.
+  - Next, put the one-liner and pitch on your homepage and in your profiles. Then use the skill's email sequence notes to plan your follow-up emails.
 output_sample:
   input:
     - What you sell and who buys it

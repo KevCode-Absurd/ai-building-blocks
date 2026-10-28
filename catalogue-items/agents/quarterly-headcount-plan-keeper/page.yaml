@@ -33,6 +33,8 @@ how_to_use:
   - Give counts and roles only. Leave out names and individual pay.
   - The first time it builds a plan and a forecast for you to approve. After that it compares each quarter with them.
   - Read the update with your leaders. The decisions on hires and budget are yours.
+  - It does not start by itself. Run it each quarter, or connect a scheduler if your AI app has one.
+  - For a company of about 15 to 30 people, it judges change by the number of people, not the 20% rule, because one hire moves the share a lot. Under 15 people, use the Headcount business case builder for each hire instead.
 output_sample:
   input:
     - Last quarter's headcount by team, with hires and exits as counts
@@ -124,9 +126,10 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the headcount folder and read last quarter's files each time.
+      why: It can keep the headcount folder and read last quarter's files each time. It is a paid product that needs a Claude plan or API credits. Any chat AI works if you paste last quarter's files back in.
     - name: Your HR system or a spreadsheet
       why: Export counts by team, hires and exits here, without names or individual pay.
   inputs:
     - Your people budget by team and month
     - The growth goals for the next year
+next: [headcount-business-case-builder, hiring-search-brief-writer]

@@ -7,7 +7,7 @@ job: organise-work
 headline: Slack message finder
 subhead: The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
 explain: |
-  The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
+  This is Anthropic's slack-search skill, copied as it is under the MIT licence. We only gave it a plain name.
 
   It starts broad, then narrows with filters such as channel, sender and date. If there are too few hits, it drops filters and tries other words. It splits big questions into smaller searches: the topic first, then who said what, then which channel. It picks between public search and search that includes private channels, which asks for your consent first. It can also look up channels and people. This needs Slack connected.
 when:
@@ -30,11 +30,12 @@ you_get:
   - Channels or people tied to the topic
   - A short summary of what was said
 how_to_use:
-  - Connect Slack to your AI. This skill needs that link to search.
+  - Connect Slack to your AI. In Claude, add the Slack connector in settings. It gives your AI the search and read tools this skill names, such as slack_search_public, slack_read_thread and slack_read_channel. Without a Slack connection the skill cannot search.
   - Paste this skill into a chat with your AI, or add it as a skill.
   - Ask your question in plain words, like what was decided about the launch date.
   - Add a channel, person or date if you remember one. Say yes if it asks to search private channels.
   - Check the answer against the messages it quotes. Open the thread in Slack if you need more.
+  - Next, use what you found. Reply in the thread, copy the decision into your notes or doc, or ask your AI to turn it into a task list.
 output_sample:
   input:
     - What you want to find, in plain words

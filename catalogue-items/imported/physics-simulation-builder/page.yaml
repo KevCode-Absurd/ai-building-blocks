@@ -35,6 +35,7 @@ you_get:
 how_to_use:
   - Check you have MATLAB R2025a or newer with the PDE Toolbox, a paid add-on. Without it the skill cannot run. Open a chat with an AI that can run MATLAB code.
   - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - "Gather first: the part's dimensions and their unit, the material names or properties, each load with its size and direction, which faces are fixed, and the analysis you want (stress, heat or another type)."
   - Pick one set of units and keep to it, for example metres, pascals, watts and kelvin. The toolbox has no units of its own, so a mix-up gives wrong numbers with no warning.
   - Describe your part, its materials, and the loads, fixed faces or temperatures. Say which analysis you want. Attach your CAD file if you have one.
   - Ask your AI to build, mesh, solve and plot the model, then report the key values.

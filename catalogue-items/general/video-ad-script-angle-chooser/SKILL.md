@@ -65,4 +65,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No tone claims a worry that has nothing at stake.
 - Nothing says the viewer has a health condition.
 
-For the full version with every check, use the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker).
+For the full version with every check, use the [Video ad format planner](https://useaiblocks.com/skills/video-ad-script-type-picker).

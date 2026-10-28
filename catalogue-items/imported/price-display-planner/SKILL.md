@@ -7,6 +7,25 @@ description: Use when setting or reviewing the full price of a product, plan, or
 
 Choose the digits, structure, and placement of a full price so it sends the signal you want. The last digits of a price tell people whether to think about quality or about cost, complex prices get read as expensive, and where the price sits on the page changes how big it feels.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Deciding whether a price should be rounded ($200), just-below ($199), or precise ($203)
@@ -44,7 +63,7 @@ Collect, or state your assumption:
 4. **Prefer a flat rate** that covers what most customers want ($50/month, all-in; unlimited revisions), priced *above* the pay-per-use equivalent — a $6,000 fixed fee beat $50/h × 100 h. Keep pay-per-use only as a low-commitment entry tier.
 5. **Keep components simple** when you must price separately: rounded amounts ($0.10/min, not $0.07), the same ending across components, no service charge tacked on, options easy to compare side by side. Add-ons follow the same rule ($15, not $12.35).
 6. **Place the price below the product** image, not above; the same price reads lower.
-7. **Color:** mostly male audience and a routine, low-scrutiny purchase → every price in red; the effect disappears for expensive or important purchases. Mixed red and black backfires. Audience unknown or mixed → black.
+7. **Color:** mostly male audience and a routine, low-scrutiny purchase → every price in red; the effect disappears for expensive or important purchases. Mixed red and black backfires. Audience unknown or mixed → black. This colour effect rests on weak evidence: test it on your own page first, and never use it to show different prices or colours to people based on their gender.
 8. **Hand off:** sale prices → `discounts`; validating the level → `price-research`.
 
 ## Output
@@ -57,6 +76,14 @@ Collect, or state your assumption:
 | Structure | Flat rate / pay-per-use / n.a. |
 | Placement & color | Price below the product image; black (mixed audience) |
 | Alternatives rejected | $199 (just-below reads as price-led; save for promotions), $197.50 (precision signals nothing here) |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

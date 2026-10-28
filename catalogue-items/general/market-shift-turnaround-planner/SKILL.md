@@ -82,16 +82,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Turn the cash plan into a 30, 60 and 90 day forecast** with the [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the cash plan.
-- **Plan the move into the near market** with the [Market expansion sequencer](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the near market and the new range.
-- **Test the new range cheaply** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **If the cash plan shows a gap you cannot close** with the [Layoff plan writer](https://useaiblocks.com/skills/layoff-plan-writer). It takes the cash plan. Ask a lawyer or HR adviser first.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - It names the market shift and when it began.
@@ -100,6 +90,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It sets a share target and a date.
 - The cash plan says to take loans, asset sales and staff cuts to a qualified adviser.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Turn the cash plan into a 30, 60 and 90 day forecast** with the [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the cash plan.
+- **Plan the move into the near market** with the [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the near market and the new range.
+- **Test the new range cheaply** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **If the cash plan shows a gap you cannot close** with the [Layoff plan writer](https://useaiblocks.com/skills/layoff-plan-writer). It takes the cash plan. Ask a lawyer or HR adviser first.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -31,4 +31,4 @@ credits:
   - title: dspy skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/dspy
-    used: Copied under the MIT licence. We gave it a plain name, updated the model setup code to the newer dspy.LM style and added version notes.
+    used: Copied under the MIT licence. We gave it a plain name, updated the model setup code to the newer dspy.LM style, added version notes, fixed a broken string in one code example and removed install extras that do not exist on PyPI. We added Before you start and After this sections that link to other AI Blocks steps.

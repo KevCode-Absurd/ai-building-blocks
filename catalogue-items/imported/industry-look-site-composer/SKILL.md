@@ -16,6 +16,23 @@ It is the build-side counterpart to `competitor-experience-audit`. The audit mea
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A design direction** (yours): the page's type, colours and layout rules.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, an audit report, a design direction. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Companion skills (added by AI Blocks)
 
 This skill names companion skills. In the AI Blocks library, some exist under plain names: `competitor-experience-audit` is the Competitor site experience auditor, `design-standards` is the Page design standards checker, `creative-direction` is the Aesthetic direction brief writer, `design-system` is the Design system auditor or the Brand style setup wizard, `brand-voice` is the Brand voice rules writer and `seo-onpage` is the On-page SEO tuner. `information-architecture`, `frontend-component-build` and `accessibility-audit` are not in this library. When a step routes to a skill the user does not have, do not pretend you ran it. Write that step in the hand-off list as work for a designer or developer, and say so.
@@ -203,6 +220,13 @@ Default output is a markdown set of composition notes at `composition-[site-shap
 Keep notes under 1500 words. The notes are a spec for the implementation skills; if they need more detail, that is a sign one of those skills should own the deeper specification.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Website designer](https://useaiblocks.com/skills/website-art-director). It takes the page layout spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Reference files
 

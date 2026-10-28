@@ -33,9 +33,10 @@ how_to_use:
   - Use an AI that can run code and reach the web. This skill needs Python 3.11 or later and internet access.
   - Download the skill folder and give it to your AI, or upload its files to the chat.
   - Start small. Ask your AI to run resolve_terms.py on one sample term, such as a tissue name, and show you the result.
-  - Then give it your full list, and name the ontology if you know it.
+  - Then give it your full list, and name the ontology if you know it. Put one term per line in a plain text file, or keep the terms in one column of a spreadsheet saved as TSV or CSV.
   - Read the ID and label for each match. Check that the meaning fits your sample.
   - For an old file, ask your AI to run validate_terms.py on your ID and label columns.
+  - Next, before you submit the table, run validate_terms.py --strict on it so any unknown or out-of-date ID stops the check. Keep the lookup record with the file, so others can see where each ID came from.
 output_sample:
   input:
     - A list or column of lab terms, such as tissue, cell type or disease names

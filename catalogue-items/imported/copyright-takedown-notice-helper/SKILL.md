@@ -19,6 +19,22 @@ Three modes. Pick one:
 - Respond mode — triage a takedown someone sent you. Options: comply / counter / engage / ignore.
 - `a counter-notice draft (counter mode)` — draft a §512(g)(3) counter-notice. Loud gate for the federal-jurisdiction admission and the perjury statement.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Instructions
 
 1. **Collect the facts in plain words.** This works in a plain chat. No plugin, saved profile or setup interview is needed. Ask for: who must approve a notice before it goes out; the work, who owns it and any registration; the exact web addresses of the copies; and the user's own read on fair use. Use those answers wherever the steps below mention a practice profile or approval matrix, and say so at the top of the draft. Ignore any step below that mentions slash commands, `~/.claude` paths, `CLAUDE.md`, matter workspaces or the setup interview. Save files named notice-v1.md, submission.md and so on only if the AI can save files; in a chat, give the text in the reply. Wherever a step mentions a "plugin config", a "work-product header" or a "matter folder", use the plain line "Draft for lawyer review. Not legal advice." at the top and keep the text in the reply or in one folder the user names.
@@ -445,3 +461,10 @@ Decision posture on subjective legal calls: when uncertain whether the use is fa
 - **Bypass the gate.** The gate runs every time in `--send` and `--counter` modes.
 - **Invent citations.** Any cites included are source-tagged and flagged for verification; no silent supplement.
 - **Handle non-US regimes.** DMCA is US-specific. For EU DSA, UK OSA, India IT Rules, and other regimes — flag and route.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

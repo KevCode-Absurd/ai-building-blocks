@@ -34,9 +34,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Paste your past revenue and cost numbers. A spreadsheet export or a pasted table both work.
   - Answer the questions about your time frame, business unit, and main revenue and cost drivers.
+  - If any past number is missing, your AI marks each figure it fills in as an assumption. Confirm or replace each one before it builds the forecast.
   - Check the list of assumptions first. Change any that look wrong, then ask for a new version.
   - Save the budget against actuals layout. Fill in real numbers each month to see the gaps.
-  - Only ask for the calculation script if your AI can run code. Otherwise it works through the numbers in the chat.
+  - Only ask for the calculation script if your AI can run code. The script checks the sums, such as growth, scenarios and budget against actual gaps. Without it, you get the same plan with the sums worked in the chat, so check them yourself.
+  - Next, compare the budget with actuals each month. Rerun the forecast when actuals move away from the plan.
 output_sample:
   input:
     - Two or three years of past revenue and cost numbers

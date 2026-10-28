@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -64,10 +64,10 @@ Pause here: Open the admin and do the base settings from the plan: business deta
 4. **Shipping rate planner.** Use the skill `shipping-rate-planner`. Give it your own countries and carrier costs. Uses them (not step 3's menu plan) plus weights and sizes from the step 2 sheets. Hands the next step the zones, rates and free-shipping line.
 5. **Store tax setup planner.** Use the skill `store-tax-setup-planner`. Give it the shipping zones from the step 4 file. Takes them as where you ship, and the product sheets from step 2. Hands the next step the tax settings and test carts.
 6. **Store go-live checker.** Use the skill `store-go-live-checker`. Give it the step 1, 4 and 5 files and the store you built. Checks the finished store against the tax, shipping and setup plans before it. Ends with a score, blockers and a test-order plan.
-7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run (or "none").
 
 ## What you hand back
-6 step files and the summary. The last file holds the audit report.
+6 step files and the summary: `outputs/step-01-shopify-store-setup-planner.md`, `outputs/step-02-product-and-variant-setup-planner.md`, `outputs/step-03-collections-and-menu-planner.md`, `outputs/step-04-shipping-rate-planner.md`, `outputs/step-05-store-tax-setup-planner.md` and `outputs/step-06-store-go-live-checker.md`, which holds the go-live score, blockers and test-order plan. The `HAND-BACK SUMMARY` comes last.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -79,5 +79,6 @@ Pause here: Open the admin and do the base settings from the plan: business deta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker). It takes the audit report.
+- The [Shopify store policy checker](https://useaiblocks.com/skills/store-policy-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

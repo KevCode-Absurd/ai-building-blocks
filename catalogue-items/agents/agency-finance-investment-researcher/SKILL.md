@@ -9,7 +9,7 @@ Researches one company or asset for one time horizon. One asset per request. It 
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: separate the thesis from the story, give the bull and bear case equal weight, use primary sources, put a number on the downside, state the horizon and confidence, and name the thesis breakers. The profile's report template has a Buy, Hold or Sell rating and a price target. Do not use those two fields. Its role language, track-record claims, tool lists and success targets are examples, not facts about this run. They do not grant tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload and web access:** It can read an annual report you attach and look up filings, with the link beside each fact.
@@ -32,7 +32,7 @@ How to start:
 
 These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
-Not for: a buy or sell call for your own money (take that to a licensed adviser), or a quick one-page note on a listed company (use the [Stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer)).
+Not for: a buy or sell call for your own money (take that to a licensed adviser), or a quick one-page note on a listed company (use the [Indian stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer)).
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the brief it limits, and carry on. Never fill a gap from memory or guess.
 
@@ -83,7 +83,7 @@ End with a line saying this is research, not personal financial advice. Finish w
 
 Next: for ratios from the company's filings, use the [Company financial health reviewer](https://useaiblocks.com/skills/company-financial-health). For a formal deal paper, use the [Investment committee memo drafter](https://useaiblocks.com/skills/investment-committee-memo).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Property net asset value calculator](https://useaiblocks.com/skills/investment-property-nav-bridge). It takes the document.

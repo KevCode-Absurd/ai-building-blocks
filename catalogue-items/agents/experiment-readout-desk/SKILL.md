@@ -16,13 +16,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a spreadsheet, a plan, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, a plan, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -31,7 +32,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The "Before you start" block above is shared text. Ignore its "Objection map", "Your offer", "Plan" (a dated plan with decision rules) and "Your results" (Meta or Google Ads export) lines: they belong to a sales-page job, not a test readout. This job uses the list below.
+This list spells out the inputs named in "Before you start" above: the plan is the test plan, the spreadsheet is the traffic numbers, and the data is the per-version test export. The objection map and offer lines come from the planner step and only matter if the test changes a sales page. Do not ask for them otherwise, and do not ask for ad exports.
 
 - **The test plan** (required before a test): what changes, for whom, the rate it should move, by how much, and the read date.
 - **Traffic numbers** (required before a test): visits, conversions and revenue for the pages or flow in the test, for the last few weeks.
@@ -77,7 +78,7 @@ You never do these yourself, even if you can reach the testing tool. You list th
 - **The lesson:** if earned, the cause and the rule.
 - **Register:** the team's tests this year, with verdicts, so the hit rate is visible.
 - **Files:** each file, and every `MISSING:` line.
-- **Next:** log the lesson in `register.md`, then plan the next test from it. The "After this" links below are shared suggestions about business ideas. Offer the Minimum experiment planner only if the team wants a smaller next test.
+- **Next:** log the lesson in `register.md`, then plan the next test from it. If the team wants a smaller next test, offer the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker).
 
 ## Checks before you hand it back
 - The test changed one thing and named one rate before it ran, or it was sent back.
@@ -90,7 +91,8 @@ You never do these yourself, even if you can reach the testing tool. You list th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons and plan.
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

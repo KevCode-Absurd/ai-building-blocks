@@ -10,7 +10,7 @@ Turns a rough description of a repeat task into numbered steps with expected res
 ## When not to use it
 - Your task has many roles or branches: use "Repeat task step guide writer".
 - You want to review a runbook you already have: use "SOP and runbook checker".
-- You need a contract or long document made simple: use "Plain-words contract summary".
+- You need a contract or long document made simple: use "Contract plain-language summary writer".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The task** (required): its name, how often it runs and who does it. This is what the "Your question" line above means here: paste these three items and your steps in one message.
+- **The task** (required): its name, how often it runs and who does it. This is what the "Your question" line in Before you start means here, and no project files are needed: paste these three items and your steps in one message.
 - **Your steps** (required): as you do them now, even if rough.
 - **What usually goes wrong** (optional).
 
@@ -46,7 +46,7 @@ After the how-to is written, ask someone who has never done the task to follow i
 6. **Test it.** Could a new person follow it with no questions? Mark any step that assumes knowledge with `MISSING:`. Never invent a result a step "should" show if the user did not describe it; write `MISSING: expected result`.
 
 ## What you hand back
-PURPOSE. BEFORE YOU START. STEPS (each with You should see and If not). CHECK IT WORKED. UNDO IT. WHO TO ASK. `MISSING:` lines.
+PURPOSE. BEFORE YOU START. STEPS (each with You should see and If not). CHECK IT WORKED. UNDO IT. WHO TO ASK. `MISSING:` lines. Last, CHECKS MISSED: one line for each check below that failed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -61,4 +61,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Steps that can fail have a fix.
 - Nothing is assumed that a new person would not know.
 
-For the full version with every check, use the [Repeat task step guide writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer).
+For the full version with every check, use the [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer).

@@ -29,4 +29,4 @@ credits:
   - title: maintenance-planning skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/maintenance-planning
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, fixed fleet availability to divide by every asset's scheduled hours, made the remaining-life check look at the current reading and the failure direction first, and replaced fixed benefit percentages with estimates from the site's own data. We added Before you start and After this sections that link to other AI Blocks steps.

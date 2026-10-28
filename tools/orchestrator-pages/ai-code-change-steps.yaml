@@ -75,6 +75,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How much old behaviour you list
     how: Say what must keep working. Cases for old behaviour are what stop a tidy-up from breaking something.

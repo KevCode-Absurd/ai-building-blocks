@@ -16,7 +16,7 @@ Musk co-founded Zip2 and X.com (later PayPal), then put his money into two compa
 
 Musk has said physics taught him to reason from first principles instead of by analogy [S6]. Reasoning by analogy means copying what others do with small changes. First principles means asking what is true at the bottom of a problem and building up from there [S6].
 
-How he applied it: in 2002 he wanted to send a rocket to Mars, but the quotes he got were as high as $65 million [S6]. He listed what a rocket is made of (aluminium alloys, titanium, copper, carbon fibre) and found those materials cost about 2% of the usual price [S6]. So he founded SpaceX to build rockets himself instead of buying them [S6].
+How he applied it (as James Clear retells it, a secondary account): in 2002 he wanted to send a rocket to Mars, but the quotes he got were as high as $65 million [S6]. He listed what a rocket is made of (aluminium alloys, titanium, copper, carbon fibre) and found those materials cost about 2% of the usual price [S6]. So he founded SpaceX to build rockets himself instead of buying them [S6].
 
 In the 2015 Stanford talk he said his ideas start from something broken, like Russian launch prices, and that he judges work by how useful it can be, even if the gain per person is small. He added that physics-style reasoning helps most with counterintuitive problems [S9]. In 2023 or later he put it as "physics is the law, everything else is a recommendation" and said answers should be checked against reality [S13].
 
@@ -60,7 +60,7 @@ How he applied it: the plan put self-driving hardware in all new cars ahead of t
 
 ### Design for failure, then test it
 
-Musk said a rocket has "1,000 ways" to fail and one way to work, and that it must work the first time, with no recall or patch [S9]. So the plan is to test many failure modes, run simulations (they always carry some error) and build so that a part can fail while the whole still succeeds [S9]. For an engine or flight he said simulations are run from subsonic to hypersonic flight and heating because real test flights are costly and rare [S13]. He called himself "pathologically optimistic on schedule" and admitted he is sometimes late [S13].
+Musk said a rocket has "1,000 ways" to fail and one way to work, and that it must work the first time, with no recall or patch [S9]. So the plan is to test many failure modes, run simulations (they always carry some error) and build so that a part can fail while the whole still succeeds [S9]. For an engine or flight he said simulations are run from subsonic to hypersonic flight and heating because real test flights are costly and rare [S13]. He described himself as pathologically optimistic on schedules (paraphrase) and admitted he is sometimes late [S13].
 
 ### Make the ask plain, and make it binary
 

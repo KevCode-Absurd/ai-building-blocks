@@ -31,7 +31,7 @@ credits:
   - title: hr-performance-management skill
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-performance-management
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Tuan Duc Tran
     url: https://github.com/tuanductran

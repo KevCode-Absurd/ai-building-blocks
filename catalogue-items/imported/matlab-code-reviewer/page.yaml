@@ -16,8 +16,8 @@ when:
   - Your loops run slowly and you suspect missing preallocation.
   - You want code that follows one standard across your team.
 not_for:
-  - "You have a runtime error to fix: use the matlab-debug-code skill, which is not yet in this library."
-  - "You want tests written for your code: use the matlab-write-tests skill, which is not yet in this library."
+  - "You have a runtime error to fix: use the MATLAB bug tracer instead."
+  - "You want tests written for your code: use the MATLAB unit test writer instead."
   - "You want your code made faster by measuring it: use the MATLAB profiler, or a teammate who knows it well."
   - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
@@ -35,6 +35,7 @@ how_to_use:
   - Give it the folder path and your MATLAB release before the run starts. Add your team's style rules if you have them.
   - Ask for a code review. Your AI runs the code analyser first, then checks the rest by reading the code.
   - Read the errors first, then the warnings. Apply the fixes you agree with. The review does not change your code.
+  - Next, make the agreed fixes on a new branch, then run the review again on the changed files to check nothing new came in. To bring old commands up to date in bulk, use the Old MATLAB code updater.
 output_sample:
   input:
     - Your MATLAB files or a folder of them

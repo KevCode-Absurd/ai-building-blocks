@@ -32,14 +32,14 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run code and read your files, and add the skill folder. The scripts need Python. The agent file, the sibling engineering skills and the slash commands the skill names are not included, so skip any step that uses them.
   - Paste your API plan or describe what your service must do. Say which framework you use.
-  - Ask for routes first. Read the files it writes before you use them.
+  - Ask for routes first. Read the files it writes before you use them. Open the route handlers in your output folder first, then run your project's type check or tests, such as npx tsc --noEmit for TypeScript, to see that they build.
   - Add your database schema as a .sql file if you want a speed check. The tool reads the file, not a live database. Ask for migration files, then try them on a copy first.
   - Only run a load test on a system you own or have written permission to test. Use a staging copy, and never test a live login page without approval.
   - Next, read the files it wrote, run your tests, and review the security steps with someone who knows backends before you ship.
 output_sample:
   input:
     - Your API plan as an OpenAPI file, or a plain description of the service
-    - Your database link or schema files (optional)
+    - Your database schema as a .sql file (optional; the tool does not read a live database)
     - The framework you use, such as Express, Fastify or Koa
     - Your load test target, such as users and seconds (optional)
   prerequisites:
@@ -47,11 +47,11 @@ output_sample:
     - Python on your computer to run the four helper scripts
   output:
     - name: Route handlers
-      contains: One file per API route, with the code that answers each request.
+      contains: One file per API route in your output folder, such as src/routes/, with the code that answers each request.
     - name: Validation middleware and types
-      contains: Checks on request bodies, query values and paths, plus TypeScript types.
+      contains: A validators file at src/middleware/validators.ts with checks on request bodies, query values and paths, plus TypeScript types.
     - name: Schema analysis and migration files
-      contains: Missing indexes, slow query risks and migration files you can apply or undo.
+      contains: A printed report of missing indexes and slow query risks, plus migration files such as migrations/add_indexes.sql. The tool writes them but does not run them.
     - name: Load test results
       contains: Requests per second, response time spread, error counts and advice on scaling.
     - name: Security hardening steps

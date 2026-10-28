@@ -30,12 +30,13 @@ you_get:
   - Competitor response rules
   - Rollout and monitoring plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the full skill file (SKILL.md) from the download, since this page only sums it up. Skip the npx install line at its top. It is only for coding tools, and the chat route needs no install.
   - Paste your product costs, fees and sales channels. Add rival offers with links, pack sizes, shipping and discounts.
   - "Say how you want to be seen: budget, value, parity or premium. Add your margin goal if you have one."
   - Answer any one round of follow-up questions. Blocked items are marked, not guessed.
   - Check the price floors first. Then test one product or one channel before you change every price.
-  - Check current platform rules and legal limits before you publish any price. No code or special tools are needed.
+  - Check current platform rules and legal limits before you publish any price.
+  - "Next: when the test period ends, run the planner again with your new sales numbers as the baseline. Then roll the approved prices out to the next product group or channel."
 output_sample:
   input:
     - Your product costs and fees

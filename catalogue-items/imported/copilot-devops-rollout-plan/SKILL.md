@@ -7,6 +7,29 @@ description: 'Generate comprehensive rollout plans with preflight checks, step-b
 
 Your goal is to create a comprehensive, production-ready rollout plan for infrastructure or application changes.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A test report** (yours): what was tested, what passed, what failed and why.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). Bring a codebase, a plan (optional).
+2. **A test report** with the [Code and documentation consistency checker](https://useaiblocks.com/skills/copilot-docs-sync-audit). Bring a codebase.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, a test report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Input Requirements
 
 Gather these details before generating the plan:
@@ -96,6 +119,13 @@ For each: Symptoms, response, timeline
 - Primary and secondary on-call
 - Escalation path
 - Emergency contacts (infrastructure, security, database, networking)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Plan Customization
 

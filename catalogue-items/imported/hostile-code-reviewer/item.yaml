@@ -30,7 +30,7 @@ credits:
   - title: adversarial-reviewer skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/adversarial-reviewer
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, closed the verdict gap (one warning now means CONCERNS), dropped the finding quota, and replaced automatic severity promotion by persona agreement with a re-check based on impact. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: ekreloff
     url: https://github.com/ekreloff

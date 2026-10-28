@@ -33,14 +33,14 @@ you_get:
   - Questions to settle before starting
   - A short summary of the risk areas
 how_to_use:
-  - "The full skill is written for Claude Code and uses a saved config file that only exists there. In Claude Code, paste it in as it is. In Claude, ChatGPT or Gemini, use the short version instead. Paste the skill, then say: ask whether the work has already started and stop if it has; gather the facts; look up the tests for my country or state; apply each test to my facts; flag the gaps and give a bottom line, the points for a lawyer and the next steps. Tag every law as unverified."
+  - "In Claude, ChatGPT or Gemini, paste the skill, then say: skip the config file; ask whether the work has already started and stop if it has; gather the facts; look up the tests for my country or state; apply each test to my facts; flag the gaps and give a bottom line, the points for a lawyer and the next steps. Tag every law as unverified."
   - "Warning: without a legal research tool, the tests, laws and cases it names come from the AI's memory and may be wrong. Check each one on the official government site before you act on the bottom line."
-  - If you are not using Claude Code, tell your AI to skip loading the config file. Keep the first question ("Has this work already started?") and stop if the answer is yes. Give your country or state, and say the work is not started yet.
   - "Places covered: the skill has no fixed list of countries or states. It looks up the tests for the place you name, and its examples lean on the US (such as California). Say your country or state, and treat anything outside the US as less certain."
   - "Start with three facts: the role and daily work, the hours and tools, and the pay and place. Then paste your answers about the rest."
   - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, ask your AI to tag every cited law as unverified, then check each one on the official government site before you rely on it.
   - Read the bottom line and the flagged items first.
   - Take the red flags to an employment lawyer before you sign anything. For a close call, a single consultation with an employment lawyer is the cheaper next step.
+  - In Claude Code only, you can paste the full skill as it is. It uses a saved config file that exists only there. The full skill file is long (about 400 lines); the steps above are the short version.
 output_sample:
   input:
     - How the person will work day to day

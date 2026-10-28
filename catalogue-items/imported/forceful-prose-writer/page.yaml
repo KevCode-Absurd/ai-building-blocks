@@ -30,7 +30,7 @@ you_get:
   - Rewrite that removes stock phrases
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - "Paste the skill text first. Then start your request with the line: Apply the Beautiful Prose skill."
+  - "Paste the skill text first. Then start your request with the line: Apply the Beautiful Prose skill. Beautiful Prose is this skill's original name, and the skill text expects that exact line."
   - "On the next lines, add your settings if you want them, such as REGISTER: cold_steel or LENGTH: short."
   - Add your topic, or paste your draft. Say who it is for and how long it should be.
   - Read the result. Check facts and names yourself, because the skill does not verify claims. Anglo-Saxon words are short, plain ones like "burn" or "hard". Latinate words are longer, like "combustion" or "difficult". The skill prefers the short ones.

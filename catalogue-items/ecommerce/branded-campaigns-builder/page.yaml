@@ -87,7 +87,7 @@ how_it_works:
     text: Settings, budgets, ad rules and claims are checked, and any check it could not run is listed.
 
 output_shape: |
-  FIT  <brand searched? volume note> | brand spend cap <3 to 8% of Google spend, an unsourced test value>
+  FIT  <brand searched? volume note> | brand spend cap <your test value, set from your own data; 3 to 8% of Google spend is an unsourced starting point>
 
   SEARCH CAMPAIGN SETTINGS
   goal <sales: purchase> | network <Search only> | location <presence only>

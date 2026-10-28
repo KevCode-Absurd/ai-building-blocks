@@ -98,16 +98,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Measure one period's earnings above the required return with the [One-period residual income bridge](https://useaiblocks.com/skills/one-period-residual-income-bridge).
+- Measure one period's earnings above the required return with the [Excess earnings calculator](https://useaiblocks.com/skills/one-period-residual-income-bridge).
 - Build the full model with the [Build a clean surplus residual income model](https://useaiblocks.com/workflows/build-a-clean-surplus-residual-income-model) workflow.
-- Check your book value with the [Book value per share roll-forward](https://useaiblocks.com/skills/book-value-per-share-rollforward).
+- Check your book value with the [Book value per share calculator](https://useaiblocks.com/skills/book-value-per-share-rollforward).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.

@@ -69,6 +69,23 @@ tags: ["EAL", "language-demands", "BICS-CALP", "scaffolding", "academic-language
 
 # Language Demand Analyser
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lesson plan** with the [Critical thinking task writer](https://useaiblocks.com/skills/critical-thinking-task-writer). Bring your lesson plan.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Identifies the language demands of a classroom task across four dimensions — vocabulary (Tier 1/2/3), grammar (sentence complexity, tense, voice, modality), discourse (text structure, cohesion, paragraph organisation), and genre (purpose, audience, register) — and recommends specific scaffolds for each dimension. The analysis makes visible the language that is ASSUMED by the task but rarely explicitly taught, revealing the hidden linguistic barriers that prevent EAL students from demonstrating their subject knowledge. AI is specifically valuable here because most teachers are experts in their subject content but not in the language features their tasks demand — they know what a good science conclusion looks like but may not be able to articulate the specific grammatical structures, discourse patterns, and vocabulary tiers it requires.
@@ -269,3 +286,12 @@ Return your output in this exact format:
 2. **Language demands interact with cognitive demands, and the analysis treats them separately for clarity.** In practice, a student struggling with both the science concepts AND the language to express them faces a compounded challenge. The scaffolds help with language, but if the student doesn't understand the science, language scaffolds alone are insufficient. Ensure conceptual understanding is secure before focusing on language production.
 
 3. **The analysis assumes the teacher will use the scaffolds temporarily.** Scaffolds should be progressively removed as students develop proficiency. If sentence frames are provided permanently, students may become dependent on them rather than developing independent academic language. The goal is to build capacity, not create permanent supports.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [English learner task support planner](https://useaiblocks.com/skills/ell-task-scaffolds). It takes the audit report.
+- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the audit report.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

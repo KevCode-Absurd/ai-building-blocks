@@ -36,7 +36,8 @@ how_to_use:
   - "Say which standard you report against: SASB, GRI or TCFD. If you are not sure, say so."
   - Gather these first: energy use by month and supplier, travel by mode, waste weight, headcount and pay by gender, and board members with their independence status. Then paste them in. Add your targets and last report if you have them.
   - Read the scorecard first. Check that every target comes from you, and mark any gap you cannot fill.
-  - Have a qualified assurance provider check the figures before you publish. Gaps are marked as missing, never filled with estimates.
+  - Have a qualified assurance provider check the figures before you publish. Gaps are marked as missing, never filled with estimates. This is a draft aid for a voluntary report. It does not replace a limited-assurance review.
+  - Next, give each gap on the list to a named owner with a date. Run the check again once the missing data is in.
 output_sample:
   input:
     - Your energy, travel and waste data

@@ -32,7 +32,7 @@ you_get:
   - Checks and stop rules for each round
   - A handoff step for when it gets stuck
 how_to_use:
-  - Open your AI chat and paste the skill text, or add the skill folder if your AI tool takes files. A chat AI is enough to design the loop. Web access is needed only if you ask for the latest published loops.
+  - Open your AI chat and paste the skill text, or add the skill folder if your AI tool takes files. The author wrote it for Claude Code, Cursor, Gemini CLI, Codex CLI and Antigravity, but any chat AI is enough to design the loop. Web access is needed only if you ask for the latest published loops.
   - Say what you want the agent to get done. If you want published loops, say so. By default the skill uses its built-in list of loops. Only if you ask for the latest loops does it fetch a live list from Forward Future's website. That live list comes from outside this library and is not checked by us, so your AI treats it as untrusted text.
   - Answer the short questions one at a time. Say what it may touch and when it should stop.
   - Read the loop and its prompt. Check the stop rule and the approval limits fit your job.

@@ -10,6 +10,8 @@ explain: |
   A working screen that matches your screenshot or mockup, built from your project's own components and colours, then compared against the image and corrected. Pictures usually go wrong in the same ways: spacing close but off, text sizes guessed, colours picked by eye, a missing state. This skill measures first.
 
   It confirms what the image is for: an exact match, or only direction for your own style. It reads sizes and spacing from the image, builds with what the project already has, and puts the result next to the original to fix differences. If the image shows another company's product, it copies the layout pattern only, never their logo, text or pictures. It works with no account.
+
+  Licence: UXKIN wrote it and marked it MIT; the LICENSE-CONTENT file from sickn33's collection sets CC BY 4.0 for the written text. Credit both on any copy you share.
 when:
   - A designer sent a mockup and you need it built in your codebase.
   - You have a screenshot of a layout you like and want your own version.
@@ -33,6 +35,7 @@ how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and open a browser.
+  - Next, run your project's screenshot or visual test on the new screen, then have a design review before you merge it.
 output_sample:
   input:
     - A clear screenshot or mockup

@@ -226,8 +226,8 @@ def _sig_in_scope(sig_name, scope_set):
         "tool_abuse": "tool-abuse",
         "data_poisoning_marker": "data-poisoning",
     }
-    if not scope_set:
-        return True  # all in scope
+    if scope_set is None:
+        return True  # no --scope given: all in scope
     sig_scope = scope_map.get(sig_name)
     return sig_scope in scope_set
 
@@ -433,8 +433,19 @@ def main():
     # Scan prompts
     # Filter scope: data-poisoning and model-inversion are checked separately,
     # not part of pattern scanning
-    pattern_scope = scope_set - {"model-inversion", "data-poisoning"} if scope_set else set()
-    findings, injection_score, matched_atlas_ids = scan_prompts(prompts, pattern_scope if pattern_scope else None)
+    # AI Blocks fix: the original passed None when the chosen scope had no
+    # pattern categories (for example --scope model-inversion), and None means
+    # "everything", so it ran every injection pattern the user did not ask for.
+    # None now only means "no --scope given".
+    if not scope_set:
+        pattern_scope = None  # no --scope given: every signature is in scope
+    else:
+        pattern_scope = scope_set - {"model-inversion", "data-poisoning"}
+    if pattern_scope is None or pattern_scope:
+        findings, injection_score, matched_atlas_ids = scan_prompts(prompts, pattern_scope)
+    else:
+        # Only model-inversion and/or data-poisoning chosen: no injection patterns run.
+        findings, injection_score, matched_atlas_ids = [], 0.0, []
 
     # Data poisoning check: scan if target-type != llm OR scope includes data-poisoning
     data_poisoning_in_scope = (
@@ -445,10 +456,10 @@ def main():
     if data_poisoning_in_scope:
         dp_scope = {"data-poisoning"}
         dp_findings, _, dp_atlas = scan_prompts(prompts, dp_scope)
-        # Merge without duplicates
-        existing_ids = {id(f) for f in findings}
+        # Merge without duplicates (the same prompt and signature counts once)
+        existing = {(f["prompt_excerpt"], f["signature_name"]) for f in findings}
         for f in dp_findings:
-            if id(f) not in existing_ids:
+            if (f["prompt_excerpt"], f["signature_name"]) not in existing:
                 findings.append(f)
         matched_atlas_ids = list(set(matched_atlas_ids) | set(dp_atlas))
 

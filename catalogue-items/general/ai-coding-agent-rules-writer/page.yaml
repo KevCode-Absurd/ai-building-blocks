@@ -25,6 +25,7 @@ not_for:
 you_give:
   - A description of the project and the language or tools
   - Your test list or plan, if you have one
+  - The command that runs your tests (advised)
   - Rules your team already has for commits and checks (optional)
 you_get:
   - A plan file with the ordered tests and what is done

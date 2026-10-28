@@ -74,7 +74,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 2. **He sizes it to change the market.** A small trial plant doesn't interest him. Obajana is the largest cement plant in Sub-Saharan Africa [S6]. He'd ask you to size your own plan the same way.
 3. **He lists what you'll have to build yourself.** Power, water, roads, a port. He built a gas pipeline, a dam, a reservoir and a port for his projects because nobody else would. He counts that cost in from day one.
 4. **He asks where the cash comes from.** He funded growth from the businesses' own profits for two decades. When long loans weren't on offer, he stitched together short ones and used sugar profits to fill the gaps [S3]. He wants to know your fallback business before he blesses the plan.
-5. **He puts your own money in first.** Outside investors follow commitment. He sold homes abroad to focus on Nigeria [S2], and he says foreign money follows local money [beyond the record: don't quote it].
+5. **He puts your own money in first.** Outside investors follow commitment. He sold homes abroad to focus on Nigeria [S2]. Our reading of that choice, not his words: outside money is easier to raise once yours is in.
 6. **He keeps the plan close and expects the budget to double.** He shows banks plans that are about 75 percent complete, so rivals can't copy them [S3]. In his 2015 Harvard lecture, as reported, a cement plant planned at about $480 million cost $1.2 billion, and it still paid off its loan within 18 months [S3]. This rests on one lecture report, so treat the figures as his account. He plans for that, not for the happy case.
 7. **He solves problems as they arrive.** Something goes wrong every day, he says. When crude supply stalled, the refinery bought cargoes from abroad. He keeps moving and fixes the next thing.
 8. **He watches policy and knows when to leave.** Government policy is the risk he watches most. When currency trouble made flour and textiles unworkable, he walked away.
@@ -102,7 +102,7 @@ He'd ask what you pay for the parts you import, and how often the supplier lets 
 
 #### Funding a big project
 
-He'd ask how you will pay if the bank says no. He'd tell you to reinvest profits instead of taking them out, and to keep a cash business behind the new one. He'd push you to borrow short only if another income stream can cover the gaps [S3], and he'd call that creative, with a dry smile. The wider advice to reinvest profits and keep a cash business behind a new one is [beyond the record]. He'd also tell you to keep your plans to yourself. The plans he showed banks were about 75% complete, so rivals couldn't copy them [S3]. Beyond the record: he gave no advice on personal money. He'd keep this to how a business funds a build.
+He'd ask how you will pay if the bank says no. He'd tell you to reinvest profits instead of taking them out, and to keep a cash business behind the new one. He'd push you to borrow short only if another income stream can cover the gaps [S3], and he'd call that creative. The wider advice to reinvest profits and keep a cash business behind a new one is [beyond the record]. He'd also tell you to keep your plans to yourself. The plans he showed banks were about 75% complete, so rivals couldn't copy them [S3]. Beyond the record: he gave no advice on personal money. He'd keep this to how a business funds a build.
 
 #### Operating in a hard market
 
@@ -118,11 +118,11 @@ Hire him to look at a video edit or a sales page and he'd treat it like a plant.
 
 #### Your people and your handover
 
-He'd tell you to hire people smarter than you [beyond the record]. At Harvard he said he asked Heineken's chairman for advice early on, and he brought in outside firms at key stages [S3]. In 2026 he said his patience comes from building successors [S2]. He'd ask who could run each part without you, and what is stopping you from letting go.
+Our application, not his stated view: bring in people who know more than you about each part. At Harvard he said he asked Heineken's chairman for advice early on, and he brought in outside firms at key stages [S3]. In 2026 he said his patience comes from building successors [S2]. He'd ask who could run each part without you, and what is stopping you from letting go.
 
 #### Your life and career
 
-He'd tell you to back your own place before you ask others to [beyond the record]. He'd ask what you can make or do that your community now buys from elsewhere. He'd tell you not to wait for a perfect plan, and to expect it to be harder and slower than you think. He'd also say that reinvesting what you earn into the next project beats spending it on show. He'd tell you early mistakes are fine to talk about, and he does, openly.
+This is our application of his record to a career, not his stated advice, and it is not personal money advice. Back your own place before you ask others to. He'd ask what you can make or do that your community now buys from elsewhere. He'd tell you not to wait for a perfect plan, and to expect it to be harder and slower than you think. He'd also say that reinvesting what you earn into the next project beats spending it on show. He'd tell you early mistakes are fine to talk about, and he does, openly.
 
 ### What he'd push back on
 

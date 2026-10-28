@@ -29,9 +29,9 @@ How to start:
 - **A capable chat AI with file support:** Reads several full papers at once and keeps section references straight.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+Use this list, not the shared "Before you start" block above: that block is generated for many workflows and its draft, slide deck and project lines do not apply. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - Two or more full papers on the same question, as PDFs or pasted text. Abstracts alone are not enough.
@@ -81,6 +81,18 @@ NEXT STEP          <one step>
 - The wording check names the sentence it flags.
 - CHECKS MISSED lists any check that did not run, or says none.
 
+## If something is missing
+
+Write `MISSING: <what>` next to the affected line. Carry on with what does not depend on it. If only abstracts were supplied, say the methods could not be compared and mark comparability `MISSING`. With one paper only, stop and point to the Source note summariser. Never fill a gap from general knowledge of the field.
+
+## Next steps for this workflow
+
+Use this list, not the generated links above. Suggest one next step as a short question, and say the user can type their own:
+- **Write it up.** Turn the comparison into a section of your review with the [Research a question and write a cited report](https://useaiblocks.com/workflows/research-a-question-and-write-a-cited-report) workflow.
+- **Keep a record.** Use the [Research finding comparison reviewer](https://useaiblocks.com/agents/research-contradiction-review-assistant), which updates the comparison when a new paper arrives.
+- **Check a draft.** Run the [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter) on your own write-up.
+Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -89,18 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## If something is missing
-
-Write `MISSING: <what>` next to the affected line. Carry on with what does not depend on it. If only abstracts were supplied, say the methods could not be compared and mark comparability `MISSING`. With one paper only, stop and point to the Source note summariser. Never fill a gap from general knowledge of the field.
-
-## After this
-
-Suggest one next step as a short question, and say the user can type their own:
-- **Write it up.** Turn the comparison into a section of your review with the [Research a question and write a cited report](https://useaiblocks.com/workflows/research-a-question-and-write-a-cited-report) workflow.
-- **Keep a record.** Use the [Research contradiction review assistant](https://useaiblocks.com/agents/research-contradiction-review-assistant), which updates the comparison when a new paper arrives.
-- **Check a draft.** Run the [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter) on your own write-up.
-Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 
 ## Avoid
 

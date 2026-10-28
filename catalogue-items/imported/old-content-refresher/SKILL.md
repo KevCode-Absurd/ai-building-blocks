@@ -20,6 +20,27 @@ When to use this skill: building a refresh program from scratch, auditing why re
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). Bring a spreadsheet, an audit report (optional), a search query report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website, your results, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill covers
 
 This skill spans the post-publish lifecycle of content. The content suite distinction:
@@ -261,3 +282,12 @@ A content library is a long-running system. The pieces in it interact with searc
 The discipline is the immune system: signals are detected early, prioritization concentrates effort where the value is highest, depth matches signal strength, dispositions include merge and delete (not just refresh), and the work is tracked so the program learns. Programs that run this discipline preserve the library's compounding value. Programs that do not watch the library erode and discover the loss only when an algorithm update or a competitor's flagship piece exposes how far the rot has spread.
 
 When in doubt about whether a refresh program is ready, ask: does the program detect signals, prioritize on value, match depth to signal, decide between refresh and merge and delete, allocate capacity explicitly, re-promote the refreshed pieces, and track effectiveness? If yes to all of those, the program is real. If no to any, the gap is where decay will compound.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the plan.
+- The [Content traffic decline reviewer](https://useaiblocks.com/skills/monthly-content-decay-keeper).
+- The [Search title and snippet writer](https://useaiblocks.com/prompts/search-title-and-snippet-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

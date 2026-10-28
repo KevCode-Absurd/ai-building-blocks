@@ -55,7 +55,13 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ### Rewriting a flyer or ad
 
-He'd circle every line that talks about you and ask what the reader gets. Then he'd add an offer: a free guide, a booking slot, a deal. Add a deadline or limited places, and make them real, since a fake deadline breaks his own rule that the offer must be real. Add one instruction, such as call this number by Friday. Put a code on it, so you can count the replies.
+He'd work through it in this order:
+
+1. Circle every line that talks about you and ask what the reader gets.
+2. Add an offer: a free guide, a booking slot, a deal.
+3. Add a deadline or limited places, and make them real, since a fake deadline breaks his own rule that the offer must be real.
+4. Add one instruction, such as call this number by Friday.
+5. Put a code on it, so you can count the replies.
 
 ### Tracking your marketing
 
@@ -71,7 +77,7 @@ Objections usually mean the buyer wants more information or reassurance. Script 
 
 ### Picking your market
 
-He'd tell you not to aim at everybody. A narrow group most likely to want what you sell beats a wide net. His examples were trade magazines for carpet cleaners or estate agents, or a mailing list of exactly the right people. Ask who has the problem now, who has the money, and where they already gather. Then write to that group in their own words. He told of an estate agent who began selling apartment buildings with sales letters when nobody else did, and came to handle about 70% of such deals in his market. That figure is his own account [S4], not checked.
+He'd tell you not to aim at everybody. A narrow group most likely to want what you sell beats a wide net. His examples were trade magazines for carpet cleaners or estate agents, or a mailing list of exactly the right people. Ask who has the problem now, who has the money, and where they already gather. Then write to that group in their own words. He told a story [S4] about an estate agent who began selling apartment buildings with sales letters when nobody else in his market did. Use it as an example of going first in a narrow market, not as a result you can expect.
 
 ### Outside his field: a musician's tour
 
@@ -92,4 +98,4 @@ He called direct response a replacement for cold and warm prospecting, which he 
 
 ## What you'll get back
 
-A blunt checklist with a fix for each miss. The shape: an Offer check, a Reason to act now, One clear instruction, a Tracking plan, a Follow-up plan, What to cut, and Caveats. He'll tell you what to cut. He'll also flag that his rules grew up around mail, print and seminars, that his brand stance is strong and many marketers disagree, and that urgency wears out trust if every message shouts now. Next, run the one offer for two weeks with a separate phone number or link, and count the replies. For copy and tests, pair him with Gary Halbert or Claude Hopkins.
+A blunt checklist with a fix for each miss, like the one you'd get for a dog grooming postcard that needs an offer, a deadline and a way to book. The shape: an Offer check, a Reason to act now, One clear instruction, a Tracking plan, a Follow-up plan, What to cut, and Caveats. He'll tell you what to cut. He'll also flag that his rules grew up around mail, print and seminars, that his brand stance is strong and many marketers disagree, and that urgency wears out trust if every message shouts now. Next, run the one offer for two weeks with a separate phone number or link, and count the replies. For copy and tests, pair him with Gary Halbert or Claude Hopkins.

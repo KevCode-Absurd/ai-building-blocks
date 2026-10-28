@@ -5,6 +5,22 @@ description: Format CVs for academic positions, including publications, grants, 
 
 # Academic CV Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, the job description. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill when the user:
@@ -412,6 +428,17 @@ When creating an academic CV:
 ## Next steps
 
 Once the person has confirmed the checklist, they can paste the draft into the job application. For a cover letter or research statement, ask for it as a separate task. This skill builds only the CV.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
+- The [Creative resume layout planner](https://useaiblocks.com/skills/creative-resume-layout-planner). It takes the resume.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Academic CV Checklist
 

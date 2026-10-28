@@ -240,12 +240,22 @@ def calculate_cac_payback(
     """
     gross_margin = gross_margin_pct / 100
     monthly_contribution = arpa_monthly * gross_margin
-    payback_months = safe_divide(cac, monthly_contribution)
 
-    benchmark = rate_metric("cac_payback_months", payback_months)
+    if monthly_contribution <= 0:
+        # No positive monthly contribution means CAC is never paid back.
+        # Do not divide (a 0 result would wrongly rate as a healthy payback).
+        payback_months = None
+        benchmark = {
+            "rating": "Red",
+            "label": "Never pays back - monthly contribution is zero or negative",
+            "percentile": "N/A",
+        }
+    else:
+        payback_months = round(cac / monthly_contribution, 1)
+        benchmark = rate_metric("cac_payback_months", payback_months)
 
     return {
-        "months": round(payback_months, 1),
+        "months": payback_months,
         "cac": cac,
         "arpa_monthly": arpa_monthly,
         "gross_margin_pct": gross_margin_pct,
@@ -269,11 +279,28 @@ def calculate_burn_multiple(net_burn: float, net_new_arr: float) -> dict[str, An
     Returns:
         Burn multiple with rating and benchmark.
     """
-    value = safe_divide(net_burn, net_new_arr)
-    benchmark = rate_metric("burn_multiple", value)
+    if net_new_arr <= 0:
+        # No net new ARR: the ratio is undefined. Do not divide (a 0 result
+        # would wrongly rate as the best possible burn multiple).
+        value = None
+        if net_burn > 0:
+            benchmark = {
+                "rating": "Red",
+                "label": "Burning cash with no net new ARR",
+                "percentile": "N/A",
+            }
+        else:
+            benchmark = {
+                "rating": "N/A",
+                "label": "Not computable - no net new ARR and no net burn",
+                "percentile": "N/A",
+            }
+    else:
+        value = round(net_burn / net_new_arr, 2)
+        benchmark = rate_metric("burn_multiple", value)
 
     return {
-        "value": round(value, 2),
+        "value": value,
         "net_burn": net_burn,
         "net_new_arr": net_new_arr,
         "formula": "Net Burn / Net New ARR",
@@ -390,16 +417,18 @@ def generate_recommendations(metrics: dict) -> list[str]:
     # CAC Payback
     cp = metrics["cac_payback"]
     if cp["rating"] == "Red":
+        payback_text = "never reached" if cp["months"] is None else f"{cp['months']} months"
         recs.append(
-            f"CAC payback is {cp['months']} months (target <18). Capital recovery is too slow. "
+            f"CAC payback is {payback_text} (target <18 months). Capital recovery is too slow. "
             "Reduce acquisition costs or increase gross-margin-weighted ARPA."
         )
 
     # Burn Multiple
     bm = metrics["burn_multiple"]
     if bm["rating"] == "Red":
+        burn_text = "undefined (no net new ARR)" if bm["value"] is None else f"{bm['value']}x"
         recs.append(
-            f"Burn multiple is {bm['value']}x (target <2x). Cash consumption relative to "
+            f"Burn multiple is {burn_text} (target <2x). Cash consumption relative to "
             "growth is unsustainable. Prioritize operating efficiency and path to profitability."
         )
 
@@ -514,8 +543,10 @@ def format_text_report(results: dict) -> str:
     metrics_order = [
         ("magic_number", "Magic Number", lambda m: f"{m['value']}"),
         ("ltv_cac", "LTV:CAC Ratio", lambda m: f"{m['ratio']}:1"),
-        ("cac_payback", "CAC Payback", lambda m: f"{m['months']} months"),
-        ("burn_multiple", "Burn Multiple", lambda m: f"{m['value']}x"),
+        ("cac_payback", "CAC Payback",
+         lambda m: "never" if m["months"] is None else f"{m['months']} months"),
+        ("burn_multiple", "Burn Multiple",
+         lambda m: "undefined" if m["value"] is None else f"{m['value']}x"),
         ("rule_of_40", "Rule of 40", lambda m: f"{m['value']}%"),
         ("ndr", "Net Dollar Retention", lambda m: f"{m['ndr_pct']}%"),
     ]
@@ -561,7 +592,10 @@ def format_text_report(results: dict) -> str:
     # CAC Payback
     cp = results["cac_payback"]
     lines.append("")
-    lines.append(f"  CAC PAYBACK: {cp['months']} months")
+    lines.append(
+        "  CAC PAYBACK: never (no positive monthly contribution)"
+        if cp["months"] is None else f"  CAC PAYBACK: {cp['months']} months"
+    )
     lines.append(f"    CAC:                 {format_currency(cp['cac'])}")
     lines.append(f"    Monthly Contribution:{format_currency(cp['monthly_contribution'])}")
     lines.append(f"    Rating:              {cp['rating']} - {cp['label']}")
@@ -570,7 +604,10 @@ def format_text_report(results: dict) -> str:
     # Burn Multiple
     bm = results["burn_multiple"]
     lines.append("")
-    lines.append(f"  BURN MULTIPLE: {bm['value']}x")
+    lines.append(
+        "  BURN MULTIPLE: undefined (no net new ARR)"
+        if bm["value"] is None else f"  BURN MULTIPLE: {bm['value']}x"
+    )
     lines.append(f"    Net Burn:            {format_currency(bm['net_burn'])}")
     lines.append(f"    Net New ARR:         {format_currency(bm['net_new_arr'])}")
     lines.append(f"    Rating:              {bm['rating']} - {bm['label']}")

@@ -14,13 +14,26 @@ metadata:
 
 > **Legal disclaimer:** This skill produces search signal, not legal advice. Verdicts are technical assessments. **Always consult a patent attorney before filing or licensing decisions.**
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Non-Generic Framing — The Differentiator
 
 This skill is **prior-art + landscape intelligence**. It **refuses to be a bucket**. Every invocation commits to one of five sub-use-cases via the grill-me intake before any search runs. The chosen sub-use-case dictates the entire search strategy, ranking heuristics, and DOCX emphasis.
 
 | Sub-use-case | Search strategy | DOCX emphasis |
 |---|---|---|
-| **Novelty search** | Narrow + claims-text focused; pre-filing date irrelevant | Closest art + claim-differentiation |
+| **Novelty search** | Narrow; compare each document's full text (description, drawings, claims) feature by feature; keep only art dated before your effective filing date | Closest art + claim-differentiation |
 | **Freedom-to-operate** | Broad + active patents only; jurisdiction-filtered | FTO flags + claim-by-claim risk |
 | **Competitive landscape** | Breadth + filer tally + CPC trends | Filer map + investment hotspots |
 | **Acquisition diligence** | Specific assignee + portfolio scope + assignment chain | Portfolio table + ownership verification |
@@ -158,9 +171,11 @@ Returns: query plan (5-8 queries) + ranking heuristic + DOCX emphasis flags.
 ## Phase 4: Claim Extraction + Relevance Scoring
 
 For each closest-art hit:
-- Pull **independent claim 1** (the broadest claim — primary anticipation/obviousness vehicle)
+- **Check the date first (novelty).** A document counts as prior art only if it was public before your effective filing date (the date you will file, or the earlier priority date you will claim; ask the user, and use today if they do not know). A US patent or published application by someone else also counts if it was effectively filed before that date, even if it was published later (35 U.S.C. 102(a)(1) and (a)(2); USPTO MPEP 2152). Other offices have their own rules, so note the jurisdiction. List later documents separately as "not prior art for this filing date".
+- **Novelty is about the whole document.** A claim is anticipated only if one document discloses every element of it, anywhere in that document, not only in its claims (USPTO MPEP 2131). For novelty, compare the invention's features with the description, drawings and claims of each hit, and quote the passage that discloses each feature.
+- **Pull every independent claim**, not just claim 1. Claim 1 is often broad but not always the broadest, and separate independent claims can protect different aspects. For FTO and litigation, assess each independent claim on its own.
 - Pull **key dependent claims** (claims that add the inventive step)
-- Score relevance against invention description (overlap of claim language with Q1 terminology)
+- Score relevance against the invention description: how many of the invention's features the document discloses, with the supporting passage
 
 Rank by score. A verdict of CLEAR, NOVEL or POTENTIALLY NOVEL means only that no close hit turned up in this search. It does not mean the idea is new in law or that shipping is safe. Say so next to every verdict. Verdict per sub-use-case (NOVEL / POTENTIALLY NOVEL / NOT NOVEL for novelty; CLEAR / FLAGGED / HIGH RISK per jurisdiction for FTO).
 
@@ -195,7 +210,7 @@ See [`references/cpc_classification_canon.md`](references/cpc_classification_can
 Sub-use-case-dependent emphasis. Via Node.js + `docx` library.
 
 1. **Executive Summary + Verdict** — Sub-use-case banner + one-line verdict (NOVEL / FLAGGED / etc.) + 3-4 key findings + legal disclaimer footer
-2. **Closest Prior Art** — 5-10 patents in ranked order. Per hit: hyperlinked title + assignee + filing/priority dates + independent claim 1 text (italicized) + relevance score + relevance rationale (1-2 sentences)
+2. **Closest Prior Art** — 5-10 patents in ranked order. Per hit: hyperlinked title + assignee + filing/priority/publication dates + whether it is dated before the user's effective filing date + the relevant independent claims (italicized), or for novelty the passages that disclose the invention's features + relevance score + relevance rationale (1-2 sentences)
 3. **Patent Landscape** — Top filers table (top 10 by count) + 10-year filing trend description + CPC class distribution table. Only for landscape and diligence; abbreviated otherwise.
 4. **Citation Graph Signals** — Foundational patents (if Lens-enabled) + recent high-cite activity. If Lens unavailable, note "manual review recommended" and skip table.
 5. **Geographic Coverage** — Filings by jurisdiction for top 10 hits. Only for FTO, landscape, diligence; skipped for novelty and litigation.
@@ -225,7 +240,7 @@ Distinguish at every hit:
 - **Grant date** — when the patent was granted (later than publication)
 
 Surface the **legally-relevant date** per sub-use-case:
-- Novelty → priority date (vs invention's anticipated filing date)
+- Novelty → each hit's publication date (and, for an earlier-filed patent application, its effective filing date), compared with the user's effective filing date
 - FTO → grant date + status (active vs expired)
 - Landscape → publication date (when public knowledge began)
 - Diligence → grant date + assignment date

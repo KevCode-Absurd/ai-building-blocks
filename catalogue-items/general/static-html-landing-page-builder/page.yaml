@@ -48,3 +48,4 @@ output_sample:
       contains: What was checked on desktop, mobile, keyboard, links and form, and which checks were not run.
     - name: README.md
       contains: How to preview the page, host it as static files and set up the form.
+next: [landing-page-30-point-checker, accessibility-checker]

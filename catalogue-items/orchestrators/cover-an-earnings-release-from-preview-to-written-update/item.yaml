@@ -12,7 +12,6 @@ inputs:
   - {type: transcript, required: true}
 outputs:
   - {type: document}
-  - {type: audit_report}
 uses: [earnings-preview-writer, earnings-call-tone-reader, earnings-recap-writer, earnings-update-report-writer]
 steps:
   - {uses: earnings-preview-writer, note: "What matters for this company this quarter, the numbers to watch, what would count as a surprise and the questions you hope analysts ask."}

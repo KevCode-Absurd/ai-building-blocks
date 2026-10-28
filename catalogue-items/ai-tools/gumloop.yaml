@@ -25,6 +25,7 @@ not_for:
   - "One-off text writing with no apps involved. Use Claude or ChatGPT."
   - "Simple app-to-app moves with fixed steps. Zapier or Make may be enough."
   - "Anyone who needs a price before they start. We could not read the pricing page on 26 Oct 2026."
+  - "High-volume jobs, until you know what one run costs in credits. Start with a few runs a day."
 pricing:
   model: subscription
   from: Not confirmed. Check the maker's site
@@ -43,7 +44,7 @@ last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
   - "Open gumloop.com and sign up, or book a demo if you are a company team. The sign-up steps were not on the pages we could read, so check the site."
-  - "Look at the plan and credit rules on the pricing page before you build."
+  - "Open gumloop.com/pricing and find which plan includes agents and how credits are counted before you build."
   - "Write the job in one or two sentences, such as: when a new HubSpot lead arrives, research the company and post a summary in Slack."
   - "Connect only the apps the job needs, such as HubSpot and Slack. Sign in to each when asked."
   - "Run the agent once on one test record. Open the result in Slack, check it against the lead, and fix the task wording before you switch on a trigger."
@@ -55,7 +56,7 @@ needs:
 example:
   task: "When a new HubSpot lead arrives, research the company and post a summary in Slack."
   cost: "Not known. We could not read the credit rules, so we cannot say what one run costs. Run it once and read the usage."
-  reply: "A short message in a Slack channel with the company name, what it does and a line on why it may fit. The exact shape depends on your task wording, so ask for the fields you want."
+  reply: "A short Slack message per lead. Ask for four fixed lines in your task: company name, what it does, a one-line fit note, and the source link. The shape follows your task wording, so name those fields."
 not_verified:
   - "Any price, any free plan, and the credits used per run. The pricing page did not load on 26 Oct 2026."
   - "The sign-up steps for a first agent. The pages we could read did not list them."

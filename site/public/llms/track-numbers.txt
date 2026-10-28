@@ -1,19 +1,24 @@
 # Track your numbers: AI Blocks
 
-> 100 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 113 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Acquired asset earnings adjustment checker](https://useaiblocks.com/skills/purchased-amortization-eps-bridge): Share acquired asset charges and their tax effect. Compare reported earnings per share with an adjusted view.
 - [Ad data quality checker](https://useaiblocks.com/skills/ad-data-quality-checker): Give it ad and sales data with dates and time zone. Pick checks, like spend totals or duplicate leads, and get full BigQuery findings.
+- [Analytics events and tracking gap review](https://useaiblocks.com/agents/monthly-tracking-health-keeper): Review event reports, campaign links and platform totals. Find missing evidence, double counts and tag changes to check.
 - [Animal study severity scorer](https://useaiblocks.com/skills/animal-study-severity-scorer): Share animal welfare readings and a reference group. Get scores of change over time, with plots and forecasts to explore.
 - [Appointment no-show analyst](https://useaiblocks.com/workflows/explain-appointment-no-show-patterns): Check booking records and the rule for no-shows. Get a table and plain summary, with reasons left unknown unless supported.
 - [Bayesian starting assumptions checker](https://useaiblocks.com/skills/starting-assumptions-checker): Set starting beliefs for a Bayesian model, check sample outcomes, and compare other choices.
 - [BigQuery multi-touch sales credit calculator](https://useaiblocks.com/skills/multi-touch-credit-calculator): Share touch, sale and spend data. Build BigQuery sales credit rules, check missing links and report costs by channel.
+- [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl): Match your books to payment reports for the month. Flag mismatches, duplicate entries and missing receipts, then get a plain P&L story.
 - [Brand health metrics planner](https://useaiblocks.com/skills/brand-health-metrics-planner): Plan how to track your brand health. Say your goals and get the metrics to follow, how to collect each one and how to read them.
 - [Brand search share tracking planner](https://useaiblocks.com/prompts/share-of-search-tracker-planner): Share your brand and rivals. Get a monthly tracker plan showing your share of tracked brand searches, with formulas and limits.
 - [Break-even ad cost calculator](https://useaiblocks.com/prompts/break-even-ad-target-finder): Share one product's price and costs. Get profit per order, an ad-cost limit and the sales return needed to break even.
+- [Budget variance explainer](https://useaiblocks.com/skills/budget-variance-explainer): Find out why your actuals missed budget. Give it actual and budget numbers and get each gap split by cause, plus short notes for leadership.
+- [Budget, forecast and cash gap review](https://useaiblocks.com/agents/monthly-budget-versus-actual-keeper): Compare spending with budget, update the forecast and put cash risks first. Get proposed changes for review.
 - [Business results drop investigator](https://useaiblocks.com/prompts/numbers-drop-explainer): Find out why your numbers dropped. Paste the before and after figures and what changed. You get causes ranked by evidence and one check to run.
 - [Business subscription renewal reviewer](https://useaiblocks.com/agents/monthly-subscription-renewal-decision-assistant): Review changed bills, usage and renewal terms. Find duplicate costs and evidence gaps before proposing a renewal decision.
 - [Business subscription usage auditor](https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions): Check software bills and real use. Compare keep or replace options and list renewal choices with possible savings.
+- [CAC payback checker](https://useaiblocks.com/skills/cac-payback-checker): Check your CAC payback: give it ad spend, margins and cohort profit. Get profit to CAC ratios, a scale, hold or fix call and a score out of 100.
 - [Cantera ignition delay simulator](https://useaiblocks.com/skills/ignition-delay-simulator): Use a reaction model, gas mix, temperature, and pressure to find the wait before ignition.
 - [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst): Find where people leave your sign-up or checkout funnel. Give it an event log and your steps to get conversion per step and ranked fixes.
 - [Conversion tracking planner](https://useaiblocks.com/agents/agency-paid-media-tracking-specialist): Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan.
@@ -22,16 +27,21 @@
 - [Customer acquisition profitability reviewer](https://useaiblocks.com/skills/ltgp-to-cac-checker): Share ad spend, new customers and order profits. Get customer payback ratios, warning signs and a score out of 100.
 - [Customer behaviour group finder](https://useaiblocks.com/skills/behaviour-group-finder): Share customer data and a decision goal. Get proposed behaviour groups, profiles and actions, with checks on how useful the groups are.
 - [Customer value and payback reviewer](https://useaiblocks.com/skills/store-ltv-payback-reader): Find your store's LTV and real CAC payback month from first-order cohorts by month. Get repeat rate, LTV and a score out of 100.
+- [Department budget difference and options review](https://useaiblocks.com/workflows/explain-a-department-budget-overrun): Check actual spend against the budget. Trace major differences to the records and draft choices for the budget owner.
 - [Donated goods stock handover checker](https://useaiblocks.com/workflows/reconcile-donated-goods-records): Share donation receipts, distributions, dates and stock counts. Get an item-by-item quantity check, missing records and handover notes.
 - [Employee share dilution cash calculator](https://useaiblocks.com/skills/sbc-share-offset-cost): Share net employee shares and repurchase assumptions. Estimate the cash to offset dilution beside the reported pay expense.
 - [Energy contract cash modeler](https://useaiblocks.com/skills/contracted-energy-cash-model): Share accepted energy volumes, contract prices and costs. Get a three-year view of operating cash.
+- [Event tracking planner](https://useaiblocks.com/skills/event-tracking-planner): Turn product steps and set goals into named actions, user rules, and a plan to track use.
 - [Expense report builder](https://useaiblocks.com/skills/expense-report-builder): Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.
 - [Experiment tracker](https://useaiblocks.com/agents/agency-project-management-experiment-tracker): Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep.
 - [Extra week sales growth checker](https://useaiblocks.com/skills/extra-week-revenue-comparability): Share annual sales and the extra week's sales. Compare reported growth with growth over a matching period.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Set up a first-party tracking pixel for your website. Answer a few questions and get a script, a collector and a Postgres database you own.
+- [Freelancer transaction and cash review](https://useaiblocks.com/agents/monthly-freelancer-books-closer): Sort monthly transactions, match receipts and compare budget. Get cash forecasts and a tax reserve estimate from your rules.
 - [GA4 BigQuery export analyst](https://useaiblocks.com/skills/ga4-raw-data-analyst): Share a GA4 daily export. Get observed sessions, channel tables and notes on gaps from the GA4 screen.
 - [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker): Check your GA4 store setup in one pass. Get the day-one settings you missed, the store events to add and a setup score out of 100.
 - [Google Analytics analyst](https://useaiblocks.com/skills/google-analytics-reader): Check your Google Analytics 4 traffic, top pages and sign-ups by asking in plain words. Get a live, read-only report and the query behind it.
+- [Grant spending and evidence report preparer](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack): Share grant rules, budget, transactions and receipts. Get a spending table, budget differences and missing evidence for the fund owner.
+- [Grant spending and receipt review](https://useaiblocks.com/agents/grant-spending-evidence-review-assistant): Match grant spending with its budget, rules and receipts. See changes, disputed costs and missing evidence.
 - [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner): Plan an incrementality test for your ad channel. Get a test sized to your spend and regions, plus a cut, hold or scale rule to read it.
 - [Indian economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Build an India economy dashboard from dated official data. Show key measures, sources, gaps and limits.
 - [Invoice financing cash flow checker](https://useaiblocks.com/skills/factoring-cashflow-timing-bridge): Share operating cash and matched invoice-financing records. See how early advances changed the timing of reported cash.
@@ -52,8 +62,10 @@
 - [North star metric picker](https://useaiblocks.com/skills/north-star-metric-picker): Pick your North Star metric: describe your product, get the one number to steer by plus 3 to 5 smaller numbers that move it.
 - [Notion time log updater](https://useaiblocks.com/skills/time-log-keeper): Log your time in plain words and get rows added to your Notion time log. Say "read papers 2h, gym 1h" and it asks when unsure.
 - [Opportunity size estimator](https://useaiblocks.com/skills/opportunity-size-estimator): Share a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
+- [Payroll hours and approval review](https://useaiblocks.com/workflows/check-payroll-inputs-before-the-cut-off): Check payroll source hours, approvals and totals. Get a list of issues and questions for the right reviewers before the cutoff.
 - [Pension cost and funding checker](https://useaiblocks.com/skills/pension-service-financing-bridge): Share pension costs, rates and payments. Separate service cost, interest, value changes and cash paid into the plan.
 - [Pension funding gap tracker](https://useaiblocks.com/skills/pension-funded-status-change): Share pension obligations, assets and payments. Separate employer cash funding from other changes in the pension gap.
+- [Product event tracking and retention dashboard planner](https://useaiblocks.com/workflows/set-up-product-tracking-and-build-a-retention-dashboard): Describe your product and chosen retention measure. Get an event plan, cohort table and dashboard from real usage data when tools support it.
 - [PyMC run tracker with MLflow](https://useaiblocks.com/skills/model-run-tracker): Turn PyMC model code into MLflow tracking code that saves settings, fit results, and diagnostics.
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Test a queue or process before you change it. Get a simulation of waits and busy staff or machines, run many times, with a plain summary.
 - [Raw material price impact calculator](https://useaiblocks.com/skills/commodity-pass-through-cost-bridge): Share material costs, product quantities and price plans. See how cost increases affect the margin left.
@@ -82,6 +94,7 @@
 - [Store profit per visitor calculator](https://useaiblocks.com/skills/store-profit-per-visitor-calculator): Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score.
 - [Store sales decline investigator](https://useaiblocks.com/skills/store-sales-drop-splitter): Share two periods of store and ad numbers. Get the sales drop split into traffic, conversion and order value, with next checks.
 - [Store sales drop analyst](https://useaiblocks.com/prompts/sales-drop-cause-finder): Share two periods of store numbers. Get changes in visits, buying rate and order value, refunds separated and a next check.
+- [Subscription revenue, churn and customer cost review](https://useaiblocks.com/agents/weekly-saas-numbers-keeper): Review recurring revenue and customer losses under fixed definitions. Get cost gaps, payback checks and one proposed weekly priority.
 - [Supplier financing debt scenario checker](https://useaiblocks.com/skills/supplier-finance-leverage-bridge): Share debt, cash and supplier-finance balances. See a debt-like scenario beside the reported balance-sheet treatment.
 - [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker): Share shipping, energy and supplier data. Get emissions by source and a ranked list of reduction options.
 - [Supply chain dashboard designer](https://useaiblocks.com/skills/supply-chain-dashboard-designer): Describe your supply chain and systems. Get a dashboard design with data sources and alert rules.

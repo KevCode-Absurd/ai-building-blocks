@@ -1,6 +1,6 @@
 ---
 name: codebase-audit-pre-push
-description: "Deep audit before GitHub push: removes junk files, dead code, security holes, and optimization issues. Checks every file line-by-line for production readiness."
+description: "Deep audit before GitHub push: takes junk files out of git (with your yes), finds dead code, security holes, and optimization issues. Checks every file line-by-line for production readiness."
 category: development
 risk: safe
 source: community
@@ -10,6 +10,19 @@ date_added: "2026-03-05"
 # Pre-Push Codebase Audit
 
 As a senior engineer, you're doing the final review before pushing this code to GitHub. Check everything carefully and fix problems as you find them.  
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## When to Use This Skill  
 
@@ -31,16 +44,28 @@ Review the entire codebase file by file. Read the code carefully. Fix small, saf
 
 Start by looking for files that shouldn't be on GitHub:  
 
-**Remove these, but list the files first and get the user's yes before deleting. Never delete a file that may be the user's own work (for example `*_old.*`, `*_copy.*`, `scratch.*` or `vendor/`) without asking:**  
-- OS files: `.DS_Store`, `Thumbs.db`, `desktop.ini`  
-- Logs: `*.log`, `npm-debug.log*`, `yarn-error.log*`  
-- Temp files: `*.tmp`, `*.temp`, `*.cache`, `*.swp`  
-- Build output: `dist/`, `build/`, `.next/`, `out/`, `.cache/`  
-- Dependencies: `node_modules/`, `vendor/`, `__pycache__/`, `*.pyc`  
-- IDE files: `.idea/`, `.vscode/` (ask user first), `*.iml`, `.project`  
-- Backup files: `*.bak`, `*_old.*`, `*_backup.*`, `*_copy.*`  
-- Test artifacts: `coverage/`, `.nyc_output/`, `test-results/`  
-- Personal junk: `TODO.txt`, `NOTES.txt`, `scratch.*`, `test123.*`  
+A file name alone never proves a file is junk. The aim is to keep these files out of GitHub, which usually means taking them out of git and adding them to `.gitignore`, not deleting them from the user's disk.
+
+**Before you propose any file, check three things:**
+- **Is it tracked?** Run `git ls-files <path>`. Untracked files only need a `.gitignore` line; leave them on disk.
+- **Does anything use it?** Search the code, build files and config for the path (for example `go.mod` with a committed `vendor/` folder, a `composer.json`, a Dockerfile, a deploy script, or a build that reads `build/`). If anything refers to it, keep it and say why.
+- **Could it be someone's work?** Backups, notes, scratch files and editor settings may be the only copy of something. Never remove these; ask the user what to do with each.
+
+**Group A: generated files you can rebuild.** Propose taking these out of git (`git rm -r --cached <path>`, which keeps the local copy) and adding them to `.gitignore`. List them and get the user's yes first:
+- OS files: `.DS_Store`, `Thumbs.db`, `desktop.ini`
+- Logs: `*.log`, `npm-debug.log*`, `yarn-error.log*`
+- Temp files: `*.tmp`, `*.temp`, `*.swp`
+- Build output: `dist/`, `build/`, `.next/`, `out/`, `.cache/` (only if a build step recreates it)
+- Installed dependencies: `node_modules/`, `__pycache__/`, `*.pyc`
+- Test artifacts: `coverage/`, `.nyc_output/`, `test-results/`
+
+**Group B: files that may be needed or may be the user's own work.** Do not delete or untrack these. List each one with what you found (tracked or not, and anything that refers to it) and ask the user to choose: keep it, move it out of the project, or untrack it:
+- Vendored code: `vendor/` (some projects commit it on purpose, and the build needs it)
+- IDE files: `.idea/`, `.vscode/`, `*.iml`, `.project` (teams often share some of these settings)
+- Backup files: `*.bak`, `*_old.*`, `*_backup.*`, `*_copy.*`
+- Notes and scratch files: `TODO.txt`, `NOTES.txt`, `scratch.*`, `test123.*`
+
+Only delete a file from disk if the user asks for that file to be deleted.
 
 **Critical - Check for secrets:**  
 - `.env` files (should never be committed)  
@@ -51,25 +76,25 @@ If you find secrets in the code, mark it as a CRITICAL BLOCKER. With the user's 
 
 ### 2. Fix .gitignore  
 
-Check if the `.gitignore` file exists and is thorough. If it’s missing or not complete, update it to include all junk file patterns above. Ensure that `.env.example` exists with keys but no values.  
+Check if the `.gitignore` file exists and is thorough. If it’s missing or not complete, add the Group A patterns above, and any Group B patterns the user chose to untrack. Ensure that `.env.example` exists with keys but no values.
 
 ### 3. Audit Every Source File  
 
 Look through each code file and check:  
 
-**Dead Code (remove immediately):**  
-- Commented-out code blocks  
-- Unused imports/requires  
-- Unused variables (declared but never used)  
-- Unused functions (defined but never called)  
-- Unreachable code (after `return`, inside `if (false)`)  
-- Duplicate logic (same code in multiple places—combine)  
+**Dead Code (remove only after you check nothing uses it):**
+- Commented-out code blocks (list large blocks for the user instead of deleting them)
+- Unused imports/requires
+- Unused variables (declared but never used)
+- Unused functions: first search for exports, other packages, tests, config, reflection or names built at run time. If you are not sure, list it instead of removing it
+- Unreachable code (after `return`, inside `if (false)`)
+- Duplicate logic (same code in multiple places—combine)
 
 **Code Quality (fix issues as you go):**  
 - Vague names: `data`, `info`, `temp`, `thing` → rename to be descriptive  
 - Magic numbers: `if (status === 3)` → extract to named constant  
 - Debug statements: remove `console.log`, `print()`, `debugger`  
-- TODO/FIXME comments: either resolve them or delete them  
+- TODO/FIXME comments: resolve the small ones; list the rest for the user rather than deleting them
 - TypeScript `any`: add proper types or explain why `any` is used  
 - Use `===` instead of `==` in JavaScript  
 - Functions longer than 50 lines: consider splitting  
@@ -193,10 +218,12 @@ After auditing, provide a report:
 ```
 CODEBASE AUDIT COMPLETE  
 
-FILES REMOVED:  
-- node_modules/ (build artifact)  
-- .env (contained secrets)  
-- old_backup.js (unused duplicate)  
+FILES TAKEN OUT OF GIT (kept on disk, added to .gitignore):
+- node_modules/ (installed dependencies)
+- .env (contained secrets; key rotation needed)
+
+FILES FOR YOU TO DECIDE:
+- old_backup.js (backup; nothing refers to it) → keep, move or untrack?
 
 CODE CHANGES:  
 [src/api/users.js]  
@@ -226,10 +253,17 @@ Scalability: 9/10
 Overall: 9/10  
 ```  
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Vercel deployer](https://useaiblocks.com/skills/vercel-deployer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Key Principles  
 
 - Read the code thoroughly, don't skim  
-- Fix small, safe issues immediately. For deletions and secrets, ask first  
+- Fix small, safe issues immediately. For untracking, deletions and secrets, ask first, and prefer untracking to deleting
 - If uncertain about removing something, ask the user  
 - Test after making changes  
 - Be thorough but practical—focus on real problems  

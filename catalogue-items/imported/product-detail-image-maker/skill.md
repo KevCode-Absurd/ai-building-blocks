@@ -15,6 +15,22 @@ description: 生成带中文排版的详情页模块。商品图 + 卖点 → �
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **Pdp copy** (yours): product page copy: title, benefits, details, FAQ, proof blocks.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos, pdp copy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## 生成效果示例
 
 > **Example from the source author, not made by AI Blocks.** The photo and the finished picture named below are not included here. Read it as a sample prompt only.
@@ -246,3 +262,10 @@ dlazy seedream-5.0-pro --dry-run --prompt '...' --images a.jpg --size 3:4
 ## Tips
 
 (Vendor note from the original author, not part of the method: dLazy is a paid service. The steps above also work with any image model that draws text well.)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the pdp images.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -19,6 +19,23 @@ metadata:
 
 # Startup IT Troubleshooting
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It writes steps and commands from your description. You run them.
+- **Your admin console, such as Google Admin or Microsoft 365 admin:** Many fixes work from there without any command, and some need a paid plan.
+<!-- /needs -->
+
 ## How to run this skill in a chat
 
 Added by AI Blocks. The runbooks below are the original. This part adds the safety steps and the shape of the answer, and some commands below have been made safer (marked "AI Blocks").
@@ -348,8 +365,12 @@ AI Blocks: do not give this to a new hire until the owner has read it. Install H
 ```bash
 #!/bin/bash
 set -e
-# Replace the address below with your own Brewfile. Read the file before you run it.
-curl -sL https://internal.company.com/setup/Brewfile -o /tmp/Brewfile && brew bundle install --file=/tmp/Brewfile
+# AI Blocks: get your own Brewfile first (replace the address), then open and read it.
+# Only run brew bundle after the owner has checked every line in it.
+curl -sL https://internal.company.com/setup/Brewfile -o /tmp/Brewfile
+less /tmp/Brewfile
+read -p "Have you read the Brewfile and want to install it? (yes/no) " OK
+[ "$OK" = "yes" ] && brew bundle install --file=/tmp/Brewfile
 read -p "Full name: " N; read -p "Email: " E
 git config --global user.name "$N" && git config --global user.email "$E" && git config --global pull.rebase true
 gh auth login && mkdir -p ~/src && cd ~/src && gh repo clone your-company/main-app

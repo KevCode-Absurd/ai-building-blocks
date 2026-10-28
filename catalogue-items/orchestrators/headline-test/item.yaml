@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [victor-schwab, john-caples]
 credits:
-  - {title: "100 Good Advertising Headlines, and why they were so profitable", by: "Victor Schwab", used: "The order of the steps: ad headline writer, headline promise checker, keyed headline test planner"}
+  - {title: "100 Good Advertising Headlines, and why they were so profitable", by: "Victor Schwab", used: "Inspiration for writing headlines that pick out a reader and promise a reward, and for testing them with a code each. The three-step order is this workflow's own design."}
 generated_from: intake/100-good-advertising-headlines/skeleton.yaml

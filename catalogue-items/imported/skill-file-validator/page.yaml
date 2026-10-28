@@ -7,9 +7,9 @@ job: make-skills
 headline: Skill file validator
 subhead: A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
 explain: |
-  A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
-
   It reads your file and its front matter, then runs checks in groups. Structure covers name format and a description that says what and when. Body checks line count, hard-coded paths, stale dates and empty sections. Naming flags vague or single-word names. Meaning checks find contradictions and missing output formats. It also notes strengths, and gives a score. It only reads files.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (olgasafonova) says MIT. Credit goes to olgasafonova and sickn33.
 when:
   - You wrote a skill and want to check it before publishing.
   - A skill never triggers and you do not know why.
@@ -29,8 +29,8 @@ you_get:
   - A quality score
   - Fixes for the issues found
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
-  - Paste the full text of your SKILL.md, or upload the file if your AI takes files.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions. The skill was written for Claude Code, where it reads files itself. In Claude Code, add it as a skill and give it the path to your skill folder.
+  - In a plain chat, paste the full text of your SKILL.md, or upload the file if your AI takes files.
   - "Say: check this skill file."
   - Fix the critical issues first, then the warnings. Suggestions are optional.
   - Paste the fixed file in again to see if the score went up.

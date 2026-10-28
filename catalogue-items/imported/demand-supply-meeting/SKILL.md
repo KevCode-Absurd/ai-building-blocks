@@ -7,6 +7,22 @@ description: When the user wants to implement S&OP process, integrate demand and
 
 You are an expert in Sales & Operations Planning (S&OP) and Integrated Business Planning (IBP). Your goal is to help organizations implement effective S&OP processes that align demand, supply, finance, and strategy to drive better business decisions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** A plain chat is enough. A tool that runs code can build the forecast checks for you.
+<!-- /needs -->
+
 ## How to run this in a chat (added by AI Blocks)
 
 **Who this is for.** A team that plans several products or product families each month and needs sales, operations and finance to agree on one plan. For one product or a one-off decision, use a lighter skill (see the related skills at the end).
@@ -342,6 +358,12 @@ class DemandReview:
         """Apply adjustments to create consensus forecast"""
 
         consensus = self.statistical_fcst.copy()
+
+        # Start every row at the statistical forecast, so rows with no
+        # adjustment keep it instead of being left empty (NaN). AI Blocks fix.
+        # Each adjustment is applied to the statistical forecast; if one row
+        # gets several, the last one wins. Combine them into one if needed.
+        consensus['consensus_forecast'] = consensus['statistical_forecast']
 
         for adj in self.adjustments:
             mask = (
@@ -684,25 +706,60 @@ class PreSopMeeting:
         self.supply = supply_plan
         self.financial = financial_data
 
-    def create_demand_supply_balance(self):
-        """Create integrated view of demand and supply"""
+    def create_demand_supply_balance(self, opening_inventory=None):
+        """
+        Create integrated view of demand and supply
+
+        AI Blocks fix: inventory is now tracked per product family (the
+        original ran one cumulative sum across all families, so one family's
+        stock leaked into the next), and sales are capped at what is on hand.
+        Unmet demand is assumed lost, not back-ordered; change this if your
+        business back-orders.
+
+        - opening_inventory: optional dict {product_family: units on hand}
+        """
 
         balance = self.demand.merge(
             self.supply,
             on=['product_family', 'period'],
             how='outer'
         )
+        # A family/period missing from one plan means zero for that plan
+        balance[['consensus_forecast', 'supply_plan']] = (
+            balance[['consensus_forecast', 'supply_plan']].fillna(0)
+        )
+        balance = balance.sort_values(['product_family', 'period']).reset_index(drop=True)
 
         balance['supply_demand_gap'] = (
             balance['supply_plan'] - balance['consensus_forecast']
         )
 
-        balance['inventory_impact'] = balance['supply_demand_gap'].cumsum()
+        opening_inventory = opening_inventory or {}
+        sold, unmet, ending = [], [], []
+        for family, rows in balance.groupby('product_family', sort=False):
+            on_hand = opening_inventory.get(family, 0)
+            for _, row in rows.iterrows():
+                available = on_hand + row['supply_plan']
+                units_sold = min(row['consensus_forecast'], available)
+                on_hand = available - units_sold
+                sold.append(units_sold)
+                unmet.append(row['consensus_forecast'] - units_sold)
+                ending.append(on_hand)
+
+        balance['units_sold'] = sold
+        balance['unmet_demand'] = unmet          # demand with no stock to fill it
+        balance['ending_inventory'] = ending     # never below zero
 
         return balance
 
     def financial_reconciliation(self, balance_plan):
-        """Calculate financial impact of plan"""
+        """
+        Calculate financial impact of plan
+
+        Revenue and cost of sales come from units actually sold. Units made
+        but not sold go into inventory value, not cost of sales, and unmet
+        demand earns no revenue.
+        """
 
         financial = balance_plan.merge(
             self.financial,
@@ -710,19 +767,24 @@ class PreSopMeeting:
             how='left'
         )
 
-        # Revenue
+        # Revenue: only units sold
         financial['revenue'] = (
-            financial['consensus_forecast'] * financial['price_per_unit']
+            financial['units_sold'] * financial['price_per_unit']
         )
 
-        # COGS
+        # Cost of goods sold: only units sold
         financial['cogs'] = (
-            financial['supply_plan'] * financial['cost_per_unit']
+            financial['units_sold'] * financial['cost_per_unit']
         )
 
-        # Inventory value
+        # Inventory value: units left on hand at the end of the period
         financial['inventory_value'] = (
-            financial['inventory_impact'] * financial['cost_per_unit']
+            financial['ending_inventory'] * financial['cost_per_unit']
+        )
+
+        # Revenue missed because there was no stock
+        financial['lost_revenue'] = (
+            financial['unmet_demand'] * financial['price_per_unit']
         )
 
         # Gross margin
@@ -733,7 +795,8 @@ class PreSopMeeting:
             'revenue': 'sum',
             'cogs': 'sum',
             'gross_margin': 'sum',
-            'inventory_value': 'sum'
+            'inventory_value': 'sum',
+            'lost_revenue': 'sum'
         }).reset_index()
 
         summary['gross_margin_pct'] = (
@@ -770,7 +833,9 @@ class PreSopMeeting:
             'planning_period': balance['period'].min(),
             'total_demand': balance['consensus_forecast'].sum(),
             'total_supply': balance['supply_plan'].sum(),
-            'net_inventory_change': balance['supply_demand_gap'].sum(),
+            # Units made minus units sold (unmet demand is lost, not stocked)
+            'net_inventory_change': balance['supply_plan'].sum() - balance['units_sold'].sum(),
+            'unmet_demand': balance['unmet_demand'].sum(),
             'revenue_plan': financials['revenue'].sum(),
             'gross_margin_pct': (
                 financials['gross_margin'].sum() /
@@ -1570,6 +1635,15 @@ All numbers in the example tables below are illustrative. Never copy them. Fill 
 - Pricing analysis for appliances (Marketing, Mar 1)
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker). It takes the plan.
+- The [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker). It takes the plan.
+- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

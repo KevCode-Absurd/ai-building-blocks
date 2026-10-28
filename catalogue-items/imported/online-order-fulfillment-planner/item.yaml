@@ -29,4 +29,4 @@ credits:
   - title: ecommerce-fulfillment skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/ecommerce-fulfillment
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, made the box picker check that items physically fit (not just volume) and say when no box fits, rebuilt the free-shipping threshold so it uses your margin before shipping, and removed the random shipping zone. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -7,7 +7,7 @@ description: "Reconcile an LP-interest NAV quote with interim distributions and 
 
 Quoted price, adjusted closing payment and a separate future-call funding budget.
 
-Use it for one secondary purchase of a fund interest where the price is quoted as a share of a dated reference NAV. It does only price arithmetic. It does not give a fair value or a view on future NAV. For the unfunded part of one commitment after calls and recalls, use the Unfunded commitment checker. For how much of a fund's distributions can be recycled, use the Fund recycling capacity checker.
+Use it for one secondary purchase of a fund interest where the price is quoted as a share of a dated reference NAV. It does only price arithmetic. It does not give a fair value or a view on future NAV. For the unfunded part of one commitment after calls and recalls, use the Remaining fund commitment checker. For how much of a fund's distributions can be recycled, use the Fund reinvestment limit checker.
 
 ## Before you start
 
@@ -65,6 +65,7 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 ## Limits
 
 - Only interim-distribution adjustment; no interim calls, FX, discount-rate valuation or uncertain future NAV return.
+- The included model only covers seller-kept distributions credited dollar for dollar against the price. If your terms credit them another way, stop and work that part out by hand.
 - Gross funding budget is not expected economic loss or a secondary investment recommendation.
 - Arithmetic does not establish legal applicability or authorize a transaction.
 
@@ -75,15 +76,15 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 These links identify public methods and definitions. All instructions and practice fixtures in this pack are original; linked publications are not bundled or relicensed.
 
+## Hand back
+
+Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Work out the unfunded part of the commitment you are taking on with the [Unfunded commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker).
-- Check how much of a fund's distributions it can recycle with the [Fund recycling capacity checker](https://useaiblocks.com/skills/fund-recycling-capacity-checker).
+- Work out the unfunded part of the commitment you are taking on with the [Remaining fund commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker).
+- Check how much of a fund's distributions it can recycle with the [Fund reinvestment limit checker](https://useaiblocks.com/skills/fund-recycling-capacity-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.

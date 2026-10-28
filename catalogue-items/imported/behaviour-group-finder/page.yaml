@@ -46,7 +46,7 @@ output_sample:
     - The decision the groups should help with, such as a campaign, a roadmap or a retention plan
     - Any groups you already use (optional)
   prerequisites:
-    - An AI that can run Python code and read your data file
+    - An AI that can run Python code and read your data file, with pandas and scikit-learn for the clustering step. The helper script itself needs only your CSV, the segment column and one number column.
   output:
     - name: segmentation_runner.py
       contains: The script that profiles each group against the overall average. The AI's own code does the k-means run and the charts.

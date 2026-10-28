@@ -12,6 +12,7 @@ when:
   - You need a bounded wakeup dispatcher with retry and stale-claim recovery.
   - You are adding this function to an agent system.
   - You need to compare an existing version with the supplied starter.
+  - You want a starter to review: the output is not run or tested, so check it before you turn it on.
 you_give:
   - Scoped event signals, deduplication key, claim lease and agent state
 you_get:
@@ -42,7 +43,7 @@ thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - You need one agent run loop that does a single task per run. Use the Single-task agent heartbeat builder.
   - You need a job queue that survives crashes and caps retries. Use the Recoverable agent job queue builder.
-  - You need a task table where an agent claims one task at a time. Use the Agent issue and checkout builder.
+  - You need a task table where an agent claims one task at a time. Use the Agent task ownership workflow builder.
 output_sample:
   input:
     - Your list of events that should wake an agent (for example, a proposal approved or a task assigned)

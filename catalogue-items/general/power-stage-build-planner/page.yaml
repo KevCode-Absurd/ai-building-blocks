@@ -18,8 +18,8 @@ when:
   - You are about to spend on brand, scale or a platform and want to know if the timing is right.
   - You are choosing a product design and want to know which long-run edges it will allow or rule out.
 not_for:
-  - "You have no market facts and no power result yet: run the Business power tester first, or write a few lines on your business."
-  - "You want to check if your model beats the leader's: use the Counter-positioning finder."
+  - "You have no market facts and no power result yet: run the Competitive advantage tester first, or write a few lines on your business."
+  - "You want to check if your model beats the leader's: use the Competitive business model planner."
   - "You want to score the seven powers for your business first: use the Seven powers scorecard builder."
 
 you_give:
@@ -37,7 +37,7 @@ how_to_use:
   - Paste your power test or scorecard, then add market growth figures if you have them.
   - Name the choices that would be costly to undo, such as your main supplier or your price model.
   - Run the first test it writes and come back with the result.
-  - If the answer is a counter-positioning idea, check it with "Counter-positioning finder" first.
+  - If the answer is a counter-positioning idea, check it with "Competitive business model planner" first.
 output_sample:
   input:
     - Your power test or scorecard, or a few lines on your business
@@ -128,6 +128,8 @@ improve:
   - Rerun when your market growth number changes by a lot.
   - Add the result of the first test to the facts and ask for the next one.
   - Keep a list of early choices and add to it each time you make a hard-to-undo decision.
+
+next: [counter-positioning-finder, one-bold-move-picker]
 
 works_best_with:
   tools:

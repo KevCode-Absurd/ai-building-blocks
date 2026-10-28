@@ -12,7 +12,7 @@ The hardest call in a new venture is whether to keep going or change course. Mos
 This skill runs in any chat AI. It needs no files, web access or paid tools. One fact is required: a progress reading. The skill never invents a trend or a customer quote.
 
 **What you need:**
-- **Your progress reading** (yours, or from the [Cohort funnel reader](https://useaiblocks.com/skills/cohort-funnel-reader)): each key rate by group of customers, set against its target. A table you made yourself works.
+- **Your progress reading** (yours, or from the [Cohort funnel analyst](https://useaiblocks.com/skills/cohort-funnel-reader)): each key rate by group of customers, set against its target. A table you made yourself works.
 
 **Makes it better (optional):**
 - **Customer notes** (yours): what customers said in calls or tests, including those who left. These matter most.
@@ -20,7 +20,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **Your milestones** (yours): what you predicted earlier, with dates.
 
 **Recommended step before this one:**
-1. If you only have raw results by join date, run the [Cohort funnel reader](https://useaiblocks.com/skills/cohort-funnel-reader). Bring your results by join date.
+1. If you only have raw results by join date, run the [Cohort funnel analyst](https://useaiblocks.com/skills/cohort-funnel-reader). Bring your results by join date.
 2. This one.
 
 How to start:
@@ -109,15 +109,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Pick the cheapest first test of the new guess** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the call and the new guess.
-- **Plan the smallest version of the new product** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the new guess.
-- **Set a stop line in advance if you persevere** with the [Decision options and tripwire planner](https://useaiblocks.com/skills/decision-tripwire-planner). It takes the call.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The call is stated in one line, with facts for and against.
@@ -127,6 +118,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A pivot names one kind, its evidence and what is kept.
 - A next review date and attendee list are given.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Pick the cheapest first test of the new guess** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the call and the new guess.
+- **Plan the smallest version of the new product** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the new guess.
+- **Set a stop line in advance if you persevere** with the [Decision backup planner](https://useaiblocks.com/skills/decision-tripwire-planner). It takes the call.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

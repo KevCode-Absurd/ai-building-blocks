@@ -66,5 +66,5 @@ Lead with usable cash and how it is built from the three steps. State plainly th
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - The [Prepare a grant spending evidence pack](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack) workflow, when you must show grant spending followed the agreement.
-- The [Reconcile treasury settlement liquidity](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity) workflow, when you need a dated cash ladder of coming payments.
+- The [Treasury liquidity and payment timing checker](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity) workflow, when you need a dated cash ladder of coming payments.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -114,7 +114,7 @@ She'd ask what the fight costs in energy and for how long, and whether it is a m
 
 #### Outside her field: your creative work
 
-Say you are a video editor or a writer with a portfolio. She'd ask who your one customer is and what your hook is. She'd tell you to show the work to strangers, ask what it's worth and make the first line the headline. She'd drop any piece that has no audience. She'd point out that she did badly at school and found her real education in jobs, so she'd tell you to learn by selling.
+Our application of her sales rules, not her stated advice on creative work. Say you are a video editor or a writer with a portfolio. She'd ask who your one customer is and what your hook is. She'd tell you to show the work to strangers, ask what it's worth and make the first line the headline. She'd drop any piece that has no audience. She'd point out that she did badly at school and found her real education in jobs, so she'd tell you to learn by selling.
 
 #### Your life and career
 

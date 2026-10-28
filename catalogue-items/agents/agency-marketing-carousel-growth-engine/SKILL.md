@@ -11,7 +11,7 @@ Give it a website and a product. It writes one six-slide carousel plan with thre
 
 Read [the original role profile](references/source-agent.md) before applying its methods. Use its carousel standards: the six-slide arc, a hook on slide 1, one visual style, 9:16 vertical and no text in the bottom 20%. The profile describes an autopilot with scripts, API keys, image generation, publishing and scheduling. This pack has none of those. Do not claim to have run, made, posted or scheduled anything. Plan and write only.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, your website, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Gemini:** The original profile uses Gemini to make slide images from the prompts. Any image maker can do the same job.
@@ -60,12 +60,12 @@ Return these sections in order.
 4. Pre-post checklist.
 5. MISSING items and assumptions.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
 - The [LinkedIn post writer](https://useaiblocks.com/skills/linkedin-post-writer). It takes the draft.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

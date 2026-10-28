@@ -29,4 +29,4 @@ credits:
   - title: senior-secops skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-secops
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name and added notes to SKILL.md that the scans are a pre-check, not certification, that the package list is offline, and that gitleaks-action can need a paid licence.

@@ -30,4 +30,4 @@ credits:
   - title: sales-operations-planning skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/sales-operations-planning
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: "Copied under the MIT licence. We gave it a plain name and fixed the planning code: the consensus forecast now starts from the statistical forecast, inventory is tracked per product family, and revenue and cost of sales count only units actually sold. We added Before you start and After this sections that link to other AI Blocks steps."

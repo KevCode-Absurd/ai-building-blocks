@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
+  - {type: product_data, required: false}
   - {type: keyword_list, required: true}
   - {type: competitor_set, required: false}
 outputs:

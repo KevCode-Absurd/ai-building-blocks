@@ -35,7 +35,7 @@ you_get:
   - Updated agent-state.json and decision-log.md files, or the same text to save in a note
   - Missing facts, and one next action
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and add the pack, which holds this agent and its three skills. If your AI can't keep files, paste the agent first.
+  - Open Claude, ChatGPT or Gemini and add the pack, which holds this agent and its three skills. Add all three. If one is missing, the agent says so and reads it from its page. If your AI can't keep files, paste the agent first.
   - First run: paste your notes or action list and say there is no saved state. Pick a folder for the two state files, or ask for them as text to save in a note.
   - Later runs: paste the new notes and the saved state files, then give today's date and your timezone.
   - Check the line that says which path ran. If you gave it new notes and it says nothing changed, ask it to show which notes it read.
@@ -126,3 +126,4 @@ terms:
     meaning: A task someone agreed to do, with an owner and a date.
   - term: Draft
     meaning: A message the agent writes for you to read and send. Nothing is sent for you.
+next: [week-priority-picker]

@@ -132,7 +132,11 @@ for countMode = 1:numMode
         while numErrors <= maxNumErrors && numPacket <= maxNumPackets
             % --- TX ---
             txBits = randi([0 1], dataLength*bitsPerByte, 1, "int8");
-            channelIndex = randi([0 39], 1, 1);
+            if phyMode == "LE2M"
+                channelIndex = randi([0 36], 1, 1);  % LE2M is not allowed on advertising channels 37-39
+            else
+                channelIndex = randi([0 39], 1, 1);
+            end
 
             if channelIndex <= 36
                 accessAddress = [1 0 0 0 1 1 1 0 1 1 0 0 1 0 0 1 ...

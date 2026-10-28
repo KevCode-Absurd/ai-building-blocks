@@ -149,8 +149,8 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
 - The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
 - The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
 - The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.

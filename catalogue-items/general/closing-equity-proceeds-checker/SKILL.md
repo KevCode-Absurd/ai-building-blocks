@@ -103,16 +103,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the bridge, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or payment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Settle the price change after closing with the [Working capital true-up checker](https://useaiblocks.com/skills/working-capital-true-up-checker).
-- Work out what escrow can be released with the [Escrow release checker](https://useaiblocks.com/skills/escrow-release-checker).
-- Run all three together in the [Reconcile seller closing cash](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow.
+- Settle the price change after closing with the [Sale working capital settlement checker](https://useaiblocks.com/skills/working-capital-true-up-checker).
+- Work out what escrow can be released with the [Escrow release balance checker](https://useaiblocks.com/skills/escrow-release-checker).
+- Run all three together in the [Seller closing proceeds and retained cash checker](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the bridge, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or payment conclusion unresolved.

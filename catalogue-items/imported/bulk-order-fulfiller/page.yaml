@@ -5,13 +5,13 @@ name: Bulk order fulfiller
 summary: Mark many Shopify orders as shipped in one batch. Give it your order tracking numbers, check the preview, then it adds tracking to each order.
 job: run-your-store
 headline: Bulk order fulfiller
-subhead: Give it your tracking numbers and your Shopify location. It shows a preview of every order it will mark as shipped, then adds the tracking to each one. It changes live orders and cannot be undone.
+subhead: Give it your tracking numbers and your Shopify location. It shows a preview of every order it will mark as shipped, then adds the tracking to each one. It changes live orders, and that is hard to undo.
 explain: |
   Marking fifty orders as shipped one by one takes a long time. This skill does it in one batch. It finds the open orders at your location, matches each to a row in your tracking list by order number, and adds the tracking.
 
   It always shows a preview first. The preview lists every order, carrier and tracking number, and says if customers will get an email. Nothing changes until you say go ahead. Customer emails stay off unless you turn them on.
 
-  It does not buy or print labels, so do that in your carrier tool first. It skips orders that ship in parts or have more than 10 lines, and lists them for you to check by hand. Shopify does not let you undo a fulfilment through this route.
+  It does not buy or print labels, so do that in your carrier tool first. It skips orders that ship in parts or have more than 10 lines, and lists them for you to check by hand. Undoing a fulfilment takes a separate cancel in Shopify, and a shipping email that went out cannot be taken back.
 when:
   - You shipped fifty orders today and need to mark them all fulfilled.
   - You have a sheet of tracking numbers from your carrier.
@@ -34,7 +34,7 @@ you_get:
   - A summary and a results file
 how_to_use:
   - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
-  - Install Shopify CLI (Shopify's own install guide has the steps). Then sign in to your store with it. Your sign-in needs permission to read orders and write fulfilments.
+  - Install Shopify CLI (Shopify's own install guide has the steps). Then sign in to your store with it. Your sign-in needs permission to read orders and to read and write fulfilment orders, and your staff account needs the fulfil and ship orders permission.
   - Give your AI the skill, your store address, your location and your tracking list. Say whether customers should get an email.
   - Ask for the preview first. Check the order numbers, tracking numbers and the count of emails.
   - If it looks right, say go ahead. Then read the results for each order and fix any errors in Shopify.
@@ -69,7 +69,7 @@ output_sample:
   prerequisites:
     - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
     - Shopify CLI signed in to your store
-    - Permission to read orders and write fulfilments
+    - Permission to read orders and to read and write fulfilment orders, plus the fulfil and ship orders staff permission
     - Shipping labels already bought in your carrier tool
   output:
     - name: Preview table

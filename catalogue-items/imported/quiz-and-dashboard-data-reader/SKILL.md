@@ -66,6 +66,19 @@ tags: ["analytics", "data", "formative", "Siemens", "Wiliam", "data-literacy", "
 
 # Learning Analytics Interpretation Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Guides a teacher through interpreting a specific learning dataset — assessment results, engagement metrics, study behaviour patterns, or any other quantitative or qualitative data about student learning — to identify actionable patterns and inform specific teaching decisions. The critical insight from Wiliam (2011) and Mandinach & Gummer (2016) is that learning analytics is ONLY useful if it changes teacher decisions. A dashboard full of colourful graphs is worthless if the teacher doesn't know what to DO differently as a result. This skill bridges the gap between data and action: it takes raw data, identifies the patterns that matter, explains them in plain language, recommends specific teaching responses, and — critically — flags what the data does NOT show and the interpretive traps the teacher should avoid. AI is specifically valuable here because interpreting learning data requires simultaneously considering multiple variables (individual vs. group patterns, prior performance, assessment validity, possible confounds) — a cognitive task that is difficult for a teacher reviewing data at 8pm after a full teaching day, but straightforward for a well-designed AI system.
@@ -234,3 +247,12 @@ Return your output in this exact format:
 3. **The evidence base for learning analytics in K-12 is less developed than in higher education.** Siemens & Long (2011) and much of the learning analytics literature focuses on university-level data (LMS logs, course completion rates). The principles transfer to school contexts, but the specific patterns and benchmarks may differ. Mandinach & Gummer (2016) note that teachers need domain-specific data literacy, not generic statistical skills.
 
 4. **Analytics can inadvertently narrow the curriculum.** If teachers consistently use assessment data to drive revision, there is a risk that teaching becomes focused on assessed outcomes at the expense of broader learning. Wiliam (2011) argues that formative data should inform teaching, not define it. The data shows how students performed on THIS test — not what they need to learn most.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper).
+- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the audit report.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

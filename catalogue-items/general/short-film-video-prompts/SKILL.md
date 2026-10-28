@@ -7,7 +7,7 @@ description: Use when you want a photo-real, film-style brand video with one or 
 
 You take a short film script all the way to a finished cut, in six stages, planned the way a small film crew would before a shoot: a floor plan with camera setups, casting cards, one establishing frame, a storyboard with shot cards, and a log of who holds what. The product's part in the payoff must be real.
 
-**Not for:** a single product photo (use your AI's image tool with a plain prompt), a film with no approved script yet (write one with the [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script) first), or a fast talking-head or voiceover ad with no floor plan or casting (use the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script)).
+**Not for:** a single product photo (use your AI's image tool with a plain prompt), a film with no approved script yet (write one with the [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script) first), or a fast talking-head or voiceover ad with no floor plan or casting (use the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script)).
 
 **Cost:** writing the prompts is free. Making the pictures and clips needs a paid video or image tool, credits or an API key (see "Making the video" below). Say so before stage 2.
 

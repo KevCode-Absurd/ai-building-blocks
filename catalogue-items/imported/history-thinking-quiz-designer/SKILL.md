@@ -79,6 +79,27 @@ tags: ["assessment", "historical-thinking", "formative-assessment", "HATs", "dia
 
 # Historical Thinking Assessment Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Primary source history lesson planner](https://useaiblocks.com/skills/primary-source-lesson). Bring your lesson plan, source text.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs formative assessment tasks that make students' historical thinking visible — revealing whether students are sourcing, close reading, contextualising, and corroborating, and at what level of sophistication. The output includes assessment tasks with documents and prompts, a scoring guide distinguishing novice/developing/proficient responses, diagnostic guidance on how to interpret results, and validity notes identifying what the assessment does and does not measure.
@@ -278,3 +299,12 @@ Source note: "Parliamentary Recruiting Committee, printed by Johnson, Riddle & C
 2. **The HATs model (Wineburg, Smith & Breakstone, 2018) was developed and tested with US college students reading US history documents.** The task structure (document + question requiring a specific skill) transfers to other contexts, but the specific documents and scoring descriptors must be adapted for different age groups, national curricula, and historical topics.
 
 3. **Formative assessment is only useful if it changes instruction.** The diagnostic value section provides specific instructional guidance for each score pattern, but the teacher must act on it. An assessment that reveals students are not contextualising but leads to no change in instruction is a wasted opportunity. The assessment's value lies entirely in what happens next.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [History question and source checker](https://useaiblocks.com/skills/history-inquiry-question-checker). It takes the question.
+- The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the question.
+- The [Classroom skills activity planner](https://useaiblocks.com/skills/competency-framework-translator). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

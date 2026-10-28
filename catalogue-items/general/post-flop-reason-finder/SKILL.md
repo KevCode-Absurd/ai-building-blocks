@@ -47,7 +47,7 @@ MISSING: any number you did not have.
 CHECKS MISSED: one line per check missed, or none.
 
 ## What to do next
-Make the one change on the next post, then paste that post and its numbers into this prompt again to see whether the failure changed. For every check, use the [Flop post diagnoser](https://useaiblocks.com/skills/flop-post-diagnoser).
+Make the one change on the next post, then paste that post and its numbers into this prompt again to see whether the failure changed. For every check, use the [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser).
 
 ## Checks
 - Exactly one failure is named.
@@ -55,4 +55,4 @@ Make the one change on the next post, then paste that post and its numbers into 
 - No number is guessed.
 - There is one change, not a list.
 
-For the full version with every check, use the [Flop post diagnoser](https://useaiblocks.com/skills/flop-post-diagnoser).
+For the full version with every check, use the [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser).

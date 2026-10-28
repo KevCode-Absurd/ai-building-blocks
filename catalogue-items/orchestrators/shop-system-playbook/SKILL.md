@@ -72,7 +72,7 @@ Pause here: Have someone who has never worked for you run one shift from the man
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - After the first month at the second location, run step 3 (`second-location-check`) again with that location's real takings and costs, and fix the gaps it finds.
 - If the call is no-go, fix the first fix named in step 4, run a newcomer trial again, then repeat steps 3 and 4.
 

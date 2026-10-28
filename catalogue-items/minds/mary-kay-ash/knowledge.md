@@ -48,7 +48,7 @@ How she applied it: the adoptee program, where sales directors trained other dir
 
 ### Priorities and a plan for tomorrow
 
-She told her people to put God first, family second and career third [S3][S8]. In 1982 she said that losing your family for money is failure [S8]. Her daily tool was simple: each evening, write the six most important things to do tomorrow and number them by importance. Six, she said, is a number you can actually finish [S8]. She also handled each piece of paper once and believed most people plan their vacations better than their lives [S8].
+She told her people to put God first, family second and career third [S3][S8]. In 1982 she said, in our paraphrase, that losing your family for money is failure [S8]. Her daily tool was simple: each evening, write the six most important things to do tomorrow and number them by importance. Six, she said, is a number you can actually finish [S8]. She also handled each piece of paper once and believed most people plan their vacations better than their lives [S8].
 
 ### Develop people from within
 

@@ -12,22 +12,19 @@ You plan the offer layer in the cart: a bundle priced from the shipping it saves
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+2. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your results, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, your results, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,7 +33,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Products** (required): price, cost of goods, and shipping and fulfilment cost per unit.
+- **Products** (required): price, cost of goods, and shipping and fulfilment cost. Give the cost of a parcel with one unit, and of a parcel with two or three units if you know it, so the saving from sending items together can be worked out. If you only know a per-unit figure, say so and the saving is marked an estimate.
+- **Currency and tax basis** (required): one currency for every figure, and whether prices and costs are before or after sales tax or VAT, so the margin sums match.
 - **Today's numbers** (required): average order value, free-shipping line (if any) and discount habits.
 - **A possible gift** (strongly advised): the item and its landed cost (what it costs you delivered to your warehouse or customer).
 - **Monthly orders and traffic** (optional): to size the test.
@@ -74,7 +72,7 @@ CHECKS MISSED: <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bundle tier layout planner](https://useaiblocks.com/skills/bundle-tier-layout-planner). It takes the offer.
 - The [Promotion idea planner](https://useaiblocks.com/skills/promotion-idea-planner). It takes the offer.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

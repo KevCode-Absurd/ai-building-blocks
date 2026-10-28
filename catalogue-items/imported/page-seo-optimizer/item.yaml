@@ -31,7 +31,7 @@ credits:
   - title: seo-optimization skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/marketing-and-seo/seo-optimization
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and corrected the speed and indexing advice from Google's own pages. It no longer lazy-loads the main image, uses current Core Web Vitals and ranking wording, drops rel next/prev and dynamic rendering, and limits the Indexing API to job and livestream pages. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

@@ -122,8 +122,8 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test the loan limits on the same dates with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Check the cost of a refinancing with the [Refinancing closing cost checker](https://useaiblocks.com/skills/refinancing-closing-cost-checker).
+- Test the loan limits on the same dates with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Check the cost of a refinancing with the [Loan refinancing cash gap checker](https://useaiblocks.com/skills/refinancing-closing-cost-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
 

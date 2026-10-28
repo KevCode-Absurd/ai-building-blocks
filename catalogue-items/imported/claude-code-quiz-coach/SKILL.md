@@ -7,6 +7,22 @@ description: Run a scored knowledge quiz on one Claude Code lesson using the bun
 
 Run a quiz on one selected Claude Code topic, explain missed answers, and show what to review.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **An AI that can read local files:** Reads the selected lesson and question references from the complete folder.
+<!-- /needs -->
+
 ## Resolve the lesson
 
 Use [the lesson index](references/lesson-index.md) to map a number, name or alias to exactly one of the ten lessons. If no topic was supplied, show the choices and ask. Ask whether this is before, during or after the lesson. Read only that lesson's local text and its corresponding section in [the question bank](references/upstream/lesson-quiz/references/question-bank.txt).
@@ -38,3 +54,10 @@ Use the question tool available in the user's AI. If there is no structured ques
 The lessons describe the pinned repository version, not every installed Claude Code release. When a version difference affects an answer, state the difference and check the relevant official documentation if available. Do not silently score a defensible, version-dependent answer as wrong. Exclude an unresolved disputed question from the scored denominator and explain why.
 
 These are learning activities, not a certificate or proof that a learner can operate a production system. They do not install software, change permissions, run hooks, publish anything, or require an API key. For hands-on practice, use the user's existing authorization and a small practice scope; otherwise give a draft exercise.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

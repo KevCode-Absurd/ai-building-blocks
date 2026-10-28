@@ -10,6 +10,19 @@ date_added: "2026-02-27"
 
 > **Who this is for (added by AI Blocks).** Developers, or business owners working with one, who need a custom visual effect on a web page or in a game. A shader is code that runs on the graphics card, so it only shows up inside a project that can run it, such as a WebGL page or a Three.js scene. This skill writes the code. It does not draw anything by itself. Give your AI the effect, the engine and the values you want to control, then check the result in your own scene.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 A comprehensive guide to writing GPU shaders using GLSL (OpenGL Shading Language). Learn syntax, uniforms, varying variables, and key mathematical concepts like swizzling and vector operations for visual effects.
@@ -112,6 +125,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
 This example is fragment-only and written for Shadertoy, where `iResolution` is supplied for you. To run it in WebGL or Three.js, declare `uniform vec3 iResolution;` and set it from your code to the canvas width and height, with 1.0 as the third value. The example only uses `iResolution.xy`. Add a `void main() { mainImage(gl_FragColor, gl_FragCoord.xy); }` wrapper, and pair it with a simple vertex shader that draws a full-screen quad.
 
+A simple full-screen quad vertex shader (WebGL1 style). Feed it the six corners of two triangles that cover the screen, from -1 to 1 on each axis:
+
+```glsl
+// Full-screen quad vertex shader
+attribute vec2 position; // quad corners in clip space, -1 to 1
+
+void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+}
+```
+
 ## Best Practices
 
 - ✅ **Do:** Use `mix()` for linear interpolation instead of manual math.
@@ -129,3 +153,11 @@ This example is fragment-only and written for Shadertoy, where `iResolution` is 
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder).
+- The [Web animation builder](https://useaiblocks.com/skills/web-animation-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

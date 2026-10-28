@@ -9,7 +9,7 @@ subhead: Describe a user story or page. Get Playwright tests written for it that
 explain: |
   Tell it what a user should be able to do, and get Playwright tests for it that you can run today.
 
-  You can give a user story like "user can log in", a page address, a component file or a feature name. The skill reads your Playwright config, your existing tests, any page objects, and your login setup so the new test matches your style. It picks a template for the type of flow, such as login, checkout, search, forms, dashboards or API calls, and fills in your real selectors, routes and data. The result is a test file in the shape your project already uses. This is an MIT-licensed copy of the upstream generate skill from alirezarezvani/claude-skills. Only the name and page text are ours. The skill works from your own tests, because the ready-made flow templates are not in this copy.
+  You can give a user story like "user can log in", a page address, a component file or a feature name. The skill reads your Playwright config, your existing tests, any page objects, and your login setup so the new test matches your style. It covers flows such as login, checkout, search, forms, dashboards or API calls, and fills in your real selectors, routes and data. The ready-made flow templates from the original are not in this copy, so it writes each test from your own existing tests and login setup. The result is a test file in the shape your project already uses, saved in your Playwright test folder (testDir) and checked with npx playwright test and the file name. This is an MIT-licensed copy of the upstream generate skill from alirezarezvani/claude-skills. We changed the name, this page, and a note in the skill about the missing templates.
 when:
   - You just built a checkout flow and have no tests for it.
   - You want a login test that follows your existing test style.
@@ -29,7 +29,8 @@ you_get:
   - Page objects or fixtures where they help
   - Cases for the main path and for errors
 how_to_use:
-  - Open your AI tool in a way that lets it read your project files and run code. Have your app or dev server running, because the new test is run to check it.
+  - "Before you start: install Playwright in your project, have your app or dev server running, and have a test login ready if the flow needs one. Keep real passwords out of the chat."
+  - Open your AI tool in a way that lets it read your project files and run code. The new test is run to check it.
   - Paste the skill instructions into the chat.
   - "Say what to test, for example: user can log in with email and password. You can also give a page, a component file or a feature name."
   - Let it read your Playwright config and existing tests so the new test matches them.

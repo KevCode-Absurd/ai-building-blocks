@@ -39,6 +39,7 @@ how_to_use:
   - Let it set up eas.json and run the production build. Check the build status and the version numbers it used.
   - Before any step that submits to a store, read the command and say yes. Submitting cannot always be undone.
   - Start with TestFlight or the Google Play internal track. Test the app, then move to public release. At the end you should have a build ID and a submission status for each store.
+  - Next, once the first build passes testing, ask your AI for the automated release steps in references/workflows.md, and for the store listing text from the store guides in the references folder.
 output_sample:
   input:
     - Your Expo app folder

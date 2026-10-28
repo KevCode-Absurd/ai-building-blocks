@@ -29,8 +29,8 @@ When not to use: if there are no buyer conversations or traffic yet, talk to ten
 ## Skills you need
 
 Install both companion skills before the first run. They are separate pieces in the pack:
-- [Find your SaaS growth channel](https://useaiblocks.com/workflows/find-your-saas-growth-channel) (`find-your-saas-growth-channel`) builds the plan.
-- [Traction experiment result reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer) (`traction-experiment-reviewer`) reads results.
+- [SaaS growth channel test planner](https://useaiblocks.com/workflows/find-your-saas-growth-channel) (`find-your-saas-growth-channel`) builds the plan.
+- [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer) (`traction-experiment-reviewer`) reads results.
 
 If one is not installed, fetch it from its link. If you still cannot get it, write `MISSING: <slug>`, say which step cannot run, and stop that step. Do not copy their method from memory.
 

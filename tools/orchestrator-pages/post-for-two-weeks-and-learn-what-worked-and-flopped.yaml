@@ -22,7 +22,8 @@ you_give:
   - The platforms you use and your goal
   - Your brand file (optional)
   - Who you want to reach (optional)
-  - "Your post numbers after two weeks (reach, likes, comments, shares and clicks)"
+  - "Your post numbers after two weeks (reach, likes, comments, shares, clicks and impressions)"
+  - "Numbers for your past posts, to compare against (optional)"
 you_get:
   - A calendar and ready posts for each platform
   - A sharing score for each post, with the weakest reason and one change
@@ -83,7 +84,7 @@ output_shape: |-
     Why it failed (unseen, skipped or ignored) | the weak line | the one change
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Which platforms
     how: Name only the ones you will really post on. Fewer platforms gives fewer posts to write and cleaner numbers to read.

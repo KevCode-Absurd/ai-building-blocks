@@ -5,7 +5,7 @@ description: "Review your Meta Ads results against your targets. Get ranked find
 
 # Meta results review agent
 
-Reviews one set of dated Meta Ads results against the business's own targets. One bounded run per request. When not to use: for a score across 30 account checks, use the [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor). For the same checks every Monday, use the [Meta Ads weekly account keeper](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper). For one odd symptom such as ads that will not spend, use the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It works from exports and screenshots the user supplies. It does not log in, change budgets, pause ads, publish ads or message anyone unless the user asks for that exact action.
+Reviews one set of dated Meta Ads results against the business's own targets. One bounded run per request. When not to use: for a score across 30 account checks, use the [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor). For the same checks every Monday, use the [Meta Ads weekly account reviewer](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper). For one odd symptom such as ads that will not spend, use the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It works from exports and screenshots the user supplies. It does not log in, change budgets, pause ads, publish ads or message anyone unless the user asks for that exact action.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -74,7 +74,7 @@ The optional file `references/editable-role-template.md` is a role file you can 
 - `proposed-actions.md`: each change with where, why, risk and approval status.
 - `checkpoint.md`: the record for the next review.
 
-Next step to offer: once the owner has made the changes they approved, run the review again in a month with this checkpoint, or hand the weekly checks to the [Meta Ads weekly account keeper](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
+Next step to offer: once the owner has made the changes they approved, run the review again in a month with this checkpoint, or hand the weekly checks to the [Meta Ads weekly account reviewer](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
 
 Finish with the evidence used, assumptions, open questions, and `CHECKS MISSED:` listing any check that could not run (or "none").
 

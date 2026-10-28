@@ -107,15 +107,6 @@ NEXT ACTION
 
 If no results were supplied, mark the focus decision pending. Never present a plan as a tested channel or a promise of revenue.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Rank the ideas by effort and payoff** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). Bring the channel matrix.
-- **Find the cheapest lever** with the [Growth lever audit](https://useaiblocks.com/skills/growth-lever-audit). Bring your buyers, average order and repeat rate.
-- **Run the test and bring results back** to this workflow, so it can review them and choose a focus.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each of the 19 channels has one idea and a reason for its rank, and none is skipped silently.
 - At most three pilots are chosen, and their combined cash and time are within the stated limits, or marked as proposed.
@@ -124,6 +115,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - A lead, enquiry or booking is never counted as a paid customer.
 - Nothing was sent, spent, booked or published, and no test is described as having run.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Rank the ideas by effort and payoff** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). Bring the channel matrix.
+- **Find the cheapest lever** with the [Business growth lever planner](https://useaiblocks.com/skills/growth-lever-audit). Bring your buyers, average order and repeat rate.
+- **Run the test and bring results back** to this workflow, so it can review them and choose a focus.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If the link cannot be read, ask for pasted text once. Never invent search volumes, contacts, conversion rates, costs or results.

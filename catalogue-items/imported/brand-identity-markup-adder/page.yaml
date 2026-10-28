@@ -9,10 +9,10 @@ subhead: Add machine-readable brand details to your Shopify store. They help sea
 explain: |
   Add machine-readable brand details to your Shopify store. They help search tools and AI shopping assistants link your store to your official profiles. No tool is promised to use them. This changes your live theme, so it previews first.
 
-  The skill builds an Organization JSON-LD block from your shop data. It includes your official social profiles and public pages such as Wikipedia, plus a contact point. It then places the block in your theme. The preview mode is on by default and shows the snippet and where it will go before anything is written. You need a logged-in Shopify CLI session with theme read and write access.
+  The skill builds an Organization JSON-LD block from your shop data. It includes your official social profiles and public pages such as Wikipedia, plus a contact point. It then places the block in your theme. The preview mode is on by default and shows the snippet and where it will go before anything is written. You need a logged-in Shopify CLI session with theme read and write access. Writing theme files through the API also needs an exemption from Shopify. Without it, the skill gives you the snippet to add by hand.
 when:
   - You want your brand details in a form search tools and AI assistants can read.
-  - Resellers or copycats use your brand name.
+  - You want to state which site and profiles are officially yours. It is your own claim, so it will not stop copycats on its own.
   - You want your social and public profiles linked to your site.
   - You need a contact point that machines can read.
 not_for:

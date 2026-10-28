@@ -43,7 +43,7 @@ how_to_use:
   - Tell it your system, your graphics card and what you want the model for.
   - If it asks for something you do not know, say so. It will mark the gap and not guess your hardware.
   - Read the model choice first. Then run the commands yourself, one block at a time, in your terminal.
-  - Before you rely on the Docker file, pin the Ollama and Open WebUI image versions. The "latest" and "main" tags in it change over time, so look up a current version tag on each project's page and put it in.
+  - Before you run the Docker file, fill in each <pinned-version> slot. Look up a current release tag on each project's page (Ollama, Open WebUI and, if you use it, LiteLLM) and put it in, so the setup does not change without notice.
   - Back up anything important before you start. Make up your own passwords for the secrets it lists.
   - On Windows, use the installer from ollama.com, then run the same pull and run commands in PowerShell. Skip the Linux install command.
   - When it lists Gaps at the end, paste that section back into the chat with the missing answers, so it can fill them in before you go on.

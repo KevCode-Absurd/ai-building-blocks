@@ -45,10 +45,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Call it: dip or dead end.** Use the skill `dip-or-dead-end-checker`. Give it the facts, your reasons and what is at stake. It returns the facts, the effort test, the prize test, evidence versus fear, the cost of staying, and one call (push on, change course or stop) with a date. Save it as `outputs/step-01-dip-or-dead-end-checker.md`.
-2. **Argue the case against the call.** Use the skill `case-against-writer`. Give it the call from step 1. It names the sharpest opponent, writes their three best arguments, marks each answered or open, names the weak assumption and what would change your mind. Save it as `outputs/step-02-case-against-writer.md`.
+2. **Argue the case against the call.** Use the skill `case-against-writer`. Give it the call from step 1. It names the sharpest opponent, writes their three best arguments, marks each answered or open, names the weak assumption and what would change your mind. If the opponent is a real, named person, write their case only from words or views you supplied, and label anything else as a stand-in argument, not their view. Never put a quote in their mouth. Save it as `outputs/step-02-case-against-writer.md`.
 3. **Cap what you can lose.** Use the skill `ruin-risk-stress-tester`. Give it the call and the case against. It lists what the plan depends on and finds the loss you could not recover from. It adds a fix with a cost for each, and an early warning sign. Save it as `outputs/step-03-ruin-risk-stress-tester.md`.
 4. **Set the evidence bar and a date to decide.** Use the skill `decision-evidence-bar-setter`. Give it the capped plan from step 3. It says how reversible the choice is, how much proof is enough, the first and cheapest fact to get, and the date to decide. Save it as `outputs/step-04-decision-evidence-bar-setter.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
@@ -56,6 +56,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 2:** three arguments against the call, each answered or open, and what would change your mind.
 - **Step 3:** the unrecoverable loss, fixes with cost, and an early sign.
 - **Step 4:** how reversible the choice is, the bar for proof, the first fact to get and the date to decide.
+
+Each step file uses these headings, in this order:
+
+```
+STEP 1: THE CALL         Facts | effort test | prize test | evidence vs fear | cost of staying | call and date
+STEP 2: THE CASE AGAINST Opponent | three arguments | answered or open | hit assumption | mind-changing test | go, change or wait
+STEP 3: THE LOSS CAP     Dependencies | unrecoverable outcome | ordinary losses | fixes with cost | early sign
+STEP 4: THE EVIDENCE BAR Reversibility | facts wanted, weighted | share known | bar | verdict | first fact to get | date
+HAND-BACK SUMMARY        Files | MISSING | CHECKS MISSED
+```
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

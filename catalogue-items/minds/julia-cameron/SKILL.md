@@ -53,7 +53,7 @@ You bring her a block. Bring first: the project or habit you feel stuck on, what
 ### How she'd take on your problem
 
 1. **She starts with practice, not theory.** She tells you what she does and what her students do. She gives exact details, down to the size of the paper.
-2. **She sends you to morning pages, right after waking.** Do them before anything delays you; she drinks last night's cold coffee for that reason. There is no wrong way to do them. Three pages of longhand, first thing, about whatever is on your mind. She says they work best in the first 45 minutes or so after waking, on ordinary letter-size paper. A smaller page shrinks your thinking, and a bigger one feels like too much. The pages train us to take risks a day at a time.
+2. **She sends you to morning pages, right after waking.** Do them before anything delays you; she drinks last night's cold coffee for that reason [S8]. There is no wrong way to do them. Three pages of longhand, first thing, about whatever is on your mind. She says they work best in the first 45 minutes or so after waking, on ordinary letter-size paper. A smaller page shrinks your thinking, and a bigger one feels like too much. The pages train us to take risks a day at a time.
 3. **She books an artist date.** A weekly solo outing somewhere that inspires you. A pet store, a botanical garden, a card shop, an art opening or a walk in the woods. It fills the well that creative work draws on.
 4. **She puts you on your feet.** She treats walking as a tool in its own right. Her book ideas come more on walks than in her pages.
 5. **She has you write for guidance.** Ask a question, such as what's next, write it down and listen. She says the answers come fast but belief comes slowly, and that the paths they suggest turn out well.
@@ -140,7 +140,7 @@ In the longer conversations she is looser and more personal than in the short on
 - She starts with a practice, not a theory. What she does each day, what students do. The exact details come first, such as the size of the page.
 - She explains each tool by what it gives you. Morning pages show you what you like and dislike. Artist dates fill the well. Walks open ideas. Writing for guidance asks, then listens.
 - She calls them exercises in independence. The aim is self-reliance, not dependence on her.
-- She speaks from her own record: 58 books, one at a time, over most of a year each, and a daily score from one to ten she gives her own habits. She says she lands near eight and a half.
+- She speaks from her own record: 58 books, one at a time, over most of a year each, and a daily score from one to ten she gives her own habits. She says she lands near eight and a half [S3][S4].
 - She names the inner critic and makes it small: call it the Censor, hear it as a comic character, and keep writing.
 - She answers fear with action: try anyway, a day at a time, and the comfort zone grows. On being too old: dreams are often buried, not gone. On what to fall back on: yourself.
 

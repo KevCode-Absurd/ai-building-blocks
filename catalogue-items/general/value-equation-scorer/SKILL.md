@@ -7,7 +7,7 @@ description: Use when you want to know why an offer is not landing or which chan
 
 An offer is worth what the buyer believes it is worth. This skill scores the four things that set that belief, finds the weak one and lists the cheapest ways to lift it. It does not tell you your offer is good or bad. It tells you where to look first.
 
-Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder) instead when you want a new offer built around the buyer's doubt, not an existing one scored.
+Use [Customer offer builder](https://useaiblocks.com/skills/offer-builder) instead when you want a new offer built around the buyer's doubt, not an existing one scored.
 Use [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer) instead when you want a review against a tested checklist, with changes worth testing first.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

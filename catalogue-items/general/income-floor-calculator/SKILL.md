@@ -7,7 +7,7 @@ description: Use when you are thinking of leaving a salaried job to work for you
 
 A salary comes with costs you do not see: health cover, a pension, tools, a desk, and tax taken before payday. Going independent means paying for all of it. This skill builds the real monthly number, shows which of your income is steady and which is an extra, and works out how many clients you need. It is a planning aid and not personal financial advice. Check tax and cover with a local adviser.
 
-Use [Client fee and cap setter](https://useaiblocks.com/skills/client-fee-and-cap-setter) instead when you already know your income floor and need a fee, a client limit and billing terms.
+Use [Client pricing planner](https://useaiblocks.com/skills/client-fee-and-cap-setter) instead when you already know your income floor and need a fee, a client limit and billing terms.
 
 ## Required input
 

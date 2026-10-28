@@ -78,3 +78,4 @@ output_sample:
       contains: Up to three priorities, decisions due, clashes and a first next action.
     - name: Source coverage and missing facts
       contains: What was checked, what is unknown, and which changes are only proposals.
+next: [executive-work-keeper, weekly-review-guide]

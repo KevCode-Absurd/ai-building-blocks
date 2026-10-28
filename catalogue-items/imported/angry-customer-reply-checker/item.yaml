@@ -34,4 +34,4 @@ credits:
   - title: angry-customer-reply-check skill
     by: Pro Skill Packs
     url: https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

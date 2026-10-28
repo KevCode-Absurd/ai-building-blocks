@@ -5,7 +5,7 @@ name: Contract and term sheet reviewer
 summary: Check a contract or term sheet before you sign. Get risky clauses flagged, explained in plain words, with a clear line on when to call a lawyer.
 job: check-contracts
 headline: Contract and term sheet reviewer
-subhead: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer. Bring the contract or term sheet text. Use the result to plan your next step.
+subhead: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer. Bring the contract or term sheet text.
 explain: |
   A read of your contract or investment term sheet with risky terms flagged, each explained in plain English, and a clear signal for when you should pay a lawyer. You know what you are agreeing to before you sign.
 
@@ -35,8 +35,8 @@ how_to_use:
   - Ask your AI to review it. It needs no code for a normal review.
   - Read the Bottom Line and The Risks first. Pick the worst three clauses to push back on.
   - Bring the counter-proposals and lawyer action items to a licensed lawyer before you sign. For a term sheet, have the lawyer read the whole document before you negotiate, not only the flagged clauses.
-  - Expect five short sections, under 800 words in all. They are listed under "What you get" on this page.
-  - "Optional: the 0 to 100 term sheet score and the clause scanner come from two Python scripts. Workflows 1 and 2 in the skill need them, so they need an AI that can run code, or Python 3 on your own computer. The score comes from simple pattern checks. It is a rough guide, not a legal judgement, and never a reason to sign or not sign. For the term sheet script, your AI builds the input file from the script's --help output, since no schema file is included."
+  - Expect five short sections, under 800 words in all. For a term sheet, a sixth section with the score is added only if the script was run.
+  - "Optional: the 0 to 100 term sheet score and the clause scanner come from two Python scripts. Workflows 1 and 2 in the skill need them, so they need an AI that can run code, or Python 3 on your own computer. The score comes from simple pattern checks. It is a rough guide, not a legal judgement, and never a reason to sign or not sign. For the term sheet script, the skill lists the fields your AI puts in the input file."
   - What it does not check - whether a clause can be enforced in your country or state, how a signed version differs from the draft, and the full story of the negotiation. A lawyer covers those.
 output_sample:
   input:

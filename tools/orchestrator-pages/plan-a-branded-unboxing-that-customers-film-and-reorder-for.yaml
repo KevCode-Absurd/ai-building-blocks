@@ -80,7 +80,7 @@ output_shape: |-
     Tiers | cost per order | insert card spec | note and gift rules | payback check | what to measure
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Reviews that show real use
     how: Loyal customers' own habits are the best source of a ritual that fits. Add reviews, messages or photos.

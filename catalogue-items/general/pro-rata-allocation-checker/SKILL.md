@@ -93,16 +93,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Plan the cash to hold back for follow-on rounds with the [Follow-on reserve planner](https://useaiblocks.com/skills/follow-on-reserve-planner).
-- Check what a SAFE holder owns after conversion with the [Post-money SAFE ownership checker](https://useaiblocks.com/skills/post-money-safe-ownership-checker).
-- Size the option pool before the round with the [Option pool top-up checker](https://useaiblocks.com/skills/option-pool-top-up-checker).
+- Plan the cash to hold back for follow-on rounds with the [Follow-on investment cash planner](https://useaiblocks.com/skills/follow-on-reserve-planner).
+- Check what a SAFE holder owns after conversion with the [Post-money SAFE ownership calculator](https://useaiblocks.com/skills/post-money-safe-ownership-checker).
+- Size the option pool before the round with the [Employee option pool top-up calculator](https://useaiblocks.com/skills/option-pool-top-up-checker).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion unresolved.

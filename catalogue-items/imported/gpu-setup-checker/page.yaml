@@ -35,13 +35,14 @@ you_get:
   - The cause of any failure
   - Fix steps including driver advice
 how_to_use:
-  - Open your AI tool and paste in the text of this skill.
+  - "What you need first: MATLAB R2024b or newer with the Parallel Computing Toolbox. Both are paid MathWorks licences. Then open your AI tool and paste in the text of this skill."
   - Tell it your MATLAB release. Add any error message, your GPU model or your nvidia-smi output if you have them.
   - Let your AI run the checks in MATLAB on the computer with the GPU. If it cannot run MATLAB, run each command yourself and paste back the results.
   - Read the diagnosis and the fix steps. Check any driver advice against the GPU requirements page for your release.
   - Only if your AI suggests raising the Windows TDR timeout, know that this edits the Windows Registry and needs administrator rights. You make that edit yourself. Your AI must never run it for you. Make a restore point and export the registry key first, as your AI will tell you. A wrong edit can break Windows.
   - For any driver advice, open the GPU Computing Requirements page in MathWorks' documentation for your MATLAB release and check that your GPU is still supported before you install a new driver.
   - Run the check again to confirm MATLAB now sees your GPU.
+  - Once the check passes, run gpuBench from the MATLAB File Exchange if you want to measure how fast the GPU is. If your GPU code is still slow, use the MATLAB speed tuner next.
   - "The result always comes back in this order: GPU ready yes or no, a table of the devices MATLAB sees, the failed layer and its cause, then an ordered fix list."
 output_sample:
   input:

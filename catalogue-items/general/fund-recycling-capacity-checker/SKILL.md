@@ -9,14 +9,14 @@ Works out how much of a fund's recycling cap is left, how much of new distributi
 
 ## When to use it
 
-Use it when a distribution arrives and you need to know how much of it fits under the signed recycling cap. It checks the recycling cap only. Do not use it to decide whether a distribution is eligible by date or recall rights (ask your fund's lawyer or administrator), to approve a new investment (spare cap does not approve a deal), or to track recalled amounts or commitment changes (use the administrator's ledger). To split a capital call across commitments, use the [Capital call allocation checker](https://useaiblocks.com/skills/capital-call-allocation-checker).
+Use it when a distribution arrives and you need to know how much of it fits under the signed recycling cap. It checks the recycling cap only. Do not use it to decide whether a distribution is eligible by date or recall rights (ask your fund's lawyer or administrator), to approve a new investment (spare cap does not approve a deal), or to track recalled amounts or commitment changes (use the administrator's ledger). To split a capital call across commitments, use the [Fund capital call checker](https://useaiblocks.com/skills/capital-call-allocation-checker).
 
 ## What you need
 
-- the commitment cap base from the fund agreement;
-- the recycling fraction in the agreement;
+- the commitment cap base from the fund agreement: the amount the recycling limit is measured against, usually total commitments, set in the recycling or reinvestment clause;
+- the recycling fraction in the agreement: the share of that base that may be reused, such as 20 percent, in the same clause;
 - the total recycled so far;
-- the distributions that are eligible to recycle;
+- the distributions that are eligible to recycle, with each one's distribution date;
 - proof that the recycling window is still open;
 - the reporting date, currency and scale.
 
@@ -44,10 +44,9 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 ## Acceptance checks
 
-- Eligible distributions are confirmed separately; a cash receipt is not automatically recyclable.
-- Previously recycled amounts cannot be omitted when reusing the same distribution notice.
-- Trace each input to its dated signed source, currency, scale and period.
-- Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
+- Each distribution is confirmed as eligible on its own; cash received is not recyclable by default.
+- Amounts already recycled are counted against the cap, even when the same distribution notice is reused.
+- Remaining cap = cap base x recycling fraction - recycled so far, and any overuse shows as a negative remaining cap, not a zero.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
@@ -55,7 +54,7 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 ## What next
 
-Ask your fund administrator or lawyer to confirm which distributions are eligible, then share the workbook and the reconciliation with the reviewer. To split a capital call across commitments, use the [Capital call allocation checker](https://useaiblocks.com/skills/capital-call-allocation-checker).
+Ask your fund administrator or lawyer to confirm which distributions are eligible, then share the workbook and the reconciliation with the reviewer. To split a capital call across commitments, use the [Fund capital call checker](https://useaiblocks.com/skills/capital-call-allocation-checker).
 
 ## Limits
 

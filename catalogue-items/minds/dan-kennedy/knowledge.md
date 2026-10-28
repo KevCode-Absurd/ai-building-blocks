@@ -56,7 +56,7 @@ How he applied it: summaries of his book list a follow-up system as a core tool,
 
 His "big secret" is that skilled sales copy sells [S4]. How something is said matters at least as much as what is said [S4]. He believes people in every market buy the same way, so this applies to any business [S4]. He warns against assuming customers won't read, or that adequate copy is good enough [S4].
 
-How he applied it: he told of an estate agent who began selling apartment buildings with sales letters when nobody else did, and came to handle about 70% of such deals in his market [S4]. When an old ad stops working, he says, it often just needs new life [S4].
+How he applied it: he told of an estate agent who began selling apartment buildings with sales letters when nobody else did, and, by Kennedy's own unchecked account, came to handle most such deals in his market [S4]. When an old ad stops working, he says, it often just needs new life [S4].
 
 ### Price objections are value problems
 

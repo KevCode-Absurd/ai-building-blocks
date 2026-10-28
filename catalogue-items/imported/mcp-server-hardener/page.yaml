@@ -39,11 +39,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. For file-level advice, use one that can read your project files.
   - Paste the skill text into the chat.
   - Sections 6 to 11 and the quick checklist are in references/details.md, in this item's references folder. Paste or upload that file too, or those steps are missing.
-  - Gather these first, so you can paste them for file-level advice: the server entry file, the files that handle each tool call, and your tool policy or config file (for example config/tool-policy.yaml).
+  - "Gather these first, so you can paste them for file-level advice: the server entry file, the files that handle each tool call, and your tool policy or config file (for example config/tool-policy.yaml)."
   - "Under it, paste your details: how it connects, how users sign in, and the list of tools. Add your config if you can."
   - Read the top three fixes first. If a detail is marked MISSING, answer it and ask for the list again.
   - Apply the fixes in a test copy of your server first. The sample settings are starting points, not drop-in files.
-  - Ask your AI to re-check the list once the fixes are in.
+  - The access check in section 5.2 uses placeholder inputs for the approval flag and the operation name. Wire both to your real approval step and your real tool arguments before you use it, or the dangerous-tool rules will not hold.
+  - Ask your AI to re-check the list once the fixes are in. Then test it yourself. For each role, call one tool that role should not have, and check the call is refused and the refusal shows in your logs.
   - The sample code is for illustration. Have the person who owns the server review it before it goes live.
 output_sample:
   input:

@@ -9,7 +9,7 @@ subhead: A trend of average order value for your Shopify store, split into new a
 explain: |
   A trend of average order value for your Shopify store, split into new and returning customers. Pick a look-back window, such as 90 days, and a bucket size of day, week or month, and see whether orders are getting bigger or smaller.
 
-  The skill reads orders and customer data through the Shopify command line tool, works out the average for each period, and separates first-time buyers from repeat ones using each customer's order count. It only reads. It never changes anything in your store. You must sign in to Shopify CLI with read access to orders and customers. Results come back as a readable table or as JSON.
+  The skill reads orders and customer data through the Shopify command line tool, works out the average for each period, and separates first-time buyers from repeat ones by where each order sits in that customer's history at the time it was placed. Orders it cannot place are shown as unknown, not guessed. It only reads. It never changes anything in your store. You must sign in to Shopify CLI with read access to orders and customers. Results come back as a readable table or as JSON.
 when:
   - You ran a bundle offer and want to see if order size went up.
   - You suspect repeat customers spend more than new ones.
@@ -44,7 +44,7 @@ output_sample:
     - Table or JSON format (optional, table by default)
   prerequisites:
     - An AI that can run code and use the Shopify command line tool
-    - A Shopify CLI sign-in with read access to orders and customers
+    - A Shopify CLI sign-in with read access to orders and customers (Shopify shows only the last 60 days of orders unless you also have access to all orders)
   output:
     - name: Start banner
       contains: Shows the store name and the time the run started.

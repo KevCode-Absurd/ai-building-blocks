@@ -75,4 +75,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Values have a reason, or say MISSING.
 - A bonus is not something the core offer already includes.
 
-For the full version with every check, use the [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder).
+For the full version with every check, use the [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder).

@@ -32,7 +32,8 @@ you_get:
   - A handoff ready for PyDESeq2
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a mode that can run Python and command line tools. Raw reads also need Nextflow with containers.
-  - Paste the skill text from this page, or upload the skill folder.
+  - Upload the whole skill folder (SKILL.md, references/ and scripts/), because the steps call those files. If you can only paste text, paste SKILL.md and the reference files too, and expect your AI to write the scripts itself.
+  - Nextflow runs on raw reads can use a lot of compute. On a cloud machine or paid container service that costs money, so check the price before the first run.
   - "Add your files, sample sheet and reference details. Say which route you use: raw reads or Salmon, STAR or featureCounts output."
   - Let your AI check the sample sheet first. Fix any replicate or strandedness problem it flags before counting starts.
   - Read the QC report, then check that counts.csv and metadata.csv list the same samples.
@@ -54,11 +55,11 @@ output_sample:
     - name: Validated sample sheet
       contains: Your sample list checked for missing fields, real biological replicates and the strandedness setting before any compute is spent.
     - name: QC report
-      contains: Quality checks run before and after counting, such as mapping rate, duplication and sample outliers.
+      contains: Quality checks run before and after counting, such as per-base quality, adapter content, mapping rate, duplication and sample outliers, each marked pass or flag.
     - name: counts.csv
-      contains: A gene by sample table of counts, with samples and genes in the right order.
+      contains: "A table with one row per gene and one column per sample: the first column is the gene ID, each cell a whole-number count. Salmon estimates are rounded to whole numbers."
     - name: metadata.csv
-      contains: A matching table of samples with their group and any batch details, ready for PyDESeq2.
+      contains: "One row per sample with the columns sample, condition and batch, in the same sample order as counts.csv. It starts as metadata_template.csv with condition set to CHANGE_ME, which you fill in."
     - name: Run record
       contains: The reference used, tool versions and settings, so the run can be repeated.
     - name: PyDESeq2 handoff

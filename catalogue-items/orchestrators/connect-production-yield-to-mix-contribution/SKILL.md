@@ -65,6 +65,6 @@ Lead with cost per good unit for each product, contribution per unit, and whethe
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check shared overhead** with the [Reconcile service capacity and shared cost](https://useaiblocks.com/workflows/reconcile-service-capacity-and-shared-cost) workflow, if overhead sits inside your margins.
-- **Plan a purchase around your budget** with the [Plan a purchase around your real budget](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget) workflow, if capacity needs a new machine.
+- **Check shared overhead** with the [Service capacity and cost reviewer](https://useaiblocks.com/workflows/reconcile-service-capacity-and-shared-cost) workflow, if overhead sits inside your margins.
+- **Plan a purchase around your budget** with the [Purchase total-cost comparison analyst](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget) workflow, if capacity needs a new machine.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -47,7 +47,6 @@ MUST GO RIGHT. THREE FAILURES (with numbers). BREAKING POINT. BORROWING RISK. CU
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -57,4 +56,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score shows its sums.
 - This gives frameworks and checks only. It is not advice to buy, sell or borrow. For a debt decision, a licensed financial adviser should read the result first.
 
-For the full version with every check, use the [Room for error plan checker](https://useaiblocks.com/skills/room-for-error-plan-checker).
+For the full version with every check, use the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker).

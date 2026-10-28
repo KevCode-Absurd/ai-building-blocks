@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -71,7 +71,7 @@ Pause here: Build the checker and send ads or posts to it for one to two weeks. 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker). It takes the offer.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
+- The [Funnel flow planner](https://useaiblocks.com/skills/funnel-flow-planner). It takes the offer.
 - **Write the ad copy** with the [Sales follow-up email writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer). It takes the offer.
 - **Grow on social** with the [Comment-to-message funnel planner](https://useaiblocks.com/skills/comment-keyword-dm-funnel-builder). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

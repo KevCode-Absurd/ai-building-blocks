@@ -32,10 +32,12 @@ you_get:
 how_to_use:
   - Open your AI tool on your computer, one that can run commands and see your project folder. A plain chat window cannot do this.
   - Paste in this skill and say which folder holds your site.
-  - Choose preview or production. Start with preview to check the site first.
+  - Choose preview or production. Send every new change to preview first. Deploy to production only after you have checked the preview link.
+  - If the deploy is blocked by your AI tool's network limits, your AI asks before retrying with extra permissions. If your tool has no such setting, run the deploy command in your own terminal.
   - Sign in to Netlify in the browser window when asked. The deploy can take a few minutes.
   - Open the preview link and check your site. Preview links are public. Netlify's site password protection may need a paid plan, so check yours before you rely on it.
   - Ask for a production deploy when you are happy, and you get your live link. If the build fails, open the logs link first and read the first error.
+  - Next, connect your own domain in Netlify's site settings, and share the live link. For later updates, run the same steps again, preview first.
 output_sample:
   input:
     - Your web project folder

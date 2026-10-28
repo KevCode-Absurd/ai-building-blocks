@@ -10,6 +10,8 @@ explain: |
   Edits to a page or topic that make AI search tools more likely to pull it into answers and name you as the source. The target is Google AI Overviews, ChatGPT, Perplexity and similar tools.
 
   First it checks where you stand: what the AI says today for your key questions, who gets cited, whether your content can be lifted out cleanly, and whether AI bots can get in. Then it works on three things. Structure means short answer blocks, clear definitions, comparisons and FAQs. Authority means named sources, fresh facts and expert bylines. Presence means being on the sites AI trusts. It also covers schema markup and tracking.
+
+  A note on Google: Google says pages need no special markup or AI text files to show up in its AI Overviews. Plain good pages that Google can crawl are enough there. The schema and llms.txt steps mainly help other AI tools.
 when:
   - Competitors get named in AI answers and you do not.
   - AI describes your price or features wrongly.
@@ -32,7 +34,7 @@ you_get:
   - A tracking list of prompts to monitor
 how_to_use:
   - Open your AI. Use one that can browse the web, such as ChatGPT, Claude or Gemini.
-  - Upload the skill file, or paste its text. The full skill is long, so if your AI limits pasting, paste only the parts for the step you are on.
+  - Upload the skill file, or paste its text. The skill links to about 17 reference files that are not included in this copy. Its core steps run without them. The full skill is long, so if your AI limits pasting, paste the Before Starting, AI Visibility Audit, Optimization Strategy and What NOT to Do sections first.
   - Add your page address or topic, and your key customer questions. Pick 10 to 20 questions to test.
   - Add your competitors and brand background if you have them.
   - Ask for the audit first. Check each question in ChatGPT, Perplexity and Google, and record in a table who is cited. Read the audit section first.

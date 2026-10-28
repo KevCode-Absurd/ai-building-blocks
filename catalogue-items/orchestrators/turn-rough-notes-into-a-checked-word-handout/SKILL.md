@@ -99,7 +99,7 @@ Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One n
 
 ## Next steps to offer
 
-Ignore the "After this" list above and use only this list. Offer one next step and say they can type their own:
+Ignore the "After this" list below and use only this list. Offer one next step and say they can type their own:
 
 - Open the Word file and read any page marked not run before you send or print it.
 - For a one-page version to use at a desk, try the [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).

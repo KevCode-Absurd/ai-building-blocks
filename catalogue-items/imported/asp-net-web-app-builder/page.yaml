@@ -9,7 +9,9 @@ subhead: "ASP.NET Core code that matches what Microsoft recommends now, not what
 explain: |
   ASP.NET Core code that matches what Microsoft recommends now, not what old tutorials show. Tell the AI what you are building and it first picks the right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API.
 
-  It then checks your .NET version and loads only the guidance that fits the job, so the answer isn't cluttered. It covers how the app starts, the request pipeline, dependency injection, settings, login and permissions, live updates with SignalR, gRPC, background work, testing and speed. You can use it to start a new app, review one, or refactor an old one. You need the .NET SDK to run the result, or a developer who has it. Its default advice is dated March 2026, so ask your AI to check Microsoft Learn for the current .NET version first.
+  It then checks your .NET version and loads only the guidance that fits the job, so the answer isn't cluttered. It covers how the app starts, the request pipeline, dependency injection, settings, login and permissions, live updates with SignalR, gRPC, background work, testing and speed. You can use it to start a new app, review one, or refactor an old one. You need the .NET SDK to run the result, or a developer who has it. Its default advice is dated March 2026 and may be out of date, so ask your AI to check Microsoft Learn for the current .NET version first.
+
+  Licence: Apache 2.0, from OpenAI's public skills collection. Keep the credit if you reuse it.
 when:
   - You are starting a new .NET web app and can't decide between Blazor, MVC and Razor Pages.
   - Your Program.cs has grown messy and you want it cleaned up.
@@ -29,6 +31,7 @@ you_get:
   - A clean startup and pipeline setup
   - Notes on tests, speed and security
 how_to_use:
+  - "Before you start: look up the current stable .NET version on Microsoft Learn, have your project files ready if you are changing an existing app, and make sure you or a developer has the .NET SDK to build the result."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If your AI can read files, add the skill folder. If it cannot, also paste the reference files your task needs, such as stack-selection.md and program-and-pipeline.md, plus the one file for your app style.
   - Describe what you are building in one or two lines. Add login, data and hosting needs.
   - Add your .NET version and project files if you have an existing app (optional).

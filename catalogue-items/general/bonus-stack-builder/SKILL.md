@@ -9,9 +9,9 @@ A discount tells the buyer your price was a guess. A bonus tells them they get m
 
 ## When not to use this
 
-- Buyers like the offer but need a real deadline or cap to decide: use the [Honest scarcity and urgency planner](https://useaiblocks.com/skills/honest-urgency-planner).
-- You need one whole offer for one buyer, with a profit check, not a set of bonuses: use the [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder).
-- You want to know how buyers will compare your price: use the [Commodity trap checker](https://useaiblocks.com/skills/commodity-trap-checker).
+- Buyers like the offer but need a real deadline or cap to decide: use the [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner).
+- You need one whole offer for one buyer, with a profit check, not a set of bonuses: use the [Customer offer builder](https://useaiblocks.com/skills/offer-builder).
+- You want to know how buyers will compare your price: use the [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker).
 
 ## Ask first when the offer is missing
 

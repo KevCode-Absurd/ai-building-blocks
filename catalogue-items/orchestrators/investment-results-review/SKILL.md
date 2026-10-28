@@ -9,29 +9,29 @@ Give it your holdings. Get each judged on business results, a short ranked list 
 
 It is inspired by The Warren Buffett Way (Second Edition) by Robert G. Hagstrom. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+## When not to use
+
+This is a method of analysis, not personal financial advice. It is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision, and it names no security to buy or sell. Do not use it for one stock you are about to buy, money you need within a few years, or a loan secured on your holdings (take those to an adviser first).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Claude:** Holds four steps and several businesses' figures in one run.
 - **A printed page:** A rule card only works if you can see it at the moment you want to break it.
 <!-- /needs -->
-
-## When not to use
-
-This is a method of analysis, not personal financial advice. It is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision, and it names no security to buy or sell. Do not use it for one stock you are about to buy, money you need within a few years, or a loan secured on your holdings (take those to an adviser first).
 
 ## What you need
 - **Your holdings** (required): for each, the name, roughly how much of your total it is, when you bought it, and one line on why you bought it. Say which are broad funds.
@@ -52,24 +52,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Judge each holding by its business results.** Use the skill `holdings-results-review` on your holdings and any yearly figures. It saves `outputs/step-01-holdings-results-review.md`: every holding sorted by earnings, returns and debt, with the price kept out of it. Keeper: the reason you bought it still holds, returns are steady or rising and debt is modest. Watch: it mostly holds but one fact is slipping. Weak: earnings or returns have fallen, or debt has risen. Not understood: you cannot say in plain words how it makes money, or you have no figures. A holding with no figures goes straight to not understood, never to a guess.
-2. **Rank them and cut the list.** Use the skill `lifetime-punch-card-bet-ranker`. Give it `outputs/step-01-holdings-results-review.md` and how much money you can commit. It saves a short ranked list with sizes, using your best holding as the bar, and a written no for the rest. Show each size as a share of your own total, as a range to talk through with an adviser. State at this step, next to the sizes, that this is a method of analysis and not personal financial advice. The sizes are not an instruction to buy or sell, and you decide any trade yourself with a licensed adviser.
+2. **Rank them and cut the list.** Use the skill `lifetime-punch-card-bet-ranker`. Give it `outputs/step-01-holdings-results-review.md` and how much money you can commit. It saves a short ranked list with sizes, using your best holding as the bar, and a written no for the rest. Show each size as an illustrative range, as a share of your own total, to talk through with an adviser. If you named a loan secured on your holdings or money you need within a few years, flag it at the top of this step and show no sizes until an adviser has seen it. State at this step, next to the sizes, that this is a method of analysis and not personal financial advice. The sizes are not an instruction to buy or sell, and you decide any trade yourself with a licensed adviser.
 3. **Write the rules for sitting still.** Use the skill `sit-still-rule-writer`. Give it the ranked list from step 2 (`outputs/step-02-lifetime-punch-card-bet-ranker.md`), the results review from step 1 and your costs. It saves a one-page rule set: the facts that must stay true, review dates, the cost of acting and the only reasons to change a holding.
 4. **Write your rules for price drops.** Use the skill `price-drop-rules-writer`. Give it the holdings plan from steps 2 and 3, the results review from step 1, when you need the money and any loan against your holdings. It saves a rule card for drops and jumps, written before the next one, so you do not decide in the middle of one.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 4 step files and the summary. The last file is the rule card for price drops and jumps. Every hand-back ends with this line: "This is a method of analysis, not personal financial advice. The ranked sizes are not an instruction to buy or sell. Take the rule card to a licensed adviser before you act on it."
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 Of the next steps in the shared "After this" list above, offer only the Bond type and maturity chooser. Skip the other four: they are about marketing and product work, not investing.
 
 ## Check before you hand it back

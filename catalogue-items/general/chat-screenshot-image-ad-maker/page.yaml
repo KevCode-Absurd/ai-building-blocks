@@ -28,7 +28,7 @@ you_give:
   - How your buyer texts, and whether their family uses group chats (optional)
 you_get:
   - One-to-one or group, with who each person is and what they noticed
-  - Two to six messages in order, with who sent each
+  - Two to five messages one-to-one, or four to six in a group, in order, with who sent each
   - A blank version and the line under the picture
   - A 60 to 120 word image prompt, and how to make it exact
   - Any of its six checks the brief still misses, each named
@@ -91,7 +91,7 @@ output_shape: |
   MESSAGES          <sender>: "<text>", in order
   BLANK VERSION     <the screen with empty bubbles>
   LINE UNDER IMAGE  <words> (<which line>, <characters>)
-  FLAGS             <words written for the image, anything inferred, a new story opening if needed>
+  FLAGS             <staged scene label (always), words written for the image, anything inferred, a new story opening if needed>
   IMAGE PROMPT      <60 to 120 words, every message in quotes once>
   HOW TO MAKE IT    <design tool or image tool>
   CHECKS MISSED     <one line each, or none>
@@ -166,7 +166,7 @@ tweaks:
 
 judge:
   - The others notice the problem. Nobody sells or cheers.
-  - It's two to six messages, each readable on a phone without zooming, with three senders at most.
+  - It's two to five messages one-to-one, or four to six in a group, each readable on a phone without zooming, with three senders at most.
   - The thread ends with the narrator on the spot, and your story's first line picks it up.
   - Every message is from your story, or flagged as written for the image.
   - Every name is made up, and the screen looks like no real app, with no face as a contact photo.

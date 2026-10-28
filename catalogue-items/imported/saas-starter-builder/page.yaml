@@ -7,7 +7,9 @@ job: build-software
 headline: SaaS starter builder
 subhead: Describe your software product and pick your tools. You get a Next.js project with sign-in, a database, Stripe billing, API routes and a dashboard. It also comes with a checklist to test each stage.
 explain: |
-  A working Next.js project for your software product with sign-in, database, payments, API routes and a dashboard already in place. You describe the app, pick your tools, and get the whole file tree.
+  A sample Next.js project for your software product with sign-in, database, payments, API routes and a dashboard laid out. You describe the app, pick your tools, and get the whole file tree. It must be built, tested phase by phase and reviewed by a developer before launch.
+
+  The Stripe webhook code handles a finished checkout only. Handlers for cancelled subscriptions and failed payments are not written yet, so a developer must add them before billing goes live.
 
   You fill in a short form: product name, a few lines about it, sign-in service (NextAuth is fully built; Clerk or Supabase need a developer to adapt the sign-in code), database (Neon, Supabase or PlanetScale), payments (Stripe or none) and a feature list. The output follows a set layout with three areas: marketing pages with pricing, auth pages, and a dashboard with settings and billing. It adds webhook and checkout routes, shared components, and helper files for auth, database and payments. You need Node tooling, and accounts with the services you choose.
 when:
@@ -19,6 +21,7 @@ not_for:
   - You already have an app. Add the new parts by hand or ask your AI to change one file at a time.
   - You use a stack other than Next.js. Ask a developer to set up a starter for your own stack.
   - You want Lemon Squeezy only. The billing code here is written for Stripe, so a developer must adapt it.
+  - You cannot get a developer to review the payment and webhook code before launch.
 you_give:
   - Your product name
   - Two or three sentences about your product

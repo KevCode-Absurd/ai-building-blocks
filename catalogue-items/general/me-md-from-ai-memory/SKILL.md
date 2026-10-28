@@ -7,6 +7,8 @@ description: Paste this into ChatGPT, Claude or Gemini. It asks before using wha
 
 One prompt that turns what your AI already knows about you into a me.md: one short file that tells any AI who you are.
 
+**Not for:** adding a CV or bio with a full interview (use the [me.md builder](https://useaiblocks.com/skills/me-md-builder)), or updating a me.md you already have (use the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher)).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This prompt runs on its own. It needs nothing but your answers.
@@ -27,6 +29,7 @@ Help me write my me.md: one short file that tells any AI who I am, so I don't ha
 First, ask me this and wait for my answer: "May I use what I remember about you and our past chats to draft your me.md? Yes or no."
 
 If I say yes:
+- If you cannot see any memory of me or our past chats, say so and switch to the interview below. Never draft a fact you cannot point to.
 - Draft each section below from your memory of me and our past chats.
 - Put "(from memory, please check)" after every fact you take from memory.
 - Don't guess. Leave a section empty if you know nothing for it.
@@ -72,6 +75,13 @@ Last checked: <date>
 
 Then `TO CHECK:` each fact from memory, `MISSING:` each gap, `CHECKS MISSED:` one line each, or none. Then the two next steps.
 
+## Check before you hand it back
+- Nothing from memory was used before a yes.
+- Every fact from memory is marked `(from memory, please check)`.
+- No passwords, keys, ID or bank numbers, health details or private facts about other people.
+- Voice is a short description, not pasted writing.
+- Every section is dated, and Projects has an expiry date.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -79,13 +89,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Fill the gaps with documents and a longer interview** with the [me.md builder](https://useaiblocks.com/skills/me-md-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Nothing from memory was used before a yes.
-- Every fact from memory is marked `(from memory, please check)`.
-- No passwords, keys, ID or bank numbers, health details or private facts about other people.
-- Voice is a short description, not pasted writing.
-- Every section is dated, and Projects has an expiry date.
 
 ## Avoid
 - Guessing to fill a section.

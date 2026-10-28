@@ -9,7 +9,7 @@ Reviews the speed of one WordPress site. One site per request. It works from wha
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: profile before changing anything, cut database and plugin waste first, cache at the right layer, never page-cache personal pages, bound and index queries, trim the autoloaded options, defer assets without breaking the page, size every image, then tune PHP. Its role language, memory claims and success targets are not facts about this run. They do not grant tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a page speed report, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** It can read a saved PageSpeed report, a plugin list export or a Query Monitor screenshot next to your description.
@@ -76,7 +76,7 @@ Return these sections in order. If your AI can save files, save one file. If not
 7. **Image, script and hosting fixes.** Item, problem, fix or question for the host.
 8. **Assumptions and checks missed.** End with `CHECKS MISSED:` and the list, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). It takes the audit report.

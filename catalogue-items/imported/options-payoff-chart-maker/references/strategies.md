@@ -64,16 +64,25 @@ function theoreticalValue(S, K, T_near, T_far, r, iv_near, iv_far, isCall) {
   if (isCall) return bsCall(S,K,T_far,r,iv_far/100) - bsCall(S,K,T_near,r,iv_near/100);
   return bsPut(S,K,T_far,r,iv_far/100) - bsPut(S,K,T_near,r,iv_near/100);
 }
-// At near expiry (T_near=0): near leg expires, far leg retains time value
-function atNearExpiry(S, K, T_far, r, iv_far, isCall) {
-  if (isCall) return bsCall(S,K,T_far,r,iv_far/100);
-  return bsPut(S,K,T_far,r,iv_far/100);
+// At near expiry: the short near leg settles at its intrinsic value (it is NOT
+// worthless when in the money), and the far leg keeps T_far - T_near of time.
+function atNearExpiry(S, K, T_near, T_far, r, iv_far, isCall) {
+  const tLeft = Math.max(T_far - T_near, 0);
+  if (isCall) {
+    const far = tLeft > 0 ? bsCall(S,K,tLeft,r,iv_far/100) : Math.max(S-K, 0);
+    return far - Math.max(S-K, 0);
+  }
+  const far = tLeft > 0 ? bsPut(S,K,tLeft,r,iv_far/100) : Math.max(K-S, 0);
+  return far - Math.max(K-S, 0);
 }
+// Check: call calendar, K=100, 30 days left on far leg, IV 20%, r 4.3%, debit 2.
+// S=110: far call ≈ 10.46, value = 10.46 - 10 = 0.46, P&L = 0.46 - 2 = -1.54 per share.
+// S=100: far call ≈ 2.46, value = 2.46, P&L = +0.46 per share.
 ```
 
 **UI note for calendar**: Show TWO sliders for DTE (near and far). "Expiry" curve = at-near-expiry value minus premium paid.
-**Max profit**: When spot = K at near expiry (maximum time value difference)
-**Max loss**: Premium paid (if spot moves far from K in either direction)
+**Max profit**: Near spot = K at near expiry (maximum time value difference)
+**Max loss**: About the debit paid, when spot moves far from K in either direction. For a put calendar with interest rates above zero, deep in the money the loss can be slightly more than the debit (in the check above with puts, at S=70 it is about 0.35 more). Early assignment of the short leg on American-style options can also change the result, so tell the user to check with their broker.
 
 ---
 
@@ -159,5 +168,5 @@ Max profit: premium | Max loss: K - premium (stock goes to 0)
 - **DTE = 0**: skip BS entirely, use intrinsic value only
 - **IV = 0**: BS undefined (σ=0), use max(intrinsic, 0)  
 - **K1 > K2**: warn user, auto-sort strikes ascending
-- **Negative theoretical value**: clip to 0 for display (arbitrage-free floor)
+- **Negative theoretical value**: clip a single option's price to 0 (arbitrage-free floor). Never clip a combined position: credit spreads, iron condors and deep in-the-money put calendars can have negative value, and clipping them hides losses
 - **Calendar with IV skew**: use separate IV sliders for near vs far leg

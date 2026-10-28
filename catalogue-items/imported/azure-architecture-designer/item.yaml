@@ -29,4 +29,4 @@ credits:
   - title: azure-cloud-architect skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/azure-cloud-architect
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and corrected the Front Door costs to Microsoft's published base fees, with no free tier, and stopped the designer script cutting its cost estimate down to the budget. We added Before you start and After this sections that link to other AI Blocks steps.

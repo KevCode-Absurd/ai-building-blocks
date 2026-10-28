@@ -59,6 +59,6 @@ Lead with three things: yearly cash available for debt service, loan life cover,
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test cover by period** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
-- **Size repayments to the cash** with the [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow.
+- **Test cover by period** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Size repayments to the cash** with the [Project debt repayment modeler](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

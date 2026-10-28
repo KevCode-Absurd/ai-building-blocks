@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, alfred-hitchcock]
 credits:
-  - {title: "Misery", by: "Stephen King", used: "The order of the steps: plan the hook, check the way out is fair, draft the scene, find where readers would put it down"}
+  - {title: "Misery", by: "Stephen King", used: "Ideas on hooks, fair turns and pull, from the craft shown in the novel. The four-step order is this workflow's own design"}
 generated_from: intake/misery-craft-page-turner-scene/skeleton.yaml

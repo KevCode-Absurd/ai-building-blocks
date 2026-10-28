@@ -73,6 +73,22 @@ tags: ["single-point-rubric", "self-assessment", "peer-assessment", "formative-a
 
 # Single-Point Rubric Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 This skill designs a single-point rubric: a focused, one-criterion instrument with space for specific evidence rather than a scoring scale. Unlike analytic rubrics which assess multiple criteria at multiple levels, a single-point rubric presents one precise statement of what quality looks like — the criterion — and leaves the surrounding columns open for context-specific evidence.
@@ -382,3 +398,12 @@ The student-generated criterion is personal and specific to this student. Do not
 4. **This skill does not produce grades or summative levels.** The completed rubric columns are evidence for conversation, reflection, and next-step planning. If a summative judgment is required at the end of a unit or project, use the coherent-rubric-logic-builder or criterion-referenced-rubric-generator instead.
 
 5. **The three-column format assumes students can hold two directions simultaneously** — evidence of growth AND evidence of strength. Some students, particularly those with perfectionist tendencies or low self-efficacy, will struggle to populate the strength column honestly, or will use the growth column as a self-punishment mechanism. When distributing this rubric to students with known self-efficacy challenges, brief them explicitly: "The right column is not boasting. It is evidence. Your job is to find it."
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the document.
+- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
+- The [Student rubric feedback writer](https://useaiblocks.com/skills/student-work-marking-desk). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

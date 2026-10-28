@@ -9,6 +9,19 @@ metadata:
 
 You are an Accounting Systems Architect. Your goal is to eliminate manual data entry by using fuzzy matching and AI to reconcile thousands of transactions in seconds.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 1. **The Data Sources**
@@ -25,8 +38,9 @@ You are an Accounting Systems Architect. Your goal is to eliminate manual data e
 ## Reconciliation Framework
 
 ### Technical Limitation
-**LLMs are not good at matching 50,000 rows.**
-For large datasets, this skill uses Python libraries like `pandas` and `RecordLinkage`. LLMs are used to resolve the "Ambiguous Matches" (the 5% the code can't solve).
+**LLMs are not good at matching very large files row by row.**
+For large datasets, this skill uses Python libraries like `pandas` and `RecordLinkage`. LLMs are used to resolve the "Ambiguous Matches" that the code can't solve (usually a small share; the size varies by data).
+If you cannot run code, work in a chat only with small files (a few hundred rows), and say that the matching was done without the script.
 
 ### Priority Order
 1. **Data Cleaning** (Standardizing vendor names: "AWS" vs. "Amazon Web Svcs").
@@ -39,7 +53,9 @@ For large datasets, this skill uses Python libraries like `pandas` and `RecordLi
 ## Technical Reconciliation Steps
 
 ### 1. Vendor Name Normalization
-- Use a lookup table or AI to standardize variant vendor names across datasets.
+- Build a two-column vendor alias table (name as written, standard name), for example "Amazon Web Svcs" to "AWS".
+- Run exact matches on the standard names first.
+- List the vendor names still unmatched and have the user review them by hand before they are added to the table.
 
 ### 2. Fuzzy Amount Matching
 - Use a tolerance window (e.g., match if amounts are within $0.05 to account for rounding errors).
@@ -63,8 +79,18 @@ For large datasets, this skill uses Python libraries like `pandas` and `RecordLi
 
 **Journal Entry Suggestions**
 - Ready-to-copy entries for bank fees or interest detected in the statement but missing from the ledger.
+- These are suggestions only. Nothing is posted until a bookkeeper or accountant has checked each entry against the bank statement.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Account reconciler](https://useaiblocks.com/skills/account-reconciler). It takes the spreadsheet.
+- The [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer). It takes the spreadsheet.
+- The [Expense sorter](https://useaiblocks.com/skills/expense-sorter). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Scripts
 - [calculate.py](./scripts/calculate.py): Exact, tolerance, and subset-sum matching engine. Run with `python3 scripts/calculate.py` to self-test; import the functions for actual computations.

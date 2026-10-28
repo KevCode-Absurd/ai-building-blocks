@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: plan, required: true}
-  - {type: performance_sheet, required: false}
+  - {type: dataset, required: false}
 outputs:
   - {type: test_report}
   - {type: lessons_register}

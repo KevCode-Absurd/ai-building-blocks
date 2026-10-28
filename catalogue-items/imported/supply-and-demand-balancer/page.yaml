@@ -24,6 +24,7 @@ you_give:
   - Incoming supply and dates
   - Open orders and quantities
   - Customer priorities
+  - Unit prices or order values (optional, needed for the revenue at risk column in the shortage report)
 you_get:
   - Available-to-promise by date
   - An allocation of stock to orders
@@ -32,8 +33,8 @@ you_get:
 how_to_use:
   - "Collect three lists: stock on hand, incoming supply, and open orders. Use columns for product, location, quantity, date, customer and priority."
   - Save them as CSV files or spreadsheet tabs. Check that each row has a date and a quantity.
-  - Open Claude, ChatGPT or Gemini. Paste the skill, then add your lists. For the code to run, use an AI that can run Python and read files.
-  - "Tell your AI which rule to use: first come first served, share evenly, or priority first. Say if in-transit stock should count."
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then add your lists. For the code to run, use an AI that can run Python and read files, with the pandas, numpy and scipy packages. Free chat plans may not run code; then your AI can still work through the steps by hand on small lists.
+  - "Tell your AI which rule to use: first come first served, share evenly, or priority first. Say if in-transit stock should count. If it should, your AI turns on the in-transit option in the code and does not also list those shipments as incoming supply."
   - Read the shortage report first. Check that the unfilled orders match your own sense of the stock.
   - Share the allocation with sales, and tell affected customers early.
 output_sample:

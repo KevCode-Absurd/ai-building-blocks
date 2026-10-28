@@ -84,7 +84,7 @@ output_shape: |-
     The bet and the attacks: <who attacks> | <attack>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Your reasons, in your own words
     how: Write them before you read anything else it says. If the reasons are vague, the check can't tell clear thought from pressure.

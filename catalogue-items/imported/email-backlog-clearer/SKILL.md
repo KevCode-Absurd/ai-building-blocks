@@ -21,6 +21,24 @@ Turn the inbox into a short list of decisions, not a pile of mail.
 
 Owners do not want their email read to them. They want to know the four things that will hurt if they're missed, and they want the other forty already handled. What drowns people is not volume — it is not knowing which of the 300 matters.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, your question, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Pull the mail
 
 Read from Gmail or Microsoft 365, whichever is connected, once the mailbox is confirmed as the owner's — its address matches the `## Business context` block, or the owner names it (`../../shared/tenant-scope.md`). Default to the last 48 hours plus anything still unanswered from the prior two weeks, because an unanswered thread from Tuesday is more dangerous than a new one from this morning.
@@ -128,3 +146,12 @@ The inbox is a short list again: replies sent or waiting, the rest filed. If bil
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email mistake fixer](https://useaiblocks.com/skills/email-mistake-fixer). It takes the draft.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
+- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

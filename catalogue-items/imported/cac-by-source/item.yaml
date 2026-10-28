@@ -31,7 +31,7 @@ credits:
   - title: shopify-admin-customer-acquisition-cost-by-source skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/customer-ops/shopify-admin-customer-acquisition-cost-by-source
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and fixed the new-customer count, so a buyer whose first order is in the window now counts once, even with two orders, instead of being dropped. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

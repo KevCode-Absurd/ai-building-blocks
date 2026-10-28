@@ -33,7 +33,7 @@ How to start:
 - **Budget and city** (required): what you can spend and where. Include permit and venue costs.
 - **How you will film** (strongly advised): who films, with what, and what you plan to do with the footage.
 
-When not to use: products that cannot be sampled (large items, software, anything that needs weeks of use). Use a short buyer survey instead, with the [Buyer research plan with survey](https://useaiblocks.com/skills/buyer-research-plan-with-survey). It also does not fit a brand with no event budget or no place where your buyers gather. A big free event costs real money, so cost it first. To check what people say against what they buy online, use the [Say-do gap checker](https://useaiblocks.com/skills/say-do-gap-checker). The method comes from one founder's own account of his drinks and supplements brand (a public article, which we have not verified). Treat it as ideas to test, and state nothing about that brand or founder as fact. It suits food, drink and other sample-able goods. Leave it out for other products.
+When not to use: products that cannot be sampled (large items, software, anything that needs weeks of use). Use a short buyer survey instead, with the [Buyer research and survey planner](https://useaiblocks.com/skills/buyer-research-plan-with-survey). It also does not fit a brand with no event budget or no place where your buyers gather. A big free event costs real money, so cost it first. To check what people say against what they buy online, use the [Customer survey reliability reviewer](https://useaiblocks.com/skills/say-do-gap-checker). The method comes from one founder's own account of his drinks and supplements brand (a public article, which we have not verified). Treat it as ideas to test, and state nothing about that brand or founder as fact. It suits food, drink and other sample-able goods. Leave it out for other products.
 
 ## Steps
 Any numbers a founder quoted in the sources are one person's reported examples, and are not repeated here. Set your own pass rule, with your own numbers.
@@ -49,7 +49,7 @@ Any numbers a founder quoted in the sources are one person's reported examples, 
 9. **Small version and your own team.** If an event is too costly, use your own team as a test panel, but only if they match your buyer. Staff know the brand and want to please, so treat their votes as a first filter, not proof.
 10. **Write a one-line taster card.** Three items: do you like it (score), would you buy it (yes or no), and what price do you expect. Add a pick-your-favourite line across versions. Keep the card to one side of a card.
 11. **Set the pass rule before the event.** Write it down. Example shape: "A version goes forward if at least X of the matching tasters like it, and at least Y say they would buy at a price within our range." Choose X and Y yourself. Adjust the bar to how costly a wrong call would be.
-12. **Write the day plan.** Setup, signs, the sampling script (what staff say, what they must not say, such as health claims), allergen and safety information, how to record the cards, and when to film.
+12. **Write the day plan.** Setup, signs, the sampling script (what staff say, what they must not say, such as health claims), allergen and safety information, how to record the cards, and when to film. If any version contains alcohol, check the licence the venue needs, plan an ID check so no one under the legal drinking age tastes, and follow local rules on free samples and sales. Do not film anyone drinking who has not passed the age check.
 13. **Plan the read-out.** How the cards are counted, who counts, and what the next step is for a pass, a tie and a fail.
 
 ## What you hand back
@@ -79,7 +79,7 @@ DECISION RULE (set before the event)
 Goes forward if: <X of N matching tasters like it AND Y say they would buy at a price within range>
 Tie: <...>  Fail: <...>
 Read-out: <who counts, when>
-SAFETY AND LEGAL: <food safety, allergens, permits, consent for filming; check local rules with a qualified person>
+SAFETY AND LEGAL: <food safety, allergens, permits, consent for filming; if alcohol: licence, age checks, sampling and sale rules; check local rules with a qualified person>
 CHECKS MISSED: <none | list>
 ```
 
@@ -89,6 +89,7 @@ CHECKS MISSED: <none | list>
 - The screening question matches the target buyer.
 - The shot list was written before the setup.
 - Consent for filming is planned, and children are not filmed without a parent's permission.
+- If any version contains alcohol, the licence and age checks are planned.
 - No health claim appears in the sampling script. Food safety, allergen and permit information is planned, with a line telling the owner to check local rules with a qualified person.
 - Any founder's numbers are labelled as one person's illustration, not as rules.
 

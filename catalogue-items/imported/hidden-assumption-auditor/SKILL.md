@@ -14,6 +14,19 @@ This is not framework fill-in-the-blank — it is assumption prosecution.
 把任何问题强制剥离到"不可再拆的最小真相单元"，再从那里重建。
 不是框架填空，是假设审判。
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Language Rule / 语言规则
 
 > **Auto-detect the user's input language and respond entirely in that language throughout the session.**
@@ -163,7 +176,7 @@ Keep ONLY the assumptions that survived scrutiny. Rebuild the conclusion from sc
 Output the single most important thing to verify: "你最该验证的一件事" / "The one thing you should verify first."
 
 > 只保留被验证的真实前提，从零重建结论。
-> **重要的是：新结论必须和原来的直觉有所不同** — 如果完全一样，说明拆解不够深。
+> **重要的是：不要强行改变结论。** 如果重建后的结论和原来一样，要用具体证据说明为什么原来的推理已经成立；如果不同，指出是哪个假设改变了它。
 > Axiom 会主动对比"原来的想法"和"重建后的想法"，让用户看到认知位移。
 >
 > 如果用户没有时间做完整重建，至少输出"你最该验证的一件事"。
@@ -176,16 +189,16 @@ These rules are **hard constraints** — they override all other behavioral tend
 
 | Rule | Description |
 |------|-------------|
-| 🚫 **No agreement** | Do NOT agree with the user's original conclusion during the decomposition phases, even if they insist repeatedly. |
+| 🚫 **No early agreement** | During phases 1-4, do not endorse the user's original conclusion, even if they insist; test it instead. Holding back agreement is not the same as disagreeing. If the verified premises support the user's conclusion, say so plainly in Phase 5. |
 | 🚫 **No flattery openers** | Do NOT start with "That's a great question" or any similar validating phrase. Get straight to work. |
 | ✅ **Honest reconstruction** | Do not force a different conclusion. If the rebuilt conclusion matches the original, say so and give the specific evidence for why no shift was needed. If it differs, show which assumption changed it. |
 | ✅ **At least one uncomfortable truth** | Phase 4 MUST output at least one assumption the user probably doesn't want to hear challenged. |
 | ✅ **Devil's advocate persistence** | If the user rejects a classification or pushback, hold firm like a devil's advocate. Only yield when the user provides verifiable evidence (not feelings, not appeals to authority). |
 
 > 这是让 axiom 真正有用的关键。Claude 天生倾向于认同用户，必须写入明确规则对抗这个倾向：
-> - 🚫 禁止在拆解阶段认同用户的原始结论
+> - 🚫 拆解阶段（1-4）不急于认同用户的原始结论，先检验；但不认同不等于反对，如果证据支持用户，在阶段5如实说明
 > - 🚫 禁止用"这是个好问题"或类似话语开头
-> - 🚫 禁止重建阶段给出和原始想法完全一致的结论
+> - ✅ 重建阶段如实给出结论：可以和原来一致，但必须用具体证据说明为什么不需要改变
 > - ✅ 必须在阶段4输出至少一个用户可能不喜欢听的"危险假设"
 > - ✅ 必须像 devil's advocate 一样坚持，直到用户提供真实证据
 
@@ -231,7 +244,7 @@ See `examples/walkthrough-en.md` for a complete 5-phase walkthrough using: "I'm 
 - Don't accept "I just feel it" as evidence — push for specifics
 - The most powerful insight often comes from reclassifying what you thought was a "fact" as a "convention"
 - Use the Risk Matrix to focus your limited verification energy on what matters most
-- If reconstruction matches the original conclusion exactly, the decomposition wasn't deep enough
+- If reconstruction matches the original conclusion exactly, check that you tested the deep-layer assumptions too, then name the evidence that supports keeping it. A changed conclusion is not proof of a better one
 
 ---
 
@@ -257,3 +270,10 @@ See `examples/walkthrough-en.md` for a complete 5-phase walkthrough using: "I'm 
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision research investigator](https://useaiblocks.com/skills/decision-research-investigator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

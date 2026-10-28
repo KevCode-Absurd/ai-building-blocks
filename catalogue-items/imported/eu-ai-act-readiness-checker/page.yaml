@@ -19,6 +19,7 @@ not_for:
   - "You need a legal opinion or a compliance sign-off: ask a qualified EU lawyer, because this gives a first read only."
   - "You have questions on scope, exemptions or risk class: send them to qualified EU counsel, using the questions list this skill writes."
   - "You need to file a registration or contact a regulator: a lawyer must review and approve that step."
+  - "Your AI cannot browse or run code: use only the checklist file in the skill folder to list your systems and write questions for counsel, and skip the gap register."
 you_give:
   - List of AI systems and what each is used for
   - Your role for each one, such as builder or user
@@ -39,7 +40,7 @@ how_to_use:
   - Add your risk, privacy and security documents if you have them (optional). Then ask for the gap register and the 30, 60 and 90 day plan.
   - Check the inventory and gap register with each system owner. Fix any wrong facts.
   - Ask your AI to confirm every legal date and the amending act on EUR-Lex, and to show the date it checked next to each, before you plan around them. Treat any it could not confirm as unverified.
-  - Send the questions list to a qualified EU lawyer before you act on any risk class.
+  - Send the questions list to a qualified EU lawyer before you act on any risk class. The gap register is a planning list, not a compliance sign-off.
 output_sample:
   input:
     - A list of your AI systems and what each is used for

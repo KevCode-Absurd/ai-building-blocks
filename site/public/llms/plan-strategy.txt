@@ -1,6 +1,6 @@
 # Plan your strategy: AI Blocks
 
-> 209 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 212 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Share an approved decision, owners and start date. Get a 12-week action plan with milestones, check-ins, dependencies and risks.
 - [90-day marketing strategy planner](https://useaiblocks.com/workflows/check-your-strategy-then-turn-it-into-a-90-day-plan): Review the strategy, resolve weak choices and build a marketing plan with weekly actions, owners and check-ins for 90 days.
@@ -22,7 +22,9 @@
 - [Brand positioning and launch planner](https://useaiblocks.com/workflows/position-name-launch): Share product, brand and competitor facts. Get a positioning statement, name-extension check and a press-led launch plan.
 - [Brand positioning sentence writer](https://useaiblocks.com/prompts/one-line-position-writer): Describe your product, rivals and proof. Get a proposed brand position, one clear sentence and limits on what it can claim.
 - [Brand reach reviewer](https://useaiblocks.com/skills/brand-reach-audit): Find where buyers forget you or can't buy from you. Give it your sales and buyer notes for a brand reach audit with three gaps and one fix.
+- [Brand strategy report writer](https://useaiblocks.com/skills/brand-strategy-report-writer): Answer a set of brand questions and get a full brand strategy report for your business or your client, with positioning, audience and voice.
 - [Business activity metric planner](https://useaiblocks.com/skills/input-metric-picker): Pick input metrics you control from the numbers you report. Get three to six inputs, a proxy test for each and one output to check them.
+- [Business buyer trust builder](https://useaiblocks.com/skills/business-buyer-trust-builder): Share your offer and buyer roles to get messages, content plans, and suggested trust assets.
 - [Business growth channel test planner](https://useaiblocks.com/workflows/find-your-business-growth-channel): Compare 19 ways to reach customers, plan up to three small tests and review real results before choosing a focus.
 - [Business growth forecast planner](https://useaiblocks.com/skills/repeatable-growth-guide): Turn lucky months into a growth plan you can repeat. Give it your business details and get a marketing plan, a sharper offer and a forecast.
 - [Business growth lever planner](https://useaiblocks.com/skills/growth-lever-audit): Share buyers, orders, revenue and costs. Compare more buyers, bigger orders and repeat purchases, then plan one supported growth test.
@@ -67,6 +69,7 @@
 - [Deal and hiring decision reviewer](https://useaiblocks.com/workflows/four-filter-decision): Review understanding, lasting value, people and price, then challenge the failure risks and draft a yes, no or too-hard call.
 - [Decision priority planner](https://useaiblocks.com/skills/big-decisions-first-sorter): Sort a messy plan's open questions against your goal. Get the big choices it already settles, with reasons, and the few hard questions left.
 - [Delivery blocker priority scorer](https://useaiblocks.com/skills/copilot-impediment-prioritization): Share blockers and rate value, effort, ease and risk from 1 to 10. Get a ranked list with each score shown.
+- [Demand and stock planner](https://useaiblocks.com/skills/demand-and-stock-planner): Turn your sales history and supplier lead times into a demand forecast, safety stock levels and a reorder plan for each product.
 - [Developer adoption program planner](https://useaiblocks.com/skills/copilot-gtm-developer-ecosystem): Plan how outside developers build on your product. Get an open or curated choice, a developer path, docs order, support routes and metrics.
 - [Developer partner program planner](https://useaiblocks.com/workflows/build-a-developer-partner-program): Plan how developers use your platform and how partners benefit. Get small tests, incentives and measures for the program.
 - [Direct sales channel reviewer](https://useaiblocks.com/skills/direct-selling-model-check): Share sales channels, costs and payment terms. Compare each channel’s value, stock needs and cash timing, then plan a small test.

@@ -32,7 +32,7 @@ credits:
   - title: commercial-forecaster skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/commercial-forecaster
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and made the scripts reject conversion rates outside 0 to 1 (or 0 to 100 for percent fields) and leave out, with a warning, any deal or cohort with a missing amount instead of counting it as zero. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: claude-code-skills
     url: https://github.com/alirezarezvani/claude-code-skills

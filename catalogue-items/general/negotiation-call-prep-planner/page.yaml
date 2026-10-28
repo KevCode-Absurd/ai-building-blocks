@@ -18,8 +18,8 @@ when:
   - "A client or supplier keeps saying yes and nothing changes."
   - "You tend to split the difference to get out of an awkward talk."
 not_for:
-  - "You want to plan a cold outreach call to a stranger: use the Prospecting block planner."
-  - "You need someone to want your idea, not just accept a term: use the Buy-in conversation planner."
+  - "You want to plan a cold outreach call to a stranger: use the Sales prospecting schedule planner."
+  - "You need someone to want your idea, not just accept a term: use the Proposal discussion planner."
   - "The decision is already final and you only need to share it: send a plain summary instead."
   - "You want advice on price or terms, or you are about to sign: ask a person who knows your field, and have a qualified person read the contract first."
 
@@ -145,7 +145,7 @@ improve:
   - "Add your own field's usual hidden facts to step 7, such as renewal dates or who signs."
   - "Add words your counterpart uses so labels sound like theirs."
   - "Save past plans and results in a notes file so the next plan starts from them."
-  - "Pair it with \"Buy-in conversation planner\" when you need someone to want your idea, not only accept a term."
+  - "Pair it with \"Proposal discussion planner\" when you need someone to want your idea, not only accept a term."
 
 works_best_with:
   tools:

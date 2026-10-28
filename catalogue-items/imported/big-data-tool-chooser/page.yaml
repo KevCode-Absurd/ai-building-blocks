@@ -7,8 +7,6 @@ job: build-software
 headline: Big data tool chooser
 subhead: "One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them. It only works with MATLAB, a paid MathWorks product."
 explain: |
-  One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
-
   The AI runs a pre-flight check and follows a decision flowchart. Continuous data across files points to a datastore with tall arrays. Files to process one at a time point to a datastore with transform. Parquet can be handled per row group. It also covers running reads in parallel, when mapreduce is actually needed, formats with no built-in datastore, and how to write a custom datastore. You need MATLAB, which is paid. Some paths need paid add-ons, listed in the requirements.
 
   You get one result in this order: a pre-flight verdict, the recommended path, the code, parallel settings if they help, and caveats.
@@ -34,6 +32,7 @@ you_get:
   - Parallel settings if they help
   - A custom datastore outline (if needed)
 how_to_use:
+  - The code it writes is for MATLAB only, and the licence lets you use the skill only with MathWorks products.
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - "Before you start, check which paid MATLAB add-ons you have: Parallel Computing Toolbox, Database Toolbox, Vehicle Network Toolbox and MATLAB Parallel Server. Then gather a small sample of your files, and note the file type, count and total size."
   - Ask your AI to follow this skill. Include the files and details listed on this page.

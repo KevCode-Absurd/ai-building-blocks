@@ -24,7 +24,7 @@ you_give:
   - Hold or release
   - Order IDs or a search filter
   - Reason and staff note
-  - Auto-expiry date (optional)
+  - Auto-expiry date (optional). The hold lifts on that date without anyone checking, so do not set one on fraud or payment holds until the check is done.
 you_get:
   - A preview of affected orders
   - Holds placed or released
@@ -37,7 +37,7 @@ how_to_use:
   - Ask for a preview first. Check the table of orders and their current status.
   - If the list looks right, tell your AI to go ahead. Then read the results for each order and fix any errors.
   - Note that it reads only the first five fulfilment orders on each order. Check any order that has more.
-  - To lift the holds later, run the same skill again with release on the same tag or order list.
+  - To lift the holds later, run the same skill again with release on the same tag or order list. Then open Orders in the Shopify admin, filter by that tag, and check each order is no longer on hold.
 output_sample:
   input:
     - Your store domain

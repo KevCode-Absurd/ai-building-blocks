@@ -7,8 +7,6 @@ job: secure-code
 headline: Shipped app gap finder
 subhead: A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
 explain: |
-  A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
-
   Read this first: the audit runs an outside tool on your machine and sends your repo address and live link to a third-party service (api.commit.show). Run it only in a folder with no secrets, and only if you approve.
 
   It runs an outside audit of your repo and live URL using a command line tool. The checks cover database access rules, webhook handling, leaked secrets, permission grants, payment retries that could charge twice, missing indexes, monitoring and mobile use. Results are saved in a folder in the project so later sessions can read them without a re-run. It works best alongside the code-time security checks you already use, and is useful right after merging to main.
@@ -41,7 +39,7 @@ how_to_use:
   - Open your AI in your project folder. It needs to run code and read files. Chat-only AI cannot run this.
   - Stop here unless approved. The next step runs an npm package that can read your local files and environment variables. Only run it in a folder with no secrets.
   - "Ask your AI to run: mkdir -p .commitshow, then npx commitshow@0.3.23 audit . --json, saving the result in .commitshow/audit.json. The first run takes 60 to 90 seconds."
-  - Read the score and the top concerns. The audit sometimes flags a gap that is already fixed somewhere else, so treat each concern as a lead, not a verdict. Ask your AI to check the file named in the concern you care about before you change any code.
+  - Read the score and the top concerns. A high score is not a security sign-off; it only means these checks found no gaps. The audit sometimes flags a gap that is already fixed somewhere else, so treat each concern as a lead, not a verdict. Ask your AI to check the file named in the concern you care about before you change any code.
   - Ask for a small fix to one concern. Look at the diff and approve it before anything changes.
   - Run the audit again with --refresh after you fix a gap. The score then shows the change.
 output_sample:

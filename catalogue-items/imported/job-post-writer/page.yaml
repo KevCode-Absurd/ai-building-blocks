@@ -36,7 +36,8 @@ how_to_use:
   - Answer any short questions the AI asks about gaps.
   - Read the bias check and the sensitive information check. Fix anything flagged before you publish.
   - Saving jd.md as a file needs an AI that can create files. In a plain chat, copy the text yourself.
-  - The skill reads a company notes file (talent-sourcing.local.md), a stop-slop style pass and a references folder. Without them, paste your company story and pay approach into the chat, and ask your AI to cut filler words as a last pass.
+  - The skill reads a company notes file (talent-sourcing.local.md) and a stop-slop style pass, which are not included. Paste your company story and pay approach into the chat instead, and ask your AI to cut filler words as a last pass. The references folder with bias and example guides is included, so paste references/inclusive-language.md too if your AI cannot open the folder.
+  - Next, pass jd.md to the Ideal candidate profiler to describe who you are looking for, then to the Candidate sourcing planner and the Candidate outreach drafter.
 output_sample:
   input:
     - The role title and level

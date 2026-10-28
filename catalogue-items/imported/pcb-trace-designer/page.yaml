@@ -37,7 +37,9 @@ you_get:
   - A mesh and memory check before the full solve
 how_to_use:
   - Before you start, gather your target impedance, frequency and stackup values (board material, layer heights, metal). Open an AI that can run MATLAB code. You need MATLAB and the RF PCB Toolbox, which are paid and need a licence.
+  - Check your MATLAB release first. Some functions the skill uses, such as pcbBendCustom, need R2025a or later. Ask your AI to confirm each function it plans to use exists in your release.
   - Paste the skill into the chat, or load the skill folder if your AI supports files.
+  - The MATLAB code in the skill comes unchanged from MathWorks and has not been tested on your setup. Run it on your own toolbox and compare the impedance with a known case before you use it on a real board.
   - Give your target impedance, frequency, substrate, metal and line type. Add the aggressor spacing for crosstalk.
   - Check the mesh and memory estimate before you let it run the full solve.
   - Read the width, spacing and impedance first. Then check the crosstalk figures against your limit.

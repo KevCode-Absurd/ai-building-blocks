@@ -11,7 +11,7 @@ explain: |
 
   Your AI starts with one sentence on the design idea. The defaults are Open Sans for text, Inter for display type, Inconsolata for code, near-black text on a warm off-white surface, one indigo accent and spacing steps of 4, 8, 12, 16, 24 and 32. It then writes rules for each part and its states. The source gives no type sizes, only the words "expressive scale", so the skill sets exact sizes for you.
 
-  The guide also checks contrast. Near-black text on the off-white surface is easy to read, but the green and orange status colours are not. They come out near 3 to 1, below the 4.5 to 1 normal text needs. The guide tells you to use them for icons and fills, or to darken them.
+  The guide also checks contrast. Near-black text on the off-white surface is easy to read, but the green and orange status colours are not. They come out near 3 to 1, below the 4.5 to 1 normal text needs. The red comes out near 4.4 to 1, just under the line. The guide tells you to use them for icons and fills, or to darken them. The ratios use the standard WCAG contrast formula, so you can recheck any pair in a free contrast checker.
 
   How it differs from the Retro throwback style guide writer: this one uses plain type, one accent colour and a lot of empty space. The retro one uses vintage type and bold colour pairs. The steps are the same, but the choices and the look are different.
 when:
@@ -36,7 +36,7 @@ you_get:
   - Accessibility rules you can test
   - Do and don't lists, tone notes and a review checklist
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Any chat AI works. No paid tool or setup is needed.
   - Paste your product description and who uses it. Add any brand colours or fonts you must keep.
   - Answer the one round of questions it asks, or say "use the defaults". Anything you do not give is marked MISSING.
   - Check the type sizes and the colour table. Darken any text colour below 4.5 to 1.

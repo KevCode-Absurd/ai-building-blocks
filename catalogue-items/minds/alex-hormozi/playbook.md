@@ -51,7 +51,7 @@ He'd score each group on pain, money, reach and growth and rule out any with a z
 
 ### Raise my prices
 
-He'd say racing to the lowest price is a trap. Buyers who can't tell sellers apart pick the cheapest, and a price war eats margin. So change the offer until they stop comparing. Estimate what the result is worth to your buyer, set a price near a tenth to a third of that depending on how strong your proof is [beyond the record: a working rule of thumb, not a ratio he states], and check the gap. Add value before you raise it, tell people the price is going up on a real date, and use bonuses, never a cut to the core, to close a hesitant buyer.
+He'd say racing to the lowest price is a trap. Buyers who can't tell sellers apart pick the cheapest, and a price war eats margin. So change the offer until they stop comparing. Estimate what the result is worth to your buyer, set the price as a small share of that worth, and check the gap. He gives no fixed share, so try two or three price levels with real buyers and let your proof decide how high you go. Add value before you raise it, tell people the price is going up on a real date, and use bonuses, never a cut to the core, to close a hesitant buyer.
 
 ### Make a decent offer harder to refuse
 
@@ -63,7 +63,7 @@ He'd ask if the offer, the market or the way in is the problem. If the way in, h
 
 ### Outside his field: your job search, essay or team proposal
 
-He sells to business owners, so he'd translate. Your customer is the hiring manager, the reader or the boss who approves the plan. Write the result as a place they arrive. List their worries and answer each: a sample of your work, a one-page plan, a first result before they hire you. Then make a plan so specific that they can't compare it with anyone else's. Reach out in volume. He built his sales skill by running a very high number of one-on-one talks [beyond the record].
+He sells to business owners, so he'd translate. Your customer is the hiring manager, the reader or the boss who approves the plan. Write the result as a place they arrive. List their worries and answer each: a sample of your work, a one-page plan, a first result before they hire you. Then make a plan so specific that they can't compare it with anyone else's. Reach out in volume.
 
 ### Your life and career
 

@@ -8,10 +8,8 @@ job: analysis
 level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
-  - {type: product_data, required: false}
+  - {type: search_query_report, required: true}
   - {type: plan, required: false}
-  - {type: audit_report, required: false}
-  - {type: search_query_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

@@ -9,7 +9,9 @@ subhead: Give it an AI-made product photo. It rates the risk as low, medium or h
 explain: |
   Check an AI-made product photo before it reaches an ad. You get a risk rating of low, medium or high, a verdict on each of eight checks, and a call to run it, redo it or send it for a manual touch-up.
 
-  The eight checks cover a warped product, an odd face, bad hands, wrong limbs, garbled text, clashing light and shadow, cut-out edge marks, and platform rule breaks. The last part is the most useful. It writes one to three English lines you can paste onto the end of your image prompt, so the next try fixes the exact fault. A person still makes the final call. It runs through the dlazy command line and spends credits.
+  The eight checks cover a warped product, an odd face, bad hands, wrong limbs, garbled text, clashing light and shadow, cut-out edge marks, and platform rule breaks. The last part is the most useful. It writes one to three English lines you can paste onto the end of your image prompt, so the next try fixes the exact fault. The eight checks are an AI model's judgement. They are not a legal or platform-policy ruling, so a person still makes the final call. It runs through the dlazy command line, a paid service that spends credits on each check (about 3 per photo, by the author's figure).
+
+  The skill file is written mostly in Chinese, and its prompt asks for the report in Chinese, with only the fix lines in English. To get the whole report in English, change the line in the prompt that asks for Chinese (全部用中文作答) to ask for English.
 when:
   - You made a model-wearing-product photo with AI and want to know if it is ad-ready.
   - Your AI images keep having odd hands or smeared logos.
@@ -30,9 +32,10 @@ you_get:
   - A run, redo or retouch call
   - One to three prompt lines to fix the faults
 how_to_use:
-  - Install the dlazy command line tool on your computer. This step needs a place where your AI can run code.
+  - Install the dlazy command line tool on your computer. The skill does not give the install command, so follow the setup guide on dlazy.com. This step needs a place where your AI can run code.
   - Get your key from your dlazy account. Save it by running dlazy auth set with your key.
-  - Add --dry-run to the command first. It shows the credit cost without a real run.
+  - Add --dry-run to the command first. It shows the credit cost without a real run. The author puts it at about 3 credits per photo.
+  - Decide the report language. The prompt asks for Chinese by default. Change that line to English if you want the full report in English.
   - Run the check on your photo. Read the risk rating, then the eight checks, then the advice.
   - Paste the prompt fixes at the end of your image prompt, make the photo again, and check it once more.
   - Look at the final photo yourself before it goes into an ad.

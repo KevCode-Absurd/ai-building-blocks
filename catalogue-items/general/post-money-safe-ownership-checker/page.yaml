@@ -19,7 +19,7 @@ not_for:
   - "Your SAFE has only a discount, an MFN term, or more than one class of SAFE: ask a startup lawyer or use a cap table tool, since this skill does not solve those."
   - "You need a legal reading of what the SAFE says or advice on whether to sign: ask a lawyer."
   - "You want to guess later dilution from a headline valuation: get the dilution figure from the round documents first, because this skill only uses a figure you give it."
-  - "You need to size an option pool top-up before new money: use the Option pool top-up checker instead."
+  - "You need to size an option pool top-up before new money: use the Employee option pool top-up calculator instead."
 you_give:
   - Your signed cap-only post-money SAFE
   - The amount the company received under the SAFE

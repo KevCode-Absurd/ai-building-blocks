@@ -214,6 +214,8 @@ improve:
   - Add your house entrance and exit moves to the look card in stage 3, so every ad moves the same way.
   - Pair it with "Motion graphics video ad script writer", which writes the look card, fact sheet and shot table this skill reads.
 
+before: [website-brand-brain-builder, motion-graphics-ad-script]
+
 works_best_with:
   tools:
     - {name: "Claude Code with Remotion", why: "Builds the ad in code, so every word, number and bar height renders exactly as written."}

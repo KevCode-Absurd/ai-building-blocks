@@ -13,13 +13,13 @@ not_for:
   - "You use a different threat modeling tool: use that tool's own file format, since this one only writes .tm7."
   - "You only want to read or review a model: open it in the Microsoft Threat Modeling Tool itself, which runs on Windows."
 how_to_use:
-  - This is the MIT-licensed tm7-threat-model skill from github/awesome-copilot, copied here with a plainer name. Its file structure has not been tested by this catalogue.
+  - This is the MIT-licensed tm7-threat-model skill from github/awesome-copilot (commit 613efc8, copied on 2026-10-21), with a plainer name. Its file structure has not been tested by this catalogue.
   - First, on a Windows computer, open the bundled assets/example-minimal.tm7 in the Microsoft Threat Modeling Tool. If your version of the tool cannot load it, stop here, because a file your AI builds from it will fail too.
   - Use an AI that can create a file you can download. Paste the skill into the chat, or upload the skill folder.
   - Describe your system in a few lines. Name each part, each data store, each outside party and each data flow.
   - Ask your AI to build the .tm7 file. Add your trust boundaries if you have them.
   - Download the file and open it in the Microsoft Threat Modeling Tool v7.3 or newer on Windows. Check that the diagram shows every part and flow you gave. Write down any error message the tool shows.
-  - We have not checked the file in every version of the tool. If the tool says the file is corrupted, tell your AI the exact message and ask it to fix the file.
+  - We have not checked the file in every version of the tool. If the tool says the file is corrupted, tell your AI the exact message and ask it to fix the file. The skill's own check is a text checklist the AI runs on the file. It cannot open the file in Microsoft's tool, so only your test in the tool counts. If the file still will not open after a fix or two, ask for a plain STRIDE threat table instead.
   - Review each threat in the tool. Set its state and write a mitigation.
   - Next, export the threat list for your security review and track each mitigation in your task tracker. The tool runs on Windows only. If you are not on Windows, ask your AI for a plain STRIDE threat table instead.
 output_sample:

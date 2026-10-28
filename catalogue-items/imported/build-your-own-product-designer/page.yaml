@@ -36,7 +36,7 @@ how_to_use:
   - Add the pairs of options that cannot go together, and your price table.
   - Add your drop-off data if you have it (optional).
   - Ask for the plan in this order: list the options, set the defaults, write the rules for invalid combinations, price each choice, then define save and add-to-cart. Check that each rule has a clear message the buyer would understand.
-  - Give the plan to your developer or builder tool. Test it first by handing the build to a stranger in your target audience. Check that they reach a buyable build in under 5 minutes.
+  - Next, give the plan to your developer or builder tool. Test it first by handing the build to a stranger in your target audience. Check that they reach a buyable build in under 5 minutes.
 output_sample:
   input:
     - Your product and all its options

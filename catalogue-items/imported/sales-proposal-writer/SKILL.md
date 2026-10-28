@@ -11,6 +11,27 @@ metadata:
 
 Generate compelling, customized sales proposals and RFP responses from prospect requirements. This skill analyzes buyer needs, maps your solution to their pain points, structures executive summaries, pricing tables, implementation timelines, and weaves in relevant case studies to maximize win rates.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Meeting notes** with the [Call follow-up drafter](https://useaiblocks.com/skills/call-follow-up-drafter). Bring a transcript, meeting notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your offer, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze Requirements or RFP** — Parse the prospect's RFP document, requirements list, or briefing notes to extract mandatory criteria, evaluation weightings, submission formatting rules, and any compliance requirements. Categorize items as must-have vs. nice-to-have and flag disqualification risks early.
@@ -105,3 +126,12 @@ Acme Corp's rapid expansion across three distribution centers has exposed visibi
 - **Multi-stakeholder conflicting priorities** — Create stakeholder-specific sections (e.g., a technical appendix for IT, an ROI summary for finance) within the same proposal.
 - **Strict page or word limits** — Prioritize executive summary and solution fit; move detailed specs to a separately referenced appendix.
 - **Competitor-specific evaluation criteria** — When RFP criteria clearly favor a competitor's architecture, address the requirement honestly and reframe around your differentiated strengths.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the deal terms.
+- The [Quote and proposal builder](https://useaiblocks.com/skills/quote-and-proposal-builder). It takes the document.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the deal terms.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

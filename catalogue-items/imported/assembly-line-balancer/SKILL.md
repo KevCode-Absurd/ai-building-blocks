@@ -7,6 +7,19 @@ description: When the user wants to balance assembly lines, assign tasks to work
 
 You are an expert in assembly line balancing and production line design. Your goal is to help organizations optimize assembly line configurations, balance workloads across stations, minimize idle time, and maximize line efficiency while meeting production targets.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before balancing assembly lines, understand:
@@ -259,211 +272,120 @@ class LineBalancer:
         precedence_graph = {'A': [], 'B': ['A'], 'C': ['A'], ...}
         """
         self.tasks = tasks
-        self.precedence = precedence_graph
+        self.precedence = {t: list(precedence_graph.get(t, [])) for t in tasks}
         self.cycle_time = cycle_time
+        self._validate()
+
+    def _validate(self):
+        """Stop early on inputs no station layout can satisfy."""
+        too_long = {t: p for t, p in self.tasks.items() if p > self.cycle_time}
+        if too_long:
+            raise ValueError(
+                f"Tasks longer than the cycle time {self.cycle_time}: {too_long}. "
+                "Split the task, run it on parallel stations, or raise the cycle time."
+            )
+        for task, preds in self.precedence.items():
+            unknown = [p for p in preds if p not in self.tasks]
+            if unknown:
+                raise ValueError(f"Task {task} lists unknown predecessors {unknown}")
+        # Detect precedence loops (a task that must come before itself)
+        state = {}
+        def visit(t):
+            if state.get(t) == 1:
+                raise ValueError(f"Precedence loop through task {t}")
+            if state.get(t) == 2:
+                return
+            state[t] = 1
+            for p in self.precedence[t]:
+                visit(p)
+            state[t] = 2
+        for t in self.tasks:
+            visit(t)
+
+    def _all_successors(self):
+        """Every task that must come after each task, directly or indirectly (each counted once)."""
+        direct = defaultdict(set)
+        for task, predecessors in self.precedence.items():
+            for pred in predecessors:
+                direct[pred].add(task)
+
+        closure = {}
+        def collect(task):
+            if task not in closure:
+                found = set()
+                for s in direct[task]:
+                    found.add(s)
+                    found |= collect(s)
+                closure[task] = found
+            return closure[task]
+
+        for task in self.tasks:
+            collect(task)
+        return closure
 
     def calculate_positional_weights(self):
         """
-        Calculate positional weight for each task
-        Positional weight = task time + sum of all following tasks' times
+        Positional weight = task time + sum of the times of every task that follows it.
+        Each following task is counted once, even when it can be reached by two paths
+        (for example A -> B -> D and A -> C -> D counts D once for A).
         """
+        succ = self._all_successors()
+        return {
+            task: self.tasks[task] + sum(self.tasks[s] for s in succ[task])
+            for task in self.tasks
+        }
 
-        # Build successor relationships
-        successors = defaultdict(list)
-        for task, predecessors in self.precedence.items():
-            for pred in predecessors:
-                successors[pred].append(task)
-
-        # Calculate positional weights (recursive)
-        positional_weights = {}
-
-        def calc_weight(task):
-            if task in positional_weights:
-                return positional_weights[task]
-
-            # Weight = own time + sum of all successors' weights
-            weight = self.tasks[task]
-            for successor in successors[task]:
-                weight += calc_weight(successor)
-
-            positional_weights[task] = weight
-            return weight
-
-        # Calculate for all tasks
-        for task in self.tasks:
-            calc_weight(task)
-
-        return positional_weights
-
-    def rpw_method(self):
+    def _fill_stations(self, priority):
         """
-        Ranked Positional Weight method for line balancing
-
-        Returns workstation assignments
+        Station-by-station assignment. Open a station, then keep adding the
+        highest-priority task whose predecessors are all assigned and that fits in
+        the time left. When nothing fits, close the station and open a new one.
+        A task is only placed after all its predecessors, so precedence always holds,
+        and no station ever goes over the cycle time.
         """
-
-        # Calculate positional weights
-        weights = self.calculate_positional_weights()
-
-        # Sort tasks by positional weight (descending)
-        sorted_tasks = sorted(weights.items(), key=lambda x: x[1], reverse=True)
-
-        # Initialize workstations
         workstations = []
-        current_station = []
-        current_station_time = 0
-        assigned_tasks = set()
+        assigned = set()
+        remaining = set(self.tasks)
 
-        # Assign tasks to workstations
-        for task, weight in sorted_tasks:
-            # Check if task can be assigned (predecessors already assigned)
-            predecessors = self.precedence[task]
-            if not all(pred in assigned_tasks for pred in predecessors):
-                continue  # Skip this task for now
-
-            # Check if task fits in current station
-            task_time = self.tasks[task]
-
-            if current_station_time + task_time <= self.cycle_time:
-                # Assign to current station
-                current_station.append(task)
-                current_station_time += task_time
-                assigned_tasks.add(task)
-            else:
-                # Start new station
-                if current_station:
-                    workstations.append({
-                        'tasks': current_station.copy(),
-                        'time': current_station_time
-                    })
-
-                current_station = [task]
-                current_station_time = task_time
-                assigned_tasks.add(task)
-
-        # Add last station
-        if current_station:
-            workstations.append({
-                'tasks': current_station.copy(),
-                'time': current_station_time
-            })
-
-        # If not all tasks assigned, need to iterate again
-        # (For simplicity, this basic version may not assign all tasks in one pass)
-        unassigned = set(self.tasks.keys()) - assigned_tasks
-
-        # Try to assign remaining tasks
-        while unassigned:
-            assigned_this_round = []
-
-            for task in list(unassigned):
-                predecessors = self.precedence[task]
-                if not all(pred in assigned_tasks for pred in predecessors):
-                    continue
-
-                task_time = self.tasks[task]
-
-                # Try to fit in existing stations
-                fitted = False
-                for station in workstations:
-                    if station['time'] + task_time <= self.cycle_time:
-                        station['tasks'].append(task)
-                        station['time'] += task_time
-                        assigned_tasks.add(task)
-                        assigned_this_round.append(task)
-                        fitted = True
-                        break
-
-                # If not fitted, create new station
-                if not fitted:
-                    workstations.append({
-                        'tasks': [task],
-                        'time': task_time
-                    })
-                    assigned_tasks.add(task)
-                    assigned_this_round.append(task)
-
-            # Remove assigned tasks from unassigned
-            for task in assigned_this_round:
-                unassigned.remove(task)
-
-            # If nothing assigned this round, break to avoid infinite loop
-            if not assigned_this_round:
-                break
+        while remaining:
+            station, station_time = [], 0.0
+            while True:
+                candidates = [
+                    t for t in remaining
+                    if all(p in assigned for p in self.precedence[t])
+                    and station_time + self.tasks[t] <= self.cycle_time + 1e-9
+                ]
+                if not candidates:
+                    break
+                task = max(candidates, key=lambda t: (priority[t], self.tasks[t], str(t)))
+                station.append(task)
+                station_time += self.tasks[task]
+                assigned.add(task)
+                remaining.remove(task)
+            if not station:
+                # Cannot happen after _validate, but never loop forever
+                raise RuntimeError(f"Could not place tasks {sorted(remaining)}")
+            workstations.append({'tasks': station, 'time': station_time})
 
         return {
             'workstations': workstations,
             'num_workstations': len(workstations),
-            'unassigned_tasks': list(unassigned)
+            'unassigned_tasks': []
         }
+
+    def rpw_method(self):
+        """
+        Ranked Positional Weight method: priority = positional weight.
+        Returns workstation assignments.
+        """
+        return self._fill_stations(self.calculate_positional_weights())
 
     def largest_candidate_rule(self):
         """
-        Largest Candidate Rule (LCR) heuristic
-        Assign longest task that fits and satisfies precedence
+        Largest Candidate Rule (LCR): priority = task time.
+        Assign the longest task that fits and has all predecessors assigned.
         """
-
-        workstations = []
-        current_station = []
-        current_station_time = 0
-        assigned_tasks = set()
-        remaining_tasks = set(self.tasks.keys())
-
-        while remaining_tasks:
-            # Find eligible tasks (predecessors assigned)
-            eligible = [
-                task for task in remaining_tasks
-                if all(pred in assigned_tasks for pred in self.precedence[task])
-            ]
-
-            if not eligible:
-                break  # No eligible tasks (shouldn't happen with valid precedence)
-
-            # Sort eligible by processing time (longest first)
-            eligible_sorted = sorted(eligible, key=lambda t: self.tasks[t], reverse=True)
-
-            # Try to assign largest task that fits
-            assigned = False
-            for task in eligible_sorted:
-                task_time = self.tasks[task]
-
-                if current_station_time + task_time <= self.cycle_time:
-                    # Assign to current station
-                    current_station.append(task)
-                    current_station_time += task_time
-                    assigned_tasks.add(task)
-                    remaining_tasks.remove(task)
-                    assigned = True
-                    break
-
-            # If no task fits, start new station
-            if not assigned:
-                if current_station:
-                    workstations.append({
-                        'tasks': current_station.copy(),
-                        'time': current_station_time
-                    })
-
-                # Assign smallest eligible task to new station
-                task = min(eligible_sorted, key=lambda t: self.tasks[t])
-                task_time = self.tasks[task]
-
-                current_station = [task]
-                current_station_time = task_time
-                assigned_tasks.add(task)
-                remaining_tasks.remove(task)
-
-        # Add last station
-        if current_station:
-            workstations.append({
-                'tasks': current_station.copy(),
-                'time': current_station_time
-            })
-
-        return {
-            'workstations': workstations,
-            'num_workstations': len(workstations)
-        }
+        return self._fill_stations(dict(self.tasks))
 
     def compare_solutions(self, solution1, solution2):
         """Compare two line balancing solutions"""
@@ -627,7 +549,15 @@ class MixedModelLineBalancer:
 
         avg_times = self.calculate_average_task_times()
 
-        # Simple greedy assignment
+        # A task longer than the cycle time cannot fit in any station
+        too_long = {t: round(v, 2) for t, v in avg_times.items() if v > self.cycle_time}
+        if too_long:
+            raise ValueError(f"Average task times longer than the cycle time: {too_long}")
+
+        # Simple greedy assignment. This example has no precedence rules. If your
+        # tasks must follow an order, use LineBalancer with the average times instead.
+        # Check analyze_product_balance: one model can still go over the cycle time at
+        # a station even when the average fits.
         workstations = []
         current_station = []
         current_time = 0
@@ -821,8 +751,8 @@ class UShapedLineAnalyzer:
             'u_shaped_cycle_time': u_config['cycle_time'],
             'improvement_pct': ((straight_line_cycle_time - u_config['cycle_time']) /
                                straight_line_cycle_time) * 100,
-            'space_reduction_pct': 30,  # Typical space reduction
-            'material_handling_reduction_pct': 40  # Typical reduction
+            # Space and material-handling savings depend on your layout.
+            # Measure them on your own line; there is no standard figure.
         }
 
         return comparison
@@ -850,8 +780,6 @@ print("\nU-Shaped vs. Straight Line Comparison:")
 print(f"  Straight Line Cycle Time: {comparison['straight_line_cycle_time']:.2f} min")
 print(f"  U-Shaped Cycle Time: {comparison['u_shaped_cycle_time']:.2f} min")
 print(f"  Cycle Time Improvement: {comparison['improvement_pct']:.1f}%")
-print(f"  Space Reduction: ~{comparison['space_reduction_pct']}%")
-print(f"  Material Handling Reduction: ~{comparison['material_handling_reduction_pct']}%")
 ```
 
 ---
@@ -968,6 +896,8 @@ print(f"  Material Handling Reduction: ~{comparison['material_handling_reduction
 - Recommendations for improvement
 - Expected benefits
 
+The numbers below are a made-up example to show the layout. Use your own measured task times.
+
 **Current State:**
 
 | Workstation | Tasks | Time (min) | Idle Time | Utilization % |
@@ -980,54 +910,59 @@ print(f"  Material Handling Reduction: ~{comparison['material_handling_reduction
 **Current Metrics:**
 - Number of Workstations: 4
 - Cycle Time: 7.0 minutes
-- Line Efficiency: 89.3%
-- Balance Delay: 10.7%
-- Throughput: 8.6 units/hour
+- Total work content: 24.9 minutes
+- Line Efficiency: 24.9 / (4 × 7.0) = 88.9%
+- Balance Delay: 11.1%
+- Throughput: 60 / 7.0 = 8.6 units/hour
 
-**Proposed Balance:**
+**Proposed Balance:** (same 24.9 minutes of work, spread more evenly)
 
-| Workstation | Tasks | Time (min) | Idle Time | Utilization % |
+| Workstation | Tasks | Time (min) | Idle Time at 6.4 min | Utilization % |
 |-------------|-------|------------|-----------|---------------|
-| WS1 | A, B, D | 6.8 | 0.2 | 97% |
-| WS2 | C, E | 6.7 | 0.3 | 96% |
-| WS3 | F, G, H | 6.5 | 0.5 | 93% |
-| WS4 | I, J | 6.9 | 0.1 | 99% |
+| WS1 | A, B, D | 6.4 | 0.0 | 100% (new bottleneck) |
+| WS2 | C, E | 6.2 | 0.2 | 97% |
+| WS3 | F, G, H | 6.1 | 0.3 | 95% |
+| WS4 | I, J | 6.2 | 0.2 | 97% |
 
 **Improved Metrics:**
 - Number of Workstations: 4 (no change)
-- Cycle Time: 7.0 minutes (same)
-- Line Efficiency: 95.7% (+6.4%)
-- Balance Delay: 4.3% (-6.4%)
-- Throughput: 8.6 units/hour (same)
+- Cycle Time: can drop to 6.4 minutes (the slowest station), if demand needs it
+- Line Efficiency: 24.9 / (4 × 6.4) = 97.3%
+- Balance Delay: 2.7%
+- Throughput: 60 / 6.4 = 9.4 units/hour (+9%)
+
+Rebalancing alone does not change efficiency if you keep the same cycle time and number of stations, because the total work stays the same. The gain comes from running at the shorter cycle time, or from removing a station.
 
 **Recommendations:**
 
 1. **Rebalance Workstations** (Priority: High)
    - Redistribute tasks per proposed balance
-   - Expected: +6.4% efficiency
-   - Implementation: 1 week (training, layout changes)
-   - Cost: Minimal (training only)
+   - Expected: cycle time 7.0 → 6.4 min, about +9% throughput
+   - Implementation and cost: [your estimate for training and layout changes]
 
 2. **Reduce Bottleneck Task Time** (Priority: Medium)
-   - Improve methods at WS2 (Task E)
-   - Target: Reduce 0.9 min → 0.6 min
-   - Expected: Enable cycle time reduction to 6.7 min (+11% throughput)
+   - Improve methods at the new bottleneck, WS1
+   - Each minute cut there lowers the possible cycle time, until the next slowest station (6.2 min here) becomes the bottleneck
    - Methods: Improved tooling, eliminate wasted motion
 
-3. **Implement U-Shaped Line** (Priority: Medium)
-   - Convert to U-shaped configuration
-   - Expected: -30% space, better flexibility
-   - Investment: $50K layout changes
-   - ROI: 12 months
+3. **Consider a U-Shaped Line** (Priority: Medium)
+   - Convert to U-shaped configuration if your layout allows
+   - Expected: better operator flexibility; measure any floor-space saving on your own layout
+   - Investment and payback: [from your own quotes]
 
 **Expected Benefits:**
-- Line efficiency: +6-8%
-- Throughput: +8-12% (if cycle time reduced)
-- Space utilization: +20-30% (U-shaped)
-- Operator flexibility: Improved
-- WIP reduction: 15-20%
+- Throughput: +9% in this example (8.6 → 9.4 units/hour), if you run at the shorter cycle time
+- Line efficiency: 88.9% → 97.3% at the shorter cycle time
+- Space, WIP and flexibility changes: measure on your own line
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Van loading planner](https://useaiblocks.com/skills/van-loading-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

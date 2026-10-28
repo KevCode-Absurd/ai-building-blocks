@@ -107,8 +107,8 @@ Write MISSING: <what> next to the row it affects. Keep working on rows that do n
 ## After this
 
 - Give the register and note to the person who receives the building, and send the missing-evidence list to the contractor.
-- If a defect needs a priced change, run the [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow.
-- Once the building runs, use the [Prepare a property maintenance handover](https://useaiblocks.com/workflows/prepare-a-property-maintenance-handover) workflow for upkeep.
+- If a defect needs a priced change, run the [Construction change decision brief writer](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow.
+- Once the building runs, use the [Property maintenance handover and action tracker](https://useaiblocks.com/workflows/prepare-a-property-maintenance-handover) workflow for upkeep.
 - A qualified person signs off any safety item.
 
 ## Avoid

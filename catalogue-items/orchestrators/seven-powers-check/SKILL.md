@@ -56,9 +56,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Run the first test in step 4 and record the result against its pass line.
-- Write the case against the power you plan to build with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer).
+- Write the case against the power you plan to build with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer).
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.

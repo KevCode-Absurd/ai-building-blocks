@@ -68,6 +68,19 @@ tags: ["collaboration", "CSCL", "Dillenbourg", "Järvelä", "cooperative-learnin
 
 # AI-Facilitated Collaborative Learning Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a collaborative learning task with specific AI facilitation points — the places where an AI system supports the group process without replacing it. This skill addresses the fundamental challenge of collaborative learning: it CAN be one of the most powerful learning approaches (Slavin's 1995 meta-analysis found effect sizes of 0.26-0.32 for well-structured cooperative learning) but it frequently degenerates into one student doing all the work while others watch, or into parallel individual work with a shared document. Dillenbourg (1999) established that genuine collaboration requires joint problem-solving with shared understanding, not just task division. Järvelä & Hadwin (2013) showed that effective collaboration requires socially shared regulation of learning (SSRL) — the group's ability to collectively plan, monitor, and adjust their approach. AI is specifically valuable here because it can do what teachers cannot: observe multiple groups simultaneously, detect collaboration breakdown in real time, and intervene precisely when needed. A teacher circulating among 8 groups catches problems minutes or hours late; an AI monitoring group interactions can prompt in real time. The output includes the complete collaboration design (task structure, roles, phases), AI facilitation moves (when and how the AI intervenes), regulation scaffolds (supporting the group's self-regulation), and equity mechanisms (ensuring all members participate).
@@ -261,3 +274,11 @@ Selected member presents. Teacher asks questions. This is the individual account
 3. **Collaborative cognitive load can be high.** Kirschner et al. (2018) note that coordination costs (communicating, negotiating, managing different perspectives) consume cognitive resources. For students who are already struggling with the content, the additional load of structured collaboration may be overwhelming. The teacher should monitor whether the collaboration structure is helping or hindering learning.
 
 4. **Cultural norms affect collaboration.** Dillenbourg's (1999) framework was developed primarily in Western educational contexts. In some cultural contexts, direct disagreement, challenging peers' ideas, or speaking before someone of higher perceived status may be uncomfortable or inappropriate. The AI facilitation prompts may need cultural adaptation.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shared group learning task planner](https://useaiblocks.com/skills/group-knowledge-task). It takes the lesson plan.
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

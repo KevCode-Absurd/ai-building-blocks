@@ -100,9 +100,19 @@ def load_config(cwd: Path | None = None) -> dict[str, Any]:
     return config
 
 
-def setup_completed() -> bool:
-    cfg = _read_json(GLOBAL_CONFIG_PATH) or _read_json(project_config_path())
-    return bool(cfg and cfg.get("setup_completed_at"))
+def setup_completed(cwd: Path | None = None) -> bool:
+    """True when the effective config (project over global) has a setup time.
+
+    AI Blocks fix: the original read the global file first and stopped there if
+    it was non-empty, so a finished project setup was missed whenever the global
+    file had setup_completed_at = null. This uses the same precedence as
+    load_config(): a project value overrides the global one.
+    """
+    project_cfg = _read_json(project_config_path(cwd)) or {}
+    global_cfg = _read_json(GLOBAL_CONFIG_PATH) or {}
+    if "setup_completed_at" in project_cfg:
+        return bool(project_cfg["setup_completed_at"])
+    return bool(global_cfg.get("setup_completed_at"))
 
 
 def write_config(config: dict[str, Any], scope: str = "global", cwd: Path | None = None) -> Path:

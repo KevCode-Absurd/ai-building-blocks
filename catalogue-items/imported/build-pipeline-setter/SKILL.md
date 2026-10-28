@@ -5,6 +5,19 @@ description: Automates CI/CD pipeline setup. Use when setting up or modifying bu
 
 # CI/CD and Automation
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Automate quality gates so that no change reaches production without passing tests, lint, type checking, and build. CI/CD is the enforcement mechanism for every other skill — it catches what humans and agents miss, and it does so consistently on every single change.
@@ -260,17 +273,35 @@ on:
         description: 'Version to rollback to'
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   rollback:
     runs-on: ubuntu-latest
+    environment: production   # add required reviewers to this environment in repo settings
     steps:
       - name: Rollback deployment
+        # Pass the input through an environment variable. Never put
+        # ${{ inputs.version }} straight into the script: GitHub pastes it in
+        # as shell code, so a value like "v1; rm -rf ." would run as a command.
+        env:
+          VERSION: ${{ inputs.version }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
+          # Accept only a deployment id or URL: letters, digits and . _ : / -
+          # It must start with a letter or digit, so it cannot pass as a flag like --prod
+          if [[ ! "$VERSION" =~ ^[A-Za-z0-9][A-Za-z0-9._:/-]*$ ]]; then
+            echo "Version has characters that are not allowed: refusing to run" >&2
+            exit 1
+          fi
           # PLACEHOLDER: replace with your host's own rollback command. Check it in your host's docs and try it on a staging copy before you rely on it.
           # Keep the host token in GitHub Secrets. Never paste it into a chat.
           # Example for Vercel (confirm the syntax in Vercel's docs first):
-          npx vercel rollback ${{ inputs.version }}
+          npx vercel rollback "$VERSION" --token "$VERCEL_TOKEN"
 ```
+
+The input goes through an environment variable and is quoted, as GitHub's security guide recommends for script injection (https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions). Use the same pattern for any `${{ }}` value a person or a pull request can set, such as inputs, branch names, titles and commit messages.
 
 ## Environment Management
 
@@ -392,3 +423,10 @@ After setting up or modifying CI:
 - [ ] Secrets are stored in the secrets manager, not in code
 - [ ] Deployment has a rollback mechanism
 - [ ] Pipeline runs in under 10 minutes for the test suite
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Error and log debugger](https://useaiblocks.com/skills/error-and-log-debugger).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -13,19 +13,23 @@ Money figures are planning numbers. Tell the person to check them with their acc
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A spreadsheet** with the [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). Bring your results, your customer list, a spreadsheet (optional), an audit report (optional).
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, spreadsheet, your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** It needs only your numbers and a clear table. Check one month by hand first.
@@ -71,10 +75,12 @@ Do these when the basics pass and you want a deeper read. If you skip them, writ
 The score measures payback safety, out of 100. It is this skill's own rule of thumb, not a source figure. Show the sum.
 - **First order, up to 30.** First order ratio of 1 or more: 30. Between 0.7 and 1 with proven repeat (consumable or subscription): 15. Under 0.7, or under 1 for a one-off store: 0.
 - **Window ratio, up to 40.** On the chosen window: 2 to 3: 40. Over 3: 30 (money left on the table, but safe). 1 to 2: 25. Under 1: 0.
-- **Cash cover, up to 20.** Cash cover is how many days of ad spend you could keep running before repeat orders pay back. Work it out as cash you can use divided by the daily payback gap (daily new customers times the part of CAC that the first order does not cover). If the gap is zero, score 20. Covers 90 days or more: 20. 30 to 89 days: 10. Under 30: 0. Cash not given: 10 and `MISSING: cash`. Show the sum so it scores the same way twice.
+- **Cash cover, up to 20.** Cash cover is how many days of ad spend you could keep running before repeat orders pay back. Work it out as cash you can use divided by the daily payback gap (daily new customers times the part of CAC that the first order does not cover). If the gap is zero, score 20. Covers 90 days or more: 20. 30 to 89 days: 10. Under 30: 0. Cash not given while there is a gap: 0 and `MISSING: cash`, because an unfunded gap is not safe. Show the sum so it scores the same way twice.
 - **Trend, up to 10.** CAC and ratio steady or better for 3 months: 10. Mixed: 5. Worse each month: 0.
 
-Call: scale at 75 or more with the ratio on the chosen window at 2 or above. Hold at 50 to 74. Fix below 50, or if a one-off store fails the first order check. Always add the CAC figure to hit.
+Call: scale at 75 or more with the ratio on the chosen window at 2 or above, and only if the first order pays for itself (first order ratio 1 or more) or the cash shown covers the payback gap for 90 days or more. If the first order does not pay for itself and cash cover is missing or under 90 days, the call is hold at most, whatever the score, and the NEXT line asks for the cash figure or a fix to first-order profit. Hold at 50 to 74. Fix below 50, or if a one-off store fails the first order check. Always add the CAC figure to hit.
+
+Worked check with round numbers: CAC $100, first-order contribution $80 (first order ratio 0.8) on a consumable with proven repeat, 30-day gross profit $200 (window ratio 2), trend steady, cash not given. Score: first order 15 + window 40 + cash 0 + trend 10 = 65, so hold. Each new customer leaves a $20 gap until repeat orders arrive, and nobody has shown that cash covers it.
 
 ## What you hand back
 ```
@@ -105,11 +111,10 @@ End with: "Planning numbers only. Check with your accountant."
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Customer acquisition profitability reviewer](https://useaiblocks.com/skills/ltgp-to-cac-checker).
+- The [Subscription revenue, churn and customer cost review](https://useaiblocks.com/skills/weekly-saas-numbers-keeper).
+- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the audit report.
+- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -120,6 +125,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Gross profit is used, not revenue, over a fixed window.
 - Refunds sit on the profit side.
 - The score shows its sum and says what it measures.
+- Scale is never called when the first order loses money and cash cover for that gap is missing or under 90 days.
 - Source examples are labelled as examples, not benchmarks for this store.
 
 ## If something is missing

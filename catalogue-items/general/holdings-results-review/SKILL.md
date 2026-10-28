@@ -9,7 +9,7 @@ Most people review what they own by looking at the price: up is good, down is ba
 
 ## When to use it
 
-Use it to review several shares or stakes by how each business is doing. Do not use it to decide what to buy or sell today (ask a licensed financial adviser), or when you hold only broad index funds (there is no single business to review, so check the fund's fees and mix on your fund provider's site). To rank and size your bets after this review, use the [Twenty-punch bet ranker](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker).
+Use it to review several shares or stakes by how each business is doing. Do not use it to decide what to buy or sell today (ask a licensed financial adviser), or when you hold only broad index funds (there is no single business to review, so check the fund's fees and mix on your fund provider's site). To rank and size your bets after this review, use the [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker).
 
 ## What you need
 
@@ -29,7 +29,12 @@ Use it to review several shares or stakes by how each business is doing. Do not 
    - **WEAK:** earnings or returns have fallen, or debt has risen to prop up the figures, or the managers are chasing size.
    - **NOT UNDERSTOOD:** you cannot explain in a few plain sentences how it makes money, or you have no figures. This is not a verdict on the business. It is a note that you are holding something you cannot judge.
    Write the evidence line beside each label.
-6. **Run the one-dollar cross-check.** For each business with five years of figures, add up the profit it kept (profit after tax less dividends and buybacks) and compare it with the rise in the company's market value over the same years. Worked example: kept 40, market value rose by 90: each dollar kept became more than two. Kept 40 and value rose by 15: the kept money earned less than it should. Use it only as a cross-check, not as a verdict, and note if the start or end year was extreme.
+6. **Run the one-dollar cross-check.** For each business with five years of figures:
+   - **Kept** = the sum over those years of profit after tax, less dividends and buybacks.
+   - **Adjusted rise** = market value at the end, minus market value at the start, minus money the company raised by issuing new shares over the same years (including shares issued to buy other companies or to pay staff), plus the value of anything handed to owners outside dividends and buybacks, such as shares in a spun-off company. New shares can lift total market value while the price per share stays flat, so the raw rise overstates what kept profit did.
+   - **Per dollar kept** = adjusted rise divided by kept.
+   Worked example, with round numbers: market value went from 500 to 650, the company raised 60 from new shares, and kept 40. Adjusted rise = 650 - 500 - 60 = 90, so each dollar kept became 90 / 40 = 2.25. Without the adjustment it would wrongly show 150 / 40 = 3.75. If it kept 40 and the adjusted rise was 15, the kept money earned less than a dollar per dollar.
+   **Gates:** if kept is zero or negative, give no per-dollar figure: write "not applicable: no profit kept" and say why (losses, or paying out more than it earned). If the start or end market value is missing, or you cannot tell whether new shares were issued or a spin-off happened, or one happened and its value is missing, write `MISSING:` and give no figure. Use 0 only when the filings show there were none. Use it only as a cross-check, not as a verdict, and note if the start or end year was extreme.
 7. **Show where results and price disagree.** Rank the holdings by results (best to worst) and, in a second list, by price change over the same period. Mark each holding where the two ranks are far apart. Results strong and price weak: say a gap may be worth looking at, and that the Twenty-punch bet ranker can help test it. Results weak and price strong: say the price may be running on hope, not results. Do not tell the reader to act. Say what to look into.
 8. **Count what you understand.** Write how many holdings fall in each group and what share of your money sits in NOT UNDERSTOOD.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
@@ -41,8 +46,8 @@ The holding table. The results table with price left out. For each holding, whet
 ## What next
 
 When you've handed it back, suggest what they could do next in one short question. Offer these, and say they can type their own:
-- **Rank and size what you hold** with the [Twenty-punch bet ranker](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). Bring the labels.
-- **Write a rule for when to do nothing** with the [Sit-still rule writer](https://useaiblocks.com/skills/sit-still-rule-writer).
+- **Rank and size what you hold** with the [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). Bring the labels.
+- **Write a rule for when to do nothing** with the [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer).
 
 ## Check before you hand it back
 
@@ -50,6 +55,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The results table shows no price and no gain or loss.
 - Every label has an evidence line.
 - A holding with no figures is NOT UNDERSTOOD, not given a guess.
+- The one-dollar cross-check shows its sum, adjusts for new shares issued and spin-offs, and gives no figure when kept profit is zero or negative or an input is missing.
 - Where results and price disagree, it says what to look into and does not give a trade.
 - Nothing says to buy or sell a named security.
 

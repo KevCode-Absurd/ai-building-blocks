@@ -9,7 +9,7 @@ subhead: Sharp, high-resolution screenshots of your running app, ready for Produ
 explain: |
   Sharp, high-resolution screenshots of your running app, ready for Product Hunt, social posts, a landing page or docs. You point it at your local or live app address and pick how many shots you need.
 
-  The skill uses Playwright, a browser tool you may need to install, to capture at double resolution, the quality of a retina screen. It asks how many shots you need, what they are for, and whether the app needs a login. If you give a login, it finds the form fields on its own. It suggests common local addresses if you are unsure. The result is a set of crisp images saved to a folder you can use at once.
+  The skill uses Playwright, a browser tool you may need to install, to capture at double resolution, the quality of a retina screen. It asks how many shots you need, what they are for, and whether the app needs a login. If the screens need a login, you set a test account's email and password on your own computer, never in the chat. It then finds the form fields on its own. It suggests common local addresses if you are unsure. The result is a set of crisp images saved to a folder you can use at once.
 when:
   - You are launching on Product Hunt and need clean images.
   - Your landing page still shows blurry or outdated screens.
@@ -23,7 +23,7 @@ you_give:
   - Your app address
   - How many screenshots you need
   - What they are for
-  - Login details for a test account (optional)
+  - A test account set up on your computer, if the screens need a login (optional)
 you_get:
   - High-resolution PNG screenshots, each 2880x1800 pixels
   - Shots of the screens you choose, one file per screen
@@ -33,7 +33,7 @@ how_to_use:
   - Start your app, or have its live address ready. Use an AI that can run code and open a browser.
   - Paste the skill into your chat, or open its folder in your AI tool.
   - Give your app address. Say how many shots you need and what they are for.
-  - Share test account login details only if the screens need them. Use a test account, never a real one. Set the email and password as environment variables on your computer, so they are not written into the script file.
+  - If the screens need a login, use a test account, never a real one. Set its email and password as environment variables on your computer. Never paste them into the chat, and never write them into the script file.
   - Check the list of screens your AI suggests. Remove or add any before it captures.
   - Open the screenshots folder and check each image. Then upload them to Product Hunt, your landing page, your docs or your social posts.
 output_sample:
@@ -41,7 +41,7 @@ output_sample:
     - Your app address, local or live
     - How many screenshots you need
     - What the screenshots are for
-    - Login details for a test account (optional)
+    - A test account set up on your computer, if the screens need a login (optional)
   prerequisites:
     - An AI that can run code and open a browser
     - Playwright installed (a free browser tool; your AI will tell you how)

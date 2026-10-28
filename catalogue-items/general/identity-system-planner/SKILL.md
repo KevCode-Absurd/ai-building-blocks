@@ -5,7 +5,7 @@ description: "Use when you are building or renewing a brand identity that will a
 
 # Identity system planner
 
-An identity is a set of pieces that must look like one thing in many places, and a team that can run it after you leave. This skill plans the work in three phases and ends with a hand-off. For the mark alone, use the [Brand mark system planner](https://useaiblocks.com/skills/brand-mark-system-planner). If the client has no existing identity files, start from the client study and say so under MISSING.
+An identity is a set of pieces that must look like one thing in many places, and a team that can run it after you leave. This skill plans the work in three phases and ends with a hand-off. For the mark alone, use the [Brand logo planner](https://useaiblocks.com/skills/brand-mark-system-planner). If the client has no existing identity files, start from the client study and say so under MISSING.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

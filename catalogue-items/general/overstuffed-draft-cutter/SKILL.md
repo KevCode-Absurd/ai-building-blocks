@@ -7,7 +7,7 @@ description: Use when a draft feels like too much, has several good ideas fighti
 
 A draft can be good and still too full. When several strong ideas share the page, the reader cannot tell which one matters, and a patchy delivery makes the crowd worse. This skill cuts for the one main idea. It does not add. It counts first, scores every item, removes what competes even when it is good, and keeps a list of cuts so you can reverse any of them.
 
-Use [Ten percent cutter](https://useaiblocks.com/skills/ten-percent-cutter) instead when the draft is only puffy and you want it cut by a set share, not cut around one main idea.
+Use [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter) instead when the draft is only puffy and you want it cut by a set share, not cut around one main idea.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

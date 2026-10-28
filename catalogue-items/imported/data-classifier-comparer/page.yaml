@@ -31,10 +31,11 @@ you_get:
   - The top group of models that are equal
   - A short summary of what to pick
 how_to_use:
-  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. Both need a paid licence. Your AI also needs a way to run MATLAB code.
+  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. Both need a paid licence. Your AI also needs a way to run MATLAB code. The skill's licence (LICENSE.md: BSD 2-Clause, plus use with MathWorks products only) governs this copy.
+  - Have your data as a CSV or Excel file, or a MATLAB table, with one row per example. One column must hold the category to predict, such as yes or no, or a label name.
   - Open your AI tool and add this skill. Say which file holds your data and which column to predict.
   - Say how you want to test accuracy, or let your AI ask you. Tell it if some classes are rare.
-  - Answer its questions about your data and about easy-to-explain models.
+  - Answer its questions about your data and about easy-to-explain models. Training many models takes time. A small table can finish in minutes, but large data or a hyperparameter search can take much longer, so start with cross-validation if you are unsure.
   - Read the ranking, then the test results. Models in the top tier are equal, so pick the simplest or fastest one.
   - If you lack MATLAB, do not use this skill. Ask a data analyst or use a free tool like scikit-learn.
 output_sample:

@@ -29,4 +29,4 @@ credits:
   - title: matlab-model-ams-systems skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Copied under the BSD 2-Clause licence. We gave it a plain name and made the simulation timing rules agree (hold-off always above the lock estimate and below the stop time) and the companion guide report lock time from the PLL Testbench only. Not run in MATLAB here. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -12,6 +12,8 @@ explain: |
   Your AI reads your code and finds each area that loads or saves data. For each one it writes a skeleton that matches the final layout, an empty state that says why it is empty and what to do, an error state in plain words with a retry button, and a short success message. It leaves out areas that load nothing, such as static text.
 
   The rules come from the original author. A skeleton waits 300ms before it shows, so fast loads skip it. A failed card shows its own error while the rest of the page loads. The examples use React and Tailwind, and your AI swaps in your own components.
+
+  Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The skill file header names the author's own MIT licence. Both allow reuse. Credit bitjaru and sickn33.
 when:
   - A list shows nothing while data loads, and users think it broke.
   - A failed request leaves a blank page with no message.
@@ -38,6 +40,8 @@ how_to_use:
   - Say what the screen loads or saves. Add your design style if the code does not show it.
   - Check the table of states it returns, then the changed code. Look for guessed wording and a retry button that calls the real reload.
   - Test in your own app with a slow request and a failed request. This works best when your AI can read and edit your project files.
+  - The skill file's "risk: critical" line is the source collection's own label, because the skill edits your code. Review every change before you commit it.
+  - Next, have the new wording checked with the Interface microcopy writer, and run the Accessibility checker on the new states.
 how_it_works:
   - title: Find the data areas
     text: It reads your code and lists each place that loads or saves data. It skips static content.

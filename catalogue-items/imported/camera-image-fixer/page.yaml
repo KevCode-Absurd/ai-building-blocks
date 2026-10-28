@@ -30,6 +30,7 @@ you_get:
   - A before and after check
 how_to_use:
   - Check you have MATLAB with the Image Acquisition Toolbox and Image Processing Toolbox. MATLAB is a paid product, and this skill cannot run without it. If you do not have MATLAB, change the light, exposure and focus on your camera app by hand, or ask a general AI for free photo-editing steps.
+  - The skill is written as steps for an AI that can run MATLAB. Your part is to connect the camera, say what looks wrong, try the settings it suggests and judge the result. The AI runs the checks and the code.
   - Connect your camera to the computer.
   - Open an AI that can run MATLAB code and paste in this skill. It needs MATLAB tool access to run its checks (detect_matlab_toolboxes and check_matlab_code). Without that, type ver in MATLAB to list your toolboxes, and ask your AI to read the code before you run it.
   - Say what looks wrong, and name your camera if you know it.

@@ -11,6 +11,19 @@ metadata:
 
 Detect early warning signs of customer churn by aggregating usage telemetry, support interactions, billing history, and engagement metrics into a composite risk score per account. This skill segments accounts into risk tiers and produces actionable intervention playbooks tailored to each tier, enabling CS teams to proactively retain revenue.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your customer list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Collect usage and engagement data** — Pull metrics across product analytics (DAU, feature adoption, session duration), support history (ticket volume, CSAT scores, escalations), billing signals (late payments, downgrade requests, contract end dates), and engagement touchpoints (email opens, webinar attendance, QBR participation). Normalize all metrics to a consistent time window (typically 90 days trailing).
@@ -33,6 +46,8 @@ data export. Identify the top 10 at-risk accounts and recommend interventions.
 ```
 
 ## Examples
+
+The companies, ARR figures, usage numbers and percentages in these examples are illustrative, not real results. The default weights and tier cut-offs are starting points to test against your own churn history.
 
 ### Example 1: Cohort risk analysis with scoring table
 
@@ -91,3 +106,11 @@ data export. Identify the top 10 at-risk accounts and recommend interventions.
 - **Free-to-paid conversion cohort** — Recently converted accounts may show low engagement compared to established accounts but are actually ramping up. Apply a different baseline for accounts in their first renewal cycle.
 - **Multi-product accounts** — Churn risk should be assessed per product line, not just at the account level. An account may be healthy on Product A but churning on Product B, and a blended score hides this.
 - **Accounts in active expansion** — A temporary dip in per-seat usage metrics might reflect rapid seat additions (denominator growth) rather than actual disengagement. Normalize usage by active seats, not total seats.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer renewal risk reviewer](https://useaiblocks.com/skills/weekly-customer-health-watcher).
+- The [Escalation brief writer](https://useaiblocks.com/skills/escalation-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

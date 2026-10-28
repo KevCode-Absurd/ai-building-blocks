@@ -92,6 +92,6 @@ Write `MISSING: <what>` beside the affected row and carry on with the rest. A re
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Check one contract** with the [Review a contract and get edits and a plain summary](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary) workflow.
-- **Answer a security questionnaire** with the [Prepare a vendor security questionnaire response](https://useaiblocks.com/workflows/prepare-a-vendor-security-questionnaire-response) workflow, if the reviewer asked for one.
+- **Check one contract** with the [Contract clause and ownership reviewer](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary) workflow.
+- **Answer a security questionnaire** with the [Vendor security questionnaire response writer](https://useaiblocks.com/workflows/prepare-a-vendor-security-questionnaire-response) workflow, if the reviewer asked for one.
 Nothing here uploads or shares a file. A person does that.

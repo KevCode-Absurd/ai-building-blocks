@@ -29,4 +29,4 @@ credits:
   - title: on-call-handoff-patterns skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/on-call-handoff-patterns
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence. We gave it a plain name, said when an async handoff is fine, and marked the quick-reference commands as read-only checks that need authorization. We added Before you start and After this sections that link to other AI Blocks steps.

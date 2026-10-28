@@ -10,7 +10,7 @@ date_added: "2026-06-29"
 author: stareezy-1
 tags: [frontend, lighthouse, performance, core-web-vitals, ci]
 tools: [lighthouse, node, github-actions]
-license: "CC-BY-4.0" # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own header said MIT.
+license: "MIT" # AI Blocks: this is the author's own header, kept as written. sickn33's collection shares this copy under CC BY 4.0 (see LICENSE-CONTENT).
 license_source: "https://github.com/stareezy-1/frontend-architecture-skill/blob/main/LICENSE"
 ---
 
@@ -24,6 +24,19 @@ license_source: "https://github.com/stareezy-1/frontend-architecture-skill/blob/
 The goal: every pull request is **blocked unless the production build meets explicit Core Web
 Vitals budgets and category score floors**. Budgets live in **one** `lighthouserc.cjs`, runs are
 **median-of-N** so the gate doesn't flake, and the same config runs locally and in CI.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## When to Use This Skill
 
@@ -346,3 +359,10 @@ This skill follows the Anthropic `SKILL.md` format and is portable across agents
 - Lighthouse CI is a lab signal and does not replace field monitoring from real-user metrics.
 - Budgets must be tuned to the actual app route, hosting platform, and device/network assumptions.
 - A passing Lighthouse gate does not prove business-critical flows, visual correctness, or backend availability.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

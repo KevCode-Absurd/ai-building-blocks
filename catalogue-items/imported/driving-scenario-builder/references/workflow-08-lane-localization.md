@@ -523,9 +523,14 @@ exportToRoadRunner(localizedTrajectory, rrApp, ...
 % (3) MANDATORY: normalize timestamps — actorprops compares ego and track
 % absolute times. Localized trajectory keeps `TimeOrigin=0` after
 % localizeEgoUsingLanes; track data has the original epoch start. They MUST
-% share an origin. Easiest: zero both sides.
+% share an origin. Zeroing each side at its own first sample is only safe
+% when both start at the same instant on the recording's timeline; otherwise
+% it erases the real offset (SKILL.md Rule 5). egoStartAbs is the absolute
+% time that the ego's t=0 stands for: record it before the ego trajectory is
+% normalized or localized. If you do not have it, stop and ask.
 trackObjNorm = copy(trackData);
-normalizeTimestamps(trackObjNorm);          % sets track time origin to 0
+fprintf("Track starts %.6f s after the ego's t=0\n", trackObjNorm.Timestamps(1) - egoStartAbs);
+normalizeTimestamps(trackObjNorm, egoStartAbs);   % shared origin, offset kept
 localizedTrajectory.TimeOrigin = 0;          % already 0 in practice; keep explicit
 
 % (4) Extract non-ego actors — scenariobuilder.Trajectory works directly
@@ -575,7 +580,7 @@ saveScenario(rrApp, fullfile(rrProjectPath, "Scenarios", "MyScenario.rrscenario"
 
 **`actorprops` gotchas (R2026a):**
 - Accepts `scenariobuilder.Trajectory` directly — do NOT convert to `waypointTrajectory` first
-- The internal timestamp-overlap check uses **absolute** timestamps. If the ego trajectory has `TimeOrigin=0` but track timestamps are still on the recording's epoch (e.g. `1.55e9`), the check fails for every actor. Always `normalizeTimestamps(trackObj)` and set `localizedTrajectory.TimeOrigin = 0` before calling
+- The internal timestamp-overlap check uses **absolute** timestamps. If the ego trajectory has `TimeOrigin=0` but track timestamps are still on the recording's epoch (e.g. `1.55e9`), the check fails for every actor. Always `normalizeTimestamps(trackObj, egoStartAbs)` (the ego's original start, so the real offset is kept) and set `localizedTrajectory.TimeOrigin = 0` before calling. If the tracks start before the ego, crop the tracks to the ego's window first
 - The error surface looks like: *"Actor tracklist start timestamp must be greater than or equal to the ego start timestamp..."* followed by an internal `actorParams` assignment failure — both are the same root cause
 
 ## Determining the starting lane index — ASK the user

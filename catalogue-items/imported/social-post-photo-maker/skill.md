@@ -5,6 +5,19 @@ description: 同款穿搭换模特换场景做种草图。穿搭图 → 社交�
 
 # clothing-grass-planting — 相同穿搭改模特场景姿势
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## English summary (added by AI Blocks)
 
 The rest of this file is in Chinese. In short: it turns one outfit photo into social post photos with a new model, scene, pose and light. The outfit stays the same.
@@ -19,6 +32,7 @@ The rest of this file is in Chinese. In short: it turns one outfit photo into so
 - **Rights.** Use only photos you own or have the right to edit. The Chinese steps below mention a watermark remover skill for cleaning the photo. Use it only on your own images, never to strip another person's watermark.
 - **What the Chinese in the prompt template means.** `[逐件描述：上装 / 下装 / 鞋 / 包 / 配饰]` = describe each item: top, bottom, shoes, bag, accessories. `[上装]`, `[下装]`, `[鞋]`, `[包]`, `[配饰]` = top, bottom, shoes, bag, accessories. The line marked "用参考图时保留这行" means keep it only when you use a reference photo. The line in brackets that starts "纯文字版" is the text-only version: replace the reference lines with "Replace the model, pose, scene and lighting: [scene + action + light]".
 - **What the fix table means.** Item swapped: name that item again and add "This item must appear unchanged; substituting it is a failure." Looks like a studio shot: add a candid snapshot line. Stiff pose: ask for a natural mid-action pose. Bad hands: ask for correct hands and run four images. Background steals focus: ask for a softly blurred background.
+- **Reference photos and consent.** A scene or pose reference may show a person only if you have their consent. The prompts below (changed by AI Blocks) take only the pose, scene and light from it and ask for a new, invented model, never the face of the person in the reference.
 - **Missing files.** The example pictures shown below (in `docs/`) are not included here. The commands use placeholders such as `<your-outfit.jpg>`. Replace them with your own photos.
 - **Before you post.** This is a required step, not an extra. Label every image as AI-generated where the platform asks. Check the platform's rules on AI images and paid promotion. Never show the invented person as a real customer or endorser.
 
@@ -41,7 +55,7 @@ The rest of this file is in Chinese. In short: it turns one outfit photo into so
 
 ```bash
 dlazy gpt-image-2 \
-  --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep: a light-grey textured sleeveless knit mini dress with a mock neckline, a pearl choker, a cream-and-tan tote bag and silver pointed heels. Image 2 is the model, pose, scene and lighting reference: a young woman on a sunlit tree-lined street outside a coffee shop, hand in her hair, warm dappled daylight, shallow depth of field. Put the complete outfit from image 1 onto the model from image 2. Keep every garment detail faithful: same grey knit texture, same neckline and hem length, same pearl choker, same tote bag colour blocking. Reproduce image 2 for the model identity, pose, camera angle, crop, street background and colour grading. Photorealistic influencer-style photo, no text, no watermark.' \
+  --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep: a light-grey textured sleeveless knit mini dress with a mock neckline, a pearl choker, a cream-and-tan tote bag and silver pointed heels. Image 2 is the pose, scene and lighting reference: a sunlit tree-lined street outside a coffee shop, hand in her hair, warm dappled daylight, shallow depth of field. Put the complete outfit from image 1 onto a new, invented young woman posed as in image 2. Keep every garment detail faithful: same grey knit texture, same neckline and hem length, same pearl choker, same tote bag colour blocking. Follow image 2 for the pose, camera angle, crop, street background and colour grading only; do not copy the face or identity of anyone in image 2. Photorealistic influencer-style photo, no text, no watermark.' \
   --images <your-outfit.jpg> <your-scene-reference.jpg> \
   --size 1024x1536 --quality medium --imageFormat jpeg \
   --save <your-output.jpg>
@@ -147,7 +161,7 @@ dlazy gpt-image-2 --prompt '...' --images ... --save output/clothing-grass-plant
 ```bash
 # basic call: 用参考图换模特+场景+姿势
 dlazy gpt-image-2 \
-  --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep. Image 2 is the model, pose, scene and lighting reference. Put the complete outfit from image 1 onto the model from image 2. Keep every garment detail faithful — colour, pattern, texture and fit unchanged. Reproduce image 2 for model identity, pose, camera angle, crop, background and colour grading. Photorealistic influencer-style photo, no text, no watermark.' \
+  --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep. Image 2 is the pose, scene and lighting reference. Put the complete outfit from image 1 onto a new, invented model posed as in image 2. Keep every garment detail faithful — colour, pattern, texture and fit unchanged. Follow image 2 for pose, camera angle, crop, background and colour grading only; do not copy the face or identity of anyone in image 2. Photorealistic influencer-style photo, no text, no watermark.' \
   --images <your-outfit.jpg> <your-scene-reference.jpg> \
   --size 1024x1536 --quality medium
 
@@ -187,15 +201,15 @@ dlazy gpt-image-2 --dry-run --prompt '...' --images a.jpg b.jpg --size 1024x1536
 Lifestyle social-commerce photo.
 
 Image 1 shows the outfit to keep: [逐件描述：上装 / 下装 / 鞋 / 包 / 配饰].
-Image 2 is the model, pose, scene and lighting reference.   ← 用参考图时保留这行
+Image 2 is the pose, scene and lighting reference.   ← 用参考图时保留这行
 
-Put the complete outfit from image 1 onto the model from image 2.
+Put the complete outfit from image 1 onto a new, invented model posed as in image 2.
 
 Keep every garment detail faithful: same [上装], same [下装], same [鞋], same [包],
 same [配饰] — colour, pattern, texture and fit unchanged.
 
-Reproduce image 2 for the model identity, pose, camera angle, crop, background
-and colour grading.
+Follow image 2 for the pose, camera angle, crop, background and colour grading
+only. Do not copy the face or identity of anyone in image 2.
 （纯文字版改为：Replace the model, pose, scene and lighting: [场景 + 动作 + 光线]）
 
 Photorealistic influencer-style photo, shallow depth of field, shot on 50mm,
@@ -241,3 +255,12 @@ slight film grain, natural colour grading, no text, no watermark.
 ## Tips
 
 Visit https://dlazy.com for more information.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder).
+- The [Product photo background editor](https://useaiblocks.com/skills/product-background-swapper).
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

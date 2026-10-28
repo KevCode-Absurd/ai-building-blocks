@@ -5,7 +5,7 @@ name: Live audio processing builder
 summary: Build a live audio processing chain in MATLAB. Get frame-by-frame code for filters, EQ, compressors and level meters you can tune as sound plays.
 job: build-software
 headline: Live audio processing builder
-subhead: A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it. For MATLAB users with Audio Toolbox.
+subhead: A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it. For MATLAB users with Audio Toolbox, and licensed for use only with MathWorks products.
 explain: |
   A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 
@@ -25,7 +25,7 @@ not_for:
 you_give:
   - The effect or chain you want
   - "Audio source: file or live input"
-  - Sample rate
+  - Sample rate. For a file, find it with audioinfo in MATLAB, for example info = audioinfo("song.wav"); info.SampleRate
   - "Your MATLAB release and Audio Toolbox licence: sample rate conversion (audioresample, designAudioResampler) needs R2023b, and octaveSpectrumEstimator needs R2024b"
 you_get:
   - A frame-by-frame MATLAB script
@@ -52,6 +52,8 @@ output_sample:
     - An AI that can write MATLAB code, ideally one that can also run it
     - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms, see the LICENSE.md file) says so
   output:
+    - name: One MATLAB script
+      contains: A single script with sections in this order, source, processing objects, response plots, tuning panel, streaming loop and metering, ready to run.
     - name: Source setup
       contains: Code that reads a file or live input one frame at a time.
     - name: Processing objects

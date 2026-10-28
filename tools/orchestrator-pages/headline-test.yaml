@@ -11,7 +11,7 @@ subhead: "Give it your brief, your product facts and your offer. It writes headl
 explain: |
   Most headlines are chosen by whoever likes them most. A headline can sound clever and still fail to name the reader, or promise nothing worth reading for. When there are several, they get picked on taste, or compared in a test that changes five things at once.
 
-  This workflow writes headlines for each idea in your brief, then checks each against a few questions: does it pick out the right reader, does it promise a reward, and does it still make sense when read on its own? Weak lines are rewritten. It sorts the headlines by appeal, picks two or three to test, and plans a small test where each version has its own code, so you know which one brought each reply. The method follows Victor Schwab's book 100 Good Advertising Headlines.
+  This workflow writes headlines for each idea in your brief, then checks each against a few questions: does it pick out the right reader, does it promise a reward, and does it still make sense when read on its own? Weak lines are rewritten. It sorts the headlines by appeal, picks two or three to test, and plans a small test where each version has its own code, so you know which one brought each reply. It is inspired by Victor Schwab's 100 Good Advertising Headlines; the step order is this library's own design.
 
 when:
   - You need a headline for an ad, email or page and have several ideas but no way to choose.
@@ -83,6 +83,7 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    CHECKS MISSED: <checks that failed or could not run, or none>
 
 tweaks:
   - what: The offer

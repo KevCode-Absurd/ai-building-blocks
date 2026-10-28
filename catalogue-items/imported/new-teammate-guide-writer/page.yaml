@@ -7,8 +7,6 @@ job: build-software
 headline: New teammate guide writer
 subhead: A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
 explain: |
-  A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
-
   A Python script first scans the project: file counts, languages, config files and folder layout. Those facts go into a template covering the stack, key files, local setup, common tasks, debugging tips and a contribution checklist. The depth changes by reader. Juniors get setup and guardrails, seniors get architecture and operations, and contractors get their scope and the edges where they connect to other systems. Python must be installed.
 when:
   - A contractor starts Monday and the old docs are stale.
@@ -35,7 +33,7 @@ how_to_use:
   - Do not give your AI .env files, key files or other files that hold passwords. Keep them out of the folder you share. The guide must leave out any values found in them.
   - Give it this skill and the path to your repository. The AI reads your code, so check your company policy first if the code is confidential. The template files and the scan script come with the skill folder. If you paste only the text, also paste references/onboarding-template.md.
   - "Say who the guide is for: a junior, a senior, a tech lead or a contractor."
-  - Let it scan the project, then read the guide it writes from the template. The guide follows the template order: what the project is, quick start, architecture, key files, common developer tasks, debugging, contribution rules and notes for each reader. The scan results fill the stack and key file parts.
+  - "Let it run the scan script first (scripts/codebase_analyzer.py with your repo path), then read the guide it writes from the template. The guide follows the template order: what the project is, quick start, architecture, key files, common developer tasks, debugging, contribution rules and notes for each reader. The scan results fill the stack and key file parts."
   - Check the guide for secrets and private details copied from config files, such as passwords, keys, internal hostnames and customer data. Remove them before you share it.
   - The AI writes the setup commands from code it has only read, so do not trust them yet. Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
   - Send the guide to your tech lead for review before you share it. Then ask a new hire to follow it. The README first-run tester checks the quick start the same way.

@@ -157,3 +157,4 @@ test:
   - Omit one important fact and check whether the agent names the gap.
 improve:
   - Keep useful corrections with your task notes and apply them on the next run.
+next: [nonprofit-grant-funder-researcher, nonprofit-grant-proposal-writer]

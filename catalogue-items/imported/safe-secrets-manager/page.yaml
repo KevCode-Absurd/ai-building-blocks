@@ -33,7 +33,8 @@ you_get:
   - Fixes for missing or invalid variables
 how_to_use:
   - Use an AI that can run commands and read your project files, such as Claude Code. A plain chat window cannot run the checks.
-  - Install the Varlock tool on your computer. The skill shows the install steps. Pick a specific release on the Varlock releases page, read the installer before you run it and compare it with that release. The same applies if you copy the Docker example into a build.
+  - Install the Varlock tool on your computer. The skill shows the install steps. Pick a specific release on the Varlock releases page, read the installer before you run it and compare it with that release. Fill in the release tag and checksum yourself; the commands stop until you do.
+  - "Docker warning: the Docker example downloads and runs the same remote installer every time the image builds. Fill in the checksum of the installer you read, so a changed script stops the build."
   - Add the skill to your AI, then ask it to set up or check your secrets with Varlock.
   - Let it create or read the .env.schema file, then run varlock load to check your variables.
   - Fix any missing or invalid variables yourself in your .env file. Your AI will not edit secret values. Run any command that sets a secret, such as gh secret set, yourself, so the AI never handles the value.

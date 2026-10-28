@@ -10,6 +10,8 @@ explain: |
   Single-cell data tells you which way cells seem to be heading, how far along they are, and which genes push them. Give it counts with spliced and unspliced reads, and you get arrows on the cell map, a timeline for each cell, and ranked driver genes.
 
   The skill uses scVelo to estimate how expression is changing from the balance of spliced and unspliced reads. It supports a steady-state model and a dynamical model with latent time, and draws gene phase plots. It is strict about meaning: the arrows are model estimates, not observed movement or proof of cell fate. It works in an isolated Python setup and needs no API key.
+
+  Licence: this copy is MIT, as the LICENSE.md file from K-Dense says, and that file governs here. The skill file's own header names BSD-3-Clause. Keep the credit to K-Dense.
 when:
   - You have single-cell data and want to see the direction of cell change.
   - You need the genes that drive a branching path.
@@ -34,9 +36,10 @@ how_to_use:
   - Check that your single-cell file has spliced and unspliced count layers. Without them, stop here.
   - Open an AI that can run Python code, such as Claude with code tools. Paste in this skill.
   - Upload your H5AD file and name the column that holds your cell groups, if you have one.
-  - Ask your AI to set up a clean Python environment and run the workflow with the dynamical model.
+  - Ask your AI to set up a clean Python environment and run the workflow with the dynamical model. The dynamical model needs a lot of memory and time on big files. Start with a subset of cells and genes and n_jobs=1, then scale up.
   - Open the arrow plots and gene phase plots. Check that they make sense before you trust any arrow.
   - Compare the results with outside evidence, such as a time course, before you draw conclusions.
+  - Next, take the top-ranked genes as candidates for lab checks. For fate probabilities, ask for the optional CellRank step in references/velocity_models.md.
 output_sample:
   input:
     - A single-cell file (H5AD) with spliced and unspliced count layers

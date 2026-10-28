@@ -39,6 +39,7 @@ how_to_use:
   - Before you change anything, save the outputs your current prompt makes. You can't do this fairly afterwards.
   - Run the new prompt on exactly the same briefs and paste both sets, labelled by brief.
   - Attach the approved facts and offer terms for each brief.
+  - Text outputs are enough. Attach images only if you are comparing image ads.
   - For a fairer result, have a second person or a fresh chat do the picking without knowing which side is new.
 output_sample:
   input:
@@ -201,7 +202,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Claude", why: "Follows a long judging brief closely and gives the same pick when a pair is shown twice in swapped order."}
+    - {name: "Claude", why: "Follows a long judging brief closely. Still judge each pair twice in swapped order, since any judge can favour the first answer it sees."}
     - {name: "Google Sheets", why: "Holds the pairs, both rounds of picks and the counts, so anyone can check the sums."}
   inputs:
     - "A fixed set of 20 to 30 real briefs, so every prompt change is tested on the same ground"

@@ -54,7 +54,7 @@ Pause here: Check the draft, fix any wrong detail and send it yourself.
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Send the follow-up yourself, then add its actions and dates to your task list.
 - Run step 3 again on your next call and compare the speaking share.
 

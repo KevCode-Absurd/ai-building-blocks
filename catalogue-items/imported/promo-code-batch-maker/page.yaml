@@ -36,7 +36,10 @@ how_to_use:
   - Give your AI this skill. Tell it your store, prefix, number of codes, discount type and value. Add start and end dates if you have them.
   - "Example: prefix GIVEAWAY, 100 codes, 10% off. Ask for a dry run first."
   - Check the preview. Look at the prefix, count, value and end date. Codes cannot be deleted in bulk, so check well.
+  - Before you say yes, set an end date. By default each code works on every product for every customer, and with no end date it never expires. Each code goes live as soon as it is made.
   - Say yes to create the codes. Then open the CSV file and share one code per person.
+  - If a large run stops partway, the CSV marks codes as created or pending. Ask the AI to rerun only the pending ones.
+  - Next, track how often each prefix is used in Shopify admin. Then use the Discount payoff calculator to see if the campaign earned more than it cost.
 output_sample:
   input:
     - Your store address, such as mystore.myshopify.com

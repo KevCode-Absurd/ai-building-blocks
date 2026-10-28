@@ -59,19 +59,19 @@ CORE FOR YOUR me.md
 
 Then `LEFT OUT:` live facts and anything cut for length, `MISSING:` each gap, `CHECKS MISSED:` one line each, or none.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The short core is about 1,200 characters or less, and the count is shown.
 - Every line comes from the me.md. Nothing is added or made stronger.
 - No projects or other live facts in the short core.
 - No passwords, ID or bank numbers, health details or other people's private facts.
 - The guide covers each AI they named, or all five.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Without a me.md, stop and offer the me.md builder. If Core is empty, build the short core from Work, Preferences and Never, and list Core as `MISSING:`.

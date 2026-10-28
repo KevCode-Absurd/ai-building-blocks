@@ -15,12 +15,12 @@ when:
   - You are not sure which parts of your offer the buyer values.
   - Your price feels too high next to what the buyer sees you do.
 not_for:
-  - "You have one buyer and one doubt and need a single offer: use the Offer builder that answers buyer doubts."
-  - "You have no rated delivery options yet: make them first with the Delivery option generator."
+  - "You have one buyer and one doubt and need a single offer: use the Customer offer builder."
+  - "You have no rated delivery options yet: make them first with the Offer delivery options planner."
   - "You only want to check your price: use the Pricing decision planner."
 you_give:
   - Promises from Buyer problem list builder
-  - Rated delivery options from Delivery option generator
+  - Rated delivery options from Offer delivery options planner
   - Your planned price and cost per buyer (optional)
   - Product facts (optional)
 you_get:
@@ -32,7 +32,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the promises and the rated options. Add your planned price.
   - Fix any value figure that looks too high to you. A value you cannot defend hurts the offer.
-  - Take the result to Value equation scorer, then to Pricing decision planner.
+  - Take the result to Offer value reviewer, then to Pricing decision planner.
 output_sample:
   input:
     - Your buyer promises and problems
@@ -40,7 +40,7 @@ output_sample:
     - Your planned price and cost per buyer (optional)
     - Your product facts (optional)
   prerequisites:
-    - Rated options from the Delivery option generator, or your own list with a cost and value for each
+    - Rated options from the Offer delivery options planner, or your own list with a cost and value for each
   output:
     - name: Cut and keep
       contains: Each option with its cost, value, a cut or keep verdict and the reason.
@@ -109,12 +109,14 @@ improve:
   - Move by-hand pieces into assets once you have sold the offer ten times.
   - Keep a list of values that buyers accepted and ones they questioned.
   - Add a bundle each time a new objection appears in sales calls.
+before: [delivery-option-generator]
+
 works_best_with:
   tools:
     - name: Any good chat AI
       why: This is text and number work that any strong chat AI does well with the skill.
   inputs:
-    - Rated options from Delivery option generator
+    - Rated options from Offer delivery options planner
     - Your real cost per buyer
     - Prices of what buyers pay for the same pieces elsewhere
 terms:

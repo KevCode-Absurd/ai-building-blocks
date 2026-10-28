@@ -29,6 +29,23 @@ flags specific risks by name.
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A spreadsheet** with the [Budget and forecast builder](https://useaiblocks.com/skills/budget-and-forecast-builder). Bring a spreadsheet.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 ### Step 1 — Identify available data sources
@@ -253,3 +270,14 @@ Scheduling is a property of this skill. There is no separate command for it.
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser). It takes the spreadsheet.
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
+- The [Cash tied-up finder](https://useaiblocks.com/skills/cash-tied-up-finder). It takes the spreadsheet.
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper). It takes the spreadsheet.
+- The [Freelancer transaction and cash review](https://useaiblocks.com/skills/monthly-freelancer-books-closer). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -20,6 +20,19 @@ When to use this skill: planning the extension of a flagship piece across format
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans cross-format adaptation work after a source piece has been produced. The content suite distinction:
@@ -302,3 +315,12 @@ Repurposing is widely treated as a content multiplication problem to be solved w
 Adaptation is craft, not duplication. The source piece is the starting material; the derivative is its own work. Programs that hold this discipline get value compounding across formats; programs that skip it produce a wall of derivative content that performs worse, not better, than publishing only the source.
 
 When in doubt about whether a repurposing program is ready, ask: does each derivative respect its medium's conventions, does voice stay consistent across the set, are derivatives cross-promoting and linking back to the source, is AI-search extraction part of the plan, is cannibalization being managed, is the cadence pacing earning engagement? If yes to all of those, the program is real. If no to any, the gap is where the derivatives will read as filler and audiences will tune out.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Content reuse planner](https://useaiblocks.com/skills/monthly-content-repurposer).
+- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
+- The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

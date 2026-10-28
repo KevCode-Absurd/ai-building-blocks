@@ -68,6 +68,19 @@ tags: ["metacognition", "self-regulation", "Dunning-Kruger", "overconfidence", "
 
 # Metacognitive Monitoring in AI Contexts
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Analyses how AI tool use in a specific learning context might distort students' metacognitive monitoring — their ability to accurately assess what they know and don't know — and designs interventions to maintain metacognitive accuracy. This is one of the most urgent challenges in AI-enabled education. When a student uses an AI tool to complete work, they may experience a fluency illusion: the work looks good, the answers are correct, the text is fluent — and the student concludes "I understand this." But the STUDENT didn't do the cognitive work; the AI did. The student's sense of understanding is calibrated to the PRODUCT (which is good) rather than to their OWN knowledge (which may be unchanged). Bjork et al. (2013) showed that learners are systematically poor at judging their own learning — they confuse familiarity with understanding, and fluent performance with durable knowledge. AI tools dramatically amplify this miscalibration because they produce fluent, correct output that the student may mistake for evidence of their own competence. The output includes a metacognitive diagnosis (how AI use distorts self-assessment in this specific context), monitoring interventions (strategies to improve metacognitive accuracy), AI usage guidelines (when to use and when to restrict AI), and assessment alignment (ensuring tests measure student knowledge, not AI-assisted performance).
@@ -253,3 +266,12 @@ Watch for these signs that metacognitive distortion is occurring:
 3. **Individual differences in metacognitive ability are large.** Some students are naturally good at monitoring their own understanding; others are not. The Dunning-Kruger effect suggests that the students who most need metacognitive support are the least likely to recognise that they need it. Interventions must be STRUCTURAL (built into the workflow for all students) rather than ADVISORY ("you should check your understanding").
 
 4. **The relationship between AI use and metacognition may be more nuanced than "AI harms metacognition."** Some uses of AI (e.g., using AI to generate practice questions, then attempting them without AI) might actually IMPROVE metacognitive accuracy by creating retrieval opportunities. The risk is context-dependent, not absolute. The diagnosis above applies specifically to the "AI generates, student edits" workflow — other workflows may have different metacognitive profiles.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+- The [Learning content and assessment mapper](https://useaiblocks.com/skills/know-understand-do-sorter). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

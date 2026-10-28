@@ -20,12 +20,12 @@ If not provided, ask:
 
 ### Step 2: Verify Timeliness
 
-**CRITICAL**: Before proceeding, verify you have the latest data:
-1. Search for "[Company] latest earnings results [current year]"
-2. Verify the earnings release is within the last 3 months
+**CRITICAL**: Before proceeding, verify you have the right quarter:
+1. If the user named a quarter, search for that quarter by name and check every document is for it, however old. Never swap in a newer quarter.
+2. If the user asked for the latest quarter or named none, search for "[Company] latest earnings results [current year]" and verify the earnings release is within the last 3 months.
 3. Confirm transcript date matches release date
 
-If data is stale, inform the user and search for the latest.
+If a latest-quarter request turns up stale data, inform the user and search for the latest.
 
 ### Step 3: Load Earnings Analysis Skill
 
@@ -129,7 +129,7 @@ SOURCES SECTION (with clickable hyperlinks):
 ## Quality Checklist
 
 Before delivery:
-- [ ] Earnings data is from latest quarter (not stale)
+- [ ] Earnings data is from the target quarter: the latest (not stale), or the quarter the user named
 - [ ] Beat/miss quantified with specific numbers
 - [ ] All charts embedded (8-12 total)
 - [ ] Sources section with clickable hyperlinks
@@ -137,3 +137,5 @@ Before delivery:
 - [ ] Guidance changes clearly documented
 - [ ] Rating and price target stated upfront
 - [ ] 8-12 pages, 3,000-5,000 words
+
+Changed by AI Blocks (2026-10-28): a quarter the user names is now used as asked, even if it is old; the latest-quarter and 3-month checks apply only when the user asks for the latest quarter or names none.

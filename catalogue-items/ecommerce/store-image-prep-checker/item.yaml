@@ -8,7 +8,6 @@ job: image
 level: beginner
 inputs:
   - {type: product_photos, required: true}
-  - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
   - {type: gallery_plan}

@@ -9,6 +9,24 @@ Design effective testing strategies balancing coverage, speed, and maintenance. 
 
 **Do not use when:** the user has a single script or one-off task (a few manual checks are enough), already has a plan and wants the tests written (write them, using the plan), or has failing tests to fix (fix the failures first).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This skill is advice from what you describe, so no code access is needed.
+- **Claude Code:** It can read your repo and list the tests you already have, so the gaps are real.
+<!-- /needs -->
+
 ## What you need
 
 Ask once, in one message, for anything missing. Do not invent details to fill gaps.
@@ -62,6 +80,13 @@ Produce a test plan with these sections, in this order:
 6. **Not testing:** what is skipped and why.
 7. **Order of work:** numbered list.
 8. **Next steps:** who writes first, and which tool to use to check the tests really catch breakage.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

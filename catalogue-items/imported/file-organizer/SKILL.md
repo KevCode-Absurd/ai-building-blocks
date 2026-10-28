@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to bring order to cluttered directories. Given a target path, the agent scans all files, classifies them using a configurable rule set, and moves them into a well-structured directory tree. It supports organization by file type, modification date, project association, or priority level. Advanced features include duplicate detection via content hashing, consistent naming conventions, dry-run previews, and automated archival of stale files.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Scan the Target Directory**
@@ -99,7 +112,7 @@ ignore:
 Scan complete: 11 files found, 1 duplicate detected.
 
 Duplicate: IMG_4012 (1).jpg is identical to IMG_4012.jpg (SHA-256 match)
-  → Moving IMG_4012 (1).jpg to _duplicates/
+  → Moving IMG_4012 (1).jpg to _duplicates/img-4012-1.jpg
 
 Move plan:
   IMG_4012.jpg                → images/img-4012.jpg
@@ -180,3 +193,10 @@ This skill is for document, photo and export folders. Do not run it on a live co
 - **Very large directories (>10,000 files).** Process files in batches and provide a progress indicator. Avoid loading the entire file list into memory at once.
 - **Permission errors.** If a file cannot be read or moved due to filesystem permissions, log it, skip it, and continue with the remaining files. Present a summary of skipped files at the end.
 - **Network or external drives.** Warn the user that reorganizing files on a network share or external drive may be significantly slower and that interrupted operations could leave files in an inconsistent state. Recommend working on a local copy first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -11,6 +11,23 @@ metadata:
 
 This skill enables an AI agent to integrate applications with external APIs reliably. The agent selects the right integration pattern (REST client, webhook consumer, polling, SDK wrapper), implements authentication (API keys, OAuth, JWT), handles errors with retries and circuit breakers, and respects rate limits. The result is production-grade integration code that handles real-world failure modes.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the target API:** Review the API documentation, OpenAPI spec, or SDK reference to understand available endpoints, authentication requirements, rate limits, and response formats. Identify whether the API supports webhooks for push-based updates or requires polling. Note any idiosyncrasies like non-standard error formats or pagination schemes.
@@ -43,7 +60,7 @@ Provide the agent with the target API name or documentation URL, the operations 
 
 ```python
 import os
-import time
+import uuid
 import logging
 from typing import Optional
 import requests
@@ -52,12 +69,16 @@ from urllib3.util.retry import Retry
 
 logger = logging.getLogger(__name__)
 
+# Connect timeout 5s, read timeout 30s. Never send a request with no timeout.
+DEFAULT_TIMEOUT = (5, 30)
+
 class StripeClient:
-    """Production-ready Stripe API client with retries and error handling."""
+    """Stripe API client with timeouts, safe retries and error handling."""
 
     BASE_URL = "https://api.stripe.com/v1"
 
     def __init__(self, api_key: Optional[str] = None):
+        # Read the key from the environment or a secrets manager. Never paste it into chat.
         self.api_key = api_key or os.environ["STRIPE_SECRET_KEY"]
         self.session = self._build_session()
 
@@ -72,31 +93,36 @@ class StripeClient:
             total=4,
             backoff_factor=1,
             status_forcelist=[429, 500, 502, 503, 504],
-            # POST is left out on purpose: a retried payment call can charge twice.
-            # Retry POST only if you send an Idempotency-Key header with it.
-            allowed_methods=["GET", "DELETE"],
+            # POST is retried only because _request() refuses to send a POST
+            # without an Idempotency-Key. With the same key, Stripe returns the
+            # saved result of the first attempt instead of charging twice.
+            allowed_methods=["GET", "DELETE", "POST"],
             respect_retry_after_header=True,
+            raise_on_status=False,  # hand the last response to raise_for_status()
         )
         adapter = HTTPAdapter(max_retries=retry_strategy)
         session.mount("https://", adapter)
         return session
 
-    def create_customer(self, email: str, name: str, metadata: Optional[dict] = None) -> dict:
+    def create_customer(self, email: str, name: str, idempotency_key: str,
+                        metadata: Optional[dict] = None) -> dict:
         """Create a Stripe customer."""
         payload = {"email": email, "name": name}
         if metadata:
             for key, value in metadata.items():
                 payload[f"metadata[{key}]"] = value
-        response = self._request("POST", "/customers", data=payload)
-        return response
+        return self._request("POST", "/customers", data=payload,
+                             idempotency_key=idempotency_key)
 
-    def create_payment_intent(self, amount_cents: int, currency: str = "usd",
+    def create_payment_intent(self, amount_cents: int, idempotency_key: str,
+                              currency: str = "usd",
                               customer_id: Optional[str] = None) -> dict:
         """Create a payment intent for a given amount."""
         payload = {"amount": amount_cents, "currency": currency}
         if customer_id:
             payload["customer"] = customer_id
-        return self._request("POST", "/payment_intents", data=payload)
+        return self._request("POST", "/payment_intents", data=payload,
+                             idempotency_key=idempotency_key)
 
     def list_charges(self, customer_id: str, limit: int = 10) -> list:
         """List charges for a customer with automatic pagination."""
@@ -110,34 +136,54 @@ class StripeClient:
             params["starting_after"] = data["data"][-1]["id"]
         return charges
 
-    def _request(self, method: str, path: str, **kwargs) -> dict:
+    def _request(self, method: str, path: str, idempotency_key: Optional[str] = None,
+                 **kwargs) -> dict:
         url = f"{self.BASE_URL}{path}"
+        headers = kwargs.pop("headers", {})
+        if method == "POST":
+            if not idempotency_key:
+                raise ValueError("POST requests need an idempotency_key so retries are safe")
+            headers["Idempotency-Key"] = idempotency_key
+        kwargs.setdefault("timeout", DEFAULT_TIMEOUT)
         try:
-            resp = self.session.request(method, url, **kwargs)
+            resp = self.session.request(method, url, headers=headers, **kwargs)
             resp.raise_for_status()
             return resp.json()
         except requests.exceptions.HTTPError as e:
-            error_body = e.response.json().get("error", {})
+            try:
+                error_body = e.response.json().get("error", {})
+            except ValueError:
+                error_body = {}
             logger.error(
-                "Stripe API error: type=%s code=%s message=%s",
+                "Stripe API error: status=%s type=%s code=%s message=%s",
+                e.response.status_code,
                 error_body.get("type"),
                 error_body.get("code"),
                 error_body.get("message"),
             )
-            if e.response.status_code == 429:
-                retry_after = int(e.response.headers.get("Retry-After", 5))
-                logger.warning("Rate limited. Retry after %ds", retry_after)
             raise
-        except requests.exceptions.ConnectionError:
-            logger.error("Connection failed to Stripe API")
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+            logger.error("Could not reach the Stripe API (connection error or timeout)")
             raise
 
 # Usage
+# Make one key per real-world action (one signup, one checkout) and store it with
+# that record, so a retry after a crash or restart reuses the same key.
+# Don't build keys from emails or other personal data.
 client = StripeClient()
-customer = client.create_customer("alice@example.com", "Alice Smith")
-payment = client.create_payment_intent(2500, customer_id=customer["id"])
+signup_key = str(uuid.uuid4())
+customer = client.create_customer("alice@example.com", "Alice Smith",
+                                  idempotency_key=signup_key)
+checkout_key = str(uuid.uuid4())
+payment = client.create_payment_intent(2500, idempotency_key=checkout_key,
+                                       customer_id=customer["id"])
 print(f"Payment intent {payment['id']} for ${payment['amount']/100:.2f}")
 ```
+
+Stripe keeps the result of each idempotency key for at least 24 hours and returns
+the saved result (even a saved error) when you retry with the same key. A retry
+with the same key but different parameters is rejected. Source:
+https://docs.stripe.com/api/idempotent_requests
 
 ### Example 2: GraphQL API Integration with requests
 
@@ -161,7 +207,7 @@ class GraphQLClient:
         if variables:
             payload["variables"] = variables
 
-        response = self.session.post(self.endpoint, json=payload, timeout=30)
+        response = self.session.post(self.endpoint, json=payload, timeout=(5, 30))
         response.raise_for_status()
         result = response.json()
 
@@ -235,3 +281,12 @@ for repo in repos:
 - **Large payloads:** When fetching large datasets, use streaming responses and pagination rather than loading everything into memory. Watch for APIs that silently truncate results.
 - **Network partitions:** A request may succeed on the server but the response is lost. This is why idempotency keys matter—you can safely retry without causing duplicate side effects.
 - **Webhook vs. polling race conditions:** If you use both webhooks and polling for the same data, implement deduplication to avoid processing the same event twice.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Webhook receiver builder](https://useaiblocks.com/skills/webhook-receiver-builder).
+- **Build it** with the [API retry handler](https://useaiblocks.com/skills/api-retry-handler).
+- The [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

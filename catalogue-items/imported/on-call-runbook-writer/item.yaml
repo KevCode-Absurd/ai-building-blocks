@@ -30,7 +30,7 @@ credits:
   - title: runbook-creation skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/runbook-creation
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, made the disk cleanup example a dry run with retention checks, and added a step that fences the old primary before a database failover. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: BagelHole
     url: https://github.com/BagelHole

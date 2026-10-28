@@ -1,6 +1,6 @@
 # Teach and train people: AI Blocks
 
-> 159 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 165 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor): Check your lesson plan for barriers that shut some learners out. Get an accessible lesson audit with fixes ranked by impact, and what to keep.
 - [AI answer review worksheet builder](https://useaiblocks.com/skills/ai-answer-critique-lesson): Share an AI text sample and class level. Get marking steps, a scoring guide, questions and a teacher example for checking it.
@@ -26,6 +26,7 @@
 - [Classroom skills activity planner](https://useaiblocks.com/skills/competency-framework-translator): Turn a skill from a teaching guide into class tasks, clear progress levels, and subject-based checks.
 - [Classroom task engagement designer](https://useaiblocks.com/skills/task-engagement-tuner): Describe a class task and signs of boredom or stress. Get changes to challenge, goals and feedback to try and watch.
 - [Classroom tech fit checker](https://useaiblocks.com/skills/classroom-tech-fit-checker): Give it a tool or AI app and a subject. Get a check of how well it fits your teaching, with changes.
+- [Close reading lesson builder for history](https://useaiblocks.com/skills/history-close-reading): Share a history source. Get a lesson series that teaches learners to read word choice, tone and bias.
 - [Community learning project planner](https://useaiblocks.com/workflows/build-a-community-project-with-clear-learning): Plan a local student project. Set learning goals, roles and steps, and keep a separate record of how students make choices.
 - [Community project unit planner](https://useaiblocks.com/skills/community-project-unit-planner): Name a community need. Get a project plan where students help and also meet your curriculum goals.
 - [Community workshop guide builder](https://useaiblocks.com/skills/community-workshop-guide-builder): Share a community goal and local facts. Get practical activities, worksheets, and clear notes for the host.
@@ -44,6 +45,7 @@
 - [Culturally responsive lesson rewriter](https://useaiblocks.com/skills/culturally-responsive-lesson): Rewrite a lesson around your students' backgrounds with this culturally responsive lesson rewriter. Paste your lesson and learners, get a new version.
 - [Curriculum coverage checker](https://useaiblocks.com/skills/curriculum-gap-check): Check course plans against legal or course approval rules to find matches and gaps.
 - [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder): Share the skill, class level and lesson time. Get teacher modelling, guided practice, independent tasks and checks before learners move on.
+- [Emotional skills lesson sequence](https://useaiblocks.com/skills/emotional-skills-lesson-sequence): Build an emotional skills lesson sequence for your class. Give it the problem and year group. You get lessons that help students name and manage feelings.
 - [English learner critical-thinking task designer](https://useaiblocks.com/workflows/write-a-thinking-task-english-learners-can-do): Share the subject, thinking goal and learner level. Get a challenging task, a language-demand check and a version with targeted language help.
 - [English learner lesson adapter](https://useaiblocks.com/skills/ell-lesson-adapter): Adapt a subject lesson for students learning English. Get clear content and language goals, classroom supports, practice and checks for understanding.
 - [English learner sentence frame writer](https://useaiblocks.com/skills/ell-sentence-frames): Create sentence frames for a classroom thinking task. Get three support levels, useful connecting words and a plan to reduce support as students progress.
@@ -54,11 +56,14 @@
 - [Follow-up question writer](https://useaiblocks.com/skills/follow-up-question-writer): Use a student's answer and goal to draft follow-up questions, with reasons and tips for choosing.
 - [Group work task planner](https://useaiblocks.com/skills/group-work-task-planner): Share a class task and what goes wrong in group work. Get roles, discussion steps and AI prompts for more balanced participation.
 - [Hands-on vocabulary lesson planner](https://useaiblocks.com/skills/vocabulary-lesson-planner): Name a concept and the objects at hand. Get a lesson to show it, name it, and check what students remember.
+- [Hard topic teaching guide](https://useaiblocks.com/skills/hard-topic-teaching-guide): Find the mistakes learners make on a hard topic and the examples that fix them. Get a plan to teach a topic you find hard to teach.
+- [Historical context lesson builder](https://useaiblocks.com/skills/historical-context-lesson): Build a historical context lesson series that teaches students to use time, place and audience as evidence when they read a source.
 - [History lesson source set planner](https://useaiblocks.com/skills/history-source-set-picker): Share a history question, student level and available sources. Plan which documents to use, their reading order and perspectives still missing.
 - [History question and source checker](https://useaiblocks.com/skills/history-inquiry-question-checker): Share a draft history question, sources and student level. Check its scope, evidence needs and source fit, with a clearer rewrite if needed.
 - [History source authorship lesson builder](https://useaiblocks.com/skills/who-wrote-it-lesson): Build a who wrote it lesson series for history sources. Give it your topic and students. You get steps, questions and common errors.
 - [History source comparison lesson builder](https://useaiblocks.com/skills/compare-sources-lesson): Share your history topic and students’ struggles to get a source comparison teaching plan.
 - [History source text simplifier](https://useaiblocks.com/skills/history-source-simplifier): Share a historical text, full source details and student needs. Get an easier reading version, a change record and definitions for difficult words kept.
+- [History think-aloud script writer](https://useaiblocks.com/skills/history-think-aloud): Share a source. Get a script for talking through your thinking so learners see how a historian reads.
 - [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer): Name the history skills and student level. Get short source-based tasks, scoring guides and notes on what the answers can and cannot show.
 - [If-then habit plan writer](https://useaiblocks.com/skills/if-then-habit-plan-writer): Share a goal a student struggles to follow through on. Get if-then plans and a simple obstacle plan.
 - [Independent classroom work planner](https://useaiblocks.com/skills/choice-work-block-planner): Describe your time block. Get a plan for a long stretch of independent, choice-based work.
@@ -92,6 +97,7 @@
 - [Online source checking guide builder](https://useaiblocks.com/skills/online-source-check-lesson): Share the source type, class level, and task. Get checking steps and a teacher script.
 - [Online source-checking lesson planner](https://useaiblocks.com/workflows/help-learners-spot-weak-online-evidence): Share the topic, learner level and source texts. Get an evidence-checking activity, discussion prompts and a marking guide.
 - [Online worked example builder](https://useaiblocks.com/skills/online-worked-example-builder): Build online worked examples for any skill. Help fades step by step, so learners move from full solutions to solving alone.
+- [Outdoor lesson sequence planner](https://useaiblocks.com/skills/outdoor-lesson-sequence-planner): Plan outdoor lessons that teach your curriculum. Give your goal and your space. You get prep, an outdoor session and follow-up, plus a safety plan.
 - [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker): Share a learning task and learner level. Get likely overload points and specific design fixes.
 - [Peer writing feedback and revision planner](https://useaiblocks.com/workflows/plan-a-peer-feedback-session-that-helps): Share writing drafts, criteria, group size and session time. Get a peer-review guide, example feedback and a record for real revision choices.
 - [Perspective-taking activity builder](https://useaiblocks.com/skills/perspective-taking-activity): Share a topic, learning goal and student ages. Get a classroom activity for comparing views through evidence and context.

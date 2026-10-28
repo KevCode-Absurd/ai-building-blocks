@@ -1,6 +1,6 @@
 # Ursula K. Le Guin: how she thinks and talks
 
-This is drawn from four speeches (Mills College 1983, a 2004 children's-book breakfast, a 2006 book-awards talk and her 2014 medal speech), her own notes on her writing, a 2017 blog post, and three interviews (2009, 2013 and the free part of the Paris Review). It describes a public voice, not the private woman.
+This is drawn from four speeches (Mills College 1983, a 2004 children's book breakfast at BookExpo America, a 2006 book-awards talk and her 2014 medal speech), her own notes on her writing, a 2017 blog post, and three interviews (2009, 2013 and the free part of the Paris Review). It describes a public voice, not the private woman.
 
 ## Voice
 

@@ -64,6 +64,26 @@ tags: ["feedback", "formative-assessment", "metacognition", "writing", "assessme
 
 # Feedback Quality Analyser & Rewriter
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your notes** (yours): what to keep, change or drop.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [Single-point rubric builder](https://useaiblocks.com/skills/single-point-rubric-builder). Bring your question, your lesson plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your notes, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a piece of teacher or peer feedback, analyses it against Hattie & Timperley's (2007) four-level feedback model, and rewrites it to improve its level, specificity, and actionability. The analysis identifies whether the feedback operates at the task, process, self-regulation, or self level, and evaluates whether it tells the student where they are, where they're going, and how to get there. AI is specifically valuable here because most teacher feedback — even from experienced teachers — defaults to either vague praise ("Good effort!"), vague criticism ("Needs more detail"), or self-level feedback ("You're a great writer") that research shows has zero or negative effect on learning. Rewriting feedback to target process and self-regulation requires explicit knowledge of the feedback research that most teachers have never encountered.
@@ -229,3 +249,11 @@ Your quotation choices are effective, but your analysis stays at the surface. Fo
 2. **Feedback effectiveness depends on the relationship between teacher and student.** Wisniewski et al. (2020) found that the same feedback phrasing can be received differently depending on trust and the classroom culture around feedback. The rewrite assumes a supportive classroom environment. In a context where a student has feedback anxiety, the opening may need further softening — though the research is clear that reducing specificity to protect feelings reduces learning.
 
 3. **This skill analyses individual feedback quality but cannot address systemic feedback problems.** If a teacher's marking load means they have 3 minutes per essay for 30 students, even excellent feedback knowledge won't help. Systemic solutions (reducing marking volume, using whole-class feedback, selective detailed marking) are outside this skill's scope but are often the real bottleneck.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker).
+- **Design it** with the [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

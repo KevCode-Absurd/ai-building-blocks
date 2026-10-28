@@ -92,7 +92,9 @@ CHECKS MISSED: <none | which>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Amazon unit profit checker](https://useaiblocks.com/prompts/amazon-unit-profit-checker).
+- The [Amazon reimbursement claim finder](https://useaiblocks.com/skills/amazon-reimbursement-claim-finder). It takes the document.
+- The [Amazon launch week planner](https://useaiblocks.com/skills/amazon-launch-week-planner). It takes the plan.
+- The [Amazon margins, stock and claim review](https://useaiblocks.com/skills/amazon-monthly-account-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

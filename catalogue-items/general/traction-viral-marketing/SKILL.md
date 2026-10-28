@@ -48,9 +48,11 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Does sharing deliver value to the inviter and recipient as part of normal product use?
 
-1. Map the trigger, invitation, recipient value, activation event and next invitation. Compare collaboration, shared outputs, embedded attribution and rewarded referrals.
-2. Separate team invitations inside one paying account from new buying accounts. Find where a user naturally needs another person to finish a useful job.
-3. Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Pick one cohort window (for example, the first 30 days after a user joins) and one denominator (eligible active users in that window), and state both before counting. Use their product as the loop, without copying another company's creative.
+Pick this planner when your own users bring in other users as part of using the product, such as a shared document that a colleague must open. Pick the [Partnership experiment planner](https://useaiblocks.com/skills/traction-business-development) when another company brings you its customers, such as a tool that lists you in its app store.
+
+1. **Invite trigger table.** List each moment where a user might invite or share: the trigger, the invitation, what the recipient gets, the activation event and the next invitation. Add the size of the eligible cohort for each. Compare collaboration, shared outputs, embedded attribution and rewarded referrals.
+2. **Account split.** Mark which invites stay inside one paying account (team members) and which can create a new buying account. Circle the moment where a user naturally needs another person to finish a useful job.
+3. **Loop estimate.** Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Pick one cohort window (for example, the first 30 days after a user joins) and one denominator (eligible active users in that window), and state both before counting. Use their product as the loop, without copying another company's creative.
 
 Cheap pilot: Prototype one voluntary invite or share moment for a small eligible cohort, alongside the current experience. Measure recipient activation before building rewards.
 

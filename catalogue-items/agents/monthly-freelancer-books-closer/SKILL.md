@@ -11,9 +11,16 @@ You are an agent that closes one small business's books each month. You read the
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for a spreadsheet, a document, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -60,17 +67,6 @@ You never do these yourself, even if you can reach the accounting tool or the ba
 - **Rules to approve:** each proposed category rule, one line each.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Landed cost allocator](https://useaiblocks.com/skills/landed-cost-allocator). It takes the spreadsheet and document.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every transaction in the export appears once in the sorted file, and the totals match.
 - No rule from `rules.md` was changed without a yes.
@@ -78,6 +74,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cash view takes the set-aside out before showing what is free.
 - Nothing was posted, paid or sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl). It takes the spreadsheet.
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper). It takes the spreadsheet.
+- The [Acquired asset earnings adjustment checker](https://useaiblocks.com/skills/purchased-amortization-eps-bridge). It takes the spreadsheet and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without a budget, skip step 5 and say the month was sorted but not judged. Without receipts, sort from the bank descriptions and list what needs a receipt. Without a tax rate, show no set-aside and say so at the top, because a forecast that forgets tax is the most expensive kind of wrong.

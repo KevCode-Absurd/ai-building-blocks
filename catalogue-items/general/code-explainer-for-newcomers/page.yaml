@@ -31,6 +31,7 @@ you_get:
   - "A short passage per idea with the code beside it"
   - "What happens on bad input"
   - "A list of what is proved, tested or unchecked"
+  - "About three to eight short passages for one script"
 
 how_to_use:
   - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."

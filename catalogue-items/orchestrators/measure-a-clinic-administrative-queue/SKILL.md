@@ -110,8 +110,8 @@ Write MISSING: <what> next to the result it affects. If timings are missing, ret
 ## After this
 
 - Share the options with the clinic operations owner before anyone changes a rota.
-- To keep the work from stalling when someone is away, run the [Prepare a referral administration handover](https://useaiblocks.com/workflows/prepare-a-referral-administration-handover) workflow.
-- To find why work keeps slipping past its dates, run the [Trace why work keeps missing deadlines](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow.
+- To keep the work from stalling when someone is away, run the [Clinic referral administration handover planner](https://useaiblocks.com/workflows/prepare-a-referral-administration-handover) workflow.
+- To find why work keeps slipping past its dates, run the [Recurring work delay reviewer](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines) workflow.
 - Run it again after a change, on a new period, and compare the two delay maps.
 
 ## Avoid

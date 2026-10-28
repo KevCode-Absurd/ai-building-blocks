@@ -73,6 +73,19 @@ tags: ["UbD", "backwards-design", "unit-planning", "curriculum", "alignment"]
 
 # Backwards Design Unit Planner
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a complete Stage 1–2–3 Understanding by Design unit structure from a teacher's desired outcomes: Stage 1 defines enduring understandings, essential questions, and target knowledge/skills; Stage 2 designs the assessment evidence that will demonstrate understanding (before any activities are planned); Stage 3 sequences the learning activities that build toward the assessments and outcomes. The critical insight of backwards design is that assessment is designed BEFORE instruction — not as an afterthought but as the definition of what success looks like. AI is specifically valuable here because backwards design requires holding all three stages in mind simultaneously and ensuring tight alignment between them — what is assessed must match what is intended, and what is taught must prepare students for what is assessed. Most teacher-designed units plan activities first and assessments last, which produces misalignment.
@@ -318,3 +331,12 @@ No misalignment detected. All Stage 1 outcomes are assessed and taught.
 2. **Backwards design assumes clear desired outcomes.** If the teacher's initial outcome statement is vague ("students will learn about natural selection"), the UbD structure will be less precise. The quality of the unit depends on the specificity of the input. Chain with Competency Unpacker if the outcome needs clarifying before unit design.
 
 3. **The performance task is designed for a specific context and may need adaptation.** The "Island" scenario works for this Biology topic but may not transfer directly to other schools' resources or assessment requirements. Teachers should review the performance task against their specific assessment framework and modify the scenario while maintaining the assessment design principles.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Mixed practice unit planner](https://useaiblocks.com/skills/mixed-practice-unit-planner). It takes the lesson plan.
+- The [Reggio learning documentation planner](https://useaiblocks.com/skills/learning-documentation-planner). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

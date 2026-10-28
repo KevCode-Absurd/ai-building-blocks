@@ -8,7 +8,6 @@ job: strategy
 level: intermediate
 inputs:
   - {type: brief, required: true}
-  - {type: persona, required: false}
 outputs:
   - {type: brief}
 origin: rebuilt

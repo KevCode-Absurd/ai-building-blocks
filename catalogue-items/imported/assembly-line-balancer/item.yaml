@@ -29,4 +29,4 @@ credits:
   - title: assembly-line-balancing skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/assembly-line-balancing
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, rewrote the RPW and largest-candidate helpers so no station goes over the cycle time and every step follows its predecessors, counted each later step once in positional weights, removed made-up typical savings figures, and corrected the sample report's efficiency and throughput sums and labelled it as a made-up example. We added Before you start and After this sections that link to other AI Blocks steps.

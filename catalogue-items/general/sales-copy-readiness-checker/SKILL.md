@@ -7,7 +7,7 @@ description: Use as the last read of any finished piece of sales copy. A facts g
 
 A last read that follows the reader. They notice the piece, then understand it, then believe it, then act. A failure early on costs more than one late, because the reader is gone before the rest matters. So the verdict depends on where the first failure sits.
 
-**When not to use it:** the copy is still a rough draft (run the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor) first), you need new copy written (use the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer)), or you want to plan tests (use the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner)). Check one piece of copy per run.
+**When not to use it:** the copy is still a rough draft (run the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor) first), you need new copy written (use the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer)), or you want to plan tests (use the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner)). Check one piece of copy per run.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

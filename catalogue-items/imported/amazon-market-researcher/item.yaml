@@ -35,7 +35,7 @@ credits:
   - title: pangolinfo-amazon-data-research skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pangolinfo-amazon-data-research
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Shared under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, added a paid and scraping note, and changed the setup example to need a pinned package version.
   - title: Original author
     by: Pangolinfo
     url: ""

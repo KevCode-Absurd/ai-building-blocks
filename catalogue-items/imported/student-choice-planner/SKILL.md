@@ -69,6 +69,19 @@ tags: ["agency", "student-voice", "choice", "autonomy", "self-regulation", "grad
 
 # Agency Scaffold Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a structured scaffold for progressively releasing decision-making to students — moving from teacher-directed to student-directed learning in specific, manageable steps across five dimensions of agency: choice of topic, choice of process, choice of product, choice of criteria, and choice of timeline. The critical principle is that agency is not binary (teacher controls vs. student controls) but a continuum that must be scaffolded — giving full agency to students who have never had it is as counterproductive as never giving agency at all. The output is a progressive release scaffold showing exactly what choices to offer at each level, how to structure those choices so they are meaningful but manageable, and what to do when students make poor choices (recover without removing agency). AI is specifically valuable here because scaffolding agency requires balancing two competing demands: enough structure that students don't flounder, and enough freedom that the choices are genuine — and this balance point is different for every class, every subject, and every task.
@@ -251,3 +264,11 @@ The long-term goal is not permanent Level 4 in all contexts. Some tasks are appr
 2. **Agency scaffolding takes multiple cycles to show results.** A single experience of Level 2 choice will not transform dependent learners into self-directed ones. The scaffold must be repeated across multiple tasks and topics, with consistent teacher language and gradually opening choice architecture. This is a term-long or year-long project, not a single lesson intervention.
 
 3. **Some curriculum contexts constrain agency.** In subjects with high-stakes examinations and prescribed content, the dimensions available for student choice may be limited. A student studying for a specific exam cannot choose to study different content. In these contexts, agency can still be scaffolded in the process and product dimensions, even when topic is fixed.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Low-motivation task redesigner](https://useaiblocks.com/skills/low-motivation-task-redesigner). It takes the lesson plan.
+- **Lead the team** with the [Team and product motivation planner](https://useaiblocks.com/skills/motivation-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

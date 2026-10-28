@@ -5,7 +5,7 @@ description: "Check one charter-defined conversion price reset after a qualifyin
 
 # Weighted-average antidilution checker
 
-Works out the revised conversion price and conversion ratio for one series of protected shares after one cash issuance below the old price, using the charter’s own weighted-average clause. It does not cover full-ratchet clauses, several series or a fixed share exchange (use the [Fixed-exchange consideration checker](https://useaiblocks.com/skills/fixed-exchange-consideration-checker)), or a note with a cap or discount (use the [Cap and discount conversion checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker)).
+Works out the revised conversion price and conversion ratio for one series of protected shares after one cash issuance below the old price, using the charter’s own weighted-average clause. It does not cover full-ratchet clauses, several series or a fixed share exchange (use the [Fixed-exchange consideration checker](https://useaiblocks.com/skills/fixed-exchange-consideration-checker)), or a note with a cap or discount (use the [Convertible note price checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 
-The "question" and "deal terms" in the "Before you start" block above mean the charter clause, the old price, and the issue price and shares listed here. Ignore the spreadsheet and Node.js lines unless the user asks for a workbook. Do the sums in the chat and show each one.
+The "question" and "deal terms" in the "Before you start" block above mean the charter clause, the old price, and the issue price and shares listed here. One rule for the workbook: build it only when the user asks for one and a spreadsheet tool is available (see "Build and verify the requested workbook" below). Otherwise do the sums in the chat and show each one, and leave the spreadsheet and Node.js lines aside.
 
 - **The charter clause** that sets the conversion price reset, word for word.
 - **Old conversion price** for the series.

@@ -19,7 +19,7 @@ when:
   - "You are rewriting your home page and want it built on real win reasons."
 not_for:
   - "You have fewer than six deals, or a new product with no sales yet: talk to buyers first with a short set of interview questions you write yourself."
-  - "You want a short headline from a message you already have: use a one line position writer, not this deal analysis."
+  - "You want a short headline from a message you already have: use the Brand positioning sentence writer, not this deal analysis."
   - "You only have your own summary of each deal, with no buyer words: ask the buyers why they chose you, then come back."
 
 you_give:
@@ -141,7 +141,7 @@ test:
 improve:
   - "Add a deal to the notes every time one closes or dies, and re-run each quarter."
   - "Add your win-loss interview questions so the notes capture the right words."
-  - "Pair it with the One line position writer to turn the value line into a headline."
+  - "Pair it with the Brand positioning sentence writer to turn the value line into a headline."
 
 works_best_with:
   tools:
@@ -149,3 +149,4 @@ works_best_with:
   inputs:
     - "Win-loss interview transcripts"
     - "The reasons given in your sales tool for each closed deal"
+next: [one-line-position-writer, ten-second-opener-writer, objection-answer-sheet-writer]

@@ -24,6 +24,24 @@ Turn an inbox full of applications into a short list the owner can act on today,
 
 `job-post-builder` produces the post, the interview guide, and the scoring rubric. This skill runs the funnel from there: screen, rank, reply, schedule, onboard.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your resume** (yours): your resume or CV, pasted or attached.
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **The job description** with the [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder). Bring the job description.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your resume, the job description. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Get the rubric first
 
 **Nothing gets scored until there is a rubric.** The rubric is the list of skills, experience, and requirements stated in the job post. It is the only thing candidates are measured against.
@@ -109,6 +127,14 @@ Gusto, DocuSign and Trello are optional. Each needs the owner's own account and 
 ## Deliver the shortlist as an artifact
 
 Alongside the chat summary, render the result as an HTML artifact using the house artifact style (`../../shared/artifact-style.md`): the ranked shortlist table with per-criterion rubric scores in mono tabular-nums, stage status pills (interview / maybe / no / cannot assess), and an interview-schedule panel. Candidate-facing draft replies stay out of the artifact — they live in the chat approval flow only. The artifact is additive; the short answer stays in chat.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job post writer](https://useaiblocks.com/skills/job-post-writer).
+- The [Contract reviewer](https://useaiblocks.com/skills/contract-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Closing offer
 

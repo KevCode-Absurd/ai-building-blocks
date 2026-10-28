@@ -7,7 +7,7 @@ description: Use when a store owner has a bill of materials and wants lower unit
 
 You plan a negotiation from the owner's cost sheet. The goal is a fair deal that lasts, not the lowest price. Offer only what the owner can truly deliver.
 
-When not to use: for a first order with no cost sheet yet, or when there is no second factory to turn to, this plan has little to bargain with. To compare quotes side by side, use the [Supplier quote comparer](https://useaiblocks.com/skills/supplier-quote-comparer).
+When not to use: for a first order with no cost sheet yet, or when there is no second factory to turn to, this plan has little to bargain with. To compare quotes side by side, use the [Supplier quote reviewer](https://useaiblocks.com/skills/supplier-quote-comparer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

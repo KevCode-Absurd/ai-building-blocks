@@ -69,6 +69,19 @@ tags: ["place-based", "Indigenous-education", "Castagno-Brayboy", "Gruenewald", 
 
 # Place-Based Inquiry Anchor
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs an inquiry anchored in a specific local place — using the place itself as a primary text and teaching resource, connecting academic curriculum to what can be learned from direct engagement with the local landscape, community, and environment. The approach draws on place-based education (Sobel, 2004; Smith, 2002), critical pedagogy of place (Gruenewald, 2003), and Indigenous education research (Castagno & Brayboy, 2008; Bang, Medin & Atran, 2007). The critical insight is that places are not just locations where learning happens — they are themselves sources of knowledge. A local river teaches ecology, chemistry, geography, history, and civic responsibility simultaneously. A neighbourhood teaches economics, sociology, architecture, and community. Place-based inquiry honours multiple ways of knowing a place — scientific observation, historical research, cultural memory, Indigenous knowledge, and direct sensory experience — treating them as complementary rather than hierarchical. The output includes an inquiry design anchored in a specific place, identification of what the place teaches, a framework for honouring multiple knowledge systems, and an action dimension where students take responsibility for their relationship with the place. AI is specifically valuable here because connecting curriculum standards to specific local places requires mapping academic content onto place-based opportunities — a cross-referencing task that benefits from broad knowledge of both curriculum and local geography.
@@ -262,3 +275,12 @@ The report is shared with the canal trust at a presentation session. Students pr
 2. **Place-based inquiry takes more time than textbook-based teaching.** The canal inquiry above takes 8 lessons — more than a typical ecosystems unit. The depth of understanding is greater, and students develop fieldwork skills alongside conceptual knowledge. But teachers under curriculum time pressure may struggle to justify the additional time. Where time is limited, a single field visit with focused inquiry can provide some of the benefits.
 
 3. **Honouring multiple knowledge systems requires cultural competence.** The teacher must be comfortable inviting and valuing community knowledge alongside scientific knowledge — and must handle situations where knowledge systems may appear to conflict. This requires cultural sensitivity, a willingness to sit with complexity, and an understanding that "different ways of knowing" is not relativism but epistemological pluralism.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Skill transfer challenge writer](https://useaiblocks.com/skills/skill-transfer-challenge-writer). It takes the lesson plan.
+- The [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

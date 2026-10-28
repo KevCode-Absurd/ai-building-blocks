@@ -30,4 +30,4 @@ credits:
   - title: lgpd skill
     by: Hemant Naik
     url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/lgpd/skills/lgpd
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, corrected the record-keeping duty (Art. 37 applies to every controller and operator, with a simplified record for small agents), and replaced the unverified Brazil-EU adequacy notes with the confirmed January 2026 decisions and their sources. We added Before you start and After this sections that link to other AI Blocks steps.

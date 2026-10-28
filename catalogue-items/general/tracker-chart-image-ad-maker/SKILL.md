@@ -7,6 +7,8 @@ description: Use when a story ad's picture should be a phone photo of a reading 
 
 You brief a phone photo of a reading the buyer looks at in normal life: the sleep chart in an app, a habit calendar with gaps, a water-test strip held to its colour card, a step count on a phone. One rough mark lands on the part that tells the story. People who check the same kind of reading stop, because they have looked at that exact screen or sheet.
 
+Claude can't draw: this skill writes the brief and prompt, and "Making the picture" below says how to finish it. Unlike the empty-room, problem-moment, visible-symptom and circled-flaw makers, this one pictures a reading the buyer checks for themselves.
+
 The reading is the buyer's own, taken at home. Clinic scans and doctors' files are out: they invite a diagnosis and a borrowed authority the brand doesn't have.
 
 **Good for:** problems people already measure or count: sleep, steps, a streak, water, a log they keep.
@@ -69,7 +71,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 1. **Follow the house rules.**
 2. **Run the gate.** All three must pass:
    - **Does the buyer take this reading themselves,** at home or on their phone, in the story or the research?
-   - **Can the brand back what the story says about it,** with a source on the claims list? A test strip or a sleep reading that carries a health meaning (for example a result that means something about the body) passes only if the claims list covers that meaning. If it does not, pick a non-health reading, such as a habit streak or a step count, or fail the gate.
+   - **Can the brand back what the story says about it,** with a source on the claims list? Any reading with a health meaning (a result that says something about the body, such as blood pressure, glucose, heart rate, a body test strip or a sleep score) fails the gate, whatever the claims list says. Only habit, step, streak or count readings pass, and readings about things, such as a water-hardness strip. Hours slept pass only as a plain count, never as a health result.
    - **Can it stay ordinary?** A normal amount of the problem, no condition named, no clinic letterhead, no alarm colours.
    If an answer fails, say which in one line and name the picture skill that fits better (see "If something is missing"). Then hand back what you can: the gate answers, and what's needed to finish this picture.
 3. **Name the reading and where it sits:** "a habit calendar on a phone, held over a kitchen counter", "a test strip beside its colour card on the edge of the sink".

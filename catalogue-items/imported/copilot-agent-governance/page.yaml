@@ -41,7 +41,7 @@ how_to_use:
   - Paste your tool list and how risky the work is. Say if the agent handles money or personal data.
   - If it asks for something you do not know, say so. It marks the gap instead of guessing.
   - Check the tool table first. Make sure every tool the agent can call is in it.
-  - Ask your developer to build and test the policy. Have a person review the result before launch.
+  - Ask your developer to build and test the policy. The sample code refuses calls that need human approval but has no approval screen, so your developer must add one. Have a person review the result before launch.
 how_it_works:
   - title: List the tools
     text: It puts every tool in a table with what it does and the worst thing that could go wrong.

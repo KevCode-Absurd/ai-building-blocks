@@ -6,12 +6,12 @@ thinking: low
 thinking_why: "It follows a short, fixed order of steps, and the main risk is stale rules, which you check on Amazon's own pages."
 
 headline: "Amazon brand registry planner"
-subhead: Give it your brand name, logo, country, category and your listing's ASIN. It plans the order of steps from name check to trademark to registry application. You get a trademark choice, the application pack and a list of tools to turn on after approval.
+subhead: Give it your brand name, logo, country and category. It plans the order of steps from name check to trademark to registry application. You get a trademark choice, the application pack and a list of tools to turn on after approval.
 
 explain: |
   Brand Registry gives a brand owner more control of its listings and opens tools that other sellers cannot use, such as A+ content, Vine, brand analytics and the brand referral bonus. To apply, Amazon wants a trademark, and the order you do things in matters. A name that is too close to another brand can force a rebrand: two sellers in the source said they had to change names, and one put the cost at over 100,000 dollars in lost launches (their own figure, not a rule).
 
-  This skill is a store version of a general brand protection planner. It covers the first-time order: check the name, apply for the trademark, create the listing, then apply to the registry with the trademark number, an ASIN and a product image showing the brand. It lists what to turn on after approval. A trademark is specific to a country, and rules and open tools change, so confirm on the registry site. This is not legal advice.
+  This skill is a store version of a general brand protection planner. It covers the first-time order: check the name, apply for the trademark, take real photos of the product with your logo on it, then apply to the registry. Amazon asks for a registered or pending trademark, a logo image, a photo of the logo on the product or packaging, and your categories. You don't need an ASIN or a listing to apply. It lists what to turn on after approval. A trademark is specific to a country, and rules and open tools change, so confirm on the registry site. This is not legal advice.
 
 when:
   - You have a brand name and are about to order stock, and want to protect the name from day one.
@@ -25,7 +25,7 @@ not_for:
 you_give:
   - Your brand name and logo
   - Your country and category
-  - Your current listing ASIN (optional until you create it)
+  - Your current listing ASIN (optional, not needed to apply)
 you_get:
   - A trademark choice and filing plan
   - The registry application pack
@@ -33,7 +33,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Give your brand name, logo, country and category, and the ASIN if you have a listing.
+  - Give your brand name, logo, country and category, and the ASIN if you already have a listing.
   - Search the trademark database for your name and close spellings before you pay for anything. Paste what you find.
   - Follow the plan in order. Check each step on Amazon's registry page and the trademark office's page, since rules change.
   - Before you rely on a trademark, ask a qualified trademark professional.
@@ -52,7 +52,7 @@ output_sample:
     - name: TRADEMARK CHOICE
       contains: Word mark, logo mark or both, why, your country and the filing steps.
     - name: REGISTRY APPLICATION PACK
-      contains: Your ASIN, trademark number, product image with the brand, seller account, category, answers and website.
+      contains: Your trademark number, logo image, a real photo of the product or packaging with the logo, categories, answers and website.
     - name: TURN ON AFTER APPROVAL
       contains: Each registry tool to switch on, with what it does for you.
     - name: ALSO CONSIDER
@@ -66,11 +66,11 @@ how_it_works:
   - title: Picks the mark type
     text: Compares a word mark with a logo mark. A logo mark was easier to win for generic names in the source.
   - title: Plans the filing
-    text: Applies for the trademark first. One course source says a pending application is enough for registry. You confirm that on the registry site.
-  - title: Creates the listing
-    text: Makes the listing first, because the registry form needs an ASIN.
+    text: Applies for the trademark first. Amazon's registry page accepts a registered trademark, and a pending application in some cases, so you confirm yours on the registry site.
+  - title: Plans the product photos
+    text: Asks for a real photo of the product or packaging with the logo on it. No mock-ups, stock or edited images.
   - title: Builds the application pack
-    text: Collects the ASIN, trademark number and a product image with the brand on it.
+    text: Collects the trademark number, logo image, product photo and categories.
   - title: Lists the answers
     text: Plans the seller account, category, distribution answers and website.
   - title: Lists what to turn on
@@ -84,12 +84,14 @@ output_shape: |
 
   TRADEMARK CHOICE
   Mark type: <word | logo | both> | why: <...>
-  Country: <...> | status needed for registry: <pending is enough per one source, confirm on the registry site>
+  Country: <...> | status needed for registry: <registered or pending application (Amazon's Brand Registry page)>
   Filing steps: <...>
 
   REGISTRY APPLICATION PACK
-  ASIN: <...> | Trademark number: <...> | Product image with brand: <file>
-  Seller account: <...> | Category: <...> | Distribution answers: <...> | Website: <...>
+  Trademark number: <...> | Trademark office: <...>
+  Logo image: <file> | Real photo of product or packaging with the logo: <file>
+  Categories: <...> | Website: <... or none> | ASIN: <... or none, not required>
+  Distribution answers: <...>
 
   TURN ON AFTER APPROVAL
   <tool>: <what it does for you>
@@ -99,7 +101,7 @@ output_shape: |
 
   CHECK ON THE REGISTRY SITE: <current rules and tools> | page: Amazon Brand Registry (brandservices.amazon.com) | last checked: <date>
   NOT LEGAL ADVICE: check with a qualified trademark professional.
-  MISSING: <brand name | country | ASIN>
+  MISSING: <brand name | country | trademark number | product photo>
 
 tweaks:
   - what: Country
@@ -107,14 +109,14 @@ tweaks:
   - what: How generic the name is
     how: A generic-sounding name may be denied as a word mark, so the plan leans to a logo mark.
   - what: Whether the listing exists
-    how: Without an ASIN the plan starts with creating the listing. The application needs a real photo of the product with the brand visible, so check Amazon's image rules first.
+    how: You can apply without a listing or an ASIN. The application needs a real photo of the product or packaging with the logo on it, so check Amazon's image rules first.
   - what: Where you make the product
     how: Say where the maker is. The plan adds a manufacturer agreement note.
 
 judge:
-  - The order is name check, trademark filing, listing, then registry application.
-  - The plan says a pending trademark is enough for registry, and that approval can take 6 to 18 months.
-  - The pack lists the three things the form needs (ASIN, trademark number and a product image with the brand).
+  - The order is name check, trademark filing, real product photos, then registry application.
+  - The plan says a registered or pending trademark is accepted, and that trademark approval can take a long time (one source says 6 to 18 months).
+  - The pack lists what Amazon's page asks for: trademark number, logo image, a real photo of the logo on the product or packaging, and categories.
   - The turn-on list names each tool and what it does for you.
   - The plan says it is not legal advice and the rules change.
 
@@ -138,7 +140,7 @@ works_best_with:
   inputs:
     - "A trademark search result for your name and close spellings"
     - "Your logo files and a real photo of the product with the brand visible"
-    - "Your listing ASIN"
+    - "Your listing ASIN, if you have one"
     - "The countries you sell in or plan to"
 
 terms:

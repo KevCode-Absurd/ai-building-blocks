@@ -126,7 +126,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
 - The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
 - The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
+- The [Complaint review image ad maker](https://useaiblocks.com/skills/complaint-review-image-ad-maker). It takes the ad copy.
 - The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

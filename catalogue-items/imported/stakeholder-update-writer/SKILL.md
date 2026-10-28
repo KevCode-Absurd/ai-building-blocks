@@ -8,6 +8,32 @@ argument-hint: "<update type and audience>"
 
 Write a progress update shaped for one reader at the right depth. Based on the stakeholder-update skill from Anthropic's knowledge-work-plugins (Apache-2.0). Trimmed here to the update itself: the original's decision-record and meeting-facilitation sections are left out because they are separate jobs.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Stakeholder map builder](https://useaiblocks.com/skills/stakeholder-map-builder). Bring your question.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a tool connection, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It only needs your notes pasted in. A tracker connection is a bonus, not a need.
+<!-- /needs -->
+
 ## Usage
 
 ```
@@ -152,3 +178,12 @@ Mistakes to avoid: burying risks under good news, vague wording ("there might be
 ## Output format
 
 Return the update in the template for the audience, ready to paste. Keep it scannable: bold for key points, short bullets. Put any `MISSING` items in a short list after the update, with a note of what to fill. If the user asked for several audiences, return one update per audience under its own heading, built from the same facts so the numbers match.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup). It takes the document.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
+- **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

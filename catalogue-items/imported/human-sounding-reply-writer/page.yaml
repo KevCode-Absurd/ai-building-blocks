@@ -33,7 +33,7 @@ how_to_use:
   - Paste the message or describe the situation. Say who the reply is for.
   - Add two or three of your own sample lines if you want your voice matched (optional).
   - "On first use you see three parts: the first answer, the mirror note and the final reply. Use the final reply."
-  - Ask for quiet mode if you only want the final reply from then on.
+  - Ask for quiet mode if you only want the final reply from then on. By the author's rough count, show mode uses about 2.5 to 3 times the tokens of a normal reply, and quiet mode about 1.5 to 2 times.
   - Read the final reply once more, then paste it into your message or post. It pairs with the Pre-publish content checker (pre-publish-content-checker), which checks a draft you already wrote.
   - If the message mentions danger or self-harm, do not rely on this loop. Contact local emergency or crisis support.
 output_sample:

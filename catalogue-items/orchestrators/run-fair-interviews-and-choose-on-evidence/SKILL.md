@@ -44,7 +44,7 @@ How to start:
 
 ## What you need
 
-This is a hiring job. The brand brain, buyer brief and "From the brand brain, read" lines above do not apply here: do not read brand files or pull offer facts, buyer quotes or voice lines into a hiring run. Hiring prerequisites are the role brief, the must-have list and the interview schedule, below. Ask for them once, in one short message, and ask only for what is missing; the "Check what's missing" step above works the same way. If you also need the job post and the offer letter, run [Hire fairly, from job post to a checked offer letter](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter) before or after this one.
+This is a hiring job. The brand brain, buyer brief and "From the brand brain, read" lines above do not apply here: do not read brand files or pull offer facts, buyer quotes or voice lines into a hiring run. Hiring prerequisites are the role brief, the must-have list and the interview schedule, below. Ask for them once, in one short message, and ask only for what is missing; the "Check what's missing" step above works the same way. If you also need the job post and the offer letter, run [Hiring document and candidate reviewer](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter) before or after this one.
 
 Before step 1, have the role brief and the must-have list. Before step 4, have every interviewer's filled-in scorecard and the interview schedule you ran.
 
@@ -102,6 +102,6 @@ Next step: read the replies, send them yourself, then record each candidate's re
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
 - The [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker). It takes the document.
-- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the plan and document and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

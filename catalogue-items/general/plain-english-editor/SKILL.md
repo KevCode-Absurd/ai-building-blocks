@@ -68,7 +68,7 @@ The edited text. A list of every cut or swap with its reason. The one-sentence p
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft and notes.
 - The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
-- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
+- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the draft.
 - **Fill the gaps in your brand brain** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
 - The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

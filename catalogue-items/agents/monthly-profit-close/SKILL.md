@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
@@ -89,9 +89,9 @@ If the owner approves one action in clear words, do only that one. Then write wh
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Financial statement and budget reviewer](https://useaiblocks.com/skills/financial-statement-analyst). It takes the financial statements.
 - The [Working capital cash change checker](https://useaiblocks.com/skills/noncash-working-capital-bridge). It takes the financial statements and spreadsheet.
-- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Check the money** with the [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator). It takes the financial statements and audit report.
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper). It takes the financial statements and spreadsheet.
 - The [LIFO to FIFO comparison calculator](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge). It takes the financial statements and spreadsheet.
+- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

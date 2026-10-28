@@ -6,8 +6,12 @@ Price 500, variable 320, fixed 5,400,000. Contribution 180; CM ratio 36%.
 - After-tax target 1,260,000 at 30% tax → pre-tax 1,800,000 → volume = (5,400,000+1,800,000)/180 = **40,000 units**.
 
 ## 2. Step Cost Trap
-Same product, but each 10,000 units of capacity needs a supervisor (600,000).
-Profit at 30,000 units with 3 supervisors: contribution 5,400,000 − fixed 5,400,000 − 1,800,000 = **−1,800,000 (loss!)** — the naive breakeven ignored the steps. Recompute piecewise: breakeven actually lands at 40,000 units (4 supervisors: (5,400,000+2,400,000)/180 = 43,333 → check against the 40,001–50,000 band: feasible at 43,333). Always test the breakeven against the step band it falls in.
+Same product, but each 10,000 units of capacity (or part of it) needs a supervisor (600,000), so supervisors = ceil(units / 10,000).
+Profit at 30,000 units with 3 supervisors: contribution 5,400,000 − fixed 5,400,000 − 1,800,000 = **−1,800,000 (loss!)** — the naive breakeven ignored the steps. Recompute band by band:
+- 30,001–40,000 units (4 supervisors, fixed 7,800,000): breakeven 7,800,000 / 180 = 43,333 → outside this band, so no breakeven here. At 40,000 units the loss is 600,000.
+- 40,001–50,000 units (5 supervisors, fixed 8,400,000): breakeven 8,400,000 / 180 = 46,666.7 → inside this band. The first whole-unit volume with no loss is **46,667 units** (profit +60; 46,666 units loses 120). At 43,333 units this band loses 600,060.
+- Above 50,000, each new band adds up to 1,800,000 of contribution against 600,000 for one more supervisor, so profit stays positive.
+Always test the breakeven against the step band it falls in. `breakeven_units_with_steps` in scripts/calculate.py does this search.
 
 ## 3. Special Order
 Capacity 100,000; running at 70,000. Export order: 15,000 units at 360 (below full cost of 410 = 320 var + 90 allocated fixed). Incremental freight 12/unit.

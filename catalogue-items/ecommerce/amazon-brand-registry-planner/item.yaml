@@ -1,6 +1,6 @@
 slug: amazon-brand-registry-planner
 name: "Amazon brand registry planner"
-summary: "Give it your brand name and listing. Get a trademark choice, a registry pack and tools to turn on."
+summary: "Give it your brand name and logo. Get a trademark choice, a registry pack and tools to turn on."
 category: ecommerce
 type: skill
 role: make
@@ -17,4 +17,5 @@ origin: rebuilt
 example_pending: true
 version: 1.0.0
 credits:
-  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "A pending trademark being enough for registry, design versus word marks, checking the name first, the ASIN needed before applying, what registry opens up and the manufacturer agreement note"}
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "A pending trademark being enough for registry, design versus word marks, checking the name first, what registry opens up and the manufacturer agreement note. We removed the source's claim that an ASIN is needed before applying."}
+  - {title: "Amazon Brand Registry", by: "Amazon", url: "https://sell.amazon.com/brand-registry", used: "The enrollment requirements: a registered or pending trademark, a logo permanently on the product or packaging, a logo image, a product or packaging photo, the trademark number and categories"}

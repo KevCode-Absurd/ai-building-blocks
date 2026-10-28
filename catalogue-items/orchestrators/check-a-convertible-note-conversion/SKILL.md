@@ -57,6 +57,6 @@ Lead with the answer: the converting balance, the price that applies and the sha
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check a SAFE instead** with the [Check a SAFE into priced financing](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing) workflow, if other investors hold SAFEs.
-- **Check the option pool** with the [Option pool top-up checker](https://useaiblocks.com/skills/option-pool-top-up-checker), if the round changes it.
+- **Check a SAFE instead** with the [SAFE ownership and funding checker](https://useaiblocks.com/workflows/check-a-safe-into-priced-financing) workflow, if other investors hold SAFEs.
+- **Check the option pool** with the [Employee option pool top-up calculator](https://useaiblocks.com/skills/option-pool-top-up-checker), if the round changes it.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

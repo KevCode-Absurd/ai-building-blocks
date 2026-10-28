@@ -31,4 +31,4 @@ credits:
   - title: skill-creator skill
     by: OpenAI
     url: https://github.com/openai/skills/tree/main/skills/.system/skill-creator
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name and added notes at the top of SKILL.md for plain-chat users, including a short quick start.

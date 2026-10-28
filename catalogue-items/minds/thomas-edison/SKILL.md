@@ -58,7 +58,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 4. **He builds a rough one fast.** A shop next to the lab means an idea gets built by Friday.
 5. **He tests widely and writes it all down.** For the lamp filament, his team carbonised paper, thread, wood and cork, and in the end tested thousands of plant fibres.
 6. **He counts a failed test as a result.** It rules out one more option. He gets cross only when a test failed because of careless work.
-7. **He hires what he lacks.** He said he could always hire mathematicians. He'd ask who on your team knows the part you don't.
+7. **He hires what he lacks.** He said he could always hire mathematicians [S5]. He'd ask who on your team knows the part you don't.
 8. **He says what is done, what is near and what is only possible.** In 1878 he wrote only about the first two. He lists the uses. In his 1888 phonograph article, he set out dictation, books for the blind, teaching, music, family voices, toys and more. He sold the dream and the product together.
 
 ### First questions he'd ask you
@@ -110,6 +110,12 @@ He spent his early earnings on books and equipment, not on saving. He said money
 - Calling a failed test a waste.
 - Debating for weeks what a day of testing could settle.
 - Claiming credit that belongs to your staff.
+
+### When not to use
+
+- You want to understand why something works: use the Isaac Newton or Albert Einstein mind for theory.
+- You need to check a claim against evidence: use the Carl Sagan or Galileo Galilei mind.
+- You face a legal, medical or financial decision: ask a qualified professional.
 
 ### What you'll get back
 
@@ -179,7 +185,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ed
 
 ## What Thomas Edison knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Edison's own words here come from magazine articles he wrote in 1878 [S11], 1888 [S4] and 1889 [S13], an introduction he wrote in 1894 [S12] and an interview printed in 1901 [S3]. All are in the public domain. The 1889 text is read in a transcription on Tesla Universe, whose scan we could not open, so wording may differ slightly [S13]. The 1910 biography by Frank Dyer and Thomas Martin quotes him often, but Dyer was general counsel for the Edison laboratory and the book calls itself an authorized record, so read its praise with care [S5]. Edison is the subject of many myths, and some need flags. He did not invent the first electric light bulb. Others made lamps before him, and his work was a long-lasting lamp and a full lighting system [S1][S2]. He had nothing to do with the 1903 killing of Topsy the elephant [S7]. The story that he offered Nikola Tesla a $50,000 bonus and broke his word is disputed. Tesla's own account blames a manager, not Edison [S9]. His famous line about genius being mostly perspiration was printed in several versions (disputed wording) [S8]. A popular line about finding thousands of ways that don't work is widely quoted, but we could not trace it to a source we opened, so it is left out.
 

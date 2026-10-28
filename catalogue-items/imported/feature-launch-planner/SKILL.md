@@ -20,6 +20,19 @@ When to use this skill: planning a launch (any size, any segment), auditing an e
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans the operational launch discipline. It composes with the rest of the Product skill suite.
@@ -205,6 +218,8 @@ Define the rollback trigger explicitly before launch. Examples.
 - "Support tickets mentioning the feature exceed 50 in the first hour triggers escalation."
 - "Funnel completion drops below 50 percent of pre-launch baseline for any cohort triggers paused rollout."
 
+These numbers are placeholders, not benchmarks. Set each threshold from the team's own pre-launch baseline, and mark any you could not set as `TO SET`.
+
 The "no rollback trigger" failure. Launch goes sideways. The team debates whether to roll back for an hour while the issue compounds. Pre-defined triggers remove the debate; the rule fires automatically and the team executes the rollback.
 
 Detail in [`references/monitoring-readiness-checklist.md`](references/monitoring-readiness-checklist.md).
@@ -344,3 +359,11 @@ The discipline of separating shipping from releasing from launching is the singl
 When in doubt about whether a launch is ready, ask: is the launch brief written and distributed? Has sales seen the battlecard? Does support have the FAQ? Is the rollout strategy chosen and the rollback trigger defined? Are the comms gated on a health check? Is the measurement plan tied to the spec hypotheses?
 
 If any of those answers is no, the launch is not ready. Delaying the launch by a week to close the gaps is cheaper than launching incomplete and capturing a fraction of the value the feature could have delivered.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Feature spec writer](https://useaiblocks.com/skills/feature-spec-writer).
+- The [Feature flag planner](https://useaiblocks.com/skills/feature-flag-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

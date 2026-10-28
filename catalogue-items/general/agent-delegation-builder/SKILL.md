@@ -13,7 +13,7 @@ Not for planning the whole agent team: use "Multi-agent workflow planner" or "Mu
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material or the linked skill):
+**Makes it better (optional):**
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
@@ -33,7 +33,7 @@ How to start:
 - **The task tree** (required): the parent task and the child tasks wanted.
 - **What each task waits for** (required where a task has blockers).
 - **Work only a person can do**, and who that person is (optional).
-- **The project's code** (optional): so the starter can be adapted to it. The "Before you start" list above shows the codebase as needed; it is not. You can run this with only the agent list and the task tree, and the plan then stays a plan. The starter's placeholder blocker and log code must be replaced before any live use, so never treat the starter as working code.
+- **The project's code** (optional): so the starter can be adapted to it. You can run this with only the agent list and the task tree, and the plan then stays a plan. The starter's placeholder blocker and log code must be replaced before any live use, so never treat the starter as working code.
 
 If the agents and the authority rules are both missing, stop. Ask for them in one short message and wait. Do not hand back an empty template. If only some inputs are missing, run the steps you can and write `MISSING: <what>` for the rest. Never invent an agent, a rule or a task.
 
@@ -109,7 +109,9 @@ Separate an idea, a calculation, a proposed action and a completed action. If yo
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MATLAB package manager](https://useaiblocks.com/skills/matlab-package-installer). It takes the code change.
+- The [Agent wakeup and claim recovery builder](https://useaiblocks.com/skills/wakeups-how-agents-alert-each-other-implementation-planner).
+- The [Agent task ownership workflow builder](https://useaiblocks.com/skills/issues-how-agents-track-work-implementation-planner). It takes the plan.
+- The [Multi-agent workflow planner](https://useaiblocks.com/skills/multi-agent-workflow-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

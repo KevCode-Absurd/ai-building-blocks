@@ -59,6 +59,8 @@ Pause here: Act on the call and look again on the review date.
 ## What you hand back
 Four step files and the summary: the door sort, the math or judgment verdict, the evidence bar with a call date, and the disagree-and-commit note with each dissent on record and the review date.
 
+Next: share the note with the people in it and act on the call. If you want the decision stress-tested before you act, the Plan risk reviewer below takes the step 4 note as the plan to test.
+
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -69,6 +71,5 @@ Four step files and the summary: the door sort, the math or judgment verdict, th
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner). It takes the plan.
-- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -52,18 +52,18 @@ If the plan itself is missing, or there is no cost figure at all, do not fill th
 
 The move in one sentence. The worst case in numbers and what you cannot afford to lose. Caps with doable or not. The views of people near customers. A stop signal and review date. The gut check. A verdict of go, change or no with one reason. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Hear the strongest case against it** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Name who decides** with the [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan and the verdict.
-- **Run a small first test** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan, when the verdict is change and you chose a smaller first version.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The worst case has a number.
 - At least one cap is listed and doable.
 - A stop signal and a review date are written.
 - The verdict is one word with one reason.
+
+<!-- next: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Hear the strongest case against it** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+- **Name who decides** with the [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan and the verdict.
+- **Run a small first test** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan, when the verdict is change and you chose a smaller first version.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

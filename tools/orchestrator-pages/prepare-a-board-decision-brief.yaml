@@ -88,3 +88,4 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+next: [board-deck-builder, board-minutes-drafter]

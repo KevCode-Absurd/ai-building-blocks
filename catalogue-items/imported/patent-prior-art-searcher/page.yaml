@@ -28,7 +28,7 @@ you_give:
   - A Lens.org API key for the citation step, free for 1,000 queries a month (optional)
 you_get:
   - A Word report with a verdict for your goal
-  - The closest patents, ranked, with the key claim text
+  - The closest patents dated before your filing date, ranked, with the passages and claims that matter
   - A map of who files in the field, where it applies
   - Related patents grouped into families, with countries covered
   - A source link for every patent cited
@@ -56,7 +56,7 @@ output_sample:
     - name: Verdict
       contains: A plain call on the goal you chose, such as how new the idea looks or where the risk sits. A clear verdict means no close hit was found in this search. It does not mean you are safe to ship or file.
     - name: Ranked closest art
-      contains: The nearest patents in order, with the claim text that matters and why each one ranks where it does.
+      contains: The nearest patents in order, with their dates, the passages and independent claims that matter, and why each one ranks where it does.
     - name: Landscape
       contains: Who files in this field, grouped by patent class, with the main trends.
     - name: Family and country coverage

@@ -7,7 +7,7 @@ description: Use when you need an offer that persuades one specific buyer and st
 
 You build up to three offers, each around a named buyer and the doubt that holds them back, with the terms, the wording and a profit check. The idea underneath is a value sum: buyers value an offer more when the result is bigger and more certain, and when it comes sooner and with less effort. Price is one more lever, and usually the last one to pull.
 
-Use [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder) instead when you already have many delivery options and need them cut to the ones worth keeping and grouped into named bundles.
+Use [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder) instead when you already have many delivery options and need them cut to the ones worth keeping and grouped into named bundles.
 
 Not for a quick list of offers from what you already have (brainstorm with your AI, then come back to build the best one), or a one-off sale with no repeat buyers (set the price yourself and check your costs in a spreadsheet).
 
@@ -86,9 +86,9 @@ For each offer (up to three, each on a different lever):
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 - The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
+- The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - **Write the landing page** with the [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer). It takes the offer.
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

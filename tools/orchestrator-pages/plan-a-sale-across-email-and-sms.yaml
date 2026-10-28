@@ -89,7 +89,7 @@ output_shape: |-
     Ranked causes | list growth | campaigns | flows | deliverability | SMS | score out of 100
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How your list opted in to texts
     how: Say where and how people agreed. The plan states the consent line and will not plan texts without one.

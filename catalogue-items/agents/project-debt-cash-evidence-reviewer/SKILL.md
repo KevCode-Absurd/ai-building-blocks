@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record and earlier source versions. For an availability payment: the certified gross payment, the approved deduction, the contract deduction cap, other approved charges and operating cash costs for the period.
 
-**The pieces it uses:** the [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow (the governing method) and the [Availability payment deduction checker](https://useaiblocks.com/skills/availability-payment-deduction-checker) (only when a changed receipt is an availability payment). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Project debt repayment modeler](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow (the governing method) and the [Project availability payment deduction checker](https://useaiblocks.com/skills/availability-payment-deduction-checker) (only when a changed receipt is an availability payment). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the linked workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -75,6 +75,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - **Test your covenant** with the [Debt service covenant evidence reviewer](https://useaiblocks.com/skills/debt-service-covenant-evidence-reviewer).
-- **Check the reserve account and payment order** with the [Project reserve evidence reviewer](https://useaiblocks.com/skills/project-reserve-evidence-reviewer).
-- **Run a toll traffic scenario** with the [Connect toll cash to debt repayment](https://useaiblocks.com/workflows/connect-toll-operating-cash-to-debt-repayment) workflow.
+- **Check the reserve account and payment order** with the [Project debt reserve and payment reviewer](https://useaiblocks.com/skills/project-reserve-evidence-reviewer).
+- **Run a toll traffic scenario** with the [Toll road debt repayment modeller](https://useaiblocks.com/workflows/connect-toll-operating-cash-to-debt-repayment) workflow.
 Nothing here moves money or contacts a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

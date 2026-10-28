@@ -14,6 +14,23 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Pdp copy** (yours): product page copy: title, benefits, details, FAQ, proof blocks.
+
+**Makes it better (optional):**
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for pdp copy, product photos, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## 一、能力边界
 
 | 能做 | 说明 |
@@ -154,3 +171,11 @@ node scripts/gen.mjs --task cross-border-localize --brand examples/brand.yaml \
 - **无文字底图是资产**。先做好它，各区域再派生，比每个区域从头生成省得多。
 - **模特选型跟着市场走**。北美站需要多元面孔，这不是政治正确，是转化率问题。
 - **厘米数比什么文案都管用**。跨境退货成本高，尺码信息越具体越省钱。
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the landing page** with the [Product listing writer](https://useaiblocks.com/skills/product-listing-writer).
+- The [Product listing completeness checker](https://useaiblocks.com/skills/listing-completeness-scorer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

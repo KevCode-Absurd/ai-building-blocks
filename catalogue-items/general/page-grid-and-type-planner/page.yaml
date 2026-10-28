@@ -89,7 +89,7 @@ output_shape: |
   Columns: <n> | Rows or modules: <n> | Gutter: <n>
 
   TYPE
-  Family: <one typeface family> | Sizes: <size 1>, <size 2>
+  Family: <one typeface family, or two at most> | Sizes: <size 1>, <size 2>
   Weights used: <light, regular, bold>
 
   ORDER AND WHITE SPACE
@@ -120,7 +120,7 @@ judge:
   - "Every element sits on the grid."
   - "White space is planned, not left over."
   - "A new reader could say what the page is for in five seconds."
-  - "Only one typeface family is chosen."
+  - "One typeface family is chosen, or two at most, from a short list."
 
 test:
   - "Squint at the layout. The first thing you see should be the one you planned."
@@ -135,7 +135,7 @@ improve:
   - "Pair it with \"Visual system rules writer\" for colour and sign rules."
 
 before: []
-next: [brand-style-guide-writer, colour-contrast-checker]
+next: [visual-system-rules-writer, colour-contrast-checker]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Setting a grid and type list from rules is text and number work any strong chat AI does."}

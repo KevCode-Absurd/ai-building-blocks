@@ -56,7 +56,7 @@ how_it_works:
   - title: Sets sample sizes
     text: Rules of thumb from the sources. Popups need 3,000 to 5,000 impressions per variant and at least 15 days. Flows need at least 1,000 recipients per variant. Campaigns use a manual 50/50 split.
   - title: Picks the winning metric
-    text: Placed order rate or revenue per recipient. Not opens or clicks, except clicks in send-time tests.
+    text: Placed order rate or revenue per recipient, set before the test starts. Never opens or clicks, even for send-time tests.
   - title: Ranks the tests
     text: Popup, flow and campaign tests each have an order of impact, based on the sources.
   - title: Sets the rule for calling it
@@ -68,13 +68,14 @@ output_shape: |
   TEST QUEUE
   1. <what changes> in <flow, campaign or popup>
      Hypothesis: <change> will <effect> because <reason>
-     Volume: <n> per month | Sample: <n> per variant | Run: <days>
-     Set-up: <split, metric, tool settings>
-     Call it when: <rule>
+     Volume: <n> per month | Sample: <n> per variant (<rule of thumb | calculated>) | Run: <days>
+     Primary measure: <placed order rate | revenue per recipient>, set before launch
+     Set-up: <split, tool settings>
+     Call it when: <rule, using the primary measure only>
   2. ...
 
   WINNING METRIC
-  <placed order rate | revenue per recipient>; clicks only for <send-time tests>
+  <placed order rate | revenue per recipient> for every test, set before launch; clicks and opens are secondary reads only
 
   SKIP FOR NOW
   <test> | why: <volume too small | gain too small | flow recipients MISSING>
@@ -95,7 +96,7 @@ output_sample:
     - "An email tool with A/B testing, such as Klaviyo"
   output:
     - {name: "Test queue", contains: "Ranked tests, each with a hypothesis, sample size, run time, set-up notes and a rule for calling it."}
-    - {name: "Winning metric", contains: "Placed order rate or revenue per recipient, and when clicks are allowed instead."}
+    - {name: "Winning metric", contains: "Placed order rate or revenue per recipient, chosen before launch. Clicks and opens are shown but never decide."}
     - {name: "Skip for now", contains: "Tests your volume can't support yet, each with the reason."}
     - {name: "Cadence", contains: "How often to test and where to record each result."}
     - {name: "Checks missed and missing", contains: "Any check it could not run and the numbers that would sharpen the plan."}
@@ -106,7 +107,7 @@ tweaks:
   - what: Your monthly revenue
     how: Stores above about $100,000 a month can test every 2 to 4 weeks. Smaller stores need longer, and button colour tests only pay off at multi-million revenue.
   - what: Winning metric
-    how: Say what you can read in your tool. Placed order rate is best. Revenue per recipient is next. Open rate is the last choice and is distorted by privacy features.
+    how: Say what you can read in your tool. Placed order rate is best. Revenue per recipient is next. Opens and clicks never decide a test, because privacy features distort them.
   - what: Your list size
     how: On a small list, test popups and campaign send time first, since they have the most data.
 

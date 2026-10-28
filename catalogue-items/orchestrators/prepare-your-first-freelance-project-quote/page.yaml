@@ -106,6 +106,7 @@ works_best_with:
   inputs:
     - A past quote or a template you like, so the draft follows your layout.
     - A named person who will check the contract terms.
+next: [three-tier-price-ladder-drafter, prepare-a-client-scope-change-brief]
 terms:
   - term: Scope
     meaning: The exact list of what you will build and what you will not.

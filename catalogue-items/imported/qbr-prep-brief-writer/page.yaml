@@ -32,7 +32,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Type the customer's name. Say if you want a health check or QBR prep.
   - If your AI is connected to your CRM, email and calendar, it reads them. If not, paste the account history or upload a file with the customer's row.
-  - Check the health table first. Look at where each number came from.
+  - "The skill was written for Claude with connectors. In ChatGPT or Gemini, or with no connectors, ignore the parts about artifacts, Pages, Slides and connector permissions: ask for the brief as plain text, and paste in what it would have read."
+  - "It mentions three helper skills that are not included: renewal-radar, expansion-whitespace and schedule-meeting. Without them, give it the renewal date and any expansion ideas yourself, and book the meeting by hand."
+  - Check the health table first. Look at where each number came from. Ask it to state the rule behind each green, yellow or red, such as no meeting in 60 days is red, and change any rule that does not fit your business.
   - Anything marked not visible was not available to your AI. Add it yourself before the meeting.
   - Review any suggested CRM updates. Apply the ones you agree with.
 output_sample:

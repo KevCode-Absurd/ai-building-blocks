@@ -7,7 +7,7 @@ description: Use when a scene or dialogue only explains things and nobody is try
 
 A scene pulls the reader when each person is trying to get something and words are their tool. This skill rebuilds a scene that only explains. It works for stories, plays, sales and training role plays, and scripts for video or audio.
 
-**When not to use it:** plain factual copy such as a help page (use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor)), or a scene that already works and only needs line edits (use the [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker)). Paste the whole scene in full with speaker labels, so each line can be matched to a want. The "Before you start" text below says "draft" and mentions ads and the Draft shortening editor. Ignore that: the only required input is the scene, and nothing needs to be shortened first.
+**When not to use it:** plain factual copy such as a help page (use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor)), or a scene that already works and only needs line edits (use the [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker)). Paste the whole scene in full with speaker labels, so each line can be matched to a want. In Before you start, read "a draft" as this scene. It is the only required input, and nothing needs shortening first. A long piece with several scenes works best one scene at a time.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

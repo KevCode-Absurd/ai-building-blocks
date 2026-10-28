@@ -4,6 +4,10 @@ Supply Chain Analyzer - Core Calculator
 Supply Chain Analyzer - Core Calculator
 
 Purpose: Calculate key metrics and diagnose bottlenecks
+
+NOTE (AI Blocks): the thresholds in BENCHMARKS are the original author's unsourced
+starting points. They are planning lines, not proof that a store is healthy or in
+danger. Replace them with the user's own targets, and say so in any report.
 Version: 1.0.0
 """
 
@@ -14,13 +18,14 @@ from enum import Enum
 
 
 class HealthStatus(Enum):
-    HEALTHY = "healthy"
-    WARNING = "warning"
-    DANGER = "danger"
+    # Position against an unsourced planning line, not a verdict on the store
+    HEALTHY = "within"
+    WARNING = "near"
+    DANGER = "outside"
 
 
 # ============================================================
-# Benchmark Configuration (customizable)
+# Planning lines (unsourced starting points from the original author; replace with your own targets)
 # ============================================================
 
 BENCHMARKS = {
@@ -165,8 +170,11 @@ class SupplyChainInput:
     daily_sales: Optional[float] = None      # DayAverage sales
     current_inventory: Optional[int] = None  # CurrentInventoryquantity
     
+    # Days from a sale until the money reaches your bank (your payment provider's payout schedule)
+    payout_days: Optional[int] = None
+
     # Platform
-    platform: str = "amazon"
+    platform: str = "shopify"
 
 
 @dataclass
@@ -233,7 +241,7 @@ def calculate_metrics(data: SupplyChainInput) -> List[MetricResult]:
     """
     Calculateplace has Key Metrics
     """
-    benchmarks = BENCHMARKS.get(data.platform, BENCHMARKS["amazon"])
+    benchmarks = BENCHMARKS.get(data.platform, BENCHMARKS["shopify"])
     metrics = []
     
     # 1. Gross Margin
@@ -284,11 +292,13 @@ def calculate_metrics(data: SupplyChainInput) -> List[MetricResult]:
     ))
     
     # 5. CashweeksconvertweeksPeriod
+    if data.payout_days is None:
+        raise ValueError("payout_days is needed: days from a sale until the money reaches your bank. Check your payment provider's payout schedule.")
     cash_cycle = (
         data.production_days + 
         data.shipping_days + 
         data.inventory_days + 
-        14  # AmazonPayment Cycle
+        data.payout_days
         - data.supplier_payment_days
     )
     metrics.append(MetricResult(
@@ -344,15 +354,15 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
     DiagnoseBottleneckandSort
     """
     bottlenecks = []
-    benchmarks = BENCHMARKS.get(data.platform, BENCHMARKS["amazon"])
+    benchmarks = BENCHMARKS.get(data.platform, BENCHMARKS["shopify"])
     
     # Check each Metrics
     for metric in metrics:
         if metric.status == HealthStatus.DANGER:
-            severity = "High"
+            severity = "Outside planning line"
             priority = 1
         elif metric.status == HealthStatus.WARNING:
-            severity = " in "
+            severity = "Near planning line"
             priority = 2
         else:
             continue  # HealthyNot addBottleneck
@@ -363,7 +373,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
                 priority=priority,
                 severity=severity,
                 title="Inventoryweeksconvert slow ",
-                problem=f"Current {metric.value} days vs Recommendation <{benchmarks['inventory_days']['healthy']} days",
+                problem=f"Current {metric.value} days vs planning line (unsourced) <{benchmarks['inventory_days']['healthy']} days",
                 impact="CapitalOccupyIncrease，MayGeneratePeriodStoragefee",
                 suggestion="1. Clear slow-movingSKU 2. Set safetyInventoryFormula 3.  small BatchHigh frequencyRestock"
             ))
@@ -372,7 +382,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
                 priority=priority,
                 severity=severity,
                 title="Cash Cycle ",
-                problem=f"Current {metric.value} days vs Recommendation <{benchmarks['cash_cycle']['healthy']} days",
+                problem=f"Current {metric.value} days vs planning line (unsourced) <{benchmarks['cash_cycle']['healthy']} days",
                 impact="CapitalUtilizeeffectRate low ，ImpactExpansionCapability",
                 suggestion="1. StriveSupplierPayment terms 2. shrink short Inventorydays 3. ConsiderSupply ChainFinance"
             ))
@@ -381,7 +391,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
                 priority=priority,
                 severity=severity,
                 title="LogisticsCost High",
-                problem=f"Current {metric.value}% vs Recommendation <{benchmarks['shipping_ratio']['healthy']*100}%",
+                problem=f"Current {metric.value}% vs planning line (unsourced) <{benchmarks['shipping_ratio']['healthy']*100}%",
                 impact="ErodeProfitempty",
                 suggestion="1. Sea freightReplaceAir freight 2. LCL/Full containerOptimization 3. Compare multiple freight forwarders"
             ))
@@ -390,7 +400,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
                 priority=priority,
                 severity=severity,
                 title="Gross Marginbias low ",
-                problem=f"Current {metric.value}% vs Recommendation >{benchmarks['gross_margin']['healthy']*100}%",
+                problem=f"Current {metric.value}% vs planning line (unsourced) >{benchmarks['gross_margin']['healthy']*100}%",
                 impact="Risk resistanceCapabilityWeak，difficult to SupportAdvertisingInput",
                 suggestion="1. Raise price or Optimizationlistingconvert 2. reduce low ProcurementCost 3. OptimizationProductCombo"
             ))
@@ -399,7 +409,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
                 priority=priority,
                 severity=severity,
                 title="Net Margin  low ",
-                problem=f"Current {metric.value}% vs Recommendation >{benchmarks['net_margin']['healthy']*100}%",
+                problem=f"Current {metric.value}% vs planning line (unsourced) >{benchmarks['net_margin']['healthy']*100}%",
                 impact="ProfitCapabilityWeak，BusinessCannotSustain",
                 suggestion="1. OptimizationAdvertisingACOS 2. ControlStoragefee 3. Increase average order value"
             ))
@@ -408,7 +418,7 @@ def diagnose_bottlenecks(data: SupplyChainInput, metrics: List[MetricResult]) ->
     if data.has_long_term_storage:
         bottlenecks.append(BottleneckItem(
             priority=2,
-            severity=" in ",
+            severity="Near planning line",
             title="ExistPeriodStoragefee",
             problem="PartInventorysuper 365days",
             impact="amount outside CostExpenditure，CapitalWaste",
@@ -434,11 +444,11 @@ def analyze(data: SupplyChainInput) -> AnalysisResult:
     warning_count = sum(1 for m in metrics if m.status == HealthStatus.WARNING)
     
     if danger_count > 0:
-        summary = f"Found {danger_count} CriticalIssueNeedImmediatelyProcess"
+        summary = f"{danger_count} measures are outside the planning lines (unsourced starting points; check them against your own targets)"
     elif warning_count > 0:
-        summary = f"Found {warning_count} potential in IssueRecommendationOptimization"
+        summary = f"{warning_count} measures are near the planning lines (unsourced starting points; check them against your own targets)"
     else:
-        summary = "Supply ChainOverallHealthy，CanAttentionSustainOptimization"
+        summary = "No measure is outside the planning lines. These lines are unsourced starting points, not proof the store is healthy."
     
     return AnalysisResult(
         metrics=metrics,
@@ -460,7 +470,7 @@ def format_metrics_table(metrics: List[MetricResult]) -> str:
         HealthStatus.DANGER: "🔴"
     }
     
-    lines = ["| Metrics | Value | Benchmark | Status |", "|------|------|------|------|"]
+    lines = ["| Metrics | Value | Planning line (unsourced) | Position |", "|------|------|------|------|"]
     for m in metrics:
         icon = status_icons[m.status]
         lines.append(f"| {m.name} | {m.value}{m.unit} | {m.benchmark}{m.unit} | {icon} |")
@@ -488,7 +498,7 @@ def format_cost_breakdown(breakdown: Dict[str, float]) -> str:
 def format_bottlenecks(bottlenecks: List[BottleneckItem]) -> str:
     """FormatBottleneckcolumnTable"""
     if not bottlenecks:
-        return "✅ No obvious bottleneck found"
+        return "No measure is outside the planning lines. That is not proof there is no bottleneck."
     
     lines = []
     priority_icons = {1: "🥇", 2: "🥈", 3: "🥉"}
@@ -542,31 +552,18 @@ def format_full_report(result: AnalysisResult) -> str:
 def main():
     """CLI Entry Point - use at Test"""
     import sys
-    
-    # ExampleData
-    test_data = SupplyChainInput(
-        product_cost=8.00,
-        supplier_payment_days=0,
-        production_days=25,
-        shipping_cost_per_unit=0.75,
-        shipping_days=35,
-        selling_price=25.00,
-        fba_fee=5.00,
-        storage_fee=0.50,
-        ad_spend_ratio=0.10,
-        inventory_days=60,
-        has_long_term_storage=True,
-        platform="amazon"
-    )
-    
-    # If JSON input provided
-    if len(sys.argv) > 1:
-        try:
-            input_json = json.loads(sys.argv[1])
-            test_data = SupplyChainInput(**input_json)
-        except Exception as e:
-            print(f"Error parsing input: {e}")
-            sys.exit(1)
+
+    # No built-in sample figures: a report must come from the user's own numbers.
+    if len(sys.argv) < 2:
+        print("Usage: python calculator.py '<JSON with your own figures>'", file=sys.stderr)
+        print("The planning lines in BENCHMARKS are unsourced starting points. Replace them with your own targets.", file=sys.stderr)
+        sys.exit(2)
+    try:
+        input_json = json.loads(sys.argv[1])
+        test_data = SupplyChainInput(**input_json)
+    except Exception as e:
+        print(f"Error parsing input: {e}")
+        sys.exit(1)
     
     # ExecuteAnalyze
     result = analyze(test_data)

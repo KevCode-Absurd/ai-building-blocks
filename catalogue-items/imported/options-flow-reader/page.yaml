@@ -12,7 +12,7 @@ explain: |
   For each ticker it sorts contracts into real calls, lottery calls, real puts and lottery puts. Real means a strike within 5 percent of the stock price and meaningful premium. You get a corrected ratio, the share of volume that is lottery tickets and a breakdown by expiry. It flags shifts such as a ratio change above 0.3, open interest jumps above 30 percent or volatility spikes above 20 percent against a recent baseline. Needs a Polygon.io API key. This is analysis, not financial advice.
 when:
   - A stock's put-call ratio looks extremely bullish and you doubt it.
-  - You want to tell hedging from cheap speculation.
+  - You want to see how much volume is cheap far out-of-the-money contracts.
   - You track a watchlist and want alerts on unusual options activity.
   - You compare options flow across sectors before an event.
 not_for:

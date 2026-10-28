@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
   - Paste the full text of the skill file (SKILL.md, about 2,400 words) as your first message. The references folder, with one file per principle, is optional. The review works from SKILL.md alone, but it will not see those extra notes.
-  - Paste the code you want reviewed. A few files, one module or a design doc gives the most reliable score. A whole large codebase will not fit, so pick the part you worry about.
+  - Paste the code you want reviewed. A few files, one module or a design doc gives the most reliable score. A whole large codebase will not fit, so pick the part you worry about. As a rough guide, keep each review to a few files or under about 1,000 lines. For more, review one module at a time and compare the scores.
   - Add the language, the framework and your biggest worry if you have them.
   - Read the score and the failing checks first. Then fix the ones that cost the most effort.
   - Ask your AI to explain any fix you do not follow, and run the review again after you change the code.

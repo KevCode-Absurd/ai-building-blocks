@@ -33,7 +33,7 @@ you_get:
   - Steps to write data back
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page into the chat.
-  - Tell your AI your workspace address, how you sign in, and whether you use a cluster or a SQL Warehouse.
+  - Tell your AI your workspace address, how you sign in, and whether you use a cluster or a SQL Warehouse. Also give your MATLAB release and your local Python version. The Spark route needs Python 3.10 to 3.12 (3.11 or 3.12 for serverless), matched to your Databricks runtime.
   - Say how big your data is, so your AI can pick Spark or JDBC for you.
   - Run the MATLAB code your AI gives you on your own computer. Your AI cannot run MATLAB in a chat, so paste back any error you see.
   - Check that the test read works before you build on it. Never paste your token into the chat.

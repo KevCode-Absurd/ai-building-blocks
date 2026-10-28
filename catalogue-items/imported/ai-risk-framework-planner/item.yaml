@@ -30,4 +30,4 @@ credits:
   - title: nist-ai-rmf skill
     by: Hemant Naik
     url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nist-ai-rmf/skills/nist-ai-rmf
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and rewrote the framework tables and citations to match the official NIST AI RMF Core (19 categories, 72 subcategories), and marked the cross-framework maps and maturity tiers as unofficial. We added Before you start and After this sections that link to other AI Blocks steps.

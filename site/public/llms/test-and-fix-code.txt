@@ -1,6 +1,6 @@
 # Test and fix code: AI Blocks
 
-> 148 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 155 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility auditor](https://useaiblocks.com/agents/agency-testing-accessibility-auditor): Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list.
 - [Agent run evidence auditor](https://useaiblocks.com/skills/agent-run-evidence-auditor): Share logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
@@ -17,6 +17,8 @@
 - [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder): Share route code and expected behaviour. Get integration and contract test files with fixtures, error cases and open coverage gaps.
 - [App test coverage reviewer](https://useaiblocks.com/skills/test-coverage-gap-finder): Share your app. Get every page, part and endpoint listed with what is tested and what is not.
 - [Application performance optimizer](https://useaiblocks.com/skills/speed-tuner): Describe a slow app or feature. Get its bottleneck measured, fixed, and measured again.
+- [Browser test migrator](https://useaiblocks.com/skills/browser-test-migrator): Move your Cypress or Selenium tests to Playwright, one file at a time. It sizes the job first, then converts and checks each file.
+- [BrowserStack test runner](https://useaiblocks.com/skills/browserstack-test-runner): Set up Playwright tests for BrowserStack and view test status, browsers, videos, and logs.
 - [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer): Check code or pull request changes for bugs and security risks, with fixes tied to lines.
 - [Bug cause investigator](https://useaiblocks.com/skills/bug-cause-investigator-team): Turn bug reports and logs into evidence-backed likely causes and steps to test them.
 - [Bug diagnoser](https://useaiblocks.com/skills/bug-diagnoser): Share the failure, expected result and project access. Build a focused reproduction, test possible causes and check a proposed fix.
@@ -48,6 +50,7 @@
 - [Electron desktop app tester](https://useaiblocks.com/skills/desktop-app-tester): Run an Electron app with test data. Drive one window, inspect screenshots and logs, and report what actually worked.
 - [Engineering principle code reviewer](https://useaiblocks.com/skills/famous-engineer-code-reviewer): Give it a code diff. Get findings tied to sourced engineering principles, with confidence and limits.
 - [Enzyme to React Testing Library migrator](https://useaiblocks.com/skills/copilot-react18-enzyme-to-rtl): Share an Enzyme test and component. Get a React Testing Library test based on what users see and do.
+- [Error and log debugger](https://useaiblocks.com/skills/error-and-log-debugger): Paste an error, log or stack trace into this error and log debugger. You get the root cause, a small fix, a test and steps to confirm it.
 - [Failed test repairer](https://useaiblocks.com/agents/test-failure-repair-loop): Fix one group of test failures at a time. Re-run meaningful checks and stop at clear limits without weakening tests.
 - [Failing test fixer](https://useaiblocks.com/skills/failing-test-fixer): Share a broken test suite. Get failures grouped by cause and fixed one group at a time.
 - [Failure drill planner](https://useaiblocks.com/skills/failure-drill-planner): Name a system and fault. Get a bounded drill plan with limits, checks and abort steps.
@@ -61,6 +64,8 @@
 - [Git pre-commit hook builder](https://useaiblocks.com/skills/pre-commit-hook-setter): Share your JavaScript project. Set up Husky formatting checks and the type checks or tests your project provides.
 - [GitHub Actions failure diagnoser](https://useaiblocks.com/skills/failed-workflow-diagnoser): Find why your GitHub Actions workflow failed. Paste the log and workflow file, and get the root cause with a diff that fixes it.
 - [GitHub check failure fixer](https://useaiblocks.com/skills/ci-failure-fixer): Share a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+- [GPU code speed tuner](https://useaiblocks.com/skills/gpu-code-speed-tuner): Speed up MATLAB code for GPU Coder. Get faster generated CUDA code, timed after each change, with results checked against your original.
+- [Hostile code reviewer](https://useaiblocks.com/skills/hostile-code-reviewer): Get a hostile code review of your changes from three angles: breakage, confusion and security. Findings are ranked, with a clear merge verdict.
 - [Human approval review planner](https://useaiblocks.com/skills/human-review-gate): Get a human review gate for AI work: a one-page review, saved feedback, and a sign-off record before anything counts as done.
 - [Legacy code cleanup planner](https://useaiblocks.com/skills/old-code-paydown-guide): Share your codebase and trouble spots. Get a phased cleanup plan, testing log and tracker you can resume.
 - [Library change finder](https://useaiblocks.com/skills/library-change-finder): Point it at a Python project. Get newer library changes and where your code may be affected.
@@ -81,6 +86,7 @@
 - [Old MATLAB code updater](https://useaiblocks.com/skills/old-matlab-code-updater): Share the code, MATLAB release and warnings. Replace removed or discouraged calls, then check that the new code keeps the intended behaviour.
 - [Open-source contribution preparer](https://useaiblocks.com/skills/open-source-contribution): Share an open-source issue. Get a checked fix, rerun tests and a drafted post held for your approval.
 - [Parallel code reviewer](https://useaiblocks.com/skills/parallel-code-reviewer): Share a change and its purpose. Get ranked findings from four parallel reviewers, with a local review for small changes.
+- [Parfor error fixer](https://useaiblocks.com/skills/parfor-error-fixer): Fix a parfor loop that MATLAB won't run. Paste the loop or error and get the cause plus a fixed parfor loop, checked with MATLAB's code checker.
 - [Performance benchmark planner](https://useaiblocks.com/agents/agency-testing-performance-benchmarker): Plan a repeatable speed and load test for your site or API. Get baselines, a test script, bottlenecks and ranked fixes from your own numbers.
 - [Persistent bug debugger](https://useaiblocks.com/skills/fix-loop-breaker): Share a bug that keeps failing and its evidence. Get a bounded repair, verification log and rollback check, or a clear stop decision.
 - [Pester test migration planner](https://useaiblocks.com/skills/copilot-pester-migration): Share your PowerShell tests and target Pester version. Get migration edits and checks that protect test behavior.
@@ -90,6 +96,7 @@
 - [Playwright test setup builder](https://useaiblocks.com/skills/browser-test-setup-builder): Use your project files to build a Playwright config, sample tests, folders, and test scripts.
 - [Playwright test writer](https://useaiblocks.com/skills/browser-test-writer): Turn a user story or feature and project code into Playwright tests with error cases.
 - [Postman test pipeline writer](https://useaiblocks.com/skills/api-test-pipeline-writer): Share a Postman collection and build platform. Get a pipeline file to run Newman tests, report results and flag failures.
+- [PowerShell pitfall checker](https://useaiblocks.com/skills/powershell-pitfall-checker): Check a Windows PowerShell script for common errors and get fixes with clear reasons.
 - [Production error summarizer](https://useaiblocks.com/skills/production-error-summarizer): Summarize recent production errors from Sentry. Ask what broke and get the top open issues with level, priority and key details in plain words.
 - [Prototype production readiness planner](https://useaiblocks.com/skills/prototype-to-production-guide): Share a working prototype. Get tests, code cleanup and a staged readiness plan for real users.
 - [Pull request comment repairer](https://useaiblocks.com/skills/review-comment-fixer): Turn the review comments on your open GitHub pull request into a numbered list. Pick which to fix and your AI changes only those.

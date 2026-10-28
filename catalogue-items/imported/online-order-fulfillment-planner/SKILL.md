@@ -7,6 +7,23 @@ description: When the user wants to optimize e-commerce fulfillment, online orde
 
 You are an expert in e-commerce fulfillment operations and direct-to-consumer logistics. Your goal is to help online retailers optimize order processing, warehouse operations, shipping strategies, and returns management to deliver fast, accurate, cost-effective fulfillment while maximizing customer satisfaction.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** The skill is mostly questions and reasoning, so no special tool is needed.
+- **A spreadsheet:** Lets you check the sums behind each saving.
+<!-- /needs -->
+
 ## How to use this skill (read first)
 
 **What you hand back:** one fulfillment plan for the user's online store, in the layout under "Output Format" below.
@@ -573,8 +590,8 @@ class ShippingOptimizer:
         # Get closest fulfillment center
         fc = self._get_closest_fc(customer_zip)
 
-        # Get shipping zone
-        zone = self._get_shipping_zone(fc['zip'], customer_zip)
+        # Get shipping zone (from the order if known, else the carrier zone chart)
+        zone = order.get('zone') or self._get_shipping_zone(fc['zip'], customer_zip)
 
         # Get rates from all carriers
         carrier_options = []
@@ -632,77 +649,113 @@ class ShippingOptimizer:
 
         return dim_weight
 
-    def optimize_packaging(self, items):
+    @staticmethod
+    def _fits(item_dims, box_dims, padding_in):
         """
-        Select optimal packaging to minimize dimensional weight
+        True if a rigid box-shaped item fits inside a box, turned any way
+        but kept square to the box sides, with padding on every side.
+        Volume alone is not enough: a 40 x 1 x 1 inch rod has a small volume
+        but does not fit in an 8 x 6 x 4 box.
+        """
+        need = sorted(d + 2 * padding_in for d in item_dims)
+        have = sorted(box_dims)
+        return all(n <= h for n, h in zip(need, have))
 
-        Try to fit in smallest box possible
+    def optimize_packaging(self, items, box_sizes=None, padding_in=0.5):
+        """
+        Select the smallest box that the items physically fit in
+
+        items: list of dicts with 'length', 'width', 'height' in inches
+        box_sizes: the user's own boxes; the defaults below are illustrations
+        padding_in: packing material on each side, in inches
+
+        Multi-item orders are checked by stacking the items flat on top of
+        each other. That layout always fits if the check passes, but a
+        cleverer layout may fit a smaller box, so a test pack can do better.
+        Returns None for the box when no box fits, instead of guessing.
         """
 
-        # Standard box sizes (length x width x height in inches)
-        box_sizes = [
-            {'name': 'Small', 'dims': (8, 6, 4), 'cost': 0.50},
-            {'name': 'Medium', 'dims': (12, 10, 6), 'cost': 0.75},
-            {'name': 'Large', 'dims': (16, 12, 10), 'cost': 1.00},
-            {'name': 'X-Large', 'dims': (20, 16, 12), 'cost': 1.50}
-        ]
+        # Standard box sizes (length x width x height in inches) - illustration only
+        if box_sizes is None:
+            box_sizes = [
+                {'name': 'Small', 'dims': (8, 6, 4), 'cost': 0.50},
+                {'name': 'Medium', 'dims': (12, 10, 6), 'cost': 0.75},
+                {'name': 'Large', 'dims': (16, 12, 10), 'cost': 1.00},
+                {'name': 'X-Large', 'dims': (20, 16, 12), 'cost': 1.50}
+            ]
 
-        # Calculate total item volume (simplified)
-        total_item_volume = sum(
-            item['length'] * item['width'] * item['height']
-            for item in items
+        item_dims = [sorted((item['length'], item['width'], item['height'])) for item in items]
+
+        # Stack items flat: smallest side up, so heights add up
+        stacked = (
+            max(d[2] for d in item_dims),   # longest side
+            max(d[1] for d in item_dims),   # middle side
+            sum(d[0] for d in item_dims)    # stacked heights
         )
 
-        # Add 20% for packing material
-        required_volume = total_item_volume * 1.2
-
-        # Find smallest box that fits
-        for box in box_sizes:
-            box_volume = box['dims'][0] * box['dims'][1] * box['dims'][2]
-
-            if box_volume >= required_volume:
-                dim_weight = self.calculate_dimensional_weight(*box['dims'])
-
+        # Smallest box (by volume) that every item fits and the stack fits
+        for box in sorted(box_sizes, key=lambda b: b['dims'][0] * b['dims'][1] * b['dims'][2]):
+            if all(self._fits(d, box['dims'], padding_in) for d in item_dims) and \
+               self._fits(stacked, box['dims'], padding_in):
                 return {
                     'box_name': box['name'],
                     'dimensions': box['dims'],
                     'box_cost': box['cost'],
-                    'dimensional_weight': dim_weight
+                    'dimensional_weight': self.calculate_dimensional_weight(*box['dims']),
+                    'fit_check': 'items stacked flat with padding'
                 }
 
-        # If no box fits, need X-Large
-        box = box_sizes[-1]
-        dim_weight = self.calculate_dimensional_weight(*box['dims'])
-
+        # No box fits: say so. Never return a box the items cannot go in.
         return {
-            'box_name': box['name'],
-            'dimensions': box['dims'],
-            'box_cost': box['cost'],
-            'dimensional_weight': dim_weight
+            'box_name': None,
+            'dimensions': None,
+            'box_cost': None,
+            'dimensional_weight': None,
+            'fit_check': 'no listed box fits; use a custom box, split the order, or test-pack by hand'
         }
 
-    def calculate_shipping_budget(self, forecast_orders, target_margin_pct=30):
+    def calculate_shipping_budget(self, forecast_orders, gross_margin_pct,
+                                  target_margin_pct=30):
         """
-        Calculate shipping budget to maintain margin targets
+        Lowest order value at which you can pay for shipping and still keep
+        your target margin. Used for free shipping threshold decisions.
 
-        Used for free shipping threshold decisions
+        gross_margin_pct: the user's margin after product cost and any other
+        per-order costs, BEFORE shipping (for example 50 means 50%).
+        Without it the margin cannot be checked, so it is required.
+
+        Rule: order_value x gross_margin - shipping >= order_value x target_margin
+        so    order_value >= shipping / (gross_margin - target_margin)
+        Worked case: gross margin 50%, target 30%, shipping $8
+        -> 8 / 0.20 = $40. Check: a $40 order makes $20, minus $8 shipping
+        leaves $12, which is 30% of $40.
         """
 
         avg_order_value = forecast_orders['order_value'].mean()
         avg_shipping_cost = forecast_orders['shipping_cost'].mean()
 
-        # Calculate breakeven for free shipping
-        # Need to absorb shipping cost while maintaining margin
+        gm = gross_margin_pct / 100
+        tm = target_margin_pct / 100
 
-        # If AOV > X, can afford free shipping
-        min_aov_for_free_shipping = avg_shipping_cost / (1 - target_margin_pct/100)
+        if gm <= tm:
+            # Margin before shipping is already at or below target:
+            # no order value can absorb shipping and still hit the target.
+            min_aov_for_free_shipping = None
+        else:
+            min_aov_for_free_shipping = avg_shipping_cost / (gm - tm)
 
         return {
             'avg_order_value': avg_order_value,
             'avg_shipping_cost': avg_shipping_cost,
+            'gross_margin_pct': gross_margin_pct,
             'target_margin_pct': target_margin_pct,
             'min_aov_for_free_shipping': min_aov_for_free_shipping,
-            'recommended_free_ship_threshold': round(min_aov_for_free_shipping * 1.2, 0)  # 20% buffer
+            # Rounded up to a whole dollar. Average shipping hides costly orders,
+            # so check the threshold against your real cost spread too.
+            'recommended_free_ship_threshold': (
+                None if min_aov_for_free_shipping is None
+                else float(np.ceil(min_aov_for_free_shipping))
+            )
         }
 
     def _get_closest_fc(self, customer_zip):
@@ -712,8 +765,9 @@ class ShippingOptimizer:
 
     def _get_shipping_zone(self, origin_zip, dest_zip):
         """Determine shipping zone (1-8)"""
-        # Simplified - would use actual zone lookup
-        return np.random.randint(2, 7)
+        # Look the zone up in the carrier's own zone chart for this origin.
+        # Never guess or pick a random zone: it changes the rate and the carrier choice.
+        raise NotImplementedError("Add a zone lookup from your carrier's zone chart")
 
     def _lookup_rate(self, carrier, service, zone, weight):
         """Look up shipping rate"""
@@ -742,7 +796,8 @@ order = {
     'ship_to_zip': '10001',
     'weight_lbs': 3.5,
     'dimensions': (10, 8, 6),
-    'service_level': 'standard'
+    'service_level': 'standard',
+    'zone': 8  # illustration: read the real zone from your carrier's zone chart
 }
 
 shipping_opt = ShippingOptimizer({}, {})
@@ -758,16 +813,24 @@ items = [
     {'length': 5, 'width': 4, 'height': 3}
 ]
 packaging = shipping_opt.optimize_packaging(items)
-print(f"\nOptimal packaging: {packaging['box_name']}")
-print(f"Dimensional weight: {packaging['dimensional_weight']:.1f} lbs")
+if packaging['box_name']:
+    print(f"\nOptimal packaging: {packaging['box_name']}")
+    print(f"Dimensional weight: {packaging['dimensional_weight']:.1f} lbs")
+else:
+    print(f"\nNo box fits: {packaging['fit_check']}")
 
-# Shipping budget
+# Shipping budget (random sample data, illustration only)
 forecast_orders = pd.DataFrame({
     'order_value': np.random.uniform(50, 200, 1000),
     'shipping_cost': np.random.uniform(5, 12, 1000)
 })
-budget = shipping_opt.calculate_shipping_budget(forecast_orders, target_margin_pct=30)
-print(f"\nRecommended free shipping threshold: ${budget['recommended_free_ship_threshold']:.0f}")
+# gross_margin_pct must be the user's own margin before shipping
+budget = shipping_opt.calculate_shipping_budget(forecast_orders, gross_margin_pct=50,
+                                                target_margin_pct=30)
+if budget['recommended_free_ship_threshold'] is None:
+    print("\nMargin before shipping is at or below the target: free shipping cannot keep the target margin")
+else:
+    print(f"\nRecommended free shipping threshold: ${budget['recommended_free_ship_threshold']:.0f}")
 ```
 
 ---
@@ -1072,6 +1135,14 @@ Rank by estimated saving against cost and effort. Every saving is labelled "esti
 - Related skills to run next: Last-mile delivery planner for local delivery, Warehouse layout planner for the floor, Order fulfillment mix planner if you add shops.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Order picking, packing and shipping planner](https://useaiblocks.com/skills/pick-pack-and-ship-improver).
+- The [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

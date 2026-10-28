@@ -33,6 +33,8 @@ The trap. Putting user-level properties on every event payload. Three problems.
 
 The fix. Set user-level properties on the user profile via the platform's identify/track-user API. Let the analytics tool perform the join.
 
+The gate (added by AI Blocks). First check whether the join uses the value as it was when each event fired, or only the current value. With current-value-only joins, an upgrade makes a user's old free-tier events look like pro. Then keep a dated history of the property (for example tier changes with a start date) and join on event time, or put the property on the few events where its value at that moment matters (conversion, upgrade, key feature use).
+
 ---
 
 ## Type discipline

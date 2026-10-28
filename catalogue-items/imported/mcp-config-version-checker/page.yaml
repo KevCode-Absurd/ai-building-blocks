@@ -10,6 +10,8 @@ explain: |
   A list of the tool servers in your MCP config that could change under you, found before you approve them. It reads your config files without running anything, so nothing can start by accident.
 
   It searches the repo for MCP config files and reads them as plain text. If a drift checker tool is already installed it uses it; otherwise it applies hand rules. These flag servers fetched by a floating tag, an unpinned package name, or a download that runs straight from the web. For each one it suggests a fix without inventing a version number, since a pinned version should be one someone has reviewed.
+
+  This is a copied skill, not written for AI Blocks. tomelias10 wrote it (original: github.com/tomelias10/mcp-drift-check), and sickn33 shared it in their collection. Licence: the collection's LICENSE-CONTENT file says CC BY 4.0, and the skill file's own header says MIT. Both allow reuse with credit, so credit tomelias10 and sickn33.
 when:
   - A repo you cloned has an MCP config and you are unsure about approving it.
   - You want to know which servers update themselves.
@@ -35,6 +37,7 @@ how_to_use:
   - Read the table. Fix each high and medium row by pinning a version your team has reviewed.
   - "Optional: the scanner tool is not needed. If your AI offers to install it, that fetches code from GitHub and needs your approval. You can say no, and it will check by hand rules instead."
   - "Optional: ask for a CI step if you want this check on every pull request."
+  - Next, approve the server only once each risky row is pinned. For risks beyond package versions, such as prompt tricks or tools that delete data, run the MCP attack defence reviewer.
 output_sample:
   input:
     - Your repo or the MCP config files, such as .mcp.json

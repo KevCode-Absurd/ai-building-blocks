@@ -71,13 +71,6 @@ CHECKS MISSED:
 
 Status is `done` when the file meets the requirement, `partial` when part is done, and `blocked` when a missing input stops it. If you cannot save files, give each file as its own labelled block, with the file name above it.
 
-<!-- next: written by hand for this skill. -->
-## After this
-When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
-- **Check the files against the request** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the request brief, artifact-index.md and the files.
-If they pick it and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every requirement in the brief has a row in `artifact-index.md`.
@@ -86,6 +79,13 @@ If they pick it and that skill is added here, carry straight on with what you ju
 - Every file uses the format, count, language and platform the brief asked for.
 - Regulated work is marked as a review draft with the review named.
 - Nothing was sent, published, booked, spent or scheduled.
+
+<!-- next: written by hand for this skill. -->
+## After this
+When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
+- **Check the files against the request** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the request brief, artifact-index.md and the files.
+If they pick it and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

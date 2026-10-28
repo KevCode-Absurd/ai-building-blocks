@@ -60,3 +60,5 @@ output_sample:
       contains: A positioning narrative, a positioning statement, map axes in words and a short note on what sets you apart.
     - name: 12 Tagline suggestions
       contains: Three to five tagline options, each with a one-line reason.
+    - name: 13 Assumptions to check
+      contains: Every guess the report made, such as persona details, income or market claims, listed so you can confirm or fix each one.

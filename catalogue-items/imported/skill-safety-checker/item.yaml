@@ -30,7 +30,7 @@ credits:
   - title: audit-skills skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-skills
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Used under the CC BY-4.0 licence. We gave it a plain name, removed a stray editing line, made the registry check work without the missing CATALOG.md file, and noted that the related security-scanner skill is not included.
   - title: Original author
     by: MAIOStudio
     url: https://github.com/MAIOStudio

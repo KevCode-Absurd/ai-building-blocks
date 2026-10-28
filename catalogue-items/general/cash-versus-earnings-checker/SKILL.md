@@ -72,9 +72,8 @@ The figure table, free cash flow by year, the four tests with working, the score
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
-- The [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator). It takes the audit report.
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
 - The [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). It takes the audit report.
-- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

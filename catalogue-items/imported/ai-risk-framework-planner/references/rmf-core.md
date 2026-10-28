@@ -1,361 +1,315 @@
 # NIST AI RMF 1.0 — Full Category and Subcategory Reference
 
-Source: NIST AI 100-1 (January 2023) and the AI RMF Playbook (NIST AI 100-1 Playbook)
+Source: NIST AI 100-1 (January 2023), Part 2 "Core", Tables 1–4. Official text: https://airc.nist.gov/airmf-resources/airmf/5-sec-core/ (PDF: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf).
+
+The Core has **4 functions, 19 categories and 72 subcategories**: GOVERN 6 / 19, MAP 5 / 18, MEASURE 4 / 22, MANAGE 4 / 13.
+
+The subcategory descriptions below are short summaries of the official outcomes. Quote the official text when a stakeholder needs exact wording. The "Suggested actions" lines are practical examples written for this skill. They are not the text of the NIST AI RMF Playbook; for the Playbook's own suggested actions see https://airc.nist.gov/airmf-resources/playbook/.
 
 ---
 
-## GOVERN Function (6 Categories, 21 Subcategories)
+## GOVERN Function (6 Categories, 19 Subcategories)
 
-GOVERN establishes the organizational culture, policies, accountability, and risk tolerance that underpin all other functions. It should be addressed first and revisited continuously.
+GOVERN is cross-cutting. It sets the culture, policies and accountability that the other three functions run inside.
 
-### GV-1: Policies, Processes, Procedures and Practices in Place
+### GOVERN 1: Policies, processes, procedures and practices for mapping, measuring and managing AI risk are in place, transparent and implemented effectively
 
-**Purpose:** Ensure the organization has formalized policies and processes for AI risk management across the full AI lifecycle.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-1.1 | AI risk management is integrated into the organization's broader enterprise risk management (ERM) processes |
-| GV-1.2 | The characteristics of trustworthy AI are integrated into organizational policies, processes, and practices |
-| GV-1.3 | Organizational risk tolerance for AI is established, communicated, and reflected in AI policies |
-| GV-1.4 | Organizational teams are committed to a culture of risk awareness and continuous improvement |
-| GV-1.5 | Organizational policies for AI risk management are reviewed and updated on a periodic cadence |
-| GV-1.6 | Policies for complying with applicable AI laws, regulations, and standards are established |
-| GV-1.7 | Processes for regular review of AI risk policies to incorporate emerging AI risks are established |
+| GOVERN 1.1 | Legal and regulatory requirements involving AI are understood, managed and documented |
+| GOVERN 1.2 | The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures and practices |
+| GOVERN 1.3 | Processes are in place to set the needed level of risk management activity based on the organization's risk tolerance |
+| GOVERN 1.4 | The risk management process and its outcomes are established through transparent policies, procedures and other controls based on risk priorities |
+| GOVERN 1.5 | Ongoing monitoring and periodic review of the risk management process are planned, with roles and review frequency defined |
+| GOVERN 1.6 | Mechanisms are in place to inventory AI systems, resourced according to risk priorities |
+| GOVERN 1.7 | Processes are in place to decommission and phase out AI systems safely, without increasing risk or reducing trustworthiness |
 
-**Suggested Actions:**
-- Publish an organization-wide AI Risk Management Policy signed by senior leadership
-- Define AI risk appetite statements (e.g., acceptable false positive rates, bias thresholds)
-- Incorporate AI risk into existing ERM committee agendas and quarterly reviews
-- Establish a policy review cycle (minimum annual) with a designated AI risk owner
+**Suggested actions:**
+- Keep a register of AI laws and rules that apply to you (GOVERN 1.1)
+- Publish an AI risk management policy signed by senior leadership that names the trustworthiness characteristics (GOVERN 1.2)
+- Tie the depth of review to risk tier, so high-stakes systems get more scrutiny (GOVERN 1.3)
+- Set a review cycle (at least yearly) and name who runs it (GOVERN 1.5)
+- Keep an AI system inventory (GOVERN 1.6) and a decommissioning checklist (GOVERN 1.7)
 
 ---
 
-### GV-2: Accountability Structures
+### GOVERN 2: Accountability structures are in place so the right teams and people are empowered, responsible and trained for mapping, measuring and managing AI risk
 
-**Purpose:** Assign clear ownership of AI risk management decisions at the organizational level.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-2.1 | Roles and responsibilities for AI risk management across organizational levels are documented |
-| GV-2.2 | The organization designates senior officials accountable for AI risk outcomes |
-| GV-2.3 | Executive leadership understands AI risk and fosters an accountable culture |
+| GOVERN 2.1 | Roles, responsibilities and lines of communication for AI risk are documented and clear across the organization |
+| GOVERN 2.2 | Personnel and partners receive AI risk management training so they can perform their duties consistent with policies and agreements |
+| GOVERN 2.3 | Executive leadership takes responsibility for decisions about risks from AI system development and deployment |
 
-**Suggested Actions:**
-- Appoint an AI Risk Owner or Chief AI Officer with board-level reporting
-- Define RACI for AI development, deployment, and monitoring decisions
-- Include AI risk in executive performance goals and leadership dashboards
+**Suggested actions:**
+- Define a RACI for AI development, deployment and monitoring decisions (GOVERN 2.1)
+- Run role-based AI risk training for staff and key partners (GOVERN 2.2)
+- Name an executive who signs off high-risk deployments and residual risk (GOVERN 2.3)
 
 ---
 
-### GV-3: Roles and Responsibilities
+### GOVERN 3: Workforce diversity, equity, inclusion and accessibility processes are prioritized in mapping, measuring and managing AI risk throughout the lifecycle
 
-**Purpose:** Identify and define all roles involved in AI design, development, deployment, and evaluation.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-3.1 | AI risk management roles span the entire AI lifecycle from design through decommission |
-| GV-3.2 | AI risk responsibilities are defined for development teams, operators, and deployers |
-| GV-3.3 | Responsibilities for AI risk are assigned to both technical and non-technical roles |
+| GOVERN 3.1 | Decisions about AI risk across the lifecycle are informed by a diverse team (demographics, disciplines, experience, expertise, backgrounds) |
+| GOVERN 3.2 | Policies define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems |
 
-**Suggested Actions:**
-- Create an AI roles register mapping each lifecycle stage to responsible team/individual
-- Ensure business owners (not just engineers) are accountable for deployed AI outcomes
-- Define responsibilities for external AI vendors and third-party model providers
+**Suggested actions:**
+- Put legal, privacy, security, domain and affected-user perspectives on AI risk reviews (GOVERN 3.1)
+- Document who oversees each AI system, when a human must review, and who can override it (GOVERN 3.2)
 
 ---
 
-### GV-4: Cross-Functional Team Collaboration
+### GOVERN 4: Organizational teams are committed to a culture that considers and communicates AI risk
 
-**Purpose:** Ensure AI risk management involves diverse perspectives across the organization.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-4.1 | Cross-functional AI risk teams include AI/ML, legal, privacy, security, HR, and ethics functions |
-| GV-4.2 | Processes for communicating AI risks between teams are documented |
-| GV-4.3 | Mechanisms for escalating AI risk concerns are established |
+| GOVERN 4.1 | Policies foster a critical-thinking, safety-first mindset in design, development, deployment and use, to minimize negative impacts |
+| GOVERN 4.2 | Teams document the risks and potential impacts of the AI they design, develop, deploy, evaluate and use, and communicate about impacts more broadly |
+| GOVERN 4.3 | Practices are in place to enable AI testing, identification of incidents, and information sharing |
 
-**Suggested Actions:**
-- Establish an AI Risk Working Group with quarterly cross-functional reviews
-- Create an AI risk escalation path from development teams to executive leadership
-- Include privacy, legal, and security representatives in AI system design reviews
+**Suggested actions:**
+- Make it safe and expected to raise AI risk concerns; give a clear escalation path (GOVERN 4.1)
+- Require a model or system card for each system (GOVERN 4.2)
+- Keep an incident log and a process for sharing lessons (GOVERN 4.3)
 
 ---
 
-### GV-5: Organizational Risk Tolerance for AI
+### GOVERN 5: Processes are in place for robust engagement with relevant AI actors
 
-**Purpose:** Communicate AI risk tolerance and link it to operational decisions.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-5.1 | AI risk tolerance is defined and reflects organizational values |
-| GV-5.2 | AI risk tolerance is reviewed when new AI systems are deployed or contexts change |
-| GV-5.3 | Risk tolerance statements inform go/no-go decisions for AI system deployment |
+| GOVERN 5.1 | Policies collect, consider, prioritize and integrate feedback from people outside the team that built or deployed the system about individual and societal impacts |
+| GOVERN 5.2 | Mechanisms let the team regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation |
 
-**Suggested Actions:**
-- Define risk tolerance per AI system category (e.g., low-stakes recommendations vs. high-stakes decisions affecting individuals)
-- Create a deployment checklist that validates an AI system against stated risk tolerance before launch
-- Link risk tolerance to specific bias and accuracy thresholds in testing requirements
+**Suggested actions:**
+- Run a feedback channel for users and affected people, and review it on a schedule (GOVERN 5.1)
+- Track which feedback led to design changes (GOVERN 5.2)
 
 ---
 
-### GV-6: AI Risk Aligned to Laws, Regulations, and Principles
+### GOVERN 6: Policies and procedures address AI risks and benefits from third-party software, data and other supply chain issues
 
-**Purpose:** Ensure AI risks and risk management practices align with applicable laws, ethical principles, and industry standards.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| GV-6.1 | Legal and regulatory requirements for AI are identified and tracked |
-| GV-6.2 | AI risk management processes are aligned with applicable ethical principles |
-| GV-6.3 | The organization engages with emerging AI regulations on a proactive basis |
+| GOVERN 6.1 | Policies address AI risks from third-party entities, including risk of infringing a third party's intellectual property or other rights |
+| GOVERN 6.2 | Contingency processes handle failures or incidents in third-party data or AI systems deemed high-risk |
 
-**Suggested Actions:**
-- Maintain a regulatory register for applicable AI laws (EU AI Act, state AI laws, sector-specific requirements)
-- Align AI risk policies to NIST AI 100-1, ISO/IEC 42001, and relevant sector frameworks (FINRA, HIPAA, etc.)
-- Designate a legal/compliance representative on the AI governance committee
+**Suggested actions:**
+- Add AI terms to vendor contracts: change notification, audit rights, IP and data-use terms (GOVERN 6.1)
+- Keep a fallback plan for each high-risk vendor model or dataset (GOVERN 6.2)
 
 ---
 
-## MAP Function (5 Categories, 20 Subcategories)
+## MAP Function (5 Categories, 18 Subcategories)
 
-MAP establishes context before risks are measured or managed. A well-executed MAP prevents investing resources in the wrong risk treatments.
+MAP sets the context so the right risks get measured and managed.
 
-### MP-1: Context Is Established
+### MAP 1: Context is established and understood
 
-**Purpose:** Understand the intended use, operating environment, and affected populations of each AI system.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MP-1.1 | The organization's mission and goals related to AI are documented |
-| MP-1.2 | Intended uses of the AI system are documented and bounded |
-| MP-1.3 | The AI system's operating environment and constraints are defined |
-| MP-1.4 | Affected individuals, groups, communities, and organizations are identified |
-| MP-1.5 | Potential harms, misuses, and unintended uses are scoped |
-| MP-1.6 | Legal, regulatory, and contractual constraints are identified |
+| MAP 1.1 | Intended purposes, beneficial uses, context-specific laws, norms and expectations, and deployment settings are understood and documented |
+| MAP 1.2 | Interdisciplinary AI actors with diverse demographics and broad domain and user expertise take part in establishing context, and their participation is documented |
+| MAP 1.3 | The organization's mission and relevant goals for AI are understood and documented |
+| MAP 1.4 | The business value or context of business use is clearly defined or, for existing systems, re-evaluated |
+| MAP 1.5 | Organizational risk tolerances are determined and documented |
+| MAP 1.6 | System requirements are elicited from and understood by relevant AI actors, and design decisions take socio-technical implications into account |
 
-**Suggested Actions:**
-- Produce an AI System Description Document for each deployed system covering: purpose, inputs, outputs, decision authority, operator vs. user roles
-- Identify affected populations at the beginning of design — not at deployment
-- Document prohibited use cases explicitly
+**Suggested actions:**
+- Write a system description per AI system: purpose, users, inputs, outputs, decision authority, prohibited uses, applicable laws (MAP 1.1)
+- Record the business value and the risk tolerance for this system (MAP 1.4, MAP 1.5)
 
 ---
 
-### MP-2: Scientific Understanding Applied
+### MAP 2: Categorization of the AI system is performed
 
-**Purpose:** Apply current scientific understanding of AI capabilities and limitations to the design and risk assessment.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MP-2.1 | AI and ML capabilities and limitations are documented for the specific system type |
-| MP-2.2 | Assumptions and constraints of the AI system's training data are documented |
-| MP-2.3 | Uncertainty and variability in AI outputs are characterized |
+| MAP 2.1 | The specific tasks and methods the system uses are defined (for example classifier, generative model, recommender) |
+| MAP 2.2 | The system's knowledge limits, and how its output may be used and overseen by humans, are documented |
+| MAP 2.3 | Scientific integrity and TEVV considerations are identified and documented, including experimental design, data collection and selection, trustworthiness and construct validation |
 
-**Suggested Actions:**
-- Document model card or system card information including training data sources, known biases, and performance bounds
-- Quantify output uncertainty (confidence intervals, calibration metrics) where applicable
-- Review relevant literature on known failure modes for the model architecture in use
+**Suggested actions:**
+- Record the model type, training data sources, known limits and performance bounds in a model card (MAP 2.1, MAP 2.2)
+- Plan how the system will be tested before it is built (MAP 2.3)
 
 ---
 
-### MP-3: Risks and Benefits Mapped to Stakeholders
+### MAP 3: AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood
 
-**Purpose:** Identify who benefits from the AI system and who bears its risks — these are often different groups.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MP-3.1 | Benefits and risks are documented for each identified stakeholder group |
-| MP-3.2 | Affected communities are engaged where feasible to understand perceived risks and benefits |
-| MP-3.3 | The distribution of benefits vs. risks across stakeholder groups is evaluated |
-| MP-3.4 | Feedback mechanisms for affected individuals to report harm are established |
+| MAP 3.1 | Potential benefits of intended functionality and performance are examined and documented |
+| MAP 3.2 | Potential costs, including non-monetary costs, from expected or realized AI errors are examined and documented, connected to risk tolerance |
+| MAP 3.3 | Targeted application scope is specified and documented based on capability, context and categorization |
+| MAP 3.4 | Processes for operator and practitioner proficiency with system performance and trustworthiness, and relevant standards and certifications, are defined, assessed and documented |
+| MAP 3.5 | Processes for human oversight are defined, assessed and documented in line with GOVERN policies |
 
-**Suggested Actions:**
-- Create a stakeholder risk/benefit matrix: rows = stakeholder group, columns = risk type, benefit type
-- Implement a feedback channel (e.g., complaint form, audit log review) for users to report unexpected outcomes
-- Conduct equity analysis: which groups are disproportionately affected by errors?
+**Suggested actions:**
+- Build a stakeholder benefit/cost matrix: rows = stakeholder groups, columns = benefits and costs (MAP 3.1, MAP 3.2)
+- State in writing what the system must not be used for (MAP 3.3)
+- Train operators and define when a human reviews or overrides (MAP 3.4, MAP 3.5)
 
 ---
 
-### MP-4: Risks Prioritized
+### MAP 4: Risks and benefits are mapped for all components of the AI system, including third-party software and data
 
-**Purpose:** Prioritize identified risks to focus MEASURE and MANAGE resources effectively.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MP-4.1 | Risk prioritization criteria are established (e.g., severity, breadth, reversibility) |
-| MP-4.2 | Risks are ranked and documented in the AI risk register |
-| MP-4.3 | Highest-priority risks are escalated to GOVERN for risk tolerance review |
+| MAP 4.1 | Approaches for mapping the technology and legal risks of components, including third-party data or software and IP infringement risk, are in place and documented |
+| MAP 4.2 | Internal risk controls for components, including third-party AI technologies, are identified and documented |
 
-**Suggested Actions:**
-- Use a severity × breadth × reversibility scoring model for prioritization
-- Flag any risk that affects a protected class, creates legal exposure, or is irreversible as high-priority
-- Review prioritization at each model version update or significant context change
+**Suggested actions:**
+- List every model, dataset, library and API the system depends on, with its owner and licence (MAP 4.1)
+- Record the control that covers each component (MAP 4.2)
 
 ---
 
-### MP-5: Likelihood and Impact Characterized
+### MAP 5: Impacts to individuals, groups, communities, organizations and society are characterized
 
-**Purpose:** Characterize the probability and potential severity of identified harms.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MP-5.1 | Likelihood of harm is estimated using historical data, expert judgment, or red-teaming |
-| MP-5.2 | Potential impact is assessed across physical, psychological, financial, and reputational dimensions |
-| MP-5.3 | Cumulative and systemic risks (e.g., societal effects of widespread deployment) are considered |
+| MAP 5.1 | Likelihood and magnitude of each identified impact (beneficial and harmful) are identified and documented, using expected use, past uses in similar contexts, public incident reports, external feedback or other data |
+| MAP 5.2 | Practices and personnel for regular engagement with relevant AI actors, and for integrating feedback about positive, negative and unanticipated impacts, are in place and documented |
 
-**Suggested Actions:**
-- Conduct red-team exercises and adversarial testing to estimate real-world failure rates
-- Assess impact across harm dimensions: physical safety, financial, psychological, reputational, societal
-- For large-scale deployments, model aggregate societal effects (e.g., labour market impact of an automated hiring tool)
+**Suggested actions:**
+- Score each risk for likelihood and magnitude; treat harm to protected groups, legal exposure or irreversibility as high (MAP 5.1)
+- Use red-team results and public incident reports as evidence (MAP 5.1)
 
 ---
 
-## MEASURE Function (4 Categories, 16 Subcategories)
+## MEASURE Function (4 Categories, 22 Subcategories)
 
-MEASURE employs quantitative and qualitative tools to evaluate AI risks identified in MAP.
+MEASURE uses quantitative, qualitative or mixed methods, including TEVV (test, evaluation, verification and validation), to analyze and track the risks found in MAP.
 
-### MS-1: Measurement Approaches Identified
+### MEASURE 1: Appropriate methods and metrics are identified and applied
 
-**Purpose:** Identify appropriate methods and tools for measuring AI risks.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MS-1.1 | Metrics for each identified risk are defined (technical, operational, and societal) |
-| MS-1.2 | Measurement approaches are appropriate for the AI system type and deployment context |
-| MS-1.3 | Gaps in measurement capabilities are documented and addressed |
+| MEASURE 1.1 | Approaches and metrics for the risks found in MAP are selected, starting with the most significant; risks that will not or cannot be measured are documented |
+| MEASURE 1.2 | Appropriateness of metrics and effectiveness of existing controls are regularly assessed and updated, including error reports and impacts on affected communities |
+| MEASURE 1.3 | Internal experts who were not front-line developers, and/or independent assessors, take part in regular assessments and updates |
 
-**Suggested Actions:**
-- Define metrics for each trustworthiness property: accuracy, fairness (demographic parity, equalized odds), robustness (adversarial accuracy), explainability (LIME/SHAP scores), privacy (differential privacy ε)
-- Document measurement tools and their known limitations
-- Identify where human evaluation is required instead of (or in addition to) automated metrics
+**Suggested actions:**
+- Pick a metric per trustworthiness characteristic (see rmf-profiles.md) and note what you cannot measure (MEASURE 1.1)
+- Use an independent reviewer for high-risk systems (MEASURE 1.3)
 
 ---
 
-### MS-2: AI Systems Evaluated for Trustworthiness
+### MEASURE 2: AI systems are evaluated for trustworthy characteristics
 
-**Purpose:** Evaluate AI systems against the trustworthiness properties throughout the lifecycle.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MS-2.1 | AI systems are evaluated pre-deployment for technical performance and safety |
-| MS-2.2 | Bias and fairness testing is conducted across demographic groups |
-| MS-2.3 | Explainability and interpretability requirements are tested and documented |
-| MS-2.4 | Security and privacy of the AI system are assessed |
-| MS-2.5 | Human oversight mechanisms are tested and validated |
-| MS-2.6 | Evaluation results are documented and shared with relevant stakeholders |
+| MEASURE 2.1 | Test sets, metrics and details about TEVV tools are documented |
+| MEASURE 2.2 | Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population |
+| MEASURE 2.3 | Performance or assurance criteria are measured and demonstrated for conditions similar to deployment, and documented |
+| MEASURE 2.4 | Functionality and behavior of the system and its components are monitored in production |
+| MEASURE 2.5 | The system is demonstrated to be valid and reliable; limits on generalizing beyond development conditions are documented |
+| MEASURE 2.6 | The system is evaluated regularly for safety risks; it is shown to be safe, residual negative risk does not exceed risk tolerance, and it can fail safely |
+| MEASURE 2.7 | Security and resilience are evaluated and documented |
+| MEASURE 2.8 | Risks related to transparency and accountability are examined and documented |
+| MEASURE 2.9 | The model is explained, validated and documented, and output is interpreted within its context |
+| MEASURE 2.10 | Privacy risk is examined and documented |
+| MEASURE 2.11 | Fairness and bias are evaluated and results documented |
+| MEASURE 2.12 | Environmental impact and sustainability of training and management are assessed and documented |
+| MEASURE 2.13 | Effectiveness of the TEVV metrics and processes used is evaluated and documented |
 
-**Suggested Actions:**
-- Require pre-deployment evaluation report covering all seven trustworthiness properties
-- Run disaggregated performance testing across demographic subgroups (age, gender, race, geography)
-- Test adversarial robustness using standard benchmark datasets relevant to the model type
-- Document SHAP/LIME explanations for models affecting high-stakes individual decisions
+**Suggested actions:**
+- Write a pre-deployment evaluation report covering all seven trustworthiness characteristics (MEASURE 2.3, 2.5–2.11)
+- Test performance by subgroup and record disparities (MEASURE 2.11)
+- Test robustness against adversarial input and, for LLMs, prompt injection (MEASURE 2.7)
+- Record explanation methods used for high-stakes individual decisions (MEASURE 2.9)
 
 ---
 
-### MS-3: AI Risk Tracked Over Time
+### MEASURE 3: Mechanisms for tracking identified AI risks over time are in place
 
-**Purpose:** Monitor AI risk continuously after deployment to detect drift, degradation, or new harms.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MS-3.1 | Ongoing monitoring metrics are defined and implemented post-deployment |
-| MS-3.2 | Model drift and performance degradation are detected and trigger review |
-| MS-3.3 | New risks identified post-deployment are fed back into MAP |
-| MS-3.4 | External signals (regulatory updates, academic findings, media reports) inform monitoring |
+| MEASURE 3.1 | Approaches, personnel and documentation regularly identify and track existing, unanticipated and emergent risks based on intended and actual performance |
+| MEASURE 3.2 | Risk tracking approaches are considered where risks are hard to assess with current techniques or metrics are not yet available |
+| MEASURE 3.3 | Feedback processes for end users and impacted communities to report problems and appeal outcomes are established and integrated into evaluation metrics |
 
-**Suggested Actions:**
-- Implement model monitoring dashboards tracking accuracy, fairness metrics, and input data distribution
-- Set alert thresholds that trigger human review (e.g., accuracy drops >5%, demographic parity gap exceeds threshold)
-- Assign a model owner responsible for monthly monitoring reviews
-- Subscribe to NIST NVD and relevant AI safety/bias research feeds
+**Suggested actions:**
+- Monitor accuracy, subgroup gaps and input drift, with alert thresholds that trigger human review (MEASURE 3.1)
+- Offer a way for affected people to report problems and appeal decisions (MEASURE 3.3)
 
 ---
 
-### MS-4: Feedback Informs MANAGE
+### MEASURE 4: Feedback about efficacy of measurement is gathered and assessed
 
-**Purpose:** Ensure measurement results directly inform risk treatment decisions in MANAGE.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MS-4.1 | Measurement outputs are communicated to decision-makers responsible for MANAGE |
-| MS-4.2 | Measurement limitations and uncertainties are communicated alongside results |
-| MS-4.3 | Measurement results are used to update the AI risk register and treatment plans |
+| MEASURE 4.1 | Measurement approaches are connected to deployment context and informed by domain experts and end users; approaches are documented |
+| MEASURE 4.2 | Measurement results in deployment are informed by domain experts and relevant AI actors to validate the system performs as intended; results are documented |
+| MEASURE 4.3 | Measurable performance improvements or declines, based on consultation with relevant AI actors (including affected communities) and field data, are identified and documented |
 
-**Suggested Actions:**
-- Create a measurement-to-action protocol: define which measurement findings trigger which MANAGE actions
-- Include measurement uncertainty caveats in all AI risk reports
-- Automate risk register updates from monitoring dashboards where feasible
+**Suggested actions:**
+- Review measurement results with domain experts before acting on them (MEASURE 4.2)
+- Log performance changes from field data and update the risk register (MEASURE 4.3)
 
 ---
 
-## MANAGE Function (4 Categories, 18 Subcategories)
+## MANAGE Function (4 Categories, 13 Subcategories)
 
-MANAGE addresses identified AI risks through treatment, monitoring, and improvement.
+MANAGE puts resources against the mapped and measured risks.
 
-### MG-1: Risks Prioritized and Documented
+### MANAGE 1: AI risks based on MAP and MEASURE outputs are prioritized, responded to and managed
 
-**Purpose:** Ensure the most impactful AI risks receive treatment resources first.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MG-1.1 | AI risk register entries are prioritized and assigned treatment owners |
-| MG-1.2 | Risk prioritization reflects organizational risk tolerance (GOVERN 1.3) |
-| MG-1.3 | Residual risks after treatment are documented and accepted by appropriate authority |
+| MANAGE 1.1 | A decision is made on whether the system achieves its intended purposes and whether development or deployment should proceed |
+| MANAGE 1.2 | Treatment of documented risks is prioritized by impact, likelihood and available resources or methods |
+| MANAGE 1.3 | Responses to high-priority risks are developed, planned and documented; options include mitigating, transferring, avoiding or accepting |
+| MANAGE 1.4 | Negative residual risks (all unmitigated risks) to downstream acquirers and end users are documented |
 
-**Suggested Actions:**
-- Assign a treatment owner, target date, and treatment approach for every risk register entry
-- Require senior approval for accepting residual risks above the defined risk tolerance threshold
-- Review residual risk acceptance annually or when significant system changes occur
+**Suggested actions:**
+- Hold a go/no-go decision before deployment (MANAGE 1.1)
+- Give every register entry an owner, target date and response type (MANAGE 1.2, MANAGE 1.3)
+- Document residual risk and have an accountable executive accept it (MANAGE 1.4, GOVERN 2.3)
 
 ---
 
-### MG-2: Strategies Planned and Actioned
+### MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented and informed by input from relevant AI actors
 
-**Purpose:** Develop and execute risk treatment strategies that reduce AI risk to acceptable levels.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MG-2.1 | Risk treatment options are identified (mitigate, transfer, avoid, accept) |
-| MG-2.2 | Treatment strategies are resourced and implemented |
-| MG-2.3 | Emergency interventions (e.g., system shutdown) are defined for critical failures |
-| MG-2.4 | Benefits of AI systems are preserved while reducing risks |
+| MANAGE 2.1 | Resources required to manage risks are considered, along with viable non-AI alternatives, to reduce the magnitude or likelihood of impacts |
+| MANAGE 2.2 | Mechanisms are in place and applied to sustain the value of deployed systems |
+| MANAGE 2.3 | Procedures are followed to respond to and recover from a previously unknown risk when it is identified |
+| MANAGE 2.4 | Mechanisms and assigned responsibilities exist to supersede, disengage or deactivate systems whose performance or outcomes are inconsistent with intended use |
 
-**Suggested Actions:**
-- For each high-priority risk, identify one or more treatment options: technical (retrain, constrain, add human review), operational (restrict use case), contractual (indemnification), or avoidance (decommission)
-- Define a "kill switch" or emergency shutdown procedure for AI systems affecting safety
-- Document benefit-risk tradeoffs for any accepted risk
+**Suggested actions:**
+- Compare the AI option with a non-AI option before committing resources (MANAGE 2.1)
+- Define a kill switch and who may use it (MANAGE 2.4)
 
 ---
 
-### MG-3: Risk Responses Monitored and Adjusted
+### MANAGE 3: AI risks and benefits from third-party entities are managed
 
-**Purpose:** Ensure risk treatments remain effective over time and adapt to changing conditions.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MG-3.1 | Effectiveness of risk treatments is monitored using defined metrics |
-| MG-3.2 | AI incidents are documented, reported, and investigated |
-| MG-3.3 | Lessons learned from incidents are applied to future risk management |
-| MG-3.4 | Stakeholders are notified of significant AI risks or incidents |
+| MANAGE 3.1 | Risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented |
+| MANAGE 3.2 | Pre-trained models used for development are monitored as part of regular monitoring and maintenance |
 
-**Suggested Actions:**
-- Implement an AI incident log with severity classification (low/medium/high/critical)
-- Define notification thresholds: internal escalation, external customer notification, regulatory disclosure
-- Conduct post-incident reviews and update the risk register and GOVERN policies
-- Share anonymized incident learnings with industry where appropriate (e.g., AI incident databases)
+**Suggested actions:**
+- Review vendor validation reports and benchmark vendor models against an internal comparison model (MANAGE 3.1)
+- Re-test pre-trained or foundation models after each version change (MANAGE 3.2)
 
 ---
 
-### MG-4: Risk Treatment Reviewed and Improved
+### MANAGE 4: Risk treatments, including response and recovery, and communication plans are documented and monitored regularly
 
-**Purpose:** Close the loop — feed treatment outcomes back into GOVERN and MAP for continuous improvement.
-
-| Subcategory | Description |
+| Subcategory | Summary of the official outcome |
 |-------------|-------------|
-| MG-4.1 | AI risk management processes are periodically reviewed for effectiveness |
-| MG-4.2 | Improvements to AI risk management are identified and implemented |
-| MG-4.3 | Lessons learned inform updates to organizational AI risk policies |
-| MG-4.4 | The organization's AI risk profile is reviewed when significant changes occur |
+| MANAGE 4.1 | Post-deployment monitoring plans are implemented, including user input, appeal and override, decommissioning, incident response, recovery and change management |
+| MANAGE 4.2 | Measurable continual-improvement activities are integrated into system updates, with regular engagement of interested parties |
+| MANAGE 4.3 | Incidents and errors are communicated to relevant AI actors, including affected communities; tracking, response and recovery processes are followed and documented |
 
-**Suggested Actions:**
-- Schedule quarterly AI risk programme reviews covering all four functions
-- Use external assessment or third-party audit every 1–2 years to validate programme effectiveness
-- Update GOVERN policies and MAP context documents following every major incident or model update
+**Suggested actions:**
+- Keep an AI incident log with severity levels and notification thresholds (MANAGE 4.3)
+- Run post-incident reviews that update the risk register and GOVERN policies (MANAGE 4.2, MANAGE 4.3)
+- Schedule periodic programme reviews; consider an independent audit for high-risk systems (MANAGE 4.1, MEASURE 1.3)
+

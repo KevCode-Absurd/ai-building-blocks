@@ -18,7 +18,7 @@ not_for:
   - "You need a GP catch-up, deal-by-deal carry or a tax-distribution waterfall: ask your fund lawyer or fund administrator, because this tool does not model them."
   - "You want to know what your LPA clause means: ask a fund lawyer, because this tool only does the arithmetic."
   - "You want to check an investor statement against its records: use the Investor statement NAV checker."
-  - "You need to work out the accrued preferred return itself: use the Preferred return accrual checker instead."
+  - "You need to work out the accrued preferred return itself: use the Preferred return accrual calculator instead."
 you_give:
   - Available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
   - "The distribution date, plus the currency and scale used for the fund distribution waterfall."

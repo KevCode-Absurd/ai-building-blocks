@@ -63,7 +63,7 @@ A procedure, an exception guide and a handover checklist, in these parts:
 
 Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, all MISSING: lines and CHECKS MISSED. A plan is not a completed external action.
 
-From the shared "After this" list above, offer only the Recurring task procedure writer. It fits a handover best. Bring the step 1 procedure. The other links in that list do not fit a handover.
+From the shared "After this" list below, offer only the Recurring task procedure writer. It fits a handover best. Bring the step 1 procedure. The other links in that list do not fit a handover.
 
 ## Check before you hand it back
 
@@ -90,8 +90,8 @@ Suggest that the replacement completes the practice tasks, and that you log what
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
 - The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
 - The [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper). It takes the document.
+- The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

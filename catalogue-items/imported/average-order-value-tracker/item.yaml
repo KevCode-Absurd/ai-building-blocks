@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-average-order-value-trends skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/finance/shopify-admin-average-order-value-trends
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and changed the new vs. returning split to use each order's place in the customer's history (customerOrderIndex) instead of today's lifetime order count, and noted Shopify's 60-day order window. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

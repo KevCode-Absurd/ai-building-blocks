@@ -73,8 +73,8 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 Suggest one next step in a short question, and say they can type their own:
 - **Ship one change and run the test** with three to five people who have not seen the form. Then run this workflow again on the new version.
-- **Write the form's error text** with the [Write helpful error and empty states](https://useaiblocks.com/workflows/write-helpful-error-and-empty-states) workflow.
-- **Check the test plan first** with the [Check a prototype before user testing](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
+- **Write the form's error text** with the [Interface state and recovery message writer](https://useaiblocks.com/workflows/write-helpful-error-and-empty-states) workflow.
+- **Check the test plan first** with the [Prototype usability test planner](https://useaiblocks.com/workflows/check-a-prototype-before-user-testing) workflow.
 Nothing here edits your form.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

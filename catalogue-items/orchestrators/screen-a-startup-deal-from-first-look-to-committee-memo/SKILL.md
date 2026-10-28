@@ -69,9 +69,9 @@ Pause here: Ask the founders the open questions. Paste their answers before goin
 
 ## Next steps to offer
 
-Use these in place of the generic "After this" list above. Offer them:
+Use these in place of the generic "After this" list below. Offer them:
 - Test the idea with real people with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer).
-- When the term sheet arrives, use [Review a contract and get edits and a plain summary](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary).
+- When the term sheet arrives, use [Contract clause and ownership reviewer](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary).
 
 ## What you hand back
 4 step files and the summary. The third file holds the call; the last the committee memo, if the call was proceed.

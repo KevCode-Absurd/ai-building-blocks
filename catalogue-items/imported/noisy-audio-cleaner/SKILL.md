@@ -14,6 +14,19 @@ Removes background noise from audio and isolates vocals/speech — useful for cl
 
 > Added by AI Blocks: before you run the command, stop and ask the user for the version number they chose. Do not guess one and do not look one up yourself. Tell the person in one sentence that the command signs them in to ElevenLabs and stores a key for the project. Also tell them the audio is sent to ElevenLabs, so they need permission from anyone whose voice is on it. Ask them to check the file size and length limits in the Voice Isolator section of the ElevenLabs API docs (elevenlabs.io/docs) before they send a long file, and to split long files if needed.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Audio** (yours): a sound or voice recording.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audio. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Quick Start
 
 ### Python
@@ -114,6 +127,13 @@ Common errors:
 - **401**: Invalid API key
 - **422**: Invalid parameters (e.g. wrong `file_format` for the supplied audio)
 - **429**: Rate limit exceeded
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber). It takes the audio.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## References
 

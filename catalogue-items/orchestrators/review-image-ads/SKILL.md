@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.

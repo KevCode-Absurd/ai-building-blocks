@@ -9,7 +9,7 @@ Plans the visual systems of one Unreal Engine 5 project: materials, Niagara effe
 
 When not to use it: for World Partition, landscape layers or HLOD, use the Unreal World Builder agent. For gameplay code or systems in C++, use the Unreal Systems Engineer agent. For Unity, use the Unity Shader Graph Artist agent. For art budgets that work in any engine, use the Technical Artist agent.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Any chat AI can plan the graphs. Pick one that can read screenshots of your Material Editor or Niagara.
@@ -77,7 +77,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.

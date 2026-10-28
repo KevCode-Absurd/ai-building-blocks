@@ -5,6 +5,20 @@ description: Morning rundown - today's meetings with account context, opps closi
 
 # Daily Briefing
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection, your lead list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Setup (AI Blocks note)
 
 1. Connect your CRM, your calendar and your email to your AI. Or upload three files instead: a sales spreadsheet, a calendar export and your emails.
@@ -67,3 +81,10 @@ tiers:
   read-only:    live calendar + crm + email reads; transcript context
   gated-writes: posting or emailing the briefing to a destination the user names or set the schedule up with, within connector permissions; other actions hand off to the skills that make changes (update-opportunity, log-activity and others), which act on the user's request within connector permissions
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

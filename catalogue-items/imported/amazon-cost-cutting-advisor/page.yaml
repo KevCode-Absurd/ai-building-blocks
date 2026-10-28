@@ -34,7 +34,7 @@ how_to_use:
   - Say "Analyze my supply chain". Then describe your setup in a sentence or two.
   - Check the profile your AI repeats back. Fix anything that is wrong.
   - Reply with rough numbers for sourcing, shipping, fees, ads and inventory days. Estimates are fine.
-  - Read the ranked bottlenecks and the fixes. Pick one fix to test first.
+  - Read the ranked bottlenecks and the fixes. Pick one fix to test first. Change one thing at a time, then run the analysis again with your new numbers after a full sales cycle.
   - Ask for a web report or a document if you need to share the result. The benchmark limits are default guides, so check them against your own category.
 output_sample:
   input:

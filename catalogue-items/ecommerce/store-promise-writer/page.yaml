@@ -68,7 +68,7 @@ how_it_works:
   - title: Finds the smallest group
     text: The smallest group that would make the store worth running, grouped by beliefs and wants.
   - title: Fills the three lines
-    text: Who it is for by belief, who you focus on by want, and what engaging will help them get.
+    text: Who it is for by belief, who you focus on by want, and what buying from you will help them get.
   - title: Checks the outcome
     text: The promise is a feeling or status shoppers want, not a spec.
   - title: Lists who should pass
@@ -88,7 +88,7 @@ output_shape: |
   PROMISE (three lines)
   For people who believe <...>.
   Focused on people who want <...>.
-  Engaging with <store> will help you get <feeling or status>.
+  Buying from <store> will help you get <feeling or status>.
 
   FEELING CHECK: <belonging | connection | peace of mind | status | respect | good looks | control | justice>
   NOT-FOR-YOU (5)

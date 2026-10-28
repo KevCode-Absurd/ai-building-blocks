@@ -20,7 +20,7 @@ not_for:
   - "You want to know if a dividend is sustainable or whether to buy or sell: ask a licensed financial adviser, as this tool only checks one period."
   - "You need coverage based on FCFF or EBITDA: build that in your own spreadsheet, as this tool uses equity free cash flow only."
   - "You only have announced buybacks that have not been carried out: wait for the cash-flow statement, as only executed repurchases count."
-  - "You need EPS before and after a cash-funded buyback: use the Cash-funded buyback EPS bridge instead."
+  - "You need EPS before and after a cash-funded buyback: use the Cash buyback EPS checker instead."
 you_give:
   - Cash dividends paid in each period
   - Executed share repurchases (not announced ones)

@@ -31,9 +31,9 @@ you_get:
 how_to_use:
   - Open an AI that can run Python code and reach public websites. Paste in this skill's instructions.
   - Type the stock ticker. Add your own growth view or a list of peers if you have them (optional).
+  - Before it pulls any data, know that it uses yfinance, an unofficial Yahoo Finance reader. It may be wrong or go against Yahoo's terms, so read them first. You can take the same figures from the company's annual report or filings instead.
   - Let it run. It installs what it needs, pulls public data and builds the three methods.
   - Read the headline verdict and the sensitivity grid first. Then check the peer list and key assumptions against the company's annual report.
-  - The data comes from an unofficial Yahoo Finance reader, which may be wrong or against that site's terms. Check the figures against the company's filings.
   - Treat the result as research, not advice, and do not use it alone for a buy or sell decision. It does not work for unlisted companies.
   - Next, save the sensitivity grid and the list of assumptions. Check the growth and margin inputs against the company's latest annual report before you act on any number.
   - The exit multiple comes from the peer median the skill calculates. If it cannot find one, it uses the cash flow method alone and tells you.

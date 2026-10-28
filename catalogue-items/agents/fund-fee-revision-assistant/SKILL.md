@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the invoice to check, an approved capital call notice and the commitment ledger (only if the fee is paid through a call), the last accepted review and the record this agent wrote last time.
 
-**The pieces it uses:** the [Private fund fee and offset checker](https://useaiblocks.com/workflows/reconcile-private-fund-fee-charges) workflow (the governing method), which runs the [Management fee stepdown checker](https://useaiblocks.com/skills/management-fee-stepdown-checker) and the [Transaction fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker), and the [Unfunded commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker) (only when a call notice is supplied). If you cannot open them, use the method written in step 3 and say you did.
+**The pieces it uses:** the [Private fund fee and offset checker](https://useaiblocks.com/workflows/reconcile-private-fund-fee-charges) workflow (the governing method), which runs the [Fund management fee change checker](https://useaiblocks.com/skills/management-fee-stepdown-checker) and the [Fund management fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker), and the [Remaining fund commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker) (only when a call notice is supplied). If you cannot open them, use the method written in step 3 and say you did.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.

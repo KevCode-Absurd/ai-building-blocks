@@ -7,6 +7,23 @@ description: When the user wants to optimize freight transportation, reduce ship
 
 You are an expert in freight transportation optimization and logistics. Your goal is to help minimize transportation costs, improve service levels, and optimize carrier selection across all transportation modes while ensuring on-time delivery and freight visibility.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file upload:** You can attach your invoice export instead of pasting it.
+- **A tool that can run code:** It can total hundreds of invoices by lane without sums by hand.
+<!-- /needs -->
+
 ## How to run this in a chat (added by AI Blocks)
 
 **Who this is for.** A business that ships freight between fixed places (parcel, LTL, truckload, intermodal) and wants to cut its bill without worse delivery. For local delivery routes use the Delivery route planner. For the final leg to a home use the Last-mile delivery planner. Without about three months of freight invoices there is not enough to go on: say so and ask for them.
@@ -1094,6 +1111,15 @@ Every dollar figure, percentage and count in this example layout is invented. Ne
 | Number of carriers | 35 | 20 | -43% |
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Warehouse picker route planner](https://useaiblocks.com/skills/warehouse-picker-route-planner). It takes the plan.
+- The [Truck load builder](https://useaiblocks.com/skills/truck-load-builder). It takes the plan.
+- The [Truck loading planner](https://useaiblocks.com/skills/truck-loading-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

@@ -57,5 +57,5 @@ Lead with the side-by-side table: investor and common payout under alternative A
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - **Check a later round** with the [Review a down round rights change](https://useaiblocks.com/workflows/review-a-down-round-rights-change) workflow, if new terms could change these.
-- **Take out deal fees** with the [Check adviser fees in seller proceeds](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds) workflow, if you need what holders keep after the sale.
+- **Take out deal fees** with the [Seller adviser fee and proceeds checker](https://useaiblocks.com/workflows/check-adviser-fees-in-seller-proceeds) workflow, if you need what holders keep after the sale.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -12,27 +12,23 @@ This is the store version of the general A/B test traffic checker. It adds the o
 ## When not to use
 - Under 30 orders a month. Do research and known fixes first.
 - To rank many test ideas. Use the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker).
-- To read a finished test. Use the [Store test verdict maker](https://useaiblocks.com/skills/store-test-verdict-maker).
+- To read a finished test. Use the [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
-**Makes it better (optional):**
-- **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
-
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **A shortlist** with the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). Bring your results, an audit report (optional), your question (optional). It uses your shortlist.
-3. This one.
+1. **Test idea ranker** with the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). Bring an audit report, your results (optional), customer words (optional), a plan (optional).
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, your question, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -41,10 +37,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In the box above, "Your results" and "Your question" mean the store numbers and the change below. No Meta Ads Manager or Google Ads export is used. The shortlist is optional, and the Competitor ad swipe file builder is not the source of it: it comes from the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker) or the [Big swing test picker](https://useaiblocks.com/skills/big-swing-test-picker). In the box above, "Bold store experiment planner" is the Big swing test picker, and "Store test evidence reviewer" is the [Store test verdict maker](https://useaiblocks.com/skills/store-test-verdict-maker).
+In the box above, "Your results" and "Your question" mean the store numbers and the change below. No ad export is used. A shortlist of ideas is optional; it comes from the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker) or the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker).
 
 - **Store numbers** (required): orders per month, sessions per month and conversion rate for the page to test. Take sessions from GA4 if the owner has it, because Shopify sessions may include bot visits that GA4 filters out. That is one source's claim and the size differs by store, so ask the owner to compare Shopify and GA4 sessions for the same dates. A large gap means the weeks below will come out too short.
-- **The change** (required): what will change on the page and why they think it helps. The top pick from a Test idea ranker or Big swing test picker shortlist works as the change.
+- **The change** (required): what will change on the page and why they think it helps. The top pick from a Test idea ranker or Bold store experiment planner shortlist works as the change.
 - **Broken or just maybe better?** (required): is anything on the page failing today?
 - **Smallest lift worth shipping** (optional): the smallest gain that would pay for the work. If missing, work it out in step 4.
 - **Planned dates, sales and email sends** (optional).

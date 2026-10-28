@@ -48,6 +48,18 @@ def generate_brand_registry_complaint(info: ComplaintInfo) -> str:
 
 ---
 
+## Use this only for an intellectual property problem
+
+File this only when you can show a counterfeit, a misuse of your registered trademark, or a copied
+image or text, for example with a test buy. Do not file it just because a seller is not on your
+approved list or prices below your minimum advertised price (MAP). Reselling genuine goods is
+generally not trademark infringement, and a MAP breach is a matter between you and a reseller who
+agreed to your MAP policy. You confirm the notice is accurate, and false notices can cost you
+access to Amazon's reporting tools. Check Amazon's current Intellectual Property Policy in Seller
+Central and the Brand Registry help pages before you file, and have a lawyer check your claim.
+
+---
+
 ## Report Details
 
 **Brand Name**: {info.brand_name}
@@ -63,12 +75,12 @@ def generate_brand_registry_complaint(info: ComplaintInfo) -> str:
 ```
 I am the brand owner of {info.brand_name} (Trademark #{info.trademark_number or "[YOUR TRADEMARK NUMBER]"}).
 
-The seller "{info.seller_name}" (Seller ID: {info.seller_id}) is selling unauthorized/counterfeit products on ASIN {info.asin}.
+The seller "{info.seller_name}" (Seller ID: {info.seller_id}) is selling counterfeit products on ASIN {info.asin}, using our trademark on goods we did not make.
 
 Evidence:
-{info.evidence or "[Describe your evidence here - screenshots, test buy results, etc.]"}
+{info.evidence or "[Describe your evidence here - test buy order ID, photos showing how the item differs from the genuine product]"}
 
-This seller is NOT an authorized reseller of our products. We request immediate removal of this seller from our listing.
+I have a good-faith belief that this use of our trademark is not authorized by us, our agent or the law, and the information in this notice is accurate. We request removal of this seller's counterfeit offer.
 
 Contact: {info.contact_email or "[YOUR EMAIL]"}
 Company: {info.company_name or "[YOUR COMPANY NAME]"}
@@ -90,11 +102,10 @@ Company: {info.company_name or "[YOUR COMPANY NAME]"}
 
 ## Evidence Checklist
 
-☐ Screenshots of listing showing unauthorized seller
+☐ Screenshots of the seller's offer on the listing
 ☐ Invoice/order confirmation from test buy
 ☐ Photos comparing authentic vs suspected counterfeit
 ☐ Trademark registration certificate
-☐ Authorization letter (showing seller is NOT authorized)
 """
 
 
@@ -115,32 +126,35 @@ def generate_cease_desist(info: ComplaintInfo) -> str:
 
 To: {info.seller_name}
 Seller ID: {info.seller_id}
-Re: Unauthorized Sale of {info.brand_name} Products
+Re: Sale of Counterfeit {info.brand_name} Products
 
 ---
 
+[USE THIS LETTER ONLY WHEN YOU HAVE EVIDENCE, SUCH AS A TEST BUY, THAT THE ITEMS ARE COUNTERFEIT OR
+MISUSE YOUR TRADEMARK. Being an unapproved reseller of genuine goods is generally not trademark
+infringement. Have a lawyer check the claims below before you send it. Delete this note.]
+
 Dear {info.seller_name},
 
-This letter serves as formal notice that you are engaging in unauthorized sale of products bearing the {info.brand_name}® trademark (Registration No. {info.trademark_number or "[TRADEMARK NUMBER]"}) on Amazon.com, specifically on ASIN: {info.asin}.
+This letter serves as formal notice that you are selling products bearing the {info.brand_name}® trademark (Registration No. {info.trademark_number or "[TRADEMARK NUMBER]"}) on Amazon.com, specifically on ASIN: {info.asin}, that are not genuine {info.brand_name} products.
 
-**YOU ARE NOT AN AUTHORIZED RESELLER** of {info.brand_name} products. Your unauthorized sale of these products constitutes:
+Our test buy (order [ORDER ID]) received an item that [DESCRIBE HOW IT DIFFERS FROM THE GENUINE PRODUCT]. Selling counterfeit goods under our trademark may constitute:
 
 1. Trademark infringement under 15 U.S.C. § 1114
 2. False designation of origin under 15 U.S.C. § 1125(a)
-3. Violation of Amazon's Anti-Counterfeiting Policy
 
 **DEMAND**
 
 We hereby demand that you:
 
-1. Immediately cease and desist all sales of {info.brand_name} products
-2. Remove all {info.brand_name} product listings from your seller account
+1. Immediately stop selling counterfeit products under the {info.brand_name} trademark
+2. Remove those offers from your seller account
 3. Provide a written confirmation of compliance within 5 business days
 
 **CONSEQUENCES OF NON-COMPLIANCE**
 
-Failure to comply with this demand will result in:
-- Report to Amazon Brand Registry for listing removal
+Failure to comply with this demand may result in:
+- A counterfeit report to Amazon with our test buy evidence
 - Legal action seeking injunctive relief and monetary damages
 - Report to law enforcement if counterfeit goods are involved
 
@@ -172,7 +186,7 @@ def generate_test_buy_guide() -> str:
 
 ## Purpose
 
-Test Buy is the process of purchasing products from suspected counterfeit/unauthorized sellers to collect physical evidence for your complaint.
+Test Buy is the process of purchasing products from a seller you suspect of selling counterfeits, to collect physical evidence. Only file an infringement complaint if the item you receive shows a counterfeit or trademark problem.
 
 ---
 
@@ -309,11 +323,12 @@ This notice is to inform you that your current advertised price for {info.brand_
 
 **MAP Policy Terms:**
 
-As an authorized/unauthorized reseller of {info.brand_name} products, you are required to maintain advertised prices at or above the Minimum Advertised Price. This policy ensures:
+[SEND THIS ONLY TO A RESELLER WHO AGREED TO YOUR MAP POLICY. A seller who never agreed to it is not
+bound by it. Rules on controlling reseller prices differ by country and some places restrict them,
+so ask a lawyer before you enforce a MAP policy. This is a business notice, not an intellectual
+property complaint: do not report a MAP breach through Amazon's infringement tools. Delete this note.]
 
-- Fair competition among resellers
-- Brand value protection
-- Quality customer experience
+Under the MAP policy you accepted on [DATE YOU AGREED], you agreed to advertise {info.brand_name} products at or above the Minimum Advertised Price.
 
 **Required Action:**
 
@@ -321,9 +336,8 @@ Please adjust your advertised price to ${map_price:.2f} or higher within **48 ho
 
 **Consequences of Non-Compliance:**
 
-Continued violation of our MAP policy may result in:
+Continued violation of our MAP policy may result in the steps our agreement allows, such as:
 - Removal from authorized reseller program
-- Report to Amazon for policy violation
 - Supply chain restrictions
 
 Please confirm compliance by replying to this notice.
@@ -365,12 +379,14 @@ def generate_brand_registry_complaint_zh(info: ComplaintInfo) -> str:
 ```
 I is  {info.brand_name} BrandOwner (TrademarkRegisternumber: {info.trademark_number or "[youTrademarknumber]"})。
 
-Seller "{info.seller_name}" (Seller ID: {info.seller_id}) positive in  ASIN {info.asin} Selling unauthorized on/CounterfeitProduct。
+Seller "{info.seller_name}" (Seller ID: {info.seller_id}) is selling counterfeit products on ASIN {info.asin}, using our trademark on goods we did not make.
 
 Evidence:
-{info.evidence or "[Describe your evidence here - Screenshot、TestPurchaseResult etc]"}
+{info.evidence or "[Describe your evidence here - test buy order ID, photos showing how the item differs from the genuine product]"}
 
- should Sellernot is WeProductAuthorized distributor of。WeRequestImmediately will  this Seller from We Listing  in Remove。
+I have a good-faith belief that this use of our trademark is not authorized by us, our agent or the law, and the information in this notice is accurate. We request removal of this seller's counterfeit offer.
+
+[Use this only for counterfeits, trademark misuse or copied content you can show. Do not file it just because a seller is not on your approved list or prices below your MAP.]
 
 Contact info: {info.contact_email or "[Your email]"}
 CompanyName: {info.company_name or "[youCompanyname]"}
@@ -392,11 +408,10 @@ CompanyName: {info.company_name or "[youCompanyname]"}
 
 ## EvidenceList
 
-☐ Show notAuthorizedSeller Listing Screenshot
+☐ Screenshot of the seller's offer on the listing
 ☐ Test Buy Invoice/OrderConfirm
 ☐ Authentic vs suspected counterfeitComparisonPhoto
 ☐ Trademark registration certificate
-☐ Authorizedbook (Proof should SellerNot obtainedAuthorized)
 """
 
 
@@ -409,7 +424,7 @@ def generate_test_buy_guide_zh() -> str:
 
 ## item
 
-Test Buy (TestPurchase) Is fromSuspiciousCounterfeit/notAuthorizedSeller at PurchaseProduct，Process of collecting physical evidence for complaint。
+Test Buy is buying from a seller you suspect of selling counterfeits, to collect physical evidence. Only file a complaint if the item shows a counterfeit or trademark problem.
 
 ---
 
@@ -503,7 +518,7 @@ def main():
         asin="B08XXXXXX1",
         seller_name="CheapDeals123",
         seller_id="X9Y8Z7W6V5U4T3",
-        violation_type="Unauthorized Sale / Suspected Counterfeit",
+        violation_type="Counterfeit (confirmed by test buy)",
         evidence="Test buy received product with different packaging and lower quality than authentic product.",
         contact_email="legal@techgadget.com",
         company_name="TechGadget Inc.",

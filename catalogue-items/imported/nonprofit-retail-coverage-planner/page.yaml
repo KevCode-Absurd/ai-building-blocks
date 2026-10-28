@@ -20,9 +20,12 @@ you_get:
 how_to_use:
   - Gather your store hours, the roles each shift needs, your roster with training, and your cash and keyholder rules.
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your facts. No code, files or paid tools are needed.
+  - The skill points to three related skills from its source (nonprofit-retail-store-operations, nonprofit-hr and nonprofit-volunteer-management). They are not part of this item. Give your own store rules, HR policy and volunteer plan in their place.
+  - The skill's paid-to-volunteer ratio (for example 1 paid person per 4 to 6 volunteer shift-hours) is an illustration, not a benchmark. Set your own target.
   - Ask for the role matrix first. Check that each shift has a trained cashier and a paid keyholder.
   - Ask for the onboarding track and a plan for no-shows, such as cross-training.
-  - Fix any item marked missing, then check pay and volunteer rules with your HR contact before you use the schedule.
+  - Fix any item marked missing. Then check pay and volunteer rules with your HR contact before you use the schedule. Confirm that no volunteer shift covers work a paid role should do, since that can break wage-and-hour rules.
+  - Next, share the schedule with shift leads, and review the no-show and gap report each quarter.
 output_sample:
   input:
     - Your store hours by day and part of day

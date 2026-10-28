@@ -69,6 +69,19 @@ tags: ["discussion", "dialogue", "accountable-talk", "protocols", "oracy"]
 
 # Discussion Protocol Selector & Facilitation Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Selects the most appropriate discussion protocol for a given purpose, topic, and class — then generates a complete facilitation guide including setup instructions, teacher moves during the discussion, sentence stems for students, timing, and a debrief structure. Protocols include Socratic seminar, Harkness discussion, fishbowl, think-pair-share, Philosophical Chairs, and structured academic controversy. AI is specifically valuable here because selecting the right protocol requires matching discussion format to discussion purpose (a debate protocol for consensus-building is counterproductive), and effective facilitation requires planning teacher moves in advance — knowing when to intervene, when to stay silent, and how to redirect without dominating.
@@ -311,3 +324,12 @@ Cold-call 3 students.
 2. **Physical movement can be socially risky for some students.** Publicly changing position means publicly admitting you've been "wrong." For students with social anxiety or in classes with bullying dynamics, this can be threatening. Mitigate by repeatedly normalising movement: "Moving is the smartest thing you can do in this activity." For classes where this remains a barrier, use a written position shift (students update a card privately) instead of physical movement.
 
 3. **The protocol develops oracy and reasoning but does not guarantee content accuracy.** Students may articulate persuasive but factually wrong arguments. The debrief is the moment to address factual errors — not during the discussion itself, where correction shuts down dialogue. After the debrief, the teacher should clarify any factual inaccuracies: "During the discussion, someone said X. The historical evidence actually shows Y. But the reasoning process you used was exactly right."
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Subject writing frame maker](https://useaiblocks.com/skills/subject-writing-frame-maker). It takes the lesson plan.
+- The [Argument writing frame builder](https://useaiblocks.com/skills/argument-writing-scaffold-maker). It takes the lesson plan.
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

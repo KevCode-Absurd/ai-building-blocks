@@ -84,6 +84,14 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+
+- Every product is in the list with its income share.
+- Each harm names its evidence.
+- Switch cost is stated in numbers, or the blanks are marked `MISSING:`.
+- A re-audit date is set.
+- The biggest harm is chosen on harm, not on ease.
+
 <!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -93,14 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Decide whether to switch** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every product is in the list with its income share.
-- Each harm names its evidence.
-- Switch cost is stated in numbers, or the blanks are marked `MISSING:`.
-- A re-audit date is set.
-- The biggest harm is chosen on harm, not on ease.
 
 ## If something is missing
 

@@ -9,6 +9,26 @@ metadata:
 
 Your goal is to give the user a clear, honest snapshot of their total financial position and a trend they can track monthly. You are a calculator and a tracker. You are not a licensed financial adviser, and you do not tell the user what to buy, sell or borrow.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is simple arithmetic and works in any chat.
+- **Claude or ChatGPT with code running:** Runs the included script, so every total is exact.
+<!-- /needs -->
+
 ## Rules for this skill
 
 - **Use only the figures the user gives you.** If an asset or debt value is missing, ask once in one list. If it is still missing, list it under "Not included" and calculate with what you have. Do not estimate a balance.
@@ -91,6 +111,15 @@ If prior snapshot exists: compute dollar change, percentage change, and which as
 - Ask the user to save the statement with the date and repeat it next month. Point to the related skills below for debt payoff, budgeting or retirement, since this skill does not plan them.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Property net asset value calculator](https://useaiblocks.com/skills/investment-property-nav-bridge). It takes the spreadsheet.
+- The [Holding company value calculator](https://useaiblocks.com/skills/listed-holding-lookthrough-nav). It takes the spreadsheet.
+- The [Dividend timing return calculator](https://useaiblocks.com/skills/dividend-recap-timing-checker). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Scripts
 - [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math.

@@ -68,11 +68,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Build belief one acceptable step at a time.** Use the skill `belief-ladder-builder`. It receives the want section from the step 1 file. It saves the goal claim, a ladder of rungs with a score for each jump, and the copy redrafted in the new order. The ladder starts at a true, widely accepted statement and never jumps two points of belief.
 3. **Explain how it works so the promise is believed.** Use the skill `how-it-works-copy-writer`. It receives the redrafted copy from the step 2 file and the product facts. It saves a chain of cause and effect that explains the result, with no link that lacks a fact you gave, and the draft with that passage added.
 4. **Match every claim to its proof.** Use the skill `claim-and-proof-matcher`. It receives the finished draft from the step 3 file and the proof you hold. It saves each claim paired with its proof, any gap, and a fix for each claim that outruns the proof.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 Four step files and the summary. The step 4 file holds the claims and proof report.
-- STEP 1 THE WANT SECTION, STEP 2 THE BELIEF LADDER, STEP 3 HOW IT WORKS, STEP 4 CLAIMS AND PROOF, then HAND-BACK SUMMARY with each file and every MISSING line.
+- STEP 1 THE WANT SECTION, STEP 2 THE BELIEF LADDER, STEP 3 HOW IT WORKS, STEP 4 CLAIMS AND PROOF, then HAND-BACK SUMMARY with each file, every MISSING line and CHECKS MISSED.
+- What to do next: fix or cut every claim step 4 flags. Then test the finished copy against your current copy, with the same headline and offer, in your ad platform or an A/B test tool.
 
 ## Check before you hand it back
 - The section serves one want, and no block repeats another.

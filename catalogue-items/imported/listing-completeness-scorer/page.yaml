@@ -29,12 +29,12 @@ you_get:
   - A list ordered worst first
   - Totals for each type of gap
 how_to_use:
-  - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store. Claude Code needs a paid Claude plan or API credits. The Shopify CLI is free, but you need a Shopify store and staff or app access with permission to read products.
   - Sign in to your store with read-only product access. Cost data may also need permission to read inventory.
   - Paste the skill into your AI. Give it your store address.
   - Add the status to check and any required metafields, if you want them (optional). By default only active products are scored. Ask for draft or all products if you want those too.
   - Open the report and the CSV. Fix the lowest scores first, starting with missing descriptions and images.
-  - Run it again after a clean-up to see if your average score went up.
+  - Run it again after a clean-up to see if your average score went up. Re-run it monthly, and use the CSV to plan a bulk edit in Shopify admin for the weakest products.
 output_sample:
   input:
     - Your Shopify store address

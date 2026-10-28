@@ -11,7 +11,7 @@ Peer-reviewed findings behind the `store-audit` procedure. Effects are as report
 
 ## Label recommendations as algorithmic for utilitarian, human for hedonic
 
-**Rule.** "Recommended based on our data" for functional purchases; "Our expert's pick" for enjoyment purchases.
+**Rule.** "Recommended based on our data" for functional purchases. For enjoyment purchases, buyers prefer human recommendations, so have real people choose or review the picks and label them that way. A label must name the real source: do not call algorithm picks "Our expert's pick".
 **Effect.** Preference for the recommendation source flipped with the purchase goal (e.g. a business hotel stay vs a holiday stay).
 **Why.** People believe machines are better at weighing functional pros and cons but don't understand what people enjoy.
 **Source.** Longoni, C., & Cian, L. (2020). Artificial intelligence in utilitarian vs. hedonic contexts: The "word-of-machine" effect. *Journal of Marketing*. https://doi.org/10.1177/0022242920957347

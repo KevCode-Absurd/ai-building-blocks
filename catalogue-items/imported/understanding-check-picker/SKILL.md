@@ -70,6 +70,19 @@ tags: ["formative-assessment", "checking-understanding", "AfL", "feedback", "res
 
 # Formative Assessment Technique Selector
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Selects the most appropriate formative assessment technique for a specific learning moment — during instruction, after guided practice, at the end of a lesson, or between lessons — and provides a complete implementation guide including how to interpret the responses and what to do next based on what the data shows. Unlike generic lists of formative assessment ideas, this skill matches the technique to the specific moment, purpose, and practical constraints. A technique that works brilliantly at the end of a lesson (exit ticket) is useless during a teacher explanation; a technique that works for checking factual recall (mini-whiteboards) is inappropriate for checking deep understanding (which requires explanation, not single answers). AI is specifically valuable here because selecting the right technique requires matching the assessment purpose (what am I checking?), the timing (when in the lesson?), the response format (do I need quick data from everyone, or deep data from a few?), and the practical constraints (class size, resources, time).
@@ -251,3 +264,11 @@ For each technique (2–3, ranked):
 2. **The response interpretation thresholds (80%, 50–80%, below 50%) are guidelines, not rules.** A class that is 78% correct may be ready to proceed if the 22% who got it wrong all made the same correctable error. A class that is 82% correct may need to pause if the errors suggest a deep misconception. The teacher's professional judgement must interpret the data in context.
 
 3. **Formative assessment only works if the teacher is prepared to adapt.** The technique provides data, but the value is in the response. A teacher who checks whiteboards, sees 60% correct, and proceeds anyway because they need to "get through the lesson" has conducted a formative check but not formative assessment. The willingness to adapt the lesson in response to data is the essential ingredient that no technique can provide.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the plan.
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

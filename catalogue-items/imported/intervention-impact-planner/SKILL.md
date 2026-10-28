@@ -66,6 +66,22 @@ tags: ["systems-thinking", "leverage-points", "intervention-design", "unintended
 
 # Leverage and Response Design
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Helps students and educators design a thoughtful intervention once they know where to act in a system. The skill fills the action gap in systems thinking: existing tools help students analyse systems (iceberg), surface assumptions (mental models, ladder of inference), and identify where they have agency (agency circles). This skill bridges analysis and action by asking: given what we know about the system, what response would be wise?
@@ -218,3 +234,12 @@ Return exactly:
 2. **Higher-leverage does not always mean better.** Meadows herself emphasised that leverage points are also places where systems resist intervention most fiercely. The hierarchy describes potential impact, not ease of change.
 3. **Students may find it discouraging.** Analysis revealing that a proposed action has limited leverage can feel deflating. The skill should normalise this as a feature of systems thinking, not a failure of the students or their idea.
 4. **Proportionality is a judgment call the skill cannot make.** Whether an intervention is appropriate for students of a given age requires teacher judgment about emotional and developmental readiness, not just systemic analysis.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Reggio learning documentation planner](https://useaiblocks.com/skills/learning-documentation-planner). It takes the plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+- The [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

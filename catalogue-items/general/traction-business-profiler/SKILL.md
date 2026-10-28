@@ -34,11 +34,11 @@ Default to SaaS: identify the buyer, costly problem, product value, self-serve v
 
 Separate observed facts, user-provided facts, hypotheses and missing inputs. Public pricing is not average revenue, retention, gross margin or acquisition cost. Mark private metrics unknown. Verify changing platform rules, fees, publication availability and execution settings from current official sources before relying on them.
 
-## Make one bounded experiment
+## Record the limits for a later test
 This skill builds the profile only. Use this section to record the limits, caps and tracking facts the profile needs. Do not propose a pilot here: the channel pickers named in "After this" do that. The "website" in "Before you start" is the same product link or pasted page text.
 
 
-Explain this channel's fit for the current business and the strongest reason it might fail. Use evidence to propose one cheap pilot, its audience, offer, deliverable, owner, time window, cash cap, labour cap, tracking and go / revise / stop rules. If caps or thresholds were not supplied, label proposed values as assumptions for approval. Check long sales cycles and slow channels before choosing a review date. A short pilot can test an early assumption without proving long-term acquisition.
+Record what a later pilot will need: the cash cap, the hours a week, who could own a test, how sales are tracked today, and how long the sales cycle is. If caps were not supplied, mark them MISSING or label any proposed value as an assumption for approval. Note a long sales cycle plainly, since the channel pickers use it to set review dates.
 
 Use the funnel qualified visitor or account -> useful product action -> paying customer -> retained customer. Keep people, teams and buying accounts separate. Use references/measurement.md for economics and attribution. Never invent search volume, contacts, conversion rates, ROI or results. Include an evidence ledger and MISSING at the end. Send nothing, spend nothing, publish nothing and change no live system without authorization for that action.
 
@@ -58,7 +58,7 @@ Save business-profile.md with these headings, in this order:
 
 Separate public price from revenue per acquired account. A blocked URL produces a provisional profile with explicit MISSING fields, not an invented company description.
 
-Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, propose a bounded learning test and identify the product issue before recommending larger acquisition spend. If browsing fails, ask for these, and nothing else, before you go on:
+Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, propose a bounded learning test and identify the product issue before recommending larger acquisition spend. If browsing fails, ask only for whichever of these are still missing, and nothing else, before you go on:
 1. The page text for your product, pricing and who it is for.
 2. Your growth goal and deadline.
 3. Your cash cap and hours per week.

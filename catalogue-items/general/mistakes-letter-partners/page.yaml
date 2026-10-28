@@ -137,6 +137,8 @@ improve:
   - Save the mistakes list each year and use it to look for repeats.
   - Pair it with a numbers check before sending.
 
+next: [plain-english-editor]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Drafting and tightening a letter is text work any strong chat AI does well."}

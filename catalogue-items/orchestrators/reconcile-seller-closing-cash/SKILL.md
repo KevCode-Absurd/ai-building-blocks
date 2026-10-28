@@ -68,6 +68,6 @@ Lead with the seller cash picture: paid at closing, owed back, still held and to
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check the price on a locked-box deal** with the [Reconcile a locked-box closing price](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price) workflow, when the price was fixed at an earlier date.
-- **Check an earnout held in escrow** with the [Check an escrow-funded earnout](https://useaiblocks.com/workflows/check-an-escrow-funded-earnout) workflow.
+- **Check the price on a locked-box deal** with the [Locked-box deal price checker](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price) workflow, when the price was fixed at an earlier date.
+- **Check an earnout held in escrow** with the [Earnout payout and escrow cash checker](https://useaiblocks.com/workflows/check-an-escrow-funded-earnout) workflow.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

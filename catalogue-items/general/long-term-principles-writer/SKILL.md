@@ -76,15 +76,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Turn it into a letter to your team or owners** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the list.
-- **Pick numbers that show whether you keep each promise** with the [Input metric picker](https://useaiblocks.com/skills/input-metric-picker). It takes the list.
-- **Add a promise after your next mistake** with the [Mistake-to-principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the list.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every promise starts with what you will do.
@@ -94,6 +85,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each promise passed the bad-year test.
 - The closing line says this is your approach, not the only right one.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Turn it into a letter to your team or owners** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the list.
+- **Pick numbers that show whether you keep each promise** with the [Business activity metric planner](https://useaiblocks.com/skills/input-metric-picker). It takes the list.
+- **Add a promise after your next mistake** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -87,7 +87,12 @@ Returns a DataFrame indexed by `Earnings Date` — tz-aware announcement timesta
 Columns: `EPS Estimate`, `Reported EPS`, `Surprise(%)` (already in percent, e.g. 6.74).
 
 - The upcoming report is the row with no `Reported EPS`.
-- The time of day (US Eastern) gives the timing: at or after 16:00 means after the close; earlier times mean before the open, or occasionally during the session.
+- The time of day (US Eastern) gives the timing, in four cases:
+  - before 09:30 ET: before the open
+  - 09:30 up to 16:00 ET: during the regular session (for example a 14:00 report)
+  - 16:00 ET or later: after the close
+  - 00:00 or no time: time not confirmed. Say so, and point to the company's investor page.
+  These hours are the NYSE core session, 9:30 a.m. to 4:00 p.m. ET (https://www.nyse.com/markets/hours-calendars). For a non-US listing, or a date on a weekend, holiday or early-close day, use that exchange's own calendar.
 
 ---
 

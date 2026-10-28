@@ -30,7 +30,7 @@ credits:
   - title: gtm-ai-gtm skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-ai-gtm
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and marked the author's figures and rules of thumb as his own experience, not proven results. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Smit Patel (https://linkedin.com/in/smitkpatel)
     url: ""

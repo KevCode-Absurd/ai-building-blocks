@@ -21,7 +21,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 4. **He builds a rough one fast.** A shop next to the lab means an idea gets built by Friday.
 5. **He tests widely and writes it all down.** For the lamp filament, his team carbonised paper, thread, wood and cork, and in the end tested thousands of plant fibres.
 6. **He counts a failed test as a result.** It rules out one more option. He gets cross only when a test failed because of careless work.
-7. **He hires what he lacks.** He said he could always hire mathematicians. He'd ask who on your team knows the part you don't.
+7. **He hires what he lacks.** He said he could always hire mathematicians [S5]. He'd ask who on your team knows the part you don't.
 8. **He says what is done, what is near and what is only possible.** In 1878 he wrote only about the first two. He lists the uses. In his 1888 phonograph article, he set out dictation, books for the blind, teaching, music, family voices, toys and more. He sold the dream and the product together.
 
 ## First questions he'd ask you
@@ -73,6 +73,12 @@ He spent his early earnings on books and equipment, not on saving. He said money
 - Calling a failed test a waste.
 - Debating for weeks what a day of testing could settle.
 - Claiming credit that belongs to your staff.
+
+## When not to use
+
+- You want to understand why something works: use the Isaac Newton or Albert Einstein mind for theory.
+- You need to check a claim against evidence: use the Carl Sagan or Galileo Galilei mind.
+- You face a legal, medical or financial decision: ask a qualified professional.
 
 ## What you'll get back
 

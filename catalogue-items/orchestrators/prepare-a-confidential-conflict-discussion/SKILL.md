@@ -7,6 +7,10 @@ description: "Use when two people at work are in conflict and you will lead a ta
 
 Prepare a leader for a talk between two people in conflict. Three component skills run in order: a neutral issue map, a discussion guide, then draft agreements with a minutes template. Accounts stay separate and named. Nothing is agreed until both people accept it in the room.
 
+## Stop first
+
+Read the accounts before any step. If any account describes harassment, discrimination, violence, a threat, a safety breach or a possible crime, stop. Say this needs a formal process with HR or an employment adviser, not a mediation talk. List which lines triggered it. Do not run steps 2 and 3. You may still return the step 1 issue map, marked `FOR THE FORMAL PROCESS`, if the user's reviewer wants it.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -26,13 +30,9 @@ How to start:
 - **A chat AI that reads files:** It reads both accounts and the pack together. Nothing is sent or filed for you.
 <!-- /needs -->
 
-## Stop first
+## What you need
 
-Read the accounts before any step. If any account describes harassment, discrimination, violence, a threat, a safety breach or a possible crime, stop. Say this needs a formal process with HR or an employment adviser, not a mediation talk. List which lines triggered it. Do not run steps 2 and 3. You may still return the step 1 issue map, marked `FOR THE FORMAL PROCESS`, if the user's reviewer wants it.
-
-## Before you start
-
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This list replaces the shared "Before you start" block above. Use what is attached or pasted first. Then ask once, in one short message, only for the missing facts below that change the result.
 
 **You need:**
 - A few lines on the conflict: who is involved, what happened and when.
@@ -91,6 +91,8 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent, agreed or filed.
 
+When you hand back, offer one next step in a short question, and say the user can type their own: plan a formal investigation if a flag was raised, with the [Workplace investigation planner](https://useaiblocks.com/skills/workplace-investigation-guide); give one person hard feedback with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner); or record the outcome by running step 3 again with real notes from the talk.
+
 ## Check before you hand it back
 
 - Every disputed point is attributed and no side is judged.
@@ -104,19 +106,11 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Workplace investigation planner](https://useaiblocks.com/skills/workplace-investigation-guide). It takes the document.
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
 - The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the meeting notes and plan.
-- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the meeting notes and plan.
-- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
-- The [Candidate comparison table builder](https://useaiblocks.com/prompts/candidate-comparison-table-builder). It takes the meeting notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Offer one next step in a short question, and say the user can type their own:
-- **Plan a formal investigation** if a flag was raised, with the [Workplace investigation guide](https://useaiblocks.com/skills/workplace-investigation-guide).
-- **Give one person hard feedback** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner).
-- **Record the outcome** by running step 3 again with real notes from the talk.
 
 ## Avoid
 

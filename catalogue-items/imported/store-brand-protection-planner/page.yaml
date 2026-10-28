@@ -36,6 +36,7 @@ how_to_use:
   - Gather your brand name, official domain and trademark number if you have one. Add your logo link and social handles too.
   - Find suspect listings, sites and posts by hand. For each one write down the seller, price, images, reviews and link.
   - Download the skill folder and open it in an AI that can run Python code. Fill in the input settings with your brand details.
+  - The listing fields (ASIN, buy box) are for Amazon-style marketplaces. For a Shopify or other online store, use the product page link or SKU in place of the ASIN and leave the marketplace-only fields empty. SKILL.md has a short example to copy.
   - Run detector.py on your listings. It does not search the web. It checks the details you give it against your brand info.
   - Read each finding and its risk level. Open every link yourself before you act.
   - Confirm your trademark is registered and active. The letters assume you hold the right. If it is not registered and active, skip the cease and desist letter and ask a lawyer first.

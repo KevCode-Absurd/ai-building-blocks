@@ -7,8 +7,6 @@ job: set-up-ai
 headline: Prompt fixer
 subhead: A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
 explain: |
-  A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
-
   The skill first diagnoses what is wrong: too vague, no output format, made-up facts, inconsistent runs or too long. Each problem has a matching fix, such as adding context, naming the format, telling the model to say when it is unsure, or adding examples. It then rebuilds the prompt with role, situation, constraints, instructions and target output. It can also trim wasted words to cut token use, and adapt the prompt when it works on one model but fails on another.
 when:
   - Your prompt gives different answers each time you run it.

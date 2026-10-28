@@ -29,4 +29,4 @@ credits:
   - title: pedagogical-content-knowledge-developer skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/pedagogical-content-knowledge-developer
-    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+    used: Copied under the CC BY-SA-4.0 licence. We gave it a plain name and corrected the stress-response example so the fast adrenaline pathway (adrenal medulla) and the slower cortisol pathway (HPA axis, adrenal cortex) are taught as two separate pathways. We added Before you start and After this sections that link to other AI Blocks steps.

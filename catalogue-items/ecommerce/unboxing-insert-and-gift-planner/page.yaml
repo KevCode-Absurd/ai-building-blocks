@@ -134,8 +134,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can do the cost sums and write the card and note."}
-    - {name: "Handwrytten", why: "A service that writes real notes with a pen machine from a customer list. Check cost and volume limits."}
-    - {name: "Klaviyo", why: "It can mark VIP and high-value orders, so the right tier is picked for each box."}
+    - {name: "Handwrytten", why: "Paid service, charged per note. It writes real notes with a pen machine from a customer list. Check cost and volume limits."}
+    - {name: "Klaviyo", why: "Paid email service that needs an account. It can mark VIP and high-value orders, so the right tier is picked for each box."}
   inputs:
     - "Quotes from your printer and packer"
     - "A list of your VIP and high-value customers"
@@ -149,3 +149,4 @@ terms:
     meaning: How many extra repeat orders you need for the extra cost to pay for itself.
   - term: Holdout group
     meaning: A few orders that do not get the new item, so you can compare.
+next: [packaging-brief-writer]

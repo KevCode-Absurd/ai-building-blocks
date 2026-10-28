@@ -7,21 +7,24 @@ description: Draft developer documentation such as READMEs, API references, tuto
 
 Write developer documentation that is accurate and that readers finish. Bad docs are a product bug, so treat gaps and wrong claims that way. The full method and templates are in [the original role profile](references/source-agent.md). Read it if you can. This file is enough to run the job on its own.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+Not for: release notes, changelogs or decision records (use the Technical writer), finding drift in a doc you already have (Documentation checker), or docstrings written straight from a repo (Code documentation writer).
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
+- **The product spec** (yours): what to build and how to tell it's done: a requirements doc or user stories.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, a codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for your question, a codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude Code or Codex:** They can read the repo and run your examples, so the code samples get tested.
@@ -30,7 +33,7 @@ How to start:
 
 ## What to get from the user
 
-These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article, transcript or book notes, ignore that part. This agent takes code, an OpenAPI file, a spec, issue threads or engineer notes.
+This list spells out the inputs named in "Before you start" above. The question is what to document, for whom and in which doc type. The source material is code, an OpenAPI file, a spec, issue threads or engineer notes.
 
 1. **What is being documented.** A feature, endpoint, library, setup process or concept.
 2. **The reader.** Who they are and what they already know. If the user does not say, ask once. Do not assume.
@@ -91,12 +94,12 @@ The Accuracy checks table and the Gaps list are also your CHECKS MISSED list: na
 
 Next step: ask an engineer to confirm every row in the Accuracy checks table. Then take the confirmed draft to the [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper) or the [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
 - The [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper). It takes the document.
-- The [Codebase history researcher](https://useaiblocks.com/skills/agency-specialized-codebase-archaeologist). It takes the document.
+- The [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

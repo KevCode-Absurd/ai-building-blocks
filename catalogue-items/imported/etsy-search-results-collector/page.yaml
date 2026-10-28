@@ -9,7 +9,7 @@ subhead: Give it a keyword, a phrase or a category. It pulls the live Etsy searc
 explain: |
   A table of what is ranking on Etsy for a keyword right now: position, price, rating, badges, ad or organic, and the shop behind each listing. It is a quick view of your market without scrolling pages by hand.
 
-  You name a keyword or category and how many pages to pull. The skill runs a ready-made scraper on Apify through an MCP connection and returns each row. It needs an Apify account and token, which you add yourself, and it asks before spending credits on large page counts. Filters like best seller, star seller, free shipping and ship-to country are optional. The rows are then ready to compare and to feed into shop checks.
+  You name a keyword or category and how many pages to pull. The skill runs a ready-made scraper on Apify through an MCP connection and returns each row. It needs an Apify account and token, which you add yourself, and it asks before spending credits on large page counts. Filters like best seller, star seller, free shipping and ship-to country are optional. The rows are then ready to compare and to feed into shop checks. Disclosure: the skill's author, GeminiGeorge22, maintains the publicrecords scraper on Apify Store that it runs.
 when:
   - You want to see who owns page one for a keyword.
   - You are pricing a new product against what already sells.
@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Open an AI that can connect to outside tools through MCP, such as Claude, and paste in this skill.
   - Add the Apify connection in your AI's settings with your own token. Never paste the token into the chat.
-  - This is scraping. Etsy's terms of service may limit automated collection, so read them before you run it.
+  - This is scraping. Etsy's terms of service may limit automated collection. Read them before your first run, and do not run it if they forbid this use.
   - Give your keyword. Start with one page.
   - Say yes when your AI asks before spending credits. Each run is billed by Apify, and more pages cost more. Check the current price on the scraper's Apify page first, then run one page before you ask for many.
   - Check the table. Ask for price bands, ad counts or shops with the most page-one slots.
+  - Next, group the rows by shop name to see who holds page one, then compare your own listing against the top ones with the Etsy listing SEO scorer.
 output_sample:
   input:
     - A keyword, market phrase or category page link

@@ -9,15 +9,22 @@ Earnings cover can look fine for the wrong reasons: a run of good years, a flatt
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Debt and preferred dividend coverage checker](https://useaiblocks.com/skills/average-earnings-coverage-tester). Bring source text, an audit report (optional).
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with source text. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for an audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** The sums and the reading are text work. It cannot look up prices.
@@ -34,7 +41,7 @@ How to start:
 
 ## Steps
 
-1. **Fix the claim and the debt in front of it.** Total all debt that ranks level with or ahead of yours, and add your own claim. For a preferred share, add the preferred amount too. Call it TOTAL DEBT. Tests apply to the whole pile, not to your slice.
+1. **Fix the claim and the debt in front of it.** List every claim that ranks level with or ahead of yours, and your own claim, **each once**. TOTAL DEBT is the sum of that list. If a figure you were given already includes your claim (for example a "total debt" or a whole bond issue you hold part of), do not add your claim on top: that counts it twice. If you cannot tell whether a total includes your claim, ask, or write `MISSING: does the debt total include my claim?`. For a preferred share, the list is all the debt plus the whole preferred issue, yours included once. Tests apply to the whole pile, not to your slice.
 2. **Value the cushion.** The cushion is everything that ranks behind your claim:
    - Listed company: shares times a recent low price, not the peak. Use the lowest sensible price of the last bad stretch. If only a peak price is given, write `MISSING: low price`.
    - Private business: what an outside buyer would pay for the owner's stake, found by a sensible multiple of normal earnings. Write down the multiple and why. If you have no basis, write `MISSING: fair price of the owners' stake`.
@@ -53,30 +60,29 @@ How to start:
 8. **Show the weak spot.** Say what it would take for the ratio to fall below the bar, such as a given fall in the owners' stake.
 9. **Check it.** Go through "Check before you hand it back" and fix what fails. Under CHECKS MISSED write one line per check missed, or "none".
 
-**Worked sum (made-up numbers).** A packaging firm owes 6m in total (bank 2m, bonds 4m). It has 3m shares and traded at a low of 1.40 in the last slump, so the cushion is 4.2m and the ratio is 0.70. The bar for an ordinary business is 1.0. Earnings cover came out at 4 times, a pass. So earnings pass and the cushion fails, and holding the bonds would mean believing the shares were too cheap at 1.40. Verdict: weaker than it looks.
+**Worked sum (made-up numbers).** A packaging firm owes 6m in total (bank 2m, bonds 4m). Your bonds are part of the 4m issue, so they are already in the 6m and are not added again. It has 3m shares and traded at a low of 1.40 in the last slump, so the cushion is 4.2m and the ratio is 0.70. The bar for an ordinary business is 1.0. Earnings cover came out at 4 times, a pass. So earnings pass and the cushion fails, and holding the bonds would mean believing the shares were too cheap at 1.40. Verdict: weaker than it looks.
 
 ## What you hand back
 
 TOTAL DEBT and what it contains. The cushion, how it was valued and the price used. The ratio, the bar and why. A reading of the two tests together. A note on any pledged assets and how much they count. The weak spot. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
-- TOTAL DEBT includes everything level with or ahead of the claim.
+- TOTAL DEBT includes everything level with or ahead of the claim, and every item, including your own claim, is counted once.
 - The cushion uses a low recent price, not a peak, or says it is missing.
 - The bar is chosen by business type and the reason is stated.
 - Both tests are read together, not one alone.
 - No book value of property was used as proof of safety.
 - Nothing was invented and no security was named as one to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lender safety verdict writer](https://useaiblocks.com/skills/lender-safety-verdict-writer). It takes the audit report.
+- The [Debt and preferred dividend coverage checker](https://useaiblocks.com/skills/average-earnings-coverage-tester). It takes the audit report.
+- The [Earnings-based share value calculator](https://useaiblocks.com/skills/earnings-value-range-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

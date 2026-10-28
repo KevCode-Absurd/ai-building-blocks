@@ -7,7 +7,7 @@ role: source
 job: research
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: document, required: true}
   - {type: competitor_set, required: false}
 outputs:
   - {type: angle_library}

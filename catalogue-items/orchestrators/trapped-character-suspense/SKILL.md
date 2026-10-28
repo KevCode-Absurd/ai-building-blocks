@@ -61,7 +61,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above, which is not about stories:
+Use these instead of the general "After this" list below, which is not about stories:
 - Write the scenes out as prose with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter).
 - Run the scene turn checker again on your draft once you have written it.
 

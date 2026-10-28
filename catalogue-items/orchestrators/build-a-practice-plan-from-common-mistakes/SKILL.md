@@ -7,7 +7,7 @@ description: "Use when a learner keeps making the same mistakes and you want an 
 
 Turn a learner's real wrong answers into an error map, practice that targets each type of mistake and a recall check for later.
 
-**When not to use it.** To mark or grade one test, mark it yourself or use the Study understanding check. To plan a whole exam, use the Exam study roadmap builder. With no real answers yet, only a topic, use the Recall quiz writer first. To track progress over many weeks, use the Study plan progress review assistant.
+**When not to use it.** To mark or grade one test, mark it yourself or use the Study understanding check. To plan study for a whole exam, use the [Study roadmap and weekly session planner](https://useaiblocks.com/workflows/choose-a-study-plan-you-can-keep) workflow. With no real answers yet, only a topic, use the Recall quiz writer first. To track progress over many weeks, use the Study plan progress review assistant.
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. The AI prepares the work. The learner and the teacher do the practice.
 
@@ -16,15 +16,15 @@ This workflow chains three skills from the library. Run them in order. Save each
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your lesson plan, source text, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, a plan, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Study understanding check.** Use the skill `study-understanding-check`. The answers already exist, so use its way of checking reasoning, not its question mode. Compare each wrong answer with the correct solution and find the step where it went wrong. Sort each mistake as a slip, a missing basic or a misunderstood idea. Quote the answer as evidence. Group repeats and count how often each appears. Save `outputs/step-01-study-understanding-check.md`. Hand to step 2: the error map, most frequent mistake first.
 
-2. **Flawed example writer.** Use the skill `flawed-example-writer`. Take the top three mistakes that are missing basics or misunderstood ideas. Slips get a one-line checking habit instead of a practice set. For each mistake, start from a verified correct worked solution and plant exactly one realistic error. Write two or three examples per set unless the user asked for another number. Each example has prompts to find, explain and fix the error. Put the teacher key in its own section. Save `outputs/step-02-flawed-example-writer.md`. Hand to step 3: the sets and the topics they cover.
+2. **Flawed example writer.** Use the skill `flawed-example-writer`. Take the top three mistakes that are missing basics or misunderstood ideas. Slips get a one-line checking habit instead of a practice set. For each mistake, start from a verified correct worked solution and plant exactly one realistic error. Write two or three examples per set unless the user asked for another number. Each example has prompts to find, explain and fix the error. Put the teacher key in its own section. If a planted mistake does not match a mistake in the error map, rewrite that example so it does, or drop it and say so. Save `outputs/step-02-flawed-example-writer.md`. Hand to step 3: the sets and the topics they cover.
 
 3. **Mixed practice unit planner.** Use the skill `mixed-practice-unit-planner`. Give it the practice sets, the earlier topics in teaching order and the weekly time. Build sessions that mix the fixed topics with earlier ones, with missing basics first. Then write the recall check: new questions on the same mistake types, for a later date. Use the date and pass rule from "What you need". If none were given, suggest a date after the last session and a pass rule, and label both "suggestion". Save `outputs/step-03-mixed-practice-unit-planner.md`.
 
@@ -92,8 +92,8 @@ Files | MISSING | CHECKS MISSED | one next step
 Offer one next step and say they can type their own:
 
 - Run the plan, then the recall check. Bring the learner's answers back and ask for the error map to be updated.
-- Review progress over several weeks with the [Study plan progress review assistant](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
-- Turn the topics into a plain recall quiz with the [Recall quiz writer](https://useaiblocks.com/skills/recall-quiz-writer).
+- Review progress over several weeks with the [Study practice progress reviewer](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
+- Turn the topics into a plain recall quiz with the [Recall quiz writer](https://useaiblocks.com/prompts/recall-quiz-writer).
 
 ## Check before you hand it back
 

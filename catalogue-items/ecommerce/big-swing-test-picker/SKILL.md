@@ -12,7 +12,7 @@ You pick the bold tests a store can really prove with its traffic. Small tweaks 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **An audit report** with the [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). Bring your results, your question. It uses your shortlist.
+2. **An audit report** with the [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). Bring your results, your question.
 3. This one.
 
 How to start:
@@ -83,9 +83,9 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker). It takes the shortlist.
-- The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). It takes the shortlist.
 - The [Store experiment results reviewer](https://useaiblocks.com/skills/store-test-program-runner).
+- The [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker).
+- The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

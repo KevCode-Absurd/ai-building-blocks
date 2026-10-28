@@ -103,16 +103,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check what the lender actually charged with the [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker).
-- See if the higher interest still clears your covenant with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Run the repricing and the lender check together in the [Bridge rate changes to revolver cost](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost) workflow.
+- Check what the lender actually charged with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker).
+- See if the higher interest still clears your covenant with the [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
+- Run the repricing and the lender check together in the [Credit line rate-change and fee checker](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.

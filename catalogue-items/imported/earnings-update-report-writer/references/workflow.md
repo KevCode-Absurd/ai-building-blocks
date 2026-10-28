@@ -8,13 +8,15 @@ This document provides detailed step-by-step instructions for each phase of the 
 
 **STOP AND READ THIS FIRST:**
 
+**Period rule (added by AI Blocks).** If the user named a quarter, that quarter is the target, however old it is: search for it by name, check every document is for it, and never swap in a newer one. The "latest" and "within 3 months" checks in this file apply only when the user asked for the latest quarter or did not name one. If you cannot tell, ask once.
+
 Training data is OUTDATED. Actively search for and retrieve the MOST RECENT earnings materials. Using outdated earnings data is the #1 mistake in earnings analysis.
 
 **BEFORE STARTING:**
 1. **CHECK TODAY'S DATE** - Write down the current date
 2. **SEARCH FOR LATEST** - Use web search to find the most recent earnings
 3. **VERIFY THE DATE** - Confirm the earnings release is within the last 3 months
-4. **IF OLDER THAN 3 MONTHS** - Wrong quarter obtained, search again
+4. **IF OLDER THAN 3 MONTHS** - For a latest-quarter request, you have the wrong quarter: search again. For a named quarter, age does not matter; check it is the named quarter
 
 ## Phase 1: Earnings Data Collection (30-60 minutes)
 
@@ -47,26 +49,27 @@ Training data is OUTDATED. Actively search for and retrieve the MOST RECENT earn
 - **Look at the date of the earnings release found**
 - **Calculate**: Is this date within the last 3 months from today?
 - **If YES** → Proceed to next step
-- **If NO (older than 3 months)** → 🚨 WRONG QUARTER - Search again for more recent
+- **If NO (older than 3 months)** → 🚨 For a latest-quarter request: WRONG QUARTER - search again for more recent. For a named quarter: skip this check and confirm the documents are for the named quarter instead
 
 **❌ COMMON MISTAKES TO AVOID:**
 - ❌ Using earnings data from training without searching
 - ❌ Assuming "Q3 2024" is latest based on expectations
 - ❌ Grabbing the first earnings release found without checking the date
 - ❌ Not comparing the release date to today's date
-- ❌ Proceeding when the release is 4+ months old
+- ❌ Proceeding when the release is 4+ months old on a latest-quarter request
+- ❌ Replacing a quarter the user named with a newer one
 
 **✅ CORRECT APPROACH:**
 - ✅ Check today's date first
 - ✅ Search explicitly for "latest" or "most recent"
 - ✅ Read the actual release date on the materials
-- ✅ Confirm release date is within 3 months of today
+- ✅ Latest-quarter requests: confirm release date is within 3 months of today. Named quarter: confirm it is that quarter
 - ✅ If unsure, search again with different terms
 
 **MANDATORY STEP 4: IDENTIFY THE QUARTER**
 - **Read the title/headline** to identify the quarter (Q1, Q2, Q3, Q4 or fiscal quarter)
 - **Read the release date** on the document itself
-- **Verify both the quarter name AND the date are recent**
+- **Verify the quarter name matches the target, and (for a latest-quarter request) that the date is recent**
 
 3. **Alternative search methods if IR site is unclear:**
    - Web search: `[Company name] latest earnings results`
@@ -98,7 +101,7 @@ Many companies state their fiscal year in the earnings release header. Search `[
 - [ ] ✅ **Today's date written down**: [Month] [Day], [Year]
 - [ ] ✅ **Actively searched** using "latest earnings" or "most recent earnings"
 - [ ] ✅ **Earnings release date found**: [Month] [Day], [Year]
-- [ ] ✅ **Verified release is within 3 months of today** (do the math!)
+- [ ] ✅ **Verified release is within 3 months of today** (do the math!), for a latest-quarter request. For a named quarter: verified the documents are for that quarter, whatever their age
 - [ ] ✅ **Did NOT assume** the quarter based on today's date alone
 - [ ] ✅ **Can see the actual press release** confirming the quarter/period
 - [ ] ✅ **Opened and read** the actual earnings materials (not just assumed they exist)
@@ -142,7 +145,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
   - Navigate to IR site and find the actual press release
   - Search patterns: "[Company name] latest earnings", "[Company name] Q[X] [Year] earnings results"
   - Look for PDF or HTML version
-  - **Verify the date matches what was found in Step 1** (should be within last 1-3 months)
+  - **Verify the date matches what was found in Step 1** (within the last 1-3 months for a latest-quarter request; for a named quarter, the date of that quarter's release)
   - **Read the actual document** to confirm the quarter and get reported numbers
 
 - **Results filing on BSE or NSE** - On the exchange's company announcements page
@@ -191,7 +194,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
 
 **DATES - Verify ALL dates match:**
 - [ ] ✅ **Today's date written down**: _______________
-- [ ] ✅ **Earnings release date**: _______________ (MUST be within 3 months of today)
+- [ ] ✅ **Earnings release date**: _______________ (latest-quarter request: MUST be within 3 months of today; named quarter: MUST be that quarter's release)
 - [ ] ✅ **Earnings call transcript date**: _______________ (MUST match release date ±1 day)
 - [ ] ✅ **BSE or NSE results filing date**: _______________ (MUST be same quarter as release)
 - [ ] ✅ **ALL materials show SAME quarter** (e.g., all say "Q3 2024", not mixed quarters)
@@ -200,7 +203,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
 - [ ] ✅ **SEARCHED** for "latest earnings" (not assumed based on current date)
 - [ ] ✅ **ACCESSED** actual earnings press release and read it
 - [ ] ✅ **OPENED** actual earnings call transcript and verified date
-- [ ] ✅ **CONFIRMED** this is the MOST RECENT quarter by checking dates
+- [ ] ✅ **CONFIRMED** this is the target quarter by checking dates (the MOST RECENT one, unless the user named a quarter)
 - [ ] ✅ Have full financial results (revenue, EPS, margins, etc.) from actual release
 - [ ] ✅ Have pre-earnings consensus estimates with source date
 
@@ -490,7 +493,7 @@ Before publishing, verify:
 
 **Timeliness:**
 - [ ] Report published within 24-48 hours of earnings release
-- [ ] All data is from LATEST quarter
+- [ ] All data is from the target quarter (LATEST, unless the user named one; a named older quarter is labelled a historical update)
 - [ ] Consensus estimates are pre-earnings (not post-earnings)
 
 ### Step 16: Deliver Report
@@ -523,3 +526,5 @@ Price Target: $XXX (prior: $XXX) - [+/-]XX% upside
 
 Deliverable: 8-12 page earnings update report with updated estimates and valuation.
 ```
+
+Changed by AI Blocks (2026-10-28): a quarter the user names is now used as asked, even if it is old; the latest-quarter and 3-month checks apply only when the user asks for the latest quarter or names none.

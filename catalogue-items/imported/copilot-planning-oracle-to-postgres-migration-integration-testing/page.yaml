@@ -34,10 +34,11 @@ you_get:
   - "A check that every database touchpoint has at least one test case"
 how_to_use:
   - Open your AI tool and paste in this skill's instructions.
-  - Give it the path to your one target project and the source files that touch the database.
+  - Give it the path to your one target project and the source files that touch the database. Not sure which files those are? Ask it to search the project for classes named Repository, Dao or Service, and for OracleCommand, OracleConnection, DbContext, ExecuteReader, Dapper calls, stored procedure names or raw SQL strings.
   - Add any notes on Oracle stored procedures or schema that the code calls (optional).
   - Ask it to write the testing plan. It saves a markdown file named after your project in the Reports folder if it can write files. Otherwise it shows the plan in the chat.
   - Check that every database method appears in the plan, then hand it to your team to build the integration tests.
+  - Next, have your developers make one test file per data access class, with the plan's cases for that class. Any database call the coverage check shows with no test case goes back to the AI for cases, or gets a written reason to skip it.
 output_sample:
   input:
     - The path to the one project you want to test

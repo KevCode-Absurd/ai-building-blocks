@@ -23,8 +23,8 @@ when:
 not_for:
   - "You need tariff approval, a regulator filing or an accounting treatment. This is a cash and receivables schedule built from numbers you supply, and a finance lead or accountant should review it."
   - "You want to know where water is physically lost. Unbilled volume is a billing gap, not proof of leakage."
-  - "You want to set aside credit-loss expense and write-offs against receivables. Use the Receivables allowance roll-forward."
-  - "You work in health claims, not water bills. Use the Clinic claims collections bridge."
+  - "You want to set aside credit-loss expense and write-offs against receivables. Use the Customer credit loss allowance checker."
+  - "You work in health claims, not water bills. Use the Clinic payment reconciliation reviewer."
 
 you_give:
   - "Cubic meters produced and cubic meters billed for the same period, from your meter and billing records"

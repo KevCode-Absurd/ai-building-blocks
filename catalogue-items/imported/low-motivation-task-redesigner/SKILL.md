@@ -69,6 +69,19 @@ tags: ["motivation", "SDT", "self-determination", "autonomy", "engagement", "tas
 
 # Motivation Diagnostic & Task Redesign
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Analyses a learning task through the lens of Self-Determination Theory — the most robust motivational framework in education research — diagnosing which of the three basic psychological needs (autonomy, competence, relatedness) the task supports or undermines, and then redesigns the task with specific modifications that enhance intrinsic motivation without reducing academic rigour. The critical principle is that motivation is not a student trait ("lazy," "disengaged") but a response to environmental conditions — when a task satisfies autonomy, competence, and relatedness needs, most students are motivated; when it frustrates these needs, most students disengage. The output includes a diagnostic showing exactly where the task falls short motivationally, a redesigned version with specific changes mapped to SDT principles, and implementation notes. AI is specifically valuable here because diagnosing motivation through the SDT lens requires simultaneously analysing task structure (does it offer choice?), difficulty calibration (does it feel achievable?), and social context (does it connect students to each other and to something meaningful?) — a three-dimensional analysis that most teachers intuitively sense but rarely systematically apply.
@@ -259,3 +272,11 @@ Two pairs join to form a group of four. Each pair explains their 3-term connecti
 2. **SDT is a framework for understanding motivation, not a guarantee of engagement.** A task that satisfies autonomy, competence, and relatedness needs creates the CONDITIONS for intrinsic motivation — but individual students may still be disengaged due to factors outside the task: tiredness, social difficulties, trauma, prior negative experiences with the subject. SDT addresses the environmental conditions; it does not address all individual barriers.
 
 3. **Redesigned tasks typically take more time than the original.** A 10-minute copying task replaced by a 35-minute investigation may seem impractical. The trade-off is learning: if students copy definitions and forget them by next lesson, the 10 minutes were wasted. If students spend 35 minutes generating, discussing, and applying definitions and remember them, the time is better invested. The teacher must judge whether the time trade-off is feasible within their curriculum.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student confidence task planner](https://useaiblocks.com/skills/confidence-building-task-ladder). It takes the lesson plan.
+- The [Learning task adapter](https://useaiblocks.com/skills/task-adapter-learners). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -73,7 +73,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 - The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
 - The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
 - The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

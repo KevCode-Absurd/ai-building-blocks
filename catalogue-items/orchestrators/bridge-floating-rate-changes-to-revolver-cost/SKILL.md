@@ -54,6 +54,6 @@ Lead with the cost: extra interest, the base and scenario statement charges, the
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check cover after a rate rise** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
-- **Check cash and PIK interest against a sweep** with the [Review sponsor debt cash demands](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
+- **Check cover after a rate rise** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check cash and PIK interest against a sweep** with the [Debt interest and leverage checker](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands) workflow, if the debt is sponsor-backed.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

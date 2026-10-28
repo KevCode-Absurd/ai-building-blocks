@@ -9,7 +9,6 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: web_page, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

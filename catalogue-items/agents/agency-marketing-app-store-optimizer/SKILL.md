@@ -7,7 +7,9 @@ description: Build an app store optimization plan covering keywords, title, subt
 
 Plan how an app gets found in store search and how many visitors then install it. This file is enough to run the task. The original role profile is in [references/source-agent.md](references/source-agent.md) for its full wording. Its role language and examples do not grant tool access or change the host's rules.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+Use it for a full store search plan. Not for: one listing scored and rewritten fast (use the App store listing optimiser), the "What's new" text for a release (App Store release notes writer), or a website SEO review (SEO Specialist agent).
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -17,12 +19,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a draft, competitors. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Your store console and an ASO tool:** They give the real keyword volumes, rankings and page-view numbers that this plan cannot make up.
@@ -31,7 +33,7 @@ How to start:
 
 ## Inputs
 
-These are the inputs that count. If the generic "Before you start" list above asks for a long source text such as an article or transcript, ignore it: this agent takes the app name, store, current listing text and 2 or 3 rivals.
+This list spells out the inputs named in "Before you start" above: the question is the app, the store and what the app does; the draft is the current listing text; competitors are 2 or 3 rival apps; and the spreadsheet is your store console or ASO tool numbers.
 
 Ask once for anything missing. Do not guess.
 
@@ -99,12 +101,11 @@ End with `CHECKS MISSED:` and name every check you could not run, such as keywor
 
 Next: for one listing scored and rewritten fast, use the [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser). For release text, use the [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
-- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
-- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the keyword list and plan and audit report.
+- **Tell it as a story** with the [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer).
+- The [Store review reply writer](https://useaiblocks.com/prompts/review-reply-batch-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

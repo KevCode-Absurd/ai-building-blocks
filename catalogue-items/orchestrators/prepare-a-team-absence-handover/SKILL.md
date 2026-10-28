@@ -26,9 +26,9 @@ How to start:
 - **A chat AI that reads files:** It reads a task export and the person's notes together. It sends nothing and changes no tracker.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This list replaces the shared "Before you start" block above: there is no general question to answer, and meeting notes are only one place the work list may come from. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The absence dates, confirmed.
@@ -63,6 +63,7 @@ If a component skill is missing, tell the user which one and ask them to add it 
    **Gate before step 3:** no password or key appears. Every task has a source link or `MISSING`.
 
 3. **Executive action register keeper** (`executive-action-register`). Give it the step 1 and 2 files. Ask for an action list for coverage with an owner, a date, a dependency and an acceptance status for each. Add an escalation list: who to call for what, in the absence. Save `outputs/step-03-executive-action-register.md`.
+   **Gate before the hand back:** no action is marked accepted without a yes from the cover person in the user's sources, and every escalation contact was named by the user.
 
 4. **Check and hand back.** Build the result below.
 
@@ -80,6 +81,8 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent or reassigned.
 
+When you hand back, offer one next step in a short question, and say the user can type their own: ask each cover person to confirm their tasks (the user sends this, not the AI); plan a backup for a single point of failure with the workflow [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role); or run the handover again when the person returns, to hand work back.
+
 ## Check before you hand it back
 
 - Every critical task has an accepted cover owner or an explicit `GAP`.
@@ -91,17 +94,9 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Team absence coverage reviewer](https://useaiblocks.com/skills/weekly-team-coverage-review-assistant).
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner). It takes the document.
+- **Lead the team** with the [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Offer one next step in a short question, and say the user can type their own:
-- **Ask each cover person to confirm** their tasks. You send it, not the AI.
-- **Plan a backup for a single point of failure** with the workflow Plan coverage for a critical role.
-- **Run the handover again** when the person returns, to hand work back.
 
 ## Avoid
 

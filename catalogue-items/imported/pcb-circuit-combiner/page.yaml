@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need to design a single filter, coupler or line: use the matching MATLAB PCB design skill for that part first."
   - "You want EM analysis of one component: use a single-part analysis step in MATLAB, not this skill."
-  - "You have no MATLAB with the RF PCB Toolbox, which are paid licensed products: ask an RF engineer or use a free circuit simulator."
+  - "You have no MATLAB with the RF PCB Toolbox, which are paid licensed products: this skill has no free route. Ask an RF engineer, or build the circuit in a free simulator such as Qucs-S instead."
 you_give:
   - Designed PCB components in MATLAB, each as a pcbComponent object (or a design object such as filterStub) with its board material, height and conductor already set. Parts you cascade must share the same material, height and conductor.
   - Order they connect in
@@ -55,6 +55,6 @@ output_sample:
     - name: Loaded ports
       contains: Internal ports loaded with resistors, capacitors or Touchstone parts such as varactors.
     - name: Touchstone file
-      contains: The combined S-parameters saved with rfwrite, ready for other tools. File name, frequency unit and number format are set in the call, so check them against what the next tool expects.
+      contains: The combined S-parameters saved with rfwrite, ready for other tools. File name, frequency unit and number format are set in the call. Before you load it in the next tool, check four things match what it expects. These are the port count (shown by the .s2p or .s4p ending), the reference impedance, the frequency unit (Hz, kHz, MHz or GHz) and the number format (MA, DB or RI).
     - name: Eye diagram link
       contains: A bridge from the S-parameters to signal integrity eye diagram analysis.

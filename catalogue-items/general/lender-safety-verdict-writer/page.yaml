@@ -19,11 +19,11 @@ when:
   - You want to write down why you said yes or no before you commit.
 not_for:
   - "You want to judge a share, not a loan or bond: this skill only tests debt, so ask a licensed financial adviser."
-  - "You have not run the earnings cover and cushion tests yet: run the Average earnings coverage tester and the Equity cushion ratio tester first."
+  - "You have not run the earnings cover and cushion tests yet: run the Debt and preferred dividend coverage checker and the Debt protection ratio checker first."
   - "The decision is large or personal, or you cannot afford to lose the money: talk to a licensed financial adviser, because this is a method, not advice."
 
 you_give:
-  - The results from "Average earnings coverage tester" and "Equity cushion ratio tester"
+  - The results from "Debt and preferred dividend coverage checker" and "Debt protection ratio checker"
   - The terms, including amount, rate, due date, early repayment terms, security and your price
   - What you know about the borrower's age, size, record and owners (optional)
 you_get:
@@ -41,12 +41,12 @@ how_to_use:
   - Put the borrower question to them in writing.
 output_sample:
   input:
-    - The result from the Average earnings coverage tester
-    - The result from the Equity cushion ratio tester
+    - The result from the Debt and preferred dividend coverage checker
+    - The result from the Debt protection ratio checker
     - "The loan terms: amount, rate, due date, early repayment terms, security and your price"
     - What you know about the borrower's age, size and record (optional)
   prerequisites:
-    - Results from the Average earnings coverage tester and the Equity cushion ratio tester
+    - Results from the Debt and preferred dividend coverage checker and the Debt protection ratio checker
   output:
     - name: The results
       contains: "Three lines: the label, the earnings cover against its bar, and the cushion against its bar."
@@ -132,8 +132,8 @@ test:
 improve:
   - Add your own exclusion rules, such as a minimum borrower age.
   - Keep a log of past calls and what happened, and paste it in as a record.
-  - Pair it with "Average earnings coverage tester" and "Equity cushion ratio tester".
-  - Add "Room for error plan checker" for your own side, to see what happens to you if the loan is lost.
+  - Pair it with "Debt and preferred dividend coverage checker" and "Debt protection ratio checker".
+  - Add "Business plan risk buffer reviewer" for your own side, to see what happens to you if the loan is lost.
 
 works_best_with:
   tools:

@@ -13,7 +13,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
@@ -52,7 +52,7 @@ Keep one folder, `reviewer/`. Keep `reviewer/months.md`: one row per month per c
 3. **Work out what a customer costs.** Run `cost-per-customer-calculator` using actual new-customer figures with a stated channel-assignment rule. If channel-level customer counts or gross profit inputs are missing, report the supported store-level measure only and leave affected channel costs or payback unknown.
 4. **Look for fading channels.** If `months.md` holds at least three months, find any channel whose comparable sourced return measure fell two months in a row (this agent's own starting point). Use the same method and scope across months; do not manufacture a true-return series. Run `channel-decay-checker` on those channels with the saved months. No channel that fell two months running receives extra budget this month.
 5. **Choose the path on trust.** First check whether the evidence can support a channel-level budget comparison. With only aggregate store totals and overlapping platform claims, propose an appropriate test or hold rather than presenting a calculated causal allocation.
-   - If the trust level from step 2 is medium or high (50 or more out of 100 on that skill's scale), run `next-dollar-budget-allocator` and keep its split and test plan.
+   - If the trust level from step 2 is medium or high (50 or more out of 100 on the house trust score of `platform-roas-reality-check`: 75 or more is high, 50 to 74 medium, under 50 low), run `next-dollar-budget-allocator` and keep its split and test plan.
    - If trust is low (under 50), do not move budget. Hand back the test the reality check recommends (a holdout or a controlled step) and what would raise trust.
    - If a channel's spend is a small share of the total, say its return is too thin to tune and leave it out of the split (this agent's own starting point: under a tenth of spend).
 6. **Score the plan against break-even.** For each channel with a supported comparable measure, show its return estimate, method, uncertainty and break-even return. Unknown channel return remains unknown; it cannot pass this gate. Do not propose extra budget into a channel whose supported result is below break-even.
@@ -72,7 +72,7 @@ You list them as steps for the owner to approve.
 ## What you hand back
 - **This month in one line:** total spend, store revenue, blended return and the gap between platform claims and the store.
 - **Channel table:** for each channel: spend, reported return, supported return estimate or unknown, break-even return, cost per new customer, payback, trust level.
-- **Fading channels:** each one flagged, with the months it fell and the likely cause.
+- **Fading channels:** each one flagged, with the months it fell and each cause `channel-decay-checker` tested, marked likely or unknown. Never name a cause the data does not support.
 - **Budget proposal:** the split from the allocator, or "hold" and the test to run first. Each move with its size and reason.
 - **Watch next month:** the 1 to 3 numbers that decide the next review.
 - **Files:** each step's file and the updated `months.md`. Then every `MISSING:` line in one list.
@@ -93,7 +93,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## If something is missing
-Write `MISSING: <what>` where it belongs and carry on with what you have. Without store totals, stop after step 1 and ask for them, because the true return depends on them. Without a past month, skip step 4 and say fading cannot be judged yet.
+Write `MISSING: <what>` where it belongs and carry on with what you have. Without store totals, stop after step 1 and ask for them, because the return check depends on them. Without a past month, skip step 4 and say fading cannot be judged yet.
 
 ## Avoid
 - Moving budget on platform return alone. Retargeting and branded search over-claim; cold channels under-claim.

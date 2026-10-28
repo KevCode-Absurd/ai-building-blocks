@@ -8,7 +8,7 @@ job: analysis
 level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: true}
   - {type: competitor_set, required: false}
   - {type: web_page, required: false}
 outputs:

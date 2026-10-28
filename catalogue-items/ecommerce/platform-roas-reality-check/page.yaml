@@ -108,7 +108,7 @@ tweaks:
 judge:
   - The base is new-customer revenue divided by total ad spend for the same dates.
   - Attribution differences state which definitions changed; operator percentages remain labelled anecdotes.
-  - Meta's current click definition was checked, not assumed.
+  - Meta's click definition was not assumed. Each 7-day click figure is labelled "click definition not confirmed" until you confirm it in Meta's Business Help Centre.
   - No ROAS is compared across platforms, margins or funnel stages.
   - Each budget decision names its evidence level.
   - The custom score shows its bounds, working and unchecked evidence; it is not a probability or causal confidence.

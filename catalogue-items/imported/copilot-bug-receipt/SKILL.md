@@ -7,6 +7,27 @@ metadata:
 
 # Bug Receipt
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **A test report** (yours): what was tested, what passed, what failed and why.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A test report** with the [Code and documentation consistency checker](https://useaiblocks.com/skills/copilot-docs-sync-audit). Bring a codebase.
+2. **A test report** with the [Software test gap finder](https://useaiblocks.com/skills/copilot-test-gap-audit). Bring a codebase, a test report (optional).
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a test report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Mandatory closeout output
 
 For every bug or incident closeout decision, return the complete receipt below as the entire user-facing result, even when the user requests a concise reply or does not name this format. Concision shortens field values; it never removes or renames a row. Do not replace the receipt with prose.
@@ -75,6 +96,15 @@ For `PARTIAL` or `BLOCKED`, name the single minimal experiment or correlated evi
 For a machine-readable receipt or CI integration, read [references/receipt-contract.md](references/receipt-contract.md) and conform to its JSON fields, evidence-source marker, compatibility rule, and status invariants.
 
 When a JSON artifact is requested, start from [assets/receipt.template.json](assets/receipt.template.json), write it to a task-owned path, and validate it with `node scripts/validate-receipt.mjs <receipt.json>` from this skill directory. Do not commit the generated receipt unless the user requests it.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code change test and docs tracker](https://useaiblocks.com/skills/engineering-evidence-keeper). It takes the test report.
+- The [Persistent bug debugger](https://useaiblocks.com/skills/fix-loop-breaker). It takes the test report.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the test report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Source and license
 

@@ -7,9 +7,11 @@ job: build-websites
 headline: WordPress health fixer
 subhead: A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
 explain: |
-  A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
+  It cannot change your live site. You run every command yourself, and you decide which fixes to make.
 
   Paste the report from Tools, Site Health, or the debug info. The skill sorts items into critical, recommended and passed, then tiers every fix by risk. Before any edit to wp-config.php, .htaccess or a plugin, it tells you to back up that exact file outside the web root. Your AI gives you commands and code to run yourself, because a chat AI cannot reach your site. Safe fixes are short and easy to undo. Risky ones are marked. It covers speed, security and SEO issues.
+
+  Source and licence: adapted from sickn33's wp-site-health-auditor skill, shared under CC BY 4.0 (see the LICENSE-CONTENT file).
 when:
   - Site Health shows red and orange items you do not understand.
   - You want the site faster and safer without breaking it.
@@ -33,6 +35,7 @@ you_get:
 how_to_use:
   - Open Tools, then Site Health in your WordPress admin. Copy the text from the Status tab. You can also copy the Info tab.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - "Before you paste, remove private details from the report and the Info tab: your domain name, email addresses, IP addresses, server file paths and database names. Swap them for placeholders such as example.com."
   - Paste your report. Say how you can reach your files (SFTP, host file manager or WP-CLI) and whether you have a full backup.
   - Know that the commands need WP-CLI or SFTP access, and that you run them yourself. Your AI shows the rollback command before any delete or edit.
   - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed. Host-level changes, such as PHP settings or an object cache, may need a paid host plan or a support ticket.

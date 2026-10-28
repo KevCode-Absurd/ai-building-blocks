@@ -30,11 +30,12 @@ you_get:
   - The code that made it
   - Edits on request
 how_to_use:
-  - Open an AI that can run Python code, such as Claude or ChatGPT with code tools on.
-  - Paste the skill, then upload your file or paste your rows.
+  - Open an AI that can run Python code, such as Claude with code execution, ChatGPT with its data analysis tool, or Claude Code. Some of these need a paid plan.
+  - Paste the skill, then upload your file or paste your rows. Check your AI tool's data settings before you upload customer, staff or other private rows, or remove those columns first.
   - Say what the chart should show and who will see it. Add a chart type only if you have one in mind.
   - Check the chart type it picks and read the title and axes. Ask for changes in plain words.
-  - Save the PNG and the code. Say "interactive" if you want a plot you can hover over.
+  - Save the PNG and the code. The skill saves the PNG in the AI's working folder; in a chat tool, download it from the chat. Say "interactive" if you want a plot you can hover over.
+  - Next, drop the chart into your slide or report, and keep the code so you can redraw it when the numbers change.
 output_sample:
   input:
     - Your data as a file (CSV or Excel), pasted rows, or a question for your data source

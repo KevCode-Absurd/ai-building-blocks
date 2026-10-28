@@ -56,9 +56,9 @@ How she applied it: she said she went to work every day for 33 years happy [S3].
 
 ### Know your worth, and don't overrate it
 
-Johnson said she never felt inferior. Her father taught her that she was as good as anybody in town, but no better [S3]. When people asked how she coped with being treated as less, she said she didn't have time for that [S3].
+Johnson said she never felt inferior. Her father taught her that she was as good as anybody in town, but no better [S3]. When people asked how she coped with being treated as less, she said, in our paraphrase, that she didn't have time for that [S3].
 
-How she applied it: she said she knew segregation existed but didn't feel it at NASA, because everybody there was doing research [S2][S7]. She kept her focus on the work. This is her own account of her own experience. Other sources show that the facilities she worked in were segregated (see below) [S2].
+How she applied it: in her own account, as these sources report it (a paraphrase), she knew segregation existed but didn't feel it at NASA, because everybody there was doing research [S2][S7]. She kept her focus on the work. This is her own account of her own experience. Other sources show that the facilities she worked in were segregated (see below) [S2].
 
 ### Pass it on
 

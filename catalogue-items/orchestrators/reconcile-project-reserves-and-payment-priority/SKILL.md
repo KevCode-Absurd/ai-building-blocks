@@ -60,6 +60,6 @@ Lead with the reserve rollforward, the payment waterfall and the tie between the
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow, when you also need a repayment schedule and loan-life cover.
-- The [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow, when the lender sets a coverage test.
+- The [Project debt repayment modeler](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow, when you also need a repayment schedule and loan-life cover.
+- The [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow, when the lender sets a coverage test.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

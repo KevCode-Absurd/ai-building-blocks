@@ -9,7 +9,7 @@ Turns two to five key figures into comparisons and counts of people, with the re
 
 ## When to use it
 
-Use it when you are presenting figures to people who do not work with them. Do not use it when you need every check shown for a high-stakes talk (use the [Number-to-picture translator](https://useaiblocks.com/skills/number-to-picture-translator)), when your rates come with no totals (get the total first, or the people count is marked MISSING), or when you need a chart or a full slide deck (build those yourself, then use this for the lines you say aloud).
+Use it when you are presenting figures to people who do not work with them. Do not use it when you need every check shown for a high-stakes talk (use the [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator)), when your rates come with no totals (get the total first, or the people count is marked MISSING), or when you need a chart or a full slide deck (build those yourself, then use this for the lines you say aloud).
 
 ## What you need
 - **The figures** (required): each with what it measures, the period and the source.
@@ -36,7 +36,7 @@ MISSING: any fact you needed.
 
 ## What next
 
-When you've handed it back, suggest in one short question that they shape the lines for speaking with the [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the draft.
+When you've handed it back, suggest in one short question that they shape the lines for speaking with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the draft.
 
 ## Checks
 - Every comparison shows its arithmetic.
@@ -44,4 +44,4 @@ When you've handed it back, suggest in one short question that they shape the li
 - No fact or total is guessed.
 - The image is marked as an illustration.
 
-For the full version with every check, use the [Number-to-picture translator](https://useaiblocks.com/skills/number-to-picture-translator).
+For the full version with every check, use the [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator).

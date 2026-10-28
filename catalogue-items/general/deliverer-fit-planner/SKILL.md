@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+1. **Two-audience brief writer** with the [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer). Bring a brief.
 2. This one.
 
 How to start:
@@ -40,7 +40,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. Ignore any request above for customer words or a brand brain. The "buyer brief" named above means the brief for this piece. A brief from the Two-audience brief writer works best, but a short description of the piece is enough.
+These are the inputs for this skill. The brief is the brief for this piece: one from the [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer) works best, but a short description of the piece is enough. No customer words or brand brain are needed.
 
 - **The brief or a description of the piece** (required): what it is for and how long it runs.
 - **Who delivers it and how** (required): a speaker on stage, a rep on a call, an actor, a presenter on video, you.
@@ -50,7 +50,7 @@ These are the inputs for this skill. Ignore any request above for customer words
 ## Steps
 
 1. **Name the deliverer and the setting.** If more than one person delivers, treat each as a separate case and say who takes which part.
-2. **Read the evidence.** From a recording or transcript, note the average sentence length, the words they repeat, where they speed up or hesitate and how they handle a joke or a sad line. If there is no evidence, say so and ask these three questions before going on: Which part do you do best when you speak? Which words or topics make you stumble? How long can you hold a room before you tire? If you are the deliverer, ask these of yourself.
+2. **Read the evidence.** From a recording or transcript, note the average sentence length, the words they repeat, where they speed up or hesitate and how they handle a joke or a sad line. If there is no evidence, say so and ask the three questions under "If something is missing" before going on.
 3. **Build the fit table.** One line each for pace, range and register (how formal, how loud or quiet), vocabulary, humour, handling of strong feeling, and memory and stamina. Mark each as a strength, a strain or unknown. Never fill an unknown with a guess; write `MISSING:`.
 4. **Place the showpiece.** Choose the moment people should remember. Put it where the table says the person is strongest. Do not put it in the first 20% of the piece, where nerves are highest, or the last 20%, where stamina is lowest, unless the person is steady throughout.
 5. **Keep the hard parts plain.** For each strain, find the passages that touch it. Shorten the sentences, drop the long list, remove the word they trip on, or give the passage a steady, even beat. Say what you changed.
@@ -79,7 +79,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> about <person>`. With no evidence, ask the three questions in step 2 before writing the table. Never invent a habit, a weakness or a quote.
+Write `MISSING: <what> about <person>`. With no evidence, ask these three questions in one message before writing the table, then wait for the answers:
+
+1. Which part do you do best when you speak?
+2. Which words or topics make you stumble?
+3. How long can you hold a room before you tire?
+
+If you are the deliverer, answer them yourself. Never invent a habit, a weakness or a quote.
 
 ## Avoid
 

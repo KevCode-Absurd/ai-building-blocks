@@ -7,7 +7,7 @@ description: "Paste this above a task you do again and again to get an automatio
 
 Lays out the trigger, the steps, the checks and what to do when something fails, so you can build it in a no-code tool in one sitting.
 
-This is a plan only. Nothing is built or run. Zapier and Make are paid services with free tiers. Features named in STEPS must be checked against the user's plan, because the plan may name a feature the tool lacks. Ask for the exact apps and the plan you pay for, and never invent a feature. For the full version with every check, use the [No-code automation planner](https://useaiblocks.com/skills/no-code-automation-planner).
+This is a plan only. Nothing is built or run. Zapier and Make are paid services with free tiers. Features named in STEPS must be checked against the user's plan, because the plan may name a feature the tool lacks. Ask for the exact apps and the plan you pay for, and never invent a feature. For the full version with every check, use the [Zapier and Make automation planner](https://useaiblocks.com/skills/no-code-automation-planner).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -61,4 +61,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Failure and duplicates are covered.
 - No app feature is invented that the tool may not have. Each feature named is marked "confirm on your plan" until the person has checked it.
 
-For the full version with every check, use the [No-code automation planner](https://useaiblocks.com/skills/no-code-automation-planner).
+For the full version with every check, use the [Zapier and Make automation planner](https://useaiblocks.com/skills/no-code-automation-planner).

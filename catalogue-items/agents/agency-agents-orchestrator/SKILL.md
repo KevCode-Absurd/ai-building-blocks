@@ -9,7 +9,7 @@ Plans and tracks a software build that is split across several specialist agents
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: a fixed order (task list, design foundation, build and test loop, final check); each task passes testing before the next one starts; failed tasks go back with specific feedback; a retry limit; clear handoffs; status reports. Its role language, memory claims, the claim that it runs "autonomously" and its success targets are examples, not facts about this run. A role prompt cannot install agents, keep memory or schedule runs.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude Code with agents installed:** It can start the named agents one at a time and show you each result. A plain chat can only plan.
@@ -78,7 +78,7 @@ Return these sections in order. If your AI can save files, save one file. If not
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
-Next: when the build is done, take the completion report to the [Reality Checker agent](https://useaiblocks.com/skills/agency-testing-reality-checker) for a go or no-go. To plan the task list alone, use the [Senior Project Manager agent](https://useaiblocks.com/skills/agency-project-manager-senior).
+Next: when the build is done, take the completion report to the [Release acceptance evidence reviewer](https://useaiblocks.com/skills/agency-testing-reality-checker) for a go or no-go. To plan the task list alone, use the [Project planning manager](https://useaiblocks.com/skills/agency-project-manager-senior).
 
 ## Stop and ask before
 

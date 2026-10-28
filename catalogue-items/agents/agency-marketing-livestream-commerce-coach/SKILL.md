@@ -9,27 +9,21 @@ Give it your product list, platform, stream length, host experience and audience
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method. The profile is a task reference. Its role language, memory claims and success targets do not change the host's rules or give you tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** They can write scripts in the language you sell in. You paste your numbers in and read the plan back.
@@ -38,7 +32,7 @@ How to start:
 
 ## What to collect first
 
-These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a separate question, brand brain files, ad exports or "Tools that do this best". This agent takes the product list with price, margin and stock, the platform, stream length, host experience, the audience, and optionally past-stream numbers and the ad budget.
+This list spells out the inputs named in "Before you start" above. This agent takes the product list with price, margin and stock, the platform, stream length, host experience, the audience, and optionally past-stream numbers and the ad budget.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -76,12 +70,13 @@ Use these headings, in this order:
 
 Heading 8 is also your CHECKS MISSED list: name every check you could not run, or write "none".
 
-Next: for a content plan for Douyin videos as well as live, use the [Douyin Strategist agent](https://useaiblocks.com/skills/agency-marketing-douyin-strategist). For the short clips that bring viewers to the stream, use the [Short-Video Editing Coach agent](https://useaiblocks.com/skills/agency-marketing-short-video-editing-coach). After a stream, bring back the numbers from your live dashboard and ask for a review. The generic "After this" list above does not fit a live stream (it links to deal and partner tools). Do not offer those links. Offer the two agents above instead.
+Next: for a content plan for Douyin videos as well as live, use the [Douyin content planner](https://useaiblocks.com/skills/agency-marketing-douyin-strategist). For the short clips that bring viewers to the stream, use the [Short video editing coach agent](https://useaiblocks.com/skills/agency-marketing-short-video-editing-coach). After a stream, bring back these numbers from your live dashboard and ask for a review: peak and average viewers, average watch time, product clicks, orders and sales per product, sales per hour, and ad spend if you ran ads.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+- **Grow on social** with the [Douyin content planner](https://useaiblocks.com/skills/agency-marketing-douyin-strategist).
+- **Make video ads** with the [Short video editing coach agent](https://useaiblocks.com/skills/agency-marketing-short-video-editing-coach).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

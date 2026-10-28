@@ -7,8 +7,8 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - {type: plan, required: true}
-  - {type: question, required: true}
+  - {type: product_spec, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

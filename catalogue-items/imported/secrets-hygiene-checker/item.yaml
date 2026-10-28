@@ -29,4 +29,4 @@ credits:
   - title: env-secrets-manager skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/env-secrets-manager
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: "Copied under the MIT licence. We gave it a plain name and made the leak-response steps and scan scripts safe: no printing secrets to the terminal or logs, no secrets typed on command lines or sent to online search, a backup and approval before any history rewrite, and no claim that the scanner tracks rotation dates. We added Before you start and After this sections that link to other AI Blocks steps."

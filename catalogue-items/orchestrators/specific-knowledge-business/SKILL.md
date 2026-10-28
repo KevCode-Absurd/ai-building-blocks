@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -52,7 +52,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Run the cheap test from step 1 by its date, then note what happened.
 - Come back on the review date set in step 2 and re-run step 2 with your new earnings.
 - If you named a partner, run step 3 again after a few months of working together, with new dated examples.

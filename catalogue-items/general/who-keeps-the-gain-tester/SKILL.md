@@ -20,7 +20,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools.
 - **A change to test** (yours): a new machine, a cost cut, a better product or a price rise. With none, the skill picks the three most likely changes.
 - **Price and cost per unit, or margin history** (yours): so the sums use your numbers, not marked examples.
 - **How rivals acted in the last bad year** (yours): it shows more than a good year.
-- **A report from the [Business power tester](https://useaiblocks.com/skills/business-power-tester)**: if you already tested the edge, paste it in.
+- **A report from the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester)**: if you already tested the edge, paste it in.
 
 How to start:
 1. **Look first.** Use what they have already attached or pasted. In Claude Code, look in the project too.
@@ -57,14 +57,6 @@ How to start:
 
 The changes tested. For each, the pass-through sum with both lines. How rivals behave, with an example. The industry sort. Which way technology cuts. The opposite pull. The one-line verdict. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: hand-written (needs_mode: manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If gains tend to stick** with the [Long-hold return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the verdict and the price figures.
-- **If you want to see how a bad year hits it** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the business and its worst risks.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each change has a pass-through sum with two lines, one where only this business gets it and one where all rivals do.
@@ -73,6 +65,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The technology line says who gains, not only that it is useful.
 - The verdict follows from the sums.
 - Nothing says to buy or sell a named security.
+
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If gains tend to stick** with the [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the verdict and the price figures.
+- **If you want to see how a bad year hits it** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the business and its worst risks.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

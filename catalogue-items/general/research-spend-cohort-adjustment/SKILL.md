@@ -7,12 +7,14 @@ description: "Build an analyst research asset and amortization schedule from dat
 
 A cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
 
+What sets it apart: it treats past research spend as an asset built up year by year (one cohort per year) and written off over a chosen life. It does not move amounts between profit and other income, as the OCI reclassification bridge does.
+
 ## When not to use it
 
 - You need to recognize an asset under IAS 38 for your statutory accounts: use your accountant or auditor.
 - You want to forecast whether research will succeed: ask a person who knows the product and market.
 - You only want a quick view of reported profit: read the income statement directly.
-- You need EPS with acquired-intangible amortization added back: use the Purchased amortization EPS bridge. This skill handles your own research spend, not bought intangibles.
+- You need EPS with acquired-intangible amortization added back: use the Acquired asset earnings adjustment checker. This skill handles your own research spend, not bought intangibles.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -55,7 +57,7 @@ Formulas on a straight-line life: unamortized cost of a cohort = expense x remai
 
 The current year's spend is counted at full cost in the asset and is not amortized in its first year (spending is treated as made at year end). Amortization comes only from the earlier cohorts that are still within their life. In the example below, the current spend is 30 and the amortization of 18 comes from the earlier cohorts 24, 18 and 12.
 
-3. Add current expensed research back to EBIT and deduct cohort amortization; carry the research asset consistently into any adjusted capital-return calculation without changing cash taxes automatically.
+3. Add current expensed research back to EBIT and deduct cohort amortization; if the person wants an adjusted return, add the research asset to the capital measure they name (invested capital, or equity for return on equity) and ask for that measure's reported figure; if it is not given, write `MISSING: capital measure`. Do not change cash taxes automatically.
 
 ## Build and verify the requested workbook
 

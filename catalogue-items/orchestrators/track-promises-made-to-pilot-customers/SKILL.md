@@ -89,7 +89,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## Next steps to offer
 
-Ignore the "After this" list above and use only this paragraph. Suggest the user decide on each not-yet-accepted request, fill each missing owner and date, then send the updates themselves. If a customer message is still to be written, the [Complaint reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker) checks a draft for promises you cannot keep.
+Ignore the "After this" list below and use only this paragraph. Suggest the user decide on each not-yet-accepted request, fill each missing owner and date, then send the updates themselves. If a customer message is still to be written, the [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker) checks a draft for promises you cannot keep.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

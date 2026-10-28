@@ -57,6 +57,6 @@ Lead with accessible cash, the ladder and the peak funding gap. State plainly th
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Prepare a seasonal cash buffer](https://useaiblocks.com/workflows/prepare-a-seasonal-cash-buffer) workflow, when the gaps repeat in a season.
-- The [Reconcile restricted utility program cash](https://useaiblocks.com/workflows/reconcile-restricted-utility-program-cash) workflow, when part of the cash is a restricted program fund.
+- The [Seasonal cash forecast and buffer planner](https://useaiblocks.com/workflows/prepare-a-seasonal-cash-buffer) workflow, when the gaps repeat in a season.
+- The [Utility restricted cash checker](https://useaiblocks.com/workflows/reconcile-restricted-utility-program-cash) workflow, when part of the cash is a restricted program fund.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

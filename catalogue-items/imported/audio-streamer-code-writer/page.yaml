@@ -11,7 +11,7 @@ explain: |
 
   Tell it what you want to play or record, and it sets up the device, the settings that must be set before streaming starts, callbacks, play and record methods, full-duplex use for loopback tests, transport controls, and device listing. It also tells you when not to use it, such as for a one-off short clip, code generation or Simulink. It needs a recent release of MATLAB with Audio Toolbox. MATLAB and Audio Toolbox are paid MathWorks products.
 
-  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition (condition 3 in that file): you may use it only together with MathWorks products such as MATLAB.
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition (condition 3 in that file): you may use it only together with MathWorks products such as MATLAB. The skill file's header links MathWorks' own reuse licence page, which says the same kind of thing. LICENSE.md in this folder governs this copy.
 when:
   - You want to play a sequence of sounds through a sound card.
   - You need to record from an audio interface while playing a test tone.
@@ -34,8 +34,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill file.
   - Say what you want to play or record. Add your sample rate, channel count and device name if you know them.
-  - Give your MATLAB release. The skill needs R2025a or later with Audio Toolbox. The start and write methods need R2026a or later.
-  - Copy the code into MATLAB and run it. Your AI cannot test it unless it can run MATLAB.
+  - Give your MATLAB release. Type ver in MATLAB to check it. The skill needs R2025a or later with Audio Toolbox. The start and write methods need R2026a or later.
+  - Copy the code into MATLAB and run it. Your AI cannot test it unless it can run MATLAB. Expect one script in this order. Device setup, then playback or recording, then callbacks, then teardown, then notes on moving from older tools.
   - If you hear dropouts, ask your AI to check the underrun count and adjust the buffer settings.
   - Next, run the code in MATLAB and check the underrun count after a full run. For files, pair it with audioread and audiowrite. For data acquisition hardware, pair it with DAQ Toolbox.
 output_sample:

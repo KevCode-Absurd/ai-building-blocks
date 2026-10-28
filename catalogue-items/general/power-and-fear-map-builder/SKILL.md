@@ -83,15 +83,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Prepare the talk itself** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the map and the first move.
-- **Work out what a win looks like for each side** with the [Win-win stance planner](https://useaiblocks.com/skills/win-win-stance-planner). It takes the map.
-- **Write the words if the first move is a no** with the [Hard no planner](https://useaiblocks.com/skills/hard-no-planner). It takes the first move.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Players off the chart are included.
@@ -100,6 +91,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Dependence on outside people is named.
 - Every guess is marked as a guess.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Prepare the talk itself** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the map and the first move.
+- **Work out what a win looks like for each side** with the [Deal and dispute negotiation planner](https://useaiblocks.com/skills/win-win-stance-planner). It takes the map.
+- **Write the words if the first move is a no** with the [Clear refusal message writer](https://useaiblocks.com/skills/hard-no-planner). It takes the first move.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

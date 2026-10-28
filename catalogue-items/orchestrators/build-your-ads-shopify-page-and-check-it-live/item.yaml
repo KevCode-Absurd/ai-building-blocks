@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: brand_brain, required: true}
   - {type: offer, required: true}
-  - {type: store_capture, required: true}
+  - {type: store_capture, required: false}
   - {type: ad_copy, required: false}
   - {type: voc_reviews, required: false}
   - {type: persona, required: false}

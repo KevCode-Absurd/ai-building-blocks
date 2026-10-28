@@ -28,6 +28,7 @@ you_give:
   - The acceptance criteria and any sign-offs or approval emails
   - Client feedback and open requests, from emails or meeting notes
   - Open commitments both sides still hold, and the support terms after closeout (optional)
+  - The closeout date and your timezone
 you_get:
   - A delivery and acceptance register with each deliverable's status, evidence and dates
   - A list of open commitments with owner and due date, taken only from what was said
@@ -48,7 +49,7 @@ how_it_works:
 output_shape: |-
   SCOPE AND SOURCES      <contract, evidence and dates you supplied>
   DELIVERY REGISTER      <deliverable | agreed in | delivered (date, proof) | reviewed (by, date) | accepted (by, date, proof) | status>
-  OPEN COMMITMENTS       <ID | task | owner | due | status | source>
+  OPEN COMMITMENTS       <ID | task | owner | due | timezone | status | depends on | source>
   CLOSEOUT HANDOVER      <read first | file locations | open issues | support period | sign-offs needed | contacts>
   QUESTIONS              <what needs confirming | who can answer>
   MISSING                <each gap and what it stops>
@@ -82,6 +83,7 @@ works_best_with:
   inputs:
     - The signed contract or statement of work.
     - Acceptance emails or signed forms from the client.
+next: [executive-action-register]
 terms:
   - term: Acceptance
     meaning: The client's written agreement that a deliverable meets what was agreed.

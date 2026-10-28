@@ -33,4 +33,4 @@ credits:
   - title: status-report skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/status-report
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Used under the Apache 2.0 licence. We gave it a plain name and added a note on the parts not included and a rule to mark missing figures as TBD (marked in the file).

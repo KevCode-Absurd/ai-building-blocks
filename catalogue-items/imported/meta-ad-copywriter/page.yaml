@@ -43,7 +43,7 @@ how_to_use:
   - "Add past ads that worked (optional) and say which format you want: static ad, short UGC, long video or story."
   - Read the variations. Replace every placeholder, such as [X customers], with your own real numbers, names and results.
   - Check any health, weight-loss or before and after claims against Meta's ad policies before you launch. Do the same for lines such as "your doctor won't tell you" or "experts say". Never run a customer story unless it is from a real customer who agreed to be quoted.
-  - Next, log each version in a test sheet. Run the best hooks against the same body text, and write the landing page in a separate chat.
+  - Next, log each version in a test sheet, one row per version, with columns for angle, hook, primary text, impressions, clicks and cost per click. Run the best hooks against the same body text, and write the landing page in a separate chat.
 output_sample:
   input:
     - Your offer and product

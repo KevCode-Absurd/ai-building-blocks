@@ -1,6 +1,6 @@
 # Test an idea before you build it: AI Blocks
 
-> 61 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-day launch planner](https://useaiblocks.com/skills/thirty-day-launch-planner): Plan a 30-day launch with a fixed deadline, an early payment step, a spending cap and a keep, kill or change rule. Give it your idea and tools.
 - [AI suitability reviewer](https://useaiblocks.com/skills/ai-fit-problem-checker): Check if AI fits your problem. Get a verdict from three tests, plus a data plan, an outside test and a first small proof.
@@ -8,17 +8,21 @@
 - [Business assumption and customer test planner](https://useaiblocks.com/workflows/plan-assumption-tests): Share your business plan. Get testable assumptions, a customer interview plan and a small experiment for the riskiest assumption.
 - [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test): Give it a plan and its key bets. Find which assumptions break first and what to test.
 - [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker): Share a business or product plan. Get its key assumptions ranked by risk, numbers to check and a group to test with.
+- [Business idea killer](https://useaiblocks.com/skills/business-idea-killer): Test a business idea before you build it. Get a clear verdict: dead, with the reason, or survived, with the cheapest test left to run.
 - [Business idea market reviewer](https://useaiblocks.com/workflows/idea-market-test): Share an idea, buyer evidence and rival facts. Get a market-boundary check, advantage review, long-term risks and questions to test first.
 - [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner): Test a business idea in a weekend. Get the math on buyers needed, ten people to ask, and a plan to see if they will pay.
 - [Business idea stress tester](https://useaiblocks.com/skills/idea-stress-test-panel): Share an idea and business details. Get five reviews, one GO, RESHAPE or KILL verdict, and a low-cost test to try first.
+- [Business idea tests and evidence tracker](https://useaiblocks.com/agents/idea-validation-analyst): Test the riskiest guess behind an idea. Track real results against pass lines set before each test.
 - [Business idea validation planner](https://useaiblocks.com/skills/idea-to-business-guide): Describe your idea. Get a step-by-step guide to test it with customers, shape the offer, and choose a first market.
 - [Business model assumption tester](https://useaiblocks.com/skills/business-model-guess-tester): Paste your plan and any proof. Get a one-page model, ranked assumptions and proposed tests with success rules set in advance.
+- [Business plan downside and failure-scenario reviewer](https://useaiblocks.com/workflows/stress-test-a-business-plan-before-you-commit-money): Share your business plan, assumptions and resource limits. Get a one-page model, case against it, stress scenarios and downside safeguards.
 - [Contrarian belief tester](https://useaiblocks.com/skills/contrarian-belief-tester): Paste your big idea and see if it rests on a belief few people share. Get a contrarian belief test, plus the smallest market you could win first.
 - [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request): Write a customer interview request that gets a yes. Give it who you want to meet. You get a warm intro note, a cold message and an opening line.
 - [Customer interview evidence planner](https://useaiblocks.com/workflows/idea-worth-building): Share an idea and real customer notes when available. Get interview plans, outreach drafts, evidence sorting and a reasoned next-step review.
 - [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions): Write customer interview questions about their real life, not your idea. Get fixed drafts, your top three questions and a plan for the scary one.
 - [Customer success milestone planner](https://useaiblocks.com/skills/customer-success-signals): Describe what buyers do after purchase. Pick one early success sign and a deadline to track it.
 - [Deep research reporter](https://useaiblocks.com/skills/deep-research-reporter): Give it a research question. Get a sourced report that compares evidence, flags conflicts and lists remaining gaps.
+- [Demand research and low-cost test plan](https://useaiblocks.com/workflows/check-real-demand-for-your-idea-then-run-one-cheap-test): Research real buyer problems, challenge the idea's weakest assumption and plan a cheap test with a clear pass rule.
 - [Experiment plan and results reviewer](https://useaiblocks.com/agents/experiment-readout-desk): Check a test before it runs. Read the results against its plan, flag weak evidence and save useful lessons.
 - [First customer group picker](https://useaiblocks.com/skills/first-customer-group-picker): Pick your first customer group from a broad market. Slice it into people you can find, then get the one group to talk to first.
 - [Five-day idea test planner](https://useaiblocks.com/skills/five-day-idea-test-planner): Describe an idea. Get a five-day plan to map, sketch, prototype and test it.

@@ -68,11 +68,13 @@ how_it_works:
     text: "About a third of price to product cost, a third to Amazon fees, a third to profit. Net margin floor of 30%. Price at least 3 times landed cost. Say where this product sits."
 
 output_shape: |
+  FEES PULLED: <date the fee figures were taken, or MISSING>
   PROFIT PER UNIT: price <$> | landed cost <$> | each fee <$> | returns <$> | profit before ads <$ | %> | after ads <$ | %>
   BREAK-EVEN AD COST PER SALE: <$>
   RULES OF THUMB: thirds <pass | fail> | net margin vs 30% <pass | fail> | price vs 3x cost <pass | fail>
   WEAKEST LINE: <the biggest cost>
   MISSING: <fees or costs you did not give>
+  CHECKS MISSED: <checks that could not run, or none>
 
 tweaks:
   - what: "Fees"

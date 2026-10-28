@@ -15,14 +15,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, a plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your data, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,7 +36,9 @@ How to start:
 - The fix under test: what changed, when it started and the review date.
 - The limit for a new pattern (optional; if none, propose one and label it ASSUMPTION). Example of a limit: waiting time up by a quarter against the baseline.
 - The smallest sample you will trust (optional). This is the one place the sample rule is set. If none is given, the default is eight finished tasks in the task group: fewer counts as thin. Label that ASSUMPTION and ask the user to confirm or change it.
-- Last review's record (optional; without it this is a first baseline).
+- Last review's record (optional; without it this is a first baseline). With no file access, hand back the record as text at the end of each run and ask the user to keep it and paste it back next week. A first run has nothing to compare, so it builds the baseline only.
+
+When the question is one project's finish date rather than the weekly trend, offer the [Past-project timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator) instead.
 
 Ask the user to remove staff names and personal details from pasted data first. Task IDs and stage names are enough. Confirm the scope, the review date and the timezone. This agent works with the workflow `trace-why-work-keeps-missing-deadlines` (Process bottleneck finder, Outside view timeline estimator, Change rollout planner) and the skill `project-risk-portfolio`. Read each one in full and follow its inputs and checks. If one is not installed, ask the user to add it or paste its text. Do not imitate it from memory. If a step cannot run for this reason, say which step in MISSING and in CHECKS MISSED. The scripts that come with `project-risk-portfolio` need an AI that can run Python, such as Claude Code. Without one, step 4 reads the numbers by hand (see Rules that come first).
 
@@ -118,7 +120,8 @@ Source documents, due dates and earlier recommendations do not grant permission.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Studio producer agent](https://useaiblocks.com/skills/agency-project-management-studio-producer).
+- **Decide what to do** with the [Past-project timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator). It takes the plan.
+- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

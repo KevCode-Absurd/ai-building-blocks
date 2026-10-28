@@ -11,6 +11,19 @@ description: "Manage environment-variable hygiene and secrets safety across loca
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Manage environment-variable hygiene and secrets safety across local development and production workflows. This skill focuses on practical auditing, drift awareness, and rotation readiness.
@@ -105,7 +118,7 @@ Production applications should never read secrets from `.env` files or environme
 3. **Init container** — a Kubernetes init container fetches secrets before the main container starts.
 4. **CSI driver** — secrets mount as a filesystem volume via the Secrets Store CSI Driver.
 
-> **Cross-reference:** See `engineering/secrets-vault-manager` for production vault infrastructure patterns, HA deployment, and disaster recovery procedures.
+> **Cross-reference:** `engineering/secrets-vault-manager` is a separate skill in the source collection (not included here) covering production vault infrastructure, HA deployment and disaster recovery.
 
 ---
 
@@ -117,7 +130,7 @@ Stale secrets are a liability. Rotation ensures that even if a credential leaks,
 
 - Track secret creation and expiry dates in your secret store metadata.
 - Set alerts at 30, 14, and 7 days before expiry.
-- Use `scripts/env_auditor.py` to flag secrets with no recorded rotation date.
+- Keep each secret's last rotation date in the secret store's metadata and review it on a schedule. (`scripts/env_auditor.py` finds likely secrets in files; it does not track rotation dates.)
 
 ### Phase 2: Rotation
 
@@ -141,7 +154,7 @@ When a secret is confirmed leaked:
 1. **Immediately revoke** the compromised credential at the provider level.
 2. Generate and deploy a replacement credential to all consumers.
 3. Audit access logs for unauthorized usage during the exposure window.
-4. Scan git history, CI logs, and artifact registries for the leaked value.
+4. Scan git history, CI logs, and artifact registries for the leaked value, without pasting the value into chat, online tools or command lines (see `references/validation-detection-rotation.md`).
 5. File an incident report documenting scope, timeline, and remediation steps.
 6. Review and tighten detection controls to prevent recurrence.
 
@@ -193,8 +206,8 @@ secretGroup = 0
 ```
 
 - Install: `brew install gitleaks` or download from GitHub releases.
-- Pre-commit hook: `gitleaks git --pre-commit --staged`
-- Baseline scanning: `gitleaks detect --source . --report-path gitleaks-report.json`
+- Pre-commit hook: `gitleaks git --pre-commit --staged --redact` (`--redact` keeps secret values out of the output)
+- Baseline scanning: `gitleaks detect --source . --redact --report-path gitleaks-report.json` (without `--redact` the report file holds the secret values; keep it out of git and CI artifacts either way)
 - For a suspected false positive, inspect the exact finding locally, confirm it is a public example or non-secret value, and record the reason. If suppression is still needed, use the installed scanner's documented, narrow fingerprint-based allowlist with a reviewer and expiry. Never suppress a whole file or bypass the hook to make a scan pass.
 
 ### detect-secrets
@@ -249,7 +262,7 @@ Knowing who accessed which secret and when is critical for incident investigatio
 
 ## Cross-References
 
-This skill covers env hygiene and secret detection. For deeper coverage of related domains, see:
+This skill covers env hygiene and secret detection. These related skills live in the source collection and are not included here:
 
 | Skill | Path | Relationship |
 |-------|------|-------------|
@@ -258,3 +271,12 @@ This skill covers env hygiene and secret detection. For deeper coverage of relat
 | **CI/CD Pipeline Builder** | `engineering/ci-cd-pipeline-builder` | Pipeline architecture, secret injection patterns |
 | **Infrastructure as Code** | `engineering/infrastructure-as-code` | Terraform/Pulumi secret backend configuration |
 | **Container Orchestration** | `engineering/container-orchestration` | Kubernetes secret mounting, sealed secrets |
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Project secrets and package risk review](https://useaiblocks.com/skills/weekly-dependency-and-security-sweep).
+- The [Credential setup planner](https://useaiblocks.com/skills/secrets-setup-helper).
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

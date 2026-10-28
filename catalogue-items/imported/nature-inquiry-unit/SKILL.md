@@ -73,6 +73,19 @@ tags: ["ecological-literacy", "Sobel", "Orr", "place-based", "environmental-educ
 
 # Ecological Inquiry Anchor Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a sustained ecological inquiry anchored in a specific local ecosystem — a pond, garden, hedgerow, tree, or even a window box — connecting curriculum science objectives to direct investigation of living systems that students can observe, monitor, and care for over time. The approach draws on Sobel's (1996, 2004) place-based education and his critique of "ecophobia" (frightening children with global environmental catastrophe before they have developed love for local nature), and Orr's (1992) concept of ecological literacy (understanding how natural systems work, not just knowing facts about nature). The critical principle is that ecological understanding comes from RELATIONSHIP with specific living systems — sustained observation of one pond teaches more about ecology than reading about ten biomes. The output includes an inquiry design, a driving question, investigation activities, ecological literacy outcomes (beyond the curriculum), and a stewardship dimension where students take responsibility for the ecosystem they've studied. AI is specifically valuable here because designing an inquiry that addresses curriculum objectives THROUGH authentic ecological investigation requires mapping scientific concepts onto what a specific local ecosystem can reveal — ensuring the ecology is real, not contrived.
@@ -290,3 +303,10 @@ Students design their intervention based on evidence:
 2. **The evidence base for ecological education is primarily qualitative.** Chawla (1998) and Sobel (1996, 2004) draw on qualitative research traditions — significant life experience narratives, case studies, and practitioner accounts. There are fewer RCTs or large-scale quantitative studies demonstrating academic attainment gains from ecological inquiry. The evidence for engagement, environmental awareness, and stewardship behaviours is stronger than the evidence for science test performance.
 
 3. **Long-term inquiry requires institutional support.** A term-long weekly investigation needs timetable protection, outdoor access in all weather, and support from school leadership. If the inquiry is cancelled every time it rains or the field is muddy, the sustained observation principle is undermined. Teachers need to advocate for the time and conditions that make ecological inquiry possible.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Local nature inquiry cycle planner](https://useaiblocks.com/skills/nature-inquiry-cycle). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -33,13 +33,13 @@ you_get:
   - A list of conditions to meet
   - Flags for privacy and vendor review
 how_to_use:
-  - Open your AI tool. Use one that can search the web, so it can check current rules. A legal research connection such as Westlaw or EUR-Lex is better. Without one, every citation stays unverified and you must check it yourself.
+  - Open your AI tool. Use one that can search the web, so it can check current rules. A legal research connection such as Westlaw or EUR-Lex is better. Without one, your AI asks before it uses web search, tags each web citation to verify, and you must check them yourself.
   - Paste the skill, or upload the skill folder if your tool takes files.
   - Tell it the AI use you are assessing, such as AI résumé screening for HR. If you have no saved company profile, also tell it your countries, your AI policy and whether you are a provider or a deployer.
   - Answer its questions about what the system does, who is affected and who checks its results.
   - Add your AI policy and a past assessment if you have them. Without them it uses a default format.
   - Without a legal research tool, treat every cited article or pinpoint as unverified until you have checked it against the official text. The result is a draft, not a sign-off.
-  - Check every cited rule against the source before you rely on it. Then ask a lawyer to review.
+  - Check every cited rule against the source before you rely on it. If a citation behind the risk tier is unverified, treat the go or no-go call as provisional. Then ask a lawyer to review.
 output_sample:
   input:
     - The AI use you are assessing, in plain words

@@ -11,6 +11,19 @@ Understanding decays. This skill runs recall-first review sessions and keeps the
 
 **Vault root:** `OBSIDIAN_VAULT` env var, else `learning/` in the current workspace. All content under `<vault>/Learning/`.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## The schedule
 
 Every lesson note carries a `review:` block in its frontmatter with the note's memory state:
@@ -79,3 +92,11 @@ Keep the **Up for review** section current: one bullet per due note, sorted by d
 Remove bullets after the review is logged. This list is what the tutor reads at session start, so it must be true.
 
 **Html mode** (`output_format.dashboard: html` in the learner profile): the queue lives in `Dashboard.html` — the **Up for review** section and the `due_notes[]` of the island read in step 1. Update it at the end of the session by regenerating the html dashboard whole — a fresh island, overview and subject focus pages together, plus the thin `Dashboard.md` hub's counters, exactly the update-the-Dashboard moment every session ends with; never hand-patch the html.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Personal study planner](https://useaiblocks.com/skills/personal-study-notebook).
+- The [Study review scheduler](https://useaiblocks.com/skills/study-review-scheduler).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

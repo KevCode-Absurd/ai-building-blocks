@@ -1,13 +1,13 @@
 ---
 name: headline-test
-description: Use when you need a headline that earns its place and a fair way to choose between options. It runs 3 skills in the order Victor Schwab's book teaches, and checks each result before the next step starts.
+description: Use when you need a headline that earns its place and a fair way to choose between options. It runs 3 skills in an order inspired by Victor Schwab's headline method, and checks each result before the next step starts.
 ---
 
 # Write headlines and pick the winner with a small test
 
 Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner.
 
-This workflow follows the method in 100 Good Advertising Headlines, and why they were so profitable by Victor Schwab. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow is inspired by the headline method in 100 Good Advertising Headlines, and why they were so profitable by Victor Schwab. The three-step order is this library's own design. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -62,9 +62,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Ad headline writer.** Use the skill `ad-headline-writer`. Give it the brief, the product facts, the offer, how many lines you want and the character limit. It saves a set of headlines, each with a different way in and a check against the limit, and marks the one to test first. Saved as `outputs/step-01-ad-headline-writer.md`.
-2. **Headline promise checker.** Use the skill `headline-promise-checker`. Give it the headlines in `outputs/step-01-ad-headline-writer.md` and the offer facts, one headline at a time. It names the reader each one picks out, checks the reward, scores it out of 100 and writes stronger versions using only your offer's facts. Saved as `outputs/step-02-headline-promise-checker.md`.
+2. **Headline promise checker.** Use the skill `headline-promise-checker`. Give it the headlines in `outputs/step-01-ad-headline-writer.md` and the offer facts, one headline at a time. It names the reader each one picks out, checks the reward, scores it out of 100 (that skill's own rubric, which rates the promise, not the sales it will bring) and writes stronger versions using only your offer's facts. Saved as `outputs/step-02-headline-promise-checker.md`.
 3. **Keyed headline test planner.** Use the skill `keyed-headline-test-planner`. Give it the checked headlines from `outputs/step-02-headline-promise-checker.md`, your offer, where it runs and what counts as a response. It sorts the headlines by appeal, picks two or three to test, plans a small keyed test where only the headline changes and sets the winning rule before the test. Set up the test record before the test starts, one row per version: `code | headline | spend | replies | cost per reply | winner rule met (yes or no)`. Leave spend and replies blank until the counts come in. Saved as `outputs/step-03-keyed-headline-test-planner.md`.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 3 step files and the summary:

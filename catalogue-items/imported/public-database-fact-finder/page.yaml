@@ -7,8 +7,6 @@ job: research-topics
 headline: Public database fact finder
 subhead: A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
 explain: |
-  A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
-
   Instead of answering from memory, the skill sets a retrieval contract: the entity, identifiers, filters, fields wanted and whether you need one record or the full set. It picks the authoritative database from a catalogue of about 80 science, regulatory and financial sources, reads the notes for that source, and makes limited, rate-aware calls. It pages through all results when completeness matters, checks counts, and logs the exact request. It asks when a missing detail would change the answer.
 when:
   - You need a gene, drug, trial or regulatory record, and a guess will not do.
@@ -35,6 +33,7 @@ how_to_use:
   - Check that your AI can reach the web or run code. Without that it cannot read live databases.
   - If it asks a question, answer it. It asks when a missing detail would change the answer.
   - Check the record count and the request in the Provenance part before you use the result.
+  - Next, paste the results table and its source line into your report. Keep the logged request, and run it again later to see if the data has changed.
 output_sample:
   input:
     - The fact or records you need

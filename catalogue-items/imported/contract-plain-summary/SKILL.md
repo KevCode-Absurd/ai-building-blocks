@@ -16,6 +16,27 @@ This works in a plain chat from what the user pastes: the finished review and th
 - Never say a renewal is "tracked" or "added to the tracker". Write "Add the renewal date to your calendar. Not done yet."
 - If the review names people the contract should go to, list each one under "Escalation status" as "not routed", because nothing here sends it. If the review names none, or the user has no approvers, leave the block out. It is optional.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Contract change tracer](https://useaiblocks.com/skills/contract-change-tracer). Bring the contract.
+2. **An audit report** with the [IP clause checker](https://useaiblocks.com/skills/ip-clause-checker). Bring the contract.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the contract, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Destination check
 
 Before producing output, check where it's going. If the user has named a destination (a channel, a distribution list, a counterparty, "everyone"), ask whether it's inside the privilege circle. Public channels, company-wide lists, counterparty/opposing counsel, vendors, and clients (for work product) waive the protection. When the destination looks outside the circle, flag it and offer (a) the privileged version for legal only, (b) a sanitized version for the broader channel, or (c) both — don't silently apply a privileged header and then help paste it somewhere the header won't protect it.
@@ -164,3 +185,12 @@ If the review named nobody, or the user has no approvers, leave the block out. D
 Stakeholders remember two things about legal: did it block me, and did it make sense. This skill is how legal makes sense. Write like you're explaining it to a smart colleague over coffee, not like you're writing a memo to file.
 
 If the honest summary is "this is fine, sign it," say that. Don't pad a clean review into three paragraphs to look thorough.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
+- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
+- The [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

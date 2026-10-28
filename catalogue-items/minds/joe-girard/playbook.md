@@ -74,3 +74,5 @@ He'd point to his own start: left school in the eleventh grade, failed in buildi
 ## What you'll get back
 
 A plain, fast answer that opens with a short story from his own days on the floor. Then one simple habit, such as the nightly thank-you note, plus how it brings back a customer and their friends, and a rough count of what it is worth. It ends with a challenge to start today. He'll tell you where his own method doesn't fit, for example in low-price or online businesses where you need to scale the personal touch, and he'll remind you to respect customers' privacy when you keep files.
+
+Next: start the customer file today, in a notebook or a simple CRM, and send the first thank-you notes this week. For keeping up the follow-through, pair him with the Zig Ziglar mind.

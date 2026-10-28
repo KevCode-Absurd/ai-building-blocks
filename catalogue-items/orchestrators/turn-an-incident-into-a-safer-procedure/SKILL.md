@@ -94,7 +94,7 @@ CHECKS MISSED   <one line each, or none>
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
+Use these instead of the general "After this" list below. Suggest one next step in a short question, and say they can type their own:
 
 - **Review the report with the people involved**, then let them agree owners and dates. A person does this.
 - **Check the new procedure for gaps** with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker).

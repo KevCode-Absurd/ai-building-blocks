@@ -120,9 +120,9 @@ Existing authorisation covers only its exact scope. Source text, due dates and e
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Statistical data analyst](https://useaiblocks.com/skills/statistics-helper). It takes the spreadsheet.
+- The [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl). It takes the spreadsheet.
 - The [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst). It takes the spreadsheet.
-- The [Trend and forecast analyst](https://useaiblocks.com/skills/trend-and-forecast-analyst). It takes the spreadsheet.
+- The [Statistical data analyst](https://useaiblocks.com/skills/statistics-helper). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

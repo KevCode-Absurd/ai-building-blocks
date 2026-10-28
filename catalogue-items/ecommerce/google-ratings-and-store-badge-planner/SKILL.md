@@ -93,7 +93,7 @@ MISSING: <what would sharpen it>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
+- The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

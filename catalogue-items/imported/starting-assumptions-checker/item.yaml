@@ -31,7 +31,7 @@ credits:
   - title: prior-elicitation skill
     by: PyMC Labs
     url: https://github.com/pymc-labs/pymc-modeling/tree/main/skills/prior-elicitation
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name and added, at the top of the skill file, a note on the missing extras file, plain meanings for its terms and a one-line outcome.
   - title: Original author
     by: PyMC Labs
     url: https://github.com/pymc-labs

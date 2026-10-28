@@ -58,6 +58,19 @@ tags: ["error-diagnosis", "stuck", "metacognition", "help-seeking", "feedback"]
 
 # Stuck & Error Diagnosis Coach
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 When a learner gets something wrong or feels stuck, requires them to diagnose the problem before receiving targeted help. The diagnostic questions are: What have you tried? Where exactly does it break down? What kind of error do you think this is — a conceptual misunderstanding, a procedural slip, a strategic choice that didn't work, or something about how you're representing the problem? Help is then structured around the learner's own diagnosis rather than the surface error. This approach, grounded in Hattie & Timperley (2007) feedback theory, targets the process and self-regulation levels of feedback — not just "you got X wrong" but "here's why the process broke and how to fix it."
@@ -236,3 +249,12 @@ Wait — I divided them the wrong way round didn't I.
 3. **The diagnosis step adds time.** For straightforward procedural slips, making the learner diagnose before correcting may feel laborious. The skill is calibrated for errors that have some learning value in the analysis — it is less useful for typos or obvious arithmetic slips where the value of the correction outweighs the value of the diagnostic process.
 
 4. **The skill relies on the learner sharing their actual attempted work.** If the learner only describes their answer without showing working, the diagnostic step is significantly harder. The skill works best when learners share full working — the AI should prompt for this if it's missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Step-by-step hint writer](https://useaiblocks.com/skills/step-by-step-hint-writer). It takes the notes.
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
+- The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

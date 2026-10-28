@@ -7,7 +7,7 @@ description: Plan how your team's Slack reactions teach your AI agents. Get a fo
 
 Plan the loop where people react to an agent's finding in Slack and the agent learns from it. A person adds an emoji and maybe a reply. The plan turns that into a saved feedback record of one of four kinds, counts repeats, and drafts a lesson for a named person to review. It never rewrites a live rule on its own. This skill reads a starter handler and a method note, lists what they get wrong, and drafts the log, the lesson rules and the tests. It does not run code, read your Slack or touch your database.
 
-Do not use it to score an agent's own past predictions (use the [Agent prediction review builder](https://useaiblocks.com/skills/self-reflection-grading-past-predictions-implementation-planner)), to change one rule once (edit the rules file by hand), to collect feedback from customers (use a survey tool), or to let an agent rewrite its own live rules (it only drafts lessons).
+Do not use it to score an agent's own past predictions (use the [Agent prediction log builder](https://useaiblocks.com/skills/self-reflection-grading-past-predictions-implementation-planner)), to change one rule once (edit the rules file by hand), to collect feedback from customers (use a survey tool), or to let an agent rewrite its own live rules (it only drafts lessons).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -6,7 +6,7 @@ description: "Write short-form bridge page copy (300-800 words) that sits betwee
 > Created by **Rob Palmer**, direct-response copywriter.
 > Source & updates: https://github.com/robpalmer99/claude-code-copywriting-skills
 > Free under CC-BY-4.0. Attribution requested when redistributed.
-> Adapted by AI Blocks: examples made neutral and honesty rules added. The method (three paragraphs, awareness levels, message match) is unchanged.
+> Adapted by AI Blocks: examples made neutral, and honesty, permission and evidence rules added for proof and claims. The method (three paragraphs, awareness levels, message match) is unchanged.
 
 # Landing Page Copy Skill
 
@@ -19,6 +19,13 @@ The page has ONE job: **get the visitor curious enough to click through to the n
 # Rule 0: Only true, supplied facts
 
 Every authority, institution, study, statistic, user count, testimonial, name, location and result on the page must come from material the user gave you, or from a source you name that they can check. If the user did not supply it, write a placeholder such as `[REAL STAT + SOURCE]` or `[REAL TESTIMONIAL: name, place, result]` and list it under "Facts to supply". Never invent a doctor, university, number or quote. Never write "this video may be taken down" or any scarcity or suppression claim that is not true.
+
+**Before you use any proof, check three things with the user, and list any you could not confirm under "Claims to check":**
+- **Permission:** the person or organisation quoted, named or pictured agreed to be used this way. Any payment, free product or other link between them and the seller is disclosed on the page.
+- **Evidence:** each result or claim, including one inside a testimonial, is backed by evidence the user holds. A testimonial does not prove a claim on its own.
+- **Current and typical:** the quote still reflects the person's view, the result is what the product does today, and a standout result is not presented as what most people get. If it is not typical, say what people generally get, or leave it out.
+
+In the US these points follow the FTC's Endorsement Guides, 16 CFR Part 255 (https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews). Other countries have similar rules. Check the rules where the ad runs.
 
 Stop and say so if the offer is a health, medical, financial or other regulated claim, or if the user cannot back its claims with evidence. Ask for compliance review first, and check the ad platform's policies. Never write cure, reversal, "diabetes-free" or similar claims.
 
@@ -59,6 +66,23 @@ Most bridge pages target problem-aware visitors from cold ads.
 
 Three elements, in this order. Each may be 2-3 short paragraphs.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Paragraph 1: The discovery (authority and root cause)
 
 Purpose: show credibility and introduce the idea or method. Use a real expert, source or experience from the user's material.
@@ -74,7 +98,7 @@ Elements: a real named source or the founder's own story; a specific root cause 
 
 Purpose: show real people already get results.
 
-Use the strongest proof the user supplied, in this order: a named testimonial with a real result, review screenshots, a case study with numbers, an expert endorsement, media mentions, user counts, an anonymous testimonial. Use exact figures only when the user gave them. Otherwise use `[REAL NUMBER + SOURCE]`.
+Use the strongest proof the user supplied that passes the permission, evidence and current-and-typical checks in Rule 0, in this order: a named testimonial with a real result, review screenshots, a case study with numbers, an expert endorsement, media mentions, user counts, an anonymous testimonial. Use exact figures only when the user gave them. Otherwise use `[REAL NUMBER + SOURCE]`.
 
 Match the proof to the visitor's main doubt.
 
@@ -177,7 +201,7 @@ After the variations, add:
 
 Sound like a friend sharing a find, or a plain news report. Not a sales pitch, a textbook or a generic marketing line. Read it out loud.
 
-Ban AI tells: delve, comprehensive, robust, cutting-edge, utilize, leverage, unlock, supercharge, game-changer, "in today's fast-paced world", "are you ready to". Use firm, plain language without wimpy hedging, but never overclaim.
+Ban AI tells: delve, comprehensive, robust, cutting-edge, utilize, leverage, unlock, supercharge, game-changer, "in today's fast-paced world", "are you ready to". Use firm, plain language without needless hedging, but never overclaim. Keep every qualifier a claim needs to be true, such as "results vary", "in our tests" or what people generally get. Cutting it to sound stronger is not allowed.
 
 Aim for reading grade 6 or lower. Short sentences.
 
@@ -192,3 +216,14 @@ Aim for reading grade 6 or lower. Short sentences.
 - **Joanna Wiebe:** use the customer's own words for the problem.
 - **Robert Collier:** enter the conversation already in the customer's mind.
 - **Joseph Sugarman:** every element has one job: get them to read the next element.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the page.
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

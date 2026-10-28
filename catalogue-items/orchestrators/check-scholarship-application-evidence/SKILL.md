@@ -9,7 +9,7 @@ Check a scholarship application against the funder's rules and your own records.
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. The AI checks and edits. The applicant decides what to send.
 
-**When not to use it:** you only want a spelling and grammar pass (use the [Proofreader](https://useaiblocks.com/skills/proofreader)), you are checking claims in an article or ad (use the [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter)), or you want a ruling on whether you qualify (only the funder decides).
+**When not to use it:** you only want a spelling and grammar pass (use the [Text proofreader](https://useaiblocks.com/skills/proofreader)), you are checking claims in an article or ad (use the [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter)), or you want a ruling on whether you qualify (only the funder decides).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

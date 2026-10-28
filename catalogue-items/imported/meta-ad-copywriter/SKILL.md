@@ -9,7 +9,7 @@ description: "Write high-converting Meta (Facebook + Instagram) ad copy — prim
 
 # Meta Ad Copy Skill
 
-**Real facts only (added by AI Blocks).** Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, and lines like "your doctor won't tell you" or an implied personal health problem can be rejected. Check every line against Meta's current ad policy before launch. Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as the weight, health and "my sister sent me this article" lines, show the style only and are not claims to run. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
+**Real facts only (added by AI Blocks).** Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, and lines like "your doctor won't tell you" or an implied personal health problem can be rejected. Check every line against Meta's current ad policy before launch. Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as the weight, health and "my sister sent me this article" lines, show the style only and are not claims to run. Write them as [X customers], [name], [result] and [source], and never invent proof. Any line that names an expert, a study or researchers needs a real, named source, or it comes out.
 
 This skill writes high-converting ad copy for Meta platforms (Facebook + Instagram) — primary text, headlines, descriptions, and UGC/video ad scripts. It draws on proven direct response frameworks from Schwartz, Halbert, Makepeace, Georgi, Sultanic, and others.
 
@@ -20,6 +20,26 @@ The ad's ONLY job is to get the click. Not close the sale. Not educate fully. Ge
 # Step 1: Classify the Ad Brief
 
 Before writing a single word, determine these four things. Ask the user if unclear.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Funnel Position
 
@@ -193,8 +213,8 @@ These techniques make any ad more compelling:
 
 **Authority anchors:**
 > "[Named expert] calls it..." (only with a real, named expert)
-> "A study from [institution] proved..."
-> "Researchers found..."
+> "A study from [institution] proved..." (only with a real study you can link)
+> "Researchers found..." (only with a real, cited study)
 > "[Number] studies now show..." (only with real, cited studies)
 
 ## Making the Mechanism Appealing
@@ -346,7 +366,7 @@ Personal narrative arc. Most effective for emotional markets.
 
 Since many Meta ads send traffic to advertorials, understand the four advertorial types your ad might connect to:
 
-1. **Story-Based** — Personal transformation narrative ("I couldn't move until I tried this 2-inch patch"). Makes it personal, real, and lets the reader live it.
+1. **Story-Based** — Personal transformation narrative ("I was stuck with [a real problem your buyer has] until I tried [product]", from a real customer who agreed to be quoted). Makes it personal, real, and lets the reader live it.
 2. **Listicle** — "5 reasons homeowners are switching to..." or "We tested the top 5 and found..."
 3. **Editorial/Consumer** — Looks like a news article or editorial review.
 4. **eCom Disruptor** — "Small watch company is disrupting the billion dollar industry." Underdog story.
@@ -477,3 +497,14 @@ These foundational principles inform all good ad copy:
 **Clayton Makepeace** — The Tingle Factor: feel your way through copy. If the tingle drops, rewrite. Ban wimpy hedging words. Use the 75 Power Words. Address prospects directly with "YOU." Prove every point.
 
 The greats all agree: know your audience before writing a word. Lead with their self-interest. Be specific, never vague. Tell stories. The headline does most of the work. Write like you talk. Honesty and proof beat hype.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and script.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy.
+- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

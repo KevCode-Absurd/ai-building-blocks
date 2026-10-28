@@ -12,7 +12,7 @@ When people stop using a product, the common answer is another feature. But feat
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
 
 How to start:
@@ -91,6 +91,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
 - The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
 - **Design it** with the [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
-- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
+- The [Product funnel steps and experiment review](https://useaiblocks.com/skills/weekly-product-funnel-watcher). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

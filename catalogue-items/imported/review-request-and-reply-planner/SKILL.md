@@ -7,6 +7,23 @@ description: Use when planning how to get product reviews or feedback, when to a
 
 Get more reviews and answer complaints in a way that wins over the people watching. Counterintuitive parts: an imperfect rating sells more than a perfect one, asking too soon reduces reviews, and the best first question is not "rate us".
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your notes** (yours): what to keep, change or drop.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, customer words, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - The review-request email or sequence
@@ -45,6 +62,14 @@ Collect, or state your assumption:
 2. Rating policy: what to leave, reply wording for an irrelevant negative.
 3. Templates: public complaint reply with private handoff; rude-complaint reply with situational humor; positive-review reply.
 4. Next steps: test the new request timing on one batch of customers first. After 30 to 60 days, compare review volume and average rating with the last batch.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Public review reply drafter](https://useaiblocks.com/skills/public-review-reply-drafter). It takes the plan.
+- The [Public review response manager](https://useaiblocks.com/skills/public-review-reply-desk).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

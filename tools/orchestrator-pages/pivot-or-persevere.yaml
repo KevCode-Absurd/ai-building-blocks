@@ -20,7 +20,7 @@ not_for:
   - "You want to check a test is big enough to trust: use the A/B test traffic checker."
 you_give:
   - Your plan, with the figures you hope for
-  - "After a test, results by join week or month for each step of the customer path"
+  - "After a test, results by join week or month for each step of the customer path, for at least two join periods, with what each count means"
   - Dates of each change you released (optional)
   - Notes from customers, including those who left (optional)
   - Money and time left (optional)
@@ -34,6 +34,7 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Start with the plan. It sets the milestones first, then tells you when to run the test and bring back results.
   - Hold the review on the date it gives, with the people it lists.
+  - "The pack holds the five skills it runs, in order: Customer growth model finder, Learning milestone planner, Business metric quality reviewer, Cohort funnel analyst and Product pivot decision reviewer. Each step needs its skill file."
 output_sample:
   input:
     - Your plan, with the figures you hope for
@@ -87,7 +88,7 @@ output_shape: |-
     Kind of pivot | new guess | next review
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Counts by join date
     how: Real counts for each step of the customer path let the later steps work in shares, not totals.

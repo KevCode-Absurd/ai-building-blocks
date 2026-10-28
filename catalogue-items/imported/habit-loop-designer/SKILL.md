@@ -11,6 +11,19 @@ metadata:
 
 Framework for building habit-forming products. Habits are not created — they are built through successive cycles through the Hook.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **The Hook Model** = a four-phase loop that connects the user's problem to your solution frequently enough to form a habit, moving usage from deliberate to automatic.
@@ -150,14 +163,14 @@ Ask: how often do users need to engage, what's the perceived value of each engag
 
 ## Habit Testing
 
-The 5% rule: a habit has formed when at least 5% of users show unprompted, habitual usage.
+The 5% rule of thumb: first define how often a user should use the product. Nir Eyal, who wrote the Hook Model, calls 5% his "rule of thumb" for habit testing (https://www.nirandfar.com/hooking-users-in-3-steps/). If fewer than about 5% of users reach that expected use, something is wrong, so go back to the product. Reaching 5% means you have enough devoted users to study. It is not proof that use has become automatic, and a lasting business usually needs a much larger share of active users.
 
 **Three questions:**
 1. **Who are the habitual users?** Which users engage most frequently, and what do they share?
 2. **What are they doing?** Identify the "Habit Path" — the action sequence that separates power users from casual users.
 3. **Why are they doing it?** What internal trigger and emotion precede usage?
 
-See [references/habit-testing.md](references/habit-testing.md) when running the test — cohort analysis, finding the Habit Path, and confirming the 5% threshold. For worked teardowns of these loops in real products (Instagram, Slack, Duolingo, Pinterest, and failures), see [references/case-studies.md](references/case-studies.md).
+See [references/habit-testing.md](references/habit-testing.md) when running the test — cohort analysis, finding the Habit Path, and checking the 5% rule of thumb. For worked teardowns of these loops in real products (Instagram, Slack, Duolingo, Pinterest, and failures), see [references/case-studies.md](references/case-studies.md).
 
 ## The Manipulation Matrix
 
@@ -233,9 +246,17 @@ Audit any product feature:
 Based on the Hook Model developed by Nir Eyal:
 
 - (The Amazon links below carry the original author's affiliate tag, not ours.)
-- [*"Hooked: How to Build Habit-Forming Products"*](https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788?tag=wondelai00-20) by Nir Eyal
-- [*"Indistractable: How to Control Your Attention and Choose Your Life"*](https://www.amazon.com/Indistractable-Control-Your-Attention-Choose/dp/194883653X?tag=wondelai00-20) by Nir Eyal (companion: resisting unwanted habits and building focus)
+- [*"Hooked: How to Build Habit-Forming Products"*](https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788) by Nir Eyal
+- [*"Indistractable: How to Control Your Attention and Choose Your Life"*](https://www.amazon.com/Indistractable-Control-Your-Attention-Choose/dp/194883653X) by Nir Eyal (companion: resisting unwanted habits and building focus)
 
 ## About the Author
 
 **Nir Eyal** taught at Stanford Graduate School of Business and the Hasso Plattner Institute of Design, after working in the gaming and advertising industries where he saw habit psychology firsthand. *Hooked* distills that research into a framework used by product teams from startups to Fortune 500s; his follow-up *Indistractable* addresses resisting the same triggers.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Understand your buyers** with the [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer).
+- **Plan your strategy** with the [Product sharing and referral loop planner](https://useaiblocks.com/skills/growth-loop-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

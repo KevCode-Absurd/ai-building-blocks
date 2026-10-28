@@ -12,6 +12,19 @@ Helps HR and compliance teams govern the responsible, compliant use of AI tools 
 
 Source: copied from tuanductran/hr-skills under the MIT licence. This catalogue copy may include small notes added by AI Blocks, such as the "What you get" section below.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Supported tasks
 
 - Drafting an AI use policy for HR processes
@@ -56,6 +69,14 @@ Source: copied from tuanductran/hr-skills under the MIT licence. This catalogue 
 ## What you get
 
 Write the draft as plain text that can be pasted into a Word file. Use these sections, in order, and keep each to about one page or less: 1. Purpose and scope. 2. Allowed and banned uses of AI. 3. Human review of big decisions. 4. Bias and risk check plan, with how often to repeat it. 5. Review before adopting a new tool. 6. Vendor questions. 7. Notice to candidates and staff. 8. How to challenge a decision, and who handles it. 9. Records HR must keep. 10. Training points for HR staff. Mark anything you could not fill from the user's facts as MISSING. Never invent a law, a tool name or a vendor claim. End with a reminder that this is not legal advice.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker).
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## How to run it
 

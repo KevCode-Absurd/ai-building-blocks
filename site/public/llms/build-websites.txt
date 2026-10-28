@@ -1,6 +1,6 @@
 # Build websites and web apps: AI Blocks
 
-> 63 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Share a scene brief, web framework, model files and target devices to get 3D scene code with a loading state and a fallback.
 - [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Give a site brief, colours and models. Get 3D scene code with shader effects, motion, a preloader and phone performance guidance.
@@ -8,6 +8,7 @@
 - [Animation performance fixer](https://useaiblocks.com/skills/animation-speed-fixer): Share stuttering animation code. Get likely causes, quoted problem lines and small fixes to test in your current setup.
 - [App translation setup helper](https://useaiblocks.com/skills/app-translation-setup-helper): Share your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
 - [ASP.NET Core web app builder](https://useaiblocks.com/skills/asp-net-web-app-builder): Share a web app, API or codebase. Get ASP.NET Core code, design or review matched to its framework and app style.
+- [Brand identity markup adder](https://useaiblocks.com/skills/brand-identity-markup-adder): Add your brand details to your Shopify theme as markup that search tools can read. Previews the snippet before it writes.
 - [Bundled React app builder](https://useaiblocks.com/skills/single-file-app-builder): Describe a React app. Get project code bundled into one HTML file after setup and build.
 - [Favicon maker](https://useaiblocks.com/skills/favicon-maker): Share a logo image. Get favicon files and HTML link tags for your site.
 - [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker): Get a font pair shortlist for your website: three headline and body pairs with sizes and line spacing, plus one pick for your readers.
@@ -31,6 +32,7 @@
 - [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer): Share page code and preferred URLs. Get metadata fixes and a list of checks, including live social preview checks when available.
 - [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer): Share PageSpeed or Lighthouse results and project access. Get ordered fixes, risk notes and a checklist for fresh test results.
 - [Page transition animator](https://useaiblocks.com/skills/page-transition-animator): Share React or Next.js code. Get transition code for navigation, lists, and reduced-motion settings.
+- [Photopea editor embedder](https://useaiblocks.com/skills/photopea-editor-embedder): Embed the Photopea image editor in your web page and script it to open, edit and export files. Built for a Photopea editor embed in your own app.
 - [Product comparison page designer](https://useaiblocks.com/skills/comparison-table-designer): Share options and buyer needs. Get a fair comparison page with a clear pick for each buyer.
 - [Product description enricher](https://useaiblocks.com/skills/product-description-enricher): Find thin product descriptions in your Shopify store and rewrite them with real facts. Review every product description rewrite before it goes live.
 - [React and Next.js UI builder](https://useaiblocks.com/skills/react-and-next-js-builder): Describe a screen. Get React components, a project scaffold and size checks.

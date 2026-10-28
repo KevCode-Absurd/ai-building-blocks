@@ -70,6 +70,19 @@ tags: ["questioning", "Socratic", "critical-thinking", "dialogue", "reasoning"]
 
 # Socratic Questioning Sequence Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a progression of questions designed to develop a concept through dialogue rather than direct instruction — moving students from their current understanding to a deeper or more nuanced position through their own reasoning. The sequence distinguishes genuinely Socratic questions (which probe reasoning, surface assumptions, and develop understanding through student thinking) from leading questions (which guide students toward a predetermined answer through narrowing). AI is specifically valuable here because designing a genuine Socratic sequence requires anticipating multiple possible student responses and preparing contingent follow-ups for each, creating a branching dialogue tree that most teachers cannot construct in real time.
@@ -260,3 +273,12 @@ For each question:
 2. **The sequence is a prepared script, but real Socratic dialogue is improvisational.** The branching follow-ups cover likely responses, but students will say things that aren't anticipated. The teacher must be able to improvise follow-up questions in real time. This skill provides a framework and starting points, not a complete script for every possible dialogue path.
 
 3. **Socratic questioning is not appropriate for all learning objectives.** If students need to learn specific factual content (dates, formulas, procedures), Socratic questioning is an inefficient method. It is most valuable for developing conceptual understanding, ethical reasoning, and critical thinking — tasks where the process of reasoning matters as much as the conclusion. Use explicit instruction for facts and procedures; use Socratic questioning for contested concepts and complex judgments.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Teach-back learning coach](https://useaiblocks.com/skills/teach-back-practice-partner). It takes the question.
+- The [Learning gap diagnosis coach](https://useaiblocks.com/skills/stuck-point-diagnosis-coach). It takes the question.
+- The [Wellbeing and learning link mapper](https://useaiblocks.com/skills/wellbeing-learning-link). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -66,7 +66,7 @@ output_shape: |-
     The shared want in the buyers' words | smaller wants | hook for each, with how it works, proof and feeling | running order | test plan
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: How much of the product's own material you give
     how: More source gives more real phrases. A one-line description gives it almost nothing to mine.
@@ -88,3 +88,4 @@ improve:
   - Save the phrase sheet and the shared want into your brand file, so every writer and tool starts with the same words.
   - Add the phrases you must not use, such as claims you cannot prove, so they are marked early.
   - Test the hooks as the plan sets out, then save the winner and what it showed.
+next: [video-hook-scorer, headline-cover-test-ranker]

@@ -78,14 +78,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sharpen the items you kept** with the [Honest draft feedback giver](https://useaiblocks.com/skills/honest-draft-feedback-giver). Bring one finalist at a time.
-- **Try the set on real people** with the [Expert and newcomer test planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). Bring the final running order.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - At least three times as many candidates as slots were considered, or the thin pool is flagged.
@@ -94,6 +86,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every cut has a one-line reason.
 - The set has a re-read time.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sharpen the items you kept** with the [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). Bring one finalist at a time.
+- **Try the set on real people** with the [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). Bring the final running order.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

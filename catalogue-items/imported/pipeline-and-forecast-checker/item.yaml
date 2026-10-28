@@ -29,4 +29,4 @@ credits:
   - title: revenue-operations skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/revenue-operations
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and fixed the GTM calculator so zero monthly contribution shows CAC payback as never (not a healthy 0 months), and zero net new ARR no longer shows a perfect burn multiple. We added Before you start and After this sections that link to other AI Blocks steps.

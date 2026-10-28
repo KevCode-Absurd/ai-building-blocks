@@ -9,8 +9,8 @@ level: advanced
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: true
+  - type: document
+    required: false
   - type: spreadsheet
     required: false
 outputs:

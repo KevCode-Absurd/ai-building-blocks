@@ -36,6 +36,7 @@ how_to_use:
   - "Optional: connect a paper search tool such as Exa MCP. The skill can also search with its own lookup tools."
   - Read the draft and the list of unverified citations. Check each placeholder reference yourself before you submit.
   - Send your edits back and ask for another round on the weak sections.
+  - Once every reference is checked, run the conference's own paper checklist and formatting rules before you submit.
 output_sample:
   input:
     - Your research repo with code, results and notes

@@ -9,16 +9,16 @@ subhead: Paste your plan under this prompt. It strips out comparisons, splits th
 explain: |
   Every plan rests on a few guesses, and most of them feel like facts. "People will love it" and "it will spread" sound solid until you ask what number would have to be true. The risk is rarely spread evenly. A few guesses carry the whole plan.
 
-        This prompt finds them. It writes each guess as a number, marks what you know and what you only believe, and scores each by the damage if it is wrong and how little you have seen. The top one is what to test first.
+  This prompt finds them. It writes each guess as a number, marks what you know and what you only believe, and scores each by the damage if it is wrong and how little you have seen. The top one is what to test first.
 when:
   - You have a plan and do not know what to test first.
   - You are about to spend money on something you have not checked.
   - Your plan leans on lines such as "it will be the next big thing".
 not_for:
-  - "You want the full check with every test: use the Leap-of-faith assumption finder."
+  - "You want the full check with every test: use the Startup assumption checker."
   - "You have no buyers or customers in mind yet: first write down who you think they are, then come back."
   - "You want to know if the plan will work: this prompt ranks risks and cannot predict success. Test the top guess with real people."
-  - "You want each part of the plan rewritten as a guess with a test and a pass line: use the Business model guess tester."
+  - "You want each part of the plan rewritten as a guess with a test and a pass line: use the Business model assumption tester."
 you_give:
   - Your plan in a paragraph
   - What worries you most (optional)
@@ -65,14 +65,14 @@ how_it_works:
     text: Damage times how little you know.
 output_shape: |
   VALUE GUESS: <...>
-        GROWTH GUESS: <...>
+  GROWTH GUESS: <...>
 
-        RANKED GUESSES
-        # | guess | number | damage | how little known | score
+  RANKED GUESSES (highest score = riskiest, first)
+  # | guess | number | damage | how little known | score
 
-        RISKIEST: <guess> because <reason>
-        TEST ON: <who and where>
-        MISSING: <...>
+  RISKIEST: <guess> because <reason>
+  TEST ON: <who and where>
+  MISSING: <...>
 tweaks:
   - what: Figures in the plan
     how: The more numbers you give, the fewer MISSING lines you get.

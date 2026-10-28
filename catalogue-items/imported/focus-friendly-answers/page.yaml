@@ -10,6 +10,8 @@ explain: |
   Every reply from your AI starts with the next thing to do, then numbered steps with time estimates. It is written for readers who lose track in long answers, such as people with ADHD.
 
   Once switched on, it stays on for the whole session until you say normal mode. The first line is always an action or a command. Multi-step work becomes short numbered steps, one action each, with the fewest steps that still work. It repeats where you are so you do not hold state in your head, gives real time estimates instead of vague ones, cuts tangents, and shows small wins as they happen.
+
+  Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The original author's file (ayghri) says MIT. Both allow reuse. Credit ayghri and sickn33.
 when:
   - Long AI answers make you lose your place or give up.
   - You freeze on where to start a task.

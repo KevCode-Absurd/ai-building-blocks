@@ -100,16 +100,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the two lists, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or closing conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Check a debt payoff, premium and fees against new funding with the [Refinancing closing cost checker](https://useaiblocks.com/skills/refinancing-closing-cost-checker).
-- Check the sellers' stake after rollover with the [Rollover equity ownership checker](https://useaiblocks.com/skills/rollover-equity-ownership-checker).
-- Run the debt, fees and gap checks together in the [Check acquisition refinancing funds](https://useaiblocks.com/workflows/check-acquisition-refinancing-funds) workflow.
+- Check a debt payoff, premium and fees against new funding with the [Loan refinancing cash gap checker](https://useaiblocks.com/skills/refinancing-closing-cost-checker).
+- Check the sellers' stake after rollover with the [Seller rollover ownership calculator](https://useaiblocks.com/skills/rollover-equity-ownership-checker).
+- Run the debt, fees and gap checks together in the [Acquisition funding and debt payoff checker](https://useaiblocks.com/workflows/check-acquisition-refinancing-funds) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the two lists, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or closing conclusion unresolved.

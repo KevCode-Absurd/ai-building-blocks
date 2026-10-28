@@ -39,7 +39,7 @@ If a date, owner or attendee list is missing, mark the gap as step 3 says. Do no
 5. **Keep it short.** The minutes should be no more than a third of the length of the notes.
 
 ## What you hand back
-BOTTOM LINE. DECISIONS. ACTIONS (owner, task, date). OPEN QUESTIONS (next step and owner). CHECKS MISSED (one line per check missed, or none).
+BOTTOM LINE. DECISIONS. ACTIONS (owner, task, date). OPEN QUESTIONS (next step and owner). CHECKS MISSED: go through the four lines under Checks below, and write one line for each that failed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

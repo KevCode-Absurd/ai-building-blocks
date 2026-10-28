@@ -5,11 +5,11 @@ name: Orphan product finder
 summary: Find products in no collection and products in too many, so shoppers can find them. Give it your Shopify store and get a CSV report.
 job: run-your-store
 headline: Orphan product finder
-subhead: A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
+subhead: A list of products that sit in no collection, so shoppers browsing your collections never see them, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
 explain: |
-  A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
+  A list of products that sit in no collection, so shoppers browsing your collections never see them, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
 
-  The skill scans your Shopify products, active by default, and counts the collections each one sits in. Zero means it is an orphan, invisible in navigation. Above your limit, set at 10 by default, it is flagged as over-collected and likely adds clutter. It then pulls collection names and sizes so the report is readable. It only reads data and changes nothing. You choose whether to scan active, draft or all products. Needs a signed-in Shopify CLI session with product read access.
+  The skill scans your Shopify products, active by default, and counts the collections each one sits in. Zero means it is an orphan: no collection page shows it. Shoppers may still reach it through search, a direct link or a menu link to the product, so check your menus before you call it hidden. It reads every collection a product is in, however many there are. Above your limit, set at 10 by default, it is flagged as over-collected and likely adds clutter. It then pulls collection names and sizes so the report is readable. It only reads data and changes nothing. You choose whether to scan active, draft or all products. Needs a signed-in Shopify CLI session with product read access.
 when:
   - You added products but forgot to place them in collections.
   - Your menu feels messy and some items seem lost.
@@ -18,7 +18,7 @@ when:
 not_for:
   - Your store cross-lists on purpose, like a marketplace. Skip the over-collected check or raise the collection limit.
   - You want to change collections. This only reads data, so add or remove products in your Shopify admin.
-  - Your products show up through rule-based collections. Check those in Shopify first, as a product may not be a true orphan.
+  - You want to know what is in your menus. This counts collections only. It does not read menus, so a product it flags may still be linked from a menu.
 you_give:
   - Store domain
   - Collection limit (optional)

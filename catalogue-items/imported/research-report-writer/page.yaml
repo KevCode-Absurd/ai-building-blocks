@@ -9,7 +9,7 @@ subhead: A research report that opens with the conclusion, ranks every source by
 explain: |
   A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
 
-  Licence: this copy is under CC BY 4.0, as the LICENSE-CONTENT file in this item says. The skill file's own header says MIT, which is the original author's label. Both allow reuse with credit. Credit goes to alapha888.
+  Licence: alapha888 wrote it as deep-research-framework (alapha888/agent-skills-en) and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both allow reuse with credit. Credit alapha888 (author) and sickn33 (collection).
 
   First you write the question in one sentence, with at most three sub-questions. Then sources are tiered before searching: primary ones such as official documents and original papers, secondary ones such as reputable press, and tertiary ones such as forums, which count as leads only. Key claims are cross-checked against more than one source. The report puts the answer first, then the evidence, then the gaps and uncertainty. It suits topic studies and competitor analysis.
 when:
@@ -55,6 +55,6 @@ output_sample:
     - name: Core conclusions
       contains: Three to five lines at the top that state the answer.
     - name: Sub-question sections
-      contains: One section per sub-question, in the order conclusion, evidence, sources, with dates on key facts.
+      contains: One section per sub-question, so at most three, each in the order conclusion, evidence, sources, with dates on key facts. There is no set word count; length follows the evidence.
     - name: Uncertainty statement
       contains: What was not found, which claims rest on one source, and what would change the conclusions.

@@ -19,6 +19,7 @@ not_for:
   - "You need to move positions from one genome build to another (liftover): use CrossMap or the UCSC liftOver tool."
   - "You need HGVS names such as c.742 for a variant: use VEP, Mutalyzer or the hgvs package with the right transcript."
   - "You need to rewrite a whole VCF file for production use: use bcftools norm, since this skill only checks and reports."
+  - "You do not work with genome files such as BED, VCF or GFF, or you do not know which genome build your data uses: ask a bioinformatics colleague first. This is not for general business data."
 you_give:
   - Positions or variants to convert
   - The convention each file uses
@@ -30,7 +31,7 @@ you_get:
   - Normalised variant records
   - A note of what was checked
 how_to_use:
-  - Open a chat with an AI that can run Python code and read files, such as Claude with code tools. Paste in the skill text or upload the skill folder.
+  - "What you need to start: an AI that can run Python 3.11 or newer and read files, such as Claude with code tools, plus your BED, GFF, GTF or VCF files and the genome build each one uses. Paste in the skill text or upload the skill folder."
   - Upload your BED, GFF, GTF or VCF files, or paste the positions you want converted.
   - Tell your AI which convention and genome build each file uses. Say so if you do not know.
   - Add your reference FASTA if you want variants normalised. It must be uncompressed.

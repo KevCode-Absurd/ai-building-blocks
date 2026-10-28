@@ -6,9 +6,23 @@ toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
   - orders:query
+  - order:query
 status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Purpose
 Tracks how much money the store gave away in discounts over time, bucketed by week, month, or quarter, and broken down by discount code and by discount type (code / automatic / manual / shipping). Answers: "is our discount spend trending up or down, and which campaigns are driving it?" Read-only — no mutations. Complements the Discount payoff calculator (per-discount return) with a longitudinal view of total cost.
@@ -37,52 +51,59 @@ Tracks how much money the store gave away in discounts over time, bucketed by we
 1. Compute window from `period` × `periods_back` (e.g., `month` × 12 → last 12 calendar months starting from the first day of the bucket 11 months ago)
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<window_start>' financial_status:paid"`, `first: 250`, select `createdAt`, `discountCodes`, `currentTotalDiscountsSet`, `totalDiscountsSet`, `cartDiscountAmountSet`, `discountApplications { allocationMethod, targetType, value, ... on DiscountCodeApplication { code }, ... on AutomaticDiscountApplication { title }, ... on ManualDiscountApplication { title } }`, `shippingLines { discountAllocations { allocatedAmountSet } }`, pagination cursor
-   **Expected output:** All paid orders in the window with discount data; paginate until `hasNextPage: false`
+   **Inputs:** `query: "created_at:>='<window_start>' financial_status:paid"`, `first: 20`, select `createdAt`, `discountCodes`, `totalDiscountsSet`, `currentTotalDiscountsSet`, `lineItems(first: 20) { discountAllocations { allocatedAmountSet, discountApplication { ... } }, pageInfo }`, `shippingLines(first: 5) { discountAllocations { allocatedAmountSet, discountApplication { ... } } }`, pagination cursor
+   **Expected output:** All paid orders in the window with discount data; paginate the orders until `hasNextPage: false`
 
-3. For each order, attribute discount cost:
-   - `cart_discount` = `currentTotalDiscountsSet.shopMoney.amount`
-   - `shipping_discount` = sum of `shippingLines.discountAllocations.allocatedAmountSet` (only if `include_shipping_discounts: true`)
+3. **OPERATION:** `order` — query, once for each order whose `lineItems.pageInfo.hasNextPage` is true. Fetch the remaining line items (with the same `discountAllocations` fields) until `hasNextPage` is false. Do not total an order until all its line items are in.
+
+4. For each order, attribute discount cost from the **discount allocations**, which are the money amounts Shopify assigned from each discount to each line:
+   - For every `discountAllocations` entry on a line item: add `allocatedAmountSet.shopMoney.amount` to the discount named by its `discountApplication` (its `code` for a code discount, its `title` for an automatic or manual discount) and to that discount's type (code, automatic or manual; a Script discount counts as automatic, labelled `script:<title>`). This is `cart_discount`.
+   - For every `discountAllocations` entry on a shipping line: add the amount to its discount and to the `shipping` type (only if `include_shipping_discounts: true`). This is `shipping_discount`.
    - `total_discount` = cart_discount + shipping_discount
-   - Attribute by code: prefer first `discountApplications.code` for code discounts, `title` for automatic / manual
+   - Never split an order's discount using the `value` field of `discountApplications`. That value is a percentage for some discounts and a money amount for others, so the two cannot be compared or used as weights. When an order has two codes, each code gets exactly what its own allocations add up to.
+   - Check: compare `totalDiscountsSet.shopMoney.amount` (the amount at the time of the order, before refunds) with the order's line item allocations, and with its line item plus shipping line allocations (Shopify's docs do not say whether that total includes shipping discounts). If neither matches within one cent, list the order under "Unreconciled" with both numbers and do not guess where the gap belongs.
+   - Allocations include discounts on items that were later refunded or removed. If the user wants discount cost net of refunds, also report the sum of `currentTotalDiscountsSet` and say the difference comes from refunds and order edits; do not split that difference by code.
 
-4. Bucket each order into its period (week-of-year, year-month, or year-quarter) and aggregate:
+5. Bucket each order into its period (week-of-year, year-month, or year-quarter) and aggregate:
    - Total discount cost per bucket
    - Per discount code per bucket
    - Per discount type per bucket (code, automatic, manual, shipping)
 
-5. Identify top codes by total cost across the window; aggregate the rest as `other`
+6. Identify top codes by total cost across the window; aggregate the rest as `other`. The listed codes and titles plus `other` must add up to the window's total discount; check this before you report.
 
 ## GraphQL Operations
 
+Shopify rejects a single query that costs more than 1,000 points, and nested lists multiply the cost. Keep `first` small as below and page the rest; if Shopify still reports the query is too costly, lower `first`. Written for api_version 2025-01. Shopify retires API versions on a schedule, so check these fields against the current Shopify GraphQL Admin API reference (`LineItem.discountAllocations`, `DiscountAllocation.discountApplication`) before you run it.
+
 ```graphql
-# orders:query — validated against api_version 2025-01
+# orders:query
 query DiscountCostTrend($query: String!, $after: String) {
-  orders(first: 250, after: $after, query: $query) {
+  orders(first: 20, after: $after, query: $query) {
     edges {
       node {
         id
         name
         createdAt
         discountCodes
-        currentTotalDiscountsSet { shopMoney { amount currencyCode } }
         totalDiscountsSet { shopMoney { amount currencyCode } }
-        cartDiscountAmountSet { shopMoney { amount currencyCode } }
-        discountApplications(first: 10) {
+        currentTotalDiscountsSet { shopMoney { amount currencyCode } }
+        lineItems(first: 20) {
           edges {
             node {
-              allocationMethod
-              targetType
-              targetSelection
-              value {
-                ... on PricingPercentageValue { percentage }
-                ... on MoneyV2 { amount currencyCode }
+              id
+              discountAllocations {
+                allocatedAmountSet { shopMoney { amount currencyCode } }
+                discountApplication {
+                  __typename
+                  ... on DiscountCodeApplication { code }
+                  ... on AutomaticDiscountApplication { title }
+                  ... on ManualDiscountApplication { title }
+                  ... on ScriptDiscountApplication { title }
+                }
               }
-              ... on DiscountCodeApplication { code }
-              ... on AutomaticDiscountApplication { title }
-              ... on ManualDiscountApplication { title description }
             }
           }
+          pageInfo { hasNextPage endCursor }
         }
         shippingLines(first: 5) {
           edges {
@@ -90,6 +111,13 @@ query DiscountCostTrend($query: String!, $after: String) {
               title
               discountAllocations {
                 allocatedAmountSet { shopMoney { amount currencyCode } }
+                discountApplication {
+                  __typename
+                  ... on DiscountCodeApplication { code }
+                  ... on AutomaticDiscountApplication { title }
+                  ... on ManualDiscountApplication { title }
+                  ... on ScriptDiscountApplication { title }
+                }
               }
             }
           }
@@ -97,6 +125,32 @@ query DiscountCostTrend($query: String!, $after: String) {
       }
     }
     pageInfo { hasNextPage endCursor }
+  }
+}
+```
+
+```graphql
+# order:query — the rest of one order's line items
+query DiscountCostMoreLines($id: ID!, $after: String) {
+  order(id: $id) {
+    lineItems(first: 100, after: $after) {
+      edges {
+        node {
+          id
+          discountAllocations {
+            allocatedAmountSet { shopMoney { amount currencyCode } }
+            discountApplication {
+              __typename
+              ... on DiscountCodeApplication { code }
+              ... on AutomaticDiscountApplication { title }
+              ... on ManualDiscountApplication { title }
+              ... on ScriptDiscountApplication { title }
+            }
+          }
+        }
+      }
+      pageInfo { hasNextPage endCursor }
+    }
   }
 }
 ```
@@ -171,11 +225,20 @@ For `format: json`, emit:
 CSV file `discount_cost_trend_<YYYY-MM-DD>.csv` with columns:
 `bucket`, `discount_code_or_title`, `discount_type`, `orders_count`, `cart_discount`, `shipping_discount`, `total_discount`, `currency`
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock count updater](https://useaiblocks.com/skills/stock-count-updater). It takes the audit report.
+- The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Stacked discount codes | Multiple codes on one order | Label the order `multi-code` and count its discount once, under that label, so code totals stay consistent |
+| Stacked discount codes | Multiple codes on one order | Credit each code with its own allocated amounts; the allocations already split the order's discount exactly |
+| Allocations do not match the order total | Old orders, edits or apps that changed the order | List the order under `Unreconciled` with both amounts; do not spread the gap across codes |
 | Manual discount with no title | Cashier-entered with empty title | Group as `manual:untitled` |
 | Multi-currency orders | Presentment currency != shop currency | Sum on `shopMoney.amount` (shop currency) for consistency |
 

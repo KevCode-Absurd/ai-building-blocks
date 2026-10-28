@@ -71,13 +71,14 @@ how_it_works:
     text: With protected time and tomorrow's list.
 output_shape: |
   BIG: <task> | hours | why
-        SMALL: <task> | batch / hand to / drop
-        LEVER: <task>
-        PUT OFF LONGEST: <task> and verdict
-        HOURS: <big total> of <real hours>
-        THREE PRIORITIES: 1 | 2 | 3
-        TOMORROW: <time> <task>
-        MISSING: <...>
+  SMALL: <task> | batch / hand to / drop
+  LEVER: <task>
+  PUT OFF LONGEST: <task> and verdict
+  HOURS: <big total> of <real hours>
+  THREE PRIORITIES: 1 | 2 | 3
+  TOMORROW: <time> <task>
+  MISSING: <...>
+  CHECKS MISSED: <one line per check that failed, or none>
 tweaks:
   - what: Real hours
     how: Say how many you truly have. Low numbers give a smaller, firmer plan.

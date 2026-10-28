@@ -18,15 +18,14 @@ This workflow chains 4 skills into one job. You run them one after another, and 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -70,7 +69,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Put the review dates from step 1 in your calendar, and check each page again on its date.
 - Check one finished page on its own with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker).
 - Teach one procedure with [Write a procedure, test it and build a training deck](https://useaiblocks.com/workflows/write-a-procedure-test-it-and-build-a-training-deck).
@@ -82,17 +81,6 @@ Use these instead of the general "After this" list above:
 - **Step 3, runbooks:** for each thing that breaks, the signs, the checks in order, the fix, who to call and when to escalate.
 - **Step 4, check:** for each page, the step where a stranger would get stuck, what is missing and the fix.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -101,3 +89,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every page in the system has an owner and a review date.
 - Each procedure says who does each step and what good looks like, and each runbook has the checks in order and says when to escalate.
 - The check names a specific stuck point, not "could be clearer", and a runbook that says "ask Sam" is flagged as a missing step.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the audit report and document.
+- The [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper). It takes the document.
+- The [Resale store daily procedure planner](https://useaiblocks.com/skills/resale-store-daily-procedure-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

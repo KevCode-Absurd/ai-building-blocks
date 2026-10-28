@@ -9,7 +9,7 @@ subhead: A well organised Confluence space for your team, with page templates, a
 explain: |
   A well organised Confluence space for your team, with page templates, access rules and a layout people can find their way around. It takes a blank space and gives it structure.
 
-  You say what your team needs, such as meeting notes, project pages or a knowledge base. Claude plans the page tree, writes templates, and sets permissions by group. If the Atlassian connector is on, it can create and update pages, search with CQL and read comments, using the correct page format. Creating the space itself is not possible through the connector, so you make that in Confluence first or use its web interface. It needs a Confluence account.
+  You say what your team needs, such as meeting notes, project pages or a knowledge base. Claude plans the page tree, writes templates, and sets permissions by group. If the Atlassian connector is on, it can create and update pages, search your pages and read comments, writing each page in the format Confluence needs. Creating the space itself is not possible through the connector, so you make that in Confluence first or use its web interface. It needs a Confluence account.
 when:
   - Your team's documents are scattered and nobody can find anything.
   - You are starting a new project and need a ready-to-use space.

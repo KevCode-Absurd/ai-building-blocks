@@ -17,12 +17,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -80,6 +81,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the financial statements and spreadsheet.
 - The [Landed cost allocator](https://useaiblocks.com/skills/landed-cost-allocator). It takes the spreadsheet.
 - The [Inventory write-down margin checker](https://useaiblocks.com/skills/inventory-charge-margin-bridge). It takes the financial statements and spreadsheet.
-- **Check the money** with the [Reinvestment growth assumption checker](https://useaiblocks.com/skills/reinvestment-supported-growth). It takes the financial statements and spreadsheet.
+- **Check the money** with the [Portfolio company tracker](https://useaiblocks.com/skills/portfolio-company-tracker). It takes the financial statements.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

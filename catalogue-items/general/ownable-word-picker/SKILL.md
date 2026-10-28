@@ -12,7 +12,7 @@ A brand that stands for one simple word is easier to remember than one that list
 This skill runs in any chat AI. It needs no files, web access or paid tools. It cannot pick a word without a word map, and it never invents proof, a buyer quote or a rival's claim.
 
 **What you need:**
-- **A word map** (yours, or made by the [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper)): which rival owns which word, and which words are open or empty.
+- **A word map** (yours, or made by the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper)): which rival owns which word, and which words are open or empty.
 
 **Makes it better (optional):**
 - **What you sell, and your proof** (yours): tests, numbers, awards, firsts or customer results. Without proof, the true test scores low.
@@ -20,7 +20,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. It 
 - **Buyer words** (yours): reviews or survey lines showing what buyers care about. Without them, the wanted score is a guess.
 
 **Recommended step before this one:**
-1. Make the word map with the [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper). Bring your rivals and what buyers say.
+1. Make the word map with the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). Bring your rivals and what buyers say.
 2. This one.
 
 How to start:
@@ -84,15 +84,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Turn the word into a position** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the word.
-- **Cut what does not feed the word** with the [Give-up list planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the word.
-- **Write lines that admit a flaw and turn it toward the word** with the [Candid line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the word.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The pick is a single word.
@@ -102,6 +93,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every guessed score is marked.
 - The stop list names real messages, or is marked `MISSING:`.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Turn the word into a position** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the word.
+- **Cut what does not feed the word** with the [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the word.
+- **Write lines that admit a flaw and turn it toward the word** with the [Product weakness line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the word.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

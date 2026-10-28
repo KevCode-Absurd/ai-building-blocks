@@ -9,7 +9,7 @@ headline: "Best-of page writer"
 subhead: Give it a "best X" question, your product, four to eight rivals and verified facts on each. It hands back a page brief and a draft with the same block for every product, a comparison table, honest pros and cons, and a list of proof you still need to add.
 
 explain: |
-  When someone searches "best X for Y", the top results are often list pages. If your own product pages can't reach that spot, a fair list page that includes your product can. But a list that puts you first in every case reads as an ad, doesn't convert, and AI assistants tend to prefer third-party lists over a brand ranking itself.
+  When someone searches "best X for Y", the top results are often list pages. If your own product pages can't reach that spot, a fair list page that includes your product can. But a list that puts you first in every case reads as an ad, doesn't convert, and AI assistants seem to prefer third-party lists over a brand ranking itself (an observation from the source, not tested by us).
 
   This skill checks that a list is the right page type, builds a brief (title, entities, questions, links), and drafts the page. Every product gets the same block: a best-for badge, a short description, a picture, pros, cons and ideal use. Rivals are included fairly, you only rank first where you truly fit best, and any line that claims "we tested it" is held back until you provide real notes.
 

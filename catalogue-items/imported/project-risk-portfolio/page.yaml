@@ -32,10 +32,11 @@ you_get:
   - Executive summary
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If you can upload files, add the skill folder too.
-  - Paste your project list, risks, team capacity and who the report is for. Mark anything you don't know as unknown.
+  - "Gather first. For each project: name, status, priority, budget, start and planned end dates, and team. For each risk: title, category, owner, the project it affects, and a 1 to 5 rating for likelihood and for impact. Add the chance as a percent and the cost in money only if you know them. For each person: role, hours available and current workload. The sample file assets/sample_project_data.json shows the full layout."
+  - Paste your project list, risks, team capacity and who the report is for. Mark anything you don't know as unknown. Do not guess odds or costs to fill gaps, or the expected-cost figures will look measured when they are not.
   - Ask for the risk register first, then the priority ranking, then the executive report.
   - If you want the health scores from the scripts, use an AI that can run code and upload your project data file.
-  - Treat any benchmark targets as starting examples. Replace them with your own numbers before you share the report.
+  - Treat the benchmark targets, status colour cut-offs, health-score weights and risk formulas as starting examples. Replace them with your own rules before you share the report. Any score from the scripts is only as good as the data you give them.
   - Use the executive summary as your status update. Pair it with the Status report writer, and use the Product strategy canvas writer to decide which project gets people first.
 next: [status-report-writer, people-risk-register-builder, product-strategy-canvas-writer]
 output_sample:

@@ -10,6 +10,10 @@ explain: |
   Name the Euro NCAP test you care about and get its driving scenario built, varied, plotted and scored. The skill creates the starting scenario for the test, makes variants from it, and moves the scenarios between two simulators.
 
   It picks the right route by protocol year. For 2023 it uses the standalone scenario call with prefixes like SA AEB. For 2026 it sets up an assessment object, can set a custom vehicle under test, then builds the scenario. After that you can plot single or grouped scenarios, translate them between drivingScenario and RoadRunner, compute scores and export reports. You need MATLAB with the automated driving tools and the NCAP support package.
+
+  The score comes back as a MATLAB struct. The total is in score.AggregateScore.Total and the most you could get is in score.AvailableScore.Total. The report is saved as a PDF file. The example code stops before scoring until you fill the table with real simulation results, so a made-up score cannot slip through.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file in this folder says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file's header links MathWorks' own reuse licence page. LICENSE.md governs this copy.
 when:
   - You need a Euro NCAP car-to-car braking test set up in simulation.
   - You want many variants of one test to see how well your braking system holds up.

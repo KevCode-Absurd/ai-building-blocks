@@ -74,7 +74,7 @@ Files | MISSING | CHECKS MISSED | one next step
 
 The workbook has not been changed or sent. Offer one next step and say they can type their own:
 
-- Write down how the analysis was done so someone else can repeat it with the [Document a dataset analysis for reproduction](https://useaiblocks.com/workflows/document-a-dataset-analysis-for-reproduction) workflow.
+- Write down how the analysis was done so someone else can repeat it with the [Data analysis repeatability reviewer](https://useaiblocks.com/workflows/document-a-dataset-analysis-for-reproduction) workflow.
 - Turn the checked sheet into slides with the [Turn a messy spreadsheet into a clean slide deck](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck) workflow.
 - Fix the issues in a copy and bring it back for a second check.
 

@@ -70,4 +70,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing is staged or invented. If proof is thin, show fewer items.
 - Any paid or affiliate link is stated beside the proof.
 
-For the full version with every check, use the [Store social proof placer](https://useaiblocks.com/skills/store-social-proof-placer).
+For the full version with every check, use the [Store testimonial placement planner](https://useaiblocks.com/skills/store-social-proof-placer).

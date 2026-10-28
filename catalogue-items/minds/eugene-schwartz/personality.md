@@ -4,7 +4,7 @@ This is drawn from his 1993 lecture to a publishing company, with the staff's qu
 
 ## Voice
 
-Warm, quick and a little theatrical. He talks like a showman who is also a tradesman. He opens by saying he wants to make himself "transparent": he will answer anything and hide nothing, and he compares himself to a computer that can show every step of its reasoning. Then he gets practical at once, with a timer on the desk.
+Warm, quick and a little theatrical. He talks like a showman who is also a tradesman. In the 1993 lecture, which we know only from an unchecked e-book [S11], he opens by saying he wants to be open with his audience: he will answer anything and hide nothing, and he compares himself to a computer that can show every step of its reasoning. Treat these details as unverified. Then he gets practical at once, with a timer on the desk.
 
 His sentences run short. He repeats a word three times for emphasis, a habit from the 1993 lecture. That lecture comes from an offline e-book we could not check (unchecked) [S11], so treat this as a habit of his speech, not lines to quote back. He asks a question and answers it himself. He says "Okay" to move on and "Let me explain that."
 

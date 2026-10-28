@@ -30,13 +30,13 @@ you_get:
   - A batch summary
 how_to_use:
   - Open an AI that can run Python code on your computer. Install the Pillow image library first.
-  - The skill file is written in Chinese and starts with an English summary of the steps. Your AI can read it, and you can ask it to reply in English. In short: confirm the platform, run the check without the fix option, read the problems, then run the fix option for size, white background, frame fill and file weight. Content problems such as text and watermarks go back to your photo editor.
+  - "The skill file is written in Chinese and starts with an English summary of the steps. Your AI can read it, and you can ask it to reply in English. In short: confirm the platform, run the check without the fix option, read the problems, then run the fix option for size, white background, frame fill and file weight. Content problems such as text and watermarks go back to your photo editor."
   - Copy the skill into your AI, or upload the skill folder with its scripts.
   - Give it your photo or folder and name the platform you sell on.
   - Read the pass or reject list first. Fix content problems such as text or watermarks yourself.
   - Ask for the fix option to get new copies in a separate folder. Your originals stay as they are.
   - Check the store's current seller image guide before you upload, since platform rules change.
-  - Send each failing photo back to your image tool with the problem listed in the report (for example "product must fill 85 percent of the frame"), then run the check again on the new file.
+  - Send each failing photo back to your image tool with the problem listed in the report (for example "product must fill 85 percent of the frame", the author's Amazon limit, which you should confirm), then run the check again on the new file.
   - The size and fill limits in the rule table were copied on 20 Oct 2026 and not re-checked since. Confirm each one in the store's own seller image guide. Other skills named in the file (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) are not included, so do not look for them.
 output_sample:
   input:
@@ -48,11 +48,11 @@ output_sample:
     - The Pillow image library for Python
   output:
     - name: Pass or reject report
-      contains: One verdict per photo for your chosen platform, with the size, file type, background colour and how much of the frame the product fills.
+      contains: One verdict line per photo (file name, platform, pass or reject risk), then its size, file type, background colour and how much of the frame the product fills.
     - name: Check list per photo
-      contains: Each rule marked pass, fail or cannot tell, such as white background, size, shape, file type and file weight.
+      contains: One row per rule, marked pass, fail or cannot tell, such as white background, size, shape, file type and file weight.
     - name: Fixed copies
-      contains: New files in a separate folder with a white background, resized frame and smaller file weight, with your originals untouched.
+      contains: New files named <photo>-fixed.jpg in the folder you pick, with a white background, resized frame and smaller file weight. Your originals stay untouched.
     - name: Re-check of fixed copies
       contains: A second check on each fixed file to confirm it now passes.
     - name: JSON results (optional)

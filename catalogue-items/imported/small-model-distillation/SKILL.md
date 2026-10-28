@@ -10,6 +10,28 @@ dependencies: [transformers, torch, datasets]
 
 # Knowledge Distillation: Compressing LLMs
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Training data** (yours): the examples to train the model on, with how they are split.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, training data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code or Codex:** They can run the training on your own GPU computer, so you do not copy code by hand.
+- **Any good chat AI:** It writes the plan and scripts and reads your results. You run the code yourself.
+- **Hugging Face account:** You need it to download models, and to accept access for gated ones.
+<!-- /needs -->
+
 ## What you need
 
 - The teacher model (the large one) and the student model (the small one you want to train), by name.
@@ -60,6 +82,13 @@ Use Knowledge Distillation when you need to:
 **Key Techniques**: Temperature scaling, soft targets, reverse KLD (MiniLLM), logit distillation, response distillation
 
 **Papers**: Hinton et al. 2015 (arXiv 1503.02531), MiniLLM (arXiv 2306.08543), KD Survey (arXiv 2402.13116)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Installation
 
@@ -137,8 +166,15 @@ def distillation_loss(student_logits, teacher_logits, labels, temperature=2.0, a
         temperature: Softens probability distributions (higher = softer)
         alpha: Weight for distillation loss (1-alpha for hard loss)
     """
-    # Hard loss: Standard cross-entropy with true labels
-    hard_loss = F.cross_entropy(student_logits.view(-1, student_logits.size(-1)), labels.view(-1))
+    # Hard loss: next-token cross-entropy. A causal LM predicts token t+1 from
+    # position t, so shift: logits[:, :-1] against labels[:, 1:].
+    shift_logits = student_logits[:, :-1, :].contiguous()
+    shift_labels = labels[:, 1:].contiguous()
+    hard_loss = F.cross_entropy(
+        shift_logits.view(-1, shift_logits.size(-1)),
+        shift_labels.view(-1),
+        ignore_index=-100,
+    )
 
     # Soft loss: KL divergence between student and teacher
     soft_targets = F.softmax(teacher_logits / temperature, dim=-1)
@@ -150,6 +186,7 @@ def distillation_loss(student_logits, teacher_logits, labels, temperature=2.0, a
 
 # 3. Training loop
 for batch in dataloader:
+    batch = {k: v.to(student.device) for k, v in batch.items()}
     # Teacher forward (no grad)
     with torch.no_grad():
         teacher_outputs = teacher(**batch)
@@ -203,8 +240,10 @@ def reverse_kl_loss(student_logits, teacher_logits, temperature=1.0):
 
 # Training with the simplified reverse KL (needs the teacher, student, dataloader and optimizer from Quick Start above)
 for batch in dataloader:
+    batch = {k: v.to(student.device) for k, v in batch.items()}
     with torch.no_grad():
-        teacher_logits = teacher(**batch).logits
+        # Move the teacher logits to the student's device, as in the basic loop.
+        teacher_logits = teacher(**batch).logits.to(student.device)
 
     student_logits = student(**batch).logits
 
@@ -239,13 +278,15 @@ for prompt in prompts:
     teacher_responses.append(response)
 
 # 2. Train student on teacher's responses (standard fine-tuning)
-# Tokenise first: Trainer needs input_ids, attention_mask and labels, not raw text.
+# Tokenise first: Trainer needs input_ids and attention_mask, not raw text.
+# Do not add "labels" here: the collator below pads each batch and builds the
+# labels from input_ids (padding set to -100). Unpadded labels of different
+# lengths would fail to batch.
 tokenizer.pad_token = tokenizer.pad_token or tokenizer.eos_token
 train_dataset = []
 for prompt, response in zip(prompts, teacher_responses):
     enc = tokenizer(f"{prompt}\n{response}", truncation=True, max_length=512)
-    enc["labels"] = enc["input_ids"].copy()
-    train_dataset.append(enc)
+    train_dataset.append({"input_ids": enc["input_ids"], "attention_mask": enc["attention_mask"]})
 
 # 3. Fine-tune student
 trainer = Trainer(
@@ -422,7 +463,7 @@ def train_distilled_model(
             # Teacher forward (no grad)
             with torch.no_grad():
                 outputs_teacher = teacher(**inputs)
-                teacher_logits = outputs_teacher.logits
+                teacher_logits = outputs_teacher.logits.to(student_logits.device)
 
             # Distillation loss
             soft_targets = F.softmax(teacher_logits / temperature, dim=-1)

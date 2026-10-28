@@ -12,6 +12,19 @@ Decide how domains, subdomains, and DNS work across a portfolio. Stack-agnostic.
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to use
 
 - Setting up DNS for a new site (apex vs www, primary vs aliases)
@@ -187,7 +200,7 @@ Domain strategy is a quarterly review topic. Renewals, consolidations, and new l
 
 **Domains in multiple registrars by accident.** Migrations that didn't fully complete. Consolidate.
 
-**No CAA records.** Anyone with a misconfigured ACME client can issue a cert for your domain. CAA limits which CAs can issue. Add it.
+**No CAA records.** A certificate authority (CA) must still check that the requester controls the domain, with or without CAA. What CAA adds is a limit on which CAs may issue at all. Without it, any public CA that is fooled or makes a mistake can issue a certificate for your domain, even one you never use. With it, a CA not on your list must refuse (RFC 8659, https://www.rfc-editor.org/rfc/rfc8659). Add it, listing only the CAs you use.
 
 **Auto-renew off "to save money."** Domain accidentally drops, gets snapped up, costs ten times more (or is unrecoverable). Auto-renew is cheap insurance.
 
@@ -212,6 +225,13 @@ A domain strategy document includes:
 - **Review cadence:** when this gets revisited
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Azure price estimate researcher](https://useaiblocks.com/skills/copilot-azure-pricing). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Reference files
 

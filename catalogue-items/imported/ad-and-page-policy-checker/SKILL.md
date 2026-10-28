@@ -21,6 +21,27 @@ The goal: catch compliance issues BEFORE your ad gets rejected or your account g
 
 Before checking anything, determine these four things. Ask the user if unclear.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Makes it better (optional):**
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
+2. **Ad copy** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). Bring your image ads (optional), an image prompt (optional), your page (optional). It uses your brand brain and ad copy and video ad script.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a draft, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Copy Type
 - **Ad** (primary text, headline, description, video script)
 - **Landing page** (bridge page, pre-sell, PDP)
@@ -286,8 +307,6 @@ After both phases, calculate:
 ### Compliant Headline Rewrites (Meta Examples)
 | Non-Compliant | Why It Fails | Compliant |
 |---|---|---|
-| "Are you struggling with high blood sugar?" | Personal attribute + disease name | "Many Americans are looking for ways to help support balanced glucose levels" |
-| "Regulate erratic blood sugar with XYZ" | Definitive claim ("regulate") | "XYZ helps support erratic blood sugar" |
 | "Why a spare tire increases death risk" | Sensational + scare tactic | "How does a spare tire impact health?" |
 | "The ideal way to stabilize weight" | "The ideal" = only way | "An ideal way to support weight management" |
 | "These 5 foods ruin women's metabolism" | Personal attribute + negative word | "Discover how 5 foods impact metabolism" |
@@ -344,12 +363,9 @@ For health and supplement copy, FDA rules apply on top of platform rules:
 - **Conditional language required:** "may," "can," "helps support"
 - **Abstract nouns safe:** Happiness, wellness, vitality, freedom (cannot be measured = cannot be disputed)
 
-**Specific FDA language flags:**
-- "High blood sugar" → use "erratic blood sugar"
-- "Blood sugar spike" → use "blood sugar fluctuations"
-- "Managing your blood sugar" → use "sustaining your blood sugar"
+**Disease and condition wording (AI Blocks note):** do not swap a disease or condition name for a softer phrase to get past a review. If the copy names or hints at a condition, fix the claim underneath, check the wording against the platform's current policy and get a compliance review before launch.
 
-**Not legal clearance:** following this list does not make health or supplement copy lawful. Get a compliance or legal review before you launch any health, supplement or income claim. The word swaps above are the author's tips and do not remove the need for the claim to be true and supportable.
+**Not legal clearance:** following this list does not make health or supplement copy lawful. Get a compliance or legal review before you launch any health, supplement or income claim. The softening words above are the author's tips and do not remove the need for the claim to be true and supportable.
 
 **Pro tip:** Read FDA warning letters — they show the exact language the FDA does not like. These are essentially a cheat sheet for what to avoid.
 
@@ -368,3 +384,12 @@ The best modern DR copy is MORE sophisticated because of compliance. Smart copyw
 **The golden rule:** Write for conversion, then edit for compliance. Do not let compliance thinking kill the creative process — get the persuasive draft right first, then run it through this checklist.
 
 **Being compliant and being persuasive are not mutually exclusive.** The best copy does both.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft and audit report.
+- The [China healthcare marketing reviewer](https://useaiblocks.com/skills/agency-healthcare-marketing-compliance). It takes the draft.
+- The [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

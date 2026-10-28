@@ -7,7 +7,7 @@ description: Use when someone is judging a business to own for years and wants t
 
 A record only helps you predict if the business behind it stays the same. A company that sold the same thing, to the same kind of buyer, for ten years gives you something to lean on. One that keeps changing course gives you a history of a different business. This skill checks which one you are looking at. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
-**Not for:** a business with under five years of figures (you get a "too young" call only), a buy or sell decision (ask a licensed financial adviser), or a check of a lasting edge (use the [Business power tester](https://useaiblocks.com/skills/business-power-tester)). The inputs are a description of the business and its sales and operating profit by year. The "Before you start" text below mentions ad accounts, Meta Ads Manager exports and an audit report. This skill does not use any of them. Your results here are the business's yearly sales and operating profit.
+**Not for:** a business with under five years of figures (you get a "too young" call only), a buy or sell decision (ask a licensed financial adviser), or a check of a lasting edge (use the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester)). The inputs are a description of the business and its sales and operating profit by year. In Before you start, "financial statements" means the yearly sales and operating profit, and "an audit report" means any earlier findings on the business. No ad account data is used.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -17,12 +17,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your results, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, financial statements, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,7 +55,7 @@ How to start:
 
 The years covered. The first-and-last comparison. The table with average, best and worst year and the spread. The flags with years. For each bad year, cycle or change. The two or three ten-year risks with signs to watch. The call: steady, mixed, changing or too young, and the fact that would change it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-What next: the links under "After this" take this record, not an audit report. Bring the table, the flags and the call to the [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker), or run the [Business power tester](https://useaiblocks.com/skills/business-power-tester) to check for a lasting edge.
+What next: bring the table, the flags and the call to the [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker), or run the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester) to check for a lasting edge.
 
 ## Check before you hand it back
 

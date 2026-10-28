@@ -8,7 +8,7 @@ job: analysis
 level: advanced
 inputs:
   - {type: performance_sheet, required: true}
-  - {type: meeting_notes, required: false}
+  - {type: dataset, required: false}
 outputs:
   - {type: audit_report}
 uses: []

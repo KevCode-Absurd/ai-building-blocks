@@ -7,9 +7,7 @@ job: research-topics
 headline: Single-cell RNA analysis pipeline
 subhead: Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
 explain: |
-  Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
-
-  It uses Scanpy. It confirms the input holds raw counts, then runs quality control, normalisation, and picks highly variable genes. Next come PCA, UMAP or t-SNE and clustering. It ranks marker genes per cluster, and prepares sample-level sums for differential expression between conditions. Batch tools like Harmony or BBKNN are available. R objects must first be converted to h5ad. You need Python 3.12 or newer and Scanpy installed.
+  It uses Scanpy. It confirms the input holds raw counts, then runs quality control, normalisation, and picks highly variable genes. Next come PCA, UMAP or t-SNE and clustering. It ranks marker genes per cluster, and prepares sample-level sums for differential expression between conditions. If your samples were run on different days or machines, it can add a batch-correction step so those differences do not split your clusters. Files made in R must be converted first. You need Python 3.12 or newer and Scanpy installed.
 
   Licence: we share this copy under MIT, as the LICENSE.md file says (K-Dense Inc.). The skill file header names BSD-3-Clause instead. Follow the LICENSE.md file. Credit goes to K-Dense Inc.
 when:

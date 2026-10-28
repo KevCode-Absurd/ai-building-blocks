@@ -49,6 +49,31 @@ description: 平铺图转隐形模特立体图。平铺图 → 有体积感与�
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **A photo set** (yours): a set of generated product photos in one style, checked against the truth sheet.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A photo set** with the [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher). Bring product photos.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos, a photo set. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **ChatGPT image feature:** It edits a photo you attach, so it can keep your real garment while it adds shape.
+- **Gemini image feature:** It also edits an attached photo and gives you a second option to compare.
+- **dLazy command line:** It runs the original skill's own path and can preview the cost first. It needs an account and credits.
+<!-- /needs -->
+
 ## 生成效果示例
 
 | 输入：平铺图 |
@@ -243,3 +268,12 @@ No mannequin, no person, no visible support, no text.
 ## Tips
 
 Visit https://dlazy.com for more information.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker). It takes the photo set.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

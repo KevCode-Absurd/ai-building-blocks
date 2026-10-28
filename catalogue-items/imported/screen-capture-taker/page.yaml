@@ -66,7 +66,7 @@ how_it_works:
   - title: Pick the save place
     text: It saves where you said, or in your default screenshot folder, or in a temporary folder if the AI is only looking.
   - title: Capture
-    text: It runs the script for your system, for the screen, one window or one region.
+    text: If you have not said what to capture, it asks first and never takes the whole screen by default. Then it runs the script for your system, for one window, one region or the screen.
   - title: Report
     text: It prints each file path and says what could not be captured and why.
 works_best_with:

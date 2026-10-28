@@ -7,6 +7,8 @@ description: "Use when a purchase needs a defensible record: compare vendor prop
 
 Preserve a procurement decision audit trail. Two steps run in order: compare the real proposals on the approved criteria, then run the approval checklist against that comparison. The trace records who decided what, on what evidence.
 
+Before it starts, the run needs two things you wrote before the proposals came in: the approved criteria with their weights, and your ordered approval checklist with its stop rules. If either is missing, it stops and asks. The "document", "spreadsheet" and "plan" in the shared block above mean the proposals, the evaluator scores and the checklist.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

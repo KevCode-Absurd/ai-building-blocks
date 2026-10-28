@@ -20,6 +20,22 @@ When to use this skill: planning a flagship long-form piece, structuring a draft
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans individual long-form content pieces. The content suite distinction:
@@ -315,3 +331,11 @@ Length is not a virtue. A 5,000-word piece is only worth more than a 1,500-word 
 The discipline is the inversion. Decide what the piece needs to deliver, choose the format and archetype that fit, calibrate sections to actual argumentative load, and let the length follow. Pieces written that way earn their length and read as the work of someone who had something to say. Pieces written length-first read as filler, no matter how many subheads dress them up.
 
 When in doubt about whether a long-form piece is ready, ask: does each section justify its weight, does the lede earn the next 30 minutes, does the closing leave the reader with something specific, are claims cited, do visuals carry load, does the mid-piece micro-thesis refresh attention? If yes to all of those, the piece is publication-quality. If no to any, the gap is where the reader stops reading.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research paper writer](https://useaiblocks.com/skills/research-paper-writer). It takes the document.
+- The [Game narrative designer](https://useaiblocks.com/skills/agency-narrative-designer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

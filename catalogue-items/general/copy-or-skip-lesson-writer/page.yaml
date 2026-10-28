@@ -17,7 +17,7 @@ when:
 not_for:
   - "You face one decision and have no similar success to learn from: write a plain pros and cons list, or ask a trusted person."
   - "You have not yet worked out why the success happened: use the Incentive checker or the Many-field model checklist runner first, then come back."
-  - "You want to test one idea with real people right now: use the Smallest test picker."
+  - "You want to test one idea with real people right now: use the Minimum experiment planner."
 you_give:
   - The checks and causes from the step before, or your own list
   - A description of your situation
@@ -127,3 +127,4 @@ terms:
     meaning: The unseen system, such as pay or selection rules, that makes a visible feature work.
   - term: Pass number
     meaning: The result that tells you a test worked, set before the test is run.
+next: [smallest-test-picker]

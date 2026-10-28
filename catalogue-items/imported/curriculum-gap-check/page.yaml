@@ -34,7 +34,7 @@ how_to_use:
   - Paste your curriculum. If it is long, upload it as a file.
   - Paste your requirements list. Give each requirement a number or label. If you leave them off, the skill numbers them R001, R002 and so on. Check those numbers against your source list.
   - Add the framework name, the requirements source and the age bands to check, if you want to.
-  - Ask your AI to run the coverage audit and give you the table, the CSV and the gap summary.
+  - Ask your AI to run the coverage audit and give you the table, the CSV and the gap summary. The school example in the skill only shows the format. It is not a real audit result.
   - Check the rows marked partial or indirect against your own curriculum before you act on them.
   - Take the gap rows to your planning lead or a qualified reviewer before any accreditation submission.
 next: [course-scope-sequence, backwards-unit-planner]

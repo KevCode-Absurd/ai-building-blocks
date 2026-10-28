@@ -35,8 +35,9 @@ how_to_use:
   - Tell your AI what you sell, who you sell to, and how your team finds and closes leads today.
   - Add your lead sources and your revenue goal if you have one.
   - Read the score first, then the checks that block a 10.
-  - Ask your AI to write the referral email and follow-up schedule for your buyer.
+  - Ask your AI to write the referral email and follow-up schedule for your buyer. Before you send any of it, check the email rules where your buyers are, such as CAN-SPAM in the US or GDPR in the EU and UK, and remove anyone who opts out at once.
   - Treat the benchmark numbers (response rates, emails per day) as the author's rough rules of thumb, not tested facts. Replace them with your own numbers as soon as you have them. Tools like Sales Navigator, ZoomInfo, Apollo and Clearbit need a paid plan, and the plan works without them.
+  - Next, take the pipeline math and the 30-day schedule into your next sales planning meeting. Set a weekly target per rep from the math, run the schedule for one month, then compare real replies and meetings with the plan and adjust.
 output_sample:
   input:
     - What you sell and who you sell to

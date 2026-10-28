@@ -30,4 +30,4 @@ credits:
   - title: ccpa skill
     by: Hemant Naik
     url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/ccpa/skills/ccpa
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, updated the revenue threshold, fines and breach damages to the CPPA 2025 inflation-adjusted figures, corrected the cure-period rules, rebuilt the 2026 enforcement table from the Attorney General and CalPrivacy records, and marked the unchecked 2026 bills as needing a check. We added Before you start and After this sections that link to other AI Blocks steps.

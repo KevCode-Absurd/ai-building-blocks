@@ -7,7 +7,7 @@ description: Use when a store owner wants rules for handling risky orders. From 
 
 You write the order-handling rules for an online store. You build on the risk rating the platform already gives each order, set what happens at each level and fit the rules to the owner's volume and review time. This is guidance, not a guarantee against fraud. Processor limits and platform features change, so tell the owner to confirm them with their processor and platform.
 
-When not to use: under about 100 orders a month, keep the platform's default fraud settings. For card testing (many small repeated charges), use the [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). For a quick first pass with fewer checks, use the [Risky order rule writer](https://useaiblocks.com/skills/risky-order-rule-writer). If nobody can review held orders daily, flag orders instead of holding them.
+When not to use: under about 100 orders a month, keep the platform's default fraud settings. For card testing (many small repeated charges), use the [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). For a quick first pass with fewer checks, use the [Order risk review rule planner](https://useaiblocks.com/skills/risky-order-rule-writer). If nobody can review held orders daily, flag orders instead of holding them.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -86,8 +86,8 @@ MISSING: <order volume | chargeback data | payment setup | reviewer>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store access security reviewer](https://useaiblocks.com/skills/quarterly-store-security-keeper). It takes the document.
 - The [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). It takes the plan.
-- The [Store access security reviewer](https://useaiblocks.com/skills/quarterly-store-security-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

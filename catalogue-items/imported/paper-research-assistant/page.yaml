@@ -10,6 +10,8 @@ explain: |
   A literature scan, a close read of one paper, an impact check or a reading list, pulled from free academic sources. You name a topic or paper and get organised results.
 
   It runs a bundled Python tool that searches Semantic Scholar and arXiv, downloads arXiv PDFs and extracts their text. From that it builds the piece you asked for: who cites a paper, which work shaped it, what the method and results are, and which papers to read in what order. It needs Python and an internet connection, and it uses free services rather than paid ones.
+
+  Licence: two labels apply. The skill file's own header (xwmxcz) says MIT. sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to xwmxcz and sickn33.
 when:
   - You are new to a field and need a starting reading list.
   - You want a plain summary of what one paper does and finds.
@@ -31,10 +33,12 @@ you_get:
 how_to_use:
   - Open an AI that can run code and reach the internet, such as Claude with code tools turned on.
   - Paste this skill into the chat, or add its folder if your AI takes files.
+  - The skill's commands start with ${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/, which only works inside the author's plugin. Tell your AI to run scripts/papers.py from this skill's folder instead, for example python scripts/papers.py search "your topic" --limit 10.
   - "Say what you want: a scan, a deep read, an impact check or a reading list. Add the topic, title or arXiv link."
   - Let your AI install the three Python add-ons if it asks. This happens once per session.
   - Check the paper IDs and titles it lists before you ask for a PDF download.
   - Save the result to your notes. If Semantic Scholar says it is busy, wait ten seconds and ask again. Some script messages are in Chinese, and your AI can translate them. To keep the reading list, add the paper IDs to a reference manager such as Zotero.
+  - Next, take the top IDs from the reading list into a deep read or an impact check, and save each PDF's path in your notes.
 output_sample:
   input:
     - A topic, paper title, DOI or arXiv link

@@ -18,7 +18,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, the criteria weights, reference call notes and each vendor's security or compliance documents.
 
-**The pieces it uses:** the [Preserve a procurement decision audit trail](https://useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail) workflow, which runs the [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer) and the [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner), and the [Source note summariser](https://useaiblocks.com/skills/source-note-summariser). Read them in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
+**The pieces it uses:** the [Supplier bid decision reviewer](https://useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail) workflow, which runs the [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer) and the [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner), and the [Source note summariser](https://useaiblocks.com/skills/source-note-summariser). Read them in full before step 4. If your AI cannot open them, ask the user to attach the pack or paste the files. Do not imitate them from memory.
 
 **Tools that do this best:** an AI that reads uploaded files and can save files. In plain chat, return the same tables as text, say nothing was saved, and give the record for the user to keep.
 

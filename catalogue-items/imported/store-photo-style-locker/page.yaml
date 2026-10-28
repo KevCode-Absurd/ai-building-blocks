@@ -7,9 +7,9 @@ job: brand-file
 headline: Store photo style locker
 subhead: "One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood."
 explain: |
-  One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood. After that, every photo prompt picks up the same rules.
+  One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood. After that, every photo job you run with the style file picks up the same rules.
 
-  Without a shared file, each prompt describes the model a little differently and your catalogue drifts. The file holds a reference image to lock the face, a written description, lighting and background settings and tone words. It is added to each image or video job automatically, so a whole batch comes out matching. It needs Node to run.
+  Without a shared file, each prompt describes the model a little differently and your catalogue drifts. The file holds a reference image to lock the face, a written description, lighting and background settings and tone words. It is only added to a job when you pass it with --brand on that run. A run without --brand ignores your style. It needs Node to run. The skill file is in Chinese; the steps below are the English version.
 when:
   - Your product photos show a different model face from item to item.
   - Colours and backgrounds change from shot to shot.
@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Check that Node is installed and that you have an image model key (OpenAI, Gemini, fal or Replicate). Photos cost whatever your provider charges.
   - Download the skill folder and open it in an AI that can run code.
-  - "Tell your AI your shop's look: model, light, colour tone, background and what to avoid."
-  - Add your own model photo path in the file. The sample path does not ship in the folder, so replace it.
-  - Test one product with and without the style file, and check the look is right.
-  - Run the whole batch with the style file on, so every photo matches.
+  - "Tell your AI your shop's look: model, light, colour tone, background and what to avoid. It fills in the fields of examples/brand.yaml, or makes a new file with node scripts/brand.mjs --init."
+  - Make a folder named assets/model/ and put your own clear, front-facing model photo in it. Set the reference line in the style file to that photo. The sample face-a.jpg does not ship in the folder. Use only a photo of someone who agreed to it.
+  - "Test one product with and without the style file, and check the look is right. For example: node scripts/gen.mjs --task flat-lay --brand examples/brand.yaml, then the same command without --brand."
+  - Run the whole batch with --brand examples/brand.yaml on every command, so every photo matches. The skill file also names run_loop.mjs, batch.mjs and video.mjs, which take --brand too, but only gen.mjs ships in this folder.
+  - Next, use the same style file with the Virtual try-on photo maker or the Product detail image maker, so all your images share one look.
 output_sample:
   input:
     - Your shop's look and mood in words

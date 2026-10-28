@@ -77,4 +77,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every tease has its answering line.
 - No hype words such as secret, shocking or game-changing.
 
-For the full version with every check, use the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer).
+For the full version with every check, use the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer).

@@ -54,6 +54,6 @@ The shape is: period, currency and units; 1 OLD STOCK (batch, sold at full price
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Size the restock cash** with the [Plan the cash for your next stock order](https://useaiblocks.com/workflows/plan-the-cash-for-your-next-stock-order) workflow.
-- **Explain inventory charges in margin** with the [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow.
+- **Size the restock cash** with the [Stock order cash planner](https://useaiblocks.com/workflows/plan-the-cash-for-your-next-stock-order) workflow.
+- **Explain inventory charges in margin** with the [Inventory cost and margin reviewer](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -52,4 +52,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The edge is something real, not a liking.
 - This gives frameworks and checks only. It is not advice to buy, sell or borrow.
 
-For the full version with every check, use the [Circle of competence sorter](https://useaiblocks.com/skills/circle-of-competence-sorter).
+For the full version with every check, use the [Business expertise reviewer](https://useaiblocks.com/skills/circle-of-competence-sorter).

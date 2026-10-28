@@ -87,7 +87,7 @@ Offer one next step and say they can type their own:
 
 - Ask your safeguarding lead to read the procedure before any volunteer uses it.
 - After the first volunteers finish, bring back what was unclear and ask for changes.
-- Check records later with the [Volunteer induction evidence review assistant](https://useaiblocks.com/agents/volunteer-induction-evidence-review-assistant).
+- Check records later with the [Volunteer training clearance reviewer](https://useaiblocks.com/agents/volunteer-induction-evidence-review-assistant).
 
 ## Check before you hand it back
 

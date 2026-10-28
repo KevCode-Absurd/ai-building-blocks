@@ -62,14 +62,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-## After this
-
-Nothing has been restored. The person runs the rehearsal in the test environment and fills in the evidence log. Offer one next step and say they can type their own:
-
-- Turn what the rehearsal teaches into a written restore procedure for your team with the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).
-- If the rehearsal fails or something breaks, learn from it with the [Turn an incident into a safer procedure](https://useaiblocks.com/workflows/turn-an-incident-into-a-safer-procedure) workflow.
-- Bring the filled-in evidence log back and ask for the gaps to be closed in the action register.
-
 ## Check before you hand it back
 
 - Every system has a rank, a target and a rehearsal row, or a `MISSING:` line saying why not.
@@ -77,3 +69,11 @@ Nothing has been restored. The person runs the rehearsal in the test environment
 - Every test targets the approved test environment, with no step that touches live data.
 - Every date and figure traces to a source you were given or is labelled as an assumption.
 - No password, key or token appears in any file.
+
+## After this
+
+Nothing has been restored. The person runs the rehearsal in the test environment and fills in the evidence log. Offer one next step and say they can type their own:
+
+- Turn what the rehearsal teaches into a written restore procedure for your team with the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).
+- If the rehearsal fails or something breaks, learn from it with the [Incident learning and follow-up planner](https://useaiblocks.com/workflows/turn-an-incident-into-a-safer-procedure) workflow.
+- Bring the filled-in evidence log back and ask for the gaps to be closed in the action register.

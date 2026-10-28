@@ -142,8 +142,8 @@ def detect_hijackers(brand: BrandInfo, listing: ListingInfo) -> List[Violation]:
             ],
             description=f"Unauthorized seller '{seller.seller_name}' found on your listing",
             description_zh=f"FoundnotAuthorizedSeller '{seller.seller_name}'  in you Listing  above Sale",
-            recommended_action="File Brand Registry complaint or send cease & desist",
-            recommended_action_zh="Pass Brand Registry Complaint or cease and desist letter",
+            recommended_action="Do a test buy. File a Brand Registry complaint only if it shows a counterfeit or trademark problem. An unapproved seller of genuine goods is not by itself grounds for an IP complaint",
+            recommended_action_zh="Do a test buy first. Complain only if it shows a counterfeit or trademark problem",
         ))
     
     return violations
@@ -173,7 +173,7 @@ def detect_price_violations(brand: BrandInfo, listing: ListingInfo) -> List[Viol
                 ],
                 description=f"Seller '{seller.seller_name}' selling {discount:.1f}% below MAP",
                 description_zh=f"Seller '{seller.seller_name}' Selling Price low  at  MAP {discount:.1f}%",
-                recommended_action="Send MAP violation notice, consider distribution review",
+                recommended_action="If this seller agreed to your MAP policy, send a MAP notice. A price break is not grounds for an IP complaint to Amazon",
                 recommended_action_zh="Send MAP Violation notice，ConsiderReviewDistributionChannel",
             ))
     
@@ -294,24 +294,14 @@ def generate_action_plan(violations: List[Violation], brand: BrandInfo) -> List[
     
     # HijackingProcess
     if hijackers:
-        if brand.brand_registry:
-            actions.append({
-                "priority": "1",
-                "action": "Report via Brand Registry",
-                "action_zh": "Pass Brand Registry Complaint",
-                "detail": f"Report {len(hijackers)} unauthorized seller(s) via Amazon Brand Registry portal",
-                "detail_zh": f"Pass Amazon Brand Registry PortalComplaint {len(hijackers)} notAuthorizedSeller",
-                "timeline": "24-48 hours",
-            })
-        else:
-            actions.append({
-                "priority": "1",
-                "action": "Send Cease & Desist",
-                "action_zh": "SendStopInfringementLetter",
-                "detail": "Contact sellers directly with legal notice",
-                "detail_zh": "Direct contactSellerSend legal letter",
-                "timeline": "3-5 business days",
-            })
+        actions.append({
+            "priority": "1",
+            "action": "Test buy from new sellers",
+            "action_zh": "Proceed Test Buy",
+            "detail": f"Buy from {len(hijackers)} seller(s) not on your approved list. Report through Brand Registry only if the item is counterfeit or misuses your trademark. Selling genuine goods is not by itself an IP violation",
+            "detail_zh": f"Test buy from {len(hijackers)} seller(s). Report only a counterfeit or trademark problem",
+            "timeline": "7-14 days",
+        })
     
     # CounterfeitProcess
     if counterfeits:
@@ -338,7 +328,7 @@ def generate_action_plan(violations: List[Violation], brand: BrandInfo) -> List[
             "priority": "2",
             "action": "Send MAP Violation Notice",
             "action_zh": "Send MAP Violation notice",
-            "detail": f"Notify {len(price_violations)} seller(s) of MAP policy violation",
+            "detail": f"Notify {len(price_violations)} seller(s) who agreed to your MAP policy. Do not report price breaks through Amazon's infringement tools",
             "detail_zh": f"Notification {len(price_violations)} Seller MAP Policy violation",
             "timeline": "48-72 hours",
         })

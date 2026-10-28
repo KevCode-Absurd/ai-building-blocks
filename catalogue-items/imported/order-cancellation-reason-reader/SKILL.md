@@ -10,12 +10,25 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Computes cancellation rate (cancelled orders / total orders) over a configurable window, broken down by `cancelReason` (`CUSTOMER`, `FRAUD`, `INVENTORY`, `DECLINED`, `OTHER`, `STAFF`). Surfaces shifts in cancellation patterns — for example, a spike in `INVENTORY` cancellations suggests a stock data integrity problem, while a spike in `FRAUD` suggests a coordinated attack. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
-- API scopes: `read_orders`
+- API scopes: `read_orders`. The query also reads the customer's order count, which needs `read_customers`, and `staffMember`, which needs `read_users` (not available to every app or plan). Add those scopes to the auth command, or remove those fields from the query. (Note added by AI Blocks.)
 
 ## Parameters
 
@@ -119,6 +132,7 @@ CANCELLATION ANALYSIS  (<days_back> days, by <bucket>)
     INVENTORY    <n>  (<pct>%)
     DECLINED     <n>  (<pct>%)
     OTHER        <n>  (<pct>%)
+    STAFF        <n>  (<pct>%)
 
   Anomaly buckets (>2x trailing avg):
     <bucket-key>  reason=<reason>  rate=<pct>%
@@ -139,7 +153,7 @@ For `format: json`, emit:
   "lost_revenue": 0,
   "currency": "USD",
   "by_reason": {
-    "CUSTOMER": 0, "FRAUD": 0, "INVENTORY": 0, "DECLINED": 0, "OTHER": 0
+    "CUSTOMER": 0, "FRAUD": 0, "INVENTORY": 0, "DECLINED": 0, "OTHER": 0, "STAFF": 0
   },
   "anomalies": [],
   "output_file": "cancellation_analysis_<date>.csv"
@@ -148,7 +162,15 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `cancellation_analysis_<YYYY-MM-DD>.csv` with columns:
-`bucket_start`, `bucket_end`, `total_orders`, `cancelled_orders`, `rate_pct`, `reason_customer`, `reason_fraud`, `reason_inventory`, `reason_declined`, `reason_other`, `lost_revenue`, `currency`
+`bucket_start`, `bucket_end`, `total_orders`, `cancelled_orders`, `rate_pct`, `reason_customer`, `reason_fraud`, `reason_inventory`, `reason_declined`, `reason_other`, `reason_staff`, `lost_revenue`, `currency`
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock count updater](https://useaiblocks.com/skills/stock-count-updater). It takes the audit report.
+- The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -159,7 +181,7 @@ CSV file `cancellation_analysis_<YYYY-MM-DD>.csv` with columns:
 | Cancelled order created outside window | Cancellation happened in window but order older | Excluded by design — analyses creation cohort |
 
 ## Best Practices
-- Compare the cancellation rate with your own store's past rate. As a rough guide with no source, some stores see a few percent, but yours may differ, so look at changes against your own history.
+- Compare the cancellation rate with your own store's past rate. This skill gives no outside benchmark, so judge changes against your own history.
 - Sustained `INVENTORY` cancellations indicate a sync issue between storefront stock and warehouse — pair this skill with `multi-location-inventory-audit`.
 - Sustained `FRAUD` cancellations indicate either improving fraud filters (good) or a coordinated attack (bad) — cross-reference with `order-risk-report`.
 - High `DECLINED` rates often correlate with checkout friction or expired payment methods — investigate alongside checkout abandonment data.

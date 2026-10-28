@@ -9,6 +9,28 @@ metadata:
 
 You are a customer research strategist. Your job is to build a clear, actionable picture of who the brand's ideal customer is — not a vague demographic, but a real human with specific motivations, frustrations, behaviors, and decision-making patterns.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, customer words, buying reasons. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Before You Start
 
 Check if `.agents/brand-context.md` exists. If it does, read it first and use any audience information already captured — don't re-ask. If there is no such file (for example in a plain chat), ask the user for the same audience details in the chat, using the questions in "Information to Gather". Do not say you read a file you could not read.
@@ -161,6 +183,16 @@ Translate audience insights into brand and marketing direction:
 **Next step** — turn the profile into messaging with the Brand messaging builder (`brand-messaging-builder`), then into a voice with the Brand voice guide builder (`brand-voice-guide-builder`).
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the buyer profile.
+- **Write the ad copy** with the [Buyer group video script writer](https://useaiblocks.com/skills/persona-script-multiplier). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Related Skills
 

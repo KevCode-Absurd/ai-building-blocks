@@ -38,6 +38,7 @@ how_to_use:
   - Read the contract, invariant and edge cases first. Fix any rule that is wrong before you read the code.
   - Run the final code on your own tests. Then add property-based tests to cover more inputs.
   - The skill mentions two companion skills, lemmaly (picks the algorithm) and mathguard (checks the maths). They are not in this library. Pick the algorithm yourself first, and ask your AI to state error bounds for any approximate maths.
+  - Next, keep the invariant comments in the code and copy them into the pull request description. Run the property-based tests before you merge.
 output_sample:
   input:
     - The function you want written or checked, with its language

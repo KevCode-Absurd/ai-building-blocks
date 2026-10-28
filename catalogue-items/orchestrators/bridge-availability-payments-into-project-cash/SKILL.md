@@ -55,6 +55,6 @@ Lead with the bridge: net certified payment, cash actually received, and cash av
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Size the loan repayments** with the [Build a project debt service cash pack](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow, using the cash you just found.
-- **Test the cover rules** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Size the loan repayments** with the [Project debt repayment modeler](https://useaiblocks.com/workflows/build-a-project-debt-service-cash-pack) workflow, using the cash you just found.
+- **Test the cover rules** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

@@ -57,4 +57,4 @@ output_sample:
     - name: Predictive maintenance implementation
       contains: A phased plan by quarter for adding condition checks on your most critical machines.
     - name: Expected benefits
-      contains: The gains to aim for in downtime, repair cost, availability, spare parts stock and machine life.
+      contains: Targets for downtime, repair cost, availability, spare parts stock and machine life, worked out from your own numbers, to check after a trial.

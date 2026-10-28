@@ -35,6 +35,7 @@ how_to_use:
   - Let it search your test files for "as" casts, then swap each one for fromPartial or fromAny.
   - Check that it added the shoehorn imports, then run the type check and your tests.
   - Read its note on any case it left as is, and decide if you want to fix those by hand.
+  - If the type check fails after the swap, paste the error back and ask your AI to fix that one call, often by switching fromPartial to fromAny for data that is wrong on purpose. When the type check and tests pass, review the diff as you would any pull request before you merge it.
 output_sample:
   input:
     - Your test files or test folder

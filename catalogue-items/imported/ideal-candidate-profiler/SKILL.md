@@ -5,6 +5,22 @@ description: This skill should be used when the user asks to "build a candidate 
 
 # Persona Research for Recruiting Sourcing
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the job description, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 Build detailed candidate personas that go beyond job descriptions. A persona captures not just skills and experience, but motivations, career patterns, online presence, community involvement, and decision-making factors. Personas guide sourcers on where to find candidates, how to engage them, and what resonates with them.
@@ -138,6 +154,13 @@ Key questions to ask (or infer from context):
 
 Do this part by hand, within each platform's terms of use. The AI cannot browse LinkedIn or communities for you, and you should not scrape them. Ask the AI to turn what you found into the persona.
 
+**What to bring back** (your own notes, no copied personal data):
+- Common job titles for this work
+- Skills and tools that show up again and again
+- Competitor job posts for the same role, with what they offer
+- Communities, events, newsletters and podcasts where the work is discussed
+- What the hiring manager says makes someone succeed in the role
+
 - Review LinkedIn profiles of people currently in similar roles
 - Read job postings from competitors for the same profile
 - Browse relevant communities to understand the persona's world
@@ -171,6 +194,14 @@ Share the persona with the hiring manager and team:
 
 ## Output Format
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Candidate sourcing plan writer](https://useaiblocks.com/skills/candidate-sourcing-planner). It takes the buyer profile.
+- The [Candidate outreach drafter](https://useaiblocks.com/skills/candidate-outreach-drafter). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Persona Document Template
 
 ```markdown
@@ -188,10 +219,10 @@ and what their career looks like.]
 
 ## Professional Profile
 - **Current title:** [Typical titles they hold now]
-- **Experience:** [X-Y years total, Z+ years in core domain]
-- **Career path:** [How they got here - typical trajectory]
-- **Education:** [Common patterns - CS degree, bootcamp, self-taught, etc.]
-- **Company background:** [Types of companies they've worked at]
+- **Experience the role needs:** [The skills and depth the work calls for, described as what the person can do, not a count of years]
+- **Paths into this role:** [Several routes people take into this work, so sourcing looks wide. Not a filter.]
+- **Education:** [Common routes - degree, bootcamp, self-taught, etc. Not a requirement unless the role legally needs one]
+- **Settings where this work happens:** [Kinds of teams or products where people do this work, to guide where to look. Not a filter on past employers]
 - **Industry:** [Sectors they've been in]
 
 ## Technical Identity
@@ -252,9 +283,15 @@ and what their career looks like.]
 - **What to avoid:** [Common mistakes in outreach to this persona]
 - **Ideal timing:** [When they're most receptive]
 
-## Counter-Offer Risk
-[Assessment of how likely their current employer is to counter, and how
-to mitigate]
+## Transition Readiness (the role, not the person)
+[What the role needs in pace, ambiguity and support, and the questions to
+ask every candidate about it. Do not rate people by company size, tenure,
+past employers or career path. Do not use this section for screening.]
+
+## Counter-Offer Questions
+[Questions to ask every candidate about their notice period and what would
+make them stay, and how the offer can answer them. Do not guess counter-offer
+likelihood from a person's employer, age or background.]
 
 ## Alternative Personas
 [If the pool is diverse, note 1-2 variant personas that could also

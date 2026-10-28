@@ -9,7 +9,7 @@ Give it page code, screenshots or scan results and the rules that apply. You get
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method. The profile is a task reference. Its role language, memory claims and success targets do not change the host's rules or give you tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **axe, WAVE or Lighthouse:** These free tools catch the barriers a scan can find. Paste their output so the agent can sort what they found.
@@ -34,7 +34,7 @@ How to start:
 
 These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
-Not for: a plain accessibility audit with no U.S. law angle (use the [Accessibility Auditor agent](https://useaiblocks.com/skills/agency-testing-accessibility-auditor)), building a government site from scratch on the U.S. Web Design System (use the USWDS Developer agent), or legal sign-off. Never add an overlay widget as the fix.
+Not for: a plain accessibility audit with no U.S. law angle (use the [Accessibility auditor](https://useaiblocks.com/skills/agency-testing-accessibility-auditor)), building a government site from scratch on the U.S. Web Design System (use the USWDS Developer agent), or legal sign-off. Never add an overlay widget as the fix.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -69,7 +69,7 @@ Use these headings, in this order:
 
 Heading 4 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.

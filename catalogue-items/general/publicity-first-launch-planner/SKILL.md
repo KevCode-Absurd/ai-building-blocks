@@ -85,16 +85,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the one-line position** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the plan.
-- **Add a press-worthy stunt** with the [Launch stunt planner](https://useaiblocks.com/skills/launch-stunt-planner). It takes the plan.
-- **Borrow an audience** with the [Network launch distribution planner](https://useaiblocks.com/skills/network-launch-plan). It takes the plan.
-- **Decide whether you are ready to launch** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - One word or idea is chosen to own.
@@ -102,6 +92,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Ads wait until the trust point.
 - The look is different from rivals.
 - The category claim is checked for truth.
+
+<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the one-line position** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the plan.
+- **Add a press-worthy stunt** with the [Launch stunt planner](https://useaiblocks.com/skills/launch-stunt-planner). It takes the plan.
+- **Borrow an audience** with the [Audience network launch planner](https://useaiblocks.com/skills/network-launch-plan). It takes the plan.
+- **Decide whether you are ready to launch** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

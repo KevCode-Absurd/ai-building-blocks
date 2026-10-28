@@ -84,9 +84,9 @@ Then suggest "Brand name stretch checker" for any new product and "One bold move
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
 - The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan and audit report.
 - The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan and audit report.
+- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

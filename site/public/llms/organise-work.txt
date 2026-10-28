@@ -1,6 +1,6 @@
 # Run meetings, notes and plans: AI Blocks
 
-> 121 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 122 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Action item tracker](https://useaiblocks.com/skills/executive-action-register): Share meeting notes or email threads. Get action items with owners, deadlines and unresolved commitments.
 - [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Catch up on what you missed with a daily or weekly activity digest. Get your action items, decisions and mentions, grouped by project.
@@ -41,6 +41,7 @@
 - [First-customer manual delivery planner](https://useaiblocks.com/workflows/plan-a-manual-first-customer-delivery): Share accepted scope, real steps, people and available hours. Get a delivery guide, workload check and unresolved handoffs.
 - [Folder tidier](https://useaiblocks.com/skills/folder-tidier): Share folder access to get a filing plan, name rules, and checks for repeat files if requested.
 - [Google Forms automator](https://useaiblocks.com/skills/google-forms-automator): Set up a Google Forms automation that emails you or logs a row to a sheet on every reply. You get a form plan and the script to paste in.
+- [Gorgias and HubSpot contact check](https://useaiblocks.com/skills/gorgias-and-hubspot-contact-check): Check your Gorgias and HubSpot contacts. Find customers missing from your CRM and fields that do not match, with fixes to review.
 - [Hotel group booking handover checker](https://useaiblocks.com/workflows/prepare-a-hotel-group-booking-handover): Share the confirmed booking, room list, rates and deposits. Get a payment check, team handover and open request list.
 - [Incident learning and follow-up planner](https://useaiblocks.com/workflows/turn-an-incident-into-a-safer-procedure): Share the incident notes, logs and current steps. Get a sourced learning report, a procedure draft and a list of actions to track.
 - [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer): Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.

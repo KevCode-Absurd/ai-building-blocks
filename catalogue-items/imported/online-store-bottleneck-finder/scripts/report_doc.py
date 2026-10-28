@@ -22,7 +22,7 @@ def generate_doc_report(data: SupplyChainInput, output_path: str = "report.md") 
     }
     
     # MetricsTable
-    metrics_table = "| Metrics | CurrentValue | HealthyBenchmark | Status |\n|:---:|:---:|:---:|:---:|\n"
+    metrics_table = "| Metrics | CurrentValue | Planning line (unsourced) | Position |\n|:---:|:---:|:---:|:---:|\n"
     for m in result.metrics:
         icon = status_icons[m.status]
         metrics_table += f"| {m.name} | **{m.value}{m.unit}** | {m.benchmark}{m.unit} | {icon} |\n"
@@ -51,7 +51,7 @@ def generate_doc_report(data: SupplyChainInput, output_path: str = "report.md") 
             bottlenecks_section += f"""
 ### {emoji} Bottleneck {i}: {b.title}
 
-**CriticalprocessDegree**: {b.severity}
+**Against the planning line**: {b.severity}
 
 **IssueDescription**  
 {b.problem}
@@ -65,7 +65,7 @@ def generate_doc_report(data: SupplyChainInput, output_path: str = "report.md") 
 ---
 """
     else:
-        bottlenecks_section = "\n✅ **No obvious bottleneck found，Supply ChainOverallHealthy**\n"
+        bottlenecks_section = "\n**No measure is outside the planning lines. These lines are unsourced starting points, not proof the store is healthy.**\n"
     
     # ExecuteList
     action_items = """
@@ -97,7 +97,7 @@ author: Supply Chain Analyzer
 # 📦 Supply ChainBottleneckAnalyzeReport
 
 > **GenerateTime**: {datetime.now().strftime("%Yyears%mmonths%dDay %H:%M")}  
-> **AnalyzePlatform**: Amazon ({data.platform.upper()})
+> **AnalyzePlatform**: {data.platform.upper()}
 
 ---
 
@@ -148,7 +148,7 @@ Based onProvided by youData，Found **{len([m for m in result.metrics if m.statu
 | OptimizationItem | Current | Target | prePeriodRevenue |
 |:---|:---:|:---:|:---|
 | Inventoryweeksconvert | {data.inventory_days}days | 45days | ReleaseInventoryCapital，ReduceStoragefee |
-| PeriodStoragefee |  has  | no | Save $500+/months |
+| PeriodStoragefee |  has  | no | Estimate from your own storage invoices |
 | SupplierPayment terms | {data.supplier_payment_days}days | 30days | Improve cash flow |
 
 ---
@@ -165,7 +165,7 @@ Based onProvided by youData，Found **{len([m for m in result.metrics if m.statu
 
 ### BenchmarkValueDescription
 
-basicReportUseHealthyBenchmarkValueBased onAmazonSellerIndustryData，Can be adjusted according to actual situation。
+The planning lines in this report are the original author's unsourced starting points. They are not industry data. Replace them with your own targets.
 
 ---
 
@@ -183,21 +183,12 @@ basicReportUseHealthyBenchmarkValueBased onAmazonSellerIndustryData，Can be adj
 
 
 if __name__ == "__main__":
-    # TestData
-    test_data = SupplyChainInput(
-        product_cost=8.00,
-        supplier_payment_days=0,
-        production_days=25,
-        shipping_cost_per_unit=0.75,
-        shipping_days=35,
-        selling_price=25.00,
-        fba_fee=5.00,
-        storage_fee=0.50,
-        ad_spend_ratio=0.10,
-        inventory_days=60,
-        has_long_term_storage=True,
-        platform="amazon"
-    )
-    
-    output = generate_doc_report(test_data, "supply_chain_report.md")
-    print(f"✅ Report documentGenerate: {output}")
+    import sys
+    import json
+    # No built-in sample figures: a report must come from the user's own numbers.
+    if len(sys.argv) < 2:
+        print("Usage: python report_doc.py '<JSON with your own figures>'", file=sys.stderr)
+        sys.exit(2)
+    data = SupplyChainInput(**json.loads(sys.argv[1]))
+    output = generate_doc_report(data, "supply_chain_report.md")
+    print(f"Report written: {output}")

@@ -1,6 +1,6 @@
 # Grace Hopper: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Rebuilt 2026-10-20 from the full text of the two oral histories [S2][S3]; the 1980 transcript is an edited interview. On 2026-10-21 we re-read the 1980 transcript for more decisions and added a reporter's account of her 1987 talk at Ohio State, where her remarks appear in quotes inside someone else's article [S7]. We could not open her 1952 and 1978 papers (access blocked), and found no full transcript of her later talks.
 

@@ -16,6 +16,23 @@ license_source: "https://github.com/70v-Yoyo/md2video-audio-skill/blob/main/LICE
 
 # Md2video-audio
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can run the commands, check your installs and save the files on your computer.
+- **Any good chat AI:** Claude, ChatGPT or Gemini can write the slides and narration, but cannot make the MP4 alone.
+<!-- /needs -->
+
 ## Overview
 
 `md2video-audio` converts a Markdown document into a narrated MP4 video by transforming the source into synchronized presentation visuals and spoken narration.
@@ -29,11 +46,11 @@ The workflow preserves the original file and generates separate presentation, na
 
 **Source and credit.** The skill is by 70v-Yoyo (70v-Yoyo/md2video-audio-skill, Apache-2.0 in the original repo), shared in the sickn33/agentic-awesome-skills collection (content under CC BY 4.0). Keep the credit with any copy you share.
 
-**The video scripts are not in this folder.** Steps 5 and 6 call `ai-2md2marp2av.py`, `md2marp2av.py` and `md2video.py`. Get them from the original repo above before you run those steps. Do not write or guess a script of your own and present it as the original.
+**No scripts needed.** The original repo renders the video with its own Python scripts, which are not in this folder. This version does not use them. Step 5 runs the standard tools directly: the Marp command line tool, the `edge-tts` command and ffmpeg.
 
 **Two ways to run it.**
 
-1. **Full run** needs a computer where your AI can run code and save files, with Python, Marp (the slide tool), a video tool such as ffmpeg, and the Edge-TTS speech package, plus the three scripts. Check each is installed before you start, and ask before installing anything.
+1. **Full run** needs a computer where your AI can run code and save files, with Node.js (for the Marp command line tool), Python with the Edge-TTS speech package, and ffmpeg. Check each is installed before you start, and ask before installing anything.
 2. **Slides and script only** works in any chat AI. Do Steps 2 to 4 and stop. You get the cleaned Markdown, the slide Markdown and the narration Markdown. The person can then render the slides with Marp and read the narration with any speech tool.
 
 **Privacy.** Edge-TTS sends the narration text over the internet to an online speech service. Do not use the full run on confidential documents. Offer the slides-and-script route, or a speech tool that runs offline, instead.
@@ -84,33 +101,54 @@ Remove visual-only characters that should not be spoken and verify that slide se
 
 ### Step 5: Generate Video
 
-Run the provided video-generation script with the presentation and narration files:
+Run the standard tools directly. Write all output into a new folder, for example `video-build/`. Show the person each command before you run it.
 
-```
-python ai-2md2marp2av.py presentation.md narration.md
-```
+1. **Render the slides as images** with the Marp command line tool:
 
-The script renders Marp slides, generates speech with Edge-TTS, and combines them into an MP4 video.
+   ```
+   npx @marp-team/marp-cli presentation.md --images png -o video-build/slide.png
+   ```
 
-Ask the user to complete any interactive input required by the script.
+   This writes one numbered image per slide (`slide.001.png`, `slide.002.png`, and so on).
 
-### Step 6: Fallback
+2. **Make one audio file per slide.** Split `narration.md` on its `---` separators into one plain text file per slide (`narration-001.txt`, `narration-002.txt`, ...). Then, for each one:
 
-If the primary workflow fails, try the included fallback scripts in order:
+   ```
+   edge-tts --file video-build/narration-001.txt --voice en-US-AriaNeural --write-media video-build/slide-001.mp3
+   ```
 
-```
-python md2marp2av.py
-```
+   Ask the person which voice and language they want. `edge-tts --list-voices` lists them.
 
-Then:
+3. **Join each image with its audio** into a short clip:
 
-```
-python md2video.py
-```
+   ```
+   ffmpeg -loop 1 -i video-build/slide.001.png -i video-build/slide-001.mp3 -c:v libx264 -tune stillimage -pix_fmt yuv420p -c:a aac -shortest video-build/clip-001.mp4
+   ```
+
+4. **Join the clips in order.** Write a `video-build/clips.txt` file with one line per clip, such as `file 'clip-001.mp4'`, then run:
+
+   ```
+   ffmpeg -f concat -safe 0 -i video-build/clips.txt -c copy video.mp4
+   ```
+
+Before Step 3, check that the number of slide images equals the number of audio files. If they differ, stop and realign the narration (see Common Pitfalls).
+
+### Step 6: If a step fails
+
+Say which command failed and show its error. Do not guess a fix that changes the content. Common causes: a tool is not installed (ask before installing), Edge-TTS cannot reach its online service (check the network, or use an offline speech tool), or a slide image and audio file count do not match. If the video cannot be made, hand back the slides and narration from Steps 3 and 4.
 
 ## Next steps
 
 Check that the presentation and narration files have the same number of slides. Watch the MP4 once from start to end before sharing it. For a product demo use the product demo video maker, and for audio only use the multilingual narrator.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer). It takes the video ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Examples
 
@@ -141,7 +179,7 @@ Use the generated slides and narration to create a presentation-style report vid
 
 ## Limitations
 
-- Requires the local runtime and dependencies used by the included scripts.
+- The full run needs Node.js, Python with Edge-TTS, and ffmpeg on the local computer.
 - Complex Markdown layouts may require manual adjustment.
 - Edge-TTS availability depends on the local network and runtime environment.
 - Stop and ask for clarification when required files, permissions, or user choices are missing.
@@ -160,4 +198,6 @@ Use the generated slides and narration to create a presentation-style report vid
 - **Problem:** Slide content overflows the Marp layout.
   **Solution:** Split the content into smaller logical sections before rendering.
 - **Problem:** Video generation fails because dependencies are unavailable.
-  **Solution:** Verify the environment first, then use the fallback scripts if appropriate.
+  **Solution:** Verify the environment first. If one step still fails, hand back the slides and narration and say which step to finish by hand.
+
+Changed by AI Blocks (2026-10-28): replaced the calls to the original repo's video scripts, which are not in this package, with direct Marp, edge-tts and ffmpeg steps.

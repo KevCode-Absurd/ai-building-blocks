@@ -9,7 +9,7 @@ subhead: Give it each ad channel's month and your store totals. It sets what eac
 explain: |
   Every ad platform says it brought you the sale. Add their numbers up and you have sold far more than your store shows. Retargeting and branded search take credit for sales that would have happened anyway. Cold channels get less credit than they earn. Owners who move budget on the platform numbers often feed the channel that over-claims.
 
-  This agent checks each channel against your store once a month. It works out how much of each platform's return is real, what a new customer costs, and which channels are fading. If the numbers can't be trusted yet, it does not move budget. It hands back the test that would make them trustworthy. If they can, it says where the next dollar goes. It never moves money or changes a campaign.
+  This agent checks each channel against your store once a month. It checks how much of each platform's claim your store totals can support, what a new customer costs, and which channels are fading. If the numbers can't be trusted yet, it does not move budget. It hands back the test that would make them trustworthy. If they can, it says where the next dollar goes. It never moves money or changes a campaign.
 when:
   - You spend on more than one channel and the platform numbers add up to more than your store sold.
   - You want one calm monthly look at where the budget goes, not weekly tweaks.
@@ -24,9 +24,9 @@ you_give:
   - Your price, landed cost, shipping and fees, the first time
   - A post-purchase "how did you hear about us" answer set (optional)
 you_get:
-  - Each channel's true return against break-even, with a trust level
+  - Each channel's return estimate against break-even, or unknown when no test backs it, with a trust level
   - What a new customer costs on each channel, and the payback time
-  - Channels that fell two months in a row, with the likely cause
+  - Channels that fell two months in a row, with each tested cause marked likely or unknown
   - A budget split, or "hold" and the test to run first
   - The numbers to watch next month
 how_to_use:
@@ -51,7 +51,7 @@ output_sample:
     - name: Channels
       contains: "For each channel: spend, reported return, supported return or unknown, break-even, new-customer cost, payback and trust level."
     - name: Fading
-      contains: Channels whose return fell two months in a row, with the months and the likely cause.
+      contains: Channels whose return fell two months in a row, with the months and each tested cause, marked likely or unknown.
     - name: Budget proposal
       contains: A split with the size and reason of each move, or a hold and the test to run first.
     - name: Watch next month
@@ -66,9 +66,9 @@ how_it_works:
   - title: Cost a real customer
     text: Works out what a new customer costs on each channel and how soon it pays back.
   - title: Look for fading channels
-    text: After three saved months, flags any channel whose true return fell two months in a row. Those get no extra budget.
+    text: After three saved months, flags any channel whose supported return fell two months in a row. Those get no extra budget.
   - title: Choose on trust
-    text: If trust is medium or high, it splits the next budget. If trust is low, it holds and hands back the test that would raise it.
+    text: If trust is medium or high (50 or more out of 100 on the reality check's scale), it splits the next budget. If trust is low, it holds and hands back the test that would raise it.
   - title: Hand back one review
     text: Gives the channel table, the proposal and the numbers to watch. Nothing moves until you say yes.
 output_shape: |-
@@ -76,10 +76,10 @@ output_shape: |-
     Spend <amount> | Store revenue <amount> | Blended return <x> | Platforms claim <amount> more than the store
 
   CHANNELS
-    <channel> | spend <amount> | reported <x> | true <x> | break-even <x> | new-customer cost <amount> | payback <days> | trust <high | medium | low>
+    <channel> | spend <amount> | reported <x> | supported <x or unknown> | break-even <x> | new-customer cost <amount> | payback <days> | trust <high | medium | low>
 
   FADING
-    <channel> | fell in <months> | likely cause
+    <channel> | fell in <months> | <cause tested> likely or unknown
 
   BUDGET PROPOSAL
     <hold, and the test to run first> | or | <channel> <+/- amount> | why
@@ -102,7 +102,7 @@ judge:
   - Every return is shown next to break-even, with the sums.
   - No budget goes to a channel below break-even or one that fell two months running.
   - No budget move is proposed when trust is low.
-  - The store totals, not the platforms, are the base for the true return.
+  - Store totals check the platforms' combined claims. A channel's own return needs a completed test or another stated method, or it stays unknown.
   - Nothing was moved, paused or changed.
 test:
   - Run it on a past month where you know a channel over-claimed. See if it finds the same gap.

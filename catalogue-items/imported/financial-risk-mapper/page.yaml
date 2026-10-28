@@ -33,7 +33,7 @@ you_get:
   - A monitoring plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. For the VaR figures, also attach scripts/calculate.py and the two files in the references folder (hedging-guide.md and risk-metrics.md), or use a tool that can run the whole skill folder. Pasting the skill text alone is not enough to calculate them.
-  - If your chat cannot run code, skip the script. The VaR and stress figures are then rough estimates by your AI. Ask it to mark each one "unverified, not calculated by script" and do not rely on them for a decision.
+  - Without price history, the skill gives no VaR or stress loss figures. It asks for the data and stops. If you have price history but your chat cannot run code, skip the script. Ask your AI to show its working and mark each figure "not calculated by script", and do not rely on those figures for a decision.
   - "Say which risk you care about: portfolio, credit or operational. Add your time horizon."
   - Paste your positions or counterparties and the price history. Add credit ratings if you have them.
   - Ask for the risk dashboard. Code running helps the VaR figures, so use a chat that can run code if you can.

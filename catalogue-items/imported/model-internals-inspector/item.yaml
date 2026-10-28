@@ -15,6 +15,8 @@ inputs:
 outputs:
   - type: audit_report
     required: true
+  - type: code_change
+    required: false
 uses: []
 origin: imported
 source:
@@ -32,4 +34,4 @@ credits:
   - title: transformer-lens-interpretability skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/04-mechanistic-interpretability/transformer-lens
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name, removed a reference to another skill's report, and marked the head contribution code as approximate because it skips the final LayerNorm. We added Before you start and After this sections that link to other AI Blocks steps.

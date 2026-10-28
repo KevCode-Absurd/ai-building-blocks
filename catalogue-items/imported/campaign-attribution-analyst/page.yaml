@@ -52,7 +52,7 @@ output_sample:
     - name: Funnel analysis
       contains: Conversion and drop-off rate between each stage, the biggest drops, and the overall funnel conversion rate.
     - name: Campaign ROI table
-      contains: ROI, ROAS, cost per acquisition, cost per lead, customer cost, click rate and lead-to-customer rate per campaign.
+      contains: ROI, ROAS, cost per acquisition, cost per lead, customer cost, click rate and lead-to-customer rate per campaign. Revenue minus ad spend is shown, not full profit, and a campaign with no spend shows n/a instead of 0.
     - name: Underperformer flags
       contains: Campaigns that fall below the benchmark values built into the ROI script.
     - name: Suggestions

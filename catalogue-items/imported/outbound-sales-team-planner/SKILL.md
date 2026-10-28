@@ -11,6 +11,19 @@ metadata:
 
 A systematic approach to building a scalable, predictable B2B sales machine — the outbound prospecting system that, by the author's account, helped Salesforce add $100M in recurring revenue (a claim from the author, not checked here).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Predictable lead generation drives predictable revenue.** The biggest mistake in sales is having the same people prospect AND close — specialization creates a repeatable, scalable machine. Traditional cold calling is dead; Cold Calling 2.0 (mass, personalized cold emails that generate referrals to the right person) is the new outbound.
@@ -202,9 +215,16 @@ Audit any B2B sales process:
 
 For the complete system:
 
-- [*"Predictable Revenue"*](https://www.amazon.com/Predictable-Revenue-Business-Practices-Salesforce-com/dp/0984380213?tag=wondelai00-20) by Aaron Ross & Marylou Tyler
-- [*"From Impossible to Inevitable"*](https://www.amazon.com/Impossible-Inevitable-Hyper-Growth-Companies-Predictable/dp/1119166713?tag=wondelai00-20) by Aaron Ross & Jason Lemkin (scaling to $100M+ ARR)
+- [*"Predictable Revenue"*](https://www.amazon.com/Predictable-Revenue-Business-Practices-Salesforce-com/dp/0984380213) by Aaron Ross & Marylou Tyler
+- [*"From Impossible to Inevitable"*](https://www.amazon.com/Impossible-Inevitable-Hyper-Growth-Companies-Predictable/dp/1119166713) by Aaron Ross & Jason Lemkin (scaling to $100M+ ARR)
 
 ## About the Author
 
 **Aaron Ross** says he built the outbound sales process at Salesforce.com that added $100M+ in recurring revenue (his claim, not checked here), and co-founded Predictable Revenue Inc. His book *Predictable Revenue* — known as "The Bible of Outbound Sales" — made Cold Calling 2.0 the standard for B2B outbound prospecting.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cold email writer](https://useaiblocks.com/skills/cold-email-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

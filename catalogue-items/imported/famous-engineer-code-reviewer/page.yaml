@@ -34,7 +34,7 @@ how_to_use:
   - Paste your diff, code or pull request text. Say which language it is and what it should do.
   - Name the engineers you want, or say you want the skill to pick them. It always adds one product view.
   - Read the findings from the top. Fix blockers and critical items first.
-  - Check each cited principle against the principles file. Treat the engineer's name as a lens, not as their opinion of your code, and confirm each finding is a real problem.
+  - Check each cited principle against the principles file. The skill now uses only that file and drops any engineer who has no entry there. Treat the engineer's name as a lens, not as their opinion of your code, and confirm each finding is a real problem.
   - Run the review again after you fix blockers or critical items.
 output_sample:
   input:

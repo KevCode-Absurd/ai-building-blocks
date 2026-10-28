@@ -119,3 +119,4 @@ judge:
 test:
   - Try a small task whose result you can check yourself.
   - Omit one important fact and check whether the agent names the gap.
+next: [agency-security-appsec-engineer, live-app-security-tester]

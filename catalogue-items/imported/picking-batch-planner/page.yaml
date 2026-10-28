@@ -39,6 +39,8 @@ how_to_use:
   - Check two or three batches by hand against your floor layout. Then try one batch on a real shift before you change how you pick for the whole day.
   - The distance saved is an estimate. Measure it on your own orders.
   - The optimiser example in the skill builds batches of one or two orders only and does not check cart size. If your cart holds more than two orders, your AI must add cart-limit rules before you use its batches.
+  - The other two examples also need checking. The seed-based example caps the number of orders per batch, but not lines or units. The k-means example does not cap batch size at all. Check every batch against your cart's order and unit limits before a picker uses it.
+  - "The result comes as a batch table, one row per batch (orders, lines, travel and priority orders), then three short sections: batching statistics, travel savings and labour impact. Any figure without your own data is marked MISSING."
   - Then take the batch table to your warehouse system, or to the Warehouse picker route planner, to set the walking order inside each batch.
 output_sample:
   input:

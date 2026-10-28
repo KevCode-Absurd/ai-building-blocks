@@ -1,6 +1,6 @@
 # Worked Examples — Before/After Offers
 
-Anonymized examples drawn from real engagements. Each shows the weak version, the diagnostic, and the strong version.
+Anonymized examples the source author says are drawn from real engagements. Each shows the weak version, the diagnostic, and the strong version. The results are the author's reports, not published case data. Use them to see the shape of a fix, never as a lift to expect. Measure your own change with a test.
 
 ---
 
@@ -31,7 +31,7 @@ Anonymized examples drawn from real engagements. Each shows the weak version, th
 | **Name** | "The 90-Day Marketing Reset" |
 | **Price** | $15K → $5K start, $5K week 8, $5K week 16 |
 
-Same delivery, same person, ~3x close rate, longer engagements (because the buyer is clearer about scope).
+Same delivery, same person. Reported result: a higher close rate and longer engagements (because the buyer is clearer about scope). The source author reports this from an anonymized engagement; no case data is published, so treat it as a story, not a forecast.
 
 **Lesson:** the price didn't move. The structure did.
 
@@ -63,7 +63,7 @@ Same delivery, same person, ~3x close rate, longer engagements (because the buye
 | **Name** | "The $5K Sales Page Bootcamp" |
 | **Price** | $1,997 pay-in-full OR $797 × 3 |
 
-Same modules. Same instructor. ~4x conversion. Lower refund rate (conditional guarantee qualifies).
+Same modules. Same instructor. Reported result: higher conversion and a lower refund rate (conditional guarantee qualifies). The source author reports this from an anonymized engagement; no case data is published, so treat it as a story, not a forecast.
 
 **Lesson:** rename the outcome, add proof, install a real scarcity mechanic.
 
@@ -95,7 +95,7 @@ Same modules. Same instructor. ~4x conversion. Lower refund rate (conditional gu
 | **Name** | "The Marketing Ops Stack" |
 | **Price** | $97 pay-in-full |
 
-Same templates. ~2x close rate from the same traffic. The differentiator was the "in one Saturday" outcome anchor and the Loom that proves the speed claim.
+Same templates. Reported result: a higher close rate from the same traffic. The source author reports this from an anonymized engagement; no case data is published, so treat it as a story, not a forecast. The differentiator was the "in one Saturday" outcome anchor and the Loom that proves the speed claim.
 
 **Lesson:** for low-priced info products, the dream outcome and a fast first-win are the levers. Don't over-engineer the guarantee.
 
@@ -127,7 +127,7 @@ Same templates. ~2x close rate from the same traffic. The differentiator was the
 | **Name** | Tier name stayed "Enterprise" but added the engagement name "Strategic Onboarding" |
 | **Price** | $50K annual → $50K annual with quarterly billing + paid 30-day pilot |
 
-Same product. ~30% higher close rate, 50% shorter sales cycle. The pilot + SLA combination removed the procurement objection.
+Same product. Reported result: a higher close rate and a shorter sales cycle. The pilot + SLA combination removed the procurement objection. The source author reports this from an anonymized engagement; no case data is published, so treat it as a story, not a forecast.
 
 **Lesson:** for enterprise B2B, time-to-value IS the offer. Solve it explicitly.
 
@@ -159,7 +159,7 @@ Same product. ~30% higher close rate, 50% shorter sales cycle. The pilot + SLA c
 | **Name** | "The Founders' Quarter" |
 | **Price** | $4K/quarter pay-in-full OR $1,500 × 3 |
 
-Same coach, same cadence. Higher close rate. Notably: members renew at ~70% (was ~35% before) because the "alumni access for 1 year" bonus changed the buying decision frame from "quarter" to "year."
+Same coach, same cadence. Reported result: a higher close rate and more renewals, because the "alumni access for 1 year" bonus changed the buying decision frame from "quarter" to "year."
 
 **Lesson:** for coaching, the room IS the offer. Position the room, not the curriculum. Renewal-friendly bonuses lock in long-term LTV.
 
@@ -191,7 +191,7 @@ Same coach, same cadence. Higher close rate. Notably: members renew at ~70% (was
 | **Name** | Tier name: "Growth Retainer"; engagement name: "The 90-Day Content Reset → 9-Month Growth Engine" |
 | **Price** | $8K/month, 6-month minimum, OR $7K/month for 12-month commit |
 
-Same writers. Same SEO methodology. ~2x close rate. 60% of pilots convert to 12-month commits.
+Same writers. Same SEO methodology. Reported result: a higher close rate, and many pilots move to 12-month commits. The source author reports this from an anonymized engagement; no case data is published, so treat it as a story, not a forecast.
 
 **Lesson:** for slow-cycle services (SEO, brand, content), the offer has to address the timeline explicitly. "Trust us, results in 6 months" doesn't sell; "paid pilot → milestone at day 30 → ramp" does.
 

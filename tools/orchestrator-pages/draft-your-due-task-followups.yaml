@@ -9,7 +9,7 @@ subhead: Share your due tasks and the email threads that go with them. It writes
 explain: |-
   A task list tells you who owes what by when. It does not write the email. You open each thread, find the right person, remember what was promised and type the nudge, one task at a time.
 
-  This workflow does that pass for you. Step one matches each due task to its thread and recipient, then drafts one follow-up email and logs it. If a recipient or thread is missing, it asks instead of guessing. Step two checks every draft against your voice notes or past emails and fixes the lines that do not sound like you. Facts, recipients and dates stay as step one set them.
+  This workflow does that pass for you. It starts from tasks that are already due, not from meeting notes. Step one matches each due task to its thread and recipient, then drafts one follow-up email and logs it. If a recipient or thread is missing, it asks instead of guessing. Step two checks every draft against your voice notes or past emails and fixes the lines that do not sound like you. Facts, recipients and dates stay as step one set them.
 when:
   - Several tasks are past due or due this week, and each one needs an email to chase or confirm.
   - You have a task list and the threads behind it, and you want drafts to review, not a blank page.

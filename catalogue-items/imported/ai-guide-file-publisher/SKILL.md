@@ -16,6 +16,19 @@ audit_signals:
   - agents-md
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 `llms.txt` is the emerging convention for telling AI assistants, in plain text, what a site is and where the important pages live — a curated front door for models. This skill assembles an `llms.txt` from the store's own data (brand one-liner, top collections, flagship products with URLs, shipping/returns policy links, contact) and publishes it through a theme template so it's served at a stable path. Fixes `llms-txt` / `well-known-llms-txt` and the related `agents-md` discovery signals.
 
@@ -43,7 +56,7 @@ Skill-specific parameters:
 
 ## Safety
 
-> ⚠️ Step 4 (`themeFilesUpsert`) writes a new template to the LIVE theme. The content is additive (a new file/route) and low-risk, but it is published immediately. Defaults `dry_run: true` so you review the generated `llms.txt` first. Duplicating the theme before writing is recommended.
+> ⚠️ Step 4 (`themeFilesUpsert`) writes a new template to the LIVE theme. The content is additive (a new file/route) and low-risk, but it is published immediately. Defaults `dry_run: true` so you review the generated `llms.txt` first. Before any `themeFilesUpsert` call, ask the user to duplicate the live theme in Shopify Admin and to confirm in chat that the copy exists. Do not write until they confirm.
 
 ## Workflow Steps
 
@@ -58,7 +71,7 @@ Skill-specific parameters:
 3. **COMPUTE (no API):** render the `llms.txt` markdown: `# <Brand>` + one-liner, `## Key products` (title — URL — one line), `## Policies` (shipping/returns/privacy URLs), `## Contact`. Emit the full text.
 
 4. **OPERATION:** `themeFilesUpsert` — mutation
-   **Inputs:** `themeId`, write `templates/page.llms.liquid` (a page template that outputs the text as `text/plain`) plus, if used, an `assets/llms.txt` copy; skipped when `dry_run`.
+   **Inputs:** `themeId`, write `templates/page.llms.liquid` (a page template that outputs the text as `text/plain`); skipped when `dry_run`. This skill gives no ready-made Liquid source, so draft the template and show its full text to the user with the `llms.txt` preview. Write it only after they approve that exact text and confirm the theme copy. Do not write an `assets/llms.txt` file unless the user asks for one.
    **Expected output:** Upserted theme file(s); collect `userErrors`. (Note: surface a one-line instruction to create a Page using the `llms` template, or to add a redirect from `/llms.txt`.)
 
 ## GraphQL Operations
@@ -161,6 +174,13 @@ For `format: json`, emit:
 
 ## Output Format
 `human`: the full generated `llms.txt` + the post-publish step (create a Page on the `llms` template, or add a `/llms.txt` → page redirect). `json`: `{ theme_id, llms_txt, wrote: true|false, follow_up, errors }`.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [llms.txt writer](https://useaiblocks.com/skills/llms-txt-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

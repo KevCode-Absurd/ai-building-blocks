@@ -23,6 +23,7 @@ not_for:
   - "You need slides about something other than code, like a sales pitch or a lecture: write those in your usual slide tool or ask your AI for a plain outline."
   - "You want a PDF you can check later: check the HTML deck, because the PDF holds no citations."
   - "You only want to read or explain your code, with no slides: ask your AI to explain the repo in a chat."
+  - "You want a quick one-off deck and will never check it against the code again: ask your AI for an outline and build the slides in your usual slide tool."
 you_give:
   - Your code repository (a git repo)
   - Who the talk is for and how long it runs

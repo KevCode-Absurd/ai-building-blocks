@@ -33,4 +33,4 @@ credits:
   - title: master-data-management skill
     by: erphq
     url: https://github.com/erphq/skills/tree/eaa34a70a3bcd8a82aad118d10fbb084cdc1363a/departments/information-technology/01-org-under-100/master-data-management
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

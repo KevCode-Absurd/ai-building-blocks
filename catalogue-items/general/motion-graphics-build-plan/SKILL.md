@@ -18,8 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
+1. **Brand profile builder** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Motion graphics video ad script writer** with the [Motion graphics video ad script writer](https://useaiblocks.com/skills/motion-graphics-ad-script). It uses your brand brain and buyer brief.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -94,6 +94,8 @@ Before the final hand-back, check the run against the 6 checks under "Check befo
 5. **Build**: the Remotion scene list or editor layer list, and background prompts or "none" (stage 5).
 6. **Edit list**: voice, music, end card, the text layer table with sources, and `MISSING:` lines.
 7. **Checks missed:** one line per check still missed, or "none".
+
+If you build in a motion editor instead of Remotion, take the layer list and the text layer table into the editor, then check the render against the table the same way.
 
 ## Check before you hand it back
 - You stopped after stages 1, 3 and 4, or marked them "(approve)" when asked to run in one go.

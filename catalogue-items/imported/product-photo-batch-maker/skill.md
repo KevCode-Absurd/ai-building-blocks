@@ -16,9 +16,13 @@ description: 多商品批量生图流水线。商品清单 CSV → 整批统一�
 > ```bash
 > SPEC='Placed in one shared look: [BACKGROUND], [LIGHT], [CAMERA ANGLE], a consistent product shadow below, and the same framing and spacing across the whole set. Realistic commercial product photography, no text, no watermark.'
 >
-> while IFS=, read -r SKU IMG DESC; do
->   dlazy seedream-5.0 >     --prompt "Product photo for a catalogue. Image 1 is the product: ${DESC}. Keep its colour, material texture and style details exactly as in image 1. ${SPEC}" >     --images "$IMG" --size 1:1 --resolution 2k >     --save "out/${SKU}.jpg"
-> done < manifest.csv
+> mkdir -p out
+> tail -n +2 manifest.csv | while IFS=, read -r SKU IMG DESC; do
+>   dlazy seedream-5.0 \
+>     --prompt "Product photo for a catalogue. Image 1 is the product: ${DESC}. Keep its colour, material texture and style details exactly as in image 1. ${SPEC}" \
+>     --images "$IMG" --size 1:1 --resolution 2k \
+>     --save "out/${SKU}.jpg"
+> done
 > ```
 >
 > Change nothing in SPEC once the batch has started. If you change it, rerun the whole batch.
@@ -26,6 +30,25 @@ description: 多商品批量生图流水线。商品清单 CSV → 整批统一�
 > **Set a spending cap first.** The loop below has no spending stop. Before the full run, work out price per image times number of products, write down the most you accept, and run in chunks (for example 20 products at a time) while you check your credit balance between chunks.
 
 ---
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## 生成效果示例
 
@@ -303,3 +326,12 @@ echo "SKU 数：$(wc -l < manifest.csv)"
 ## Tips
 
 Visit https://dlazy.com for more information.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

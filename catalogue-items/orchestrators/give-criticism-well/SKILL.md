@@ -38,17 +38,19 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Get the behaviour and the fix clear.** Use the skill `behaviour-and-fix-notes-writer`. First it decides if the matter is worth raising: has it happened more than once, and what does it cost if you say nothing? Then it writes one watchable behaviour, the result you want, your own part, a fair reason for the behaviour, three true strengths and the smallest fix. Stop rule: if it is a one-off with a small cost, the notes say "let it go" and why. If no single behaviour can be named from your examples, the notes say what to gather first, such as one real, dated example. In either case, stop here and go to the hand-back summary.
+1. **Get the behaviour and the fix clear.** Use the skill `behaviour-and-fix-notes-writer`. First it decides if the matter is worth raising: has it happened more than once, and what does it cost if you say nothing? Then it writes one watchable behaviour, the result you want, your own part, a fair reason for the behaviour, three true strengths and the smallest fix. Stop rule: if it is a one-off with a small cost, the notes say "let it go" and why. If no single behaviour can be named from your examples, the notes say what to gather first, such as one real, dated example. In either case, the whole run ends here: steps 2 to 4 are not run, and you go straight to the hand-back summary.
 2. **Write the message.** Use the skill `hard-feedback-message-writer`. Give it the feedback notes from the steps before. A short message with true praise, one change asked for, and a way out that keeps their pride.
 3. **Turn orders into requests.** Use the skill `order-to-request-rewriter`. Give it the copy draft and the feedback notes from the steps before. Every order in the draft becomes a question or a request with a gain for them.
 
 Pause here: Say or send it. Then watch for the first small improvement.
 
 4. **Praise the progress.** Use the skill `small-win-praise-planner`. Give it the feedback notes from step 1 and what you saw after the talk. A plan to notice and praise each step in the right direction, in specific words. It does not use the message draft.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
+
+Next: use the plan on the review date it sets. If the behaviour has not changed by then, run step 1 again with the new examples. Ignore the generated suggestion below unless the issue is about sales pay.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

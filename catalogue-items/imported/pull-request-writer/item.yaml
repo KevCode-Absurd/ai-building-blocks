@@ -31,4 +31,4 @@ credits:
   - title: pr skill
     by: Matt Pocock
     url: https://github.com/mattpocock/skills/tree/main/skills/engineering/pr
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, made the GLOSSARY.md file optional, and told it to mark evidence as missing instead of inventing it.

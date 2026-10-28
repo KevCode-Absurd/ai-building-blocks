@@ -17,13 +17,13 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your image ads** (yours): the image ads, attached as pictures.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
 4. This one.
 
@@ -110,22 +110,22 @@ Each version should differ in one nameable thing: the reason to buy, the buyer, 
 - **Verdict:** fix, remake, or within-reviewed-scope ready; use INCOMPLETE when a material launch check is NOT CHECKED. Name the exact asset version and any owner or external verification still needed. A review verdict does not publish an ad. For a batch, note variety and any intended test variable that changed unintentionally.
 - **Next action:** the one thing to do now, with owner and evidence needed. Include a small test contract when this is a paid experiment: control, one intended variable, budget/risk limit, observation window and decision rule. Missing pieces are gaps, not made-up defaults. Verify destination/offer/UTM congruence from supplied or inspected evidence; event firing requires an actual authorized probe and its result.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every item gives the quote, number or spot, and a fix that keeps the art.
 - Stop-ship holds only the five kinds in "Sorting".
 - Nothing unconfirmed is passed; nothing only a person can judge is marked checked.
 - The score's sum matches the lists. No results numbers like click rate; those exist only after the ad runs.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+- **Read your ad results** with the [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
+- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. With only a description, move size, safe zones, spelling, logo and font to "for a person". With no proof, mark each claim "not confirmed". With no buyer named, read the links as someone new to the brand and say so.

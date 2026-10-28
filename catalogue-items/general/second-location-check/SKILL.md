@@ -88,16 +88,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide whether to open** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report.
-- **Test a bad year** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan the order of new markets** with the [Market expansion sequencer](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the audit report.
-- **Fix the manual** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every trial note is a gap with a fix.
@@ -106,6 +96,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The call follows the stated lines.
 - The fix list is in order with owners and dates.
 - No number or fact is invented.
+
+<!-- next: hand-written for this skill (needs_mode manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide whether to open** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report.
+- **Test a bad year** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- **Plan the order of new markets** with the [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the audit report.
+- **Fix the manual** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

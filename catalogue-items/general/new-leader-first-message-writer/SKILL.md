@@ -85,14 +85,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **For the weeks after you send it** with the [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer). It takes the draft.
-- **To plan your first talks with each person** with the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All four questions are answered.
@@ -101,6 +93,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It fits on one page.
 - It ends with one clear ask.
 - Every fact in it came from the user, and every gap is marked `MISSING:`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **For the weeks after you send it** with the [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer). It takes the draft.
+- **To plan your first talks with each person** with the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

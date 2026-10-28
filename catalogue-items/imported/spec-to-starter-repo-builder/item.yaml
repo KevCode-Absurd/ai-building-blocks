@@ -29,4 +29,4 @@ credits:
   - title: spec-to-repo skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/spec-to-repo
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name and added a note on which cross-referenced skills are in this library.

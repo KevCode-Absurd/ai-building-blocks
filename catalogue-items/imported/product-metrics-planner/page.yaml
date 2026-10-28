@@ -7,7 +7,7 @@ job: build-product
 headline: Product metrics planner
 subhead: A short list of the numbers worth tracking at your product's stage, laid out as a dashboard, plus a way to read retention and adoption.
 explain: |
-  A short list of the numbers worth tracking at your product's stage, laid out as a dashboard, plus a way to read retention and adoption. You avoid drowning in charts that do not drive decisions.
+  You avoid drowning in charts that do not drive decisions.
 
   Claude picks a framework to fit: AARRR for funnels, North Star for shared focus, or HEART for user experience quality. It then sets KPIs for your stage, whether before product-market fit, growing or mature. The dashboard has three layers: five to seven leadership metrics, product health, and per-feature use. For cohorts, it compares retention curves rather than single points and looks for drop-offs around first value.
 when:
@@ -30,12 +30,14 @@ you_get:
   - A layered dashboard layout
   - A reading of retention and adoption
 how_to_use:
+  - "First, pick your stage: before product-market fit, growing or mature. List the numbers you already track, even if it is only sign-ups."
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Tell it your product, its stage and your main goal.
-  - Paste a few weeks of cohort data if you have it (optional). A chat AI can read pasted rows. To run the CSV script, use an AI that can run code.
+  - Paste a few weeks of cohort data if you have it (optional). A chat AI can read pasted rows. To run the CSV script, use an AI that can run code. No data yet? Skip this step.
   - Read the framework choice and KPI list first. Change any metric that does not fit your business.
   - Use the dashboard layers to build your report in your analytics tool.
   - Pick the actions you will do first and give each one an owner.
+  - Review the feature layer weekly and the leadership layer monthly. Bring the latest numbers and the actions you took last time.
 output_sample:
   input:
     - Your product and its stage (before product-market fit, growing or mature)
@@ -59,3 +61,12 @@ output_sample:
       contains: What your cohort curves suggest, including early drop points near first value.
     - name: Actions
       contains: One clear product action for each major risk or chance the numbers show.
+terms:
+  - term: AARRR
+    meaning: A funnel of five steps a user goes through. Acquisition, activation, retention, referral and revenue.
+  - term: North Star
+    meaning: One number the whole team works to grow, because it shows customers getting value.
+  - term: HEART
+    meaning: A way to measure how good the product feels to use. Happiness, engagement, adoption, retention and task success.
+  - term: Product-market fit (PMF)
+    meaning: The point where enough of the right people want your product and keep using it.

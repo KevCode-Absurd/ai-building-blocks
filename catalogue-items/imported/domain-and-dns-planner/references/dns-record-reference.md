@@ -103,7 +103,7 @@ example.com.    300    IN    CAA    0 issuewild "letsencrypt.org"
 example.com.    300    IN    CAA    0 iodef "mailto:security@example.com"
 ```
 
-Without CAA, any public CA can issue a cert for your domain. With CAA, only the listed CAs can. Add CAA for any domain you care about.
+Without CAA, nothing limits which public CA may issue for your domain. Each CA still has to confirm that the requester controls the domain. With CAA, a CA that is not listed must refuse to issue, which lowers the risk of a mistaken or fraudulent certificate from a CA you do not use. CAA does not stop a listed CA from issuing in error. Source: RFC 8659, https://www.rfc-editor.org/rfc/rfc8659. Add CAA for any domain you care about.
 
 The `iodef` directive specifies where to email reports of unauthorized issuance attempts.
 

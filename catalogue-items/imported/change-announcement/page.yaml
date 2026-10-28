@@ -57,7 +57,7 @@ output_sample:
     - name: Manager talking points
       contains: What front-line managers say and how they handle questions they cannot answer.
     - name: Touchpoint calendar
-      contains: Seven follow-up messages with timing, channel, owner and key message, plus gaps and channel mismatches.
+      contains: A table of five to seven follow-up messages (the optional script builds seven), with columns for timing, channel, owner, change stage and key message, plus gaps and channel mismatches.
     - name: Follow-up message
       contains: A later note that checks how people are coping and reinforces the change.
     - name: Anti-pattern check

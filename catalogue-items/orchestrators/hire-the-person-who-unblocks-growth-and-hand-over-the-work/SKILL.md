@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -30,7 +30,7 @@ How to start:
 - **An honest rating of your own skills** (strong, ok or weak) in sourcing or product, paid ads, site conversion, brand, email and retention, and operations (required). A kind rating gives the wrong hire.
 - **What you think is limiting growth:** traffic, conversion, margin, cash or stock (required)
 - **Traffic sources, site conversion rate and monthly sessions** (strongly advised). Without them, step 1 cannot tell a traffic problem from a conversion problem and says so.
-- **What you can offer:** cash per month, a share of profit, equity or stock (strongly advised)
+- **What you can offer:** cash per month, a share of profit, equity or stock (strongly advised). Give the most you can afford and are allowed to offer. Step 1 never suggests pay above it, and without it lists pay options as `MISSING: pay limit`.
 - **How experienced the new person will be at the exact task** (strongly advised). It sets the agreement and how often you meet.
 
 If you use the handoff pack from the workflow page, open it with "Follow HANDOFF.md". The pack holds this file and one skill file for each step.
@@ -50,7 +50,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list. If hiring cannot fix the limit, say so in step 1 and stop there.
 
 ## What you hand back
-3 step files and the summary. The last file holds the plan.
+3 step files and the summary:
+- **Step 1, hire gap file:** whether hiring fixes the limit, the one hire, the prize, pay options within your limit and the 90-day result in numbers.
+- **Step 2, results agreement:** the one-page agreement in five parts and the say-it-back card.
+- **Step 3, meeting plan:** how often and how long to meet, what they bring, note rules and follow-up. The last file holds the plan.
+- **Hand-back summary:** each file and every `MISSING:` line.
+
+Next: before you make an offer, check the candidate can do the work with the Work sample test designer below. Have any equity or stock offer checked by a lawyer and an accountant first.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

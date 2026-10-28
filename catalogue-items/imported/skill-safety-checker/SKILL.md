@@ -12,10 +12,26 @@ tools: [claude, gemini, gpt, llama, mistral, etc]
 
 # Audit Skills (Premium Universal Security)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Skill files** (yours): a skill's folder: its SKILL.md and any files it needs.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Skill files** with the [Skill writer and reviewer](https://useaiblocks.com/skills/skill-writer-and-reviewer). Bring your question, skill files (optional), your notes (optional), an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for skill files. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Expert security auditor for AI Skills and Bundles. Performs non-intrusive static analysis to identify malicious patterns, data leaks, system stability risks, and obfuscated payloads across Windows, macOS, Linux/Unix, and Mobile (Android/iOS).
-2-4 sentences is perfect.
 
 ## When to Use This Skill
 
@@ -80,7 +96,7 @@ Analyzes code for platform-specific security issues across Windows, macOS, Linux
 - **Remote script piping**: network fetch commands that stream directly into a shell or PowerShell evaluator.
 
 #### 9. Legitimacy & Scope (Universal)
-- **Registry Alignment**: Cross-reference with `CATALOG.md`.
+- **Registry Alignment**: If the user pastes a list of known skills, check the skill against it. If not, skip this check and say it was skipped.
 - **Structural Integrity**: Does it follow the standard repo layout?
 - **Healthy Scope**: Does a "UI Design" skill need `adb shell` or `sudo`?
 
@@ -125,9 +141,19 @@ Generates a security report with a score (0-10), platform target identification,
 
 ## Related Skills
 
-- `@security-scanner` - Additional security scanning capabilities
+- `@security-scanner` - Additional security scanning capabilities (from the original collection; not included with this copy)
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI skill library reviewer](https://useaiblocks.com/skills/monthly-skill-library-keeper).
+- The [Skill portability checker](https://useaiblocks.com/skills/skill-portability-checker).
+- The [Skill quality tester](https://useaiblocks.com/skills/skill-quality-tester).
+- The [Prompt and skill improvement tester](https://useaiblocks.com/skills/prompt-and-skill-tuner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

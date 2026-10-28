@@ -94,10 +94,10 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Offer one next step in a short question, and say the user can type their own:
-- **Explain the policy better** with the [Make a new policy understandable to staff](https://useaiblocks.com/workflows/make-a-new-policy-understandable-to-staff) workflow, if awareness is the biggest barrier.
-- **Turn broader feedback into actions** with the [Turn employee feedback into owned actions](https://useaiblocks.com/workflows/turn-employee-feedback-into-owned-actions) workflow.
-- **Run a follow-up pulse** with the [Employee survey designer](https://useaiblocks.com/skills/employee-survey-designer) after the support actions have run.
+Use these instead of the general "After this" list below. Offer one next step in a short question, and say the user can type their own:
+- **Explain the policy better** with the [Staff policy explanation and rollout writer](https://useaiblocks.com/workflows/make-a-new-policy-understandable-to-staff) workflow, if awareness is the biggest barrier.
+- **Turn broader feedback into actions** with the [Employee feedback action planner](https://useaiblocks.com/workflows/turn-employee-feedback-into-owned-actions) workflow.
+- **Run a follow-up pulse** with the [Employee feedback survey planner](https://useaiblocks.com/skills/employee-survey-designer) after the support actions have run.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -106,6 +106,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
 - The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer). It takes the document.
 - The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
+- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

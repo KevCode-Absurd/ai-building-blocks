@@ -11,7 +11,7 @@ Read [the original role profile](references/source-agent.md) before you start. I
 
 When not to use it: for a report by territory and rep from one clean table, use the Sales data consolidation agent (the next step after this one). For deal health or a quarter forecast from a CRM export, use the Sales pipeline health and forecast agent. To log a call note into a CRM record, use the CRM activity logger. For a folder watcher that writes to a database, ask for a script and have a developer run and check it.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for a spreadsheet, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** They can read an attached workbook, so every sheet is checked and no row is dropped from a paste.
@@ -64,7 +64,7 @@ Use these headings, in this order.
 
 Name the source file and sheet in every extracted row. If the user asks, give the table as CSV text.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly store ad performance reviewer](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker). It takes the spreadsheet.

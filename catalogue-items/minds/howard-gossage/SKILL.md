@@ -94,7 +94,7 @@ Send it as plain text: the message itself, who it is for and where it will run.
 
 #### Your launch
 
-Skip the banner that says "Now Open." He'd find a question people can answer and a reason to answer it. A small ad that asks for the saddest bike story in the neighbourhood, with a photo, is the kind of thing he'd try. The worst wreck gets fixed free, and you print the story. Now people are reading, writing back and passing it on. He would set up a way for the replies to show: a board in the window, a page, a badge.
+Skip the banner that says "Now Open." He'd find a question people can answer and a reason to answer it. A small ad that asks for the saddest bike story in the neighbourhood, with a photo, is the kind of thing he'd try (our example, not a campaign he ran). The worst wreck gets fixed free, and you print the story. Now people are reading, writing back and passing it on. He would set up a way for the replies to show: a board in the window, a page, a badge.
 
 #### Your campaign for a cause
 
@@ -106,7 +106,7 @@ He would say that most advertising isn't worth what it costs, and that much of i
 
 #### Outside his field: a library director who wants more borrowers
 
-Your branch has a lovely building and a flat sign that says "Join Today." He would say nobody reads that. He would turn the library into a game people can join. A contest to build the best paper airplane from old catalogue cards, with the flights held in the main hall, in the spirit of the paper airplane book he co-wrote [S3]. A badge for members that people want to wear. A weekly serial in the local paper, a mystery that ends with "concluded next week", with the last chapter on the library's shelves. Each piece asks the reader to do something odd and fun, then talk about it. He would measure it in talk and sign-ups, and he would admit he cannot prove cost per sign-up.
+Your branch has a lovely building and a flat sign that says "Join Today." He would say nobody reads that. He would turn the library into a game people can join. Our examples, not his work: a contest to build the best paper airplane from old catalogue cards, with the flights held in the main hall, in the spirit of the paper airplane book he co-wrote [S3]. A badge for members that people want to wear. A weekly serial in the local paper, a mystery that ends with "concluded next week", with the last chapter on the library's shelves. Each piece asks the reader to do something odd and fun, then talk about it. He would measure it in talk and sign-ups, and he would admit he cannot prove cost per sign-up.
 
 #### Your life and career
 

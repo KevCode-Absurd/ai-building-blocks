@@ -33,10 +33,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini with a mode that can run Python code. This skill needs code running with PuLP and its free CBC solver installed. No paid tool is needed. The commercial tools it lists are optional.
   - Paste the skill text into the chat.
+  - "Know which code runs: optimize_network and the NetworkDesigner class are complete. The multi-scenario block calls optimize_network_weighted, which the file does not define, so your AI must write it first or run optimize_network once per scenario."
   - Add your sites, customer demand, costs and service targets. Say if any site must stay open.
   - Answer the questions your AI asks about goals, budget and limits.
   - Check the options, the costs and the assumptions it lists. Swap any sample costs or typical ranges for your own quotes.
   - Take the option you choose into your budget or rollout plan.
+  - Next, once the network is set, plan daily delivery runs from each site with the Delivery time slot route planner.
 output_sample:
   input:
     - Your current and possible site locations

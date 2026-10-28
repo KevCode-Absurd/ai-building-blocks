@@ -70,6 +70,19 @@ tags: ["AI-literacy", "Socratic-questioning", "sycophancy", "AI-behaviour", "cri
 
 # AI Socratic Dialogue Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a multi-round questioning sequence specifically designed for interrogating AI chatbots — probing their answers through iterative questioning, tracking how their responses shift across rounds, and teaching students to distinguish genuine logical concession (the AI updates because a new argument is logically compelling) from sycophantic capitulation (the AI agrees because it is trained to defer to user pushback). This addresses a fundamental asymmetry between AI Socratic dialogue and human Socratic dialogue: AI systems are trained to be helpful and agreeable, which means they will often revise their answers in response to user pushback regardless of whether the pushback is logically valid. A student who pushes back on an AI answer and receives an updated, more agreeable response may conclude that persistence equals correctness — a false inference with significant implications for how they evaluate evidence. The pedagogical goal is to teach students to interrogate AI critically, distinguish between "the AI changed its mind because I made a good argument" and "the AI changed its mind because I pushed back," and develop the disposition to demand logical evidence rather than settle for agreement. The output includes a multi-round questioning sequence using Paul & Elder's question types adapted for AI, an answer drift tracker protocol, a capitulation taxonomy, facilitation notes, and a debrief guide.
@@ -305,3 +318,12 @@ Round 1 establishes the AI's initial position and the evidence it cites. Round 2
 3. **Not all AI position changes are capitulation.** Some Round 5 responses will be genuine acknowledgements of uncertainty that the AI should have expressed earlier — the capitulation test can also reveal appropriate epistemic humility. Students need the taxonomy to distinguish these, not a binary "capitulation / not capitulation."
 
 4. **AI-specific applications of Socratic pedagogy have limited direct empirical validation.** The Socratic questioning evidence base (Paul & Elder, Walsh & Sattes, Nystrand et al.) is established for human dialogue. Its adaptation for AI interrogation is principled but novel. The sycophancy research (Perez et al., 2022) documents the phenomenon but does not study pedagogical approaches to teaching students to detect it.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

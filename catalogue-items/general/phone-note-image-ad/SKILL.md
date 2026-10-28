@@ -76,7 +76,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. **Brief a generic notes screen:** a bold title line, plain lines, a plain sans-serif font, the time in the status bar, lots of empty space, cropped a little at the bottom like a shared screenshot.
 5. **Say how to make it.** Best: build the screen in a design tool with the words set as real text, so nothing is misspelt. Next best: the image tool, with every line quoted once and then checked.
 6. **Describe the blank version:** the note with its title only.
-7. **Check it.** Go through the six checks under "Check before you hand it back" and fix any that fail where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
+7. **Check it.** Go through the seven checks under "Check before you hand it back" and fix any that fail where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back
 First, before anything else: if the note was written for the image, label it a re-creation at the top of the answer.
@@ -110,7 +110,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.
 - Words on the image are off: use `problem-moment-image-ad-maker` with the screen turned away.
-- The story has no note: write the fewest words that say what it already says, and flag them "written for the image: a re-creation, not a real person's note. Label it as one, and read it before it runs".
+- The story has no note: stop and ask once for a real note a customer agreed to share, or for a yes to a re-creation that will run with a dramatisation label. Write a note only after that answer. Then write the fewest words that say what the story already says, and flag them "written for the image: a re-creation, not a real person's note. Label it as one, and read it before it runs".
 
 ## Avoid
 - A note that sells, explains or sums up the story's lesson.

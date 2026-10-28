@@ -32,7 +32,7 @@ credits:
   - title: ui-from-screenshot skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-from-screenshot
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Copied as it is. UXKIN marked the skill MIT in its header (original repo uxkin/agent); sickn33's LICENSE-CONTENT sets CC BY 4.0 for the written text. Both allow reuse with credit. We gave it a plain name.
   - title: Original author
     by: UXKIN
     url: https://github.com/uxkin

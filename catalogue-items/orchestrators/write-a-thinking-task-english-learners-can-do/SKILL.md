@@ -55,14 +55,6 @@ HAND-BACK SUMMARY
 Files: ... | MISSING: ...
 ```
 
-## After this
-
-Ask what they would like to do next in one short question. It is a suggestion. Offer these, and say they can type their own:
-
-- **Mark the task fairly** with the [Task rubric drafter](https://useaiblocks.com/skills/task-rubric-drafter).
-- **Check the whole lesson** with the [Check a lesson before teaching it](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it) workflow.
-- **Adapt the lesson for other needs** with the [Adapt a lesson for different access needs](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs) workflow.
-
 ## Check before you hand it back
 
 - The task asks for the thinking skill named, not recall of facts.
@@ -70,3 +62,11 @@ Ask what they would like to do next in one short question. It is a suggestion. O
 - Every thinking question from step 1 is still in the supported task and is not easier.
 - Help comes in layers, not one fixed set.
 - Each gap is a `MISSING:` line. Nothing was invented to fill it.
+
+## After this
+
+Ask what they would like to do next in one short question. It is a suggestion. Offer these, and say they can type their own:
+
+- **Mark the task fairly** with the [Task marking guide writer](https://useaiblocks.com/skills/task-rubric-drafter).
+- **Check the whole lesson** with the [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it) workflow.
+- **Adapt the lesson for other needs** with the [Lesson access and activity planner](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs) workflow.

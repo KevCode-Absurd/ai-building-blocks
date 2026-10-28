@@ -89,7 +89,7 @@ Nothing has been sent or shared. Tell the person which file to open first and wh
 Offer one next step and say they can type their own:
 
 - Check the deck's numbers against a workbook with the [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker).
-- Build the next monthly deck from your records with the [Build a monthly Excel and PowerPoint update](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update) workflow.
+- Build the next monthly deck from your records with the [Excel report and PowerPoint update writer](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update) workflow.
 - Bring back the fixed accessibility issues and ask for a recheck.
 
 ## Check before you hand it back

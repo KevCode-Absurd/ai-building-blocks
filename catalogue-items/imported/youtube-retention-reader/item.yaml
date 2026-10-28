@@ -33,7 +33,7 @@ credits:
   - title: yt-retention skill
     by: Jake Schincariol
     url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-retention
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Jake Schincariol
     url: https://github.com/Jakeschincariol

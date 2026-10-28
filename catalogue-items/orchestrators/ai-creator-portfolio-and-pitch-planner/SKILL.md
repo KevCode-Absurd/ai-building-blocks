@@ -91,9 +91,9 @@ Write `MISSING: <what>` next to the affected line and carry on with the parts th
 ## Next steps for this workflow
 
 This is the only next-step list for this workflow. This workflow is one planning run with no sub-skills. Suggest one next step as a short question, and say the user can type their own:
-- **A client asked for a price.** Use the [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote) workflow.
-- **A client wants more after signing.** Use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
-- **Polish one pitch.** Use the [Capability pitch letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer).
+- **A client asked for a price.** Use the [Freelance website quote and proposal planner](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote) workflow.
+- **A client wants more after signing.** Use the [Client scope change planner](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
+- **Polish one pitch.** Use the [Sales offer letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer).
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

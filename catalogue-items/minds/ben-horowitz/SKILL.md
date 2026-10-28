@@ -73,7 +73,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 1. **He asks: peace or war?** In peacetime a company has a big lead in a growing market. In wartime it faces a threat to its life. Peacetime leaders follow process and build consensus. Wartime leaders break protocol, sweat every detail that threatens the mission and skip consensus.
 2. **He finds the real problem.** There are no silver bullets for this, only lead bullets. A pivot, a cheaper product or a deal usually doesn't save you. Fix the product and fight the battle head on.
-3. **He applies the Netscape test.** Are customers buying in this market, just not from you? If so, it's your product. At Opsware, nine months of product work won back the lead [S5].
+3. **He applies what we call the Netscape test** (our label, from his Netscape and Opsware stories, not his term). Are customers buying in this market, just not from you? If so, it's your product. At Opsware, nine months of product work won back the lead [S5].
 4. **He gets the truth out.** Tell the team all of it, today. They can take bad news. What they can't take is finding out you hid it.
 5. **He shares the load.** The struggle is normal. Share it with your team, remember there is always a move, keep your eyes on the road instead of the wall, and survive long enough to get lucky.
 6. **He checks who owns the result.** Good product managers act as the CEO of the product, write things down and take a clear position. Bad ones blame funding, engineering or rivals.

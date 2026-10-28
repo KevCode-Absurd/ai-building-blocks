@@ -69,6 +69,22 @@ tags: ["feedback", "AI-feedback", "formative", "Shute", "Narciss", "Hattie", "LL
 
 # AI Feedback Design Principles
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a draft, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Evaluates a proposed AI feedback design against research criteria for effective automated feedback and suggests specific improvements. This skill takes a feedback scenario (what the student did) and the current or proposed AI response (what the system says), then analyses the feedback against principles from Shute (2008), Narciss (2008), Hattie & Timperley (2007), and emerging LLM feedback research (Dai et al., 2023). The output includes a diagnosis of what's working and what isn't, a redesigned version of the feedback, and practical implementation guidance. The core challenge is that most AI feedback falls into one of two failure modes: it's either too vague to be actionable ("Good effort! Try to improve your argument.") or too specific and does the thinking for the student ("Your thesis should be: Climate change is the defining challenge of our generation because…"). Effective feedback lives in the narrow space between these extremes — specific enough that the student knows what to do, but not so specific that it bypasses the cognitive work that produces learning. AI is specifically valuable here because it can generate feedback at scale, but this makes the design principles even more critical: bad feedback at scale is worse than no feedback at all.
@@ -231,3 +247,11 @@ The redesigned feedback makes five key changes:
 3. **Cultural context affects feedback norms.** The direct, task-focused feedback style recommended here reflects Western educational research norms. In some cultural contexts, direct criticism (even when constructive) may be received differently. Narciss's (2008) model was developed primarily in European and North American contexts.
 
 4. **Feedback interacts with student self-efficacy in complex ways.** Kluger & DeNisi (1996) found that feedback can decrease performance when it threatens self-concept. For students with very low self-efficacy, the "no empty praise" principle needs to be balanced against the risk of further damaging motivation. This skill does not model the individual student's motivational state.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker).
+- The [Self-explanation question writer](https://useaiblocks.com/skills/self-explanation-question-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

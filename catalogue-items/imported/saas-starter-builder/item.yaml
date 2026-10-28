@@ -29,4 +29,4 @@ credits:
   - title: saas-scaffolder skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/saas-scaffolder
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name and marked the Stripe webhook sketch so it says the cancel and failed-payment handlers are not written yet.

@@ -51,14 +51,6 @@ How to start:
 
 Use these headings, in this order, every time: DECISION, DISSENT ON RECORD, VIEW OR AIMS, ESCALATE, COMMIT LINES, SIGNAL THAT IT IS WRONG, NOTE TO THE TEAM, MISSING, CHECKS MISSED. Keep every heading even when a section says "none". Put every gap under MISSING. Under CHECKS MISSED write one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan the next big call** with the [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter). Bring the next decision and what you know.
-- **Talk to the person who keeps reopening it** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). Bring the person and the problem.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each dissent is neutral and names a reason.
@@ -68,6 +60,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The boss's own view is recorded if they disagree.
 - The note has a review date and a signal.
 - All nine headings are present, in order.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan the next big call** with the [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). Bring the next decision and what you know.
+- **Talk to the person who keeps reopening it** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). Bring the person and the problem.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

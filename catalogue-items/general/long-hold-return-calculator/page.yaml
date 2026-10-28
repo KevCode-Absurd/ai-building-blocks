@@ -139,14 +139,14 @@ improve:
   - Add your local tax rules to the tax step.
   - Keep a record of your estimates and compare them with later results.
   - Add the cost of your time as part of the alternative if the choice needs it.
-  - Pair it with the "Who-keeps-the-gain tester" so the business return is believable.
+  - Pair it with the "Business value capture reviewer" so the business return is believable.
 
 works_best_with:
   tools:
     - {name: "A spreadsheet", why: "Lets you rerun the compounding with your own years and rates and check every line."}
     - {name: "Any good chat AI", why: "It can lay out the cases and weigh them, but check the arithmetic against a calculator."}
   inputs:
-    - "A report from the Who-keeps-the-gain tester"
+    - "A report from the Business value capture reviewer"
     - "Five or more years of the business's return on invested money"
     - "Your tax rate and holding years"
 

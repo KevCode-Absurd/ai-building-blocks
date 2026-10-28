@@ -18,6 +18,22 @@ allowed-tools: Read, WebFetch, make_api_request, stripe_api_read, stripe_api_wri
 
 # Ticket Deflector
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Quick start
 
 Forward or paste a customer email — Claude pulls order status from the connected payments connector, looks up the customer in the CRM and the support desk, and drafts a reply in the owner's voice. If a refund is needed, it stages the details and waits for explicit approval before issuing anything. Same-category connectors are peers (`shared/connector-neutrality.md`): whichever is connected runs the step.
@@ -148,6 +164,14 @@ Fallback is unchanged: pasted text in, drafted reply out.
 - **Visual artifact (the default):** render the run as an HTML page in the house style — in triage mode, each order a row with its status pill and dollar amount in tabular-nums; in reactive mode, the customer's situation up top. **Every drafted reply is a copy block** so the owner can copy it and send it by hand. Refund confirmations stay their own gate, never a button on the page.
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why.
 - **Best for skill:** use the visual artifact — this output is drafts the owner works through, not prose.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer inbox reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter).
+- The [Customer question researcher](https://useaiblocks.com/skills/customer-question-researcher).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After the reply
 

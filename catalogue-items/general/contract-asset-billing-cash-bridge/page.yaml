@@ -106,6 +106,7 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+before: []
 next:
   - contract-liability-release-bridge
   - noncash-working-capital-bridge

@@ -73,7 +73,7 @@ CHECKS MISSED   <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **To fill the template each week** with the [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer). It takes what got done, what is stuck and what you need.
 - **If a decision keeps slipping in the meeting you kept** with the [Debate-then-decide meeting planner](https://useaiblocks.com/prompts/debate-then-decide-meeting-planner). It takes the decision and the people who make it.
-- **If you have more meetings to look at** with the [Process and meeting cull planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes your list of regular meetings.
+- **If you have more meetings to look at** with the [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes your list of regular meetings.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

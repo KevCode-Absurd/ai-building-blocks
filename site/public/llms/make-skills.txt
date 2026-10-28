@@ -1,6 +1,6 @@
 # Make your own skills: AI Blocks
 
-> 21 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 22 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent procedure writer](https://useaiblocks.com/skills/agent-procedure-writer): Describe a repeatable job. Get a reusable procedure file with inputs, numbered steps, clear requirements and format checks.
 - [AI instruction writer](https://useaiblocks.com/skills/ai-instruction-writer): Share a skill or AI instruction file. Get clearer steps, reference links and completion checks, with repeated or stale rules trimmed.
@@ -10,6 +10,7 @@
 - [AI skill release package builder](https://useaiblocks.com/workflows/write-a-skill-and-check-it-is-safe-to-share): Share a repeated job and target AI tools. Get skill files, trigger feedback, quality checks, security findings and a scoped portability review.
 - [AI skill writing coach](https://useaiblocks.com/skills/skill-making-guide): Turn a task you repeat into your own skill. Get a SKILL.md draft, a description that triggers, and a test plan. A skill-making guide for Claude.
 - [Book and document skill builder](https://useaiblocks.com/skills/book-to-skill-converter): Share a book or document folder. Get agent instructions, chapter notes and a quick guide built from the source, with checks.
+- [Pattern to skill extractor](https://useaiblocks.com/skills/pattern-to-skill-extractor): Turn a fix you keep repeating into a reusable skill. Describe the pattern and get a skill folder with steps, notes and examples.
 - [Project skill finder](https://useaiblocks.com/skills/project-skill-finder): Find the skills your project needs. Give it your project folder and get a ranked list of skills to add or update, based on how you really work.
 - [Prompt engineer](https://useaiblocks.com/agents/agency-engineering-prompt-engineer): Describe the task and the answer format you need. Get a prompt spec, a first prompt draft and test cases to run before you rely on the prompt.
 - [Repeated work skill finder](https://useaiblocks.com/skills/repeated-work-skill-finder): Share your screen history. Get tasks you repeat and draft skills to automate them.

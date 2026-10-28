@@ -69,7 +69,6 @@ The ranked list of holding forces with the sums. Anxieties by type and the point
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer interview pattern tracker](https://useaiblocks.com/skills/customer-interview-program-keeper).
 - The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- **Plan your strategy** with the [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

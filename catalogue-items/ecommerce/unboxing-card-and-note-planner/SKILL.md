@@ -16,7 +16,7 @@ When not to use: if parcels often arrive late or returns are hard, fix those fir
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -28,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In the box above, "Your results" means your order figures and packaging quotes below, not an ad export.
+In the box above, "Your results" means your store's order figures (average order value, margin, orders per month), plus your real card and sticker quotes and your repeat rate if you have them. No ad export is needed. Paste them under the prompt. If the repeat rate is missing, the sums show `MISSING: repeat rate`.
 
 - **Average order value and margin per order** (required).
 - **Orders per month and packaging cost per order** (required for the sums). Use the user's real quotes for cards and stickers, and the user's repeat rate if they have one. Do not guess these.
@@ -50,6 +50,7 @@ NOTE RULE: who gets one and what it says.
 GIFT RULE: what and for whom.
 COSTS: monthly cost and the payback sum, shown.
 WHAT TO MEASURE: repeat rate by group, with a few orders left out as a test group.
+CHECKS MISSED: any check below that failed or could not run, or none.
 MISSING: any number not given.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

@@ -25,6 +25,29 @@ By George Hartley, co-founder of [Nitrosend](https://nitrosend.com). Disclosure:
 > v2.8.2, 13 Oct 2026. Distilled from the EMB (19 chapters, research across 900+ sources), from running SmartrMail (~12K customers, 6B emails, sold 2022) and field notes from running an ESP through agents.
 > Rules and gates are here; detail is in `references/`, named by the router (§2). If `references/` is missing, fetch https://emailmarketingskill.com/llms.txt and use its URLs verbatim (Claude's fetch refuses assembled URLs); if refused, have the user paste that URL. Offline, name the chapter and never invent the figure.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for a buyer brief, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## 0. Operating rules and the send gate
 
 Every segment, draft, campaign, flow or staged send on a real ESP is live. **Hard gates, never skip:**
@@ -154,3 +177,12 @@ The first three are ESP mechanics (check your ESP's equivalent); the rest hold a
 Full guide: https://emailmarketingskill.com (chapter URLs: llms.txt, above). references/sources.md says which chapter answers what. Where a chapter and a reference disagree, the reference wins.
 
 01-fundamentals, 02-building-your-list, 03-segmentation-and-personalisation, 04-the-emails-that-make-money, 05-copywriting-that-converts, 06-design-and-technical, 07-deliverability, 08-testing-and-optimisation, 09-analytics-and-measurement, 10-compliance-and-privacy, 11-industry-playbooks, 12-choosing-your-platform, 13-cold-email-and-b2b-outbound, 14-whatsapp-business, 15-sms-and-rcs, 16-ai-and-agentic-marketing, 17-company-case-studies, 18-expert-directory, 19-best-email-designs-2026, appendix-a-benchmarks, appendix-b-frequency-guide, appendix-c-calendar, appendix-d-methodology.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+- The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

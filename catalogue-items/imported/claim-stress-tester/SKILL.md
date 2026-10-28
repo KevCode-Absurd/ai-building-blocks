@@ -19,6 +19,19 @@ license_source: "https://github.com/263311487-ux/falsify/blob/main/LICENSE"
 > Think like a first-rate scientist: doubt first, verify, then believe.
 > 像一流科学家一样思考：先证伪，再相信；先标不确定，再下结论。
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What you get
 
 You give it a question or a claim, what you already know, and what a wrong answer would cost. You get a short answer that states a testable hypothesis, the strongest attack on it, the evidence for and against, and a list of what is still uncertain. For a simple or urgent question it gives a short answer and says which mode it chose. It is plain text, so it needs no tools. Do not use it for a trivial fact or for a live outage: answer directly, or act first and test the cause later.
@@ -80,6 +93,13 @@ When you run the full five stages, hand back these parts in order: Mode, Hypothe
 - Small talk. Not everything is a thesis defense.
 
 Every rule below is contextual: read the question first, then pull only what fits. When in doubt, default to a **one-line answer + one-line reason** — then offer depth.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fact cross-checker](https://useaiblocks.com/skills/fact-cross-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## How It Works
 

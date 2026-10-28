@@ -10,6 +10,22 @@ metadata:
 
 Design and run effective career development programs — from building career path frameworks and competency ladders to facilitating individual development conversations and connecting employee growth ambitions to organizational talent strategy.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the job description. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a writing and thinking job. Claude, ChatGPT or Gemini all do it well.
+<!-- /needs -->
+
 ## How to run this skill
 
 1. **Ask once for what is missing.** You need the job family, the skills that matter, and two or three real roles with what each person does. Useful extras: current titles, how many levels the user wants (suggest 3 to 5 if they do not know), company size. If the user cannot give something, write `MISSING: <what>` in the output. Never invent the company's levels, titles, pay or promotion rules.
@@ -90,3 +106,13 @@ Do not set pay, bands or promotion decisions. Say the user must decide those, an
 - Distinguish development for current role excellence versus development for future role readiness.
 - Use the 70-20-10 model as a guide: most development happens through challenging experiences, not training.
 - Align career framework language with job architecture to reduce ambiguity about what progression looks like.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
+- The [Interview process planner](https://useaiblocks.com/skills/interview-process-planner). It takes the document.
+- The [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package). It takes the document.
+- **Lead the team** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

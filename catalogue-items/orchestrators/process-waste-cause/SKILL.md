@@ -42,11 +42,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A question** (a step needs something only the person knows): if they're there, wait. If not, write it as `MISSING: <what>` and carry on.
 - **An approval** (nothing is sent, published or paid for without the person's clear yes).
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
+- **No clear worst waste:** if step 1 finds two or more wastes of about the same size, ask the person which one hurts most. If they are not there, pick the one with the longest wait time, say why, and carry on to step 2.
+- **A why that cannot be checked:** mark it `unchecked` with the record that would settle it, and do not build the next why on it. If the chain stops at an unchecked why, hand back the chain so far and ask the person to look at the real place or record.
 
 ## Steps
 1. **Process waste finder.** Use the skill `process-waste-finder`. Give it your process, who does each step and the times. It lists each step with its work time and wait time, marks each one as value or waste with the kind of waste named, finds the worst waste, asks who required each step and picks one change to try. The step 1 file holds the waste map.
 2. **Root cause finder.** Use the skill `root-cause-finder`. Give it the step 1 file (the worst waste) and the problem with its place and date. It states the problem as something seen, then asks why of each answer and checks each against a record, not a guess, until it reaches a cause your team can change. It follows a second chain in case there are two causes, then writes the fix and a check that it held. The step 2 file holds the root cause.
-3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 2 step files and the summary.

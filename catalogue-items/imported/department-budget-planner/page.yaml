@@ -9,7 +9,7 @@ subhead: A budget for each department, set up so you can compare actual spending
 explain: |
   A budget for each department, set up so you can compare actual spending to it every month. Give it six to twelve months of past spending and your targets and you get a phased budget, variance reports and suggested fixes.
 
-  It looks at trends, seasonal peaks and one-off costs in the history. It sets a top-level amount per department from your revenue goals and priorities, then breaks that into lines such as pay, software, travel and marketing. As real spending arrives it maps each item to a line and period and reports month-to-date, quarter and year. Variances are labelled as timing, one-off or lasting, and it suggests moving unused money to where it is needed.
+  It looks at trends, seasonal peaks and one-off costs in the history. It sets a top-level amount per department from your revenue goals and priorities, then breaks that into lines such as pay, software, travel and marketing. As real spending arrives it maps each item to a line and period and reports month-to-date, quarter and year. Variances are labelled as timing, volume, rate or permanent, and it suggests moving unused money to where it is needed.
 when:
   - You must hand each department head a number for next year.
   - Spending keeps running over and nobody can say why.
@@ -35,6 +35,7 @@ how_to_use:
   - Add your department list, your spending target and the budget period. Mention any big costs you know are coming.
   - Read the budget and check that each department total matches your target. Ask your AI to fix any line that looks wrong.
   - Each month, paste in your actual spending and ask for a variance report.
+  - Next, take each permanent variance to the department head and agree a budget change. Move unused money only after finance agrees, then run the report again the next month.
   - Have an accountant or finance lead review the plan before you share it. The AI does not need code, web access or a paid tool.
 output_sample:
   input:

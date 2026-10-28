@@ -54,14 +54,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-## After this
-
-Nothing has been promised or sent. The person picks an option, edits the reply and sends it. Offer one next step and say they can type their own:
-
-- Put the chosen date into next week's work with the [Week plan maker from a task list](https://useaiblocks.com/skills/week-plan-from-task-list-maker).
-- Keep the promise visible with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
-- If staffing changes, run the first step again with the new hours.
-
 ## Check before you hand it back
 
 - Existing commitments are still counted after the new work is added.
@@ -69,3 +61,11 @@ Nothing has been promised or sent. The person picks an option, edits the reply a
 - Every figure and date traces to a source or is labelled as an assumption.
 - The draft reply promises nothing the options do not support and is marked as not sent.
 - Every gap is a `MISSING:` line.
+
+## After this
+
+Nothing has been promised or sent. The person picks an option, edits the reply and sends it. Offer one next step and say they can type their own:
+
+- Put the chosen date into next week's work with the [Weekly task planner](https://useaiblocks.com/skills/week-plan-from-task-list-maker).
+- Keep the promise visible with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
+- If staffing changes, run the first step again with the new hours.

@@ -15,14 +15,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your lesson plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -92,8 +92,8 @@ Files | MISSING | CHECKS MISSED | one next step
 Use this list, not the shared "After this" list above. Offer one next step and say they can type their own:
 
 - Do the first week and bring your closing reflections back. Ask for the plan to be adjusted.
-- After a few weeks, review how it is going with the [Study practice progress reviewer](https://useaiblocks.com/skills/study-plan-progress-review-assistant).
-- If the date is close, rank topics by marks with the [Exam study roadmap builder](https://useaiblocks.com/skills/exam-study-roadmap-builder).
+- After a few weeks, review how it is going with the [Study practice progress reviewer](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
+- If the date is close, rerun step 1 with the topics that carry the most marks put first.
 
 ## Check before you hand it back
 

@@ -70,7 +70,7 @@ Lead with signed availability, which limit applied (commitment or borrowing base
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check what the line costs** with the [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the same loan balances.
-- **See what a rate change does to the cost** with the [Bridge rate changes to revolver cost](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost) workflow.
-- **Test your covenants** with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
+- **Check what the line costs** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the same loan balances.
+- **See what a rate change does to the cost** with the [Credit line rate-change and fee checker](https://useaiblocks.com/workflows/bridge-floating-rate-changes-to-revolver-cost) workflow.
+- **Test your covenants** with the [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
 Nothing here goes to a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

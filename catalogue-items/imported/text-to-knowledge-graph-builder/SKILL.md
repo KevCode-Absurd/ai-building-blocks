@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to transform unstructured text into a structured knowledge graph. The agent extracts entities (people, organizations, technologies, concepts), identifies the relationships between them, generates formal graph triples (subject-predicate-object), and outputs the graph in both a queryable format (Cypher for Neo4j, JSON-LD) and a visual diagram (Mermaid). Knowledge graphs are valuable for understanding complex domains, powering semantic search, detecting implicit connections, and building recommendation systems.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the Source Material:** Read the input text and determine its domain, scope, and complexity. Identify the types of entities likely present (people, organizations, locations, technical concepts, events, etc.) and the granularity appropriate for the graph. A technical architecture document requires fine-grained component-level entities, while a news article may need coarser actor-level entities.
@@ -147,3 +160,11 @@ This visualization immediately reveals that the Payment Service is a central nod
 - **Very large source texts:** For documents exceeding a few thousand words, process the text in chunks and merge entity graphs across chunks, deduplicating as you go. Warn the user if the resulting graph exceeds a practical visualization size (roughly 50+ nodes).
 - **Contradictory information:** If the source text contains conflicting statements about relationships (e.g., "Service A depends on Service B" in one paragraph and "Service A has no external dependencies" in another), include both and flag the contradiction.
 - **Domain-specific terminology:** In specialized domains (medical, legal, financial), entity types and relationship predicates should reflect domain ontologies (e.g., SNOMED CT for medical, FIBO for financial) when the user requires interoperability with existing knowledge bases.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Design it** with the [Dark-theme SVG diagram maker](https://useaiblocks.com/skills/diagram-maker).
+- **Tell it as a story** with the [Executive summary writer](https://useaiblocks.com/skills/executive-summary-writer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

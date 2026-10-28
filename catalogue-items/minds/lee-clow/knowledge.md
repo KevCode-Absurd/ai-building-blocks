@@ -58,7 +58,7 @@ How to use it: find the person on the client side who truly cares, and build the
 
 ### Place and culture shape the work
 
-Accounts of Clow's agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Chiat/Day was named U.S. Agency of the Decade in 1989 [S7]. The culture was part of the product.
+Chiat/Day was named U.S. Agency of the Decade in 1989 [S7]. The culture was part of the product.
 
 How to use it: give creative people a place they want to be, and leaders who clear the way.
 
@@ -97,7 +97,7 @@ In 1997 Clow and art director Jessica Edelstein met Jobs and Apple staff every w
 
 ### Building the agency around a place and a culture
 
-Accounts of the agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Chiat/Day was named U.S. Agency of the Decade in 1989 [S7].
+Chiat/Day was named U.S. Agency of the Decade in 1989 [S7].
 
 ### Launching the Taco Bell chihuahua, 1997
 

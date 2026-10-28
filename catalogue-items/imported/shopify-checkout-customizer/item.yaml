@@ -32,7 +32,7 @@ credits:
   - title: checkout-customization skill
     by: dragnoir
     url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/checkout-customization
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: dragnoir
     url: https://github.com/dragnoir

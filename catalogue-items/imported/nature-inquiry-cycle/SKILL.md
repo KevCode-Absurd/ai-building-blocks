@@ -80,6 +80,19 @@ tags: ["SEEDS", "regenerative", "inquiry", "place-based", "Manning", "bio-empath
 
 # SEEDS Regenerative Inquiry Cycle
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 This skill encodes an original practitioner framework developed by Gareth Manning, educator, curriculum designer, and learning systems designer. Unlike skills in other domains, it is not drawn from peer-reviewed research traditions. It is grounded in serious engagement with learning science, original curriculum design work, and active classroom testing. It is included because the methodology is coherent, transferable, and genuinely useful — and because intellectual honesty requires distinguishing practitioner frameworks from research-validated approaches.
@@ -402,3 +415,12 @@ In the final session, students return to the courtyard and sit in silence for 15
 4. **Bio-empathy is philosophically grounded but methodologically imprecise.** Asking "What does the soil need?" is a generative prompt for inquiry, not a scientific method. It can produce genuine ecological insight (the soil needs organic matter, moisture, microbial life) or vague anthropomorphism (the soil is "sad"). The teacher's role is to guide students from empathic prompts toward scientific investigation — using the empathy as a doorway, not a destination.
 
 5. **Stewardship depends on institutional continuity.** The Design to Last stage requires that the school sustain the stewardship structure — the Courtyard Committee, the care routines, the seasonal calendar — beyond the original group of students. If the school doesn't commit to this continuity, the courtyard will revert to neglect, and students will learn that their work doesn't matter. The teacher must have institutional support before committing to the stewardship promise.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Reggio learning documentation planner](https://useaiblocks.com/skills/learning-documentation-planner). It takes the lesson plan and plan.
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -15,6 +15,22 @@ Two modes. Pick one:
 - `/ip-legal:cease-desist --send` — draft a cease-and-desist letter calibrated to your enforcement posture. Loud gate runs before delivery.
 - `/ip-legal:cease-desist --receive` — triage a C&D someone sent you. Produces an options memo with a recommendation.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Instructions
 
 > **Plain chat path (AI Blocks note).** This skill came from a plugin whose setup interview and config files (the practice profile CLAUDE.md, matter workspaces, `/ip-legal` commands) are not included here. In a plain chat, do this instead:
@@ -508,3 +524,14 @@ Per `## Decision posture on subjective legal calls` in the practice profile: whe
 - **Decide merit definitively on the receive side.** The rating is a structured read for routing; a formal merit opinion lives with counsel.
 - **Validate the sender's cited law.** Flags for the user; does not autonomously call a claim valid or invalid.
 - **Make the matter-creation call.** Surfaces the recommendation; user decides.
+
+Changed by AI Blocks (2026-10-28): added the plain-chat path note at the top of the Instructions, which replaces the plugin setup interview, config files, matter workspaces and /ip-legal commands with three questions in the chat.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
+- The [Demand letter drafter](https://useaiblocks.com/skills/demand-letter-drafter). It takes the document.
+- The [Infringement claim screening reviewer](https://useaiblocks.com/skills/infringement-first-look-sorter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

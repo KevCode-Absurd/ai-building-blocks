@@ -11,6 +11,19 @@ metadata:
 
 This skill enables the agent to deploy and manage applications on Kubernetes clusters. The agent can generate deployment manifests, services, ingress rules, Helm charts, and autoscaling configurations. It handles the full lifecycle from initial deployment through scaling, rolling updates, and troubleshooting, following production best practices for resource management, security, and reliability.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Configure Cluster Access:** The agent verifies that `kubectl` is configured with the correct cluster context and namespace. It checks connectivity with `kubectl cluster-info` and confirms that the user has sufficient RBAC permissions to create and manage resources in the target namespace. If a kubeconfig is not present, the agent guides the user through authentication (e.g., `aws eks update-kubeconfig`, `gcloud container clusters get-credentials`).
@@ -268,3 +281,10 @@ spec:
 - **Stuck rollouts and deadlines:** A deployment rollout can stall if new pods fail readiness checks. The default `progressDeadlineSeconds` is 600 seconds, after which Kubernetes marks the rollout as failed. Use `kubectl rollout undo deployment/myapp` to revert immediately rather than waiting for the deadline.
 - **DNS resolution failures in new namespaces:** Pods in newly created namespaces may experience temporary DNS resolution failures if CoreDNS has not yet updated its internal records. Application containers should implement retry logic with backoff for initial service discovery calls.
 - **Helm release conflicts:** If a previous `helm upgrade` was interrupted (e.g., by a timeout), the release may be in a `pending-upgrade` or `failed` state. Use `helm history myapp` to inspect the state and `helm rollback myapp <revision>` to recover before attempting another upgrade.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Helm chart builder](https://useaiblocks.com/skills/helm-chart-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

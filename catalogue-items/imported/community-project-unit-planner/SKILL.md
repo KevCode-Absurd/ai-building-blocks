@@ -72,6 +72,23 @@ tags: ["service-learning", "Billig", "community", "civic-engagement", "experient
 
 # Service Learning Project Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your lesson plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a service learning project that combines genuine community service with structured academic learning — ensuring that students both contribute meaningfully to their community AND learn curriculum content through the process. The critical distinction from Furco (2002) is that service learning is NOT community service (service without academic learning), NOT volunteerism (service without structured reflection), and NOT field trips (experience without service). Service learning integrates three elements: genuine community benefit, curriculum-connected academic learning, and structured reflection that bridges the two. The approach draws on Billig's (2000, 2004) research showing that the strongest academic effects occur when service is directly connected to curriculum objectives through explicit reflection — not when service and academics happen in parallel without connection. The output includes the complete project design, community partnership framework, curriculum integration plan, reflection structure (before, during, and after service), and assessment plan. AI is specifically valuable here because designing effective service learning requires simultaneously addressing community needs, curriculum requirements, logistical constraints, and the structured reflection that converts service experience into academic learning — a complex design challenge where any element missing undermines the whole.
@@ -274,3 +291,12 @@ The food bank manager provides written feedback: Was the analysis accurate? Was 
 2. **The meta-analytic effect size for service learning on academic outcomes is modest (d=0.27 — Celio et al., 2011).** Service learning is not a high-impact academic strategy in the way that retrieval practice or feedback are. Its primary value is in integrating academic learning with civic development, authentic context, and motivation — not in raising test scores. Teachers should use service learning because it develops citizens AND teaches curriculum, not because it is the most efficient way to improve academic attainment.
 
 3. **The distinction between service learning and charity is crucial and easy to get wrong.** If students feel sorry for food bank users and "help" them from a position of privilege, the project reinforces social hierarchies rather than challenging them. The reflection structure is designed to prevent this — but the teacher must be vigilant. The framing should be partnership, not pity: "We are providing data analysis skills that the food bank needs. They are providing us with real data and authentic purpose that we need. Both sides contribute, both sides benefit."
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

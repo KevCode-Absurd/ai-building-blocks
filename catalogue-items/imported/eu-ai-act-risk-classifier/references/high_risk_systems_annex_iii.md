@@ -12,9 +12,16 @@ Pair with `scripts/ai_system_risk_classifier.py` for the decision-tree implement
 3. Article 6(2) + Annex III?       → YES: enter Article 6(3) carve-out check
 4. Article 6(3) carve-out applies?  → YES (and no profiling): NOT high-risk
                                     → NO  (or profiling present): high-risk
-5. Article 50 transparency trigger? → YES: limited-risk
-6. Default                          → minimal-risk
+5. Otherwise                        → not high-risk (minimal-risk)
+
+THEN, for every system that is not prohibited (high-risk included):
+   Article 50 transparency trigger?  → YES: add the Article 50 duty
+                                       (makes a non-high-risk system "limited-risk";
+                                       a high-risk system stays high-risk AND has the duty)
+   Article 4 AI literacy             → applies to all providers and deployers
 ```
+
+Article 50(6): paragraphs 1 to 4 "shall not affect the requirements and obligations set out in Chapter III". Source: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50
 
 ## Annex III — The 8 Categories (Article 6(2))
 
@@ -24,9 +31,9 @@ Pair with `scripts/ai_system_risk_classifier.py` for the decision-tree implement
 - Biometric categorisation according to sensitive or protected attributes (where not prohibited under Article 5)
 - Emotion recognition (where not prohibited under Article 5)
 
-**Conformity assessment:** Module H (notified body required) per Article 43(1).
+**Conformity assessment:** Article 43(1). If harmonised standards or common specifications were applied in full, the provider chooses internal control (Annex VI) or Annex VII with a notified body. If not, Annex VII with a notified body is required. Annex III points 2 to 8 use internal control with no notified body (Article 43(2)). Source: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-43
 
-**Carve-out applicability:** Article 6(3) carve-outs do NOT apply to biometric ID systems performing biometric verification. Carve-out can apply to other Annex III §1 systems only if profiling is absent.
+**Carve-out applicability:** Biometric verification whose only purpose is to confirm a person is who they claim to be is outside Annex III point 1(a) altogether, so it is not high-risk on that ground. Carve-out can apply to other Annex III §1 systems only if profiling is absent.
 
 ### §2 — Critical Infrastructure
 
@@ -49,7 +56,7 @@ Pair with `scripts/ai_system_risk_classifier.py` for the decision-tree implement
 - Decisions about promotion, termination, task allocation based on individual behaviour or traits
 - Monitoring/evaluating performance + behaviour
 
-**Carve-out applicability:** profiling of natural persons is always present in employment AI by definition (Article 6(3) last sentence overrides carve-out claim).
+**Carve-out applicability:** employment AI that evaluates candidates or workers usually profiles them, and profiling overrides the carve-out (Article 6(3) last sentence). Check each case.
 
 ### §5 — Access to Essential Private and Public Services
 
@@ -116,9 +123,9 @@ For each AI system, ask in order:
 
 1. **Does it touch hiring, credit, insurance, education, law enforcement, migration, justice, or critical infrastructure?** If yes, continue. If no, skip to step 4.
 2. **Does it influence (not just inform) decisions about natural persons?** If yes → high-risk per Annex III. Conformity assessment required.
-3. **If it only informs / does narrow procedural work AND there's no profiling:** carve-out may apply. Document thoroughly. Still register if Annex III §1 / §6 / §7.
-4. **Does it interact directly with natural persons, generate synthetic content, or do emotion recognition outside Article 5?** Article 50 transparency applies (limited-risk).
-5. **Otherwise:** minimal-risk.
+3. **If it only informs / does narrow procedural work AND there's no profiling:** carve-out may apply. Document thoroughly (Article 6(4)) and still register the system under Article 49(2).
+4. **Whatever the answer to 1 to 3: does it interact directly with natural persons, generate synthetic content, or do emotion recognition outside Article 5?** Article 50 transparency applies on top of the risk class. For a system that is not high-risk, that makes it limited-risk; a high-risk system keeps both.
+5. **Otherwise, if not high-risk:** minimal-risk. Article 4 AI literacy still applies.
 
 ## When This Reference Doesn't Help
 

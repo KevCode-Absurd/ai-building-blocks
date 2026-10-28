@@ -7,6 +7,28 @@ description: "Audit Google Ads measurement, Search, Shopping, Performance Max, D
 
 This is a read-only audit. It works in a plain chat from exports, screenshots or pasted tables. It never changes the account. Reading the live account through an API or MCP server is optional, needs read-only access the person sets up themselves, and may need a paid tool or key. If the person has no such access, use exports.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, your question, a search query report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude:** It handles long exports and can read the reference files in the folder.
+- **ChatGPT:** It reads pasted tables and uploaded spreadsheets well.
+- **Gemini:** It can take a long export or several screenshots in one go.
+<!-- /needs -->
+
 ## Procedure
 
 1. **Collect the basics.** Ask once, in one message, for what is missing: goal (leads, sales, store visits), what counts as a conversion, account and campaign age, countries, date window, timezone, currency, spend, targets, and what data the person can give (exports, screenshots, pasted tables, or read-only access). Write **MISSING** for anything not given. Never invent a figure.
@@ -51,3 +73,11 @@ Use these headings in this order:
 6. **Draft changes (not applied):** each change as a draft for approval.
 7. **Unscored opportunities:** ideas that are not health findings.
 8. **Contradictions and unknowns:** facts that conflict, and what to send next to settle them.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
+- The [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -9,6 +9,23 @@ metadata:
 
 You are an expert in applying psychological principles and mental models to marketing. Your goal is to help users understand why people buy, how to influence behavior ethically, and how to make better marketing decisions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## How to Use This Skill
 
 **Check for product marketing context first:**
@@ -166,7 +183,13 @@ People prefer the current state of affairs. Change requires effort and feels ris
 ### Default Effect
 People tend to accept pre-selected options. Defaults are powerful.
 
-**Marketing application**: Pre-select the plan you want customers to choose. Opt-out beats opt-in for subscriptions (ethically applied).
+**Marketing application**: Pre-select the plan that fits most buyers, as a suggestion they can see and change. A default is a suggestion, not permission to charge.
+
+**Guardrails for defaults that cost money:**
+- Never pre-tick a paid add-on, a recurring subscription or an auto-renewal. The buyer must actively choose it.
+- Before any recurring charge, show the price, how often it bills, when the first charge lands (including when a free trial turns paid) and how to cancel, and get a clear yes for that charge on its own.
+- Make cancelling at least as easy as signing up, in the same place.
+- These match current rules in two big markets: the US FTC's guidance on negative option marketing under the Restore Online Shoppers' Confidence Act (clear terms before billing, express informed consent, a simple way to stop charges; ftc.gov, Enforcement Policy Statement Regarding Negative Option Marketing, 2021), and Article 22 of the EU Consumer Rights Directive 2011/83/EU (express consent for any extra payment; pre-ticked boxes do not count). Rules differ by country and US state, so check the rules where you sell before you launch.
 
 ### Paradox of Choice
 Too many options overwhelm and paralyze. Fewer choices often lead to more decisions.
@@ -332,14 +355,14 @@ Attention → Interest → Desire → Action. The classic customer journey model
 **Marketing application**: Structure pages and campaigns to move through each stage. Capture attention before building desire.
 
 ### Rule of 7
-Prospects need roughly 7 touchpoints before converting. One ad rarely converts; sustained presence does.
+A marketing rule of thumb, not a measured finding: there is no solid study behind the number 7, and the real count varies a lot by product, price and channel. Use it only as a reminder that one ad rarely converts and sustained presence helps. Measure your own touches to purchase instead of planning around 7.
 
 **Marketing application**: Build multi-touch campaigns across channels. Retargeting, email sequences, and consistent presence compound.
 
 ### Nudge Theory / Choice Architecture
 Small changes in how choices are presented significantly influence decisions.
 
-**Marketing application**: Default selections, strategic ordering, and friction reduction guide behavior without restricting choice.
+**Marketing application**: Default selections, strategic ordering, and friction reduction guide behavior without restricting choice. Defaults that cost the buyer money follow the guardrails under Default Effect.
 
 ### BJ Fogg Behavior Model
 Behavior = Motivation × Ability × Prompt. All three must be present for action.
@@ -449,6 +472,13 @@ When facing a marketing challenge, consider:
 ## Output format
 
 Return four labelled sections: (1) Models that fit, (2) Why each works, (3) One change per model, (4) Honest use note.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Related Skills
 

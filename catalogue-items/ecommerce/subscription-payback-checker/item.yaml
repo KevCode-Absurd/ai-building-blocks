@@ -7,8 +7,7 @@ role: check
 job: offer
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: product_data, required: false}
+  - {type: spreadsheet, required: true}
   - {type: offer, required: false}
 outputs:
   - {type: audit_report}
@@ -18,4 +17,4 @@ example_pending: true
 version: 1.0.0
 credits:
   - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "The lifetime value ceiling on a subscription play and the warning about cash"}
-  - {title: "I scraped 700 IM8 ads and read their P&L", by: "Head of paid media at an ecommerce agency (public video)", used: "Comparing first-order profit with CAC by plan, the rule that AOV must rise faster than CAC, the offer stack on a quarterly plan, and the payback caution"}
+  - {title: "I scraped 700 IM8 ads and read their P&L", by: "Head of paid media at an ecommerce agency (public video)", used: "Comparing first-order profit with CAC by plan, the rule that AOV must rise faster than CAC, the offer stack on a quarterly plan, and the payback caution. The video's own ad collection is not used here; this skill needs only your numbers"}

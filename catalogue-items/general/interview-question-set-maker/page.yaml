@@ -64,6 +64,9 @@ output_shape: |-
 
   MISSING
   <e.g. time per interview>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
 tweaks:
   - what: Level
     how: Say junior or senior and the questions change in depth.

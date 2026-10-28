@@ -30,7 +30,9 @@ you_get:
   - Corruption checks on loaded data
   - Explanation of any error
 how_to_use:
-  - Check your MATLAB release and have the number ready. Some functions need R2019a or later.
+  - You need MATLAB, which is paid software. If you only use Excel or Google Sheets, open the file there instead.
+  - Check your MATLAB release and have the number ready. The basics need R2019a or later, and some newer read and write functions need releases from R2020a up to R2025a or later. The skill says which.
+  - Gather first: the file path or web address, the first few rows of the file, and the delimiter, decimal mark and encoding if you know them.
   - Open your AI and paste this skill's instructions.
   - Add your file path or web address, and say whether you want to read or save. For a web address that needs a sign-in, you will need a bearer token (an access key) from the service that hosts the file. Keep it out of the chat and out of saved code.
   - Paste the error message and any locale details if you have them.

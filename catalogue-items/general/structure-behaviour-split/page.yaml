@@ -122,6 +122,8 @@ improve:
   - Keep the step list with the pull request or change record.
   - Pair it with "Test list writer" to plan the cases for the behaviour steps.
 
+next: [test-list-writer, monthly-tech-debt-keeper]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Labelling edits and ordering steps is text work any strong chat AI does."}

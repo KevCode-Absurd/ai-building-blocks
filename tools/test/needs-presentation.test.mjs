@@ -16,6 +16,14 @@ test('a setup guide with useful inputs still names the actual material', () => {
   assert.doesNotMatch(text, /none of it is required|works on its own/);
 });
 
+test('an imported skill is told to follow its own steps, not our CHECKS MISSED format', () => {
+  const plan = { needed: [{ key: 'source_text', label: 'Source text', what: 'a long source', parts: [], required: true }], helps: [], chain: [], brain: null };
+  const own = beforeSection(plan), imported = beforeSection(plan, [], '\n', { imported: true });
+  assert.match(own, /CHECKS MISSED/);
+  assert.doesNotMatch(imported, /CHECKS MISSED/);
+  assert.match(imported, /Follow the skill below/);
+});
+
 test('an ordinary work plan does not lead to advertising through a generic report port', () => {
   const source = { slug: 'team-work-plan', name: 'Team work planner', task: 'organise-work', inputs: [], outputs: [{type:'plan'}] };
   const ads = { slug: 'ad-plan-review', name: 'Ad plan review', task: 'run-google-ads', inputs:[{type:'plan',required:true}], outputs:[] };

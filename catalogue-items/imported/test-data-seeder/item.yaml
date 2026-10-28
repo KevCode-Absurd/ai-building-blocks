@@ -35,7 +35,7 @@ credits:
   - title: database-seeding skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/database-seeding
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, added fail-closed environment guards to both examples, and a personal-data warning for production snapshots.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

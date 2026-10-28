@@ -34,7 +34,7 @@ how_to_use:
   - Paste your loss triangle. Add your line of business, premiums and expenses. Add an expected loss ratio if you have one.
   - Ask your AI to run the insurance reserving skill. If it can run code, let it use the script for the math.
   - Check the growth factors it picked and the IBNR figure. Ask it to explain any year that looks odd.
-  - Have a qualified actuary review the factors and reserve figures before you book or file anything.
+  - Have a qualified actuary review the factors and reserve figures before you book or file anything. After review, the booked figures go into your financial statements.
 output_sample:
   input:
     - Your loss triangle by accident year (paid or incurred losses)

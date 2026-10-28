@@ -21,8 +21,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). Bring your question, a page speed report (optional), an audit report (optional).
-2. This one.
+1. **An audit report** with the [Store app script reviewer](https://useaiblocks.com/skills/app-script-auditor). Bring a store capture, a page speed report.
+2. **A plan** with the [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). Bring your question, a page speed report (optional), an audit report (optional).
+3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

@@ -24,6 +24,28 @@ Keep the owner posting consistently, on brand, in their own voice, without them 
 
 Owners do not stop posting because they lack ideas. They stop because posting falls off the list when a job runs long. So this skill holds the calendar between sessions and always leaves the next few weeks already drafted. The second thing owners say is that AI content does not sound like them — that is the adoption barrier, so voice comes first, before any design is generated.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A plan** with the [Social platform content planner](https://useaiblocks.com/skills/platform-native-content-planner). Bring your results (optional). It uses your brand brain.
+3. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, a plan, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Learn the voice before writing anything
 
 Read [the shared voice profile](../../shared/voice-profile.md). Every skill that writes in the owner's name reads the same file, so a correction the owner makes once holds everywhere.
@@ -160,3 +182,12 @@ One line on what is drafted and staged, then the single most relevant next step 
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
+- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan and draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

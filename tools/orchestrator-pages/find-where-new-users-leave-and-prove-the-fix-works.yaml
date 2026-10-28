@@ -9,7 +9,7 @@ subhead: Give it your visits, sign-ups and users still active after 30 days. It 
 explain: |
   When people sign up and then vanish, the usual reaction is to build another feature. But a new feature mostly reaches the few people who already use the product a lot. The people you are losing never see it. Meanwhile nobody can say if the last change helped, because nobody wrote down what to measure.
 
-  The first step lays out your funnel and finds the biggest drop, then plans one change to the first visit with a measure and a date. The second step turns that leak into a small test: three people plus one outsider, a script, and a short fix list. Then you pause. You run the test, ship the fix and wait two weeks. When you bring back the new numbers, the last step sets them against the old ones and tells you what moved, what did not and what to do next.
+  The first step lays out your funnel and finds the biggest drop, then plans one change to the first visit with a measure and a date. The second step turns that leak into a small test: three people plus one outsider, a script, and a short fix list. Then you pause. You run the test, ship the fix and wait until every new user since the fix has had 30 days. When you bring back the new numbers, the last step sets them against the old ones and tells you what moved, what did not and what to do next.
 when:
   - Sign-ups look fine but few people are still around a month later.
   - Your team wants a new feature to bring users back and you are not sure it will reach them.
@@ -23,7 +23,7 @@ you_give:
   - What the goal of a new user is, in a sentence
   - The page or the first five clicks of a new visit (optional)
   - A description of your typical new user (optional)
-  - A second export of the same numbers, two weeks after you ship the fix
+  - A second export of the same numbers, once every user since the fix has had 30 days
 you_get:
   - A funnel with the share kept at each step and the biggest leak named
   - The few actions that mark an active user, and one first-visit change with a target and a date
@@ -33,7 +33,7 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your funnel numbers for one named period. Do not mix periods.
-  - Stop after step 2, run the test, ship the fix and wait two weeks.
+  - Stop after step 2, run the test, ship the fix and wait until every user who signed up after the fix has had 30 days.
   - Come back with the new export and run step 3 to see what moved.
 output_sample:
   input:
@@ -41,7 +41,7 @@ output_sample:
     - The goal of a new user, in a sentence
     - The page or first five clicks of a new visit (optional)
     - A description of your typical new user (optional)
-    - A second export of the same numbers, two weeks after you ship the fix
+    - A second export of the same numbers, once every user since the fix has had 30 days
   prerequisites:
     - An AI that can read pasted text or files, such as Claude
     - Time to run a test and ship a fix, then wait for new numbers
@@ -62,7 +62,7 @@ how_it_works:
   - title: Plan a one-morning test
     text: Picks three to five tasks at the leak and plans three testers plus one outsider. Writes a script that tests the product and not the person. Builds a short fix list.
   - title: Pause, test, ship and wait
-    text: You run the test, ship the first-visit fix and wait two weeks. Then you export the same numbers again for the same length of time.
+    text: You run the test, ship the first-visit fix and wait until every new user since the fix has had 30 days. Then you export the same numbers again for the same length of time.
   - title: Check the result
     text: Sets the new numbers against the old ones and your target. Says what moved, why it likely moved and what to do next.
 output_shape: |-
@@ -72,7 +72,7 @@ output_shape: |-
   STEP 2: TEST PLAN
     Tasks | people | read-aloud script | watcher rules | note sheet | fix list | next round
 
-  PAUSE: run the test, ship the fix, wait two weeks, export again
+  PAUSE: run the test, ship the fix, wait for a full 30-day window, export again
 
   STEP 3: RESULT CHECK
     Scorecard against target | what moved and why | bright spots | concerns | next actions

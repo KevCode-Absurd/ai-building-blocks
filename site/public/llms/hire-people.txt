@@ -1,15 +1,17 @@
 # Hire and look after your people: AI Blocks
 
-> 108 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 116 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner): Share the role, goals, team and time available. Get a new-hire plan with first-week tasks, milestones and check-ins.
 - [Annual hiring and staff-cost planner](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Share team numbers, hiring goals, pay and start dates. Get a hiring sequence, headcount forecast and staff-cost budget.
+- [Applicant evidence and hiring reply drafts](https://useaiblocks.com/agents/hiring-pipeline-runner): Review new applications against an approved job guide. Get cited scores, reply drafts and gaps for a person to assess.
 - [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder): Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
 - [Attendance policy writer](https://useaiblocks.com/skills/attendance-policy-writer): Share shifts, location, and attendance problems. Get draft rules, approval steps, and staff guidance.
 - [Candidate comparison table builder](https://useaiblocks.com/prompts/candidate-comparison-table-builder): Share interview notes and job criteria. Compare candidates using quoted notes, with missing facts and opinions flagged.
 - [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter): Write the right email to a job candidate at any stage, from screening invite to offer or rejection, with one clear next step and a send time.
 - [Candidate outreach drafter](https://useaiblocks.com/skills/candidate-outreach-drafter): Write personal candidate outreach messages that get replies. Give it the role and the person. You get a first message, follow-ups and reply templates.
 - [Candidate reply drafter](https://useaiblocks.com/prompts/candidate-reply-drafter): Paste where the candidate is in your process. Get a clear reply or rejection to send.
+- [Candidate search plan and outreach drafts](https://useaiblocks.com/workflows/find-the-right-candidates-and-write-messages-they-answer): Set role criteria and a candidate search plan. Draft first messages and review the replies you receive.
 - [Candidate sourcing plan writer](https://useaiblocks.com/skills/candidate-sourcing-planner): Share a role and candidate profile. Get ranked search channels, target companies, search terms and a four-week plan.
 - [Career level and growth planner](https://useaiblocks.com/skills/career-ladder-plan): Name a job family. Get career levels, growth plans and a manager guide for career talks.
 - [China recruitment planner](https://useaiblocks.com/agents/agency-recruitment-specialist): Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.
@@ -33,9 +35,12 @@
 - [Hiring headcount planner](https://useaiblocks.com/skills/headcount-plan-builder): Share team counts, business goals and budget. Get a hiring plan that separates approved roles, backfills and requests, with gaps to resolve.
 - [Hiring interview and candidate comparison planner](https://useaiblocks.com/workflows/run-fair-interviews-and-choose-on-evidence): Share the role, criteria and candidate evidence. Get interview stages, scorecards, a work test, later comparisons and reply drafts.
 - [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer): Name the role, level and skills to assess. Get interview rounds, questions and scoring guidance to review with your hiring panel.
+- [Hiring market researcher](https://useaiblocks.com/skills/hiring-market-researcher): Name a role and a place. Get a hiring market research report with pay ranges, talent supply and how hard the hire will be, from public web pages.
 - [Hiring mistake checklist builder](https://useaiblocks.com/prompts/hire-mistake-checklist-builder): Paste the role and your past hiring misses. Get a checklist of mistakes to rule out before you offer.
 - [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder): Turn a hiring brief into a job post, scored interview guide, and offer letter template.
 - [Hiring path planner](https://useaiblocks.com/skills/candidate-experience-improver): Share your hiring steps, roles and drop-off data. Get a candidate journey map, friction points, stage messages and a short survey.
+- [Hiring progress reporter](https://useaiblocks.com/skills/hiring-progress-reporter): Turn your hiring pipeline numbers into a clear update for your hiring manager or leaders. Pick a weekly update, market report, talent map or look back.
+- [Hiring quality reviewer](https://useaiblocks.com/skills/hiring-quality-reviewer): Review a finished hire: get manager and candidate surveys, a look back at what worked, 30-60-90 day check-ins and a pre-start checklist.
 - [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer): Share the role, hiring goals and constraints. Get a search brief with target candidates, channels, milestones, open questions and risks to review.
 - [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker): Check an HR AI tool vendor before you buy. Name the HR job and the tool. You get a scorecard, vendor questions, a small pilot and a decision record.
 - [HR AI use policy writer](https://useaiblocks.com/skills/hr-ai-use-policy-writer): Write an HR AI use policy for hiring. Describe how you use AI. Get a policy draft, a bias check plan and a staff notice. Not legal advice.
@@ -63,6 +68,7 @@
 - [Manager quality review planner](https://useaiblocks.com/skills/manager-quality-review-planner): Share your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
 - [Mentoring and coaching program builder](https://useaiblocks.com/skills/mentoring-program-builder): Share the group and development goals. Get matching rules, a program plan and practical guides for mentors or managers.
 - [New country hiring planner](https://useaiblocks.com/skills/new-country-hiring-planner): Plan your first hires in a new country. Get an entity or employer of record choice, rules to check and a dated hiring plan.
+- [New hire 90-day plan and first-month review](https://useaiblocks.com/workflows/get-a-new-hire-to-full-speed-in-90-days): Define the role, plan the first week and 90-day goals, then use real month-one notes to improve the next hire's start.
 - [New hire first week planner](https://useaiblocks.com/prompts/new-hire-first-week-planner): Plan a new hire's first week day by day. Give it the role and team. You get meetings, one real task and check-ins, ready to share by Monday.
 - [New hire onboarding planner](https://useaiblocks.com/agents/agency-hr-onboarding): Get a new hire onboarding plan from first checklist to day 90, with owners, a day-one schedule and a manager guide. Give it the role and start date.
 - [New hire plan builder](https://useaiblocks.com/skills/new-hire-plan-builder): Share a name, role and start date. Get a pre-start checklist, a first week plan, and 30/60/90 day goals.
@@ -81,6 +87,7 @@
 - [Pay and hours rule researcher](https://useaiblocks.com/skills/pay-and-hours-rules-answerer): Ask an overtime, break or final pay question and name your state. Get the rule with its source and a flag if it is a close call.
 - [Pay band builder](https://useaiblocks.com/skills/pay-band-builder): Find what to pay for a role. Give it market pay data and get a pay range with a midpoint and a method note leaders can follow.
 - [Pay benchmark and equity modeler](https://useaiblocks.com/skills/pay-benchmark-and-equity-modeler): Check what to pay for a role, find pay outliers in your sheet, or model a stock grant. Get market pay ranges and notes on assumptions.
+- [Payroll timesheet checker](https://useaiblocks.com/skills/payroll-timesheet-checker): Bring timesheets and pay dates. Get hours by person and a run sheet with flagged issues.
 - [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder): Share headcount, pay and hiring plans. Get a monthly team budget, assumptions and notes on changes from the plan.
 - [People risk register builder](https://useaiblocks.com/skills/people-risk-register-builder): Find your people risks before they cost you. Get a ranked HR risk register with scores, an owner and a response step for each risk.
 - [Performance review writer](https://useaiblocks.com/skills/performance-review-helper): Turn work notes into one review draft: your own review, a manager review, or a team rating discussion.
@@ -99,6 +106,7 @@
 - [Succession plan builder](https://useaiblocks.com/skills/succession-plan-builder): Map your key roles, see who could step in and what each needs to be ready, and get a short board summary. The final calls stay yours.
 - [Talent pool mapper](https://useaiblocks.com/skills/talent-pool-mapper): Describe the role, industry, and hiring locations. Get estimated target companies, pool sizes, and ways to reach candidates from public pages.
 - [Team size and turnover report writer](https://useaiblocks.com/skills/headcount-and-turnover-reporter): Share workforce data and a report question. Get team-size or turnover measures, trends, data gaps and actions for review.
+- [Team size, hiring plan and budget review](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Compare planned hires and exits with actual counts. Get forecast changes, budget gaps and role requests for leaders to decide.
 - [Team structure and role planner](https://useaiblocks.com/skills/org-structure-map): Use goals and reporting lines to compare team structures and map roles and decision rights.
 - [Training program builder](https://useaiblocks.com/skills/training-program-builder): Turn a skills gap into a training plan: ranked gaps, clear learning objectives, a session outline and a coaching plan for after.
 - [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer): Design a work sample test for any role, with a scoring guide and fairness checks, so you hire on what candidates can actually do.

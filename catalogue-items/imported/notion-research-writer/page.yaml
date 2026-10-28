@@ -30,12 +30,14 @@ you_get:
   - A references section
   - A comparison table when options are involved
 how_to_use:
-  - Use Codex, and connect Notion first. Run codex mcp add notion with the Notion link, turn on rmcp_client, then run codex mcp login notion.
-  - Restart Codex after you log in.
+  - "Have ready: your question, the Notion pages or teamspace to search (names or links), and a Notion sign-in that can open those pages."
+  - The skill was written for Codex, OpenAI's coding agent, which needs an OpenAI account, so check its current plans. In Codex, connect Notion first. Run codex mcp add notion with the Notion link, turn on rmcp_client, then run codex mcp login notion. Restart Codex after you log in.
+  - No Codex? Use any AI that has a Notion connector turned on, such as Claude or ChatGPT, and ask it to follow the same steps. With no connector at all, paste the pages into a chat and ask for the brief there.
   - Ask your AI to follow this skill. Type your question and, if you can, the Notion area to search.
   - Check the pages it found. Confirm the scope when it asks.
   - "Pick a format: quick brief, one-topic summary, comparison or full report. Or let it choose."
   - Open the new Notion page. Click a few reference links to check the claims.
+  - Next, move the brief into your team's space, or link it from the decision or task it supports, and tag the person who has to act on it.
 output_sample:
   input:
     - The question you want answered
@@ -43,8 +45,7 @@ output_sample:
     - The format you want, such as brief or comparison (optional)
   prerequisites:
     - A Notion workspace you can sign in to
-    - Codex with the Notion connection (MCP) added and logged in with OAuth
-    - A restart of Codex after the first login
+    - Codex with the Notion connection (MCP) added and logged in, then restarted, or another AI with a Notion connector
   output:
     - name: Title and summary
       contains: A short answer to your question at the top of the new Notion page.

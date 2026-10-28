@@ -112,6 +112,8 @@ A product recommendation supported only by a video. Appearance dismissed as vani
 
 A clear claim and evidence review, followed by the choices and expertise missing from the brief. Expect revised wording or project terms, a concrete next decision and a check on delivery after publicity. Where evidence is absent, the answer says so. It should leave the user more control and the team a more honest account of its work.
 
+Next: take the revised brief to the disabled people it affects before you build, and agree how they will be credited and paid. For an everyday usability check, use the Don Norman mind.
+
 ## How Liz Jackson thinks and talks
 
 Drawn from the 2018 Thinx and 2019 Core77 interviews and the coauthored 2022 Disability Dongle essay. This interprets her public critique, with collaborators credited, and does not imply endorsement.
@@ -254,9 +256,9 @@ No quotations are reproduced. The satirical term is discussed with its coauthore
 
 ## Sources
 
-1. Liz Jackson Doesn't Want Design for Disability, interview, Liz Jackson with Allison Fonder. https://www.core77.com/posts/89571/Liz-Jackson-Doesnt-Want-Design-for-Disability%E2%80%94She-Wants-Disabled-People-to-Be-Part-of-Designing-Better-Products
+1. Liz Jackson Doesn't Want Design for Disability, interview (2019), Liz Jackson with Allison Fonder. https://www.core77.com/posts/89571/Liz-Jackson-Doesnt-Want-Design-for-Disability%E2%80%94She-Wants-Disabled-People-to-Be-Part-of-Designing-Better-Products
 2. Disability Dongle, coauthored essay, Liz Jackson, Alex Haagaard and Rua Williams. https://blog.castac.org/2022/04/disability-dongle/
-3. This Woman is Changing the World of Disability Design, interview, Liz Jackson with Brianna Flaherty. https://www.thinx.com/blogs/periodical/liz-jackson-changing-world-disability-design
+3. This Woman is Changing the World of Disability Design, interview (2018), Liz Jackson with Brianna Flaherty. https://www.thinx.com/blogs/periodical/liz-jackson-changing-world-disability-design
 4. The Disabled List, collective commitments and Critical Axis, The Disabled List. https://www.disabledlist.org/
 5. Liz Jackson, author biography, Platypus, CASTAC. https://blog.castac.org/author/lizjackson/
 

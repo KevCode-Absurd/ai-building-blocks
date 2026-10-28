@@ -10,6 +10,8 @@ explain: |
   Your GA4 numbers finally match what you can trace. Sessions, channels and sign-ups come straight from the raw daily export in BigQuery, with a clear note on why they differ from the GA4 screen.
 
   It starts by fixing the boundary: which dataset, which dates, which events count as a key event. Then it checks the table layout before it writes a single query. Ready-made SQL covers sessions, channels, landing pages, traffic source checks, ecommerce and a screen reconciliation. Every query is shown first, with a cost estimate and a byte cap. Late events are flagged, since daily tables can still change for a few days.
+
+  Purchase and revenue totals are sums of what GA4 recorded, in USD. They are not accounting figures. Check money against your shop or payment records before you report it.
 when:
   - Your GA4 report and your own sign-up count do not agree and you need to know why.
   - You want sessions by channel from raw export tables instead of the GA4 screen.

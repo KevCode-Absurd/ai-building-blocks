@@ -30,7 +30,7 @@ credits:
   - title: idea-autopsy skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-autopsy
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, made an old kill-list match check whether the idea has changed before calling it dead, and stopped treating long-running ads as proof that they pay off. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: hafiz-actyte
     url: https://github.com/hafiz-actyte

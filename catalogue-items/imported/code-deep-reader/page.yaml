@@ -32,9 +32,9 @@ how_to_use:
   - Open your AI tool and paste the skill text, or upload the skill folder if your tool allows files.
   - Share the code or module. Say which area matters most, if you have one. For a large codebase, split it by module and read one module or a few files per request.
   - Ask for the orientation map first. Check that the modules and entry points match what you know.
-  - Ask your AI to go function by function. It asks why each block exists (5 Whys) and how it works (5 Hows).
+  - Ask your AI to go function by function. It asks why each block exists (5 Whys) and how it works (5 Hows). If your tool has no function-analyzer helper, your AI reads each function itself, one at a time in the same chat.
   - "Ask for a final summary of purpose, assumptions, rules that must hold and spots that are risky to read. The result has these headings in order: orientation, function-by-function analysis, flows between functions, whole-system view, fragile spots, and corrections."
-  - Keep the result. Use it as the starting point for a separate bug-hunting or audit step.
+  - Keep the result. Next, hand the fragile spots and the rules that must hold to a separate bug-hunting or security review, such as the Code change reviewer, so it starts from the riskiest code.
 output_sample:
   input:
     - The code or module you want to understand

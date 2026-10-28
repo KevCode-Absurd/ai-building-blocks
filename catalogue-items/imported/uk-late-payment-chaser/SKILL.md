@@ -9,6 +9,22 @@ Turn the details of one unpaid invoice into (1) a checked calculation of what th
 
 Jurisdiction: United Kingdom, business-to-business debts only. This is arithmetic on published rules plus drafting. It is not legal advice, and the output must say so once.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Input (ask for nothing that has a sensible default)
 - **Required:** the unpaid amount and the invoice date. If either is missing, ask for both in one question and stop.
 - **Optional (don't ask; use these defaults and say which you used):**
@@ -107,3 +123,10 @@ Email rules:
 - [ ] Email 1 has no interest or Act wording; emails 2–3 use it only when the script result is "statutory" (or the contract figure, labelled as contractual).
 - [ ] "Not legal advice" and the jurisdiction appear once; sources are linked.
 - [ ] Every `[CONFIRM: …]` in the emails is listed under "Before you send".
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Unpaid invoice chaser](https://useaiblocks.com/skills/unpaid-invoice-chaser).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -39,6 +39,7 @@ you_get:
   - IBIS-AMI model files, if you ask for them
 how_to_use:
   - Check that you hold MATLAB and the SerDes Toolbox licences. Your AI must be able to run MATLAB code.
+  - Check your MATLAB release. Eye diagrams with eyeDiagramSI need R2024a or later, jitter breakdown needs R2024b or later, and the scripted IBIS-AMI export needs R2026a or later.
   - Paste the skill into your AI chat, or add the skill folder to your AI tool.
   - Give your data rate, signal type and channel. For example, say a 10 Gb/s NRZ link with 15 dB loss at Nyquist.
   - Ask for the model, the tuned equalizers and the eye plots. Read the eye height and width it reports.

@@ -30,12 +30,14 @@ you_get:
   - A list of users to move and effort for each
   - A shutdown checklist
 how_to_use:
+  - "Gather these first: the name of what you want to retire, what replaces it, who uses it (teams, apps or customers) and roughly how many, any usage logs or numbers, and your timeline. Code access helps but is optional."
   - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Name the system, feature or library you want to retire. Say what replaces it, if anything.
   - Add who uses it and how many, plus your timeline if you have one.
   - If your AI can read your project files, let it search for who still calls the old code. Otherwise paste in what you know.
   - Read the go or no-go first. If it says no-go, fix that gap before you use the plan.
   - For a database change, ask for the expand and contract steps. The skill also points to a separate skill called incremental-implementation, which you do not need to run it.
+  - Once the plan is agreed, send the deprecation notice to every user on the list, open one ticket per user or system to move, and put the shutdown date in the team calendar.
 output_sample:
   input:
     - The system, feature or library you want to retire

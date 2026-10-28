@@ -59,6 +59,6 @@ Lead with reported growth and comparable growth side by side, then the steps beh
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- The [Build a comparable trailing revenue model](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model) workflow, when you want a trailing 12-month view.
+- The [Comparable annual revenue modeler](https://useaiblocks.com/workflows/build-a-comparable-trailing-revenue-model) workflow, when you want a trailing 12-month view.
 - The [Reconcile contract balances and customer cash](https://useaiblocks.com/workflows/reconcile-contract-balances-and-customer-cash) workflow, when you want to judge how revenue turns into cash.
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

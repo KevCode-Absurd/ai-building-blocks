@@ -48,16 +48,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 Two step files and the summary. Step 1 holds the me.md. Step 2 holds the short core and where it goes.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - Step 2 used the me.md the person approved in step 1.
 - Nothing from memory was used before a yes.
 - No passwords, ID or bank numbers, health details or other people's private facts in either file.
 - Nothing was saved, sent or changed in any app for the person. They do the setup themselves.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Keep it current each month** with the [me.md refresher](https://useaiblocks.com/skills/me-md-refresher). It takes the me.md.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

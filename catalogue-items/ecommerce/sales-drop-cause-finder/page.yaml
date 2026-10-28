@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to read a slow trend over many months: use a simple chart of monthly sales in your store reports, then ask again on one sharp drop."
   - "You have no numbers from before the drop: pull the earlier period from your store reports first, because this needs two periods to compare."
-  - "You need the full version with every check: use the Store sales drop splitter."
+  - "You need the full version with every check: use the Store sales decline investigator."
 
 you_give:
   - "Two periods (required): net sales plus shipping, sessions, conversion rate and average order value, before and after the drop."

@@ -10,11 +10,28 @@ dependencies: [outlines, transformers, vllm, pydantic]
 
 # Outlines: Structured Text Generation
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can run the Python code and show you the sample results.
+- **Hugging Face:** It hosts the open models you load through Transformers.
+<!-- /needs -->
+
 ## How to run this skill (added by AI Blocks)
 
 1. Ask once for what is missing: the exact shape of each answer (fields and types, allowed labels, or a pattern), two or three sample texts, and the local model and backend (Transformers, llama.cpp or vLLM). Python setup and GPU are optional. If something is still missing, write `MISSING: <what>`. Never invent fields, labels or sample data.
 2. Pick the generator that matches the shape: `choice` for a fixed list, `json` for a Pydantic class or schema, `regex` for a pattern, `integer` or `float` for numbers.
-3. The code in this file uses the `outlines.models.*` and `outlines.generate.*` calls from the Outlines 0.1 series. Install it with `pip install "outlines>=0.1,<0.2"`. Newer releases changed the API. If the user has a newer version, ask for `pip show outlines`, rewrite the calls from the docs for that version, and say which version you wrote the code for. Do not claim the code was run unless you ran it.
+3. The code in this file uses the `outlines.models.*` and `outlines.generate.*` calls from the Outlines 0.1 series. Install it with `pip install "outlines>=0.1,<0.2"`. Newer releases changed the API. If the user has a newer version, ask for `pip show outlines`, rewrite the calls using the official migration guide (https://dottxt-ai.github.io/outlines/latest/guide/migration/) and the docs for that version, and say which version you wrote the code for. Do not claim the code was run unless you ran it.
 4. Hand back: the format definition, the setup commands, the code with its file name, a sample run that shows the result type and values, and speed notes. End with `OPEN QUESTIONS`.
 5. A valid shape does not mean a correct answer. Tell the user to read the sample results and check them before they trust the run.
 6. Never put an API key in code. Read it from an environment variable.
@@ -36,7 +53,7 @@ Use Outlines when you need to:
 
 ## Installation
 
-> **Version note.** The code in this file was written for the Outlines 0.1 series. AI Blocks has not rechecked it against newer releases, so confirm the version first with `pip show outlines`.
+> **Version note.** The code in this file was written for the Outlines 0.1 series. AI Blocks has not rechecked it against newer releases, so confirm the version first with `pip show outlines`. Outlines 1.0 and later replaced `outlines.generate.*` and `outlines.models.*` (for example with `outlines.Generator` and `outlines.from_transformers`); the official migration guide is at https://dottxt-ai.github.io/outlines/latest/guide/migration/.
 
 ```bash
 # Base installation (the calls in this file match the 0.1 series)
@@ -654,4 +671,9 @@ class Article(BaseModel):
 - `references/backends.md` - Backend-specific configuration
 - `references/examples.md` - Production-ready examples
 
-
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

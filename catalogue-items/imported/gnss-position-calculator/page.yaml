@@ -32,7 +32,7 @@ you_get:
   - Single versus multi-system comparison
   - MATLAB code you can rerun
 how_to_use:
-  - Open an AI that can run MATLAB code. You need MATLAB with the Navigation Toolbox, release R2026a or newer.
+  - Open an AI that can run MATLAB code. You need MATLAB with the Navigation Toolbox, release R2026a or newer. Both are paid MathWorks products, so check your licence before you start.
   - Paste the skill into the chat, or load the skill folder.
   - Add your RINEX 3 observation and navigation files. Say which satellite systems to use.
   - Set the elevation mask and signal strength cutoff you want, or ask your AI to use the defaults.

@@ -9,7 +9,7 @@ subhead: Manuscript sections you can trust because every claim points back to so
 explain: |
   Manuscript sections you can trust because every claim points back to something you supplied. You hand over results, notes and sources, and get Introduction, Methods, Results or Discussion drafts in clear scientific prose.
 
-  The rules are strict. Nothing is invented: no references, numbers, sample sizes, approvals or funding lines. Where a detail is missing, the draft says so in plain view instead of filling it with boilerplate. Drafting, checking evidence and final sign-off are kept as separate stages, and you stay the author who approves the text. It checks your draft against reporting guidelines, flags gaps, and verifies references. Small offline helper tools are included, and nothing leaves your computer without your say.
+  The rules are strict. Nothing is invented: no references, numbers, sample sizes, approvals or funding lines. Where a detail is missing, the draft says so in plain view instead of filling it with boilerplate. Drafting, checking evidence and final sign-off are kept as separate stages, and you stay the author who approves the text. It checks your draft against reporting guidelines, flags gaps, and checks reference format. The small helper tools included run offline on your computer, but the AI tool you paste your files into may send them to its own servers.
 when:
   - You have results and lab notes and need a first draft of the Methods and Results.
   - You want to know which reporting checklist items your paper does not yet cover.
@@ -38,6 +38,7 @@ how_to_use:
   - Ask for one section at a time, such as Methods or Results.
   - Read the missing-detail flags and fill each gap yourself. Do not let your AI fill them.
   - Open every source and confirm it says what the draft claims. The reference check only covers format and duplicate IDs. You approve the final text.
+  - Next, run the reporting checklist check on the full draft, ask your co-authors to sign off, then format it for your target journal and submit.
 output_sample:
   input:
     - Your results, tables and figures

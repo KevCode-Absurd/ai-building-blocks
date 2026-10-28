@@ -9,6 +9,27 @@ Turn a report into an editable PowerPoint briefing deck. The slide text is check
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. You approve the outline before any slide is built.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, a document, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **An AI that can run code, with Python and python-pptx:** It builds the editable PowerPoint file. The libraries are free to install and no paid service or account is needed. A chat AI that cannot run code gives you the outline and slide text only.
+- **LibreOffice (optional):** It lets your AI draw each slide as a picture so every slide can be inspected. Without it, the visual check stays pending.
+<!-- /needs -->
+
 ## What you need
 
 - **The report** (required): a file or pasted text. If it is missing, write `MISSING: report` and stop.
@@ -69,8 +90,8 @@ Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One n
 Offer one next step and say they can type their own:
 
 - Read every slide marked pending in PowerPoint, then fix anything flagged.
-- Get the deck ready to present and share with [Prepare a PowerPoint deck for presenting and sharing](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing).
-- When the report is updated, refresh the numbers with the [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher).
+- Get the deck ready to present and share with [PowerPoint presenter handout and notes writer](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing).
+- When the report is updated, refresh the numbers with the [Slide deck number updater](https://useaiblocks.com/skills/deck-number-refresher).
 
 ## Check before you hand it back
 
@@ -80,3 +101,11 @@ Offer one next step and say they can type their own:
 - Every slide was inspected as a picture or is marked pending.
 - The original report is untouched.
 - Every date, figure and name traces to the report or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PowerPoint presenter handout and notes writer](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing). It takes the slide deck.
+- The [Slide deck number updater](https://useaiblocks.com/skills/deck-number-refresher). It takes the slide deck.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

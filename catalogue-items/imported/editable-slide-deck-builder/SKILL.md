@@ -18,6 +18,27 @@ license_source: "https://github.com/kimtth/agent-pptify-kit/blob/main/LICENSE"
 
 > Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's licence for their code and file header. Keep the credit to the author.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **A slide deck** (yours): a finished slide deck.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A slide deck** with the [Presentation builder](https://useaiblocks.com/skills/presentation-builder). Bring a document, a brief (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a brief, a slide deck. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Create an editable PowerPoint deck from a clear narrative, source evidence, and
@@ -230,7 +251,8 @@ separate explicit confirmation.
 ### Example 1: Executive recommendation deck
 
 A user asks for a 10-slide leadership deck based on a project brief. Confirm
-the audience, choose `exec-summary-first`, summarize the brief into one claim
+the audience, ask the user which framework to use (suggest `exec-summary-first`
+if they are unsure), summarize the brief into one claim
 per slide, and create coordinate-explicit content cards with a documented
 Fluent UI design context. Add source references for each brief-derived metric,
 then build and audit the requested PPTX.
@@ -287,3 +309,12 @@ its own slide specification and native editable content.
 
 * `@pptx-official` - Use for existing PPTX, OOXML, and template-mutation workflows, not default net-new deck creation
 * `@python-pptx-generator` - Use for focused Python PPTX generation patterns
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the slide deck.
+- The [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer). It takes the slide deck.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -17,6 +17,22 @@ argument-hint: "[title] [--full]"
 
 # Demand Intake
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 The drafting is downstream. The value is in the pre-writing — forcing the questions a careless letter skips. Leverage, BATNA, downside tolerance, privilege filters, the actual audience. A demand letter sent without thinking about those is worse than no letter.
@@ -269,3 +285,10 @@ End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the 
 - Draft the letter. That's `demand-draft` — the two steps are intentionally separate so counsel can pause for business input, outside counsel consult, or insurance tender before drafting.
 - Decide whether to send the letter. Some intake sessions end with "actually, don't send — let's negotiate directly." That's a valid outcome; the intake record still has value.
 - Run the conflicts check. If the counterparty is a customer or known entity, flag that this should clear conflicts (per `~/.claude/plugins/config/claude-for-legal/litigation-legal/CLAUDE.md`) before sending — but the check itself lives in the matter-intake workflow or outside this skill.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Demand letter drafter](https://useaiblocks.com/skills/demand-letter-drafter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

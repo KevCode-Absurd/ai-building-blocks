@@ -34,7 +34,7 @@ how_to_use:
   - Open your AI in a tool that can run code and read your project folder.
   - Paste the skill text, or upload the skill folder with its helper script.
   - Point your AI at your project and say "Write App Store release notes since the last tag".
-  - Add your last release tag, your wanted length or a character limit if you have them.
+  - Add your last release tag, your wanted length or a character limit if you have them. The 5 to 10 bullets and the New, Improved and Fixed groups are defaults. Ask for a different count or grouping if you prefer.
   - Check each bullet against your changes and answer any questions the AI asks.
   - If the helper script fails, run "git log <last-tag>..HEAD --oneline" yourself and paste the output into the chat.
   - Check the current "What's New" character limit in App Store Connect, because the skill does not give a number. Then paste the bullets into that field.

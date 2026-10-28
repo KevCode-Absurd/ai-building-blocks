@@ -49,7 +49,7 @@ output_sample:
     - Your customer list size (optional)
     - Survey or support answers you already have (optional)
   prerequisites:
-    - A survey app or email tool to run the survey (the skill writes plain text that works in any tool)
+    - A survey app or email tool to run the survey (survey apps are usually paid; the skill writes plain text that works in any tool)
   output:
     - name: POST-PURCHASE SURVEY
       contains: The two core questions, up to two short follow-ups, and where to set it up in your tool.
@@ -131,7 +131,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "A store survey app", why: "Sets up post-purchase and exit surveys tied to your order data, with no fixed reply limit on some plans. Check current terms."}
+    - {name: "A store survey app", why: "Sets up post-purchase and exit surveys tied to your order data, with no fixed reply limit on some plans. Most are paid apps or need a paid plan, so check current prices and terms. Your email tool works too."}
     - {name: "Any good chat AI", why: "Mines a review export for themes, tone and objections."}
   inputs:
     - "A CSV of all your reviews"

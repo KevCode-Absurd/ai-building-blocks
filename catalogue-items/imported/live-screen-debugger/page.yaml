@@ -26,6 +26,7 @@ not_for:
   - "You want to debug a live website you do not own, or a page with real customer data: use the Browser page debugger, which reads a page through Chrome DevTools in a separate profile."
   - "You want a lasting set of tests to run on every change: use the Browser test writer."
   - "Your AI can only chat and cannot run code on your computer: ask a developer, or use the Browser page debugger if you can set it up."
+  - "You would run it on a shared, work or personal computer: the sandbox-off setup is only safe on a throwaway machine or container. Before the first run, confirm the app address is 127.0.0.1 or localhost."
 you_give:
   - The address of your local app, such as http://127.0.0.1:3000, or the Electron project folder
   - A description of the bug
@@ -40,7 +41,7 @@ you_get:
   - A short list of what was tested and what was left out
 how_to_use:
   - "Warning: this skill needs your AI started with its safety sandbox turned off, so it can reach your browser. That lets it do more on your computer. Use it only in an isolated or disposable setup, never on a machine that holds sensitive data, and only on a local app you trust, never on a live site. A safe setup is a throwaway virtual machine or container with a copy of the project, no saved passwords or keys, and no personal files. When you finish, close the session, start your next session without the sandbox-off setting so the sandbox is back on (if you changed ~/.codex/config.toml, remove that line), and delete the throwaway setup. Point it only at an app on this computer, never at a live site."
-  - Use an AI tool that can run code on your computer and open a browser. The skill was written for OpenAI Codex and its js_repl tool. A plain chat window will not work.
+  - Use an AI tool that can run code on your computer and open a browser. The skill was written for OpenAI Codex and its js_repl tool. A plain chat window will not work. Outside Codex, ask your AI to follow the skill's last section instead. It turns the steps into a small Playwright script (check.mjs) that you run with node after each change. It is slower, because each run opens a fresh browser.
   - Have Node.js installed. In your project folder, run npm install playwright and then npx playwright install chromium. The first run fails without them.
   - Start your app in its own terminal so it keeps running.
   - Give your AI the skill, the app address, the bug and the steps to repeat it. Add the screen sizes you care about.

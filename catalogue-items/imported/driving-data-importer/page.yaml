@@ -35,7 +35,7 @@ you_get:
 how_to_use:
   - Open an AI that can run MATLAB code, with MATLAB and Automated Driving Toolbox installed.
   - Give your AI this skill and say you want to import driving data.
-  - Point it to your recording folder and say which dataset type it is.
+  - Point it to your recording folder and say which dataset type it is. Check first whether the recording comes with annotations (labelled boxes or tracks for other cars and people), which short clips often do and long drives often do not. If they exist it uses them directly. If not, it has to build actor tracks from the lidar, which takes longer.
   - Add calibration files and sensor mounting details if you have them.
   - If your annotations or timestamps are laid out in a way the skill cannot read, it should ask you how, not guess. Tell it where the timestamps are kept.
   - Check the data summary it prints before you go on: dataset and recording name, duration, each sensor with its sample count and rate, whether annotations exist, and which calibration is available. Fix any missing sensor or wrong frame.

@@ -31,11 +31,12 @@ you_get:
   - A corrective action list
   - A certification readiness checklist
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text (the SKILL.md file in the item folder). For more detail, also paste the reference you need from the references folder, such as iso27001-audit-methodology.md.
   - Describe your security setup and scope. Add your last risk assessment, past findings and recent incidents if you have them.
   - Ask for the audit schedule first. Check that critical areas like privileged access and logging come up each quarter.
   - Ask for test steps for the controls you want to check. Then ask for findings in the finding template.
   - The scheduling script needs Python 3 and code running. Without it, ask your AI to write the schedule as a table in the chat.
+  - Response times for findings and the 3-month operating period before Stage 2 are the author's examples. Check them against your certification body's rules.
   - Have a lead auditor or your security owner review the plan before you send it for approval.
 output_sample:
   input:

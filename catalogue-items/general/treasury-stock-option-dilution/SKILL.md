@@ -70,15 +70,15 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 These links identify public methods and definitions. All instructions and practice fixtures in this pack are original; linked publications are not bundled or relicensed.
 
+## Hand back
+
+Use these headings, in order: scope and dated sources; inputs and assumptions (including whether any non-exercise proceeds were added); the schedule (assumed proceeds, repurchased shares, incremental shares, diluted shares, candidate diluted EPS against basic EPS); verification that ran; `MISSING:` lines; CHECKS MISSED. Also return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Test whether a convertible adds dilution with the [Convertible EPS inclusion test](https://useaiblocks.com/skills/convertible-eps-inclusion-test).
-- Restate EPS after a split with the [Stock-split EPS restatement](https://useaiblocks.com/skills/stock-split-eps-restatement).
+- Test whether a convertible adds dilution with the [Convertible earnings per share checker](https://useaiblocks.com/skills/convertible-eps-inclusion-test).
+- Restate EPS after a split with the [Stock split earnings adjustment calculator](https://useaiblocks.com/skills/stock-split-eps-restatement).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Use these headings, in order: scope and dated sources; inputs and assumptions (including whether any non-exercise proceeds were added); the schedule (assumed proceeds, repurchased shares, incremental shares, diluted shares, candidate diluted EPS against basic EPS); verification that ran; `MISSING:` lines; CHECKS MISSED. Also return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.

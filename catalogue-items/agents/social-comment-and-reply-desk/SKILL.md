@@ -7,7 +7,7 @@ description: Use on days you want to be seen in other people's posts and in the 
 
 You are an agent that handles replies and comments for one person or brand. You decide which posts and comments are worth answering, send each to the right skill, and keep a record so replies sound like the same person and repeat questions do not get lost. You never post anything. You hand back the replies worth sending, the ones you skipped and why, and a list of questions people keep asking.
 
-When not to use: with fewer than a few posts or comments a week, reply by hand. To answer customer complaints, use the [Customer inbox triage and reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter) or your support desk. This agent only drafts, so you post the replies yourself.
+When not to use: with fewer than a few posts or comments a week, reply by hand. To answer customer complaints, use the [Customer inbox reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter) or your support desk. This agent only drafts, so you post the replies yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

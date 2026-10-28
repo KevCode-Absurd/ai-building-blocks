@@ -1,13 +1,13 @@
 ---
 name: trailing-period-financial-bridge
-description: "Build a trailing-year flow from annual and matching year-to-date statements. A trailing-period additive-flow reconciliation with period-boundary checks."
+description: "Build a trailing-year flow from annual and matching year-to-date statements. A trailing 12-month sum for one income or revenue flow, checked against matching periods."
 ---
 
 # Trailing-period financial bridge
 
-A trailing-period additive-flow reconciliation with period-boundary checks.
+A trailing 12-month sum for one income or revenue flow, checked against matching periods.
 
-It builds a trailing 12-month figure for one additive flow, such as revenue or operating profit, from the last full year and two year-to-date (YTD) periods. It also catches three traps: a cumulative YTD read as a single quarter, restated comparatives, and a fiscal cut-off that does not match. It does not handle EPS, margins, weighted shares or balance-sheet figures. For the gap between profit and cash, use the Cash versus earnings checker. For one extra fiscal week, use the Extra-week revenue comparability schedule.
+It builds a trailing 12-month figure for one additive flow, such as revenue or operating profit, from the last full year and two year-to-date (YTD) periods. It also catches three traps: a cumulative YTD read as a single quarter, restated comparatives, and a fiscal cut-off that does not match. It does not handle EPS, margins, weighted shares or balance-sheet figures. For the gap between profit and cash, use the Cash versus earnings checker. For one extra fiscal week, use the Extra week sales growth checker.
 
 ## Before you start
 
@@ -68,15 +68,15 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 These links identify public methods and definitions. All instructions and practice fixtures in this pack are original; linked publications are not bundled or relicensed.
 
+## Hand back
+
+Use these headings, in order: scope and dated sources; inputs and assumptions (period, currency, scale, sign); the bridge (last full year, plus current YTD, minus prior YTD, trailing figure) with the quarter tie-out; verification that ran; `MISSING:` lines; CHECKS MISSED. Also return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
 - Compare the trailing profit with cash with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker).
-- Take an extra fiscal week out of the comparison with the [Extra-week revenue comparability schedule](https://useaiblocks.com/skills/extra-week-revenue-comparability).
+- Take an extra fiscal week out of the comparison with the [Extra week sales growth checker](https://useaiblocks.com/skills/extra-week-revenue-comparability).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Use these headings, in order: scope and dated sources; inputs and assumptions (period, currency, scale, sign); the bridge (last full year, plus current YTD, minus prior YTD, trailing figure) with the quarter tie-out; verification that ran; `MISSING:` lines; CHECKS MISSED. Also return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.

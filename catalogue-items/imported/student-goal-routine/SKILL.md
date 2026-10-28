@@ -69,6 +69,19 @@ tags: ["goal-setting", "motivation", "self-regulation", "planning", "self-effica
 
 # Goal-Setting Protocol Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a structured goal-setting protocol that guides students through setting specific, proximal, process-focused goals for a unit, project, or task — including teacher modelling scripts, weak-vs-strong goal examples, monitoring checkpoints, and a student template. The protocol is calibrated to developmental level and timeframe. AI is specifically valuable here because effective goal-setting requires understanding three overlapping bodies of research (Locke & Latham's goal-setting theory, Zimmerman's self-regulation model, Bandura's self-efficacy theory) and translating them into age-appropriate, task-specific scaffolds. Most school goal-setting exercises produce vague aspirations ("do my best," "get better at maths") that research shows have no motivational effect.
@@ -258,3 +271,12 @@ How I'd prove it: _______________
 2. **Process goals require teachers to value process, not just outcomes.** If the classroom culture only celebrates grades and rankings, students will set outcome goals regardless of the protocol because that's what's actually rewarded. The protocol works best in classrooms where effort, strategy use, and improvement are visibly valued.
 
 3. **Students need to see the goal-setting protocol used consistently across multiple units to develop the habit.** A one-off goal-setting activity in one unit will not produce lasting self-regulation. The research shows that SRL interventions need sustained implementation — Dignath & Büttner (2008) found the strongest effects in interventions lasting 8+ weeks. Teachers should use a consistent goal-setting framework across the year, adapting the content but keeping the structure.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

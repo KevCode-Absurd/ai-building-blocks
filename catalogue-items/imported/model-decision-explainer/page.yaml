@@ -7,9 +7,9 @@ job: build-software
 headline: Model decision explainer
 subhead: A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
 explain: |
-  A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
+  Who it suits: someone who already has a trained model in MATLAB and the Statistics and Machine Learning Toolbox, working alone or with a data scientist. If you do not use MATLAB, this is not for you.
 
-  The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function. It is not for images or text models, and it does not train or tune anything. You need MATLAB and its Statistics and Machine Learning Toolbox. Both are paid MathWorks products, so check you hold a licence first.
+  The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function, which is a short MATLAB function that takes rows of data and returns the model's answers. It is not for images or text models, and it does not train or tune anything. You need MATLAB and its Statistics and Machine Learning Toolbox. Both are paid MathWorks products, so check you hold a licence first.
 when:
   - Your manager asks which factors drive the model.
   - One customer got a bad score and you must explain why.
@@ -38,7 +38,7 @@ how_to_use:
   - Tell it where your trained model and your data are. Say that you use MATLAB.
   - Ask one clear question, such as which inputs matter or why one case got its score.
   - Add the groups you want to compare, if you have any (optional).
-  - Check the plan your AI shows you, then let it run the analysis in MATLAB.
+  - Your AI's first reply lists what it found, such as the model type, its inputs and your data, and asks you to confirm or correct it. Before it runs anything, it then shows a short plan naming the method that fits your question. Check it, then let it run the analysis in MATLAB.
   - Read the result and the caveats. Share the findings with whoever owns the model. If the model is weak, collect more data or retrain it outside this skill.
 next: [no-code-model-trainer, neural-network-trainer]
 output_sample:

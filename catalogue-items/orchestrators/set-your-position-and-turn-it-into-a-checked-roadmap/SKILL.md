@@ -56,9 +56,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
-- Write the case against the plan with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer).
-- Test the riskiest result with real people using the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker).
+Use these instead of the general "After this" list below:
+- Write the case against the plan with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer).
+- Test the riskiest result with real people using the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker).
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.

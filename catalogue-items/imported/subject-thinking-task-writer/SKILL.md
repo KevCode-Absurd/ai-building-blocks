@@ -78,6 +78,19 @@ tags: ["critical-thinking", "disciplinary-thinking", "horizontal-knowledge", "kn
 
 # Critical Thinking Task Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a curriculum topic and produces a structured critical thinking task that embeds disciplinary thinking within subject content — with the intellectual resources students need to do the thinking scaffolded explicitly. Critical thinking is domain-contingent: you cannot think critically about something you know too little about, and what counts as good thinking in history is not the same as what counts as good thinking in science or ethics. This skill operationalises that insight. It does not produce generic "higher order thinking" tasks. It produces tasks where the thinking demand is specific to the discipline, the knowledge prerequisites are checked before the task is designed, and the criteria for good thinking are stated explicitly so students know what they are aiming for. The skill draws on Bailin et al.'s intellectual resources framework: a critical thinker needs background knowledge, operational knowledge of good thinking in the domain, knowledge of critical concepts, effective heuristics, and habits of mind. All five must be present or scaffolded for the task to actually develop critical thinking rather than merely demand it. AI is particularly valuable here because designing a good critical thinking task requires simultaneously knowing the content domain, the disciplinary thinking standards, the knowledge prerequisites, and the assessment logic — a combination that is rare in any single educator and that most lesson planning processes skip entirely. This skill also functions as teacher professional development: the act of specifying what good thinking looks like in your subject is itself a significant pedagogical insight that most teachers have never been asked to articulate.
@@ -343,3 +356,11 @@ The "what would change my mind?" heuristic is worth noting as a transferable mov
 4. **The habits of mind component (intellectual humility, tolerance for ambiguity) is dispositional and cannot be developed through a single task or assessed through a rubric.** The task can cultivate these habits if the classroom culture supports them — but the classroom culture is outside the scope of this skill. If the assessment environment is controlling or high-stakes, students will perform reasoning for the rubric rather than engage in genuine thinking.
 
 5. **Transfer between domains should not be assumed.** Running this skill in history does not mean students will think critically in science. Each discipline requires its own thinking standards to be made explicit. The appropriate response is to use this skill consistently across multiple subjects, not to assume that critical thinking developed in one domain transfers automatically.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan.
+- The [Single-point rubric builder](https://useaiblocks.com/skills/single-point-rubric-builder). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

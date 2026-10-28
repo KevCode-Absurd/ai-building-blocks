@@ -99,7 +99,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## What to do with the result
 
-Use this in place of the generic list above. Suggest the user say each answer out loud and note where they stumble. If they also need a resume for this role, suggest [Tailor a job application to real evidence](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence).
+Use this in place of the generic list above. Suggest the user say each answer out loud and note where they stumble. If they also need a resume for this role, suggest [Resume and application evidence writer](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence).
 
 ## Avoid
 

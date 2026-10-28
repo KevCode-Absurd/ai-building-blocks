@@ -19,6 +19,19 @@ tags:
 
 # ExamPrep AI
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 Use this skill when you need to:
@@ -54,7 +67,7 @@ Skip everything else. Do not load all sections for a focused request.
 
 | Level | Signal Words | Student Goal |
 |-------|-------------|--------------|
-| 🟩 Easy | define, state, list, name, identify, what is | Guaranteed marks — study first |
+| 🟩 Easy | define, state, list, name, identify, what is | Quickest marks to secure (none are guaranteed) — study first |
 | 🟨 Medium | explain, describe, compare, calculate, implement, trace | Mid-paper marks |
 | 🟥 Hard | derive, prove, optimize, analyze, evaluate, design, why | Score separators — study last |
 
@@ -65,6 +78,7 @@ Skip everything else. Do not load all sections for a focused request.
 1. Collect at least one of: syllabus, past question papers, notes, or subject name + university.
 2. Confirm course code if OCR confidence < 80%: *"I detected [X] — is this correct?"*
 3. Ask time available. If no answer → default **Standard Mode (6–12 hrs)** and state the assumption.
+4. Only if the student asks for a readiness check: ask for evidence of how THEY perform, because papers and syllabus show what to study, not how ready this student is. Accept any of: (a) a short diagnostic quiz you build from their past papers and mark together, (b) their recent test or mock marks by topic or question type, or (c) a self-rating per topic (0 = not started, 1 = read it, 2 = can do it with notes, 3 = can do it from memory). See the Exam Readiness Dashboard for how each is used.
 
 ### Study Modes
 
@@ -388,6 +402,15 @@ SECTION C — Long Answer        [🟥 Hard]
 
 > Use when: student asks for a score estimate or readiness check.
 
+**Gate: no student evidence, no percentages.** How often a topic appears in past papers tells the student what to study first. It says nothing about what this student knows. Fill the dashboard only from the student's own evidence (Intake step 4):
+
+- **Diagnostic quiz (best):** give 3–5 past-paper questions per question type the exam uses, across Easy, Medium and Hard, and mark each one with the student as right, partly right or wrong. For each cell, the low figure counts partly right as wrong and the high figure counts partly right as right.
+- **Recent test or mock marks:** use marks scored ÷ marks available per type or topic. Say which test and when.
+- **Self-ratings only:** show the ratings as words (not started / read it / with notes / from memory). Do not turn them into percentages or a marks range, and label the dashboard "self-rated".
+- **No evidence:** do not show readiness percentages or a marks range. Show the coverage tracker instead, and offer the diagnostic quiz.
+
+**Marks range method (diagnostic or test marks only).** For each question type, take the share of marks it usually carries in the student's past papers, multiply by the paper total, then by the student's low and high scores for that type, and add up the types. Worked case: a 100-mark paper usually has Theory 40, Numerical 30, MCQ 30. The diagnostic gives Theory 5 right and 2 partly right out of 10 (low 50%, high 70%), Numerical 3 right out of 10 with none partly right (30%), MCQ 8 right out of 10 (80%). Low = 40 × 0.5 + 30 × 0.3 + 30 × 0.8 = 53. High = 40 × 0.7 + 30 × 0.3 + 30 × 0.8 = 61. Marks range 53–61 out of 100. Set confidence to Low when any type had fewer than 3 diagnostic questions.
+
 ```
 📊 EXAM READINESS
 ──────────────────────────────────────────────────────
@@ -398,13 +421,14 @@ TYPE          EASY    MEDIUM   HARD    OVERALL
 💻 Coding     [X]%    [X]%     [X]%    [X]%
 🧪 Lab        [X]%    [X]%     [X]%    [X]%
 ──────────────────────────────────────────────────────
-PREPAREDNESS  : [X]%   (an estimate from the papers you supplied, not a forecast of your mark)
-MARKS RANGE   : [Low]–[High] out of [Total]   (same: an estimate, not a prediction)
+PREPAREDNESS  : [X]%   (from your diagnostic or test marks, not from the past papers alone; an estimate, not a forecast of your mark)
+MARKS RANGE   : [Low]–[High] out of [Total]   (diagnostic or test marks only, using the method above; an estimate, not a prediction)
+EVIDENCE      : [diagnostic quiz, N questions | test on <date> | self-rated, no %]
 ──────────────────────────────────────────────────────
 STRONG        : [types + topics]
 WEAK → FOCUS  : [types + topics]
 ──────────────────────────────────────────────────────
-Confidence: [High/Medium/Low]  |  Based on: [N] papers
+Confidence: [High/Medium/Low]  |  Based on: [N] papers for topic weights, [N] diagnostic or test questions for readiness
 ```
 
 ---
@@ -452,3 +476,10 @@ Confidence: [High/Medium/Low]  |  Based on: [N] papers
 | Mixed subjects | "Found questions from two subjects. Should I separate them?" |
 | No time given | "Defaulting to Standard Mode (6–12 hrs). Tell me if you have less time." |
 | No numericals/coding found | "No numerical/coding questions found. Share a paper that includes them if your exam has these."
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -16,9 +16,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its buyers and products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Makes it better (optional):**
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.

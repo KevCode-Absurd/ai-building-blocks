@@ -13,7 +13,7 @@ explain: |
 
   It keeps changes small. It follows the pattern your project already uses, and it does not invent ratings, reviews or prices for structured data. It tells you what it could not check, such as how a card looks on a live address.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ibelick) said MIT. We relabelled it in the skill file, so the one licence that applies here is CC BY 4.0. Credit goes to ibelick and sickn33.
+  Licence: two labels apply. The skill file keeps its author's own MIT header (ibelick). sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to ibelick and sickn33.
 when:
   - A link looks bare or wrong when you paste it into chat or social media.
   - Search results show a missing or odd title for one of your pages.
@@ -34,7 +34,8 @@ you_get:
   - A check that title, description, canonical and share address agree
   - A list of what could not be checked. If your site is offline, check the share cards after launch
 how_to_use:
-  - Open Claude Code, or paste this skill into Claude, ChatGPT or Gemini. Claude Code can read your whole project. No paid tool, account or API key is needed. You only need your site code or the pasted head sections.
+  - "Gather first: your site code (or the head section of each page you care about), your live domain, and the framework the site uses, such as Next.js or plain HTML."
+  - Open Claude Code, or paste this skill into Claude, ChatGPT or Gemini. Claude Code can read your whole project, but it needs a paid Claude plan. A free chat AI works too if you paste the head sections. No other tool, account or API key is needed.
   - Give it your site code, or paste the head section of two or three key pages. Add your live domain.
   - Read the audit table first. The first rows are the ones that matter most.
   - Apply the fixes. Check that your AI changed only metadata and not other code.

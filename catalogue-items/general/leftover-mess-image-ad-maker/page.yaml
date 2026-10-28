@@ -6,12 +6,12 @@ summary: "Turn your story ad into a close-up photo prompt of the mess your probl
 job: make-image-ads
 
 headline: "Leftover mess image ad maker"
-subhead: Give it your story ad. It pins down what the problem leaves behind, its honest amount and where it was found, then frames it close like proof sent to a friend. You get the photo prompt and a line under the image.
+subhead: Give it your story ad. It pins down what the problem leaves behind, its honest amount and where it was found, then frames it close in the plain look of a phone snap. You get the photo prompt and a line under the image.
 
 explain: |
-  Many problems leave something you can see: shed hair, lint, limescale, spilled powder, a worn-out sole. Shot close, the way a friend sends proof, it takes a second look to work out what it is. People with the problem get there on that second look, and the story's first line confirms it. That small gap, opened and closed fast, is what makes people stop.
+  Many problems leave something you can see: shed hair, lint, limescale, spilled powder, a worn-out sole. Shot close, in the plain look of a phone snap, it takes a second look to work out what it is. People with the problem get there on that second look, and the story's first line confirms it. That small gap, opened and closed fast, is what makes people stop.
 
-  The skill fixes three facts first: what the residue is in your buyer's words, the honest amount, and the surface or container that gives it away. Then it frames it close with that container cut by the edge, and picks the light by tone: hard flash for mess people complain about, softer room light for mess they'd rather not mention. It keeps the amount true to your research and never shows anything that reads as injury.
+  The skill fixes three facts first: what the residue is in your buyer's words, the honest amount, and the surface or container that gives it away. Then it frames it close with that container cut by the edge, and picks the light by tone: hard flash for mess people complain about, softer room light for mess they'd rather not mention. It keeps the amount true to your research and never shows anything that reads as injury. The result is a made image, so it never claims a real customer took it or presents it as a testimonial.
 
 when:
   - Your buyer's problem leaves something behind they can see or touch.
@@ -140,7 +140,7 @@ tweaks:
   - what: How close
     how: Closer makes the first look harder, which is the point. Ask for "fill half the frame" if it reads too easily, or "show more of the tub" if nobody can tell at all.
   - what: The light
-    how: Flash looks like proof a friend sent. Room or window light is softer and suits mess people would rather not talk about.
+    how: Flash looks like a quick phone snap. Room or window light is softer and suits mess people would rather not talk about.
   - what: A hand
     how: Add "a hand wiping it with a cloth at the edge" to show it happens every day, or keep it hands-free so the mess is all there is.
   - what: The amount

@@ -20,6 +20,22 @@ When to use this skill: planning a beta for an upcoming launch, auditing why pri
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans beta program design and execution. The PM and engineering distinction:
@@ -316,3 +332,10 @@ A soft-launch or kitchen-sink beta is one of the least useful. The team spends w
 The teams that earn returns on betas are the ones that take the structure seriously: cohorts calibrated to the GA profile, feedback channels designed for signal, mid-beta triage that uses what is being learned, graduation criteria that distinguish ready from tired, wind-down communication that treats participants well enough to recruit them again.
 
 When in doubt about whether a beta is ready, ask: are participants matched to the GA user, are feedback channels structured, is the team responding to feedback during the beta, are graduation criteria explicit and being applied honestly, will participants want to join the next beta? If yes to all of those, the beta is real. If no to any, the gap is where the beta will fail to convert participation into learning.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product metrics planner](https://useaiblocks.com/skills/product-metrics-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

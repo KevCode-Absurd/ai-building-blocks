@@ -11,7 +11,7 @@ explain: |
 
   By default it only plans and reports. It does not change your tracker unless you connect one. Where the skill text talks about pushing or syncing, that needs your access key.
 
-  This is a copy of the public MIT-licensed project-management skill by Burhan Sebin (awesome-ai-agent-skills). The page text is ours.
+  This is a copy of the public MIT-licensed project-management skill by Burhan Sebin (awesome-ai-agent-skills). The page text is ours. In the skill file we only labelled the examples as invented data and added a rule: with no tracker or figures, it asks for your sprint data and marks missing numbers as placeholders.
 
   It gathers the team, capacity and method you use, like Scrum or Kanban. Then it splits each goal into epics, user stories and sub-tasks small enough to finish in a day or two, each with acceptance criteria. It estimates effort, plans sprints around what the team can handle, and writes progress reports that flag risks and slipping dates. It can connect to Jira, Linear, GitHub Issues or Trello if you give it access. Without access, it produces lists you can paste in.
 when:
@@ -40,6 +40,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe your project, your team, your deadlines and your method. Add your backlog if you have one.
   - "Ask for what you need: a task breakdown, a sprint plan or a status report."
+  - For a status report with no tracker connected, paste your sprint figures (points done, carried over, past velocity, risks). Without them, every number in the report is a placeholder, not a real result.
   - Check the estimates and dependencies. Fix anything that does not match how your team works.
   - Copy the lists into your tracker by hand. This works with no setup. After a sprint plan, copy the tasks into your tracker, then ask for a status report at the end of each sprint.
   - "Next: ask for a status report at the end of each sprint, and share it with your manager."

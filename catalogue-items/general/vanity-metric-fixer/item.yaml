@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: true}
   - {type: plan, required: false}
   - {type: question, required: false}
 outputs:

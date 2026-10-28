@@ -15,6 +15,38 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
+   "url": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
+   "title": "Ask your AI what it knows about you",
+   "summary": "Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.",
+   "content_text": "Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check. Updated 2026-10-28.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "prompt",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/prompts/me-md-from-ai-memory.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-from-ai-memory/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "prompt",
+    "markdown": "https://useaiblocks.com/prompts/me-md-from-ai-memory.md",
+    "json": "https://useaiblocks.com/prompts/me-md-from-ai-memory.json",
+    "skill": "https://useaiblocks.com/skills/me-md-from-ai-memory/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/expense-report-builder",
    "url": "https://useaiblocks.com/skills/expense-report-builder",
    "title": "Expense report builder",
@@ -76,6 +108,134 @@
     "markdown": "https://useaiblocks.com/skills/hourly-rate-calculator.md",
     "json": "https://useaiblocks.com/skills/hourly-rate-calculator.json",
     "skill": "https://useaiblocks.com/skills/hourly-rate-calculator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai",
+   "url": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai",
+   "title": "Make your me.md and set it up in every AI you use",
+   "summary": "Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.",
+   "content_text": "Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI. Updated 2026-10-28.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "workflow",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/make-your-me-md-and-set-it-up-in-every-ai/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.md",
+    "json": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.json",
+    "skill": "https://useaiblocks.com/skills/make-your-me-md-and-set-it-up-in-every-ai/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-builder",
+   "url": "https://useaiblocks.com/skills/me-md-builder",
+   "title": "me.md builder",
+   "summary": "Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.",
+   "content_text": "Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are. Updated 2026-10-28.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-builder.md",
+    "json": "https://useaiblocks.com/skills/me-md-builder.json",
+    "skill": "https://useaiblocks.com/skills/me-md-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-refresher",
+   "url": "https://useaiblocks.com/skills/me-md-refresher",
+   "title": "me.md refresher",
+   "summary": "Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.",
+   "content_text": "Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections. Updated 2026-10-28.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-refresher.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-refresher/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-refresher.md",
+    "json": "https://useaiblocks.com/skills/me-md-refresher.json",
+    "skill": "https://useaiblocks.com/skills/me-md-refresher/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-short-core-writer",
+   "url": "https://useaiblocks.com/skills/me-md-short-core-writer",
+   "title": "me.md short-core writer",
+   "summary": "Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.",
+   "content_text": "Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use. Updated 2026-10-28.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-short-core-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-short-core-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-short-core-writer.md",
+    "json": "https://useaiblocks.com/skills/me-md-short-core-writer.json",
+    "skill": "https://useaiblocks.com/skills/me-md-short-core-writer/SKILL.md"
    }
   },
   {
@@ -1775,6 +1935,70 @@
    }
   },
   {
+   "id": "https://useaiblocks.com/skills/claude-code-learning-coach",
+   "url": "https://useaiblocks.com/skills/claude-code-learning-coach",
+   "title": "Claude Code learning coach",
+   "summary": "Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.",
+   "content_text": "Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check. Updated 2026-10-28.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Study and check your understanding"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-learning-coach.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-learning-coach/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/claude-code-learning-coach.md",
+    "json": "https://useaiblocks.com/skills/claude-code-learning-coach.json",
+    "skill": "https://useaiblocks.com/skills/claude-code-learning-coach/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/claude-code-quiz-coach",
+   "url": "https://useaiblocks.com/skills/claude-code-quiz-coach",
+   "title": "Claude Code quiz coach",
+   "summary": "Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson.",
+   "content_text": "Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson. Updated 2026-10-28.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Study and check your understanding"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-quiz-coach.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-quiz-coach/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/claude-code-quiz-coach.md",
+    "json": "https://useaiblocks.com/skills/claude-code-quiz-coach.json",
+    "skill": "https://useaiblocks.com/skills/claude-code-quiz-coach/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent",
    "url": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent",
    "title": "Clinical evidence reviewer",
@@ -2543,6 +2767,38 @@
    }
   },
   {
+   "id": "https://useaiblocks.com/skills/design-to-motion-animator",
+   "url": "https://useaiblocks.com/skills/design-to-motion-animator",
+   "title": "Design animator",
+   "summary": "Turn a static design into an animated HTML version that loops, with checks on the still frame and loop, plus MP4 or GIF files if you ask.",
+   "content_text": "Turn a static design into an animated HTML version that loops, with checks on the still frame and loop, plus MP4 or GIF files if you ask. Updated 2026-10-28.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-28T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/design-to-motion-animator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/design-to-motion-animator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/design-to-motion-animator.md",
+    "json": "https://useaiblocks.com/skills/design-to-motion-animator.json",
+    "skill": "https://useaiblocks.com/skills/design-to-motion-animator/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/agents/agency-engineering-desktop-app-engineer",
    "url": "https://useaiblocks.com/agents/agency-engineering-desktop-app-engineer",
    "title": "Desktop app engineer agent",
@@ -2956,262 +3212,6 @@
     "markdown": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer.md",
     "json": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer.json",
     "skill": "https://useaiblocks.com/skills/agency-engineering-electrical-engineer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-marketing-email-strategist",
-   "url": "https://useaiblocks.com/agents/agency-marketing-email-strategist",
-   "title": "Email marketing planner",
-   "summary": "Turn a messy contact list into an email plan: who gets what, when, with exit rules, a deliverability checklist and clicks-first measurement.",
-   "content_text": "Turn a messy contact list into an email plan: who gets what, when, with exit rules, a deliverability checklist and clicks-first measurement. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Write emails that get read"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-marketing-email-strategist.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-marketing-email-strategist/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-marketing-email-strategist.md",
-    "json": "https://useaiblocks.com/agents/agency-marketing-email-strategist.json",
-    "skill": "https://useaiblocks.com/skills/agency-marketing-email-strategist/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer",
-   "url": "https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer",
-   "title": "Email parsing engineer",
-   "summary": "Turn a messy email thread into who said what, decisions and tasks with owners. Or plan the pipeline that does it for many threads.",
-   "content_text": "Turn a messy email thread into who said what, decisions and tasks with owners. Or plan the pipeline that does it for many threads. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Connect AI to your tools"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-engineering-email-intelligence-engineer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer.md",
-    "json": "https://useaiblocks.com/agents/agency-engineering-email-intelligence-engineer.json",
-    "skill": "https://useaiblocks.com/skills/agency-engineering-email-intelligence-engineer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer",
-   "url": "https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer",
-   "title": "Embedded firmware engineer",
-   "summary": "Plan embedded firmware for ESP32, STM32 or Nordic chips: tasks, pin map, memory limits and failure handling. Bring your chip and goal.",
-   "content_text": "Plan embedded firmware for ESP32, STM32 or Nordic chips: tasks, pin map, memory limits and failure handling. Bring your chip and goal. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Build and ship software"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-engineering-embedded-firmware-engineer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer.md",
-    "json": "https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer.json",
-    "skill": "https://useaiblocks.com/skills/agency-engineering-embedded-firmware-engineer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-engineering-technical-writer",
-   "url": "https://useaiblocks.com/agents/agency-engineering-technical-writer",
-   "title": "Engineering documentation writer",
-   "summary": "Get developer docs drafted from your code and notes, such as a README, API reference or tutorial, plus a list of claims to verify.",
-   "content_text": "Get developer docs drafted from your code and notes, such as a README, API reference or tutorial, plus a list of claims to verify. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Write down how work gets done"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-engineering-technical-writer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-engineering-technical-writer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-engineering-technical-writer.md",
-    "json": "https://useaiblocks.com/agents/agency-engineering-technical-writer.json",
-    "skill": "https://useaiblocks.com/skills/agency-engineering-technical-writer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-support-executive-summary-generator",
-   "url": "https://useaiblocks.com/agents/agency-support-executive-summary-generator",
-   "title": "Executive summary generator",
-   "summary": "Turn a long report into a 325 to 475 word executive summary with findings, impact, ranked actions and owners. Paste your report.",
-   "content_text": "Turn a long report into a 325 to 475 word executive summary with findings, impact, ranked actions and owners. Paste your report. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Write down how work gets done"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-support-executive-summary-generator.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-support-executive-summary-generator/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-support-executive-summary-generator.md",
-    "json": "https://useaiblocks.com/agents/agency-support-executive-summary-generator.json",
-    "skill": "https://useaiblocks.com/skills/agency-support-executive-summary-generator/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-project-management-experiment-tracker",
-   "url": "https://useaiblocks.com/agents/agency-project-management-experiment-tracker",
-   "title": "Experiment tracker",
-   "summary": "Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep.",
-   "content_text": "Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Track your numbers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-project-management-experiment-tracker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-project-management-experiment-tracker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-project-management-experiment-tracker.md",
-    "json": "https://useaiblocks.com/agents/agency-project-management-experiment-tracker.json",
-    "skill": "https://useaiblocks.com/skills/agency-project-management-experiment-tracker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/workflows/family-care-visit-handoff",
-   "url": "https://useaiblocks.com/workflows/family-care-visit-handoff",
-   "title": "Family care visit coordinator",
-   "summary": "Prepare questions for a relative's care visit, record what the care team said and draft a short family handoff. You review it; nothing is sent.",
-   "content_text": "Prepare questions for a relative's care visit, record what the care team said and draft a short family handoff. You review it; nothing is sent. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "workflow",
-    "Run meetings, notes and plans"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/workflows/family-care-visit-handoff.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/family-care-visit-handoff/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "workflow",
-    "markdown": "https://useaiblocks.com/workflows/family-care-visit-handoff.md",
-    "json": "https://useaiblocks.com/workflows/family-care-visit-handoff.json",
-    "skill": "https://useaiblocks.com/skills/family-care-visit-handoff/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance",
-   "url": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance",
-   "title": "FedRAMP and RMF compliance planner",
-   "summary": "Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.",
-   "content_text": "Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Check contracts and rules"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-specialized-fedramp-rmf-compliance/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.md",
-    "json": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.json",
-    "skill": "https://useaiblocks.com/skills/agency-specialized-fedramp-rmf-compliance/SKILL.md"
    }
   }
  ]

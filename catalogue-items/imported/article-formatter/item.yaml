@@ -31,4 +31,4 @@ credits:
   - title: baoyu-format-markdown skill
     by: Jim Liu
     url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-format-markdown
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a backup reminder before the typography-only option changes the original file. We added Before you start and After this sections that link to other AI Blocks steps.

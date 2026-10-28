@@ -2,14 +2,12 @@ thinking: low
 thinking_why: It follows set size rules and a few animation steps.
 new_slug: slack-gif-maker
 name: Slack GIF maker
-summary: Make a Slack GIF from a plain description. You get an animated emoji or message GIF at Slack's size, checked against Slack's limits.
+summary: Make a Slack GIF from a plain description. You get an animated emoji or message GIF at Slack's size, with its size and frames checked.
 job: make-images
 headline: Slack GIF maker
-subhead: A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
+subhead: Describe the animation, like a star spinning or a coffee cup bouncing. You get a small GIF at Slack's emoji or message size, plus a check of its pixel size, file size and frames. The check does not test the 128 KB emoji limit, so compare that yourself.
 explain: |
-  A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
-
-  The skill draws each frame in Python with simple shapes, or uses an image you give it. It follows Slack's rules: 128 by 128 pixels for emoji, 480 by 480 for messages, 10 to 30 frames per second, and 48 to 128 colours. Emoji GIFs stay under about three seconds. The check step reports the size and flags files over 5 MB. It does not trim anything by itself. If the file is too big, ask for a smaller version and your AI cuts frames or colours then. Slack's own limit for custom emoji is 128 KB, so compare the KB figure with that number yourself. Check Slack's help page for the current limit. You need Python with the Pillow image library.
+  The skill draws each frame in Python with simple shapes, or uses an image you give it. It follows Slack's rules: 128 by 128 pixels for emoji, 480 by 480 for messages, 10 to 30 frames per second, and 48 to 128 colours. Emoji GIFs stay under about three seconds. The check step reports the size and flags files over 5 MB. It does not trim anything by itself. If the file is too big, ask for a smaller version and your AI cuts frames or colours then. Slack's own limit for custom emoji is 128 KB, so compare the KB figure with that number yourself. Check Slack's help page for the current limit. You need Python with the Pillow, imageio and numpy libraries.
 
   This is an unchanged copy of Anthropic's slack-gif-creator skill, shared under the Apache 2.0 licence (see the LICENSE.txt file).
 when:

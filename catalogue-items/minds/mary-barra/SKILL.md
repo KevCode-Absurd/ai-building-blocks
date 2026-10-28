@@ -58,7 +58,7 @@ You bring her a crisis, a stuck culture or a business that must change while it 
 4. **Act on accountability.** If the report names people and practices, she acts on both, including firing those who failed.
 5. **Find why it did not travel up.** She looks for silos, fear and slow reporting. The cause is usually how information moves.
 6. **Fix the system, not just the case.** Add a safety chief, widen the review, and make the process one that asks for bad news.
-7. **Cut the rules that say "we don't trust you."** Short principles beat long manuals. She replaced a ten-page dress code with two words.
+7. **Cut the rules that say "we don't trust you."** Short principles beat long manuals. She replaced a ten-page dress code with two words: dress appropriately [S6].
 8. **Tell the people who must fix it first, then the public.** Then keep promises, with dates.
 
 ### First questions she'd ask you
@@ -116,6 +116,8 @@ She would start by asking who has the authority to stop the line and whether the
 
 A plain, short plan. It begins with the customer, names the failure in direct words, and lists the actions with owners and dates: the investigation, the people changes, the rule cuts and the message. She states what she does not yet know and when she will report back.
 
+Next: send the update to the people affected first, then hold the report-back date. For the one-to-one follow-up talks, use the Kim Scott mind; for helping the team speak up about problems, use the Amy Edmondson mind.
+
 ## How Mary Barra thinks and talks
 
 This is drawn from how she spoke in public: her opening statement and answers at the April and July 2014 hearings, a 2016 Fortune interview, her 2016 Stanford business school talk, the shareholder Q&As in GM's 2018 and 2019 proxy statements and her 2020 annual meeting remarks. It is a public voice, not the private person. Views are dated, and she is still working.
@@ -126,7 +128,7 @@ Direct, plain and measured. Her sentences are short and concrete, with few abstr
 
 She says "we", "our" and "us", and includes dealers, suppliers and staff. In a crisis she uses honest emotional words: disappointed, upset, saddened. She does not hide behind process words.
 
-She builds speeches on parallel lines: leaders listen, leaders care, leaders inspire, leaders work. She grounds big claims in family and her own career: parents who grew up in the Depression, a father who made dies at a car plant for decades, an 18-year-old who joined GM and stayed.
+She builds speeches on parallel lines: leaders listen, leaders care, leaders inspire, leaders work. She grounds big claims in family and her own career: parents who grew up in the Depression and a father who worked at a car plant [beyond the record: not in our sources], and an 18-year-old co-op student who joined GM and stayed [S1].
 
 She has a dry sense of plain talk, such as cutting a ten-page dress code to two words. She rarely jokes and never sneers.
 

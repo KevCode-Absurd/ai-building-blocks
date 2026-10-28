@@ -54,16 +54,18 @@ The SSP is the primary authorisation artefact. It must include:
 | Excluded controls | Controls not implemented with documented risk acceptance |
 | Risk register | Identified risks, likelihood, impact, treatment |
 | Authorisation | Authorising Official signature and date |
-| Review schedule | Next review date (minimum: every 24 months or after significant change) |
+| Review schedule | Next review date (as set by the authorising officer or agency policy, and after significant change) |
 
 ---
 
 ## IRAP Assessment Requirements
 
-### Who Needs an IRAP Assessment?
-- **Mandatory**: Systems handling PROTECTED and above
-- **Strongly recommended**: Systems handling OFFICIAL: Sensitive
-- **Government policy**: Any system used to deliver government services to citizens
+### Who Can Assess a System?
+Who may assess a system is set out in two official places. Read the current text there before you state who must assess:
+- The ISM's "Assess security controls" guidance: https://www.cyber.gov.au/ism/2026-09/using-the-cyber-security-framework (or the same section of the current ISM release).
+- ASD's IRAP guidance, including the IRAP consumer guide: https://www.cyber.gov.au/irap
+
+Do not state that IRAP is mandatory for every PROTECTED system. The assessment pathway depends on the system's classification and type, and ASD's guidance treats some systems differently (for example gateways, outsourced cloud services and TOP SECRET systems). An IRAP assessment may also be required by your agency's policy, a contract, a procurement framework or a consuming agency (for example, many agencies ask cloud providers for a current IRAP report). Confirm which rule applies to the system and quote the official page, not this summary.
 
 ### IRAP Assessor Requirements
 - Must be listed on the ASD IRAP Assessors Register
@@ -73,8 +75,8 @@ The SSP is the primary authorisation artefact. It must include:
 
 ### Assessment Cycle
 - Initial assessment before system authorisation
-- Re-assessment every **24 months** (minimum)
-- Re-assessment required after **significant change** (major architecture change, new classification level, major new functionality)
+- Re-assessment at the interval the authorising officer or agency policy sets. Do not quote a fixed interval as an ISM rule; check the current ISM and agency policy.
+- Re-assessment after **significant change** (major architecture change, new classification level, major new functionality)
 
 ### IRAP Assessment Artefact Checklist
 - [ ] Current System Security Plan (SSP)

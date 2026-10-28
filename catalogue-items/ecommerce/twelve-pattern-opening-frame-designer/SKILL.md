@@ -158,7 +158,7 @@ Use these sections, in this order:
 6. **CHECKS MISSED:** any rule or policy check that failed or could not run (for example, a claim frame not checked against platform rules), or "none".
 
 ## What next
-Pick the first pattern to test and run the frames as an A/B test with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Write the paired first line with the [Ad opening line batch writer](https://useaiblocks.com/skills/ad-opening-line-batch-writer). Check the finished ad with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
+Pick the first pattern to test and run the frames as an A/B test with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Write the paired first line with the [Ad hook writer](https://useaiblocks.com/skills/ad-opening-line-batch-writer). Check the finished ad with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
 
 ## Final check
 

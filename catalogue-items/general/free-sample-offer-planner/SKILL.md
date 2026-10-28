@@ -7,7 +7,7 @@ description: Use when you want to let people try a product free before they buy.
 
 A sample works when it reaches the right people and its cost is capped. This skill plans the offer, who gets it, how they claim it and what a customer will cost, before you spend. It plans the offer. It does not send samples or promise results. Do not use it for alcohol, supplements or other regulated products until a qualified person has checked the sampling rules, and do not use it to send or run the samples.
 
-Use [Front-end offer picker](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
+Use [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker) instead when you have not yet decided between a premium, free or discount first step.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -57,7 +57,7 @@ How to start:
    - Samples the budget buys = budget ÷ cost of one sample.
    - Buyers needed to break even = total sample spend ÷ profit per customer (first sale profit plus repeat profit they can show).
    - Break-even rate = buyers needed ÷ samples sent, as a percentage.
-   If a figure is missing, write `MISSING:` for it, then show the same sums at two or three plain example values, labelled as examples to replace (for instance a sample cost of 4, 6 and 8). Never present an example value as their number. Set a cap on total spend, and a stop rule tied to the break-even rate: set the stop threshold at 80 percent of the break-even rate you worked out (the person can change this). For example, "if break-even is 15 in 100, the stop threshold is 12 in 100: stop after the first 200 samples if fewer than 12 in 100 have bought". If the break-even rate looks out of reach, change the sample or the audience and say which.
+   If a figure is missing, write `MISSING:` for it, then show the same sums at two or three plain example values, labelled as examples to replace (for instance a sample cost of 4, 6 and 8). Never present an example value as their number. Set a cap on total spend, and a stop rule tied to the break-even rate: after a first batch big enough to read (the person sets it, such as 200 samples), stop spending if the buyer rate is below the break-even rate. For example, "if break-even is 15 in 100, stop after the first 200 samples if fewer than 15 in 100 have bought". The plan never keeps spending while buyers sit below break-even. If the break-even rate looks out of reach, change the sample or the audience and say which.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back

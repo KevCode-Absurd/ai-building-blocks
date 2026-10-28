@@ -32,6 +32,23 @@ argument-hint: "[slug] [--format=working|sof|witness-[name]]"
 
 # Chronology
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [Demand letter fact gatherer](https://useaiblocks.com/skills/demand-letter-fact-gatherer). Bring your question, a document (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Disclosed-document use restrictions
 
 Source and last checked: the rules below come from the AI's general knowledge, not from a checked source. Last checked: never. Tag every statement here `[model knowledge — verify]` and have a lawyer confirm it before anyone relies on it.
@@ -263,6 +280,15 @@ Filter to 🔴 and relevant 🟡 only. Present as prose in chronological narrati
 ### Witness-specific chronology (on request)
 
 Filter to events where a named witness is sender, recipient, attendee, or subject. Feeds witness prep and helps reconstruct what a witness knew when.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Demand letter drafter](https://useaiblocks.com/skills/demand-letter-drafter). It takes the document.
+- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
+- The [Product feature legal risk reviewer](https://useaiblocks.com/skills/feature-legal-risk-assessor). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Incremental builds
 

@@ -69,6 +69,19 @@ tags: ["PERMA", "positive-education", "Seligman", "flourishing", "wellbeing", "l
 
 # PERMA-Based Lesson Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a lesson that integrates Seligman's PERMA framework (Positive Emotion, Engagement, Relationships, Meaning, Accomplishment) into academic content — not as a bolt-on wellbeing activity but as an inherent feature of the learning experience. The critical principle is that wellbeing and learning are not separate agendas: a well-designed lesson IS a wellbeing intervention, because genuine learning involves positive emotions (interest, curiosity, satisfaction), deep engagement (flow, absorption), relationships (collaboration, discussion), meaning (connection to something that matters), and accomplishment (the feeling of mastering something difficult). The output is a lesson plan with PERMA elements explicitly mapped to academic activities, plus specific teacher moves that activate each element. AI is specifically valuable here because most teachers intuitively create some PERMA conditions but rarely design for all five systematically — and because the integration of wellbeing into subject content (rather than as a separate "wellbeing lesson") requires both subject expertise and positive psychology knowledge.
@@ -260,3 +273,12 @@ Collect both. The closing argument assesses the learning objective; the reflecti
 2. **PERMA is a framework, not a recipe.** The elements interact and overlap: genuine engagement often produces positive emotion, accomplishment builds relationships (shared success), and meaning deepens engagement. The mapping is a design tool, not a checklist — the goal is a lesson that feels coherent, not one that ticks five boxes.
 
 3. **Positive Education research is primarily from privileged school contexts.** The Geelong Grammar implementation (Norrish et al., 2013) occurred in an independent school with significant resources. The principles transfer to all contexts, but the practical constraints differ. A teacher in a high-deprivation school with limited resources may need to adapt the practices — the underlying framework is sound, but the implementation must be context-sensitive.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

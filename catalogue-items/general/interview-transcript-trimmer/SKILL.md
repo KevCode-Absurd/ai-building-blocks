@@ -58,7 +58,7 @@ The kept passages in order, each with its source time or line and a reason for i
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker).
+- The [Small working example explainer](https://useaiblocks.com/skills/small-working-example-explainer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

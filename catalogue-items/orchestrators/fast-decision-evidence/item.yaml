@@ -16,7 +16,7 @@ steps:
   - {uses: reversible-decision-sorter, note: "A door type and the process that fits it."}
   - {uses: math-or-judgment-call-sorter, note: "Either a model to run, or a written judgment with the math against it stated."}
   - {uses: decision-evidence-bar-setter, note: "A clear bar for enough evidence, and a date to stop collecting it."}
-  - {uses: disagree-and-commit-note-writer, note: "Uses the decision and each person's view and reason, which only you can give, plus the plan from step 3 for each person's action. Hands back the call, the dissent on record and a clear commit."}
+  - {uses: disagree-and-commit-note-writer, note: "Uses the decision and each person's view and reason, which only you can give, plus the verdict and call date from step 3. Hands back the call, the dissent on record and a clear commit."}
 origin: rebuilt
 version: 1.0.0
 minds: [jeff-bezos]

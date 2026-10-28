@@ -8,6 +8,24 @@ tags: [LLaVA, Vision-Language, Multimodal, Visual Question Answering, Image Chat
 dependencies: [transformers, torch, pillow]
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **An image** (yours): a finished picture.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for an image, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can run the install and test commands on your machine for you, when you allow it.
+- **Hugging Face:** It hosts the LLaVA model files that the code downloads.
+<!-- /needs -->
+
 ## Supporting material availability
 
 This catalog copy does not include these files:
@@ -58,6 +76,13 @@ Walk the user through, then give:
 5. **Next steps**: save captions to a spreadsheet, add a chat front end such as the Gradio app below, or try a larger model.
 
 If images, questions or GPU details are missing, ask once, then mark them MISSING. Never invent model answers. You cannot see the user's images unless they are attached, and answers only come from running the model on their machine. Code here is a starting point: run it, then report errors back.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Quick start
 
@@ -143,8 +168,7 @@ def generate(conv, model, image):
 def ask(model, image, question):
     """One question about one image."""
     conv = conv_templates["llava_v1"].copy()
-    conv.append_message(conv.roles[0], DEFAULT_IMAGE_TOKEN + "
-" + question)
+    conv.append_message(conv.roles[0], DEFAULT_IMAGE_TOKEN + "\n" + question)
     conv.append_message(conv.roles[1], None)
     return generate(conv, model, image)
 ```
@@ -340,8 +364,7 @@ def chat(text, history, image):
     if web_conv is None or not history:
         # First question: start a new conversation and attach the image token
         web_conv = conv_templates["llava_v1"].copy()
-        text = DEFAULT_IMAGE_TOKEN + "
-" + text
+        text = DEFAULT_IMAGE_TOKEN + "\n" + text
     web_conv.append_message(web_conv.roles[0], text)
     web_conv.append_message(web_conv.roles[1], None)
     reply = generate(web_conv, model, image)

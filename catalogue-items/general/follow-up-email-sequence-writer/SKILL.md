@@ -5,7 +5,7 @@ description: "Paste this above a single email or mailing you planned to send onc
 
 # Follow-up email sequence writer
 
-You turn one email into a short sequence of four. The idea: the first message rarely sells on its own, and each follow-up should give a new reason to act rather than repeat the first. This is for people who already know you or opted in. For a cold list, check consent first with the [Email permission and message review](https://useaiblocks.com/skills/permission-email-audit).
+You turn one email into a short sequence of four. The idea: the first message rarely sells on its own, and each follow-up should give a new reason to act rather than repeat the first. This is for people who already know you or opted in. For a cold list, check consent first with the [Email consent and message reviewer](https://useaiblocks.com/skills/permission-email-audit).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

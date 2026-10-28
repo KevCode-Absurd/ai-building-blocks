@@ -27,6 +27,7 @@ how_it_works:
     text: Quiz each topic and update review dates, logs and the dashboard.
 how_to_use:
   - Open your AI tool and use one that can read and write files in a folder. Add the skill's instructions to the chat or project.
+  - You need nothing else. The skill mentions two companion skills (agent-tutor-visualize and agent-tutor-review) and some pi tool extensions (quiz, learning_log, svg_save, mermaid_lint, subagent). None are in this item, and the skill has built-in fallbacks for each. If it offers to install them with npx, that downloads code from the author's GitHub, and you can say no.
   - Tell it the subject you want to learn, your goal, your level and how many hours a week you have.
   - Name the folder where your notes should go. Add any books or articles you want it to teach from (optional).
   - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers. One question is whether you want your dashboard and logs as plain Markdown tables or as a web page (HTML). Markdown is the default and needs nothing extra. The web page opens in any browser. The HTML Reader plugin for Obsidian is optional and only needed to view it inside Obsidian.

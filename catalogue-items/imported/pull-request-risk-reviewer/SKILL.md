@@ -11,6 +11,26 @@ description: "Use when the user asks to review pull requests, analyze code chang
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your notes** with the [Pull request risk scorer](https://useaiblocks.com/skills/pull-request-risk-scorer). Bring a codebase.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a code change, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Structured, systematic code review for GitHub PRs and GitLab MRs. Goes beyond style nits — this skill
@@ -374,6 +394,16 @@ Breaking Changes: None detected
 ```
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request review tracker](https://useaiblocks.com/skills/pull-request-reviewer).
+- The [Pull request comment repairer](https://useaiblocks.com/skills/review-comment-fixer). It takes the notes.
+- The [Security-focused change reviewer](https://useaiblocks.com/skills/security-focused-change-reviewer). It takes the notes.
+- **Build it** with the [Pull request writer](https://useaiblocks.com/skills/pull-request-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common Pitfalls
 

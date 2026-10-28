@@ -62,7 +62,7 @@ NOT RUN
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Hand the timecoded mix plan to the editor. If the voice takes are noisy, run them through the [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner) before the mix. If you also need a cut list for the pictures, use the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
+Use these instead of the general "After this" list below. Hand the timecoded mix plan to the editor. If the voice takes are noisy, run them through the [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner) before the mix. If you also need a cut list for the pictures, use the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
 
 ## Check before handing back
 

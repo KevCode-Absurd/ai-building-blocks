@@ -7,6 +7,22 @@ description: 'Build Model Context Protocol (MCP) servers in C#/.NET against the 
 
 This skill helps you write production-quality MCP servers and basic clients in C#/.NET against the **official** [`ModelContextProtocol`](https://www.nuget.org/profiles/ModelContextProtocol) NuGet packages, maintained by Microsoft and the MCP project. It targets the **stable 2.x** line and the current spec (2026-07-28).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When this skill earns its keep
 
 The .NET MCP SDK had years of preview packages (`0.x-preview`) before reaching `1.0`, and v2 flipped several defaults. Without help, the model tends to:
@@ -86,3 +102,10 @@ Walk this checklist before guessing:
 6. **`MCP9005` build warnings after upgrading to 2.x:** the code uses deprecated roots/sampling/logging APIs. Plan the migration; suppress only temporarily.
 
 Still stuck? Point the user at the [`EverythingServer`](https://github.com/modelcontextprotocol/csharp-sdk/tree/main/samples/EverythingServer) sample — it exercises every feature.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

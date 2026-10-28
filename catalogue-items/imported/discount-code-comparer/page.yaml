@@ -9,7 +9,7 @@ subhead: A side-by-side look at two or more Shopify discount codes, showing how 
 explain: |
   A side-by-side look at two or more Shopify discount codes, showing how often each was used and how much revenue each brought in. You find out which offer really earned its place.
 
-  Give it the store domain, the codes to compare and a date range. The skill reads each code's details, such as status and dates, then pulls every order that used it in that period. It adds up redemptions and revenue per code and sets the results next to each other. It only reads data and changes nothing in the store. It needs a signed-in Shopify CLI session with permission to read discounts and orders. Results can be shown as a readable table or as JSON.
+  Give it the store domain, the codes to compare and a date range. The skill reads each code's details, such as status and dates, then pulls every order that used it in that period. It adds up redemptions and revenue per code and sets the results next to each other. It only reads data and changes nothing in the store. It needs a signed-in Shopify CLI session with permission to read discounts and orders. Results can be shown as a readable table or as JSON. Different customers use different codes at different times, so this is a comparison, not a controlled test. A gap can come from the audience or the timing, not only the offer.
 when:
   - You ran SAVE10 and WELCOME15 and want to know which one worked better.
   - You are choosing which promotion to repeat next month.
@@ -35,8 +35,9 @@ how_to_use:
   - Open your AI tool. It must be able to run commands on your computer, such as Claude Code. A plain chat window cannot do this.
   - Paste the skill, then give your store domain, two or more codes, and a start and end date.
   - Say if you want a table or JSON. A table is the default.
-  - Read the table. Revenue per use is the fairest way to compare codes that were used a different number of times.
+  - Read the table. Revenue per use is the fairest way to compare codes that were used a different number of times. It is the revenue in your date range divided by the orders in that range. The lifetime uses column is not part of it.
   - Check profit separately before you pick a winner, because the revenue shown is order totals, not profit.
+  - Next, run the winning offer again for one period, then compare it again with this skill to see if the result holds.
 output_sample:
   input:
     - Your Shopify store domain

@@ -111,14 +111,6 @@ If no value source and no price were given, still return every heading. Under ea
 
 The numbers used. The range of approximate value and its width. Where the price falls. The margin against the uncertainty. The likely cause of the gap and a check on whether it is real. What could close the gap and how slowly. The downside. The group view. The verdict, ranked reasons and what would change it. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set holding rules** with the [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes your picks and the reasons for them.
-- **Review what changed later** with the [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the original business case and the later company figures.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The range has a low end and a high end and its width is stated.
@@ -127,6 +119,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A cause for the gap was named and tested against decline.
 - The verdict is one of the three, or NO VERDICT when inputs are missing, and follows from the above.
 - Nothing was invented and no security was named as one to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Set holding rules** with the [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes your picks and the reasons for them.
+- **Review what changed later** with the [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the original business case and the later company figures.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

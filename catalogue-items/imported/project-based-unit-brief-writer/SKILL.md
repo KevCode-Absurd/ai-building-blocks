@@ -81,6 +81,26 @@ tags: ["PBL", "project-based-learning", "inquiry", "driving-question", "authenti
 
 # Project Brief Designer (PBL)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Community project unit planner](https://useaiblocks.com/skills/community-project-unit-planner). Bring your question, your lesson plan, an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a complete project brief for project-based learning — including a driving question, real-world connection, structured milestones, explicit instruction points, and assessment criteria — that ensures students learn substantive content THROUGH the project rather than simply producing a product. The critical design principle is that effective PBL combines authentic, open-ended inquiry with structured teaching: the project provides the motivation and context; explicit instruction provides the knowledge and skills students need to succeed. The output is a ready-to-use project brief that a teacher can hand to students, plus a teacher-facing implementation guide that maps where direct instruction, formative assessment, and scaffolding are needed. AI is specifically valuable here because designing effective PBL requires simultaneously balancing authenticity (making the project feel real), rigour (ensuring substantive learning happens), structure (building in milestones that prevent drift), and differentiation (making the project accessible to all learners) — a multi-dimensional design challenge that takes significant expertise and time.
@@ -349,3 +369,10 @@ Your team has been commissioned to investigate. Your findings will be presented 
 3. **PBL is not appropriate for all learning objectives.** Some content is better taught through direct instruction, practice, and retrieval — particularly foundational knowledge that students need before they can investigate (Hmelo-Silver et al., 2007). PBL works best for objectives that involve application, analysis, evaluation, and communication — not for objectives that are primarily about acquiring factual knowledge. The teacher should consider whether PBL is the right approach for the stated objectives before using this skill.
 
 4. **The explicit instruction map is a guide, not a script.** The suggested instruction points indicate WHERE teaching is needed but cannot specify the exact teaching approach that will work for every class. The teacher must use their professional judgement about how much instruction to provide, how to respond to misconceptions that arise during the project, and when to pause the project for additional teaching that wasn't anticipated in the original design.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Task marking guide writer](https://useaiblocks.com/prompts/task-rubric-drafter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

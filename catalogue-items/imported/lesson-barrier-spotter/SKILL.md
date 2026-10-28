@@ -65,6 +65,22 @@ tags: ["UDL", "inclusive-design", "barrier-analysis", "preventive-design", "acce
 
 # UDL Barrier Anticipator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Given a task description and a learner variability profile, predicts likely access barriers before the lesson runs and suggests proactive design changes. This is the preventive design skill — it moves UDL from reactive adaptation (modifying after a student fails) to intentional upfront design (removing barriers before they matter).
@@ -177,3 +193,11 @@ Return in this format:
 - [ ] A "Barriers Requiring Specialist Support" section is present and honest.
 - [ ] No claim that UDL ensures or guarantees access for all learners.
 - [ ] The distinction between design-addressable and specialist-referral barriers is clear.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the audit report.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

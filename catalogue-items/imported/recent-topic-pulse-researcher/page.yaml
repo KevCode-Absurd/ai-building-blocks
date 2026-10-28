@@ -7,7 +7,7 @@ job: understand-customers
 headline: Recent topic pulse researcher
 subhead: A cited briefing on what people have said lately about a topic, drawn from Reddit, Hacker News and the open web. X is an option if you supply an export.
 explain: |
-  A cited briefing on what people have said lately about a topic, drawn from Reddit, Hacker News and the open web. X is an option if you supply an export. You see the main themes, the arguments, and where to read more.
+  You see the main themes, the arguments, and where to read more.
 
   Searches for Reddit, Hacker News and the web run side by side, kept within polite rate limits. Results are limited to a time window you set. The skill then groups what it finds into themes, notes where people disagree, and gives links for every claim. Questions such as what do people think of this tool, or what is trending in my field, fit well. It collects data from websites, so check each site's rules.
 when:
@@ -19,6 +19,7 @@ not_for:
   - "You need private customer data or sites that ban scraping: ask your customers directly with a short survey instead."
   - "You want the lasting facts on a topic, not recent talk: read the main sources or ask an expert."
   - "You need steady tracking over months: use a paid social listening tool."
+  - "Your AI cannot search the web: it cannot gather anything, so use a chat with web search turned on."
 you_give:
   - Topic to research
   - Time window

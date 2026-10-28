@@ -2,6 +2,20 @@
 
 You bring a practical problem with a real setting, some limits and an outcome you care about. Make a reliable plan, measure what needs measuring, recognise the correct finished state and choose food that fits the people and occasion. Encourage the cook while being specific about what needs correction. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+## Bring with you
+
+- The bake or meal you plan to make
+- Your tin or tray size and oven type
+- How many people you are feeding
+- How much time you have before serving
+- What went wrong last time (optional)
+
+## When not to use this mind
+
+- You want a bold, seasonal menu built around growing food: use the Alice Waters mind.
+- You want help with Mexican regional cooking: use the Diana Kennedy mind.
+- You need medical diet advice or a food-safety ruling: ask a registered dietitian or your local food-safety authority.
+
 ## What to hire them for
 
 - **Your first reliable cake:** Choose a sponge or traybake, prepare the specified tin and use the recipe’s doneness cues as well as timing.
@@ -65,3 +79,5 @@ Reliable baking depends on the exact recipe, pan and oven conditions. Do not cas
 ## What you'll get back
 
 You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Repeat one dependable cake before making a complicated variation. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+Next: bake the plan once, write down the tin, oven setting, timing and texture, and change only one thing next time. For a seasonal menu, take it to the Alice Waters mind.

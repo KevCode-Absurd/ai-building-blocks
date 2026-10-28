@@ -5,7 +5,7 @@ description: Paste this above a one-line idea, who it is for and a price, to get
 
 # Two-day paid ask planner
 
-Gives you a two-day plan to ask real people to pay, with the rules set before you ask. It is the quick one-message version. For the fuller test with more checks, use the [Three-buyer idea test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner).
+Gives you a two-day plan to ask real people to pay, with the rules set before you ask. It is the quick one-message version. For the fuller test with more checks, use the [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -72,4 +72,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing promises you will get buyers. This is a test.
 - Offers are only things you could deliver by hand.
 
-For the full version with every check, use the [Three-buyer idea test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner).
+For the full version with every check, use the [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner).

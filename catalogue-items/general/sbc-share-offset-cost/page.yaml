@@ -21,7 +21,7 @@ not_for:
   - "You need the fair value of grants: ask an accountant or valuation adviser, because this does not value awards."
   - "You need diluted earnings per share: use your accounting team's EPS workings, because this uses actual issued shares only."
   - "You want to decide on or run a share buyback: talk to your finance lead and legal adviser, because this only models cost."
-  - "You need incremental shares from options for diluted EPS: use the Treasury-stock option dilution instead."
+  - "You need incremental shares from options for diluted EPS: use the Employee option dilution calculator instead."
 you_give:
   - Net employee shares issued, from your share ledger
   - The repurchase price you want to test

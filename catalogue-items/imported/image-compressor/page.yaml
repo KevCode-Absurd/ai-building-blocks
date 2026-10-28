@@ -30,9 +30,10 @@ you_get:
 how_to_use:
   - "Warning first: by default the original file is replaced. Back up your images, or ask for the keep option (--keep) so your originals stay."
   - Check you have Bun or Node. Type bun --version or npx --version in a terminal. If both fail, install one. Have the file or folder path ready.
-  - Open an AI that can run code and save files, such as Claude with code tools. The script runs on your own computer. Check the script before you run it on a whole folder.
+  - Open an AI that can run code and save files, such as Claude with code tools. The script (scripts/main.ts) runs on your own computer through Bun or npx, so read it first or ask your AI to explain what it does.
   - Paste in this skill and tell your AI the path to your image or folder.
   - Say which format and quality you want. The default is WebP at quality 80.
+  - Run one test image first with --keep. Check its size and how it looks before you run the whole folder.
   - Check the size report, then open a few images to confirm they still look right. Keep the smaller files only after you have checked a sample.
   - Next, put the images on your page and run a page speed test to see the gain. Update each image's alt text (the short description for screen readers) while you are there.
 output_sample:

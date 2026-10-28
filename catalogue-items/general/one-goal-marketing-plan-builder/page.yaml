@@ -136,7 +136,7 @@ improve:
   - "Add your own scoring notes, such as what counts as high impact in your field."
   - "Add channels you cannot use, so they never get picked."
   - "Save each finished test and its result to a log, so the next plan starts smarter."
-  - "Pair it with a customer interview skill to check demand first."
+  - "Pair it with the Customer interview question writer to check demand first."
 
 works_best_with:
   tools:

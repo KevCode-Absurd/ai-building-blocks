@@ -35,6 +35,7 @@ how_to_use:
   - "Before you start, gather: how many people sign up, the one action that you think shows a user got value, and how many users drop off at each step. Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs no code or paid tools."
   - Answer the questions it asks first about your product, your users and what counts as a user getting value.
   - Say where users drop off today. Paste your current onboarding steps if you have them.
+  - "For an audit of your current onboarding, ask for it in three stages: 1. a list of your steps from sign-up to first value, with the drop-off at each; 2. one row per problem with finding, impact, fix and priority; 3. the new flow, with the activation goal, steps, checklist, empty-state text, email triggers and what to measure."
   - If you do not have drop-off numbers yet, say so. Your AI should ask which step you think loses people most, then plan a way to count it (one event at each step) before you change anything.
   - Read the activation goal first. Check that it matches real value for your users. Then pick the activation model that fits (free trial, freemium and so on), and read the flow.
   - Ask your AI to adjust anything that does not fit, then build the checklist, empty states and emails. The psychology and toolkit sections can be skipped for a quick run.

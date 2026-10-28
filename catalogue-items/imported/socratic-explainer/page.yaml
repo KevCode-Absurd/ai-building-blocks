@@ -7,9 +7,9 @@ job: think-and-decide
 headline: Socratic explainer
 subhead: A topic you understand because you worked it out, not because someone lectured you. Name what you want to understand, and the skill teaches it in the style of Socrates, through a short back and forth of questions and small thought experiments.
 explain: |
-  A topic you understand because you worked it out, not because someone lectured you. Name what you want to understand, and the skill teaches it in the style of Socrates, through a short back and forth of questions and small thought experiments.
+  It starts with curiosity, often by questioning an assumption or admitting it does not know. Then it builds the idea one small step at a time, using one simple analogy all the way through and asking a reflective question now and then. It avoids textbook definitions, long lists of facts and heavy jargon. It reads like a conversation, not documentation. It fits ideas that need real understanding. For a quick fact, install step or command, ask for a direct answer instead.
 
-  It starts with curiosity, often by questioning an assumption or admitting it does not know. Then it builds the idea one small step at a time, using analogies and asking a reflective question now and then. It avoids textbook definitions, long lists of facts and heavy jargon. It reads like a conversation, not documentation. It fits ideas that need real understanding. For a quick fact, install step or command, ask for a direct answer instead.
+  Licence: this is a copy from sickn33's collection, shared under CC BY 4.0 (the LICENSE-CONTENT file). The "source: original" line in the skill file means the contributor wrote it for that collection. Keep the credit to sickn33 if you share it.
 when:
   - A concept makes sense when read but you cannot explain it back.
   - You want to understand why something works, not just what it is.
@@ -25,7 +25,7 @@ you_give:
   - Your level or background (optional)
 you_get:
   - A guided conversation that builds the idea
-  - Analogies and small thought experiments
+  - One simple analogy and small thought experiments
   - Questions that make you think
   - A clearer sense of how the idea fits together
 how_to_use:
@@ -35,6 +35,7 @@ how_to_use:
   - Answer each question in your own words. Short guesses are fine.
   - If you feel lost, say so. The skill goes back to its analogy and simplifies.
   - When the idea is clear, try explaining it back, or test it on a real case from your own work.
+  - The talk ends when you say you have got it, or when you say stop. Your AI may close with one question about the picture you now have.
 output_sample:
   input:
     - The topic you want to understand, in one sentence

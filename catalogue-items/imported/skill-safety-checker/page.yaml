@@ -7,8 +7,6 @@ job: make-skills
 headline: Skill safety checker
 subhead: A list of risky code, data leaks and hidden payloads in a skill or bundle, found before you add it. It checks without running anything, on Windows, Mac, Linux and mobile.
 explain: |
-  A list of risky code, data leaks and hidden payloads in a skill or bundle, found before you add it. It checks without running anything, on Windows, Mac, Linux and mobile.
-
   It reads the files and looks for patterns grouped by threat. Examples are raised privileges and ownership changes, locking or hiding folders, scripts that chain other scripts, and obfuscated or encoded commands. Each group has its platform-specific signs, such as sudo and chmod on Unix or icacls and execution policy changes on Windows. It lists what it found and why it matters. The review is a static read, so it cannot prove a skill is safe.
 when:
   - You downloaded a bundle of skills and want a scan first.
@@ -29,7 +27,7 @@ you_get:
   - Platform-specific notes
   - A summary of what to remove or ask about
 how_to_use:
-  - Open your AI. Use Claude, ChatGPT or Gemini. No code runs and nothing is installed.
+  - Open your AI. Use Claude, ChatGPT or Gemini. The review only reads files. No code runs, nothing is installed, and it needs no paid service or API key. The word "Premium" in the skill's heading is the author's label, not a paid tier.
   - Add this skill to the chat, then add the skill files you want checked. Paste the text if your AI cannot read files.
   - Say your operating system if you know it. Add where the skill came from if you know that too.
   - Ask your AI to audit the skill. Read the score and the flagged actions first.

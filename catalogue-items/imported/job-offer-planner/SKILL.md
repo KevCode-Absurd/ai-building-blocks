@@ -5,6 +5,22 @@ description: "This skill should be used when the user asks to make an offer, off
 
 # Offer Negotiation for Recruiting
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the job description, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 Construct competitive offer packages, design negotiation strategies, and close candidates. Bridge the gap between what the company can offer and what the candidate wants.
@@ -45,6 +61,12 @@ Components of a total compensation package:
 - Title upgrade (if level-appropriate)
 - Accelerated performance review (6 months instead of 12)
 
+### Pay equity and salary history check (before any concession plan)
+
+- Compare the offer with the pay of current staff in the same role and level. Flag any gap that job-related reasons such as skills or scope do not explain, and tell the user before they raise the offer.
+- Many places ban asking about a candidate's past pay, or using it to set an offer. Tell the user to check their local rules first. Base the offer on the role and the market, not on what the candidate earned before.
+- Some places require the pay range in the job post or on request. Keep the offer inside the stated range, or flag it.
+
 ## Market Positioning
 
 Where to position offers relative to market data:
@@ -55,7 +77,7 @@ Where to position offers relative to market data:
 | Match | Median market (P50) | Standard hires, active candidates, abundant talent |
 | Lag | Below median (P25-P50) | Strong non-comp value prop (mission, equity upside, growth) |
 
-Rule: Always know where your offer sits relative to market before presenting it. Use market-analyst data from `.claude/data/market/` if available.
+Rule: Always know where your offer sits relative to market before presenting it. Ask the user to paste their own market pay data, with its source and date. If they have none, say the market position is unknown instead of guessing.
 
 ## Negotiation Strategy
 
@@ -189,6 +211,13 @@ Standard structure for offer-brief.md:
 |------|-----------|------------|
 | [Risk 1] | High/Med/Low | [Action] |
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Reference Files
 

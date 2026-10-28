@@ -9,7 +9,7 @@ subhead: Give it your replacement quote, the old vehicle's sale value, three yea
 explain: |-
   A replacement can look good on price and still lose cash over its life. This compares replacing a vehicle now with keeping it, using only the extra cash the change brings, and brings that cash back to today's value.
 
-  Illustrative USD amounts only. Replacing now costs $1,000, less $200 from selling the old vehicle, so $800 goes out at time zero. Savings are $300 a year for three years. The terminal difference is $100: the replacement's sale proceeds minus the sale proceeds you give up by not keeping the old vehicle. So final-year incremental cash is $300 + $100 = $400. At a zero discount rate, future cash is $300 + $300 + $400 = $1,000, and the net benefit is $1,000 - $800 = $200. With a terminal difference of -$100, future cash is $800 and exactly covers the $800 paid at time zero. No depreciation or financing cash is included.
+  It counts the old vehicle's sale once, today, adds three years of savings and the end-of-term difference, and discounts them at your rate. No depreciation or financing cash is included. A worked example with illustrative figures comes with the skill.
 when:
   - You are deciding whether to replace a truck or van now or keep it.
   - A manager asks you to show the cash case for a fleet purchase.

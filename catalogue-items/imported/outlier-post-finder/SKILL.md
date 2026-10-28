@@ -23,6 +23,22 @@ metadata:
 
 # Outlier Post Finder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A video link** (yours): the link to the video, playlist, channel or post.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a video link. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Find social posts that beat an account's normal performance. The goal is not just to sort by views. The goal is to identify posts that performed unusually well for that creator or brand, then explain the repeatable patterns.
@@ -141,6 +157,14 @@ Before calling an endpoint, fetch its docs or per-endpoint OpenAPI spec if param
 - Public data only.
 - Small samples are directional, not definitive.
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Study competitor ads** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). It takes the reference ads.
+- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the reference ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common Pitfalls
 

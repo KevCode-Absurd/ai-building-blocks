@@ -41,7 +41,7 @@ how_to_use:
   - Before you run anything, check that your GitHub Copilot subscription is active and that you are signed in on this computer.
   - The examples let the agent do anything it asks, with no review (approveAll). That is for local testing only. Before real use, replace it with a permission handler that limits which actions the agent may take.
   - A good first run prints one reply from the agent to your terminal. If you see that, the setup works.
-  - After the first working reply, add one custom tool, then the MCP link, one at a time. The output is code for you or a developer to run, so it pairs with your own app project. Next, run the quick start, then test the custom tool and the MCP link one at a time. In Go, fill in the MCP server fields from the SDK's own documentation, because the skill leaves them empty.
+  - After the first working reply, add one custom tool, then the MCP link, and test each before the next. Put the code in your own app's repository, starting with the file that opens the session. In Go, fill in the MCP server fields from the SDK's own documentation, because the skill leaves them empty.
 output_sample:
   input:
     - What your agent app should do

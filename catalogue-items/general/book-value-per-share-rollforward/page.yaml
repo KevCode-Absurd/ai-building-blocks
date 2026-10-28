@@ -16,12 +16,12 @@ when:
   - You want to know how a company's book value per share moved from one period to the next, and why.
   - You work from public filings and need each movement traced to a source.
   - A reviewer needs to trace the result back to inputs and assumptions.
-  - You want equity and per-share book value rolled forward. To test whether profit covers a payout to shareholders, use the Shareholder distribution coverage checker instead.
+  - You want equity and per-share book value rolled forward. To test whether profit covers a payout to shareholders, use the Shareholder payout cash checker instead.
 not_for:
   - "You need earnings per share: use weighted average shares and a simple EPS calculation, because this item uses closing shares only."
   - "You have a private company or a tax or legal-basis question: ask an accountant for a full accounts or tax review."
   - "You want a market value or a buy or sell view: use a valuation model or ask a licensed adviser, because book value is only an accounting measure."
-  - "You need weighted-average shares and basic EPS, not closing book value: use the Weighted-average share schedule instead."
+  - "You need weighted-average shares and basic EPS, not closing book value: use the Weighted share count calculator instead."
 you_give:
   - Opening common equity, ordinary profit, common dividends, issuance cash, repurchase cash, OCI and opening/closing share counts.
   - "The balance sheet date, plus the currency and scale used for the book value per share roll-forward."
@@ -107,3 +107,4 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+before: []

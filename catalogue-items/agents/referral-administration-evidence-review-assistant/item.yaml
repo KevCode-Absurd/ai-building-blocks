@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: document
     required: false
   - type: meeting_notes
     required: false

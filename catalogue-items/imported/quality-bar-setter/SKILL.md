@@ -9,6 +9,19 @@ description: Establishes a project's quality bar as a written contract and stops
 
 **Skills and commands named here** (`interview-me`, `code-review-and-quality`, `test-driven-development`, `security-and-hardening`, `ci-cd-and-automation`, and the `/build`, `/test`, `/review` and `/ship` commands) come from the author's own skill pack. They are not in this library. If you do not have them, ask the questions one at a time yourself, and run the checks with your own scripts or CI.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 
 Other skills in this pack describe what good looks like. `code-review-and-quality` gives you five axes. `test-driven-development` gives you a cycle. `security-and-hardening` gives you a threat list. All of that lives in prose the agent reads and may or may not follow, and none of it survives the end of the session.
@@ -313,3 +326,10 @@ The skill was applied correctly when:
 - `test-driven-development` — the suite that coverage and mutation constraints measure
 - `security-and-hardening` — what the security dimension should contain
 - `performance-optimization` — where the performance numbers come from
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI answer scoring designer](https://useaiblocks.com/skills/ai-answer-judge-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

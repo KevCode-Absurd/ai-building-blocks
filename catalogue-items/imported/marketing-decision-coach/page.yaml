@@ -11,7 +11,7 @@ explain: |
 
   It starts from one idea: marketing is an exchange, so every action must trade for something real, such as money, clear prospects or a realistic chance of revenue. It reads your product, offer, audience, budget and channel data, then answers questions like where your first customers will come from, whether a test result is good, or whether to drop a channel. It checks how much volume a test needs before its result means anything. It will not make up proof, testimonials or case studies.
 
-  Licence: this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Axel Freeman) says MIT, which covers the author's own code. The skill text comes from sickn33's collection with a short note from the catalogue that it was adapted for this library. Credit goes to Axel Freeman and sickn33.
+  Licence: two labels apply. The LICENSE-CONTENT file in sickn33's collection says CC BY 4.0, and the skill file's own header (Axel Freeman) says MIT. Both allow reuse with credit, so credit Axel Freeman and sickn33. sickn33 shortened the original for their collection; the skill file says it was "adapted for this catalog". We copied that version as it is.
 when:
   - You do not know where your first ten customers will come from.
   - You ran a test and need to know if the result means anything.
@@ -35,11 +35,11 @@ you_get:
   - A next step or a stop recommendation
 how_to_use:
   - Open Claude, ChatGPT or Gemini and start a new chat. The skill text is in the SKILL.md file, so paste it in first, or add the skill to your AI if it lets you. It needs no code, files, keys or paid services.
-  - Before you ask, gather these in this order: how many paying clients you have and which channel they came from, then the channel you want to test, then your target cost to win one client (target CPA) and your margin per client. The stop rules depend on the last two.
+  - "Before you ask, gather these in this order: how many paying clients you have and which channel they came from, then the channel you want to test, then your target cost to win one client (target CPA) and your margin per client. The stop rules depend on the last two."
   - Tell your AI about your product, offer, audience and budget.
   - Say how many paying clients you have today and where they came from, and give your target CPA and margin.
   - Add any test results, such as sends, replies, visitors or ad spend (optional).
-  - Pick the test channel, then ask your question, for example: should I stop this channel? Check the verdict and the test volume it names.
+  - "Pick the test channel, then ask your question, for example: should I stop this channel? The reply comes in four parts: Verdict, Reasons, Test volume needed, and Next step or Stop."
   - Run the next step it gives you. Come back with the new numbers once you hit the volume.
   - To plan the test, use the Experiment designer. When the results are in, the Experiment result analyst reads them.
 output_sample:

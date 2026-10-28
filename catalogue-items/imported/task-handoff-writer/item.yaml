@@ -30,7 +30,7 @@ credits:
   - title: delegating-to-agents skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/delegating-to-agents
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Shared by sickn33 (LICENSE-CONTENT, CC BY-4.0); the skill file's own MIT header covers the skill text. We gave it a plain name, set out the brief as the main result, marked the developer-only sections, and added a licence note.
   - title: Original author
     by: David Ondrej
     url: https://github.com/davidondrej

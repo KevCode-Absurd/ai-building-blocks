@@ -10,8 +10,6 @@ subhead: "A step-by-step plan for watching your production system: what to
   measure, what to log, how to trace requests and when to alert. You can build
   it in small pieces."
 explain: |
-  A step-by-step plan for watching your production system: what to measure, what to log, how to trace requests and when to alert. You can build it in small pieces.
-
   The plan starts with the main things your users do and what reliability each needs. Then it picks signals and sets how long data is kept. It builds the smallest set of dashboards and alerts that support your targets, each with an owner, a runbook and a rule for missing data. It checks that counts and totals line up, tests one alert in a safe environment, and measures noise before rolling out. It keeps private data, such as passwords and full request bodies, out of the logs.
 when:
   - You are setting up monitoring for the first time.
@@ -21,6 +19,7 @@ when:
 you_give:
   - The services and user tasks that matter most
   - Reliability goals
+  - Your current alerts and how noisy they are
   - Tools in use, such as Prometheus or Grafana
   - Data you must not log
 you_get:
@@ -32,8 +31,9 @@ you_get:
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather first: your service names, the main things users do in each one, the alerts you have now and how often they fire with no real problem, your monitoring tools, and the data you must never log."
+  - Ask your AI to follow this skill, and paste those details in.
+  - "It builds the plan in four steps, each from the one before: a list of user tasks with a reliability target for each, then a list of signals with how long to keep each, then a table of dashboards and alerts with owner, runbook and missing-data columns, then a test of one alert and a count of false alarms before rollout."
 not_for:
   - "You only need reliability targets and an error budget. Use the Reliability target setter."
   - "You want a ready Grafana dashboard and alert config from scripts. Use the Monitoring planner."

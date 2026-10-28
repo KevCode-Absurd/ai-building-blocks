@@ -100,16 +100,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public document. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion for the deal adviser.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Work out what sellers receive at closing with the [Closing equity proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker).
-- Add any delay compensation with the [Deal ticking fee checker](https://useaiblocks.com/skills/deal-ticking-fee-checker).
-- Run the whole closing price check with the [Reconcile a locked-box closing price](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price) workflow.
+- Work out what sellers receive at closing with the [Business sale proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker).
+- Add any delay compensation with the [Deal delay fee calculator](https://useaiblocks.com/skills/deal-ticking-fee-checker).
+- Run the whole closing price check with the [Locked-box deal price checker](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal conclusion for the deal adviser.

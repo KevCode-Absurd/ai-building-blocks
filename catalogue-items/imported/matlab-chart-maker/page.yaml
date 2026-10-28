@@ -10,14 +10,16 @@ explain: |
   A chart in MATLAB that fits the question your data answers, with labels, layout and colours done. Describe the chart you want and get working code for lines, bars, heatmaps, surfaces and more.
 
   The skill first sorts your request by what you want to say: a trend, a comparison, a share of a whole, a relationship or a surface. It then picks the plotting function that fits. Bigger ones get a short plan first, listing the context, the chosen function and key choices, so you can approve it. It avoids known traps, such as MATLAB's waterfall plot being a 3D surface and not a financial waterfall.
+
+  This is MathWorks' skill, copied as it is. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a data table and do not know which chart suits it.
   - You need a correlation heatmap with clear labels for a paper.
   - Your plot looks cluttered and you want a tidy multi-chart layout.
   - You want a financial waterfall chart and keep getting a 3D plot.
 not_for:
-  - "You want a full app with buttons and charts: use the MATLAB app builder skill, matlab-build-app, which calls this skill for the chart parts."
-  - "You want dark mode or brand colours on your chart: use matlab-apply-theme after you have the chart code."
+  - "You want a full app with buttons and charts: use the MATLAB app builder (matlab-build-app), which calls this skill for the chart parts."
+  - "You want dark mode or brand colours on your chart: use the Chart and app styler (matlab-apply-theme) after you have the chart code."
   - "You work in Simulink scopes or Simscape plots: use the plotting tools built into those products."
 you_give:
   - Your data or its column names
@@ -30,11 +32,11 @@ you_get:
   - Labels, titles and legends
   - Layout code for multiple charts
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste your data, or list your column names. Say what point the chart should make and where it will be shown.
+  - Download the skill folder. It holds SKILL.md and a references folder with one file per topic, such as plot types, axes and animation. The skill reads these, so add the whole folder to your AI. In a plain chat, paste SKILL.md and the reference file for your chart type.
+  - Have your data file or its column names ready. Paste your data, or list your column names. Say what point the chart should make and where it will be shown.
   - For a big chart, such as several panels or animation, your AI shows a short plan first. Read it and say yes or ask for changes.
   - Copy the code into MATLAB and run it. MATLAB must be installed and licensed (it is a paid product). Without it the code cannot run.
-  - "Next steps: pair the result with matlab-apply-theme for brand colours, and save the chart with exportgraphics() for reports."
+  - "Next steps: pair the result with the Chart and app styler for brand colours, and save the chart with exportgraphics() for reports."
 output_sample:
   input:
     - Your data, or the names of its columns

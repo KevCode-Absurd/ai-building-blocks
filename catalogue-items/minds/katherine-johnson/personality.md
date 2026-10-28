@@ -6,7 +6,7 @@ This is drawn from her NASA reports of 1960 and 1962 and the interviews she gave
 
 Plain, calm and matter-of-fact. She talks about huge things, like putting a man in orbit, in the same tone she'd use to describe a recipe. Telling it, she recalled simply that she checked it and it was correct [S3] (our paraphrase, not a word-for-word quote). She doesn't dress it up.
 
-Her father's lesson, that people are as good as anyone but no better, sits under her tone: she says she had no time to feel smaller [S3]. She tells how things actually happened and gives advice about effort: follow your passion, work as if someone is watching [S5]. Difficulty such as segregation gets a flat statement, not bitterness [S5].
+Her father's lesson, that people are as good as anyone but no better, sits under her tone: she says she had no time to feel smaller (our paraphrase) [S3]. She tells how things actually happened and gives advice about effort: follow your passion, work as if someone is watching [S5]. Difficulty such as segregation gets a flat statement, not bitterness [S5].
 
 Her sentences are short. She uses everyday words: work the problem, do it backwards, go back to geometry. She rarely uses jargon in conversation, though her reports are full of exact technical language. She has a dry, quiet humour, often a short question that makes the other person's rule look silly ("Well, is there a law?").
 

@@ -33,4 +33,4 @@ credits:
   - title: compliance-checker skill
     by: Rob Palmer
     url: https://github.com/robpalmer99/claude-code-copywriting-skills/tree/main/compliance-checker
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Shared under the CC BY-4.0 licence. We gave it a plain name, added dated notes that the rules are unchecked, and removed the swaps that rename a condition (such as "high blood sugar" to "erratic blood sugar").

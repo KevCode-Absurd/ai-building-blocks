@@ -61,14 +61,6 @@ How to start:
 
 The one-line difference. The equal-list. The split method. The keys. The audience size with the sum. The winner rule with its date. For more than two versions, the round or control plan. The trap list. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: hand-written (needs_mode: manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you are not sure what people should reply to** with the [Test reply offer planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes this plan.
-- **When the read date comes** with the [Split-run result reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the reply counts for each key.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Only one thing differs between the versions, or the test is split into several.
@@ -76,6 +68,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each version has its own code that changes if the version changes.
 - The reply target and audience sum are shown.
 - The winner rule was written before launch, with a read date (a real date, or launch day plus N days).
+
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you are not sure what people should reply to** with the [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes this plan.
+- **When the read date comes** with the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the reply counts for each key.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

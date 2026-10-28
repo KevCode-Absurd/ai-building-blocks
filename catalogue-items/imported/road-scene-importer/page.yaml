@@ -17,8 +17,8 @@ when:
   - You need to check that a converted road looks right.
 not_for:
   - "You need to open RoadRunner or manage projects: use the roadrunner-core skill first."
-  - "You need to turn a Lanelet2 map into RRHD: use the roadrunner-convert-lanelet2-to-rrhd skill."
-  - "You need to write or edit road content in an RRHD file: use the roadrunner-rrhd-authoring skill."
+  - "You need to turn a Lanelet2 map into RRHD: use the Road map converter."
+  - "You need to write or edit road content in an RRHD file: use the Road map author."
 you_give:
   - A map file (.rrhd or .xodr)
   - A running RoadRunner session
@@ -30,7 +30,7 @@ you_get:
   - Build options applied
   - A scene ready for visual checking
 how_to_use:
-  - You need paid MATLAB and paid RoadRunner licences before you start. The LICENSE.md in this item is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB.
+  - You need paid MATLAB and paid RoadRunner licences before you start. The LICENSE.md in this item is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The MathWorks licence page linked in the skill file (PMRL) sets the same limit. Follow LICENSE.md.
   - Open an AI that can run MATLAB code and has your RoadRunner session connected. Set that up first with the roadrunner-core skill.
   - Paste in this skill, or upload its folder.
   - Give your AI the path to your map file and say whether you want to load only or also build.
@@ -38,6 +38,14 @@ how_to_use:
   - Let it run the checks and the import. It reports pass or fail for each check (file location, file type and, for a build, the build options) before it imports. Fix anything the checks flag.
   - The scene is saved in your RoadRunner project folder under your map's file name.
   - "Open the saved scene, which sits in your RoadRunner project folder and is named after your map. Look over the roads by eye: that lanes run on without breaks, and that junctions and bridges look right. Only then ask for a full build."
+  - "Next: if you find broken lanes or junctions, fix them in the map file with the Road map author, or rerun the Road map converter if the map came from Lanelet2. Then import again. Once the scene looks right, use it in your driving simulation tests."
+terms:
+  - term: RRHD
+    meaning: RoadRunner HD map, the .rrhd file format that stores lanes, boundaries, junctions and signs for RoadRunner.
+  - term: rrApp
+    meaning: The MATLAB connection to a running RoadRunner app. The roadrunner-core skill from MathWorks sets it up; it is not in this library.
+  - term: OpenDRIVE
+    meaning: A common open file format (.xodr) for road networks used in driving simulation.
 output_sample:
   input:
     - Your map file (.rrhd or .xodr)

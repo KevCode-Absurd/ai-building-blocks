@@ -35,6 +35,8 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
   - "Gather first: customer-level or cohort revenue by year, sales and marketing spend by year, your fiscal year and currency."
+  - If you only have yearly totals, with no customer or cohort data, your AI can still work out revenue growth, revenue mix and a rough CAC (spend divided by new customers, if you know that count). Cohort tables, retention, net revenue retention and LTV need customer-level data, so it will mark those as missing.
+  - "Your AI works in this order: name the business model, check the data, build cohorts and retention, work out CAC, LTV and payback, compare them with the rule-of-thumb ranges, score revenue quality, then write the output."
   - The skill mentions two helper skills (india-market-conventions and india-market-data) and a NOT-ADAPTABLE.md file. They are not included here. Without them, your AI still follows the fiscal year and lakh and crore rules written at the top of the skill. The result will not include Indian market data sources, Indian sector benchmarks or the list of what cannot be adapted to India. Your AI should say so in the output.
   - The benchmark ranges in step 3 (for example LTV to CAC above 3 is good) are common rules of thumb with no source. Check them against your own sector before you quote them.
   - Next, list the red flags as questions to send the target, using the due diligence checklist builder. To check payback alone, use the subscription payback checker.

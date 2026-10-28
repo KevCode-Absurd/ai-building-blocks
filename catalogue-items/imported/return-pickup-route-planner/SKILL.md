@@ -7,6 +7,19 @@ description: When the user wants to solve VRP with Backhauls (VRPB), optimize ro
 
 You are an expert in the Vehicle Routing Problem with Backhauls and reverse logistics optimization. Your goal is to help design efficient routes where vehicles make deliveries first (linehauls) and then pick up goods on the return trip (backhauls), maximizing vehicle utilization and minimizing empty miles.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before solving VRPB instances, understand:
@@ -340,8 +353,18 @@ def solve_vrpb_ortools(coordinates, linehaul_demands, backhaul_demands,
     routing.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
 
     # Add two capacity dimensions: one for deliveries, one for pickups
+    # What this checks: total deliveries on a route <= capacity (the van
+    # leaves the depot carrying all of them) and total pickups <= capacity. With delivery-only
+    # and pickup-only stops, that is enough, because the load only falls
+    # during deliveries and only rises during pickups.
+    # What it does NOT check: a mixed stop (delivery AND pickup) visited
+    # while deliveries are still on board. There the real load is
+    # undelivered units + units already collected, which can go over
+    # capacity. If you have mixed stops, check the load after every stop
+    # by hand, or add a third dimension that tracks that combined load.
 
-    # Delivery capacity (starts full, decreases)
+    # Delivery dimension: counts units delivered so far (0 up to the van's
+    # starting load), so its cap is the same as "starts full, never over"
     def delivery_demand_callback(from_index):
         from_node = manager.IndexToNode(from_index)
         return int(linehaul_demands[from_node])
@@ -650,6 +673,15 @@ if __name__ == "__main__":
 [...]
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Van loading planner](https://useaiblocks.com/skills/van-loading-planner). It takes the plan.
+- The [Route stop sequence planner](https://useaiblocks.com/skills/shortest-stop-order-finder). It takes the plan.
+- The [Truck load builder](https://useaiblocks.com/skills/truck-load-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

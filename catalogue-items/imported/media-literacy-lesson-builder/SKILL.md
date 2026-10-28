@@ -69,6 +69,26 @@ tags: ["media-literacy", "critical-thinking", "representation", "persuasion", "d
 
 # Media Literacy Deconstruction Protocol
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Online source checking guide builder](https://useaiblocks.com/skills/online-source-check-lesson). Bring your lesson plan.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a structured analysis framework for deconstructing a specific type of media text — an advertisement, a news article, a social media post, a political campaign, a film clip, an infographic. The framework goes beyond surface-level observation ("What colours are used?") to teach students to analyse how media texts are constructed to position audiences, represent people and ideas, and serve particular purposes. The output includes a media-type-specific deconstruction protocol organised by analytical category (construction, representation, audience, purpose, omission), a teacher modelling script, and a structured student activity. AI is specifically valuable here because media literacy requires both general analytical principles and media-type-specific knowledge — the techniques used to persuade in a television advertisement are different from those used in a news headline or a social media post, and effective analysis protocols must reflect these differences.
@@ -293,3 +313,12 @@ Students swap advertisements with a partner and compare analyses. Focus question
 2. **The protocol reflects a primarily Western media analysis tradition.** Media conventions, advertising techniques, and audience expectations vary across cultures. Students from different cultural backgrounds may read the same media text differently — these differences should be treated as enriching the analysis, not as errors. The protocol should be adapted when analysing media from non-Western contexts.
 
 3. **Analysing media critically is not the same as rejecting all media.** A risk of media literacy instruction is that students become cynical rather than critical — distrusting everything rather than evaluating specifically. The protocol should help students distinguish between legitimate persuasion (which is transparent about its purpose) and manipulation (which disguises its purpose), not teach them that all media is deceptive.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan and plan.
+- The [Cultural bias lesson checker](https://useaiblocks.com/skills/cultural-bias-lesson-checker). It takes the lesson plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

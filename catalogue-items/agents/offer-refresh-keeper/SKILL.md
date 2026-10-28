@@ -14,12 +14,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Competitors** (yours): the brands buyers compare you with.
+- **Your data** (yours): the data files, with their format and where they came from.
 - **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

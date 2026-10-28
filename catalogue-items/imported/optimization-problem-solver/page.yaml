@@ -7,7 +7,9 @@ job: build-software
 headline: Optimization problem solver
 subhead: MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
 explain: |
-  MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
+  In plain words: you have something to make as small or as large as possible, such as cost, waste or time, and rules it must obey, such as limits on budget or capacity. This skill writes the MATLAB code that finds the best values and then checks that the answer really keeps to your rules.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 
   The skill first sorts your problem into a class, such as linear, quadratic or nonlinear. That decides the solver and whether the answer is global or only local. It writes the problem with optimization variables and expressions, not slow loops, then picks and tunes solver options and runs it. It reads the exit flag, constraint violations and convergence, and helps debug failures. It also spots hidden easier forms, like a nonlinear problem that is really linear. Needs MATLAB with Optimization Toolbox.
 when:
@@ -31,10 +33,12 @@ you_get:
   - A check of convergence and constraint satisfaction
 how_to_use:
   - Check that you have MATLAB with Optimization Toolbox. It is a paid licence and you need it before you start.
+  - "Gather first: each variable with its unit, the lowest and highest value each can take, the goal written as a formula, and each rule written as an equation or inequality, such as 2x + 3y <= 100."
   - Paste this skill into your AI chat, or add it to your AI tool.
   - Tell your AI what to minimise or maximise, your variables, bounds and constraints. Paste any existing code.
   - Run the MATLAB code it writes. Your AI can run it only if it has MATLAB access. Otherwise run it yourself.
   - Check the exit flag and constraint violations in the result. Paste any warning back to your AI so it can debug.
+  - Next, change one limit at a time and run it again to see how the answer moves. Save the solver, its options and the exit flag with the result, so others can repeat it.
 output_sample:
   input:
     - What you want to minimise or maximise

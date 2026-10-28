@@ -61,6 +61,19 @@ tags: ["transfer", "deep-learning", "near-transfer", "far-transfer", "portable-u
 
 # Transfer Bridge
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 After the learner demonstrates understanding of a concept, presents a near-transfer challenge (same principle, slightly different surface) and a far-transfer challenge (same underlying principle, substantially different domain or context). Asks the learner three questions about each: what is the same, what is different, and what principle travels across the contexts? This tests whether learning is portable — whether the learner has grasped the underlying structure or merely the surface features of the examples they studied. Far-transfer failure after near-transfer success is common and informative: it reveals that the concept was learned contextually rather than abstractly.
@@ -246,3 +259,11 @@ One last check: generate a third context where this principle applies — somewh
 3. **Transfer success on AI-facilitated problems does not guarantee unassisted transfer.** The presence of the AI bridge (questions, framing, structural hints) may enable transfer that wouldn't occur independently. This is partially addressed by pairing with 20-11 (Unassisted Evidence Checkpoint) and by asking the learner to generate their own third example.
 
 4. **The skill is most valuable for conceptual and principle-based knowledge.** Procedural skills (arithmetic operations, grammar rules) transfer via practice; the transfer bridge is most valuable for conceptual structures, theories, frameworks, and models where the "same principle, different domain" question is meaningful.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Explain-it-first tutor](https://useaiblocks.com/skills/explain-it-first-tutor). It takes the question.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

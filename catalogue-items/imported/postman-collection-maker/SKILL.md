@@ -11,6 +11,19 @@ license_source: https://github.com/LambdaTest/agent-skills/blob/main/LICENSE
 ---
 
 # Postman Collection Generator
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 Use this skill when you need generate complete, import-ready Postman Collection v2.1 JSON files from natural language API descriptions or cURL commands. Use this skill whenever the user describes an API in plain English ("I have a REST API with these endpoints..."), pastes cURL commands, or asks to "create a Postman collection".
@@ -49,7 +62,7 @@ Parse the user's input and extract for **each endpoint**:
 | URL | Full URL or path; use `{{base_url}}` variable for the host |
 | Headers | From cURL `-H` flags or described headers |
 | Auth | Bearer token, Basic, API Key, or None |
-| Body | From cURL `-d` / `--data` or described payload (JSON, form-data) |
+| Body | From cURL `-d` / `--data` / `--data-urlencode` / `-F`, or a described payload. Keep the encoding: JSON stays `raw`, URL-encoded stays `urlencoded`, multipart stays `formdata` (see the cURL table) |
 | Query params | From URL `?key=value` or described filters |
 
 If input is ambiguous, make reasonable REST conventions and note assumptions at the end.
@@ -108,6 +121,27 @@ Use this exact v2.1 structure:
 }
 ```
 
+URL-encoded body (from `--data-urlencode`, or `-d 'a=1&b=2'` without a JSON content type):
+```json
+"body": {
+  "mode": "urlencoded",
+  "urlencoded": [
+    { "key": "a", "value": "1" },
+    { "key": "b", "value": "2" }
+  ]
+}
+```
+
+Multipart body (from `-F`):
+```json
+"body": {
+  "mode": "formdata",
+  "formdata": [
+    { "key": "name", "value": "value", "type": "text" }
+  ]
+}
+```
+
 ### Grouping:
 - Group related endpoints into **folders** using the `item` array nested inside an item with `"name"` but no `"request"` key.
 - Use logical grouping: by resource (Users, Orders) or by feature.
@@ -150,10 +184,12 @@ Always extract these into a companion **Postman Environment** file:
 |---|---|
 | `-X POST` | method |
 | `-H "Key: Value"` | header |
-| `-d '{"a":1}'` | body (raw JSON) |
-| `--data-urlencode` | body (form-data) |
+| `-d '{"a":1}'` with `-H "Content-Type: application/json"` | body `mode: raw`, language json |
+| `-d 'a=1&b=2'` with no JSON content type | body `mode: urlencoded` (curl's default for `-d` is `application/x-www-form-urlencoded`, per the curl manual at curl.se/docs/manpage.html) |
+| `--data-urlencode 'a=b c'` | body `mode: urlencoded`, with the decoded value (`b c`) as the value; Postman encodes it when sending |
+| `-F 'a=1'` / `--form` | body `mode: formdata` (multipart/form-data) |
 | `-u user:pass` | Basic auth |
-| `--bearer <token>` | Bearer auth |
+| `--oauth2-bearer <token>`, or `-H "Authorization: Bearer <token>"` | Bearer auth, with the value as `{{token}}` |
 | `?key=val` in URL | query params |
 
 ---
@@ -166,6 +202,7 @@ Before outputting, verify:
 - [ ] JSON is valid (no trailing commas, balanced braces)
 - [ ] Every request has at least `method`, `url`, and `header` fields
 - [ ] Auth tokens are variables (`{{token}}`), not hardcoded values
+- [ ] Each body keeps the cURL encoding: `--data-urlencode` and plain `-d key=value` become `urlencoded`, `-F` becomes `formdata`, JSON becomes `raw`
 
 
 ---
@@ -189,3 +226,11 @@ If the user says **no**:
 - Use this skill only when the task clearly matches its upstream source and local project context.
 - Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
 - Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [API spec writer](https://useaiblocks.com/skills/api-spec-writer).
+- The [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

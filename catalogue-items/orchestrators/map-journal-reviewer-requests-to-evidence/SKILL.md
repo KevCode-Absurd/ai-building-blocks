@@ -91,8 +91,8 @@ Write `MISSING: <what>` next to the affected line. Carry on with the comments th
 ## Next steps
 
 Suggest one next step as a short question, and say the user can type their own:
-- **Keep track while you revise.** Use the [Reviewer response progress assistant](https://useaiblocks.com/agents/reviewer-response-progress-assistant), which keeps the matrix and updates status as you change the manuscript.
-- **Polish your own response letter.** Run the [Proofreader](https://useaiblocks.com/skills/proofreader) on the draft you write.
+- **Keep track while you revise.** Use the [Journal revision and response tracker](https://useaiblocks.com/agents/reviewer-response-progress-assistant), which keeps the matrix and updates status as you change the manuscript.
+- **Polish your own response letter.** Run the [Text proofreader](https://useaiblocks.com/skills/proofreader) on the draft you write.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

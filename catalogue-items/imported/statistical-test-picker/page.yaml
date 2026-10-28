@@ -7,7 +7,7 @@ job: track-numbers
 headline: Research test picker and reporter
 subhead: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style. Bring your data file or a description of it. Then put the APA paragraph into your methods and results, or run a sensitivity check if the study is already done.
 explain: |
-  The right statistical test for your question, run properly, and written up in APA style. You describe your data and what you want to know, and you get a choice of test with the reason for it, checks that its assumptions hold, effect sizes with confidence intervals, and report-ready wording.
+  The right statistical test for your question, run properly, and written up in APA style. You describe your data and what you want to know, and you get a choice of test with the reason for it, checks that screen its assumptions (they flag problems but cannot prove the assumptions hold), effect sizes with confidence intervals, and report-ready wording.
 
   It begins by framing the hypothesis and design: paired or independent, how many groups. It looks at each group's size, spread and missing values, then picks a test such as a t-test, ANOVA, chi-square, regression or Bayesian model. It always reports the size of the effect, not only the p-value, and can work out how many participants you need. It needs Python with scientific packages.
 when:
@@ -36,6 +36,7 @@ how_to_use:
   - Add your data file or a short description of it. Say what you want to know and how the study was set up.
   - Read the assumption checks first. The AI flags concerns, but you decide if the test fits your study.
   - Check the write-up. Any example numbers in the report templates are placeholders, so use only your real results.
+  - The checks screen your data. They do not prove the assumptions hold or that the study is sound. Before you submit or publish, have a statistician review the test choice and the write-up.
 output_sample:
   input:
     - Your data file, or a description of your data

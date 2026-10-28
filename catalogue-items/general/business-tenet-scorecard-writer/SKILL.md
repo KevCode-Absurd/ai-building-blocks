@@ -7,6 +7,8 @@ description: Use when someone has gathered findings on a business (its edge, whe
 
 After a lot of digging it is easy to hold ten findings in your head and still not know where you stand. This skill puts them on one page. Each of ten tests gets a pass, fail or unknown with the evidence behind it. A short ladder then says whether the business deserves a look at its price, needs more digging, or should be dropped. It does not say whether to buy. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
+**When not to use:** with no findings yet (run the Business power tester first), to judge whether a price is cheap (this checks the business, not the price), or for a buy or sell call (talk to a licensed financial adviser).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -46,11 +48,11 @@ How to start:
    Mark UNKNOWN when the evidence is missing. Do not turn a gap into a pass.
 3. **Apply the must-pass tests.** Tests 1, 3 and 8 are must-pass, because a value cannot be worked out without a business you understand, an edge that lasts and cash you can estimate. If any of them is FAIL or UNKNOWN, the verdict is TOO HARD: stop there and say what would turn it around.
 4. **Count the rest.** Among the other seven, count FAIL and UNKNOWN.
-5. **Pick the verdict from this ladder.**
+5. **Pick the verdict from this ladder.** Use the first rung that fits, top to bottom, so no case lands on two rungs.
    - **TOO HARD:** a must-pass test failed or is unknown.
    - **NOT WORTH A PRICE CHECK:** three or more fails among the other seven.
-   - **DIG MORE:** one or two fails, or three or more unknowns, among the other seven.
-   - **WORTH A PRICE CHECK:** all three must-pass tests pass, at most one fail and two unknowns among the rest.
+   - **DIG MORE:** exactly two fails, or three or more unknowns, among the other seven.
+   - **WORTH A PRICE CHECK:** all three must-pass tests pass, with at most one fail and at most two unknowns among the rest.
    Say these cut-offs are a working rule and that you may move them. Worked example: tests 1, 3 and 8 pass; tests 2, 4, 5, 6, 7 and 10 pass; test 9 is unknown. One unknown, no fails: WORTH A PRICE CHECK. Add a fail on test 7 and a fail on test 5, and it becomes DIG MORE.
 6. **List red flags.** Pull out anything that warns of poor reporting or honesty: pay in shares left out of costs, footnotes nobody can follow, bold earnings forecasts, constant "adjusted" figures, deals made to keep up with a rival. Say plainly that no test catches outright fraud, so a pass is not a guarantee.
 7. **Write the reading list.** For every UNKNOWN or weak test, name the document to read (the last five annual reports, a rival's reports, the notes to the accounts) or the person to ask (customers, suppliers, former staff, competitors). Order the list by which unknown would move the verdict most.
@@ -73,8 +75,8 @@ The list of findings found and missing. The ten-test table with PASS, FAIL or UN
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
 - The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
 - The [Bargain investment portfolio planner](https://useaiblocks.com/skills/bargain-group-rules-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

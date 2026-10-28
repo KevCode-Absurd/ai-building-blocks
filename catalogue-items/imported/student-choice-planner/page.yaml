@@ -32,7 +32,8 @@ you_get:
   - Your changing role at each stage
   - Common pitfalls to avoid
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or copy the skill text from this page and paste it in.
+  - "Gather first: the task students do now, the year level and subject, how much say students have today, and the learning goal."
+  - Open Claude, ChatGPT or Gemini. A free account is enough. Copy the skill text from this page and paste it at the start of a new chat. In Claude you can instead upload the skill folder as a skill, so it is ready in every chat.
   - Type the task students do now, their year level, and how much say they have today.
   - Add the subject and learning goal if you have them. Add notes on certain students if it helps (optional).
   - Send it. No code, files or paid tools are needed.

@@ -86,7 +86,7 @@ Nothing outside your working files has changed. Offer one next step and say they
 
 - Send the open conflicts to the metric owner and ask for a yes or no on each proposed definition.
 - Write a clear definition for each approved metric with the [Metric definition writer](https://useaiblocks.com/skills/metric-definition-writer).
-- Set up the report that uses these definitions with the [Build a weekly KPI report with a forecast and dashboard](https://useaiblocks.com/workflows/build-a-weekly-kpi-report-with-a-forecast-and-dashboard) workflow.
+- Set up the report that uses these definitions with the [Weekly metrics report and dashboard builder](https://useaiblocks.com/workflows/build-a-weekly-kpi-report-with-a-forecast-and-dashboard) workflow.
 
 ## Check before you hand it back
 

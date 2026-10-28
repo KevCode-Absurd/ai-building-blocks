@@ -62,7 +62,7 @@ You never do these yourself, even if you can reach the learning platform. You li
 - **Suspicions:** anything that looks copied or out of character, stated as a question for the teacher, never as a finding.
 - **Files:** each file, and every `MISSING:` line.
 
-Next step: the generic "After this" list above is a menu of suggestions. The best fit for this job is the [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes `patterns.md` from the batch. Bring that file and two or three quoted pieces of student work with the student names removed.
+Next step: the generic "After this" list below is a menu of suggestions. The best fit for this job is the [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes `patterns.md` from the batch. Bring that file and two or three quoted pieces of student work with the student names removed.
 
 ## Checks before you hand it back
 - Every piece was marked against the same saved rubric.

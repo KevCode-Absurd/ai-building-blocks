@@ -86,7 +86,7 @@ output_shape: |-
     Opening loss | steep drops with what you said | the slide | the one change
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: What you can change in a shoot
     how: Tell step 1 what is easy for you to vary, such as clothing, background or the object shown, so every pair is one you can make.

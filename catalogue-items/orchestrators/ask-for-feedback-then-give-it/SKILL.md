@@ -9,7 +9,7 @@ Say who you manage. Get a go-to question to ask for feedback and a plan for the 
 
 This workflow follows the method in How do you get feedback? The four steps to solicit Radical Candor by Kim Scott. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** Not for a serious conduct or performance issue in a first talk. Speak to HR or your manager first. If you only want to write a thank-you to your team, use the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). If you need to settle a team disagreement, use the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer).
+**When not to use it:** Not for a serious conduct or performance issue in a first talk. Speak to HR or your manager first. If you only want to write a thank-you to your team, use the [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). If you need to settle a team disagreement, use the [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

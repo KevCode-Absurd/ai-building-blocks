@@ -11,11 +11,28 @@ metadata:
 
 This skill enables an AI agent to generate and insert realistic test data into databases for development, testing, and staging environments. The agent creates idempotent seed scripts using deterministic generators or faker libraries, handles relational data with proper foreign key ordering, supports environment-specific seed profiles (minimal dev data vs. large-scale load testing), and ensures seeds can be run repeatedly without duplicating data.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The data model** (yours): the database tables or collections, their fields and how they link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, your question, the data model. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the target schema:** Inspect the database schema to identify all tables, their columns, data types, constraints (NOT NULL, UNIQUE, CHECK, foreign keys), and relationships. Determine the correct insertion order to satisfy foreign key dependencies — parent tables must be seeded before child tables.
 
-2. **Design the seed data strategy:** Choose the appropriate approach based on the use case. Use deterministic data with fixed seeds for reproducible test suites. Use faker-based generation for realistic-looking development data. Use anonymized production snapshots for staging environments that need realistic data distributions. Define the volume of data for each table.
+2. **Design the seed data strategy:** Choose the appropriate approach based on the use case. Use deterministic data with fixed seeds for reproducible test suites. Use faker-based generation for realistic-looking development data. Use anonymized production snapshots for staging environments that need realistic data distributions. Production data holds personal data: only use a snapshot when the anonymising has been checked and your data protection rules allow it, and never copy raw customer data into a test or staging database. Define the volume of data for each table.
 
 3. **Generate seed scripts:** Write seed scripts in the project's language (Python, JavaScript, SQL, etc.) that create data matching all schema constraints. Use the Faker library or equivalent for realistic names, emails, addresses, and dates. Handle unique constraints by generating unique values or using sequence-based patterns. Wrap inserts in transactions for atomicity.
 
@@ -175,6 +192,17 @@ if __name__ == "__main__":
 ```sql
 -- seed.sql — Idempotent seed data for local development
 -- Run with: psql -U [YOUR_TEST_USER] -d [YOUR_TEST_DB] -f seed.sql
+-- Only run this on a disposable test or development database.
+
+-- Guard: fail closed. Stop on the first error, and refuse any database whose
+-- name does not contain "test" or "dev". Rename the check to match your naming.
+\set ON_ERROR_STOP on
+DO $$
+BEGIN
+  IF current_database() NOT LIKE '%test%' AND current_database() NOT LIKE '%dev%' THEN
+    RAISE EXCEPTION 'Refusing to seed database %: use a test or dev database', current_database();
+  END IF;
+END $$;
 
 BEGIN;
 
@@ -239,3 +267,11 @@ COMMIT;
 - **Large seed datasets and performance:** For seeding more than 10,000 rows, use bulk insert methods (COPY in PostgreSQL, LOAD DATA INFILE in MySQL) rather than individual INSERT statements. Disable indexes and constraints during bulk load, then re-enable them afterward.
 - **Time-dependent test data:** If your application logic depends on dates (e.g., "orders from the last 30 days"), generate dates relative to the current date rather than hardcoded dates that will become stale.
 - **Seeding binary or file data:** For tables that reference uploaded files or images, seed with placeholder file paths or small base64-encoded test images rather than attempting to generate full binary content.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Playwright test writer](https://useaiblocks.com/skills/browser-test-writer).
+- The [Failing test fixer](https://useaiblocks.com/skills/failing-test-fixer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

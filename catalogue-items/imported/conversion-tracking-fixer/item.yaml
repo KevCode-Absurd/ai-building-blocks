@@ -8,6 +8,8 @@ role: check
 job: ops
 level: advanced
 inputs:
+  - type: question
+    required: true
   - type: web_page
     required: true
 outputs:
@@ -29,4 +31,4 @@ credits:
   - title: conversion-tracking skill
     by: Corey Haines
     url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/conversion-tracking
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -7,7 +7,7 @@ job: make-skills
 headline: Skill writer and reviewer
 subhead: Describe the job, or paste a skill file you already have. Your AI checks the trigger line, the structure and the safety notes, then returns a cleaner SKILL.md and test prompts. You see what changed and why.
 explain: |
-  A skill is a folder with a SKILL.md file that tells your AI how to do one job. A good one fires at the right time, stays short, and is safe to run. This skill is a writer and reviewer for SKILL.md files, based on David Ondrej's guide to how skills work.
+  A skill is a folder with a SKILL.md file that tells your AI how to do one job. A good one fires at the right time, stays short, and is safe to run. This skill is a writer and reviewer for SKILL.md files, based on David Ondrej's guide to how skills work. The guide on its own is reference reading. This version adds a write-and-review procedure and a fixed order for the result.
 
   In write mode, you describe the job and your AI drafts the file. In review mode, you paste a skill and your AI checks it. Either way it looks at three things. First, does the trigger line say what the skill does, when to use it and how it differs from nearby skills? Second, is the file lean, with long detail moved into separate reference files? Third, does it say what it needs, what it returns, what to do when something is missing, and what could be risky?
 

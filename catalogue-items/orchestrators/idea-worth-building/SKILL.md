@@ -20,6 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

@@ -58,19 +58,19 @@ UPDATED me.md (after your approval)
 
 Then `MISSING:` each gap, `CHECKS MISSED:` one line each, or none.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Update the short version in your AI's settings** with the [me.md short-core writer](https://useaiblocks.com/skills/me-md-short-core-writer). It takes the me.md.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every proposed edit names its source and date.
 - Nothing changed without the person's approval.
 - Nothing from memory was used before a yes.
 - Expired and stale sections are listed, even when there is nothing new to put in them.
 - No passwords, ID or bank numbers, health details or private facts about other people reached the file.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Update the short version in your AI's settings** with the [me.md short-core writer](https://useaiblocks.com/skills/me-md-short-core-writer). It takes the me.md.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Without a me.md, stop and offer the me.md builder. Without new facts for a stale section, keep the section, list it as stale, and ask one question about it.

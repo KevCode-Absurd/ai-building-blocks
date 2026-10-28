@@ -100,17 +100,6 @@ Ask (ads only): "<the final ask line>" | price in it: <yes, or MISSING: price>
 CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Nothing in the locked list was reworded or dropped, and every specific is still there.
 - You can point to one promise.
@@ -118,6 +107,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every ledger row names a gain, and every new fact is in the facts.
 - The person (I, you, we) and the tense are unchanged.
 - No line made cleverer, no padding, no fragment except a label such as a price.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+- **Read your ad results** with the [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
+- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <fact>` when a fix needs a fact you were not given. Correct an accidental draft error when the approved facts resolve it, and log the source and change. When the underlying claim is genuinely disputed or unproved, flag it for a claims check rather than inventing a replacement. Never invent a fact to fill the gap.

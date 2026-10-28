@@ -1,6 +1,6 @@
 slug: build-a-community-project-with-clear-learning
 name: Build a community project with clear learning
-summary: Share the source files. Get a project brief, learning sequence and evidence collection plan.
+summary: Describe a local need and a curriculum goal. Get a project plan, a student brief and a learning record plan.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,18 +8,14 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: lesson_plan
-    required: true
   - type: question
-    required: false
+    required: true
   - type: source_text
     required: false
 outputs:
   - type: plan
   - type: copy_draft
   - type: document
-  - type: lesson_plan
-    required: true
 uses:
   - community-project-unit-planner
   - project-based-unit-brief-writer

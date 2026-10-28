@@ -17,7 +17,8 @@ You write the brief for a phone screen of reminders the narrator set for themsel
 - Leave the product out. No reminder names it.
 - The screen is generic: no real phone's or app's icons, fonts, colours or layout. The wallpaper is a plain colour, never a photo of a person.
 - Nothing says what the reader has. No reminder makes a claim.
-- Do not copy a system alert's shape, icons, sounds or wording, and do not add a notification badge or a fake "now" label. Do not render any element that looks like an operating-system or app notification banner. Drop the screen if it would read as a real alert, since platforms may reject notification-style pictures as deceptive. Keep the screen generic, with no phone maker's or app's logo, so it reads as a story prop, not a real alert.
+- The reminder cards are a generic story prop, not a copy of a real alert. Allowed: plain rounded cards, each with the word "Reminder", a time and the text, on a plain background. Not allowed: a status bar, app icons, a phone maker's or app's logo, system fonts, blur effects, notification badges, a fake "now" label, or any real system alert's shape or wording. Drop the screen if it would still read as a real alert.
+- Ad platforms may reject pictures that look like phone notifications as deceptive. Before it runs, confirm the platform allows this kind of picture. If it does not, use the plain list version from step 5, or a sticky note (`sticky-note-image-ad-maker`).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -88,7 +89,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 8. **How to make it**: the design-tool build, or the image prompt (60 to 120 words).
 9. **Checks missed**: one line per check still missed, or "none".
 
-Next step: run the finished picture against one other picture for the same story as a split test, and run the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker) before it goes live.
+Required before it goes live: run the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), because the picture looks like a phone screen. Then run it against one other picture for the same story as a split test.
 
 ## Check before you hand it back
 - **Stop:** a lock screen full of reminders looks like a friend's phone, not an ad.

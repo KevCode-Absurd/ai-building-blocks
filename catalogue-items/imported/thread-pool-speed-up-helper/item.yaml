@@ -29,4 +29,4 @@ credits:
   - title: matlab-use-thread-pool skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-use-thread-pool
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Used under LICENSE.md (BSD 2-Clause, for use with MathWorks products only). We gave it a plain name and changed the thread-pool snippet to ask before closing an open process pool.

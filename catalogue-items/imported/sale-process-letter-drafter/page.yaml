@@ -32,8 +32,8 @@ you_get:
 how_to_use:
   - Gather your deal code name, round dates, bid address, data room access and what the seller wants.
   - "Open Claude, ChatGPT or Gemini and paste in the full skill text, the whole SKILL.md for this item, from this page. Then give it your request in this pattern: \"Draft the [first process letter, final bid letter or management meeting invite] for [deal code name]. Facts: [dates, bid address, data room terms, number of rounds, what the seller wants].\""
-  - "Say which letter you need: first process letter, final bid letter or management meeting invite."
-  - Paste in your deal facts. If a fact is missing, your AI should ask you.
+  - "Work in this order: answer the questions your AI asks about missing facts, confirm which letter you need (first process letter, final bid letter or management meeting invite), let it draft, then check dates and contacts."
+  - A plain chat gives you the letter as text. The skill also describes a Word (.docx) file and a track-changes copy; for those, use an AI that can create files, or paste the text into Word yourself.
   - Check every date and contact. Then ask your advisor and lawyer to review the draft before you send it.
   - "Next: log each recipient and the date you sent the letter in your process tracker. Pair the letter with the anonymous company teaser and the sale memorandum that go with it."
 next: [anonymous-company-teaser-writer, sale-memorandum-drafter]
@@ -60,3 +60,14 @@ output_sample:
       contains: The advisor contacts for questions.
     - name: Final bid, meeting invite or word file
       contains: "For later rounds: the extra bid terms or meeting details, as a Word letter with a letterhead placeholder."
+terms:
+  - term: IOI
+    meaning: Indication of interest. A buyer's first, non-binding offer, usually a value range.
+  - term: CIM
+    meaning: Confidential information memorandum. The detailed sale document buyers read before bidding.
+  - term: SPA
+    meaning: Share purchase agreement. The sale contract; final bidders send back a marked-up copy.
+  - term: NDA
+    meaning: Non-disclosure agreement. The promise a buyer signs to keep deal facts private.
+  - term: Data room
+    meaning: A secure online folder where buyers read the company's documents.

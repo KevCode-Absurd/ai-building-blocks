@@ -88,6 +88,19 @@ tags: ["dispositional-knowledge", "assessment", "multi-informant", "coaching-fee
 
 # Dispositional Knowledge Assessment Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Guides a teacher through designing a complete assessment approach for dispositional knowledge — competencies like agency, collaboration, self-regulation, creative confidence, and regenerative mindset — where the "knowledge" exists only in enactment and cannot be separated from the learner's growing capability. This skill explicitly does NOT produce a rubric. Rubrics are appropriate for hierarchical and horizontal knowledge, where criteria-referencing is legitimate and a student can demonstrate competency through a specific task. Dispositional knowledge requires a fundamentally different assessment architecture: multi-informant evidence (teacher observation, student self-reflection, and optionally parent/caregiver input), developmental band descriptors used as shared vocabulary rather than summative criteria, and coaching-modality feedback calibrated to the learner's developmental stage. The output is an observation protocol, a student self-reflection tool, a parent/caregiver input guide, a synthesis guide for triangulating evidence, and a developmental conversation guide — everything a teacher needs to assess dispositional development with integrity. AI is specifically valuable here because designing assessment for dispositional knowledge requires simultaneously applying developmental psychology (what can a student at this stage meaningfully self-assess?), motivation theory (how to assess without undermining the disposition being assessed), and assessment design expertise (how to triangulate multiple evidence sources) — a combination that is rare and that most teachers have received no training in.
@@ -639,3 +652,12 @@ This is an inherent feature of all observation, not a failure of professionalism
 4. **The developmental conversation requires significant skill from the teacher.** The conversation guide scaffolds the structure and provides coaching questions, but the quality of the conversation depends on the teacher's ability to listen, to respond authentically, to hold space for the student's self-assessment without correcting or evaluating, and to maintain relational trust. A teacher who reads the coaching questions mechanically will produce a worse outcome than a teacher who has no guide but has strong relational instincts. The guide is a scaffold, not a substitute for professional judgment and relational competence. Schools should consider providing professional development on coaching conversations before implementing this approach at scale.
 
 5. **When two teachers reach different conclusions about the same student, this is information about contextual variation, not an interrater reliability failure.** Both observers may be accurate: they have seen different aspects of the disposition in different contexts. The response is a moderation conversation exploring what the variation reveals about the student's dispositional development across contexts — not averaging the observations, not deciding who is right. The pattern of variation across contexts is itself the most informative piece of evidence. This hermeneutic approach to moderation — treating divergent observations as a prompt for professional inquiry rather than a scoring problem to resolve — is a fundamental difference from psychometric reliability frameworks, which assume a single true score that reliable raters converge on. Dispositional development does not have a single true score; it has a pattern of enacted behaviour across contexts, and divergent teacher observations may both be faithfully representing real parts of that pattern.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the plan.
+- The [Student systems change planner](https://useaiblocks.com/skills/intervention-impact-planner). It takes the plan.
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

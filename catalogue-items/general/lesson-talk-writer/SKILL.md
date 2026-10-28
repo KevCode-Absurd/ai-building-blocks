@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make it sound better aloud** with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the script.
-- **Rehearse it** by reading it aloud once with a timer, then trim to your slot. No skill needed.
-If they pick the editor and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each lesson is tied to one true story.
@@ -98,6 +90,14 @@ If they pick the editor and that skill is added here, carry straight on with wha
 - No lesson is a claim you cannot back, and every quote is on the check list.
 - The joke is at your expense, not the audience's.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make it sound better aloud** with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the script.
+- **Rehearse it** by reading it aloud once with a timer, then trim to your slot. No skill needed.
+If they pick the editor and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

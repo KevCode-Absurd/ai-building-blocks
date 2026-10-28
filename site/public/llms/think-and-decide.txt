@@ -1,6 +1,6 @@
 # Think it through and decide: AI Blocks
 
-> 136 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 138 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
 - [Advice credibility checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Share advice and how the adviser is paid. Get who gains, who could lose and how much weight to give the advice.
@@ -55,12 +55,14 @@
 - [Digital tool audit planner](https://useaiblocks.com/skills/digital-tool-audit-planner): Run a digital tool audit: list your apps and habits and what you value. Get each one marked keep, cut or limit, with a rule for every limit.
 - [Disagreement evidence test planner](https://useaiblocks.com/skills/fair-disagreement-test-planner): Plan a fair test for a team dispute where both sides think they are right. Get claims both accept, a test, and written predictions.
 - [Evidence-based feedback conversation planner](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation): Share observed behaviour, effects and the desired change. Get a conversation plan, direct opening lines and listening prompts.
+- [Exam study roadmap builder](https://useaiblocks.com/skills/exam-study-roadmap-builder): Turn syllabi, past papers, or notes into ranked study topics matched to your available time.
 - [Fact cross-checker](https://useaiblocks.com/skills/fact-cross-checker): Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
 - [Failure postmortem writer](https://useaiblocks.com/skills/failure-postmortem-writer): Write a blame-free postmortem after a missed target, failed launch or outage. Get a five whys chain, root cause and dated action list.
 - [Fireworks multi-model answer reviewer](https://useaiblocks.com/skills/multi-model-answer-panel): Choose models and a question. Compare independent answers, cross-rank them and get a final synthesis with the full response record.
 - [Forecast disagreement reviewer](https://useaiblocks.com/skills/estimate-gap-auditor): Compare two estimates for the same event. Get their gap, the evidence behind each and the questions needed to resolve it.
 - [Habit plan builder](https://useaiblocks.com/skills/habit-plan-builder): Share a habit goal and your daily routine. Get a tiny first step, a reliable cue, simple tracking and a no-guilt restart plan.
 - [Hard decision planner](https://useaiblocks.com/skills/no-good-options-decider): Share a hard choice, the options and known facts. Compare what can be undone, who is affected and how to explain the decision.
+- [Hidden assumption auditor](https://useaiblocks.com/skills/hidden-assumption-auditor): Find the hidden assumptions behind a decision or idea, see which are most likely wrong, and get a conclusion rebuilt from what holds up.
 - [High-pressure claim reviewer](https://useaiblocks.com/skills/pressure-proof-answer-checker): Share a claim and the pressure to approve it. Get an evidence-led response, clear uncertainty and the checks still needed.
 - [Idea debate judge](https://useaiblocks.com/skills/idea-debate-judge): Test an idea before you build it. Get a three-round debate between a fan and a critic, then a judge's verdict on whether to go ahead.
 - [Idea sharing decision planner](https://useaiblocks.com/skills/share-or-protect-brief): Decide whether to keep, license or give away what you made. Get a one-page brief with who gains, who pays and what you will share.

@@ -7,7 +7,7 @@ job: check-contracts
 headline: Saudi rules finder
 subhead: Share your Saudi business, licences, data and cloud use; get a source check of rules and facts still to confirm.
 explain: |
-  Share your sector, licences, data and cloud setup. The skill checks current Saudi sources, maps possible rules and lists facts still to confirm.
+  Share your sector, licences, data and cloud setup. If your chat can browse, the skill checks current Saudi sources; if not, every rule and date it gives is unverified. It maps possible rules and lists facts still to confirm.
 
   This is general compliance information, not legal advice. Licence: MIT, as the LICENSE file in this item says.
 
@@ -33,7 +33,7 @@ you_get:
   - A mapping to ISO 27001, NIST or SOC 2
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check official sources. If your chat cannot browse, the applicability matrix and every date in it are unverified. Check each one against the official NCA, SDAIA, SAMA or CST text before you use it.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat. If your AI can read files, also add the two reference files in this download (references/nca-ecc.md and references/nca-cloud-ccc.md). The other three reference files the skill names are not included, so control IDs and dates for the personal data law, SAMA and sector rules must be checked against the official texts.
   - Describe your organisation, sector, licences, data and cloud setup. Add your ISO 27001 or SOC 2 status if you have it (optional).
   - Answer any questions your AI asks. It will not guess missing facts.
   - Check each source link and date in the result before you rely on it.
@@ -50,7 +50,7 @@ output_sample:
     - Access to official Saudi regulator pages, so your AI can check current rule text and dates
   output:
     - name: Applicability matrix
-      contains: Each Saudi rule, who issues it, and whether it applies to you, with the official source and date checked.
+      contains: Each Saudi rule, who issues it, and whether it applies to you, with the official source and the date checked, or marked unverified if your chat could not browse.
     - name: Open questions
       contains: Facts still missing, so no rule is ruled in or out by guesswork.
     - name: Gap table

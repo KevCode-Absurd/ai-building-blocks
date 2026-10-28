@@ -8,8 +8,12 @@ role: make
 job: ops
 level: beginner
 inputs:
+  - type: source_text
+    required: true
   - type: question
     required: true
+  - type: copy_draft
+    required: false
 outputs:
   - type: copy_draft
 uses: []
@@ -29,4 +33,4 @@ credits:
   - title: behuman skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/behuman/skills/behuman
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

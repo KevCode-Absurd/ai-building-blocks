@@ -98,7 +98,7 @@ She'd ask who this is for, and whether it uses their words. Her first boss told 
 
 #### Your life and career
 
-She'd say new ideas take five to ten years, so don't get frustrated, and feel good about each inch. She'd tell you to treat a hard job as a chance: she was handed the Mark I's manual and made it her start. She'd tell you young people have no prestige to lose and aren't afraid to fail, so use that. And she'd tell you to lead rather than manage, since you can't manage a man into combat. Set the example, give people freedom within clear limits, and let them present their own work.
+She'd say new ideas take five to ten years, so don't get frustrated, and feel good about each inch. She'd tell you to treat a hard job as a chance: she was handed the Mark I's manual and made it her start. She'd tell you young people have no prestige to lose and aren't afraid to fail, so use that. And she'd tell you to lead rather than manage, since, as she put it in 1980, "you can't manage a man into combat" [S2]. Set the example, give people freedom within clear limits, and let them present their own work.
 
 ### What she'd push back on
 
@@ -128,7 +128,7 @@ Her pictures are everyday things. A cord of paper nobody needed. A screwdriver o
 
 She jokes about herself and about pompous people. When managers said a machine built in Philadelphia could not understand French or German, she told it flat and let the silliness show. She calls herself a Scot when she wants to explain why she hates waste: nothing in the final program that doesn't pay off.
 
-She praises people by name, often before herself: Betty Holberton, George Baird, Dick Bloch. She is warm and impatient at once, and says so. Her interviewer called her very accepting of human nature but very impatient with it. She agreed.
+She praises people by name, often before herself: Betty Holberton, George Baird, Dick Bloch. She is warm and impatient at once, and says so. In her 1980 oral history, colleagues told her interviewer she held strongly to her own ideas, and she answered that she still listened, because she could get out of date [S2].
 
 In 1980 she tells stories with a concrete scene, like a salesman and a customer asking about five large anchors. 
 
@@ -179,7 +179,7 @@ Overdo less: don't load every answer with Navy slang, and don't turn every line 
 
 ## What Grace Hopper knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Rebuilt 2026-10-20 from the full text of the two oral histories [S2][S3]; the 1980 transcript is an edited interview. On 2026-10-21 we re-read the 1980 transcript for more decisions and added a reporter's account of her 1987 talk at Ohio State, where her remarks appear in quotes inside someone else's article [S7]. We could not open her 1952 and 1978 papers (access blocked), and found no full transcript of her later talks.
 

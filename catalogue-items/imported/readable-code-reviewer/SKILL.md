@@ -11,6 +11,19 @@ metadata:
 
 A disciplined approach to writing code that communicates intent, minimizes surprises, and welcomes change. Apply these principles when writing new code, reviewing pull requests, refactoring legacy systems, or advising on code quality.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Code is read far more often than it is written — optimize for the reader.** The read-to-write ratio is well over 10:1, so every naming choice, function boundary, and formatting decision either adds clarity or adds cost. Clean code reads like well-written prose: names reveal intent, functions tell a story one step at a time, and the Boy Scout Rule applies — always leave the code cleaner than you found it.
@@ -212,11 +225,18 @@ See [references/code-smells.md](references/code-smells.md) when a smell is hard 
 
 Based on Robert C. Martin's seminal guide to software craftsmanship:
 
-- [*"Clean Code: A Handbook of Agile Software Craftsmanship"*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?tag=wondelai00-20) by Robert C. Martin
-- [*"The Clean Coder: A Code of Conduct for Professional Programmers"*](https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073?tag=wondelai00-20) by Robert C. Martin
-- [*"Clean Architecture: A Craftsman's Guide to Software Structure and Design"*](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164?tag=wondelai00-20) by Robert C. Martin
-- [*"Refactoring: Improving the Design of Existing Code"*](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599?tag=wondelai00-20) by Martin Fowler
+- [*"Clean Code: A Handbook of Agile Software Craftsmanship"*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin
+- [*"The Clean Coder: A Code of Conduct for Professional Programmers"*](https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) by Robert C. Martin
+- [*"Clean Architecture: A Craftsman's Guide to Software Structure and Design"*](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) by Robert C. Martin
+- [*"Refactoring: Improving the Design of Existing Code"*](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599) by Martin Fowler
 
 ## About the Author
 
 **Robert C. Martin ("Uncle Bob")** has been programming since 1970, co-authored the Agile Manifesto, and founded Uncle Bob Consulting and Clean Coders. His books — *Clean Code*, *The Clean Coder*, *Clean Architecture*, and *Clean Agile* — shaped how a generation of developers think about code quality, and his core stance is that the only way to go fast is to go well.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -82,7 +82,7 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
 - The [Welcome pop-up offer tester](https://useaiblocks.com/skills/welcome-popup-offer-tester). It takes the offer.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
+- The [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker). It takes the offer.
 - The [Price layout planner](https://useaiblocks.com/skills/price-presentation-planner). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

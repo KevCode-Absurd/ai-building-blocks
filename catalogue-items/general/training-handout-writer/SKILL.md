@@ -26,7 +26,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The material** (required): slides, notes or a transcript from the session.
+- **The material** (required): slides, notes or a transcript from the session. This is the "source text" in Before you start; no article or book is needed.
 - **The skill** (required): what people should be able to do after the session, in one line.
 - **When they will use it** (advised): the situation at work where the handout gets pulled out.
 - **Questions asked in the session** (optional): they show what was unclear.
@@ -63,7 +63,7 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Repeat task how-to writer](https://useaiblocks.com/prompts/repeat-task-how-to-writer).
-- **Write the ad copy** with the [Product how-to guide writer](https://useaiblocks.com/skills/product-how-to-guide-writer).
+- The [Recall quiz writer](https://useaiblocks.com/prompts/recall-quiz-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

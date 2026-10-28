@@ -30,7 +30,7 @@ credits:
   - title: expo-api-routes skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/expo-api-routes
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, made the sign-in helper refuse requests until a real check is added, marked the example routes as templates, and added a sign-in check to the paid OpenAI example. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Expo
     url: https://github.com/expo

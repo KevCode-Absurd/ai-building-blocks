@@ -66,9 +66,9 @@ The full list. Big and small labels with reasons. The main task and what it unlo
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker). It takes the plan.
 - The [Urgent versus important sorter](https://useaiblocks.com/skills/urgent-versus-important-sorter). It takes the plan.
 - The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- The [Long-shot bet planner](https://useaiblocks.com/skills/long-shot-bet-planner). It takes the plan.
 - The [Life goals and time planner](https://useaiblocks.com/skills/monthly-roles-and-goals-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

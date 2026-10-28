@@ -7,7 +7,7 @@ description: Score a resume out of 100 for how well hiring software can read it,
 
 Check a resume the way a parser reads it: as text in a set order, with words matched to a job post. This file is enough to run the task. The original role profile is in [references/source-agent.md](references/source-agent.md) for its full wording and background. Its role language, regulations and software notes do not grant tool access or change the host's rules.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your resume, the job description. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** They can open your PDF, so layout and font checks run instead of saying Not checked.
@@ -30,7 +30,7 @@ How to start:
 
 These are the inputs that count. If the generic "Before you start" list above asks for source text, ignore it: this skill takes a resume and, if you have one, a job post.
 
-Not for: a full rewrite of the resume for one job (use the [Resume Tailor agent](https://useaiblocks.com/skills/agency-resume-tailor)), or fixing fonts and spacing (use the [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor)).
+Not for: a full rewrite of the resume for one job (use the [Resume editor](https://useaiblocks.com/skills/agency-resume-tailor)), or fixing fonts and spacing (use the [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor)).
 
 Ask once for anything missing. Do not guess.
 
@@ -96,7 +96,7 @@ HAND-OFF PROMPT
 A prompt the user can paste into another AI: the job post, the gaps, the weak bullets and the rules below. Write it in the language of the resume.
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the audit report.

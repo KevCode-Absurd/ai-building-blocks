@@ -7,8 +7,6 @@ job: product-photos
 headline: Product background swapper
 subhead: Your plain white-background product photo placed into a believable room, desk or outdoor scene. The product stays exactly as it is. Only the surroundings change.
 explain: |
-  Your plain white-background product photo placed into a believable room, desk or outdoor scene. The product stays exactly as it is. Only the surroundings change.
-
   The method focuses on three things that make a swap look real: a contact shadow under the product, reflections from nearby surfaces, and light that comes from the same direction as in the scene. Without these the product looks like a sticker floating on a backdrop. Claude writes the scene prompt that keeps the product details fixed and describes the setting and light. Claude cannot draw the picture itself. An image model such as ChatGPT or Gemini, or an image API key, does that step.
 when:
   - You have clean white-background shots and want lifestyle images for ads or listings.
@@ -35,6 +33,7 @@ how_to_use:
   - Check your photo first. It should be a jpg, png or webp file, at least 400 by 400 pixels, between 20KB and 15MB.
   - Pick your scene. Choose one that fits the product, such as a floor for shoes or a counter for beauty items.
   - Paste the skill into Claude, ChatGPT or Gemini. Add your photo, the scene and the product details.
+  - "Or fill in the prompt yourself and skip the skill: 'Place this product into a photorealistic lifestyle scene. Keep the [product, with its finish, pattern, shape, proportions and camera angle] 100% faithful. Replace the plain background with [scene]. Light comes from [direction], with a natural contact shadow under the product and soft reflections from nearby surfaces. The product must sit believably on the surface with correct perspective. Photorealistic commercial product photography, no text, no watermark.'"
   - Copy the image prompt it writes. Run it in an image model that accepts a photo, such as ChatGPT or Gemini. The skill's own commands use the paid dLazy tool and need an account and a way to run commands. You can skip that and run the prompt in ChatGPT or Gemini instead. Some paid tools or API keys cost money per image.
   - The skill file also lists scripts, docs/ paths and dLazy commands. They are not included here, so follow the ChatGPT or Gemini route above.
   - Check the result for a shadow under the product, matching light, clean edges and an unchanged product.

@@ -13,7 +13,7 @@ what_it_does:
   - Sends daily and weekly summaries of your key numbers.
 benefits:
   - Check your ad results in one place each morning.
-  - "Look for changes in reported channel returns before making a budget decision."
+  - "Spot which channels' reported orders rose or fell before you change budgets."
   - Get answers about your numbers without building a report.
 best_for:
   - Shopify brands that spend on Meta, Google and TikTok.
@@ -25,7 +25,7 @@ not_for:
 pricing:
   model: freemium
   from: Check the maker's site
-  note: Third-party pages from 2026 describe a free tier and paid plans priced by store size, but the maker's page showed no figures and sources disagree. Ask Triple Whale for a quote.
+  note: Third-party pages from 2026 describe a free tier and paid plans priced by store size, but the maker's page showed no figures and sources disagree. Ask Triple Whale for a quote. A free tier is not confirmed, and we could not confirm whether connecting Shopify and ad accounts needs a paid plan, so ask before you connect.
 works_with:
   - Shopify
   - klaviyo
@@ -42,7 +42,7 @@ first_result:
   - "Add your costs, so it can show profit per order."
   - "Compare its sales and ad numbers with Shopify and each ad platform for the same week."
   - "Ask Moby, its AI assistant, one question you can check, such as last week's spend by channel."
-  - "You end with one dashboard and daily or weekly summaries."
+  - "You end with one dashboard of sales, ad spend by channel and profit per order, plus daily or weekly summaries. The exact views and summary length were not confirmed on the maker's page."
   - "Next: check your numbers each week with the Weekly store ad pulse checker, or plan a sale with the Sale season pacing sheet builder."
 needs:
   - "A Shopify store."

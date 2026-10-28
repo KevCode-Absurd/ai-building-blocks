@@ -61,6 +61,19 @@ tags: ["productive-failure", "exploration", "Kapur", "desirable-difficulty", "co
 
 # Productive Failure Protocol
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 For novel or complex problems, stages exploration before instruction. The learner must produce at least two attempted approaches and explain why each might or might not work before receiving consolidation. The consolidation — when it comes — explicitly references and builds on the learner's own attempts rather than starting from scratch. This design, from Kapur's (2008, 2014) productive failure research, produces significantly better conceptual understanding and transfer compared to instruction-first approaches — because the struggle of attempting solutions activates prior knowledge, generates awareness of what's missing, and creates cognitive readiness for the explanation that follows.
@@ -218,3 +231,11 @@ Quick transfer check: three students score 70, 70, 70. Three others score 60, 70
 3. **Consolidation quality is critical and difficult.** Kapur (2016) is explicit: productive failure only works when the consolidation explicitly references the exploration attempts. Generic instruction that doesn't connect to the learner's specific attempts produces the same gains as direct instruction without the exploration. The AI must read the actual attempts and reference them specifically.
 
 4. **This skill requires more time than direct instruction.** Two exploration phases plus consolidation may take 2–3x as long as a standard explanation. This is a genuine cost — worth it for core concepts, not worth it for every topic in every session.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker). It takes the notes.
+- The [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

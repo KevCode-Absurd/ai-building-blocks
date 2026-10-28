@@ -6,9 +6,30 @@ argument-hint: "<Figma URL, screenshot, or description>"
 
 # /design-critique
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> In this skill, "~~design tool" means a design app your AI is connected to, such as Figma, and "~~user feedback" means a connected feedback or support tool. If neither is connected, work from the screenshot, link or description the user shares. (The CONNECTORS.md file the original links to is not in this copy.)
 
 Get structured design feedback across multiple dimensions.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Everyday usability reviewer](https://useaiblocks.com/skills/everyday-usability-reviewer). Bring a design file (optional), your website (optional).
+2. **An audit report** with the [Website usability reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer). Bring your question, your website (optional), your page (optional), a store capture (optional).
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a design file, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Usage
 
@@ -88,8 +109,8 @@ If a Figma URL is provided, pull the design from Figma. If a file is referenced,
 | [Typography/spacing/color] | [Inconsistency] | [Fix] |
 
 ### Accessibility
-- **Color contrast**: [Pass/fail for key text]
-- **Touch targets**: [Adequate size?]
+- **Color contrast**: [Likely pass/fail for key text. From a screenshot this is an estimate; say so, and tell the user to confirm exact ratios with a contrast checker]
+- **Touch targets**: [Adequate size? An estimate from a screenshot unless real dimensions are given]
 - **Text readability**: [Font size, line height]
 
 ### What Works Well
@@ -100,7 +121,18 @@ If a Figma URL is provided, pull the design from Figma. If a file is referenced,
 1. **[Most impactful change]** — [Why and how]
 2. **[Second priority]** — [Why and how]
 3. **[Third priority]** — [Why and how]
+
+**Next step:** apply the top three changes, then share the updated design for a second round.
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
+- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer).
+- The [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If Connectors Available
 
@@ -116,3 +148,5 @@ If **~~user feedback** is connected:
 1. **Share the context** — "This is a checkout flow for a B2B SaaS" helps me give relevant feedback.
 2. **Specify your stage** — Early exploration gets different feedback than final polish.
 3. **Ask me to focus** — "Just look at the navigation" gives you more depth on one area.
+
+Changed by AI Blocks (2026-10-28): explained the connector placeholders, marked screenshot contrast and size checks as estimates, and added a next-step line to the output.

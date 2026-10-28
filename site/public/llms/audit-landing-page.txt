@@ -1,6 +1,6 @@
 # Audit a landing page: AI Blocks
 
-> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 36 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker): Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.
 - [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker): Check if your site has enough visitors for an A/B test. Paste visits, orders and revenue to get the weeks needed and a readiness score out of 100.
@@ -20,6 +20,7 @@
 - [Landing page repair reviewer](https://useaiblocks.com/workflows/fix-your-landing-pages-top-problems-and-check-again): Rank landing page problems, separate fixes from test ideas and review the updated page against a 30-point checklist.
 - [Page drop-off test planner](https://useaiblocks.com/workflows/page-drop-off-fix): Share page content, step counts and customer questions. Get the largest measured drop, answer gaps and a traffic-based test estimate.
 - [Page issue sorter](https://useaiblocks.com/skills/page-issue-sorter): Sort a long list of page problems into fix now, investigate, test or tracking, then rank them. Get a clear plan for your page issue list.
+- [Page traffic and conversion reader](https://useaiblocks.com/skills/page-traffic-conversion): Find which Shopify product and collection pages get visits but few sales. Give your store address, get a ranked page traffic and conversion report.
 - [Page usability test planner](https://useaiblocks.com/workflows/page-usability-review): Share a page and the task users need to finish. Get usability concerns, clearer click choices and a small participant-test plan.
 - [Popup copy and display planner](https://useaiblocks.com/skills/popup-optimiser): Share your visitor goal and current results. Get popup copy, display rules and test ideas suited to your page.
 - [Product page auditor](https://useaiblocks.com/skills/product-page-auditor): Check your product page for changes that lift sales. Give it a link or screenshot and get a ranked list of fixes, each with the research behind it.

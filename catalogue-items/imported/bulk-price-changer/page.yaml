@@ -33,8 +33,8 @@ how_to_use:
   - Use an AI that can run commands and sign in to Shopify, such as Claude Code, Cursor, Codex or Gemini CLI. A normal chat window cannot change your store.
   - Sign in to your store with the Shopify CLI first. Your login needs permission to read and write products.
   - Give your AI the skill and tell it your store address, the collection or tag, and the percent or fixed change. Add a lowest and highest price if you want limits.
-  - Ask for a preview first. Check the CSV of old and new prices against what you expect.
-  - Tell your AI to apply the change only when the preview looks right. Prices go live at once and there is no bulk undo.
+  - The skill always starts with a preview and changes nothing. Check the CSV of old and new prices against what you expect, and check it lists every variant.
+  - Say a clear yes to apply the change only when the preview looks right. If you change anything, ask for a new preview first. Prices go live at once and there is no bulk undo.
   - Open a few products in the Shopify admin to check the new prices. Errors are logged but do not stop the run.
 output_sample:
   input:
@@ -42,7 +42,7 @@ output_sample:
     - A collection or a product tag
     - Percent or fixed change, and the amount (a minus sign means a discount)
     - Lowest and highest allowed price (optional)
-    - Preview only or apply (optional)
+    - Your yes to apply, given after you check the preview
   prerequisites:
     - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
     - Shopify CLI signed in to your store

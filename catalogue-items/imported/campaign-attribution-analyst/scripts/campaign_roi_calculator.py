@@ -24,7 +24,8 @@ import sys
 from typing import Any, Dict, List, Optional
 
 
-# Industry benchmark ranges by channel
+# Reference ranges by channel. These are the original author's rules of thumb with no
+# published source; compare with your own history before acting on them.
 # Format: {metric: {channel: (low, target, high)}}
 BENCHMARKS: Dict[str, Dict[str, tuple]] = {
     "ctr": {
@@ -63,11 +64,35 @@ BENCHMARKS: Dict[str, Dict[str, tuple]] = {
 }
 
 
-def safe_divide(numerator: float, denominator: float, default: float = 0.0) -> float:
-    """Safely divide two numbers, returning default if denominator is zero."""
-    if denominator == 0:
-        return default
+def safe_divide(numerator: float, denominator: Optional[float]) -> Optional[float]:
+    """Divide two numbers. Returns None when the denominator is zero or missing.
+
+    A ratio with no denominator is undefined, not zero: spend 0 with revenue 300
+    has no ROAS, and reporting 0 would hide that.
+    """
+    if denominator is None or denominator == 0:
+        return None
     return numerator / denominator
+
+
+def _round(value: Optional[float], digits: int = 2) -> Optional[float]:
+    return round(value, digits) if value is not None else None
+
+
+def _times(value: Optional[float], factor: float) -> Optional[float]:
+    return value * factor if value is not None else None
+
+
+def _show(value: Optional[float], fmt: str, prefix: str = "", suffix: str = "") -> str:
+    """Format a number for text output; undefined or missing values print as n/a."""
+    return f"{prefix}{format(value, fmt)}{suffix}" if value is not None else "n/a"
+
+
+# What "profit" means in this script. Only media spend is subtracted.
+PROFIT_BASIS = (
+    "revenue minus media spend only; excludes product cost, fees, creative, tools "
+    "and labour, so it is not operating profit"
+)
 
 
 def get_benchmark(metric: str, channel: str) -> tuple:
@@ -125,31 +150,43 @@ def calculate_campaign_metrics(campaign: Dict[str, Any]) -> Dict[str, Any]:
     """
     name = campaign.get("name", "Unnamed Campaign")
     channel = campaign.get("channel", "default")
-    spend = campaign.get("spend", 0.0)
-    revenue = campaign.get("revenue", 0.0)
+    spend = campaign.get("spend")          # None when missing: never assume 0
+    revenue = campaign.get("revenue")
     impressions = campaign.get("impressions", 0)
     clicks = campaign.get("clicks", 0)
     leads = campaign.get("leads", 0)
     customers = campaign.get("customers", 0)
 
-    # Core metrics
-    roi = safe_divide(revenue - spend, spend) * 100
-    roas = safe_divide(revenue, spend)
-    cpa = safe_divide(spend, customers) if customers > 0 else None
-    cpl = safe_divide(spend, leads) if leads > 0 else None
-    cac = safe_divide(spend, customers) if customers > 0 else None
-    ctr = safe_divide(clicks, impressions) * 100 if impressions > 0 else None
-    cvr = safe_divide(customers, leads) * 100 if leads > 0 else None
-    cpc = safe_divide(spend, clicks) if clicks > 0 else None
-    cpm = safe_divide(spend, impressions) * 1000 if impressions > 0 else None
-    lead_conversion_rate = safe_divide(leads, clicks) * 100 if clicks > 0 else None
+    flags: List[str] = []
+    if spend is None:
+        flags.append("MISSING: spend, so ROI, ROAS and cost metrics are not calculated")
+    if revenue is None:
+        flags.append("MISSING: revenue, so ROI, ROAS and profit are not calculated")
+    if spend == 0:
+        flags.append("Spend is 0: ROI and ROAS are undefined, not 0")
 
-    # Profit
-    profit = revenue - spend
+    have_money = spend is not None and revenue is not None
+
+    def pct(x: Optional[float]) -> Optional[float]:
+        return x * 100 if x is not None else None
+
+    # Core metrics (None = undefined or missing)
+    roi = pct(safe_divide(revenue - spend, spend)) if have_money else None
+    roas = safe_divide(revenue, spend) if have_money else None
+    cpa = safe_divide(spend, customers) if spend is not None and customers > 0 else None
+    cpl = safe_divide(spend, leads) if spend is not None and leads > 0 else None
+    cac = cpa
+    ctr = pct(safe_divide(clicks, impressions))
+    cvr = pct(safe_divide(customers, leads))
+    cpc = safe_divide(spend, clicks) if spend is not None else None
+    cpm = safe_divide(spend * 1000, impressions) if spend is not None else None
+    lead_conversion_rate = pct(safe_divide(leads, clicks))
+
+    # Revenue minus media spend (see PROFIT_BASIS). Not operating profit.
+    profit = revenue - spend if have_money else None
 
     # Benchmark assessments
     assessments: Dict[str, Any] = {}
-    flags: List[str] = []
 
     if ctr is not None:
         benchmark = get_benchmark("ctr", channel)
@@ -160,9 +197,9 @@ def calculate_campaign_metrics(campaign: Dict[str, Any]) -> Dict[str, Any]:
             "assessment": assessment,
         }
         if assessment == "underperforming":
-            flags.append(f"CTR ({ctr:.2f}%) is below industry low ({benchmark[0]}%) for {channel}")
+            flags.append(f"CTR ({ctr:.2f}%) is below the reference low ({benchmark[0]}%) for {channel} (rule-of-thumb range, not a published benchmark)")
 
-    if roas > 0:
+    if roas is not None:
         benchmark = get_benchmark("roas", channel)
         assessment = assess_performance(roas, benchmark, higher_is_better=True)
         assessments["roas"] = {
@@ -171,7 +208,7 @@ def calculate_campaign_metrics(campaign: Dict[str, Any]) -> Dict[str, Any]:
             "assessment": assessment,
         }
         if assessment == "underperforming":
-            flags.append(f"ROAS ({roas:.2f}x) is below industry low ({benchmark[0]}x) for {channel}")
+            flags.append(f"ROAS ({roas:.2f}x) is below the reference low ({benchmark[0]}x) for {channel} (rule-of-thumb range, not a published benchmark)")
 
     if cpa is not None:
         benchmark = get_benchmark("cpa", channel)
@@ -182,10 +219,10 @@ def calculate_campaign_metrics(campaign: Dict[str, Any]) -> Dict[str, Any]:
             "assessment": assessment,
         }
         if assessment == "underperforming":
-            flags.append(f"CPA (${cpa:.2f}) exceeds industry high (${benchmark[2]:.2f}) for {channel}")
+            flags.append(f"CPA (${cpa:.2f}) is above the reference high (${benchmark[2]:.2f}) for {channel} (rule-of-thumb range, not a published benchmark)")
 
-    if profit < 0:
-        flags.append(f"Campaign is unprofitable: ${profit:,.2f} net loss")
+    if profit is not None and profit < 0:
+        flags.append(f"Revenue is below media spend: ${profit:,.2f} (revenue minus media spend only)")
 
     # Recommendations
     recommendations: List[str] = []
@@ -199,26 +236,29 @@ def calculate_campaign_metrics(campaign: Dict[str, Any]) -> Dict[str, Any]:
         recommendations.append("Lead-to-customer conversion is low; review sales process and lead quality")
     if lead_conversion_rate is not None and lead_conversion_rate < 2:
         recommendations.append("Click-to-lead rate is low; improve landing page relevance and form experience")
-    if profit > 0 and assessments.get("roas", {}).get("assessment") in ("good", "excellent"):
-        recommendations.append("Campaign performing well; consider scaling budget")
+    if profit is not None and profit > 0 and assessments.get("roas", {}).get("assessment") in ("good", "excellent"):
+        recommendations.append(
+            "Revenue is well above media spend; check margin and other costs before scaling budget"
+        )
 
     return {
         "name": name,
         "channel": channel,
         "metrics": {
-            "spend": round(spend, 2),
-            "revenue": round(revenue, 2),
-            "profit": round(profit, 2),
-            "roi_pct": round(roi, 2),
-            "roas": round(roas, 2),
-            "cpa": round(cpa, 2) if cpa is not None else None,
-            "cpl": round(cpl, 2) if cpl is not None else None,
-            "cac": round(cac, 2) if cac is not None else None,
-            "ctr_pct": round(ctr, 2) if ctr is not None else None,
-            "cvr_pct": round(cvr, 2) if cvr is not None else None,
-            "cpc": round(cpc, 2) if cpc is not None else None,
-            "cpm": round(cpm, 2) if cpm is not None else None,
-            "lead_conversion_rate_pct": round(lead_conversion_rate, 2) if lead_conversion_rate is not None else None,
+            "spend": _round(spend),
+            "revenue": _round(revenue),
+            "profit": _round(profit),
+            "profit_basis": PROFIT_BASIS,
+            "roi_pct": _round(roi),
+            "roas": _round(roas),
+            "cpa": _round(cpa),
+            "cpl": _round(cpl),
+            "cac": _round(cac),
+            "ctr_pct": _round(ctr),
+            "cvr_pct": _round(cvr),
+            "cpc": _round(cpc),
+            "cpm": _round(cpm),
+            "lead_conversion_rate_pct": _round(lead_conversion_rate),
             "impressions": impressions,
             "clicks": clicks,
             "leads": leads,
@@ -239,24 +279,32 @@ def calculate_portfolio_summary(campaign_results: List[Dict[str, Any]]) -> Dict[
     Returns:
         Portfolio-level summary with totals and weighted averages.
     """
-    total_spend = sum(c["metrics"]["spend"] for c in campaign_results)
-    total_revenue = sum(c["metrics"]["revenue"] for c in campaign_results)
+    # Campaigns missing spend or revenue are left out of money totals (and listed)
+    priced = [c for c in campaign_results
+              if c["metrics"]["spend"] is not None and c["metrics"]["revenue"] is not None]
+    excluded = [c["name"] for c in campaign_results if c not in priced]
+    total_spend = sum(c["metrics"]["spend"] for c in priced)
+    total_revenue = sum(c["metrics"]["revenue"] for c in priced)
     total_impressions = sum(c["metrics"]["impressions"] for c in campaign_results)
     total_clicks = sum(c["metrics"]["clicks"] for c in campaign_results)
     total_leads = sum(c["metrics"]["leads"] for c in campaign_results)
     total_customers = sum(c["metrics"]["customers"] for c in campaign_results)
     total_profit = total_revenue - total_spend
+    # Blended cost per lead / customer uses the same campaigns as the spend total,
+    # so leads from a campaign with no spend figure do not dilute the cost.
+    priced_leads = sum(c["metrics"]["leads"] for c in priced)
+    priced_customers = sum(c["metrics"]["customers"] for c in priced)
 
     underperforming = [c["name"] for c in campaign_results if c["flags"]]
     top_performers = sorted(
-        campaign_results,
+        [c for c in campaign_results if c["metrics"]["roi_pct"] is not None],
         key=lambda c: c["metrics"]["roi_pct"],
         reverse=True,
     )
 
     # Channel breakdown
     channel_totals: Dict[str, Dict[str, float]] = {}
-    for c in campaign_results:
+    for c in priced:
         ch = c["channel"]
         if ch not in channel_totals:
             channel_totals[ch] = {"spend": 0, "revenue": 0, "leads": 0, "customers": 0}
@@ -270,8 +318,8 @@ def calculate_portfolio_summary(campaign_results: List[Dict[str, Any]]) -> Dict[
         channel_summary[ch] = {
             "spend": round(totals["spend"], 2),
             "revenue": round(totals["revenue"], 2),
-            "roi_pct": round(safe_divide(totals["revenue"] - totals["spend"], totals["spend"]) * 100, 2),
-            "roas": round(safe_divide(totals["revenue"], totals["spend"]), 2),
+            "roi_pct": _round(_times(safe_divide(totals["revenue"] - totals["spend"], totals["spend"]), 100)),
+            "roas": _round(safe_divide(totals["revenue"], totals["spend"])),
             "leads": int(totals["leads"]),
             "customers": int(totals["customers"]),
         }
@@ -281,15 +329,17 @@ def calculate_portfolio_summary(campaign_results: List[Dict[str, Any]]) -> Dict[
         "total_spend": round(total_spend, 2),
         "total_revenue": round(total_revenue, 2),
         "total_profit": round(total_profit, 2),
-        "portfolio_roi_pct": round(safe_divide(total_profit, total_spend) * 100, 2),
-        "portfolio_roas": round(safe_divide(total_revenue, total_spend), 2),
+        "profit_basis": PROFIT_BASIS,
+        "portfolio_roi_pct": _round(_times(safe_divide(total_profit, total_spend), 100)),
+        "portfolio_roas": _round(safe_divide(total_revenue, total_spend)),
+        "excluded_from_money_totals": excluded,
         "total_impressions": total_impressions,
         "total_clicks": total_clicks,
         "total_leads": total_leads,
         "total_customers": total_customers,
-        "blended_ctr_pct": round(safe_divide(total_clicks, total_impressions) * 100, 2),
-        "blended_cpl": round(safe_divide(total_spend, total_leads), 2) if total_leads > 0 else None,
-        "blended_cpa": round(safe_divide(total_spend, total_customers), 2) if total_customers > 0 else None,
+        "blended_ctr_pct": _round(_times(safe_divide(total_clicks, total_impressions), 100)),
+        "blended_cpl": _round(safe_divide(total_spend, priced_leads)),
+        "blended_cpa": _round(safe_divide(total_spend, priced_customers)),
         "underperforming_campaigns": underperforming,
         "top_performer": top_performers[0]["name"] if top_performers else None,
         "channel_summary": channel_summary,
@@ -310,10 +360,12 @@ def format_text(results: Dict[str, Any]) -> str:
     lines.append(f"  Total Campaigns:    {summary['total_campaigns']}")
     lines.append(f"  Total Spend:        ${summary['total_spend']:>12,.2f}")
     lines.append(f"  Total Revenue:      ${summary['total_revenue']:>12,.2f}")
-    lines.append(f"  Total Profit:       ${summary['total_profit']:>12,.2f}")
-    lines.append(f"  Portfolio ROI:      {summary['portfolio_roi_pct']}%")
-    lines.append(f"  Portfolio ROAS:     {summary['portfolio_roas']}x")
-    lines.append(f"  Blended CTR:        {summary['blended_ctr_pct']}%")
+    lines.append(f"  Revenue - Spend:    ${summary['total_profit']:>12,.2f}   (media spend only, not operating profit)")
+    lines.append(f"  Portfolio ROI:      {_show(summary['portfolio_roi_pct'], '.2f', suffix='%')}")
+    lines.append(f"  Portfolio ROAS:     {_show(summary['portfolio_roas'], '.2f', suffix='x')}")
+    lines.append(f"  Blended CTR:        {_show(summary['blended_ctr_pct'], '.2f', suffix='%')}")
+    if summary["excluded_from_money_totals"]:
+        lines.append(f"  Left out of totals: {', '.join(summary['excluded_from_money_totals'])} (spend or revenue missing)")
     if summary["blended_cpl"] is not None:
         lines.append(f"  Blended CPL:        ${summary['blended_cpl']:>12,.2f}")
     if summary["blended_cpa"] is not None:
@@ -334,7 +386,7 @@ def format_text(results: Dict[str, Any]) -> str:
         for ch, cs in sorted(summary["channel_summary"].items()):
             lines.append(
                 f"  {ch:<20} ${cs['spend']:>10,.2f} ${cs['revenue']:>10,.2f} "
-                f"{cs['roi_pct']:>8.1f}% {cs['roas']:>6.2f}x"
+                f"{_show(cs['roi_pct'], '.1f', suffix='%'):>9} {_show(cs['roas'], '.2f', suffix='x'):>7}"
             )
 
     # Individual campaigns
@@ -348,11 +400,11 @@ def format_text(results: Dict[str, Any]) -> str:
         m = campaign["metrics"]
         lines.append(f"  {'Metric':<25} {'Value':>15}")
         lines.append(f"  {'-'*25} {'-'*15}")
-        lines.append(f"  {'Spend':<25} ${m['spend']:>13,.2f}")
-        lines.append(f"  {'Revenue':<25} ${m['revenue']:>13,.2f}")
-        lines.append(f"  {'Profit':<25} ${m['profit']:>13,.2f}")
-        lines.append(f"  {'ROI':<25} {m['roi_pct']:>13.2f}%")
-        lines.append(f"  {'ROAS':<25} {m['roas']:>13.2f}x")
+        lines.append(f"  {'Spend':<25} {_show(m['spend'], ',.2f', prefix='$'):>14}")
+        lines.append(f"  {'Revenue':<25} {_show(m['revenue'], ',.2f', prefix='$'):>14}")
+        lines.append(f"  {'Revenue - media spend':<25} {_show(m['profit'], ',.2f', prefix='$'):>14}")
+        lines.append(f"  {'ROI':<25} {_show(m['roi_pct'], '.2f', suffix='%'):>14}")
+        lines.append(f"  {'ROAS':<25} {_show(m['roas'], '.2f', suffix='x'):>14}")
 
         if m["cpa"] is not None:
             lines.append(f"  {'CPA':<25} ${m['cpa']:>13,.2f}")

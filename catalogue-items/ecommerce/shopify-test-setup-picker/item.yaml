@@ -8,8 +8,6 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: performance_sheet, required: false}
-  - {type: shortlist, required: false}
 outputs:
   - {type: audit_report}
 uses: []

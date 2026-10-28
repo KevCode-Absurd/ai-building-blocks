@@ -68,6 +68,19 @@ tags: ["perspective-taking", "empathy", "historical-thinking", "social-perspecti
 
 # Perspective-Taking Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Helps teachers design learning activities that develop genuine perspective-taking — the ability to understand how other people think, feel, and experience situations from within their own context and constraints. It is useful across many domains: history (understanding actors with different worldviews), social sciences (stakeholder analysis), literature (character motivation), conflict resolution, design thinking, and systems work.
@@ -226,3 +239,11 @@ Note: Emotional engagement is not an assessment criterion. Students who engage w
 2. **Perspective-taking on sensitive historical or cultural topics requires subject expertise the skill cannot provide.** A well-designed activity on partition of India will still fail if the teacher does not understand the history. The skill scaffolds pedagogy, not content knowledge.
 3. **The anti-projection guardrails reduce but cannot eliminate projection.** Students bring their own frameworks and experiences to any perspective-taking exercise. The guardrails make the epistemically better path clear; they cannot prevent students from taking the easier path.
 4. **For perspectives shaped by experiences students have never had, the activity can develop intellectual understanding but not experiential empathy.** Students who have not experienced poverty, displacement, or discrimination can understand the structural conditions that produce those experiences. They cannot be made to feel those experiences, and the activity should not claim otherwise.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Class discussion format picker](https://useaiblocks.com/skills/class-discussion-format-picker). It takes the lesson plan.
+- The [Follow-up question writer](https://useaiblocks.com/skills/follow-up-question-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

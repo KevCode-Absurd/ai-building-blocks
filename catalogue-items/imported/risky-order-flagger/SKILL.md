@@ -12,6 +12,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Queries recent high-risk orders and takes two protective actions: tags the order for staff visibility and optionally places a fulfillment hold to prevent the order from shipping until reviewed. Complements `order-risk-report` (in this library: Fraud review queue builder), which only reads, with write actions that create a reviewable queue.
 
@@ -50,6 +63,7 @@ Queries recent high-risk orders and takes two protective actions: tags the order
 3. **OPERATION:** `fulfillmentOrderHold` — mutation (if `hold_fulfillment: true`)
    **Inputs:** `fulfillmentOrderId`, `reason: <hold_reason>`, `reasonNotes: "High-risk order — awaiting fraud review"`
    **Expected output:** `heldFulfillmentOrder { id, status }`, `userErrors`
+   **Which IDs:** place one hold on each fulfillment order from Step 1 whose status is still open (not closed, cancelled or already on hold). An order can have more than one. The query reads `fulfillmentOrders(first: 5)`, so if an order returns 5, page through the rest or raise the limit before holding, or a shipment can slip through. Log any order where not every open fulfillment order was held.
 
 ## GraphQL Operations
 
@@ -179,6 +193,14 @@ For `format: json`, emit:
 ## Output Format
 CSV file `risk_tagging_<YYYY-MM-DD>.csv` with columns:
 `order_name`, `order_id`, `risk_level`, `total_price`, `currency`, `tag_applied`, `hold_placed`, `customer_name`
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
+- The [Fraud review queue builder](https://useaiblocks.com/skills/fraud-review-queue-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

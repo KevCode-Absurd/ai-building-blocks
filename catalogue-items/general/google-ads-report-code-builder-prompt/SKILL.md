@@ -5,7 +5,9 @@ description: Get a coding brief for a Google Ads report with matched dates, clea
 
 # Google Ads report coding prompt
 
-Use it to get a coding brief for a monthly Google Ads report in your own tool. It needs your code folder and your Google Ads details.
+Use it to get a coding brief for a monthly Google Ads report in your own tool. Only your request is required. Your code folder makes the brief fit your project; with just a CSV export, you get a specification instead.
+
+**What you get:** the brief for a report that returns, in order: an executive summary, a metric table, spend against budget, conversion tracking, value and ROAS trend, CPA trend, a campaign comparison and owned actions for next period, plus a source ledger and the checks not run.
 
 **Getting the data:** the easiest route is a report export from Google Ads (a CSV file). Running the code against the live Google Ads API needs more: a developer token (approved by Google), OAuth credentials, and read access to the customer account. The brief only lists these. It does not set them up or call Google Ads. Google Ads access is yours to grant, and the brief never asks for your keys. If you have no code folder yet, start from the CSV export and mark the code parts `MISSING:` so the brief is a specification your developer can build from.
 
@@ -60,7 +62,7 @@ In short: scope, data pull, money fix, metrics, report, tests. In full:
 2. **Read the data.** Use the repository's authorized read-only client or a supplied export. Collect campaign and ad group IDs, names and status, campaign type, budget, cost, impressions, clicks, conversions, conversion value and conversion-action labels. Add search terms, keyword or asset data, impression-share loss and placement or video fields only when they exist and matter.
 3. **Fix the money.** Convert cost_micros to currency units exactly once and keep the raw value. Check whether each conversion value is already in currency units. Reject double conversion, totals that mix currencies and a manager-wide sum shown as one customer. Record missing data as missing, never as zero.
 4. **Work out the metrics.** Calculate spend, conversion value, conversions, CTR, CPC, CPA and ROAS, with a stated result for zero denominators and unavailable data. Compare periods only when the definitions match, and say if the periods differ in length or conversions are delayed. Hitting a target ratio does not prove profit: contribution or payback is a separate question.
-5. **Build the report.** Use these sections where they apply and mark the rest "not applicable": executive summary; metric table; spend versus budget; conversion tracking and action mix; value and ROAS trend; CPA trend; campaign comparison; unresolved or weak campaigns; search terms and keywords; Shopping and feed findings; Performance Max assets and what search data it shows; Display, video and placements; brand versus non-brand evidence; bid, budget and impression-share context; supported wins; challenges and evidence gaps; owned actions for next period. Audience and cross-platform claims need their own supplied evidence.
+5. **Build the report.** A typical monthly report needs these sections: executive summary; metric table; spend versus budget; conversion tracking and action mix; value and ROAS trend; CPA trend; campaign comparison; challenges and evidence gaps; owned actions for next period. Add these only when the account runs them and the data exists: search terms and keywords; Shopping and feed findings; Performance Max assets; Display, video and placements; brand versus non-brand; impression-share context. Audience and cross-platform claims need their own supplied evidence.
 6. **Keep words honest.** An AI model may explain sections within stated cost and evidence limits, but it must not invent metrics, causes or projected gains. A full report needs no paid model call.
 7. **Return the output.** Give structured JSON and readable Markdown with a source ledger, a timestamp, the actual query or export used and the checks not run. A Slack summary is a draft unless sending is separately authorized. PDF rendering and delivery checks are separate and not implied by a Markdown file. Make no fixed time-saving claim.
 8. **Add tests.** Write synthetic tests for account scope, date boundaries, the micros conversion, currency mismatch, no conversions, missing values, partial campaign types and narrative source checks. Example: cost_micros of 350,000,000 and a conversion value of 700 in USD means cost 350 and ROAS 2, not cost 350,000,000. Report tests as run only if they ran in the target project.
@@ -74,6 +76,7 @@ Next step: hand the brief to your developer or coding AI, then have the finished
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -106,6 +106,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the buyer profile.
 - The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
 - The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- **Test the idea with real people** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- The [First customer group picker](https://useaiblocks.com/skills/first-customer-group-picker). It takes the buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

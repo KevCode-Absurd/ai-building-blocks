@@ -65,7 +65,7 @@ Pause here: Apply every fix marked must-fix, then run the server once more.
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above:
+Use these instead of the general "After this" list below:
 - Share the step 4 install steps with the people who will connect. Keep the step 3 security report with your records.
 - Run step 3 again before each major version, and apply every must-fix item before you publish.
 - Check the published server for leaked keys with the [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder).

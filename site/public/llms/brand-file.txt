@@ -1,6 +1,6 @@
 # Set up your brand file: AI Blocks
 
-> 48 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand consistency reviewer](https://useaiblocks.com/agents/agency-design-brand-guardian): Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.
 - [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Share your product and buyers. Explore what the brand stands for, possible names, visual styles and story ideas, then narrow the options.
@@ -30,6 +30,7 @@
 - [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder): Share your product, alternatives and buyer comments. Get comparison maps, possible gaps and a positioning claim to test.
 - [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker): Share a draft and voice guide. Get ranked findings and before-and-after edits for top issues.
 - [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner): Plan your founder interview call. Give it your brand file and get ranked questions, a written form and every answer filed.
+- [Markdown page brand settings builder](https://useaiblocks.com/skills/brand-style-setup-wizard): Answer ten brand questions to create saved colors, fonts, and layout settings for markdown-html converters.
 - [Packaging first-impression reviewer](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester): Share a pack image and five strangers’ brief-look answers. Get a custom read score, design changes and a comparison plan.
 - [Premium brand ad message planner](https://useaiblocks.com/skills/marketing-vector-writer): Share your brand and ad offers. Get one message direction, allowed ad ideas, discount rules and a creator brief.
 - [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper): Share product facts, buyer groups and costs. Get positioning lines, proof needs and price scenarios to test with real buyers.

@@ -38,7 +38,7 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run MATLAB code. You need MATLAB R2024b or newer with the DSP System Toolbox, which needs a MATLAB licence.
   - Paste the skill into the chat, or upload the skill folder.
-  - Gather these first. The signal file format, a reference signal recorded at the same sample rate as the signal, and the delay of the echo or noise if you know it. Then add your signal file, your reference signal, your sample rate and a short note on the noise or echo.
+  - Gather these first. Your signal and your reference signal, each as a single-channel MATLAB vector or an audio file MATLAB can read, such as WAV. Both must use the same sample rate and line up in time. Add the delay of the echo or noise if you know it. Then give your AI the two signals, your sample rate in Hz and a short note on the noise or echo.
   - Ask your AI to design and run the adaptive filter, then show the error curve and the final weights.
   - Check that the error curve falls and levels off. If it does not, ask for a smaller step size or a different filter type.
   - Apply the weights to new data, or keep the code to run the filter on live signals.
@@ -63,6 +63,6 @@ output_sample:
     - name: Convergence check
       contains: A test that the error falls over time, so you can see the filter has settled.
     - name: Final weights
-      contains: The learned filter coefficients, pulled out the right way for the filter type you used.
+      contains: The learned filter coefficients as a MATLAB vector, one value per filter tap, so its length matches the filter length. They are pulled out the right way for the filter type you used.
     - name: Cleaned signal
-      contains: Your signal with the noise or echo removed.
+      contains: Your signal with the noise or echo removed, as a MATLAB variable the same length as your input. For noise and echo cancelling this is the filter's error output. Save it to a file if you need one.

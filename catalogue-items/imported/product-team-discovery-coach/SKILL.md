@@ -11,6 +11,23 @@ metadata:
 
 Framework for building products customers love through empowered teams that own continuous discovery and delivery. The best product companies don't ship features -- they solve problems, and they give teams the autonomy and accountability to figure out how.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude or ChatGPT:** Either can score your answers and write the plan. Files and code are not needed.
+- **Your roadmap and OKR documents:** Paste them in so the score rests on what the team really works from.
+<!-- /needs -->
+
 ## When to Use
 
 - A roadmap is a dated list of features that stakeholders handed over.
@@ -47,6 +64,14 @@ Return these sections, in this order. Keep the whole answer under about 1,000 wo
 6. **Missing**: every input marked MISSING and how it limits the plan.
 
 Rules: the iteration counts, user counts and thresholds in the reference files are the original author's rules of thumb, not research findings. Do not present them as proof. Report failed diagnostic rows honestly even when the person hoped for a higher score.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the plan.
+- The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Core Principle
 
@@ -235,8 +260,8 @@ See [references/case-studies.md](references/case-studies.md) when you want a wor
 
 For the complete methodology, case studies, and deeper insights:
 
-- [*"Inspired: How to Create Tech Products Customers Love"*](https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507?tag=wondelai00-20) by Marty Cagan
-- [*"Empowered: Ordinary People, Extraordinary Products"*](https://www.amazon.com/EMPOWERED-Ordinary-People-Extraordinary-Products/dp/111969129X?tag=wondelai00-20) by Marty Cagan and Chris Jones
+- [*"Inspired: How to Create Tech Products Customers Love"*](https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507) by Marty Cagan
+- [*"Empowered: Ordinary People, Extraordinary Products"*](https://www.amazon.com/EMPOWERED-Ordinary-People-Extraordinary-Products/dp/111969129X) by Marty Cagan and Chris Jones
 
 ## About the Author
 

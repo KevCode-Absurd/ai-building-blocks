@@ -30,14 +30,17 @@ you_get:
   - A bank of questions with follow-up probes
   - A phone screen script
   - A debrief checklist
+  - A separate gut feeling field
+  - Calibration exercises for interviewers
 how_to_use:
   - Gather the role title, your interview stages, the must-have skills and your company values. Anything you leave out, the skill marks as MISSING instead of guessing.
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Also paste references/scorecard-templates.md, which has full example scorecards to work from. A plain chat cannot open the references folder by itself. Without it the skill still works, from its own instructions.
   - Add the role, your interview stages, and the must-have skills and values.
   - Add your own rating scale and phone screen topics if you have them.
   - Ask for the scorecards, then the phone screen script.
   - Check that every stage ends with a recommendation and debrief notes, and that each rating guide names things an interviewer can see or hear.
   - Read each rating guide and check it fits your role before you share it with interviewers.
+  - Next, run a short calibration session with your interviewers using the exercises, before the first interview. After each candidate, use the debrief checklist.
   - Last, and only if you use Teamtailor, ask for teamtailor-setup.md. The Job Match Score is a score Teamtailor works out from your interview ratings, and it needs a paid Teamtailor account.
 output_sample:
   input:

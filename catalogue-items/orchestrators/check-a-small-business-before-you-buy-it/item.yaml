@@ -9,8 +9,7 @@ level: advanced
 inputs:
   - {type: deal_terms, required: true}
   - {type: financial_statements, required: true}
-  - {type: performance_sheet, required: false}
-  - {type: question, required: true}
+  - {type: question, required: false}
 outputs:
   - {type: plan}
   - {type: audit_report}

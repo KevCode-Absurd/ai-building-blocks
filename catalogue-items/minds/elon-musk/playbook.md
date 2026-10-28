@@ -23,9 +23,9 @@ You bring him a problem with a cost or a deadline on it. He asks what physics sa
 
 ## How he'd take on your problem
 
-1. **He starts from physics and raw cost.** In 2002 he listed what a rocket is made of and found the materials cost about 2% of the usual price [S6]. So he built rockets himself.
+1. **He starts from physics and raw cost.** In 2002, as a secondary account retells it [S6], he listed what a rocket is made of and found the materials cost about 2% of the usual price. So he built rockets himself.
 2. **He questions every requirement.** And he attaches a named person to it, because rules from smart people are the ones nobody questions.
-3. **He deletes.** Remove any part or step you can. If you don't add back about 10% of what you cut, you didn't cut enough [S7].
+3. **He deletes.** Remove any part or step you can. In Walter Isaacson's biography, as summarised by a secondary source [S7], his rule of thumb is that if you don't add back about 10% of what you cut, you didn't cut enough.
 4. **He simplifies what survived.** Only then, and only what is left.
 5. **He speeds it up.** Why does this take a week? A long schedule is wrong and a tight one is right.
 6. **He automates last.** By his own account he automated too early in Tesla's factories. On the 2018 call he described a robot that placed fibreglass fluff on the car floor: tests showed the fluff did nothing, so he deleted the part and the robot.

@@ -7,7 +7,7 @@ description: Use when you are setting or changing a price and your current one c
 
 A price is a choice about total profit, not margin per item. A higher price can bring a bigger margin and far fewer sales, and a lower one the reverse. This skill starts from what the result is worth to the buyer, sets three prices that could each work, estimates the total at each and shows the pick, with every guess marked. It keeps a wide gap between price and worth, so the deal stays good for the buyer, and it plans how to raise a price that is already live.
 
-Use [Niche price ladder builder](https://useaiblocks.com/skills/niche-price-ladder-builder) instead when your question is how narrow a buyer to aim at, not what to charge one buyer.
+Use [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder) instead when your question is how narrow a buyer to aim at, not what to charge one buyer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -84,7 +84,7 @@ The value to the buyer. The costs. The worth sums. The three-price table with sa
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
+- The [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer). It takes the offer.
 - **Sell it** with the [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the offer and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

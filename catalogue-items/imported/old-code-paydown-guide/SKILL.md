@@ -11,6 +11,19 @@ metadata:
 
 Take a large, aged, tangled codebase that everyone is afraid to touch and pay its debt down in place — no big-bang rewrite, the old system always shipping. The instinct to rewrite is the one reliable way to turn a struggling-but-shipping product into a struggling-and-not-shipping one; this journey is the alternative. It is interactive and resumable across eight phases: the agent asks before every decision and records the outcome in your project's `docs/` folder, so you can stop after any phase and pick up later. The first phase builds a safety net at your change points; every phase after it is verifiable because that net exists.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Feedback over fear: cover and modify, never edit and pray — pay debt down in place on the paths you actually walk, and never stop shipping.** This skill sequences the phases, asks the decision questions, and records every choice in `docs/`. The constituent skills carry the method — invoke them rather than improvising their frameworks. You do not pay down a mountain of debt by rebuilding the mountain; you pay it down one safe, tested step at a time along the paths you already change. Skipping ahead — cleaning before the safety net, splitting services before the boundaries are real — is the exact failure mode this ordering exists to prevent.
@@ -201,3 +214,10 @@ Exit checklist — every box tied to an artifact:
 - [ ] No untracked hacks remain; the debt budget and broken-windows policy are written down (TECH-DEBT.md Debt Budget & Broken-Windows Policy).
 
 Close the tracker: every phase `done` or `skipped: reason`, with remaining Next Actions carried into the TECH-DEBT.md Debt Ledger so nothing is lost. Then route forward: when the starting point was a younger prototype and you want the production-readiness variant of this journey, continue with the `improve-code-quality` skill; when code health is restored and the product experience is next, continue with the `improve-app` skill.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code cleanup planner](https://useaiblocks.com/skills/code-cleanup-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

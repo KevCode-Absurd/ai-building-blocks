@@ -7,6 +7,8 @@ description: Use when someone has a topic and notes and needs a way into a piece
 
 A piece that opens with the idea gets a nod and is forgotten, while one real case sticks. This skill finds the one person or event that holds your idea, questions the obvious explanation and pushes past where research usually stops. It then outlines the piece from a scene to a person, with the strongest case against you included.
 
+The approach is drawn from Malcolm Gladwell's public interviews and is credited as a style and thinking influence only. It is not his method, and he has not reviewed or endorsed this skill.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -16,11 +18,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, customer words, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -60,9 +61,9 @@ The chosen case and why, with two other candidates. What everyone assumes and th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Blog post writer](https://useaiblocks.com/skills/blog-post-writer). It takes the brief.
 - The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the brief.
 - The [Long-form writing planner](https://useaiblocks.com/skills/long-form-piece-structurer). It takes the brief.
-- **Say it to the room** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

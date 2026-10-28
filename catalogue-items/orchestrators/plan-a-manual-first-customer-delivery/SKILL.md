@@ -100,8 +100,8 @@ Write MISSING: <what> next to the result it affects. Keep working on steps that 
 ## After this
 
 - Send the procedure to the person who leads delivery for sign-off, then close the open handoff checks before the customer's start date.
-- When the next request arrives, run the [Check capacity before promising a delivery date](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow before you answer.
-- To kick off the work with the client, run the [Prepare a clear client project kickoff](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff) workflow.
+- When the next request arrives, run the [Team capacity and delivery-date planner](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow before you answer.
+- To kick off the work with the client, run the [Client project kickoff planner](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff) workflow.
 - Nothing is sent to the customer by this workflow.
 
 ## Avoid

@@ -7,7 +7,7 @@ description: "Plan a spatial analysis: testable question, first look and depende
 
 Turn a location question and a data description into an analysis plan: the method, the checks, the records and a way to explain the result.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, map data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** The plan and draft code work from a pasted profile and your data description.
@@ -82,9 +82,9 @@ Return these sections, in this order:
 
 ## Next step
 
-Use this next step instead of the generic "After this" list above, which is about research, not maps. Run the draft code yourself and bring the output back. For a plain map or simple query, use the [GIS Analyst agent](https://useaiblocks.com/skills/agency-gis-analyst). To clean or join the data first, use the [Spatial Data Engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). For general statistics without location, use the [Statistician agent](https://useaiblocks.com/skills/agency-academic-statistician).
+Use this next step instead of the generic "After this" list below, which is about research, not maps. Run the draft code yourself and bring the output back. For a plain map or simple query, use the [GIS analyst](https://useaiblocks.com/skills/agency-gis-analyst). To clean or join the data first, use the [Spatial data engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). For general statistics without location, use the [Statistician agent](https://useaiblocks.com/skills/agency-academic-statistician).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the plan.

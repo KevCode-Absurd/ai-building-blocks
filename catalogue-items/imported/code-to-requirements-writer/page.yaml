@@ -30,12 +30,13 @@ you_get:
   - A list of API calls that marks real ones and mock data
   - A map of how pages link to each other
 how_to_use:
-  - Use an AI that can read your project files and run code. Install Python 3 first.
+  - Use an AI that can read your project files and run code, such as Claude Code, Codex or Cursor. A plain chat cannot do this. Install Python 3 first. The scripts write new files (analysis.json and a prd/ folder) into your project, so work on a copy or a clean git branch.
   - Put the skill folder next to your project. Run codebase_analyzer.py on your project to make analysis.json.
   - Run prd_scaffolder.py on analysis.json. It makes a prd/ folder with empty page files.
   - Ask your AI to follow the skill and fill in each page file, one page at a time.
   - Check the result with references/prd-quality-checklist.md. Fix gaps and anything marked as unsure.
-  - Give prd/README.md to your product lead, or to the AI agent that will rebuild the app.
+  - Search for [TBC]. It marks fields whose business meaning the AI could not tell from the code. Fill each one in with someone who knows the app. API calls marked as mock data are not built yet, so treat them as a plan, not a working endpoint.
+  - Give prd/README.md to your product lead, or to the AI agent that will rebuild the app. You can also turn each page file into backlog tickets.
 output_sample:
   input:
     - Your project folder, front end, back end or both

@@ -7,11 +7,9 @@ job: make-skills
 headline: Skill writer
 subhead: A new skill built from a plain description of the job, then tested and improved over several rounds. You say what you want, and the skill narrows it down, drafts the instructions, and writes a few realistic test prompts.
 explain: |
-  A new skill built from a plain description of the job, then tested and improved over several rounds. You say what you want, and the skill narrows it down, drafts the instructions, and writes a few realistic test prompts.
+  After it drafts the skill and the test prompts, it runs those prompts with the new skill switched on, shows you the results side by side, and tracks simple numbers like pass rates. You tell it what is wrong, it rewrites, and the loop repeats on a bigger test set. A last step rewrites the short description so the skill triggers when it should. If you already have a draft, you can skip straight to testing. Running the viewer needs Python.
 
-  Then it runs those prompts with the new skill switched on, shows you the results side by side, and tracks simple numbers like pass rates. You tell it what is wrong, it rewrites, and the loop repeats on a bigger test set. A last step rewrites the short description so the skill triggers when it should. If you already have a draft, you can skip straight to testing. Running the viewer needs Python.
-
-  Source: this is Anthropic's skill-creator skill, copied under the Apache 2.0 licence (see the LICENSE.txt file). We changed only the name and this page text. The skill file itself is unchanged.
+  Source: this is Anthropic's skill-creator skill, copied under the Apache 2.0 licence (see the LICENSE.txt file). We changed only the name and this page text. The skill file itself is unchanged, so inside it the skill is still called skill-creator.
 when:
   - You do the same task every week and want to turn it into a reusable skill.
   - You have a skill draft that gives uneven results.
@@ -56,9 +54,9 @@ output_sample:
     - name: Test results
       contains: Runs with the skill and without it, so you can compare them side by side.
     - name: benchmark.json
-      contains: Simple numbers such as pass rates for each version of the skill.
+      contains: Simple numbers such as pass rates for each version of the skill. Needs an AI that runs code, such as Claude Code, plus Python.
     - name: Results viewer
-      contains: A page where you read each result and leave feedback for the next rewrite.
+      contains: A page where you read each result and leave feedback for the next rewrite. Needs Claude Code or another tool that runs Python; in a plain chat you review results in the chat instead.
     - name: Improved skill
       contains: A rewrite based on your feedback, tested again on a larger set of prompts.
     - name: Trigger description

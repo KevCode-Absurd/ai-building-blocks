@@ -16,6 +16,31 @@ license_source: "https://github.com/Clagoss/claude-code-para-disenadores/blob/ma
 
 # Design Token Contrast
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Design tokens** (yours): the colours, type sizes and spacing, as CSS or JSON.
+- **A design direction** (yours): the page's type, colours and layout rules.
+- **An image** (yours): a finished picture.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A design direction** with the [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). Bring a document, a design direction (optional). It uses your brand brain.
+2. **A design direction** with the [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). Bring a brief. It uses your brand brain.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for design tokens, a design direction, an image. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can read your project files, run the script and apply the fix once you agree.
+- **Any AI that can run Node:** The script needs Node 18 or newer. A plain chat AI can do the hand-worked version.
+<!-- /needs -->
+
 ## Overview
 
 Measures contrast on the **tokens**, not on screens: a problem fixed in a token is fixed
@@ -152,6 +177,15 @@ it only after the user agrees, and run the script again to show it passes.
 ## Related Skills
 
 - `@wcag-audit-patterns` - For a full WCAG 2.2 audit beyond color contrast.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Design rule consistency reviewer](https://useaiblocks.com/skills/monthly-design-system-keeper).
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
+- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Licence Note
 

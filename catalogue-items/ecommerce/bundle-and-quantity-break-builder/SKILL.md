@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -87,8 +87,8 @@ MISSING: <what was not given>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [After-sale offer planner](https://useaiblocks.com/skills/after-sale-offer-planner). It takes the offer.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
 - The [Bundle tier layout planner](https://useaiblocks.com/skills/bundle-tier-layout-planner). It takes the offer.
+- The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
 - The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the offer.
 - The [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

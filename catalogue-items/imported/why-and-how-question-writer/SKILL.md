@@ -66,6 +66,22 @@ tags: ["elaboration", "encoding", "comprehension", "deep-processing", "questioni
 
 # Elaborative Interrogation Prompt Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a set of "why?" and "how does this connect?" prompts designed to deepen encoding by forcing students to generate explanations that link new information to existing knowledge. Unlike comprehension questions (which check understanding), elaborative interrogation prompts require students to explain *why* a fact is true or *how* it relates to something they already know — the act of generating the explanation strengthens the memory trace. AI is specifically valuable here because effective elaborative prompts must be pitched at the precise intersection of what students are learning and what they already know — too disconnected from prior knowledge and students can't generate explanations; too obvious and there's no elaboration needed.
@@ -221,3 +237,11 @@ For each prompt:
 2. **The evidence base is strongest for factual/conceptual learning, not procedural skills.** Pressley et al. (1992) and most elaborative interrogation studies used factual materials. The strategy transfers less clearly to mathematical procedures, physical skills, or creative tasks where "why?" questions may not deepen encoding in the same way.
 
 3. **Elaborative interrogation is more effective than re-reading but less effective than retrieval practice.** Dunlosky et al. (2013) rated it as "moderate utility" rather than "high utility." It is best used as a complement to retrieval practice and spaced practice, not as a replacement. Use elaborative prompts during initial encoding, then switch to retrieval practice for consolidation.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the draft.
+- The [Self-explanation question writer](https://useaiblocks.com/skills/self-explanation-question-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

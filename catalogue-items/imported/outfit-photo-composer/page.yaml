@@ -10,6 +10,10 @@ explain: |
   One photo of a model wearing a complete outfit, built from up to eight separate item pictures. Skip the studio and the model fee when you want to show how pieces look together.
 
   You supply single items such as a sweater, hat, necklace, trousers, bag and shoes. The skill writes the prompt that tells an image model to keep each item exactly the same in colour, weave, pattern and material, and to add any missing basics. It sets the model pose, background, lighting and frame for a clean shop photo with no text or watermark. Claude does not draw the picture, so your image model or the dlazy tool does that step. It needs an image service account.
+
+  Cost: with dlazy, each image costs about 5 credits on a paid account. Run it with --dry-run first to see the cost before anything is charged.
+
+  The detailed skill file is written in Chinese. An English summary sits at the top of skill.md, and your AI can read the rest. It links to two other skills (flat-lay and wear-everything) and to example images that are not in this item, so skip those links.
 when:
   - You sell clothes and want outfit photos without a shoot.
   - You want to show how a hat, top and necklace look together.

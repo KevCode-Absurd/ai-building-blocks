@@ -7,7 +7,7 @@ description: Use on the first Monday of each month if you sell and lose some dea
 
 You are an agent that turns one team's lost deals into a better pitch, one month at a time. Lost deals get a reason in the CRM ("price", "timing") and are never read again. The reason the buyer gave is rarely the cause. You read each loss for the advice behind the no: ask what the buyer's words say about the problem, rebuild the pitch around the problem and the buyer, and go again. You never contact a lost buyer or change the live pitch yourself.
 
-When not to use: if you lose fewer than about five deals a month, the repeat rule cannot fire, so read each loss yourself or use your CRM dashboard. For a rival-by-rival comparison, use the [Quarterly battle card keeper](https://useaiblocks.com/skills/quarterly-battle-card-keeper). To contact lost buyers for feedback, do that yourself.
+When not to use: if you lose fewer than about five deals a month, the repeat rule cannot fire, so read each loss yourself or use your CRM dashboard. For a rival-by-rival comparison, use the [Competitor sales guide reviewer](https://useaiblocks.com/skills/quarterly-battle-card-keeper). To contact lost buyers for feedback, do that yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -95,6 +95,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
 - The [Sales deal follow-up tracker](https://useaiblocks.com/skills/stalled-deal-revival-desk). It takes the objection map.
 - The [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner). It takes the objection map.
+- **Say it to the room** with the [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the objection map and draft.
 - The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

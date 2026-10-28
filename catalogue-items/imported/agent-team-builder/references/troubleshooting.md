@@ -316,16 +316,18 @@ pip install 'crewai-tools[firecrawl]'
 
 **Fix**: Set environment variables:
 ```bash
-# .env file
+# .env file (add .env to .gitignore so it is never committed)
 OPENAI_API_KEY=sk-...
 SERPER_API_KEY=...
 TAVILY_API_KEY=...
 ```
 
 ```python
-# Or in code
+# Check the key is set before you start
 import os
-os.environ["SERPER_API_KEY"] = "your-key"
+# Keys come from your environment or a password manager. Never paste them into chat
+# or hard-code them in files you commit.
+assert os.environ.get("SERPER_API_KEY"), "Set SERPER_API_KEY in your shell or .env"
 
 from crewai_tools import SerperDevTool
 search = SerperDevTool()

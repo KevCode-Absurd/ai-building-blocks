@@ -34,15 +34,17 @@ you_get:
   - Steps to test it and deploy it
   - Admin screen code to set values like a percentage (optional)
 how_to_use:
-  - "Before you start, have these ready: the Shopify CLI installed (get the current version from Shopify's developer site), a free Shopify Partner account, and an existing Shopify app to add the Function to."
-  - Open an AI that can run code and use the Shopify CLI. Paste in this skill. Test on a Shopify development store from your Partner account before any live store, because these rules run on every order.
+  - "Before you start, have these ready: the Shopify CLI installed (run shopify version to see yours, and update it from Shopify's developer site if it is old), a free Shopify Partner account, and an existing Shopify app to add the Function to."
+  - "Know that the sample code will not run as it is. These parts are placeholders you or your AI must write or fill in: the weight check in the delivery example (cart_weight_exceeds_limit), the restricted-product check in the cart check example (is_restricted_product), the Function ID in the admin screen code (YOUR_FUNCTION_ID), and the example limits."
+  - Open an AI that can run code and use the Shopify CLI. Paste in the text of SKILL.md from this item. Test on a Shopify development store from your Partner account before any live store, because these rules run on every order.
   - "Check the current API version in Shopify's docs and the currency of your shop. The sample code uses version 2025-01 and a 500 limit as examples only."
   - Describe your rule in plain words and say which part of checkout it changes.
   - Ask your AI to create the Function with the Shopify CLI in your app, in Rust or JavaScript.
   - Run the sample cart through it with the local test command. Check the result matches your rule.
   - Try a large cart and a cart that should not match, then read the code once.
-  - Before you deploy, check three things. The API version is current. Any rule that blocks checkout or limits regions fits your legal and shipping terms. The tests pass on a development store. Then deploy with the Shopify CLI and turn it on in your Shopify admin.
-  - "For the admin screen, deploy first, then copy the Function ID from your app in the Partner dashboard (or from the deploy output) into the admin code. These parts are placeholders you or your AI must write or fill in before the code runs: the weight check in the delivery example (cart_weight_exceeds_limit), the restricted-product check in the cart check example (is_restricted_product), the Function ID in the admin screen code (YOUR_FUNCTION_ID), and the example limits. The sample code is for development stores only until a developer has reviewed it."
+  - Before you deploy, check three things. The API version is current. Any rule that blocks checkout, hides a payment method or limits regions fits your legal and shipping terms. The tests pass on a development store. Get a developer to sign off any such rule before it goes live. Then deploy with the Shopify CLI and turn it on in your Shopify admin.
+  - "For the admin screen, deploy first, then copy the Function ID from your app in the Partner dashboard (or from the deploy output) into the admin code. The sample code is for development stores only until a developer has reviewed it."
+  - Next, keep the sample cart files. Run them again after every rule change, before you deploy the change.
 next: [shopify-checkout-customizer, shopify-app-builder]
 output_sample:
   input:

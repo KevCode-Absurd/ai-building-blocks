@@ -135,6 +135,8 @@ improve:
   - Keep each old version and note why you changed it.
   - Ask someone you trust to read it and say what is unclear.
 
+next: [price-drop-rules-writer]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Gathering decisions onto one page is text work any strong chat AI does well with this skill."}

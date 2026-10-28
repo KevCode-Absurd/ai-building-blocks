@@ -5,11 +5,13 @@ name: Biology model builder
 summary: Build a SimBiology model in MATLAB code from your species and reactions, with an optional diagram. Needs paid MATLAB and SimBiology.
 job: build-software
 headline: Biology model builder
-subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram. Bring the species and reactions to model. Then simulate or fit the saved model.
+subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram if you ask for one. Then simulate or fit the saved model.
 explain: |
   Describe the species and reactions in your biological system, and get a working SimBiology model written as MATLAB code, with a diagram if you want one. You no longer need to click through the Model Builder by hand or guess function names.
 
   The skill covers compartments, species, reactions, parameters, rules, events, doses and variants. It loads helper scripts first, then builds the model in steps. It only opens the Model Builder app when you ask for a visual, or when you hand it a project file whose layout must be kept. Modifying an existing model works the same way. It needs MATLAB with SimBiology, both paid MathWorks products.
+
+  You get a MATLAB script that builds the model, the saved model file (.sbproj, or a .mat file if you ask), and, when you ask for a diagram, the layout check result, which should show zero problems.
 
   Licence: you may use this only together with MathWorks products such as MATLAB. The BSD 2-Clause licence in LICENSE.md carries that condition, and the skill file also links MathWorks' own reuse licence.
 when:

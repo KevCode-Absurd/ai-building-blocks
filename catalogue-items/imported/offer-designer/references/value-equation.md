@@ -123,7 +123,7 @@ Lowest: effort & sacrifice and perceived likelihood are tied. Pick one (perceive
 - Add 8 named-customer case studies with before/after copy + revenue numbers
 - Add an "even if you've never written before" cohort with 3 named graduates
 
-After: perceived likelihood goes 4 → 8. Course converts at ~3x baseline. Two months later, attack effort & sacrifice (replace weekly live calls with async + 1 live Q&A).
+After: perceived likelihood goes 4 → 8 (your own re-score). Measure conversion against the old version before you call it a win; the size of any gain is unknown until you test it. Two months later, attack effort & sacrifice (replace weekly live calls with async + 1 live Q&A).
 
 ---
 

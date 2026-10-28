@@ -94,7 +94,7 @@ Offer one next step and say they can type their own:
 
 - Teacher: read the rewrites, change any you disagree with, then send the revision prompts to the student.
 - When the student sends a new draft, run the Written feedback checker again on the new comments.
-- For a whole class set, use [Prepare feedback students can act on](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on).
+- For a whole class set, use [Student feedback and revision task planner](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on).
 
 ## Check before you hand it back
 

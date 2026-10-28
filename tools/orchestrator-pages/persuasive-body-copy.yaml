@@ -90,7 +90,7 @@ output_shape: |-
     Each claim: <proof | gap | fix>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 
 tweaks:
   - what: Your brief

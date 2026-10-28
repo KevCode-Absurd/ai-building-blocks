@@ -57,6 +57,6 @@ Lead with what the terminal value implies: its reinvestment rate and return on c
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Stress the valuation assumptions** with the [Review equity valuation sensitivity assumptions](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
-- **Connect forecast growth to terminal reinvestment** with the [Link operating growth to terminal reinvestment](https://useaiblocks.com/workflows/link-operating-growth-to-terminal-reinvestment) workflow.
+- **Stress the valuation assumptions** with the [Equity valuation scenario reviewer](https://useaiblocks.com/workflows/review-equity-valuation-sensitivity-assumptions) workflow.
+- **Connect forecast growth to terminal reinvestment** with the [Growth and reinvestment spreadsheet modeller](https://useaiblocks.com/workflows/link-operating-growth-to-terminal-reinvestment) workflow.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

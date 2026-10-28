@@ -13,15 +13,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a spreadsheet, financial statements, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your results, financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -32,7 +31,7 @@ How to start:
 ## What you need
 This skill runs on its own. Ask once, in one short message, for anything you can't work without, then carry on and mark each gap `MISSING:`.
 
-- **Monthly P&L or accounting export** (required). In the box above, the spreadsheet and financial statements are this export. Shopify sales figures and cost lines are listed next.
+- **Monthly P&L or accounting export** (required). In the box above, the spreadsheet is this export. Only the monthly profit and loss is needed, not a balance sheet or cash flow statement. "Your results" are the Shopify sales figures and marketing spend by channel listed next.
 - **Shopify gross sales, discounts, refunds and shipping charged** (required).
 - **Cost lines** (required): product, freight, duties, fulfilment, payment fees.
 - **Marketing spend by channel**, **operating expenses** and **loan interest** (advised).
@@ -48,7 +47,7 @@ A bookkeeper able to tag costs is needed to build it fully. Moving fulfilment st
    The sources disagree here: one keeps only product cost, inbound freight and duties in COGS; others fold fulfilment, shipping and payment fees into cost of delivery. Both work; mixing them across months does not.
 2. **Revenue bridge.** Start from gross revenue (product sales; tax collected stays out), minus discounts, refunds and chargebacks, plus shipping collected, equals net revenue. Show every step, because a revenue move can hide in refunds or discounts, not demand.
 3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost: [DAILY WAGE] / [PARCELS PER DAY] = [COST PER ORDER].
-4. **Marketing.** Paid ads, influencer fees and events. One speaker keeps this to pure variable media only; another puts content spend that flexes with the season (agencies, short-term hires) here, while a fixed in-house team goes to operating expenses. Pick one rule and hold it every month.
+4. **Marketing.** Paid ads, influencer fees and events. One speaker keeps this to pure variable media only; another puts content spend that flexes with the season (agencies, short-term hires) here, while a fixed in-house team goes to operating expenses. If the person has no preference, use the first rule (pure variable media only) as the default. Pick one rule and hold it every month.
 5. **Operating expenses.** Everything left: people, software, office. One speaker gives a reference range for a lean store and warns that a high share is hard to win with. Another notes that seven-figure founders let this grow faster than revenue, so profit stays flat. These are unchecked opinions from large-brand speakers. Compare with your own past months and your accountant's view, not with their numbers.
 6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A, cost of delivery is product COGS plus fulfilment, and you also show gross margin and margin after fulfilment as extra lines. Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit, so the operating profit shown does not depend on how the business is funded. Ask the accountant how they want it shown. The table stops at net profit before tax. Income tax is outside this layout, so ask the accountant for it.
 7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. Watch for a line that creeps up by a point or two (for example fulfilment moving from [LAST MONTH %] to [THIS MONTH %] of revenue as shipping rose). Use a three-month trailing average when months bounce.

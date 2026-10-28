@@ -14,13 +14,26 @@ license: "MIT"
 license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 ---
 
-<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+<!-- Licence note: the MIT line in the header above is the original author's licence, and it covers this skill text. LICENSE-CONTENT (CC BY 4.0) from sickn33's collection applies only where no more specific upstream notice exists. -->
 
 # Interview-Style Doc Building
 
 > The `risk: critical` label in the header is the author's. It flags that this skill creates and edits files. Give your AI access to one folder only, and back up any file you want it to patch.
 
 The user's preferred mode for creating durable strategic docs. AI does NOT propose content — AI asks one question, the user answers, AI patches the file, AI asks the next question. The file IS the conversation's output, updated incrementally.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## When to Use
 
@@ -92,3 +105,10 @@ These are named only for contrast. None of them are in this library:
 
 - Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.
 - For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -33,8 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill. Add your product facts, price and honest weak spots.
   - Name the rival. If you skip this, your AI will ask and stop.
   - 'Pick a format: one "X alternative" page, an "X alternatives" roundup, "you vs X", or "X vs Y".'
+  - Add real quotes from customers who switched, if you have them. Your AI uses only quotes you give it and never makes up testimonials. With none, the quotes section is left out.
   - Ask for the draft. Check that each claim about the rival has an "as of" date.
   - Verify pricing and features on the rival's own site before you publish. Your AI needs web access to check for you, so do it by hand if it has none.
+  - Keep each rival's profile and dated pricing in one file, and check it every quarter before you republish the page.
 output_sample:
   input:
     - The rival's name

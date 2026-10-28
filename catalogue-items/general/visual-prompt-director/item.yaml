@@ -9,9 +9,7 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: reference_set
-    required: false
-  - type: copy_draft
+  - type: image
     required: false
 outputs:
   - type: image_prompt

@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record and earlier source versions. Average drawn and undrawn balances, rates and fees for a revolving loan, only if a confirmed refinancing changes its cost.
 
-**The pieces it uses:** the [Review maturity funding and credit limits](https://useaiblocks.com/workflows/review-maturity-funding-and-credit-limits) workflow (the governing method) and the [Revolver interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker) (only when a confirmed refinancing changes a revolving loan's cost). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Debt maturity funding checker](https://useaiblocks.com/workflows/review-maturity-funding-and-credit-limits) workflow (the governing method) and the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker) (only when a confirmed refinancing changes a revolving loan's cost). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the ladder workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -74,6 +74,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - **Test a loan covenant** with the [Debt service covenant evidence reviewer](https://useaiblocks.com/skills/debt-service-covenant-evidence-reviewer).
-- **Check your cash for the next few days** with the [Treasury settlement evidence reviewer](https://useaiblocks.com/skills/treasury-settlement-evidence-reviewer).
-- **Check a revolver's borrowing base** with the [Borrowing base evidence reviewer](https://useaiblocks.com/skills/borrowing-base-evidence-reviewer).
+- **Check your cash for the next few days** with the [Cash settlement forecast reviewer](https://useaiblocks.com/skills/treasury-settlement-evidence-reviewer).
+- **Check a revolver's borrowing base** with the [Borrowing base and credit line reviewer](https://useaiblocks.com/skills/borrowing-base-evidence-reviewer).
 Nothing here moves money or contacts a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

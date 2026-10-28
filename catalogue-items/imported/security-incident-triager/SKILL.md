@@ -9,6 +9,19 @@ Incident response skill for the full lifecycle from initial triage through foren
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The incident record** (yours): the timeline of the outage, what it affected and who did what.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the incident record. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -221,7 +234,7 @@ Each framework sets its own start for the notification clock. Read the Deadline 
 
 This table is a quick reference only. **Status: unverified.** It comes from the original author. It was not rechecked when this copy was imported on 2026-10-20, and every row may be out of date. Say so when you show it, and give no penalty figure as current. Confirm each deadline, its start point and the penalty with legal counsel and the regulator's own text before you act on it.
 
-| Framework | Incident Type | Deadline | Penalty |
+| Framework | Incident Type | Deadline | Penalty (unverified, check current text) |
 |-----------|--------------|----------|---------|
 | GDPR (EU 2016/679) | Personal data breach | 72 hours after discovery | Up to 4% global revenue |
 | PCI-DSS v4.0 | Cardholder data breach | 24 hours to acquirer | Card brand fines |
@@ -326,3 +339,11 @@ These related skills are not in this copy.
 | security-pen-testing | Pen test vulnerabilities exploited in the wild escalate to incident-response for active incident handling |
 
 After triage, hand the evidence list and chain-of-custody record to your forensic lead or legal counsel. For the write-up once the incident is over, use incident-postmortem-writer from the AI Blocks library.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer).
+- **Build it** with the [Incident runbook writer](https://useaiblocks.com/skills/incident-runbook-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

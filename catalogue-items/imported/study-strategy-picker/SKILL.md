@@ -69,6 +69,22 @@ tags: ["study-skills", "learning-strategies", "revision", "self-regulation", "me
 
 # Study Strategy Selector & Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Analyses a specific learning task and recommends the most evidence-supported study strategies, with an explicit implementation guide for each. Crucially, the skill also identifies ineffective strategies the student is likely using (highlighting, re-reading, copying notes) and provides specific replacement strategies with the evidence rationale. AI is specifically valuable here because students overwhelmingly default to the least effective study strategies — Kornell & Bjork (2007) found that the most popular strategies (re-reading, highlighting) are rated "low utility" by research, while the most effective strategies (retrieval practice, distributed practice) are the least used. This skill encodes Dunlosky et al.'s (2013) landmark review into actionable, task-specific guidance.
@@ -292,3 +308,11 @@ Highlighting marks text but doesn't process it. You're deciding what's important
 2. **The strategy recommendations assume students have access to accurate study materials.** If a student's notes contain errors, retrieval practice may reinforce those errors. The "check and correct" step is essential but relies on having a reliable source to check against.
 
 3. **Dunlosky et al.'s (2013) utility ratings are based primarily on studies of verbal learning (text comprehension, factual recall).** Transfer to highly practical subjects (PE, music performance, art, design technology) is less well-established. For procedural skills, interleaved practice is well-evidenced, but the "close your notes and retrieve" approach needs adaptation — physical rehearsal and deliberate practice may be more appropriate.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the plan.
+- The [Study review scheduler](https://useaiblocks.com/skills/study-review-scheduler).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

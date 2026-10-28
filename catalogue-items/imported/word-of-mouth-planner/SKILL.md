@@ -11,6 +11,19 @@ metadata:
 
 A framework for engineering word-of-mouth and making products, ideas, and content contagious, based on Jonah Berger's research into why things catch on. Use it to design shareability into products, campaigns, and content instead of hoping for luck.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Virality is not born — it is engineered.** Products spread because they were designed — consciously or not — to be shared. Berger's research suggests most word-of-mouth happens offline (the author gives about 7% online and 93% offline; we have not checked the source), so virality is about the psychology of sharing, not social media mechanics. Those psychological patterns are predictable and can be engineered into anything using the STEPPS framework.
@@ -23,6 +36,8 @@ See: [references/word-of-mouth.md](references/word-of-mouth.md) when the brief o
 - **9-10** — three or more drivers at strength 2, at least one of them Public or Social Currency (the self-propagating ones), and the brand survives the Trojan Horse test.
 - **6-8** — two drivers genuinely strong, but spread still leans on paid reach or product quality alone.
 - **<=5** — at most one weak driver; sharing is incidental, not engineered.
+
+The band notes describe a typical profile. The score itself always comes from the raw count and the mapping above; if a band note and the mapping disagree, use the mapping and say which driver profile differs.
 
 Report the raw count, the mapped score, and the specific driver(s) to raise next to reach 10/10.
 
@@ -273,9 +288,17 @@ See: [references/viral-content-patterns.md](references/viral-content-patterns.md
 
 *The book links below carry the original skill author's affiliate tag, so the author may earn a commission if you buy.*
 
-- [Contagious: Why Things Catch On](https://www.amazon.com/Contagious-Things-Catch-Jonah-Berger/dp/1451686579?tag=wondelai00-20) by Jonah Berger
-- [The Catalyst: How to Change Anyone's Mind](https://www.amazon.com/Catalyst-How-Change-Anyones-Mind/dp/1982108606?tag=wondelai00-20) by Jonah Berger
+- [Contagious: Why Things Catch On](https://www.amazon.com/Contagious-Things-Catch-Jonah-Berger/dp/1451686579) by Jonah Berger
+- [The Catalyst: How to Change Anyone's Mind](https://www.amazon.com/Catalyst-How-Change-Anyones-Mind/dp/1982108606) by Jonah Berger
 
 ## About the Author
 
 **Jonah Berger** is a marketing professor at the Wharton School whose research focuses on social influence, word-of-mouth, and why things catch on. *Contagious* distills that research into the STEPPS framework; he also wrote *Invisible Influence* and *The Catalyst* and consults for companies from startups to the Fortune 500.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Tell it as a story** with the [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer).
+- **Say it to the room** with the [Persuasion and trust reviewer](https://useaiblocks.com/skills/honest-persuasion-advisor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

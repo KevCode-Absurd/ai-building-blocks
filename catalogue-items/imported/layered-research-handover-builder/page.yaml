@@ -15,6 +15,8 @@ you_give:
 you_get:
   - A research index, findings summary, topic analyses, evidence records, and coverage notes.
 how_it_works:
+  - title: Know the folder names
+    text: 00-index is the map of files. 01-summary is the short findings (layer 1, L1). 02-analysis holds one file per topic (L2). 03-dossiers holds the evidence, such as source excerpts and data (L3).
   - title: Separate the layers
     text: Keep the index for finding files. Put findings in the summary, reasoning in the analysis, and source facts in evidence records.
   - title: Connect findings to evidence
@@ -33,6 +35,7 @@ how_to_use:
   - Open 00-index.md and the summary first. Click through to a topic file and an evidence file to check the links work and each file makes sense alone.
   - Read the coverage notes for gaps. Fill them, then ask your AI to update the links.
   - Share the index and the summary with readers first. Send the evidence files only to people who want to check the sources.
+  - Where this copy comes from. We imported it from magnus919/agent-skills at commit 92c327e. The skill file's own metadata names an earlier home, magnus919/hermes-profiles, by the same author.
 output_sample:
   input:
     - Your research question

@@ -95,6 +95,7 @@ output_shape: |
   CONFLICTS  <tests that clash on one page, or none>
   SCORE    <n>/100 (<sum shown>)
   NEXT     <one step>
+  CHECKS MISSED: <none | list>
   MISSING: <plan | ideas | builder | orders>
 
 tweaks:
@@ -143,3 +144,4 @@ terms:
   - term: Checkout blocks
     meaning: Parts you can add to Shopify Plus checkout without custom code.
 next: [store-test-readiness-checker, store-test-verdict-maker]
+before: [big-swing-test-picker]

@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -58,11 +58,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Make the fix-now changes, then save the updated page text and screenshots.
 
-3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. Use your own updated page after you made the fix-now changes, not step 2's list. It runs 30 yes-or-no checks in five stops a buyer makes (arrive, understand, believe, commit, trust the fine print), flags deal-breakers, lists the five fixes to make first and gives a checks score out of 100. This is a separate score from step 1's page score out of 100, so do not compare the two numbers. Compare its findings with the fix-now list from step 2 instead: each fix-now item is marked fixed, partly fixed or still there, and any new problem is listed. Save it as `outputs/step-03-landing-page-30-point-checker.md`.
+3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. Use your own updated page after you made the fix-now changes, not step 2's list. It runs 30 yes-or-no checks in five stops a buyer makes (arrive, understand, believe, commit, trust the fine print), flags deal-breakers, lists the five fixes to make first and gives a checks score out of 100. This is a separate score from step 1's page score out of 100, so do not compare the two numbers. Compare its findings with the fix-now list from step 2 instead: each fix-now item is marked fixed, partly fixed or still there, and any new problem is listed. If you gave the ad, also set the ad's promise beside the updated first screen and mark it match or mismatch, so the check tests the ad promise as well as the page. Save it as `outputs/step-03-landing-page-30-point-checker.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 3 step files and the summary. The last file holds the audit report.
+
+Next: once the fix-now items pass, take step 2's test ideas into the [Website issue and test readiness reviewer](https://useaiblocks.com/workflows/page-problems-test-picks) workflow when you have enough traffic to test. The speed planner below fits only if the page is slow.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

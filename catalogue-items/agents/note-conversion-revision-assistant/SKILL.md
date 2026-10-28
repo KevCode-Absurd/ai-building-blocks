@@ -18,7 +18,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record and the changed source files with dates. The share rounding rule in the note. If a new option pool is reported, the share count before the top-up and the pre-cash pool target.
 
-**The pieces it uses:** the [Check a convertible note conversion](https://useaiblocks.com/workflows/check-a-convertible-note-conversion) workflow (the governing method) and the [Option pool top-up checker](https://useaiblocks.com/skills/option-pool-top-up-checker) (only when a pool change affects the cap price). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
+**The pieces it uses:** the [Convertible note conversion checker](https://useaiblocks.com/workflows/check-a-convertible-note-conversion) workflow (the governing method) and the [Employee option pool top-up calculator](https://useaiblocks.com/skills/option-pool-top-up-checker) (only when a pool change affects the cap price). Read both in full before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. Do not imitate them from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -71,6 +71,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check a SAFE in the same round** with the [SAFE financing revision assistant](https://useaiblocks.com/skills/safe-financing-revision-assistant).
-- **Check the price comparison on its own** with the [Cap and discount conversion checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker).
+- **Check a SAFE in the same round** with the [SAFE ownership and share-pool reviewer](https://useaiblocks.com/skills/safe-financing-revision-assistant).
+- **Check the price comparison on its own** with the [Convertible note price checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker).
 Nothing here files anything or contacts an investor. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

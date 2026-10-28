@@ -18,7 +18,7 @@ not_for:
   - "You need to value inventory or decide how big a reserve should be: ask your accountant or auditor, because this only shows what past charges did to margin."
   - "You want to treat all write-downs as one-off costs: do not use this to hide them, because repeat obsolescence is a real cost of doing business."
   - "You need to track an earlier write-down through later sales item by item: use an inventory ledger or a stock-level spreadsheet instead."
-  - "You need a LIFO to FIFO inventory and earnings bridge: use the LIFO reserve earnings bridge instead."
+  - "You need a LIFO to FIFO inventory and earnings bridge: use the LIFO to FIFO comparison calculator instead."
 you_give:
   - Reported revenue/COGS, inventory write-downs and reversals included in that COGS, plus accounting basis and notes.
   - "The reporting period, plus the currency and scale used for the inventory charge margin bridge."
@@ -88,12 +88,14 @@ test:
 improve:
   - "Save one inventory charge margin bridge you have already checked as an approved example, so your AI copies its layout."
   - "Write how your documents define write-down into SKILL.md, so every run uses your wording."
+before: []
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: "Optional: only to run the bundled reference calculation script. The skill works without it."
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.

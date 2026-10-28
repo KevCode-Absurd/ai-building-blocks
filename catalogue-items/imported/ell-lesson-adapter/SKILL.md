@@ -69,6 +69,19 @@ tags: ["SIOP", "sheltered-instruction", "EAL", "lesson-planning", "content-langu
 
 # Sheltered Instruction Lesson Modifier
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a content lesson plan and modifies it using the SIOP (Sheltered Instruction Observation Protocol) model principles, adding explicit language objectives, building background knowledge, making input comprehensible, structuring meaningful interaction, and providing opportunities for practice and application — all while maintaining the content learning objective. The output is a modified lesson plan that serves all students (not just EAL students), because the SIOP principles — clear objectives, comprehensible input, structured interaction, meaningful practice — are good teaching for everyone. AI is specifically valuable here because effective sheltered instruction requires analysing a lesson through two simultaneous lenses (content AND language) and making modifications across multiple SIOP components in a way that is coherent and practical — not a checklist of disconnected additions but an integrated redesign.
@@ -337,3 +350,11 @@ Listen for correct use of the frame. Identify students who still need support �
 2. **The modifications assume a typical classroom setup.** Schools with specialist EAL teachers, bilingual TAs, or access to first-language resources can implement additional supports that this modification doesn't include. The output provides a baseline modification that works with standard resources; additional specialist support should be layered on where available.
 
 3. **Sheltered instruction is one lesson at a time, but language development is longitudinal.** This skill modifies a single lesson, but EAL students need consistent, sustained support across all lessons. The language objective in one lesson should connect to language objectives in subsequent lessons, building a coherent programme of academic language development. Individual lesson modification is necessary but not sufficient — it must be part of a whole-school approach.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+- The [Vocabulary tier sorter](https://useaiblocks.com/skills/vocabulary-tier-sorter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

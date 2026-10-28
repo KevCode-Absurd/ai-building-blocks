@@ -20,6 +20,22 @@ When to use this skill: building a content QA process from scratch, auditing an 
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Makes it better (optional):**
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a draft, a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans pre-publish quality control. It plugs in at the END of every other content skill's output. The six-skill content suite distinction:
@@ -332,3 +348,11 @@ Every other skill in the content suite produces drafts. QA is the discipline tha
 The QA process is the immune system of the content program: invisible when it is working, catastrophic in its absence.
 
 When in doubt about whether a QA process is ready, ask: does each check name a class of failure it catches, has each check actually caught something in the last 6 months, is brief-adherence first in the sequence, is fact-accuracy a halt-condition, is the AI-content audit included, does sampling discipline apply to scaled surfaces? If yes to all of those, the process is real. If no to any, the gap is where readers will encounter the failure that QA did not catch.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer).
+- **Fill the gaps in your brand brain** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -146,5 +146,7 @@ terms:
     meaning: "The one moment you want people to remember and repeat."
   - term: "Strain"
     meaning: "Something that makes this person's delivery harder, such as a long list or a tongue-twisting word."
+before:
+  - two-audience-brief-writer
 next:
   - layered-draft-writer

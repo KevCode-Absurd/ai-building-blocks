@@ -10,6 +10,19 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose order record has not changed in N days (a stand-in for stale tracking), and unfulfilled orders sitting past a configurable SLA. Finding these orders early can cut the number of tracking tickets your support team gets. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
 
@@ -149,6 +162,14 @@ CSV file `wismo-report-<YYYY-MM-DD>.csv` with columns: `risk_type`, `order_name`
 `days_waiting` is the days since `createdAt` for `UNFULFILLED_OVERDUE` orders, and the days since `updatedAt` for `SHIPPED_STALE_TRACKING` orders.
 
 Two sections in the CSV (separated by `risk_type` column value): `UNFULFILLED_OVERDUE` and `SHIPPED_STALE_TRACKING`. For human format, also shows a summary table before the CSV path.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Daily fulfillment digest writer](https://useaiblocks.com/skills/daily-fulfillment-digest-writer).
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Error Handling
 | Error | Cause | Recovery |

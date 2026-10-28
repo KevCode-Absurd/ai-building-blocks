@@ -5,9 +5,9 @@ name: Agent self-improvement loop builder
 summary: "Build an AI agent self-improvement loop: test your agent, rewrite its prompts and skills, keep only changes that raise the score."
 job: build-software
 headline: Agent self-improvement loop builder
-subhead: An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round changes one thing, and a change that makes results worse is rolled back.
+subhead: An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. A round can change several files at once, and the change is kept only if it scores better on held-back tasks.
 explain: |
-  An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round changes one thing, and a change that makes results worse is rolled back.
+  An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round can rewrite prompts, skills and memory together. The change is checked against tasks held back from training and rolled back if it does not win.
 
   The agent's prompts, skills, memory and tools all live as plain files in one folder. The loop runs your agent on a set of test tasks, looks at where it failed, and asks a model to rewrite the files. It scores the new version, keeps it only if it wins, and saves every change in version history. This needs Python, a package install and model access, plus a test set that gives clear scores.
 when:
@@ -36,6 +36,7 @@ how_to_use:
   - Each round makes many paid model calls. Run 1 or 2 rounds first to see what it costs, then raise the number of rounds.
   - Read the score table, then check the git log to see which files changed in each round.
   - Roll back to an earlier tag, such as evo-2, if a later round made things worse.
+  - Before you use the improved agent, compare the first and last versions with git diff evo-1 and your final tag. Then test it on fresh tasks it has never seen.
 output_sample:
   input:
     - Your AI agent, or the folder with its prompt, skill, memory and tool files

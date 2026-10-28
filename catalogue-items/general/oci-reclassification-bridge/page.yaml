@@ -18,7 +18,7 @@ not_for:
   - "You need to know if the standard lets you recycle an amount to profit: read the accounting standard first, or ask your auditor."
   - "You need to review an OCI reserve balance or its valuation: use a separate reserve or valuation review, or ask your accountant."
   - "You need to track tax or owner transactions: keep these in your own schedules, because this bridge leaves them out."
-  - "You need to split pension cost into service cost, net interest and remeasurement: use the Pension service and financing bridge instead."
+  - "You need to split pension cost into service cost, net interest and remeasurement: use the Pension cost and funding checker instead."
 you_give:
   - Profit before a specific reclassification, OCI before it, signed after-tax reclassification and source notes on recycling eligibility.
   - "The period end, plus the currency and scale used for the OCI reclassification."
@@ -91,6 +91,9 @@ test:
 improve:
   - "Save one OCI reclassification you have already checked as an approved example, so your AI copies its layout."
   - "Write how your documents define reclassification into SKILL.md, so every run uses your wording."
+before: []
+next: [pension-service-financing-bridge, common-equity-residual-income-review-assistant, financial-statement-preparer]
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

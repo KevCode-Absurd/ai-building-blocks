@@ -42,6 +42,7 @@ how_to_use:
   - Read the answer and compare it with the image. If it invents details, make your question more specific.
   - Move on to your full set of images, or start the web chat page to ask follow-ups.
   - Save the captions to a file or spreadsheet, and check a sample by eye.
+  - Next, to search images by text or sort them by meaning, use the Image and text matcher. To pull printed text out of images, use the Image text reader.
 how_it_works:
   - title: Check your setup
     text: It checks your GPU memory and picks a model size that fits, such as 7B in 4-bit.

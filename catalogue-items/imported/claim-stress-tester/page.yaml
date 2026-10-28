@@ -38,7 +38,7 @@ how_to_use:
   - Paste any logs or data if you have them (optional).
   - Read the mode your AI picks. If it is a simple or urgent question, expect a short answer, not five stages.
   - Check the strongest attack and the list of what remains uncertain before you act on the answer.
-  - Take the result into a decision memo or a test plan, and run the checks it lists.
+  - Next, run the cheapest check that could prove the answer wrong first. Before you run it, write down what result would change your decision. Then record the decision and why.
 output_sample:
   input:
     - Your question or problem

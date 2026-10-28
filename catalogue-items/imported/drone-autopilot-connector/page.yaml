@@ -38,7 +38,8 @@ how_to_use:
   - Say if your drone already sends heartbeats. If you are not sure, say so and your AI can pick the right path.
   - Run the code in MATLAB. Your AI cannot run it unless it has MATLAB access, so paste any errors back to it.
   - Check that the client list shows more than one row. The extra row is your drone.
-  - Test arm commands only in a simulator, or with propellers removed and people clear of the vehicle.
+  - If more than one system shows up, tell your AI which SystemID and ComponentID is yours. It must pick exactly one.
+  - This skill only connects and reads data. It will not arm the drone or send flight commands. Do those in your ground control software, following the autopilot's own safety steps.
   - Next, read flight data with the skill's "Subscribing to Specific Messages" pattern. MATLAB is paid software, and the skill's licence allows use only with MathWorks products (see its LICENSE.md).
 output_shape: |
   MATLAB code in order: <dialect, link, UDP, heartbeat message, heartbeat timer, client check>

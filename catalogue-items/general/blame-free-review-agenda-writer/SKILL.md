@@ -11,7 +11,7 @@ The quickest way to end a review's honesty is to ask whose fault something was. 
 ## Before you start
 You need the themes from your review. Everything else is optional.
 
-**Needed:** the review themes, with contested ones marked and the top questions. The [Review lists sorter](https://useaiblocks.com/skills/review-lists-sorter) makes them from everyone's do-again and never-again lists. If you have not collected those lists yet, start with the [Project review prep planner](https://useaiblocks.com/skills/project-review-prep-planner).
+**Needed:** the review themes, with contested ones marked and the top questions. The [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter) makes them from everyone's do-again and never-again lists. If you have not collected those lists yet, start with the [Project review prep planner](https://useaiblocks.com/skills/project-review-prep-planner).
 
 **Makes it better (optional):** the meeting length, the facilitator, who will be in the room by role, and the prep plan.
 
@@ -59,14 +59,6 @@ How to start:
 
 Use these headings, in this order: THE ROOM, AGENDA (a timed table with each theme's owner and limit), WORDING RULES, FACILITATOR LINES, OLD HURTS, QUESTIONS FOR THE NEXT PROJECT, THE RECORD, MISSING, CHECKS MISSED (one line per check missed, or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Turn each lesson into a rule** with the [Mistake-to-principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring the notes from the meeting.
-- **Dig into one big failure** with the [Five whys session planner](https://useaiblocks.com/skills/five-whys-session-planner). Bring the theme that needs more time.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The times add up to the meeting length, or the extra themes have a written follow-up.
@@ -76,6 +68,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The old-hurts slot has a time cap and a rule for replies.
 - The close has three to five questions, each with an owner and a place.
 - A facilitator other than the project lead is named.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Turn each lesson into a rule** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring the notes from the meeting.
+- **Dig into one big failure** with the [Five whys session planner](https://useaiblocks.com/skills/five-whys-session-planner). Bring the theme that needs more time.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

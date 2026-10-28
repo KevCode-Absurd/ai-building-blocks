@@ -10,8 +10,8 @@ Every promise in an offer has to be delivered somehow, and the first idea is rar
 ## When not to use this
 
 - You have no list of buyer problems yet: use the [Buyer problem list builder](https://useaiblocks.com/skills/buyer-problem-list-builder) first.
-- You already have your options and need to cut and bundle them: use the [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder).
-- You want extras that answer doubts at the point of sale: use the [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder).
+- You already have your options and need to cut and bundle them: use the [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder).
+- You want extras that answer doubts at the point of sale: use the [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder).
 - You want to lay out a free first step and rising paid steps: use the Value ladder planner.
 
 ## Never return an empty table
@@ -85,7 +85,7 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-Then tell the person the shortlist goes next to the [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder).
+Then tell the person the shortlist goes next to the [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder).
 
 ## Check before you hand it back
 

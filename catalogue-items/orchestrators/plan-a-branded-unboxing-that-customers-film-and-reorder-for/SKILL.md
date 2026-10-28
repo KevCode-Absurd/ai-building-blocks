@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your website** (yours): the link to your site or the page.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
@@ -29,7 +29,7 @@ How to start:
 ## What you need
 - **Your store page** (required): a live URL or saved HTML.
 - **Your product's facts** (required): price, what it is made of, how it is used and the size and weight of the pack.
-- **Your order data** (required for step 4): average order value, gross margin, orders per month and packaging cost per order, from a closed date window. Without margin or packaging cost, step 4 marks its costs `MISSING:` and gives no insert budget.
+- **Your order data** (required for step 4): average order value, gross margin, orders per month and packaging cost per order, from a closed date window. Without margin or packaging cost, step 4 marks its costs `MISSING:` and gives no insert budget. Where to find them: order value and orders per month in your store's sales report; gross margin from your product cost sheet or accounts; packaging cost per order from your last packaging invoice divided by the orders it covered.
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional). Use real quotes only.
 
 Not for: a business that ships no physical goods, or a product that arrives in a mailer you cannot change (use the inserts step alone). Any pack change costs money and may need a supplier, so price it before you commit. Gifts, samples and inserts that contain food, cosmetics or small parts can carry safety and labelling rules. Check them where you ship.
@@ -48,7 +48,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Brand ritual designer.** Use the skill `brand-ritual-designer`. Give it the brand file from `outputs/step-01-website-brand-brain-builder.md`. It designs one customer ritual around the product. Saves `outputs/step-02-brand-ritual-designer.md`.
 3. **Sensory unboxing planner.** Use the skill `sensory-unboxing-planner`. Give it the ritual in `outputs/step-02-brand-ritual-designer.md` and the brand file from step 1. It matches weight, colour, sound and smell to the ritual. Saves `outputs/step-03-sensory-unboxing-planner.md`.
 4. **Unboxing insert and gift planner.** Use the skill `unboxing-insert-and-gift-planner`. Give it the unboxing plan in `outputs/step-03-sensory-unboxing-planner.md`, the brand file from step 1, and your order value, margin and packaging cost. It chooses the inserts and gifts that carry the plan, within your margin. Saves `outputs/step-04-unboxing-insert-and-gift-planner.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 4 step files and the summary:
@@ -56,6 +56,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2, ritual: one customer ritual around the product.
 - Step 3, unboxing plan: weight, colour, sound and smell matched to the ritual.
 - Step 4, inserts and gifts: what to include, each costed within your margin. The last file holds the plan.
+- Next: build one test box from the step 3 plan, then bring its photos and the step 3 file to a packaging review, such as the Packaging first-impression reviewer.
 
 ## Check before you hand it back
 - Step 1 holds your facts, buyers and claims from the store. Step 2 holds one ritual. Step 3 ties the ritual to weight, colour, sound and smell. Step 4 costs each insert against your margin. If one is missing, the run stopped at that step and says why.

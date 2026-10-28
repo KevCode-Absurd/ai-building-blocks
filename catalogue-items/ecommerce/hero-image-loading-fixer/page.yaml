@@ -18,7 +18,7 @@ when:
   - "The first product image appears late or after a slideshow loads."
   - "Your hero is lazy loaded or fades in."
 not_for:
-  - The slow part of your page is text, not an image. Your page is already fine for this measure, so leave the images alone.
+  - The largest item on your first screen is text, not an image. Text can still load slowly, but the cause is fonts, code or the server, so this image fix will not help.
   - Your server is slow (over 0.8 seconds to respond). Ask your host or a developer first, since image fixes alone will not be enough.
   - Your hero file is far too big. Resize and compress it first with the store image prep checker, then come back.
 

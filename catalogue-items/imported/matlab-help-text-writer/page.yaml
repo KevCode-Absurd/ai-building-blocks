@@ -17,7 +17,7 @@ when:
   - You are about to share code and need documentation done.
 not_for:
   - "You need a README or general project docs: write those by hand or ask your AI for a plain README instead."
-  - "You want new MATLAB code written: this only writes help comments and does not change your code."
+  - "You want new MATLAB code written: this only writes help comments. It adds them to your file only after you approve the draft, and it does not change your code itself. If you prefer, paste the block in by hand."
   - "You use Live Scripts or another language: use that tool's own doc format instead."
   - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
@@ -37,7 +37,7 @@ how_to_use:
   - Read the help block it proposes. Check the summary line, each syntax line and the See Also links.
   - Ask for changes, then paste the block under the function line, matching the indent of your code.
   - Type help and your function name in MATLAB to check how it shows up.
-  - Before you merge the change, check that every input name and option in the block matches your code, and that each See Also link points to a real function. To review the code itself, use the MATLAB code reviewer.
+  - Before you merge the change, check that every input name and option in the block matches your code, and that each See Also link points to a real function. To review the code itself, use the MATLAB code reviewer, which sorts problems in your MATLAB code by how much they matter.
 output_sample:
   input:
     - Your MATLAB function, class or script file

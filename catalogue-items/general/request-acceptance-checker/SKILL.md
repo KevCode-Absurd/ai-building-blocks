@@ -80,14 +80,6 @@ WAITING FOR YOUR YES
 
 Then the repaired files, each with its original name, and CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If rows still fail after two repairs** with the [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter). It takes the request brief and the report.
-- **If a row needs an expert** give the README's "not run" list to the qualified person.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every requirement in the request has a row.
@@ -97,6 +89,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every check that could not run is marked `not run` with the missing review named.
 - Nothing is called specialist-verified.
 - Nothing was published, sent or booked.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If rows still fail after two repairs** with the [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter). It takes the request brief and the report.
+- **If a row needs an expert** give the README's "not run" list to the qualified person.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

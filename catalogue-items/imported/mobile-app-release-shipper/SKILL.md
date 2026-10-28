@@ -16,13 +16,28 @@ AI Blocks note on the licence: the MIT line in the front matter above is the ori
 
 Costs: EAS builds use your Expo plan, and its free build allowance is limited. Apple and Google charge for developer accounts. This skill does not check current prices, so tell the user to look them up before building.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## First run, in order (added by AI Blocks)
+
+Gather first: the Apple ID email, the App Store Connect app ID, the path to the Google Play service account key file (never paste the key itself), and the app's bundle identifier. If `eas.json` sets `appVersionSource` to `remote`, EAS keeps the version and build numbers on its servers, not in your app config.
 
 1. Install the EAS command-line tool.
 2. Sign in with `eas login`.
 3. Run `eas init` to create `eas.json`.
 4. Make the first production build for one platform, and check its status.
-5. Send the first iOS build to TestFlight, or the first Android build to the Google Play internal track. Needs a paid Apple developer account for iOS.
+5. Show the user the exact submit command and ask for a clear yes before running it. Then send the first iOS build to TestFlight, or the first Android build to the Google Play internal track. Needs a paid Apple developer account for iOS.
 6. Check the submission status with `eas submit:list`.
 
 ## When to Use
@@ -198,3 +213,12 @@ eas submit:list
 - Use this skill only when the task clearly matches its upstream product or API scope.
 - Verify commands, API behavior, pricing, quotas, credentials, and deployment effects against current official documentation before making changes.
 - Do not treat generated examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Release readiness and live version checker](https://useaiblocks.com/skills/deploy-verifier). It takes the deploy url.
+- The [Live software release reviewer](https://useaiblocks.com/skills/release-proof-checker). It takes the deploy url.
+- The [Software release verification coordinator](https://useaiblocks.com/skills/release-manager). It takes the deploy url.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

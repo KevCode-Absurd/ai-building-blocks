@@ -76,6 +76,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
 - The [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper). It takes the brief.
 - The [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser). It takes the brief.
+- The [Buyer psychology advisor](https://useaiblocks.com/skills/buyer-psychology-advisor). It takes the brief.
 - The [Product weakness messaging planner](https://useaiblocks.com/skills/product-handicap-reframer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

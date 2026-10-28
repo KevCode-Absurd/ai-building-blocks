@@ -6,6 +6,8 @@ summary: Turn your content, sources and audience into a storyboard and an editab
 job: work-with-files
 headline: Storyboard to PowerPoint deck builder
 subhead: Give your AI your content, sources and audience. It plans the story as a storyboard, checks it, then builds an editable PowerPoint deck. You render each slide and check the layout before you present.
+explain: |
+  This is Ved Raut's SlideSage method (MIT licence), with additions from AI Blocks. We added a finalizer script that puts a visible source line and chart units on each slide for the corporate-bright style, since the original keeps sources only in the notes. We also added a full eight-slide sample storyboard so you can test your setup. The original instructions are kept in SKILL.upstream.md.
 when:
   - You have a report, lesson notes or research and need a slide deck from it.
   - You must show where each fact came from on the slides.
@@ -17,10 +19,11 @@ not_for:
   - "You want a style other than corporate-bright with no review: plan to check source notes and layout on every slide yourself."
 how_to_use:
   - Before you start, gather your source files. Fill in templates/brief.template.md with your audience, your goal and the one message you want them to leave with.
-  - Use an AI that can run code on your computer, and install Node and the npm packages first.
-  - Download the skill folder and open it in your AI tool.
+  - Use an AI that can run code on your computer. You need Node 18 or newer, plus Python with python-pptx for the finalizer.
+  - Download the skill folder and open it in your AI tool. In that folder, run npm ci --ignore-scripts to install the packages.
+  - "Test the setup first with the eight-slide sample: node scripts/validate-storyboard.mjs templates/storyboard.example.json, then node scripts/generate.mjs --in templates/storyboard.example.json --out draft.pptx. If that makes a deck, your setup works."
   - Give your AI your source text, your audience, your goal and the filled-in brief.
-  - Ask it to work in this order: validate the storyboard, build the deck, run the source-note finalizer, then render every slide.
+  - "Ask it to work in this order, with your own storyboard file in place of the sample: validate (node scripts/validate-storyboard.mjs), build (node scripts/generate.mjs --in storyboard.json --out draft.pptx), run the source-note finalizer (python launch-tools/finalize_pptx.py storyboard.json draft.pptx presentation.pptx), then render every slide. launch-tools/USAGE.md has the full commands."
   - Render every slide and look at titles, chart units, source notes and wrapped text.
   - Confirm the deck has the same number of slides as the storyboard before you present.
   - Next, write your speaker notes and export a PDF handout. For a talk with a different look, use the conference talk slide maker.

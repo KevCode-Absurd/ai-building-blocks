@@ -20,10 +20,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **The product spec** (yours): what to build and how to tell it's done: a requirements doc or user stories.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a draft, the product spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -55,18 +56,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 3. **Write the helper's rules.** Use the skill `ai-coding-agent-rules-writer`. Give it the ordered steps from `outputs/step-02-structure-behaviour-split.md`, the test order from `outputs/step-01-test-list-writer.md`, the project description and your commit rules. It returns the plan file text, a one-word command for the next test, standing rules with how to check each, the commit rules, warning signs and when to take the design back. Save it as `outputs/step-03-ai-coding-agent-rules-writer.md`.
 If a test you ran in step 1 or 2 fails, do not move on: say which case failed and ask whether to fix the code or change the case. If step 1 or 2 returns no file, or fails its own check, do not run the next step. Fix the missing input and rerun that step, or hand back what exists and say which step stopped. If step 3 cannot find the project's test command, write `MISSING: test command` and still give the standing rules.
 
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 
 Three step files and the summary, in this shape:
 - Step 1: the change in one line, cases from smallest to largest, the one to turn into a real test now.
 - Step 2: each edit as structure or behaviour, tidy-up steps, behaviour steps, which tidy-ups help, order and when to run tests.
-- Step 3: the plan file with the ordered tests, a one-word command, standing rules, warning signs, when to take the design back. This file holds the plan.
-- Next steps: give the plan file to your AI coding helper, or turn it into tickets. Use the Stripe payments builder only if the change touches payments.
+- Step 3: the plan file with the ordered tests, a one-word command, standing rules, warning signs, when to take the design back. This file holds the plan: one Markdown text file you save in your project for your AI helper to read.
+- Next steps: give the plan file to your AI coding helper and start it with the one-word command.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-What next: the Stripe payments builder under "After this" is only for a change that touches payments. For any other change, use the AI coding task brief writer or the Plan-to-ticket writer.
+What next: to hand the work to an AI helper with full context, turn the plan file into a task brief with the AI coding task brief writer under "After this".
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why. The checks per step are below.

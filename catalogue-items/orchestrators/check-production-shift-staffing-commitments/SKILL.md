@@ -56,14 +56,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-## After this
-
-Nothing has been changed or sent. The production owner decides on any move and the shift lead gets the handover from the person. Offer one next step and say they can type their own:
-
-- Keep the follow-ups visible with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
-- If a person is away for a longer time, plan cover with the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
-- After the shift, bring back the real hours and re-run step 1.
-
 ## Check before you hand it back
 
 - Capacity uses qualified people and equipment limits, not paid hours.
@@ -71,3 +63,11 @@ Nothing has been changed or sent. The production owner decides on any move and t
 - No machine throughput was calculated and no move is called authorised.
 - Every figure traces to a source or is labelled as an assumption.
 - Every gap is a `MISSING:` line.
+
+## After this
+
+Nothing has been changed or sent. The production owner decides on any move and the shift lead gets the handover from the person. Offer one next step and say they can type their own:
+
+- Keep the follow-ups visible with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
+- If a person is away for a longer time, plan cover with the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
+- After the shift, bring back the real hours and re-run step 1.

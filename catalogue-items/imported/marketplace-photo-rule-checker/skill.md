@@ -5,6 +5,27 @@ description: 上架前平台合规校验与自动修复。待上架图 → Amazo
 
 **Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. It links to other skills (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) that are not in this folder, so skip those steps. The platform limits in the table are a snapshot, copied when AI Blocks imported this skill on 20 Oct 2026, and not re-checked since. A pass or reject here can be wrong for today's store rules. Tell the user to confirm each limit in the store's own seller image guide (search the store's seller help for "product image requirements") before they rely on it, and say so in the report.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **A photo set** (yours): a set of generated product photos in one style, checked against the truth sheet.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). Bring product photos, a photo set (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product photos, a photo set, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## English summary (added for this catalogue)
 
 In short, the Chinese sections below say this:
@@ -202,3 +223,10 @@ pip install Pillow
   比人工抽检可靠。
 - **先检一张再跑整批**：整批生成前拿一张过一遍合规，能省掉一整批的返工。
 - **不同坑位不同规则**：主图严、细节图松。别拿主图的阈值去卡详情页配图。
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

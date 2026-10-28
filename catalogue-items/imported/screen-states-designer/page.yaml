@@ -10,6 +10,8 @@ explain: |
   Most screens are built for the best case: lots of data, fast network, nothing breaking. Real people hit the other cases first. This skill takes a screen you are building and finds those states, then builds each one properly.
 
   It goes through a list for every screen that loads, lists, searches or saves: first use, empty, loading, partial data, error, offline, bad input, no results and success. It keeps only the ones that can happen, then writes the content and design for each, with a way out of every error. It works on its own. An optional connection to the UXKIN screen library can show how other products handle the same case.
+
+  Licence: UXKIN wrote it and marked it MIT; the LICENSE-CONTENT file from sickn33's collection sets CC BY 4.0 for the written text. Credit both on any copy you share.
 when:
   - Your screen only shows the version with perfect data and you need the rest.
   - A new user would see an empty list on day one and you have nothing designed for it.
@@ -37,6 +39,7 @@ how_to_use:
   - Read the report at the end. Answer any open questions, such as what an error should say.
   - Test the states in your own app with slow, failed and offline requests.
   - Send the open decisions to the right person, such as the exact error wording to your backend developer, then ask your AI to update the states.
+  - Next, have the changes code reviewed, and add a test for each state so it does not break later.
 output_sample:
   input:
     - Your screen or component, as code, a screenshot or a description

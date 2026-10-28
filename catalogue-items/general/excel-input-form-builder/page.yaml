@@ -27,6 +27,7 @@ you_give:
   - The app and file tools your AI can use for the requested work
 you_get:
   - input-form.xlsx and field-rules.md, with an empty production table and a separate illustrative test copy.
+  - "In the workbook: a form sheet with one column per field and shaded entry cells, a lists sheet holding the dropdown values, and a check column that flags duplicates and missing fields."
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:

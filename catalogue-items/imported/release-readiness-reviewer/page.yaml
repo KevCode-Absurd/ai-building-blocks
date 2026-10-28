@@ -11,7 +11,7 @@ explain: |
 
   It works read-only. It compares your change against a checklist covering database migrations, configuration, secrets, queues, caches, stored files and rollback. Each finding names the module, the evidence, the likely owner, the risk and a fix, sorted from most to least serious. Clean items are left out so the report stays short. Where evidence is unclear but the risk is high, it lists a question to confirm. Secrets are never printed, only their location and name.
 
-  Licence: chaunsin wrote the skill and marked it Apache-2.0 in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit chaunsin (author) and sickn33 (collection) on any copy you share.
+  Licence: chaunsin wrote the skill as pre-release-review and marked it Apache-2.0 in the skill file's header, which covers SKILL.md. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. We only gave it a plain name. Both let you reuse it if you give credit. Credit chaunsin (author) and sickn33 (collection) on any copy you share.
 when:
   - You are about to deploy and want a second pair of eyes on the risks.
   - A pull request touches database tables and config together.

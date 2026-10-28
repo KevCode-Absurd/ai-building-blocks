@@ -31,10 +31,12 @@ you_get:
   - The prompt, so you can redo it
 how_to_use:
   - Paste the skill into your AI chat, or add the skill folder if your AI tool takes files.
+  - The first time, it asks a few setup questions, such as which image tool to use, and saves your answers in a settings file called EXTEND.md. In a plain chat, just answer them. Later runs skip this step.
   - Paste your article and say where the cover will be used and which shape you want.
   - Check the type, palette, style, text and mood it suggests. Confirm them or change them.
   - Let your AI draw the cover with its image tool. This step needs an image tool, which may need a login or an API key and may cost money.
   - Check the image. Ask for changes, or reuse the saved prompt file to make it again.
+  - Next, publish the cover with your article. For social posts, reuse the saved prompt to make the same cover in another shape, such as a square.
 output_sample:
   input:
     - Your article text

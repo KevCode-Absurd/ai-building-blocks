@@ -15,7 +15,8 @@ inputs:
   - type: dataset
     required: false
 outputs:
-  - type: code_change
+  - type: dataset
+  - type: audit_report
 uses: []
 origin: imported
 source:
@@ -34,7 +35,7 @@ credits:
   - title: nextflow-development skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research/skills/nextflow-development
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Anthropic
     url: https://github.com/anthropics

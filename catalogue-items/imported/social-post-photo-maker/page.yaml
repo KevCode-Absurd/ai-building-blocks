@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - "Before you start: you need a dLazy account and API key, and each image costs money. Add --dry-run to the command first to see the cost. Use only photos you own or have the right to edit."
   - Clean your photo first. Remove filters, text and stickers, or the new image will keep them. The watermark remover skill can help, but only on your own images. Never strip another person's watermark.
-  - Open your AI and paste this skill. Add the outfit photo and, if you have one, a scene reference photo.
+  - Open your AI and paste this skill. Add the outfit photo and, if you have one, a scene reference photo. A reference photo may show a person only if you have their consent. The prompt takes only the pose, scene and light from it and asks for a new, invented model, not that person's face.
   - Tell it the mood or scene. It lists each item you wear, then writes the picture prompt.
   - Run the prompt in your image tool. The skill's commands use the dlazy tool and an API key, which may cost money per image, so check prices first.
   - The skill file is in Chinese, with an English summary at the top. The example images it points to (in a docs folder) are not included here, so use your own outfit and scene photos.

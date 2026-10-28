@@ -5,7 +5,7 @@ description: Use when your ideas look like everyone else's and you want a fresh 
 
 # Unlikely pairing idea generator
 
-Fresh ideas often come from crossing things that do not usually meet. Most crossings fail, so you need many, plus a rule to stop them drifting into the usual. This skill makes the pairings, applies a limit, and keeps the ones that hold together. It works for naming, design, writing, products and campaigns. The method is inspired by public talks and advice from David Bowie. These are our own paraphrases of the ideas, not his words, and he has not endorsed this skill.
+Fresh ideas often come from crossing things that do not usually meet. Most crossings fail, so you need many, plus a rule to stop them drifting into the usual. This skill makes the pairings, applies a limit, and keeps the ones that hold together. Unlike a plain brainstorm, it forces at least ten crossings, adds one hard limit and one accident, and drops any idea that feels comfortable. It works for naming, design, writing, products and campaigns. The method is inspired by public talks and advice from David Bowie. These are our own paraphrases of the ideas, not his words, and he has not endorsed this skill.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -59,7 +59,8 @@ What next: turn the pairing you pick into a short brief or first draft and show 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [XR interface architect agent](https://useaiblocks.com/skills/agency-xr-interface-architect). It takes the idea.
+- The [Design brief rules writer](https://useaiblocks.com/skills/design-brief-rules-writer).
+- **Plan your strategy** with the [Marketing brief writer](https://useaiblocks.com/skills/marketing-brief-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

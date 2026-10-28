@@ -9,7 +9,7 @@ Describe your site. Get font pairs, a grid and type plan, a built page that foll
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it.** If you only want copy edits on a live site, edit the text yourself or ask your AI to rewrite it. If you only want a layout review of an existing page, use the Page grid and type planner on its own. If you want to fix test failures you already have, use the [Test failure repair loop](https://useaiblocks.com/skills/test-failure-repair-loop).
+**When not to use it.** If you only want copy edits on a live site, edit the text yourself or ask your AI to rewrite it. If you only want a layout review of an existing page, use the Page grid and type planner on its own. If you want to fix test failures you already have, use the [Failed test repairer](https://useaiblocks.com/skills/test-failure-repair-loop).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

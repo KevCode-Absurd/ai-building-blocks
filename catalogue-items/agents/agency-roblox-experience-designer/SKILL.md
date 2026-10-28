@@ -11,7 +11,7 @@ Read [the original role profile](references/source-agent.md) before you start. I
 
 When not to use it: to build the shop, saves and server rules in Luau, use the Roblox Systems Scripter agent. For avatar items and UGC, use the Roblox Avatar Creator agent. To balance currencies, prices and drop rates only, use the Game Economy Designer agent. For a game on another platform, use the Game Designer agent. Child-safety and legal questions go to a qualified person and Roblox's own rules.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** It can hold the full design and revise it as you bring playtest notes back.
@@ -68,7 +68,7 @@ Use these headings, in this order:
 8. Playtest and numbers to watch
 9. Open questions and checks still needed (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Gameplay designer](https://useaiblocks.com/skills/agency-game-designer). It takes the document.

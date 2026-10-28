@@ -9,7 +9,7 @@ Work out an adviser's two-tier success fee from the signed letter, take off the 
 
 What sets it apart: it splits one deal value at the breakpoint and applies each rate to its own slice, then credits the retainer.
 
-When not to use: for an adviser's fee inside seller closing proceeds, use Check adviser fees in seller proceeds. For a private fund's management fee or credits, use the Fund fee and credit reviewer or the Transaction fee offset checker. For merger share and cash consideration, use the Fixed exchange consideration checker. This checker covers a two-tier marginal success fee with a cash retainer credit only. It is not a general fixed-fee check. It does not value merger share and cash consideration: that is the Fixed exchange consideration checker's job. It checks an adviser's fee, never the price paid for the company.
+When not to use: for an adviser's fee inside seller closing proceeds, use Check adviser fees in seller proceeds. For a private fund's management fee or credits, use the Fund fee and credit reviewer or the Transaction fee offset checker. For merger share and cash consideration, use the Fixed exchange consideration checker. This checker covers a two-tier marginal success fee with a cash retainer credit only. It checks an adviser's fee, never the price paid for the company.
 
 This skill's inputs are the signed engagement letter and the deal value (see "What you need" below). This is arithmetic, not legal or financial advice: a lawyer or adviser should read the letter before anyone pays.
 
@@ -68,8 +68,6 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 - Marginal tiers are not an all-value cliff rate.
 - Retainer is credited only once and only when permitted by the engagement.
-- Trace each input to its dated signed source, currency, scale and period.
-- Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.

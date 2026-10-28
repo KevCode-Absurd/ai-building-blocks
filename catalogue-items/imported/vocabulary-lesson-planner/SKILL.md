@@ -69,6 +69,19 @@ tags: ["Montessori", "three-period-lesson", "Lillard", "naming", "recognition", 
 
 # Three-Part Lesson Designer (Montessori)
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a Montessori three-period lesson (also called the three-stage lesson or three-part lesson) — the most encodable and most studied Montessori instructional practice. The three-period lesson was originally developed by Édouard Séguin (1866) and adapted by Maria Montessori for use with concrete materials. It consists of three distinct phases: Period 1 (Introduction/Naming) — the teacher names the concept while the student handles the material: "This is an isosceles triangle"; Period 2 (Recognition) — the teacher asks the student to identify the concept from among options: "Show me the isosceles triangle"; Period 3 (Recall) — the teacher asks the student to name the concept from memory: "What is this called?" The sequence is deliberately ordered because naming (Period 1) requires only passive reception, recognition (Period 2) requires matching a name to an object, and recall (Period 3) requires active retrieval from memory — each period demands more cognitive work than the last. Lillard et al. (2006) published in Science demonstrating that children in Montessori programmes showed significant advantages in academic and social outcomes, and the three-period lesson is one of the specific instructional practices that characterises high-fidelity Montessori implementation. This skill designs the complete lesson, including materials preparation, the specific language for each period, assessment indicators, and extensions.
@@ -296,3 +309,11 @@ After 2-3 more recognition prompts, try Period 3 again. If the student still can
 3. **The "three items maximum" rule limits scope.** Introducing only 2-3 items per lesson means that a classification system with 10 categories requires 3-4 separate lessons. This is pedagogically sound (it prevents overload) but time-consuming. In conventional classrooms with time pressure, teachers may be tempted to introduce more items per lesson, which reduces the method's effectiveness.
 
 4. **The lesson assumes a calm, focused environment.** The three-period lesson requires sustained attention from a small group over 10-15 minutes. In noisy, disrupted, or overstimulated environments, the quiet precision of the lesson may be difficult to maintain. The prepared environment (see Skill 93) is the Montessori solution to this, but it is not always available in conventional school settings.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recall quiz writer](https://useaiblocks.com/prompts/recall-quiz-writer). It takes the lesson plan.
+- The [Classroom layout redesigner](https://useaiblocks.com/skills/classroom-layout-redesigner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -36,6 +36,7 @@ how_to_use:
   - Read the results. Check the DCF against peer multiples, and run the forecast again after each month's actuals.
   - A valuation depends on its assumptions. Have a qualified adviser review it before any investment decision.
 not_for:
+  - You need to make a live investment decision. The DCF and forecast are working estimates, so have a qualified adviser review them first.
   - You run an online store and want a 36-month model from ad spend and costs. Use the Store financial model builder.
   - You want a monthly budget against actuals by team. Use the Monthly budget versus actual keeper.
   - You are weighing a private equity deal in India and want IRR tables. Use the Deal returns sensitivity builder.
@@ -51,11 +52,11 @@ output_sample:
     - name: Ratio analysis
       contains: Profitability, liquidity, debt, efficiency and valuation ratios, with how to read each trend.
     - name: DCF valuation
-      contains: A value estimate from cash flows, with a table that varies the discount and growth rates.
+      contains: A value estimate from cash flows, with a table that varies the discount and growth rates. The value depends on the assumptions you give.
     - name: Budget variance report
       contains: Each gap marked favorable or unfavorable, with the large ones explained.
     - name: Rolling forecast
-      contains: A driver-based forecast with a 13-week cash view and base, bull and bear cases.
+      contains: A driver-based forecast with a 13-week cash view and base, bull and bear cases. The 5% revenue accuracy figure is a goal to track, not a promise.
     - name: Executive summary
-      contains: The findings that matter most, in plain words.
+      contains: A short summary of half a page or less, in plain words. It gives the three to five findings that matter most, the biggest variances and what to check next.
 next: [valuation-method-comparer, store-financial-model-builder]

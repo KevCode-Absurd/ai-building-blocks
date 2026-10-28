@@ -1,6 +1,6 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 92 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Share plain text or rough Markdown. Get clearer structure, title and summary fields, while keeping the body’s words apart from obvious typos.
 - [Article layout and typo editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Share rough text or notes. Get a title, summary, headings and lists while body wording stays intact apart from clear typos.
@@ -69,11 +69,15 @@
 - [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder): Turn your PowerPoint deck into speaker notes with source links, transitions and a timing plan for your talk length. Your original file stays safe.
 - [PowerPoint storyboard deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Turn your content, sources and audience into a storyboard and an editable PowerPoint deck for a business talk, lesson or report.
 - [PowerPoint template deck builder](https://useaiblocks.com/skills/powerpoint-template-populator): Share your PowerPoint template, outline and approved content. Build an editable deck using its layouts, with source notes and checks.
+- [Presentation builder](https://useaiblocks.com/skills/presentation-builder): Turn your outline, report or notes into a slide deck built for your audience. Get a presentation builder result in Marp, reveal.js, PPTX or Google Slides.
 - [Project Gutenberg book text finder](https://useaiblocks.com/skills/project-gutenberg-book-text-finder): Find a public-domain book on Project Gutenberg by title or number. You get its details and clean, readable text to use for research.
 - [Python chart maker](https://useaiblocks.com/skills/python-chart-maker): Share your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
 - [Repo slide deck builder](https://useaiblocks.com/skills/repo-slide-deck-builder): Share a repo. Get a slide deck with cited facts that warns you when the code changes.
+- [Report-to-slide briefing deck builder and reviewer](https://useaiblocks.com/workflows/turn-a-report-into-an-editable-briefing-deck): Share the report, audience and meeting length. Get a source-checked slide plan, an editable deck where tools allow and a layout review.
 - [Research poster builder](https://useaiblocks.com/skills/research-poster-builder): Use approved text, local images, and print rules to build a PowerPoint poster you can edit.
+- [Research poster content and source planner](https://useaiblocks.com/workflows/prepare-research-poster-source-notes): Share your completed study, approved results and poster rules. Get a reading order, figure briefs, source index and wording check.
 - [Research poster maker](https://useaiblocks.com/skills/research-poster-maker): Share results, figures and size. Get editable LaTeX and a checked PDF when tools are available.
+- [Research report summary and slide-brief writer](https://useaiblocks.com/workflows/make-a-research-report-easier-to-share): Share a report, its sources, audience and sharing limits. Get a plain summary, slide outline and checks across figures and claims.
 - [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
 - [Scanned document reader and fact checker](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Read text from a scan. Check key names and numbers against the original pages and flag what is unclear.
 - [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files, or scans. Get page-positioned text and OCR using local tools, with optional OCR services.
@@ -82,6 +86,7 @@
 - [Slide outline and image maker](https://useaiblocks.com/skills/slide-deck-image-maker): Give it content. Review a slide outline, then create one image for each approved slide.
 - [Spreadsheet and CSV cleaner](https://useaiblocks.com/agents/data-file-clean-up-loop): Clean a spreadsheet or CSV using agreed rules. Recheck each round and keep unresolved cells for a person to decide.
 - [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker): Check a spreadsheet for odd totals, broken formulas and messy data. Your original stays safe, and you get findings with proof and a new file.
+- [Spreadsheet cleanup, data-check and slide-deck builder](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck): Share the data file, definitions and meeting goal. Get a cleaned copy, a quality report, a data story and slides where tools allow.
 - [Spreadsheet formula auditor](https://useaiblocks.com/skills/spreadsheet-formula-auditor): Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
 - [Spreadsheet results reviewer](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results): Check formulas and source totals. Explain the checked results with clear units, dates and limits before you share them.
 - [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Share an English technical document. Get specific language fixes and fact-check flags without a full rewrite.

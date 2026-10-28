@@ -58,15 +58,6 @@ In this order:
 6. **The test:** change, measure, target, read date and stop rule.
 7. `MISSING:` lines, then CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **If you need the cost side** with the [Customer value and spend limit calculator](https://useaiblocks.com/skills/customer-value-spend-limit). Bring sales by customer type and source.
-- **If you have more growth ideas than one test** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report.
-- **If you want to test the pick on real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Gains are multiplied, not added.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cheapest lever is chosen with a reason (or marked PROVISIONAL with the number that would firm it up).
 - The test has a measure and a date (a relative date is fine when numbers are missing), plus a stop rule.
 - Missing numbers are listed, not guessed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **If you need the cost side** with the [Customer value and spend limit calculator](https://useaiblocks.com/skills/customer-value-spend-limit). Bring sales by customer type and source.
+- **If you have more growth ideas than one test** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report.
+- **If you want to test the pick on real people** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

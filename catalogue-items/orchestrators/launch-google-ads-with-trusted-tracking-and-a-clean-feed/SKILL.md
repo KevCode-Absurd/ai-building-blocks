@@ -14,13 +14,13 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -30,11 +30,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your question, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
+This list replaces the shared block above. A brand brain is not used here. Only the store details are needed to start; the rest come at the step named.
+
 - **Your Shopify store details** (required): your store country, the checkout details you collect (such as email and phone), and what tracking you have now (Google and YouTube app, GA4, Tag Manager, current conversion actions). Admin access to Shopify, Google Ads and Merchant Center is needed to follow the build.
 - **Test-order screenshots** (required for step 2): the Google Ads conversion page and Tag Assistant, from a real test order.
 - **Your Merchant Center products and issues export, with the product count** (required for step 3).
@@ -64,7 +66,7 @@ Pause here: Fix the tracking faults, then run the tracking check again until it 
 Pause here: Fix the feed faults, then run the feed check again until the gate passes.
 
 4. **Google Ads launch planner.** Use the skill `google-ads-launch-planner`. Give it the feed audit from `outputs/step-03-merchant-center-feed-health-checker.md`, the passed tracking audit from `outputs/step-02-google-ads-purchase-tracking-checker.md`, plus your monthly budget, average order value and margin. The tracking audit names the primary purchase action and the test result. If your AI cannot read both files, copy those two lines from the audit into the chat yourself. The planner does not take the step 1 plan. It sets which campaigns go live first and when to add more, and says what must happen before each stage starts.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 Four step files and the summary. The last file holds the launch plan.

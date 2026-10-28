@@ -54,7 +54,7 @@ The "draft" named above is your list of error messages. Before pasting, gather t
 
 Messages in order of cost, each with the original, trigger, cost, the rewrite and any prevention. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-Next step: put the final messages into your code and your style guide so new ones match. If the whole flow feels confusing, run the [Usability heuristic reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer) on it.
+Next step: put the final messages into your code and your style guide so new ones match. If the whole flow feels confusing, run the [Website usability reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer) on it.
 
 ## Check before you hand it back
 

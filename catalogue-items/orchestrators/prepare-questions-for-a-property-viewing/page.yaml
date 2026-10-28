@@ -105,6 +105,7 @@ works_best_with:
   inputs:
     - The floor plan or a list of measurements, if the listing has one.
     - Your budget limits.
+next: [plain-words-contract-summary]
 terms:
   - term: Listing claim
     meaning: A statement in the advert that the advert does not prove, such as quiet street.

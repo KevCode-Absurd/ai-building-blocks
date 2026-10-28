@@ -5,18 +5,18 @@ description: "Roll a debt service reserve forward for one period. Get the requir
 
 # Debt reserve rollforward builder
 
-Rolls a debt service reserve account forward by one period. It applies an approved draw, works out the required balance from next year's debt service, tops the account up from available cash and shows any excess as a possible release. It ends with the ending balance and any gap left unfunded. It does not decide whether a draw or release is allowed, and it does not change any account. For the order of payments across lenders and the reserve use the Project payment waterfall builder. For a cash covenant test use the Debt service covenant headroom checker.
+Rolls a debt service reserve account forward by one period. It applies an approved draw, works out the required balance from next year's debt service, tops the account up from available cash and shows any excess as a possible release. It ends with the ending balance and any gap left unfunded. It does not decide whether a draw or release is allowed, and it does not change any account. For the order of payments across lenders and the reserve use the Project payment priority planner. For a cash covenant test use the Loan covenant cash coverage checker.
 
 ## When not to use
 
 - Your loan has no reserve requirement. There is nothing to roll forward.
-- You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment waterfall builder.
-- You want to test a cash covenant. Use the Debt service covenant headroom checker.
+- You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment priority planner.
+- You want to test a cash covenant. Use the Loan covenant cash coverage checker.
 - Your payments are uneven across the year and you only have the yearly total. Give the real months, or treat the result as rough.
 
-## Before you start
+## How to work
 
-This skill needs only the figures in "What you need". A document or spreadsheet is optional: if a line below asks for one as required, ignore that.
+This skill needs only the figures in "What you need". The loan documents and a spreadsheet are optional.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
@@ -26,10 +26,8 @@ If the figures are not in the chat, ask once for the missing items in "What you 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material or the linked skill):
-- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-
 **Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
@@ -132,15 +130,6 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 - [SAM merchant plant financial parameters](https://samrepo.nlr.gov/help/fin_merchant_plant.html): reserve funding, debt schedules and explicit annual financial assumptions.
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked page is not bundled or relicensed.
-
-## After this
-
-Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-
-- Split the period's cash across lenders and the reserve with the [Project payment waterfall builder](https://useaiblocks.com/skills/project-payment-waterfall-builder).
-- Test the cash cushion over the loan limit with the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-
-If they pick one and it is not added here, give the link and say what to bring.
 
 ## Hand back
 

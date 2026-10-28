@@ -98,5 +98,5 @@ Write `MISSING: <what>` next to the affected part. Carry on with the parts that 
 
 Use this list, not the shared "After this" list above. These follow from the test checklist, which is the main thing this workflow hands back. Suggest one next step as a short question, and say the user can type their own:
 - **Run the checklist** on one small real case, then bring back the pass and fail marks to update the procedure.
-- **Hand it over.** For a task that people do by hand, use the [Make a recurring process easier to hand over](https://useaiblocks.com/workflows/make-a-recurring-process-easier-to-hand-over) workflow.
+- **Hand it over.** For a task that people do by hand, use the [Process handover guide writer](https://useaiblocks.com/workflows/make-a-recurring-process-easier-to-hand-over) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring. If the automation is built in n8n and needs failure alerts, offer the [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler), with the procedure and the recovery steps.

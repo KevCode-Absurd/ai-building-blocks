@@ -179,11 +179,11 @@ Before delivering earnings update, verify all items below:
 **Publication Timing:**
 - [ ] Report published within 24-48 hours of earnings release
 - [ ] If later than 48 hours, acknowledged as "delayed reaction"
-- [ ] ✅ **VERIFIED all data is from LATEST quarter by searching for recent earnings**
+- [ ] ✅ **VERIFIED all data is from the target quarter (the one the user named, or the latest if none) by searching for it**
 - [ ] ✅ **Did NOT rely on knowledge cutoff - actively searched for current data**
 - [ ] Consensus estimates are pre-earnings (not post-earnings)
 - [ ] No outdated information included
-- [ ] Earnings release date is within last 1-3 months (not 6+ months old)
+- [ ] Latest-quarter request: earnings release date is within last 1-3 months (not 6+ months old). Named older quarter: report is labelled a historical update with its release date
 
 ### Writing Style Checklist
 
@@ -248,3 +248,5 @@ Deliverables:
 
 File: [Company]_Q[X]_[Year]_Earnings_Update.docx
 ```
+
+Changed by AI Blocks (2026-10-28): a quarter the user names is now used as asked, even if it is old; the latest-quarter and 3-month checks apply only when the user asks for the latest quarter or names none.

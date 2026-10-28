@@ -9,7 +9,7 @@ A quick check that a headline picks out the right person and tells them what the
 
 ## When to use it
 
-Use it on one headline, or several ranked one per line. Do not use it when you need the full set of checks (use the Headline promise checker), when there is no headline yet (write one first), or when you want a batch of new opening lines (use the [Ad opening line batch writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer)).
+Use it on one headline, or several ranked one per line. Do not use it when you need the full set of checks (use the Headline promise checker), when there is no headline yet (write one first), or when you want a batch of new opening lines (use the [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer)).
 
 ## What you need
 - **The headline** (required): paste it first, alone or with its ad.
@@ -46,8 +46,8 @@ MISSING: <facts you did not give>
 ## What next
 
 When you've handed it back, suggest what they could do next in one short question. Offer these, and say they can type their own:
-- **Write more opening lines to test against it** with the [Ad opening line batch writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer).
-- **Plan a fair test of the gain and loss versions** with the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner).
+- **Write more opening lines to test against it** with the [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer).
+- **Plan a fair test of the gain and loss versions** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner).
 
 ## Checks
 - The reader is named in terms of their situation.

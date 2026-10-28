@@ -17,6 +17,28 @@ This is the strategy layer above marketing execution. It tells you **what to do 
 
 Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## How to use it
 
 Paste this whole file into Claude, ChatGPT or Gemini, then add your shop details. No install is needed.
@@ -128,10 +150,12 @@ Calculate and present:
   - LTV = AOV × Purchase Frequency × Customer Lifespan × Gross Margin
   - LTV:CAC Ratio — compare against benchmarks (see below)
   - Contribution Margin = Revenue - COGS - Shipping - Processing - Packaging - Returns
-  - Payback Period = CAC ÷ (AOV × Margin)
+  - Orders to pay back CAC = CAC ÷ (AOV × Contribution Margin %). This is a count of orders, not a time.
+  - Payback Period (months) = Orders to pay back CAC ÷ Orders per customer per month. Only give a time if the person gave purchase timing; otherwise report the order count and mark the time `MISSING:`.
 
-- **The Growth Equation:**
-  Revenue = Traffic × Conversion Rate × AOV × Purchase Frequency
+- **The Growth Equation** (for one period, such as a month):
+  Revenue = Sessions × Conversion Rate (sessions to orders) × AOV
+  Do not also multiply by purchase frequency: repeat orders already come from sessions that convert. To show the retention lever, use the customer form instead: Revenue = Unique Customers × Orders per Customer × AOV. Use one form or the other, never both at once.
   
   Show which variable has the biggest room for improvement based on their numbers vs benchmarks. A 20% improvement in conversion is often worth more than a 20% increase in traffic.
 
@@ -366,7 +390,8 @@ When calculating unit economics, use these formulas and benchmarks:
 - **LTV** = AOV × Purchase Frequency × Customer Lifespan × Gross Margin
 - **LTV:CAC Ratio** = LTV ÷ CAC
 - **Contribution Margin** = Revenue - COGS - Shipping - Processing (3%) - Packaging - Returns provision (5%)
-- **Payback Period** = CAC ÷ (AOV × Contribution Margin %)
+- **Orders to pay back CAC** = CAC ÷ (AOV × Contribution Margin %). This is a number of orders, not a time period
+- **Payback Period (months)** = Orders to pay back CAC ÷ Orders per customer per month. Check: CAC $30, AOV $40, contribution margin 50% gives $20 per order, so 1.5 orders. A buyer who orders once every 4 months (0.25 orders a month) pays back in 1.5 ÷ 0.25 = 6 months
 
 ### LTV:CAC Benchmarks *(Finsi.ai 2026)*
 | Ratio | Meaning |
@@ -379,8 +404,11 @@ When calculating unit economics, use these formulas and benchmarks:
 
 ### Growth Equation
 ```
-Revenue = Traffic × Conversion Rate × AOV × Purchase Frequency
+Revenue = Sessions × Conversion Rate (sessions to orders) × AOV
+  or, to show retention:
+Revenue = Unique Customers × Orders per Customer × AOV
 ```
+Use one form, not both together. Conversion here is sessions to orders, so repeat orders are already counted; multiplying by purchase frequency again double-counts them. Check: 10,000 sessions × 2% × $40 = $8,000. If those 200 orders came from 160 customers ordering 1.25 times each, 160 × 1.25 × $40 = $8,000, the same total.
 Show the user which variable has the most room to improve. A 20% lift in conversion often beats a 20% increase in traffic — and costs less.
 
 ---
@@ -446,7 +474,7 @@ Product | Platform | Revenue | Stage | AOV | Margin | Repeat Rate
 | Repeat Purchase Rate | X% | 28% avg | 🟢/🟡/🔴 |
 
 ## Growth Equation Diagnosis
-Revenue = Traffic × Conversion × AOV × Frequency
+Revenue = Sessions × Conversion × AOV  (or Customers × Orders per Customer × AOV, not both)
 [Which variable has the most room to improve?]
 
 ## E-Commerce Ansoff Matrix (Your Opportunities)
@@ -490,6 +518,14 @@ Revenue = Traffic × Conversion × AOV × Frequency
 ```
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Growth health checker](https://useaiblocks.com/skills/growth-health-checker).
+- **Plan your strategy** with the [Launch channel picker](https://useaiblocks.com/skills/launch-channel-picker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Other Skills
 

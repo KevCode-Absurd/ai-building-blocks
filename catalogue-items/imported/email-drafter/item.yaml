@@ -31,7 +31,7 @@ credits:
   - title: email-drafting skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/email-drafting
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and removed claims the examples made without the user's facts (a renewal discount, a deployed fix, an unaffected subscription, product features), using marked placeholders the user must confirm or delete. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

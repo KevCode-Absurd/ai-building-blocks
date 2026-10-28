@@ -8,6 +8,24 @@ tags: "[audio, transcription, whisper, meeting-minutes, speech-to-text]"
 date_added: "2026-02-27"
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Audio** (yours): a sound or voice recording.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audio. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Faster-Whisper:** A free speech-to-text tool that runs on your computer, so audio stays local.
+- **Claude or GitHub Copilot command line:** It reads the transcript and writes the notes.
+- **ffmpeg:** It converts video and uncommon audio files so they can be read.
+<!-- /needs -->
+
 ## Run it: what you need, what you get
 
 **What you need.** Ask once for anything missing. Never invent it.
@@ -161,3 +179,14 @@ Transcription runs on the user’s own computer and needs no API key. The meetin
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Call follow-up drafter](https://useaiblocks.com/skills/call-follow-up-drafter). It takes the transcript and meeting notes.
+- The [Deal notes and CRM updater](https://useaiblocks.com/skills/deal-notes-and-crm-updater). It takes the meeting notes and transcript.
+- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes and transcript.
+- The [Meeting communication coach](https://useaiblocks.com/skills/meeting-coaching-analyst). It takes the transcript.
+- The [Dialpad and Leexi call summarizer](https://useaiblocks.com/skills/dialpad-and-leexi-call-summarizer). It takes the transcript.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

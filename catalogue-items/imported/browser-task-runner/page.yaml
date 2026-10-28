@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Check that Node.js is installed. Type node --version in your terminal. If it fails, install Node.js first, then run npm install -g @playwright/cli@latest.
   - Use an AI that can run commands on your computer. A plain chat window cannot open a browser.
-  - Paste this skill into your AI. Then describe the task and the web address.
+  - Paste this skill into your AI. Then describe the task and the web address. The skill's setup lines assume Codex and point to $CODEX_HOME/skills. In another AI tool, swap that for the folder where you saved or installed the skill.
   - Start with a public page. Ask your AI to open it, take a snapshot and save a screenshot.
   - Check the screenshot in output/playwright/. Tell your AI what to click, fill or copy next.
   - Ask for a trace if a step fails and you want to see what happened.
+  - Next, copy any data you collected into a spreadsheet, or rerun the steps on the page where the first try failed.
 output_sample:
   input:
     - The task in plain words

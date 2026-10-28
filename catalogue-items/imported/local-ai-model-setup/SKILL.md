@@ -21,6 +21,24 @@ metadata:
 
 Deploy a local LLM stack for offline and privacy-first workflows.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Ollama:** Free program that downloads and runs local models. Get it from ollama.com.
+- **Open WebUI:** Browser chat screen that works with Ollama.
+- **Docker Desktop:** Runs the chat screen in a box so it stays separate from your system.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill when:
@@ -131,7 +149,7 @@ Notes before you use this file:
 # docker-compose.yml
 services:
   ollama:
-    image: ollama/ollama:latest
+    image: ollama/ollama:<pinned-version>  # look up a current release tag; do not use latest
     container_name: ollama
     restart: unless-stopped
     ports:
@@ -158,7 +176,7 @@ services:
       retries: 3
 
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/open-webui/open-webui:<pinned-version>  # look up a current release tag; do not use main
     container_name: open-webui
     restart: unless-stopped
     ports:
@@ -175,7 +193,7 @@ services:
         condition: service_healthy
 
   litellm:
-    image: ghcr.io/berriai/litellm:main-latest
+    image: ghcr.io/berriai/litellm:<pinned-version>  # look up a current release tag; do not use main-latest
     container_name: litellm
     restart: unless-stopped
     ports:

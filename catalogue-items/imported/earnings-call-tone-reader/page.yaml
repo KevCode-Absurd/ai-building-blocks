@@ -40,7 +40,7 @@ how_to_use:
   - Paste the transcript and name the company and quarter. Paste older transcripts too if you have them. Without them you get a level, not a shift.
   - Say whether you care most about the prepared remarks or the Q&A.
   - Read the Key Findings first. Check each quote against the transcript. If your AI did not run code, treat the tone score and the hedging counts as approximate. Ask it to list the phrases it counted.
-  - Then read the Check against the numbers section. Look up those numbers in the results.
+  - Then read the Check against the numbers section. Look up those numbers in the results release. The Earnings padding detector or Cash versus earnings checker can help you test them.
   - Use the result as one input. Do not trade on it alone.
 output_sample:
   input:

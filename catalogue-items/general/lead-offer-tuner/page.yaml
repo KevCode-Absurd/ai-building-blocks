@@ -22,13 +22,13 @@ when:
   - Your diagnosis says "more leads" or "better leads" and you need to know what to change.
 
 not_for:
-  - "You do not have a diagnosis yet. Use the inquiry problem diagnoser first to see whether you need more leads or better ones."
-  - "The ad itself is weak, not the offer. Use the reply-getting fix writer to fix the headline and the ask."
+  - "You do not have a diagnosis yet. Use the lead quality reviewer first to see whether you need more leads or better ones."
+  - "The ad itself is weak, not the offer. Use the ad response copy editor to fix the headline and the ask."
   - "Your reply form asks too much or too little. Use the coupon and form fixer."
   - "You have no reply offer at all. This tunes an offer that already exists."
 
 you_give:
-  - The diagnosis from the inquiry problem diagnoser, or your own call ("raise replies" or "cut weak replies"), with numbers if you have them
+  - The diagnosis from the lead quality reviewer, or your own call ("raise replies" or "cut weak replies"), with numbers if you have them
   - Your current reply offer, its title and where it sits in the ad
   - What you can truly promise or ask, such as a fee, a question, a guarantee or no sales call (optional)
   - The name of an expert and their credential, only if they have said yes in writing (optional)
@@ -85,7 +85,7 @@ output_sample:
     - "Your current reply offer, its title and where it sits in the ad"
     - "What you can truly promise or ask, such as a fee or a guarantee (optional)"
   prerequisites:
-    - "A diagnosis from the inquiry problem diagnoser, if you do not have your own call (optional)"
+    - "A diagnosis from the lead quality reviewer, if you do not have your own call (optional)"
   output:
     - name: "CALL"
       contains: "Whether the offer is changed to raise replies or to cut weak ones."
@@ -128,7 +128,7 @@ works_best_with:
     - name: Any good chat AI
       why: The work is sorting and writing from facts you supply, which any strong chat AI does well with this skill.
   inputs:
-    - The diagnosis from the Inquiry problem diagnoser
+    - The diagnosis from the Lead quality reviewer
     - The ad where the offer appears
 
 terms:

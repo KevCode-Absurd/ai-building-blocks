@@ -34,9 +34,9 @@ how_to_use:
   - This is an imported MIT-licensed copy. Its author last checked it on 2026-09-14, and we have not checked it again, so some dates and rule numbers may have changed.
   - Gather first. Write down your product's parts (hardware and software), how it connects, the countries you sell in, your role, and any software parts list you already have.
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the full SKILL.md text into the chat.
+  - Paste the full SKILL.md text into the chat, then the two reference files it reads, references/essential-requirements.md and references/conformity-assessment.md. Without them the answer has less detail on duties and routes.
   - "Describe your product, how it connects, where you sell it and your role: maker, importer or distributor."
-  - Read the answer. It gives your scope, class, route and a summary of duties, in that order.
+  - Read the answer. It gives your scope, class, route and a summary of duties, in that order, usually in a page or two. It is a draft for your assessor, not the full skill text.
   - Treat the answer as a draft for your assessor, not a decision on your product class. Do not file any ENISA report based on it without checking the current steps on the reporting platform itself.
   - Check every date, rule number and class list against EUR-Lex and the ENISA site before you act on them. The skill's own check date is 2026-09-14, and we have not checked it again.
   - Next, take the Key Obligations Summary to a notified body or a qualified assessor. The class decision, the CE marking route and your reporting steps need a lawyer or assessor to sign off.

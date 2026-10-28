@@ -42,6 +42,7 @@ how_to_use:
   - Run stage 1 on a new git branch. Only go on to the next stage when its tests pass.
   - If a stage fails, return to its marked point. Share the error with your AI and ask for a changed plan.
   - Do not run any command the plan marks as risky, such as a force install, without reading what it does first.
+  - The code samples in the skill are examples. Check each command against the package's own docs before you run it.
 how_it_works:
   - title: Read your setup
     text: It reads the dependency file, the current version and the one you want, and checks the size of the jump.

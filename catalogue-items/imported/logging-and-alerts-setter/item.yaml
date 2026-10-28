@@ -31,4 +31,4 @@ credits:
   - title: observability-and-instrumentation skill
     by: Addy Osmani
     url: https://github.com/addyosmani/agent-skills/tree/main/skills/observability-and-instrumentation
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and noted that the observability checklist file it points to is not in this copy. We added Before you start and After this sections that link to other AI Blocks steps.

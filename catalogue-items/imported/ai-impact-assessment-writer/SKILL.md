@@ -14,7 +14,8 @@ argument-hint: "[describe the use case or system, or pass a triage result]"
 > **AI Blocks note: using this in a plain chat.** The `~/.claude/plugins/config/...CLAUDE.md` file, the matter workspaces and the slash commands named below belong to the original legal toolkit. They do not exist for you. Ignore the file paths and do this instead:
 >
 > - Before step 1, ask the user in the chat for what that file would hold: the countries where the system will run, their AI policy (if any), their role (provider, deployer or both), whether they are a lawyer, and a past assessment to copy the format from. If they have none, use the default format below and a full assessment.
-> - Research tools: if you have no legal research connection (Westlaw, EUR-Lex), cite only what you can find on the web and tag every citation `[web search — verify]`. Treat every article number as unverified. Never invent a citation.
+> - Research tools, one rule: if you have a legal research connection (Westlaw, EUR-Lex), follow "No silent supplement" below and ask before using the web. If you have none, say so once at the start and ask whether to use web search. If the user agrees, cite only what you find on the web and tag every citation `[web search — verify]`. If they do not, flag the gap as unverified. Treat every article number as unverified. Never invent a citation.
+> - If any citation that sets a risk tier or a go/no-go point is unverified, label the recommendation provisional until a lawyer checks those citations.
 > - Skip the matter workspace and slash-command steps.
 > - This is a draft for a lawyer to check. It is not legal advice.
 
@@ -33,6 +34,22 @@ argument-hint: "[describe the use case or system, or pass a triage result]"
 ```
 
 ---
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
 ## Matter context
 
@@ -404,3 +421,14 @@ End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the 
 - It doesn't design the mitigations. It describes what needs mitigating; engineering
   designs the fix.
 - It doesn't substitute for a PIA when personal data is involved. Run both.
+
+Changed by AI Blocks (2026-10-28): added a plain-chat note (ask for what the config file would hold, skip the matter workspace and slash commands), one rule for web search, and a provisional label when key citations are unverified.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Privacy impact assessment writer](https://useaiblocks.com/skills/privacy-impact-assessment-writer).
+- The [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker).
+- The [Legal team AI policy drafter](https://useaiblocks.com/skills/team-ai-use-policy-drafter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

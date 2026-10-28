@@ -5,6 +5,23 @@ description: When the user wants to plan promotions, optimize trade spending, fo
 
 # Promotional Planning
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **ChatGPT with data analysis, or Claude with code execution:** They can fit the lift model to your sales table and show the result.
+- **Any good chat AI:** Fine for the calendar and stock plan once you give it lift figures.
+<!-- /needs -->
+
 ## How to run this version
 
 This block was added by AI Blocks. The method below is the original author's.
@@ -22,7 +39,9 @@ This block was added by AI Blocks. The method below is the original author's.
 
 **Ask first, never guess.** If there is no history of past promotions or no baseline sales, say the lift cannot be worked out. Offer two choices: gather the data first, or run one small test promotion and measure it. Write MISSING next to each input the user does not have. Do not fill gaps with typical figures.
 
-**Column names must match the user's sheet.** The elasticity code reads a `volume` column and the post-promotion code reads a `sales` column. Use one name for units sold and rename the columns in the user's sheet to match before you run any code. All example tables and numbers in the code must be replaced with the user's own data.
+**Column names must match the user's sheet.** The elasticity code reads a `volume` column and the post-promotion code reads a `sales` column. Use one name for units sold and rename the columns in the user's sheet to match before you run any code.
+
+**Minimum history (a rule of thumb).** Only report a lift for a deal type with at least three past promotions of that type and at least eight normal weeks around them. With less, mark the lift as a rough guide and say why. All example tables and numbers in the code must be replaced with the user's own data.
 
 **Every lift number in the code is a placeholder.** The price elasticity of -2.5, the feature lift of 1.5 and the display lift of 2.0 only show the shape of the model. They are not benchmarks. Take them from the user's own history (the elasticity model below does this). Other fixed numbers in the code (promo curves, safety stock rates, cost figures) are placeholders too. Never report a lift or a return that uses them.
 
@@ -168,8 +187,9 @@ def estimate_price_elasticity(sales_data):
 
     elasticity = {
         'price_elasticity': model.params['log_price'],
-        'feature_lift': np.exp(model.params['feature']) - 1,
-        'display_lift': np.exp(model.params['display']) - 1,
+        # Multipliers (1.5 means 50% more), the form the uplift model below expects
+        'feature_lift': np.exp(model.params['feature']),
+        'display_lift': np.exp(model.params['display']),
         'r_squared': model.rsquared,
         'model': model
     }
@@ -187,8 +207,8 @@ sales_data = pd.DataFrame({
 
 elasticity = estimate_price_elasticity(sales_data)
 print(f"Price Elasticity: {elasticity['price_elasticity']:.2f}")
-print(f"Feature Lift: {elasticity['feature_lift']:.1%}")
-print(f"Display Lift: {elasticity['display_lift']:.1%}")
+print(f"Feature Lift: {elasticity['feature_lift'] - 1:.1%}")
+print(f"Display Lift: {elasticity['display_lift'] - 1:.1%}")
 ```
 
 **2. Multiplicative Promotional Model**
@@ -1291,6 +1311,15 @@ def adaptive_promotional_forecast(initial_forecast, actual_sales_to_date,
 **Calendar:** the deals in date order, with gaps so they do not compete.
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Production plan builder](https://useaiblocks.com/skills/production-plan-builder). It takes the plan.
+- The [Demand forecast planner](https://useaiblocks.com/skills/demand-forecast-planner).
+- The [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

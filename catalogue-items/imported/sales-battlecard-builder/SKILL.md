@@ -11,6 +11,26 @@ metadata:
 
 Build structured sales battlecards that arm reps with everything they need to win against specific competitors. This skill researches competitor products, maps feature-level comparisons, drafts objection handling scripts, creates positioning statements and win themes, and packages the output into a quick-reference format reps can pull up mid-call.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Competitors** (yours): the brands buyers compare you with.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Competitors** with the [Deal competitor playbook builder](https://useaiblocks.com/skills/deal-competitor-playbook-builder). Bring your question, a spreadsheet (optional), meeting notes (optional), a tool connection (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for competitors, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Research the Competitor** — Gather current intelligence on the competitor: product capabilities, pricing model, recent product launches, G2/Gartner reviews, customer complaints, leadership changes, and public roadmap signals. Pull from their website, changelog, job postings (which reveal investment areas), and customer review sites. Use public pages only. Skip anything behind a login or paywall, and never scrape a site against its terms.
@@ -122,3 +142,12 @@ Bridge: [A question that moves the buyer back to your differentiator.]
 - **Competitor you've never lost to** — Still build a battlecard. Their presence in a deal changes buyer expectations and evaluation criteria even if they don't win.
 - **Multiple competitors in the same deal** — Create a deal-specific composite card that covers all active competitors rather than requiring reps to flip between three separate battlecards.
 - **Former competitor customer on your team** — Leverage their insider knowledge for battlecard input, but scrub any confidential or NDA-protected information before publishing.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Live objection responder](https://useaiblocks.com/skills/live-objection-responder). It takes the document.
+- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
+- The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

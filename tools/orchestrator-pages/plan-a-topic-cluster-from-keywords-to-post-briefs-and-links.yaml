@@ -45,7 +45,7 @@ output_sample:
     - Your keyword tool export, if you want real search numbers (optional)
   output:
     - name: "Step 1: Keywords"
-      contains: Searches around your topic, grouped, with monthly searches and difficulty. Figures are marked as estimates without a tool export.
+      contains: Searches around your topic, grouped, with monthly searches and difficulty. Without a tool export there are no figures, only a labelled high, medium or low guess.
     - name: "Step 2: Intent"
       contains: What the searcher wants behind each keyword, such as learn, compare, buy or fix, and the page type that fits.
     - name: "Step 3: Cluster"
@@ -84,7 +84,7 @@ output_shape: |-
     <from page> -> <to page> | Anchor: <...>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <checks that failed or could not run, or none>
 example:
   business: sprout
   input: |
@@ -99,7 +99,7 @@ example:
   output: pending
 tweaks:
   - what: Keyword data
-    how: Bring an export from your keyword tool. Without it, the volumes are estimates and the plan says so.
+    how: Bring an export from your keyword tool. Without it, the plan gives no volumes, only a high, medium or low guess, and says so.
   - what: Your current pages
     how: List them all. The cluster plan places or retires each, so you stop competing with yourself.
   - what: Claims you avoid
@@ -127,7 +127,7 @@ works_best_with:
     - name: Any good chat AI
       why: Every step is a plan or a piece of writing.
     - name: A keyword research tool
-      why: Real search volumes and difficulty beat estimates.
+      why: Gives the real search volumes and difficulty. The plan writes no numbers without it.
     - name: Your search console
       why: Shows which searches already bring people to your pages.
   inputs:

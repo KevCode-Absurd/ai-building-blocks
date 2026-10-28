@@ -10,6 +10,26 @@ metadata:
 
 Build a comprehensive employee listening strategy — from designing engagement surveys and pulse checks to running focus groups, analyzing results, and translating feedback into action plans that improve the employee experience.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a writing and reading job. Claude, ChatGPT or Gemini all do it well.
+- **Google Forms or your survey tool:** You send the survey from there. The AI writes the questions only.
+<!-- /needs -->
+
 ## How to run this skill
 
 1. **Ask once for what is missing.** You need: what the user wants to learn, how many people and teams will answer, and the channel. Optional: past results. If the goal is vague ("see how people feel"), suggest one of three: a full survey, a short pulse, or a focus group. Let the user pick.
@@ -89,3 +109,14 @@ Build a comprehensive employee listening strategy — from designing engagement 
 - Balance quantitative surveys with qualitative listening through focus groups and stay interviews.
 - Protect anonymity rigorously—employees need to trust that individual responses cannot be identified.
 - Track listening program participation rates as a leading indicator of overall organizational trust.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [People risk register builder](https://useaiblocks.com/skills/people-risk-register-builder). It takes the document.
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
+- The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
+- **Lead the team** with the [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the plan.
+- The [New hire onboarding reviewer](https://useaiblocks.com/skills/new-hire-onboarding-keeper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

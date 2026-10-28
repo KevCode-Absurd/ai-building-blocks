@@ -9,12 +9,12 @@ subhead: A score and a to-do list for a skill, after its structure is checked an
 explain: |
   A score and a to-do list for a skill, after its structure is checked and its scripts are run. You find weak spots before you ship it.
 
-  Four tools run from the repo root. The validator checks front matter, required sections and folder layout against a tier. The script tester checks that Python scripts have valid syntax, standard imports, run, and print output. The quality scorer rates several dimensions and gives a letter grade with a road map of improvements. The security scorer rates risk and can run inside the quality score. You can set a minimum score so it fails a build. It needs Python only.
+  Four tools run from the repo root. The validator checks front matter, required sections and folder layout against a tier. The script tester checks that Python scripts have valid syntax, standard imports, run, and print output. The quality scorer rates several dimensions and gives a letter grade with a road map of improvements. The security scorer rates risk and can run inside the quality score. You can set a minimum score so it fails a build, but keep the script tester out of pull-request builds, since it runs the skill's code. It needs Python only.
 when:
   - You wrote a skill with scripts and want to know they run.
   - You want a letter grade and a list of what to improve.
   - You need a score gate in your build pipeline.
-  - You review a library of skills and want to rank them.
+  - You review several skills and want to compare their scores, running the checks on each folder in turn.
 not_for:
   - "You are writing a new skill: follow the write-a-skill guide in the claude-skills repo instead, since this tester's line minimums suit older skills."
   - "Your skill has no Python scripts: the script tests have nothing to run, so a careful read-through by a person is simpler."

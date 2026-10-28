@@ -12,6 +12,24 @@ date_added: "2026-02-27"
 
 Perform a security check of an AWS environment to find vulnerabilities and misconfigurations. All commands below only read.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** Can run the AWS commands itself and read the output.
+- **AWS Security Hub:** Runs continuous checks and covers more than this one-time review.
+- **Any good chat AI:** Reads command output you paste in and ranks the findings.
+<!-- /needs -->
+
 ## When to Use
 Use this skill when you need to check AWS security posture, find vulnerabilities, or prepare for a compliance review.
 
@@ -26,6 +44,8 @@ Use this skill when you need to check AWS security posture, find vulnerabilities
 3. **Compliance framework in scope** (optional): CIS, PCI-DSS or HIPAA.
 
 If a command fails with access denied, record the check as `NOT RUN (access denied)`. Never report a clean result for a check that did not run.
+
+**Empty output is not a clean result on its own.** Many checks below print nothing when nothing is wrong, and also print nothing when the command failed. A check counts as clean only when its command succeeded and read real data (for example, the credential report has its header row and one row per user). If you cannot show that, record the check as `NOT RUN` with the error.
 
 ## Audit Categories
 
@@ -61,9 +81,22 @@ Each command is a lead. Read the output, and say which checks you ran and which 
 ### IAM Security Checks
 
 ```bash
-# Credential report: generate it, then read it. Columns are found by header name.
-aws iam generate-credential-report >/dev/null
-aws iam get-credential-report --query Content --output text | base64 --decode > credential-report.csv
+# Credential report: generate it, wait until it is ready, then read it. Columns are found by header name.
+for i in 1 2 3 4 5 6; do
+  state=$(aws iam generate-credential-report --query State --output text) || { echo "NOT RUN: cannot generate the credential report"; break; }
+  [ "$state" = "COMPLETE" ] && break
+  sleep 5
+done
+if aws iam get-credential-report --query Content --output text > credential-report.b64 \
+   && base64 --decode credential-report.b64 > credential-report.csv \
+   && head -1 credential-report.csv | grep -q "mfa_active"; then
+  echo "CREDENTIAL REPORT OK: $(( $(wc -l < credential-report.csv) - 1 )) rows (root plus users)"
+else
+  echo "NOT RUN: the credential report could not be read. MFA, root, unused-user and key checks are NOT RUN."
+fi
+# Run the four awk checks below only after "CREDENTIAL REPORT OK". If it said NOT RUN, report
+# those checks as NOT RUN, never as "no users without MFA". The report holds user names:
+# delete credential-report.csv and credential-report.b64 when you are done.
 
 # Users with a console password and no MFA
 awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next}
@@ -101,14 +134,25 @@ while read bucket; do
   pol=$(aws s3api get-bucket-policy-status --bucket "$bucket" --query 'PolicyStatus.IsPublic' --output text 2>&1)
   acl=$(aws s3api get-bucket-acl --bucket "$bucket" 2>&1)
   echo "$bucket | policy public: $pol"
-  echo "$pab" | grep -q "NoSuchPublicAccessBlockConfiguration" && echo "  no Block Public Access set: $bucket"
-  echo "$acl" | grep -q "AllUsers" && echo "  PUBLIC ACL: $bucket"
+  if echo "$pab" | grep -q "NoSuchPublicAccessBlockConfiguration"; then
+    echo "  no Block Public Access set: $bucket"
+  elif ! echo "$pab" | grep -q "PublicAccessBlockConfiguration"; then
+    echo "  NOT RUN (Block Public Access) for $bucket: $pab"
+  fi
+  if echo "$acl" | grep -q "Grants"; then
+    echo "$acl" | grep -q "AllUsers" && echo "  PUBLIC ACL: $bucket"
+  else
+    echo "  NOT RUN (ACL) for $bucket: $acl"
+  fi
 done
+# "policy public" shows an error such as NoSuchBucketPolicy when the bucket has no policy
+# (normal, not public). Any other error, such as AccessDenied, means that check did not run.
 
 # VPC Flow Logs status
 aws ec2 describe-vpcs --query 'Vpcs[*].VpcId' --output text | tr '\t' '\n' | \
 while read vpc; do
-  flow_logs=$(aws ec2 describe-flow-logs --filter "Name=resource-id,Values=$vpc" --query 'FlowLogs[*].FlowLogId' --output text)
+  flow_logs=$(aws ec2 describe-flow-logs --filter "Name=resource-id,Values=$vpc" --query 'FlowLogs[*].FlowLogId' --output text 2>&1) \
+    || { echo "NOT RUN for $vpc: $flow_logs"; continue; }
   [ -z "$flow_logs" ] && echo "No flow logs: $vpc"
 done
 
@@ -128,23 +172,35 @@ aws rds describe-db-instances --query 'DBInstances[?StorageEncrypted==`false`].[
 # S3 buckets with no default encryption
 aws s3api list-buckets --query 'Buckets[*].Name' --output text | tr '\t' '\n' | \
 while read bucket; do
-  aws s3api get-bucket-encryption --bucket "$bucket" 2>&1 | grep -q "ServerSideEncryptionConfigurationNotFoundError" \
-    && echo "No default encryption: $bucket"
+  enc=$(aws s3api get-bucket-encryption --bucket "$bucket" 2>&1)
+  if echo "$enc" | grep -q "ServerSideEncryptionConfigurationNotFoundError"; then
+    echo "No default encryption: $bucket"
+  elif ! echo "$enc" | grep -q "ServerSideEncryptionConfiguration"; then
+    echo "NOT RUN for $bucket: $enc"
+  fi
 done
 
 # Public manual RDS snapshots
 aws rds describe-db-snapshots --snapshot-type manual --query 'DBSnapshots[*].DBSnapshotIdentifier' --output text | tr '\t' '\n' | \
 while read snapshot; do
   attrs=$(aws rds describe-db-snapshot-attributes --db-snapshot-identifier "$snapshot" \
-    --query 'DBSnapshotAttributesResult.DBSnapshotAttributes[?AttributeName==`restore`].AttributeValues' --output text)
+    --query 'DBSnapshotAttributesResult.DBSnapshotAttributes[?AttributeName==`restore`].AttributeValues' --output text 2>&1) \
+    || { echo "NOT RUN for $snapshot: $attrs"; continue; }
   echo "$attrs" | grep -qw "all" && echo "PUBLIC SNAPSHOT: $snapshot"
 done
 
-# KMS key rotation for customer-managed keys (AWS-managed keys return an error here; ignore those)
+# KMS key rotation. Key types that cannot rotate (asymmetric, HMAC, imported key material,
+# custom key stores) return UnsupportedOperationException: list them as "rotation not applicable".
+# Any other error means the check did not run for that key.
 aws kms list-keys --query 'Keys[*].KeyId' --output text | tr '\t' '\n' | \
 while read key; do
-  rotation=$(aws kms get-key-rotation-status --key-id "$key" --query 'KeyRotationEnabled' --output text 2>/dev/null)
-  [ "$rotation" = "False" ] && echo "Rotation disabled: $key"
+  if rotation=$(aws kms get-key-rotation-status --key-id "$key" --query 'KeyRotationEnabled' --output text 2>&1); then
+    [ "$rotation" = "False" ] && echo "Rotation disabled: $key"
+  elif echo "$rotation" | grep -q "UnsupportedOperationException"; then
+    echo "Rotation not applicable: $key"
+  else
+    echo "NOT RUN for $key: $rotation"
+  fi
 done
 ```
 
@@ -155,7 +211,9 @@ done
 aws cloudtrail describe-trails --query 'trailList[*].[Name,IsMultiRegionTrail,LogFileValidationEnabled]' --output table
 aws cloudtrail describe-trails --query 'trailList[*].Name' --output text | tr '\t' '\n' | \
 while read trail; do
-  echo "$trail logging: $(aws cloudtrail get-trail-status --name "$trail" --query 'IsLogging' --output text)"
+  status=$(aws cloudtrail get-trail-status --name "$trail" --query 'IsLogging' --output text 2>&1) \
+    || { echo "NOT RUN for $trail: $status"; continue; }
+  echo "$trail logging: $status"
 done
 # If describe-trails returns nothing, CloudTrail is not set up in this region: report as Critical.
 
@@ -165,39 +223,63 @@ aws configservice describe-configuration-recorders --query 'ConfigurationRecorde
 # S3 buckets without access logging
 aws s3api list-buckets --query 'Buckets[*].Name' --output text | tr '\t' '\n' | \
 while read bucket; do
-  aws s3api get-bucket-logging --bucket "$bucket" 2>&1 | grep -q "LoggingEnabled" || echo "No access logging: $bucket"
+  logging=$(aws s3api get-bucket-logging --bucket "$bucket" 2>&1) || { echo "NOT RUN for $bucket: $logging"; continue; }
+  echo "$logging" | grep -q "LoggingEnabled" || echo "No access logging: $bucket"
 done
 ```
 
 ## One-run script (optional)
-Prints counts for a quick look. It changes nothing. Add `--region <region>` to the regional calls.
+Prints counts for a quick look. It changes nothing. Add `--region <region>` to the regional calls. A command that fails prints `NOT RUN` with its error, never a count of 0.
 
 ```bash
 #!/bin/bash
+# count LABEL COMMAND...: prints how many IDs the command returned, or NOT RUN if it failed.
+count() {
+  label="$1"; shift
+  if out=$("$@" 2>&1); then
+    echo "$label: $(echo "$out" | wc -w)"
+  else
+    echo "$label: NOT RUN ($(echo "$out" | head -1))"
+  fi
+}
+
 echo "=== AWS Security Audit Report ==="
 echo "Generated: $(date)"
 
 echo "## IAM"
-aws iam generate-credential-report >/dev/null
-aws iam get-credential-report --query Content --output text | base64 --decode | \
-  awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next} $c["password_enabled"]=="true" && $c["mfa_active"]=="false" {print "  no MFA: " $1}'
-echo "Root account access keys present (0 is good): $(aws iam get-account-summary --query 'SummaryMap.AccountAccessKeysPresent' --output text)"
+for i in 1 2 3 4 5 6; do
+  state=$(aws iam generate-credential-report --query State --output text 2>&1) || break
+  [ "$state" = "COMPLETE" ] && break
+  sleep 5
+done
+if report=$(aws iam get-credential-report --query Content --output text 2>&1 | base64 --decode 2>/dev/null) \
+   && echo "$report" | head -1 | grep -q "mfa_active"; then
+  echo "Credential report read: $(( $(echo "$report" | wc -l) - 1 )) rows"
+  echo "$report" | awk -F, 'NR==1{for(i=1;i<=NF;i++)c[$i]=i; next} $c["password_enabled"]=="true" && $c["mfa_active"]=="false" {print "  no MFA: " $1}'
+else
+  echo "MFA check: NOT RUN (credential report could not be read)"
+fi
+if keys=$(aws iam get-account-summary --query 'SummaryMap.AccountAccessKeysPresent' --output text 2>&1); then
+  echo "Root account access keys present (0 is good): $keys"
+else
+  echo "Root access keys: NOT RUN ($keys)"
+fi
 
 echo "## Network"
-echo "Security groups open to 0.0.0.0/0: $(aws ec2 describe-security-groups --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].GroupId' --output text | wc -w)"
+count "Security groups open to 0.0.0.0/0" aws ec2 describe-security-groups --query 'SecurityGroups[?IpPermissions[?IpRanges[?CidrIp==`0.0.0.0/0`]]].GroupId' --output text
 
 echo "## Data protection"
-echo "Unencrypted EBS volumes: $(aws ec2 describe-volumes --query 'Volumes[?Encrypted==`false`].VolumeId' --output text | wc -w)"
-echo "Unencrypted RDS instances: $(aws rds describe-db-instances --query 'DBInstances[?StorageEncrypted==`false`].DBInstanceIdentifier' --output text | wc -w)"
+count "Unencrypted EBS volumes" aws ec2 describe-volumes --query 'Volumes[?Encrypted==`false`].VolumeId' --output text
+count "Unencrypted RDS instances" aws rds describe-db-instances --query 'DBInstances[?StorageEncrypted==`false`].DBInstanceIdentifier' --output text
 
 echo "## Logging"
-aws cloudtrail describe-trails --query 'trailList[*].[Name,IsMultiRegionTrail]' --output table
+aws cloudtrail describe-trails --query 'trailList[*].[Name,IsMultiRegionTrail]' --output table || echo "CloudTrail: NOT RUN"
 echo "=== End of report ==="
 ```
 (`wc -w` counts the IDs on one line. `wc -l` would give 1 for any result.)
 
 ## Severity tally (replaces a numeric score)
-Do not compute a single security score. A score hides which gap matters. Instead, finish with a count by severity, such as "2 Critical, 3 High, 4 Medium, 1 check not run". Say that the counts show what this check found, and that a clean result for the checks run does not mean the account is secure.
+Do not compute a single security score. A score hides which gap matters. Instead, finish with a count by severity, such as "2 Critical, 3 High, 4 Medium, 1 check not run". Count every `NOT RUN` check separately, and never fold it into a clean result. Say that the counts show what this check found, and that a clean result for the checks run does not mean the account is secure.
 
 ## Compliance Mapping (starting points only)
 Name the area a finding relates to. Give a control number only if you are sure of it for the current version of the framework, and tell the user to confirm it. Do not claim the account meets or fails a framework.
@@ -243,6 +325,14 @@ Return in this order.
 3. **Severity tally.** Counts only, with the clean-result caveat above.
 4. **Fix order.** The top five actions, in order, with the effort for each (minutes, hours, days).
 5. **Next steps.** What to re-run after fixes, and what this check could not see (for example application code, data inside buckets, and other accounts).
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Example Prompts
 

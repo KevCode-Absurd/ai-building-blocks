@@ -20,6 +20,26 @@ When to use this skill: any time you are designing a paid media plan, evaluating
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What this skill is for
 
 This skill spans paid media strategy and operations. It does not cover ad creative production (on this site, use the Ad creative variation planner or the Meta ad copywriter), result interpretation in depth (on this site, use the Ad performance diagnoser), or platform-specific MCP tooling (consult each ad platform's official documentation for current MCP setup, auth, and example prompts).
@@ -144,7 +164,7 @@ Direct list. Audit any account against these and you will usually find easy savi
 - **Display network without targeting.** Broad display drives garbage traffic. Use only for retargeting unless you have specific contextual targeting.
 - **Geographic markets you do not serve.** Sounds obvious, fails 30% of accounts. Audit geo targeting quarterly.
 - **Hours you cannot service.** For service businesses (legal, B2B, medical). Pause off-hours unless lead form clearly converts asynchronously.
-- **Devices that do not convert.** If mobile converts at 1% and desktop at 5% with the same CPC, bid down mobile aggressively.
+- **Devices that do not pay back.** Judge each device on profit per click, not conversion rate. Profit per click = conversion rate x average order value x contribution margin, minus cost per click. Conversion rate alone can mislead: say mobile converts at 1% on $200 orders and desktop at 5% on $20 orders, both at 40% margin and $0.30 CPC. Mobile makes 0.01 x 200 x 0.4 - 0.30 = $0.50 per click; desktop makes 0.05 x 20 x 0.4 - 0.30 = $0.10. Mobile is the better buy despite the lower rate. Bid down a device only when its profit per click is lower, each device has enough conversions to read, and you have checked whether that device starts journeys that finish on another one. If order value or margin by device is missing, state the gap instead of changing bids.
 - **Audiences who never convert.** Pull last 90 days of converters, build exclusion lists for everyone else who repeatedly clicks but never converts.
 - **Creative that is tired.** Frequency above 4 with declining CTR means refresh. Refusing to refresh because "it still works ok" is incremental loss.
 
@@ -251,12 +271,22 @@ This skill's output depends on data, measurements, or tool results it cannot gen
 
 ---
 
-## Closing: when in doubt, kill the campaign
+## Closing: do not let marginal campaigns drift
 
-Most paid media decisions reduce to scale, hold, or kill. When the analysis is genuinely ambiguous, default to kill.
+Most paid media decisions reduce to scale, hold, or kill. Use them in this order so the rules above never clash:
 
-The cost of a campaign that is not clearly working is real money flowing out the door every day. The cost of killing a marginal campaign is mostly just the inconvenience of restarting it later. Asymmetric risk. Default to kill.
+- **The data is missing or cannot be verified** (tracking broken, no order value, too few conversions to read). This is not a result. Follow "If required data is unavailable": state the gap, fix the measurement, and do not call scale or kill on numbers you do not have.
+- **The data is good and results sit at the falsification line.** Hold, but only with a pre-committed end date and spend cap, and the one extra reading that would settle it.
+- **The hold period ends and the campaign is still not clearly working.** Kill it. The cost of a campaign that is not clearly working is real money flowing out the door every day. The cost of killing a marginal campaign is mostly just the inconvenience of restarting it later.
 
 The follow-on rule is symmetric. When the hypothesis is clearly confirmed at the magnitude that matters, scale aggressively. The cost of slow-rolling a working campaign is opportunity cost; competitors compound on the same demand pool. Default to scale once the data justifies it.
 
-Marginal results are the trap. They invite more analysis, more meetings, more "let us give it another two weeks." Two weeks of marginal CAC is two weeks of lost money. Pre-commit the decision rule and execute it.
+Marginal results are the trap. They invite more analysis, more meetings, more "let us give it another two weeks." Two weeks of marginal CAC is two weeks of lost money. Pre-commit the decision rule and the hold end date, and execute it.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Paid campaign builder](https://useaiblocks.com/skills/paid-campaign-builder).
+- **Read your ad results** with the [Meta ads daily checker](https://useaiblocks.com/skills/meta-ads-daily-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

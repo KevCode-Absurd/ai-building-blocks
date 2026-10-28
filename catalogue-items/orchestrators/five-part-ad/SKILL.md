@@ -60,9 +60,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 4. **Gather the proof.** Use the skill `four-kind-proof-finder`. Give it the brief from step 1 and your product facts, not the step 3 check. Each claim paired with the strongest proof, and the claims left bare.
 5. **Write the body with proof beside each claim.** Use the skill `proof-backed-sales-copy-writer`. Give it the kept headline from step 3 as its opening, the proof map from step 4 and the brief from step 1. The body that pays off the headline and backs it up.
 6. **Sum up and move the reader.** Use the skill `summing-up-paragraph-writer`. Give it the body from step 5 and the proof map from step 4. The short stretch between proof and ask that breaks inertia.
-7. **Ask for the action.** Use the skill `call-to-action-writer`. Give it the copy draft from the steps before. A clear ask with a real reason to act now.
+7. **Ask for the action.** Use the skill `call-to-action-writer`. Give it the body from step 5, the summing-up from step 6 and your offer terms (price, guarantee, deadline). A clear ask with a real reason to act now.
 8. **Check all five parts.** Use the skill `five-part-ad-checker`. Give it the ad copy and the brief from the steps before. Pass or fail on attention, advantage, proof, persuasion and action.
-9. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+9. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 8 step files and the summary. The last file holds the audit report.

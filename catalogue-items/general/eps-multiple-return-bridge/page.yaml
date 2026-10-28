@@ -73,7 +73,7 @@ tweaks:
   - what: "Start and end dates"
     how: "Take the start and end dates from the EPS, P/E and dividend figures for both dates. Use one currency and scale on every line."
   - what: "The order of the two effects"
-    how: "Change the the order of the two effects and have your AI recalculate. Keep the actual figures you supplied."
+    how: "Change the order of the two effects and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Earnings effect plus multiple effect equals the price change exactly.
 judge:

@@ -7,7 +7,7 @@ description: Use once a month on any site that gets visitors from search. It rea
 
 You are an agent that turns one site's monthly search data into a short list of work. You read the export the same way each month, compare with last month, pick the pages worth pushing, the thin pages worth fixing, and the two or three posts worth writing. You follow four rules: write about what people search for in their own words, make each page the most useful answer out there, keep a schedule you can hold for a year, and track leads over vanity traffic. You never touch the site yourself.
 
-When not to use: with only one month of data or no search traffic yet, read your Search Console export by hand. For one traffic drop, use the [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser). For one new post from one keyword, use the [Keyword to post outline writer](https://useaiblocks.com/skills/keyword-to-post-outline-writer). To change the site, ask your web person.
+When not to use: with only one month of data or no search traffic yet, read your Search Console export by hand. For one traffic drop, use the [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser). For one new post from one keyword, use the [Keyword to post outline writer](https://useaiblocks.com/skills/keyword-to-post-outline-writer). To change the site, ask your web person.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -83,7 +83,7 @@ You never do these yourself, even if you can reach the site. You list them for a
 - **Rewrites:** the answer-first rewrite for any page where the writing is the problem.
 - **Posts to write:** two or three outlines, each with its target query and intent.
 - **Files:** each step's file, and every `MISSING:` line.
-- **Next:** once a post is written, check it with the [Blog post publish check loop](https://useaiblocks.com/skills/blog-post-publish-check-loop) before it goes live.
+- **Next:** once a post is written, check it with the [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop) before it goes live.
 
 ## Checks before you hand it back
 - Every quick win is ranked with its position and clicks from the export.

@@ -3,7 +3,7 @@
 ## Reserve Categories (SEC Modernized Rules, Reg S-X 4-10)
 - **Proved (1P)**: reasonable certainty (≥ 90% for probabilistic); economically producible under EXISTING economic conditions. Subcategories: PDP (developed producing), PDNP (developed non-producing), PUD (undeveloped).
 - **PUD 5-year rule**: undeveloped locations must have a development plan with drilling scheduled within 5 years of initial booking, or de-book.
-- Probable (2P incremental, ≥ 50%) and possible (3P incremental, ≥ 10%) MAY be disclosed but not required.
+- Probable and possible reserves MAY be disclosed but are not required. Probable is the extra amount on top of proved: with probabilistic methods there should be at least a 50% probability that recovery equals or exceeds proved + probable (2P). Possible is the extra amount on top of that: at least a 10% probability that recovery equals or exceeds proved + probable + possible (3P). The 50% and 10% tests apply to the running totals, not to the extra slices alone (17 CFR 210.4-10(a)(17) and (18)).
 
 ## SEC Pricing Convention
 12-month average of first-day-of-month benchmark prices, held FLAT for the life of reserves (no escalation), adjusted for quality/transport differentials. This is the defining difference from bank/NPV decks which use forward strips.

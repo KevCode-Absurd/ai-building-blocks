@@ -93,25 +93,29 @@ $ gamma exposure per 1% move (one contract) = OI × gamma × S²
 
 ### Aggregating across the chain
 
-Two conventions are widely used. Always state which one you're using.
+Two conventions are widely used. Always state which one you're using. Both are assumptions about who holds the options: public open interest shows how many contracts exist, not whether dealers are long or short them.
+
+The sign rule behind both: a dealer who is LONG an option is long gamma (counts +), and a dealer who is SHORT an option is short gamma (counts −). Long gamma hedging sells into rallies and buys dips; short gamma hedging buys into rallies and sells into dips.
 
 #### Convention A: SqueezeMetrics-style net GEX
 
-Assumes **dealers short calls, long puts** (the typical net market-maker book in equity index options):
+Assumes **dealers are long the calls and short the puts** that customers trade (customers sell calls, for example covered calls, and buy puts for protection). That assumption is what gives calls a + sign and puts a − sign:
 
 ```
 net_GEX_$ = Σ (OI_call × gamma_call) × S²
           - Σ (OI_put × gamma_put) × S²
 ```
 
-Interpretation:
+Interpretation, valid only if that assumption holds:
 
-- **Positive net GEX** → dealers are net long gamma → they SELL into rallies, BUY into dips → market is **stabilizing**
-- **Negative net GEX** → dealers are net short gamma → they BUY into rallies, SELL into dips → market is **destabilizing** (gamma squeeze fuel)
+- **Positive net GEX** → dealers would be net long gamma → their hedging sells into rallies and buys dips → it tends to **dampen** moves
+- **Negative net GEX** → dealers would be net short gamma → their hedging buys into rallies and sells into dips → it tends to **amplify** moves
+
+If customers are BUYING calls (as in a retail call-buying rally), dealers are short those calls and Convention A gives call gamma the wrong sign. In that case a large positive Convention A number does not mean dealers are long gamma. Use Convention B, or report both and say which assumption fits the flow.
 
 #### Convention B: Customer-net-long-everything
 
-Assumes **dealers short both calls and puts** — appropriate during retail-driven rallies where customers buy both directionally:
+Assumes **dealers short both calls and puts** — closer to retail-driven rallies where customers buy options in both directions. The number below is the size of the dealers' short gamma under that assumption (dealer gamma = −gross_hedge_$):
 
 ```
 gross_hedge_$ = Σ (OI_call × gamma_call) × S²
@@ -120,10 +124,10 @@ gross_hedge_$ = Σ (OI_call × gamma_call) × S²
 
 Interpretation:
 - This is the **maximum hedging pressure** assumption
-- Always implies dealers buy on rallies, sell on dips
+- Under this assumption dealers are short gamma, so their hedging buys on rallies and sells on dips
 - Useful as an upper-bound estimate
 
-For a single-name or thematic ETF rally driven by retail call-buying, Convention A's "net GEX" is the most defensible. For an index ETF, the same convention is standard.
+Which to lean on: Convention A is the usual reference for broad index options, where customers tend to sell calls and buy puts. For a single-name or thematic ETF rally driven by retail call-buying, Convention A's assumption about calls is likely wrong, so lean on Convention B and show Convention A beside it. Either way, say the result rests on an assumption that the public data cannot confirm.
 
 ### Reproducing the article's $4-5B per 1% claim
 
@@ -169,7 +173,7 @@ Signal that AP arbitrage is impeded: the premium persists into the close, and bi
 Even with AP arbitrage blocked, the gamma squeeze fuel decays as options approach expiration:
 
 - Concentrated near-dated calls lose gamma rapidly in the final 1–2 weeks
-- After expiration, dealer hedges unwind (sell stock back), creating downward pressure on the ETF — sometimes referred to as a "gamma cliff"
+- After expiration, if dealers were short those calls, their hedges unwind (sell stock back), creating downward pressure on the ETF — sometimes referred to as a "gamma cliff"
 - IV typically compresses post-event, reducing future hedging requirements
 
 Check: where is the dominant strike's expiration? If it's within 5 trading days, the squeeze has a natural fuse.
@@ -194,7 +198,7 @@ If flows normalize and APs catch up, the premium converges over 1–4 weeks even
 | ATM IV | Spiking — often 2x baseline | Stable or modestly higher |
 | Call/Put OI ratio | > 2.5, often 3:1+ | Typically 1–1.5 |
 | OI concentration | Single near-dated strike dominates | Diffuse across expirations |
-| Net GEX (SqueezeMetrics) | Strongly negative | Mildly positive or near zero |
+| Estimated dealer gamma (under the convention that fits the flow, stated) | Large and short | Small, or long |
 | Bid/ask spread | Wider than recent average | Stable |
 | Underlying market session | Often closed | Open |
 

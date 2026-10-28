@@ -53,7 +53,7 @@ She'd ask the dull questions first and write down the answers. Then she'd go thr
 
 ### A story where you have a battle between good and evil
 
-She'd say that most of what she writes is people making mistakes and trying to fix them while making new ones. She'd ask what the choice is in your story other than war. She'd read your villain for what he actually does, not what colour his hat is, and ask why both sides behave the same way. She'd cut the final battle that solves everything, and replace it with a hard choice. In her 2004 speech she backed her case with a reminder that even the Lord of the Rings film let its battle scenes overshadow the book's moral complexity [S8] (checked against the speech text on 2026-10-28).
+She'd say that most of what she writes is people making mistakes and trying to fix them while making new ones. She'd ask what the choice is in your story other than war. She'd read your villain for what he actually does, not what colour his hat is, and ask why both sides behave the same way. She'd cut the final battle that solves everything, and replace it with a hard choice. In her 2004 BookExpo America talk she backed her case with a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. That is our summary of her point, not her exact words.
 
 ### Your next draft
 
@@ -61,7 +61,7 @@ She'd tell you to revise, and revise again. She'd read it as a craft problem, no
 
 ### Outside her field: your business model or your product
 
-She'd ask if you are making a product or practising a craft, and say the two can overlap but are not the same. She said shaping books around sales plans is not the same as responsible publishing, and she attacked publishers who charged libraries far more for e-books than readers paid [S2, checked against the speech text on 2026-10-28]. So she'd ask who pays too much for what you sell, and why. She'd treat your customers as a culture: how do they live, what do they do on a Tuesday morning? She'd push for a fair share for the people who do the making. She'd remind you that any human power can be changed. That doesn't mean skip your income. She'd say keep a practical way to pay the bills, and make your best work alongside it. She would not speak to any market after 2018.
+She'd ask if you are making a product or practising a craft, and say the two can overlap but are not the same. She said shaping books around sales plans is not the same as responsible publishing, and she attacked publishers who charged libraries far more for e-books than readers paid [S2]. So she'd ask who pays too much for what you sell, and why. She'd treat your customers as a culture: how do they live, what do they do on a Tuesday morning? She'd push for a fair share for the people who do the making. She'd remind you that any human power can be changed. That doesn't mean skip your income. She'd say keep a practical way to pay the bills, and make your best work alongside it. She would not speak to any market after 2018.
 
 ### A speech to graduates or a team after bad news
 
@@ -69,7 +69,7 @@ In her 1983 Mills College talk she told graduates she did not wish them success,
 
 ### Your life and career
 
-She said she does not decide what a book will be: it comes and wants to be written [S11]. At about twenty-three she finished a very ambitious novel and, with her father's help, sent it to the publisher Alfred Knopf, who wrote a kind letter saying he could not take it [S6; not re-checked against the interview text, so treat it as our summary]. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She also corrected herself in public, for example on how central gender was in one of her best-known books [beyond the record].
+She said she does not decide what a book will be: it comes and wants to be written [S11]. At about twenty-three she finished a very ambitious novel and, with her father's help, sent it to the publisher Alfred Knopf [S6]. As we summarise her account, he wrote a kind letter saying he could not take it [beyond the record]. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She also corrected herself in public, for example on how central gender was in one of her best-known books [beyond the record].
 
 ## What she'd push back on
 

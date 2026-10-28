@@ -37,7 +37,7 @@ how_to_use:
   - Check that all your models share the same base design. Your AI can help you read each model card, but it cannot inspect the model files from a chat window, so confirm the base yourself.
   - Ask for a merge config and the mergekit command. Your AI writes both. It does not run them in a chat.
   - Run the command yourself, or hand it to someone with Python and mergekit installed. A CPU works, though a GPU is faster. The result is a folder of model files.
-  - Load the merged model and test it on your test set. Compare the scores with each parent model.
+  - Load the merged model and test it on your test set. Compare the scores with each parent model. Next, run a fuller benchmark, or shrink the model for cheaper serving.
   - If a skill got weaker, ask your AI to change the weights or density and run the merge again.
   - If mergekit fails, first check that the tokenizers and base designs of your models match. Paste the full error to your AI.
 next: [language-model-benchmark-runner, model-size-reducer]

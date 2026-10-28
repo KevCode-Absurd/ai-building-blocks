@@ -15,7 +15,7 @@ This skill runs in any chat AI. It needs no files, web access or paid tools. One
 - **The change you want** (yours): what should be different, and who from, in terms you could see.
 
 **Makes it better (optional):**
-- **Notes on the person** (yours): what they do well and how they take praise. Notes from the [Behaviour and fix notes writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer) fit.
+- **Notes on the person** (yours): what they do well and how they take praise. Notes from the [Feedback notes writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer) fit.
 - **How and when you see their work** (yours): a report, a meeting, the floor, the inbox.
 
 How to start:
@@ -86,14 +86,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **When a win happens, to put it in a note** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer).
-- **For the whole team, not one person** with the [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each stage is something you could notice.
@@ -102,6 +94,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No new request is mixed into the praise.
 - There is a kind plan for a slip.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **When a win happens, to put it in a note** with the [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer).
+- **For the whole team, not one person** with the [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

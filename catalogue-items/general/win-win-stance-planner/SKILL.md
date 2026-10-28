@@ -62,7 +62,7 @@ The situation in four facts. The stance for each side with evidence. When each s
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the question and plan.
 - The [Disagreement perspective mapper](https://useaiblocks.com/skills/other-person-view-mapper). It takes the question.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the question and plan.
+- The [Relationship trust planner](https://useaiblocks.com/skills/trust-deposit-planner). It takes the question and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

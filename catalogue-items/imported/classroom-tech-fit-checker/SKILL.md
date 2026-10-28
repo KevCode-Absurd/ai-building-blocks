@@ -80,6 +80,19 @@ tags: ["TPACK", "technology-integration", "AI-in-education", "pedagogical-conten
 
 # Technological Pedagogical Content Knowledge Developer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Takes a description of what a teacher is teaching, the technology they are integrating, and their background, then diagnoses their technological pedagogical content knowledge gaps and produces a development plan. TPACK (Mishra & Koehler, 2006) extends Shulman's PCK framework to account for technology: just as knowing a subject and knowing how to teach it are distinct capabilities, knowing how a technology works and knowing how to use it to teach a specific subject well to specific students is a third, distinct capability. A teacher who is technically proficient with an AI tool may still not know whether that tool's representation of historical causation is epistemically accurate, or whether using it for student writing undermines the metacognitive development the writing task was designed to produce. This skill addresses those intersections. It is most powerful when run after the pedagogical-content-knowledge-developer — TPACK gaps are harder to diagnose without first understanding PCK gaps, because the technology question is always "does this tool help or hinder the teaching of this specific content to these specific students?" and that question requires PCK to answer. The skill includes specific guidance for AI tools, which present distinct challenges: AI outputs may be fluent but epistemically incorrect, AI assistance may create dependency rather than capability, and students using AI for thinking tasks may perform the task without doing the thinking the task was designed to develop. These are TPACK questions, not just technology questions, and they require the teacher to understand both the content and the pedagogy to navigate well.
@@ -415,3 +428,12 @@ The teacher needs to develop and maintain a continuous evaluative stance toward 
 4. **The equity and ethics section identifies risks but cannot resolve them.** Data privacy requirements vary by jurisdiction and are changing rapidly. For any technology collecting student data, the teacher and school must verify compliance with applicable law — this skill provides a checklist prompt, not legal advice.
 
 5. **TPACK development requires practice with real students.** Like PCK, TPACK is ultimately built through teaching with the technology, observing student responses, and refining. This skill accelerates development by identifying the right questions to ask and the right things to observe, but it cannot substitute for the experiential learning that comes from actually teaching with the technology and noticing what happens.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). It takes the plan.
+- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

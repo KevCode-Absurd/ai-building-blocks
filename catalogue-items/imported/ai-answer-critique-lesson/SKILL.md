@@ -70,6 +70,26 @@ tags: ["AI-literacy", "critical-thinking", "Ennis", "audit", "annotation", "AI-o
 
 # AI Output Critical Audit Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lesson plan** with the [AI error detection lesson planner](https://useaiblocks.com/skills/spot-ai-mistakes-activity). Bring source text, a plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a structured protocol for critically auditing AI-generated text against Ennis's (2015) six critical thinking standards — clarity, accuracy, precision, relevance, depth, and breadth — with adaptations that address AI-characteristic failure modes not covered by general critical thinking frameworks. The key pedagogical challenge is that AI-generated text is fluent, confident, and well-formed, which makes it harder to evaluate critically than text that looks suspicious. Standard source credibility heuristics (Who wrote this? Who funds it?) break down because the author is an LLM. What replaces them is a close-reading protocol trained on AI-specific patterns: assertions stated with unearned confidence, claims with plausible-sounding precision but no verifiable source, expert-sounding language without genuine epistemic depth, and the systematic absence of "I don't know." This skill generates the domain anchor for the ai-literacy suite: an annotation protocol (students mark up AI text in real time), an audit rubric (scoring AI text Weak/Moderate/Strong on each CT standard), push-back sentence stems calibrated for AI failure modes, and a teacher modelling script. This is the equivalent of sourcing-skill-builder in the historical-thinking domain — the foundational move students must learn before they can do the more specialised work.
@@ -284,3 +304,12 @@ After two minutes with this text, I've marked ★, !, and ≡. The text looks co
 3. **Fluency de-coupling is cognitively effortful.** Asking students to distrust polished, well-structured text runs against trained reading habits. Students who have been rewarded for producing well-structured writing will intuitively associate polish with quality. Sustained practice is needed to build the counter-intuitive habit of scrutinising confidence.
 
 4. **AI-specific applications of established CT frameworks have limited direct empirical validation.** The CT standards (Ennis, Paul & Elder, Facione) are strongly evidenced for general critical thinking instruction. Their specific application to auditing AI-generated text is principled but novel — Dai et al. (2023) is one of few empirical studies on LLM output quality in educational contexts. Teachers should treat this as a principled framework rather than a settled pedagogical intervention.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Online source checking guide builder](https://useaiblocks.com/skills/online-source-check-lesson). It takes the lesson plan.
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

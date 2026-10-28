@@ -32,6 +32,7 @@ you_get:
   - Security setup
   - Reusable data schemas
 how_to_use:
+  - "Gather these first: your route code or a list of endpoints, the sign-in type, and the spec version you want (OpenAPI 3.x or Swagger 2.0)."
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
   - Describe your API in plain words, or paste your route code. Express, FastAPI, Django, Spring and Rails code all work.
   - "Answer the few questions it asks: spec version, file format, sign-in type and main data shapes. It skips what you already told it."
@@ -48,7 +49,7 @@ output_sample:
     - A partial spec to extend (optional)
   output:
     - name: API spec file
-      contains: The full OpenAPI or Swagger file in YAML or JSON, with info, servers, tags, paths and no placeholder comments.
+      contains: The full OpenAPI or Swagger file in YAML or JSON, with info, servers, tags, paths and no placeholder comments. It must pass a validator such as Spectral or swagger-parser before you send it to partners.
     - name: Paths and parameters
       contains: Each endpoint with its path, query and header inputs, request body and a unique operation name.
     - name: Responses

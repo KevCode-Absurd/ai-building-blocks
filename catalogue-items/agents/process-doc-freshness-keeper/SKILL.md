@@ -74,7 +74,7 @@ If the manager says yes in clear words to one named action, do only that action.
 - **Left for later:** the docs that did not make the top five.
 - **Files, and every `MISSING:` line** from all steps in one list.
 
-Next steps that fit process docs: the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer) for a longer process, or the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer) for a new hire. The developer-docs links in "After this" above are shared suggestions and fit software docs, not SOPs or runbooks, so skip them unless the docs are software docs.
+Next steps that fit process docs: the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer) for a longer process, or the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer) for a new hire. The developer-docs links in "After this" below are shared suggestions and fit software docs, not SOPs or runbooks, so skip them unless the docs are software docs.
 
 ## Checks before you hand it back
 - Each rewrite draft was re-checked and the result is shown, with the number of rounds.

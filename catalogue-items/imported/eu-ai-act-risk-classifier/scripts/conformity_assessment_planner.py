@@ -6,9 +6,11 @@ Stdlib-only. For a high-risk AI system, selects the conformity assessment Module
 Annex IV technical documentation checklist.
 
 Decision rule (Article 43):
-  - Biometrics (Annex III §1) → Module H (notified body required) by default
-  - All other Annex III categories → Module A (internal control) is permissible
-    where harmonised standards are applied (Article 40)
+  - Biometrics (Annex III §1) → Article 43(1): choice of Module A (Annex VI) or
+    Module H (Annex VII, notified body) when harmonised standards or common
+    specifications were fully applied; Module H required otherwise
+  - Annex III points 2 to 8 → Article 43(2): internal control (Annex VI), no
+    notified body; harmonised standards (Article 40) give presumption of conformity
   - Annex I products (safety components) → follow sectoral law's existing procedure
 
 Input schema (JSON):
@@ -151,11 +153,18 @@ def select_module(payload: Dict[str, Any]) -> Dict[str, Any]:
         }
 
     if annex_iii == "biometrics":
+        if applies_standards:
+            return {
+                "module": "A_or_H",
+                "citation": "Article 43(1) — Annex III point 1 with harmonised standards (or common specifications) fully applied: choose Annex VI internal control or Annex VII with a notified body",
+                "notified_body_required": "only_if_you_choose_annex_vii",
+                "rationale": "Biometrics: the provider may choose either route when harmonised standards or common specifications were applied in full.",
+            }
         return {
             "module": "H",
-            "citation": "Article 43(1) + Annex VII — Full QMS + Notified Body for biometrics",
+            "citation": "Article 43(1) + Annex VII — Annex III point 1 without (full) harmonised standards or common specifications: notified body required",
             "notified_body_required": "yes",
-            "rationale": "Biometrics under Annex III §1 require notified-body involvement by default.",
+            "rationale": "Biometrics: Annex VII with a notified body is required when harmonised standards or common specifications were not applied, or applied only in part.",
         }
 
     if annex_iii and applies_standards:
@@ -169,9 +178,9 @@ def select_module(payload: Dict[str, Any]) -> Dict[str, Any]:
     if annex_iii and not applies_standards:
         return {
             "module": "A_with_caveats",
-            "citation": "Article 43(2) + Annex VI — Internal control without harmonised standards",
-            "notified_body_required": "optional_but_recommended",
-            "rationale": "Internal control still permitted but without presumption of conformity; document alternative compliance evidence in full.",
+            "citation": "Article 43(2) + Annex VI — Internal control (Annex III points 2 to 8); no notified body is involved",
+            "notified_body_required": "no",
+            "rationale": "Internal control applies, but without the Article 40 presumption of conformity; document how you meet each requirement in full.",
         }
 
     return {
@@ -228,7 +237,13 @@ def _next_steps(module: str) -> List[str]:
         base.append("Register in EU database (Article 71) before placing on market.")
     elif module == "A_with_caveats":
         base.append("Document equivalent alternative evidence for each requirement without a harmonised standard.")
-        base.append("Consider voluntary notified-body engagement to reduce regulatory risk.")
+        base.append("Sign EU declaration of conformity (Article 47) AFTER assembling Annex IV pack.")
+        base.append("Affix CE marking (Article 48).")
+        base.append("Register in EU database (Article 71) before placing on market.")
+    elif module == "A_or_H":
+        base.append("Choose Annex VI internal control or Annex VII with a notified body (Article 43(1)); record the choice.")
+        base.append("Verify each harmonised standard referenced is on Article 40 list at decision date.")
+        base.append("Sign EU declaration of conformity (Article 47), affix CE marking (Article 48), register in EU database (Article 71).")
     return base
 
 

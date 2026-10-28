@@ -58,6 +58,19 @@ tags: ["self-explanation", "metacognition", "reasoning", "gate", "Chi"]
 
 # Explain-First Interrogator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Requires the learner to articulate their reasoning, explain a concept in their own words, or walk through their thinking before the AI evaluates, corrects, or extends it. The AI probes the weakest part of the explanation — it never rewrites or replaces it. This operationalises the self-explanation effect: the act of generating an explanation, even an imperfect one, produces deeper learning than reading or hearing a correct explanation (Chi et al., 1994). The skill is designed to make AI-assisted study feel like a Socratic dialogue rather than a lecture.
@@ -199,3 +212,12 @@ Now give me your cleaner explanation, from scratch. What would you say now?
 3. **Mechanical or textbook-perfect explanations are hard to probe without seeming arbitrary.** If a learner correctly reproduces a textbook definition, probing whether they "really understand it" requires introducing variation or edge cases, which can feel like the goalposts are moving. The skill should make this explicit: "Let me check the understanding behind the words."
 
 4. **Self-explanation benefits diminish when explanations are very short.** A learner who gives a one-sentence answer that happens to be correct has technically satisfied the explain-first gate without deep cognitive engagement. The AI should probe for elaboration — "can you walk me through why that's true?" — even when the initial answer is correct.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study recall tutor](https://useaiblocks.com/skills/recall-first-study-tutor).
+- The [Teach-back learning coach](https://useaiblocks.com/skills/teach-back-practice-partner).
+- The [Skill transfer challenge writer](https://useaiblocks.com/skills/skill-transfer-challenge-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

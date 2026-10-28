@@ -34,8 +34,8 @@ how_to_use:
   - Paste the full text of the skill's SKILL.md into the chat.
   - Describe your plan in a few lines. Add the countries where your customers live and the types of data involved.
   - Ask for the answer in the template from the skill, and ask for an 'as of' date on each rule table.
-  - Check every unknown item and every high risk first. Then check the rules against an official source.
-  - Take the result to the approvers and to a lawyer before you launch.
+  - Check every unknown item and every high risk first. Then check the rules against an official source. The deadlines in the skill text (GDPR, CCPA, LGPD and others) come from the original authors and may be out of date.
+  - Take the result to the approvers and to a lawyer before you launch. Turn the Approvals Needed table into sign-off tasks on your launch checklist.
 output_sample:
   input:
     - A short description of your plan or feature

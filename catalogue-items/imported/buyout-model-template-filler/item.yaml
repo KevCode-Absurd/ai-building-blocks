@@ -31,4 +31,4 @@ credits:
   - title: lbo-model skill
     by: nighomni123
     url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/lbo-model
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: "Copied under the Apache 2.0 licence. We gave it a plain name and corrected the note on the trailing-comma Excel format: it divides by one million, so under a crore label it is off by 10 times. We added Before you start and After this sections that link to other AI Blocks steps."

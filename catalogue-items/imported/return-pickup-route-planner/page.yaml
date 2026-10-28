@@ -9,7 +9,7 @@ subhead: Give it your deliveries and returns to collect. Get routes that bring r
 explain: |
   Delivery routes that also pick up returns on the same trip, so vans drive back loaded instead of empty. That cuts miles and trips.
 
-  You list your drop-off stops, your pickup stops, your depot and your van sizes. The skill uses the backhaul approach: each van delivers first, then collects on the way back, so the load never overflows. It checks that capacity works as the van empties and refills, and handles stops that need both a delivery and a pickup. For small jobs under about 50 stops it can aim for the best route. Larger jobs use smart search methods that give strong routes fast.
+  You list your drop-off stops, your pickup stops, your depot and your van sizes. The skill uses the backhaul approach: each van delivers first, then collects on the way back. The sample code checks that each van's total deliveries and total pickups fit its capacity. It does not check the load at stops that need both a delivery and a pickup, so check the load after every stop by hand. Larger jobs use search methods that find good routes fast, but no method promises the single best route.
 when:
   - You deliver parcels and also collect returns or empty containers.
   - Your vans often come back empty after drop-offs.
@@ -37,7 +37,7 @@ how_to_use:
   - Ask for one route per van, with the load after each stop.
   - Check each route against van capacity, and check that every delivery comes before any pickup.
   - For the route map and bigger jobs, use an AI that can run Python code (numpy, ortools and matplotlib). The sample code is a starting point. Have it run on your own stops and then check the order rule by hand, as in the step above.
-  - Next, send each driver their route sheet with the load at every stop. Run it again whenever stops change.
+  - Next, send each driver their route sheet with the load at every stop. Run it again whenever stops change. If items must go from one named stop to another, use the pickup-delivery-problem skill instead.
 output_sample:
   input:
     - Your delivery stops with the quantity for each

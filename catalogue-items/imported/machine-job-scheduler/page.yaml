@@ -16,9 +16,9 @@ when:
   - You want to see how much faster a better order would be.
   - Some machines go down for maintenance and you must plan around it.
 not_for:
-  - "Every job runs the machines in the same order: use the flow-shop-scheduling skill, which is built for flow shops."
+  - "Every job runs the machines in the same order: ask your AI for a flow-shop schedule instead. A flow-shop skill is not in this library yet."
   - "You only have one machine: sort the jobs by due date or by shortest time first. A full schedule is too much."
-  - "You need a long-range production plan by week or month: use the production-scheduling skill instead."
+  - "You need a long-range production plan by week or month: use the Production schedule planner instead."
 you_give:
   - The list of jobs and their steps
   - Machines and processing times
@@ -35,7 +35,9 @@ how_to_use:
   - Paste your jobs, the steps in each job, the machine for each step and the time it takes.
   - Add due dates, setup times and machine downtime if you have them. Say your main goal.
   - Answer any questions your AI asks. Then check the schedule table and the late jobs it flags.
+  - Check the total finish time by hand for two or three jobs before you act on it. The sample code in the skill is simplified, so ask your AI to use a proper solver, such as OR-Tools, for exact answers.
   - Ask your AI to try another goal if you want to compare plans.
+  - Next, take the machine-by-machine chart to the shop floor. Run the plan again when a job slips or a machine goes down. For a plan by week or month, use the Production schedule planner.
 output_sample:
   input:
     - Your list of jobs and the steps in each job

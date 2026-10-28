@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -56,7 +56,13 @@ Pause here: Export the last 30 days from Google Ads with campaigns, search terms
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
-3 step files and the summary. The last file holds the audit report.
+3 step files and the summary, in four sections:
+- **Break-even:** break-even ROAS and cost per sale, with the sum.
+- **Brand split:** brand and non-brand share of spend and conversions, and reported non-brand ROAS against break-even.
+- **Scale gates:** each of the five gates passed or failed, the go, wait or fix-first call, and for a go a stepped raise to approve.
+- **Hand-back summary:** each file, every `MISSING:` line and the `CHECKS MISSED` list.
+
+The last file holds the audit report.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -68,8 +74,8 @@ Pause here: Export the last 30 days from Google Ads with campaigns, search terms
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Performance Max campaign reviewer](https://useaiblocks.com/skills/performance-max-routine-keeper). It takes the audit report.
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
+- The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the audit report.
 - **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

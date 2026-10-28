@@ -32,4 +32,4 @@ credits:
   - title: wellbeing-learning-connection-mapper skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper
-    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+    used: "Used under the CC BY-SA-4.0 licence with a plain name. We changed the prompt to mark unchecked figures as unverified and to end with a Sources table, and replaced the example's figures and unsourced claims with placeholders."

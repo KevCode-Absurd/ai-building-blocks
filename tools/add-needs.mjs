@@ -3,6 +3,7 @@
 //     which brand brain files to read, how to check for each thing, and the tools that do the job best.
 //   "## After this" (after "## What you hand back", or the page's last output or hand-back section, or else at the end
 //     above credits and sources; see insertAfterHandBack): the AI asks what's next and offers the paths from here.
+// Imported skills get the same sections, marked as ours, and their item.yaml credit says we added them.
 // Run after `npm --prefix site run index` (it reads site/public/data/blocks.json). Running it again changes nothing.
 // Usage: node tools/add-needs.mjs [--check] [--dry] [--out <file>] [--only <slug,slug>]
 //   --check: exit 1 if any file would change. --dry: write nothing, just count.
@@ -86,7 +87,7 @@ function insertBefore(text, nl, block, heading) {
   const code = fenced(lines);
   let at = lines.findIndex((l, n) => !code[n] && l.startsWith(heading));
   if (at < 0) at = lines.findIndex((l, n) => n > 0 && !code[n] && l.startsWith("## "));
-  if (at < 0) return text + nl + nl + block + nl;
+  if (at < 0) return text.replace(/\s+$/, "") + nl + nl + block + nl;
   lines.splice(at, 0, ...block.split(nl), "");
   return lines.join(nl);
 }
@@ -124,9 +125,29 @@ const section = (text, [start, end]) => {
   const i = text.indexOf(start.slice(0, 12));
   return i < 0 ? "(none)" : text.slice(text.indexOf("\n", i) + 1, text.indexOf(end, i)).replace(/\r/g, "").trim();
 };
+// Imported skills are someone else's work: their sections say so (the licences ask that changes are marked), a page
+// that already has its own "Before you start" or "After this" keeps it, and the credit says what we added.
+const IMPORTED_MARK = {
+  before: ["<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->", MARK.before[1]],
+  after: ["<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->", MARK.after[1]],
+};
+const ADDED = "We added Before you start and After this sections that link to other AI Blocks steps.";
+/** The credit line for the copied skill, updated to say what we added (the item.yaml text, or null if unchanged). */
+function creditAdded(yaml) {
+  if (yaml.includes(ADDED)) return null;
+  const next = yaml.replace(/^(\s*used: )(["']?)Copied (as it is, )?(under [^\r\n]*?)(["']?)(\r?\n)/m,
+    (_, lead, q1, _asIs, rest, q2, end) => `${lead}${q1}Copied ${rest} ${ADDED}${q2}${end}`);
+  return next === yaml ? null : next;
+}
+/** Whether the page has its own `## <heading>` outside code blocks. */
+function hasOwn(text, heading) {
+  const lines = text.split(/\r?\n/);
+  const code = fenced(lines);
+  return lines.some((l, n) => !code[n] && l.startsWith(`## ${heading}`));
+}
 const preview = [];
-let changed = 0, withBefore = 0, withAfter = 0;
-for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
+let changed = 0, withBefore = 0, withAfter = 0, credited = 0;
+for (const category of ["general", "ecommerce", "orchestrators", "agents", "imported"]) {
   const dir = path.join(ROOT, "catalogue-items", category);
   if (!fs.existsSync(dir)) continue;
   for (const slug of fs.readdirSync(dir)) {
@@ -135,22 +156,30 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
     const b = bySlug[slug];
     if (!fs.existsSync(file) || !b) continue;
     const itemPath = path.join(dir, slug, "item.yaml");
-    if (fs.existsSync(itemPath) && YAML.parse(fs.readFileSync(itemPath, "utf8"))?.needs_mode === "manual") continue;
+    const itemText = fs.existsSync(itemPath) ? fs.readFileSync(itemPath, "utf8") : "";
+    const item = itemText ? YAML.parse(itemText) : null;
+    if (item?.needs_mode === "manual") continue;
+    const imported = category === "imported" || item?.origin === "imported";
+    const mark = imported ? IMPORTED_MARK : MARK;
     const old = fs.readFileSync(file, "utf8");
     const nl = old.includes("\r\n") ? "\r\n" : "\n";
     let text = strip(strip(old, MARK.before), MARK.after);
     const plan = planOf(b, bySlug, all, describe, linksOf(path.join(dir, slug), slug));
-    const before = beforeSection(plan, toolsOf(path.join(dir, slug), slug), nl);
-    const after = afterSection(plan, nl);
-    if (before) { text = insertBefore(text, nl, [MARK.before[0], before, MARK.before[1]].join(nl), "## What you need"); withBefore++; }
-    if (after) { text = insertAfterHandBack(text, nl, [MARK.after[0], after, MARK.after[1]].join(nl)); withAfter++; }
+    const before = imported && hasOwn(text, "Before you start") ? null : beforeSection(plan, toolsOf(path.join(dir, slug), slug), nl, { imported });
+    const after = imported && hasOwn(text, "After this") ? null : afterSection(plan, nl);
+    if (before) { text = insertBefore(text, nl, [mark.before[0], before, mark.before[1]].join(nl), "## What you need"); withBefore++; }
+    if (after) { text = insertAfterHandBack(text, nl, [mark.after[0], after, mark.after[1]].join(nl)); withAfter++; }
     if (text !== old) {
       changed++;
       if (OUT) preview.push(`## ${category}/${slug}`, "", ...[MARK.before, MARK.after].flatMap((m) => [`### ${m === MARK.before ? "Before you start" : "After this"}: now`, "```md", section(old, m), "```", "### New", "```md", section(text, m), "```", ""]));
       if (!DRY) fs.writeFileSync(file, text);
     }
+    const credit = imported && (before || after) ? creditAdded(itemText) : null;
+    if (credit) { credited++; if (!DRY) fs.writeFileSync(itemPath, credit); }
   }
 }
+if (credited) console.log(`credits: ${credited} imported items ${DRY ? "would say" : "now say"} what we added`);
+if (CHECK && credited) changed += credited;
 if (OUT) fs.writeFileSync(OUT, [`# Needs preview: ${changed} pages would change`, "", ...preview].join("\n"));
 console.log(`needs: ${withBefore} with "Before you start", ${withAfter} with "After this", ${changed} files ${DRY ? "would change" : "changed"}`);
 if (CHECK && changed) process.exit(1);

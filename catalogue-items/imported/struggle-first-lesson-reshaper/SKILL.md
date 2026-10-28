@@ -69,6 +69,19 @@ tags: ["productive-failure", "desirable-difficulty", "Kapur", "Bjork", "struggle
 
 # Productive Failure & Desirable Difficulty Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Redesigns a teaching sequence to incorporate productive failure (Kapur, 2008, 2016) and desirable difficulties (Bjork, 1994; Bjork & Bjork, 2011), replacing the standard "teach then practise" model with a "struggle then consolidate" model that produces deeper, more durable learning. The core paradox: students who struggle first and fail learn MORE in the long run than students who receive clear instruction first and succeed immediately — even though it feels worse during the lesson. Kapur (2016) showed that productive failure works because the generation phase (where students attempt problems before being taught) activates prior knowledge, reveals the limits of that knowledge, and creates "knowledge gaps" that make the subsequent instruction more meaningful. Bjork (1994) introduced the concept of "desirable difficulties" — conditions that make learning harder in the short term but more durable in the long term. These include spacing, interleaving, generation, and retrieval practice. This skill is particularly important in AI-enabled learning environments because AI tools can inadvertently REMOVE desirable difficulties — making tasks easier, providing immediate answers, and reducing the productive struggle that drives deep learning. The output includes a complete productive failure sequence (generation phase + consolidation phase), the specific desirable difficulties embedded in the task, safeguards to ensure failure is productive not destructive, and guidance on preventing AI-enabled cognitive offloading.
@@ -285,3 +298,11 @@ Students will generate several approaches, most of which will be partially corre
 3. **Teacher skill is a binding constraint.** The consolidation phase requires a skilled teacher who can connect student-generated approaches to the canonical solution in real time. This is significantly harder than delivering a prepared lecture. Teachers attempting productive failure for the first time should start with a topic they know deeply.
 
 4. **The performance-learning distinction creates an assessment problem.** Students in productive failure conditions perform WORSE on immediate post-tests but BETTER on delayed and transfer tests (Soderstrom & Bjork, 2015). If the teacher assesses learning immediately after the lesson, productive failure will appear to have failed. The real benefits only appear days or weeks later.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser).
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

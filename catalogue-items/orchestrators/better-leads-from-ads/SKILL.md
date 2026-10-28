@@ -9,7 +9,7 @@ Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a r
 
 The order of the steps is adapted from a second-hand summary of Victor O. Schwab's book How to Write a Good Advertisement. He has not endorsed this workflow, and the steps are our reading, not his words. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use:** you want awareness with no reply offer, your sales fell and you don't know why, or you only want to know why one ad gets few replies. Use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer) for the first, the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst) for the second, and the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer) for the third.
+**When not to use:** you want awareness with no reply offer, your sales fell and you don't know why, or you only want to know why one ad gets few replies. Use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer) for the first, the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst) for the second, and the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer) for the third.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

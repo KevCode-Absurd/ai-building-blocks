@@ -42,7 +42,21 @@ Hand back six sections, in this order:
 - Repositioning existing products
 - Sales team reports buyer confusion
 
+**Not for:**
+- Setting prices only: use a pricing review or a finance adviser
+- A new logo, name or visual look: work with a brand designer
+- A full launch plan with dates and budget: build that first, then use this skill for the message
+
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SaaS pricing planner](https://useaiblocks.com/skills/copilot-gtm-technical-product-pricing). It takes the plan.
+- The [Software launch evidence reviewer](https://useaiblocks.com/skills/saas-launch-review-agent). It takes the plan.
+- The [First customer launch planner](https://useaiblocks.com/skills/copilot-gtm-0-to-1-launch). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Core Frameworks
 
@@ -131,7 +145,7 @@ Test messaging without committing product/org resources.
 
 **Actions:**
 - A/B test website headlines (new vs incumbent)
-- Run two outbound email sequences (different positioning angles) to cold prospects
+- Run two outbound email sequences (different positioning angles) to cold prospects. Before sending, check you are allowed to contact each person, include a clear opt-out, and follow your region's anti-spam and data-protection rules (such as CAN-SPAM, GDPR or PECR)
 - Ask existing customers: "If we described ourselves as [new positioning], would you still recognize us?"
 
 **Measurement:**
@@ -220,6 +234,7 @@ If everyone says "fastest," "most reliable," "easiest to use" — these are tabl
 - What structural advantages do you have? (Deployment model, data ownership, pricing, network effects, etc.)
 
 **Step 3: Find Under-Served Position**
+- Method: list 3 to 5 buyer segments. For each, write the unmet pain they name in customer interviews or win and loss notes, and which rival (if any) serves it. The segment with a real, named pain and no strong rival is your candidate.
 - Where do existing solutions fail users?
 - What problem is everyone ignoring?
 - What buyer segment is under-served?

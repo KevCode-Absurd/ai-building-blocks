@@ -31,8 +31,8 @@ The system and its people. The mistakes with detection and response. The safe re
 ## What next
 
 When you've handed it back, ask in one short question what they want to do next. Offer these, and say they can type their own:
-- **Split the build into small steps** with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split). Bring the plan.
-- **Check the joins again** with the [Launch readiness seam checker](https://useaiblocks.com/skills/launch-readiness-seam-checker), once the alarms and restart are built.
+- **Split the build into small steps** with the [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). Bring the plan.
+- **Check the joins again** with the [Launch readiness checker](https://useaiblocks.com/skills/launch-readiness-seam-checker), once the alarms and restart are built.
 
 ## Check before you hand it back
 

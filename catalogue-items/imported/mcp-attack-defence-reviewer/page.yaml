@@ -16,8 +16,8 @@ when:
   - Your server can delete or pay and you worry about retries.
   - You need a security list to show before release.
 not_for:
-  - "You need to set up sign-in, tokens or OAuth for your server: use the mcp-server-auth skill, if you have it, or ask a developer."
-  - "You are building the server for the first time: use the mcp-server-implementation skill, if you have it, then come back to check it."
+  - "You need to set up sign-in, tokens or OAuth for your server: use the MCP server sign-in builder instead."
+  - "You are building the server for the first time: ask your AI to help you build it step by step, then come back to check it."
   - "You want a general scan of a web app, a container or a network: use a standard security scanner or a security tester, as this only covers MCP servers."
 you_give:
   - The MCP server code or repo
@@ -33,9 +33,9 @@ how_to_use:
   - Open your AI tool. Use one that can read your code, such as Claude or ChatGPT with file upload.
   - Paste in this skill, then add your MCP server code and the list of tools it offers.
   - Say what data and systems the server can reach, so the AI can judge how bad a break-in could be.
-  - Read the review and start with the risks marked most serious. Add the code guards it suggests.
-  - "Optional: if your AI can run code, run the checklist script and add it to your build checks."
-  - "Three companion skills are named in the method: mcp-server-auth, mcp-server-implementation and mcp-server-testing. If you do not have them, ask your AI to cover those parts in plain steps."
+  - Ask for the review as a table with one row per risk and columns for the risk, how serious it is, the file or tool it affects, and the fix. Read it and start with the risks marked most serious. Add the code guards it suggests.
+  - "Optional: if your AI can run code, run the checklist script. It is scripts/security_checklist.py in the skill folder. From that folder, run: python3 scripts/security_checklist.py --repo followed by the path to your server code. It prints pass, fail or to-do for each check and exits with an error if any check fails, so you can add it to your build checks. The skill file writes the path with ${CLAUDE_SKILL_DIR}, which only works in Claude Code."
+  - "The method names three companion skills. For sign-in (mcp-server-auth), use the MCP server sign-in builder. For tests (mcp-server-testing), use the MCP server test runner. For building the server (mcp-server-implementation), which is not in this library, ask your AI for plain steps."
 output_sample:
   input:
     - Your MCP server code or repo

@@ -12,7 +12,7 @@ skill_name: "Sourcing Skill Builder"
 domain: "historical-thinking"
 version: "1.0"
 contributor: "Sean Hu"  # contributor named in the original file. The source author is Gareth Manning (GarethManning/education-agent-skills).
-evidence_strength: "strong"
+evidence_strength: "strong (the original author's rating; not checked by AI Blocks)"
 evidence_sources:
   - "Wineburg (1991) — Historical problem solving: cognitive processes in the evaluation of documentary and pictorial evidence"
   - "Wineburg (1998) — Reading Abraham Lincoln: an expert/expert study in historical cognition"
@@ -77,6 +77,22 @@ tags: ["sourcing", "historical-thinking", "primary-sources", "disciplinary-liter
 
 # Sourcing Skill Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs targeted instruction to develop students' sourcing practice — the habit of interrogating who authored a historical document, when, why, for what audience, and what this means for the document's reliability — before and during reading. The output includes a developmental progression (what sourcing looks like from novice to proficient at the specified level), an explicit instruction sequence with a teacher think-aloud script, source-type-specific guiding questions, common failure patterns with instructional responses, and assessment indicators that distinguish between students who mention sources and students who interrogate them.
@@ -86,6 +102,8 @@ Sourcing is the foundational move in historical thinking. Wineburg and Reisman (
 AI is specifically valuable here because diagnosing why students fail to source requires distinguishing between several different failure modes that require different instructional responses. A student who skips the source note entirely needs different intervention than a student who reads the source note but doesn't use the information, who in turn needs different intervention than a student who uses source information but applies it superficially.
 
 ## Evidence Foundation
+
+Note: the citations and findings below are the original author's summary. They have not been checked against the original papers. Check a study before you quote it to colleagues, parents or inspectors, and do not present these findings as checked fact.
 
 Wineburg (1991) established sourcing as an expert-novice discriminator through a landmark study comparing how historians and high school students read historical documents. Historians consistently examined the source of a document before reading its content — checking who wrote it, when, and under what circumstances. Students dove straight into the text. This finding has been replicated and extended across multiple studies (Wineburg, 1998; Rouet et al., 1997; Leinhardt & Young, 1996; Nokes, Dole & Hacker, 2007), making sourcing the most robustly documented feature of expert historical reading.
 
@@ -327,3 +345,10 @@ Students who source analytically without prompting are ready to move on. Student
 3. **Gottlieb and Wineburg (2012) demonstrated that identity and community membership can shape how readers apply sourcing criteria — people may source rigorously when reading about topics that don't engage their identity but lower their critical guard when reading about a past that matters to them personally.** This skill does not address this "horizontal axis" of historical thinking. Teachers should be aware that students may source less carefully when the topic connects to their own community, heritage, or beliefs — not because they lack the skill but because identity engagement changes the epistemological criteria they apply.
 
 4. **This skill focuses on sourcing in isolation for instructional clarity, but in authentic historical inquiry sourcing operates in concert with contextualisation, corroboration, and close reading.** Once students can source consistently, instruction should integrate sourcing with the other three skills through document-based lessons (see document-based-lesson-designer).
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [History source comparison lesson builder](https://useaiblocks.com/skills/compare-sources-lesson).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

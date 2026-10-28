@@ -14,7 +14,7 @@ You need a few lines on what the person does and who depends on them. Everything
 **Needed:** their situation: what they do, who depends on them and what is on their mind.
 
 **Makes it better (optional):**
-- Their top values, made by the [Eulogy values finder](https://useaiblocks.com/skills/eulogy-values-finder). Without them the links to values are drafts.
+- Their top values, made by the [Life values reflection coach](https://useaiblocks.com/skills/eulogy-values-finder). Without them the links to values are drafts.
 - A rough picture of a normal week.
 - Their real hours and a ranking for each role. If these are missing after step 1, ask for them once.
 
@@ -72,15 +72,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write your mission** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). Bring the role table and your values.
-- **Plan your weeks** with the [Values-to-week planner](https://useaiblocks.com/skills/values-to-week-planner). Bring the role table and your calendar.
-- **See where your time went** with the [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). Bring last week's calendar.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every role has a one-sentence "about" line that a stranger could picture.
@@ -90,6 +81,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The person's own role is present.
 - No goal was added that the person did not say or agree to.
 - The headings match the shape above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write your mission** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). Bring the role table and your values.
+- **Plan your weeks** with the [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). Bring the role table and your calendar.
+- **See where your time went** with the [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). Bring last week's calendar.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

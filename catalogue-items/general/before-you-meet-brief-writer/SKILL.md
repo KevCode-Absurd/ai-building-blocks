@@ -59,7 +59,6 @@ Who and why. What they care about, with sources. The people around them. Two hon
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Conversation question planner](https://useaiblocks.com/skills/get-them-talking-plan). It takes the buyer profile.
 - The [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer). It takes the buyer profile.
-- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

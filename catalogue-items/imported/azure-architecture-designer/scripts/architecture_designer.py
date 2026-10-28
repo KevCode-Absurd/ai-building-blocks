@@ -80,11 +80,11 @@ def _app_service_web(users: int, reqs: Dict) -> Dict[str, Any]:
             "Entra ID + RBAC",
             "Application Insights",
         ],
-        "estimated_monthly_cost_usd": min(280, budget),
+        "estimated_monthly_cost_usd": 280,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "App Service P1v3": "$70-95",
             "Azure SQL Serverless": "$40-120",
-            "Front Door": "$35-55",
+            "Front Door": "$35 base fee + requests and data out",
             "Blob Storage": "$5-15",
             "Key Vault": "$1-5",
             "Application Insights": "$5-20",
@@ -126,7 +126,7 @@ def _aks_microservices(users: int, reqs: Dict) -> Dict[str, Any]:
             "Key Vault",
             "Entra ID workload identity",
         ],
-        "estimated_monthly_cost_usd": min(1200, budget),
+        "estimated_monthly_cost_usd": 1200,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "AKS node pools (D4s_v5 x3)": "$350-500",
             "API Management Standard v2": "$175",
@@ -172,7 +172,7 @@ def _container_apps(users: int, reqs: Dict) -> Dict[str, Any]:
             "Application Insights",
             "Entra ID managed identity",
         ],
-        "estimated_monthly_cost_usd": min(350, budget),
+        "estimated_monthly_cost_usd": 350,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "Container Apps (consumption)": "$50-150",
             "Container Registry Basic": "$5",
@@ -217,7 +217,7 @@ def _serverless_functions(users: int, reqs: Dict) -> Dict[str, Any]:
             "Application Insights",
             "Key Vault",
         ],
-        "estimated_monthly_cost_usd": min(80, budget),
+        "estimated_monthly_cost_usd": 80,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "Functions (Consumption)": "$0-20 (1M free executions/month)",
             "Event Grid": "$0-5",
@@ -262,7 +262,7 @@ def _synapse_pipeline(users: int, reqs: Dict) -> Dict[str, Any]:
             "Power BI",
             "Azure Monitor",
         ],
-        "estimated_monthly_cost_usd": min(800, budget),
+        "estimated_monthly_cost_usd": 800,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "Event Hubs Standard": "$20-80",
             "Data Factory": "$50-200",
@@ -305,7 +305,7 @@ def _serverless_data(users: int, reqs: Dict) -> Dict[str, Any]:
             "Azure SQL Serverless",
             "Application Insights",
         ],
-        "estimated_monthly_cost_usd": min(120, budget),
+        "estimated_monthly_cost_usd": 120,  # rough guess, not clamped to the budget
         "cost_breakdown": {
             "Azure Functions": "$0-20",
             "Event Grid": "$0-5",
@@ -347,9 +347,9 @@ def _multi_region_web(users: int, reqs: Dict) -> Dict[str, Any]:
             "Azure Monitor + Log Analytics (centralized)",
             "Key Vault (per region)",
         ],
-        "estimated_monthly_cost_usd": min(3000, budget),
+        "estimated_monthly_cost_usd": 3000,  # rough guess, not clamped to the budget
         "cost_breakdown": {
-            "Front Door Premium": "$100-200",
+            "Front Door Premium": "$330 base fee + requests and data out",
             "Compute (2 regions)": "$300-1000",
             "Cosmos DB (multi-region)": "$400-1500",
             "Azure SQL geo-replication": "$200-600",

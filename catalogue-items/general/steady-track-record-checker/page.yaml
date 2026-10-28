@@ -18,7 +18,7 @@ when:
   - A company has a good record but a new boss or a new plan.
   - You are comparing two businesses and one has changed course more than the other.
 not_for:
-  - "You want a lasting-edge check: use the Business power tester first, then come back here."
+  - "You want a lasting-edge check: use the Competitive advantage tester first, then come back here."
   - 'The business has under five years of figures: this gives a "too young" call, so wait or read its plans and people instead.'
   - "You want a buy or sell call or personal advice: talk to a licensed financial adviser."
 
@@ -39,7 +39,7 @@ how_to_use:
   - Paste the description and the yearly figures. Annual report summaries work well.
   - List any big deals, new bosses or plans you know of, with the year.
   - Read the call, then check the flags it found against the company's own reports.
-  - Take the result to "Owner-minded management checker" or your own decision.
+  - Take the result to "Company management record reviewer" or your own decision.
 output_sample:
   input:
     - What the business sells, to whom, and how money comes in
@@ -136,7 +136,7 @@ improve:
   - Add the years of restructuring from the annual reports so none are missed.
   - Keep a short list of the bad years of the industry to compare against.
   - Re-run it every two years and watch whether a "mixed" call moves.
-  - Pair it with "Business power tester" to see if a steady record rests on a lasting edge.
+  - Pair it with "Competitive advantage tester" to see if a steady record rests on a lasting edge.
 
 works_best_with:
   tools:

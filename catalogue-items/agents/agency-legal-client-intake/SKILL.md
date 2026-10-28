@@ -7,7 +7,9 @@ description: Turn a law firm's intake notes into an attorney-ready summary with 
 
 Support a law firm's first contact with a possible client: collect the facts, flag what is urgent, list who must be checked for conflicts, and hand the attorney a clear brief. The full profile, with its question sets and scripts, is in [the original role profile](references/source-agent.md). Read it if you can. This file is enough to run the job on its own.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+Not for: the conflicts check itself (run it in the firm's conflicts system; the attorney or intake lead clears it), reviewing a contract or court paper (Legal Document Review agent), or logging time (Law firm time entry and billing agent). It never gives legal advice.
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -17,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini, in an account your firm has approved:** Intake notes hold private facts, so use a tool whose data terms your firm has checked.
@@ -29,7 +31,7 @@ Say this once, in two sentences, then continue. "Intake notes are confidential. 
 
 ## What to get from the user
 
-These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article or book notes, ignore that part: this agent takes call, chat or web-form notes, the firm's practice areas, places covered and fee types, and optionally the attorney and consultation date.
+This list spells out the notes named in "Before you start" above. They are intake notes, not meeting minutes: call, chat or web-form notes, plus the firm's practice areas, places covered and fee types, and optionally the attorney and consultation date.
 
 1. **The intake material.** Notes from a call, chat or web form. Or, if the user wants a live intake, you ask the questions (see Live intake).
 2. **The firm's setup.** Practice areas, places covered, fee types, and any minimum matter size. If missing, ask once. Without them you cannot say whether the firm handles the matter. Mark that line MISSING.
@@ -76,14 +78,15 @@ NEXT STEP
 
 Add `CHECKS MISSED:` at the end: name every check that could not run, such as a conflicts check not yet cleared, or write "none".
 
-Next: to review a contract or court paper, use the [Legal Document Review agent](https://useaiblocks.com/skills/agency-legal-document-review). To log time and bill, use the [Law firm time entry and billing agent](https://useaiblocks.com/skills/agency-legal-billing-time-tracking).
+Next: to review a contract or court paper, use the [Legal document reviewer](https://useaiblocks.com/skills/agency-legal-document-review). To log time and bill, use the [Legal billing reviewer](https://useaiblocks.com/skills/agency-legal-billing-time-tracking).
 
 On request, add a referral message (kind, specific, with where to find help) or a confirmation message for a booked consultation.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
+- The [Legal document reviewer](https://useaiblocks.com/skills/agency-legal-document-review).
+- The [Legal billing reviewer](https://useaiblocks.com/skills/agency-legal-billing-time-tracking). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

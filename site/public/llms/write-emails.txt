@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 68 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Draft outreach for one named company or contact. Get an email, call script and LinkedIn note from real signals. Needs a paid Common Room account.
 - [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.
@@ -25,13 +25,18 @@
 - [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer): Turn email copy and a goal into a designer’s brief. Get ordered sections, buttons, image needs, live text and a build-and-test plan.
 - [Email call to action editor](https://useaiblocks.com/prompts/one-ask-email-tightener): Paste your draft and get a clearer email with one ask, a date and a reason in the first three lines. Edit a work email before you send it.
 - [Email deliverability recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner): Fix low email opens and spam placement. Give it your open rates and engaged counts. You get a score out of 100 and a staged recovery plan.
+- [Email delivery recovery and quiet-subscriber plan](https://useaiblocks.com/workflows/fix-inbox-placement-and-win-back-your-opens): Check email setup and results. Plan a cautious restart and messages for quiet readers, then review what happens after approved sends.
 - [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer): Share an email draft. Get counts, edits, three subject lines, a score out of100 and a send-or-fix verdict.
 - [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer): Paste your email draft to get cuts, a pacing map, subject line fixes, a score out of 100 and a ship or fix verdict before you send it.
+- [Email flow results and rebuild review](https://useaiblocks.com/agents/monthly-email-flow-keeper): Review email results and sending problems. Get one proposed flow rebuild, copy checks and a short test list.
 - [Email layout and delivery reviewer](https://useaiblocks.com/skills/email-design-checker): Review an email screenshot or HTML against a house checklist. Get visible issues, fixes and a partial score that shows what could not be checked.
 - [Email marketing planner](https://useaiblocks.com/agents/agency-marketing-email-strategist): Turn a messy contact list into an email plan: who gets what, when, with exit rules, a deliverability checklist and clicks-first measurement.
 - [Email marketing program lead](https://useaiblocks.com/skills/email-program-lead): Plan, draft, review and manage email marketing with approval gates. Get a clear next action, checked audience and content before customer sends.
 - [Email mistake fixer](https://useaiblocks.com/skills/email-mistake-fixer): Fix typos and grammar in your email draft without changing your voice. Get a change list back, and clean tracking bits from links if you ask.
 - [Email sequence and timing writer](https://useaiblocks.com/skills/email-sequence-writer): Draft a welcome, nurture or win-back email series. Get full copy, timing, entry and exit rules, plus a results plan.
+- [Email setup health checker](https://useaiblocks.com/skills/email-setup-health-checker): Check your email setup for spam risks. Paste your DNS records and settings. You get a score out of 100 and the exact fix for each fault.
+- [Email test planner](https://useaiblocks.com/skills/email-test-planner): Plan email and popup A/B tests that can finish. Get a ranked test queue with sample sizes, run times and rules for calling a winner.
+- [Engaged list expander](https://useaiblocks.com/skills/engaged-list-expander): Plan an engaged list expander drip that adds quiet contacts back to your email sends in small steps, with sizes for your list and a stop rule.
 - [Event follow-up planner](https://useaiblocks.com/workflows/plan-an-event-follow-up-that-earns-a-reply): Share attendee requests, promises and contact preferences. Get follow-up groups, a commitment list and message drafts for review.
 - [Executive email reply editor](https://useaiblocks.com/workflows/write-a-clear-executive-reply): Share the email thread, reply goal and voice guidance. Get a supported reply draft, clear recipients and a specific next step.
 - [Executive email reply writer](https://useaiblocks.com/skills/executive-email-draft): Write a reply to an email thread. Share the thread and your goal. You get a draft with clear recipients, checked facts and one next step.
@@ -69,4 +74,5 @@
 - [Testimonial request writer](https://useaiblocks.com/skills/testimonial-request-writer): Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.
 - [Text message campaign writer](https://useaiblocks.com/skills/text-message-campaign-writer): Share your audience, goal, and opt-in process. Get SMS or WhatsApp drafts with timing.
 - [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder): Build a welcome email flow for new subscribers. Give it your offer and best sellers. Get timing, filters, email outlines, SMS and tests.
+- [Welcome, cart and browse email rollout planner](https://useaiblocks.com/workflows/roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time): Share store setup, offers and email-tool context. Get setup findings, three coordinated flow drafts and staged rollout checks.
 - [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder): Share your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder.

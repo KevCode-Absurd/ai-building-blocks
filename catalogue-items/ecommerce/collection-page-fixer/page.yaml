@@ -123,3 +123,4 @@ terms:
   - {term: "Size curve", meaning: "How your sales or clicks spread across sizes. The common sizes usually carry most of the demand."}
   - {term: "Top six", meaning: "The first six products shown on a collection page."}
   - {term: "Quick add", meaning: "A button on the collection page that adds a product to the cart without opening the product page."}
+next: [store-friction-checker, collection-page-planner]

@@ -7,7 +7,7 @@ description: Use when the user wants a controlled before/after image-to-video tr
 
 Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks. A scene lock is anything that must stay the same in both frames, such as the camera crop, lighting, scale or text.
 
-When not to use: you want a video from scratch with no before and after frames (use the [Rapid-cut product video prompt](https://useaiblocks.com/skills/rapid-cut-product-video-prompt)). You need a story with a character across many scenes (use the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner)). You need a 3D explainer of how something works (use the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts)).
+When not to use: you want a video from scratch with no before and after frames (use the [Rapid-cut product video prompt writer](https://useaiblocks.com/skills/rapid-cut-product-video-prompt)). You need a story with a character across many scenes (use the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner)). You need a 3D explainer of how something works (use the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

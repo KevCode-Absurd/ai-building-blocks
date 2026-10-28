@@ -69,7 +69,7 @@ how_it_works:
   - title: Score the fit
     text: It marks each requirement full, partial, planned or gap. Must-haves count three times, should-haves twice.
   - title: Make the bid call
-    text: One rule sets the call, based on the fit score and the must-have gap count. Low-value deals with a weak fit become no bid.
+    text: "One rule sets the call. Bid: 70% fit or more and 3 or fewer must-have gaps. Bid with a plan (the skill calls it a conditional bid): 50% to 70%, or 40% to 50% with 3 or fewer must-have gaps. No bid: anything else, or a low-value deal with a weak fit."
   - title: Compare with rivals
     text: It scores each feature for you and for each rival, then lists where you stand out and where you are weak.
   - title: Plan the trial

@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -43,7 +43,7 @@ Have these ready: stock grades (A, B or C), margin floor per product, your pacin
 - **Products with margin and stock depth, graded A, B or C** (required).
 - **Sale goal**: maximise profit or move inventory (required).
 - **Sale dates and planned sitewide discount** (required).
-- **Break-even and CAC limit** (advised): the report from the [Sale break-even and CAC allowance modeler](https://useaiblocks.com/skills/sale-break-even-and-cac-allowance-modeler). Discount only down to what that limit can carry.
+- **Break-even and CAC limit** (advised): the report from the [Sale profit and ad cost planner](https://useaiblocks.com/skills/sale-break-even-and-cac-allowance-modeler). Discount only down to what that limit can carry.
 - **Current offer and pages** (advised).
 - **Creative, email and ad capacity** (advised).
 - **Subscriber count, current subscribe discount, subscription products and margins** (if the store sells subscriptions).

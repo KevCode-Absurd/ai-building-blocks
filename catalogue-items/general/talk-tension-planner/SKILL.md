@@ -5,7 +5,7 @@ description: Use when you have a talk, pitch or presentation outline and want th
 
 # Talk tension planner
 
-An audience pays attention when it knows what is at stake and wants to see what happens. Many talks hide that until the end. This skill reorders an outline so the stakes come first, with a real clock and, if there is one, a real twist saved for last. For a last check of slide count and text size, use the [Pitch deck 10/20/30 checker](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). After this plan, rehearse the new order out loud and time it.
+An audience pays attention when it knows what is at stake and wants to see what happens. Many talks hide that until the end. This skill reorders an outline so the stakes come first, with a real clock and, if there is one, a real twist saved for last. For a last check of slide count and text size, use the [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). After this plan, rehearse the new order out loud and time it.
 
 **When not to use it:** you only want a slide count and text size check (use the Pitch deck 10/20/30 checker above), you have no outline yet (write a rough outline first), or the talk is a training or how-to where the audience needs steps, not stakes.
 

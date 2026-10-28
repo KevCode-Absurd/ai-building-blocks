@@ -66,9 +66,9 @@ This workflow does not give legal advice and does not decide who to hire or how 
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Offer them in one short question, and say the person can type their own:
+Use these instead of the general "After this" list below. Offer them in one short question, and say the person can type their own:
 - Put the pay change you chose into practice, and check it again after two quarters.
-- Use the early sign in onboarding. See [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-signals) to redo it with new data.
+- Use the early sign in onboarding. See [Customer success milestone planner](https://useaiblocks.com/skills/customer-success-signals) to redo it with new data.
 - Score your next candidates on the scorecard, then compare it with how they do in the job. The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder) can turn the traits into interview questions.
 - Cost the team you plan to build with the [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder).
 

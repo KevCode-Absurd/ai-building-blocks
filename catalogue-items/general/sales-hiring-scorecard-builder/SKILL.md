@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **To check how you pay the team** with the [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- **To turn the tests into interview stages** with the [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every trait has a written definition and score anchors.
@@ -99,6 +91,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No trait is kept only because past stars shared it.
 - The comparison says how few hires it rests on.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **To check how you pay the team** with the [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+- **To turn the tests into interview stages** with the [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

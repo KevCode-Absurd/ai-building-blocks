@@ -92,15 +92,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Get designer briefs to test the idea** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
-- **Turn the brief into one numbered goal and a test calendar** with the [One-goal marketing plan builder](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the brief.
-- **Test the one thing to say cheaply** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every question about past results, buyers and non-buyers is answered or marked unknown.
@@ -109,6 +100,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The offer is checked, not just the wording.
 - Reasons to buy come from customers, or are marked unproven.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Get designer briefs to test the idea** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
+- **Turn the brief into one numbered goal and a test calendar** with the [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the brief.
+- **Test the one thing to say cheaply** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

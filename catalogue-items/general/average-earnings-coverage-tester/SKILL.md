@@ -76,9 +76,9 @@ The claim in one line. The claims table and TOTAL CHARGES. The earnings by year 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Debt protection ratio checker](https://useaiblocks.com/skills/equity-cushion-ratio-tester). It takes the audit report.
 - The [Earnings-based share value calculator](https://useaiblocks.com/skills/earnings-value-range-builder). It takes the audit report.
 - The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
-- The [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

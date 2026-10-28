@@ -4,6 +4,19 @@ description: "Identify growth loops (flywheels) for sustainable traction. Evalua
 ---
 # Growth Loops
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Overview
 Identify and design growth loops (flywheels) that create sustainable traction. This skill evaluates five proven growth loop mechanisms to reduce reliance on paid acquisition and build product-led growth.
 
@@ -13,6 +26,8 @@ Identify and design growth loops (flywheels) that create sustainable traction. T
 - Reducing reliance on paid acquisition
 - Analyzing competitor growth strategies
 - Optimizing product for product-led growth
+
+**When not to use:** the product has no repeat use and no reason to share, or signup and first use are still leaking users. Fix those first, and use paid ads or direct sales for growth meanwhile.
 
 ## The 5 Growth Loop Types
 
@@ -82,6 +97,8 @@ Estimate growth velocity:
 - Net new users per cycle
 - Time per cycle iteration
 
+Loop coefficient = invites or shares per user per cycle × conversion rate of those invites to new users. Above 1, each cycle brings in more new users than it started with. Use only the invite and conversion figures the user gives. If either is missing, ask for it and do not invent a number.
+
 ### Step 5: Build the Loop
 Implement the highest-leverage loop first:
 - Start with the most natural loop for your product
@@ -105,6 +122,13 @@ A growth loops analysis including:
 - Key metrics and measurement framework
 - 30-60-90 day implementation roadmap
 - Potential loop coefficient and growth projections (use only figures the user gave; label every coefficient as an estimate and show how you worked it out)
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Grow on social** with the [Referral program designer](https://useaiblocks.com/skills/referral-program-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Framework
 Based on growth loops research by Ognjen Bošković. Focuses on compounding user acquisition through built-in, product-native sharing and collaboration mechanisms.

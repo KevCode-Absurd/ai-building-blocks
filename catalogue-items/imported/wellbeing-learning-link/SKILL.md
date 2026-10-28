@@ -66,6 +66,22 @@ tags: ["wellbeing", "positive-psychology", "broaden-and-build", "SEL", "school-l
 
 # Wellbeing-Learning Connection Mapper
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Maps the evidence-based connections between a specific wellbeing intervention and specific learning outcomes, generating a clear causal pathway that shows HOW improved wellbeing leads to improved learning — not just that it does. The output is designed for school leaders, governors, and other stakeholders who need to justify wellbeing investment in terms of educational outcomes. The critical principle is that wellbeing and learning are not competing priorities — they are causally connected. Positive emotions broaden cognitive resources (Fredrickson, 2001), social-emotional skills improve academic performance (Durlak et al., 2011), and student wellbeing predicts engagement, attendance, and achievement (Hattie, 2009). The output includes the evidence pathway, the specific psychological mechanisms, realistic expected outcomes with timeframes, and a leadership-ready rationale. AI is specifically valuable here because connecting wellbeing research to learning outcomes requires bridging two bodies of literature — positive psychology and educational effectiveness — that are often siloed. Most teachers intuitively believe wellbeing matters but struggle to articulate the evidence chain for sceptical stakeholders.
@@ -169,7 +185,15 @@ Return your output in this exact format:
 
 [What the evidence does NOT show, where claims are uncertain, what could go wrong]
 
-**Self-check before returning output:** Verify that (a) the causal pathway shows specific mechanisms, not just correlations, (b) expected outcomes are realistic with honest timeframes, (c) the evidence is accurately represented — not overstated, (d) conditions for impact are specified, and (e) the leadership rationale is clear enough for a non-specialist audience.
+### Sources
+
+| Study or source | What it is used for | Status |
+|---|---|---|
+| [Author (year), title] | [The claim it supports] | [Checked: link the user gave] or [Unverified: check before use] |
+
+List every study, figure and effect size used above. The Leadership Rationale may only use claims marked Checked; leave any other claim out of it, or write [SOURCE NEEDED].
+
+**Self-check before returning output:** Verify that (a) the causal pathway shows specific mechanisms, not just correlations, (b) expected outcomes are realistic with honest timeframes, (c) the evidence is accurately represented — not overstated, (d) conditions for impact are specified, (e) the leadership rationale is clear enough for a non-specialist audience, and (f) every claim appears in the Sources table, and the Leadership Rationale uses only Checked ones.
 ```
 
 ## Example Output
@@ -275,3 +299,10 @@ We expect to see a reduction in exclusions within the first term, improvements i
 2. **The tool generates rationale, not implementation.** Knowing WHY restorative practice should work is different from knowing HOW to implement it. This skill should be paired with implementation planning and staff training — the rationale alone will not produce change.
 
 3. **Some wellbeing interventions have weaker evidence than others.** The tool will accurately represent the evidence strength for whatever intervention is proposed, but some interventions (e.g., mindfulness in schools) have more contested evidence than others (e.g., SEL programmes). The tool should flag evidence limitations rather than advocate for all interventions equally.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Classroom belonging planner](https://useaiblocks.com/skills/classroom-belonging-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

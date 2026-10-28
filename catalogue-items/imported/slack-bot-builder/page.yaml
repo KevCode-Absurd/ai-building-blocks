@@ -12,6 +12,8 @@ explain: |
   It builds on Bolt, Slack's own framework, in Python, JavaScript or Java. Messages are laid out with Block Kit. Every handler answers Slack within 3 seconds before doing slow work, since Slack otherwise shows an error. It also keeps tokens in environment variables and asks for the fewest permissions the bot needs.
 
   If other workspaces should be able to install your bot, it adds Slack's sign-in flow too. You need a Slack workspace where you can create apps. The skill never asks you to paste a token into the chat.
+
+  Licence: the skill comes from sickn33's collection, shared under CC BY 4.0 (the LICENSE-CONTENT file). Its front matter names an earlier source, vibeship-spawner-skills, under Apache 2.0. Keep the credit to both if you share it.
 when:
   - You want a bot that answers a slash command like /standup.
   - Your team needs a message with buttons that start an action.
@@ -40,6 +42,7 @@ how_to_use:
   - Create your Slack app at api.slack.com/apps and switch on the settings it lists. Put your tokens in a file named .env on your computer. Never paste a token into the chat.
   - Save the code files and run the one command it gives you. A chat AI cannot run the bot for you, but Claude Code or Codex can.
   - Go through the test checklist in your own Slack workspace. Report any step that fails and ask your AI to fix it.
+  - Once every test passes, move the bot off your computer. Ask your AI (or Claude Code or Codex) to set it up on a host in HTTP mode, with the tokens stored as the host's secrets.
 how_it_works:
   - title: Plan the bot
     text: It lists each command, event and button, and picks the fewest permissions that cover them.

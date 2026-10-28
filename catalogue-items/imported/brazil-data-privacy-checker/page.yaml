@@ -31,7 +31,7 @@ you_get:
   - Breach notification checklist
   - Penalty exposure notes
 how_to_use:
-  - "Confirm before use: the skill carries several dated 2026 items that we have not checked. They are Brazil-EU mutual adequacy (January 2026), Lei 15.352/2026, Consulta Pública 1/2026 (closing 26 October 2026) and a reported R$153.7 million fine on ByteDance/TikTok. Confirm each on anpd.gov.br, the Diário Oficial da União or the EU Official Journal. Do not quote the fine or rely on the adequacy claim until you have. Until then, keep standard contractual clauses for every transfer."
+  - "Confirm before use: the skill carries several dated 2026 items that we have not checked. They are Lei 15.352/2026, Consulta Pública 1/2026 (closing 26 October 2026) and a reported R$153.7 million fine on ByteDance/TikTok. Confirm each on anpd.gov.br or in the Diário Oficial da União. Do not quote the fine until you have. We did check the Brazil-EU adequacy decisions of January 2026, so transfers to the EU and EEA do not need standard contractual clauses. Transfers to other countries still do."
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
   - Before anything else, list each country you send data to. Check ANPD's adequacy list on anpd.gov.br for each one, and read the transfer notes only after that.
   - Gather first: your company's revenue for the last financial year (the fine cap is 2% of Brazil revenue), a list of the data types you hold and where each comes from, and your current contracts for each country you send data to.

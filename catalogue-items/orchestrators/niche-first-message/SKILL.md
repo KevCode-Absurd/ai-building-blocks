@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your offer, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your offer, your customer list, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -48,10 +48,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Niche readiness checker.** Use the skill `niche-readiness-checker`. A niche verdict, a one-line niche statement and the next step. Hands the niche plan to the message writer and the role splitter
-2. **Stranger first-message writer.** Use the skill `stranger-first-message-writer`. Give it the plan from step 1. A first message a stranger can read in seconds. Hands the message to step 3 as the outreach work to hand over
-3. **Sales role splitter.** Use the skill `sales-role-splitter`. Give it the niche plan from step 1, your list of who does which sales job, and the message from step 2. Which job to split out first, who owns it and what to track
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+1. **Niche readiness checker.** Use the skill `niche-readiness-checker`. Give it the offer and the list of paying customers with how each one found you. You get a count of customers who came cold (not friends, past clients or referrals), a one-line niche statement, a ready / too wide verdict and the next step. Hands the niche plan to the message writer and the role splitter. If there is no customer list, stop here: the verdict needs it.
+2. **Stranger first-message writer.** Use the skill `stranger-first-message-writer`. Give it the plan from step 1 and the person or role to reach, if known. You get a main message under 60 words, a 30-word email, a 15-second call opening and a polite way out. Hands the message to step 3 as the outreach work to hand over
+3. **Sales role splitter.** Use the skill `sales-role-splitter`. Give it the niche plan from step 1, your list of who does which sales job and how long each takes, and the message from step 2. You get a table of sales jobs, the first job to split out, who owns it, a rule for a qualified lead and two or three result numbers to track
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run (or "none").
 
 ## What you hand back
 3 step files and the summary. The last file holds the plan.

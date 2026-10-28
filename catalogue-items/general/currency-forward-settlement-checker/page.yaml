@@ -21,7 +21,7 @@ not_for:
   - The forward has not settled yet and you want its current fair value. This does not give one.
   - You want collateral, close-out or hedge accounting treatment. Take those to your accountant or treasury adviser.
   - Your forward sells foreign currency instead of buying it. This version covers buying only.
-  - You want to net several currency exposures first. Use the Currency exposure netting checker.
+  - You want to net several currency exposures first. Use the Foreign currency exposure checker.
   - You want to compare a whole cash forecast with what happened. Use the Treasury forecast backtest checker.
 you_give:
   - The forward notional, which is the foreign amount you agreed to buy (from the confirmation)
@@ -108,7 +108,7 @@ tweaks:
   - what: Rate direction
     how: Write each rate as reporting currency per one foreign unit. If your source quotes the other way, say so and let the AI flip it.
   - what: Fees
-    how: Say whether fees are in the reporting currency or the foreign currency, so they are added in the right units.
+    how: Give fees in the reporting currency. If the bank charged them in the foreign currency, the skill converts them at the settlement spot rate and says so.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.

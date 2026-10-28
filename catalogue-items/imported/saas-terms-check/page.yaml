@@ -37,7 +37,7 @@ you_get:
   - AI training, liability cap and law findings
   - A record you can copy into a renewal tracker
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill instructions. No code, web search or paid tool is needed.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill instructions. No code, web search or paid tool is needed. The skill file still holds some plugin text (config file paths, slash commands); its own note at the top tells the AI to skip those, so you can ignore them too.
   - "Gather first: the contract text, the notice window you will accept before renewal, the biggest yearly price rise you will accept, and the law the contract names (its governing law)."
   - Paste the contract text. Say if you are the customer or the vendor, and where you operate. Add your own rules for what you accept, if you have them. If not, answer the questions it asks.
   - Read the bottom line and the auto-renewal block first. Put the cancel-by date in your calendar.

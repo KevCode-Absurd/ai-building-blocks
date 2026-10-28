@@ -32,11 +32,12 @@ you_get:
   - Remote state setup
   - A security findings list
   - Refactor suggestions for existing code
+  - "Note: all of this is review text and code for you to read and run. Nothing is deployed for you."
 how_to_use:
   - Gather first: all your .tf files, your cloud provider and version, the state backend you want and any security rules you must meet.
   - Open your AI tool and paste in this skill. Use Claude, ChatGPT or Gemini.
   - Paste your .tf files, or describe your cloud setup and name your provider.
-  - "Pick a job. Start with a review of the target folder (the /terraform:review job in the skill), or ask for a module design or a security audit."
+  - "Pick a job. Start with a review: paste your main .tf file and ask for a Terraform review (the skill calls it /terraform:review; in a chat, just ask in words). Expect a findings list, each with a fix. You can also ask for a module design or a security audit."
   - Read the results and the new code. Run terraform plan in a copy of the project first and check it. Never apply code you have not read.
   - The two analysis scripts need python3 and an AI that can run code. Skip them in a plain chat.
   - Set your CI to need a manual approval before apply. Then work through the security findings list, highest risk first.

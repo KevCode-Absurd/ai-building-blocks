@@ -142,9 +142,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## After this
 
 Offer one next step in a short question, and say the user can type their own:
-- **Plan the cuts and sound in more detail** with the [Video audio finishing plan](https://useaiblocks.com/workflows/video-audio-finishing-plan) workflow.
+- **Plan the cuts and sound in more detail** with the [Video audio finishing planner](https://useaiblocks.com/workflows/video-audio-finishing-plan) workflow.
 - **Add captions in your brand font** with the [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions).
-- **Check an ad before launch** with the [Cut, caption and check a video ad before launch](https://useaiblocks.com/workflows/cut-caption-and-check-a-video-ad-before-launch) workflow.
+- **Check an ad before launch** with the [Video ad edit and launch reviewer](https://useaiblocks.com/workflows/cut-caption-and-check-a-video-ad-before-launch) workflow.
 
 ## Avoid
 

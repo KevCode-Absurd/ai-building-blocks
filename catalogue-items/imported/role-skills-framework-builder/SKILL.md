@@ -10,6 +10,26 @@ metadata:
 
 Build, maintain, and apply competency frameworks that drive consistent talent decisions across the employee lifecycle — from defining behavioral indicators and proficiency levels to integrating competencies into hiring, performance, learning, and succession processes.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan, the job description. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** This is a writing and structuring job that any strong chat AI does well.
+<!-- /needs -->
+
 ## Steps
 
 In this skill a "competency" is the same as a skill that shows up in behaviour.
@@ -89,3 +109,12 @@ Not for pay bands, or for a single one-off hire with no team process.
 - Integrate competencies into existing processes (hiring, performance review, succession) rather than creating separate competency events; integration drives usage.
 - Competency frameworks require business sponsor ownership, not just HR ownership — if leaders don't believe in the framework, employees won't either.
 - Plan for AI and automation to change the competency landscape rapidly; build a review cycle that can respond to emerging capability needs before they become urgent skills gaps.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Training program builder](https://useaiblocks.com/skills/training-program-builder). It takes the document.
+- The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
+- The [Interview process planner](https://useaiblocks.com/skills/interview-process-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

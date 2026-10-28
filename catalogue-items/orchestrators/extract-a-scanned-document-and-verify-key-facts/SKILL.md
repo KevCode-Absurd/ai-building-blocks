@@ -79,7 +79,7 @@ Files | MISSING | CHECKS MISSED | one next step
 
 Nothing has been changed in the scan. The person checks the uncertain readings on the original pages. Offer one next step and say they can type their own:
 
-- Put the confirmed facts into a clean workbook and check it with the [Check a spreadsheet before sharing the results](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results) workflow.
+- Put the confirmed facts into a clean workbook and check it with the [Spreadsheet results reviewer](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results) workflow.
 - Make a searchable copy or a new PDF with the [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader).
 - Bring back the settled readings and ask for the fact table again.
 

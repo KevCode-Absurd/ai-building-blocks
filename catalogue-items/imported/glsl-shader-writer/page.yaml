@@ -35,7 +35,7 @@ how_to_use:
   - You need a developer, or a WebGL or Three.js project of your own, to run the shader. The skill writes the code only. It does not render anything.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say what effect you want to see, such as a ripple, glow or blur.
-  - Name your engine, such as WebGL or Three.js, and list any values you want to control. Say if you want a Shadertoy-style effect, which needs a full-screen quad and a resolution value from your code.
+  - Name your engine and its version, such as WebGL1, WebGL2 or Three.js. The skill's examples use the older WebGL1 style (gl_FragColor). WebGL2 shaders start with #version 300 es and write to an out colour instead. List any values you want to control, and your speed target, such as phones at 60 frames a second. Say if you want a Shadertoy-style effect, which needs a full-screen quad and a resolution value from your code.
   - You get back four parts, a vertex shader block, a fragment shader block, a list of uniform names, and a short speed note. Check that all four are there.
   - Copy the vertex and fragment shaders into your project and set the uniforms from your code.
   - If the screen is black, check that your uniforms are set and your UV values run from 0 to 1, then ask your AI to fix it.

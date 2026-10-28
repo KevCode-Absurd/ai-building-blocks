@@ -31,4 +31,4 @@ credits:
   - title: release-skills skill
     by: Jim Liu
     url: https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills/release-skills
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

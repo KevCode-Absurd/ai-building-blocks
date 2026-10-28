@@ -10,12 +10,12 @@ There are three ways to open a sale: sell the main offer at full price, give a f
 ## When not to use this
 
 - You have already chosen a free first step for a physical product: use the [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner).
-- You have chosen to lead with useful information: use the [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner).
-- You have no offer or price yet: use the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder) first. It is the same tool the start list below calls "New offer opportunity finder".
+- You have chosen to lead with useful information: use the [Educational lead magnet planner](https://useaiblocks.com/skills/lead-offer-planner).
+- You have no offer or price yet: use the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder) first.
 
 ## Ask first when there is no offer
 
-The start steps below say to carry on with what you have, but the offer and its price are required. If the person gave neither, ask for them once, in one short message, and stop.
+The offer and its price are required. If the person gave neither, ask for them once, in one short message, and wait. Only if they decline, or say to go ahead without them, carry on with the other facts and mark the offer and price `MISSING:`.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -52,7 +52,7 @@ How to start:
 
 1. **List the facts.** How many leads you can handle a week. Cost per lead and per sale. Cash you can spend and how long you can wait to break even. How much proof you hold (testimonials, results). How tight your sales process is. How well buyers already understand what you sell and its usual price. Any rules on free offers where you sell. Mark MISSING for anything unknown.
 2. **Describe premium.** The main offer at full price, alone. Pros: simple math, qualified buyers, no incentive to sift. Cons: the highest cost per lead, the slowest payback, needs strong copy and a strong sales process, reaches the fewest people, and needs a very strong offer. It fits when you have proof, a tight process and cash to learn.
-3. **Describe free.** A first step with no price. Pros: the most leads and the lowest cost per lead. Cons: too many leads to handle, some who never buy, and it costs you to give away. The author's draft chapter says free first steps closed at a similar rate to premium while lead cost fell. It gives no source we can check, so treat that as his claim and test your own. It fits a new market, a small local market, or when you need testimonials.
+3. **Describe free.** A first step with no price. Pros: the most leads and the lowest cost per lead. Cons: too many leads to handle, some who never buy, and it costs you to give away. The author's draft chapter says free first steps closed at a similar rate to premium while lead cost fell. That is unverified: the chapter gives no source we can check, so treat it as his claim and test it on your own leads. It fits a new market, a small local market, or when you need testimonials.
 4. **Describe discount.** A deep cut (half or more) on one piece of the offer, not the core. Pros: lets you advertise where free is restricted, collects a little cash, buyers expect to pay, sets up a two-step sale, cuts no-shows, and puts a card on file. Cons: if you discount the core, buyers learn to wait for deals; bargain hunters. It fits services buyers already understand and know the price of.
 5. **Score each route.** For each fact, give 0 to 3 for how well the route fits. Score a fact you don't know as an estimate and mark it `MISSING`. Add them up. Show the table.
 6. **Pick and set conditions.** Name the route with the highest total, why, and what must be true for it to work (for example, you can answer all new leads within a day). Name the facts that would change the pick. If two or more totals tie, or most facts are `MISSING`, make no pick. Say so, and list the facts that would break the tie.

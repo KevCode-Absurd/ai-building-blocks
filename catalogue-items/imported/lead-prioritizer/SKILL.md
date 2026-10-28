@@ -11,6 +11,23 @@ metadata:
 
 Score and prioritize inbound and outbound leads by combining firmographic fit (how closely a lead matches your ideal customer profile) with behavioral engagement signals (actions that indicate purchase intent). This skill builds scoring rubrics, assigns weighted points, calculates composite scores, and segments leads into actionable tiers — Hot, Warm, and Cold — so sales teams focus time on the highest-converting opportunities.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lead list** with the [Prospect account researcher](https://useaiblocks.com/skills/prospect-list-builder). It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lead list. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Define ICP Criteria** — Establish the firmographic attributes of your ideal customer: target industries, company size ranges, revenue bands, geographic regions, and technology stack indicators. Each attribute gets a weight reflecting its predictive importance based on historical conversion data.
@@ -100,3 +117,12 @@ All names and numbers below are placeholders that show the layout. Work out ever
 - **Duplicate leads from the same company** — When multiple contacts at one company score independently, consolidate into an account-level score to avoid double-counting the same buying intent.
 - **Engagement signal spam** — A lead who opens every email and visits every page may be a researcher, bot, or competitor. Set engagement score caps per signal type and flag anomalous activity patterns for manual review.
 - **Scoring model cold-start** — For new products or markets without historical conversion data, start with a simple unweighted model, collect 90 days of pipeline data, then recalibrate weights based on actual outcomes.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the lead list.
+- The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the lead list.
+- The [Lead grader](https://useaiblocks.com/skills/lead-grader). It takes the lead list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

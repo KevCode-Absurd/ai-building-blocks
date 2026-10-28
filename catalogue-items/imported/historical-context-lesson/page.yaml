@@ -11,7 +11,7 @@ explain: |
 
   It describes what weak, partial and strong use of context looks like for your age group. Then it lays out teaching steps where you model the thinking first, work through a source together, and then let learners try alone. It adds prompts about time, place and audience, common mistakes and marking signs. It also checks whether the gap is missing background knowledge or a missing skill.
 
-  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. We also changed one assessment prompt and the marking signs so students are judged on their evidence, not on whether their answer changes.
 when:
   - Students read old documents as though written today.
   - Learners know the background facts but do not use them when reading.

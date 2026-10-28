@@ -66,6 +66,27 @@ tags: ["worked-examples", "scaffolding", "fading", "cognitive-load", "novice-lea
 
 # Worked Example Designer with Completion Fading
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your notes** (yours): what to keep, change or drop.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Direct teaching lesson builder](https://useaiblocks.com/skills/direct-teaching-lesson-builder). Bring your lesson plan, your notes (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a complete scaffold sequence that moves students from studying a fully worked example through progressively faded completion problems to independent practice. For a given procedure or skill, it produces: (1) a worked example with annotated reasoning at each step, (2) a series of completion problems where successive steps are removed, and (3) independent practice problems. AI is specifically valuable here because effective worked examples require expert-level annotation of reasoning (not just showing steps, but explaining *why* each step is taken), and the fading sequence requires careful calibration of which steps to remove and in what order — a task requiring deep knowledge of both the subject content and the cognitive load research.
@@ -321,3 +342,11 @@ If students are completing Completion Problem 2 accurately and confidently, skip
 2. **The fading sequence assumes relatively homogeneous student readiness.** In a mixed-ability class, some students will need more fading stages and some fewer. Teachers should use Completion Problem 2 as a checkpoint — if a student is accurate, move them forward faster. If they're struggling, provide an additional worked example with different numbers before continuing the fade.
 
 3. **Surface feature variation in independent practice is crucial but hard to fully anticipate.** If all practice problems look too similar to the worked example, students may develop inflexible knowledge that only works for problems that look like the example. The skill attempts to vary surface features, but teachers should add further variations based on their knowledge of what problem formats appear in assessments.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Lesson understanding check planner](https://useaiblocks.com/skills/lesson-understanding-check). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

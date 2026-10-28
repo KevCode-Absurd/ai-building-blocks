@@ -94,7 +94,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Suggest one next step in a short question, and say they can type their own:
 
 - **Send the supplier questions.** A person sends them.
-- **Handle a bad delivery** with the [Prepare a supplier corrective action review](https://useaiblocks.com/workflows/prepare-a-supplier-corrective-action-review) workflow.
-- **Check the invoices for payment** with the [Check supplier invoices before approval](https://useaiblocks.com/workflows/check-supplier-invoices-before-approval) workflow.
+- **Handle a bad delivery** with the [Supplier defect response planner](https://useaiblocks.com/workflows/prepare-a-supplier-corrective-action-review) workflow.
+- **Check the invoices for payment** with the [Supplier invoice and receipt checker](https://useaiblocks.com/workflows/check-supplier-invoices-before-approval) workflow.
 
 Nothing here approves goods, holds a payment or changes a stock record.

@@ -76,8 +76,8 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 Suggest one of these next steps in a short question, and say they can type their own. These fit this workflow better than the generic list above:
 - **Get the rules approved** by the design system owner, then run step 3 again on the confirmed rules.
-- **Watch for drift after each stage** with the [Monthly design system keeper](https://useaiblocks.com/agents/monthly-design-system-keeper).
-- **Brief developers on one component** with the [Give developers a complete component brief](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief) workflow.
+- **Watch for drift after each stage** with the [Design rule consistency reviewer](https://useaiblocks.com/agents/monthly-design-system-keeper).
+- **Brief developers on one component** with the [Developer component brief planner](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief) workflow.
 Nothing here starts the migration.
 
 ## Avoid

@@ -11,6 +11,28 @@ metadata:
 
 A blank page becomes a live, high-converting website through ten phases run in one dependency-respecting order: message, then design, then conversion, then a brutal review. This journey is interactive — the agent asks before every decision and never designs before the message is settled — and resumable, because every decision and artifact lives in the project's `docs/` folder. You drive the phases; the constituent skills carry the method.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Message before design, design before conversion — in that order; looks-fine is the floor, not the goal.** A visitor decides in five seconds whether to stay, and that decision rides on whether they instantly understand what you do and why it matters to *them* — so clarity comes first and design serves it. This skill sequences the phases, asks the questions, and records the decisions; the constituent skills carry the frameworks. Invoke them rather than improvising their method.
@@ -35,7 +57,7 @@ A blank page becomes a live, high-converting website through ten phases run in o
 1. **Resume first.** Before anything else, read `docs/CREATE-WEBSITE-PLAN.md` and every artifact in the Journey Map. If the tracker exists, summarize the journey state in 3-5 lines and ask which phase to enter. Done when the user has confirmed an entry point. A journey with a tracker is resumed, never restarted.
 2. **Intake on first run only.** No tracker: run the Intake below, then create `docs/CREATE-WEBSITE-PLAN.md` with every phase statused `pending | in-progress | awaiting-evidence | done | deferred: reason | skipped: reason`. Done when the tracker exists and the user has confirmed the phase plan.
 3. **Phase entry.** Announce: what the phase does, the decision it forces, the artifact it produces, rough effort. Offer proceed / skip / defer — phases marked GATE may be deferred, never skipped. Mark the phase `in-progress` on proceed. Done when the user chose.
-4. **Skill invocation and fallback.** Load the phase's skill and use it: each phase's Invoke line names the skill by slug — use that skill to run the phase. If it is not available, offer: `npx skills add wondelai/skills/<slug> --global`. If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
+4. **Skill invocation and fallback.** Load the phase's skill and use it: each phase's Invoke line names the skill by slug — use that skill to run the phase. If it is not available, offer: `npx skills add wondelai/skills/<slug> --global`. (Note from AI Blocks: this install is optional. It downloads and runs code from an outside repo that AI Blocks has not reviewed. Say so when you offer it, and suggest the user reads the repo first. The Brief below covers every phase without it.) If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
 5. **In-phase decisions.** Ask every question under "Decide with the user" — with concrete options and your recommendation. Record the choice in the tracker's Key Decisions. A decision made silently is a defect.
 6. **Phase exit.** Present the draft artifact content for sign-off before writing. On approval: write or extend the docs/ files, update the tracker (status, Key Decisions, Next Actions). Done when the files are written and the phase row shows `done`.
 7. **Artifact discipline.** Read before writing; create a file only if missing, otherwise extend — add or update your sections, preserve everyone else's. Files are UPPERCASE in `docs/`. Every recommendation lands as a checkbox or a table row with owner and priority. See [references/artifact-templates.md](references/artifact-templates.md) when creating a docs/ file for the first time — create it from the full skeleton (all section headings), then fill the sections your phase names.
@@ -149,7 +171,7 @@ Done when `docs/CREATE-WEBSITE-PLAN.md` exists with every phase statused and the
 
 **Brief (fallback):** Pages must be self-evident; users scan, satisfice, and muddle through. Trunk Test — dropped onto any page cold, can they answer what site, what page, what sections, and where to go next? Run "get rid of half the words." Plain-language CTAs. Inline validation on blur, mark optional not required fields, 44x44px tap targets, visible system status ("Saving…"/"Saved", skeletons, confirmations).
 
-**Invoke:** Use the `ux-heuristics` skill with WEBSITE.md and DESIGN.md. Ask for a usability audit against Krug's laws and Nielsen's 10 heuristics, each issue rated 0-4, plus rewritten error messages and CTA labels.
+**Invoke:** (Note from AI Blocks: `ux-heuristics` is not in the AI Blocks library, so run this phase from its Brief unless the user already has that skill.) Use the `ux-heuristics` skill with WEBSITE.md and DESIGN.md. Ask for a usability audit against Krug's laws and Nielsen's 10 heuristics, each issue rated 0-4, plus rewritten error messages and CTA labels.
 
 **Decide with the user:** Approve the prioritized fix list starting with catastrophic (4) issues; confirm which fixes ship before launch versus later.
 
@@ -232,3 +254,14 @@ Exit checklist:
 - [ ] Every scarcity claim, testimonial, and guarantee on the page is true
 
 Close the tracker: every phase `done` or `skipped: reason`, with any remaining Next Actions carried into the artifacts as checkboxes. Then route forward: when the site is live and conversion data starts arriving, continue with the `improve-website` skill to turn today's assumptions into tested wins. When the website sells a product that now needs building, continue with the `create-app` skill.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page and design direction.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page and design direction and page layout spec.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the page.
+- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page and page layout spec.
+- The [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor). It takes the page.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

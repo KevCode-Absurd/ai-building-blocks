@@ -40,9 +40,8 @@ how_to_use:
   - Check what you need. NeMo Guardrails is a Python package you install, your app needs a model with its own key, and Presidio and LlamaGuard are extra installs.
   - Stop here before any toxicity step. ActiveFence is a paid outside service that sends your text off your machine. Do not set it up until you have approved the cost and the data leaving your machine. A free option is a hosted moderation API or your own model.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. It works best when your AI can run Python. If it cannot, every test is marked NOT RUN.
-  - Paste your notes. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed. The code in the skill file is sketches, not working guardrails. Do not paste it into a live app.
-  - Run the test plan yourself with fake data. Fix any rule that does not give the result the plan expects.
-  - Next, run the test plan with fake data and record each NOT RUN result. Then write the placeholder checks before any release.
+  - Paste your notes. Start with one rule, such as the jailbreak phrases from your own logs, and add the rest once it works. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed. The code in the skill file is sketches, not working guardrails. Do not paste it into a live app.
+  - Write the placeholder checks first, such as the fact check source. Then run the test plan yourself with fake data. Replace each NOT RUN with the real result, and fix any rule that does not give the result the plan expects.
   - Do not ship until you have written the placeholder checks and tested real attacks. Pair it with the AI agent attack tester.
 output_shape: |
   Rules summary: <risk> | <input or output rail> | <method> | <what it needs>

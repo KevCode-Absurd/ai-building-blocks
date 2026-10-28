@@ -1,8 +1,9 @@
 # Make an offer people want: AI Blocks
 
-> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 76 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [After-sale offer planner](https://useaiblocks.com/skills/after-sale-offer-planner): Share your product, costs and current offer. Get fitting add-ons, estimated profit per order and a one-change test plan.
+- [Bought-together pair finder](https://useaiblocks.com/skills/bought-together-pair-finder): Find which products your customers buy together. Give it your Shopify orders and get ranked pairs to build bundles and cross-sell offers.
 - [Bulk discount code creator](https://useaiblocks.com/skills/promo-code-batch-maker): Choose a code count and discount terms. Preview unique Shopify codes before creation; live creation needs authorized store access.
 - [Bundle and add-on offer test planner](https://useaiblocks.com/workflows/raise-order-value-with-bundles-and-add-ons-you-can-check): Share orders, product costs and offer limits. Get shipping thresholds, bundles, after-sale offers and a profit-focused test plan.
 - [Bundle tier layout planner](https://useaiblocks.com/skills/bundle-tier-layout-planner): Plan a bundle tier layout for your product page. Give it your price and costs. You get three tiers, savings wording, a margin check and a test plan.
@@ -36,6 +37,7 @@
 - [Offer bonus planner](https://useaiblocks.com/prompts/bonus-idea-matcher): Match one named bonus to each reason buyers say maybe to your offer. Get a short description, a value with a reason, and the order to show them.
 - [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer): Check your offer, price and guarantee against a short checklist. Get a score out of 100 and the three offer changes to split-test first.
 - [Offer delivery options planner](https://useaiblocks.com/skills/delivery-option-generator): Share the promises in your offer. Compare one-to-one, group and reusable ways to deliver them, with estimated cost and buyer value.
+- [Offer designer](https://useaiblocks.com/skills/offer-designer): Build a stronger offer for your course, service or coaching. Get bonuses, a guarantee, a name and payment terms from your offer design notes.
 - [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner): Share your offer, confirmed capacity and real dates. Plan clear limits, truthful deadline messages and a waiting-list approach for review.
 - [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer): Describe your offer and buyer. Get ten short name ideas, three picks and a simple comparison test.
 - [Offer name writer](https://useaiblocks.com/skills/offer-name-writer): Name your offer in minutes. Give it your offer and buyer, and get ten offer name ideas, three to test and a plan to refresh a tired name.

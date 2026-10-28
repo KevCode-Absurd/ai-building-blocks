@@ -32,7 +32,7 @@ credits:
   - title: stakeholder-requirements-gathering skill
     by: Nimrod Fisher
     url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/05-stakeholder-communication/stakeholder-requirements-gathering
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Nimrod Fisher
     url: https://github.com/nimrodfisher

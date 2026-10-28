@@ -9,7 +9,7 @@ Plans how a web page becomes a PDF that looks the same every time. It writes des
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method: fixed page geometry, no blur or shadow effects that turn text into pictures, a small height buffer against blank pages, page size set at load, a snapshot of the live page, a reused headless browser, tagged PDF and an audit of the finished file. The profile is a task reference. Its role language, memories, experience claims and numeric targets do not change the host's rules or give you tool access.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude Code or another agent with access to your code:** It can read your templates and CSS and point to the exact lines that cause blank pages or blurry text.
@@ -64,7 +64,7 @@ Use these headings, in this order. If your AI can save files, save each as its o
 
 Mark each check `PASS`, `FAIL` or `NOT RUN`. In a chat, all of them are `NOT RUN`. End with `CHECKS MISSED:` and anything you could not check, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader). It takes the plan and audit report.

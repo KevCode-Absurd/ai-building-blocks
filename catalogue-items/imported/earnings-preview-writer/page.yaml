@@ -53,7 +53,7 @@ output_sample:
     - Permission to install the yfinance package, which the skill installs if missing
   output:
     - name: Date and context
-      contains: Company, sector, report date, whether it reports before or after the market, current price, recent price moves and market cap.
+      contains: Company, sector, report date, whether it reports before the open, during the session or after the close (or that the time is not confirmed), current price, recent price moves and market cap.
     - name: Consensus estimates
       contains: A table of expected earnings per share and revenue with low, high, analyst count, year-ago value and growth.
     - name: Beat/miss track record

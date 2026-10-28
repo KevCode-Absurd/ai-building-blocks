@@ -18,8 +18,8 @@ when:
   - "You know what the finished result should look like but not how to write a skill file."
 
 not_for:
-  - "You are in a chat AI and not in Claude Code, and want a draft from a job you repeat: use the Repeat job skill drafter."
-  - "You already have a skill file and want it checked: use the Skill file problem spotter."
+  - "You are in a chat AI and not in Claude Code, and want a draft from a job you repeat: use the Reusable AI skill writer."
+  - "You already have a skill file and want it checked: use the AI skill file checker."
   - "You want to turn a whole book into skills: use the Book to skill converter."
   - "The task happens once. Ask your AI directly. A skill only pays off when you repeat the work."
 
@@ -101,6 +101,8 @@ output_sample:
       contains: "What to do when input is missing: ask once or mark MISSING, never guess."
     - name: "How to run and test it"
       contains: "The command to type, what to give it and what to check in the first three runs."
+
+next: [skill-file-problem-spotter]
 
 works_best_with:
   tools:

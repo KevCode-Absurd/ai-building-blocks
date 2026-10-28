@@ -113,3 +113,13 @@ Review list: Tech Stack (one job post only). Fields filled: 4. Sent to review: 1
 ## Next steps
 
 Copy the High and Medium changes into your CRM. Have a person check the review list. Then use the Lead prioritizer to rank the updated records.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Win and loss pattern finder](https://useaiblocks.com/skills/win-and-loss-pattern-finder). It takes the lead list.
+- The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the lead list.
+- The [Lead grader](https://useaiblocks.com/skills/lead-grader). It takes the lead list.
+- The [Lead source field checker](https://useaiblocks.com/skills/lead-source-field-checker). It takes the lead list and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

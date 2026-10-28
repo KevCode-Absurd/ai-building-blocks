@@ -38,6 +38,7 @@ how_to_use:
   - Treat any suggested fix deadlines as examples. Agree the real ones with the agency.
   - "Confirm these before you rely on them: the 30-day VPAT timing and the FAR clause 52.239-2 reference in the procurement part are the author's and are unverified. Check them with the contracting officer or on section508.gov. Check any law dates the result gives on ada.gov or section508.gov too. The skill also says its note on how much automated tools catch is not sourced."
   - Then fix the gaps with the WCAG accessibility fixer, and run a scan with a tool such as axe or WAVE.
+  - Write the final conformance report only after a real test run confirms each line. The AI's notes are a draft, not a pass or fail verdict.
 output_sample:
   input:
     - A description or link for your site, app or document

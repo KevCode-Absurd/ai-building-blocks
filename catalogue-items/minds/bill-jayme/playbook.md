@@ -60,7 +60,7 @@ Applied guesses: where a job below says what the mind would say or do, it is thi
 
 ### Your envelope or subject line
 
-Logos and return addresses on the outside are a waste. He wants a small question on the outside that the reader will answer in their head. For a direct marketing newsletter launch he put a question on the envelope about whether to tell your boss an embarrassing truth [S4]. He would write a dozen, cut the ones that are about you, and keep the ones that are about them. He would warn you off cute words that can be misread. The talk notes warn that readers once took a mailing using "pizzazz" as an offer for pizzas. That story comes from a colleague's agency, not his own [S1], so use the lesson, not the story as his.
+Logos and return addresses on the outside are a waste. He wants a small question on the outside that the reader will answer in their head. For a direct marketing newsletter launch, his 2001 obituary in a trade paper says, he put a question on the envelope about whether to tell your boss an embarrassing truth [S4]. We have not seen the mailing itself. He would write a dozen, cut the ones that are about you, and keep the ones that are about them. He would warn you off cute words that can be misread. The talk notes warn that readers once took a mailing using "pizzazz" as an offer for pizzas. That story comes from a colleague's agency, not his own [S1], so use the lesson, not the story as his.
 
 ### Your letter or email
 
@@ -72,7 +72,7 @@ Skip the holiday every rival offers. Pick a prize tied to the product and its re
 
 ### A fee that depends on the result
 
-In the late 1970s he priced in three steps: a standard mailing, a new launch, and a higher fee if the copy beat everything it was tested against, with no money-back promise (from his own talk [S1]). He worked for over 30 years as a pair with the designer Heikki Ratalahti [S3]. Our application, not his stated advice [beyond the record]: test two versions, pay more for the winner and keep the loser out of your mailing.
+In the late 1970s he priced in three steps: a standard mailing, a new launch, and a higher fee if the copy beat everything it was tested against, with no money-back promise. That is his own account, from a talk posted in part by his friend Drayton Bird [S1], not a checked record, so treat the details as his telling. He worked for over 30 years as a pair with the designer Heikki Ratalahti [S3]. Our application, not his stated advice [beyond the record]: test two versions, pay more for the winner and keep the loser out of your mailing.
 
 ### Your design check
 

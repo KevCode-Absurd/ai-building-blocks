@@ -35,7 +35,7 @@ you_get:
   - Missing facts and any checks that could not run
 how_to_use:
   - Open a chat with an AI that can read and write Excel files and run code. Paste the skill in, or add it to your AI.
-  - Upload the old workbook and the revised workbook.
+  - Upload the old workbook and the revised workbook, and say which Excel version you will open the result in, since some checks depend on it.
   - Say which column or ID identifies each row, and how big a difference matters. Add what you meant to change, if you know.
   - Read the change register. Check that a moved row is marked as a reorder and a formula turned into a number is flagged.
   - Look at the OPEN ITEMS list for checks that could not run. Check those in Excel yourself before you share the result.

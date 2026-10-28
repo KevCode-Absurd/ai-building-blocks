@@ -29,4 +29,4 @@ credits:
   - title: business-pulse skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/business-pulse
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

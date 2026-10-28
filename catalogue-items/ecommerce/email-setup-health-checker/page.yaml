@@ -57,7 +57,7 @@ output_sample:
     - name: Failed checks
       contains: Each failed check with how serious it is, what was found and the exact fix.
     - name: DMARC
-      contains: The record to add, starting at policy none, and the plan to tighten it later.
+      contains: For a new record, what to add, starting at policy none, and the plan to tighten it. For a record you already have, whether to keep it.
     - name: Settings table
       contains: Each setting with its current value, the recommended value and why.
     - name: Missing
@@ -67,7 +67,7 @@ how_it_works:
   - title: Checks the sending domain
     text: A branded subdomain, such as send.yourdomain.com, with the tool's NS and TXT records added at your DNS host.
   - title: Checks DMARC
-    text: A TXT record on host _dmarc. It starts at policy none with a separate inbox for reports, then moves up when reports show your mail passes.
+    text: A TXT record on host _dmarc. A new record starts at policy none with a separate inbox for reports, then moves up when reports show your mail passes. A stricter policy you already have stays if your mail passes.
   - title: Checks sending rules
     text: Smart sending on for campaigns and off for flows, so abandoned cart and post-purchase emails are never skipped.
   - title: Checks attribution
@@ -90,8 +90,10 @@ output_shape: |
   <check> | <severity> | found: <...> | fix: <exact step>
 
   DMARC
-  Add: host _dmarc, type TXT, value <from your tool, policy none to start>
-  Tighten: none -> quarantine -> reject, when reports show mail passes
+  Case: <no record | existing at none | existing at quarantine or reject>
+  No record: add host _dmarc, type TXT, value <from your tool, policy none to start>
+  Existing enforced policy: keep it if reports show your mail passes; if not, fix <sender> authentication first
+  Tighten (from none): none -> quarantine -> reject, when reports show mail passes
 
   SETTINGS TABLE
   <setting | current | recommended | why>
@@ -112,7 +114,7 @@ judge:
   - Each failed check has a plain fix that you could do in one sitting.
   - The score shows its sum and which checks were not seen.
   - No DNS value was made up. It tells you where to copy the real ones from.
-  - It starts DMARC at policy none and does not push to quarantine early.
+  - A new DMARC record starts at policy none and is not pushed to quarantine early. A stricter policy you already have is kept if your mail passes.
   - Setting names are flagged as needing a check against your live screen.
 
 test:

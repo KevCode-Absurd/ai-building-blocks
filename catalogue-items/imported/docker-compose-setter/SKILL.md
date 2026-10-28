@@ -11,6 +11,22 @@ metadata:
 
 This skill enables the agent to design and configure multi-container application stacks using Docker Compose. The agent can orchestrate services including web servers, databases, caches, background workers, and reverse proxies with proper networking, volume management, health checks, and environment-specific overrides. The agent understands both development and production configurations and can generate compose files that follow Docker best practices.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Analyze the Application Stack:** The agent reviews the project's architecture to identify all required services and their dependencies. This includes the primary application container, databases (PostgreSQL, MySQL, MongoDB), caches (Redis, Memcached), message queues (RabbitMQ, Kafka), background workers, and reverse proxies (Nginx, Traefik). The agent maps inter-service dependencies to determine startup order and health check requirements.
@@ -276,3 +292,10 @@ Run production with: `docker compose -f docker-compose.yml -f docker-compose.pro
 - **Build cache invalidation:** Changing a `COPY` or `ADD` instruction early in the Dockerfile invalidates the cache for all subsequent layers. Order Dockerfile instructions from least to most frequently changed (dependencies before source code) to maximize cache reuse.
 - **Container DNS resolution during startup:** A service may resolve a dependency's DNS name before the dependency container is assigned an IP, causing connection failures. Health checks with `depends_on` conditions prevent this, but application-level retry logic is still recommended.
 - **Orphaned containers and volumes:** Running `docker compose up` after removing a service from the compose file leaves orphan containers running. Use `docker compose up --remove-orphans` and periodically run `docker volume prune` to clean up unused volumes.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [Logging and alerts code writer](https://useaiblocks.com/skills/logging-and-alerts-setter). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

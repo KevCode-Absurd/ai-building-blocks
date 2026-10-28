@@ -57,7 +57,7 @@ output_sample:
     - A free Alpha Vantage key, only if you want consensus estimates (optional)
   output:
     - name: Header banner
-      contains: Company name, ticker, headquarters, employees, market cap, share price and as-of date.
+      contains: Company name, ticker, headquarters, employees, market cap, share price and as-of date. An Internal draft label stays here until the figures are checked against filings or a licensed source.
     - name: Business overview
       contains: What the company does, its segments and its position in its market.
     - name: Financial summary
@@ -67,7 +67,7 @@ output_sample:
     - name: Reader-specific section
       contains: Consensus for research, deals for banking, fit for corporate development, or conversation starters for sales.
     - name: Footer
-      contains: Data sources, retrieval date, and a line that it is for information only and not investment advice.
+      contains: Data sources, retrieval date, a note that yfinance data is delayed and for personal use only, and a line that it is for information only and not investment advice.
 works_best_with:
   tools:
     - name: Claude Code

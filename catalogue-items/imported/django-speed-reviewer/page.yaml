@@ -40,6 +40,7 @@ how_to_use:
   - 'Ask your AI: "Review this Django code for N+1 queries, unbounded querysets, missing indexes and write loops, using the django-perf-review rules in this skill. Report only problems you can prove from the code."'
   - Read each finding and check the evidence matches your code. Fix the top one first, then run the review again.
   - To confirm the gain, time the page before and after with a profiler such as django-debug-toolbar.
+  - Next, ask your AI for a fix pass on the top findings, one at a time, and run your tests after each.
 output_sample:
   input:
     - Your Django views, models and queries

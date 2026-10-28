@@ -16,6 +16,24 @@ Covers Block Kit for rich UIs, interactive components, slash commands,
 event handling, OAuth installation flows, and Workflow Builder integration.
 Focus on best practices for production-ready Slack apps.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code or Codex:** They can write the files, install Bolt and run the bot on your computer.
+- **Any good chat AI:** It writes the code and the settings list. You copy the files and run them yourself.
+- **Slack:** It is where you test the bot. You need permission to create apps in that workspace.
+<!-- /needs -->
+
 ## What you need
 
 - What the bot should do, in one or two sentences (for example "a /standup command that posts a message with buttons").
@@ -75,6 +93,14 @@ Return, in this order:
 - A no-code flow that Slack's Workflow Builder can already do.
 - A bot for Discord, Teams or another chat tool.
 - Scoping which agent answers which Slack message. Use the Scoped Slack agent router builder.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Slack agent message router builder](https://useaiblocks.com/skills/how-messages-reach-your-agent-implementation-planner). It takes the code change.
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit and licence
 

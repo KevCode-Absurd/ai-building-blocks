@@ -31,7 +31,7 @@ you_get:
   - A conditional cooling line and a witness you choose, or a missing name
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your holdings plan, or the rule set from "Sit-still rule writer".
+  - Paste your holdings plan, or the rule set from "Investment holding rule writer".
   - Answer the half-value question in your own words. An unanswered question stays missing; the exercise does not diagnose your personal risk capacity.
   - Supply money needs and any documented loan, monitoring or response terms. Unknown requirements stay marked for the responsible adviser.
   - Review the proposed card, preserve required checks and deadlines, and choose a witness if useful. Sharing or contacting anyone needs your authorization.
@@ -124,7 +124,7 @@ works_best_with:
   inputs:
     - Your holdings and the facts behind each
     - A list of money you will need in the next five years
-    - The rule set from the Sit-still rule writer
+    - The rule set from the Investment holding rule writer
 terms:
   - term: Half-value test
     meaning: Asking whether you could watch your holdings lose half their value and not sell in a panic.

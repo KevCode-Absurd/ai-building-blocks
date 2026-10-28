@@ -30,7 +30,7 @@ credits:
   - title: customer-support-builder skill
     by: nbashaw
     url: https://github.com/nbashaw/claude-cs/tree/main/.claude/skills/customer-support-builder
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Used under the MIT licence. We gave it a plain name, added a terminal approval gate for the reply, close, refund and cancel scripts, and made the workflow template hand those steps to the person.
   - title: Original author
     by: nbashaw
     url: https://github.com/nbashaw

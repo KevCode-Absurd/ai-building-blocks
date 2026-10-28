@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
   - Share your design. Add a screenshot, a Figma link or a short written description.
   - Say what the design is, who it is for and what stage it is at. Add a focus area if you have one.
-  - Read the Priority Recommendations first. Then check the Usability table for critical issues.
+  - Read the Priority Recommendations first. Then check the Usability table for critical issues. Contrast and touch sizes judged from a screenshot are estimates, so confirm exact contrast with a free contrast checker.
   - If your AI cannot open Figma links, paste a screenshot instead. Fix the top three items, then ask for a second round.
 output_sample:
   input:

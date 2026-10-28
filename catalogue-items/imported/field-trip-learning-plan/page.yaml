@@ -34,7 +34,7 @@ how_to_use:
   - Write down your learning objective in one or two sentences.
   - Note the kind of experience, such as a trip, role play or simulation.
   - Add the class age, subject and time slot if you know them (optional).
-  - Paste the skill into Claude, ChatGPT or Gemini, then paste your notes. No code or files are needed.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your notes. No code or files are needed. The skill has blank slots near the end, in double curly brackets, such as the learning objective. Fill them in before you paste, or leave them and tell your AI to fill them from your notes.
   - Check that each phase fits your time. Ask your AI to shorten any phase that runs long.
   - Print the plan and take it with you on the day.
 output_sample:

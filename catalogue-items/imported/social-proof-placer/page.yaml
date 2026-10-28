@@ -7,8 +7,6 @@ job: write-landing-page
 headline: Social proof placer
 subhead: A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
 explain: |
-  A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
-
   It first gathers context: who the buyer is, how much they already trust you, how aware they are of the problem and what you want them to do. Then it maps each worry to the proof that answers it. A price worry may need a result with a number. A fit worry may need a story from a similar customer. It places each piece near the doubt it solves. It uses only real proof and flags claims you cannot back up.
 
   Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to MMEHDI0606 and sickn33.
@@ -28,7 +26,7 @@ you_give:
   - "The proof you have: quotes, numbers, logos, case studies"
   - The page or offer to improve
 you_get:
-  - A doubt by doubt proof map
+  - "A doubt table, one row per doubt: the doubt, the proof type, your exact proof and where it goes on the page"
   - The best proof type for each doubt
   - Placement advice for the page
   - Flags on weak or unverifiable claims

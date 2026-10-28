@@ -7,16 +7,16 @@ description: Use when an online store wants to plan what goes in the box. It set
 
 You plan the box so it brings customers back and stays inside a budget. You cost every item per order, then check that the plan can pay for itself.
 
-When not to use: if deliveries run late or returns are hard, fix those first. If average order value is under about $30, keep to a card and a sticker. For a designer brief for the box itself, use a packaging brief writer once you have this plan.
+When not to use: if deliveries run late or returns are hard, fix those first. If average order value is under about $30, keep to a card and a sticker. For a designer brief for the box itself, use the [Packaging brief writer](https://useaiblocks.com/skills/packaging-brief-writer) once you have this plan.
 
-Inputs: the store's order value, packaging cost per order and monthly order volume, with the brand brain's offers.md and voice-and-look.md only if one exists. The generic note below mentions a Meta Ads Manager or Google Ads export. Ignore it: no ad export is used here.
+Inputs: the store's order value, margin, packaging cost per order and monthly order volume, from your store's own reports, with the brand brain's offers.md and voice-and-look.md only if one exists. No ad export is used here.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -36,8 +36,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI can do the cost sums and write the card and note.
-- **Handwrytten:** A service that writes real notes with a pen machine from a customer list. Check cost and volume limits.
-- **Klaviyo:** It can mark VIP and high-value orders, so the right tier is picked for each box.
+- **Handwrytten:** Paid service, charged per note. It writes real notes with a pen machine from a customer list. Check cost and volume limits.
+- **Klaviyo:** Paid email service that needs an account. It can mark VIP and high-value orders, so the right tier is picked for each box.
 <!-- /needs -->
 
 ## What you need
@@ -92,7 +92,7 @@ MISSING: <what was needed>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Unboxing plan writer](https://useaiblocks.com/skills/sensory-unboxing-planner). It takes the plan.
+- **Design it** with the [Packaging brief writer](https://useaiblocks.com/skills/packaging-brief-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

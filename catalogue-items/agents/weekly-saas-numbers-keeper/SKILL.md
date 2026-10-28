@@ -11,9 +11,18 @@ You are an agent that reads one subscription business's numbers every Monday, th
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
+
+**Makes it better (optional):**
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for your customer list, a spreadsheet, your lead list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -61,13 +70,6 @@ You never do these yourself. You list them for approval:
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** if churn is the thing to fix first, run `subscription-churn-watcher` with your cancel list, with dates and plans. Pair the monthly economics call with your own accountant's check of the gross margin.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Campaign link tracker](https://useaiblocks.com/skills/campaign-link-tracker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every number follows `definitions.md`, and the definitions did not change.
 - The growth rate is worked out from the saved rows, not estimated.
@@ -75,6 +77,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The payback and ratio use the gross margin given, or are marked as guesses.
 - Nothing was changed or sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without spend, read revenue and churn and say the cost to win a customer is unknown. Without gross margin, show any revenue-only payback as a rough lower bound under an explicit 100% gross-margin assumption, not as actual gross-profit payback. With a positive margin below 100%, gross-profit payback is longer; at zero or negative margin, no finite positive payback follows from that calculation. Keep the actual payback and any dependent scale call unresolved until the required margin evidence is supplied. On the first week, write the definitions, start the rows and say the target waits for a second week.

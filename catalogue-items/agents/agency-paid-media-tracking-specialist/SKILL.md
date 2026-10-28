@@ -9,7 +9,7 @@ Writes a conversion tracking plan, or finds likely causes when platform counts d
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method: bad tracking misleads bidding, so define conversions first, design events and parameters, deduplicate browser and server events, handle consent, and test before you trust a number. The profile is a task reference. Its list of tools (web fetch, search, file edit, shell, ad platform APIs) and its success metrics do not give you those tools in this chat. Do not claim you used them.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -18,12 +18,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** A long chat can hold your tag list and your test results, so it can tighten the plan as you go.
@@ -65,7 +65,7 @@ Use these headings, in this order.
 
 End with `CHECKS MISSED:` and any check you could not run, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.

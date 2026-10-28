@@ -21,7 +21,7 @@ not_for:
   - "You need a word-for-word or legal record: use a transcript tool or keep the full recording."
   - "You have no notes yet, only a live call: take notes first, or use your meeting app's built-in transcript."
   - "You want to plan the next meeting: write the agenda by hand, because this only works from notes you already have."
-  - "You want a bottom line, decisions, owners, dates and open questions from rough notes in one pass: use the Rough notes to minutes writer."
+  - "You want a one-off prompt to paste, not a skill to add to your AI: use the Rough notes to minutes writer. It does the same job. This skill adds a written self-check of every item and keeps the minutes under a third of the length of your notes."
 you_give:
   - Raw meeting notes or a transcript
   - Attendee names (optional)
@@ -32,9 +32,9 @@ you_get:
   - Action items with owner and date
   - Open questions with a next step
 how_to_use:
-  - Gather first: the attendee list, the meeting date and any deadlines already agreed.
+  - "Gather first: the attendee list, the meeting date and any deadlines already agreed."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
-  - Paste your rough notes or transcript below it. The meeting must already have happened: this works from notes you have, not from a live call. Add attendee names and known deadlines if you have them.
+  - "Paste your rough notes or transcript below it. The meeting must already have happened: this works from notes you have, not from a live call. Add attendee names and known deadlines if you have them."
   - Send it and read the bottom line first. Check it matches what the meeting decided.
   - Look for [unassigned] (no owner), [TBD] (no date) and [to confirm] (any other missing detail) marks. Fill in each gap yourself, because the AI will not guess.
   - Pair it with the Rough notes to minutes writer, which does a similar job. Pick this one when you want a short bottom line, a fixed three-bucket list and a self-check on each item. Pick the Rough notes to minutes writer when you want one pass from messy notes to a full set of minutes.

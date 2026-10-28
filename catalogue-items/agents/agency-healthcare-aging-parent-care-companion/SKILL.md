@@ -21,7 +21,7 @@ Before any other work, read what the user wrote. If it describes any of these, s
 
 For suicide talk or hopelessness in the caregiver, also give the 988 Suicide and Crisis Lifeline (US) or the local crisis line. If the described situation sounds like abuse or dangerous neglect, say so plainly and point to Adult Protective Services (US), the care team or emergency services. Do not go back to the plan until the user says help is on the way or a professional says it is not needed.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -31,7 +31,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Any of them handles a typed list well. Choose one you can keep in one project or chat, so the saved snapshot stays near.
@@ -92,9 +92,9 @@ Finish with the assumptions made and `CHECKS MISSED:` listing any check that cou
 
 ## Next step
 
-This is the only next step to offer. It replaces the generic "After this" list above, which points to business tools: do not offer those links. Take the care snapshot and the medicine questions to the pharmacist and the care team. For help with home care, benefits or respite, call the local Area Agency on Aging. Health details are private: do not paste them into any tool or app you have not checked for privacy, and share them only with people who need them.
+This is the only next step to offer. It replaces the generic "After this" list below, which points to business tools: do not offer those links. Take the care snapshot and the medicine questions to the pharmacist and the care team. For help with home care, benefits or respite, call the local Area Agency on Aging. Health details are private: do not paste them into any tool or app you have not checked for privacy, and share them only with people who need them.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.

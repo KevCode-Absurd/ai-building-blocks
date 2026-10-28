@@ -12,7 +12,7 @@ You check whether a store's Google Ads account is ready for more spend. The rule
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
@@ -83,7 +83,7 @@ MISSING: <item>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads performance reviewer](https://useaiblocks.com/skills/google-ads-weekly-account-keeper).
 - The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
+- The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

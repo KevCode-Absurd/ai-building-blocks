@@ -25,7 +25,7 @@ not_for:
 pricing:
   model: subscription
   from: US$10 per month
-  note: These prices come from a third-party site (eesel.ai), not from Midjourney, so check the current plans on midjourney.com before you pay. Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
+  note: Last checked 21 Oct 2026. These prices come from a third-party site (eesel.ai), not from Midjourney, so check the current plans on midjourney.com before you pay. Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
 works_with:
   - stable-diffusion
   - ideogram

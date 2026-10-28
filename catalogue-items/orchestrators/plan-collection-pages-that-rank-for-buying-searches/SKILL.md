@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -87,6 +87,7 @@ Pause here: Choose the first collection from the plan and note its keyword, its 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the landing page** with the [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the page.
+- The [Page SEO optimizer](https://useaiblocks.com/skills/page-seo-optimizer). It takes the page.
+- **Check the landing page** with the [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

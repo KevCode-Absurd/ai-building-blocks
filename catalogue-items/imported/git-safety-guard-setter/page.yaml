@@ -5,9 +5,9 @@ name: Git safety guard setter
 summary: Set up git safety hooks in Claude Code that block force push, reset --hard and other risky commands before they run. Pick one project or all.
 job: build-software
 headline: Git safety guard setter
-subhead: Your AI agent can no longer wreck your git history by accident. This sets up a hook in Claude Code that checks each command before it runs, and stops the risky ones.
+subhead: Claude Code can no longer run risky git commands, such as a force push, by accident. A hook checks each command Claude runs and stops the risky ones. Commands you type yourself are not checked.
 explain: |
-  Your AI agent can no longer wreck your git history by accident. This sets up a hook in Claude Code that checks each command before it runs, and stops the risky ones.
+  Claude Code can no longer run risky git commands, such as a force push, by accident. A hook checks each command Claude runs and stops the risky ones. Commands you type yourself are not checked.
 
   Blocked commands include any git push, including force push, reset --hard, clean -f, branch -D, and checkout or restore of the whole folder. When a command is blocked, Claude is told it has no authority to run it. You choose whether the guard covers one project or all your projects. The skill copies a small shell script into place and adds the matching hook to your settings file.
 when:
@@ -35,6 +35,8 @@ how_to_use:
   - Say yes to any commands you want to add or remove from the blocked list.
   - Check the test result. A working guard exits with code 2 and prints a BLOCKED message.
   - If the guard blocks a command you need, run it yourself in a terminal after you review the change.
+  - The guard matches the text of each command, so a risky command written a different way may slip past. After any edit to the script, test a few blocked commands again.
+  - Next, commit the hook script and the settings file so your team shares the same guard. Pair it with branch protection on your git host, such as GitHub, which also covers people and other tools.
 output_sample:
   input:
     - "Your choice: this project only, or all projects"

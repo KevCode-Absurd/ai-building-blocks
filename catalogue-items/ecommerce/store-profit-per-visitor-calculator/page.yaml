@@ -9,7 +9,7 @@ headline: "Store profit per visitor calculator"
 subhead: Paste your net sales, shipping collected, orders, sessions and gross margin. It corrects Shopify's figures for tax, shipping and bots, works out revenue and gross profit per visitor, shows how cold traffic moves your conversion rate, and gives a trust score out of 100.
 
 explain: |
-  Conversion rate is easy to move and hard to read. Turn off your cold ads and it jumps overnight, though nothing on the page changed. Shopify's own numbers add to the muddle: total sales include tax, average order value leaves out the shipping you collected, and sessions include bots.
+  Conversion rate is easy to move and hard to read. Turn off your cold ads and it jumps overnight, though nothing on the page changed. Shopify's own numbers can add to the muddle: total sales include tax, average order value may leave out the shipping you collected, and sessions can include bots. Check what your own exports do.
 
   This skill fixes those three, then works out revenue per visitor (conversion rate times order value) and gross profit per visitor (that times your margin). It shows how your mix of cold and warm traffic sets your blended conversion rate, so you stop comparing yourself with other brands. It also links conversion to what a new customer costs, and lists what to track each week. It covers the store parts only, not a general split by source.
 

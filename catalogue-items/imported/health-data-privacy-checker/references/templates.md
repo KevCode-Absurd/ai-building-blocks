@@ -17,7 +17,7 @@
 
 ## 1. Notice of Privacy Practices (NPP)
 
-> Required for all Covered Entities. Must be in plain language.
+> Required for most Covered Entities (exceptions in 45 CFR §164.520(a)(3)-(4) and §164.500(b): some fully insured group health plans, correctional institutions, and clearinghouses acting only as business associates). Must be in plain language.
 
 ```
 NOTICE OF PRIVACY PRACTICES
@@ -526,7 +526,7 @@ PRIVACY RULE
 □ Written authorization obtained where required
 □ Minimum necessary standard enforced (role-based access)
 □ Patient rights process in place (access, amendment, accounting, restrictions)
-□ BAAs in place with all vendors who handle PHI
+□ BAAs in place with every vendor that is a business associate (role checked under 45 CFR §160.103)
 □ Privacy complaint process documented
 □ Workforce training current and documented
 □ Sanction policy implemented

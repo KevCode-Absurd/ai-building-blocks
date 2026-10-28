@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [taiichi-ohno]
 credits:
-  - {title: "An Interview with Taiichi Ohno", by: "Taiichi Ohno", used: "The order of the steps: process waste finder, root cause finder"}
+  - {title: "An Interview with Taiichi Ohno", by: "Taiichi Ohno", used: "Ideas on value, waste and asking why until the cause shows. The step order is this library's own, not his method"}
 generated_from: intake/taiichi-ohno-toyota-production/skeleton.yaml

@@ -19,6 +19,23 @@ This imported guide contains stale, jurisdiction-specific examples. Treat every 
 
 Use a file location available to the user in the current environment. The legacy Claude paths below are examples only; do not read or write them unless the user has provided them and they are accessible.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What you need (added by AI Blocks)
 
 This skill needs web search, to check official filing pages. Without search, mark every date unknown and ask the user to check each official page and paste what it says. A registered agent is optional, and agent services usually cost money. Use plain-chat requests only: the flags in the front matter are not needed. The tracker file is always called compliance-tracker.yaml.
@@ -39,7 +56,7 @@ In a plain chat there are no slash commands and no `~/.claude` folder. Users do 
    - "Go through the unknown items": Mode 3c — walk through unknown/overdue items one by one
    - "Audit my tracker": Mode 4 — full health audit
    - "Export as CSV" or "as a table": Mode 5 — produce CSV or table export
-3. Read and write the tracker file the user keeps, for example compliance-tracker.yaml in their own folder.
+3. A plain chat cannot open or save the user's files. Show the full compliance-tracker.yaml in the chat so the user can save it. At each later request, ask the user to paste their saved tracker back in, then show the updated file in full.
 4. After any update: show summary of changes and next action.
 
 ---
@@ -209,7 +226,7 @@ If formation_date is null: set status to `unknown` and flag for confirmation.
 ### Step 3: Write the tracker
 
 Write the tracker file with all entities and their
-calculated filing requirements. Set initial status:
+calculated filing requirements. In a plain chat, show it in full for the user to save. Set initial status:
 - `current` if last_filed is within the current filing period
 - `due_soon` if due within 90 days and no last_filed for current period
 - `overdue` if due date has passed and no last_filed for current period
@@ -462,3 +479,12 @@ Before writing any cell in Excel, Sheets, or CSV output, neutralize formula inje
 - **Applies to every cell that contains text sourced from a document, a tool result, or a user paste.** Column headers you control and computed values you produce are safe.
 - **CSV: also escape embedded commas, double quotes, newlines** (RFC 4180 quoting).
 - This is not optional. A spreadsheet your user opens in Excel that triggers a macro or exfiltrates data via DDE is a supply-chain attack on your user.
+
+Changed by AI Blocks (2026-10-28): in a plain chat the tracker is shown in full for the user to save and pasted back at each update, instead of read and written as a file.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

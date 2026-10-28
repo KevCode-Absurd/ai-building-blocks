@@ -32,4 +32,4 @@ credits:
   - title: agent-tutor-review skill
     by: Mohamed El-Sharqawy
     url: https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/5651e2eec062785967d07bcb4752a59f1bcf0eee/skills/agent-tutor-review
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

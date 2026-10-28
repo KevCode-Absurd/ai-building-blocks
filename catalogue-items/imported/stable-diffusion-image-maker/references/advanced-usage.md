@@ -11,7 +11,8 @@ from diffusers import (
     DDPMScheduler,
     StableDiffusionPipeline
 )
-from transformers import CLIPTextModel, CLIPTokenizer
+from diffusers.pipelines.stable_diffusion.safety_checker import StableDiffusionSafetyChecker
+from transformers import CLIPTextModel, CLIPTokenizer, CLIPImageProcessor
 import torch
 
 # Load components individually
@@ -35,17 +36,26 @@ scheduler = DDPMScheduler.from_pretrained(
     "stable-diffusion-v1-5/stable-diffusion-v1-5",
     subfolder="scheduler"
 )
+# Keep the safety checker: load it with its feature extractor from the same repo
+safety_checker = StableDiffusionSafetyChecker.from_pretrained(
+    "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    subfolder="safety_checker"
+)
+feature_extractor = CLIPImageProcessor.from_pretrained(
+    "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    subfolder="feature_extractor"
+)
 
-# Assemble pipeline
+# Assemble pipeline (never pass safety_checker=None)
 pipe = StableDiffusionPipeline(
     unet=unet,
     vae=vae,
     text_encoder=text_encoder,
     tokenizer=tokenizer,
     scheduler=scheduler,
-    safety_checker=None,
-    feature_extractor=None,
-    requires_safety_checker=False
+    safety_checker=safety_checker,
+    feature_extractor=feature_extractor,
+    requires_safety_checker=True
 )
 ```
 
@@ -134,10 +144,23 @@ def custom_generate(
 
     # Convert to PIL
     image = (image / 2 + 0.5).clamp(0, 1)
-    image = image.cpu().permute(0, 2, 3, 1).numpy()
-    image = (image * 255).round().astype("uint8")[0]
+    image = image.cpu().permute(0, 2, 3, 1).float().numpy()
+    pil_image = Image.fromarray((image * 255).round().astype("uint8")[0])
 
-    return Image.fromarray(image)
+    # Safety check: this hand-written loop skips the pipeline's built-in
+    # safety checker, so run it here before returning anything.
+    from diffusers.pipelines.stable_diffusion.safety_checker import StableDiffusionSafetyChecker
+    from transformers import CLIPImageProcessor
+    safety_checker = StableDiffusionSafetyChecker.from_pretrained(
+        "sd-model", subfolder="safety_checker").to(device)
+    feature_extractor = CLIPImageProcessor.from_pretrained(
+        "sd-model", subfolder="feature_extractor")
+    clip_input = feature_extractor(images=[pil_image], return_tensors="pt").pixel_values.to(device)
+    _, has_nsfw_concept = safety_checker(images=image, clip_input=clip_input)
+    if has_nsfw_concept[0]:
+        raise ValueError("The safety checker flagged this image, so it was not returned.")
+
+    return pil_image
 ```
 
 ## IP-Adapter

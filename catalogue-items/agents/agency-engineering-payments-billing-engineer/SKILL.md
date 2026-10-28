@@ -7,7 +7,7 @@ description: Plan a safe payments or subscription build on Stripe, Adyen, Braint
 
 Plan payment code that never double-charges, never loses money silently and keeps card data out of the codebase. Built on the Payments & Billing Engineer profile from Agency Agents.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -15,13 +15,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for your question, a codebase, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** They can read your webhook samples and payout files alongside your brief.
@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 
-These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, a spreadsheet or a separate question.
+This list spells out the inputs named in "Before you start" above: the question is the provider, what is sold and the flow, the code is the stack and webhook sample, and the spreadsheet is the payout report and order list.
 
 - The payment provider, what is sold, and the currencies
 - The checkout flow and what happens after payment, including refunds
@@ -69,7 +69,7 @@ Use these headings, in this order:
 8. Runbook
 9. Open questions (`MISSING:` items and checks not run). This is also your CHECKS MISSED list: write "none" if every check ran.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder). It takes the plan.

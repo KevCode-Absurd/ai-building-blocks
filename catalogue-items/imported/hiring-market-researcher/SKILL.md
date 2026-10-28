@@ -5,6 +5,19 @@ description: This skill should be used when the user asks about "compensation be
 
 # Market Research for Recruiting Sourcing
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the job description. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Purpose
 
 Analyze labor market dynamics to inform sourcing strategy and stakeholder conversations. Provide data-driven insights on compensation ranges, talent supply/demand, hiring difficulty, and market trends. Market research transforms sourcing from guesswork into strategic, evidence-based talent acquisition.
@@ -53,9 +66,14 @@ Build compensation intelligence by triangulating multiple sources:
 - Recruiter activity in the space (InMail volume, outreach frequency)
 
 **Supply/Demand Ratio:**
-- **Candidate-driven market** (supply > demand): More candidates than roles; lower urgency, more selectivity
-- **Employer-driven market** (demand > supply): More roles than candidates; higher urgency, competitive offers needed
+- **Employer-driven market** (supply > demand): More qualified, available candidates than roles; employers hold the power, with lower urgency and more selectivity
+- **Candidate-driven market** (demand > supply): More roles than qualified, available candidates; candidates hold the power, so hiring is urgent and competitive offers are needed
 - **Balanced market**: Supply roughly matches demand; standard processes work
+
+**Before you call the market either way:**
+- **Count qualified, available supply, not raw volume.** Applicant counts, "open to work" badges and pool sizes include people who lack the must-have skills, live outside the area or are not really looking. Say what share of a pool meets the role's must-haves, and how you judged it. If you cannot judge it, say the supply figure is an upper bound.
+- **Match the scope.** Supply and demand figures must cover the same role definition, seniority, location (or remote area) and time period. If one source counts all "software engineers" nationwide and the other counts senior roles in one city, do not divide one by the other. Narrow one to fit the other, or report them side by side without a ratio.
+- **State it as an estimate.** Give the figures, their sources and dates, and how confident you are. If the evidence is thin or mixed, call it "unclear" rather than picking a side.
 
 ### Hiring Difficulty Assessment
 
@@ -153,6 +171,15 @@ Work through this checklist in order. For every source you use, record: the sour
 - Compensation positioning advice
 - Timeline expectations
 - Risk mitigations
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job post writer](https://useaiblocks.com/skills/job-post-writer).
+- The [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer).
+- The [Job offer planner](https://useaiblocks.com/skills/job-offer-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Data Presentation
 

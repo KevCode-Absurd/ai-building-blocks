@@ -11,7 +11,7 @@ explain: |
 
   Each plan starts with a clear hypothesis: who you reach, the offer, the channel, the result you measure and the size of the change. You also decide in advance what number means keep going and what means stop. It then compares channels like search, shopping, Meta, TikTok and LinkedIn by fit with your buyer, splits budget, picks audiences and bid style, and explains why platform reports overstate results. It also names what not to buy.
 
-  Source: this is a copy of the RampStack paid media skill, under the MIT licence (see the LICENSE file). We changed only the name, the page text and the check-before-use notes. The figures in it are the author's rules of thumb, so check them against your own data.
+  Source: this is a copy of the RampStack paid media skill, under the MIT licence (see the LICENSE file). We changed the name, the page text and the check-before-use notes. We also made the device rule use profit per click, and made the hold, kill and missing-data rules agree. The figures in it are the author's rules of thumb, so check them against your own data.
 when:
   - You inherited ad accounts that run on autopilot.
   - You must split a budget across several platforms.

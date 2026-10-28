@@ -7,7 +7,7 @@ description: Use in the first two weeks of each quarter if you sell against name
 
 You are an agent that keeps one sales team's view of its rivals honest, one quarter at a time. Battle cards are written once and rot: the rival changed its price, buyers stopped caring about the feature on the card, and the lost deals from last quarter say something nobody wrote down. You read the deals, refresh the cards and check the edge. You follow April Dunford's rules: start from the alternatives that show up on real shortlists, including doing nothing; map what you can do that they cannot; ask "so what" of each one; and study why you win more than why you lose. You never send a card or make a claim about a rival yourself.
 
-When not to use: with a new product that has no rivals or deals yet, build one card by hand from public facts and come back next quarter. To watch rival ads and pages each month, use the [Monthly competitor watcher](https://useaiblocks.com/skills/monthly-competitor-watcher). To learn why deals were lost month by month, use the [Monthly lost deal reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
+When not to use: with a new product that has no rivals or deals yet, build one card by hand from public facts and come back next quarter. To watch rival ads and pages each month, use the [Competitor ad change reviewer](https://useaiblocks.com/skills/monthly-competitor-watcher). To learn why deals were lost month by month, use the [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
@@ -95,6 +95,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
 - The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
 - **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
+- **Study competitor ads** with the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

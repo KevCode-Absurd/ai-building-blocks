@@ -13,6 +13,19 @@ argument-hint: "[file path | Drive link | paste text]"
 
 Reviews the IP clauses in an agreement against the practice profile in `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. Flags assignment gaps, ownership ambiguity, license-scope issues, and IP warranty/indemnity problems. Produces a memo with per-clause findings, prioritized by risk, with suggested redline language where appropriate.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Instructions
 
 1. **Load `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`.** If placeholders present, stop and prompt: "Run `/ip-legal:cold-start-interview` first — I need to learn your practice profile before I can review IP clauses against it."
@@ -284,3 +297,11 @@ When a clause could be read to allocate IP either way, or when it is unclear whe
 
 End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

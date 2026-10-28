@@ -11,7 +11,7 @@ explain: |
 
   The skill sets firm rules for MATLAB code. Always give awgn an explicit signal power, never the measured option. Use unit average power if the scale does not matter, or compute the real power with mean(abs(x).^2) when it does. Always use convertSNR instead of hand formulas, since it handles coding rate, bits per symbol and oversampling. It has a pattern for OFDM links and for getting noise variance to feed a soft-decision demodulator. It needs MATLAB with the Communications Toolbox. It writes code only. Unless your AI is connected to MATLAB, it cannot run or check the code, so run it yourself in a licensed MATLAB. This is a MathWorks skill.
 
-  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well.
+  Licence: the LICENSE.md file in this item governs this copy. It is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence (PMRL), which is MathWorks' upstream terms and also limits use to MathWorks products.
 
   The result is a MATLAB code block, a list of the SNR, Eb/No and noise variance values in dB, and a note on any fixes made to your code.
 when:
@@ -37,7 +37,7 @@ how_to_use:
   - Open a chat with an AI that can read MATLAB code. Paste the skill text from the skill folder.
   - "Say what you want: add noise, convert Eb/No to SNR, or get noise variance."
   - Paste your target level, modulation, coding rate and samples per symbol. Add your code if you have it.
-  - Say if the link is OFDM or uses a fading channel. Give the FFT length and active subcarriers for OFDM.
+  - Say if the link is OFDM or uses a fading channel. Give the FFT length and active subcarriers for OFDM. Also give your MATLAB release. The OFDM conversion with convertSNR's "snrsc" mode needs R2023b or later. For R2022a to R2023a the skill gives a manual formula instead.
   - Run the returned MATLAB code in MATLAB with the Communications Toolbox. Check the noise variance variable and the SNR values in dB.
   - If your AI can run MATLAB, ask it to test the code. If not, run it yourself.
   - Next, compare your simulated bit error rate with the berawgn theory curve at the converted Eb/No. Look at the received points with scatterplot or comm.ConstellationDiagram, and measure the damage with comm.EVM.

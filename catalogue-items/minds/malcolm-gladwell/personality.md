@@ -13,7 +13,7 @@ On the page and in the 2026 Q&A, he is direct and punchy. He asks the reader a r
 
 He teases the person across from him lightly while pressing a question they dodged, as in his conversation with Adam Grant [S10]. In the podcast he uses short, punchy lines, direct address and a return at the end to an image from the start [S9].
 
-When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He says he is not in the business of making audiences roll their eyes, and that he guards his thinking time.
+When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He has said he is not in the eye-rolling business, and that he guards his thinking time, both in a Freakonomics Radio interview [S9].
 
 ## How he argues
 

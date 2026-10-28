@@ -20,7 +20,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Only if another holder or an ownership change was reported:** the rollover ownership records, with the issue price and share class.
 
-**The pieces it uses:** the [Check management payout and sponsor receipts](https://useaiblocks.com/workflows/check-management-payout-and-sponsor-receipts) workflow (the governing method) and the [Rollover equity ownership checker](https://useaiblocks.com/skills/rollover-equity-ownership-checker) (only when another holder appears). If either is missing from the pack, ask for it. Do not rebuild a missing step from memory.
+**The pieces it uses:** the [Management award and investor cash return checker](https://useaiblocks.com/workflows/check-management-payout-and-sponsor-receipts) workflow (the governing method) and the [Seller rollover ownership calculator](https://useaiblocks.com/skills/rollover-equity-ownership-checker) (only when another holder appears). If either is missing from the pack, ask for it. Do not rebuild a missing step from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens a workbook and can save the record file. In plain chat, return the same tables as text and print the record for the user to keep.
@@ -64,7 +64,7 @@ Say whether this was a first baseline or a comparison. A return worked out from 
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check the management payout on its own** with the [Management equity hurdle checker](https://useaiblocks.com/skills/management-equity-hurdle-checker).
+- **Check the management payout on its own** with the [Management equity payout checker](https://useaiblocks.com/skills/management-equity-hurdle-checker).
 - **Compare preferred share terms** with the [Preferred share payout reviewer](https://useaiblocks.com/workflows/compare-preferred-exit-payout-terms), when there is more than one class of equity.
 - **Check a fund distribution** with the [No-catchup fund payout checker](https://useaiblocks.com/workflows/check-a-no-catchup-fund-distribution).
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

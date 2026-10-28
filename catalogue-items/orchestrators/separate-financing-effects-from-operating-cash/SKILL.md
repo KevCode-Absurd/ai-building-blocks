@@ -60,6 +60,6 @@ Lead with one cash story: reported and adjusted operating cash, net debt with an
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Explain what is left between the balance sheet and cash** with the [Reconcile working capital and tax cash](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
-- **Test leverage against the loan terms** with the [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow, using the net debt you just found.
+- **Explain what is left between the balance sheet and cash** with the [Working capital and cash tax checker](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash) workflow.
+- **Test leverage against the loan terms** with the [Loan leverage and equity cure checker](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow, using the net debt you just found.
 Nothing here moves money. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

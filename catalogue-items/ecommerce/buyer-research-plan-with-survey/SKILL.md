@@ -5,7 +5,7 @@ description: Use when your store has customers and you want to learn why people 
 
 # Buyer research plan with survey
 
-You plan buyer research for a store that already has people to ask: a call plan, a recruiting email, a short written survey, and a way to read the answers. The calls come first and the survey confirms what the calls found. You do not invent answers. You write the plan and the tools, and the person runs them.
+You plan buyer research for a store that already has people to ask: a call plan, a recruiting email, a short written survey, and a way to read the answers. The calls come first and the survey confirms what the calls found. You do not invent answers. You write the plan and the tools, and the person runs them. You get four things: a call plan, a recruiting email, a short written survey with its costed reward, and a template that sorts answers into reasons bought and reasons not.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -33,7 +33,7 @@ How to start:
 ## What you need
 - **Customer list** (required): buyers, and non-buyers if you have them (people on your email list who have not bought). Say roughly how many of each.
 - **Product and buyer type** (required): what you sell and who buys it.
-- **Reward budget** (required): what you can spend. A free item, early access to a new product, a store credit, or a donation to a charity of their choice.
+- **Reward budget and margin** (required): what you can spend in total, and your margin per order, so the credit and any prize are sized to what the store can carry. A free item, early access to a new product, a store credit, or a donation to a charity of their choice.
 - **Brand facts** (optional): your voice and what you can offer.
 
 Does not fit: a new store with no buyers or list. Start with public forums and reviews first (the Forum and review avatar digger). It also does not fit a list too small to give useful answers; in that case, run only the calls. Rewards, credits and prizes are a real cost, so cost the plan before you send anything.
@@ -42,8 +42,8 @@ The general Customer discovery interview planner plans customer talks to test a 
 
 ## Steps
 1. **Decide who to ask.** Make two lists: recent buyers, repeat buyers, and people who left or stopped buying; and non-buyers on your list. Ask buyers who left why they left.
-2. **Size the calls.** Plan about 20 calls of 30 minutes. A guest on one podcast said a quoted study by large research firms shows 20 conversations reach about 97 percent of the sentiment in an audience. That is second-hand. Treat it as a rule of thumb and check it before quoting it. The small version: pick your top five customers, hold five calls of 30 minutes, and put the transcripts in one AI project. Ask the person to get permission before recording or transcribing.
-3. **Write the recruiting email.** Say it is to learn, not a demo or a pitch. Say how long it takes (30 minutes). Say what they get. Rewards that worked in the sources: a free item, beta access, or a donation to a charity of their choice. One researcher in the sources paid about $30 for 30 minutes for hard-to-reach people (their figure, not a rule). Cost every reward.
+2. **Size the calls.** Plan about 20 calls of 30 minutes. A guest on one podcast said a quoted study by large research firms shows 20 conversations reach about 97 percent of the sentiment in an audience. That is second-hand. Treat it as a rule of thumb and check it before quoting it. The small version: pick your top five customers, hold five calls of 30 minutes, and put the transcripts in one AI project. Before any call is recorded or transcribed, the person must get each customer's permission, and say so in the invite.
+3. **Write the recruiting email.** Send it only to people who agreed to get email from the store, and follow the email rules where you sell. Say it is to learn, not a demo or a pitch. Say how long it takes (30 minutes). Say what they get. Rewards that worked in the sources: a free item, beta access, or a donation to a charity of their choice. One researcher in the sources paid about $30 for 30 minutes for hard-to-reach people (their figure, not a rule). Cost every reward.
 4. **Write the call guide.** Open questions only. Ask why they use it, how they found it, the whole path from first hearing about it to now, and how it felt. Do not pitch, defend or solve their problems. Ask people who left why they left.
 5. **Build the survey after the calls.** Use it to confirm what the calls found at larger scale, and for easy facts such as role or household size. Write four or five open-ended, written questions, not tick boxes. Examples:
    - What was the main reason you bought this product?

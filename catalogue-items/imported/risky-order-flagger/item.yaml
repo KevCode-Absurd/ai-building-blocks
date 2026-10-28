@@ -31,7 +31,7 @@ credits:
   - title: shopify-admin-high-risk-order-tagger skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-high-risk-order-tagger
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence with small edits. We gave it a plain name, turned holds off by default, added a dry-run check on the risk filter and said which fulfillment orders to hold. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

@@ -31,6 +31,25 @@ and future specifications.
 
 If the feature has a written spec or requirements document, use it as the source of what was expected.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **Your notes** (yours): what to keep, change or drop.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **The product spec** (yours): what to build and how to tell it's done: a requirements doc or user stories.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your results, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Loading Guide
 
 Load only the reference or template relevant to the task. Do not load every file at once.
@@ -202,3 +221,10 @@ is conditional on the decision.
 - [../site-reliability-engineering/SKILL.md](../site-reliability-engineering/SKILL.md) — Owns operational reliability. Lifecycle-learning consumes incident signals.
 - `conditional-customer-success` — Consumer for retirement communication plans, customer treatment during sunset, migration support coordination. Prose reference; skill not yet landed.
 - `incident-learning` — Destination for incident-driven learning signals. Prose reference; skill not yet landed.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Test the idea with real people** with the [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons and audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

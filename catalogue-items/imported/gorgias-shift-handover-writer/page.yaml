@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-shift-handover-writer
 name: Gorgias shift handover writer
-summary: Write a Gorgias shift handover note from your open tickets. You get urgent tickets, waiting replies, work in progress and blockers for the next agent.
+summary: Write a Gorgias shift handover note from your open tickets and those closed in the last four hours. You get urgent tickets, waiting replies, work in progress, recent fixes and blockers for the next agent.
 job: help-customers
 headline: Gorgias shift handover writer
-subhead: Connect Gorgias before a shift change or ticket handover. It checks open work and reads the threads needing attention. You get a handover note covering urgent tickets, customer replies, work in progress, recent fixes, and unresolved blockers.
+subhead: Connect Gorgias before a shift change or ticket handover. It checks open work and tickets closed in the last four hours, and reads the threads needing attention. You get a handover note covering urgent tickets, customer replies, work in progress, recent fixes, and unresolved blockers.
 when:
   - Your shift is ending and the next agent needs to know what is urgent.
   - Tickets are being reassigned and each one needs its last action and next step.
@@ -15,7 +15,7 @@ not_for:
   - "You have no Gorgias account or no Composio access: copy the ticket list into a note and ask a person to write the handover."
   - "You want a report on past support work: use a Gorgias report, since this skill covers only the last few hours."
 you_give:
-  - Your open and pending Gorgias tickets (the AI reads them once Gorgias is connected)
+  - Your open and pending Gorgias tickets, and those closed in the last four hours (the AI reads them once Gorgias is connected)
   - Which tickets are urgent or have new customer replies (optional, the AI picks them from the tickets if you skip this)
 you_get:
   - A handover note with urgent tickets, waiting replies, work in progress and recent fixes
@@ -24,7 +24,7 @@ you_get:
   - Background notes so the next agent can start fast
 how_it_works:
   - title: Read active work
-    text: Find open and waiting tickets. Read urgent threads and recent customer replies.
+    text: Find open and waiting tickets, and tickets closed in the last four hours. Read urgent threads and recent customer replies.
   - title: Separate waiting states
     text: Group tickets by immediate action, waiting on customers, work in progress, and recent resolution.
   - title: Write handover notes
@@ -55,7 +55,7 @@ output_sample:
     - name: In Progress
       contains: A table of tickets being worked now, with current status and the next step.
     - name: Recently Resolved (last 4h)
-      contains: A table of tickets closed in the last four hours and how each was fixed.
+      contains: A table of tickets closed in the last four hours and how each was fixed, or a note saying they could not be fetched.
     - name: Open Questions / Blockers
       contains: Issues needing a manager, known bugs hitting many tickets, and fixes waiting to go live.
     - name: Notes

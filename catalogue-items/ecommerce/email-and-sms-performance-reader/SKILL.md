@@ -14,20 +14,20 @@ When not to use: to check email set-up such as sender records, use the Email set
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 **Makes it better (optional):**
 - **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **An email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring an email flow. It uses your brand brain.
-2. **An email flow** with the [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner). Bring your question, your results (optional), an email flow (optional). It uses your offer.
+1. **An email flow** with the [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner). Bring your question, your results (optional), an email flow (optional). It uses your offer.
+2. **An email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring an email flow. It uses your brand brain.
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, an email flow, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, an email flow, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -56,8 +56,8 @@ Klaviyo and Shopify are paid services and need an account to export. Any email t
 1. **Check evidence of faults.** Ask for or inspect evidence that the pop-up still shows after theme updates, flows are still sending and checkout opt-ins still arrive. Mark each as verified working, observed problem or not checked. An export alone does not verify a live pop-up or checkout. An observed fault is a candidate explanation; check its timing and impact before assigning the drop to it.
 2. **List growth.** Compare new and lost subscribers, by source. Pop-up sign-ups equal views times submit rate, so check traffic before blaming the form.
 3. **Campaigns.** Sort by revenue. Then read click rate for interest and placed orders for the pull of the offer. High clicks with low revenue (newsletters, for example) is a pattern to investigate, not a diagnosis. Product placement is one test; also check the destination, offer, stock, checkout, order value and measurement. Do not claim the pattern rules out a content problem. Do not rely on revenue alone: check orders and average order value so a high-priced campaign does not hide low volume. Judge by unique opens, clicks and conversions as well as rates. If a rate falls but the unique counts rise, more people are engaging.
-4. **Flows.** Flow revenue may change with site traffic, recipient mix, order value and other factors. A percentage change alone does not show noise or significance. Check comparable periods, cohort and attribution definitions, volumes, variance and absolute business impact before judging the change. Mark uncertainty when those checks are unavailable; do not dismiss a change solely because it is under 5 percent. If revenue drops more than orders, average order value fell. Check skips for people filtered out by mistake. Find which flow earns the bulk of revenue (in one store's export the welcome series earned a large share of flow revenue; that is one store's case, not a benchmark). Test where recipients are highest, usually welcome email one. Check whether late flow emails earn anything. If not, shorten the flow or redesign them. Note which flows have no SMS follow-up.
-5. **Deliverability.** Start with the store's own history: a fall against its own past months comes first. Only where there is no history, use these rules of thumb, which are unverified (see the note after Steps). Floor (unverified, so treat it as a prompt to check): open rate above 30 percent and click rate above 0.5 percent. Below the floor, suspect deliverability. Healthier targets: open above 33 percent, click above 1.2 percent, bounce under 1 percent and unsubscribe under 0.3 percent. Spam complaints above 0.3 percent are a problem and above 0.1 percent a warning. If clicks and opens keep falling, shrink the send segment to the last 30 or 60 days, then widen slowly. Look at the by-provider report and make engaged-only segments for providers that are weak.
+4. **Flows.** Flow revenue may change with site traffic, recipient mix, order value and other factors. A percentage change alone does not show noise or significance. Check comparable periods, cohort and attribution definitions, volumes, variance and absolute business impact before judging the change. Mark uncertainty when those checks are unavailable; do not dismiss a change solely because it is under 5 percent. If revenue drops more than orders, average order value fell. Check skips for people filtered out by mistake. Find which flow earns the bulk of revenue. Test where recipients are highest, usually welcome email one. Check whether late flow emails earn anything. If not, shorten the flow or redesign them. Note which flows have no SMS follow-up.
+5. **Deliverability.** Start with the store's own history: a fall against its own past months comes first. Lead with click rate, placed-order rate and bounce and spam rates, which privacy protection does not inflate. Only where there is no history, use these rules of thumb, which are unverified (see the note after Steps). Click rate under 0.5 percent is a prompt to check deliverability. Open-rate floors (about 30 to 33 percent) are unreliable since Apple Mail privacy protection: never call a deliverability problem from opens alone. Healthier targets: click above 1.2 percent, bounce under 1 percent and unsubscribe under 0.3 percent. Spam complaints above 0.3 percent are a problem and above 0.1 percent a warning. If clicks and opens keep falling, shrink the send segment to the last 30 or 60 days, then widen slowly. Look at the by-provider report and make engaged-only segments for providers that are weak.
 6. **Other reads.** Look for the gap between opens and clicks (clicks are often the bottleneck), best send days and times, bounce spikes, effects of emoji and subject length, and which flow earns the most. When testing send time, optimise for placed-order rate, not open rate.
 7. **SMS.** Compare with the store's own history first. Where there is none, use these unverified rules of thumb: click rate 5 to 15 percent, unsubscribes under 1 percent (under 0.5 percent is excellent) and delivery above 90 percent (95 percent is excellent). Fix low clicks with tighter segments and more direct campaigns. Fix high unsubscribes by sending less to a tighter engaged group. Fix low revenue per text by changing campaign types and dropping information-only texts.
 8. **Rank possible causes.** Separate observed facts from hypotheses. Rank by measured effect where available; otherwise label the impact estimate unknown and explain the priority. Give each hypothesis its supporting numbers, other possible causes, confidence and one test. Sort feasible tests by recipient volume without claiming volume proves a cause.
@@ -87,13 +87,14 @@ CHECKS MISSED: <none | checks that failed or could not run>
 ## Next steps to offer
 
 Offer these first. The links in "After this" are optional:
-- If deliverability looks weak, use the [Inbox placement recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner).
+- If deliverability looks weak, use the [Email deliverability recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner).
 - Turn the tests to run first into a plan with the [Email test planner](https://useaiblocks.com/skills/email-test-planner).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker).
+- The [Email flow results and rebuild review](https://useaiblocks.com/skills/monthly-email-flow-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

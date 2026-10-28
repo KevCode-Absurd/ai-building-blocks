@@ -9,7 +9,7 @@ Plans how to keep a database available and recoverable: backups with tested rest
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: set recovery targets first, prove backups with a real restore, rehearse failover, change tables in small steps with lock limits, protect the connection layer, and keep drills on a schedule. Its role language, memory claims, sample figures (for example "RPO under 1 minute", "RTO under 30 minutes") and success targets are the original author's examples. They are not facts about this system and they grant no tool access. The profile is about availability and recovery, not about tuning slow queries.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** A strong reasoning model keeps recovery and lock risks straight. No code running or web access is needed. Check engine details against its own docs.
@@ -78,7 +78,7 @@ Return these sections in order. If your AI can save files, save each as its own 
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample SQL or commands only if the user asked, and label them "sketch, not tested".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review). It takes the plan.

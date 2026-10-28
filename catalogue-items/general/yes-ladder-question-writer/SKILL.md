@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). Bring your question, a plan (optional). It uses your brand brain.
+1. **A plan** with the [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). Bring your question, a plan (optional).
 2. This one.
 
 How to start:

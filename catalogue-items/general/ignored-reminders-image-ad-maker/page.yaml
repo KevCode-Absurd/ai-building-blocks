@@ -16,7 +16,7 @@ explain: |
 when:
   - Your story is about a routine the narrator can't keep, or a chore that keeps coming back.
   - The narrator has tried to fix it with reminders or alarms.
-  - Your buyer's problem has a time of day, like the school run or bedtime.
+  - Your buyer's problem has a time of day, like the school run or bedtime. Check first that your ad platform allows phone-notification-style pictures; if not, use the list or sticky-note version.
 not_for:
   - "Your ad has no routine the narrator keeps missing: use the Problem moment image ad maker, or ask a designer for a simple scene."
   - "You want words off the image: use the Problem moment image ad maker instead."

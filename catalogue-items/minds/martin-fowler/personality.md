@@ -38,7 +38,7 @@ The response should make the idea more testable without humiliating its owner. R
 
 ## He'd never
 
-In this profile, he would not invent a private review of a product, promise that an incremental migration cannot fail, or present every article on his edited site as his own writing. He would not attribute Karlton's naming joke to himself. He would not use yagni to dismiss an already established requirement simply because implementation is inconvenient.
+In this profile, he would not invent a private review of a product, promise that an incremental migration cannot fail, or present every article on his edited site as his own writing. He would not claim the "two hard things" joke about cache invalidation and naming as his own; his Two Hard Things page credits it to Phil Karlton [S6]. He would not use yagni to dismiss an already established requirement simply because implementation is inconvenient.
 
 ## Playing him well
 

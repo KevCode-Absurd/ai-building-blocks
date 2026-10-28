@@ -1,6 +1,6 @@
 # SWIFT CSCF v2026 — Full Control Reference
 
-All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture applicability: ✅ = Mandatory | 🔶 = Advisory | ➖ = Not Applicable
+All 32 controls (reported as 26 mandatory, 6 advisory in v2026) across 3 objectives. Architecture applicability: ✅ = Mandatory | 🔶 = Advisory | ➖ = Not Applicable | ❔ = Check the current CSCF document
 
 > ⚠️ **Verify against the official CSCF v2026** (swift.com Knowledge Centre, requires login) before relying on per-control applicability — SWIFT adjusts control status and architecture-type applicability each cycle. Key v2026 change reflected below: **Control 2.4 promoted Advisory → Mandatory.**
 
@@ -12,18 +12,18 @@ All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture app
 |---------|----|----|----|----|---|
 | 1.1 SWIFT Environment Protection | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 1.2 OS Privileged Account Control | ✅ | ✅ | ➖ | ➖ | ✅ |
-| 1.3A Virtualisation Platform Security | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
+| 1.3 Virtualisation or Cloud Platform Protection | ❔ | ❔ | ❔ | ❔ | ❔ |
 | 1.4 Restriction of Internet Access | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 1.5A Customer Environment Protection | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
+| 1.5 Customer Environment Protection | ❔ | ❔ | ❔ | ❔ | ❔ |
 | 2.1 Internal Data Flow Security | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 2.2 Security Updates | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 2.3 System Hardening | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2.4 Back-Office Data Flow Security *(promoted to Mandatory in v2026)* | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2.4 Back-Office Data Flow Security *(promoted to Mandatory in v2026)* | ✅ | ✅ | ✅ | ✅ | ➖ |
 | 2.5A External Transmission Data Protection | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
 | 2.6 Operator Session Confidentiality | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 2.7 Vulnerability Scanning | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 2.8 Critical Activity Outsourcing | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2.9A Transaction Business Controls | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
+| 2.9 Transaction Business Controls | ❔ | ❔ | ❔ | ❔ | ❔ |
 | 2.10 Application Hardening | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 2.11A RMA Business Controls | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
 | 3.1 Physical Security | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -42,6 +42,8 @@ All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture app
 | 7.2 Security Training and Awareness | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 7.3A Penetration Testing | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
 | 7.4A Scenario Risk Assessment | 🔶 | 🔶 | 🔶 | 🔶 | 🔶 |
+
+❔ The mandatory or advisory status of 1.3, 1.5 and 2.9, and which architecture types they apply to, could not be confirmed from an official Swift page. Check each one in the current CSCF document before you mark it mandatory, advisory or not applicable.
 
 ---
 
@@ -93,7 +95,7 @@ All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture app
 
 ---
 
-### Control 1.3A — Virtualisation Platform Security (Advisory)
+### Control 1.3 — Virtualisation or Cloud Platform Protection (status: check the current CSCF document)
 
 **Purpose:** Secure the hypervisor and virtualisation layer if SWIFT components run on virtual machines.
 
@@ -127,7 +129,7 @@ All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture app
 
 ---
 
-### Control 1.5A — Customer Environment Protection (Advisory)
+### Control 1.5 — Customer Environment Protection (status and architecture types: check the current CSCF document)
 
 **Purpose:** Extend security controls to protect the broader customer IT environment from threats that could cascade to SWIFT.
 
@@ -258,7 +260,7 @@ All 32 controls (26 mandatory, 6 advisory) across 3 objectives. Architecture app
 
 ---
 
-### Control 2.9A — Transaction Business Controls (Advisory)
+### Control 2.9 — Transaction Business Controls (status: check the current CSCF document)
 
 **Purpose:** Implement business-level controls to detect and prevent fraudulent SWIFT transactions.
 

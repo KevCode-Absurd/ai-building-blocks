@@ -7,7 +7,7 @@ description: Plan ESG and sustainability reporting with material topics, framewo
 
 Plan and check a sustainability program so every claim can be backed. The full profile, with its tables and frameworks, is in [the original role profile](references/source-agent.md). Read it if you can. This file is enough to run the job on its own.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a spreadsheet, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** They can read your spreadsheets, policies and last report, and build the topic and gap tables from them.
@@ -31,7 +31,7 @@ How to start:
 
 These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
-Not for: a drafted report from data you already have (use the [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer)), whether EU sustainability rules apply to you (use the [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker)), or emissions worked out from shipping, energy and supplier data (use the [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker)).
+Not for: a drafted report from data you already have (use the [Sustainability reporting reviewer](https://useaiblocks.com/skills/esg-report-preparer)), whether EU sustainability rules apply to you (use the [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker)), or emissions worked out from shipping, energy and supplier data (use the [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker)).
 
 1. **The company.** Size, sector, countries, who it sells to.
 2. **The purpose.** A customer or investor questionnaire, a first report, a target review, a claims check or a rules question. If unclear, ask which one to do first.
@@ -78,9 +78,9 @@ CHECKS STILL NEEDED
 ```
 CHECKS STILL NEEDED is also your CHECKS MISSED list: name every check that could not run, or write "none".
 
-Next: for a written report once the data exists, use the [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer).
+Next: for a written report once the data exists, use the [Sustainability reporting reviewer](https://useaiblocks.com/skills/esg-report-preparer).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the audit report.

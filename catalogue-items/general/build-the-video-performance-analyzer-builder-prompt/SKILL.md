@@ -7,6 +7,8 @@ description: "Get a coding brief for a Google Ads video ad review: view rate and
 
 Paste this into a coding assistant that can open your project (Claude Code, Codex or similar). It plans and builds a read-only module that reviews your Google Ads YouTube and Demand Gen video ads. For each ad it works out the view rate and where viewers drop off. It sorts the ads into six groups and lists what to test next. It never changes your ad account.
 
+What you get: a list of setup gaps, a read-only video review module in your project, a sample result (DiagnosticOutput) built from made-up rows, an account summary of the best and worst ads, and the test results.
+
 What you can check first: a sample DiagnosticOutput built from made-up rows, so you can see the result before any live account is read. Not for: judging a video ad by eye (watch it and read the numbers in Google Ads), or software that changes campaigns.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -32,7 +34,7 @@ How to start:
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in the setup gaps and carry on with placeholders. Never invent an account ID, benchmark or result.
 
 1. **Your project** (required for code): the repository, or its main folders and database schema. With no repository, write a self-contained specification with placeholder paths and say no code was written.
-2. **Google Ads read access** (required to run it later): the customer ID of the account with the video campaigns, the manager account ID if there is one, and the names of the credentials the project uses (developer token, OAuth client ID, secret and refresh token). Never ask for or repeat a secret. If one is pasted, say so and advise rotating it.
+2. **Google Ads read access** (required to run it later): the customer ID of the account with the video campaigns, the manager account ID if there is one, and the names of the credentials the project uses (developer token, OAuth client ID, secret and refresh token). To get these you need a Google Ads manager account, a developer token from its API Center (Google must approve it before it works on live accounts), and an OAuth client with read access. The API has no fee, but approval can take time, so start it early. Never ask for or repeat a secret. If one is pasted, say so and advise rotating it.
 3. **Date range** (optional): default 30 days. The fatigue check also needs the 7 days before it.
 4. **Your own benchmarks** (optional): a view rate, a completion rate (viewers who reach 100 percent) and a view-through conversion rate that count as good for this account. If none are given, use the median of the account's own ads in the date range and say so. Do not use a figure from outside the account.
 5. **Minimum data before an ad can be flagged** (optional): the starting defaults are 1,000 impressions and 25 in the account's currency. Show them and ask for a yes or changes.
@@ -176,7 +178,7 @@ VIDEO_AUDIT_CONFIG:
 
 ## What you hand back
 
-The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step. If it ran nothing, it says so. Before you rely on it, the owner confirms the Google Ads fields and query names against the current API docs, as the assistant lists them.
+The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step, such as checking three flagged ads by hand in Google Ads before changing any creative or budget. If it ran nothing, it says so. Before you rely on it, the owner confirms the Google Ads fields and query names against the current API docs, as the assistant lists them.
 
 ## If something is missing
 

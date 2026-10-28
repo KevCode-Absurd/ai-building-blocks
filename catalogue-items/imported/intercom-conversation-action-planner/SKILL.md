@@ -61,3 +61,10 @@ For each "REPLY NOW" conversation, provide a suggested reply the agent can send.
 ```
 
 Ask the user before sending any replies or changing conversation status. Ask for each reply on its own, and send only the ones the user approves. Report what was sent and what was changed.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

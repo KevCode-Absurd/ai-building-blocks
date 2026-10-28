@@ -51,15 +51,6 @@ How to start:
 
 The goal in one line. The settled choices, each with its one-line reason and what it rules out. The shorter list of open questions, ordered, with the first to work on. A note on any question marked UNKNOWN and what would settle it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: hand-written (needs_mode: manual in item.yaml). -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **To check the size of the goal** with the [Target size back-solver](https://useaiblocks.com/skills/target-size-back-solver). It takes the goal and the settled choices.
-- **To see how the settled choices could fail** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the settled choices as a plan.
-- **To test the first hard question cheaply** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the ordered list of open questions.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The goal is a line with a size or a date, or is flagged as vague.
@@ -68,6 +59,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The open list is shorter than at the start.
 - The first hard question is named.
 - Nothing settled depends on a fact marked `MISSING:`.
+
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **To check the size of the goal** with the [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the goal and the settled choices.
+- **To see how the settled choices could fail** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the settled choices as a plan.
+- **To test the first hard question cheaply** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the ordered list of open questions.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

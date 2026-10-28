@@ -14,15 +14,15 @@ This workflow chains three skills from the library. Run them in order. Save each
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your lesson plan, your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -33,7 +33,7 @@ How to start:
 
 The "Before you start" block above is shared text and may mention a lesson plan or source files. Skip those lines. This workflow starts from the four required items below, and step 1 makes the project plan. It needs no lesson plan and makes none.
 
-- **The local need** (required): in the partner's words. If it is a guess, say so and write `MISSING: partner's own statement`.
+- **The local need** (required): in the partner's words. If it is a guess, say so and write `MISSING: partner's own statement`. Step 1 then frames the need as a guess and adds "confirm the need with the partner" as the first task needing teacher approval.
 - **The curriculum goal** (required): the skill or topic. If it is missing, ask once. If it is still missing, stop. The project cannot be tied to learning without it.
 - **The learners' age or year and the project length** (required).
 - **Community limits** (required): travel, time, cost, safety. If none are given, write `MISSING: limits` and keep every task inside school.
@@ -93,7 +93,7 @@ Use this list, not the generic links in the block above. Offer one next step and
 
 - Get the approvals in your own way, then share the brief with students.
 - Halfway through, bring back what you observed and ask for the brief to be adjusted.
-- When the work is handed in, mark it with [Mark student work against a rubric and sharpen your feedback](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback).
+- When the work is handed in, mark it with [Student marking and feedback reviewer](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback).
 
 ## Check before you hand it back
 
@@ -107,7 +107,7 @@ Use this list, not the generic links in the block above. Offer one next step and
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student marking and feedback reviewer](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback). It takes the lesson plan and document.
-- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
+- The [Student marking and feedback reviewer](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback). It takes the document.
+- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -11,7 +11,7 @@ explain: |
 
   Each variance gets a colour. Green is within 5% of plan, yellow is 5% to 15% below, red is more than 15% below or close to a covenant limit. It adds a short summary and a list of questions for the company's management. It checks debt and interest cover, and it swaps in KPIs that suit the sector.
 
-  This version follows Indian conventions. Fiscal years run April to March, and lakh and crore are written out so a figure is never off by a hundred times.
+  This version follows Indian conventions. Fiscal years run April to March, and lakh and crore are written out so a figure is never off by ten times.
 when:
   - Monthly packs arrive from several portfolio companies and you want one view.
   - Quarter end is near and the board wants variances to budget.
@@ -101,3 +101,4 @@ terms:
     meaning: Indian units. One lakh is 100,000. One crore is 10,000,000.
   - term: Variance
     meaning: The gap between the actual figure and the budget.
+# Changed by AI Blocks (2026-10-28): corrected the crore display error from a hundred times to ten times.

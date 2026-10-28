@@ -37,7 +37,9 @@ how_to_use:
   - Mark any task you know is deep or shallow by adding the word after it (optional).
   - Check the shallow audit first. If it says over budget, cut or hand off tasks before you plan.
   - Read the schedule. If deep work passes four hours, defer a task as it suggests.
-  - Running the scripts needs an AI that can run Python 3 code, with no installs. In a plain chat, ask your AI to follow the same rules by hand, and log sessions yourself.
+  - Running the scripts needs an AI that can run Python 3 code on your computer, with no installs. Upload the three files from the scripts folder with the skill. The focus log is saved as a small file on your computer (~/.deep-work/sessions.json).
+  - Pasting only the skill text into a plain chat gives you the same rules worked by hand, with no scripts. Keep the focus log yourself in a note or spreadsheet: date, minutes and task for each block, then add up the week.
+  - Next, after each focus block, log it, and at the end of the day run the shutdown checklist. If you have not chosen what matters today, pick your top tasks first, then plan the blocks.
 output_sample:
   input:
     - Today's tasks with rough minutes for each

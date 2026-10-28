@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run code, such as Claude with code tools, and paste in this skill.
   - Describe your quantum system in plain words. Say which quantities you want, and any noise or loss rates you know.
-  - Check that Python 3.11 or newer and uv are installed. Your AI will set up QuTiP 5.3.1 in its own environment.
+  - "Check that Python 3.11 or newer and uv are installed. Your AI sets up QuTiP 5.3.1 with two commands: uv venv --python 3.11, then uv pip install \"qutip==5.3.1\". This skill suits people who can read Python and QuTiP code."
   - Read the model assumptions first. Fix anything that does not match your physics.
   - Check the convergence results. If the numbers shift when the settings change, ask for a larger state space or a finer step.
   - Compare the result with a measured dataset or a trusted case before you use it.
+  - Next, save the script, settings and QuTiP version with your results so others can rerun them. For circuit or gate work, move to the separate qutip-qip package.
 output_sample:
   input:
     - A description of your quantum system

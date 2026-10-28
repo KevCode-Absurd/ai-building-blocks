@@ -19,7 +19,7 @@ not_for:
   - "Your company reports under IFRS or has no LIFO disclosure: IAS 2 does not allow LIFO, so compare the reported FIFO or average-cost figures directly."
   - "You need a tax return, a filing or advice on a tax refund: ask your accountant, because this bridge is an analysis only."
   - "You need a full forecast model with several years of statements: build it in your own spreadsheet with an accountant or analyst."
-  - "You need the margin effect of inventory write-downs and reversals: use the Inventory charge margin bridge instead."
+  - "You need the margin effect of inventory write-downs and reversals: use the Inventory write-down margin checker instead."
 you_give:
   - Reported LIFO inventory at the end of the period.
   - LIFO reserve at the start and end of the period.

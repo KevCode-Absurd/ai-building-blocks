@@ -31,10 +31,11 @@ you_get:
   - A markdown report with confidence level
 how_to_use:
   - Download the skill folder. It needs your AI to read files and run git commands, so use a coding tool or an AI with file access.
-  - Open your AI in the project folder and add the skill files, including methodology.md, adversarial.md and reporting.md.
+  - Open your AI in the project folder and add SKILL.md. The four guides it names (methodology.md, adversarial.md, reporting.md, patterns.md) are not included in this copy; the phases in SKILL.md are enough to run the review.
   - Tell your AI which pull request, commit range or diff to review. Add a note on what the change should do (optional).
+  - "The review runs in this order: triage the change, read the code, check test coverage, measure the blast radius, run an attacker's-eye pass on high-risk parts, then write the report. If git history is not available, the AI should stop and ask you."
   - Check the ranked findings and the coverage limits in the report. Test any attack story it gives before you trust it.
-  - "To turn the report into a formal audit report, use the issue-writer skill with: issue-writer --input DIFFERENTIAL_REVIEW_REPORT.md --format audit-report."
+  - "Optional add-ons, not needed for the review: the Code deep reader (audit-context-building) for background on a large codebase first, and the issue-writer skill (not in this library) to turn the report into a formal audit report."
 output_sample:
   input:
     - A pull request, commit range or diff

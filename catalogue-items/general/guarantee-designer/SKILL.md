@@ -7,7 +7,7 @@ description: Use when buyers fear paying and not getting the result, or your ref
 
 Risk is the biggest brake on buying. A guarantee moves it from the buyer to you. This skill drafts a guarantee, tests supplied refund-and-cost scenarios and gives it a name. Affordability stays unresolved without complete applicable costs and cash limits. It is a method for offer design. It is not legal advice, and some fields restrict what a guarantee may promise.
 
-Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder) instead when the doubt may not be about risk, and you want the whole offer built around it (result, time, effort or price as well as a guarantee).
+Use [Customer offer builder](https://useaiblocks.com/skills/offer-builder) instead when the doubt may not be about risk, and you want the whole offer built around it (result, time, effort or price as well as a guarantee).
 Use [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer) instead when you already have a guarantee and want it reviewed against a checklist, not designed.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).

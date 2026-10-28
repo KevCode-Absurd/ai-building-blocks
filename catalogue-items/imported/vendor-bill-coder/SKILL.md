@@ -23,6 +23,22 @@ Turn the bill pile into coded entries and one payment decision.
 
 Owners describe this job as printing, stamping, and hand-keying the same twenty invoices every month. It is almost entirely mechanical — right up to the part where money leaves the account, which is entirely the owner's call.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Step 1 — Gather the bills
 
 Pull from whatever the owner actually has:
@@ -142,6 +158,15 @@ Disputes, missing invoices, and short-pay explanations get drafted, not sent. Wr
 - **Visual artifact (the default):** render the run as an HTML page in the house style — total staged and total proposed as stat tiles, each bill a row with vendor, amount in tabular-nums, due date, and an exception or credit pill where one applies. **Any drafted vendor email is a copy block** so the owner can copy it and send it by hand.
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why.
 - **Best for skill:** use the visual artifact — this output is a review board the owner approves from, not prose.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Unusual transaction finder](https://useaiblocks.com/skills/unusual-transaction-finder). It takes the spreadsheet.
+- The [Legal billing reviewer](https://useaiblocks.com/skills/agency-legal-billing-time-tracking). It takes the spreadsheet.
+- The [Business subscription renewal reviewer](https://useaiblocks.com/skills/monthly-subscription-renewal-decision-assistant). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After the run
 

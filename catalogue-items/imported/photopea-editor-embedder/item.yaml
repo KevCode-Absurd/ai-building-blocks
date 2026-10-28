@@ -31,4 +31,4 @@ credits:
   - title: photopea-embedded-editor skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/photopea-embedded-editor
-    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
+    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, made the layer export example put every layer's visibility back as it was (even if an export fails), and made layer names safe as file names. We added Before you start and After this sections that link to other AI Blocks steps.

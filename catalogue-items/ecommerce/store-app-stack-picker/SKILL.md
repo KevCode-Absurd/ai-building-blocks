@@ -30,7 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The app list** (required): each app, its monthly cost, and what it is used for. Ask for a screenshot of the installed apps page if they have no list.
+- **The app list** (required): each app, its monthly cost, and what it is used for. This is the spreadsheet the box above asks for: a plain list or table is enough, with no formulas or charts. Ask for a screenshot of the installed apps page if they have no list.
 - **Speed and bounce data** (optional): theme speed rating, PageSpeed result, bounce rate.
 - **What they sell** (optional): it changes what a good stack looks like.
 
@@ -94,6 +94,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score shows what it measured and its sum.
 
 ## If something is missing
+The NOT RUN line is this skill's CHECKS MISSED list: checks that failed or could not run, or "none".
+
 Write `MISSING: <app list | cost | use | speed data>`. No use stated for an app: mark it "ask the owner" and do not guess. Rating and review counts you cannot see are NOT RUN, never assumed.
 
 ## Avoid

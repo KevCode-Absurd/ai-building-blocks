@@ -70,8 +70,8 @@ Lead with the reading order and the poster file, then the text check and the con
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
+- The [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). It takes the design direction and document.
 - The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction and audit report.
-- The [Brand identity system planner](https://useaiblocks.com/skills/identity-system-planner). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -83,7 +83,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 Suggest one next step in a short question, and say they can type their own:
 - **Print one copy at full size** and read it from the stated distance before you print more.
-- **Check a different layout of the same words** with the [Layout default breaker](https://useaiblocks.com/skills/layout-default-breaker).
+- **Check a different layout of the same words** with the [Template layout alternatives planner](https://useaiblocks.com/skills/layout-default-breaker).
 Nothing here sends the poster anywhere.
 
 ## Avoid

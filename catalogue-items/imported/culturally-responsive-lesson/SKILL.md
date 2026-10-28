@@ -69,6 +69,19 @@ tags: ["culturally-responsive", "Gay", "Ladson-Billings", "equity", "culturally-
 
 # Culturally Responsive Teaching Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Redesigns lesson content to be culturally responsive — connecting rigorous academic curriculum to students' cultural backgrounds, community knowledge, and lived experiences while maintaining high expectations and developing critical consciousness. The approach draws on Geneva Gay's (2018) framework of culturally responsive teaching and Gloria Ladson-Billings' (1995) theory of culturally relevant pedagogy. The critical principle is that culturally responsive teaching is not about lowering standards, adding a "multicultural day," or replacing academic content with cultural content — it is about using students' cultural knowledge as a BRIDGE to rigorous academic learning. Students learn MORE, not less, when the curriculum connects to what they already know and value. The output includes a redesigned lesson with specific cultural connections, a critical consciousness element (where students use the content to examine equity and power), and a high expectations framework that ensures academic rigour is strengthened, not diluted. AI is specifically valuable here because identifying authentic connections between curriculum content and diverse cultural contexts requires broad knowledge across cultures, academic disciplines, and pedagogical approaches — while remaining sensitive to the specificity of each community.
@@ -245,3 +258,12 @@ Students share their paired texts. Class discussion: "Which version is more pers
 2. **There is a risk of essentialism — treating cultural groups as monolithic.** Not all students from Caribbean backgrounds have strong oral traditions. Not all Bangladeshi students come from families with particular cooking practices. Culturally responsive teaching must engage with the SPECIFIC students in the room, not with assumptions about their cultural group. The design should invite students to share their own cultural knowledge rather than the teacher assuming what it is.
 
 3. **Culturally responsive teaching exists within systemic constraints.** A single teacher can redesign their lessons to be culturally responsive, but they cannot change the assessment system, the national curriculum, or the institutional culture alone. Students may still face standardised assessments that privilege particular cultural forms. CRT prepares students to succeed in these systems while developing critical awareness of their limitations — but it cannot single-handedly transform the system.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan.
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan.
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

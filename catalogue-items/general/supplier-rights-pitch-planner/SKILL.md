@@ -78,6 +78,14 @@ CHECKS MISSED
 One line per check still missed, or "none".
 ```
 
+## Check before you hand it back
+
+- The area, product and terms are written down.
+- The first sales plan needs no one but you.
+- Cash to pay the supplier is planned before the first order.
+- The gap paper names the rival it is aimed at.
+- No fact about the maker or the market is invented.
+
 <!-- next: written by hand for this skill. -->
 ## After this
 When you have handed it back, suggest what they could do next in one short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
@@ -86,14 +94,6 @@ When you have handed it back, suggest what they could do next in one short quest
 - **Prepare the call itself** with the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the ask and the terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The area, product and terms are written down.
-- The first sales plan needs no one but you.
-- Cash to pay the supplier is planned before the first order.
-- The gap paper names the rival it is aimed at.
-- No fact about the maker or the market is invented.
 
 ## If something is missing
 

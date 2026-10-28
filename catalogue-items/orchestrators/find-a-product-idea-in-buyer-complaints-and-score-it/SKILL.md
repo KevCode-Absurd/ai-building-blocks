@@ -9,7 +9,7 @@ Give it a category. Get complaints that sell, the gap in it and a score out of 1
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** you already have a product and only want it scored (use the [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer) on its own). Complaint volume shows pain, not demand: a loud complaint does not prove people will pay to fix it, so the score is a first filter, not a green light. In health, supplement, children's or other regulated categories, claims and safety rules apply, so check them before you pick a product.
+**When not to use it:** you already have a product and only want it scored (use the [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer) on its own). Complaint volume shows pain, not demand: a loud complaint does not prove people will pay to fix it, so the score is a first filter, not a green light. In health, supplement, children's or other regulated categories, claims and safety rules apply, so check them before you pick a product.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -73,9 +73,9 @@ Pause here: Pick one product for the top gap. Write down its cost, shipping cost
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [New product line checker](https://useaiblocks.com/skills/new-product-line-checker). It takes the idea and audit report.
 - The [Category and trend risk checker](https://useaiblocks.com/skills/category-and-trend-risk-checker). It takes the idea.
 - **Shape the product** with the [Product build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer). It takes the idea.
 - **Test the idea with real people** with the [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher). It takes the idea.
-- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the idea and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

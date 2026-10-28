@@ -108,18 +108,20 @@ The gap between Current and Target Profile drives the risk management roadmap.
 |--------------------------|---------------------|
 | GOVERN 1 (Policies in place) | Clause 5 (Leadership), Clause 6 (Planning), A.2 (AI policy) |
 | GOVERN 2 (Accountability) | Clause 5.3 (Roles and responsibilities), A.2.3 |
-| GOVERN 3 (Roles) | Clause 5.3, A.2.5 (Responsibilities for AI system impact) |
-| GOVERN 4 (Cross-functional teams) | Clause 7.1 (Resources), A.2.5 |
-| GOVERN 5 (Risk tolerance) | Clause 6.1 (Risk and opportunity), A.5.2 (AI risk assessment) |
+| GOVERN 3.2 (Human-AI oversight roles) | Clause 5.3, A.2.5 (Responsibilities for AI system impact) |
+| GOVERN 3.1 (Diverse, interdisciplinary teams) | Clause 7.1 (Resources), A.2.5 |
+| GOVERN 1.3 / MAP 1.5 (Risk tolerance) | Clause 6.1 (Risk and opportunity), A.5.2 (AI risk assessment) |
 | MAP 1 (Context) | Clause 4 (Context of organization), A.3 (Internal/external context) |
-| MAP 2 (Scientific understanding) | A.6 (AI system lifecycle) |
-| MAP 3 (Stakeholder risk/benefit) | Clause 4.2 (Interested parties), A.8.4 (Impact assessment) |
+| MAP 2 (System categorization) | A.6 (AI system lifecycle) |
+| MAP 3 / MAP 5 (Benefits, costs and impacts) | Clause 4.2 (Interested parties), A.8.4 (Impact assessment) |
 | MAP 5 (Likelihood/impact) | A.5.2 (AI risk assessment methodology) |
 | MEASURE 2 (System evaluation) | A.6.2 (AI system design), A.10 (Use of AI systems) |
 | MEASURE 3 (Ongoing monitoring) | Clause 9.1 (Monitoring and measurement), A.6.2.5 |
 | MANAGE 2 (Treatment strategies) | Clause 6.1.3 (AI risk treatment), A.5.3 |
-| MANAGE 3 (Incident response) | A.9 (Performance evaluation), Clause 10 (Improvement) |
+| MANAGE 4.3 (Incident response) | A.9 (Performance evaluation), Clause 10 (Improvement) |
 | MANAGE 4 (Review and improve) | Clause 10.2 (Nonconformity), Clause 9.3 (Management review) |
+
+*These mappings are indicative and were made for this skill. They are not an official NIST crosswalk. Check NIST's published crosswalks at https://airc.nist.gov/airmf-resources/crosswalks/ and the other standard's own text before relying on a row.*
 
 ---
 
@@ -128,15 +130,18 @@ The gap between Current and Target Profile drives the risk management roadmap.
 | AI RMF Function | EU AI Act Requirement |
 |----------------|----------------------|
 | GOVERN 1 (AI risk policies) | Art. 9 (Risk management system) for high-risk AI |
-| GOVERN 2/3 (Accountability) | Art. 16 (Obligations of high-risk AI providers), Art. 26 (Deployer obligations) |
+| GOVERN 2 (Accountability) | Art. 16 (Obligations of high-risk AI providers), Art. 26 (Deployer obligations) |
 | MAP 1 (Intended use) | Art. 9(2) — risk management must cover intended and reasonably foreseeable misuse |
-| MAP 3 (Stakeholder mapping) | Art. 9(2)(b) — identification and analysis of known and foreseeable risks |
+| MAP 5 (Impacts characterized) | Art. 9(2)(b) — identification and analysis of known and foreseeable risks |
 | MEASURE 2 (System evaluation) | Art. 10 (Data governance), Art. 15 (Accuracy, robustness, cybersecurity) |
 | MEASURE 3 (Ongoing monitoring) | Art. 72 (Post-market monitoring), Art. 26(5) — deployer monitoring obligations |
-| MANAGE 3 (Incident response) | Art. 73 (Reporting of serious incidents to market surveillance) |
+| MANAGE 4.3 (Incidents communicated and tracked) | Art. 73 (Reporting of serious incidents to market surveillance) |
 | All functions | Annex IX (Technical documentation requirements for high-risk AI systems) |
 
-**Key difference:** The EU AI Act is mandatory for in-scope providers and deployers; the NIST AI RMF is voluntary. Organizations subject to the EU AI Act should use NIST AI RMF as the risk management methodology that satisfies Art. 9's "appropriate risk management system" requirement.
+**Key difference:** The EU AI Act is mandatory for in-scope providers and deployers; the NIST AI RMF is voluntary. Organizations subject to the EU AI Act can use the NIST AI RMF to help structure the risk management system Art. 9 requires, but following the AI RMF does not by itself show compliance with the Act.
+
+*These mappings are indicative and were made for this skill. They are not an official NIST crosswalk. Check NIST's published crosswalks at https://airc.nist.gov/airmf-resources/crosswalks/ and the other standard's own text before relying on a row.*
+
 
 ---
 
@@ -157,17 +162,19 @@ The gap between Current and Target Profile drives the risk management roadmap.
 
 | AI RMF Category | Privacy Framework Core |
 |----------------|----------------------|
-| GV-6 (Regulatory alignment) | GV.PO-P (Privacy policies) |
+| GOVERN 1.1 (Legal and regulatory requirements) | GV.PO-P (Privacy policies) |
 | MAP 1 (Context) | CT.DM-P (Data model context) |
-| MAP 3 (Affected individuals) | CT.DP-P (Disassociated processing) |
-| MEASURE 2 (Privacy evaluation) | CM.PO-P (Communication policies) |
-| MANAGE 3 (Incident response) | RS.CO-P (Response communications) |
+| MAP 5 (Impacts on individuals) | CT.DP-P (Disassociated processing) |
+| MEASURE 2.10 (Privacy risk) | CM.PO-P (Communication policies) |
+| MANAGE 4.3 (Incident communication) | RS.CO-P (Response communications) |
+
+*These mappings are indicative and were made for this skill. They are not an official NIST crosswalk. Check NIST's published crosswalks at https://airc.nist.gov/airmf-resources/crosswalks/ and the other standard's own text before relying on a row.*
 
 ---
 
 ## AI RMF Implementation Tiers
 
-Similar to NIST CSF Implementation Tiers, the AI RMF describes four organizational maturity levels:
+AI RMF 1.0 does not define implementation tiers (NIST AI 100-1 describes Profiles, not Tiers). The scale below borrows the NIST CSF tier names as an optional maturity scale. Label it that way when you use it:
 
 | Tier | Name | Description |
 |------|------|-------------|
@@ -188,5 +195,5 @@ Most organizations begin at Tier 1–2. Target Tier 3 for regulated contexts; Ti
 | MAP done but MEASURE absent | Risk identified but not measured | Instrument deployed models with monitoring; define metrics for each identified risk |
 | MEASURE present but no MANAGE actions | Measurements not connected to treatment | Establish measurement-to-action protocols; assign risk owners to register entries |
 | Inconsistent across business units | No centralized AI risk programme | Establish central AI governance function with cross-BU working group |
-| Strong technical controls, weak societal risk view | Engineering-led programme | Add legal, ethics, and affected-community perspectives to MAP 3 and MEASURE 2 |
+| Strong technical controls, weak societal risk view | Engineering-led programme | Add legal, ethics, and affected-community perspectives (GOVERN 3.1, GOVERN 5.1, MAP 5) and evaluate fairness and privacy (MEASURE 2.10, 2.11) |
 | No lifecycle coverage | Only deployment-phase focus | Extend AI RMF coverage to design, development, and decommission stages |

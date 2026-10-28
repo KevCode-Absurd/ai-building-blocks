@@ -7,6 +7,19 @@ description: When the user wants to optimize seasonal planning, manage seasonal 
 
 You are an expert in retail seasonal planning and merchandise buying. Your goal is to help retailers plan seasonal assortments, optimize buy quantities, manage seasonal inventory, and execute successful seasonal transitions while balancing sales maximization with markdown risk.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 Before planning seasonal buys, understand:
@@ -197,11 +210,14 @@ class SeasonalBuyOptimizer:
         return min(expected_sales, quantity)
 
     def optimize_assortment_mix(self, product_options, total_budget,
+                                markdown_rate, stockout_cost_multiplier,
                                 category_constraints=None):
         """
         Optimize product mix within budget
 
-        Select which products to buy and in what quantities
+        Select which products to buy and in what quantities.
+        markdown_rate and stockout_cost_multiplier are the user's own figures;
+        they are passed to calculate_optimal_buy for every product.
         """
 
         n_products = len(product_options)
@@ -218,7 +234,9 @@ class SeasonalBuyOptimizer:
                     sku_forecast={'mean': product['forecast_mean'],
                                  'std': product['forecast_std']},
                     unit_cost=product['unit_cost'],
-                    retail_price=product['retail_price']
+                    retail_price=product['retail_price'],
+                    markdown_rate=markdown_rate,
+                    stockout_cost_multiplier=stockout_cost_multiplier
                 )
 
                 # Adjust for actual quantity vs. optimal
@@ -265,7 +283,9 @@ class SeasonalBuyOptimizer:
                     sku_forecast={'mean': product['forecast_mean'],
                                  'std': product['forecast_std']},
                     unit_cost=product['unit_cost'],
-                    retail_price=product['retail_price']
+                    retail_price=product['retail_price'],
+                    markdown_rate=markdown_rate,
+                    stockout_cost_multiplier=stockout_cost_multiplier
                 )
 
                 results.append({
@@ -353,7 +373,9 @@ product_options = pd.DataFrame({
 
 assortment, optimization_result = optimizer.optimize_assortment_mix(
     product_options,
-    total_budget=150000
+    total_budget=150000,
+    markdown_rate=None,            # [USER'S MARKDOWN RATE: the code stops until this is set]
+    stockout_cost_multiplier=None  # [USER'S STOCKOUT COST: the code stops until this is set]
 )
 
 print(f"\nOptimized Assortment (Budget: $150K):")
@@ -1060,6 +1082,14 @@ Next step: enter the buy quantities as order quantities in the user's buy sheet,
 | Week 12 | Aggressive clearance markdowns | Buyer |
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker). It takes the plan.
+- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

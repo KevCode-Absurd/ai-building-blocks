@@ -9,9 +9,9 @@ subhead: An arm that moves from pose A to pose B along a path that avoids obstac
 explain: |
   An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
 
-  It starts by requiring a proper robot model, because planning on a bad model gives false safe paths. You describe the obstacles as a collision world. It then helps you choose a planner: RRT for fast random search, CHOMP for smoother optimised paths. The raw path is shortened, then turned into a timed trajectory, such as time-optimal, constant speed for welding, or trapezoidal. A last check confirms the full trajectory is free of collisions. You need MATLAB with the robotics toolbox.
+  It starts by requiring a proper robot model, because planning on a bad model gives false safe paths. You describe the obstacles as a collision world. It then helps you choose a planner: RRT for fast random search, CHOMP for smoother optimised paths. The raw path is shortened, then turned into a timed trajectory, such as time-optimal, constant speed for welding, or trapezoidal. A last check confirms the full trajectory is free of collisions. You need MATLAB with Robotics System Toolbox.
 
-  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks. This is MathWorks' skill, copied with one safety note added by AI Blocks at the top of SKILL.md.
+  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks. This is MathWorks' skill, with a safety note and a cost and licence note added by AI Blocks at the top of SKILL.md.
 when:
   - You have two arm poses and need a safe path between them.
   - A tool must move at constant speed along a seam, like welding or cutting.
@@ -50,6 +50,8 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB with Robotics System Toolbox, which is a paid product
+    - "MATLAB release: R2021b or later for RRT, R2023a or later for CHOMP, R2023b or later for time-optimal timing"
+    - Navigation Toolbox too, if your obstacles come from a 3D occupancy map (occupancyMap3D)
     - A robot model from the robot kinematics skill, if you do not have one yet
   output:
     - name: Collision risk check

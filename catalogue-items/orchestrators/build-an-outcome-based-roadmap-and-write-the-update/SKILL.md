@@ -83,15 +83,6 @@ HAND-BACK SUMMARY
 
 The files are `outputs/step-01-opportunity-solution-tree.md` to `outputs/step-04-roadmap-update-writer.md`. The second holds the roadmap, the third the quarter plan, the fourth the update.
 
-<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
-## After this
-When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-- **Screen the next feature request** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). Bring the quarter plan and the request.
-- **Ship one bet safely** with the [Launch a feature through a beta and read the numbers](https://useaiblocks.com/workflows/launch-a-feature-through-a-beta-and-read-the-numbers) workflow. Bring the bet and its measure.
-- **Test the riskiest guess** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). Bring any opportunity marked GUESS.
-If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -101,6 +92,15 @@ If they pick one and that item is added here, carry on with what you just made. 
 - The quarter plan fits the capacity and says what is not being done.
 - The update repeats no claim the plan does not hold, and promises no date the plan lacks.
 - CHECKS MISSED lists each check that failed or could not run, one line each, or says "none".
+
+<!-- next: written by hand for this workflow (needs_mode: manual in item.yaml). -->
+## After this
+When you have handed it back, suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
+- **Screen the next feature request** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). Bring the quarter plan and the request.
+- **Ship one bet safely** with the [Feature beta launch planner](https://useaiblocks.com/workflows/launch-a-feature-through-a-beta-and-read-the-numbers) workflow. Bring the bet and its measure.
+- **Test the riskiest guess** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). Bring any opportunity marked GUESS.
+If they pick one and that item is added here, carry on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If a required input is absent, stop that step and return what you have with the exact input needed to resume. Never invent a number, a customer quote or a metric to fill a gap.

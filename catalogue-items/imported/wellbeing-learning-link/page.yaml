@@ -36,7 +36,7 @@ how_to_use:
   - Add your programme description, school phase and context, the outcomes you hope for, and who will read the case.
   - Gather your baseline figures first if you have them: attendance, exclusions and survey results. Add them. If you have none, say so, and the case will tell you to collect a baseline before you start.
   - Read the result. The example output in SKILL.md shows layout only. Its citations and figures come from the original author and were not checked here, so they are placeholders and must not be quoted. Check every study and figure against the original source before you put it in a bid or report.
-  - "Check each study the case names against its original source (for example the Durlak et al. 2011 meta-analysis) before you share anything with governors, funders or inspectors. Remove any line marked [SOURCE NEEDED] unless you add a source you have checked."
+  - "Check each study the case names against its original source before you share anything with governors, funders or inspectors. The skill leans on five: Fredrickson (2001), Durlak et al. (2011), Hattie (2009), Roffey (2012) and Seligman et al. (2009). The result ends with a Sources table. Use only claims marked Checked, and remove any line marked [SOURCE NEEDED] unless you add a source you have checked."
   - Add your own school's data to the rationale before you share it.
   - Next, take the leadership rationale to your governors. To plan the work itself, use classroom-belonging-planner.
 output_sample:
@@ -59,4 +59,6 @@ output_sample:
       contains: A short statement you can use with leaders, governors, parents or inspectors.
     - name: Honest Caveats
       contains: The limits of the evidence and what the case cannot show.
+    - name: Sources
+      contains: Each study or figure used, what it supports, and whether it is checked or still needs checking.
 next: [classroom-belonging-planner]

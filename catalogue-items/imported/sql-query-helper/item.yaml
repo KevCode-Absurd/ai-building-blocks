@@ -1,6 +1,6 @@
 slug: sql-query-helper
 name: SQL query helper
-summary: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+summary: Describe the data you need. Get a checked SQL query, a faster version, or a migration.
 category: general
 boards: []
 type: skill
@@ -29,4 +29,4 @@ credits:
   - title: sql-database-assistant skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/sql-database-assistant
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

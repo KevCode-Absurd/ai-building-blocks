@@ -63,7 +63,7 @@ Do not argue with the buyer's no. Show the demand. She'd make an event, a giveaw
 
 ### Training your sales team
 
-She'd visit each new site and stay a week. She'd teach your people to demonstrate, not recite. Put the product on the customer and let her see the result. She'd choose people who look the part, give them daily goals and tell them not to oversell, because she wants the customer to leave satisfied. She'd have your leaders spend time selling so they learn the market first-hand. She'd cut the script that sounds like a brochure.
+She'd visit each new site and stay a week, as she did at new store openings [S2]. She'd teach your people to demonstrate, not recite. Put the product on the customer and let her see the result. She'd choose people who look the part, give them daily goals and tell them not to oversell, because she wants the customer to leave satisfied. She'd have your leaders spend time selling so they learn the market first-hand. She'd cut the script that sounds like a brochure.
 
 ### Adding a second brand or line
 

@@ -5,13 +5,13 @@ name: Shopify checkout customizer
 summary: "Build a Shopify checkout customizer: say what checkout should add, like a gift note field or upsell, and get starter extension code to finish."
 job: build-software
 headline: Shopify checkout customizer
-subhead: Starter checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. You fill in the placeholders before it runs. It stays safe when Shopify updates checkout.
+subhead: Starter checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. You fill in the placeholders before it runs. It uses Shopify's extension model, so check the API version before you deploy.
 explain: |
-  Starter checkout code that needs your placeholders filled in, for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
+  Starter checkout code that needs your placeholders filled in, for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders.
 
   The sample upsell throws an error until you write the function that fetches your offer product. The age example is a tick box, not a legal age check.
 
-  It picks the right extension type: checkout screen add-ons, post-purchase offers, customer account pages, thank-you page and order status changes. It scaffolds the extension with the Shopify CLI, writes the interface code, wires in custom fields, and adds validation rules where you need them. Extensions run in a sandbox, so they keep working with Shop Pay and new features. You need the Shopify CLI, a Partner account, and Shopify Plus or checkout extensibility.
+  It picks the right extension type: checkout screen add-ons, post-purchase offers, customer account pages, thank-you page and order status changes. It scaffolds the extension with the Shopify CLI, writes the interface code, wires in custom fields, and adds validation rules where you need them. Extensions run in Shopify's sandbox, which is built to keep them working as checkout changes, but test again after each Shopify API update. You need the Shopify CLI, a Partner account, and Shopify Plus or checkout extensibility.
 when:
   - You want a gift message or delivery note field at checkout.
   - You want to offer an upsell after the customer pays.

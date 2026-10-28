@@ -39,9 +39,9 @@ how_to_use:
   - "Describe your road: lanes, widths, length, junctions, signs and signals. Add any source map file."
   - Ask your AI to write the MATLAB scripts and run the checks before it writes the map file.
   - "The final files are two things: the .rrhd map file and the .m scripts that built it. Save both in one project folder. A run passed when every check reports pass and the .rrhd file opens in RoadRunner. The checks cover alignment, fit and sizes, and run before the file is written."
-  - Asset paths for markings, signs and barriers must be set by hand. The skill that maps them (MathWorks' RoadRunner asset mapping skill) is not in this library, so look up the asset paths in your own RoadRunner project and tell your AI.
+  - "Asset paths for signs and barriers must be set by hand, because MathWorks' RoadRunner asset mapping skill is not in this library. Lane marking paths are listed in the skill. For the rest, open your RoadRunner project, find each sign or barrier in the Library Browser, and note its path from the Assets folder, such as Assets/Signs/... Give your AI that list."
   - Open the .rrhd file in RoadRunner and look at lanes, junctions and signs before you use it in a test.
-  - "Next: import the finished file into RoadRunner with the Road scene importer. Asset paths for markings, signs and barriers come from MathWorks' RoadRunner asset mapping skill, which is not in this library yet."
+  - "Next: import the finished file into RoadRunner with the Road scene importer."
 next: [road-scene-importer]
 output_sample:
   input:

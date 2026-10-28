@@ -13,6 +13,26 @@ The meeting structure that worked at 30 people collapses at 100. What worked at 
 
 Start from your team size, stage and goals. If you have a board update or plan that lists the metrics and decisions to review, add it and build the review rhythm around them.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Board and investor update planner](https://useaiblocks.com/skills/copilot-gtm-board-and-investor-communication). Bring your question, a spreadsheet (optional), a business profile (optional), an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 **Triggers:**
@@ -422,3 +442,13 @@ Daily: Slack wins/customer-voice → Weekly: CEO email + function updates → Mo
 ---
 
 *The author's own account (not checked here): operating cadence design across companies scaling from 20 to 1,000+ employees, including a five-level meeting architecture, a weekly reporting format and a CEO weekly update format. The author reports good results from them, but those results are the author's claim, are not checked, and must not be quoted as findings. Not theory — patterns from building operating systems through hypergrowth and teaching them to the next team. These are one author's experience. The results quoted here are not measured or sourced.*
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker). It takes the plan.
+- The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
+- The [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). It takes the plan.
+- **Lead the team** with the [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

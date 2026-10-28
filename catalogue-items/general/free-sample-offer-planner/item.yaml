@@ -17,4 +17,4 @@ version: 1.0.0
 minds: [claude-hopkins, estee-lauder, john-caples, alex-hormozi]
 credits:
   - {title: "Scientific Advertising (1923)", by: "Claude C. Hopkins", used: "Free samples as a way to let buyers prove a claim, making claiming easy, one per home, tying samples to purchase, keying every reply and judging by cost per customer"}
-  - {title: "Estée: A Success Story (1985) and quotes", by: "Estée Lauder", used: "The idea of putting a sample in the hands of the person who will use it (excerpts only)"}
+  - {title: "Estée: A Success Story (1985) and quotes", by: "Estée Lauder", used: "The idea of putting a sample in the hands of the person who will use it (excerpts only, checked against the book). Credited as a method source, not an endorsement"}

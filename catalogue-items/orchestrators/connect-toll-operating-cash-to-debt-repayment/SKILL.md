@@ -61,6 +61,6 @@ Lead with the repayment table: cash for debt service, target service, interest, 
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Test cover by period** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
-- **Check leverage and cure rights** with the [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow.
+- **Test cover by period** with the [Debt service coverage checker](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check leverage and cure rights** with the [Loan leverage and equity cure checker](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

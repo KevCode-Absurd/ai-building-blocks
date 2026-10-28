@@ -11,6 +11,25 @@ metadata:
 
 # Grant Prospect Research & Pipeline Tracking
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **A chat AI that can read your files:** The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill for finding, vetting, and scheduling funders — stop at the point of "we should
@@ -123,3 +142,10 @@ prospecting. Use 990-PF actual-grant data, not funder websites, to challenge a c
 about which funders are "reaches" versus realistic targets. When advising on capacity, translate
 findings into a writing-capacity plan (how many LOIs/proposals per month is realistic given staff
 time) so the client doesn't build a prospect list larger than they can execute against.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

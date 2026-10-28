@@ -8,6 +8,25 @@ metadata: {"nexscope":{"emoji":"💰","category":"ecommerce"}}
 
 Calculate product profitability for Amazon FBA sellers — cost breakdowns, profit margins, break-even analysis, and pricing recommendations. No API key required.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Installation
 
 ```bash
@@ -94,7 +113,7 @@ A003, Foam Roller, $24.99, cost $8, shipping $2, FBA $6
 | **FBA Storage** | Monthly warehouse fee | User input |
 | **Referral Fee** | Amazon commission (8-20%) | Auto × category rate |
 | **Advertising** | PPC spend | Price × ad ratio |
-| **Returns** | Return processing loss | Return rate × handling |
+| **Returns** | Return processing loss | Return rate × (return handling fee + half the product cost, an assumed loss per returned unit) |
 | **Other Fees** | Packaging, labels, prep | User input |
 
 ---
@@ -109,6 +128,8 @@ A003, Foam Roller, $24.99, cost $8, shipping $2, FBA $6
 | **Most Categories (default)** | **15%** |
 | Clothing / Apparel | 17% |
 | Jewelry | 20% |
+
+These are simplified flat rates. Amazon charges the greater of the category percentage or a per-item minimum fee, and some categories are tiered by price. Check the current rates in Amazon's Selling on Amazon fee schedule (https://sellercentral.amazon.com/gp/help/external/200336920) and pass the right rate as `referral_fee_rate`.
 
 ---
 
@@ -135,23 +156,36 @@ Net Profit            $8.54     28.5%
 ### Break-Even Analysis
 
 ```
-Break-even Price:     $20.50
-Current Margin:       +46.3% above break-even
-Safety Margin:        31.6%
+Break-even Price:     $18.60
+Current Margin:       +61.2% above break-even
+Safety Margin:        38.0%
 ```
 
+How it is worked out: the referral fee and ad spend are both a share of the price, so the break-even price is the flat per-unit cost divided by what is left after those shares. Flat cost here = $6.00 + $1.50 + $5.50 + $0.30 + $0.50 + $0.15 returns = $13.95. Break-even = $13.95 ÷ (1 − 15% − 10%) = $18.60. At $18.60 the referral fee is $2.79 and ads are $1.86, so profit is $0.00.
+
 ### Pricing Recommendations
+
+Price for a target net margin = flat cost ÷ (1 − target margin − referral rate − ad rate). For 20%: $13.95 ÷ 0.55 = $25.36.
 
 ```
 | Target Margin | Recommended Price | Profit/Unit |
 |---------------|-------------------|-------------|
-| 15%           | $23.10            | $3.47       |
-| 20%           | $25.20            | $5.04       |
-| 25%           | $27.72            | $6.93       |
-| 30%           | $30.80            | $9.24       |
+| 15%           | $23.25            | $3.49       |
+| 20%           | $25.36            | $5.07       |
+| 25%           | $27.90            | $6.98       |
+| 30%           | $31.00            | $9.30       |
 ```
 
+If the referral rate plus ad rate is 100% or more of the price, no price breaks even and the calculator says so.
+
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Profitability Status
 

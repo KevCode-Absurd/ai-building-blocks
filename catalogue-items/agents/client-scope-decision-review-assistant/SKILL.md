@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, and the client's reply to your last options.
 
-**The pieces it uses:** the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow (the governing method). It runs the [Plain-words contract summary](https://useaiblocks.com/skills/plain-words-contract-summary), the [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register) to record a decision. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory.
+**The pieces it uses:** the [Client scope change planner](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow (the governing method). It runs the [Contract plain-language summary writer](https://useaiblocks.com/skills/plain-words-contract-summary), the [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Action item tracker](https://useaiblocks.com/skills/executive-action-register) to record a decision. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory.
 
 **Tools that do this best:**
 - **A chat AI that can read files:** reads the contract and emails together and can save the record file. In plain chat, return the same sections as text and print the record for the user to keep.
@@ -68,6 +68,6 @@ Say whether this was a first baseline or a comparison. A draft reply is not sent
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - **Write the change request itself** with the [Change request writer](https://useaiblocks.com/skills/change-request-writer).
-- **Check contract clauses for risk** with the [Contract intake reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
-- **Review a client's fees against hours** with the [Quarterly client rate reviewer](https://useaiblocks.com/skills/quarterly-client-rate-reviewer).
+- **Check contract clauses for risk** with the [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+- **Review a client's fees against hours** with the [Client fee and work-hour reviewer](https://useaiblocks.com/skills/quarterly-client-rate-reviewer).
 Nothing here sends a message. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

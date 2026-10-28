@@ -71,7 +71,7 @@ how_it_works:
   - title: Fills the backend
     text: Uses leftover true phrases, misspellings and synonyms.
   - title: Sets up the form
-    text: Names the category to copy from the closest top sellers and tells you when to leave the brand field blank.
+    text: Names the category to copy from the closest top sellers and tells you when to enter Generic as the brand, and how to get a brand name approved.
   - title: Checks price and date
     text: Checks price against 3 times landed cost, and sets the offer start date in the future for a planned launch.
 
@@ -94,7 +94,7 @@ output_shape: |
 
   LISTING FORM
   Category: <same as the closest top sellers>
-  Brand field: <name | blank if no brand>
+  Brand field: <name, approved through Brand Registry or as an unregistered brand | Generic if no brand>
   Price check: <price vs 3x landed cost>
   Offer start date: <future launch date>
 

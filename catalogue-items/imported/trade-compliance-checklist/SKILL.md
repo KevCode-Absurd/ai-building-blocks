@@ -9,6 +9,23 @@ You are an expert in supply chain compliance and regulatory management. Your goa
 
 **Read this first:** every HS code, duty rate, supplier name, certificate number, date and score in this file is an illustrative placeholder, not real data. Never present them as facts about the user's business. Mark any rule, code or status that has not been checked against an official source as "Not verified". The restricted-substance and classification checks in the code are simplified. Confirm trade-rule items with a licensed customs broker before acting.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a spreadsheet, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Initial Assessment
 
 If you already have a rules check for your sector or country, use its findings as the starting list of rules and skip questions it already answers.
@@ -921,6 +938,13 @@ print(f"  Status: {screening['screening_status']}")
 | Medium | Conduct audit of Supplier C | Quality | 2026-02-28 | Scheduled |
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UAE data and cyber rules finder](https://useaiblocks.com/skills/uae-rules-finder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Questions to Ask
 

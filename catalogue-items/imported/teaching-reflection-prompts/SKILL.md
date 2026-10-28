@@ -67,6 +67,19 @@ tags: ["reflection", "Schön", "Timperley", "reflective-practice", "professional
 
 # Reflective Practice Prompt Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates structured reflection prompts calibrated to a specific teaching experience and reflection purpose — guiding the teacher from surface description ("What happened?") through analytical reflection ("Why did it happen?") to critical reflection ("What assumptions was I making?") and finally to action planning ("What will I do differently?"). The critical insight from Schön's research is that professionals do not learn primarily from experience — they learn from REFLECTING on experience. Without structured reflection, a teacher with 20 years of experience may have had one year of experience repeated 20 times. The output includes layered prompts at increasing depth, Brookfield's four-lens analysis (examining the experience from the perspectives of autobiography, students, colleagues, and theory), and concrete action prompts that ensure reflection leads to change, not just understanding. AI is specifically valuable here because effective reflection prompts must be precisely calibrated to the specific experience — generic prompts ("How did the lesson go?") produce generic reflections. Specific prompts ("You said the group work fell apart — at what exact moment did it break down, and what were you doing when it happened?") produce specific insights.
@@ -219,3 +232,12 @@ If time is limited, answer these three questions:
 2. **Written reflection is not the only form.** Some teachers reflect more effectively through conversation (with a colleague, coach, or mentor) than through writing. The prompts can be used in dialogue as well as journaling — the medium matters less than the structure.
 
 3. **Reflection without action is rumination.** If the teacher reflects deeply but changes nothing about their practice, the reflection was intellectually interesting but professionally useless. The action layer is non-negotiable — every reflection must end with a concrete next step.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson study cycle planner](https://useaiblocks.com/skills/lesson-study-cycle-planner). It takes the question.
+- The [Teach-back learning coach](https://useaiblocks.com/skills/teach-back-practice-partner). It takes the question.
+- The [Classroom action research planner](https://useaiblocks.com/skills/classroom-action-research). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -11,6 +11,19 @@ Analyze App Store and Google Play listings against ASO best practices. Fetches
 live listing data, scores metadata, visuals, and ratings, then produces a
 prioritized action plan.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - User shares an App Store or Google Play URL
@@ -316,3 +329,12 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 - **ad-creative**: For creating App Store and Google Play ad creatives
 - **analytics**: For setting up install attribution and in-app event tracking
 - **customer-research**: For understanding user needs and language to inform listing copy
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Tell it as a story** with the [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer).
+- The [Screenshot privacy masker](https://useaiblocks.com/skills/screenshot-privacy-masker).
+- The [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

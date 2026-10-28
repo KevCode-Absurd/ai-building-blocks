@@ -6,10 +6,27 @@ source: https://github.com/ibelick/ui-skills/tree/main/skills/fixing-metadata
 source_repo: ibelick/ui-skills
 source_type: community
 date_added: 2026-07-01
-license: CC-BY-4.0 # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own header said MIT.
+license: MIT # AI Blocks: this is the author's own header, kept as written. sickn33's collection shares this copy under CC BY 4.0 (see LICENSE-CONTENT).
 license_source: https://github.com/ibelick/ui-skills/blob/main/LICENSE
 ---
 
+
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** Reads your whole project and makes small, scoped edits to the right files.
+- **Any good chat AI:** Works well if you paste in the head section of a few pages.
+<!-- /needs -->
 
 ## When not to use (added by AI Blocks)
 
@@ -46,6 +63,14 @@ The upstream skill by ibelick lists MIT. This copy came through the sickn33 coll
 ## When to Use
 
 Use this skill when you need audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding SEO metadata, fixing social share previews, reviewing Open Graph tags, setting up canonical URLs, or checking robots directives.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Link preview fixer](https://useaiblocks.com/skills/link-preview-fixer).
+- The [SEO auditor](https://useaiblocks.com/skills/seo-auditor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Workflow
 

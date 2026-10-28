@@ -101,7 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
 - The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
 - The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer). It takes the document.
-- **Lead the team** with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -110,7 +109,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Offer one next step in a short question, and say the user can type their own:
 - **Ask the HR reviewer to read the guide** before the meeting, and give them the MISSING lines.
 - **Record what was agreed** with the [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer) after the meeting.
-- **Plan cover** while an adjustment is tried with the [Prepare a team absence handover](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
+- **Plan cover** while an adjustment is tried with the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
 
 ## Avoid
 

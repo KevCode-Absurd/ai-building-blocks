@@ -101,7 +101,7 @@ Write `MISSING: <what>` next to the affected line. Carry on with work that does 
 ## What to do with the result
 
 Suggest one next step as a short question, and say the user can type their own. These fit a supplier review best:
-- **Track it over later lots.** Use the [Supplier correction evidence review assistant](https://useaiblocks.com/agents/supplier-correction-evidence-review-assistant), which keeps a record and checks each new lot against it.
+- **Track it over later lots.** Use the [Supplier corrective action reviewer](https://useaiblocks.com/agents/supplier-correction-evidence-review-assistant), which keeps a record and checks each new lot against it.
 - **Reply to the supplier.** Once a person has checked the register, they can send the accepted and open items themselves.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 

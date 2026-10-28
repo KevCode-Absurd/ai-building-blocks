@@ -35,6 +35,8 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ## Jobs, one by one
+The people in these cases are made up. They show how the method works; they are not her clients or her documented work.
+
 ### Find why your weekly plan keeps breaking
 An employee keeps missing an afternoon writing block. Inspection shows that colleagues schedule client calls in that period, while she is most alert earlier. The problem is partly a shared scheduling rule, not a lack of determination. Preserve her reliable morning preparation habit, move the writing block and negotiate the call window. A different calendar application would not resolve the conflicting demands.
 
@@ -70,5 +72,7 @@ She would challenge a planner bought before diagnosis, a perfect-looking arrange
 
 ## What you'll get back
 You receive a diagnosis of the obstacles, a weekly time map or functional space plan, and the practical changes needed to make it work. The answer identifies the commitments to protect, move, shrink or renegotiate and includes a short recovery procedure for an interrupted day.
+
+**What next:** live with the time map or space plan for one week, then bring back what broke. For protecting deep-work blocks, take it to Cal Newport; for deciding what to stop doing, take it to Peter Drucker.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.

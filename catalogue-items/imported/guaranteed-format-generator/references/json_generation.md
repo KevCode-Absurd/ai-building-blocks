@@ -1,5 +1,7 @@
 # Comprehensive JSON Generation Guide
 
+> **Version note (added by AI Blocks).** Every example in this file uses the `outlines.models.*` and `outlines.generate.*` calls from the Outlines 0.1 series. Install it with `pip install "outlines>=0.1,<0.2"`. Outlines 1.0 and later replaced these calls (for example `outlines.Generator` and `outlines.from_transformers`), so this code will not run on them as written. To use a newer release, follow the official migration guide: https://dottxt-ai.github.io/outlines/latest/guide/migration/
+
 Complete guide to JSON generation with Outlines using Pydantic models and JSON schemas.
 
 ## Table of Contents

@@ -5,17 +5,18 @@ job: brand-file
 headline: Product brand sheet planner
 subhead: Share your product and brand direction. Get a one-page visual sheet plan, image prompts and a list of missing assets. Bring the brief and any files you want it to use.
 explain: |-
-  Use this when you need a cohesive one-page product visual sheet. Read the brand/product material actually supplied: exact product geometry/labels, audience, approved claims, palette, type and desired use. A URL alone is not proof it was read.
+  A product page, an ad and a social post often look like three different brands. This planner fixes the look on one page first. It reads the product and brand material you share, lists what is missing (photos, logo files, fonts, approved copy, permissions) and sets shared rules for camera, light, colour and materials.
 
-  Create an asset inventory with missing photography, logo artwork, fonts, approved product copy and licensing/permission notes. Use original example assets when no brand exists.
+  Then it plans a one-page sheet with a zone for each job: mood, product hero, ad idea, editorial scene and creator-style shot. It writes one image prompt for each zone. It does not draw the images. You paste the prompts into an image tool such as ChatGPT or Gemini, which may need a paid plan for many images.
 when:
   - You need a cohesive one-page product visual sheet.
   - You want a clear draft and checks from the material you already have.
   - You need one sheet that shows the product, the mood and the ad and editorial looks together, with a prompt for each image.
 you_give:
-  - brief
-  - "Optional: product photos"
-  - "Optional: brand brain"
+  - Your product, who it is for and the claims you may make
+  - Your brand direction, colours and fonts
+  - Product photos (optional)
+  - Your brand file (optional)
 you_get:
   - plan
   - brand guide
@@ -45,7 +46,7 @@ output_sample:
     - Product photos (optional)
     - Your brand file (optional)
   prerequisites:
-    - An image tool such as ChatGPT or Gemini, to draw the images from the prompts
+    - An image tool such as ChatGPT or Gemini, to draw the images from the prompts (free plans have tight daily limits; many images may need a paid plan)
   output:
     - name: Asset inventory
       contains: What you have and what is missing, such as photos, logo, fonts and approved copy.
@@ -55,5 +56,5 @@ output_sample:
       contains: The one-page layout with a zone and a job for each image.
     - name: Asset prompts
       contains: One image prompt per needed asset, with the fixed product details written in.
-    - name: Checks and not run
-      contains: What was checked for product accuracy and layout, and what did not run.
+    - name: Checks missed
+      contains: Which product accuracy and layout checks failed or did not run, or none.

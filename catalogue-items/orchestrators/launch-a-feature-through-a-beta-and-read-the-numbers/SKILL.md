@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **The product spec** (yours): what to build and how to tell it's done: a requirements doc or user stories.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
@@ -75,7 +75,7 @@ Five step files and the summary. The third file holds the metrics decided before
 - **Step 5, results:** for each metric, the target, the actual number, what it means, what it cannot yet say, and keep, change or pull.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-Of the shared "After this" links above, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The Product feature review planner fits this run best.
+Of the shared "After this" links below, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The Product feature review planner fits this run best.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

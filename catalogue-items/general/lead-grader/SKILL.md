@@ -58,7 +58,7 @@ The list, dated, with the re-grade day. The A's, each with timing and next step.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the lead list.
 - The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the lead list.
-- The [Deal notes and CRM updater](https://useaiblocks.com/skills/deal-notes-and-crm-updater). It takes the lead list.
+- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the lead list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

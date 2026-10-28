@@ -52,7 +52,7 @@ output_sample:
     - name: The labels
       contains: Keeper, watch, weak or not understood for each holding, with whether your reason still holds and the figure behind it.
     - name: One-dollar cross-check
-      contains: Profit each business kept compared with the rise in its market value over the same years.
+      contains: Profit each business kept compared with the rise in its market value over the same years, after taking out money raised from new shares. No figure when it kept no profit.
     - name: Where results and price disagree
       contains: Two rankings, by results and by price, with the holdings where they differ far apart and what to look into.
     - name: What you understand
@@ -72,7 +72,7 @@ how_it_works:
   - title: Sorts each one
     text: Keeper, watch, weak or not understood, by stated rules.
   - title: Cross-checks the kept profit
-    text: Compares profit kept with the rise in market value over five years.
+    text: Compares profit kept with the rise in market value over five years, after taking out money raised from new shares.
   - title: Shows the disagreements
     text: Ranks by results and by price and marks where the ranks differ.
   - title: Counts what you understand
@@ -89,7 +89,7 @@ output_shape: |
   <name>: <KEEPER / WATCH / WEAK / NOT UNDERSTOOD> - reason still holds: <YES/WEAKER/NO> - <figure>
 
   ONE-DOLLAR CROSS-CHECK
-  <name>: kept <n>, value rose <n>
+  <name>: kept <n>, adjusted rise <n> (end - start - new shares + spin-offs), per dollar kept <n> or not applicable
 
   WHERE RESULTS AND PRICE DISAGREE
   <name>: results rank <n>, price rank <n> - look into <...>

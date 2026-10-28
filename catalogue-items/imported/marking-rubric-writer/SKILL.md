@@ -70,6 +70,26 @@ tags: ["rubric", "assessment", "criteria", "descriptive-language", "formative-as
 
 # Criterion-Referenced Rubric Generator
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Media literacy lesson builder](https://useaiblocks.com/skills/media-literacy-lesson-builder). Bring source text, a plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Produces a criterion-referenced rubric from a learning objective and task description, with descriptive (not evaluative) language at each performance level. Each criterion describes what the student's work LOOKS LIKE at each level — not how "good" it is. The output includes the full rubric, a design rationale, a student-friendly version for self/peer assessment, and calibration notes for consistency across markers. AI is specifically valuable here because effective rubric design requires precise, descriptive language that distinguishes between performance levels without using evaluative labels ("excellent," "good," "poor") or vague quantity indicators ("some," "many," "thorough") — and each descriptor must be qualitatively distinct from the adjacent levels, not just a scaled version of the same description.
@@ -248,3 +268,12 @@ Return your output in this exact format:
 2. **Four levels is a practical compromise.** Some tasks would benefit from more levels (to distinguish fine gradations) or fewer (to simplify assessment). Four levels balance reliability (enough levels to be informative) with usability (few enough to be practical). If the rubric is being used for high-stakes grading, additional level descriptors may be needed.
 
 3. **Descriptive language is harder to write but more useful than evaluative language.** The rubric avoids "good," "excellent," and "poor," which makes each cell longer and more specific. This is a deliberate trade-off — evaluative rubrics are shorter but less useful for feedback. Teachers may need time to become comfortable with descriptive rubric language.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the draft.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the draft.
+- The [Text and diagram explainer designer](https://useaiblocks.com/skills/word-picture-explainer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

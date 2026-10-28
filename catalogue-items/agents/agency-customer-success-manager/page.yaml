@@ -154,3 +154,4 @@ improve:
   - Put your own health score areas and weights in SKILL.md, and drop any you cannot measure.
   - Add your customers' typical goals, so the onboarding plan starts from them.
   - Keep the plans you ran and what happened, and paste the last one in at the next review.
+next: [weekly-customer-health-watcher, monthly-renewal-watcher]

@@ -7,8 +7,6 @@ job: research-topics
 headline: Research results report builder
 subhead: One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
 explain: |
-  One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
-
   It finds your outline file and reads every result file in the folder. It then asks which short fields, such as star counts, scores or release dates, to show next to each item in the contents list. A Python script is generated to join everything into a Markdown report that covers every field. Anything marked uncertain is skipped, so the report holds only what you can stand behind. It runs after an earlier research outline step.
 when:
   - You gathered facts on dozens of items and need one document.
@@ -32,9 +30,11 @@ you_get:
 how_to_use:
   - Use an AI that can run Python and save files, such as Claude with file access. A plain chat will not run the script.
   - Give your AI the skill text and your topic folder. It must hold outline.yaml, fields.yaml and the result files.
-  - Ask it to run /research-report. It will find your outline and read the result files.
+  - "Before you start, check two things the skill does not create. fields.yaml lists your field names grouped by category, such as Basic Info: name, release_date. Each result JSON marks values it is not sure of, either by writing [uncertain] in the value or by listing the field name in an uncertain array. Values marked any other way are kept as if checked."
+  - Ask it to build the research report from your folder. In Claude Code you can type /research-report. It will find your outline and read the result files.
   - Pick which short fields to show beside each item in the contents list, such as stars, scores or release dates.
-  - Let it write and run generate_report.py. Open report.md and check it before you share it.
+  - Your AI writes generate_report.py. Read the script before it runs on your files, then let it run. Open report.md and check it before you share it.
+  - "Next: compare a few items in report.md against their raw result files, and look up any field it skipped as uncertain. Then share the report, or pass it to a writing step such as a summary or brief."
 output_sample:
   input:
     - A folder of research result files (JSON)

@@ -1,6 +1,6 @@
 # Get found in search and AI answers: AI Blocks
 
-> 98 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 101 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ahrefs backlink reviewer](https://useaiblocks.com/skills/backlink-profile-auditor): Connect Ahrefs and share your site and rivals. Get a review of linking sites, possible risks, lost links and rival gaps.
 - [Ahrefs content gap and decay reviewer](https://useaiblocks.com/skills/content-gap-and-decay-finder): Connect Ahrefs and share your site, rivals and dated content data. Get missing topics and pages classified for action.
@@ -37,6 +37,8 @@
 - [Customer FAQ writer](https://useaiblocks.com/prompts/faq-page-from-questions-writer): Share customer questions and true answers. Get a grouped FAQ draft with clear answers and gaps for the owner to fill.
 - [Customer question keyword finder](https://useaiblocks.com/prompts/customer-question-keyword-finder): Share reviews and support messages. Get suggested search queries, matching page types and five topics to write first.
 - [Customer search question mapper](https://useaiblocks.com/skills/shopper-question-and-fan-out-mapper): Get the questions shoppers ask AI about your products, grouped by topic, with follow-up searches and the pages your store still lacks.
+- [Etsy listing SEO scorer](https://useaiblocks.com/skills/etsy-listing-seo-scorer): Share your Etsy listing. Get a score, better title and tags, and a ranked fix list.
+- [Honest product review writer](https://useaiblocks.com/skills/honest-product-review-writer): Write a product review or buying guide that shows its real evidence and never claims testing you did not do. Name the products to start.
 - [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper): Share your pages. Get which pages should link to which, with anchor text and orphan pages to fix.
 - [Journalist query answer writer](https://useaiblocks.com/skills/journalist-query-answer-writer): Answer journalist requests with real expertise. Get ranked picks, skimmable expert answers and a win-rate tracker to earn press links.
 - [Keyword list maker](https://useaiblocks.com/skills/keyword-list-maker): Paste any text and get a keyword list for SEO or tags: one line of up to 50 ranked keywords, ready to copy into your site.
@@ -52,6 +54,7 @@
 - [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner): Share a page and target search phrase. Review titles, headings, content, links, images, URLs and schema, then draft ranked fixes.
 - [Organic search report builder](https://useaiblocks.com/skills/organic-search-report-builder): Share Search Console and GA4 numbers. Get search trends, a custom score and one question to investigate next.
 - [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor): Find which pages to keep, update, merge, redirect or delete in your content audit. Give it your page list and data. You get a call and reason per page.
+- [Page SEO optimizer](https://useaiblocks.com/skills/page-seo-optimizer): Check one web page for SEO problems. Get ranked fixes, a rewritten title and description, and structured data code to help it rank in search.
 - [Product comparison page writer](https://useaiblocks.com/workflows/publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote): Share product and competitor facts. Get a comparison-page plan and one sourced draft that starts each section with its answer.
 - [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor): Edit a product page so AI tools quote it right. Give it your page and facts. You get a change list, spec table, FAQ and markup checklist.
 - [Product page SEO builder](https://useaiblocks.com/skills/product-page-seo-builder): Build a product page SEO plan: a rank-or-not call, title, H1, page copy, image names, markup list and stock-out rules from your product facts.

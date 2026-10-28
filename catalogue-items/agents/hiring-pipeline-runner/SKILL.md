@@ -78,19 +78,6 @@ If the person says yes in clear words to one named action, do only that action. 
 - **Friday update:** the one-page progress note, on Fridays.
 - **Files, and every `MISSING:` line** from all steps in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
-- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-- The [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
-Next steps that fit hiring: after interviews, use the [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer) on the finalists, and the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter) for replies. The generic "After this" list above (price-break, article formatter and contract summary links) does not fit hiring. Do not offer those links. Offer only the next steps in this paragraph.
-
 ## Checks before you hand it back
 - Every score is against the scoring guide and has a quoted line from the resume behind it.
 - Nothing about name, age, gender, photo, address, school, employment gaps or how the resume looks affected a score.
@@ -98,6 +85,19 @@ Next steps that fit hiring: after interviews, use the [Fair candidate comparer](
 - No winner was named. The person makes the hiring call.
 - Applicants already in `seen.md` were not scored again.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
+- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
+- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
+- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+Next steps that fit hiring: after interviews, use the [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer) on the finalists, and the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter) for replies. The generic "After this" list above (price-break, article formatter and contract summary links) does not fit hiring. Do not offer those links. Offer only the next steps in this paragraph.
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With no scoring guide, build it in step 1 and stop for the person to approve it. With no interview notes, skip step 6 and say so. With only one batch and no history, say the path in step 4 was not chosen on trends.

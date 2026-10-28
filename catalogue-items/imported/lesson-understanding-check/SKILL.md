@@ -69,6 +69,27 @@ tags: ["formative-assessment", "checking-understanding", "questioning", "cold-ca
 
 # Checking for Understanding Protocol Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [Learning option planner](https://useaiblocks.com/skills/learning-options-designer). Bring your lesson plan, an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a set of checking-for-understanding techniques appropriate for a specific lesson stage, including cold-calling scripts, mini-whiteboard prompts, exit tickets, and hinge questions — each with implementation detail and a decision tree for what to do based on results. The output tells the teacher not just *how* to check but *what to do with the information*. AI is specifically valuable here because effective CFU requires matching the right technique to the right moment (you don't use an exit ticket mid-explanation) and designing questions that reveal understanding rather than just confirming that students were listening. Most CFU in practice is "Any questions?" or "Does everyone understand?" — which checks nothing.
@@ -287,3 +308,11 @@ Exit ticket (reviewed after lesson):
 2. **Mini-whiteboards and finger votes can be gamed.** Students can copy from neighbours, wait to see others' answers before showing theirs, or hold boards at angles. Lemov (2015) recommends "boards up on my count — 3, 2, 1, show" to reduce copying, but no technique eliminates it entirely. Cold calling individuals is the strongest complement because it cannot be gamed.
 
 3. **The response decision tree requires teacher judgment in real time.** The tree provides guidance, but the teacher must make rapid decisions about whether to re-teach, how long to spend, and when to move on. This is a professional skill that improves with practice — the protocol supports it but cannot replace it.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the plan.
+- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

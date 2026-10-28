@@ -9,7 +9,7 @@ A room laughs when it finds the joke itself. A speaker who says "this is funny" 
 
 ## When to use it
 
-Use it for a toast, retirement speech or after-dinner talk built on one true story. Do not use it for a sincere tribute or a eulogy (write it plainly yourself, or use the [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper) if the speech must also move people), when you have no true story yet (pick one real moment first), or for jokes at one person's expense in a mixed room (pick a safer target, such as yourself, or skip the humour).
+Use it for a toast, retirement speech or after-dinner talk built on one true story. Do not use it for a sincere tribute or a eulogy (write it plainly yourself, or use the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper) if the speech must also move people), when you have no true story yet (pick one real moment first), or for jokes at one person's expense in a mixed room (pick a safer target, such as yourself, or skip the humour).
 
 ## What you need
 
@@ -36,7 +36,7 @@ The story in a line. The room notes. The script with [DROP] and [PAUSE] marked. 
 
 ## What next
 
-When you've handed it back, suggest in one short question that they smooth the script for reading aloud with the [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the draft.
+When you've handed it back, suggest in one short question that they smooth the script for reading aloud with the [Read-aloud speech editor](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the draft.
 
 ## Check before you hand it back
 

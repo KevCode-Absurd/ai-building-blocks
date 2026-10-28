@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Competitors** (yours): the brands buyers compare you with.
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
@@ -80,6 +80,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Etsy listing SEO scorer](https://useaiblocks.com/skills/etsy-listing-seo-scorer). It takes the pdp copy.
 - The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the pdp copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

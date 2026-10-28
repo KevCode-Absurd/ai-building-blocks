@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - type: email_flow
     required: true
-  - type: performance_sheet
+  - type: dataset
     required: false
 outputs:
   - type: audit_report

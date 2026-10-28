@@ -16,10 +16,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your video ads** (yours): the video ads, attached or linked.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
+- **Your video ads** (yours): the video ads, attached or linked.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 How to start:
@@ -31,7 +31,7 @@ How to start:
 ## What you need
 - **Screenshots of your TikTok setup** (required): Business Center, billing, Events Manager and the Pixel Helper check. Step 1 reads them as images.
 - **Your daily budget and the most you can pay for one sale** (required). That second figure is your break-even cost per sale.
-- **Three to five finished video ads, or their scripts** (required for step 2).
+- **Three to five finished video ads, or their scripts** (required for step 2). Have them ready before you start, or film them at the first pause, after step 1.
 - **A test export** (required for step 3): spend, views, click rate, watch time and cost per sale for each ad, for a closed date window at least three days after launch.
 - **Stats on your organic and creator posts** (required for step 4), plus what each creator agreed to (optional).
 
@@ -61,12 +61,12 @@ Pause here: Run the campaign for at least three days. Export the results.
 
 3. **TikTok ad test reader.** Use the skill `tiktok-ad-test-reader`. Give it the step 2 file (the starter campaign plan) and your test export. Send these columns for each ad: spend, views, click rate, watch time and cost per sale, for a closed window at least three days after launch. Reads the results against the plan and decides each ad: keep, fix or cut, with a score and a cause (creative, audience or page). Hands the keep, fix or cut calls to step 4.
 
-   Before this step, ask for your real break-even cost per sale. It is a required question with no default. If you do not have it, do not start step 3. The $30 cost-per-sale line inside the test reader is a placeholder from its source (one agency's US-market practice, described in the `tiktok-ad-test-reader` skill file). Replace it with your number. If you cannot give one, the read gives each ad's numbers with no keep or cut verdict on cost, and marks `MISSING: break-even cost per sale`.
+   Before this step, ask for your real break-even cost per sale. It is a required question with no default. The $30 cost-per-sale line inside the test reader is a placeholder from its source (one agency's US-market practice, described in the `tiktok-ad-test-reader` skill file). Replace it with your number. If you cannot give one, step 3 still runs: it gives each ad's numbers with no keep or cut verdict on cost, and marks `MISSING: break-even cost per sale`.
 
 Pause here: Pull stats on your organic posts and any creator posts.
 
 4. **TikTok Spark ad picker.** Use the skill `tiktok-spark-ad-picker`. Give it your post stats and the step 3 file (to find your best ad). Picks which posts to boost, checks creator permission, drafts the request to creators and sets a test against your best ad.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
 
 ## What you hand back
 Four step files and the summary. The last file holds the Spark ad shortlist.

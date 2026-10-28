@@ -28,6 +28,7 @@ you_give:
   - Your tenant's domain name
   - Two break-glass admin accounts for sign-in policies (optional, ask if unsure)
   - A test tenant or a small test group to try the scripts first
+  - The right paid Microsoft plan. Sign-in policies (Conditional Access) need Microsoft Entra ID P1 or higher, which comes with plans such as Microsoft 365 Business Premium or E3. Making a mailbox shared needs Exchange Online in your plan.
 you_get:
   - PowerShell scripts for the job, each with a note on what it changes
   - A read-only security audit that lists licences, sign-in policies and who lacks multi-factor sign-in
@@ -41,8 +42,8 @@ how_to_use:
   - Run the security audit first, since it only reads. Read the list of findings before you change anything. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found.
   - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches. For offboarding, the first "preview" is only a printed list. Run the -WhatIf dry run as well before you let anything be removed.
   - The sign-in policy scripts hold placeholders for your two break-glass account IDs. They stop with an error until you fill both in, so nobody is locked out.
-  - Temporary passwords are made with a cryptographic random generator, 16 random characters plus a fixed tail. They are saved in plain text in a file on your disk, so delete it after handover.
-  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, never by email to the same account. The passwords file is plain text on your disk, limited to your own Windows account. Delete it straight after you hand the passwords over.
+  - Temporary passwords are made with a cryptographic random generator, 16 random characters plus a fixed tail. Hand them over through your password manager's secure share or a one-time secret link where you can, never by email to the same account. The scripts also save them to a plain-text file on your disk, limited to your own Windows account. Treat that file as the fallback and delete it straight after handover.
+  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on.
 how_it_works:
   - title: Ask what is missing
     text: It asks for your domain, the user list and the break-glass accounts, and does not invent them.
@@ -61,6 +62,7 @@ output_shape: |
   Accounts or policies touched: <count>
   Passwords file: <where it is saved, hand over safely, then delete>
   Check after running: <what to look at in the admin portal or sign-in logs>
+  Warnings: <for offboarding, any group removals that failed, to remove by hand, then re-check in the admin portal>
   Next step: <one suggestion>
 output_sample:
   input:

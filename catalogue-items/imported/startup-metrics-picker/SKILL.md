@@ -11,6 +11,19 @@ metadata:
 
 A data discipline for startups distilled from Alistair Croll and Benjamin Yoskovitz's *Lean Analytics*: separate metrics that change decisions from numbers that merely flatter, then point the whole company at the One Metric That Matters for your business model and stage. Use it to choose metrics, audit dashboards, set targets, and plan instrumentation.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Core Principle
 
 **Focus on the one metric that matters right now — everything else is noise that feels like progress.** Startups die from lack of focus more often than lack of data. The discipline is knowing your business model, knowing your stage, and tracking the single number that tells you whether the riskiest part of the business is working. A metric earns attention only if it changes what you do next.
@@ -184,3 +197,10 @@ See references/case-studies.md when you want a full worked walkthrough — three
 ## About the Authors
 
 **Alistair Croll** is an entrepreneur and analyst who co-founded web performance company Coradiant, founded Solve For Interesting, and chairs Startupfest among other technology conferences. **Benjamin Yoskovitz** is a founding partner at venture studio Highline Beta and a serial founder and startup investor. They wrote *Lean Analytics* for Eric Ries's Lean Series.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [North star metric picker](https://useaiblocks.com/skills/north-star-metric-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

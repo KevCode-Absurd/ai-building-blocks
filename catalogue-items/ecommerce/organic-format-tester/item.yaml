@@ -7,7 +7,7 @@ role: check
 job: organic
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: true}
   - {type: question, required: false}
   - {type: hooks, required: false}
 outputs:

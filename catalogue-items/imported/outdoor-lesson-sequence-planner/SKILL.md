@@ -72,6 +72,19 @@ tags: ["outdoor-learning", "EEF", "Rickinson", "outside-classroom", "fieldwork",
 
 # Outdoor Learning Sequence Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a structured outdoor learning sequence where the outdoor element serves a specific curriculum learning objective — not as a reward, a change of scene, or a general wellbeing activity, but as a learning experience that exploits what the outdoor environment uniquely offers. The critical principle from Rickinson et al.'s (2004) review is that outdoor learning is most effective when it has clear learning intentions, is connected to indoor learning (preparation before, follow-up after), and involves students in active inquiry using the outdoor environment as a primary resource. The output includes the complete sequence (indoor preparation, outdoor activity, indoor follow-up), a learning design explaining why the outdoor element serves the objective better than an indoor alternative, a safety framework, and indoor-outdoor continuity planning. AI is specifically valuable here because designing effective outdoor learning requires simultaneously considering curriculum alignment (what are students learning?), environmental opportunities (what does this specific space offer?), practical logistics (safety, weather, timing), and pedagogical design (how to structure the activity for maximum learning) — a multi-dimensional planning challenge.
@@ -105,7 +118,9 @@ CRITICAL PRINCIPLES:
 - **Active inquiry, not passive observation.** Students should DO something outdoors, not just look at things. Collect data. Measure. Sketch. Sample. Record. Compare. The outdoor environment is a laboratory, not a museum.
 - **Safety through risk-benefit analysis, not risk elimination.** Outdoor learning involves risks (weather, terrain, traffic, water). The approach is not to eliminate all risk (which would also eliminate the learning) but to assess the BENEFITS against the risks and manage the risks to an acceptable level. A child who never encounters managed risk never develops risk assessment skills.
 - **Never taste wild plants, berries or fungi.** Leave tasting out of every station and activity unless an expert has identified the plant and allergies are checked. Smell, touch, sound and sight are enough.
-- **Weather is a feature, not a bug.** Rain, wind, cold, and heat are learning conditions, not cancellation conditions. "There's no such thing as bad weather, only bad clothing" (a common saying among outdoor teachers). Design the session to work in the weather that's likely, not just in ideal conditions.
+- **Weather is a feature, not a bug.** Ordinary rain, wind, cold, and heat are learning conditions, so the default is to adapt the session rather than cancel it. "There's no such thing as bad weather, only bad clothing" (a common saying among outdoor teachers). Design the session to work in the weather that's likely, not just in ideal conditions.
+- **Local rules and the people on site decide when to stop.** The school's or setting's own risk assessment, policies and on-the-day judgement always override this plan. Weather is never the only reason to stop. Stop, move indoors or postpone whenever any of these apply: a storm, lightning or a weather warning; extreme heat or cold for these students; the site or school is closed or access is restricted; an exit, path or meeting point is blocked; a new hazard appears (fallen branches, flooding, ice, a dog off its lead, an unknown adult); there are not enough adults for the agreed ratio; a student's medical, mobility or other needs cannot be met safely on that day; or the person in charge judges it unsafe. Never write "only cancel for X" in a plan.
+- **Plan for every student.** Check access routes and stations for students who use wheelchairs or have other mobility, sensory or medical needs, and give an equal alternative for any station they cannot reach.
 
 Your task is to design an outdoor learning sequence for:
 
@@ -119,7 +134,7 @@ The following optional context may or may not be provided. Use whatever is avail
 **Class size:** {{class_size}} — if not provided, design for 30 students with one teacher and one teaching assistant.
 **Time available:** {{time_available}} — if not provided, design for a 60-minute session (including transition time).
 **Weather constraints:** {{weather_constraints}} — if not provided, design for a temperate climate with a rain contingency.
-**Risk factors:** {{risk_factors}} — if not provided, include standard outdoor risk assessment guidance.
+**Risk factors:** {{risk_factors}} — if not provided, include standard outdoor risk assessment guidance and say clearly that the site has not been assessed: the teacher must complete their school's own risk assessment and get any sign-off it requires before the session.
 
 Return your output in this exact format:
 
@@ -151,7 +166,9 @@ Return your output in this exact format:
 |---|---|---|---|---|
 | [Risk 1] | [L/M/H] | [L/M/H] | [What learning benefit justifies this risk] | [How to manage it] |
 
-**Weather contingency:** [What to do if weather changes — adapt, not cancel]
+**Weather contingency:** [How to adapt the session to likely weather changes]
+**Stop, move indoors or postpone if:** [The full list of stop conditions — weather and non-weather — and who makes the call. Note that the school's own risk assessment and policies override this plan.]
+**Access and needs:** [Routes, stations and alternatives for students with mobility, sensory or medical needs]
 **Adult roles:** [Who does what — teacher, TA, parent helpers]
 
 ### Indoor-Outdoor Continuity
@@ -162,7 +179,7 @@ Return your output in this exact format:
 
 [What's needed — kept practical and minimal]
 
-**Self-check before returning output:** Verify that (a) the outdoor element serves the learning objective specifically, (b) the three-phase design is complete, (c) students are actively inquiring outdoors, not passively observing, (d) the safety framework uses risk-benefit analysis, and (e) the indoor and outdoor phases are connected.
+**Self-check before returning output:** Verify that (a) the outdoor element serves the learning objective specifically, (b) the three-phase design is complete, (c) students are actively inquiring outdoors, not passively observing, (d) the safety framework uses risk-benefit analysis, lists stop conditions beyond weather and says the school's own risk assessment overrides the plan, (e) every student has a way to take part, and (f) the indoor and outdoor phases are connected.
 ```
 
 ## Example Output
@@ -230,11 +247,15 @@ After the stations, gather the class: "Now find ONE thing in this environment th
 | Risk | Likelihood | Severity | Benefit | Management |
 |---|---|---|---|---|
 | Slipping on wet ground | Medium (March) | Low | Access to authentic sensory environment; rain ADDS sensory detail | Remind students to wear appropriate footwear. Walk, don't run. Highlight wet areas. |
-| Pond — falling in | Low | Medium | Pond station provides rich visual and auditory detail (water surface, reflections, sounds) | Clear boundary markers 1 metre from pond edge. Adult stationed at pond. Students observe from bank only. |
+| Pond — falling in | Low | Medium | Pond station provides rich visual and auditory detail (water surface, reflections, sounds) | Clear boundary markers set back from the pond edge, at the distance your school's water-safety policy and site check set (1 metre is only an example). Adult stationed at pond. Students observe from bank only. |
 | Allergic reaction (plants, pollen) | Low | Medium | Direct sensory engagement with plants | Check medical records before the session. Students with hay fever or plant allergies adapt the smell station (observe, don't crush leaves). Carry antihistamines if prescribed. |
-| Cold / rain | High (March) | Low | Weather IS sensory material — rain sounds, wet smells, cold touch are writing material | Require coats. Brief session to 45 min if very cold. Rain plan: go out anyway — rain produces better sensory writing than sunshine. Only cancel for storm or lightning. |
+| Cold / rain | High (March) | Low | Weather IS sensory material — rain sounds, wet smells, cold touch are writing material | Require coats. Brief session to 45 min if very cold. Rain plan: in ordinary rain, go out anyway — rain produces better sensory writing than sunshine. |
 
-**Weather contingency:** Light rain — proceed, bring clipboards with covers. Heavy rain — shorten to 30 minutes, focus on the most sheltered stations. Lightning — postpone.
+**Weather contingency:** Light rain — proceed, bring clipboards with covers. Heavy rain — shorten to 30 minutes, focus on the most sheltered stations.
+
+**Stop, move indoors or postpone if:** storm, lightning or a weather warning; the conservation area or school is closed; a path, gate or exit is blocked; the pond area is flooded or icy; there are not enough adults to staff the pond and the stations; a student's needs cannot be met safely that day; or the teacher in charge judges it unsafe. The school's own risk assessment and policies override this plan.
+
+**Access and needs:** Check that every station can be reached on the routes available. A student who cannot reach the pond bank does the sight station at the sensory garden instead.
 
 **Adult roles:** Teacher circulates and questions. TA manages transitions between stations and monitors the pond area. If parent helpers available: one per station to prompt reluctant writers.
 
@@ -265,3 +286,13 @@ The outdoor session is not "a fun trip" with writing attached. The writing depen
 2. **Weather genuinely limits some activities.** While the skill argues that rain is a feature, not a bug (and for descriptive writing, this is true), some outdoor learning objectives are weather-dependent. Science fieldwork requiring dry conditions, art requiring steady hands, or PE activities on waterlogged grass all face genuine weather constraints. The skill's rain-positive framing applies to THIS example — not universally.
 
 3. **The EEF review found moderate, not large, effects on academic outcomes.** Outdoor learning consistently improves engagement, motivation, and wellbeing — but the evidence for direct academic attainment gains is moderate. The strongest case for outdoor learning is that it provides learning experiences that cannot be replicated indoors (authentic sensory input, real specimens, spatial scale), not that it universally produces higher test scores. Teachers should use outdoor learning when the outdoor environment adds something the classroom cannot, not as a general strategy for raising attainment.
+
+4. **This plan is not a risk assessment.** It cannot see the site, the weather on the day, or the students. The school's or setting's own risk assessment, policies and staff judgement decide whether the session goes ahead.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Local place lesson planner](https://useaiblocks.com/skills/local-place-lesson-planner). It takes the lesson plan.
+- The [Local nature inquiry unit planner](https://useaiblocks.com/skills/nature-inquiry-unit). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

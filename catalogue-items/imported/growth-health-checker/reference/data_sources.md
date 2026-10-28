@@ -87,7 +87,7 @@ entry works, use it and say nothing about reconnecting
 | Gmail or Microsoft 365 | Inbound complaints, cancellation requests, refund asks |
 | HubSpot | Ticket volume and themes, if support runs through the CRM |
 
-Sentiment is the leading indicator in this pulse. It moves before revenue does, which is exactly what makes it worth including.
+Sentiment can move before revenue does, which is what makes it worth including. Treat a drop as a warning sign to look into, not a forecast of when or how much revenue will fall.
 
 ---
 
@@ -111,3 +111,5 @@ Read the header row, map the columns, and build the identical pulse. If a needed
 Every call goes out in one batch. This pulse routinely touches five or six systems.
 
 Record failures internally and list them once in the appendix. Never surface a connector error in the middle of the brief — the owner asked about growth, not about integrations.
+
+Changed by AI Blocks (2026-10-28): sentiment is a warning sign, not a fixed-lag revenue forecast.

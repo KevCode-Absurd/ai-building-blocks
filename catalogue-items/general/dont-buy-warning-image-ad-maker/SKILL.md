@@ -18,7 +18,7 @@ The picture gives the warning. The story gives the reason. That gap is what make
 - No logo, brand name, price, button, badge, brand colour or designed layout.
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - No person, or a hand at the edge at most. No children.
-- Nothing says what the reader has. No before-and-after.
+- Nothing says what the reader has or is (no "your skin is dull"). No before-and-after. The card warns against a kind of product only, such as "Don't buy another tub of greens", never against the reader.
 - The card is the narrator's voice, not a real customer's note. Any picture that could pass for a real customer's note needs that customer's written permission, or a clear label saying it is a dramatisation, before it runs. Never present it as a real note otherwise. A line under the image taken from a review needs the reviewer's permission on file.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -107,7 +107,7 @@ THE OLD WAY       <the generic object, labels turned away>
 WORDS ON IMAGE    "<words>" (<word count>)
 BLANK VERSION     <the same scene with the card blank>
 LINE UNDER IMAGE  <words> (<which line>, <characters>)
-FLAGS             <words written for the image, claims to keep in the story>
+FLAGS             <required first: "labelled dramatisation" or "real customer's note, written permission on file">, <words written for the image, claims to keep in the story>
 IMAGE PROMPT      <60 to 120 words, the words in quotes once>
 CHECKS MISSED     <one line each, or none>
 ```

@@ -70,6 +70,19 @@ tags: ["critical-thinking", "analysis", "evaluation", "domain-specific", "higher
 
 # Critical Thinking Task Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a task requiring genuine critical evaluation — not just comprehension or recall, but the evaluation of evidence, identification of assumptions, analysis of competing perspectives, or detection of bias — embedded in specific subject content. Crucially, the output includes criteria for distinguishing critical from surface-level responses (so the teacher can tell the difference) and follow-up prompts that push superficial responses toward genuine critical engagement. AI is specifically valuable here because designing tasks that genuinely require critical thinking (rather than tasks that LOOK like they require critical thinking but can be answered through recall or opinion) is one of the hardest aspects of assessment design — many tasks labelled "critical thinking" actually test comprehension, compliance with a prescribed structure, or the ability to express an opinion without evaluating it.
@@ -287,3 +300,11 @@ Look for these specific features in student responses:
 2. **The task requires sufficient domain knowledge.** A student who knows nothing about World War II cannot critically evaluate arguments about Hiroshima, no matter how strong their general reasoning skills. Critical thinking tasks must be set at the right point in a unit — after students have enough knowledge to evaluate, not before. Setting critical thinking tasks too early produces uninformed opinion, not critical analysis.
 
 3. **Students may confuse "being critical" with "being negative."** Critical thinking means evaluating the quality of reasoning — it doesn't mean attacking, dismissing, or being contrarian. Some students, when told to "think critically," will criticise everything without evaluating anything. The surface vs. critical response guide helps teachers identify this pattern, but it requires ongoing modelling of what genuine critical evaluation looks like: fair, evidence-based, and willing to acknowledge strength in opposing positions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Socratic question sequence writer](https://useaiblocks.com/skills/socratic-questions). It takes the lesson plan.
+- The [Online source checking guide builder](https://useaiblocks.com/skills/online-source-check-lesson). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

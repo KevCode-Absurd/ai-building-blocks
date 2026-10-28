@@ -10,6 +10,25 @@ metadata: {"nexscope":{"emoji":"🛡️","category":"ecommerce"}}
 
 Protect your brand from counterfeit stores and unauthorized resellers in the DTC space.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Installation
 
 ```bash
@@ -40,7 +59,7 @@ The detector checks listing details that you collect by hand against your brand 
 
 | Level | Description | Action |
 |-------|-------------|--------|
-| 🔴 High | Active infringement | DMCA within 24h |
+| 🔴 High | Active infringement | Prepare a takedown (suggested within 24h, lawyer to review) |
 | ⚠️ Medium | Potential concern | Investigate further |
 | ✅ Low | Normal activity | Continue monitoring |
 
@@ -75,9 +94,27 @@ The script does not fetch the web, ad libraries or social sites, and it needs no
 - `BrandInfo`: brand_name, trademark_number, brand_registry (true or false), authorized_sellers (list of seller ids), protected_asins (list), min_price, logo_url.
 - `ListingInfo`: asin (the product id), title, brand_in_title, price, image_urls, seller_count, sellers, buy_box_seller, category.
 - `SellerInfo`: seller_id, seller_name, price, is_fba, rating, review_count, is_authorized, storefront_url.
-- `reviews`: a list of dicts, each with a `content` text field.
+- `reviews` (optional): a dict keyed by the listing's `asin`, each value a list of dicts with a `content` text field.
 
-The fields follow marketplace listings (ASIN, buy box). For a plain online store, fill in the closest match and say which fields you left empty.
+The fields follow marketplace listings (ASIN, buy box). For a plain online store, fill in the closest match and say which fields you left empty: use the product page URL or SKU as `asin`, leave `protected_asins`, `buy_box_seller` and `is_fba` empty or false, and set `seller_count` to 1.
+
+A short example built from rows you collected by hand (replace every value with your own):
+
+```python
+from scripts.detector import BrandInfo, ListingInfo, SellerInfo, detect, format_report
+
+brand = BrandInfo(brand_name="[YOUR BRAND]", trademark_number="[YOUR TM NUMBER OR None]",
+                  authorized_sellers=["[YOUR SELLER ID]"], min_price=[YOUR MIN PRICE])
+listings = [
+    ListingInfo(asin="[PRODUCT URL OR SKU]", title="[LISTING TITLE AS SHOWN]", brand_in_title=True,
+                price=[PRICE SEEN], seller_count=1,
+                sellers=[SellerInfo(seller_id="[SELLER NAME OR ID]", seller_name="[SELLER NAME]", price=[PRICE SEEN])]),
+]
+reviews = {"[PRODUCT URL OR SKU]": [{"content": "[REVIEW TEXT YOU COPIED]"}]}
+print(format_report(detect(brand, listings, reviews)))
+```
+
+Run it from the skill folder. Each finding is a lead to check by hand, not proof.
 
 ### Generate Takedown Templates
 
@@ -120,6 +157,14 @@ Instagram: [example: unauthorized ads found]
 Facebook: [example: fake page found]
 Recommendation: Report to platforms
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock count updater](https://useaiblocks.com/skills/stock-count-updater). It takes the audit report.
+- The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Takedown Templates Included
 

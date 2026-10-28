@@ -6,7 +6,7 @@ thinking: low
 thinking_why: "It follows a fixed order of steps and fits your calendar, with few judgement calls."
 
 headline: "Values-to-week planner"
-subhead: Give it your roles, what you value and your calendar for a normal week. It turns them into quarter goals, a short list of projects, protected blocks for hard work and set times for messages. You get a week you can keep up for a year.
+subhead: Give it your roles, what you value and your calendar for a normal week. It turns them into quarter goals, a short list of projects, protected blocks for hard work and set times for messages. You get a weekly pace checked against your real calendar.
 
 explain: |
   A full calendar is not a plan. When every day is cut up by meetings and messages, the work that matters gets the scraps, and you end the week busy with little finished. Most people plan by adding to a list, so nothing traces back to what they care about.
@@ -20,7 +20,7 @@ when:
 not_for:
   - You have one task to finish. Break it into steps yourself, or ask your AI for a simple to-do list.
   - You need a calendar for a whole team. Plan it with your team, since this plans one person's week.
-  - Too many projects is the real problem. Use the Money-first business cut planner first, then come back here.
+  - Too many projects is the real problem. Use the Revenue-focused task planner first, then come back here.
 
 you_give:
   - Your roles and what you value, in a few lines (required)
@@ -133,7 +133,7 @@ improve:
   - Add your fixed duties, such as school pickup, to the steps so blocks never clash with them.
   - Add your own rule for how many projects you can hold at once.
   - Keep your roles and values in your brand file or notes and reuse them each quarter.
-  - Pair it with "Money-first business cut planner" if too many projects are the problem.
+  - Pair it with "Revenue-focused task planner" if too many projects are the problem.
 
 works_best_with:
   tools:

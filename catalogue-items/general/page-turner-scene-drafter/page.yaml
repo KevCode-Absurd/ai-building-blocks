@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no plan or stop line yet: start with the Next-page hook planner, then come back."
   - "You are writing non-fiction, such as an article or a report: use a plain outline and write it yourself or ask your AI for a draft."
-  - "You already have a scene and want it judged: use the Page-pull scene checker."
+  - "You already have a scene and want it judged: use the Scene suspense reviewer."
 
 you_give:
   - A hook plan from "Next-page hook planner"
@@ -37,7 +37,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the plan. Paste a sample of your own prose if you want it to match your voice.
   - Say the point of view and the tense.
-  - Edit the draft, then run "Page-pull scene checker" on it.
+  - Edit the draft, then run "Scene suspense reviewer" on it.
 output_sample:
   input:
     - Your hook plan from the Next-page hook planner

@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **When they answer and are ready to choose** with the [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner). It takes the plan and the buyer's choices.
-- **If the doubts are about specific points** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the fears this skill found.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The cause is named as doubt about the choice, endless learning or fear of a mistake, and each cause has a quote.
@@ -100,6 +92,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No conversion numbers are promised.
 - The message is under 150 words.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **When they answer and are ready to choose** with the [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner). It takes the plan and the buyer's choices.
+- **If the doubts are about specific points** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the fears this skill found.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

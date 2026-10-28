@@ -10,6 +10,8 @@ explain: |
   A set of useful numbers pulled from the vibration or sensor signals of a motor, pump or other rotating machine, ready for spotting faults early. It runs in MATLAB.
 
   It follows five steps. First it cleans and prepares your signals. Then it extracts features, such as statistics and frequency measures, which also shrink huge vibration files into compact ones. Next it ranks the features and keeps the ones that best separate healthy from faulty. After that it builds a health indicator from them and finally helps you deploy the monitoring. It fits evenly sampled time data. For sorting several fault types or building anomaly detectors, it points you to other tools.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have vibration data from a motor and want to spot wear early.
   - Your raw sensor files are too big to use as they are.
@@ -32,12 +34,13 @@ you_get:
   - A health indicator that tracks condition over time
   - A MATLAB script for the whole workflow
 how_to_use:
-  - Check you have MATLAB and the Predictive Maintenance Toolbox. Both are paid, and your AI must be able to run MATLAB code.
+  - Check you have MATLAB and the Predictive Maintenance Toolbox. Both are paid, and your AI must be able to run MATLAB code. Use this skill only with MathWorks products, as LICENSE.md says.
   - Open your AI tool and add the skill file, or paste its text into the chat.
   - Share your sensor files and say the machine type and sample rate.
   - Answer its questions about shaft speeds, bearing or gear details and tachometer position. It will not guess these.
   - Check the feature ranking and the health indicator against what you know about the machine.
   - Ask for the full MATLAB script, and for remaining-life or embedded code if you need them.
+  - Next, put the health indicator to work. Set a warning level for it, plot it over time, or add it to your maintenance log.
 output_sample:
   input:
     - Your sensor recordings, sampled at an even rate (vibration, motor current or similar)

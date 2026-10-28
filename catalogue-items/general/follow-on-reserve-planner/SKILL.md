@@ -104,16 +104,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public document. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
-- Convert an outside-only round with the [Pro rata allocation checker](https://useaiblocks.com/skills/pro-rata-allocation-checker).
-- Plan cash that arrives in stages with the [Milestone tranche funding checker](https://useaiblocks.com/skills/milestone-tranche-funding-checker).
-- Run the whole check across several rounds with the [Check staged follow-on commitments](https://useaiblocks.com/workflows/check-staged-follow-on-commitments) workflow.
+- Convert an outside-only round with the [Investor pro rata funding calculator](https://useaiblocks.com/skills/pro-rata-allocation-checker).
+- Plan cash that arrives in stages with the [Staged funding draw checker](https://useaiblocks.com/skills/milestone-tranche-funding-checker).
+- Run the whole check across several rounds with the [Staged follow-on investment checker](https://useaiblocks.com/workflows/check-staged-follow-on-commitments) workflow.
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or investment conclusion unresolved.

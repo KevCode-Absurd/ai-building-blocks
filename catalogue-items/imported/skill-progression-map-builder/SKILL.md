@@ -68,6 +68,22 @@ tags: ["learning-progressions", "trajectories", "prerequisites", "diagnostic", "
 
 # Learning Progression Builder
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Maps the learning progression from novice to target proficiency for a specific skill domain, identifying the sequential stages of understanding, the prerequisite relationships between them (what must come before what), common stuck points (where students typically stall and why), and diagnostic tasks that reveal which stage a student is currently at. The output is a progression map that teachers can use for three purposes: planning instruction (teaching in the right sequence), formative assessment (diagnosing where a student is), and differentiation (providing the right support for each student's current stage). AI is specifically valuable here because constructing a valid learning progression requires both deep content knowledge (understanding the logical structure of the domain) and pedagogical knowledge (knowing where students actually get stuck, which is not always where the content logic would predict).
@@ -275,3 +291,12 @@ Linear progression with lateral prerequisites at Stages 2, 5, and 6.
 2. **The progression describes skill development in ONE domain.** A student may be at Stage 5 for poetry analysis but Stage 3 for prose analysis, because the underlying texts present different challenges. Progressions are domain-specific — the teacher should assess each domain separately.
 
 3. **Diagnostic tasks provide a snapshot, not a comprehensive assessment.** A student who passes the Stage 4 diagnostic task on one occasion may not consistently perform at Stage 4. The diagnostic locates the student's approximate position — ongoing formative assessment provides the more complete picture.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer). It takes the lesson plan and plan.
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

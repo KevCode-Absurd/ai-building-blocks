@@ -30,8 +30,8 @@ you_get:
   - A simulation loop that returns sensor readings
   - A 3D flight animation
 how_to_use:
-  - Check you have MATLAB with UAV Toolbox and Navigation Toolbox. The GPS and INS sensors come from Navigation Toolbox.
-  - "Gather your inputs: a latitude and longitude, the area size, and the drone's waypoints. Add an OpenStreetMap file for buildings and a DTED file for finer terrain if you have them."
+  - Check you have MATLAB with UAV Toolbox and Navigation Toolbox. All three are paid MathWorks products that need a licence. The GPS and INS sensors come from Navigation Toolbox. This is a copy of MathWorks' skill under the BSD 2-Clause licence in its LICENSE.md, which lets you use it only with MathWorks products.
+  - "Gather your inputs: a latitude and longitude, the area size, and the drone's waypoints. Add an OpenStreetMap file for buildings and a DTED file for finer terrain if you have them. For a small area, use Export on openstreetmap.org. For bigger areas, download an extract from a mirror. Pulling data through the Overpass API is automated downloading, so follow the OpenStreetMap usage policy and keep requests small."
   - Paste the skill into Claude, ChatGPT or Gemini. Then paste your inputs and ask it to build the scenario.
   - Run the code in MATLAB. Your AI can only run it itself if it has MATLAB access. Otherwise copy the code across.
   - Check the 3D view and the sensor readings. If no buildings show, ask your AI to check the latitude and longitude settings.

@@ -72,6 +72,22 @@ tags: ["experiential-learning", "simulation", "service-learning", "Dewey", "refl
 
 # Experiential Learning Cycle Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a four-phase experiential learning cycle that moves students from direct experience, through structured reflection, to conceptual understanding, and then to application in a new context. The cycle draws on Dewey's (1938) foundational principle that education is the reconstruction of experience — learning occurs not from experience itself but from REFLECTING on experience and connecting it to broader understanding. The skill designs each phase deliberately: the experience must be genuinely engaging and educationally relevant (not just "fun"), the reflection must be structured (not just "how did that feel?"), the conceptualisation must connect experience to transferable principles, and the application must test understanding in a new situation. The output includes the complete four-phase cycle, with detailed design for each phase and the transitions between them. AI is specifically valuable here because designing effective experiential learning requires balancing engagement (the experience must be compelling) with rigour (it must produce genuine learning, not just enjoyable activity).
@@ -250,3 +266,12 @@ The teacher introduces:
 2. **Simulations simplify reality.** The classroom marketplace is a simulation of supply and demand, not the real thing. Real markets involve information asymmetry, externalities, government regulation, monopoly power, behavioural biases, and historical context that a classroom simulation cannot replicate. The simulation teaches the BASIC mechanism — but students should be told explicitly: "The real economy is more complex than our simulation. What we've learned is the foundation — the principle that supply and demand affect prices. In the coming weeks, we'll add the complications."
 
 3. **The effect size for simulation-based learning is moderate (Hattie, d=0.33).** This is a positive effect but not a large one, and it depends heavily on the quality of the debriefing. Simulations without structured reflection consistently produce weaker learning outcomes than simulations WITH structured reflection. The reflection phase is not optional — it is where the learning happens. An engaging simulation followed by "OK, that was fun, now open your textbooks" wastes the experiential opportunity.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

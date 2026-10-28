@@ -13,6 +13,25 @@ metadata:
 
 > Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-annual-appeals is the Nonprofit annual appeal planner. nonprofit-budgeting is the Nonprofit operating budget planner. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-cost-allocation, nonprofit-major-gifts, nonprofit-reserves-cash-flow and nonprofit-mergers-fiscal-sponsorship are not in this library yet. If one is missing, say so and carry on with the steps here.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **A chat AI that can read your files:** The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
+<!-- /needs -->
+
 ## When to Use This Skill
 
 Use this skill when an organization is assessing its revenue concentration risk and evaluating
@@ -125,3 +144,11 @@ As a consultant advising a nonprofit client on revenue diversification:
   generating revenue, rather than screening for it during the business case phase.
 - **Mission drift**: over time, the venture's commercial logic (maximize revenue) starts overriding
   program quality or participant experience, and nobody names the tension until it's acute.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit operating budget planner](https://useaiblocks.com/skills/nonprofit-operating-budget-planner). It takes the plan.
+- The [Nonprofit grant funder researcher](https://useaiblocks.com/skills/nonprofit-grant-funder-researcher).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

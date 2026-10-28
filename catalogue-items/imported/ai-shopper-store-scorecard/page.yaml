@@ -26,7 +26,7 @@ you_give:
 you_get:
   - A pass or gap result on six checks
   - Evidence for each result
-  - A comparison with 99 stores
+  - A comparison with 99 stores from the author's unpublished study, marked as a rough guide only
   - Plain notes on what AI agents cannot do because of each gap
 how_to_use:
   - This skill was first called agent-ready-quick-check, so look for that name in its files.
@@ -36,7 +36,7 @@ how_to_use:
   - "Tell your AI: run the quick check on your store link. Your AI will ask you in chat to confirm you own the store or have permission. Only after you say yes does it add the --owner-confirmed flag the script needs. The flag is a step in the chat, not a real ownership check, so the yes has to be true."
   - Read the scorecard. Start with the gaps that say what an AI agent cannot answer.
   - To fix the gaps, use the structured data writer and the llms.txt writer, both free in this library, and the AI search audit for a wider check. The fuller audit named at the end of the scorecard is a paid product from the skill's author.
-  - If a page could not be fetched, paste its text when your AI asks.
+  - If a page could not be fetched, paste its text when your AI asks. If the script shows NOT FETCHED because robots.txt blocks the page, that check stays open. If the script fails with an error, the scorecard marks those facts "not found by the script". Do not ask your AI to fetch the pages another way.
 output_sample:
   input:
     - Your Shopify store link

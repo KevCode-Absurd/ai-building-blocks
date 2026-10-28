@@ -13,7 +13,7 @@ when:
 not_for:
   - "You want records created or synced for you: this only reports gaps, so use a sync tool or fix them by hand in HubSpot."
   - "You have no way to connect Gorgias and HubSpot to your AI: do a manual review of a ticket export against your HubSpot contact list."
-  - "You want to find CRM contacts who never wrote to support: this only counts them, so use a HubSpot list or report."
+  - "You want to find CRM contacts who never wrote to support: this only checks people from the tickets it reads, so compare a HubSpot list with a full Gorgias customer export."
 you_give:
   - Recent Gorgias customer email addresses and names.
   - HubSpot contact records for comparing those fields.
@@ -49,8 +49,8 @@ output_sample:
       contains: A table of customers with tickets but no CRM record, with ticket counts and first and last contact dates.
     - name: Data mismatches
       contains: A table of contacts found in both tools where a field differs, with a suggested value to keep.
-    - name: In HubSpot with no tickets
-      contains: A count of CRM contacts who never filed a ticket. This is for information only.
+    - name: Coverage
+      contains: How many tickets were read and from which dates, how many emails were looked up, and any lookups that failed.
     - name: Health score
       contains: The share of contacts in sync, the number missing from the CRM, the mismatch count, and an overall rating.
     - name: Recommendations

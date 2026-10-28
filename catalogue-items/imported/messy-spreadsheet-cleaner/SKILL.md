@@ -7,6 +7,30 @@ description: Clean up messy spreadsheet data — trim whitespace, fix inconsiste
 
 Clean messy data in the active sheet or a specified range.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Data quality auditor](https://useaiblocks.com/skills/data-quality-auditor). Bring a spreadsheet.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Claude Code:** It can open and save .xlsx files and write formulas into the sheet.
+- **Any good chat AI:** It can plan the fixes and write the formulas, but you paste them into Excel yourself.
+<!-- /needs -->
+
 ## What you need first
 
 - The spreadsheet file (.xlsx). A CSV also works: save the cleaned result as .xlsx.
@@ -69,6 +93,15 @@ Show a summary table before changing anything:
 - A change summary: for each column, the issue, how many cells changed and the fix used.
 - A flag list of columns that mix types, and rows you were unsure about, for the user to decide.
 - A list of what you did not check or change, and any duplicates you left in because the user did not confirm removal.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the spreadsheet.
+- The [Spreadsheet and CSV cleaner](https://useaiblocks.com/skills/data-file-clean-up-loop). It takes the spreadsheet.
+- The [Dataset cleaner and validator](https://useaiblocks.com/skills/data-cleaner). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## India (only when the data uses Indian conventions)
 

@@ -23,6 +23,19 @@ metadata:
 Create effective operational runbooks, standard operating procedures, and
 troubleshooting guides that any on-call engineer can follow under pressure.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Runbook Template — Full Structure
 
 ````markdown
@@ -116,7 +129,7 @@ If unresolved after [X] minutes:
 | YYYY-MM-DD | [Name] | Initial version |
 ````
 
-> **Warning: sample only.** The commands below scale deployments to zero, promote a replica and change DNS. They can cause downtime or data loss. Hosts, IDs and phone numbers are placeholders. Run any step like this in staging first, and have a second person confirm before a production run.
+> **Warning: sample only.** The commands below scale deployments to zero, fence the old primary, promote a replica and change DNS. They can cause downtime or data loss. Never skip the fencing step: promoting while the old primary can still take writes splits your data. Hosts, IDs and phone numbers are placeholders. Run any step like this in staging first, and have a second person confirm before a production run.
 
 ## Overview
 
@@ -152,14 +165,35 @@ kubectl scale deployment worker --replicas=0 -n production
 
 **Expected output:** Deployments scaled to 0 pods.
 
-### Step 3 — Confirm Write Quiesce
+### Step 3 — Confirm Write Quiesce and Catch-up
+
+Planned failover only (skip the primary queries if it is unreachable):
 
 ```bash
 psql -h primary.db.internal -U dba -d postgres -c \
   "SELECT count(*) FROM pg_stat_activity WHERE state = 'active' AND query !~ 'pg_stat';"
+psql -h primary.db.internal -U dba -d postgres -c "SELECT pg_current_wal_lsn();"
+psql -h replica.db.internal -U dba -d postgres -c "SELECT pg_last_wal_replay_lsn();"
 ```
 
-**Expected output:** Count = 0 (no active queries).
+**Expected output:** Count = 0 (no active queries), and the replica's replay LSN equals the primary's current LSN. If the primary is unreachable, record the replica's last replay LSN in the incident log: writes after it may be lost.
+
+### Step 3b — Fence the Old Primary (required before promoting)
+
+Two writable primaries cause split brain: both take writes and the data splits. Before you promote, make sure the old primary cannot accept writes or come back as a primary.
+
+Planned failover: stop PostgreSQL on the old primary and stop it starting again on boot.
+
+```bash
+ssh primary.db.internal 'sudo systemctl stop postgresql && sudo systemctl disable postgresql'
+pg_isready -h primary.db.internal
+```
+
+**Expected output:** `pg_isready` reports `no response`.
+
+Unplanned failover (primary unreachable): "unreachable from here" does not mean "down". Fence it with a method that does not need the host to answer: power it off from the cloud console or out-of-band management, or cut it off from clients and replicas with a network or security-group change. Record who fenced it and how.
+
+**Do not continue to Step 4 until fencing is confirmed by a second person.** Never restart the old primary as a primary later. Rebuild it as a replica (for example with `pg_rewind` or a fresh base backup) after the incident.
 
 ### Step 4 — Promote Replica
 
@@ -327,26 +361,42 @@ exit $EXIT_CODE
 
 ### Disk Space Cleanup
 
-> **Warning: destructive.** This script deletes logs, temp files and unused Docker data. Adding --volumes would also delete volumes. Read each line, test it on a staging host, and have a second person confirm before you run it on production.
+> **Warning: destructive.** This script deletes logs, temp files and unused Docker data. It runs as a dry run unless you pass `--apply`. Before applying, check the lists it prints against this host's retention policy (audit, security or legal logs may have to be kept), confirm the logs were already shipped to central storage, and check that no stopped container is needed for an investigation. Test it on a staging host and have a second person confirm before you run it on production. Never add `--volumes`.
 
 ```bash
 #!/usr/bin/env bash
-# disk-cleanup.sh — Free disk space on a host
+# disk-cleanup.sh — Free disk space on a host. Dry run unless --apply is given.
 set -euo pipefail
+
+# Set these from THIS host's retention policy. There are no defaults on purpose.
+JOURNAL_KEEP="${JOURNAL_KEEP:?Set JOURNAL_KEEP from the retention policy, for example 7d}"
+LOG_KEEP_DAYS="${LOG_KEEP_DAYS:?Set LOG_KEEP_DAYS from the retention policy}"
+TMP_KEEP_DAYS="${TMP_KEEP_DAYS:?Set TMP_KEEP_DAYS for this host}"
+APPLY=false
+if [ "${1:-}" = "--apply" ]; then APPLY=true; fi
 
 echo "=== Disk Usage Before ==="
 df -h /
 
-# Remove old journal logs (> 7 days)
-journalctl --vacuum-time=7d 2>/dev/null || true
+echo "=== Rotated logs in /var/log older than ${LOG_KEEP_DAYS} days ==="
+find /var/log -name "*.gz" -mtime +"$LOG_KEEP_DAYS" -print
+echo "=== Files in /tmp older than ${TMP_KEEP_DAYS} days ==="
+find /tmp -xdev -type f -mtime +"$TMP_KEEP_DAYS" -print
+echo "=== Journal size now ==="
+journalctl --disk-usage
+echo "=== Docker: prune removes stopped containers, unused networks, dangling images and build cache ==="
+docker system df
+docker ps -a --filter status=exited
 
-# Clean Docker artifacts
-# Add --volumes only after you have checked that no data you need lives in a volume
-docker system prune -f 2>/dev/null || true
+if [ "$APPLY" != true ]; then
+  echo "Dry run only. Nothing was deleted. Check the lists above, then rerun with --apply."
+  exit 0
+fi
 
-# Remove old log files
-find /var/log -name "*.gz" -mtime +7 -delete 2>/dev/null || true
-find /tmp -type f -mtime +3 -delete 2>/dev/null || true
+journalctl --vacuum-time="$JOURNAL_KEEP"
+docker system prune -f   # never add --volumes here
+find /var/log -name "*.gz" -mtime +"$LOG_KEEP_DAYS" -delete
+find /tmp -xdev -type f -mtime +"$TMP_KEEP_DAYS" -delete
 
 echo "=== Disk Usage After ==="
 df -h /
@@ -365,6 +415,8 @@ content_review:
   - [ ] Expected output is documented for each step
   - [ ] Verification section confirms success with specific checks
   - [ ] Rollback section exists and has been tested
+  - [ ] Every delete or cleanup step shows what it will remove first (dry run) and checks it against this target's retention and backup rules
+  - [ ] Every failover step fences the old primary before promoting the new one, and says how to rebuild the old one
   - [ ] Escalation contacts are current (names, phones, Slack handles)
   - [ ] Troubleshooting table covers the top 3-5 known failure modes
 
@@ -445,3 +497,10 @@ Draft a SEV2 database failover runbook with prerequisites, verification, and rol
 ## Licence note
 
 The header above says MIT (BagelHole/DevOps-Security-Agent-Skills). The collection this copy came from lists its written content as CC BY 4.0 (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to the author and sickn33.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

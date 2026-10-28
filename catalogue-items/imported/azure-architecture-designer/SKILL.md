@@ -9,6 +9,19 @@ Design scalable, cost-effective Azure architectures for startups and enterprises
 
 ---
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 ### Step 1: Gather Requirements
@@ -323,7 +336,7 @@ python scripts/bicep_generator.py --arch-type microservices --output main.bicep
 
 Every price range and budget band below is a rough guess, not a quote. Front Door, Azure SQL and AKS costs may be left out of a band or may push the real cost above the stated range, so check each service in the pricing calculator. Check real prices in the Azure pricing calculator before you use them.
 
-### Web App Architecture (< $100/month)
+### Web App Architecture (small budget)
 
 ```
 Ask: "Design an Azure web app for a startup with 5000 users"
@@ -332,7 +345,7 @@ Result:
 - App Service (B1 Linux) for the application
 - Azure SQL Serverless for relational data
 - Azure Blob Storage for static assets
-- Front Door (Standard) for CDN and routing. It has no free tier, so add its cost to the estimate
+- Front Door (Standard) for CDN and routing. It has no free tier. Microsoft's Front Door pricing page (azure.microsoft.com/pricing/details/frontdoor) lists a base fee of $35 a month for Standard and $330 for Premium (US prices), plus charges per request and per GB sent out. Add all three to the estimate. If the budget is under about $100 a month, the base fee alone takes a third of it, so offer App Service on its own, without Front Door, as the low-cost version
 - Key Vault for secrets
 - Estimated: [MONTHLY COST RANGE, check in the pricing calculator]
 ```
@@ -445,6 +458,15 @@ Provide these details for architecture design:
 - Priority action list (high/medium/low) and implementation checklist
 
 ---
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer).
+- The [CI/CD pipeline builder](https://useaiblocks.com/skills/ci-cd-pipeline-setup).
+- The [AWS cost waste finder](https://useaiblocks.com/skills/cloud-bill-waste-finder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Cross-References
 

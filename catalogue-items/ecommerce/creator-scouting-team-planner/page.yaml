@@ -54,7 +54,7 @@ output_sample:
     - name: BRIEF AND RELATIONSHIP RULES
       contains: "A light brief, the #ad disclosure rule, and whether to track with codes, links or the halo read."
     - name: SHOP FIT
-      contains: A go or no-go for a TikTok Shop, showing price, buyer fit and spillover.
+      contains: A go or no-go for a TikTok Shop, showing price, buyer fit, spillover and the margin sum.
     - name: HALO READ
       contains: Which other channels to watch in the week a video lands.
     - name: BIAS CHECK
@@ -99,7 +99,8 @@ output_shape: |
   Tracking: <codes or links | halo read>
 
   SHOP FIT   <GO | NO-GO>
-  Price <$>   Buyer <fit>   Spillover <channels>
+  Price <$> (impulse range under about $29 to $39 is one operator's view; test it on your first 10 posts)   Buyer <fit>   Spillover <channels>
+  Margin <price - landed cost - fees - commission = $>
   HALO READ  <channels watched> in the week a video lands
 
   BIAS CHECK  <creators by region vs buyers by region>
@@ -155,3 +156,4 @@ terms:
     meaning: A person whose job is to find new creators who fit your buyer.
   - term: Spillover
     meaning: Buyers who see a video in one app and buy on another site or marketplace.
+next: [creator-pay-planner]

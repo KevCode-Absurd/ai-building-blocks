@@ -100,7 +100,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## After this (for this job)
 
-Use this section, not the shared "After this" list above. Suggest the user send the open questions to each vendor and re-run the comparison with the answers. After choosing, suggest [Plan a vendor change without losing work](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work). For a deeper look at how a chosen vendor handles staff data, offer the [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker).
+Use this section, not the shared "After this" list above. Suggest the user send the open questions to each vendor and re-run the comparison with the answers. After choosing, suggest [Vendor transition continuity planner](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work). For a deeper look at how a chosen vendor handles staff data, offer the [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker).
 
 ## Avoid
 

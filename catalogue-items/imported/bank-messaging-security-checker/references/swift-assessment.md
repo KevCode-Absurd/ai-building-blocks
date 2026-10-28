@@ -9,10 +9,10 @@ All SWIFT users must submit an annual **KYC Security Attestation (KYC-SA)** conf
 
 ### Attestation Workflow
 
-1. **Prepare evidence** — Gather implementation evidence for all 23 mandatory controls applicable to your architecture type
+1. **Prepare evidence** — Gather implementation evidence for every mandatory control that applies to your architecture type (26 mandatory controls in CSCF v2026)
 2. **Engage independent assessor** — Community-standard users must have an independent assessor validate compliance (see below)
 3. **Complete KYC-SA form** — For each mandatory control, attest: Implemented / Partially Implemented / Not Implemented
-4. **Submit by July 31** — Annual deadline; late submission triggers counterparty notifications
+4. **Submit by December 31** — For v2026 the attestation window is July 1 – December 31, 2026. Late or missing attestations can be visible to counterparties; confirm the current consequences in the Swift Knowledge Centre
 5. **Address counterparty queries** — Counterparties can view your attestation and may request clarification
 
 ### Independent Assessment Requirements
@@ -30,21 +30,19 @@ Since CSCF v2020, an **independent assessment** is required for all users (previ
 - SWIFT-certified assessors (listed on SWIFT's KYC Registry)
 - The assessor must not have operational responsibility for the SWIFT environment assessed
 
-**Assessment scope:** All 23 mandatory controls applicable to the architecture type; advisory controls optionally included.
+**Assessment scope:** Every mandatory control that applies to the architecture type (26 mandatory controls in CSCF v2026); advisory controls optionally included.
 
 ---
 
-## CSCF v2024 → v2025 Key Changes
+## CSCF v2025 → v2026 Key Changes
 
-| Change Area | v2024 | v2025 |
+| Change Area | v2025 | v2026 |
 |-------------|-------|-------|
-| Control count | 31 (23 mandatory, 8 advisory) | 31 (no change) |
-| 2.2 Patching SLAs | Critical: 7 days | Critical: 3 days (tightened) |
-| 4.2 MFA | Hardware token strongly recommended | Hardware token explicitly required; clarified app-based OTP insufficient for most types |
-| 6.4 Log retention | 1 year minimum | Clarified: 1 year online, 3 years total |
-| 7.1 SWIFT notification | 24-hour notification | Unchanged; emphasis on 30-day full report |
-| A4 (Cloud) | Introduced in v2023 | Further clarified; cloud-specific guidance expanded |
-| Assessment guidance | Community standard | Updated assessor qualification criteria |
+| Control count | 32 (25 mandatory, 7 advisory) | 32 (26 mandatory, 6 advisory) |
+| 2.4 Back-Office Data Flow Security | Advisory (2.4A) | Mandatory; the author reads legacy direct back-office flows as not yet mandatory, with v2028 signalled (unconfirmed) |
+| Customer client connectors | Not in mandatory scope | In scope for 14 controls (1.2, 1.3, 1.4, 2.2, 2.3, 2.6, 2.7, 3.1, 4.1, 4.2, 5.1, 5.4, 6.1, 6.4); some architecture B users may need to attest as A4 |
+
+These points are as reported for the Swift Customer Security Controls Framework v2026 (published July 2025 in the login-gated Swift Knowledge Centre). They were not checked against the document itself, and the mandatory or advisory status of individual controls such as 1.3, 1.5 and 2.9 must be confirmed there. Other per-control detail changes each year: read the change summary at the front of the CSCF document rather than relying on a list here.
 
 ---
 

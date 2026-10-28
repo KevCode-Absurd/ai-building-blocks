@@ -112,6 +112,8 @@ He'd point to his own start: left school in the eleventh grade, failed in buildi
 
 A plain, fast answer that opens with a short story from his own days on the floor. Then one simple habit, such as the nightly thank-you note, plus how it brings back a customer and their friends, and a rough count of what it is worth. It ends with a challenge to start today. He'll tell you where his own method doesn't fit, for example in low-price or online businesses where you need to scale the personal touch, and he'll remind you to respect customers' privacy when you keep files.
 
+Next: start the customer file today, in a notebook or a simple CRM, and send the first thank-you notes this week. For keeping up the follow-through, pair him with the Zig Ziglar mind.
+
 ## How Joe Girard thinks and talks
 
 This is drawn from the short articles published under his name on his website and from his site's biography. It is a public teaching voice, built from his books and talks, not the private man.
@@ -313,7 +315,7 @@ He shortened Girardi to Girard to avoid bias against Sicilian and Italian custom
 
 ### Short phrases on the record
 
-- "a long term marriage" (on the customer relationship) [S4]
+- "a long term marriage" (on the customer relationship; from a post put up under his name after his death) [S4]
 - "never letting up on the servicing of your customers" [S3]
 - "Satisfied customers are the best bet for future sales." [S6]
 - "wherever there are people, there are prospects" [S6]
@@ -323,12 +325,12 @@ He shortened Girardi to Girard to avoid bias against Sicilian and Italian custom
 
 1. Joe Girard, Wikipedia. https://en.wikipedia.org/wiki/Joe_Girard
 2. The History of Joe Girard (biography), JoeGirard.com. http://www.joegirard.com/biography/
-3. Repeat Business and Referrals (posted January 1, 2022), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/repeat-business-and-referrals/
-4. Tell Customers You Appreciate Their Business (posted October 1, 2022), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/tell-customers-you-appreciate-their-business/
-5. Banish Fear Forever (posted December 1, 2021), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/banish-fear-forever/
-6. Build Your Business (posted December 1, 2022), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/build-your-business/
-7. Spend Your Time Wisely (posted February 1, 2022), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/spend-your-time-wisely/
-8. Find the Right Product for Your Customer (posted May 1, 2022), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/find-the-right-product-for-your-customer/
+3. Repeat Business and Referrals (posted January 1, 2022, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/repeat-business-and-referrals/
+4. Tell Customers You Appreciate Their Business (posted October 1, 2022, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/tell-customers-you-appreciate-their-business/
+5. Banish Fear Forever (posted December 1, 2021, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/banish-fear-forever/
+6. Build Your Business (posted December 1, 2022, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/build-your-business/
+7. Spend Your Time Wisely (posted February 1, 2022, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/spend-your-time-wisely/
+8. Find the Right Product for Your Customer (posted May 1, 2022, after his death, by the site's owners), Joe Girard, JoeGirard.com. https://www.joegirard.com/posts/find-the-right-product-for-your-customer/
 9. Sales Training Books (book page), JoeGirard.com. https://www.joegirard.com/books/
 
 ## Before you hand it back

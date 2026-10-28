@@ -81,14 +81,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the new text for fake pressure** with the [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the rewritten text.
-- **If you will say it aloud to a room that disagrees** with the [Tough audience speech planner](https://useaiblocks.com/skills/hostile-room-speech-planner). It takes the claim and the objections.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The strongest objection is stated fairly before it is answered.
@@ -98,6 +90,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every objection has an answer or an admitted gap.
 - No evidence, source or figure was added that you did not give.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the new text for fake pressure** with the [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the rewritten text.
+- **If you will say it aloud to a room that disagrees** with the [Tough audience speech planner](https://useaiblocks.com/skills/hostile-room-speech-planner). It takes the claim and the objections.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

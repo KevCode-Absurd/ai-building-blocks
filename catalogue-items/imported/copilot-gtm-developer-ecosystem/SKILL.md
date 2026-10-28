@@ -11,6 +11,22 @@ metadata:
 
 Plan how outside developers start to build on your product and keep going. Focus on what drives real use, not vanity numbers. Based on the gtm-developer-ecosystem skill by Smit Patel, shared in github/awesome-copilot (MIT).
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a business profile. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+
+**Tools that do this best:**
+- **Any good chat AI:** It plans from your notes. Paste in your docs outline if you have one.
+<!-- /needs -->
+
 ## When to use
 
 - "How do we build a developer ecosystem?"
@@ -146,6 +162,15 @@ Return a plan in this layout. Keep each section short.
 ## Missing or unverified
 - <each MISSING input and each claim to check>
 ```
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
+- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Common mistakes
 

@@ -112,8 +112,9 @@ hist = ticker.history(
 Returns DataFrame with: Open, High, Low, Close, Volume.
 
 **Price reaction calculation tips:**
-- After-hours reporters: compare prior day's Close to next day's Open (gap) and next day's Close (full reaction)
-- Before-market reporters: compare prior day's Close to same day's Close
+- After-hours reporters: compare the report day's Close to the next session's Open (gap) and the next session's Close (full reaction)
+- Before-market reporters: compare the prior session's Close to the report day's Close
+- During market hours the daily data can include a partial row for today; its Close is only the latest price. Treat a session as closed only after it ends (16:00 New York time, plus a small buffer), otherwise report the reaction as pending
 - The biggest single-day |%change| near the earnings date is usually the reaction day
 - Volume spike confirms the reaction day
 

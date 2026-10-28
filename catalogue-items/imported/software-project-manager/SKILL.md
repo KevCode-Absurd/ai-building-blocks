@@ -11,6 +11,19 @@ metadata:
 
 This skill enables an AI agent to serve as a project management co-pilot for software teams. Beyond a plain prompt, it fixes a Fibonacci story point scale, work-in-progress limits for Kanban and a standard report layout, so plans and reports look the same every sprint. It covers the full lifecycle: breaking high-level goals into actionable tasks with acceptance criteria, estimating effort in story points, organizing work into sprints or Kanban boards, tracking progress with burndown data, identifying blockers and risks, and generating stakeholder-ready status reports. The agent integrates with Jira, Linear, GitHub Issues, and Trello so that all changes are reflected in the team's actual project tracker.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Gather Project Context**
@@ -29,7 +42,7 @@ This skill enables an AI agent to serve as a project management co-pilot for sof
    Maintain a risk register with each entry containing a description, likelihood (low/medium/high), impact (low/medium/high), an assigned owner, and a mitigation plan. When a new risk is identified — such as a team member going on leave or a third-party API deprecation — add it to the register and notify the project lead. Track cross-team dependencies by linking external issues and alerting when their status changes.
 
 6. **Generate Status Reports**
-   Produce sprint review or weekly status reports in Markdown (or export to PDF/Confluence). Each report includes: sprint goal and whether it was met, completed stories with their point total, stories carried over, burndown chart data, velocity trend over the last five sprints (for the report only; plan capacity from the trailing three-sprint average), top risks, and action items for the next period. Tailor the level of detail to the audience — executives get a one-page summary, the team gets the full breakdown.
+   Produce sprint review or weekly status reports in Markdown (or export to PDF/Confluence). Each report includes: sprint goal and whether it was met, completed stories with their point total, stories carried over, burndown chart data, velocity trend over the last five sprints (for the report only; plan capacity from the trailing three-sprint average), top risks, and action items for the next period. Tailor the level of detail to the audience — executives get a one-page summary, the team gets the full breakdown. If no tracker is connected and the user has not given sprint figures, ask for the data first (points done, points carried over, velocity, risks). Never invent burndown, velocity or risk figures; mark any number you could not get as a placeholder, such as `[POINTS DONE]`.
 
 ## Usage
 
@@ -162,3 +175,10 @@ Load per person: Alice 8 of 8, Bob 8 of 10, Carol 8 of 8. Held back for the next
 - **Tracker API outage.** If the project tracker API is unreachable, generate the plan in Markdown locally and queue the sync for when the API recovers. Inform the user that changes are saved locally but not yet pushed.
 - **Mid-sprint scope changes.** If a new high-priority item is added mid-sprint, warn the user about the impact on the sprint goal and suggest which existing item to deprioritize to make room. Log the scope change in the sprint report.
 - **Cross-project dependencies.** When a task depends on work owned by another team or project, create a linked external reference and set up a webhook or polling check to notify the team when the dependency is resolved.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

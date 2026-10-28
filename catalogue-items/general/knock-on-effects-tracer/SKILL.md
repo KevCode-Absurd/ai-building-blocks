@@ -5,7 +5,7 @@ description: "Paste this before you make a change to prices, rules, pay, product
 
 # Knock-on effects tracer
 
-Follows a change through its first, second and third effects and tells you what to watch. This is the short version. For how much of a gain you keep, how people could game the new rule and a reworked plan, use the [Second-order effects tracer](https://useaiblocks.com/skills/second-order-effects-tracer).
+Follows a change through its first, second and third effects and tells you what to watch. This is the short version. For how much of a gain you keep, how people could game the new rule and a reworked plan, use the [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer).
 
 ## Required input
 

@@ -69,6 +69,19 @@ tags: ["Ubuntu", "Mkabela", "African-philosophy", "collective-knowledge", "commu
 
 # Ubuntu Collective Knowledge Task Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Redesigns learning tasks through the lens of Ubuntu philosophy — the African concept of "umuntu ngumuntu ngabantu" (a person is a person through other persons) — so that knowledge building is genuinely collective rather than individual. Western education typically structures learning as individual acquisition: each student learns for themselves, is assessed alone, and succeeds or fails independently. Ubuntu philosophy proposes a fundamentally different epistemology: knowledge is communal, wisdom emerges through relationship, and a person's understanding is incomplete without the understanding of others. The skill redesigns academic tasks so that collective knowledge building is structural (the task cannot be completed alone — each person's contribution is genuinely necessary), the learning serves the community (not just the individual student), and individual growth exists WITHIN, not apart from, the collective. The output includes a redesigned task with collective knowledge structures, a community dimension, and a framework for individual accountability within collective learning. AI is specifically valuable here because designing genuinely collective tasks (not just group work relabelled) requires rethinking task structure at a fundamental level — ensuring that interdependence is authentic, not cosmetic.
@@ -245,3 +258,11 @@ The teacher in an Ubuntu task is not a "facilitator of group work" — they are 
 3. **Collective knowledge building takes more time than individual learning.** The archive task above takes significantly longer than a standard local history unit. The depth and community engagement it produces are worth the time, but teachers working within tight curriculum schedules may need to adjust. Not every task needs to be collective — Ubuntu principles can inform SOME tasks while others remain individual.
 
 4. **Individual assessment systems can conflict with collective learning.** If the school requires individual grades for every piece of work, the collective dimension may be undermined. The assessment framework above attempts to honour both individual and collective contribution, but in systems that ultimately reduce everything to individual marks, the collective dimension may be devalued. This is a systemic limitation, not a design limitation.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Group work task planner](https://useaiblocks.com/skills/group-work-task-planner). It takes the lesson plan.
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

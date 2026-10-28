@@ -31,10 +31,10 @@ you_get:
   - A reconciliation report
 how_to_use:
   - Remove account numbers and personal names from your bank file and your ledger export.
-  - Open an AI that can run code and read files. Small files can be pasted into a chat instead.
+  - Open an AI that can run code and read files. Small files can be pasted into a chat instead. Without code, keep to a few hundred rows, since a chat cannot match large files reliably.
   - Upload both files. Say how you define a match, such as same amount and a date within two days.
   - Ask your AI to follow the Automated Reconciliation skill.
-  - Check the near matches and the unmatched items before you post any journal entry.
+  - Check the near matches and the unmatched items before you post any journal entry. The suggested entries are not posted for you. Have a bookkeeper or accountant check each one against the bank statement first.
 output_sample:
   input:
     - Your bank statement file (CSV or PDF)

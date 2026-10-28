@@ -81,7 +81,7 @@ how_it_works:
     text: Go, test first or no-go, plus the cheapest test before you buy stock, and a reminder to search the trademark.
 
 output_shape: |
-  VERDICT: <GO | TEST FIRST | NO-GO>  <n>/100
+  VERDICT: <GO | TEST FIRST | NO-GO>  <n>/100 (a screening aid on our own rule-of-thumb weights and cut-offs, not a decision to buy stock)
   Weakest test: <name and why>
 
   HARD STOPS

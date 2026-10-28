@@ -2,21 +2,23 @@ thinking: medium
 thinking_why: It plans the stack, then builds from set steps.
 new_slug: spec-to-starter-repo-builder
 name: Spec to starter repo builder
-summary: Turn a written app spec into a starter repo with real code, setup steps and tests. Describe your app and get a runnable project folder.
+summary: Turn a written app spec into a starter repo with real code, setup steps and tests. Describe your app and get a project folder to run and test.
 job: build-software
 headline: Spec to starter repo builder
-subhead: Give it a written description of your app. It picks a stack if you did not, shows you its plan, then writes a project folder you can run. You get setup steps, working code and tests.
+subhead: Give it a written description of your app. It picks a stack if you did not, shows you its plan, then writes a starter project folder. You get setup steps, first code and tests. Unless your AI can run code, run them yourself before you rely on it.
 explain: |
   A new project folder with real structure, setup files and first working code, made from a written description of your app. The skill reads your spec and pulls out the app name, features, stack, login needs, database and deploy target. If you did not pick a stack, it infers one from clues, for example Next.js for a dashboard and FastAPI for an API.
 
-  It then writes a runnable repository, not an empty template. It works for many stacks, including Rails, Go, Rust and Flutter. For a SaaS with payments and login, a more specific skill fits better.
+  It then writes a full starter repository, not an empty template. It works for many stacks, including Rails, Go, Rust and Flutter. For a SaaS with payments and login, a more specific skill fits better.
+
+  This is Alireza Rezvani's spec-to-repo skill (alirezarezvani/claude-skills), shared under the MIT licence. We gave it a plain name and added a note in the skill file on which related skills are in this library.
 when:
   - You have a plain description of an app and no code yet.
   - You have a requirements document and need a codebase to start from.
   - You want a runnable starting point instead of a blank folder.
   - You are not sure which tech stack fits your idea.
 not_for:
-  - "You want a SaaS app with payments and login: use the saas-scaffolder skill from the product team instead."
+  - "You want a SaaS app with payments and login: use the SaaS starter builder instead."
   - "You already have a codebase and want to add one feature: ask your AI to edit your existing files, or work with a developer."
   - "You have only a rough idea and no features yet: write a short feature list first, then come back."
 you_give:

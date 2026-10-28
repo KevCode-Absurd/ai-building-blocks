@@ -7,9 +7,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: lead_list, required: true}
   - {type: plan, required: false}
-  - {type: lead_list, required: false}
+  - {type: question, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

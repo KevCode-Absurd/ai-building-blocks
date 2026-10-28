@@ -9,7 +9,7 @@ Name a business and a target size. Get the big choices, the sums behind the size
 
 This workflow draws on ideas from Poor Charlie's Almanack by Charles T. Munger, ed. Peter D. Kaufman. The five-step order is this workflow's own design, not a method from the book. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use:** you want to value a company that already trades or has sales (use a valuation tool or ask an accountant), you have no buyer group in mind yet (use the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer) first), or you want to test how strong your edge is (use the [Business power tester](https://useaiblocks.com/skills/business-power-tester)). This is a planning aid, not investment advice.
+**When not to use:** you want to value a company that already trades or has sales (use a valuation tool or ask an accountant), you have no buyer group in mind yet (use the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer) first), or you want to test how strong your edge is (use the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester)). This is a planning aid, not investment advice.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

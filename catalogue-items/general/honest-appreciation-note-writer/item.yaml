@@ -7,8 +7,7 @@ role: make
 job: copy
 level: beginner
 inputs:
-  - {type: plan, required: true}
-  - {type: persona, required: false}
+  - {type: meeting_notes, required: true}
 outputs:
   - {type: copy_draft}
 origin: rebuilt

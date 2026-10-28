@@ -39,6 +39,7 @@ how_to_use:
   - Gather your wavelengths, field angles, focal length and aperture or F-number. Or find your Zemax file.
   - Open an AI that can run MATLAB code, and note your MATLAB release. The skill file is long, so if your AI struggles, paste only the part for your task (build, analyse, tolerance or tune). Then add your details or file. If you have no Zemax file, ask it to run help optics in MATLAB and list the sample .zmx files in the opticsdata folder, so you can pick a starting system.
   - "Work in this order. First give the file or lens spec. Then list the wavelengths and field angles. Next name the analysis to run: spot diagrams, ray fans or distortion. Last ask for tolerances, then tuning. You get a MATLAB script and a table of spot size per field and wavelength, distortion values and tolerance findings."
+  - "A first prompt you can copy and fill in: Using this skill, import my Zemax file [file name] (or build a lens with [focal length] mm focal length at F/[number]). Use wavelengths [list] nm and field angles [list] degrees. Show spot diagrams for every field and wavelength, and give me a table of RMS spot size and distortion."
   - Check the plots against your targets. Then ask your AI to run the tuning again with tighter targets.
   - Next, review the tolerance results with your optics team before you build a prototype. Carry the tuned parameters and the tightest tolerances into that review.
 output_sample:
@@ -57,7 +58,9 @@ output_sample:
       contains: Spot diagrams, ray fans, distortion, chromatic aberration and astigmatism for your fields and wavelengths.
     - name: Coating and polarisation results
       contains: Coating performance and Fresnel coefficients, when your task includes coatings.
+    - name: Results table
+      contains: One row per field angle and wavelength, with RMS spot size and distortion in percent.
     - name: Tolerance results
-      contains: How much manufacturing error the design can take before it fails your targets.
+      contains: How much manufacturing error the design can take before it fails your targets, with a separate list of the tolerances that fail.
     - name: Optimised design
       contains: The tuned system with the changed parameters, such as spacing and curvature, listed.

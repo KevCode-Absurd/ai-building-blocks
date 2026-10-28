@@ -19,12 +19,12 @@ when:
   - You want a range, not a single number.
 not_for:
   - "You have no earnings record yet or fewer than five years of results: gather the years first, or value the business from its assets with a licensed financial adviser."
-  - "Your earnings are not cleaned yet or you have not rated how reliable they are: first use the Earnings record reliability checker."
+  - "Your earnings are not cleaned yet or you have not rated how reliable they are: first use the Earnings history reliability reviewer."
   - "You want a buy or sell call, or a decision on your own savings: ask a licensed financial adviser, because this gives analysis only."
 
 you_give:
   - Cleaned and restated earnings by year, five to ten years
-  - The reliability rating from "Earnings record reliability checker"
+  - The reliability rating from "Earnings history reliability reviewer"
   - Share counts by year (optional)
 you_get:
   - The window and share count used
@@ -42,11 +42,11 @@ how_to_use:
 output_sample:
   input:
     - Your cleaned earnings for each of the last 5 to 10 years
-    - The reliability rating from the Earnings record reliability checker
+    - The reliability rating from the Earnings history reliability reviewer
     - Your share counts by year (optional)
   prerequisites:
     - Cleaned earnings from an earlier cleaning step
-    - A reliability rating from the Earnings record reliability checker
+    - A reliability rating from the Earnings history reliability reviewer
   output:
     - name: BASIS
       contains: The years used, the share count and where it came from, and the reliability rating you gave.
@@ -138,7 +138,7 @@ test:
 improve:
   - Add your own rule for which years count as boom years.
   - Keep a record of ranges and what the company later earned.
-  - Pair it with "Earnings record reliability checker" and "Earnings value range builder".
+  - Pair it with "Earnings history reliability reviewer" and "Earnings-based share value calculator".
   - Run it on three similar companies and compare the ranges.
 
 works_best_with:

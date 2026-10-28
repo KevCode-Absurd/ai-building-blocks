@@ -96,16 +96,16 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public source. The instructions and practice numbers in this pack are original. The linked document is not bundled or relicensed.
 
+## Hand back
+
+Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or accounting conclusion unresolved.
+
 ## After this
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
 - Choose what to make with limited machine time with the [Product mix capacity checker](https://useaiblocks.com/skills/product-mix-capacity-checker).
-- Carry the yield into product margins with the [Connect production yield to mix contribution](https://useaiblocks.com/workflows/connect-production-yield-to-mix-contribution) workflow.
-- Follow raw material price changes into your selling price with the [Commodity pass through cost bridge](https://useaiblocks.com/skills/commodity-pass-through-cost-bridge).
+- Carry the yield into product margins with the [Production yield and capacity reviewer](https://useaiblocks.com/workflows/connect-production-yield-to-mix-contribution) workflow.
+- Follow raw material price changes into your selling price with the [Raw material price impact calculator](https://useaiblocks.com/skills/commodity-pass-through-cost-bridge).
 
 If they pick one and it is not added here, give the link and say what to bring.
-
-## Hand back
-
-Return the result, the source list, the dated assumptions, the ties, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or accounting conclusion unresolved.

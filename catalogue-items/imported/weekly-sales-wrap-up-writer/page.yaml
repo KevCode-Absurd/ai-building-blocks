@@ -33,8 +33,9 @@ you_get:
   - A Monday list of meetings, closing deals and next steps
   - A draft post for your team channel
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude and paste in the skill text from this page. It is written for Claude's connectors, artifacts and Pages. In ChatGPT or Gemini, upload your exports and ask for the wrap as plain text.
   - Connect your CRM, or upload this week's and last week's deal exports. Connecting needs an AI tool that supports it.
+  - "Using files? Export both weeks with the same columns: deal name, stage, amount, close date and last changed date. The wrap compares the two lists: new rows are new deals, changed stages are moves, and missing rows are closed or removed."
   - Say if you want your own week or a team rollup. Add calendar and email if you can.
   - Say if you want a team chat post drafted.
   - Check the Closed and Moved sections against your CRM before you share them.

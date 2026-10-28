@@ -35,6 +35,7 @@ how_to_use:
   - "Say: fix my failing tests. Add the failure output if you have it."
   - Check each group's result as it finishes. Your AI should not move on until that group passes.
   - Read the final full-suite result and the code changes before you commit.
+  - Next, review the diff, commit it, and let your CI run or a code review check it before you merge.
 output_sample:
   input:
     - Access to your project files and the command that runs your tests

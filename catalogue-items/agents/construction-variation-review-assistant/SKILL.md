@@ -22,7 +22,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, and any approval received.
 
-**The pieces it uses:** the [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Plain-words contract summary](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory. If the variation workflow is missing, stop and say so. If the Executive action register keeper is missing, finish the review and list any approval as open.
+**The pieces it uses:** the [Construction change decision brief writer](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Contract plain-language summary writer](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Action item tracker](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory. If the variation workflow is missing, stop and say so. If the Executive action register keeper is missing, finish the review and list any approval as open.
 
 **Saving the record:** saving needs file access. The agent writes only to `reviews/construction-variation-review-assistant/` and nothing else. Without file access it prints the record in the chat.
 
@@ -72,7 +72,7 @@ Say whether this was a first baseline or a comparison. The cost check is arithme
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check a delay claim** with the [Weekly project delay evidence assistant](https://useaiblocks.com/skills/weekly-project-delay-evidence-assistant).
-- **Check the contract wording for risk** with the [Contract intake reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
+- **Check a delay claim** with the [Project delay test reviewer](https://useaiblocks.com/skills/weekly-project-delay-evidence-assistant).
+- **Check the contract wording for risk** with the [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer).
 - **Write a status update for the owner** with the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer).
 Nothing here sends a message or approves work. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

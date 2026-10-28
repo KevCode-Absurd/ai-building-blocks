@@ -11,6 +11,28 @@ metadata:
 
 This skill enables an AI agent to build a comprehensive content strategy from the ground up or audit and improve an existing one. The agent defines content pillars aligned to business objectives, maps content types to funnel stages (TOFU/MOFU/BOFU), creates editorial calendars, and establishes a measurement framework. The output is a repeatable system for producing, distributing, and optimizing content that drives traffic, engagement, and conversions.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for a brief, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Workflow
 
 1. **Audit existing content and define goals.** Inventory all current content assets — blog posts, landing pages, case studies, videos, whitepapers — with their publication dates, traffic, and conversion metrics. Identify top performers, underperformers, and content gaps. Align the strategy to 2–3 measurable goals such as "increase organic traffic 40% in 6 months" or "generate 200 MQLs per month from content."
@@ -90,3 +112,12 @@ Both examples are illustrations. The names (HRBot, Acme, startuphub.io), traffic
 - **Seasonal businesses.** Plan content production 8–12 weeks ahead of peak season. Publish evergreen foundational content year-round and layer seasonal pieces on top during peak windows.
 - **Limited budget or solo creator.** Reduce to 2 content pillars and 1 post per week. Focus on SEO-driven evergreen content that compounds over time rather than social-first content that decays quickly.
 - **Pivoting product or audience.** When the product repositions, audit existing content for alignment with the new positioning. Archive or redirect misaligned content rather than deleting it, to preserve any existing backlinks and authority.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+- The [Quarterly business plan reviewer](https://useaiblocks.com/skills/quarterly-strategy-reviewer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

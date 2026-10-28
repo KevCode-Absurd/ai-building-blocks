@@ -72,6 +72,7 @@ The deal in two lines. Who gives what. The standards, fixed and local. The fee t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the deal terms and plan.
 - The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the deal terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

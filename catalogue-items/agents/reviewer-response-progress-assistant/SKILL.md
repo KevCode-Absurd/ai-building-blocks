@@ -76,7 +76,7 @@ Allow at most two correction passes on any step. After that, stop and name the b
 - `response-draft-check.md`: issues in the user's draft with fixes. Only written when a draft was given.
 - `next-review-record.md`: the record for the next run.
 
-When not to use: to have the response letter written for you (this agent tracks and checks, and never invents results; use the [Proofreader](https://useaiblocks.com/skills/proofreader) to polish a draft you wrote). For tasks not tied to reviewer comments, use the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register). For a reference list check, use the [Bibliography revision review assistant](https://useaiblocks.com/skills/bibliography-revision-review-assistant). For one pass with no record, use the [Map journal reviewer requests to evidence workflow](https://useaiblocks.com/workflows/map-journal-reviewer-requests-to-evidence).
+When not to use: to have the response letter written for you (this agent tracks and checks, and never invents results; use the [Text proofreader](https://useaiblocks.com/skills/proofreader) to polish a draft you wrote). For tasks not tied to reviewer comments, use the [Action item tracker](https://useaiblocks.com/skills/executive-action-register). For a reference list check, use the [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant). For one pass with no record, use the [Map journal reviewer requests to evidence workflow](https://useaiblocks.com/workflows/map-journal-reviewer-requests-to-evidence).
 
 Next: attach the revised text for every "Done and not checked" row and run it again. Keep `next-review-record.md` for the next run.
 

@@ -39,6 +39,15 @@ Replace every `<ANGLE_BRACKET>` value below with the user's real value before yo
 5. **Root event, or "not found".** Name the earliest change before all symptoms. If the evidence does not show one, say so.
 6. **MISSING list and next step.** What you could not read. Then pass the root event to a rollback decision or a post-incident review.
 
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AWS service health investigator](https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose). It takes the audit report.
+- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the audit report.
+- The [Release safety planner](https://useaiblocks.com/skills/safe-release-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Pattern 1: Logs Insights Query Templates
 
 ### Error Spike Detection

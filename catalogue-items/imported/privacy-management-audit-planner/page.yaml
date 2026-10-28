@@ -7,13 +7,11 @@ job: check-contracts
 headline: Privacy management audit planner
 subhead: A clear view of where your handling of personal data falls short of ISO 27701, with the controls you need and a plan to audit them.
 explain: |
-  A clear view of where your handling of personal data falls short of ISO 27701, with the controls you need and a plan to audit them. Describe your setup and get the gaps.
-
   The skill handles both the 2019 add-on edition and the 2025 standalone one, and picks the right one for you. It runs a gap assessment against controller, processor and shared security controls, helps write a Statement of Applicability, and supports data protection impact assessments and records of processing. It also maps the standard to GDPR, CCPA, LGPD and PIPEDA, and plans the path to certification.
 
   The result is a planning draft, not an audit result or legal advice. The skill itself says its transition dates (certification bodies finishing around 31 October 2026, 2019 certificates moving by 2028) and its claim that ISO 27701 is not an approved GDPR certification scheme are not sourced. Check them with your certification body and the official ISO and data protection authority sources before you rely on them. Your team must also check each gap against real evidence.
 
-  This is an MIT-licensed import from Hemant Naik's repository (Sushegaad/Claude-Skills-Governance-Risk-and-Compliance, commit aab13e1). The body text is the source's own wording.
+  This is an MIT-licensed import from Hemant Naik's repository (Sushegaad/Claude-Skills-Governance-Risk-and-Compliance, commit aab13e1). We added notes that mark its dates and legal claims as unsourced, and changed nothing else.
 when:
   - A customer asks if you hold ISO 27701.
   - You process personal data and want to test your controls.

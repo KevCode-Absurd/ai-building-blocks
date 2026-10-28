@@ -7,7 +7,7 @@ description: Paste above a PageSpeed Insights report for a store page. Use it to
 
 Reads a PageSpeed report the right way: real-user data decides pass or fail, lab data finds the cause.
 
-Not for a brand-new store with no real-user data yet (run a lab-only check, or wait about 28 days and test again). Not to get the fix made (use the [Self-hosted store speed fixer](https://useaiblocks.com/skills/self-hosted-store-speed-fixer), which takes the audit report). Not for every check in full detail (use the [Store speed report reader](https://useaiblocks.com/skills/store-speed-report-reader)).
+Not for a brand-new store with no real-user data yet (run a lab-only check, or wait about 28 days and test again). Not to get the fix made (use the [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer), which takes the audit report). Not for every check in full detail (use the [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -65,4 +65,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score sum is shown.
 - Each fix names a page and an element.
 
-For the full version with every check, use the [Store speed report reader](https://useaiblocks.com/skills/store-speed-report-reader).
+For the full version with every check, use the [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader).

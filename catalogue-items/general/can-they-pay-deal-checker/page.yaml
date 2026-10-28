@@ -145,3 +145,5 @@ terms:
     meaning: "A low and a high figure, each with evidence."
   - term: "Fixed sum"
     meaning: "One agreed amount, instead of an open-ended demand."
+before: [other-person-view-mapper]
+next: [payment-reminder-letter-writer, negotiation-call-prep-planner]

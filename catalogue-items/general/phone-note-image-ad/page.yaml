@@ -33,7 +33,7 @@ you_get:
   - A 1 to 4 word title and 3 to 6 short lines, exactly as they'll appear
   - A blank version and a short line to run under the image
   - How to build the screen with exact words, or an image prompt
-  - Any of the skill's six checks it still missed, one line each, or none
+  - Any of the skill's seven checks it still missed, one line each, or none
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.

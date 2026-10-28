@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: true}
   - {type: plan, required: false}
   - {type: audit_report, required: false}
 outputs:

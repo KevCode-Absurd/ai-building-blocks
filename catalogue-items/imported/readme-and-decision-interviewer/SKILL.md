@@ -16,6 +16,22 @@ license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 
 # brain-to-docs
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## When to Use
 
 - Use when the user wants to extract project vision, decisions, or preferences into durable docs.
@@ -62,3 +78,10 @@ One round, shown with placeholders:
 - If you cannot save files in this chat, print each full file (README.md or the ADR) after each round, say which path it belongs at, and ask the user to save it by hand.
 - Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.
 - For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision record writer](https://useaiblocks.com/skills/decision-record-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

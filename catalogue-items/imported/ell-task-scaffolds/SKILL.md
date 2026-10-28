@@ -69,6 +69,26 @@ tags: ["scaffolding", "EAL", "differentiation", "cognitive-demand", "task-modifi
 
 # Scaffolded Task Modifier
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). Bring your lesson plan.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Adapts a classroom task for a specific language proficiency level while explicitly maintaining cognitive demand — ensuring that EAL students engage with the same thinking as their peers, even when they need language support to do so. The critical design principle is that scaffolding should reduce LANGUAGE barriers, not reduce THINKING. Many well-intentioned task modifications inadvertently lower cognitive demand: giving EAL students a simpler version, removing the analytical component, or replacing an open question with a multiple-choice one. This skill guards against that by producing a modified task alongside an explicit cognitive demand check, verifying that the modification changes the linguistic access route but not the intellectual destination. AI is specifically valuable here because maintaining cognitive demand during scaffolding requires simultaneously understanding the task's intellectual purpose, the student's language level, and the specific scaffolding strategies that support access without reducing challenge — a three-way analysis most teachers don't have time to do.
@@ -275,3 +295,12 @@ Priestley uses the dramatic irony to undermine Birling's authority so that when 
 2. **Scaffold removal requires consistent, longitudinal planning.** This skill designs scaffolds for a single task, but effective scaffold removal happens across weeks and months. A teacher who uses this skill for every task will get well-scaffolded individual tasks, but the progressive removal across tasks requires the teacher to plan the trajectory. Chain with a spaced-practice approach to scaffold reduction.
 
 3. **The modification assumes the original task is well-designed.** If the original task is poorly structured, unclear, or misaligned with the learning objective, scaffolding it will not help — the original task needs redesigning first. Scaffolding is not a fix for bad task design; it's a way to make a good task accessible to students at different language proficiency levels.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [English learner sentence frame writer](https://useaiblocks.com/skills/ell-sentence-frames). It takes the lesson plan.
+- The [Student task language reviewer](https://useaiblocks.com/skills/task-language-demand-checker). It takes the lesson plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

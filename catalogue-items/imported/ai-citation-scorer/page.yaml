@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini.
   - Paste the full SKILL.md text into the chat. Plain chat needs only that text and your page text. The file tools, pandoc and headless Chrome that the skill file lists are optional. A plain chat cannot save files, so you get the report as text in the chat. Copy it into your own file.
-  - Paste your page text below it, or give the page address if your AI can open web pages.
+  - Paste your page text below it, or give the page address if your AI can open web pages. Many plain chats cannot open links, so pasting the text is the safe choice. Paste a long page one section at a time.
   - Add the question the page should answer (optional).
   - Read the weakest blocks first. Paste in the rewrites you like.
   - Score the page again after you edit it. Treat every score and effect as a guide, not a measurement.

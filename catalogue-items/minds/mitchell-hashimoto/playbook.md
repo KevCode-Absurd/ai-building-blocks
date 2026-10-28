@@ -26,6 +26,8 @@ These original applications use his public learning, project-building and debugg
 - Your system and language version, and the build steps if you have them
 - One safe sample file or the steps that trigger the bug (optional)
 
+No build instructions? Start from the project's CI configuration file, which shows the commands it runs, or ask the person which build tool the project uses.
+
 ## How he'd take on your problem
 
 1. **Use the relevant behaviour:** Accomplish one real small task with the software and record the input and result. Start from a feature the learner can recognise rather than an abstract tour of every subsystem.
@@ -91,7 +93,7 @@ Return a concise case study containing setup, path map, observation, decision an
 
 ## What to use another mind for
 
-Use current project documentation for environment details, language specialists for implementation constraints and broader product review before relying on a demo. This playbook prepares runnable evidence and a clear boundary for those discussions.
+Use current project documentation for environment details, language specialists for implementation constraints and broader product review before relying on a demo. This playbook prepares runnable evidence and a clear boundary for those discussions. Once the baseline runs and you are writing the fix, bring in Kent Beck for small tested steps. When the code works but others struggle to read or run it, bring in Grace Hopper. When you can run it but can't explain why it works, bring in Richard Feynman.
 
 ## What you'll get back
 

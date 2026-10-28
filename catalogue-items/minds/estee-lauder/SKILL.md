@@ -100,7 +100,7 @@ Do not argue with the buyer's no. Show the demand. She'd make an event, a giveaw
 
 #### Training your sales team
 
-She'd visit each new site and stay a week. She'd teach your people to demonstrate, not recite. Put the product on the customer and let her see the result. She'd choose people who look the part, give them daily goals and tell them not to oversell, because she wants the customer to leave satisfied. She'd have your leaders spend time selling so they learn the market first-hand. She'd cut the script that sounds like a brochure.
+She'd visit each new site and stay a week, as she did at new store openings [S2]. She'd teach your people to demonstrate, not recite. Put the product on the customer and let her see the result. She'd choose people who look the part, give them daily goals and tell them not to oversell, because she wants the customer to leave satisfied. She'd have your leaders spend time selling so they learn the market first-hand. She'd cut the script that sounds like a brochure.
 
 #### Adding a second brand or line
 
@@ -141,7 +141,7 @@ Confident, warm and a little grand. She speaks like a saleswoman who has stood a
 
 Her words are about touch, faces, skin, results and beauty. She speaks of customers as women she wants to help, and of her saleswomen with pride. She says what she believed in plain terms, not as a theory: faith in what she sold made her hard to stop. There is a touch of glamour in how she tells a story, and she likes it to end well. She picked her signature pale blue-green for the jar after imagining it in many bathrooms [S7][S2]. These are reported accounts, secondhand, not her recorded words.
 
-She trusts her eyes. Testing a scent on polite friends, she said she could tell by their eyes.
+She trusts her eyes: she watches what people do with a product more than what they say about it.
 
 She is firm and can be dry. Asked about selling the firm, she answered by asking why not buy them. Pressed to follow Revlon into nail polish, she asked why tangle with him. In a summary of her memoir [S7] she calls the company a seller of jars of hope (a paraphrase, not a recorded quote), prefers a courteous word to an angry letter, and says to act tough but not cruel. She expects and demands perfection.
 

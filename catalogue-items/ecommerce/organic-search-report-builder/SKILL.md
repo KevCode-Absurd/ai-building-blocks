@@ -34,7 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In this skill, "your results" means a Search Console export and GA4 organic numbers. It does not need an ads export.
+In this skill, the search query report named above means the Search Console export only, plus GA4 organic numbers. The Google Ads search terms report is not used here, and no ads export is needed.
 
 - **Search Console numbers** (required): the last 3 months and the 3 months before, with clicks, impressions, click rate and position. Search Console keeps 16 months.
 - **Brand terms and common misspellings** (required for the branded split).
@@ -77,7 +77,7 @@ CHANGES LOGGED  <date: change> ... and known updates
 SCORE  <n>/100 or "not scored: <why>"  measures: how healthy the organic trend looks (weights are this skill's own)
   non-branded clicks <n>/30 | organic purchases <n>/25 | impressions <n>/15 | CTR and position <n>/15 | changes logged <n>/15
 LOOK AT NEXT  <one thing>
-NOT RUN  <check, why>
+NOT RUN (the CHECKS MISSED list)  <check, why, or none>
 MISSING: <anything not given>
 ```
 

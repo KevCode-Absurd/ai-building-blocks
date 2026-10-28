@@ -30,4 +30,4 @@ credits:
   - title: sustainable-sourcing skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/sustainable-sourcing
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence with edits. We gave it a plain name, added no-code quick steps, made the code mark missing metrics as unknown, labelled the example suppliers as made up, and noted that the scoring stub must be replaced before any rating is shown. We added Before you start and After this sections that link to other AI Blocks steps.

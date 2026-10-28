@@ -7,7 +7,7 @@ job: grow-social
 headline: YouTube channel growth kit
 subhead: "One front door to a full set of YouTube growth tools. Tell it your niche, your size and your goal, and it sends you to the right one: audit, ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics, repurposing, money, competitors or upload details."
 explain: |
-  One front door to a full set of YouTube growth tools. Tell it your niche, your size and your goal, and it sends you to the right one: audit, ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics, repurposing, money, competitors or upload details.
+  This is a copy of Daniel Agrici's YouTube skill, shared under the MIT licence. What it adds over using one tool alone: it sets your channel type first and passes results from one job to the next, so a plan, a script and a thumbnail brief fit together.
 
   Before any of that it asks three things: what your channel is about, whether you have under 1K, 1K to 10K, 10K to 100K or over 100K subscribers, and whether your main goal is growth, money, authority or engagement. It sorts your channel into one of nine types and loads a matching template. If your request spans several jobs, such as planning and scripting, it runs them in order and passes each result to the next.
 when:
@@ -30,11 +30,12 @@ you_get:
   - Chained results across tools when needed
   - A clear next step
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the kit's instructions.
-  - Tell it what your channel is about, how many subscribers you have and your main goal.
-  - "Say what you want: an audit, ideas, a script, a calendar or something else."
-  - Check the result against your own channel, then follow the Next Steps at the end.
-  - For live channel data, your AI needs to run code and use your own YouTube API key. Without it, paste your numbers in by hand.
+  - Works best in Claude Code or another AI that can read the whole folder and run code. Download the folder and keep sub-skills, templates and execution beside SKILL.md.
+  - In a plain chat (Claude, ChatGPT or Gemini), paste SKILL.md and also attach the sub-skill file for the job you want, such as sub-skills/script.md. The chat cannot run the scripts, so paste your numbers in by hand.
+  - "Step 1: tell it your niche, your subscriber range and your main goal. It picks your channel type and template."
+  - "Step 2: say the job you want: audit, ideas, hook, script, thumbnail, search, calendar, Shorts, metrics, repurposing, money, competitors or upload details. It runs that sub-skill, or several in order."
+  - "Step 3: you get that job's result with a Next Steps list at the end. Check it against your own channel, then follow the next step."
+  - "For live data: the scripts need your own YouTube API key. Live keyword data needs a DataForSEO account, a paid service charged per call. Both are optional."
 output_sample:
   input:
     - Your channel niche, in specific words

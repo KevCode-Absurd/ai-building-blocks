@@ -27,6 +27,7 @@ you_give:
   - Your Slack setup by name only: Socket Mode on or off, bot scopes and the ops channel name (never tokens)
   - The agents you want first, and whether their work is for one client or several
 you_get:
+  - "Nothing is run: you get a plan and draft code, and the two example agents are placeholders to replace"
   - A list of gaps in the starter, each with a fix
   - A file plan that maps each starter file to your project
   - A local setup for Redis and Postgres, and the environment variable names to fill in

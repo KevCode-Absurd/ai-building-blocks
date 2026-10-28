@@ -1,14 +1,19 @@
 # Check contracts and rules: AI Blocks
 
-> 100 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 109 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, ranked fixes and draft statement notes. Not legal advice.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
 - [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer): Describe your AI system and affected people for a draft assessment, risks, and deployment conditions.
 - [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Share the AI rule and company practices. Check scope, compare requirements and plan gaps for legal review with owners and due dates.
+- [AI risk review planner](https://useaiblocks.com/skills/ai-risk-framework-planner): Plan your AI risk process under the NIST AI risk framework. Give it your AI system. You get a status table, a risk register and an action plan.
 - [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker): Share AI vendor terms and your company’s rules. Get clause-by-clause risks, proposed edits and points to take to a lawyer.
+- [Australian government security checker](https://useaiblocks.com/skills/australia-gov-security-check): Check which Australian ISM security controls apply to your system, find your gaps and see what an IRAP assessor will ask for.
+- [Basel III capital rules checker](https://useaiblocks.com/skills/bank-capital-rules-checker): Use bank capital, asset and cash flow data to calculate ratios and flag shortfalls.
 - [Board written consent drafter](https://useaiblocks.com/skills/board-written-consent-drafter): Share a proposed board action and a past consent. Get a house-style draft, signature checklist and legal questions for lawyer review.
+- [Brazil data privacy checker](https://useaiblocks.com/skills/brazil-data-privacy-checker): Check your LGPD compliance for Brazil. Describe how you handle personal data and get a gap table, legal bases and a fix plan.
 - [Business insurance needs checker](https://useaiblocks.com/skills/business-insurance-needs-checker): Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.
+- [California privacy law checker](https://useaiblocks.com/skills/california-privacy-law-checker): Check if California privacy law applies to your business. Describe your data use. You get a yes or no, your duties, gaps and a plan for requests.
 - [Car supplier security checker](https://useaiblocks.com/skills/car-supplier-security-checker): Describe your work for car makers and assessment date. Get likely TISAX scope, labels and gaps to verify with an assessor.
 - [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker): Check your card payment setup against PCI DSS. Get your merchant level, the right self-assessment form (SAQ), and a list of gaps to fix.
 - [Cease-and-desist letter drafter](https://useaiblocks.com/skills/cease-and-desist-letter-helper): Draft a cease-and-desist letter to stop someone copying your work, or get an options memo for a letter you received. A lawyer should review it.
@@ -39,13 +44,16 @@
 - [Dispute timeline builder](https://useaiblocks.com/skills/dispute-timeline-builder): Build a dated dispute timeline from documents. Get source links, key events, gaps and first-pass flags for legal review.
 - [Employee data privacy reviewer](https://useaiblocks.com/workflows/review-employee-data-access-before-a-change): Share proposed HR changes, data types, roles and policy. Get access risks, privacy questions and restricted review actions before changes are made.
 - [EU AI Act readiness checker](https://useaiblocks.com/skills/eu-ai-act-readiness-checker): Check AI system details and records for possible gaps under the EU AI Act.
+- [EU AI Act risk classifier](https://useaiblocks.com/skills/eu-ai-act-risk-classifier): Find your AI system's risk tier under the EU AI Act, the paperwork it needs, and the duties for your role. Not legal advice.
 - [EU financial IT resilience checker](https://useaiblocks.com/skills/financial-it-resilience-checker): Share your EU finance firm and IT supplier details. Check DORA duties, incident reports, contract terms and facts to confirm.
 - [EU network security rules checker](https://useaiblocks.com/skills/eu-network-security-check): Check firm size, services, countries, and records for gaps under NIS2, the EU network security law.
+- [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker): Check firm details and reports to find which EU reporting rules may apply and what's missing.
 - [Facilities contract cost comparison reviewer](https://useaiblocks.com/workflows/compare-facilities-service-contract-options): Compare facilities service coverage and full costs. Summarise contract duties and questions for review, using the same basis for each offer.
 - [Federal accessibility checker](https://useaiblocks.com/skills/federal-accessibility-checker): Share federal site, app, or document details for Section 508 gap guidance and ranked fixes.
 - [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system and security needs. Get a NIST control baseline, tailoring notes and draft control write-ups.
 - [FedRAMP and RMF compliance planner](https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance): Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.
 - [FedRAMP readiness planner](https://useaiblocks.com/skills/federal-cloud-approval-planner): Describe your cloud service. Get a likely path, required documents and gaps to review.
+- [Health data privacy checker](https://useaiblocks.com/skills/health-data-privacy-checker): Check your health app or clinic against HIPAA. Get a list of gaps, safeguards to add and draft notices or agreements. A first-pass HIPAA check.
 - [Import and export paperwork checker](https://useaiblocks.com/skills/import-export-paperwork): Describe your goods and route. Check official tariff and customs sources, then list supported options and open questions.
 - [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer): Review a demand letter you received. Get the claims, amounts, deadline, a merit read and your reply options. A first read, not legal advice.
 - [India data privacy checker](https://useaiblocks.com/skills/india-data-privacy-checker): Describe your India data use. Check current Act and Rules sources, map possible duties and list facts to confirm.
@@ -88,6 +96,7 @@
 - [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer): Share a subpoena and its court forum. Get key fields, deadline questions and a plan for counsel. Not legal advice.
 - [Supplier bid decision reviewer](https://useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail): Share vendor bids, review records and approval rules. Get a sourced comparison, checklist result and record of how the choice was made.
 - [Supplier contract manager](https://useaiblocks.com/skills/supplier-contract-manager): Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+- [SWIFT messaging security checker](https://useaiblocks.com/skills/bank-messaging-security-checker): Check your SWIFT setup for gaps and proof needed for its security checks.
 - [Terms of service drafter](https://useaiblocks.com/skills/terms-of-service-drafter): Describe your web app or marketplace and get a terms of service draft built around how you work, ready to review with a lawyer. Not legal advice.
 - [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist): Share product and trade details. Get a checklist of likely rules, owners, review dates, and gaps to confirm.
 - [Trademark name screener](https://useaiblocks.com/skills/trademark-name-first-check): Check a trademark name idea before you pay for a full search. You get a flag list of similar marks and risk points. It is not a clearance opinion.

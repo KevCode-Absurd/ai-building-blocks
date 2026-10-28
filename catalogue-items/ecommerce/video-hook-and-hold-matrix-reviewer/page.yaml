@@ -9,9 +9,9 @@ explain: |-
 
   Share video impressions, three-second views, later views and conversion results. Get metric math, four-quadrant labels and fixes for each ad.
 when:
-  - You need metric math, four-quadrant labels and fixes for each ad.
-  - You need video hook and hold matrix reviewer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Your video ads get views but you cannot tell if the opening or the rest is the weak part.
+  - You want a fix for each video ad before you make new versions.
+  - You want the sums and cutoffs written down before you act.
 not_for:
   - "You only have static or carousel ads: the hook and hold math needs video views, so compare clicks and sales by hand or in your ads report."
   - "Your ads have very little spend or few views: the labels will be unsure, so wait for more data before you act."
@@ -50,18 +50,18 @@ output_sample:
 how_it_works:
   - title: Check the inputs
     text: Confirm video impressions, three-second views, later views and conversion results. Mark facts that are missing.
-  - title: Collect Ad Data
-    text: Follow the collect ad data section in the full method and keep its required fields and decision rules.
-  - title: Calculate Diagnostic Metrics
-    text: Follow the calculate diagnostic metrics section in the full method and keep its required fields and decision rules.
-  - title: Plot to Hook x Hold Matrix
-    text: Follow the plot to hook x hold matrix section in the full method and keep its required fields and decision rules.
-  - title: Prescribe Fixes By Quadrant
-    text: Follow the prescribe fixes by quadrant section in the full method and keep its required fields and decision rules.
-  - title: Static / Carousel Ads
-    text: Follow the static / carousel ads section in the full method and keep its required fields and decision rules.
-  - title: Deliver the Diagnosis
-    text: Follow the deliver the diagnosis section in the full method and keep its required fields and decision rules.
+  - title: Collect the counts
+    text: Impressions, three-second views, a later-view count, length, spend and conversions for each ad, for the same dates.
+  - title: Work out hook and hold
+    text: Hook rate is three-second views over impressions. Hold rate is later views over three-second views. The sums are shown.
+  - title: Place each ad
+    text: You set the high and low cutoffs. Each ad goes in one of four boxes, or is marked unsure near a line.
+  - title: Suggest fixes
+    text: A weak opening gets a new first frame to test. A weak middle gets a clearer link from promise to body.
+  - title: Leave out static ads
+    text: Static and carousel ads have no view counts, so they are compared on clicks and sales instead.
+  - title: Hand back the plan
+    text: A metric table, the matrix, ranked tests and when to look again.
   - title: Review the result
     text: Return metric math, four-quadrant labels and fixes for each ad. Check facts, math and the decisions before any action.
 thinking: medium

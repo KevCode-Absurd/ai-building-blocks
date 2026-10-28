@@ -22,7 +22,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last approved review's record and the changed source files with dates. If principal changed through PIK: the cash and PIK coupon terms, the evidence that the interest was added to principal, and the revised payoff letter.
 
-**The pieces it uses:** the [Check acquisition refinancing funds](https://useaiblocks.com/workflows/check-acquisition-refinancing-funds) workflow (the governing method) and the [Cash and PIK interest checker](https://useaiblocks.com/skills/cash-and-pik-interest-checker) (only when PIK interest explains a change in old principal). Step 3 below holds their core rules. Read both in full for the detail before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. If the user cannot, write `MISSING: workflow text not read`, mark the payoff and the closing gap "not final", give no final figure for either, and return only the inputs received, the rules from step 3 that you can apply, and the MISSING lines. Do not imitate the pieces from memory.
+**The pieces it uses:** the [Acquisition funding and debt payoff checker](https://useaiblocks.com/workflows/check-acquisition-refinancing-funds) workflow (the governing method) and the [Cash and added interest calculator](https://useaiblocks.com/skills/cash-and-pik-interest-checker) (only when PIK interest explains a change in old principal). Step 3 below holds their core rules. Read both in full for the detail before step 3. If your AI cannot open them, ask the user to attach the pack or paste both files. If the user cannot, write `MISSING: workflow text not read`, mark the payoff and the closing gap "not final", give no final figure for either, and return only the inputs received, the rules from step 3 that you can apply, and the MISSING lines. Do not imitate the pieces from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the linked workbook and can save the record file. In plain chat, return the same tables as text, say no workbook was made, and give the record for the user to keep.
@@ -76,6 +76,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check what the seller receives** with the [Seller closing revision assistant](https://useaiblocks.com/skills/seller-closing-revision-assistant).
-- **Check the new loan's cash on its own** with the [Debt issue proceeds checker](https://useaiblocks.com/skills/debt-issue-proceeds-checker).
+- **Check what the seller receives** with the [Seller closing cash and escrow reviewer](https://useaiblocks.com/skills/seller-closing-revision-assistant).
+- **Check the new loan's cash on its own** with the [New loan cash proceeds checker](https://useaiblocks.com/skills/debt-issue-proceeds-checker).
 Nothing here moves money or contacts a lender. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

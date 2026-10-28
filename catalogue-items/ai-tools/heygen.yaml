@@ -42,6 +42,7 @@ first_result:
   - "Paste your finished script, then choose a voice and a language."
   - "Generate the video and watch it all the way through. Check names, numbers and how words sound."
   - "Edit the script and generate again, then export. The free plan puts a watermark on it."
+  - "Next: translate the video into another language with the built-in translation, or plan the next one with the Marketing video producer."
 needs:
   - "A finished script. For a 1-minute video, write about 130 words and read it aloud once."
   - "A free account. Whether the free plan asks for a card is not stated."
@@ -49,11 +50,11 @@ needs:
 example:
   task: "A 1-minute script that explains one product feature to new customers, read by a stock presenter."
   cost: "Free plan: no charge, but a watermark and 3 videos a month. Creator removes the watermark and includes 600 credits a month."
-  reply: "A video of up to 1 minute with the presenter speaking your script. The free plan does not state a resolution. Creator goes up to 1080p."
+  reply: "A video file of up to 1 minute with the presenter speaking your script. Free exports carry a watermark and the free resolution is not stated. Creator goes up to 1080p with no watermark. Whether captions are added was not confirmed."
 not_verified:
   - "Credits used per video. The pricing page gives monthly credit totals but not a cost per minute of video."
   - "The free plan's export resolution, and its credit total."
-  - "Which languages the free plan covers. Our earlier note said more than 30, and the home page says 175 or more."
+  - "Which of the 175 or more listed languages the free plan covers (home page, checked 26 Oct 2026)."
 sources:
   - https://www.heygen.com/pricing
   - https://www.heygen.com

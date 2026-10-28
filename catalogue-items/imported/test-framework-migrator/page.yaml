@@ -11,7 +11,7 @@ explain: |
 
   The skill first detects the source framework from your code, looking for signs like By.id, cy.get or page.goto. It confirms the target. If either is unclear, it asks. It then maps the old calls to the new ones: locators, waits, assertions, setup and teardown. It replaces explicit waits with the target's own waiting model, and notes features with no direct match so you can decide what to do. The result is converted files with a list of anything that needs manual review.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to LambdaTest and sickn33.
+  Licence: the author's own file header (LambdaTest) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit LambdaTest and sickn33.
 when:
   - Your team is moving from Selenium to Playwright.
   - Cypress tests must run in a different tool for cross-browser coverage.
@@ -37,7 +37,7 @@ how_to_use:
   - Open your AI tool and paste the skill instructions. If it can read files, point it at your test folder.
   - Paste or attach the test files you want to convert.
   - Say which framework you use now and which one you want. Add your language if it matters.
-  - Check the list of items for manual review first. Then run the converted tests in your own project.
+  - Check the list of items for manual review first. Then run the converted tests in your own project. Local runs need no account. The skill can also point you to TestMu, LambdaTest's cloud test service, which needs its own account and may cost money.
   - The per-pair guide files live in the source repo, not in this folder. Your AI needs web access to read them. If it has none, open the guide for your pair on GitHub and paste it in. Without a guide, treat every conversion as a draft.
   - Next, run the converted suite in your CI. For patterns the migration does not cover, write new tests with the browser test writer.
 output_sample:

@@ -8,6 +8,26 @@ argument-hint: "[--output .github/copilot-instructions.md|AGENTS.md] [--strategy
 
 Use this skill whenever the user wants to **create**, **regenerate**, or **refresh** their custom instructions for AI coding agents (Copilot, Claude, etc.). This is the *Generate* step in AgentRC's **Measure → Generate → Maintain** loop and the single highest-leverage action for the **AI Tooling** pillar.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **An audit report** with the [Coding agent readiness test planner](https://useaiblocks.com/skills/copilot-acreadiness-policy). Bring a codebase, an audit report (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Output options
 
 VS Code recognises several instruction file types — AgentRC generates the most common ones:

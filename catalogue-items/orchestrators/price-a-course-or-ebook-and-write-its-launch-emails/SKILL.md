@@ -58,10 +58,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Pick the digits.** Use the skill `price-ending-picker`. Give it the price. Round, just-below or exact digits for that price, with the reason, so the number fits the product and the buyer. Hands that price and its digits to the discount step.
 3. **Write the discount honestly.** Use the skill `discount-wording-planner`. Give it the price and the launch discount. The discount shown the clearest honest way: percent or amount, how the sale price is displayed, the banner line and a real end date. Hands the finished discount wording to the email step.
 4. **Plan the launch emails.** Use the skill `launch-email-sequence-planner`. Give it the price, the discount wording and your customer words. The launch sequence: trigger, timing and each email, built the way Claude Hopkins sold by mail: one offer, a reason why, proof, and a measured response. Nothing is sent until you say so.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
 4 step files and the summary. The first file holds the price, the third the discount wording, the last the email sequence.
+- Next: after the launch ends, save the opens, clicks and sales for each email from your email tool, and bring them to step 4 for your next launch.
 
 ## Check before you hand it back
 - The price has a reason that names what the product does for the buyer, not only what others charge.
@@ -79,7 +80,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan.
 - The [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer). It takes the plan.
 - The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow and draft.
-- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -33,4 +33,4 @@ credits:
   - title: legal-advisor skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/legal-advisor
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Used under the CC BY-4.0 licence. We gave it a plain name, added step-by-step instructions, and told it to ask for pasted law text when it cannot browse.

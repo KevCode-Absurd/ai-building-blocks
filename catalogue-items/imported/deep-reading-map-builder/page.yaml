@@ -34,7 +34,7 @@ you_get:
   - A plain-language check with recall questions
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the full text of this skill, or add it with the buttons on this page.
-  - Add your source. Many chat AIs can read a text PDF you upload, but this depends on your plan and settings, so check yours. A web page needs an AI with browsing turned on. If your AI cannot open the file or page, paste the text in. That always works.
+  - Add your source. Many chat AIs can read a text PDF you upload, but this depends on your plan and settings, so check yours. A web page needs an AI with browsing turned on. If your AI cannot open the file or page, paste the text in. That always works. Before you add a confidential or client document, check your AI plan's data settings, such as whether chats are used for training.
   - "Say which mode you want: quick, deep, map, feynman or book. Also say your reading question."
   - Check that each main claim has evidence or a note that none was given.
   - For the Feynman check, close the source and explain the idea in your own words before your AI corrects you.

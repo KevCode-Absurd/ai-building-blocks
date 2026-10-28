@@ -1,6 +1,6 @@
 # Make video ads: AI Blocks
 
-> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D explainer ad script writer](https://useaiblocks.com/skills/3d-explainer-video-script): Share a selling idea, sourced product facts and claim rules. Get a timed 3D video ad script with narration and picture notes.
 - [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts): Share a 3D script or sourced product facts. Get a storyboard, image and clip prompts, a voice brief and edit list.
@@ -41,6 +41,7 @@
 - [Motion graphics video ad script writer](https://useaiblocks.com/skills/motion-graphics-ad-script): Write a motion graphics video ad script from your product facts. Get a look card, a sourced fact sheet, a shot table and a cast note.
 - [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan): Turn a motion graphics script into a build plan for a video ad, with every number, chart and product shot checked and built exactly as written.
 - [Narrated video ad shot planner](https://useaiblocks.com/workflows/write-a-narrated-video-ad-the-pictures-can-carry): Share your brief, product facts and brand guidance. Get a narrated script, cuts to repeated lines and timed shots with clip prompts.
+- [Narrated video maker](https://useaiblocks.com/skills/narrated-video-maker): Turn a Markdown document into narrated slides and a voiceover video. Get slide and script files, and an MP4 on a computer that can run code.
 - [Paper craft video ad script writer](https://useaiblocks.com/skills/paper-craft-ad-script): Write a 15 to 40 second paper-craft video ad script from your brief and product facts, with a cast note for the video step.
 - [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts): Turn a paper-craft ad script into image and clip prompts where paper moves like real paper: avatar card, sheets, storyboard, clips, edit list.
 - [Paper cutout explainer clip prompt writer](https://useaiblocks.com/skills/paper-cutout-video-prompts): Turn a one-point script and your product photos into timed paper cutout explainer video prompts, plus an edit list for the words and numbers.

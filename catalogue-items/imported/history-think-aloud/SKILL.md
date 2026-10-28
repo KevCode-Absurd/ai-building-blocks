@@ -74,6 +74,19 @@ tags: ["modelling", "think-aloud", "historical-thinking", "explicit-instruction"
 
 # Historical Thinking Strategy Modelling Guide
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a teacher think-aloud script that models one or more historical thinking strategies (sourcing, close reading, contextualisation, corroboration) with a specific document. The output includes the complete script with pauses and self-talk, annotations identifying each cognitive move, common pitfalls to avoid, and guidance on transitioning from the modelled example to student practice.
@@ -195,31 +208,31 @@ Return your output in this exact format:
 
 "Before I read this, I'm going to do what historians do — look at who wrote it and when. It says John Smith, 1624. [PAUSE] OK. John Smith is the person this story is about. He's writing about himself. That immediately makes me pay attention, because when someone tells a story where THEY are the hero, I want to think about why they're telling it that way.
 
-1624. The event was supposed to have happened in 1607. That's a 17-year gap. [PAUSE] I'm trying to think — do I remember what happened 17 years ago? Not very well. So either Smith has an extraordinary memory, or he's reconstructing. And here's something else I know: Pocahontas went to England in 1616 and became very famous before she died in 1617. By 1624, she's a well-known figure. Is Smith attaching his name to her fame? I don't know yet. But I'm going to read with that question in mind.
+1624. The event was supposed to have happened in 1607. That's a 17-year gap. [PAUSE] I'm trying to think — do I remember what happened 17 years ago? Not very well. So how does he know the details? Maybe he kept notes or had earlier writing of his own to work from. Maybe he's rebuilding it from memory. I can't tell yet, and the gap alone doesn't settle it. And here's something else I know: Pocahontas went to England in 1616 and became very famous before she died in 1617. By 1624, she's a well-known figure. Is Smith attaching his name to her fame? I don't know yet. But I'm going to read with that question in mind.
 
 Now let me read the passage. 'Having feasted him after their best barbarous manner they could.' [PAUSE] I'm stopping at 'barbarous.' That's a strong word. Smith could have said 'their traditional manner' or 'their customary manner.' He chose 'barbarous.' That tells me something about how he wants his readers to see the Powhatan people — as savage, uncivilised. Why? [PAUSE] Maybe because it makes the rescue more dramatic. You need danger to have a rescue.
 
 'Pocahontas the King's dearest daughter, when no entreaty could prevail, got his head in her arms and laid her own upon his to save him from death.' [PAUSE] 'The King's dearest daughter.' That's significant. Not just 'a girl' or 'Powhatan's daughter' — 'the King's DEAREST daughter.' Smith is elevating Pocahontas. And by making her the one who saved him, he's also elevating himself — he's important enough that a princess risked her life for him.
 
-So here's what I'm thinking after reading this: I don't know whether this happened. But I do know that Smith had reasons to tell this story in 1624 — reasons that have nothing to do with what actually happened in 1607. The question I want to investigate next is: did Smith mention this rescue in his FIRST account, written in 1608? If he didn't, that would be very interesting."
+So here's what I'm thinking after reading this: I don't know whether this happened. But I can think of reasons Smith might have had to tell it this way in 1624, like Pocahontas's fame. That's a hypothesis I'd need to test, not something I know. The question I want to investigate next is: did Smith mention this rescue in his FIRST account, written in 1608? If he didn't, that would be very interesting."
 
 ### Cognitive Moves Annotated
 
 "Before I read this, I'm going to do what historians do — look at who wrote it and when. [SOURCING: examining author and date before reading content] It says John Smith, 1624. [PAUSE] OK. John Smith is the person this story is about. He's writing about himself. [SOURCING: identifying author's relationship to the events] That immediately makes me pay attention, because when someone tells a story where THEY are the hero, I want to think about why they're telling it that way. [SOURCING: reasoning about how author's position shapes the account]
 
-1624. The event was supposed to have happened in 1607. That's a 17-year gap. [SOURCING: reasoning about temporal distance between event and account] [PAUSE] I'm trying to think — do I remember what happened 17 years ago? Not very well. [SOURCING: using personal experience to evaluate plausibility of detailed recall] So either Smith has an extraordinary memory, or he's reconstructing. And here's something else I know: Pocahontas went to England in 1616 and became very famous before she died in 1617. [CONTEXTUALISATION: activating period knowledge] By 1624, she's a well-known figure. Is Smith attaching his name to her fame? [SOURCING + CONTEXTUALISATION: generating hypothesis about motive from context] I don't know yet. But I'm going to read with that question in mind. [SPECIFICATION OF IGNORANCE: holding the hypothesis as a question, not a conclusion]
+1624. The event was supposed to have happened in 1607. That's a 17-year gap. [SOURCING: reasoning about temporal distance between event and account] [PAUSE] I'm trying to think — do I remember what happened 17 years ago? Not very well. [SOURCING: using personal experience to evaluate plausibility of detailed recall] So how does he know the details? Maybe he kept notes or had earlier writing of his own to work from. Maybe he's rebuilding it from memory. I can't tell yet, and the gap alone doesn't settle it. And here's something else I know: Pocahontas went to England in 1616 and became very famous before she died in 1617. [CONTEXTUALISATION: activating period knowledge] By 1624, she's a well-known figure. Is Smith attaching his name to her fame? [SOURCING + CONTEXTUALISATION: generating hypothesis about motive from context] I don't know yet. But I'm going to read with that question in mind. [SPECIFICATION OF IGNORANCE: holding the hypothesis as a question, not a conclusion]
 
 Now let me read the passage. 'Having feasted him after their best barbarous manner they could.' [PAUSE] I'm stopping at 'barbarous.' [CLOSE READING: attending to specific word choice] That's a strong word. Smith could have said 'their traditional manner' or 'their customary manner.' He chose 'barbarous.' [CLOSE READING: considering alternative word choices to reveal the significance of the one used] That tells me something about how he wants his readers to see the Powhatan people — as savage, uncivilised. Why? [CLOSE READING: connecting word choice to author's purpose] [PAUSE] Maybe because it makes the rescue more dramatic. You need danger to have a rescue. [CLOSE READING: reasoning about rhetorical strategy]
 
 'Pocahontas the King's dearest daughter, when no entreaty could prevail, got his head in her arms and laid her own upon his to save him from death.' [PAUSE] 'The King's dearest daughter.' [CLOSE READING: attending to specific phrase] That's significant. Not just 'a girl' or 'Powhatan's daughter' — 'the King's DEAREST daughter.' Smith is elevating Pocahontas. [CLOSE READING: analysing how language choices construct the narrative] And by making her the one who saved him, he's also elevating himself. [CLOSE READING + SOURCING: connecting language to author's self-interest]
 
-So here's what I'm thinking after reading this: I don't know whether this happened. [SPECIFICATION OF IGNORANCE: maintaining uncertainty rather than rushing to a verdict] But I do know that Smith had reasons to tell this story in 1624 — reasons that have nothing to do with what actually happened in 1607. The question I want to investigate next is: did Smith mention this rescue in his FIRST account, written in 1608? If he didn't, that would be very interesting. [SPECIFICATION OF IGNORANCE + BRIDGE TO CORROBORATION: generating the next question]"
+So here's what I'm thinking after reading this: I don't know whether this happened. [SPECIFICATION OF IGNORANCE: maintaining uncertainty rather than rushing to a verdict] But I can think of reasons Smith might have had to tell it this way in 1624, like Pocahontas's fame. That's a hypothesis I'd need to test, not something I know. The question I want to investigate next is: did Smith mention this rescue in his FIRST account, written in 1608? If he didn't, that would be very interesting. [SPECIFICATION OF IGNORANCE + BRIDGE TO CORROBORATION: generating the next question]"
 
 ### Common Pitfalls
 
 **1. Narrating the answer instead of modelling the thinking**
 *The mistake:* The teacher says "Smith wrote this in 1624, which was 17 years after the event, and by that time Pocahontas was famous, so he was probably trying to capitalise on her fame." This delivers the interpretation without showing how the teacher arrived at it.
-*The fix:* Slow down. Show the thinking that generates the interpretation. Pause at "1624," visibly calculate the gap, wonder aloud whether anyone remembers things from 17 years ago, recall the Pocahontas-in-England detail, and THEN arrive at the hypothesis. The process is the lesson, not the conclusion.
+*The fix:* Slow down. Show the thinking that generates the interpretation. Pause at "1624," visibly calculate the gap, wonder aloud how someone could know details from 17 years earlier (notes, earlier writing, memory), recall the Pocahontas-in-England detail, and THEN arrive at the hypothesis. The process is the lesson, not the conclusion.
 
 **2. Modelling confidence rather than productive uncertainty**
 *The mistake:* The teacher presents each move as if the answer is obvious: "Of course Smith chose 'barbarous' to make the rescue seem more dramatic." This models certainty, which is the opposite of expert historical reasoning.
@@ -239,7 +252,7 @@ So here's what I'm thinking after reading this: I don't know whether this happen
 
 **Scaffold:** Provide sentence starters that mirror the teacher's think-aloud: "This was written by ___ in ___. That makes me wonder..." / "I notice the word ___. The author could have said ___ instead, which suggests..." Students work in pairs, talking through their reading aloud to each other. The teacher circulates and listens for the cognitive moves, not just the correct answers.
 
-**Watch for:** The difference between students who replicate the moves and students who replicate the words. A student who says "I notice the word 'kindly' — the author could have said something else" is copying the surface structure. A student who says "Smith says 'kindly' here, but in the 1624 version he says 'barbarous' for the same meeting — so one of these descriptions is being shaped by something other than what actually happened" is replicating the cognitive move. The second student has understood that language is evidence of perspective; the first is performing a strategy without understanding its purpose.
+**Watch for:** The difference between students who replicate the moves and students who replicate the words. A student who says "I notice the word 'kindly' — the author could have said something else" is copying the surface structure. A student who says "Smith says 'kindly' here, but in the 1624 version he says 'barbarous' for the same meeting — so at least one of these descriptions may be shaped by something other than what happened" is replicating the cognitive move. The second student has understood that language is evidence of perspective; the first is performing a strategy without understanding its purpose.
 
 ---
 
@@ -250,3 +263,12 @@ So here's what I'm thinking after reading this: I don't know whether this happen
 2. **This skill generates the modelling component only.** It does not design the complete lesson structure (see document-based-lesson-designer) or the progression of skill development over time (see the individual skill builders). Modelling is the "I DO" phase; the guided and independent practice that follow require separate design, though the transition-to-practice section provides initial guidance.
 
 3. **Modelling historical thinking requires the teacher to possess the historical knowledge that expert reading draws on.** The contextualisation demonstrated in the example (connecting the 1624 date to Pocahontas's 1616 England visit) requires the teacher to know that fact. If the teacher lacks the relevant background knowledge, the think-aloud will be thin. Teachers should prepare by reading the historiographical context for their documents before modelling — this preparation is part of the work, not a limitation of the skill.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Close reading lesson builder for history](https://useaiblocks.com/skills/history-close-reading).
+- The [Historical context lesson builder](https://useaiblocks.com/skills/historical-context-lesson).
+- The [History thinking task and quiz designer](https://useaiblocks.com/skills/history-thinking-quiz-designer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

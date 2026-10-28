@@ -30,10 +30,13 @@ you_get:
   - Details of the experiment behind each claim.
 how_to_use:
   - Connect the BGPT service in your AI tool's settings for remote servers. Use the address https://bgpt.pro/mcp/stream. Free use needs no key.
+  - "Cost: when the skill was written, BGPT advertised 50 free results per network, then $0.02 per returned result. A found DOI counts as one result. Check current pricing on bgpt.pro before a large batch."
   - For paid use, add your BGPT API key as an Authorization header in that same connection. Never paste the key into the chat.
+  - "Have ready: a short search phrase in English (not a long question), the DOI if you know it, and how many results you want."
   - Open a new chat and paste the skill text. Then type your topic or DOI, and how many papers you want.
   - Read the result. Rows with no claim-level evidence are flagged. Do not trust those until you open the paper.
   - Check sample sizes and numbers in the paper before you cite them. Run a second search with a reworded question to widen coverage.
+  - Next, use the rows you checked to draft a cited evidence section. To judge study quality or bias, use a separate review or summary step, since this table does not do that.
 output_sample:
   input:
     - Your research topic or question, or a DOI

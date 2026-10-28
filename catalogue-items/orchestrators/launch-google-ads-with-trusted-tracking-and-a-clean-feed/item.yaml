@@ -8,9 +8,9 @@ job: analysis
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: store_capture, required: true}
-  - {type: spreadsheet, required: true}
-  - {type: product_data, required: true}
+  - {type: store_capture, required: false}
+  - {type: spreadsheet, required: false}
+  - {type: product_data, required: false}
   - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}

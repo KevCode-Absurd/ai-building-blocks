@@ -11,12 +11,15 @@ not_for:
   - "You want no code at all: use a no-code automation app such as Zapier instead."
   - "You only need to move an old TypeScript v1 server: run the official codemod from the skill, then fix the marked spots."
 how_to_use:
+  - This suits someone at home with Node.js, npm and a terminal. If you have never used them, ask a developer to run it with you.
   - Write a list of your tools. Give each a name, a purpose, its inputs and its outputs.
-  - Decide if the server runs on your computer (stdio) or over the web (HTTP).
+  - Decide if the server runs on your computer (stdio, where the AI app starts it and talks to it directly) or over the web (HTTP, where it runs as a small web service).
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your tool list and your choice.
   - Copy the files it writes into a new folder. Or use an AI that can create files for you.
   - On your computer, run npm install, then start the server with the command it gives you.
-  - Test it with MCP Inspector and fix any errors. Needs Node.js 20 or newer.
+  - Test it with MCP Inspector, a free test window for MCP servers, and fix any errors. Needs Node.js 20 or newer. The inputs of each tool are checked with Zod, a library that rejects wrong input before your code runs.
+  - If Inspector shows an error, paste the exact message back to your AI and ask for a fix.
+  - Next, connect the server to Claude Desktop or another MCP app by adding its start command to that app's MCP settings, then try each tool from a chat.
 output_sample:
   input:
     - The tools you want, with a name, purpose, inputs and outputs for each

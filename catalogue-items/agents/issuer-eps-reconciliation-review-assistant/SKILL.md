@@ -17,7 +17,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last accepted EPS model and review log, the record this agent wrote last time, and the issuer's own EPS note.
 
-**The pieces it uses:** the [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow (the governing method), which runs the [Weighted-average share schedule](https://useaiblocks.com/skills/weighted-average-share-schedule), the [Treasury-stock option dilution](https://useaiblocks.com/skills/treasury-stock-option-dilution) and the [Convertible EPS inclusion test](https://useaiblocks.com/skills/convertible-eps-inclusion-test), and the [Stock-split EPS restatement](https://useaiblocks.com/skills/stock-split-eps-restatement) (only when a split is confirmed). If you cannot open one, use the method written in steps 3 to 5 and say you did.
+**The pieces it uses:** the [Basic and diluted earnings per share checker](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow (the governing method), which runs the [Weighted share count calculator](https://useaiblocks.com/skills/weighted-average-share-schedule), the [Employee option dilution calculator](https://useaiblocks.com/skills/treasury-stock-option-dilution) and the [Convertible earnings per share checker](https://useaiblocks.com/skills/convertible-eps-inclusion-test), and the [Stock split earnings adjustment calculator](https://useaiblocks.com/skills/stock-split-eps-restatement) (only when a split is confirmed). If you cannot open one, use the method written in steps 3 to 5 and say you did.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.
@@ -59,6 +59,6 @@ Include the evidence window, saved files, the branch taken or skipped and why, a
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Adjust EPS for acquired amortization and OCI recycling** with the [Reconcile alternative EPS and comprehensive income](https://useaiblocks.com/workflows/reconcile-alternative-eps-and-comprehensive-income).
-- **Test a rights issue on its own** with the [Rights-issue EPS adjustment](https://useaiblocks.com/skills/rights-issue-eps-adjustment).
+- **Adjust EPS for acquired amortization and OCI recycling** with the [Adjusted EPS and comprehensive income checker](https://useaiblocks.com/workflows/reconcile-alternative-eps-and-comprehensive-income).
+- **Test a rights issue on its own** with the [Rights issue earnings adjustment calculator](https://useaiblocks.com/skills/rights-issue-eps-adjustment).
 Nothing here files, trades or contacts anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

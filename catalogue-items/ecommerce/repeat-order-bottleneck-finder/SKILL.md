@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -91,7 +91,7 @@ MISSING: <what you did not give>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper).
 - The [New customer experience reviewer](https://useaiblocks.com/skills/first-use-gap-checker).
-- The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager). It takes the audit report.
+- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

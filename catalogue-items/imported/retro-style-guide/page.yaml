@@ -11,7 +11,7 @@ explain: |
 
   Your AI starts with one sentence on the design idea. Then it sets the foundations. The defaults are the Macondo font for headings and short labels, a plainer font for long reading text, JetBrains Mono for code, a blue and a purple as the main colours, a white surface and spacing steps from 4 to 32. After that it writes rules for each part, such as buttons and forms, with every state: default, hover, focus, disabled, loading and error.
 
-  This is not the Minimal style guide writer with a new coat of paint. It adds a retro palette, rules for the vintage display font and a contrast ratio for every colour pair.
+  Rules only this retro guide sets: Macondo stays on headings and short labels, never long text. It is used in its one regular weight only, with no fake bold. Long reading text moves to a plainer font. The blue and purple pair carries the throwback feel, with a darker blue for links in body text. Green and amber are kept to icons, borders and fills unless darkened.
 
   What sets it apart is the contrast check. The default blue on white is only about 3.7 to 1, and normal text needs 4.5 to 1. The guide shows the ratio for each colour pair and tells you where to darken a colour, so the vintage look stays easy to read.
 when:

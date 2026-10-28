@@ -11,7 +11,7 @@ explain: |
 
   You give the model file, such as .pt2, .pt, .onnx or .keras. The skill picks the right import route for the format. It sets the input sizes and data formats, handles the PyTorch export step, and runs the import. If it fails, it helps with unsupported operators, networks left uninitialised or zero learnable parameters. Then it runs the same input through both versions and compares the outputs. It does not cover exporting out of MATLAB, training afterwards or embedded deployment. Needs MATLAB with Deep Learning Toolbox. This is a MathWorks skill.
 
-  Licence: the terms in LICENSE.md (BSD 2-Clause) apply to this copy, and they limit use to MathWorks products such as MATLAB. The skill file header also links MathWorks' own reuse licence. Use this skill only with MathWorks products.
+  Licence: the LICENSE.md file in this item governs this copy. It is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence (PMRL), which is MathWorks' upstream terms and also limits use to MathWorks products. So BSD 2-Clause alone does not describe your rights.
 when:
   - A colleague trained a model in PyTorch and you work in MATLAB.
   - Your import throws unsupported operator warnings.
@@ -34,11 +34,12 @@ you_get:
   - Notes on unsupported parts
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste this skill, or upload its folder if your AI takes files.
-  - Add your model file and say what format it is. For a .pt file, give the exact input size.
+  - Add your model file and say what format it is. The format picks the route before anything runs. A .pt2 exported program or a traced .pt file takes the PyTorch route, an .onnx file the ONNX route, and a .keras folder the Keras route. For a .pt file, give the exact input size. If you only have PyTorch code, export it as .pt2 first.
   - Say which MATLAB release you use. Keras models need it to pick the right route.
   - Let your AI run the import. This needs MATLAB with Deep Learning Toolbox, and Python for some routes.
   - Check the layer count, the learnables count and the difference from the source model.
   - If the check passes, run predict on the imported network with a few of your own inputs. Keep the match report with the model.
+  - Next, use the network in your MATLAB workflow with predict, or fine-tune it on your own data with the Neural network trainer.
 output_sample:
   input:
     - Your model file (.pt2, .pt, .onnx or .keras folder)

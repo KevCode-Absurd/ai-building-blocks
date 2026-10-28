@@ -86,6 +86,8 @@ Now: <lines on voice> / <lines checked> x 100 = <score>
 After the fixes: <lines on voice> / <lines checked> x 100 = <score>
 ```
 
+Next step to suggest: if any line is listed under NOT FLAGGED as "not on the approved list", check that claim with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher) before the ad runs. Add any word your writers keep using to the never-say list in `00-start-here.md`.
+
 ## Check before you hand it back
 - Every issue quotes the phrase exactly as it appears.
 - Every issue names the rule or customer wording behind it.
@@ -97,6 +99,7 @@ After the fixes: <lines on voice> / <lines checked> x 100 = <score>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the audit report.
 - **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

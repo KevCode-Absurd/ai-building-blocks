@@ -9,7 +9,7 @@ subhead: Paste your offer and the buyer under this prompt. It builds ten names f
 explain: |
   An offer called "Spring Special" says nothing. An offer called "The Neighbourhood 10-Day Kitchen Reset" says who it is for, what they get and how fast. Names like that make people stop, because they see themselves in it.
 
-        This prompt builds names from five parts: a reason for the deal, who it is for, the result, a time, and a container word that says it is a bundle. It writes ten, screens them, and picks three to test side by side.
+  This prompt builds names from five parts: a reason for the deal, who it is for, the result, a time, and a container word that says it is a bundle. It writes ten, screens them, and picks three to test side by side.
 when:
   - Your offer has a boring name.
   - You are launching a deal and want it to sound specific.
@@ -39,7 +39,7 @@ output_sample:
     - Platform rules on results or time claims (optional)
   output:
     - name: PARTS
-      contains: The reasons, buyer, result, time and container word the names are built from.
+      contains: The reasons, buyer, who it is not for, result, time and container word the names are built from.
     - name: TEN NAMES
       contains: Ten offer names, each with the parts it uses.
     - name: TEST THESE THREE
@@ -61,15 +61,15 @@ how_it_works:
     text: Said aloud, cut if the buyer would not see themselves.
 output_shape: |
   PARTS
-        Reasons | Buyer | Result | Time | Container
+  Reasons | Buyer | Not for | Result | Time | Container
 
-        TEN NAMES
-        1. <name> (parts used)
+  TEN NAMES
+  1. <name> (parts used)
 
-        TEST THESE THREE
-        <name>: <why>
+  TEST THESE THREE
+  <name>: <why>
 
-        HOW TO TEST: <...>
+  HOW TO TEST: <...>
 tweaks:
   - what: How specific the buyer is
     how: A street, role or situation makes names sharper than a broad group.

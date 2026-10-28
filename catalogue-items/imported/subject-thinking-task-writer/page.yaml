@@ -10,6 +10,8 @@ explain: |
   A thinking task built from the facts and methods of your own subject, so students reason like a historian, a scientist or a mathematician, not in a vague 'critical thinking' way.
 
   You give the topic, the stage and the subject. The skill first checks what knowledge students need before they can think about it at all. It states how experts in that discipline judge good thinking, then sets the task, such as weighing causes of the First World War. It supplies the sources and tools students use, assessment guidance for what strong reasoning looks like, and notes to help you improve the task over time.
+
+  The skill file cites studies, effect sizes and how strong the evidence is. Those are the source author's own claims and were not checked here, so check a study before you quote it to colleagues.
 when:
   - You are asked to teach critical thinking but your subject is history or science.
   - Students can recall facts but cannot argue from them.
@@ -33,7 +35,7 @@ you_get:
   - Marking guidance
 next: [marking-rubric-writer, single-point-rubric-builder]
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. From SKILL.md, copy only the block under the "Prompt" heading, with its {{placeholders}}. You do not need to paste the whole file.
   - Replace each {{placeholder}} in the pasted prompt with your own words: the curriculum topic, the learner stage and the subject. Leave the optional ones blank if you do not have them.
   - Type your topic, your subject and your students' year or age.
   - Add what students already know and the type of thinking you want. Both are optional, but they make the task fit better.

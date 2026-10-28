@@ -72,6 +72,26 @@ tags: ["AI-literacy", "assignment-design", "AI-policy", "backward-design", "tool
 
 # AI Learning Boundary Mapper
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+
+**Makes it better (optional):**
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A plan** with the [AI answer review worksheet builder](https://useaiblocks.com/skills/ai-answer-critique-lesson). Bring source text, your lesson plan (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your lesson plan, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Generates a component-by-component analysis of a specific assignment, mapping which elements benefit from AI assistance, which are neutral, and which are undermined by AI involvement — based on the learning objectives the assignment serves. This is the teacher-facing design tool for AI-age assignment redesign: it takes an existing assignment and produces a boundary map that allows teachers to set specific, defensible AI use policies rather than blanket "AI allowed" or "no AI" positions. The central insight is that within any single assignment, different components serve different learning objectives — and AI assistance that helps with one component may undermine another. An essay that requires both research (AI can assist with summarising context) and original argumentation (AI assistance bypasses the cognitive work of constructing an argument) benefits from a component-level policy, not a uniform one. The output includes an objective analysis (for each learning objective, whether AI assistance supports or undermines it), a component boundary map, defensible AI policy recommendations, an optional Google vs. AI chatbot tool comparison for information-gathering tasks, and redesign suggestions that preserve learning-critical challenge while permitting AI use where it genuinely helps. This skill is the teacher-design complement to `metacognitive-monitoring-ai-contexts`: boundary-mapping prevents the metacognitive risk from arising; `metacognitive-monitoring-ai-contexts` addresses it when it does.
@@ -281,3 +301,12 @@ Return your output in this exact format:
 3. **Boundary-setting has equity implications.** Students who cannot afford private tutors may rely on AI as a cognitive scaffold in ways that parallel expensive private tutoring — uniform AI restriction may disadvantage them disproportionately. Teachers should consider whether AI-neutral components could be more permissive for students with identified support needs.
 
 4. **AI-specific applications of backward design have limited direct empirical validation.** The backward design principle (Wiggins & McTighe, 2005) and the cognitive load / illusions of competence evidence base are strongly evidenced for general learning design. The specific application to AI boundary-setting is principled but novel — there is not yet substantial empirical evidence on which types of AI boundaries most effectively preserve learning while permitting useful AI use.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Community project unit planner](https://useaiblocks.com/skills/community-project-unit-planner). It takes the audit report.
+- The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the audit report.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -33,7 +33,7 @@ how_to_use:
   - Copy your live theme in Shopify first, so you can go back if needed.
   - Open an AI that can run Shopify CLI commands, such as Claude Code, and sign in to your store.
   - Paste the skill and give it your store address. Add a brand summary or a collection if you want to choose what shows.
-  - Read the preview. It writes nothing until you approve.
+  - Read the preview. It shows the llms.txt text and the full page template it will add. It writes nothing until you confirm your theme copy exists and approve that exact text.
   - Approve the write. The skill adds a new template to your live theme.
   - Create a page that uses the llms template, or add a redirect from /llms.txt to that page.
 output_sample:

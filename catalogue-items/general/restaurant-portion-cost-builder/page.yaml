@@ -18,7 +18,7 @@ not_for:
   - "You want a full venue profit and loss with rent and wages: use a restaurant P&L in your accounting tool or ask your accountant."
   - "You want to set menu prices that cover fixed costs: use a menu pricing sheet in Google Sheets or Excel."
   - "You need food safety, allergen or tax stock valuation advice: ask a qualified food safety or accounting professional."
-  - "You need the cost per good unit of a production batch after yield loss: use the Manufacturing yield cost bridge instead."
+  - "You need the cost per good unit of a production batch after yield loss: use the Manufacturing yield and unit cost calculator instead."
 you_give:
   - The weight you bought for the batch, with the purchase date and receipt
   - The edible weight you measured after trimming and cooking

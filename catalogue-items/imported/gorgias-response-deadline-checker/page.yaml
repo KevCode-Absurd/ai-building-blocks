@@ -35,11 +35,12 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Install the Composio CLI and link your Gorgias account. Your AI will ask you to run composio link gorgias if it is not linked. Composio may charge for use, so check its pricing before the first run.
+  - Install the Composio CLI and link your Gorgias account. Your AI will ask you to run composio link gorgias if it is not linked. Gorgias is a paid help desk. Composio may charge for use, so check its pricing before the first run.
   - Add the downloaded folder to an AI that can read skill files and run commands.
   - Ask your AI to run the SLA monitor skill.
   - Give your reply and resolution targets. Skip this to use the defaults, which are set by priority from P0 to P3. Check they match your own rules.
   - Read the late tickets first, then the at-risk ones. The skill only reads tickets. It never sends replies or changes anything.
+  - Next, pass late P0 and P1 tickets to the assigned agent, or the team lead if no one is assigned. Run the check again daily or weekly to see if the score improves.
 output_sample:
   input:
     - Your reply and resolution time targets (optional, defaults are used if you skip this)
@@ -56,6 +57,6 @@ output_sample:
     - name: On track tickets
       contains: A table of tickets still within limits, with target, time elapsed and time remaining.
     - name: SLA health score
-      contains: A score out of 100, the share of first replies and resolutions on time, and average response time.
+      contains: A score out of 100, the average of two shares, first replies on time and resolutions on time, plus average response time.
     - name: Recommendations
       contains: Next steps for breached tickets and which agents to ping.

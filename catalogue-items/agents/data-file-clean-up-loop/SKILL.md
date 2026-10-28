@@ -86,8 +86,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the spreadsheet and audit report.
 - The [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter). It takes the spreadsheet.
 - The [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder). It takes the spreadsheet.
-- **Build it** with the [Training data curation planner](https://useaiblocks.com/skills/training-data-cleaner). It takes the data.
-- The [Single-cell analysis workflow planner](https://useaiblocks.com/skills/single-cell-deep-learning). It takes the data.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

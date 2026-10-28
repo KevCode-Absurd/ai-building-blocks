@@ -1,6 +1,6 @@
 # Sell and negotiate: AI Blocks
 
-> 122 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 123 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account catch-up brief writer](https://useaiblocks.com/skills/account-catch-up-brief-writer): Name a customer. Get a one-page brief from the CRM, email, docs, calls and chat you have connected, with each fact linked.
 - [Account expansion finder](https://useaiblocks.com/skills/expansion-whitespace-finder): Compare past purchases with your product list to find sales gaps and suggest deals backed by facts.
@@ -41,6 +41,7 @@
 - [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer): Write a franchise or reseller term sheet from your offer and the partner's profit sum: duties, fees, standards and exits, ready for a lawyer.
 - [Freight carrier selection planner](https://useaiblocks.com/skills/freight-carrier-manager): Turn lane volumes, rates, and service needs into freight bid plans, negotiation points, and carrier scorecards.
 - [French consulting market advisor](https://useaiblocks.com/agents/agency-specialized-french-consulting-market): Plan your daily rate (TJM) in the French IT consulting market: ESN margins, take-home by billing set-up, platforms and a negotiation plan.
+- [Grant and bid response writer](https://useaiblocks.com/skills/grant-and-bid-response-writer): Find grants and bids your group can win, get a clear go or no-go on each, and a draft response built from your real past work.
 - [Korean business meeting planner](https://useaiblocks.com/agents/agency-specialized-korean-business-navigator): Prepare for business in Korea: a meeting plan, KakaoTalk and email drafts at the right formality and a read on what your contact's replies may mean.
 - [Lead grader](https://useaiblocks.com/skills/lead-grader): Grade your sales leads A, B or C by how soon each one needs to act. Get a dated list with a follow-up plan for every grade.
 - [Lead prioritizer](https://useaiblocks.com/skills/lead-prioritizer): Score and rank your sales leads by company fit and recent activity. Get a lead scoring rubric and Hot, Warm and Cold tiers so reps know who to call.

@@ -21,6 +21,7 @@ not_for:
   - "You want to review one supplier's performance: ask a buyer or use a supplier scorecard, not a full plan."
   - "You need to check legal or regulatory exposure: talk to a compliance adviser."
   - "You want exact loss figures without your own data: the sample numbers in the code are placeholders, so add yours first."
+  - "You have not scored all six resilience factors yourself: skip the resilience score. The code now stops if any factor is missing, instead of filling in 50."
 you_give:
   - A description of your supply chain
   - Key suppliers, routes and sites
@@ -36,7 +37,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you want the scenario and simulation steps.
   - Paste the skill text, or upload the skill folder if your AI takes files.
   - "Before you paste anything, gather: your key suppliers, their lead times, what a day of downtime costs you, and how many days of safety stock you hold. Take the cost, chance and stock figures from your own ERP, supplier contracts or finance records."
-  - "The scenario and simulation steps need Python. If your AI cannot run code, fill in the risk register and mitigation table by hand, or ask your AI to build them as plain tables from your numbers."
+  - "The scenario and simulation steps need Python. If your AI cannot run code, fill in the risk register and mitigation table by hand, or ask your AI to build them as plain tables from your numbers. Risk register columns: risk ID, description, category, chance, impact, risk score (chance times impact), current controls, priority. Mitigation table columns: action, risk it covers, cost, yearly benefit, timeline, owner."
   - "Describe your supply chain: key suppliers, routes, sites and what an outage costs you."
   - Add your own cost, chance and stock numbers. Warning: the code uses placeholder figures for cascade effects (8, 20 and 25 percent), mitigation cost (10 percent) and variability. Do not show any dollar figure to management until you have replaced them with your own data.
   - Check the ranked risks and the owners in the plan. Fix anything that does not match your business.

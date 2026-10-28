@@ -73,6 +73,19 @@ tags: ["lesson-study", "jugyou-kenkyuu", "collaborative-planning", "research-les
 
 # Lesson Study Cycle Designer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## What This Skill Does
 
 Designs a complete lesson study cycle — the structured, collaborative process originated in Japan (jugyō kenkyū) where a team of teachers jointly plan a "research lesson," one teacher teaches it while others observe student learning (not teacher performance), and the team analyses what students actually learned and why. The critical principle is that lesson study is research INTO teaching, not evaluation OF teachers — the lesson belongs to the group, the focus is on student learning (not teacher behaviour), and the purpose is to develop shared professional knowledge about how students learn specific content. The output includes a research theme, a cycle plan with meeting agendas, a research lesson plan designed for collaborative observation, and an observation protocol focused on case students. AI is specifically valuable here because designing an effective lesson study cycle requires understanding both the Japanese model (with its emphasis on kyōzai kenkyū — deep study of the subject matter and curriculum) and the practical constraints of non-Japanese school contexts where release time, team stability, and lesson study experience may be limited.
@@ -320,3 +333,12 @@ One final compound shape, done independently. No discussion, no partner help. Th
 2. **Lesson study requires a culture of trust.** Being observed by colleagues is vulnerable. If the school culture is evaluative (observations are judgements, not learning), teachers will not feel safe enough for genuine lesson study. The facilitator (typically the most experienced team member) must actively protect the discussion norms: research, not evaluation.
 
 3. **Lesson study builds knowledge slowly.** One cycle produces modest insights. The power of lesson study is cumulative — repeated cycles over years build deep professional knowledge about how students learn. Schools should commit to lesson study as an ongoing practice, not a one-off event.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cultural bias lesson checker](https://useaiblocks.com/skills/cultural-bias-lesson-checker). It takes the lesson plan.
+- The [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter). It takes the lesson plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

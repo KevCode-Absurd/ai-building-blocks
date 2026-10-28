@@ -315,29 +315,48 @@ class ErrorBudgetManager:
         return total_minutes * allowed_downtime_ratio
     
     def calculate_error_budget_status(self, start_date, end_date):
-        """Calculate current error budget status"""
+        """Calculate current error budget status.
+
+        start_date must be the start of the SLO window; end_date is now.
+
+        AI Blocks fix: the original counted consumed budget as
+        (target uptime - actual uptime), which is zero when downtime exactly
+        equals the budget, and it called the share of budget used a "burn
+        rate" without allowing for how much of the window has passed.
+        Consumed budget is the downtime itself, and burn rate is budget used
+        divided by window elapsed (1.0 = on pace to use exactly the budget).
+        """
         # Get actual performance
         actual_uptime = self._get_actual_uptime(start_date, end_date)
-        
-        # Calculate consumed budget
-        total_time = (end_date - start_date).total_seconds() / 60
-        expected_uptime = total_time * (self.slo_target / 100)
-        consumed_minutes = expected_uptime - actual_uptime
-        
-        # Calculate remaining budget
+
+        # Consumed budget = downtime so far
+        elapsed_minutes = (end_date - start_date).total_seconds() / 60
+        consumed_minutes = elapsed_minutes - actual_uptime
+
+        # Remaining budget and share used
         remaining_budget = self.error_budget_minutes - consumed_minutes
-        burn_rate = consumed_minutes / self.error_budget_minutes
-        
-        # Project exhaustion
-        if burn_rate > 0:
-            days_until_exhaustion = (self.window_days * (1 - burn_rate)) / burn_rate
+        budget_used_fraction = consumed_minutes / self.error_budget_minutes
+
+        # Burn rate = share of budget used / share of window elapsed
+        window_minutes = self.window_days * 24 * 60
+        elapsed_fraction = elapsed_minutes / window_minutes
+        burn_rate = budget_used_fraction / elapsed_fraction if elapsed_fraction > 0 else 0.0
+
+        # Project exhaustion at the current downtime pace
+        elapsed_days = elapsed_minutes / (24 * 60)
+        if remaining_budget <= 0:
+            days_until_exhaustion = 0.0
+        elif consumed_minutes > 0:
+            downtime_per_day = consumed_minutes / elapsed_days
+            days_until_exhaustion = remaining_budget / downtime_per_day
         else:
             days_until_exhaustion = float('inf')
-        
+
         return {
             'total_budget_minutes': self.error_budget_minutes,
             'consumed_minutes': consumed_minutes,
             'remaining_minutes': remaining_budget,
+            'budget_used_fraction': budget_used_fraction,
             'burn_rate': burn_rate,
             'budget_percentage_remaining': (remaining_budget / self.error_budget_minutes) * 100,
             'projected_exhaustion_days': days_until_exhaustion,
@@ -366,11 +385,20 @@ class ErrorBudgetManager:
                 'action': 'page',
                 'budget_consumed': '2% in 1 hour'
             },
+            # Thresholds from the Google SRE Workbook, "Alerting on SLOs"
+            # (https://sre.google/workbook/alerting-on-slos/), for a 30-day
+            # window. Budget consumed = burn rate x long window / 30 days.
             'slow_burn': {
-                'description': '3x burn rate over 6 hours',
-                'condition': 'burn_rate >= 3 AND window = 6h',
+                'description': '6x burn rate over 6 hours',
+                'condition': 'burn_rate >= 6 AND window = 6h',
+                'action': 'page',
+                'budget_consumed': '5% in 6 hours'
+            },
+            'steady_burn': {
+                'description': '1x burn rate over 3 days',
+                'condition': 'burn_rate >= 1 AND window = 3d',
                 'action': 'ticket',
-                'budget_consumed': '10% in 6 hours'
+                'budget_consumed': '10% in 3 days'
             }
         }
 ```
@@ -473,24 +501,27 @@ groups:
             Current burn rate: {{ $value }}x
             This will exhaust 2% of monthly budget in 1 hour.
           
-      # Slow burn alert (10% budget in 6 hours)
+      # Slow burn alert (5% budget in 6 hours: 6x for 6h over a 30-day window,
+      # per https://sre.google/workbook/alerting-on-slos/). The original used
+      # 3x and said 10%, but 3x for 6 hours uses only 2.5%.
+      # Define the 5m, 30m and 6h burn-rate records the same way as the 1h one.
       - alert: ErrorBudgetSlowBurn
         expr: |
           (
-            service:error_budget_burn_rate_30m{service="api"} > 3
+            service:error_budget_burn_rate_30m{service="api"} > 6
             AND
-            service:error_budget_burn_rate_6h{service="api"} > 3
+            service:error_budget_burn_rate_6h{service="api"} > 6
           )
         for: 15m
         labels:
-          severity: warning
+          severity: critical   # 5% in 6h pages, per the SRE Workbook
           team: platform
         annotations:
           summary: "Slow error budget burn for {{ $labels.service }}"
           description: |
-            Service {{ $labels.service }} is burning error budget at 3x rate.
+            Service {{ $labels.service }} is burning error budget at 6x rate.
             Current burn rate: {{ $value }}x
-            This will exhaust 10% of monthly budget in 6 hours.
+            At this rate, 5% of the monthly budget is used in 6 hours.
 ```
 
 ### 5. SLO Dashboard
@@ -956,14 +987,15 @@ spec:
       
   alerting:
     burnRates:
+      # SRE Workbook values for a 30-day window: 2% of budget in 1h, 5% in 6h (both page)
       - severity: critical
-        shortWindow: 1h
-        longWindow: 5m
+        shortWindow: 5m
+        longWindow: 1h
         burnRate: 14.4
-      - severity: warning
-        shortWindow: 6h
-        longWindow: 30m
-        burnRate: 3
+      - severity: critical
+        shortWindow: 30m
+        longWindow: 6h
+        burnRate: 6
         
   annotations:
     runbook: https://runbooks.example.com/api-availability

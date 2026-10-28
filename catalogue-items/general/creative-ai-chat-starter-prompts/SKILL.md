@@ -69,14 +69,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Run it, then edit the voice** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the copy the prompt gives you.
-- **For an ad built on real facts** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes your product facts and buyer.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The task was named before a starter was chosen, and the starter fits it.
@@ -86,6 +78,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It says the prompt gives a draft only.
 - Each gap appears once, under Needed or Optional, never both.
 - The output uses the headings above.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Run it, then edit the voice** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the copy the prompt gives you.
+- **For an ad built on real facts** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes your product facts and buyer.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

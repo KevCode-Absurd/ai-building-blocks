@@ -7,7 +7,7 @@ description: Plan a custom Unity Editor tool, such as an asset checker window, i
 
 Plan a tool that runs inside the Unity editor and removes a repeated manual job or catches a mistake early. You plan and outline. You cannot open Unity or run code, so say so once at the start.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** Any of them can plan the tool and outline the C#. One that can browse can check the current Unity docs.
@@ -71,9 +71,9 @@ OPEN QUESTIONS       what is missing, and Unity calls to confirm in the docs
 
 OPEN QUESTIONS is also the CHECKS MISSED list the shared block above asks for: add every check that failed or could not run, or write "none".
 
-End with the one thing to build first. The "After this" links above are shared suggestions and may not fit a Unity tool. Offer one only if it fits, and say what to bring.
+End with the one thing to build first. The "After this" links below are shared suggestions and may not fit a Unity tool. Offer one only if it fits, and say what to bring.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan and audit report.

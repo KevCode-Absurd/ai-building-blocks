@@ -29,4 +29,4 @@ credits:
   - title: banking-compliance skill
     by: GAJETOso
     url: https://github.com/GAJETOso/financeskills/tree/main/skills/banking-compliance
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and replaced the blanket 0% sovereign weight with the Basel CRE20 rating table and its domestic-currency condition, in the skill and its risk-weight reference. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -11,15 +11,28 @@ license: "MIT"
 
 # Adversarial Code Reviewer
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## Description
 
-Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona looks hard for an issue — no easy "LGTM" — and says so plainly if it finds no real one. There is no minimum number of findings. Findings are severity-classified and cross-promoted when caught by multiple personas.
+Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona looks hard for an issue — no easy "LGTM" — and says so plainly if it finds no real one. There is no minimum number of findings. Findings are severity-classified by impact, and re-checked when caught by multiple personas.
 
 ## Features
 
 - **Three adversarial personas** — Saboteur (production breaks), New Hire (maintainability), Security Auditor (OWASP-informed)
 - **No rubber stamps** — Each persona must look hard. It reports real issues only, or "No real issue found" with what it checked. There is no quota.
-- **Severity promotion** — Issues caught by 2+ personas are promoted one severity level
+- **Severity re-check** — Issues caught by 2+ personas get a second look at their severity, judged on evidence of impact, not on the number of personas
 - **Self-review trap breaker** — Concrete techniques to overcome shared mental model blind spots
 - **Structured verdicts** — BLOCK / CONCERNS / CLEAN with clear merge guidance
 
@@ -94,7 +107,7 @@ Execute each persona sequentially. Each persona must look hard. There is no mini
 
 After all three personas have reported:
 1. Merge duplicate findings (same issue caught by multiple personas).
-2. Promote findings caught by 2+ personas to the next severity level.
+2. For findings caught by 2+ personas, re-check the severity against the definitions below. Raise it only if the evidence of impact supports the higher level.
 3. Produce the final structured output.
 
 ## The Three Personas
@@ -178,7 +191,7 @@ After all three personas have reported:
 | **WARNING** | Likely to cause bugs in edge cases, degrade performance, or confuse future maintainers. Should fix before merge. | Fix or explicitly accept risk with justification. |
 | **NOTE** | Style issue, minor improvement opportunity, or documentation gap. Nice to fix. | Author's discretion. |
 
-**Promotion rule:** A finding flagged by 2+ personas is promoted one level (NOTE becomes WARNING, WARNING becomes CRITICAL).
+**Severity rule:** Set each severity from the evidence of impact (what breaks, for whom, how likely). A finding flagged by 2+ personas gets its severity re-checked, but agreement alone never raises it: all three personas are the same model taking different angles, not independent reviewers.
 
 ## Output Format
 
@@ -205,8 +218,8 @@ Structure your review as follows:
 
 **Verdict definitions:**
 - **BLOCK** — 1+ CRITICAL findings. Do not merge until resolved.
-- **CONCERNS** — No criticals but 2+ warnings. Merge at your own risk.
-- **CLEAN** — Only notes. Safe to merge.
+- **CONCERNS** — No criticals, and 1 or more warnings. Merge at your own risk, or fix or accept each warning with a reason.
+- **CLEAN** — No criticals and no warnings (only notes, or no real issues found). Safe to merge as far as this review can tell.
 
 ## Anti-Patterns
 
@@ -239,6 +252,13 @@ You are likely reviewing code you just wrote or just read. Your brain (weights) 
 - **When Claude said "looks good"** — if you got an easy approval, run this for a second opinion
 - **On security-sensitive code** — auth, payments, data access, API endpoints
 - **When something "feels off"** — trust that instinct and run an adversarial review
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Cross-References
 

@@ -17,7 +17,7 @@ The upstream skill is only a pointer to two other skills, "grilling" and "domain
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 

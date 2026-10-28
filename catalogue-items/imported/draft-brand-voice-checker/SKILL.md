@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A draft** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). Bring a brand guide (optional), an audit report (optional). It uses your buyer brief.
+2. **A draft** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). Bring a brief, a brand guide (optional), an audit report (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -308,3 +308,5 @@ Ask: "Would you like me to:
 - Focus on fixing just the high-severity issues?
 - Review additional content against the same guidelines?
 - Help you document your brand voice for future reviews?"
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

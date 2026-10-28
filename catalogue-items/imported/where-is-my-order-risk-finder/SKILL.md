@@ -10,6 +10,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,7 +29,7 @@ How to start:
 Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose order record has not changed in N days (a stand-in for stale tracking), and unfulfilled orders sitting past a configurable SLA. Finding these orders early can cut the number of tracking tickets your support team gets. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
 
 ## Prerequisites
-- `shopify auth login --store <domain>`
+- `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_orders`
 
 ## Parameters

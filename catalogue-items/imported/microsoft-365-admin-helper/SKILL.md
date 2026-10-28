@@ -73,16 +73,16 @@ $rows = @(Import-Csv .\new_users.csv)
 $skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
 foreach ($row in $rows) {
     if (-not $row.UserPrincipalName -or -not $row.LicenseSku -or -not $row.UsageLocation) { throw 'Fill in every required user field before creating anyone.' }
-    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
-    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
+    $skuMatches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
+    if ($skuMatches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
 }
 foreach ($row in $rows) {
     $handover = New-TemporaryUserCredential -UserPrincipalName $row.UserPrincipalName -Directory $folder
     try {
-        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
+        $passwordProfile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
         $user = New-MgUser -DisplayName $row.DisplayName -UserPrincipalName $row.UserPrincipalName `
             -Department $row.Department -UsageLocation $row.UsageLocation `
-            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $profile -ErrorAction Stop
+            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $passwordProfile -ErrorAction Stop
         $sku = ($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku }).SkuId
         Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $sku }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
         Write-Host "Created and licensed: $($row.UserPrincipalName). Handover file: $($handover.HandoverFile)"
@@ -90,7 +90,7 @@ foreach ($row in $rows) {
         Write-Warning "Stopped for $($row.UserPrincipalName). Keep $($handover.HandoverFile)."
         throw 'Check the actual account and licence state before retrying. Do not rerun bulk creation blindly.'
     } finally {
-        if ($profile) { $profile.Password = $null }
+        if ($passwordProfile) { $passwordProfile.Password = $null }
         $handover = $null
     }
 }
@@ -201,16 +201,16 @@ $rows = @(Import-Csv .\employees.csv)
 $skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
 foreach ($row in $rows) {
     if (-not $row.UserPrincipalName -or -not $row.LicenseSku -or -not $row.UsageLocation) { throw 'Fill in every required user field before creating anyone.' }
-    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
-    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
+    $skuMatches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
+    if ($skuMatches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
 }
 foreach ($row in $rows) {
     $handover = New-TemporaryUserCredential -UserPrincipalName $row.UserPrincipalName -Directory $folder
     try {
-        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
+        $passwordProfile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
         $user = New-MgUser -DisplayName $row.DisplayName -UserPrincipalName $row.UserPrincipalName `
             -Department $row.Department -UsageLocation $row.UsageLocation `
-            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $profile -ErrorAction Stop
+            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $passwordProfile -ErrorAction Stop
         $sku = ($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku }).SkuId
         Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $sku }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
         Write-Host "Created and licensed: $($row.UserPrincipalName). Handover file: $($handover.HandoverFile)"
@@ -218,7 +218,7 @@ foreach ($row in $rows) {
         Write-Warning "Stopped for $($row.UserPrincipalName). Keep $($handover.HandoverFile)."
         throw 'Check the actual account and licence state before retrying. Do not rerun bulk creation blindly.'
     } finally {
-        if ($profile) { $profile.Password = $null }
+        if ($passwordProfile) { $passwordProfile.Password = $null }
         $handover = $null
     }
 }

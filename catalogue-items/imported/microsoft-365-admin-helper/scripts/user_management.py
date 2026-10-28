@@ -60,20 +60,20 @@ $users = @(
 # Resolve every requested licence before creating anyone. Never substitute a default licence.
 $skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
 foreach ($user in $users) {
-    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $user.LicenseSku })
-    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
-    $user.SkuId = $matches[0].SkuId
+    $skuMatches = @($skus | Where-Object { $_.SkuPartNumber -eq $user.LicenseSku })
+    if ($skuMatches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
+    $user.SkuId = $skuMatches[0].SkuId
 }
 foreach ($user in $users) {
     # If saving fails, stop here, before the account API call.
     $handover = New-TemporaryUserCredential -UserPrincipalName $user.UserPrincipalName -Directory $HandoverDirectory
     $stage = 'account creation'
     try {
-        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
+        $passwordProfile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
         $newUser = New-MgUser -UserPrincipalName $user.UserPrincipalName `
             -DisplayName $user.DisplayName -GivenName $user.GivenName -Surname $user.Surname `
             -JobTitle $user.JobTitle -Department $user.Department -UsageLocation $user.UsageLocation `
-            -PasswordProfile $profile -AccountEnabled:$true `
+            -PasswordProfile $passwordProfile -AccountEnabled:$true `
             -MailNickname ($user.UserPrincipalName -split '@')[0] -ErrorAction Stop
         $stage = 'licence assignment'
         Set-MgUserLicense -UserId $newUser.Id -AddLicenses @(@{ SkuId = $user.SkuId }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
@@ -83,7 +83,7 @@ foreach ($user in $users) {
         Write-Warning "Stopped during $stage for $($user.UserPrincipalName). Keep $($handover.HandoverFile)."
         throw 'Check the actual account and licence state before any retry. Do not rerun bulk creation blindly.'
     } finally {
-        if ($profile) { $profile.Password = $null }
+        if ($passwordProfile) { $passwordProfile.Password = $null }
         $handover = $null
     }
 }

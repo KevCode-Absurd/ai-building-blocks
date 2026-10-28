@@ -11,7 +11,7 @@ explain: |
 
   The skill swaps the old session calls for their modern equivalents: daq("ni") for createSession, addinput for channel adds, ScansAvailableFcn for the data listener, and preload plus write for queued output. It works in a fixed order and checks after each step, because failures here are often silent. It also covers new scripts that mix triggers, callbacks and continuous capture. It is built around National Instruments hardware. Simple one channel captures do not need it.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices.
 when:
   - Your lab script worked years ago and now errors on a new MATLAB release.
   - You see an error that wait is undefined for a DataAcquisition object.

@@ -11,7 +11,7 @@ explain: |
 
   A small Node script, shipped as text in the skill's references folder, reads your --color-* CSS variables. It pairs text colours with backgrounds by name, and measures each pair in the light theme and in dark mode. Normal text needs 4.5 to 1. Large text, borders, icons and focus rings need 3 to 1. For a failing pair it keeps the hue and moves the lightness the least it can. It also suggests one value that passes on every background that token sits on.
 
-  It measures tokens, not pixels. Text on photos or gradients, and colours with opacity, need a look on screen. The script prints in Spanish, so the skill file includes a table of what the words mean. Licence: CC BY 4.0 governs this copy, as set out in LICENSE-CONTENT. The MIT line in the skill file's header is the original author's (Clagoss). Keep the credit either way.
+  It measures tokens, not pixels. Text on photos or gradients, and colours with opacity, need a look on screen. The script prints in Spanish, so the skill file includes a table of what the words mean. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - You are about to approve a new colour palette.
   - Your dark mode text is hard to read.

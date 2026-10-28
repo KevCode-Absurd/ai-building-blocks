@@ -11,7 +11,7 @@ explain: |
 
   It covers loudness, roughness, speech scores like STOI and ViSQOL, noise ratings, broadcast loudness in LUFS, reverb time and tones. It asks questions before it computes. It shows how to calibrate with your microphone's sensitivity and how to convert units. It also fixes common mistakes, such as asking for a function that does not exist. PESQ and POLQA do not exist in Audio Toolbox. The skill uses visqol(degraded, reference, fs, Mode="speech") instead. You need MATLAB.
 
-  Licence: the BSD 2-Clause licence in LICENSE.md governs this copy. It adds one condition: you may use it only with MathWorks products such as MATLAB, so reuse outside MathWorks products is not allowed. The skill file also links MathWorks' own reuse licence (PMRL), which says the same kind of thing. MATLAB and Audio Toolbox are paid products. Credit goes to MathWorks.
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices. MATLAB and Audio Toolbox are paid products.
 when:
   - You need to check a broadcast file meets loudness rules.
   - A speech recording sounds muffled and you want a number for it.

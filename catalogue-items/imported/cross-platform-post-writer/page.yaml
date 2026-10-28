@@ -33,7 +33,7 @@ how_to_use:
   - Paste your idea, notes or draft. A rough draft or one sentence of notes is enough to start. Add any facts, numbers or a sample of your own posts.
   - Check the one-sentence idea your AI gives back. If it asks which part is the point, answer it.
   - Read the X post and the LinkedIn post. Look for lines that appear in both, and ask for a rewrite if you find one.
-  - "Licence: this copy is under CC BY 4.0, as set by the LICENSE-CONTENT file. Credit the author when you reuse it. The MIT label in the skill file's header is the original upstream label and is not the licence we apply."
+  - "Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file."
   - Edit to your voice, then post by hand. The last section of the skill is about the optional VoiceMoat connector (paid plan). It can post to your real X and LinkedIn accounts, but only after you read a preview and say yes. Without it, your AI can skip that section.
   - After a few days, note which post got more replies and what the first line said. Paste that note into your next session and ask your AI to use that shape.
 output_sample:

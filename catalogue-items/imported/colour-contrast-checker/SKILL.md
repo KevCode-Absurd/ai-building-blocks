@@ -189,4 +189,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Licence Note
 
-The licence that governs this copy is CC BY 4.0, as set out in LICENSE-CONTENT. The MIT line in the front matter above is the licence the original author declared. Keep the credit to the original author either way.
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.

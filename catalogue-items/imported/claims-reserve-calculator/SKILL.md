@@ -90,8 +90,8 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator). It takes the spreadsheet.
+- The [Cash flow debt repayment planner](https://useaiblocks.com/skills/debt-repayment-sculpting-planner). It takes the document and spreadsheet.
 - The [Debt payment reserve checker](https://useaiblocks.com/skills/debt-reserve-rollforward-builder). It takes the document and spreadsheet.
-- The [Escrow release balance checker](https://useaiblocks.com/skills/escrow-release-checker). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

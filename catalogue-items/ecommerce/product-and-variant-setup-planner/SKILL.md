@@ -91,8 +91,8 @@ CHECKS MISSED: <none, or the checks you could not run>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner). It takes the product facts.
 - The [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner). It takes the product facts.
+- The [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner).
 - The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the product facts.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

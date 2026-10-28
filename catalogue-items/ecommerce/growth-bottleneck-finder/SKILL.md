@@ -26,8 +26,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** It does the splitting and the comparison. Paste your numbers as a table.
-- **Google Analytics 4:** Shows funnel drop-off by step, so the skill can find where visitors leave.
-- **Shopify:** Order and margin data to check your ad numbers against real profit.
+- **Google Analytics 4:** Free. Shows funnel drop-off by step, so the skill can find where visitors leave.
+- **Shopify:** Paid subscription. Order and margin data to check your ad numbers against real profit.
 <!-- /needs -->
 
 ## What you need
@@ -95,7 +95,8 @@ MISSING: <metrics | funnel rates | creative data | margin | cash position>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- The [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder).
+- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

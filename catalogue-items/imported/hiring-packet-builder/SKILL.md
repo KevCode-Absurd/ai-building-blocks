@@ -220,7 +220,7 @@ The connectors named in this skill are the tested paths, not a wall. If the owne
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the job description.
+- The [Applicant evidence and hiring reply drafts](https://useaiblocks.com/skills/hiring-pipeline-runner). It takes the job description.
 - The [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). It takes the job description.
-- The [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

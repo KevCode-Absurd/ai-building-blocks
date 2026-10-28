@@ -157,7 +157,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the customer list.
 - The [Repeat order bottleneck finder](https://useaiblocks.com/skills/repeat-order-bottleneck-finder). It takes the customer list.
 - The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the customer list.
-- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the customer list.
+- The [Loyalty and VIP program designer](https://useaiblocks.com/skills/loyalty-and-vip-program-designer). It takes the customer list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -198,6 +198,7 @@ If no pack exists for the language, offer to bootstrap one: research the taxonom
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
+- The [Study revision coach](https://useaiblocks.com/skills/study-revision-coach). It takes the document.
 - The [System design practice reviewer](https://useaiblocks.com/skills/system-design-practice-review). It takes the document.
 - The [Student mistake analyser](https://useaiblocks.com/skills/student-mistake-analyser). It takes the document.
 - The [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). It takes the plan.

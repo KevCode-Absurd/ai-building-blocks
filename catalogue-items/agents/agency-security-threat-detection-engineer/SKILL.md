@@ -71,7 +71,7 @@ Finish with `CHECKS MISSED:` listing anything you could not evaluate (or "none")
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Threat intelligence analyst agent](https://useaiblocks.com/skills/agency-security-threat-intelligence-analyst).
+- The [Threat intelligence analyst agent](https://useaiblocks.com/skills/agency-security-threat-intelligence-analyst). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

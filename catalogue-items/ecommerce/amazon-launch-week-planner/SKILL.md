@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A plan** with the [Amazon inbound stock planner](https://useaiblocks.com/skills/amazon-inbound-stock-planner). Bring a spreadsheet (optional). It uses your brand brain.
+2. **A plan** with the [Amazon inbound stock planner](https://useaiblocks.com/skills/amazon-inbound-stock-planner). Bring a spreadsheet.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -95,7 +95,9 @@ CHECKS MISSED: <none | which>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer).
+- The [Amazon Sponsored Products ad planner](https://useaiblocks.com/skills/amazon-ppc-launch-builder).
+- The [Amazon inbound stock planner](https://useaiblocks.com/skills/amazon-inbound-stock-planner).
+- The [Amazon margins, stock and claim review](https://useaiblocks.com/skills/amazon-monthly-account-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -24,8 +24,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Shopify:** Its order export gives customer ids, dates, values, discounts and refunds.
-- **Klaviyo:** It gives flow and campaign revenue so you can see the email and SMS share.
+- **Shopify:** Paid store platform. Its order export gives customer ids, dates, values, discounts and refunds.
+- **Klaviyo:** Paid email tool with a small free tier. It gives flow and campaign revenue so you can see the email and SMS share.
 - **Any good chat AI:** Any current chat AI that reads a spreadsheet can build the cohorts.
 <!-- /needs -->
 

@@ -71,6 +71,8 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
+- The [Study notebook reviewer](https://useaiblocks.com/skills/study-notebook-review). It takes the document.
+- The [Learning session handover writer](https://useaiblocks.com/skills/learning-session-handoff). It takes the document.
 - The [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder). It takes the document.
 - The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

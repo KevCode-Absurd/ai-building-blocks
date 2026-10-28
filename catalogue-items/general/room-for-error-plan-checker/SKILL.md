@@ -67,5 +67,6 @@ What must go right. Three failures with numbers and dates. The ruin point. Borro
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the audit report.
+- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

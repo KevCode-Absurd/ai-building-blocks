@@ -30,8 +30,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Any chat AI can do the sums. Check one group by hand.
-- **Shopify:** Its cohort report shows how often one-time buyers come back.
-- **A subscription app for your store:** Runs the prepaid plan and reports re-enrol and cancel rates once you test.
+- **Shopify:** Paid store platform. Its cohort report shows how often one-time buyers come back. Check your plan includes it.
+- **A subscription app for your store:** Usually a paid app with a monthly fee. Runs the prepaid plan and reports re-enrol and cancel rates once you test.
 <!-- /needs -->
 
 ## What you need

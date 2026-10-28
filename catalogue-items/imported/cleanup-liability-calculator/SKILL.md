@@ -87,7 +87,7 @@ How to start:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator). It takes the spreadsheet.
 - The [Holding company value calculator](https://useaiblocks.com/skills/listed-holding-lookthrough-nav). It takes the spreadsheet.
-- The [Cash and added interest calculator](https://useaiblocks.com/skills/cash-and-pik-interest-checker). It takes the spreadsheet.
+- The [Cash flow debt repayment planner](https://useaiblocks.com/skills/debt-repayment-sculpting-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -26,10 +26,8 @@ If the figures are not in the chat, ask once for the missing items in "What you 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material or the linked skill):
-- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-
 **Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 

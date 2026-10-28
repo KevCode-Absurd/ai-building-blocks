@@ -461,11 +461,11 @@ Decision posture on subjective legal calls: when uncertain whether the use is fa
 - **Invent citations.** Any cites included are source-tagged and flagged for verification; no silent supplement.
 - **Handle non-US regimes.** DMCA is US-specific. For EU DSA, UK OSA, India IT Rules, and other regimes — flag and route.
 
+Changed by AI Blocks (2026-10-28): removed the Stephens v. Clash citation from the sworn-statement warning, because that case is not about bad-faith takedowns.
+
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-Changed by AI Blocks (2026-10-28): removed the Stephens v. Clash citation from the sworn-statement warning, because that case is not about bad-faith takedowns.

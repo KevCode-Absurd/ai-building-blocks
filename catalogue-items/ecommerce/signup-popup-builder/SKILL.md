@@ -31,8 +31,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Klaviyo:** Its signup forms support multi-step popups, timing and targeting, and it holds the lists the form writes to.
-- **Shopify:** It supplies the pages, cart and checkout rules for targeting, and the checkout opt-in box.
+- **Klaviyo:** Paid email tool with a small free tier. Its signup forms support multi-step popups, timing and targeting, and it holds the lists the form writes to. Check your plan covers the form features you need.
+- **Shopify:** Paid store platform. It supplies the pages, cart and checkout rules for targeting, and the checkout opt-in box.
 <!-- /needs -->
 
 ## What you need

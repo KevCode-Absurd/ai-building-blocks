@@ -111,7 +111,6 @@ Same convictions, compressed. Every sentence earns its place. This version works
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Language translator agent](https://useaiblocks.com/skills/agency-language-translator). It takes the draft.
 - The [Text translator](https://useaiblocks.com/skills/translator). It takes the draft.
 - The [Forceful prose writer](https://useaiblocks.com/skills/forceful-prose-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

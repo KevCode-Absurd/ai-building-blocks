@@ -97,9 +97,9 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the plan.
-- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
-- The [Nonprofit leadership handover planner](https://useaiblocks.com/skills/nonprofit-leadership-handover-planner). It takes the document.
+- The [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role). It takes the document.
+- The [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover).
+- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the document and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

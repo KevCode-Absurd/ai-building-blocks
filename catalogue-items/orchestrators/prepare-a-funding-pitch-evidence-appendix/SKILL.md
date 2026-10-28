@@ -89,10 +89,9 @@ NEXT STEP       <one step>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach). It takes the document.
-- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the slide deck and audit report.
+- The [Board deck builder](https://useaiblocks.com/skills/board-deck-builder). It takes the document.
 - The [Investor pitch script and email writer](https://useaiblocks.com/skills/investor-pitch-scriptwriter). It takes the document.
-- The [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer). It takes the slide deck.
-- The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the audit report.
+- **Sell it** with the [Audit sales presentation planner](https://useaiblocks.com/skills/audit-to-sales-presentation-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

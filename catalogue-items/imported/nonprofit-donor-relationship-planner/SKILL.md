@@ -11,6 +11,8 @@ metadata:
 
 # Donor Pipeline & Moves Management
 
+> Added by AI Blocks: donor records hold personal information. Before the person pastes any records, ask them to replace names, emails, phone numbers and addresses with IDs, and to check their organisation's data policy. If records arrive with names or contact details, do not repeat them in your answer. Use the IDs or row numbers instead.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,8 +32,6 @@ How to start:
 **Tools that do this best:**
 - **A chat AI that can read your files:** The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
 <!-- /needs -->
-
-> Added by AI Blocks: donor records hold personal information. Before the person pastes any records, ask them to replace names, emails, phone numbers and addresses with IDs, and to check their organisation's data policy. If records arrive with names or contact details, do not repeat them in your answer. Use the IDs or row numbers instead.
 
 ## When to Use This Skill
 

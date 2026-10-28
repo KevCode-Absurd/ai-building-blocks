@@ -379,5 +379,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Support help article writer](https://useaiblocks.com/skills/monthly-help-centre-keeper). It takes the document.
 - The [Customer inbox reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter). It takes the document.
 - The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review). It takes the document.
+- **Tell it as a story** with the [Help article writer](https://useaiblocks.com/skills/help-article-writer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -28,7 +28,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **A TikTok Shop research tool:** Needed for the product graphs, revenue source and top videos. Any tool that shows 30 and 180 day graphs works.
+- **A TikTok Shop research tool:** Usually a paid subscription you must already have. Needed for the product graphs, revenue source and top videos. Any tool that shows 30 and 180 day graphs works.
 - **Google Trends:** Free. Search the exact sub-niche over 12 months to see if it is rising now.
 - **Meta Ad Library:** Free. Search the exact product to see who already runs ads for it.
 <!-- /needs -->

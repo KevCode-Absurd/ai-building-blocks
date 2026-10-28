@@ -279,6 +279,6 @@ For each question:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Teach-back learning coach](https://useaiblocks.com/skills/teach-back-practice-partner). It takes the question.
 - The [Learning gap diagnosis coach](https://useaiblocks.com/skills/stuck-point-diagnosis-coach). It takes the question.
-- The [Wellbeing and learning link mapper](https://useaiblocks.com/skills/wellbeing-learning-link). It takes the question.
+- The [Historical context lesson builder](https://useaiblocks.com/skills/historical-context-lesson). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

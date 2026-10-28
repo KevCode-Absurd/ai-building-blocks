@@ -89,9 +89,9 @@ If the owner approves one action in clear words, do only that one. Then write wh
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Financial statement and budget reviewer](https://useaiblocks.com/skills/financial-statement-analyst). It takes the financial statements.
 - The [Working capital cash change checker](https://useaiblocks.com/skills/noncash-working-capital-bridge). It takes the financial statements and spreadsheet.
-- The [Budget, forecast and cash gap review](https://useaiblocks.com/skills/monthly-budget-versus-actual-keeper). It takes the financial statements and spreadsheet.
 - The [LIFO to FIFO comparison calculator](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge). It takes the financial statements and spreadsheet.
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- The [Inventory write-down margin checker](https://useaiblocks.com/skills/inventory-charge-margin-bridge). It takes the financial statements and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

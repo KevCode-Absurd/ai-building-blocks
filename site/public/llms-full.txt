@@ -62,7 +62,7 @@ Once connected, ask in plain words:
 - [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 101 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Keep your store safe](https://useaiblocks.com/llms/protect-your-store.txt): 13 skills and workflows, such as Bot and AI agent access planner and Domain access and certificate reviewer
 - [Launch and scale Meta and TikTok ads](https://useaiblocks.com/llms/launch-and-scale-ads.txt): 28 skills and workflows, such as Fading ad opening writer and Social and display ad experiment planner
-- [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 89 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
+- [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 88 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
 - [Look after your health and fitness](https://useaiblocks.com/llms/health-and-fitness.txt): 1 skills and workflows, such as Beginner workout planner
 - [Make an offer people want](https://useaiblocks.com/llms/make-offer.txt): 76 skills and workflows, such as After-sale offer planner and Offer bonus planner
 - [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 92 skills and workflows, such as Document proofreader and Excel workbook handover writer
@@ -110,7 +110,7 @@ Once connected, ask in plain words:
 - [Understand your customers](https://useaiblocks.com/llms/understand-customers.txt): 99 skills and workflows, such as Customer community finder and Best customer finder
 - [Write ad copy](https://useaiblocks.com/llms/write-ad-copy.txt): 72 skills and workflows, such as Ad angle planner and Ad call to action writer
 - [Write and build a landing page](https://useaiblocks.com/llms/write-landing-page.txt): 46 skills and workflows, such as Ad-matched landing page writer and Article-style landing page writer
-- [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 108 skills and workflows, such as Case study story planner and Closed story setting planner
+- [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 109 skills and workflows, such as Case study story planner and Closed story setting planner
 - [Write down how work gets done](https://useaiblocks.com/llms/document-work.txt): 57 skills and workflows, such as Handover note writer and Lessons learned note writer
 - [Write emails that get read](https://useaiblocks.com/llms/write-emails.txt): 74 skills and workflows, such as Cold email claim checker and Company update email rewriter
 - [Minds](https://useaiblocks.com/llms/minds.txt): 505 minds

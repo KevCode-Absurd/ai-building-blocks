@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 108 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 109 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Build a villain mood scale from calm to dangerous. Paste your setting plan and the person in power. Get warning signs, triggers and costs.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Share your app’s code history. Get plain “What’s New” notes users can read, based on real changes.
@@ -29,6 +29,7 @@
 - [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner): Build a daily writing routine you can keep. Give it what you write and your free hours. Get a fixed session, draft day, rewrite day and hours log.
 - [Data jargon translator](https://useaiblocks.com/skills/data-jargon-translator): Turn complex data terms into clear words. Keep the facts and limits intact.
 - [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker): Share a scene with speaker notes. Review natural speech, distinct voices, hidden explanation and dialogue tags, then get fixes and a checklist score.
+- [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener): Turn vague or bossy feedback into clear notes on the problem. Paste your raw comments and get each one rewritten with its place and any fix as an example.
 - [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader): Proofread text while keeping its meaning and voice. Get a corrected version and an explanation of each edit, or an updated file when requested.
 - [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter): Paste a long draft and cut 10 percent of its words. You get the shorter draft, a log of every cut and a check that the story still works.
 - [Email drafter](https://useaiblocks.com/skills/email-drafter): Write one clear email with a subject line, short body and a single ask. Give it who it is for and what you need. Fits cold, follow-up and support emails.

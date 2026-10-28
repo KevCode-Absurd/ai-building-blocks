@@ -58,7 +58,7 @@ Once connected, ask in plain words:
 - [Hire and look after your people](https://useaiblocks.com/llms/hire-people.txt): 116 skills and workflows, such as Candidate comparison table builder and Candidate reply drafter
 - [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 113 skills and workflows, such as Raw material price impact calculator and Revenue growth currency checker
 - [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 109 skills and workflows, such as Ad claim sorter and Business insurance needs checker
-- [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 108 skills and workflows, such as Case study story planner and Closed story setting planner
+- [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 109 skills and workflows, such as Case study story planner and Closed story setting planner
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 101 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 101 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 101 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
@@ -66,7 +66,7 @@ Once connected, ask in plain words:
 - [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 99 skills and workflows, such as Supplier quote comparison planner and Warehouse bid and agreement terms builder
 - [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 93 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 92 skills and workflows, such as Document proofreader and Excel workbook handover writer
-- [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 89 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
+- [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 88 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
 - [Make video ads](https://useaiblocks.com/llms/make-video-ads.txt): 87 skills and workflows, such as 3D how-it-works video prompt writer and 3D explainer ad script writer
 - [Make an offer people want](https://useaiblocks.com/llms/make-offer.txt): 76 skills and workflows, such as After-sale offer planner and Offer bonus planner
 - [Write emails that get read](https://useaiblocks.com/llms/write-emails.txt): 74 skills and workflows, such as Cold email claim checker and Company update email rewriter

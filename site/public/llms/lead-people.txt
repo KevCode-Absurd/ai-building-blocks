@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 88 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad creative team planner](https://useaiblocks.com/skills/creative-team-pod-designer): Fix slow creative approvals. Give it your team and review steps. You get two-person pods, review rules and a trend budget plan.
 - [Annual letter and results reviewer](https://useaiblocks.com/workflows/annual-letter): Review the year's results and cash. Draft an annual letter with long-term goals and useful measures.
@@ -18,7 +18,6 @@
 - [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role): Share critical tasks, current owners and possible backups. Get a coverage map, skills gaps, training actions and a handover checklist.
 - [Delegation agreement and check-in planner](https://useaiblocks.com/workflows/hand-off-the-work-only-you-do-and-keep-it-handed-off): Describe your recurring work and possible owners. Get tasks to delegate, a written results agreement and a check-in plan.
 - [Difficult conversation repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Plan a pause and a calm first message after a fight or hurt at work or home. Sort facts from feelings and guesses before you reply.
-- [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener): Turn vague or bossy feedback into clear notes on the problem. Paste your raw comments and get each one rewritten with its place and any fix as an example.
 - [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner): Share the idea review and outside pressures. Set who sees it, what feedback fits, proposed funding and when wider review begins.
 - [Early product idea test planner](https://useaiblocks.com/workflows/protect-new-idea): Share your rough idea, progress and pressures. Get an incentive map, early-or-flawed assessment and a time-limited development plan.
 - [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker): Review an unfinished project against its earlier versions. Get a proposed keep, change or stop decision, the evidence behind it and a review date.

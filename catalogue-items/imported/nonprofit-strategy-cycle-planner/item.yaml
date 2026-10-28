@@ -8,12 +8,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: business_profile
-    required: true
   - type: question
     required: true
-  - type: performance_sheet
+  - type: document
     required: true
+  - type: dataset
+    required: true
+  - type: financial_statements
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
     required: true

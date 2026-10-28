@@ -77,7 +77,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lesson plan** with the [Backwards unit planner](https://useaiblocks.com/skills/backwards-unit-planner). Bring your lesson plan.
+1. **Your lesson plan** with the [Backwards unit planner](https://useaiblocks.com/skills/backwards-unit-planner). Bring your question, a document (optional).
 2. **A draft** with the [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). Bring your lesson plan, a plan (optional), your notes (optional).
 3. This one.
 

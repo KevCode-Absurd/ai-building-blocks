@@ -206,6 +206,6 @@ direct expansion or a tightly managed affiliate model.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
 - The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
-- The [Self-service product growth planner](https://useaiblocks.com/skills/copilot-gtm-product-led-growth). It takes the plan.
+- The [Nonprofit strategy planner](https://useaiblocks.com/skills/nonprofit-strategy-cycle-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

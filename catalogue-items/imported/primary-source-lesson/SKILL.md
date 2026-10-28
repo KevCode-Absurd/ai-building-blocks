@@ -400,7 +400,7 @@ The Phase 4 discussion is the most important and most easily skipped part of the
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [History lesson source set planner](https://useaiblocks.com/skills/history-source-set-picker). It takes the lesson plan.
 - The [History source text simplifier](https://useaiblocks.com/skills/history-source-simplifier).
-- The [Class discussion format picker](https://useaiblocks.com/skills/class-discussion-format-picker). It takes the lesson plan.
+- The [Class discussion format picker](https://useaiblocks.com/skills/class-discussion-format-picker).
 - The [Argument writing frame builder](https://useaiblocks.com/skills/argument-writing-scaffold-maker). It takes the lesson plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

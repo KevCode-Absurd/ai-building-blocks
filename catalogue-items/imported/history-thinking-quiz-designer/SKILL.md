@@ -304,7 +304,7 @@ Source note: "Parliamentary Recruiting Committee, printed by Johnson, Riddle & C
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [History question and source checker](https://useaiblocks.com/skills/history-inquiry-question-checker). It takes the question.
+- The [History source comparison lesson builder](https://useaiblocks.com/skills/compare-sources-lesson). It takes the question.
 - The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the question.
-- The [Classroom skills activity planner](https://useaiblocks.com/skills/competency-framework-translator). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

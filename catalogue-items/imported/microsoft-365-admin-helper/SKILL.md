@@ -419,6 +419,5 @@ For a security audit, list each finding with its risk and the fix. Do not run a 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Dependency security and licence scanner](https://useaiblocks.com/skills/dependency-risk-scanner). It takes the codebase.
-- The [Microsoft threat model file builder](https://useaiblocks.com/skills/copilot-tm7-threat-model). It takes the codebase.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

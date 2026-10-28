@@ -56,7 +56,7 @@ export const INPUTS = {
   business_plan: { label: "Your business plan", what: "the idea, customers, market, how it makes money and the key numbers" },
   story_outline: { label: "A story outline", what: "the premise, the characters and the scenes in order" },
   job_description: { label: "The job description", what: "the role's title, team, duties and level, as a job post or plain notes" },
-  resume: { label: "Your resume", what: "your resume or CV, pasted or attached" },
+  resume: { label: "Resumes or CVs", what: "the resumes or CVs this job uses, pasted or attached" },
   lesson_plan: { label: "Your lesson plan", what: "the lesson or class task, the age group, the subject and the aims" },
   contract: { label: "The contract", what: "the full agreement or terms, with dates and any changes" },
   policy: { label: "The policy", what: "the written policy or rules, with the date they start" },

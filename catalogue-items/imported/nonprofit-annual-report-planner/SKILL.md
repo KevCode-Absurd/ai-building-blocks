@@ -16,16 +16,13 @@ metadata:
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
-- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-
-**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your data** (yours): the data files, with their format and where they came from.
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a business profile, your results, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, your data, financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 

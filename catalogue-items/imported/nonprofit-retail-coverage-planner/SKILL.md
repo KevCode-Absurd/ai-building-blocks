@@ -153,7 +153,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Nonprofit volunteer program planner](https://useaiblocks.com/skills/nonprofit-volunteer-program-planner). It takes the document.
 - The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
 - The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
-- **Lead the team** with the [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
-- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+- **Lead the team** with the [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the document and plan.
+- The [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

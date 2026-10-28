@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Azure price estimate researcher](https://useaiblocks.com/skills/copilot-azure-pricing). Bring a codebase, a plan (optional).
+1. **A plan** with the [Azure price estimate researcher](https://useaiblocks.com/skills/copilot-azure-pricing). Bring your question, a plan (optional).
 2. This one.
 
 How to start:

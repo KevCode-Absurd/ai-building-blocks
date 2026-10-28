@@ -29,4 +29,4 @@ credits:
   - title: slack-bot-builder skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/slack-bot-builder
-    used: Shared under the CC BY-4.0 licence (LICENSE-CONTENT). Its front matter names an earlier source, vibeship-spawner-skills, under Apache 2.0; keep the credit to both. We gave it a plain name.
+    used: Shared under the CC BY-4.0 licence (LICENSE-CONTENT). Its front matter names an earlier source, vibeship-spawner-skills, under Apache 2.0; keep the credit to both. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

@@ -43,9 +43,9 @@ You cannot see live search results, volumes, rankings or keyword difficulty. Nev
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the brief.
 - The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the brief.
 - The [Content hub planner](https://useaiblocks.com/skills/content-hub-planner). It takes the brief.
+- The [Social post writer](https://useaiblocks.com/skills/social-post-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

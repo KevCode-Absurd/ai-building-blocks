@@ -490,6 +490,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Company meeting and review planner](https://useaiblocks.com/skills/copilot-gtm-operating-cadence). It takes the plan.
 - The [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker). It takes the plan.
 - The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
-- **Lead the team** with the [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

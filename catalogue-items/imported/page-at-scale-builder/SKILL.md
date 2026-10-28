@@ -243,8 +243,8 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). It takes the plan.
-- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the plan.
 - The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the plan.
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

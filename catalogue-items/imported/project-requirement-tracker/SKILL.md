@@ -133,7 +133,7 @@ Move to the **100–1k org** version when:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Data catalog entry writer](https://useaiblocks.com/skills/data-catalog-entry-writer). It takes the spreadsheet.
+- The [Medical billing and coding specialist](https://useaiblocks.com/skills/agency-medical-billing-coding-specialist). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

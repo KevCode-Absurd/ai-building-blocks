@@ -71,7 +71,7 @@ Heading 6 (open checks) and heading 7 are also your CHECKS MISSED list: name eve
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
 - The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
-- The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the keyword list and plan.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the keyword list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

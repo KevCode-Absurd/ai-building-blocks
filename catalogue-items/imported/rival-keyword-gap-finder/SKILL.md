@@ -181,7 +181,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
 - The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
 - The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder). It takes the keyword list and shortlist.
-- The [Amazon listing writer](https://useaiblocks.com/skills/amazon-listing-writer). It takes the keyword list.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the keyword list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -8,7 +8,11 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: audit_report
+  - type: document
+    required: true
+  - type: design_tokens
+    required: true
+  - type: question
     required: true
 outputs:
   - type: web_app
@@ -30,4 +34,4 @@ credits:
   - title: md-review skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/markdown-html/skills/md-review
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

@@ -156,11 +156,12 @@ Expected workflow:
 - `@deep-research` - Use when a Gemini-backed autonomous research job is specifically required.
 - `@audit-agent-run-evidence` - Use when auditing claims and evidence from an existing agent run rather than conducting web research.
 
-Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
-
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

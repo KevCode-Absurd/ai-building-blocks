@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: document
     required: true
+  - type: question
+    required: false
 outputs:
   - type: security_report
 uses: []
@@ -29,4 +31,4 @@ credits:
   - title: tm7-threat-model skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/tm7-threat-model
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

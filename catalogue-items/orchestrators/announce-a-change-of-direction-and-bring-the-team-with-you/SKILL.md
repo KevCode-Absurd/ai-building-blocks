@@ -75,7 +75,7 @@ Four step files and the summary, in this shape:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the document and plan.
 - The [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement). It takes the document.
 - The [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer). It takes the draft.
 - The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.

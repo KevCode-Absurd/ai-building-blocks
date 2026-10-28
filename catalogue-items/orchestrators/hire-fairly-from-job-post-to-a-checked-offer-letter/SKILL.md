@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **Your resume** (yours): your resume or CV, pasted or attached.
+- **Resumes or CVs** (yours): the resumes or CVs this job uses, pasted or attached.
 - **A transcript** (yours): the words from a recording, written out, with who said what.
 
 How to start:

@@ -13,6 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { afterSection, beforeSection, planOf } from "./lib/needs.mjs";
+import { generatedSectionCredit as creditAdded, apacheGeneratedNotice as apacheNotice } from "./lib/needs-attribution.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(path.join(ROOT, "site/package.json"));
@@ -131,14 +132,6 @@ const IMPORTED_MARK = {
   before: ["<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->", MARK.before[1]],
   after: ["<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->", MARK.after[1]],
 };
-const ADDED = "We added Before you start and After this sections that link to other AI Blocks steps.";
-/** The credit line for the copied skill, updated to say what we added (the item.yaml text, or null if unchanged). */
-function creditAdded(yaml) {
-  if (yaml.includes(ADDED)) return null;
-  const next = yaml.replace(/^(\s*used: )(["']?)Copied (as it is, )?(under [^\r\n]*?)(["']?)(\r?\n)/m,
-    (_, lead, q1, _asIs, rest, q2, end) => `${lead}${q1}Copied ${rest} ${ADDED}${q2}${end}`);
-  return next === yaml ? null : next;
-}
 /** Whether the page has its own `## <heading>` outside code blocks. */
 function hasOwn(text, heading) {
   const lines = text.split(/\r?\n/);
@@ -169,12 +162,13 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents", "impo
     const after = imported && hasOwn(text, "After this") ? null : afterSection(plan, nl);
     if (before) { text = insertBefore(text, nl, [mark.before[0], before, mark.before[1]].join(nl), "## What you need"); withBefore++; }
     if (after) { text = insertAfterHandBack(text, nl, [mark.after[0], after, mark.after[1]].join(nl)); withAfter++; }
+    if (imported && item?.source?.licence === "Apache-2.0" && text !== old) text = apacheNotice(text, nl, old);
     if (text !== old) {
       changed++;
       if (OUT) preview.push(`## ${category}/${slug}`, "", ...[MARK.before, MARK.after].flatMap((m) => [`### ${m === MARK.before ? "Before you start" : "After this"}: now`, "```md", section(old, m), "```", "### New", "```md", section(text, m), "```", ""]));
       if (!DRY) fs.writeFileSync(file, text);
     }
-    const credit = imported && (before || after) ? creditAdded(itemText) : null;
+    const credit = imported && (before || after) ? creditAdded(itemText, text !== old) : null;
     if (credit) { credited++; if (!DRY) fs.writeFileSync(itemPath, credit); }
   }
 }

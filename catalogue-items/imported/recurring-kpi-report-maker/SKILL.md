@@ -162,6 +162,8 @@ The connectors named in this skill are the tested paths, not a wall. If the owne
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Business snapshot writer](https://useaiblocks.com/skills/business-snapshot-writer). It takes the spreadsheet.
-- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
+- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

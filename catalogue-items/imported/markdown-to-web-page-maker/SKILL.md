@@ -113,7 +113,7 @@ Out of scope: nested lists, HTML inlines, footnotes, definition lists, task list
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker).
+- The [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

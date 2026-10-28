@@ -33,7 +33,7 @@ credits:
   - title: internal-comms skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/internal-comms
-    used: Copied under the MIT licence. We gave it a plain name, marked the named research and the touchpoint counts as the author's unchecked claims, made the chat path the main one, and made the part counts agree. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name, marked the named research and the touchpoint counts as the author's unchecked claims, made the chat path the main one, and made the part counts agree. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: Original author
     by: claude-code-skills
     url: https://github.com/alirezarezvani/claude-code-skills

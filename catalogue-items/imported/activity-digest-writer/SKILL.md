@@ -185,13 +185,14 @@ Across [N] sources · Covering [time range]
 - If the user has a memory system (CLAUDE.md), use it to decode people names and project references
 - Include enough context in each item that the user can decide whether to dig deeper without clicking through
 
-Changed by AI Blocks (2026-10-28): replaced the link to a CONNECTORS.md file that is not in this copy with a short note on what the tool placeholders mean and how to check which tools are connected.
-
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the document.
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
-- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
+- The [Note organizer](https://useaiblocks.com/skills/note-organizer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): replaced the link to a CONNECTORS.md file that is not in this copy with a short note on what the tool placeholders mean and how to check which tools are connected.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

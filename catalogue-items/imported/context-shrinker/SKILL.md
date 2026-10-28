@@ -100,6 +100,6 @@ Provide the raw context text and a target token budget. The skill returns a comp
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI source material organizer](https://useaiblocks.com/skills/context-package-cleaner). It takes the source text.
+- The [Claim fact checker](https://useaiblocks.com/skills/claim-fact-checker). It takes the source text.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

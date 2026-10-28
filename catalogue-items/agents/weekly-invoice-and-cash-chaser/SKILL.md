@@ -20,6 +20,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your data** (yours): the data files, with their format and where they came from.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

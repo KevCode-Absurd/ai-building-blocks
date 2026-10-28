@@ -29,7 +29,7 @@ Turn an inbox full of applications into a short list the owner can act on today,
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your resume** (yours): your resume or CV, pasted or attached.
+- **Resumes or CVs** (yours): the resumes or CVs this job uses, pasted or attached.
 - **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -38,7 +38,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your resume, the job description. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for resumes or CVs, the job description. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -167,3 +167,4 @@ Close with one line on what happened — how many screened, how many in the inte
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
 
 Changed by AI Blocks (2026-10-28): gave it a plain name, added Before you start and After this sections that link to other AI Blocks steps, and added a note on hiring rules (bias audits, applicant notices, human review) after the ranking step.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -74,6 +74,5 @@ prompts are synthetic; expected answers are kept in fixture data, separate from 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lead source field checker](https://useaiblocks.com/skills/lead-source-field-checker). It takes the spreadsheet.
-- The [Cost per funnel stage reporter](https://useaiblocks.com/skills/cost-per-funnel-stage-reporter). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

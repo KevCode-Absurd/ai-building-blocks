@@ -70,6 +70,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Say it to the room** with the [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach).
-- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
+- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

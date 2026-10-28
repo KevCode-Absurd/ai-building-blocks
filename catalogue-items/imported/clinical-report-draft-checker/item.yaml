@@ -8,8 +8,12 @@ role: check
 job: ops
 level: expert
 inputs:
-  - type: source_text
+  - type: dataset
     required: true
+  - type: question
+    required: true
+  - type: document
+    required: false
 outputs:
   - type: document
   - type: audit_report
@@ -30,4 +34,4 @@ credits:
   - title: clinical-reports skill
     by: K-Dense
     url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/clinical-reports
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

@@ -33,7 +33,7 @@ credits:
   - title: file-organization skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/productivity-and-workflow/file-organization
-    used: Copied under the MIT licence. We gave it a plain name and fixed Example 1 so the dry-run plan names the duplicate's new file name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name and fixed Example 1 so the dry-run plan names the duplicate's new file name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

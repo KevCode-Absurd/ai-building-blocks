@@ -377,6 +377,8 @@ Custom configurations via EXTEND.md. See **Preferences** section for paths and s
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Document proofreader](https://useaiblocks.com/prompts/doc-typo-and-term-checker). It takes the document.
 - The [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker). It takes the document.
+- The [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker). It takes the document.
 - **Tell it as a story** with the [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop).
+- The [Note organizer](https://useaiblocks.com/skills/note-organizer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

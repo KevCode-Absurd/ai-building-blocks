@@ -193,7 +193,7 @@ Self-check: The output must move beyond behaviour management; must include struc
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Student rubric feedback writer](https://useaiblocks.com/skills/student-work-marking-desk). It takes the document.
+- The [Perspective-taking activity builder](https://useaiblocks.com/skills/perspective-taking-activity). It takes the document.
 - The [Subject writing frame maker](https://useaiblocks.com/skills/subject-writing-frame-maker). It takes the document.
-- The [Quiz results and reteaching tracker](https://useaiblocks.com/skills/class-quiz-reteach-keeper). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

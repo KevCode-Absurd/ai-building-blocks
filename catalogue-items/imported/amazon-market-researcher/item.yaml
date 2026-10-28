@@ -35,7 +35,7 @@ credits:
   - title: pangolinfo-amazon-data-research skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pangolinfo-amazon-data-research
-    used: Shared under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, added a paid and scraping note, and changed the setup example to need a pinned package version.
+    used: Shared under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, added a paid and scraping note, and changed the setup example to need a pinned package version. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Pangolinfo
     url: ""

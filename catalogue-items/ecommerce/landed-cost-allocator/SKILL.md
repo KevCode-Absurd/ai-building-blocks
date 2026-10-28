@@ -85,8 +85,8 @@ Check the treatment of duty and tax with your accountant.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product cost sorter](https://useaiblocks.com/skills/cogs-line-sorter). It takes the spreadsheet.
 - The [Monthly store profit reviewer](https://useaiblocks.com/skills/monthly-profit-close). It takes the spreadsheet.
-- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
 - The [Shared service cost calculator](https://useaiblocks.com/skills/shared-service-activity-cost-allocator). It takes the spreadsheet.
+- The [Freight trip cash margin calculator](https://useaiblocks.com/skills/freight-trip-contribution-builder). It takes the spreadsheet.
 - The [Inventory cash planner](https://useaiblocks.com/skills/inventory-cash-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

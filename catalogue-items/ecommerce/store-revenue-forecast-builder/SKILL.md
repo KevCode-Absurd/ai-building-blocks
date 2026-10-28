@@ -92,7 +92,7 @@ End with: "Planning numbers only. Check with your accountant."
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Project cost progress tracker](https://useaiblocks.com/skills/project-cost-progress-tracker). It takes the spreadsheet.
 - The [Budget and forecast builder](https://useaiblocks.com/skills/budget-and-forecast-builder). It takes the spreadsheet.
-- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
+- The [Budget and forecast analyst](https://useaiblocks.com/skills/agency-finance-fpa-analyst). It takes the spreadsheet.
 - The [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

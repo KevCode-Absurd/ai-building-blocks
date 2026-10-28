@@ -285,8 +285,8 @@ When in doubt about whether a hub is ready, ask: is the pillar selected against 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the plan.
 - The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the plan.
 - The [Search topic and link planner](https://useaiblocks.com/skills/topic-cluster-mapper). It takes the plan.
+- The [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

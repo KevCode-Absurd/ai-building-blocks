@@ -188,7 +188,7 @@ When facilitating this for a client:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan.
 - The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
-- The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
+- The [Nonprofit strategy planner](https://useaiblocks.com/skills/nonprofit-strategy-cycle-planner). It takes the plan.
 - **Lead the team** with the [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
 - The [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

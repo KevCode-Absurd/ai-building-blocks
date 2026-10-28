@@ -57,8 +57,8 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the keyword list.
 - The [Search page template builder](https://useaiblocks.com/skills/page-at-scale-builder). It takes the keyword list.
-- The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder). It takes the keyword list and shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

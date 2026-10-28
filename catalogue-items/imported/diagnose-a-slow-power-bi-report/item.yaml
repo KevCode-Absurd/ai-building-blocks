@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: performance_sheet
-    required: true
+  - type: dataset
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: audit_report
     required: true

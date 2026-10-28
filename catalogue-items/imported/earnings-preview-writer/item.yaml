@@ -31,4 +31,4 @@ credits:
   - title: earnings-preview skill
     by: himself65
     url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/earnings-preview
-    used: Copied under the MIT licence. We gave it a plain name and replaced the rule that any report before 16:00 ET is before the open with four timing cases (before the open, during the session, after the close, or time not confirmed). It now asks before it installs yfinance. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name and replaced the rule that any report before 16:00 ET is before the open with four timing cases (before the open, during the session, after the close, or time not confirmed). It now asks before it installs yfinance. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

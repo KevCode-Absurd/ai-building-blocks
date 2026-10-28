@@ -29,4 +29,4 @@ credits:
   - title: audit-context-building skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-context-building
-    used: Shared under the CC BY-4.0 licence. We gave it a plain name and noted that the worked example, output-requirements and checklist files are not in this copy, so the lists in the skill are the full format.
+    used: Shared under the CC BY-4.0 licence. We gave it a plain name and noted that the worked example, output-requirements and checklist files are not in this copy, so the lists in the skill are the full format. We added Before you start and After this sections that link to other AI Blocks steps.

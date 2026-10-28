@@ -310,6 +310,6 @@ Display six sentences on the board, each with a gap. Students choose the correct
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
 - The [Subject writing frame maker](https://useaiblocks.com/skills/subject-writing-frame-maker). It takes the document.
-- The [Course scope and sequence planner](https://useaiblocks.com/skills/course-scope-sequence). It takes the document.
+- The [Real-world phenomenon unit planner](https://useaiblocks.com/skills/phenomenon-unit-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -182,8 +182,11 @@ Return the update in the template for the audience, ready to paste. Keep it scan
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Note organizer](https://useaiblocks.com/skills/note-organizer). It takes the document.
 - The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup). It takes the document.
 - **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
 - **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

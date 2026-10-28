@@ -10,14 +10,14 @@ description: Balance visual design with ATS compatibility for creative roles. Us
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your resume** (yours): your resume or CV, pasted or attached.
+- **Resumes or CVs** (yours): the resumes or CVs this job uses, pasted or attached.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your resume, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for resumes or CVs, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -336,11 +336,11 @@ When creating a creative resume:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
-- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
-- The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the resume.
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
-- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
+- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resumes or CVs.
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resumes or CVs.
+- The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the resumes or CVs.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resumes or CVs.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resumes or CVs.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

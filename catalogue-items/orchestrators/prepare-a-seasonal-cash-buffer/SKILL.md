@@ -110,8 +110,8 @@ Nothing outside your working files has changed. Offer one next step and say they
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Water utility billing and cash checker](https://useaiblocks.com/skills/water-utility-collections-reconciler). It takes the spreadsheet and document.
-- The [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder). It takes the spreadsheet.
 - The [Payment timing cash balance planner](https://useaiblocks.com/skills/settlement-liquidity-ladder-builder). It takes the document and spreadsheet.
+- The [Cash tied-up finder](https://useaiblocks.com/skills/cash-tied-up-finder). It takes the spreadsheet.
 - **Check the money** with the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
 - The [Clinic payment reconciliation reviewer](https://useaiblocks.com/skills/clinic-claims-collections-bridge). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

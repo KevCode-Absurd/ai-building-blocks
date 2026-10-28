@@ -21,6 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

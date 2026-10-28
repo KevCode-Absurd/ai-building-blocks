@@ -8,8 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: spreadsheet
+  - type: question
     required: true
+  - type: dataset
+    required: false
+  - type: tool_connection
+    required: false
+  - type: financial_statements
+    required: false
 outputs:
   - type: spreadsheet
 uses: []
@@ -29,4 +35,4 @@ credits:
   - title: cash-flow-snapshot skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/cash-flow-snapshot
-    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

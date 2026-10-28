@@ -75,6 +75,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
 - The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
 - The [Multichannel content publishing planner](https://useaiblocks.com/skills/agency-marketing-multi-platform-publisher). It takes the draft.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the keyword list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

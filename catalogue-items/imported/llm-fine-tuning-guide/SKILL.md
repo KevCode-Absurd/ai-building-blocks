@@ -422,11 +422,12 @@ GRPO learning rates sit roughly two orders of magnitude below SFT. Reward functi
 - [Saving to GGUF](https://unsloth.ai/docs/basics/inference-and-deployment/saving-to-gguf)
 - [unslothai/unsloth on GitHub](https://github.com/unslothai/unsloth)
 
-Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
-
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Local AI model setup planner](https://useaiblocks.com/skills/local-ai-model-setup).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -79,8 +79,8 @@ Include source coverage, unresolved findings, missing facts and one next action.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Note organizer](https://useaiblocks.com/skills/note-organizer). It takes the document.
+- The [Outlook day planner](https://useaiblocks.com/skills/copilot-daily-prep). It takes the document.
 - The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
-- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the document.
-- The [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

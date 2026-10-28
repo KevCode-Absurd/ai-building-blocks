@@ -16,13 +16,17 @@ metadata:
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your data** (yours): the data files, with their format and where they came from.
+
+**Makes it better (optional):**
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a business profile, your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a document, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -184,6 +188,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
 - The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
 - The [Nonprofit program outcome planner](https://useaiblocks.com/skills/nonprofit-program-outcome-planner). It takes the document.
-- **Lead the team** with the [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the plan.
+- **Lead the team** with the [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the document and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

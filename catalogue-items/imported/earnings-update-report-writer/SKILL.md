@@ -10,11 +10,20 @@ description: Create professional equity research earnings update reports (8-12 p
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Your data** (yours): the data files, with their format and where they came from.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A document** with the [Earnings recap writer](https://useaiblocks.com/skills/earnings-recap-writer). Bring your question.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for financial statements, your question, your data. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -283,3 +292,4 @@ Examples of good/bad headlines, tips for success, common mistakes to avoid, and 
 - **Runbook:** [`references/runbook-earnings.md`](references/runbook-earnings.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
 
 Changed by AI Blocks (2026-10-28): a quarter the user names is now used as asked, even if it is old; the latest-quarter and 3-month checks apply only when the user asks for the latest quarter or names none.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

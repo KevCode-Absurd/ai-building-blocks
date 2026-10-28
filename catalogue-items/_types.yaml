@@ -122,6 +122,7 @@ data_and_science:
   training_data: {desc: "Examples used to train or fine-tune an AI model, such as labelled text pairs or images, with how they are split."}
   ai_model:      {desc: "A trained AI model file, such as a checkpoint, ONNX or TFLite file, ready to test, convert or deploy."}
 media_links:
+  social_accounts: {desc: "The social accounts to research, with each platform and handle or profile URL, and the date or post-count window."}
   video_link:    {desc: "A link to a video, playlist, channel or social post, to read or fetch."}
 you:
   me_file:       {desc: "Your me.md: who you are, your work, projects, voice and preferences, with dates."}

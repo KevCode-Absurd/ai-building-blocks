@@ -18,6 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **Your data** (yours): the data files, with their format and where they came from.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Your business plan** (yours): the idea, customers, market, how it makes money and the key numbers.
 
 How to start:

@@ -227,10 +227,10 @@ Use clear, standard job titles and language. Avoid made-up or overly creative jo
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
-- The [Applicant evidence and hiring reply drafts](https://useaiblocks.com/skills/hiring-pipeline-runner). It takes the resume.
-- The [Resume editor](https://useaiblocks.com/skills/agency-resume-tailor). It takes the resume.
-- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
-- The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the resume.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resumes or CVs.
+- The [Applicant evidence and hiring reply drafts](https://useaiblocks.com/skills/hiring-pipeline-runner). It takes the resumes or CVs.
+- The [Resume editor](https://useaiblocks.com/skills/agency-resume-tailor). It takes the resumes or CVs.
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resumes or CVs.
+- The [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder). It takes the resumes or CVs and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

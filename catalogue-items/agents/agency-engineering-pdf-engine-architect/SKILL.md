@@ -69,7 +69,6 @@ Mark each check `PASS`, `FAIL` or `NOT RUN`. In a chat, all of them are `NOT RUN
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader). It takes the plan and audit report.
 - The [JSON document file generator](https://useaiblocks.com/skills/document-file-generator). It takes the plan and audit report.
-- The [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -84,8 +84,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
 - The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
 - The [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer). It takes the audit report.
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the keyword list.
 - The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the keyword list.
-- The [Search page template builder](https://useaiblocks.com/skills/page-at-scale-builder). It takes the keyword list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

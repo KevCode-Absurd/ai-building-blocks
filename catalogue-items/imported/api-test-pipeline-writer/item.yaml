@@ -30,7 +30,7 @@ credits:
   - title: newman-cicd-integration skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/newman-cicd-integration
-    used: Shared under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, finished a cut-off When to Use sentence and passed BASE_URL in the Azure DevOps template like the others.
+    used: Shared under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, finished a cut-off When to Use sentence and passed BASE_URL in the Azure DevOps template like the others. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: LambdaTest
     url: https://github.com/LambdaTest

@@ -24,6 +24,8 @@ audit_signals:
   - org-schema
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -41,7 +43,7 @@ How to start:
 Runs a store-side "Agentic Commerce Readiness" scan — the same questions the public **audit.40rty.ai** audit asks, but answered from inside the Shopify Admin with full catalog data. It scores whether AI shopping agents (ChatGPT, Gemini, Perplexity, agentic checkout) can FIND, READ, and RECOMMEND the store's products, then prints a prioritized gap list where **every gap names the sibling `agentic` skill that fixes it**. Read-only — it changes nothing. Use it first (and on a schedule) to decide which remediation skills to run.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_products`, `read_files`, `read_content` (themes), `read_online_store_pages`
 
 ## Parameters

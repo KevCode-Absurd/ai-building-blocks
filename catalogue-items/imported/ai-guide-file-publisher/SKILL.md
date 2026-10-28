@@ -16,6 +16,8 @@ audit_signals:
   - agents-md
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -33,7 +35,7 @@ How to start:
 `llms.txt` is the emerging convention for telling AI assistants, in plain text, what a site is and where the important pages live — a curated front door for models. This skill assembles an `llms.txt` from the store's own data (brand one-liner, top collections, flagship products with URLs, shipping/returns policy links, contact) and publishes it through a theme template so it's served at a stable path. Fixes `llms-txt` / `well-known-llms-txt` and the related `agents-md` discovery signals.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_products`, `read_themes`, `write_themes`
 
 ## Parameters

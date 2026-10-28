@@ -31,7 +31,7 @@ you_get:
   - The live theme updated once you approve
 how_to_use:
   - Duplicate your live theme first in Online Store, Themes, so you can roll back.
-  - "Sign in with the Shopify CLI: run shopify auth login --store your-store.myshopify.com. This needs a computer where your AI can run commands."
+  - "Sign in with the Shopify CLI: run shopify store auth --store your-store.myshopify.com --scopes <REQUIRED_SCOPES>. This needs a computer where your AI can run commands."
   - Ask your AI to run this skill in audit mode first. It reports your current crawler rules and changes nothing.
   - Run it again with the preview on. Read the whole proposed file before you say yes.
   - Approve the write. Your AI updates the live theme, and running it again only replaces its own marked block.

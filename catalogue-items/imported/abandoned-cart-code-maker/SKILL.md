@@ -14,6 +14,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -31,7 +33,7 @@ How to start:
 Identifies customers who started checkout but did not complete their purchase, generates a unique discount code for each one, and tags them in Shopify so they can be targeted in follow-up campaigns. This skill handles the Shopify-native data layer (querying, discounts, tagging); sending the actual email requires an external tool.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - Use one `api_version` for all five operations: the one in the header above (2026-10). AI Blocks checked every operation below against Shopify's Admin GraphQL docs for 2026-10 on 2026-10-28. If your store or app uses a different version, check each operation's docs page for that version first. Do not mix versions. The GraphQL blocks below are written from the Shopify docs and have not been run against a real store.
 - API scopes: `read_orders` (abandoned checkouts; the staff login also needs the manage abandoned checkouts permission), `read_customers`, `write_discounts`, `write_customers`
 

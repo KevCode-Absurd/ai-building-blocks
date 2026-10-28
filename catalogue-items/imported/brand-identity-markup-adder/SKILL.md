@@ -16,6 +16,8 @@ audit_signals:
   - wikidata-qid
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -33,7 +35,7 @@ How to start:
 A site's `schema.org/Organization` JSON-LD is the brand's own statement of who it is. Search engines and AI assistants can read it to connect the site to its public identity via `sameAs` (official socials, Wikipedia/Wikidata) and a machine-readable `contactPoint`. It is self-published, so it is a claim, not proof: it does not show that a store is genuine rather than a counterfeit or reseller, and no tool is promised to use it. Google says this markup can help it understand an organization's administrative details and tell it apart from others in search results, and does not guarantee any search feature (https://developers.google.com/search/docs/appearance/structured-data/organization). This skill builds an Organization JSON-LD block from the shop's data + supplied social links and injects it into the theme layout via a managed snippet. Fixes `org-schema`, `machine-contact`, and supports `wikidata-qid` (through `sameAs`).
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_themes`, `write_themes`
 - For step 3: Shopify's `themeFilesUpsert` reference says the user needs `write_themes` **and an exemption from Shopify** to modify theme files (https://shopify.dev/docs/api/admin-graphql/latest/mutations/themeFilesUpsert). Without the exemption, do not attempt the mutation: produce the snippet and the one render line, and have the person add them in the theme code editor or with Shopify CLI's theme commands on a duplicated theme.
 

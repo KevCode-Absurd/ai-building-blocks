@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-product-affinity-cross-sell skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-product-affinity-cross-sell
-    used: Copied under the MIT licence. We gave it a plain name, kept single-item orders in the totals so confidence and lift are correct, added a worked check, and made it fetch every line item instead of stopping at 50. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: "Copied under the MIT licence. We gave it a plain name, kept single-item orders in the totals so confidence and lift are correct, added a worked check, and made it fetch every line item instead of stopping at 50. We added Before you start and After this sections that link to other AI Blocks steps. AI Blocks: Replaced unsupported shopify auth login --store examples with documented store auth, including its required scopes and placeholder/credential safeguards; no store login or API call was run."
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

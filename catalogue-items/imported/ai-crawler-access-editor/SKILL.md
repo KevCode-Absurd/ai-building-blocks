@@ -13,6 +13,8 @@ audit_signals:
   - robots-ai-rules
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,7 +32,7 @@ How to start:
 If your `robots.txt` doesn't address the AI crawlers by name — or worse, disallows them — assistants like ChatGPT, Claude, and Perplexity may never read your store, so you simply don't exist to AI shoppers. Shopify generates `robots.txt` from a theme template (`templates/robots.txt.liquid`); this skill reads that template and appends explicit allow rules for the major AI user-agents (with a clear, idempotent managed block) so foundational models and AI search are permitted to crawl your pages. Fixes the agentiq.report finding `robots-ai-rules`.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_themes`, `write_themes`
 
 ## Parameters

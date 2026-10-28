@@ -10,6 +10,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,7 +29,7 @@ How to start:
 Aggregates abandoned checkout data broken down by cart value bucket and hour of day (UTC). Helps identify when and at what price point customers are most likely to abandon checkout. Scoped to what the `abandonedCheckouts` API provides — device type and geographic location are not available in this API and are not reported.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_checkouts`
 
 ## Parameters
@@ -47,7 +49,7 @@ Aggregates abandoned checkout data broken down by cart value bucket and hour of 
    **Inputs:** `first: 250`, `query: "created_at:>='<date_range_start>' created_at:<='<date_range_end>'"`, pagination cursor
    **Expected output:** All abandoned checkouts in range with `totalPriceSet` and `createdAt`; paginate until `hasNextPage: false`; then aggregate in-memory: (1) count by cart value bucket, (2) count by hour of day (UTC, 0–23)
 
-   In order: (a) sign in with `shopify auth login --store <store>`; (b) run the query with `first: 250` and the date filter; (c) while `hasNextPage` is true, run it again with `after` set to `endCursor`; (d) count each checkout once by its `totalPriceSet.shopMoney.amount` band and once by the UTC hour of `createdAt`; (e) report the two tables and the total. The query asks only for the fields the report needs. It does not pull customer emails or line items.
+   In order: (a) sign in with `shopify store auth --store <store> --scopes <REQUIRED_SCOPES>`; (b) run the query with `first: 250` and the date filter; (c) while `hasNextPage` is true, run it again with `after` set to `endCursor`; (d) count each checkout once by its `totalPriceSet.shopMoney.amount` band and once by the UTC hour of `createdAt`; (e) report the two tables and the total. The query asks only for the fields the report needs. It does not pull customer emails or line items.
 
 ## GraphQL Operations
 

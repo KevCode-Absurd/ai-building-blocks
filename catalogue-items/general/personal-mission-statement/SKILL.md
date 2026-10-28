@@ -25,10 +25,10 @@ Never add a role, a value, a faith, a family member or a goal the person did not
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Makes it better (optional):**
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Life values reflection coach** with the [Life values reflection coach](https://useaiblocks.com/skills/eulogy-values-finder). Bring your question.

@@ -51,6 +51,10 @@ credits:
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-historian.md
     used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
       profile retained only as provenance/background.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
 package_files: all
 version: 1.0.0
 example_pending: true

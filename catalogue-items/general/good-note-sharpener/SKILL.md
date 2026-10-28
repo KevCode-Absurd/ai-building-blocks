@@ -73,8 +73,8 @@ The sorted notes in the form above, then the praise list, then the "Not about th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
-- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the notes.
+- **Lead the team** with the [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
+- The [Student rubric feedback writer](https://useaiblocks.com/skills/student-work-marking-desk).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

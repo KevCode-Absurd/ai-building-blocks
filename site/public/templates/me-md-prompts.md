@@ -18,6 +18,7 @@ Help me write my me.md: one short file that tells any AI who I am, so I don't ha
 First, ask me this and wait for my answer: "May I use what I remember about you and our past chats to draft your me.md? Yes or no."
 
 If I say yes:
+- If you cannot see any memory of me or our past chats, say so and switch to the interview below. Never draft a fact you cannot point to.
 - Draft each section below from your memory of me and our past chats.
 - Put "(from memory, please check)" after every fact you take from memory.
 - Don't guess. Leave a section empty if you know nothing for it.

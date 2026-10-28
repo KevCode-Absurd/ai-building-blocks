@@ -2,7 +2,7 @@ slug: harvey
 name: Harvey
 maker: Harvey
 url: https://www.harvey.ai
-promise: "Get legal research and contract reviews from AI agents built for legal teams, for your lawyers to check."
+promise: "Get legal research and contract reviews from AI agents for lawyers to check."
 use_cases: [legal]
 categories: [productivity, writing]
 what_it_does:

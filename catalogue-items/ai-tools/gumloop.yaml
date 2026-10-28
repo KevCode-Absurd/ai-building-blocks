@@ -24,8 +24,7 @@ best_for:
 not_for:
   - "One-off text writing with no apps involved. Use Claude or ChatGPT."
   - "Simple app-to-app moves with fixed steps. Zapier or Make may be enough."
-  - "Anyone who needs a price before they start. We could not read the pricing page on 26 Oct 2026."
-  - "High-volume jobs, until you know what one run costs in credits. Start with a few runs a day."
+  - "Anyone who needs a price, or high-volume jobs, before you know what one run costs in credits. We could not read the pricing page on 26 Oct 2026, so start with a few runs a day."
 pricing:
   model: subscription
   from: Not confirmed. Check the maker's site

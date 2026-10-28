@@ -9207,7 +9207,7 @@ employee-experience-map-builder:
   reason: Replaces repeated promises with the source's evidence-based mapping and
     ranking method.
 error-budget-planner:
-  name: Service reliability target planner
+  name: Error budget planner
   summary: Use service metrics and user needs to plan service targets, allowed
     failures, and ways to track them.
   subhead: "Bring service metrics, user needs, and team goals. It drafts targets

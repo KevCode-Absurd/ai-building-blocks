@@ -6,12 +6,11 @@ promise: "Use ready-made AI agents in HubSpot to research leads, draft content a
 use_cases: [sell-and-support, find-leads, write-copy]
 categories: [sales-and-support, marketing]
 what_it_does:
-  - "Keeps its ready-made agents in one place, called Agent Hub. You switch an agent on in one click and ready-made agents need no setup (checked 26 Oct 2026)."
+  - "Keeps its ready-made agents in one place, called Agent Hub, switched on in one click with no setup. You can build your own agents and workflows on one canvas in Agent Builder (checked 26 Oct 2026)."
   - "Runs a Prospecting Agent that watches for buying signals and starts personalised outreach (checked 26 Oct 2026)."
   - "Runs a Customer Agent that resolves customer questions across channels (checked 26 Oct 2026)."
   - "Answers questions about contacts and companies with a Data Agent, using CRM data, calls and documents (checked 26 Oct 2026)."
   - "Drafts blog posts, social posts and landing pages in your brand voice with a Content Agent. A Campaign Agent builds a multi-channel campaign from one goal (checked 26 Oct 2026)."
-  - "Lets you build your own agents and workflows on one canvas in Agent Builder (checked 26 Oct 2026)."
   - "Lists a Revenue Agent for invoice follow-ups (checked 26 Oct 2026). The page gives no detail on what it does."
 benefits:
   - Spend less time on research before each sales call.

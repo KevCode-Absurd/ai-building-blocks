@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import YAML from 'yaml';
 import {markdown,safeHref} from '../scripts/lib/safe-markdown.mjs';
 import {quarantineClosure} from '../../tools/lib/quarantine.mjs';
 import {applyDisplayCopy} from '../../tools/lib/display-copy.mjs';
@@ -20,7 +21,10 @@ test('quarantine propagates through uses and steps, including cycles, while keep
 test('every published block has complete assets and no dependency on withheld skills',()=>{
   const catalogue=JSON.parse(fs.readFileSync('public/data/blocks.json','utf8'));
   const slugs=new Set(catalogue.blocks.map(b=>b.slug));
-  for(const slug of ['stable-diffusion-image-maker','secrets-hygiene-checker','weekly-dependency-and-security-sweep','find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site']){
+  // Whatever catalogue-items/quarantine.yaml still holds stays off the site.
+  const held=Object.keys(YAML.parse(fs.readFileSync('../catalogue-items/quarantine.yaml','utf8'))??{});
+  assert.ok(held.length>0);
+  for(const slug of held){
     assert.ok(!slugs.has(slug),slug);
     assert.ok(!fs.existsSync(`public/skills/${slug}.zip`),slug);
     assert.ok(!fs.existsSync(`public/skills/${slug}/SKILL.md`),slug);

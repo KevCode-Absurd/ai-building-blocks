@@ -13,7 +13,7 @@ explain: |
 
   After the quickstart you get a tutorial outline for the second visit and a plan for a sample app that developers can copy. It also flags the onboarding mistakes your product is most likely to make, such as hidden keys or sign-up wizards that cannot be skipped.
 
-  This copy comes from sickn33's collection, whose LICENSE-CONTENT file applies CC BY 4.0. The skill file's header names the original author, jonathimer, and his MIT licence. Its "risk: critical" tag is the collection's own label and does not mean this skill is dangerous. Credit line to keep: "Developer onboarding skill by jonathimer (devmarketing-skills), shared through sickn33's collection."
+  Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file. Its "risk: critical" tag is the collection's own label. Credit line to keep: "Developer onboarding skill by jonathimer (devmarketing-skills), shared through sickn33's collection."
 when:
   - You are launching an API or SDK and need a getting started guide.
   - Your quickstart has many steps before anything works.

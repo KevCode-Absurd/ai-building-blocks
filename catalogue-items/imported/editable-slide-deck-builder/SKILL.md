@@ -16,7 +16,7 @@ license_source: "https://github.com/kimtth/agent-pptify-kit/blob/main/LICENSE"
 
 # PPTX Deck Creation
 
-> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's licence for their code and file header. Keep the credit to the author.
+> Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start

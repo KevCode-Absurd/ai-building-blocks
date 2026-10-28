@@ -10,7 +10,7 @@ date_added: "2026-09-04"
 
 # Django Performance Review
 
-(Added by AI Blocks. This is a read-only code review. The header lists Bash among the allowed tools and the risk label "critical" comes from the original collection. Do not run commands that change data or the project. It cannot see settings, caches, query logs or the live site. Licence of this copy: CC BY 4.0, per the LICENSE-CONTENT file. The Apache-2.0 label in the header is the original label.)
+(Added by AI Blocks. This is a read-only code review. The header lists Bash among the allowed tools and the risk label "critical" comes from the original collection. Do not run commands that change data or the project. It cannot see settings, caches, query logs or the live site. Licence: this skill follows the Apache-2.0 licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.)
 
 Review Django code for **validated** performance issues. Research the codebase to confirm issues before reporting. Report only what you can prove.
 
@@ -433,3 +433,5 @@ If your only suggestion is "combine these two lines" or "rename this variable" -
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
 
 Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
+
+Changed by AI Blocks (2026-10-28): corrected our licence note to follow the original Apache-2.0 header and included LICENSE.

@@ -16,7 +16,7 @@ license_source: "https://github.com/xiehuan123/dsh-deepread/blob/main/LICENSE"
 
 # DeepRead
 
-(Added by AI Blocks. Licence of this copy: CC BY 4.0, per the LICENSE-CONTENT file. The MIT label in the header above is the original author's label.)
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start

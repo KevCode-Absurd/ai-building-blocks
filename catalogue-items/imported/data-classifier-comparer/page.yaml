@@ -10,6 +10,8 @@ explain: |
   Find out which classification models really are the best on your data, and which ones are only slightly different by chance. Rankings alone can mislead, so this adds statistical tests.
 
   You bring a table with predictors and a category column to predict. The skill cleans and prepares it, picks promising classifiers, and trains them in MATLAB. It compares accuracy with cross-validation, a holdout split or hyperparameter search. It then runs McNemar, 5 by 2 cv and Friedman tests to show which models sit in the top group with no real difference. It supports a uniform prior for imbalanced classes but nothing more custom. It does not handle images, sequences or numeric targets, and it needs MATLAB with statistics tools.
+
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices.
 when:
   - You must pick a model for churn, fraud or diagnosis data.
   - Two models score 91 and 92 percent and you wonder if the gap is real.
@@ -31,7 +33,7 @@ you_get:
   - The top group of models that are equal
   - A short summary of what to pick
 how_to_use:
-  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. Both need a paid licence. Your AI also needs a way to run MATLAB code. The skill's licence (LICENSE.md: BSD 2-Clause, plus use with MathWorks products only) governs this copy.
+  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. Both need a paid licence. Your AI also needs a way to run MATLAB code. The bundled LICENSE.md limits use to MathWorks products and services.
   - Have your data as a CSV or Excel file, or a MATLAB table, with one row per example. One column must hold the category to predict, such as yes or no, or a label name.
   - Open your AI tool and add this skill. Say which file holds your data and which column to predict.
   - Say how you want to test accuracy, or let your AI ask you. Tell it if some classes are rare.

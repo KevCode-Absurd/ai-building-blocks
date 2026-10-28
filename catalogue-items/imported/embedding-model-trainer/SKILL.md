@@ -32,7 +32,7 @@ How to start:
 
 ## How to run this skill (added by AI Blocks)
 
-Licence note: this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "Apache-2.0" in the header above is the original author's claim for their file. Keep the credit to Hugging Face.
+Added by AI Blocks. Licence: this skill follows the Apache-2.0 licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 This skill is marked `risk: critical` upstream because it runs long, costly training and can publish files. Treat both as actions to confirm with the user.
 
@@ -169,3 +169,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
 Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.
+Changed by AI Blocks (2026-10-28): corrected our licence note to follow the original Apache-2.0 header and included LICENSE.

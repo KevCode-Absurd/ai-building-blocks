@@ -11,7 +11,7 @@ explain: |
 
   The map has typed nodes such as claim, data, example and assumption, joined by labelled links like supports or contradicts. Source locations stay attached so you can find the page again. Then the Feynman check has you explain the idea simply and shows where your explanation is thin. If you give it several documents, it compares them without blending their disagreements into one answer. It stops and asks for the text if it cannot read your source, and it never fills gaps from memory.
 
-  The licence that governs this copy is CC BY 4.0, from the LICENSE-CONTENT file in this item. Credit the author, xiehuan123. The MIT label in the skill file's header is the author's original label, and the original MIT licence stays with the author's source.
+  Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - You want study notes that show how ideas connect.
   - You are comparing three reports that disagree.

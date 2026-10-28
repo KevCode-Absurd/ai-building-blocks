@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A draft** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). Bring a brief, a brand guide (optional), an audit report (optional).
+2. **A draft** with the [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). Bring a brand guide, a brief, the post or message (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -294,10 +294,11 @@ List any legal or compliance concerns separately with recommended actions.
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). It takes the audit report.
 - The [Brand voice consistency reviewer](https://useaiblocks.com/skills/brand-voice-reviewer).
+- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter).
 - The [Newsletter draft and subject editor](https://useaiblocks.com/skills/weekly-newsletter-keeper).
 - The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the audit report.
+- **Tell it as a story** with the [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

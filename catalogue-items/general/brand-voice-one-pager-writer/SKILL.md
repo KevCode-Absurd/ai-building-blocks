@@ -76,7 +76,7 @@ CHECKS MISSED: <one line per check not done, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
 - The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer).
-- The [Brand voice consistency reviewer](https://useaiblocks.com/skills/brand-voice-reviewer). It takes the brand guide.
+- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). It takes the brand guide.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

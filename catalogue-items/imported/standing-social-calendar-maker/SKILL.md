@@ -30,7 +30,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -191,3 +191,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan and draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

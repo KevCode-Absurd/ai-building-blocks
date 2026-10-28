@@ -16,15 +16,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **A keyword list** with the [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). Bring your question, a plan (optional). It uses your shortlist.
-3. This one.
+1. **A keyword list** with the [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). Bring your question, a shortlist (optional), a plan (optional).
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

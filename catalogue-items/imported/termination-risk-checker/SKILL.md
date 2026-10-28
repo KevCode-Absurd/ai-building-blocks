@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -304,3 +304,5 @@ End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the 
 - State release or jurisdiction rules from memory — every rule is researched
   and cited at the time of review.
 - Guarantee no lawsuit. It reduces the risk by catching the obvious problems.
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Meeting notes** with the [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). Bring a transcript, a plan (optional).
@@ -115,3 +115,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Build it** with the [Task breakdown planner](https://useaiblocks.com/skills/task-breakdown-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

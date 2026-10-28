@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 

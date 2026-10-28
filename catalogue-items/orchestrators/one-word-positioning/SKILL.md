@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **Ad breakdowns** (yours): what each reference ad does: opening, angle, format, offer and proof.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

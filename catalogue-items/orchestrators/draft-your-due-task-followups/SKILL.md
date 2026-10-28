@@ -15,7 +15,7 @@ The result: one follow-up email draft for each due task, with To, CC, subject, b
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**

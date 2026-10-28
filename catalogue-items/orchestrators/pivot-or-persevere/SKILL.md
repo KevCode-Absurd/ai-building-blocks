@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Experiment results** (yours): observed dated results with cohort definitions, costs, account identities, activation, paid outcomes and retention.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **Your data** (yours): the data files, with their format and where they came from.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 

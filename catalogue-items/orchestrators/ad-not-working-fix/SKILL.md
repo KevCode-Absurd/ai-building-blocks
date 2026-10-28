@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).

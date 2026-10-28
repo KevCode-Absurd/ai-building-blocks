@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.

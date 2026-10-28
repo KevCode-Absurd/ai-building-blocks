@@ -16,13 +16,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your lead list, meeting notes, tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your lead list, meeting notes, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -75,6 +75,14 @@ If you are connected and the owner approves one change in clear words, make only
 - **Watch next week:** one to three numbers that decide next week's focus.
 - **Files:** each step's file, then every `MISSING:` line in one list.
 
+## Checks before you hand it back
+- Every deal in "Act on today" has a reason from a step and a next action with an owner.
+- No deal is called won or lost without a closed-deals file saying so.
+- At most three deals got a closer look, and the rest are listed.
+- Coverage is shown against the bar with the sums.
+- Nothing in the CRM was changed and nothing was sent without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -83,14 +91,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Sales account planner](https://useaiblocks.com/skills/account-plan-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every deal in "Act on today" has a reason from a step and a next action with an owner.
-- No deal is called won or lost without a closed-deals file saying so.
-- At most three deals got a closer look, and the rest are listed.
-- Coverage is shown against the bar with the sums.
-- Nothing in the CRM was changed and nothing was sent without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. Without last week's export, skip the comparison and say the focus was not chosen on change. Without a target, skip the coverage bar and the slip check, and say so. Without an amount or a close date on a deal, list it under data fixes and leave it out of the totals.

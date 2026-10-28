@@ -56,7 +56,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
 - The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

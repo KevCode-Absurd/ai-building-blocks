@@ -22,8 +22,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 How to start:
@@ -59,14 +59,6 @@ How to start:
 The score out of 100 with how it was worked out. Each facet with its rating and reason. The distinctive assets list. The weakest facet and one change to test. What is unknown. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 Next: take the weakest facet's change into your plan. Then bring the items on the WHAT IS UNKNOWN list, with your reach and spend numbers, to your ad platform's reach report to measure what this check can only judge.
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
-- The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 
 ## Check before you hand it back
 

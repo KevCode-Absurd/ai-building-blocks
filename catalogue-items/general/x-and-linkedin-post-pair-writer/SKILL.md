@@ -55,7 +55,7 @@ Then say what to do next: read both aloud, post them, and note which place got t
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
 - The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the draft.
-- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
+- The [Voice-matched post writer](https://useaiblocks.com/skills/voice-matched-post-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

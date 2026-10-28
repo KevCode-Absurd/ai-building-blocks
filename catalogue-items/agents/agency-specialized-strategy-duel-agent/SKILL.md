@@ -8,15 +8,6 @@ description: "Run a turn-based strategy duel for a negotiation or rivalry: play 
 Play both sides of a strategy contest, round by round, then give a verdict and advice. This is a rehearsal. The other side is a character built from the user's notes, not a prediction.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the document.
-- The [AI answer fact-checker](https://useaiblocks.com/skills/ai-answer-fact-checker). It takes the document.
-- The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,14 @@ Return these sections, in this order. Use plain headings. Simple divider lines a
 - **Referee verdict**: Winner or draw, reason, final score, would either side gain by changing its move.
 - **Advice for the real talk**: Open with, watch for, avoid.
 - **Where the simulation guessed**: The list. Also list any check that failed or could not run (the CHECKS MISSED list), or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the document.
+- The [Plan stress tester](https://useaiblocks.com/skills/plan-stress-tester). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

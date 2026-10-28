@@ -15,16 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Fresh draft reviewer](https://useaiblocks.com/skills/cold-reread-marker). Bring a draft.
-2. **Audit report** with the [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). Bring a draft.
-3. This one.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a draft, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a draft, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,6 +50,14 @@ How to start:
 
 What recurs. Why it was worth writing. Three readings with counts. The pick. Up to five additions. Scenes to cut or reduce. A warning if any item preaches. CHECKS MISSED.
 
+## Check before you hand it back
+
+- The pick is a tension, not a moral.
+- Every reading names the scenes behind it.
+- No more than five scenes to add.
+- No added speech states the meaning.
+- The counts match the lists.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -63,14 +66,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The pick is a tension, not a moral.
-- Every reading names the scenes behind it.
-- No more than five scenes to add.
-- No added speech states the meaning.
-- The counts match the lists.
 
 ## If something is missing
 

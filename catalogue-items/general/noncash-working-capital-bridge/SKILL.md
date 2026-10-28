@@ -10,17 +10,6 @@ Find how much cash a business put into operating working capital in one period, 
 Have ready: opening and closing operating working capital, the signed acquisition, currency and write-off movements from the notes, the period end, and the currency and scale. For a wider look across a trailing period, use "Trailing-period financial bridge". For cash that came early from selling invoices to a factor, use "Factoring cash-flow timing bridge".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge). It takes the document and spreadsheet.
-- The [Project cash and debt coverage reviewer](https://useaiblocks.com/skills/project-debt-cash-evidence-reviewer). It takes the spreadsheet and document.
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet and audit report.
-- The [Utility collection and grant cash reviewer](https://useaiblocks.com/skills/utility-restricted-cash-evidence-reviewer). It takes the spreadsheet and document.
-- **Check the money** with the [Fund bridge loan return analyst](https://useaiblocks.com/skills/subscription-line-timing-checker). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -29,15 +18,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Inventory write-down margin checker](https://useaiblocks.com/skills/inventory-charge-margin-bridge). Bring your question, financial statements, spreadsheet (optional).
+1. **A spreadsheet** with the [Inventory write-down margin checker](https://useaiblocks.com/skills/inventory-charge-margin-bridge). Bring your question, financial statements, a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, financial statements, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, financial statements, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -97,3 +86,14 @@ These links identify public methods and definitions. All instructions and practi
 ## Hand back
 
 Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge). It takes the document and spreadsheet.
+- The [Project cash and debt coverage reviewer](https://useaiblocks.com/skills/project-debt-cash-evidence-reviewer). It takes the spreadsheet and document.
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet and audit report.
+- The [Utility collection and grant cash reviewer](https://useaiblocks.com/skills/utility-restricted-cash-evidence-reviewer). It takes the spreadsheet and document.
+- **Check the money** with the [Fund bridge loan return analyst](https://useaiblocks.com/skills/subscription-line-timing-checker). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

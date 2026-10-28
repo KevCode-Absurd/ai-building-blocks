@@ -85,6 +85,14 @@ You never do these yourself, even if you can reach the account:
 - **Files:** the run folder. Then every `MISSING:` line in one list.
 - **Next:** post the replies you approve yourself. Once a week, turn the top repeat question into your next post.
 
+## Checks before you hand it back
+- At most ten replies, and each adds something the original did not have.
+- No two replies open the same way.
+- No reply sells, flatters or promises.
+- Held items have no reply drafted.
+- Nothing was posted or touched.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -93,14 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- At most ten replies, and each adds something the original did not have.
-- No two replies open the same way.
-- No reply sells, flatters or promises.
-- Held items have no reply drafted.
-- Nothing was posted or touched.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. Without a voice sample, write plain, short replies and say the voice was not matched. Without the age of a post, skip the reach note. Without your own facts, write replies that do not need one.

@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
@@ -72,18 +72,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2, checked headlines: the reader, the reward, a score out of 100 and stronger versions.
 - Step 3, test plan: the shortlist of two or three, what stays fixed, how each version is keyed, the test size and the rule for picking a winner. The last file holds the plan and the shortlist. The skill does not run the test or call a winner without counts.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Step 1 gives a headline set with a character-limit check. Step 2 gives each headline a score and a stronger version built only from your offer's facts. Step 3 gives a shortlist, a keying method and a winning rule set before the test. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

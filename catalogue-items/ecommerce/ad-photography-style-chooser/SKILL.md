@@ -12,13 +12,6 @@ Not for: a brand with a locked photo style that needs the full set of visual cho
 You choose a style. You do not write image prompts and you do not draw. The style rules below are rules of thumb from ad practice. Treat them as starting points to test, not facts about your buyers.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand image prompt writer](https://useaiblocks.com/skills/brand-to-image-prompt-compiler). It takes the design direction.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -145,3 +138,10 @@ CHECKS MISSED: <check, or none>
 ## Final check
 
 Before you hand it back, check that you named exactly one main style, one test style and one style to avoid, that every choice has a reason tied to the buyer or platform, and that nothing says a style will win. List any check you missed under `CHECKS MISSED:`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand image prompt writer](https://useaiblocks.com/skills/brand-to-image-prompt-compiler). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

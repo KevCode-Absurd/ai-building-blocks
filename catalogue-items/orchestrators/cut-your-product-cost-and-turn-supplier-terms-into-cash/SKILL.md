@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
@@ -57,16 +57,15 @@ Pause here: Run the talks with the factory. Write down the new prices, price bre
 ## What you hand back
 4 step files and the summary. The summary holds the table of agreed prices, price breaks and payment terms. The last file is the cash check, with a score out of 100 for growth cash safety.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
-- The [Factory product brief writer](https://useaiblocks.com/skills/product-tech-pack-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

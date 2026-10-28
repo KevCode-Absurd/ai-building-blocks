@@ -78,17 +78,15 @@ CHECKS MISSED: <none, or which>
 MISSING: <what you need to give>
 ```
 
+## When not to use
+To pick which country to enter first, use the overseas market planner. To set up currencies, languages and tax in one Shopify store, use the Shopify markets setup planner. Come back here when you are weighing a separate store or a local warehouse.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
 - The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## When not to use
-To pick which country to enter first, use the overseas market planner. To set up currencies, languages and tax in one Shopify store, use the Shopify markets setup planner. Come back here when you are weighing a separate store or a local warehouse.
 
 ## Checks
 - Every trigger shows the owner's number and the founder's number, labelled.

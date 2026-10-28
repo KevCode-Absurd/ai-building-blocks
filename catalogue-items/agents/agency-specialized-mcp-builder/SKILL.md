@@ -71,6 +71,14 @@ Use these sections, in this order:
 
 Add assumptions and source references where they matter.
 
+## Checks before you hand back
+
+- Every tool has a "use when" sentence, typed inputs and a result shape.
+- No tool both reads and changes.
+- No secret appears in the plan or the code.
+- Every API fact comes from the user's material, or is marked to check.
+- Open checks lists everything you could not run.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -80,14 +88,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand back
-
-- Every tool has a "use when" sentence, typed inputs and a result shape.
-- No tool both reads and changes.
-- No secret appears in the plan or the code.
-- Every API fact comes from the user's material, or is marked to check.
-- Open checks lists everything you could not run.
 
 ## If something is missing
 

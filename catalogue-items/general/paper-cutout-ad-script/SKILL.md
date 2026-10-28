@@ -71,6 +71,14 @@ This skill runs on its own. If something marked required is missing, ask once, i
 ## What you hand back
 The point, the paper kit, then a table of `Line | narration | key word | proof picture | signal | move | on-screen words | seconds`, then notes on every figure's source, then the cast note, then `CHECKS MISSED:` with one line for each check still missed, or "none".
 
+## Check before you hand it back
+- One point, written as one sentence with one "but".
+- Every proof picture matches its claim's verb, and lands on its key word.
+- One signal per line, in the kit's one colour.
+- Every figure and chart has a source in the notes, or isn't there.
+- No named rival, real person or body before and after.
+- The cast note names what carries the ad and why.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -79,14 +87,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- One point, written as one sentence with one "but".
-- Every proof picture matches its claim's verb, and lands on its key word.
-- One signal per line, in the kit's one colour.
-- Every figure and chart has a source in the notes, or isn't there.
-- No named rival, real person or body before and after.
-- The cast note names what carries the ad and why.
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": no diagram; prove the steps or the swap instead, or ask. No figures: no chart. No buyer facts: write from the product and mark the point "inferred". If photos are named but you can't see them, say so in one line. Take the product's look and label words from the brand file or the input, mark the photo check as still to do, and never describe a photo you didn't see. Before writing MISSING for a fact or a source, look for it in the brand file and the input; write MISSING only when both lack it.

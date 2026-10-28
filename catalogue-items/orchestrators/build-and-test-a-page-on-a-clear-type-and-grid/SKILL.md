@@ -57,17 +57,6 @@ Four step files and the summary:
 - **Step 3:** the built page, the phone and desktop check, and where it did not follow the grid.
 - **Step 4:** the browser test report: what passed, what failed, screenshots and console errors. This is the last file.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Web performance checker](https://useaiblocks.com/skills/web-page-speed-tuner). It takes the website.
-- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the website.
-- The [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker). It takes the website.
-- **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
-- **Design it** with the [Website accessibility reviewer](https://useaiblocks.com/skills/quarterly-accessibility-keeper). It takes the design direction and website.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -76,3 +65,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Only one or two type families are used, and every element on the page sits on the grid.
 - The page was checked at phone and desktop width before the browser test ran.
 - Each test failure is listed with where it is, not described in general.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Web performance checker](https://useaiblocks.com/skills/web-page-speed-tuner). It takes the website.
+- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the website.
+- The [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker). It takes the website.
+- **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
+- The [Website accessibility reviewer](https://useaiblocks.com/skills/quarterly-accessibility-keeper). It takes the design direction and website.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

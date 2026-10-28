@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -117,6 +117,15 @@ One file per stage:
 6. **Edit list:** cut points on bar lines, lip-sync shots, captions, offer text and timing, safe zones, and `MISSING:` lines.
 7. **Checks missed:** one line per check still missed, or "none".
 
+## Check before you hand it back
+- You stopped for approval after stages 1, 3 and 4, unless the person approved them ahead.
+- The track was made and the clock fixed before any frame was written.
+- The music prompt starts singing at 0 seconds and ends on the tag.
+- Every cut sits on a bar line of the chosen take.
+- The lead and the product match their sheets in every shot; mouths move only in shots marked as singing.
+- The product is on screen within 5 seconds; nothing claims more than the brand supports; no artist named, no cloned voice.
+- Every price, renewal or trial term in the offer text matches the brand file, with its renewal terms shown.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -126,15 +135,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the shot list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- You stopped for approval after stages 1, 3 and 4, unless the person approved them ahead.
-- The track was made and the clock fixed before any frame was written.
-- The music prompt starts singing at 0 seconds and ends on the tag.
-- Every cut sits on a bar line of the chosen take.
-- The lead and the product match their sheets in every shot; mouths move only in shots marked as singing.
-- The product is on screen within 5 seconds; nothing claims more than the brand supports; no artist named, no cloned voice.
-- Every price, renewal or trial term in the offer text matches the brand file, with its renewal terms shown.
 
 ## If something is missing
 Before you write MISSING for a product fact or claim, look for it in the brand file and the input; write `MISSING: <what>` only when both lack it, and clear sung lines against the brand file's claims. No BPM in the script: use 120 and say so. The brand doesn't use music or animation, or you don't know: ask before any song is made, and keep writing the prompts meanwhile.

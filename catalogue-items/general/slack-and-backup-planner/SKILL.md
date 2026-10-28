@@ -61,7 +61,7 @@ CHECKS MISSED   <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner). It takes the plan.
 - The [Plan failure risk reviewer](https://useaiblocks.com/prompts/plan-inversion-checker). It takes the plan.
-- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the plan.
+- The [Task removal impact reviewer](https://useaiblocks.com/skills/hidden-value-check). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

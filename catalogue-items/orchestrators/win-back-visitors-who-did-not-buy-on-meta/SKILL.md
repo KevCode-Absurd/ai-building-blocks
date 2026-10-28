@@ -70,14 +70,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3, budget: ranking for the next dollar, stop point per channel, test plan, loss limit and fallback.
 - Hand-back summary: each file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -86,3 +78,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every objection share is labelled measured or guess, and each ad makes one claim you hold proof for.
 - The sequence moves from objection to proof to cross-sell, and the cap on retargeting spend comes from your channel numbers.
 - No ad promises a discount or guarantee you do not offer.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

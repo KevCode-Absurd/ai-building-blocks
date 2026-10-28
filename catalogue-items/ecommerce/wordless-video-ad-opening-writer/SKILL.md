@@ -138,17 +138,6 @@ MISSING: <..>
 CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
-- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each approval came before the next stage, or, when asked for every stage at once, each approval point is marked "(approve)" and the yeses are asked for.
 - "Real speed" appears once and no slow-motion or time-lapse word appears.
@@ -156,6 +145,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The end frame is still, product in view, printing clear, matching the ad's first frame.
 - No words in the picture, no person speaking, no shop name or trademark other than the product's own printing.
 - The product matches its photos, with nothing made up inside it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
+- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No out-of-pack photo: no opening that shows the product out of its pack. No use steps: ask once, plan openings that don't depend on them, and mark the rest `MISSING:`. Motions unknown: propose them from how it's used, mark each "inferred", and ask the brand to confirm.

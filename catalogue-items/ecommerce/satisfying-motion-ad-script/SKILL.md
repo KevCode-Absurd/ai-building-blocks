@@ -104,17 +104,6 @@ MISSING: <..>
 CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
-- The [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan). It takes the script.
-- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One motion, one finish, one thing in focus.
 - The opening has no speech and no cut, and the finish lands in its last third.
@@ -123,6 +112,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product opens once, where it really opens, and its state stays in order.
 - The fact is an approved claim, said once.
 - The cast note makes the product the avatar and names who makes the clips.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
+- The [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan). It takes the script.
+- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No motion described: infer one from how it's used and mark it. No use steps: ask once, and never invent how it opens. Until then, show it closed or build the opening from the old way it replaces, and mark it `MISSING:`. No buyer words: use "Wait for it".

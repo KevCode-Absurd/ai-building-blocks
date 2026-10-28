@@ -68,6 +68,13 @@ A table with these columns:
 
 Then: **Top 5 fixes** (one line each), **Facts to collect before writing**, **Coverage score** (now and with the new answers in, each with its sum), and **What this can't tell you** (2 or 3 lines). Last, **CHECKS MISSED**: one line for each check you could not pass, or "none".
 
+## Check before you hand it back
+- Every row has a quote and a source.
+- No row is marked "missing" unless the FAQ, gallery and buying area were inspected; otherwise it's "unknown".
+- No proposed answer states a fact, test or number that isn't in the supplied facts.
+- Counts are distinct sources, not mentions.
+- Priority is labelled a guess when the sample is small.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -77,13 +84,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every row has a quote and a source.
-- No row is marked "missing" unless the FAQ, gallery and buying area were inspected; otherwise it's "unknown".
-- No proposed answer states a fact, test or number that isn't in the supplied facts.
-- Counts are distinct sources, not mentions.
-- Priority is labelled a guess when the sample is small.
 
 ## If something is missing
 Write `MISSING: <what>` for any fact an answer needs. If there are no customer words, ask once for them. If none come, carry on with a smaller map from the doubts the page itself raises or leaves open (price, fit, use, delivery, returns), mark every row `[inferred]` and the coverage score as based on inferred doubts, and say real customer words would make it sharper. Never present a guessed doubt as a customer's words.

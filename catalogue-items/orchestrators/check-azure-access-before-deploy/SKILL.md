@@ -19,12 +19,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
-- **Test report** (yours): what was tested, what passed, what failed and why.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A test report** (yours): what was tested, what passed, what failed and why.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase, test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a codebase, a test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -70,15 +70,6 @@ Save `run-state.md` with the input revision or date, completed steps, result fil
 - **Rollout and rollback plan:** preflight checks, rollout stages, health signals and the rollback steps.
 - **Final summary:** the source files used, unresolved findings, every `MISSING:` line and one next action.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mobile app release planner](https://useaiblocks.com/skills/agency-engineering-mobile-release-engineer). It takes the document.
-- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the document.
-- The [Infrastructure maintenance planner](https://useaiblocks.com/skills/agency-support-infrastructure-maintainer). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -87,3 +78,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was deployed, assigned or paid for without a clear yes.
 - The role is the narrowest that fits, at the smallest scope, and the reason is given.
 - Every preflight finding names its file. A check that could not run is listed as not run, never as a pass.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Mobile app release planner](https://useaiblocks.com/skills/agency-engineering-mobile-release-engineer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -12,15 +12,6 @@ It plans. It does not change the account.
 **When not to use:** For a routine daily table of marks for every ad, use the Daily Meta ad review planner. To scale a campaign that is already working, use the Meta scaling campaign planner. To launch a new campaign, use the Meta test campaign planner.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- **If an ad set will not spend,** use the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the plan.
-- **If you also run Google Ads,** check that account with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -30,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In "Missing and not run", list checks that could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ads Manager:** It is the source of your export. Use the same date range and attribution window for both periods.
@@ -95,3 +86,10 @@ Use these headings, in this order:
 ## Final check
 
 Before you hand back, confirm: no pause rests on a missing break-even, every mark has proof, every change has a review date and a way to undo it, and nothing says the account was changed. List anything you could not check in section 7, Missing and not run (the list the start block calls CHECKS MISSED), or write "none". Retain the prior approved settings so a change can be compared and rolled back.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

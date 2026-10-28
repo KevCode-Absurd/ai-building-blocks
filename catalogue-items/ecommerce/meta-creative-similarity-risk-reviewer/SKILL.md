@@ -10,13 +10,6 @@ Give it your active Meta ads, with previews and spend. You get a creative divers
 This report shows what you can see: how alike your ads look. Meta has not published how it groups similar ads. So this skill never claims to find Meta's own groups, to prove a higher cost per thousand views (CPM), or to show ads competing against each other. Those claims need separate account evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -87,3 +80,10 @@ Use these headings, in this order:
 ## Final check
 
 Before you hand back, confirm: every count in the score can be traced to the ads table, no claim is made about Meta's internal grouping, CPM or competition between ads, and every label is marked as seen or provisional. Write `CHECKS MISSED:` with any check you could not run, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

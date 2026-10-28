@@ -10,17 +10,6 @@ Turn a general resume into one that fits a single job, without changing the trut
 When not to use it: for a layout and parsing check, use the ATS resume checker agent. For a cover letter and resume built together, use the Resume and job application builder. To understand what a job post really asks for, use the Job ad reader. To check a finished draft for claims you cannot back up, use the Job application evidence review assistant.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
-- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
-- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
-- The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the resume and audit report.
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -29,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your resume, the job description, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your resume, the job description, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -89,6 +78,17 @@ NEXT STEPS
 ```
 
 If a check failed or could not run (the CHECKS MISSED list), add it under Open questions, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
+- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
+- The [Resume layout editor](https://useaiblocks.com/skills/resume-layout-editor). It takes the resume and audit report.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

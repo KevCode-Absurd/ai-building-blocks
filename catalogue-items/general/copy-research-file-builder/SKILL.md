@@ -63,16 +63,6 @@ Your product material is the only required input. The "Before you start" list ab
 
 Keep each file in this order: newest source first, passages copied word for word, a file with no passages marked "none found" and never padded. The inventory of what you read. The people, feeling and problem files, each passage with its source. The bonus notes. The proof list with "safe to give away" marks and the fascinating lines. The past hits with why each worked. An angle library and brand file additions. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons and brand brain.
-- **Write the landing page** with the [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner). It takes the buying reasons and brand brain.
-- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons and brand brain.
-- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each passage sits in the right file with its source.
@@ -80,6 +70,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Proof items can be given away without harm to the product.
 - Past hits are listed with why they worked.
 - Nothing is added that the sources do not say.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons and product facts and buyer profile.
+- **Write the landing page** with the [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner). It takes the buying reasons and product facts and buyer profile.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons and product facts and buyer profile.
+- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader). It takes the product facts.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

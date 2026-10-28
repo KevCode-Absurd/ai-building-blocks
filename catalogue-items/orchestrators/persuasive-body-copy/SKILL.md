@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 5. This one.
 
@@ -74,18 +74,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Four step files and the summary. The step 4 file holds the claims and proof report.
 - STEP 1 THE WANT SECTION, STEP 2 THE BELIEF LADDER, STEP 3 HOW IT WORKS, STEP 4 CLAIMS AND PROOF, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
-- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
-- The [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The section serves one want, and no block repeats another.
 - The ladder starts at a true, widely accepted statement and never jumps two points of belief.
 - Every link in the how-it-works passage is backed by a fact you gave.
 - Every claim in the final copy is paired with proof or flagged.
 - Nothing is invented to fill a gap. Every gap is a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

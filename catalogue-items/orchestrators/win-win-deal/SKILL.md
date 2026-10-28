@@ -51,17 +51,17 @@ Pause here: Hold the conversation. Listen until they say you have it right, and 
 ## What you hand back
 5 step files and the summary. The last file holds the written agreement, a draft for both sides to review. Not legal advice.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the the deal terms.
-- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the deal terms.
+- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

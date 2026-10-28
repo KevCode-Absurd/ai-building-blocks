@@ -16,7 +16,7 @@ When not to use: if you are an employee on a salary, this has no client rates to
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for spreadsheet, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -82,17 +82,6 @@ You never do these yourself. You list them for approval:
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** send the proposals you agree with in your own words, then bring each client's answer and next quarter's hours and invoices to the next run. For slow payers, hand the days-to-pay rows to the [Weekly invoice and cash chaser](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the plan and audit report.
-- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
-- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the plan and audit report.
-- The [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker). It takes the plan.
-- The [Supplier payment terms planner](https://useaiblocks.com/skills/supplier-payment-terms-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every real rate is worked out from the hours and payments in the file, with unbilled hours included.
 - No client is proposed a raise without a range they can likely meet.
@@ -100,6 +89,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The floor covers the costs the person listed.
 - Nothing was sent or ended without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the document.
+- The [Fund management fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without hours, use days or estimate from the calendar and mark the rates as rough. Without costs, set the floor from the income goal alone and say the floor may be too low. Without what others charge, skip that part of the floor and say so.

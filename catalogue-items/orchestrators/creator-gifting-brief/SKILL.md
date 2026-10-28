@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
+3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and video ad script and character sheet.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -74,13 +74,6 @@ Four step files and the summary. The last step file holds the edit plan.
 - **Step 4, edit plan:** cut list, captions, sound, close and exports, with gaps and reshoots named.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list, including any permission still needed to run the video as an ad.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Founder video series planner](https://useaiblocks.com/skills/founder-video-series-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +82,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every creator on the shortlist has a fit score with evidence from their real posts, or is marked `MISSING:`.
 - The disclosure wording appears in both the card and the brief.
 - The edit plan uses the approved script, not the filming brief, and adds no claim or offer the script does not have.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make video ads** with the [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

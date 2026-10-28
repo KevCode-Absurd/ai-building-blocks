@@ -56,15 +56,6 @@ How to start:
 
 The theme and feeling. The headline pile sorted by lead type. The section outline with the yes each section wins. The benefit chains. The claims and proof table. The sidebars. Three options for headline, deck and lead-in. The client goal and the outside-read questions. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter). It takes the brief.
-- The [Page copywriter](https://useaiblocks.com/skills/page-copywriter). It takes the brief.
-- The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The outline exists before any body copy.
@@ -72,6 +63,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The headline and lead-in have several options.
 - The client goal is stated.
 - A reader outside the project gave a note, or the gap is marked.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter). It takes the brief.
+- The [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

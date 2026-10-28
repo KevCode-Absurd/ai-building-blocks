@@ -69,15 +69,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 5: hooks times bodies equals ads, takes by place and outfit, story parts to collect, edit notes.
 - Summary: each step's file and one list of `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
-- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -86,3 +77,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every script opens on the viewer's problem, and every claim points to a proof item the person gave.
 - Each hook score shows its sum, and a hook weak on clarity or relevance is marked fail.
 - Each take in the shoot list is tied to a hook or body ID and shows how many ads it makes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
+- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

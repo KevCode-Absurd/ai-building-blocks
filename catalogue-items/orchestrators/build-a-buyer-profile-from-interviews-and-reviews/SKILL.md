@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
@@ -34,7 +34,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -76,15 +76,6 @@ Five step files and the summary. In order:
 - **Fit check.** The fit score out of 100 with its sum, the mismatches and the rewrites. This is the audit report.
 - **HAND-BACK SUMMARY.** Files, steps not run and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
-- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -93,3 +84,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No names, emails, phone numbers, usernames or profile links appear anywhere. Every interview sheet opens with the consent line.
 - Every profile has three or more word-for-word quotes with a source type and a date, and a not-for line. None is written from a guess.
 - Steps 4 and 5 used the step 3 profile. The fit score shows its sum and lists what was left out because you did not supply it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

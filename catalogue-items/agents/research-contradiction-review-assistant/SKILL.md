@@ -10,15 +10,6 @@ Compares two or more papers that appear to disagree, and says whether they reall
 This agent runs the workflow `compare-conflicting-research-findings` (steps: build the comparison and the contested-findings map, then check the wording against the papers). The steps below are the full method, so it runs without the other files. If the workflow and the skills `research-literature-comparison`, `unsupported-claim-spotter` and `source-note-summariser` are installed, read them and follow their wording where they say more.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -86,6 +77,15 @@ Allow at most two correction passes on any step. After that, stop and name the b
 - `next-review-record.md`: the record for the next run.
 
 Finish with the evidence used, assumptions, `MISSING:` lines, and `CHECKS MISSED:` listing any check that could not run (or "none"). Say whether this was a first baseline or a comparison with a record.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
+- The [Journal submission formatter](https://useaiblocks.com/skills/journal-submission-formatter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

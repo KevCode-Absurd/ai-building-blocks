@@ -78,20 +78,18 @@ CHECKS MISSED: <none or list>
 MISSING: <unresolved data or rules>
 ```
 
+## Next steps to offer
+
+Offer these first:
+- Run the quiet group through a sunset flow with the [Sunset flow and list cleaner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner).
+- Bring back past buyers with the [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the plan.
-- The [Monthly email campaign calendar planner](https://useaiblocks.com/skills/email-campaign-calendar-planner). It takes the plan.
-- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Next steps to offer
-
-Offer these first. The Task follow-up writer in "After this" does not follow from a segment plan, so skip it:
-- Run the quiet group through a sunset flow with the [Sunset flow and list cleaner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner).
-- Bring back past buyers with the [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder).
 
 ## Checks
 - Every SEND ELIGIBLE group includes current permission and delivery eligibility. EXCLUSION/AUDIT groups may include ineligible profiles, are labeled, and are excluded from every send.

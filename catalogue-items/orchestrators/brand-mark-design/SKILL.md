@@ -69,15 +69,6 @@ Three step files and the summary, in this shape:
 - Step 3: for each finished option, the seven test scores, the one-colour and small-size result, a score out of 100 and a keep, fix or drop call with one reason. This file holds the audit report.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -86,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The brief has one idea that can be taken in at a glance and three to five firm limits, and the mark plan starts from the brief, not from a style.
 - Every finished option has all seven test scores and a one-colour and small-size result, and the score shows how it was worked out.
 - If no images were supplied, the output says the small-size and one-colour checks were done against words, not the picture.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Logo concept generator](https://useaiblocks.com/skills/logo-concept-generator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -75,16 +75,6 @@ Pause here: Pick this month's top two or three concepts from the matrix. Keep on
 Five step files and the summary. The step 5 file holds the test plan.
 - STEP 1 AD QUOTA, STEP 2 BUDGET RANKING, STEP 3 CONCEPT MATRIX, STEP 4 BRIEFS, STEP 5 META TEST PLAN, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the plan.
-- **Read your ad results** with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The quota shows all three ways of counting, with each sum.
 - Each channel is ranked on new-customer revenue and says what evidence stands behind it.
@@ -92,3 +82,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every pack has one angle and one avatar.
 - Both pauses happened, or the run says which was skipped and why.
 - Every gap is a `MISSING:` line, and nothing was sent, published or paid for.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta ad concept test planner](https://useaiblocks.com/skills/meta-concept-diversity-test-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -8,15 +8,6 @@ description: Plan an internal developer platform. Gives a ranked list of what to
 Plan the standard roads that let developers ship without becoming infrastructure experts. Built on the Platform Engineer profile from Agency Agents.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -33,7 +24,7 @@ How to start:
 
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini with file upload:** They can read your ticket lists and survey answers together.
-- **Backstage:** The profile uses it as the front door for services and templates.
+- **Backstage:** The profile uses it as the front door for services and templates. It is optional. It is free and open source, but you host and run it yourself, which takes engineering time. You need no access to it to start; the plan works from your tickets and notes.
 <!-- /needs -->
 
 ## What you need
@@ -74,6 +65,13 @@ Use these headings, in this order:
 6. Measures
 7. Rollout plan
 8. Assumptions and gaps (`MISSING:` items and checks not run). This is also your CHECKS MISSED list: write "none" if every check ran.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

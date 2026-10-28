@@ -138,19 +138,19 @@ FIDELITY SCORE: <passed> / <counted> x 100 = <score>, or not scored yet
 Tries used: <n> of <n>   Verdict: <accepted | original returned, why | waiting for the file>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The result meets the target size and keeps the original's ratio.
 - A faithful model was tried first, or the report says why not.
 - Every word and logo was read letter by letter, or put back from the original artwork.
 - The difference check was done, or the report says it couldn't be.
 - The original is untouched, and every try is saved as its own file.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.

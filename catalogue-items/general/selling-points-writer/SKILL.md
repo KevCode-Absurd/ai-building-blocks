@@ -84,22 +84,22 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Problem story copy writer](https://useaiblocks.com/skills/problem-story-copy-writer). It takes the ad copy.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every number and claim traces to a fact supplied.
 - No point is a bare feature: each says what the buyer gets or what it does, even at the fact rung. No two points make the same argument.
 - Each point is a sentence a person would say.
 - No point contains a cause or effect the facts don't support.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Problem story copy writer](https://useaiblocks.com/skills/problem-story-copy-writer). It takes the ad copy.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: evidence for <rung>` and keep only the checked fact. Write `UNANSWERED: <question>` when the buyer asks it and the facts can't. Never invent an exact number.

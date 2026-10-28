@@ -96,15 +96,6 @@ CHECKS MISSED  <one line per check still missed, or none>
 ```
 Then the scripts, if a writing skill is paired.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
-- The [Video ad script and prompt writer](https://useaiblocks.com/skills/weekly-video-ad-batch-maker).
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each script would be called a different ad from its neighbours.
 - Each type's needs are met by facts that were supplied and say exactly that, named with their source. Nothing is inferred from a side remark.
@@ -112,6 +103,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No two scripts open on the same point or fact.
 - No example from the recipes appears in a script.
 - Health, body or money claims: no disease, cure or body-function claim beyond the approved claim wording and the ad platform's rules. Flag every line that would need proof, and tell the user to check these rules before the ads run (for example Meta's rules for health and supplement ads).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
+- The [Video ad script and prompt writer](https://useaiblocks.com/skills/weekly-video-ad-batch-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <need>` and skip the type. A "Someone noticed" or "Turning point" type without a real account turns into filming notes for a real customer, with blanks for their details.

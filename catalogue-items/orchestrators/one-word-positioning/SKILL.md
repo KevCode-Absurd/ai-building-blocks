@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Ad breakdowns** (yours): what each reference ad does: opening, angle, format, offer and proof.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -64,15 +64,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 From the shared "After this" list above, offer the Marketing strategy reviewer if you want the word checked against your whole plan. Then suggest one concrete step: put the word and the three lines to a few customers and ask which they believe, before you change anything public. Bring the step 2 and step 3 files.
 
@@ -81,3 +72,12 @@ From the shared "After this" list above, offer the Marketing strategy reviewer i
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- The [Rival-free pitch rewriter](https://useaiblocks.com/skills/rival-free-pitch-rewriter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

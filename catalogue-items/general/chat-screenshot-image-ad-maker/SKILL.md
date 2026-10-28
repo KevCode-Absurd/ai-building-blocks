@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -94,16 +94,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 10. **How to make it**: design tool or image tool, one line.
 11. **Checks missed**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad).
-- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer).
-- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - **Stop:** a chat in a feed of photos gets read before people decide to.
 - **Sort:** someone who's had that text, or whose family says the same things, recognises it. Others see a stranger's chat.
@@ -111,6 +101,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The chat is the narrator's own, with made-up names. Never present it as a customer's real screenshot, or as messages sent to the brand.
 - No message names or recommends the product or states a result.
 - A group has three senders at most. The house rules hold.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.

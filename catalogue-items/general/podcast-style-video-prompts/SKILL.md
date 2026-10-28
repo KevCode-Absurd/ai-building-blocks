@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -148,6 +148,14 @@ MISSING: <..>
 CHECKS MISSED: <one line each, or none>
 ```
 
+## Check before you hand it back
+- Each approval came before the next stage, or each stop is marked "approved in advance" when the person gave the approvals up front.
+- Every line comes from the right mouth, and only that mouth moves.
+- Sides, faces, clothes and microphones match in every clip; nobody else is in the room.
+- Two distinct voices, the same two throughout.
+- Every word said as written, none cut off at the end of a clip.
+- The product's label is unchanged and nothing passes in front of it; the disclosure line runs for the whole ad.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -157,14 +165,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each approval came before the next stage, or each stop is marked "approved in advance" when the person gave the approvals up front.
-- Every line comes from the right mouth, and only that mouth moves.
-- Sides, faces, clothes and microphones match in every clip; nobody else is in the room.
-- Two distinct voices, the same two throughout.
-- Every word said as written, none cut off at the end of a clip.
-- The product's label is unchanged and nothing passes in front of it; the disclosure line runs for the whole ad.
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo and no label words anywhere: ask for them in one short message, and carry on with the cast, voices and room meanwhile. If a photo is named but you can't see it, say so in one line. Take the product's look and label words from the brand file or the input, mark the product sheet check as still to do, and never describe a photo you didn't see. Before writing MISSING for a fact, look for it in the brand file and the input; write MISSING only when both lack it. No handling notes: the product stands on the table, untouched. No accent given: use the brand's home accent and say so.

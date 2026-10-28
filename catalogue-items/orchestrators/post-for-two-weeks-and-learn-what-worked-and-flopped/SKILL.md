@@ -67,15 +67,6 @@ Pause here: Post for two weeks, then export your post numbers: reach, likes, com
 
 Each step file uses the headings in the page's result shape: step 1 calendar, topic mix and posts per platform; step 2 six ratings, score, weakest reason and one change; step 3 engagement per post, platform comparison, ranking and what to post next; step 4 cause (unseen, skipped or ignored), the weak line and the one change.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Social platform content planner](https://useaiblocks.com/skills/platform-native-content-planner).
-- The [Social media strategist](https://useaiblocks.com/skills/agency-marketing-social-media-strategist).
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every rating in the sharing check quotes the part of the post that earns it.
 - Engagement is worked out the same way for every post, so the posts can be compared.
@@ -85,3 +76,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order, or the run stopped at the step that failed and says why. Step 3 used your exported numbers.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Social platform content planner](https://useaiblocks.com/skills/platform-native-content-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

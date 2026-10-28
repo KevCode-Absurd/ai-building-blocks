@@ -60,15 +60,6 @@ How to start:
 
 Your frame. The ranked leads, each with its source place, the person and circumstance, the evidence and struggle scores and the emotional side. The hunch list. A watch plan for the top three. Places not searched, with the reason. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- The [Unmet customer need finder](https://useaiblocks.com/skills/store-unmet-job-finder).
-- The [Chat export need finder](https://useaiblocks.com/skills/chat-export-need-finder).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every lead is a person in a circumstance, not a category, a need or a feature.
@@ -77,6 +68,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each of the five places was searched, or says why it was not.
 - Each top lead has a place, a time and something specific to watch.
 - No quotes or counts were invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

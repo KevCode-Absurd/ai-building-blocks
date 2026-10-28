@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -35,8 +35,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Planning cards from your facts works well in any strong chat AI with this skill.
-- **Figma:** Keeps one layout across all the cards and sets the words as real type.
-- **GPT Image:** Makes a matching set of scenes from one description and your product photos.
+- **Figma:** Keeps one layout across all the cards and sets the words as real type. Optional: it has a free plan, and paid plans need an account.
+- **GPT Image:** Makes a matching set of scenes from one description and your product photos. Optional: it needs a ChatGPT account, and free plans have tight daily limits. You can also build the cards by hand.
 - **Meta Ads Manager:** Its preview shows each card with its headline, so you can check nothing gets cut.
 <!-- /needs -->
 
@@ -98,17 +98,6 @@ MISSING: <dates, proof or terms not on file>
 CHECKS MISSED  <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Card 1 works on its own.
 - The last card is 20 words or fewer and leads with the action.
@@ -118,6 +107,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every line about the buyer's experience comes from the buyer brief or a quoted review.
 - Word and character counts are counted, not guessed.
 - Any wording about health, the body, digestion, weight or a supplement's effect is flagged under Flags. Tell the user to check it against the ad platform's health-claim rules and the law where they sell before paid use. Only use a health claim the user says they are allowed to make.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: proof` and swap proof cards for how-it-works cards. Write `MISSING: real date` and leave dates off.

@@ -17,13 +17,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your notes** with the [Peer feedback session planner](https://useaiblocks.com/skills/peer-feedback-session-planner). Bring your question, a draft (optional).
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your notes, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your notes, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -65,15 +61,6 @@ Raw: "The pricing page is dull, just add a video." Sorted as a fix. The problem 
 
 The sorted notes in the form above, then the praise list, then the "Not about the work" list, then the questions for reviewers, then `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
-- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the notes.
-- The [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter). It takes the notes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every note names a problem in the work, not a person.
@@ -82,6 +69,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every fix sits on its own line marked "Example only".
 - Repeats are merged and counted, and no lone note was dropped.
 - Nothing was added that no reviewer said.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
+- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

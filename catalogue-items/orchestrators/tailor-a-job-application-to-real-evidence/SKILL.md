@@ -78,17 +78,6 @@ MISSING, CHECKS MISSED, NEXT STEP
 
 Keep the user's original files as they are. Give each new file its own name.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job application evidence reviewer](https://useaiblocks.com/skills/job-application-evidence-review-assistant). It takes the resume and draft and document.
-- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
-- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
-- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every achievement is supported by the user's record. No experience, credential or metric is invented.
@@ -106,6 +95,17 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 ## Next steps to offer
 
 Use these instead of the general "After this" list above. Suggest the user check the gap list and apply themselves. Nothing is sent. If an interview follows, suggest the [Prepare work examples for a job interview](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview) workflow.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job application evidence reviewer](https://useaiblocks.com/skills/job-application-evidence-review-assistant). It takes the resume and draft and document.
+- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

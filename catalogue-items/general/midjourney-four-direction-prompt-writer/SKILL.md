@@ -85,14 +85,6 @@ MISSING
 
 End with one line: these are prompts, not pictures. Paste each into Midjourney to make them. Nothing was run in Midjourney here.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
-- The [Image and video prompt director](https://useaiblocks.com/skills/visual-prompt-director).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every prompt keeps the required subject, product, setting and exclusions.
@@ -100,6 +92,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No setting, version or parameter appears that the person did not give.
 - The interpretation says which details were the person's and which were your assumptions.
 - Nothing from the references folder's sample subjects appears in the prompts.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

@@ -73,7 +73,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker). It takes the offer.
 - The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the offer.
 - **Make an offer people want** with the [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
-- **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

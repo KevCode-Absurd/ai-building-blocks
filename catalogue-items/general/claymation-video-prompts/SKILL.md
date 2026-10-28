@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -101,15 +101,6 @@ Before the final hand-back, check the run against the 7 checks under "Check befo
 6. **Edit list**: order over the narration, offer text, safe zones, and retake notes, with `MISSING:` lines.
 7. **Checks missed:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Clay town video clip prompt writer](https://useaiblocks.com/skills/clay-town-video-prompts).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - You stopped after stages 1, 3 and 4, or marked each "(approve)" when asked to run every stage at once.
 - The lock lines are written out in full, word for word the same, inside every still and clip prompt. A bracket or placeholder such as [SET] or "paste the lock line here" in place of the text is a missed check, because the prompts must paste as they are.
@@ -118,6 +109,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Label lines appear exactly; no clay letters and no other words.
 - The PRODUCT line has no guess in it: no opening step, and no choice of which package or part is opened, unless the photo, label or brand file confirms it. A guess there is a missed check, even if a `MISSING:` line sits below it.
 - No child, real person, known character or human hand.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Clay town video clip prompt writer](https://useaiblocks.com/skills/clay-town-video-prompts).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo or label lines: ask once, then write the product sheet from what you have, with any unknown side facing away and `MISSING: product photo` or `MISSING: label lines`. No use steps, an unseen photo, or a script that doesn't say which part is opened: the product stands closed, and the shot shows the action without changing the product (for example, the hand rests on the top), with `MISSING: which part is opened, and how`. No mover column: pick the one thing the line is about.

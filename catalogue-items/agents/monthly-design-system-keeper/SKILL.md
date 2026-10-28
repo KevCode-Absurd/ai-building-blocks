@@ -16,12 +16,12 @@ Tools and cost: it needs an AI that can read your code files, such as Claude Cod
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
-- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 - **Your website** (yours): the link to your site or the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -32,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for codebase, your brand brain, design file. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase, your brand brain, a design file. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -80,6 +80,14 @@ You never do these yourself, even if you can reach the repo. You list them for a
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** if failing colour pairs were found, pair this with the [Quarterly accessibility keeper](https://useaiblocks.com/skills/quarterly-accessibility-keeper), which reads the same colour tokens.
 
+## Checks before you hand it back
+- Every drift item names a file and a line, and the token or name it should use.
+- Counts in `drift.md` come from the audit, not from memory.
+- The polish check covered only screens that changed, or says why it covered more.
+- No spec was written for a pattern that did not pass review.
+- Nothing in the code was changed and nothing was published.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -89,14 +97,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every drift item names a file and a line, and the token or name it should use.
-- Counts in `drift.md` come from the audit, not from memory.
-- The polish check covered only screens that changed, or says why it covered more.
-- No spec was written for a pattern that did not pass review.
-- Nothing in the code was changed and nothing was published.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without the design file, audit the code alone and say intent could not be compared. Without the brand guide, skip the token build and say the rules come from the code only. Without the list of changed screens, check the screens whose files changed in the repo this month, and say so.

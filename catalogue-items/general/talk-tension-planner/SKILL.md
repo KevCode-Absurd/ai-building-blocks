@@ -18,16 +18,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question, your idea (optional). It uses your brand brain and a buyer brief.
+2. **A plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question, your idea (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief, a draft, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a buyer brief, a draft, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,16 +57,6 @@ How to start:
 
 The news in one sentence. The first-minute opening. The clock and its source. The new order. Slides to swap and cut. The twist or "none". `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
-- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
-- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the plan.
-- **Sell it** with the [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The audience knows the stakes by the first minute.
@@ -74,6 +64,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Any surprise is saved for a real twist, not a cheap jolt.
 - A first-time listener can follow it with no briefing.
 - No fact, date or number was added that you did not give.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30).
+- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

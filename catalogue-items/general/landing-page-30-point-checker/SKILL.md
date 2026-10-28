@@ -105,6 +105,12 @@ The checks score measures the share of checks the page passes. Score = checks ma
 5. **Checks score**: now and with the five fixes made, each with its sum, plus any deal-breaker left.
 6. **Can't tell**: what you couldn't see and what would let you judge it.
 
+## Check before you hand it back
+- Every "no" quotes the page or says where on it.
+- Nothing you couldn't see is marked "yes".
+- No fix adds a rating, count, price, offer or deadline that wasn't supplied.
+- The verdict names one stop, not a list.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -114,12 +120,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every "no" quotes the page or says where on it.
-- Nothing you couldn't see is marked "yes".
-- No fix adds a rating, count, price, offer or deadline that wasn't supplied.
-- The verdict names one stop, not a list.
 
 ## If something is missing
 Write `MISSING: <what>`. No ad: checks 1 to 3 are can't tell. No facts: say which numbers on the page need a source. No phone screenshots, or screenshots named that you can't see: say so in one line, judge checks 4 to 6 and 29 from the text only, and never describe a screenshot you didn't see. Before you write MISSING for a fact, look for it in the page text, your facts and any attached file.

@@ -12,26 +12,15 @@ Quality Score is Google's 1 to 10 rating of a keyword. It has three parts: expec
 If you only want a review of your own numbers, not software, use the Google Ads store account auditor.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
-- The [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer). It takes the code change.
-- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
-- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -138,3 +127,10 @@ Write tests with sample rows only, no real accounts:
 Quality Score moves slowly, so a monthly review is plenty. Weekly runs mostly show noise. Run the module on a live account only when you say so, and keep it read-only. If you want a monthly schedule, ask the AI to propose one, then approve it yourself.
 
 Next, work down the findings from the top: fix the ads or landing page for the biggest group, then wait a few weeks and run the review again. To fetch live data, set up access first with the Google Ads token and access check planner.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -75,15 +75,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-- The [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing). It takes the plan.
-- The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The trouble part is chosen from evidence, or marked clearly as a guess.
@@ -91,6 +82,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The trade-off is stated for every option.
 - The whole system was checked, not just the part.
 - The first test can fail, and a fail result is defined.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Build it** with the [System design planner](https://useaiblocks.com/skills/system-design-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

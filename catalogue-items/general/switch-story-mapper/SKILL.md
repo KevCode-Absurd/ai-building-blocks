@@ -15,17 +15,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Customer purchase interview script writer](https://useaiblocks.com/skills/buying-story-interview-guide). Bring your question, customer words (optional). It uses your brand brain.
-2. **Audit report** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). Bring customer words, your question (optional), plan (optional).
+1. **A plan** with the [Customer purchase interview script writer](https://useaiblocks.com/skills/buying-story-interview-guide). Bring your question, customer words (optional). It uses your brand brain.
+2. **An audit report** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). Bring customer words, your question (optional), a plan (optional).
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for customer words, plan, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for customer words, a plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -56,15 +56,6 @@ How to start:
 
 One six-line story per person with line numbers. A forces table: person, push, pull, habit, anxiety, what was fired, what tipped it, later hire. The clusters with counts and quotes. The one-offs and the surprises. The follow-up list. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [Customer interview pattern tracker](https://useaiblocks.com/skills/customer-interview-program-keeper).
-- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each story line cites a note; unsupported lines say MISSING.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Later use is checked for every buyer.
 - Clusters rest on two or more separate people and are not based on demographics.
 - Surprises are listed, not smoothed away.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
+- The [Customer interview pattern tracker](https://useaiblocks.com/skills/customer-interview-program-keeper).
+- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

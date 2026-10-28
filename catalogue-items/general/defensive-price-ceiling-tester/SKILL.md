@@ -18,18 +18,18 @@ A sound company can still be a poor purchase at a high enough price. Most harm t
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, financial statements (optional).
+1. **An audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring an audit report, financial statements (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -61,14 +61,6 @@ How to start:
 
 The ceilings table, the result, how far off a failed price is, `MISSING:` lines, a line saying this is a method and not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each ceiling shows the sum and a pass or fail.
@@ -76,6 +68,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product test shows both parts.
 - A failing company gets a price that would pass.
 - Nothing says to buy or sell a named security.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

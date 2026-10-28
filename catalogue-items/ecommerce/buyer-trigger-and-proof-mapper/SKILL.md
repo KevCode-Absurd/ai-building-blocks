@@ -6,16 +6,6 @@ description: Map what starts a buyer's search, how they feel, what proof they ne
 # Buyer trigger and proof mapper
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer motivation brief writer](https://useaiblocks.com/skills/buyer-instinct-brief-writer). It takes the brand brain.
-- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the brand brain.
-- The [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging). It takes the brand brain.
-- **Write the ad copy** with the [Customer needs finder](https://useaiblocks.com/skills/buyer-wants-finder). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -28,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
@@ -179,3 +169,13 @@ Take the top ranked ad idea and write it with the Five-tactic ad hook writer, or
 ## Final check
 
 Give the requested deliverables, evidence used, assumptions, missing inputs, and the smallest useful next step. Distinguish an idea, a calculation, a proposed action and a completed tool action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer motivation brief writer](https://useaiblocks.com/skills/buyer-instinct-brief-writer). It takes the buyer profile.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buyer profile.
+- The [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging). It takes the buyer profile.
+- **Write the ad copy** with the [Customer needs finder](https://useaiblocks.com/skills/buyer-wants-finder). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

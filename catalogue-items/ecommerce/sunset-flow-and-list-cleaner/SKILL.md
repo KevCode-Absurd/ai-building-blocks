@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+- **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring email flow, your results (optional). It uses your brand brain and offer.
+2. **An email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring an email flow, your results (optional). It uses your brand brain and offer.
 3. This one.
 
 How to start:

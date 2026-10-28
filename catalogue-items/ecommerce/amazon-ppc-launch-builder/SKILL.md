@@ -91,19 +91,19 @@ MISSING: <unit profit | live bids | keyword list>
 CHECKS MISSED: <none | which>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Amazon listing first draft writer](https://useaiblocks.com/prompts/amazon-listing-first-draft-writer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps to offer
 
 Offer these first. The link in "After this" is optional:
 - Update the negative keywords and move winning search terms into manual campaigns after the first search term report. Bring that report back to this skill.
 - Pick better keywords with the [Amazon keyword picker](https://useaiblocks.com/skills/amazon-keyword-picker).
 - Recheck your unit profit with the [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker) if fees or price change.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon listing first draft writer](https://useaiblocks.com/prompts/amazon-listing-first-draft-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 Run these before handing back. Fix any that fail, or list them under `CHECKS MISSED:`.

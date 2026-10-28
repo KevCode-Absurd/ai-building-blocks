@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -90,6 +90,13 @@ SENDING
 CHECKS MISSED  <one line each, or none>
 ```
 
+## Check before you hand it back
+- Every spoken line is in the approved script or is a bracketed blank.
+- No result, health or money claim that isn't in the approved script.
+- Every first-person opening is marked "film only if true for you".
+- Deadline and usage come from the delivery needs, or are flagged `[CONFIRM]`.
+- The hands takes open and hold the product the way it really opens.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -99,13 +106,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every spoken line is in the approved script or is a bracketed blank.
-- No result, health or money claim that isn't in the approved script.
-- Every first-person opening is marked "film only if true for you".
-- Deadline and usage come from the delivery needs, or are flagged `[CONFIRM]`.
-- The hands takes open and hold the product the way it really opens.
 
 ## If something is missing
 Write `[CONFIRM: item]` and list it under Before you start. The brief sends and posts nothing.

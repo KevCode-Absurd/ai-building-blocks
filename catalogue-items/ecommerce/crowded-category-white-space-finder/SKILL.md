@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Competitors** with the [Buyer problem and product idea finder](https://useaiblocks.com/skills/pain-point-niche-finder). Bring your question, customer words (optional).
-2. **Competitors** with the [Advertised product finder](https://useaiblocks.com/skills/proven-product-scout). Bring your question, store capture (optional).
+2. **Competitors** with the [Advertised product finder](https://useaiblocks.com/skills/proven-product-scout). Bring your question, a store capture (optional).
 3. This one.
 
 How to start:
@@ -90,7 +90,6 @@ MISSING: <prices | reviews | brands | where they sell>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the shortlist.
-- The [Untapped buyer finder](https://useaiblocks.com/skills/untapped-buyer-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -8,17 +8,6 @@ description: Turn a law firm's intake notes into an attorney-ready summary with 
 Support a law firm's first contact with a possible client: collect the facts, flag what is urgent, list who must be checked for conflicts, and hand the attorney a clear brief. The full profile, with its question sets and scripts, is in [the original role profile](references/source-agent.md). Read it if you can. This file is enough to run the job on its own.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
-- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the document.
-- The [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer). It takes the document.
-- The [Obsidian database view builder](https://useaiblocks.com/skills/obsidian-database-view-builder). It takes the document.
-- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -90,6 +79,13 @@ Add `CHECKS MISSED:` at the end: name every check that could not run, such as a 
 Next: to review a contract or court paper, use the [Legal Document Review agent](https://useaiblocks.com/skills/agency-legal-document-review). To log time and bill, use the [Law firm time entry and billing agent](https://useaiblocks.com/skills/agency-legal-billing-time-tracking).
 
 On request, add a referral message (kind, specific, with where to find help) or a confirmation message for a booked consultation.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

@@ -10,15 +10,6 @@ Tracks the response to journal reviewer comments: it maps each comment to the ma
 This agent runs the workflow `map-journal-reviewer-requests-to-evidence` (steps: map comments to evidence, build the action register, check the response draft). The steps below are the full method, so it runs without the other files. If the workflow and the skills `source-note-summariser`, `executive-action-register` and `proofreader` are installed, read them and follow their wording where they say more.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
-- The [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant). It takes the document.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -90,6 +81,15 @@ When not to use: to have the response letter written for you (this agent tracks 
 Next: attach the revised text for every "Done and not checked" row and run it again. Keep `next-review-record.md` for the next run.
 
 Finish with the evidence used, assumptions, `MISSING:` lines, and `CHECKS MISSED:` listing any check that could not run (or "none"). Say whether this was a first baseline or a comparison with a record.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
+- The [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant). It takes the document.
+- The [Journal submission formatter](https://useaiblocks.com/skills/journal-submission-formatter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

@@ -16,18 +16,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, a video ad script, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, a video ad script, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -124,6 +124,14 @@ One file per stage:
 7. **Edit notes** with the voice route. `MISSING:` lines.
 8. **CHECKS MISSED:** one line per check still missed, or "none".
 
+## Check before you hand it back
+- Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
+- The character card is word for word the same in every prompt.
+- Frame 1, muted, at thumbnail size, shows the face and its feeling.
+- The product has its real label and no face, and enters by a cut at the turn.
+- Each beat has one expression change and the mouth closes after each line.
+- No limb the card doesn't list, no letters on the object, no person in frame, and no price, offer or result in the object's lines.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -133,14 +141,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the character sheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
-- The character card is word for word the same in every prompt.
-- Frame 1, muted, at thumbnail size, shows the face and its feeling.
-- The product has its real label and no face, and enters by a cut at the turn.
-- Each beat has one expression change and the mouth closes after each line.
-- No limb the card doesn't list, no letters on the object, no person in frame, and no price, offer or result in the object's lines.
 
 ## If something is missing
 Write `MISSING: <what>`, ask once for what you can't work without, then carry on. No product photo: write the character card, set sheet and storyboard with the product slot marked `MISSING: product photo`, and make no product sheet or clip until a real photo arrives. No script: say in one line that the Talking object video ad script writer gives a better start, and take their own idea or monologue in plain words, splitting it into clips and marking what you added `[inferred]`. No accent given: assume the brand's home accent and say so.

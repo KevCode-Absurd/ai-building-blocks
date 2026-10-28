@@ -56,16 +56,6 @@ How to start:
 
 The ranked ladder with a reason for each group. The proof of buying beside each. Any fit exceptions. The first test group, two backups and the money at risk. The checks to run and what would make you step down. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- **Make an offer people want** with the [Promotion explanation writer](https://useaiblocks.com/skills/reason-why-deal-writer). It takes the shortlist.
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every group is placed on the ladder with a reason.
@@ -73,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Own customers are listed first if any exist.
 - Cost and size are shown beside each rung.
 - The first test group is named, with what would make it fail.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make an offer people want** with the [Promotion explanation writer](https://useaiblocks.com/skills/reason-why-deal-writer). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

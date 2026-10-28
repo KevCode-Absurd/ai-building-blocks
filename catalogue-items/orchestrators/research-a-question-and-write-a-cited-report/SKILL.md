@@ -18,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Slide deck** (yours): a finished slide deck.
+- **A slide deck** (yours): a finished slide deck.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text, slide deck. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, a slide deck. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -65,15 +65,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 4: each claim with what the source says, whether it is supported, and whether it was kept, softened or cut.
 - The `HAND-BACK SUMMARY`: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each sub-question says what evidence would answer it.
 - Every source on the shortlist has a note on what it shows and how strong it is.
@@ -81,3 +72,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The report says what is not known.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - No claim in the final report lacks a citation, and no citation is to a source that was not read.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research grant proposal coach](https://useaiblocks.com/skills/research-grant-proposal-coach). It takes the document.
+- The [Nonprofit grant funder researcher](https://useaiblocks.com/skills/nonprofit-grant-funder-researcher). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -66,15 +66,6 @@ Pause here: Pick the version with the best scores and save it as version 1 in a 
 - Step 3, version rules: where prompts live, how versions are named, a check before each change, a small trial and rollback steps.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt and test set.
-- The [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester). It takes the prompt and test set and audit report.
-- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -83,3 +74,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every test case has an expected answer that was written before the scoring.
 - The baseline score is shown, and each version changed only one thing.
 - The rollback steps name the person who does the rollback and the file to restore.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt and test set.
+- The [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester). It takes the prompt and test set and audit report.
+- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

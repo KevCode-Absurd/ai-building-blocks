@@ -116,6 +116,12 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## What you hand back
 The reading, the keep, swap and drop lines, the prompt, then the ranked pictures, each with its score and job, and the rejects with the gate they failed. If you can't make images, the prompt alone with its `CHECKS MISSED` line from step 9.
 
+## Check before you hand it back
+- All five parts of the reading are filled, and nothing that belongs to the reference (its product, brand, words, logo, people) carried over.
+- The product matches its photo, stands in the scene's light and casts a shadow on the scene's surface.
+- There is a quiet area, and the picture works in every size needed. A shiny product reflects only this scene.
+- No children, no finger over the label, only made-up adults.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -124,12 +130,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- All five parts of the reading are filled, and nothing that belongs to the reference (its product, brand, words, logo, people) carried over.
-- The product matches its photo, stands in the scene's light and casts a shadow on the scene's surface.
-- There is a quiet area, and the picture works in every size needed. A shiny product reflects only this scene.
-- No children, no finger over the label, only made-up adults.
 
 ## If something is missing
 Write `MISSING: <real photo | reference | job>`. Ask once for what's missing, then carry on with what you have. Without a true photo of the exact variant, make no picture, since it would show a product that isn't theirs: hand back the reading, the keep, swap and drop lines and the prompt, ready for when the photo arrives.

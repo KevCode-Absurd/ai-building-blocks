@@ -8,15 +8,6 @@ description: "Plan new ads inside a running Meta campaign without disturbing wha
 Give it your running campaign's settings, the new ads and your spend limits. You get a list of the new ads as drafts, a pre-launch checklist for each, and a review plan. It plans. It does not publish.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
-- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -87,3 +78,10 @@ Use these headings, in this order:
 Status values: `draft`, `hold`, `ready for review`, `submitted` (only if done), `NOT RUN`.
 
 Next step: after the observation window, read the results with the Creative test reader, or use the Daily Meta ad review planner for ad-by-ad calls.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

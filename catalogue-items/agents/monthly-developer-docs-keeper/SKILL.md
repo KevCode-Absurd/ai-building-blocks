@@ -14,16 +14,16 @@ When not to use: for a one-off review of a single release, read that release's n
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase, your question, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase, your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -74,17 +74,6 @@ You never do these yourself, even if you can reach the repo. You list them for a
 - **The map:** which doc covers which code, updated.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document and audit report.
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
-- The [Process guide revision reviewer](https://useaiblocks.com/skills/process-doc-freshness-keeper). It takes the document and audit report.
-- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the document and audit report.
-- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every README step has a working or broken mark with proof.
 - Every drifted doc names the code file and line it disagrees with.
@@ -92,6 +81,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The spec changes match the code, not the other way round.
 - Nothing was committed, merged or published.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document and audit report.
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
+- The [Process guide revision reviewer](https://useaiblocks.com/skills/process-doc-freshness-keeper). It takes the document and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without release tags, draft the changelog from all commits and say it may include unreleased work. Without a docs folder, test the README, check inline docs and say the project has no docs to drift. On the first month, build `map.md` and say the drift check starts from the next change.

@@ -56,21 +56,19 @@ How to start:
 
 Your lead opener with its word count. The result it points at. Two spares, each tagged with the setting. An optional honest extra. The test plan. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales opening line writer](https://useaiblocks.com/prompts/sales-opener-trio-writer).
-- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer).
-- The [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each opener is about ten words.
 - None uses a false pretext or a gimmick.
 - The opener says what the buyer gets, not what the product is.
 - Two spare openers are included.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

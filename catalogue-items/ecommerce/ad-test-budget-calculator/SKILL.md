@@ -81,9 +81,9 @@ MISSING: <what was not supplied>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
 - The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+- The [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
+- **Read your ad results** with the [Ad survey results calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

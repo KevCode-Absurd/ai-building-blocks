@@ -54,15 +54,6 @@ How to start:
 
 The audience in actions. The map table with evidence, over-use and platform columns. The early topics. The three to five places to start with what to publish. A lift measure for each. The re-run date and the tools used. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
-- The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every place on the map is tied to evidence, not a guess.
@@ -70,6 +61,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Search-only plans are flagged.
 - A lift measure is named for each place.
 - Tools or data used are named so the user can re-run it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

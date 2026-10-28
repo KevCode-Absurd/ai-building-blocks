@@ -19,11 +19,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -62,15 +62,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Five step files and the summary. The step 5 file holds the final list of what to avoid and the plan changes.
 - STEP 1 to STEP 5, each under its own heading, then HAND-BACK SUMMARY with the files and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each settled choice follows from the goal and rules something out.
 - The sum has four parts: buyers, purchases, share and profit per sale. Every figure is marked CHECKED, ESTIMATED or GUESS, and the marks match the sources you gave.
@@ -78,3 +69,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every reward in the habit design is real. Nothing depends on a false claim, such as fake reviews.
 - The avoid list is specific to this business, not a general list.
 - Every gap is a `MISSING:` line, and the result is labelled a planning aid, not a valuation.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

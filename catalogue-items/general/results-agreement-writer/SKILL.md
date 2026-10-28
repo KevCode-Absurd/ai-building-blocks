@@ -15,16 +15,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Urgent versus important sorter](https://useaiblocks.com/skills/urgent-versus-important-sorter). Bring your question, plan (optional).
-2. This one.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, plan, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,15 +51,6 @@ How to start:
 
 The one-page agreement with five headings: results, guidelines, resources, accountability, consequences. The type and who has the final say. The choice for how experienced the person is. The exit and trust clauses, for a two-sided deal. The say-it-back card. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Results say what and by when, and can be checked by looking, counting or reading.
@@ -72,6 +59,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Accountability starts with self-review and has a date that does not move.
 - Consequences cover both good and poor results.
 - A two-sided deal has an exit clause.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

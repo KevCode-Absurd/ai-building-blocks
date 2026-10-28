@@ -12,16 +12,6 @@ Read [the original role profile](references/source-agent.md) before you start. I
 When not to use it: to answer one buyer doubt from real review wording, use the Offer builder that answers buyer doubts. For a guarantee only, use the Guarantee designer. For a live reply-based lead offer that is not working, use the Lead offer tuner. To choose a first step (premium, free or discount) from your numbers, use the Front-end offer picker.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Funnel flow planner](https://useaiblocks.com/skills/funnel-flow-planner). It takes the offer.
-- The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the offer and plan.
-- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- **Write the ad copy** with the [Sales follow-up email writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer). It takes the offer.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +65,16 @@ Use these headings, in this order. Skip one that does not apply and say so in on
 5. First channel test
 6. Reach boosters
 7. Checks still needed (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Funnel flow planner](https://useaiblocks.com/skills/funnel-flow-planner). It takes the offer.
+- The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the offer and plan.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- **Write the ad copy** with the [Sales follow-up email writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer). It takes the offer.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

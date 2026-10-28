@@ -65,14 +65,6 @@ Five step files and the summary:
 - **Step 4:** the worst likely event, the break-even sum and a holds, thin or fails call.
 - **Step 5:** the verdict (margin of safety present, no clear margin, or price above value), ranked reasons and what would make the estimate wrong.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small business acquisition reviewer](https://useaiblocks.com/workflows/check-a-small-business-before-you-buy-it).
-- The [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -82,3 +74,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The bad-year test shows its sum. Survival is only called when the dated cash figures were given.
 - Nothing says to buy or sell a named security.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Small business acquisition reviewer](https://useaiblocks.com/workflows/check-a-small-business-before-you-buy-it).
+- The [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

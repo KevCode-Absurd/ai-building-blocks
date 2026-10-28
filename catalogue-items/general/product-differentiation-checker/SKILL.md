@@ -59,17 +59,6 @@ How to start:
 
 The verdict in two lines. The real alternatives with the evidence for each. The differences and their value by customer type. The four-cause findings. Why good fits chose you. The best-fit accounts. Three next steps. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
-- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
-- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
-- **Sell it** with the [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
-- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Alternatives come from real shortlists, not a guess.
@@ -77,6 +66,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Lost deals are not treated as the whole picture.
 - The verdict says plainly when the product or offer needs to change.
 - All four causes were tested and each has a finding.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
+- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
+- **Sell it** with the [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
+- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

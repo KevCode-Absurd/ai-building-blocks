@@ -12,14 +12,14 @@ Value and price are different things, and the gap between them is where good and
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -54,17 +54,6 @@ Not for: a decision on named shares or funds, or on money you cannot afford to l
 
 The three cases and the sums. The supported ordered value range, or separate unresolved/crossed candidates. A maximum-price scenario only when its value and order checks pass, with the stated rule and limits. The quality-over-time sum. The best alternative. The friction table. The before-you-commit list. The verdict and next action. A note that this is not financial advice. `MISSING:` lines. Next step: take the plan to a rule writer such as the Investment holding rule writer or the Price drop rules writer. The Guarantee and refund plan writer under After this is for sellers and does not fit an investment price check. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
-- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
-- **Make an offer people want** with the [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the plan.
-- **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each case uses numbers given or follows from them, and gaps are marked.
@@ -72,6 +61,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A range and maximum-price conclusion appear only after supported-case and bad <= ordinary <= good checks pass. Crossed candidates keep their labels; no sorting, clamping or invented missing case.
 - The best alternative is named and compared.
 - Fees and commissions are counted, and the not-advice note is included.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
+- The [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). It takes the plan.
+- **Make an offer people want** with the [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the plan.
+- **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

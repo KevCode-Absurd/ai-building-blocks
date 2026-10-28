@@ -75,6 +75,14 @@ If you have an account connector (see "What you need") and the owner approves a 
 - **Watch next week:** the 1 to 3 numbers that decide next week's path.
 - **Files:** each step's file. Then every `MISSING:` line from all steps in one list.
 
+## Checks before you hand it back
+- Every call is measured against break-even, and the sums are shown.
+- No budget increase is proposed unless the scale gates passed this week.
+- No new cuts are proposed in a week the dip investigator said to wait, except clear junk search terms.
+- Every change says which step proposed it.
+- Nothing in the account was changed without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -83,14 +91,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google Ads purchase tracking checker](https://useaiblocks.com/skills/google-ads-purchase-tracking-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every call is measured against break-even, and the sums are shown.
-- No budget increase is proposed unless the scale gates passed this week.
-- No new cuts are proposed in a week the dip investigator said to wait, except clear junk search terms.
-- Every change says which step proposed it.
-- Nothing in the account was changed without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last week's numbers, skip the comparison in step 2 and say the path was not chosen on data. Without price and margin, stop after step 2 and ask for them, because every call depends on break-even.

@@ -75,14 +75,6 @@ HAND-BACK SUMMARY
 Files | MISSING | checks not run with real answers | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the plan and draft.
-- The [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps to offer
 
 Use these instead of the general "After this" list above. Nothing has been given to learners. Offer one next step and say the teacher can type their own:
@@ -98,3 +90,11 @@ Use these instead of the general "After this" list above. Nothing has been given
 - Support fades from stage to stage, with no jump the learners have no way to make.
 - Why-questions test reasoning, not recall of the steps.
 - No learner answer or result was invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer). It takes the plan and draft.
+- The [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

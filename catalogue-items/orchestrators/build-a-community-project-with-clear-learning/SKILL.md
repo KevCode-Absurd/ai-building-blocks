@@ -87,14 +87,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student marking and feedback reviewer](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback). It takes the lesson plan and document.
-- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps for this workflow
 
 Use this list, not the generic links in the block above. Offer one next step and say they can type their own:
@@ -111,3 +103,11 @@ Use this list, not the generic links in the block above. Offer one next step and
 - No partner detail, date or result was invented.
 - Learner names and photos appear in no file.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student marking and feedback reviewer](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback). It takes the lesson plan and document.
+- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

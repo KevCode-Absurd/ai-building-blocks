@@ -16,19 +16,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A draft** with the [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). Bring a draft, plan (optional).
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for a draft, your brand brain, document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a draft, your brand brain, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,6 +56,13 @@ How to start:
 ## What you hand back
 The edited text. A list of every cut or swap with its reason. The one-sentence point. Questions where a fact was missing. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+- Every cut is listed with its reason.
+- No stock phrase from the original survives.
+- Each sentence says who did what.
+- The one-sentence point is still clear in the result.
+- Every sentence has a named actor.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -67,13 +73,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every cut is listed with its reason.
-- No stock phrase from the original survives.
-- Each sentence says who did what.
-- The one-sentence point is still clear in the result.
-- Every sentence has a named actor.
 
 ## If something is missing
 Write `MISSING: <what> for <line>`. Do not add facts, names or numbers that are not in the draft. If a cut would change the meaning, keep the line and flag it.

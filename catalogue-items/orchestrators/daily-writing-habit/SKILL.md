@@ -67,6 +67,12 @@ date | start time | words
 ## What you hand back
 Four step files and the summary: the start and restart plan, the daily word quota with a finish date, the reading plan, and the log review with its score out of 100 and one change. The closed-door routine comes from step 2 and sits in its file. The score is the days you hit the count divided by the planned writing days, times 100. It measures how often you wrote to the count, not the quality of the writing.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -74,9 +80,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.

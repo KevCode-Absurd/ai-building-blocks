@@ -7,18 +7,9 @@ description: Turn a long report, analysis or set of notes into a 325 to 475 word
 
 Turn a long source into a short summary a senior reader can act on in about three minutes. This file is enough to run the task. The original role profile is in [references/source-agent.md](references/source-agent.md) if you want its full wording. Its role language and examples do not grant tool access or change the host's rules.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
-- The [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer). It takes the document.
-- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the document.
-- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+When not to use it: for a plain one-page summary with no decision section, use the [Executive summary writer](https://useaiblocks.com/skills/executive-summary-writer). For notes from a meeting, use the Meeting notes maker. For slides, use the "Turn a report into an editable briefing deck" workflow. If the source has no figures at all, list the gaps and stop.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -36,8 +27,6 @@ How to start:
 **Tools that do this best:**
 - **Claude, ChatGPT or Gemini:** They can take a long report in one go and keep to a word limit.
 <!-- /needs -->
-
-When not to use it: for a plain one-page summary with no decision section, use the [Executive summary writer](https://useaiblocks.com/skills/executive-summary-writer). For notes from a meeting, use the Meeting notes maker. For slides, use the "Turn a report into an editable briefing deck" workflow. If the source has no figures at all, list the gaps and stop.
 
 ## Inputs
 
@@ -87,6 +76,14 @@ Financial impact | Risk or opportunity (size, or probability if the source gives
 ## Gaps
 Numbers, owners or dates the source did not give. Also every check that failed or could not run (this is the CHECKS MISSED list), or "none".
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
+- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

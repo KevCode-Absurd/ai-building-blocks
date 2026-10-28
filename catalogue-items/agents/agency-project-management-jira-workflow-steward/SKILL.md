@@ -10,15 +10,6 @@ Writes the Git text for one change that is tied to one Jira ticket: a branch nam
 Read [the original role profile](references/source-agent.md) before you start. Use its branch and commit pattern table, the commit and pull request templates and the gitmoji guidance (the official catalogue is at gitmoji.dev). Its role language, success targets and its note about adding new agents to the Agency Agents repository are not facts about this run. Ignore that repository-specific default.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
-- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -27,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text, code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -85,6 +76,13 @@ Return these sections in order. If your AI can save files, save the pull request
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
 
 If the user asks for an automatic check, offer the commit message hook from the profile. Say that it needs a computer with Git and a shell, and that it only checks names and message format. Do not claim it enforces anything until the user installs it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

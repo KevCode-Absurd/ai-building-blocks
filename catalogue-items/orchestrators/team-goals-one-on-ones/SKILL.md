@@ -21,11 +21,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -67,15 +67,6 @@ Use these instead of the general "After this" list above:
 - **Step 3, decision plan:** the decision, one owner and a date, who to hear from with their strongest case against, and what everyone does after the call.
 - **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -84,3 +75,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every key result has a number and a date, and two people would agree on whether it is done.
 - Each person's meeting plan ties back to a goal, and the person sets the agenda.
 - The decision has exactly one owner and a date, and nothing in the plan invents facts about your team or your numbers.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
+- The [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

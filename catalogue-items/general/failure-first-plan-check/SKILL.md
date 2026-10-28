@@ -12,15 +12,15 @@ Plans are usually tested by asking what could go right. This skill asks what wou
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, audit report, council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, an audit report, a council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,17 +53,6 @@ How to start:
 
 The goal. What would guarantee failure. Survival risks, then other failure modes, each with exposure and a change. The bet and who pushes it. The attackers and the attacks. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker). It takes the plan.
-- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
-- **Decide what to do** with the [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the plan.
-- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Failure modes are specific to this plan.
@@ -71,6 +60,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each failure has a change in the plan.
 - No improvement idea was added before the failure list was done.
 - At least one attack is about the market, not the team.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan.
+- **Decide what to do** with the [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the plan.
+- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

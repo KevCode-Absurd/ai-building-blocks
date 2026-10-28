@@ -70,6 +70,10 @@ CHECKS AND NOT RUN
 
 Nothing here is an image yet. Paste each asset prompt into an image tool (ChatGPT or Gemini draw images; Claude does not unless an image tool is connected) and check each result against the product photo. If no brand file exists, run the Brand guide builder first and bring its output back for the visual rules.
 
+## Check before handing back
+
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -78,10 +82,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product-page brand analyst](https://useaiblocks.com/skills/product-page-brand-profile-extractor). It takes the brand guide.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Offline practice case
 

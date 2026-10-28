@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -78,15 +78,6 @@ You never do these yourself, even if you can reach the email or the account tool
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** send the touches you approve, tell the agent which went out, and run it again next Monday. If you sell subscriptions, pair it with the [Subscription churn watcher](https://useaiblocks.com/skills/subscription-churn-watcher), which reads the cancels after they happen.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher). It takes the audit report.
-- The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager). It takes the audit report.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every slipping account shows scores from at least two weeks.
 - Each at-risk account has one cause and one idea, not a list of ten.
@@ -94,6 +85,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Renewals within 60 days are at the top.
 - Nothing was sent, offered or changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher). It takes the audit report.
+- The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. With one week of data there is no trend; score the accounts, say the trend check waits for next week, and start the history file. Without support data, score from usage alone and say the score is half a picture. Without renewal dates, skip the renewal list and ask for them.

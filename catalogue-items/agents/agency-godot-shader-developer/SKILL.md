@@ -10,15 +10,6 @@ Plans and drafts shaders for Godot 4: 2D canvas item shaders, 3D spatial shaders
 Read [the original role profile](references/source-agent.md) before you plan. Use its rules and its shader patterns for the user's effect. Its role language and its "experience" lines are a reference, not evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
-- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -84,6 +75,13 @@ Return these sections in this order. Use the same headings.
 7. `TEST LIST AND NEXT STEP`: if the effect needs game logic to drive it, point to the Godot Gameplay Scripter agent.
 
 End with `CHECKS MISSED:` listing any check that could not be done, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

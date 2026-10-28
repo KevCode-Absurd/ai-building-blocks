@@ -86,6 +86,13 @@ CHECKS MISSED
 <one line per check still missed and why, or none>
 ```
 
+## Check before you hand it back
+- A and B use different leads, next to each other on the scale (or one apart when a lead was skipped).
+- Neither opening uses a fact, number or quote that isn't in the material supplied.
+- A story told as "you" comes from what buyers say. A named customer or founder appears only if on record.
+- The first sentence of each opening says what the reader gets, or makes the next sentence hard to skip.
+- Every price, discount or guarantee in the copy carries its limit in the same sentence (first order only, with text sign-up, on subscription).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -93,16 +100,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner).
 - The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
 - The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer).
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- A and B use different leads, next to each other on the scale (or one apart when a lead was skipped).
-- Neither opening uses a fact, number or quote that isn't in the material supplied.
-- A story told as "you" comes from what buyers say. A named customer or founder appears only if on record.
-- The first sentence of each opening says what the reader gets, or makes the next sentence hard to skip.
-- Every price, discount or guarantee in the copy carries its limit in the same sentence (first order only, with text sign-up, on subscription).
 
 ## If something is missing
 Write `MISSING: awareness` or `MISSING: proof`. Without proof, use leads 3 or 6, which run on the buyer's words.

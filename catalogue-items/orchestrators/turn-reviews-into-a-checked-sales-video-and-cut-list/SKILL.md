@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your a video ad script and brand brain.
+3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand brain.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -78,6 +78,12 @@ Pause here: Film or generate the clips from the shot list and save every take in
 - Step 5: cuts by clip file, caption windows, a sound plan, exports and gaps.
 - Summary: each step's file and every `MISSING:` line in one list.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -86,9 +92,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.

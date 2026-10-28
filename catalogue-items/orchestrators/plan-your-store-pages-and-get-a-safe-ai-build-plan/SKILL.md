@@ -17,10 +17,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 - **Competitors** (yours): the brands buyers compare you with.
 
@@ -32,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, objection map, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, an objection map, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -68,14 +68,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3 file: each buyer doubt matched to a section, its proof, whether you have it and the settings to switch on.
 - Step 4 file: the tools check, safe copy, kickoff prompt, section plan and publish steps. This is the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the plan.
-- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No product, price or variant is invented, and each gap is marked.
 - The menu puts every product within two or three clicks of the home page.
@@ -84,3 +76,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

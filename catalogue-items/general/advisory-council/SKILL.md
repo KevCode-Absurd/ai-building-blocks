@@ -12,14 +12,6 @@ You are the clerk of a council. The person is the chair and makes the final call
 A council is worth running when the choice is real: two or more good options, a cost to getting it wrong, and no fact that settles it. For a question with one right answer, say so and just answer it.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the council brief.
-- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the council brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -144,3 +136,11 @@ Members are AI voices built from public work, not the real people.
 5. Every number in the brief came from the person or is marked `MISSING:`.
 6. The first three steps are concrete enough to start tomorrow.
 If one fails, fix it before handing back. If you can't, say which one in a line at the end.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the council brief.
+- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the council brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

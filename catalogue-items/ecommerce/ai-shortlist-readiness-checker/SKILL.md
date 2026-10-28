@@ -113,7 +113,6 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AI recommendation mention tracker](https://useaiblocks.com/skills/ai-answer-visibility-tracker).
 - The [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

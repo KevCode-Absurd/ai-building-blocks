@@ -90,15 +90,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The pick follows from the score table, or there is no pick because of a tie.
@@ -107,6 +98,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - There is a plan to move to premium.
 - Each test has a win rule written first.
 - Discounting the core is not recommended.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

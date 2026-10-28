@@ -108,17 +108,6 @@ Go through the six checks under "Check before you hand it back" and fix any fail
 7. **Checks missed:** one line per check still missed, or "none".
 8. `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker). It takes the ad copy.
-- The [Flaw photo ad maker](https://useaiblocks.com/skills/circled-flaw-image-ad-maker). It takes the ad copy.
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - It passes the glance test: one moment, one idea.
 - Headline of 7 words or fewer, at most 3 other things to read, type 30 px or more.
@@ -126,6 +115,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The implied sentence is backed; nothing shows a body getting better.
 - Every object names its material and a real colour; no face close-up.
 - The product has its true shape and real label; no child, real person or speaking doll.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker). It takes the ad copy.
+- The [Flaw photo ad maker](https://useaiblocks.com/skills/circled-flaw-image-ad-maker). It takes the ad copy.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Before you write MISSING for a colour, colour code, product shape or label words, read the brand file's look section and the input, and use what they give. Infer only when both are silent, mark it `inferred`, and write `MISSING: <what>`.

@@ -73,14 +73,6 @@ Three step files and the summary:
 - **Step 2, weekly read and edit:** a call on each product with enough clicks, search terms to block, impression share, a waste score and the edit to make this week.
 - **Step 3, titles:** new titles and descriptions in one order, using words buyers typed, with rollout batches. This is the copy draft.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Problem-aware Google Search campaign planner](https://useaiblocks.com/skills/problem-aware-search-campaign-builder).
-- The [Google Shopping title rewriter](https://useaiblocks.com/prompts/shopping-title-rewriter).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +81,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every target comes from break-even, and every guessed margin is marked.
 - Product calls cover only products with enough clicks to judge.
 - Each new title uses words from real converting searches and says nothing untrue about the product.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Problem-aware Google Search campaign planner](https://useaiblocks.com/skills/problem-aware-search-campaign-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

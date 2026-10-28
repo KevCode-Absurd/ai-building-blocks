@@ -53,6 +53,13 @@ How to start:
 ## What you hand back
 The BASELINE pitch. The belief, the how and who it is for. The inside-out message, with the story slot filled or marked. A note of any feature cut or recast, with why. Which version to use and why. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+- The why is not money, growth or being the best.
+- The message names who it is for by what they care about.
+- Every feature comes after the belief, not before.
+- The story is true and comes from what was supplied, or the slot is marked MISSING.
+- No claim goes beyond the facts given.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -61,13 +68,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The why is not money, growth or being the best.
-- The message names who it is for by what they care about.
-- Every feature comes after the belief, not before.
-- The story is true and comes from what was supplied, or the slot is marked MISSING.
-- No claim goes beyond the facts given.
 
 ## If something is missing
 Write `MISSING: <what> for <part>`. With no belief in the facts, ask for it before writing the inside-out version, and still deliver the BASELINE. Never invent a belief, a customer or a result.

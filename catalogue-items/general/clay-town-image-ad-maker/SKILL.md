@@ -112,17 +112,6 @@ Go through the six checks under "Check before you hand it back" and fix any that
 7. **Edit step:** the real label overlay, where the words go, the contrast check, and `MISSING:` lines.
 8. **CHECKS MISSED:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
-- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - It passes the glance test: one moment, one idea.
 - Headline of 7 words or fewer, at most 3 other things to read, type 30 px or more.
@@ -130,6 +119,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The implied sentence is backed; the crowd is never used as proof.
 - The lead is written in full; label words are exact; no other words on the set.
 - No child, real person, known character or speech bubble.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. Label words unknown: turn that side of the pack away. The brand never says how it works: show the product in use, nothing more. No place or lead given: pick them from the buyer's day and mark both `inferred`.

@@ -16,17 +16,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). Bring your results, audit report (optional), plan (optional). It uses your ad breakdowns.
-2. **Audit report** with the [TikTok ads account setup checker](https://useaiblocks.com/skills/tiktok-ads-account-setup-checker). Bring store capture, your question (optional).
+1. **An audit report** with the [TikTok ads account setup checker](https://useaiblocks.com/skills/tiktok-ads-account-setup-checker). Bring a store capture, your question (optional).
+2. **A plan** with the [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). Bring your question, your video ads, a spreadsheet (optional), an audit report (optional).
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -99,10 +99,9 @@ MISSING: <break-even | day-3 numbers | audience>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker). It takes the audit report.
-- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report and plan.
 - The [TikTok Ads budget reviewer](https://useaiblocks.com/skills/tiktok-ads-weekly-account-keeper).
-- The [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
-- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
+- **Plan what to test** with the [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

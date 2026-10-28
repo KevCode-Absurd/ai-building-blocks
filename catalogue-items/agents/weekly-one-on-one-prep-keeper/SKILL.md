@@ -16,11 +16,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for meeting notes, your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for meeting notes, your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -64,15 +64,6 @@ You never do these yourself. You list them for approval:
 - **Your update:** the one-page status update, only if asked. It is one page at most.
 - **Files:** each agenda file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
-- The [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter). It takes the notes and plan.
-- The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the notes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every agenda starts with the person's items, not the manager's.
 - Every win is specific and from the notes. None was invented.
@@ -88,6 +79,14 @@ Write `MISSING: <what>` and carry on. Without last week's notes for a person, bu
 - Not for a manager with one or two reports. A shared note and a good question may be enough. Say so.
 - Not for the end-of-quarter review. That is the `quarterly-performance-review-keeper`, which reads these person files.
 - Not for a serious problem such as a safety issue or a policy breach. Tell the manager to raise it at once, without waiting for two weeks of notes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Honest limits
 - It reads the manager's notes. It cannot see the person's side, so every behaviour note is a hypothesis to test in the room.

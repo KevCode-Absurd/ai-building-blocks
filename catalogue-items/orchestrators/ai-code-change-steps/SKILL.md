@@ -66,15 +66,6 @@ Three step files and the summary, in this shape:
 - Next steps: give the plan file to your AI coding helper, or turn it into tickets. Use the Stripe payments builder only if the change touches payments.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
-- The [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: the Stripe payments builder under "After this" is only for a change that touches payments. For any other change, use the AI coding task brief writer or the Plan-to-ticket writer.
 
 ## Check before you hand it back
@@ -85,3 +76,10 @@ What next: the Stripe payments builder under "After this" is only for a change t
 - Step 1: every case on the test list says what should happen, not how to build it, and the smallest useful case comes first.
 - Step 2: no step mixes a structure edit with a behaviour edit.
 - Step 3: the standing rules can be checked from the commit history, and the warning signs include loops, unasked features and deleted or switched-off tests.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -15,15 +15,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). Bring your question, store capture (optional), audit report (optional).
+1. **An audit report** with the [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). Bring your question, a store capture (optional), an audit report (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -81,6 +81,12 @@ NOT RUN (checks missed)
 MISSING: <sign-in methods | staff list | recovery steps | platform>
 ```
 
+## Checks before you hand back
+- Platform-owned items are marked, not scored.
+- No forced symbols, forced rotation or length cap appears in the policy.
+- The vendor figure and lecture figures are labelled as claims or examples.
+- Customer second-step advice is by risk.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -89,12 +95,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand back
-- Platform-owned items are marked, not scored.
-- No forced symbols, forced rotation or length cap appears in the policy.
-- The vendor figure and lecture figures are labelled as claims or examples.
-- Customer second-step advice is by risk.
 
 ## If something is missing
 Write `MISSING: <sign-in methods | staff list | recovery steps | platform>`. List every check you could not run under NOT RUN. Never assume a second step is in place.

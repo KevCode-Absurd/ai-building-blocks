@@ -25,12 +25,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Your image ads** (yours): the image ads, attached as pictures.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 How to start:
@@ -90,6 +90,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 Seven step files plus the summary. The ad rules report sits right after the script, before anything is made. The last two files hold the avatar card, sheets and storyboard, then the shot tables, clip prompts and edit list.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- No stage of step 6 or 7 started before the approval before it.
+- Every claim in the script is in the brand file, and every quote is word for word with its source.
+- Every total (words, seconds, clips, shots) matches what the tables hold.
+- Nothing is stated about countries, shipping or targeting that the brand file doesn't say.
+- The output ends with the hand-back summary. Without it, the run isn't finished.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -99,14 +107,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the shot list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- No stage of step 6 or 7 started before the approval before it.
-- Every claim in the script is in the brand file, and every quote is word for word with its source.
-- Every total (words, seconds, clips, shots) matches what the tables hold.
-- Nothing is stated about countries, shipping or targeting that the brand file doesn't say.
-- The output ends with the hand-back summary. Without it, the run isn't finished.
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.

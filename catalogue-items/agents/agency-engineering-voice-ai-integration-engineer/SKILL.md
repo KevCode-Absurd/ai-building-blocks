@@ -8,15 +8,6 @@ description: "Plan a speech-to-text pipeline for the user's recordings: audio pr
 Plan a speech-to-text pipeline for the user's recordings, stage by stage, with the failure risk and a check at each stage.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subtitle and transcript maker](https://useaiblocks.com/skills/subtitle-and-transcript-maker).
-- The [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner).
-- The [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -85,6 +76,13 @@ Return these sections, in this order:
 ## Next step
 
 If the user picks a skill from the "After this" list above, tell them what to bring. Bring the audio file to the [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber), a noisy file to the [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner), and a finished transcript to the [Subtitle and transcript maker](https://useaiblocks.com/skills/subtitle-and-transcript-maker). They take recordings and transcripts, not this plan.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Subtitle and transcript maker](https://useaiblocks.com/skills/subtitle-and-transcript-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit
 

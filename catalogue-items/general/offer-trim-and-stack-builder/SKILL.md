@@ -14,7 +14,7 @@ Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/off
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
 
 **Makes it better (optional):**
@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for objection map, a shortlist, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an objection map, a shortlist, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -60,15 +60,6 @@ In the Before you start list, read "objection map" as your promises and "shortli
 
 The cut and keep table, the problem check, the stack with values and bases, the numbers, the by-hand list and `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offer value reviewer](https://useaiblocks.com/skills/value-equation-scorer). It takes the offer.
-- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every cut or keep has a reason in cost and value terms.
@@ -77,6 +68,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every value has a basis or is marked MISSING.
 - The ratio and margin are computed from the figures shown.
 - Build-once swaps show the sum.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Offer value reviewer](https://useaiblocks.com/skills/value-equation-scorer). It takes the offer.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

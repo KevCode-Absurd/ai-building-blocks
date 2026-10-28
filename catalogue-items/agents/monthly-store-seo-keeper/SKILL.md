@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Theme files** (yours): shopify theme files (Liquid sections, settings) ready to upload.
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for a search query report, your brand brain, store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a search query report, your brand brain, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -86,15 +86,6 @@ If the owner approves a change in clear words and you are connected to the store
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 - **Next:** after the owner makes an approved change, check that one page in Search Console four weeks later, and tell the agent the date so next month's run can judge it.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
-- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Branded searches were taken out before any comparison.
 - No change from the last 4 weeks was judged.
@@ -102,6 +93,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No page push was proposed in a month with an unexplained drop.
 - Nothing on the store was changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
+- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the audit report.
+- The [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last period's numbers, skip step 4's comparison and say the path was not chosen on data. Without the monthly hours, stop after step 2 and ask for them.

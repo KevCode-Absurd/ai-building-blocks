@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lessons** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring your question, plan (optional), audit report (optional), your lessons (optional).
+1. **Your lessons** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring your question, a plan (optional), an audit report (optional), your lessons (optional).
 2. This one.
 
 How to start:
@@ -60,14 +60,6 @@ How to start:
 
 The decision type. The four-box sort of every case. The log: case, what happened, what was ignored or skipped, cause, cost, and the question that would have caught it. The repeat causes with counts. The top four for the checklist. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the lessons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every case is in one box, with the reason for the box.
@@ -75,6 +67,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each logged mistake has a specific yes/no catching question.
 - At least three cases are from the person and at least one is from someone else with a named source, or the gap is marked.
 - Bad luck cases are kept out of the log.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

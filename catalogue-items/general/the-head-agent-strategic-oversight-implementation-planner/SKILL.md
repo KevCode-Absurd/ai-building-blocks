@@ -8,16 +8,6 @@ description: "Turn findings from several AI agents into one daily brief. Merge r
 Build the daily brief for a team of AI agents that each post findings. Group findings that describe the same issue, show where agents disagree, rank what is open, and plan each handoff with an owner and the rule that allows it. Then read a starter coordinator module, list what it leaves out, and draft the fixes. This skill does not post, assign, run code or change any account. It drafts a brief and a plan for a person to send.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
-- The [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer). It takes the code change.
-- The [Agent task ownership workflow builder](https://useaiblocks.com/skills/issues-how-agents-track-work-implementation-planner). It takes the plan.
-- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -25,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -129,3 +119,11 @@ TEST CASES cover at least: two findings for one issue, two findings for differen
 ## Final check
 
 Before you send the result, confirm: no finding, name or figure was made up or copied from the starters; no issue merges two clients; every handoff names its rule or says needs review; no step says anything was sent or changed; TOP ACTION is one sentence; NEXT STEP is one thing the owner can do today.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Git workflow helper](https://useaiblocks.com/skills/git-workflow-helper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

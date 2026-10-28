@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { beforeSection, nextOf, needsOf } from '../lib/needs.mjs';
+import { afterSection, beforeSection, nextOf, needsOf } from '../lib/needs.mjs';
 
 test('a tool-only setup guide gives a useful next step without asking for an empty list of inputs', () => {
   const text = beforeSection({ needed: [], helps: [], chain: [], brain: null }, [{ name: 'Chat AI', why: 'Use the notes provided.' }]);
@@ -105,4 +105,28 @@ test('a result that only stands in for another type helps pick the link but is n
   const next = nextOf(shoot, [shoot, checker]);
   assert.deepEqual(next.map(x => x.slug), [checker.slug]);
   assert.deepEqual(next[0].takes, []);
+});
+
+test('a loose hand-off links only blocks on the same topic, and a check is not followed by unrelated report readers', () => {
+  const base = { type: 'skill', category: 'general', outputs: [] };
+  const mail = { ...base, slug: 'direct-mail-review', name: 'Direct mail package reviewer', task: 'check-ads', role: 'check', summary: 'Check your direct mail envelope and letter before it prints. Get a score and a fix for each problem.', inputs: [{ type: 'copy_draft', required: true }], outputs: [{ type: 'audit_report' }] };
+  const seo = { ...base, slug: 'store-seo-fixes', name: 'Store SEO fix prioritiser', task: 'get-found-in-search', summary: 'Rank the SEO fixes for your store by score.', inputs: [{ type: 'audit_report', required: true }] };
+  const whys = { ...base, slug: 'five-whys', name: 'Five whys session planner', task: 'lead-people', summary: 'Plan a five whys session to find why a failure happened.', inputs: [{ type: 'question', required: true }], outputs: [{ type: 'plan' }] };
+  const review = { ...base, slug: 'blame-free-review', name: 'Blame-free review agenda writer', task: 'lead-people', summary: 'Turn the five whys findings into a blame-free review agenda.', inputs: [{ type: 'plan', required: true }] };
+  const partner = { ...base, slug: 'partner-screener', name: 'Long-term partner screener', task: 'lead-people', summary: 'Screen a business partner before you sign.', inputs: [{ type: 'plan', required: true }] };
+  const all = [mail, seo, whys, review, partner];
+  assert.deepEqual(nextOf(mail, all), []);
+  assert.deepEqual(nextOf(whys, all).map(x => x.slug), [review.slug]);
+});
+
+test('generated text never doubles an article', () => {
+  const bySlug = { 'buyer-brief-writer': { slug: 'buyer-brief-writer', name: 'Buyer brief writer', task: 'understand-customers', inputs: [], outputs: [{ type: 'brief' }] } };
+  const step = { slug: 'step', name: 'Step', url: 'https://useaiblocks.com/skills/step', label: 'A draft', bring: [], uses: ['A buyer brief', 'Your offer'] };
+  const text = beforeSection({ needed: [], helps: [{ key: 'buyer-brief-writer', label: 'A buyer brief', what: 'a brief', parts: [], required: false, maker: { ...bySlug['buyer-brief-writer'], url: 'u' } }], chain: [step], brain: null });
+  assert.match(text, /It uses your buyer brief and offer\./);
+  const terms = { slug: 'terms-writer', name: 'Deal terms writer', task: 'sell-and-negotiate', summary: 'Write the partner deal terms.', inputs: [], outputs: [{ type: 'deal_terms' }] };
+  const desk = { slug: 'deal-desk', name: 'Deal desk reviewer', task: 'sell-and-negotiate', summary: 'Review partner deal terms.', inputs: [{ type: 'deal_terms', required: true }], outputs: [] };
+  const text2 = afterSection({ job: terms.task, next: nextOf(terms, [terms, desk]) });
+  assert.match(text2, /It takes the deal terms\./);
+  assert.doesNotMatch(text2, /the the/);
 });

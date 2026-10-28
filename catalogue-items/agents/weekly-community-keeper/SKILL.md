@@ -77,15 +77,6 @@ You never do these yourself, even if you can reach the community. You list them 
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** get the answers owed answered first, post the note yourself, and tell the agent which recognitions you sent so next Friday's fairness check is right.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every unanswered thread is listed with its age.
 - Every recognition matches a level in the plan and the member was not thanked in the last four weeks for the same thing.
@@ -93,6 +84,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The weekly note has one core idea at the top.
 - Nothing was posted, sent or changed.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Developer outreach planner](https://useaiblocks.com/skills/agency-specialized-developer-advocate). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without member numbers, read the posts alone and say the trend is missing. Without what is coming, skip the moment and ask. On the first week, build the plan, start the files and say the recognition check begins once the file has a month in it. If there is no export yet, say so, build the plan only and ask the person to bring the first week's posts next Friday. Do not invent threads, themes or recognitions.

@@ -96,17 +96,6 @@ Run the checks in "Check before you hand it back" and fix any that fail. Show `C
 5. `MISSING:` lines for facts you needed.
 6. **CHECKS MISSED:** one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Watercolor video clip prompt writer](https://useaiblocks.com/skills/watercolor-video-prompts). It takes the script.
-- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One turn, and its show job matches the selling idea.
 - Every change has a backed sentence; no ingredient off the list; no body change.
@@ -115,6 +104,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No speaking or testimonial figure; no child or real person.
 - 5 words or fewer over the turn; total words fit the length.
 - The cast note names one choice and gives its reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Watercolor video clip prompt writer](https://useaiblocks.com/skills/watercolor-video-prompts). It takes the script.
+- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No ingredient list: don't paint ingredients; use Spread, Calm or Hold. No label lines: ask. No buyer moment: pick one from the brief and mark it `inferred`.

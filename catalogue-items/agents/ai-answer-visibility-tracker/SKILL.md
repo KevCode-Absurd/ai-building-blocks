@@ -81,15 +81,6 @@ If the owner approves one change in clear words in this chat, and you are connec
 - **Honest read:** what is real movement and what is within normal wobble.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
-- The [AI search visibility analyst](https://useaiblocks.com/skills/ai-search-visibility-optimiser). It takes the audit report.
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The questions and assistants are the same as last month.
 - The number of valid runs is shown for every share.
@@ -97,6 +88,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No more than 3 fixes were proposed.
 - Nothing was changed, posted or sent without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI search visibility analyst](https://useaiblocks.com/skills/ai-search-visibility-optimiser). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last month's history, this is a base run: report the share and propose fixes only for wrong facts. Without web-search assistants, stop and say the numbers would not be reliable.

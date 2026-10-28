@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
 5. This one.
 
@@ -123,23 +123,23 @@ MISSING    <photo role | product fact | approved words | price>
 CHECKS MISSED  <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- The [Visual twist image ad maker](https://useaiblocks.com/skills/visual-twist-image-ad-maker).
-- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- The [Image enlargement quality checker](https://useaiblocks.com/skills/image-upscale-checker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every attached photo has one role, and none is described beyond what it shows.
 - The lock lines appear word for word, and no pack was swapped or simplified.
 - Every approved word appears once, in quotes, with its place; or the space is asked for.
 - Nothing from a rejected version or a placeholder survived.
 - No two lines contradict each other, and no invented claim, price or person is in the picture.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [Visual twist image ad maker](https://useaiblocks.com/skills/visual-twist-image-ad-maker).
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Image enlargement quality checker](https://useaiblocks.com/skills/image-upscale-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <photo role | product fact | approved words | price>` rather than guessing a size, an opening or a part. Show the product closed or at rest until the fact arrives.

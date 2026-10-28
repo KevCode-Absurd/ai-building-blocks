@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your website** (yours): the link to your site or the page.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -52,15 +52,6 @@ How to start:
 
 The task. The score with working. Findings, worst first, each with the rule, screen, what happens and a fix. The seams. What needs a real test. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer).
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each finding names the rule it breaks.
@@ -69,6 +60,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The report says which items still need a real test.
 - Every finding cites the screen or step.
 - The score shows its deductions and what it measures.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer).
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

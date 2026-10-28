@@ -83,20 +83,19 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent or changed.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Restaurant shift handover reviewer](https://useaiblocks.com/skills/restaurant-shift-exception-review-assistant).
-- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the plan and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Safety issues come first and follow the approved procedure.
 - No temperature, inspection result or fix appears that the notes did not give.
 - Open, done and proposed items are in separate lists.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Restaurant shift handover reviewer](https://useaiblocks.com/skills/restaurant-shift-exception-review-assistant).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

@@ -50,8 +50,8 @@ Next: build it with three test rows first, then run the test checks (an empty fi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder). It takes the the automation.
-- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the the automation.
+- The [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder). It takes the automation.
+- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the automation.
 - The [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

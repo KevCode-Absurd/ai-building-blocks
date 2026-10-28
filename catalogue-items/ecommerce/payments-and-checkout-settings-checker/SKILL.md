@@ -15,18 +15,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). Bring your question, store capture (optional), plan (optional). It uses your brand brain.
-2. This one.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, store capture, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In NOT CHECKED, list checks that could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for your question, a store capture, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Shopify Payments:** Built into Shopify, with wallets such as Shop Pay, Apple Pay and Google Pay, and payout verification.
@@ -98,6 +94,9 @@ MISSING: <platform | country | business type | settings>
 Consent rules vary by country. This is not legal advice.
 ```
 
+## When not to use
+To test real orders before launch, use the store go-live checker. For where buyers leave the checkout page, use the Checkout page auditor. For legal sign-off on consent rules, ask a qualified lawyer in each region you sell to.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -105,9 +104,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## When not to use
-To test real orders before launch, use the store go-live checker. For where buyers leave the checkout page, use the Checkout page auditor. For legal sign-off on consent rules, ask a qualified lawyer in each region you sell to.
 
 ## Checks
 - Risks are ranked with payout blockers first.

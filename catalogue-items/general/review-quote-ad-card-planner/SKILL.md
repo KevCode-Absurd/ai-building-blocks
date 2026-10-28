@@ -79,7 +79,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
 - The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- The [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

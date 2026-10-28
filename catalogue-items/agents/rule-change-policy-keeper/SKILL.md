@@ -14,7 +14,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **The policy** (yours): the written policy or rules, with the date they start.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, the policy, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, the policy, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -77,17 +77,6 @@ If the person says yes to a specific step in clear words, do only that step and 
 - **Checks missed:** one line for each check that failed or could not run, or the word "none".
 - **The reminder:** this is a first check, not legal advice. Check with a qualified lawyer before you apply any of it.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing claims checker](https://useaiblocks.com/skills/marketing-claims-checker). It takes the draft.
-- The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
-- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
-- The [Refund request reply writer](https://useaiblocks.com/prompts/refund-request-reply-writer). It takes the the policy.
-- **Lead the team** with the [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the the policy and audit report and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Rule status is stated, and unverified dates are marked.
 - Every high gap has a draft or is listed as open with a reason.
@@ -95,6 +84,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No redraft is marked applied. Every gap is still open in the log.
 - The reminder to check with a qualified lawyer is in the hand-back.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Legal compliance checker agent](https://useaiblocks.com/skills/agency-support-legal-compliance-checker). It takes the policy.
+- The [Compliance auditor agent](https://useaiblocks.com/skills/agency-security-compliance-auditor). It takes the policy and audit report.
+- The [Data privacy officer](https://useaiblocks.com/skills/agency-data-privacy-officer). It takes the policy.
+- The [Refund request reply writer](https://useaiblocks.com/prompts/refund-request-reply-writer). It takes the policy.
+- **Lead the team** with the [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the policy and audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without the approved version of a policy, ask for it: a redraft of an out-of-date policy creates a second version. Without the rule text, ask for it and do not fill it from memory. Without the date it takes effect, set no deadline. Never invent a citation, a threshold or a date.

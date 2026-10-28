@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -57,16 +57,6 @@ How to start:
 
 Defined terms. The numbered claims with status, what each rests on, routes and causes. A clean version of the report with guesses removed. The open-questions block. The public claim in one line. A note on data quality. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester). It takes the draft.
-- The [Working relationship trust reviewer](https://useaiblocks.com/skills/people-trust-checker). It takes the audit report.
-- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every proven line points to a named observation.
@@ -74,6 +64,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each cause used is needed to explain the data.
 - Open questions are in a separate block.
 - Every claim has two routes or is marked single-route.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

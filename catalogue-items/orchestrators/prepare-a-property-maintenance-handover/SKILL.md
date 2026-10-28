@@ -81,15 +81,6 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was booked, sent or closed.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Property repair and access reviewer](https://useaiblocks.com/skills/property-maintenance-evidence-review-assistant).
-- The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
-- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every open ticket from the source appears once, with its ID.
@@ -97,6 +88,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Tenant details are limited to what the job needs. No codes or passwords appear.
 - Draft changes are marked draft.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Property repair and access reviewer](https://useaiblocks.com/skills/property-maintenance-evidence-review-assistant).
+- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
+- The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

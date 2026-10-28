@@ -16,13 +16,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -117,15 +117,6 @@ COULD NOT CHECK
 Check the live policy page.>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and ad copy and audit report.
-- The [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop). It takes the ad copy and script.
-- The [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every finding quotes or points to the exact place in the ad.
 - Nothing that depends on something outside the ad is rated "would reject".
@@ -134,6 +125,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score's sum matches the findings, line for line.
 - The rewritten ad changes only what a finding names, and adds no new claim or offer.
 - The closing line about Meta's live policy page is there.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and ad copy and audit report.
+- The [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop). It takes the ad copy and script.
+- The [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` ("target age unknown"). With no landing page, mark the relevance and commercial-practice findings as partial.

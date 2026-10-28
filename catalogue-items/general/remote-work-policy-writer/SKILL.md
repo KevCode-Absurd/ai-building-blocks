@@ -75,8 +75,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer). It takes the the policy.
-- The [Company handbook change reviewer](https://useaiblocks.com/skills/handbook-change-desk). It takes the the policy.
+- The [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer). It takes the policy.
+- The [Company handbook change reviewer](https://useaiblocks.com/skills/handbook-change-desk). It takes the policy.
 - The [Employee data privacy reviewer](https://useaiblocks.com/workflows/review-employee-data-access-before-a-change).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

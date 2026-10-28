@@ -14,18 +14,18 @@ A fall in price is a fact about the crowd. A fall in profit or a jump in debt is
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Investment price and value checker](https://useaiblocks.com/skills/market-mood-reader). Bring your question.
+1. **An audit report** with the [Investment price and value checker](https://useaiblocks.com/skills/market-mood-reader). Bring your question.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -54,15 +54,6 @@ How to start:
 
 One block per holding in the output shape, the count, `MISSING:` lines, a line saying this is a method and not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
-- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
-- The [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The then-and-now table uses figures, not impressions.
@@ -70,6 +61,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The mark follows from the facts, not from the price move.
 - Each watch or weak holding has a test and a date.
 - Nothing names a stock to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
+- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
+- The [Business diligence meeting question planner](https://useaiblocks.com/skills/diligence-meeting-prep-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

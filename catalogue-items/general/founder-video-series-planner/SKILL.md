@@ -69,16 +69,6 @@ How to start:
 5. **MISSING:** facts only the founder can supply.
 6. **Checks missed:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video opening hook writer](https://useaiblocks.com/prompts/video-opening-line-batch-writer). It takes the brief.
-- **Make video ads** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It takes the brief.
-- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
-- The [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every number is in the facts or is a bracketed question.
 - Read every spoken line once more. Each fact in it is in the material. Each "most", "every", "all", "always" or claim about what people do has a source, or is cut or bracketed.
@@ -86,6 +76,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No discount code, countdown or "buy now". Price is explained, never pushed.
 - No rival is named. Customer messages are read as written, with permission noted.
 - No thread two weeks running.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video opening hook writer](https://useaiblocks.com/prompts/video-opening-line-batch-writer). It takes the brief.
+- **Make video ads** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It takes the brief.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. Fewer than ten questions: plan the weeks you can and list where to find more (reviews, support inbox, comments). Don't invent a question or a story.

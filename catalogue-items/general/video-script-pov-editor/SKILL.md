@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 How to start:
@@ -59,6 +59,12 @@ Run the checks in "Check before you hand it back" and fix any that fail. Show `C
 ## What you hand back
 Every line, kept in its place, with its new spoken words, on-screen text and picture note. The opening variants, moved. Notes on every line kept in the old voice and why, and every line where honesty limited the move. Last, the `CHECKS MISSED` line: one line for each check still missed, or "none".
 
+## Check before you hand it back
+- Old and new side by side show the same facts in the same order. No line added, cut, merged or split.
+- Every claim, number, price, offer term, guarantee, product name and customer quote is unchanged. Quotes stay word for word in every voice.
+- Each line is within about 10% of its old length.
+- No moved line makes a claim the original didn't.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -66,15 +72,9 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Old and new side by side show the same facts in the same order. No line added, cut, merged or split.
-- Every claim, number, price, offer term, guarantee, product name and customer quote is unchanged. Quotes stay word for word in every voice.
-- Each line is within about 10% of its old length.
-- No moved line makes a claim the original didn't.
 
 ## If something is missing
 No speaker named: write `MISSING: speaker` and treat it as an AI presenter, so no personal results. No pronoun for third person: use "they".

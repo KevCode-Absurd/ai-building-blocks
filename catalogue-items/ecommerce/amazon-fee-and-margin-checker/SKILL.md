@@ -91,20 +91,19 @@ MISSING: <current fee figures | size and weight>
 CHECK IN SELLER CENTRAL: <referral rate, size tier, pick and pack, storage, brand bonus>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Amazon unit profit checker](https://useaiblocks.com/prompts/amazon-unit-profit-checker).
-- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps to offer
 
 Use these instead of the general "After this" list above:
 - Before this: check the product is worth selling with the [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer).
 - After this, if the numbers work: plan the launch ads with the [Amazon PPC launch builder](https://useaiblocks.com/skills/amazon-ppc-launch-builder).
 - For one product's unit profit only, use the [Amazon unit profit checker](https://useaiblocks.com/prompts/amazon-unit-profit-checker).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 - Every fee is on its own line and the lines add up to the profit shown.

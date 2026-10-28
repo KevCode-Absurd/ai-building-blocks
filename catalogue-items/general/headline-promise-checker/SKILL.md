@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 5. This one.
 
@@ -56,17 +56,6 @@ How to start:
 
 The score out of 100 with how it was worked out. The reader. The reward and its type. The so-what result. The stronger versions with changes and backing facts. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Headline test tracking planner](https://useaiblocks.com/skills/keyed-headline-test-planner). It takes the hooks.
-- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker).
-- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the audit report.
-- The [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
-- **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The reader is named.
@@ -75,6 +64,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Curiosity is tied to the product.
 - Every added claim is supported by the offer facts.
 - The score shows how it was worked out.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Headline test tracking planner](https://useaiblocks.com/skills/keyed-headline-test-planner). It takes the hooks.
+- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker).
+- The [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
+- **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

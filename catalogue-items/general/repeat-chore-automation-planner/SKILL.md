@@ -45,14 +45,6 @@ How to start:
 
 The task list with who and how often. The ranked chores worth handing to a tool. For each: terms, parts, operation and material, steps and the check against the hand method. The first version. The first week's fix. If asked, a short audit of what was left by hand and why. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Shape the product** with the [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing). It takes the plan.
-- The [AI skill writing coach](https://useaiblocks.com/skills/skill-making-guide). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## What to do next
 
 Run the first version beside the hand method for the week you named, compare the results line by line, and fix the differences. After that week, decide whether to extend the tool to the next ranked chore. If the chore uses a paid tool, an account or a login, say so in the plan, and keep passwords and customer data out of what you paste here.
@@ -64,6 +56,13 @@ Run the first version beside the hand method for the week you named, compare the
 - The plan never builds a general tool when one job-specific tool will do.
 - Each step has a check against the hand method.
 - The first week's fix is small enough to ship.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Zapier and Make automation planner](https://useaiblocks.com/skills/no-code-automation-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

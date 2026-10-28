@@ -51,18 +51,16 @@ Two step files and the summary. The last file holds the recovery plan.
 - **Step 2, error warning and recovery plan:** each mistake said to be impossible, how it is detected and what the system does; the safe restart point; each alarm with its text, the go or no-go decision and who decides.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-- The [AI agent monitoring planner](https://useaiblocks.com/skills/ai-agent-monitoring-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every join lists what passes across it, not only that two parts are linked.
 - Every job has its own priority, with no ties left to chance.
 - The readiness score says what it measures and how it was worked out.
 - Each alarm names the decision the person has to make.
 - No part, owner or incident is invented. Every gap is a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

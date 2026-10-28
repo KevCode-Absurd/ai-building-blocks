@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -50,16 +50,6 @@ How to start:
 
 The group table with assumptions, the customer sum, the total, the weakest numbers, the least well served group and one change, a note that this is not an audit, `MISSING:` lines and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the audit report.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
-- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: where the links under "After this" say "audit report", bring this tally instead. For a letter, take the group table and the weakest link to the Annual letter writer.
 
 ## Check before you hand it back
@@ -70,6 +60,13 @@ What next: where the links under "After this" say "audit report", bring this tal
 - The weakest numbers have a range.
 - The least well served group has a proposed change.
 - The note says it is a rough tally, not an audit.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -8,13 +8,6 @@ description: "Review healthcare ads, posts and scripts for mainland China agains
 Review healthcare marketing content for mainland China and flag banned claims, missing approvals and privacy risks, with a risk level and a safer rewrite for each. This is a first-pass review. It is not legal advice and not an approval.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Schema markup writer](https://useaiblocks.com/skills/schema-markup-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 

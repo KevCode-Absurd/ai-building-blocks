@@ -46,15 +46,6 @@ How to start:
 
 The launch. The parts with owners. The joins with what crosses each. The priority list. The overload plan. The change control table. The final reader. The readiness score with its six marks. The run-through plan. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Module design coach](https://useaiblocks.com/skills/module-design-coach). It takes the audit report.
-- The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
-- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every join is listed with what crosses it.
@@ -63,6 +54,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every change has a reason and an approver.
 - A full run-through is planned with a real person, and scored none until it has been done.
 - The readiness score shows its six marks and the sum.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Module design coach](https://useaiblocks.com/skills/module-design-coach). It takes the audit report.
+- The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

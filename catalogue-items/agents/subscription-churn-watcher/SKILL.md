@@ -14,15 +14,15 @@ When not to use: with only a few hundred subscribers or fewer, the day-by-day ch
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+- **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for spreadsheet, your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -99,6 +99,14 @@ WATCH NEXT MONTH  <one number>
 FILES AND MISSING  <each step's file> | MISSING: <every line>
 ```
 
+## Checks before you hand it back
+- Every score change shows both months and the sum.
+- Only the lowest part was fixed, plus onboarding only when most cancels fall in days 0 to 14.
+- Every threshold is marked as the source's or ours, as the audit marks them.
+- No claim of what a fix will save is made. Say what to watch instead.
+- Nothing in the subscription app or any subscriber was touched without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -108,14 +116,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every score change shows both months and the sum.
-- Only the lowest part was fixed, plus onboarding only when most cancels fall in days 0 to 14.
-- Every threshold is marked as the source's or ours, as the audit marks them.
-- No claim of what a fix will save is made. Say what to watch instead.
-- Nothing in the subscription app or any subscriber was touched without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last month's file, skip the comparison. Without cancel reasons, do not build a cancel flow; ask for them. Without email send dates, leave the campaign part out and say so.

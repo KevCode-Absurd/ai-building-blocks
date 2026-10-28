@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -61,6 +61,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. Step 1's file holds the cut line. Step 2's holds the programme verdicts. Step 3's holds the give-up list. Step 4's holds the commit note.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order. Step 2 used step 1's plan, step 3 used step 1's shortlist and plan, and step 4 used step 3's give-up list.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- Every cut names its numbers, and the commit note records the disagreement rather than hiding it.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -68,10 +75,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Test the idea with real people** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order. Step 2 used step 1's plan, step 3 used step 1's shortlist and plan, and step 4 used step 3's give-up list.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- Every cut names its numbers, and the commit note records the disagreement rather than hiding it.

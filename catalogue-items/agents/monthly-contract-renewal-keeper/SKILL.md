@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -67,15 +67,6 @@ You never do these yourself. You list them for approval:
 - **Broken promises:** what a vendor owed and did not deliver, for the call.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Policy change impact reviewer](https://useaiblocks.com/skills/rule-change-policy-comparer). It takes the document.
-- The [Vendor risk reviewer](https://useaiblocks.com/skills/vendor-risk-reviewer). It takes the document.
-- The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every renewal and notice date is read from the contract or the register, not guessed.
 - Notice windows closing in 45 days are at the top.
@@ -83,6 +74,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every summary says it is a first check, not legal advice.
 - Nothing was renewed, cancelled, signed or sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Vendor risk reviewer](https://useaiblocks.com/skills/vendor-risk-reviewer). It takes the document.
+- The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without a register, build one from the contracts and say the dates must be checked by a person. Without a sourced notice period, mark it MISSING and place the contract in an urgent date-verification list. Do not assume 30 days, compute a notice deadline or classify the window as safe until the controlling contract wording is checked. Without the "still use it?" lines, list every renewal as "ask the owner" and skip the cancel candidates.

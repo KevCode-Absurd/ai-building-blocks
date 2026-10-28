@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
@@ -73,8 +73,8 @@ CHECKS MISSED: <each check still missed, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make video ads** with the [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts). It takes the script.
-- **Make video ads** with the [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor). It takes the script.
-- **Make video ads** with the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts). It takes the script.
+- The [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor). It takes the script.
+- The [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

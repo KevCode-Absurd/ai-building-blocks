@@ -88,14 +88,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student feedback and revision task planner](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on).
-- The [Peer writing feedback and revision planner](https://useaiblocks.com/workflows/plan-a-peer-feedback-session-that-helps). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Offer one next step and say they can type their own:
@@ -112,3 +104,11 @@ Offer one next step and say they can type their own:
 - No experience, feeling or intention was added to the student's draft.
 - The original draft is untouched and the proofread file has a new name.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student feedback and revision task planner](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on).
+- The [Peer writing feedback and revision planner](https://useaiblocks.com/workflows/plan-a-peer-feedback-session-that-helps). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

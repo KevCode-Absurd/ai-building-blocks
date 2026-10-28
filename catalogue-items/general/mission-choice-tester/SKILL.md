@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Personal mission statement writer** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). Bring plan, shortlist (optional).
+1. **Personal mission statement writer** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). Bring a plan, a shortlist (optional).
 2. This one.
 
 How to start:
@@ -82,14 +82,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the question.
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the question and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All choices are real, dated or tied to a person.
@@ -98,6 +90,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every non-clear mark has a proposed fix.
 - The re-test uses the same choices.
 - The review date is a calendar date.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the question.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the question and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

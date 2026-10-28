@@ -56,15 +56,6 @@ Pause here: Take the summary, the suggested edits and the flagged clauses to a q
 - Then the pause: check with a qualified lawyer before you sign.
 - The `HAND-BACK SUMMARY`: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
-- The [Policy change impact reviewer](https://useaiblocks.com/skills/rule-change-policy-comparer). It takes the document.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every flagged clause quotes or points to the exact place in the contract.
 - Each suggested edit has wording you could paste, plus a fallback.
@@ -72,3 +63,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The summary has no legal terms and says clearly whether to sign.
 - The hand-back says to check with a qualified lawyer, and does not claim to give legal advice.
 - Every gap is a `MISSING:` line. Nothing was invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+- The [Infringement claim screening reviewer](https://useaiblocks.com/skills/infringement-first-look-sorter). It takes the document.
+- The [US defense contractor security checker](https://useaiblocks.com/skills/defense-contractor-security). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

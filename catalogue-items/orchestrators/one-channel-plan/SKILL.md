@@ -70,15 +70,6 @@ Three step files and the summary. The step 3 file holds the pitch draft.
 - STEP 1 THE ROUTE, STEP 2 THE PLAN, STEP 3 THE PITCH TO HIRES.
 - HAND-BACK SUMMARY: each file, and every MISSING line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
-- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Customer value and cost to win are shown as sums, with guesses marked.
 - Exactly one route is planned, and the reason each other route loses is stated.
@@ -86,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The pitch has no perks list and no claim every firm makes.
 - Nothing is invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

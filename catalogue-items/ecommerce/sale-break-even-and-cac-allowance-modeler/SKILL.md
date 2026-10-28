@@ -31,7 +31,7 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** The maths is simple. Paste your costs as a table and check one row by hand.
-- **Shopify:** A paid service. Its order export (on any paid plan) gives you cohorts by month and the repeat orders that follow. Any store platform that exports orders by date works too.
+- **Shopify:** Its order exports give you cohorts by month and the repeat orders that follow.
 - **Google Sheets:** Keep the table in a sheet so you can change the discount and watch the ROAS move.
 <!-- /needs -->
 
@@ -93,9 +93,7 @@ MISSING: <price | product cost | shipping | fees | discount options | objective>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- The [Sale season ad spend planner](https://useaiblocks.com/skills/sale-season-pacing-sheet-builder). It takes the audit report.
-- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the audit report.
 - **Make an offer people want** with the [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

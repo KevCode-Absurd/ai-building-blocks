@@ -69,15 +69,6 @@ Four step files and the summary. The last step file holds the help pages.
 - **Step 4, help pages:** one per solved problem, with steps, what the customer should see and a fix for next time.
 - **Hand-back summary:** each step's file, every `MISSING:` line in one list and the `CHECKS MISSED` list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer inbox reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter). It takes the document.
-- The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
-- The [Support reply tone editor](https://useaiblocks.com/skills/support-reply-tone-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use these first. Suggest one next step as a short question:
 - Publish the help pages yourself, on your site or help desk. Nothing here posts them.
@@ -92,3 +83,10 @@ Use these first. Suggest one next step as a short question:
 - Every ticket has a priority and a reply, and the top-priority tickets come first.
 - A medical, legal or safety question is routed to a person and not answered with advice.
 - Each help page covers a problem the person marked solved, and can be followed without writing in.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer inbox reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

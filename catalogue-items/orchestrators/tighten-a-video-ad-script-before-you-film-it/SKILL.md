@@ -24,14 +24,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
-3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
-4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
+3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and video ad script and character sheet.
+4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -78,13 +78,6 @@ Use these instead of the general "After this" list above:
 
 ## What you hand back
 4 step files and the summary. The last file holds the stop-ship check and the ship call.
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

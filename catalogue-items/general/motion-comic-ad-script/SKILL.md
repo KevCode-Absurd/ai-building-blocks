@@ -91,6 +91,14 @@ CAST NOTE  <who carries it, why, voice, what never changes>
 CHECKS MISSED: <one line each, or none>
 ```
 
+## Check before you hand it back
+- One claim, including inside cutaway labels.
+- Cover the captions: the drawings alone still show what was wrong and what changed.
+- Every panel has a named transition, and the reveal panel is the longest.
+- Captions are 6 words or fewer, narration 10 or fewer per panel.
+- The product carries no drawn letters, and the photo panel closes the ad.
+- No drawn customer, expert or child; the land panels claim no more than the brand states.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -100,14 +108,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- One claim, including inside cutaway labels.
-- Cover the captions: the drawings alone still show what was wrong and what changed.
-- Every panel has a named transition, and the reveal panel is the longest.
-- Captions are 6 words or fewer, narration 10 or fewer per panel.
-- The product carries no drawn letters, and the photo panel closes the ad.
-- No drawn customer, expert or child; the land panels claim no more than the brand states.
 
 ## If something is missing
 Write `MISSING: <what>`, or mark the line "inferred". No use facts: no usage panel. No source for how it works: no cutaway. Never fill in a claim.

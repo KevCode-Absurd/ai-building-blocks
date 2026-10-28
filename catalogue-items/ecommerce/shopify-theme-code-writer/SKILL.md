@@ -61,17 +61,6 @@ How to start:
 - A short list: what to upload, what the owner can edit, what was assumed.
 - The `CHECKS MISSED` line, one line per check missed, or "none" (when editing, also the checks the pasted file failed).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder).
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the theme files.
-- The [Leftover app code finder](https://useaiblocks.com/skills/leftover-app-code-finder). It takes the theme files.
-- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner).
-- The [Shopify script and style loader](https://useaiblocks.com/skills/theme-script-and-style-loader). It takes the theme files.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The schema is valid JSON with a name and (for sections) a preset or `enabled_on`.
 - No `include`, `img_url`, ternary or brackets in conditions.
@@ -80,6 +69,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Fixed words use `t`; editable words sit in settings.
 - Images have `alt`, `image_url` with a size, and the right loading setting.
 - The notes say whether Theme Check ran, and what the code assumes about the theme.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder).
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the theme files.
+- The [Leftover app code finder](https://useaiblocks.com/skills/leftover-app-code-finder). It takes the theme files.
+- The [Shopify script and style loader](https://useaiblocks.com/skills/theme-script-and-style-loader). It takes the theme files.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No theme info: assume a recent theme with theme blocks off, use sections and snippets only, and say so. Don't invent object properties; if unsure, name the Shopify documentation page to check.

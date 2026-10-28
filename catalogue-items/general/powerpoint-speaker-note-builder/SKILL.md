@@ -6,27 +6,19 @@ description: "Share your deck and talk length. Get slide notes with source refer
 # PowerPoint speaker notes builder
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder). It takes the slide deck.
-- The [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer). It takes the slide deck.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Slide deck** (yours): a finished slide deck.
+- **A slide deck** (yours): a finished slide deck.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for slide deck, document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a slide deck, a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -70,6 +62,14 @@ Use an actual tool that can read and write the required native format. Plain tex
 ## Deliverables
 deck-with-notes.pptx and a rehearsal timing sheet (slide, minutes, cumulative time, transition line). Include a source map (file and version, slide, what it supports), a list of checks marked passed, failed or not run, and open items (missing fact, next action).
 Include a short run log with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder). It takes the slide deck.
+- The [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer). It takes the slide deck.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## What to do next
 Do a timed run-through with the notes, using a real timer, then a question-and-answer practice pass. If you also need a take-home copy, use "PowerPoint audience handout builder", which keeps these notes out of the audience file.

@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
@@ -90,6 +90,14 @@ SOURCES: <ads and dates you used>
 MISSING: <what would sharpen it>
 ```
 
+## If something is missing
+
+Write `MISSING: <ads | competitors | brand facts | start dates>`. Do not invent ads, counts, spend or quotes. With fewer than 5 ads for a competitor, say the read is thin. With no start dates, skip the timing hint.
+
+## Next step
+
+End with one question: which brief to turn into a full creative brief first.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -99,14 +107,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker). It takes the ad breakdowns.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## If something is missing
-
-Write `MISSING: <ads | competitors | brand facts | start dates>`. Do not invent ads, counts, spend or quotes. With fewer than 5 ads for a competitor, say the read is thin. With no start dates, skip the timing hint.
-
-## Next step
-
-End with one question: which brief to turn into a full creative brief first.
 
 ## Avoid
 

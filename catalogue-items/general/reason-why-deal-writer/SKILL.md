@@ -57,6 +57,14 @@ How to start:
 
 The plain deal. The doubts. The reasons considered and the one chosen for each version, with its proof. The vivid picture. The claim steps. Three versions of the deal copy. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- The reason is true and can be shown.
+- The deal is stated before the reason.
+- The reason fits this reader, not everyone.
+- Claim steps are exact.
+- No claim of savings is larger than the real saving.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -67,14 +75,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Discount consistency checker](https://useaiblocks.com/prompts/discount-sanity-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The reason is true and can be shown.
-- The deal is stated before the reason.
-- The reason fits this reader, not everyone.
-- Claim steps are exact.
-- No claim of savings is larger than the real saving.
 
 ## If something is missing
 

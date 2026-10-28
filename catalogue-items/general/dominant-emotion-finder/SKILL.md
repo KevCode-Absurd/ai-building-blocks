@@ -58,16 +58,6 @@ How to start:
 
 The dominant emotion in one sentence and the proposed theme. The lived events with the feeling and evidence for each. The product link. The runner-up and why it lost. Three questions to test the pick. A persona update and a ranked angle list. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the landing page** with the [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner). It takes the buying reasons and brand brain.
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
-- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the brand brain.
-- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The emotion named is one the buyer already has, shown by their words or lived events.
@@ -75,6 +65,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The theme is tied to a real product benefit from the facts.
 - No feeling is invented to fit the product.
 - A reason is given for rejecting the runner-up feeling.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the landing page** with the [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner). It takes the buying reasons and buyer profile.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the buyer profile.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

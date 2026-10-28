@@ -74,15 +74,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## What you hand back
 The offer block (with its word count and where each line came from), then `MISSING` and `NOT ADDED` lines. Then, per product, the 3 ways x 2 sizes: for each ad, its way, size, layout, ground and text colour, the real photo used, and every text element (headline, support, the `offer` block, any review and its credit) with its source. Then the contact-sheet result, one line on what to change when the offer changes, and the `CHECKS MISSED` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
-- **Check it before it goes live** with the [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
-- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - All three ways exist, or the brief says why one became "what's included".
 - Each ad has exactly one `offer` element, identical on every ad. No other line repeats a price or an offer date.
@@ -90,6 +81,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each 9:16 is laid out on its own, not cropped from the 4:5.
 - Any review is word for word, with only the credit its source holds.
 - Any health, nutrition or testing claim on an ad (for example vitamin counts or third-party testing) comes from the brand file or the site, with its source. If it can't be matched, leave it off the ad and flag it for a qualified person to check against the platform's ad rules.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
+- The [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
+- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <offer terms | renewal price | end date | earlier price | review | photo>`. No review: the safety-net ad uses the policy's own words alone. No end date: no urgency anywhere. No photo: say so instead of describing one.

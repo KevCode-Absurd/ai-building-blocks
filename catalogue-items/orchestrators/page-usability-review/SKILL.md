@@ -22,8 +22,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **Page layout spec** (yours): a section-by-section layout for a page, with what each section holds.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A page layout spec** (yours): a section-by-section layout for a page, with what each section holds.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).

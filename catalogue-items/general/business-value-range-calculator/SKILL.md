@@ -12,18 +12,18 @@ A business is worth the cash an owner can take out of it over its life, brought 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). Bring financial statements, audit report (optional).
+1. **An audit report** with the [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). Bring financial statements, an audit report (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,16 +53,6 @@ How to start:
 
 The estimability call. The rate used and why. The floor value. The three cases with growth, years, value and what each needs. The sensitivity row. Where a given price falls. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
-- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
-- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The rate and its source are stated, or `MISSING:`.
@@ -71,6 +61,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The floor is shown beside the cases.
 - A sensitivity row shows the effect of a higher rate.
 - It says these are estimates, not a recommendation, and names no buy or sell call.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
+- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

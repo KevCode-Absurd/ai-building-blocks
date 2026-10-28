@@ -1,7 +1,8 @@
 // Writes two marked sections into every SKILL.md, worked out by tools/lib/needs.mjs from the blocks' inputs and outputs:
 //   "## Before you start" (before "## What you need"): what's needed, the steps before this one with links,
 //     which brand brain files to read, how to check for each thing, and the tools that do the job best.
-//   "## After this" (after "## What you hand back"): the AI asks what's next and offers the paths from here.
+//   "## After this" (after "## What you hand back", or the page's last output or hand-back section, or else at the end
+//     above credits and sources; see insertAfterHandBack): the AI asks what's next and offers the paths from here.
 // Run after `npm --prefix site run index` (it reads site/public/data/blocks.json). Running it again changes nothing.
 // Usage: node tools/add-needs.mjs [--check] [--dry] [--out <file>] [--only <slug,slug>]
 //   --check: exit 1 if any file would change. --dry: write nothing, just count.
@@ -42,7 +43,10 @@ const bySlug = Object.fromEntries(all.map((b) => [b.slug, b]));
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "catalogue-items/_types.yaml"), "utf8"));
 const desc = {};
 for (const group of Object.values(types)) for (const [id, t] of Object.entries(group)) desc[id] = t.desc;
-const describe = (t) => ({ label: t.replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase()), what: (desc[t] ?? t).replace(/\.$/, "").replace(/^./, (c) => c.toLowerCase()) });
+// "A spreadsheet", "An audit report", "Meeting notes", "Source text": a label reads like the named ones in lib/needs.mjs.
+const MASS = new Set(["source_text", "audio", "pdp_copy", "product_data"]);
+const article = (t, words) => (MASS.has(t) || /s$/.test(t) ? words : `${/^[aeiou]/.test(words) ? "an" : "a"} ${words}`);
+const describe = (t) => ({ label: article(t, t.replace(/_/g, " ")).replace(/^./, (c) => c.toUpperCase()), what: (desc[t] ?? t).replace(/\.$/, "").replace(/^./, (c) => c.toLowerCase()) });
 
 const MARK = {
   before: ["<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->", "<!-- /needs -->"],
@@ -86,15 +90,31 @@ function insertBefore(text, nl, block, heading) {
   lines.splice(at, 0, ...block.split(nl), "");
   return lines.join(nl);
 }
-/** Puts `block` after the section that starts with `heading`: before the next "## ". */
-function insertAfter(text, nl, block, heading) {
+/** Headings of the part that says what the skill hands back, in the words pages use ("Output", "Hand back", "Deliverable"). */
+const HAND_BACK = /^## (What you hand back|What to hand back|Hand back|Hand it back|Outputs?\b|Output (format|shape|files)|Deliverables?\b|Deliverable format|Deliver\b|What you get|What good output looks like|Intended result|Final check|Checks? before (you hand (it )?back|handing back)|Acceptance( checks)?\b|Completion checks|What you just built|What next|Next steps?\b)/i;
+/** End matter that stays below "After this": credits, sources, references, licence. */
+const END_MATTER = /^## (Credits?|Sources?|References|Method references|Licen[cs]e|Attribution|Acknowledg|Further reading)\b/i;
+/** Sections "After this" never sits above: when to use it, how to work, the method. */
+const BODY = /^## (When to use|When not to use|How to work|How you work|Method\s*$|Steps\s*$)/i;
+/**
+ * Puts the "After this" block at the end of the hand-back part, never above "When to use", "How to work" or the method:
+ * after the last hand-back or output section ("## What you hand back", "## Output", "## Hand back", "## Final check",
+ * "## What next"), or after the last of those body sections when one comes later; on a page with no hand-back heading,
+ * at the end of the main content, above trailing credits, sources and licence. The place depends only on the page's
+ * own headings (the generated sections are taken out first), so a rerun puts it in the same spot.
+ */
+function insertAfterHandBack(text, nl, block) {
   const lines = text.split(nl);
   const code = fenced(lines);
-  const h = lines.findIndex((l, n) => !code[n] && l.startsWith(heading));
-  if (h < 0) return insertBefore(text, nl, block, "## Check before");
-  let at = lines.findIndex((l, n) => n > h && !code[n] && l.startsWith("## "));
-  if (at < 0) at = lines.length;
-  while (at > h + 1 && lines[at - 1].trim() === "") at--;
+  const heads = lines.map((l, n) => (!code[n] && l.startsWith("## ") ? n : -1)).filter((n) => n >= 0);
+  const last = (re) => [...heads].reverse().find((n) => re.test(lines[n]));
+  const handBack = last(HAND_BACK);
+  let at = lines.length;
+  if (handBack !== undefined) { const h = Math.max(handBack, last(BODY) ?? -1); at = heads.find((n) => n > h) ?? lines.length; }
+  else for (const n of [...heads].reverse()) { if (END_MATTER.test(lines[n])) at = n; else break; }
+  while (at > 0 && lines[at - 1].trim() === "") at--;
+  // Last on the page: one blank line above it and the file's final newline below, however many blank lines were there.
+  if (lines.slice(at).every((l) => l.trim() === "")) return [...lines.slice(0, at), "", ...block.split(nl), ""].join(nl);
   lines.splice(at, 0, "", ...block.split(nl));
   return lines.join(nl);
 }
@@ -123,7 +143,7 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
     const before = beforeSection(plan, toolsOf(path.join(dir, slug), slug), nl);
     const after = afterSection(plan, nl);
     if (before) { text = insertBefore(text, nl, [MARK.before[0], before, MARK.before[1]].join(nl), "## What you need"); withBefore++; }
-    if (after) { text = insertAfter(text, nl, [MARK.after[0], after, MARK.after[1]].join(nl), "## What you hand back"); withAfter++; }
+    if (after) { text = insertAfterHandBack(text, nl, [MARK.after[0], after, MARK.after[1]].join(nl)); withAfter++; }
     if (text !== old) {
       changed++;
       if (OUT) preview.push(`## ${category}/${slug}`, "", ...[MARK.before, MARK.after].flatMap((m) => [`### ${m === MARK.before ? "Before you start" : "After this"}: now`, "```md", section(old, m), "```", "### New", "```md", section(text, m), "```", ""]));

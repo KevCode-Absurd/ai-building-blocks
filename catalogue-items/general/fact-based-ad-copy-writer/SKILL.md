@@ -79,17 +79,6 @@ MISSING:         <proof you'd need for a stronger ad>
 CHECKS MISSED    <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-- The [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every selling line traces to a fact you were given.
 - No "unique", "best" or result claim without proof.
@@ -98,6 +87,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The ad says only as much as this buyer is ready for.
 - The first line names the buyer's doubt or experience, not the product name or a spec list.
 - No line could run unchanged for any brand in the category.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` in the notes (for example "no proof the process is unique"). Don't fill the gap. Other brands' ads and claims are not facts about this product.

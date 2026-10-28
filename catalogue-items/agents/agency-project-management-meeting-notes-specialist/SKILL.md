@@ -12,15 +12,6 @@ Read [the original role profile](references/source-agent.md) before you start. U
 When not to use it: for a formal record for HR, legal or the board, use a human note-taker and have the people involved check the wording. For a word-for-word record, use the transcription tool in your meeting app. To track open actions across weekly meetings, use the Weekly meeting actions keeper. To draft follow-up messages from the notes, use the Executive work keeper.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
-- The [Rough-note meeting minutes writer](https://useaiblocks.com/prompts/rough-notes-to-minutes-writer). It takes the meeting notes.
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -90,6 +81,15 @@ GAPS TO FILL
 ```
 
 Keep each line to one sentence. If the user wants a different tone, apply it only to the prose in Decisions and Open Questions. Never change names, dates or owners.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
+- The [Rough-note meeting minutes writer](https://useaiblocks.com/prompts/rough-notes-to-minutes-writer). It takes the meeting notes.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

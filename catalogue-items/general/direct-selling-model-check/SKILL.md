@@ -56,15 +56,6 @@ These are the inputs for this skill. If the section above asks for an ads export
 
 The commodity test. The middleman table. The build-to-order view. The cash timing in days. The customer groups and the one to serve first. The new channel and its test. The review date. The score out of 100 with its six results. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan and audit report.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each middleman has a cost and a value.
@@ -73,6 +64,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The model has a review date.
 - No figure is invented. This is a rule for the whole answer. It is not one of the six scored checks.
 - The score shows its six checks.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

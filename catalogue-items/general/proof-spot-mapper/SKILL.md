@@ -59,8 +59,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Understand your buyers** with the [Customer review evidence checker](https://useaiblocks.com/skills/monthly-review-proof-keeper).
 - The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the objection map.
 - The [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the objection map.
-- The [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner).
 - **Sell it** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the objection map.
+- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

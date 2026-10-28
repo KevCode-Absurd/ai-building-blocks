@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -96,14 +96,6 @@ Before the final hand-back, check the run against the 7 checks under "Check befo
 6. **Edit list**: captions, narration, sound, the photo panel and offer, safe zones, and retake notes.
 7. **Checks missed:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - You stopped after stages 1, 3 and 4, or marked them "(approve)" when asked to run in one go.
 - Every panel has a named transition, and the reveal panel is the longest.
@@ -112,6 +104,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each panel has one kind of motion, and the ink stays flat.
 - No prompt asks the tool to draw words or numbers.
 - The changed panel claims no more than the brand states.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo: ask once, then carry on from the description, mark `MISSING: product photo` and say the product sheet can't be checked against the real pack. No claim or how it works: ask once, and leave that panel out. Never draw a guess.

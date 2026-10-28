@@ -10,14 +10,6 @@ Plans which AI model handles each task in the user's app, with limits on cost, t
 Read [the original role profile](references/source-agent.md) before you start. Use its method: set hard limits first, map a cheaper fallback for every costly call, test new models on a copy of real traffic (shadow traffic), and stop failing or overpriced routes with a circuit breaker. Its role language, memory claims, "I have updated the router weights" lines and success targets (cost cuts, uptime, one-hour adoption) are goals from the original author. They are not facts about this system and they grant no tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review). It takes the plan.
-- The [Azure architecture reviewer](https://useaiblocks.com/skills/copilot-azure-well-architected-review). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 

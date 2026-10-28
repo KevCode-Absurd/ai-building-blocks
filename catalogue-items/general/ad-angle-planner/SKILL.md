@@ -95,6 +95,12 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+- Exactly one level and one stage.
+- No offer at the unaware level; at most one offer term at problem aware and most aware.
+- Stage 2 uses only numbers the brand states.
+- Anything assumed (level, stage, doubt) is labelled as assumed.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -105,12 +111,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Exactly one level and one stage.
-- No offer at the unaware level; at most one offer term at problem aware and most aware.
-- Stage 2 uses only numbers the brand states.
-- Anything assumed (level, stage, doubt) is labelled as assumed.
 
 ## If something is missing
 Write `MISSING: <what>` for an unknown doubt or offer term. A safe default doubt is the one that goes with how the product is bought, labelled as assumed.

@@ -69,15 +69,6 @@ Two step files and the summary, in this shape:
 - Step 2: how many top customers did each step, the pattern most share, the steps to add to every lead, a shortlist of pieces for sales, and a test with a win number. This file holds the plan and the shortlist.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -86,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each trait is shared by nearly all of the top group and is less common in the rest, and the profile says who does not fit.
 - Each step in the new path shows how many top customers did it, and the output says if weaker customers did it too.
 - If the list has fewer than about 20 customers, the result is called a hunch. The test rule for a win was written before the test starts.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

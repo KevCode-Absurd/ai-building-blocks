@@ -103,23 +103,23 @@ In this skill a "code" is the short label of an ad (type, dress, audience), a "d
 ## What you hand back
 In this order: SOURCES, BUYER SHEET, REASONS TO BUY with the cuts, STOP 1 with the picks, THE SET ON THE MAP, one CONCEPT per ad (code, picture, product photo, headline options with word counts, support line), STOP 2, then the finished images or picture prompts in each size, a table with one row per ad (file, code, buyer, argument, headline word count), the check record and the `MISSING:` list. When they approved ahead, each stop line reads "STOP 1 (approve). Picks: ..." and the reply goes on to the next part.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads and image prompt.
-- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
-- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
-- **Check it before it goes live** with the [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the image ads.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every used insight has 3 buyers, or 1 buyer and a result. Hunches stay out of copy.
 - "Why now?" types are at most 1 in 5, and a batch of 6 or more has 3 types and 2 dresses.
 - No two ads share a code and an argument.
 - Both stops were shown to the owner, or marked "(approve)" when they said go ahead or asked to run in one go.
 - If they approved ahead, the reply holds every part: the set on the map, a concept, picture prompt and headlines with word counts for each ad, and the check record. Stopping early is a missed check.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads and image prompt.
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
+- The [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the image ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <buyer research | proof | product view | brand look>`. Mark any argument without research as a "hunch", and let it state no fact.

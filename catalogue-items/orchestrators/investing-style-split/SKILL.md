@@ -57,15 +57,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3, bond choice: which kind of bond, how long and why.
 - Step 4, one-page policy: what you hold, how you keep it, what you expect (only from your own figures), what you will not do and a review date. The last file holds the plan.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Company quality and share-price screener](https://useaiblocks.com/workflows/defensive-stock-screen).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.

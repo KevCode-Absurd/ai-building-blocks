@@ -78,6 +78,9 @@ CHECKS MISSED: <none, or which>
 MISSING: <what you did not give>
 ```
 
+## Next step
+Take the finished cost sheet to the landed cost calculator for the full cost per unit. Then use the factory price break negotiator before your next call.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -86,9 +89,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Factory bottleneck finder](https://useaiblocks.com/skills/factory-bottleneck-finder). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Next step
-Take the finished cost sheet to the landed cost calculator for the full cost per unit. Then use the factory price break negotiator before your next call.
 
 ## Checks
 Run these before handing back. Fix anything that fails, or list it under `CHECKS MISSED:`.

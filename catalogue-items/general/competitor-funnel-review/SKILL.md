@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Makes it better (optional):**
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for competitors, store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for competitors, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -49,16 +49,6 @@ How to start:
 
 The rival list. The shopping routine and rules. A capture sheet with dated entries for emails, purchase steps, upsells, the no-thanks path and the phone check. A report per rival with a timeline and a copy, avoid and beat list. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
-- The [Brand playbook fit checker](https://useaiblocks.com/skills/brand-playbook-fit-checker). It takes the store capture.
-- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
-- The [Competitor revenue estimator](https://useaiblocks.com/skills/competitor-revenue-estimator). It takes the store capture.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every step is dated and captured.
@@ -66,6 +56,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The no-thanks path is checked.
 - Findings are things seen, not assumed.
 - Nothing asks the user to break a site's rules.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
+- The [Brand playbook fit checker](https://useaiblocks.com/skills/brand-playbook-fit-checker). It takes the store capture.
+- The [Competitor revenue estimator](https://useaiblocks.com/skills/competitor-revenue-estimator). It takes the store capture.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

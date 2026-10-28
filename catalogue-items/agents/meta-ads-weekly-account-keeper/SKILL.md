@@ -18,12 +18,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Ad breakdowns**, made by the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): what each reference ad does: opening, angle, format, offer and proof.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -89,17 +89,6 @@ If you are connected to the account and the owner approves a change in clear wor
 - **Watch next week:** the 1 to 3 numbers that decide next week's path.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- The [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker). It takes the audit report.
-- The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
-- **Read your ad results** with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
-- **Read your ad results** with the [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every call is measured against break-even, and the sums are shown.
 - Seven-day click or new-customer numbers are used, not Meta's headline ROAS alone.
@@ -107,6 +96,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every change says which step proposed it.
 - Nothing in the account was changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last week's numbers, skip the comparison and say the path was not chosen on data. Without price and margin, stop after step 3 and ask for them, because every call depends on break-even. Without store totals, skip step 5, say Meta's number is untested, and hold the budget.

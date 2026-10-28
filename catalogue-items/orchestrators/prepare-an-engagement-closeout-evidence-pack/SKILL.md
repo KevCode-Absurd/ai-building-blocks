@@ -81,10 +81,7 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
 - The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

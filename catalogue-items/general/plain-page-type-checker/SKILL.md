@@ -57,15 +57,6 @@ How to start:
 
 The message. What the type says. The checks with values, verdicts and reasons. Who is left out and how to include them. Fixes in order, with reasons. The practice exercise. The score with its parts. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
-- The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
-- The [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). It takes the design direction.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The message is stated before any fix.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Who is left out is named.
 - A beginner could follow each step.
 - The score shows the points behind it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
+- The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
+- The [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

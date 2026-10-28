@@ -20,22 +20,13 @@ Follow a few high-impact chains, such as water/food to settlement, resources/tra
 
 Return at most five priority issues, followed by intentional liberties and unresolved questions. Do not invent setting facts, historical/ethnographic citations, an authenticity score or universal claims about a real culture. Use supplied references for real period/cultural claims, or mark the claim unverified. For comparing an older canon document with new scenes, suggest the library's existing world-detail consistency checker; do not duplicate its canon log here.
 
-What next: revise your setting sheet with the fixes you accept and run this check again, or use the World-detail consistency checker to test new scenes against the revised sheet. The editors and proofreaders listed under After this do not fit a setting review.
+What next: revise your setting sheet with the fixes you accept and run this check again, or use the World-detail consistency checker to test new scenes against the revised sheet.
 
 My setting: (paste the setting sheet or map description)
 Genre and explicit departures: (state the rules that may differ from reality)
 References and specific time/place, if relevant: (supply sources or leave unverified)
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
-- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -44,11 +35,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -64,6 +55,13 @@ These are selected, rewritten task instructions. The original role profiles are 
 - Intentional fantasy rules are preserved rather than labelled impossible.
 - Material/cultural links are conditional, with uncertainty and alternatives.
 - No invented source, authenticity score or absent canon fact appears.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Invented society planner](https://useaiblocks.com/skills/invented-society-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Source credit
 

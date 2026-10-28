@@ -47,21 +47,20 @@ How to start:
 
 The dispute in one line. Each claim in each side's terms. The common ground and the real gap. The test with the result that would embarrass each side. The prediction card. The neutral recorder. The follow-up plan. The review page. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- The [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Both sides' claims are written in their own terms.
 - Each side's predicted result is on record before the test.
 - A neutral recorder is named.
 - A follow-up step is planned for an unclear result.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
+- The [Third option finder](https://useaiblocks.com/skills/third-option-finder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

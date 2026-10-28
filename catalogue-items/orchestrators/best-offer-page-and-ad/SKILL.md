@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
 5. This one.
 
@@ -76,17 +76,6 @@ Four step files and the summary. In order:
 - **The ad.** Headline, main text, one claim and an image brief.
 - **HAND-BACK SUMMARY.** Files, steps not run, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the landing page** with the [Article-style ad readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Write the landing page** with the [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner). It takes the ad copy.
-- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -96,3 +85,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The price, terms and dates in the offer block match your brand file.
 - The page carries "Advertisement" above its headline, and the ad does not pose as a news story.
 - The ad's claim matches the first screen of the page after the five fixes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [Article-style ad readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker). It takes the ad copy.
+- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
+- The [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner). It takes the ad copy.
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -20,14 +20,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Your data** (yours): the data files, with their format and where they came from.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Your website** (yours): the link to your site or the page.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your data, your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -74,15 +74,6 @@ Ignore the suggestions in "After this" that do not fit a dataset. Offer these in
 - Step 4, insight brief: the top insights, each with finding, why it matters, likely cause, impact, action and confidence.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Analysis plan builder](https://useaiblocks.com/skills/analysis-plan-builder).
-- The [Tabular dataset explorer](https://useaiblocks.com/skills/new-dataset-explorer).
-- The [Data quality scorecard maker](https://useaiblocks.com/skills/data-quality-scorecard-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +82,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Step 1 named real problems in the file, with counts.
 - The analysis answers the person's question and says what it could not tell.
 - Every insight carries a size, a cause and an action, and an insight the check doubted shows lower confidence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Analysis plan builder](https://useaiblocks.com/skills/analysis-plan-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

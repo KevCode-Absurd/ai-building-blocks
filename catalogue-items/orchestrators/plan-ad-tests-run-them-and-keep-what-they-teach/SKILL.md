@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
@@ -68,13 +68,6 @@ Pause here: launch the test and let it run for the read window you gave, without
 
 The rule to test next goes back into step 1 the next time you run this, so the next ideas build on it.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each idea differs from the others on at least two lenses and says what you learn if it wins.
 - The test layout fits the daily budget and never adds ads to a winning set.
@@ -83,3 +76,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

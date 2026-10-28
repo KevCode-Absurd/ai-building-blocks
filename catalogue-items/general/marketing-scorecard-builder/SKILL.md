@@ -58,16 +58,6 @@ How to start:
 
 The scorecard from long-term results at the top to short-term response at the base, each line with its question, lag, value and source. The measures that mislead alone. The review rhythm. The list of data you do not have. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
-- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Both short-term and long-term measures are present.
@@ -76,6 +66,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Missing data is listed, not guessed.
 - Each misleading measure says what to read it with.
 - Every value comes from the input.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
+- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

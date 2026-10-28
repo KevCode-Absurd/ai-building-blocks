@@ -55,6 +55,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - `outputs/step-02-shared-want-hook-mapper.md`: the shared want in the buyers' words, the smaller wants, a hook for each with how it works, proof and feeling, a running order and a test plan.
 - The `HAND-BACK SUMMARY`: each step's file and every `MISSING:` line in one list.
 
+## Check before you hand it back
+- Every phrase on the step 1 sheet is in the product's own words and has its source. Anything the AI added is marked apart.
+- Every claim in a hook appears in the step 1 file or in the material you gave, and each hook has its proof or a `MISSING: proof` line.
+- Step 2 used the step 1 phrase sheet, not a new list.
+- The shared want is one a buyer would say as their own. If there were no buyer words, it is marked as a guess.
+- Each hook speaks to a different smaller want, not the same one reworded.
+- Every gap is a `MISSING:` line. Nothing was invented.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -65,11 +73,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every phrase on the step 1 sheet is in the product's own words and has its source. Anything the AI added is marked apart.
-- Every claim in a hook appears in the step 1 file or in the material you gave, and each hook has its proof or a `MISSING: proof` line.
-- Step 2 used the step 1 phrase sheet, not a new list.
-- The shared want is one a buyer would say as their own. If there were no buyer words, it is marked as a guess.
-- Each hook speaks to a different smaller want, not the same one reworded.
-- Every gap is a `MISSING:` line. Nothing was invented.

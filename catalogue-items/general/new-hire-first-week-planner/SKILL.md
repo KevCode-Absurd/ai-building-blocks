@@ -62,10 +62,6 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer). It takes the plan.
-- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
-- The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
-- **Lead the team** with the [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- **Lead the team** with the [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

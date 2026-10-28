@@ -80,13 +80,6 @@ CHECKS MISSED
 <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The whole concept fits in one sentence and one symbol, and you could say it out loud.
@@ -95,6 +88,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least one thing is left out on purpose, with a reason.
 - The limits are written down and could be checked by looking at the result.
 - No part of the plan asks for words, colours or shapes the user did not allow.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Gemini image and video maker](https://useaiblocks.com/skills/gemini-image-and-video-maker). It takes the image plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

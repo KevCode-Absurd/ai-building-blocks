@@ -70,15 +70,6 @@ Use these sections, in this order: MAP PURPOSE, BASE MAP, DATA STYLE, LABELS, LA
 
 Next: test the final colours in a colour blindness simulator, then pass the palette to the [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Slide and page style designer](https://useaiblocks.com/skills/slide-and-page-styler). It takes the document.
-- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand back
 
 - The map has one message, and fewer layers than data.
@@ -86,6 +77,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Print and screen needs are stated separately when both apply.
 - Style settings are labelled as untested.
 - No claim that you saw or drew the map.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

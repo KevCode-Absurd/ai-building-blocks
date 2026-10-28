@@ -14,12 +14,12 @@ This workflow chains 4 skills into one job. You run them one after another, and 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,18 +55,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What to do with the result
 Use this in place of the generic list above, which does not fit a peer review. Read the final review once as the author would, and cut anything unkind or not tied to a page. Paste it into the journal's reviewer system yourself, with any confidential note for the editor kept separate. If the editor sends a revised manuscript and the authors' reply, run steps 1 to 4 again on the revision and check each of your earlier points against it.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft.
-- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
-- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - Every major point is tied to a page, figure or table, and no point is outside what you said you can judge.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research finding comparison reviewer](https://useaiblocks.com/skills/research-contradiction-review-assistant). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

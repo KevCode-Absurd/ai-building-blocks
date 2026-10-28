@@ -75,17 +75,6 @@ This skill runs on its own. If something marked required is missing, ask once, i
 ## What you hand back
 First the **stock**: problems, explanations, doubts, proof and time points, each with a source, then the rounds this supports, the length, and the word budget. Then a table with one row per line: `Time | Narration | On-screen text | Picture note`, with rounds, the product's arrival, each proof and each ask marked. Then notes: what would add a round, and any `MISSING` items. Last, `CHECKS MISSED:` with one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
-- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The number of rounds matches the problems that have an explanation and proof.
 - The word count sits within about 10% of the budget for the length.
@@ -95,6 +84,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every line has a picture of a named kind, and none holds longer than about 4 seconds.
 - The narrator never speaks as a customer.
 - Health, supplement or results claims (digestion, vitamin amounts, study results) are only the approved claims, worded as approved. List each such claim next to the script with its approved source. Cut any claim that has no source, or mark it `MISSING:`. Do not film until the person has checked each one against their local ad rules and their substantiation file.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No change-over-time facts: no timeline. Not enough stock for the length asked: go as long as the stock allows and name the gaps. No footage on file: mark real-person shots `to film` and never generate a face.

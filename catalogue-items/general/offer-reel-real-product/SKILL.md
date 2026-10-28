@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 4. This one.
 
@@ -143,6 +143,14 @@ STAGE 5  BUILD, REVIEW, RENDER  <after APPROVED, in a coding agent: review log (
 MISSING: <anything blank>
 ```
 
+## Check before you hand it back
+- Each approval came before the next stage; nothing was built before APPROVED.
+- Muted, a stranger can name the product by 2 seconds.
+- Every word, number, price and offer is approved copy, and any health, supplement or money claim matches the brand's approved source.
+- The product matches its photos in every frame, and type never crosses the label.
+- Something new appears every 2 to 4 seconds; the end card is 2 seconds or less and never frozen.
+- The same-frame check passed; loudness is -14 LUFS with true peak at -1 dBTP or lower; every score is 8 or more after at least three rounds.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -152,14 +160,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each approval came before the next stage; nothing was built before APPROVED.
-- Muted, a stranger can name the product by 2 seconds.
-- Every word, number, price and offer is approved copy, and any health, supplement or money claim matches the brand's approved source.
-- The product matches its photos in every frame, and type never crosses the label.
-- Something new appears every 2 to 4 seconds; the end card is 2 seconds or less and never frozen.
-- The same-frame check passed; loudness is -14 LUFS with true peak at -1 dBTP or lower; every score is 8 or more after at least three rounds.
 
 ## If something is missing
 Write `MISSING: <what>`. A missing photo, claim, price or offer is requested, and its shot is dropped rather than invented. No rights to a voice: no voice-over.

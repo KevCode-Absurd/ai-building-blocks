@@ -55,6 +55,14 @@ How to start:
 
 Viewer and place. The words. The type feel and size. What was cut. The twist. Swap points. The small print. The far-away test. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- The poster reads from far away.
+- There is one main message only.
+- The type feel matches the mood.
+- A changed date or name can be swapped without a redesign.
+- Nothing small and fussy is needed to understand the main message.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -63,14 +71,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The poster reads from far away.
-- There is one main message only.
-- The type feel matches the mood.
-- A changed date or name can be swapped without a redesign.
-- Nothing small and fussy is needed to understand the main message.
 
 ## If something is missing
 

@@ -8,15 +8,6 @@ description: "Plan a game art pipeline: asset budgets, LOD and texture rules, sh
 Plans the art-to-engine pipeline for one game: budgets, import rules, effect limits and review stages. It follows the Technical Artist role profile in references/source-agent.md. It works from what the user supplies. It cannot open an engine, profile a build or change any asset.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -81,6 +72,13 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Sketches**: optional, untested.
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

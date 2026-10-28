@@ -60,16 +60,6 @@ How to start:
 
 The claim, four scores with evidence, the index, the weakest part, three fixes with cost, the index after the best fix, where to show it, and `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
-- The [Market demand scorer](https://useaiblocks.com/skills/starving-crowd-market-scorer). It takes the audit report.
-- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the audit report.
-- **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each score has a reason and evidence or an estimate label.
@@ -77,6 +67,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The index arithmetic is correct.
 - The weakest part is named and the fixes target it.
 - Each chosen fix says where the buyer will see it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
+- **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

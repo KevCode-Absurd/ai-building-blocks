@@ -45,21 +45,20 @@ How to start:
 
 The measure. The rate table, the average and what was left out. The target and its yearly effect. The task list marked do, defer, skip and must. The weekly review rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The measure is revenue or a clear stand-in.
 - The weekly rate is calculated, not guessed.
 - At least one task is marked skip.
 - No one-off spike is counted.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Learning milestone planner](https://useaiblocks.com/skills/learning-milestone-planner). It takes the plan.
+- The [Revenue partnership program planner](https://useaiblocks.com/skills/copilot-gtm-partnership-architecture). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

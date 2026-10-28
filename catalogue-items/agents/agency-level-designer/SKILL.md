@@ -8,14 +8,6 @@ description: "Plan a game level from your brief: intent, encounters, pacing char
 Plans one game level at a time from the user's brief. It follows the Level Designer role profile in references/source-agent.md. It works from words, sketches and notes the user gives. It cannot open a game engine or run a playtest.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Slide and page style designer](https://useaiblocks.com/skills/slide-and-page-styler). It takes the document.
-- The [Design handoff completeness reviewer](https://useaiblocks.com/skills/design-handoff-completeness-assistant). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -86,6 +78,14 @@ Return these sections in order, each with its own heading. If your AI can save f
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is also your CHECKS MISSED list.
 
 Next: after the grey box is playtested, bring the results back for a revised plan. For the core rules or loop, use the [Game Designer agent](https://useaiblocks.com/skills/agency-game-designer). For story and dialogue, use the [Narrative Designer agent](https://useaiblocks.com/skills/agency-narrative-designer).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Shape the product** with the [Gameplay designer](https://useaiblocks.com/skills/agency-game-designer). It takes the document.
+- **Tell it as a story** with the [Game narrative designer](https://useaiblocks.com/skills/agency-narrative-designer). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

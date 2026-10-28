@@ -57,6 +57,14 @@ How to start:
 
 The feeling. The must-not list. Colours with meanings and ruled-out colours. The tools. The sign rules. Where to play. Who checks. The stranger test. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- The feeling is written before any look.
+- Every colour has a stated meaning and a stated reason.
+- The rules fit on one page.
+- Play room is marked.
+- Final work is checked against the grid by a named person.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -65,14 +73,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the brand guide and design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The feeling is written before any look.
-- Every colour has a stated meaning and a stated reason.
-- The rules fit on one page.
-- Play room is marked.
-- Final work is checked against the grid by a named person.
 
 ## If something is missing
 

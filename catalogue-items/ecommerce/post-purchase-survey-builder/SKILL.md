@@ -76,7 +76,6 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer).
 - The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner). It takes the document.
 - The [Research theme synthesizer](https://useaiblocks.com/skills/research-theme-synthesizer). It takes the document.
 - **Make an offer people want** with the [Offer bonus planner](https://useaiblocks.com/prompts/bonus-idea-matcher). It takes the objection map.

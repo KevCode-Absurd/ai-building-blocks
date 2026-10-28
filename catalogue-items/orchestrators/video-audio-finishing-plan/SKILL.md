@@ -64,17 +64,16 @@ NOT RUN
 
 Use these instead of the general "After this" list above. Hand the timecoded mix plan to the editor. If the voice takes are noisy, run them through the [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner) before the mix. If you also need a cut list for the pictures, use the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
 
+## Check before handing back
+
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Suno music prompt writer](https://useaiblocks.com/skills/suno-song-and-music-bed-prompt-writer).
-- The [Game audio engineer](https://useaiblocks.com/skills/agency-game-audio-engineer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Offline practice case
 

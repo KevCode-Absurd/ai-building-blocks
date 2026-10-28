@@ -87,8 +87,7 @@ MISSING: <what, if anything>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer).
 - **Make video ads** with the [Founder ad script builder](https://useaiblocks.com/skills/founder-ad-script-builder). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

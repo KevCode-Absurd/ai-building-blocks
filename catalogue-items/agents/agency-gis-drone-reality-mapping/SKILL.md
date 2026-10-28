@@ -8,15 +8,6 @@ description: "Plan a drone mapping job: flight settings, ground control points, 
 Turn a drone mapping brief into a plan: the flight, the ground control, the checks on site, the processing order, the products and the accuracy report.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
-- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
-- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,13 @@ Return these sections, in this order:
 - **Products**: Product, pixel size, format, use.
 - **Accuracy report plan**: Errors, visual checks, density.
 - **GIS handoff and open questions**: How products load, what is unknown.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

@@ -116,22 +116,19 @@ SCORE  <n>/100 (<checks passed> of 4 checks)
 Missed: <one line per check still missed>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
-- **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the brief.
-- **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every running ad has one code, and headline-only codes are marked.
 - Every signal shows its numbers and passed its read point.
 - The picks are different types, and each traces to a signal row.
 - Every card's proof is on file. No Their words without a real source, no offer without dates.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
+- **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <ads | results | source | image>`. With no results, pick from the empty cells and review doubts only, and say the picks are untested guesses.

@@ -50,21 +50,19 @@ How to start:
 ## What you hand back
 The customer's want. The problem on three levels. The guide lines. The plan. The two calls to action. The stakes and result. The one-liner, and the two versions not chosen. The page script. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer). It takes the draft.
-- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
-- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The customer, not the brand, is the subject of the first lines.
 - There is one goal, one problem and one plan.
 - The main call to action is a verb, not "learn more".
 - The stakes are shown once and not overplayed.
 - A stranger could repeat the one-liner after one read.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 If there is no offer, ask for it in one short question and stop. Otherwise write `MISSING: <what> for <part>`, keep every heading from the output shape (THEY WANT, THE PROBLEM, GUIDE, PLAN, CALLS TO ACTION, STAKES / RESULT, ONE LINE, PAGE SCRIPT, MISSING, CHECKS MISSED), and list the gaps under MISSING. With no customer words, write the problem from the offer and mark it as a guess to confirm. Never make up proof, numbers or customer quotes.

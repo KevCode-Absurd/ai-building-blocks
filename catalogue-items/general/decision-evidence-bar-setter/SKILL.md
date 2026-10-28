@@ -15,16 +15,11 @@ Use [Informed captain decision planner](https://useaiblocks.com/skills/informed-
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Decision method planner](https://useaiblocks.com/skills/math-or-judgment-call-sorter). Bring plan, your question (optional).
-2. **Plan** with the [Reversible decision sorter](https://useaiblocks.com/skills/reversible-decision-sorter). Bring your question.
-3. This one.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -54,15 +49,6 @@ How to start:
 
 The door, the weighted fact list, the share with its sum, the bar, wrong versus slow, recovery, the verdict, the fact to get first, the call date, `MISSING:` lines and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
-- The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every fact has a weight and a known, partly or unknown mark.
@@ -71,6 +57,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cost of waiting is compared with the cost of being wrong, or marked MISSING.
 - A call date is given if the verdict is to wait.
 - No figures are invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
+- The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

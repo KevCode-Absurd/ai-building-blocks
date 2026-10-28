@@ -78,20 +78,19 @@ NOT RUN
 MISSING: <domain list | record targets | who has access | certificate provider>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store access security reviewer](https://useaiblocks.com/skills/quarterly-store-security-keeper).
-- The [Store fraud rules planner](https://useaiblocks.com/skills/fraud-rules-setter).
-- The [Sign-in security checker](https://useaiblocks.com/skills/store-sign-in-security-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand back
 - Every row has a target, a still-needed answer, a risk and one action.
 - Deleting advice says to confirm with a developer first.
 - CAA and monitoring are described as limited helpers.
 - Typo-domain advice names a few domains with a cost note.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store access security reviewer](https://useaiblocks.com/skills/quarterly-store-security-keeper).
+- The [Store fraud rules planner](https://useaiblocks.com/skills/fraud-rules-setter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <domain list | record targets | who has access | certificate provider>`. A record with no target shown is marked "unknown, needs the target". Never guess where a record points.

@@ -74,13 +74,6 @@ NEXT STEP       <one step>
 
 State plainly that nothing was run and no test has happened yet.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the the automation.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All nine parts are in the design check, each with a reason.
@@ -89,6 +82,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The repaired design keeps the user's intended outcome.
 - Nothing names a tool, schedule or permission the user did not give.
 - CHECKS MISSED lists any check that did not run, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the automation.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
@@ -71,15 +71,6 @@ Five step files and the summary. The step 3 file holds the cluster plan, the ste
 - STEP 1 KEYWORDS, STEP 2 INTENT, STEP 3 CLUSTER, STEP 4 BRIEFS, STEP 5 LINK MAP, then HAND-BACK SUMMARY.
 - Suggest the person comes back after three months with search console data, to see which posts earned their place and refresh the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Content hub planner](https://useaiblocks.com/skills/content-hub-planner). It takes the brief.
-- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the keyword list and brief.
-- The [Search page template builder](https://useaiblocks.com/skills/page-at-scale-builder). It takes the keyword list.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each keyword has one intent and one page, and no two pages chase the same search.
 - The main page answers the broad search and the posts answer specific ones.
@@ -88,3 +79,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No brief asks for a claim the person said to avoid.
 - Keyword figures are labelled estimates unless they came from a pasted tool export, and the summary says which.
 - Every gap is a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Content hub planner](https://useaiblocks.com/skills/content-hub-planner). It takes the brief.
+- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the keyword list and brief.
+- The [Search page template builder](https://useaiblocks.com/skills/page-at-scale-builder). It takes the keyword list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

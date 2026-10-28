@@ -58,21 +58,19 @@ How to start:
 
 The breakdown table. The totals and the gap as numbers. Where the gap is and why. Two ranked moves with a first test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
-- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the audit report.
-- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every cost line has a source or is marked as an estimate.
 - The gap is shown as a number, not a feeling.
 - Real constraints are separated from habit.
 - Moves are ranked by size of gap and ease.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

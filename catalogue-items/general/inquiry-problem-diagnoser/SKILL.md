@@ -55,15 +55,6 @@ How to start:
 
 The funnel table with sums, the call and why, the outside factors, the offer as run, `MISSING:` lines, and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lead magnet reviewer](https://useaiblocks.com/skills/lead-offer-tuner). It takes the audit report.
-- The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
-- The [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every sum can be redone from the numbers given.
@@ -71,6 +62,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The call is one of raise the number, raise the quality, or fix the ad first.
 - Small samples are flagged.
 - Outside factors are listed and not assumed to be the cause.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lead magnet reviewer](https://useaiblocks.com/skills/lead-offer-tuner). It takes the audit report.
+- The [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

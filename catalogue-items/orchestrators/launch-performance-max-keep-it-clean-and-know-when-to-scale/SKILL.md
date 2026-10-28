@@ -60,6 +60,14 @@ Three step files and the summary. The last file holds the scale check.
 - **Step 3, scale check:** five gates, your return against break-even, stepped plan check, score, go or wait.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
+## Check before you hand it back
+- The fit verdict uses your numbers and says wait if you fall short.
+- Brand is excluded, or the plan says why it is not.
+- Every exclusion in step 2 names the product, page or term and the spend behind it.
+- The scale call compares your return with break-even, not with Google's number alone.
+- Any budget rise is in small steps with days between them.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was sent, published or paid for without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -68,11 +76,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The fit verdict uses your numbers and says wait if you fall short.
-- Brand is excluded, or the plan says why it is not.
-- Every exclusion in step 2 names the product, page or term and the spend behind it.
-- The scale call compares your return with break-even, not with Google's number alone.
-- Any budget rise is in small steps with days between them.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was sent, published or paid for without a clear yes.

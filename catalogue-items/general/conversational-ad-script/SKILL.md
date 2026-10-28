@@ -98,17 +98,6 @@ CHECKS MISSED
 (for a review: missed as given <...>; missed after the replacements <...>)
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Make video ads** with the [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
-- **Make video ads** with the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every line passes the read-aloud test.
 - No slogan at the end, no question the speaker answers themself (in the next line or later), no buyer doubt asked as a question, and no "no this, no that" list.
@@ -116,6 +105,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One idea, one thread, one next step.
 - The length sits inside the brief's range.
 - Every shot note is one clear picture a crew could film, and none shows a result the brand can't prove.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- **Make video ads** with the [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
+- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`, or put a [placeholder] where a figure goes. Never invent proof or a customer. Before you write MISSING for a fact, look for it in the brand file and the input; write it only when both lack it.

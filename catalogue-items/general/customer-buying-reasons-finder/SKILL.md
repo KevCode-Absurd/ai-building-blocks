@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Customer words** with the [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector). Bring your question, document (optional), tool connection (optional).
+2. **Customer words** with the [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector). Bring your question, a document (optional), a tool connection (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
@@ -104,6 +104,12 @@ SCORE
 Missed: <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+- Every quote is word for word in its named source, and nothing in quote marks is your own wording.
+- Counts are separate people.
+- Nothing under 5 people, or from one channel, is called a pattern without saying so.
+- The check-before-use list exists, even if empty.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -114,12 +120,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every quote is word for word in its named source, and nothing in quote marks is your own wording.
-- Counts are separate people.
-- Nothing under 5 people, or from one channel, is called a pattern without saying so.
-- The check-before-use list exists, even if empty.
 
 ## If something is missing
 Write `MISSING: <what>` (no source IDs, no dates, no flags). With no verified-purchase flags, mark every best phrase "unverified" and keep it out of paid ads. No customer words at all: there's nothing to map, so this is the one real stop. Ask for them in one short message, say which sources help most (reviews, tickets, survey answers), and hand back the empty map layout to fill.

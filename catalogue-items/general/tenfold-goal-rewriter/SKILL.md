@@ -45,14 +45,6 @@ How to start:
 
 The current goal and the tenfold goal. What stops working at that size. The assumptions to drop. The first test with its size and dates. The core and side-bet slice. What to close. The stop rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
-- The [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The new goal is ten times the old number.
@@ -61,6 +53,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A stop rule is written down.
 - The core is protected by a fixed slice.
 - No number comes from outside the input unless marked as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- The [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

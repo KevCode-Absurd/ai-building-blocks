@@ -16,14 +16,14 @@ Paid tools: the keyword data tool (such as Ahrefs) is a paid service and is opti
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Your website** (yours): the link to your site or the page.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -34,7 +34,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for spreadsheet, your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -87,16 +87,7 @@ You list them as drafts and decisions for the owner to approve.
 - **Files:** each step's file and the updated `content-keeper/pages.md`, which is the saved base for next month's run. Then every `MISSING:` line in one list.
 - **Close with this line:** "When a draft goes live, add the date and what changed to `pages.md`, so next month's run can check whether it worked." Next step: for on-page fixes to a page you approved, use the [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
-- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
-- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
-The Shopify and store SEO links in the generic "After this" list above fit an online store, not a blog or guides site. Do not offer them. For a content site, offer the On-page SEO tuner named above instead.
+For a content site, offer the On-page SEO tuner named above.
 
 ## Checks before you hand it back
 - Each page's traffic change is shown with the sums.
@@ -105,6 +96,13 @@ The Shopify and store SEO links in the generic "After this" list above fit an on
 - Every draft has its facts-to-check list, and none is marked ready with an unchecked fact.
 - Nothing on the live site was changed.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without the prior 90 days of traffic, skip step 3 and say pages cannot be called "losing ground" yet. Without a page list, stop and ask for one, because every call depends on it.

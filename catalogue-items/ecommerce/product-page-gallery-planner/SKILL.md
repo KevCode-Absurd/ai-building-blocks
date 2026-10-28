@@ -110,14 +110,6 @@ NEED: <fact or photo> -> <which image waits on it>
 CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the gallery plan.
-- The [Product photo set maker](https://useaiblocks.com/skills/product-photo-set-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every card answers one question, and no two answer the same one.
 - Every figure has its unit and a source; a study keeps its conditions; a rating keeps its count.
@@ -126,6 +118,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every close-up or inset comes from a real photo, or is left out.
 - Any health, nutrition or medical claim (including absorption or nutrient-level results) is flagged on its card for the seller to check against local advertising and health-claim rules, and a qualified person, before the image is published.
 - Any person is a made-up adult shown for use or size. A founder, expert or named customer appears only from their own photo. No children.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the gallery plan.
+- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `NEED: <what>` on the card and in the gaps list. Swap the image for the next-best candidate rather than invent the fact.

@@ -52,15 +52,6 @@ How to start:
 
 The result a buyer can see. The before-and-after set-up. The one-line explanation. The demo script, with what you say and do at each step. The question and what to do with the answer. The close and the ask for a referral. The short version. What to bring. The when-not-to-push line. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
-- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The demo shows the result before the pitch is finished.
@@ -68,6 +59,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The buyer's own words are captured.
 - It includes one line on when not to push.
 - The demo shows the difference without a long explanation.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

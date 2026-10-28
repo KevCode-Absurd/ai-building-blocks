@@ -13,14 +13,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for meeting notes, your question, transcript. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for meeting notes, a transcript, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -69,6 +69,14 @@ If the meeting's owner says yes in clear words to one named action, do only that
 - **Next agenda:** ready to send after a yes.
 - **Files, and every `MISSING:` line** from all steps in one list.
 
+## Checks before you hand it back
+- Every action has an owner and a date, or is marked `[unassigned]` or `[TBD]`.
+- Every action from last week has a status. None disappeared.
+- Nothing was invented that is not in the notes.
+- The late items lead the agenda.
+- Nothing was sent, posted or cancelled without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -77,14 +85,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Meeting and written update planner](https://useaiblocks.com/prompts/meeting-to-written-update-converter). It takes the meeting notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every action has an owner and a date, or is marked `[unassigned]` or `[TBD]`.
-- Every action from last week has a status. None disappeared.
-- Nothing was invented that is not in the notes.
-- The late items lead the agenda.
-- Nothing was sent, posted or cancelled without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With no last week list, treat this as week one, say no comparison was possible and start `actions.md`. With notes too thin to tell what was decided, list what you could not tell and do not guess.

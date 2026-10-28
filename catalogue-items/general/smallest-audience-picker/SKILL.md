@@ -92,15 +92,6 @@ CHECKS MISSED
 <one line per check that failed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the brand brain.
-- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The group is small enough to name in one line.
@@ -108,6 +99,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Who you are not for is stated.
 - The delight is specific.
 - The first ten people are named or described.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the buyer profile.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

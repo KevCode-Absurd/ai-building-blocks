@@ -74,7 +74,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). It takes the audit report.
 - The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the audit report.
 - The [Shopify campaign link planner](https://useaiblocks.com/skills/campaign-link-tracker). It takes the audit report.
-- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
 - The [Store experiment results reviewer](https://useaiblocks.com/skills/store-test-program-runner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

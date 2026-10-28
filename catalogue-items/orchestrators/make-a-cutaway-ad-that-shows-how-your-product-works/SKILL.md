@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -92,15 +92,6 @@ Five step files and the summary. The last file holds the upscaled image.
 - **Step 5, upscale:** settings, change check, score.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
-- The [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad).
-- The [Paper cutout image ad maker](https://useaiblocks.com/skills/paper-cutout-image-ad-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The picture shows one moment, not the whole chain as numbered steps.
 - Every link in the chain is marked sourced, common knowledge or unsupported, and no unsupported link is drawn.
@@ -108,3 +99,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product in the picture matches your photos on shape, colour and label.
 - No number appears without a source.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

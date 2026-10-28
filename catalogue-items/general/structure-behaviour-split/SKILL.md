@@ -12,20 +12,16 @@ Moving things around and changing what they do are two different jobs. Mixed tog
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Test list writer](https://useaiblocks.com/skills/test-list-writer). Bring your question.
-2. This one.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, your question, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, your question, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -54,22 +50,22 @@ How to start:
 
 The goal. The edit table with label and undo rating. The steps in order, each marked structure or behaviour, with the test before and after. Which tidy-ups help and which are optional. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Code maintenance reviewer](https://useaiblocks.com/skills/monthly-tech-debt-keeper).
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
-- The [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No step mixes structure and behaviour.
 - Each step can be checked on its own.
 - Tests are run before and after each structure step.
 - A tidy-up with no feature waiting behind it is flagged as optional.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code maintenance reviewer](https://useaiblocks.com/skills/monthly-tech-debt-keeper).
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
+- The [Course exercise builder](https://useaiblocks.com/skills/course-exercise-scaffolder). It takes the plan.
+- The [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

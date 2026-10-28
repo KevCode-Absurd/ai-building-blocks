@@ -12,19 +12,19 @@ You read a store's quiz answers as a whole, work out who the buyers are, how muc
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). Bring store capture (optional). It uses your brand brain and offer.
+1. **Your page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). Bring a store capture (optional). It uses your brand brain and offer.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, your results, your page. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your results, your page. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -86,8 +86,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons.
 - The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
 - The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
-- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Write the ad copy** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons.
+- The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

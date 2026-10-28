@@ -119,6 +119,13 @@ MISSING: <identity photo | product photo | approved words>
 CHECKS MISSED: <one line each, or none>
 ```
 
+## Check before you hand it back
+- The camera is clearly above the face, and the chosen strength shows.
+- Straight lines in the setting stay straight.
+- The person matches the identity photo; nothing from the camera reference's person, clothes or room carried over.
+- Any product has the right label, shape and colour at a believable size.
+- The subject is an adult, and nothing suggests a skin result or a before and after.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -126,13 +133,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The camera is clearly above the face, and the chosen strength shows.
-- Straight lines in the setting stay straight.
-- The person matches the identity photo; nothing from the camera reference's person, clothes or room carried over.
-- Any product has the right label, shape and colour at a believable size.
-- The subject is an adult, and nothing suggests a skin result or a before and after.
 
 ## If something is missing
 Write `MISSING: <identity photo | product photo | approved words>`. Without an identity photo, describe a made-up adult and say so.

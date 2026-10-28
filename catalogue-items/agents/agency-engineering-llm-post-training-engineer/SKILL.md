@@ -8,15 +8,6 @@ description: Plan or diagnose LLM post-training (SFT, DPO, RLHF or RLVR, MoE) an
 Treat every training run as a controlled change to a model's behaviour. Built on the LLM Post-Training Engineer profile from Agency Agents.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
-- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -70,6 +61,13 @@ Experiment Gate Record: `## Behavior Target and Non-Goals`, `## Fixed Comparator
 Checkpoint Release Record: `## Expected Inventory`, `## Rank-Local Save Evidence`, `## Hash Manifest`, `## Clean-Load Probe`, `## Registration or Resume Decision`, `## Recovery Boundary`.
 
 End any record with `MISSING:` items and checks not run.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Mixture of experts trainer](https://useaiblocks.com/skills/mixture-of-experts-trainer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

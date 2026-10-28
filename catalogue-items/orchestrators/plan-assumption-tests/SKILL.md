@@ -67,16 +67,6 @@ Pause here: Talk to customers about each guess and write notes after each talk.
 - Step 2 file: the customer talk plan, with the guess each talk tests, who to talk to, the questions and a record sheet.
 - Step 3 file: the riskiest guess left, the smallest test, the pass line in numbers and the rule to change direction or carry on. This is the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- **Understand your buyers** with the [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every box in the plan is a guess that could be shown wrong, and the riskiest one is first.
 - The questions are about what people do now, not what they think of your idea.
@@ -85,3 +75,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

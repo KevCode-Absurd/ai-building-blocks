@@ -107,6 +107,15 @@ Run the checks in "Check before you hand it back" and fix any that fail. Check b
 6. `MISSING:` lines for facts you needed.
 7. **Checks missed:** one line for each check still missed, or "none".
 
+## Check before you hand it back
+- One turn; its technique fits the show job; at most one yarn-made scene change.
+- Every object, in the picture and move columns, has a material word and a colour. Every hand has its material and the skin colour.
+- Each object uses the same material word as in the room list on every mention.
+- Every change has a backed sentence; nothing shows a body getting better.
+- One main doll, the same sketch every time; none speaks; no child or real person; no face close-ups.
+- The product has its true shape and only real label words.
+- 5 words or fewer over the turn; total words fit the length.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -116,15 +125,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- One turn; its technique fits the show job; at most one yarn-made scene change.
-- Every object, in the picture and move columns, has a material word and a colour. Every hand has its material and the skin colour.
-- Each object uses the same material word as in the room list on every mention.
-- Every change has a backed sentence; nothing shows a body getting better.
-- One main doll, the same sketch every time; none speaks; no child or real person; no face close-ups.
-- The product has its true shape and only real label words.
-- 5 words or fewer over the turn; total words fit the length.
 
 ## If something is missing
 Write `MISSING: <what>`. No how-it-works facts: no how-it-works shot. No label lines: ask once, and carry on with the label left to the edit (`MISSING: label lines`). No buyer look: ask once, or mark the doll `inferred` and carry on.

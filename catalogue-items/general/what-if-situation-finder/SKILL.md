@@ -52,6 +52,14 @@ The two things. The what-if. The three versions with their tests. The pick and w
 
 Then say what to do next: run the Scene detail picker if the place needs facts, set a daily count with the Daily word quota planner, then write day one with the Unplotted first-draft writer. Pass it the pick, the people and the unknowns. The "buyer brief" and "brand mark" lines in the block below do not apply to a story.
 
+## Check before you hand it back
+
+- The pick is one sentence under 30 words with a person, a pressure and a reason they cannot leave.
+- All three versions have test marks.
+- No plot, outline or ending was written.
+- Every person has only a job, a want and one habit or object.
+- Nothing about the writer's life was invented.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -60,14 +68,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The pick is one sentence under 30 words with a person, a pressure and a reason they cannot leave.
-- All three versions have test marks.
-- No plot, outline or ending was written.
-- Every person has only a job, a want and one habit or object.
-- Nothing about the writer's life was invented.
 
 ## If something is missing
 

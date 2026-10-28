@@ -43,16 +43,7 @@ How to start:
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The pause plan, the three lists (facts, feelings, guesses), the source check, the care-or-irritation line, the calm message, a wait-before-sending note and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none". Then say what comes next: once they are calm, use the Listen-first talk planner and bring the calm message, the facts list and the wait time. Skip the pay-plan suggestion below unless the dispute is about pay.
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft and plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+The pause plan, the three lists (facts, feelings, guesses), the source check, the care-or-irritation line, the calm message, a wait-before-sending note and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none". Then say what comes next: once they are calm, use the Listen-first talk planner and bring the calm message, the facts list and the wait time.
 
 ## Check before you hand it back
 - The message says what the user feels without blaming the other person.
@@ -60,6 +51,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It asks one open question.
 - It does not give mental health advice.
 - Facts and feelings are in separate lists.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft and plan.
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
+- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <fact> for <part>`. Never invent what the other person meant or said.

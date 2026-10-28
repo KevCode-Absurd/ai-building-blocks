@@ -19,13 +19,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
 4. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 5. This one.
@@ -86,17 +86,6 @@ You never do these. You list them:
 - **Test next:** up to three tests, only if the page has the traffic to run them, each with a one-line hypothesis.
 - **Files:** each round's files.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker). It takes the page.
-- The [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor). It takes the page.
-- The [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Write the landing page** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every change traces to a fact the owner gave.
 - No invented review, number, rating or claim is in the new text.
@@ -104,6 +93,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Rounds are shown and never go past three.
 - Items that cannot be fixed by copy are on the designer list, not rewritten.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker). It takes the page.
+- The [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor). It takes the page.
+- The [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
+- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without the ad, mark checks 1 to 3 "can't tell" and say they are open. Without customer words, skip the question finder and say coverage was not scored. Without the facts, stop after round one and give the audit only.

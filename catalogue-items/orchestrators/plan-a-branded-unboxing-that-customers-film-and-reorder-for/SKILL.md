@@ -57,16 +57,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3, unboxing plan: weight, colour, sound and smell matched to the ritual.
 - Step 4, inserts and gifts: what to include, each costed within your margin. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Step 1 holds your facts, buyers and claims from the store. Step 2 holds one ritual. Step 3 ties the ritual to weight, colour, sound and smell. Step 4 costs each insert against your margin. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Step 4 shows the margin and packaging cost per order it used, or says they are `MISSING:` and gives no insert budget. Every insert has a cost per order.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Packaging first-impression reviewer](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

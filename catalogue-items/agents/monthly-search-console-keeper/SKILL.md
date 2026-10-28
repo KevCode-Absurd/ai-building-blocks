@@ -21,8 +21,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -36,7 +36,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the page and post files between months. You start the run on the second Monday. It does not run on a timer.
+- **Claude Code:** It can keep the page and post files between months. You start the run on the second Monday. It does not run on a timer unless you set up a scheduled task.
 - **Google Search Console:** Export queries and pages with clicks, impressions and position for the month.
 <!-- /needs -->
 
@@ -85,15 +85,6 @@ You never do these yourself, even if you can reach the site. You list them for a
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** once a post is written, check it with the [Blog post publish check loop](https://useaiblocks.com/skills/blog-post-publish-check-loop) before it goes live.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the brief and plan and shortlist.
-- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the brief and shortlist.
-- The [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every quick win is ranked with its position and clicks from the export.
 - No more than three pushes were proposed.
@@ -101,6 +92,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Last month's pushes were judged before new ones were picked.
 - Nothing was changed, published or submitted.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the brief and plan and shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without a visitor value, rank by clicks and say the ranking ignores money. Without a page list, skip the basics check and ask for one. With one month of data, there is nothing to compare; list the quick wins and start the history.

@@ -21,8 +21,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Competitors** (yours): the brands buyers compare you with.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -67,16 +67,6 @@ How to start:
 
 The value to the buyer. The costs. The worth sums. The three-price table with sales, margin and total profit. The pick, the gap and cost multiple, and the buyer check. The floor check and the number to watch. The raise plan, if a price is live. The owner and review date. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
-- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
-- The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
-- **Sell it** with the [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the offer and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Three prices are compared on total profit.
@@ -88,6 +78,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The worth figure uses the buyer's numbers and shows the sum.
 - The gap is at least 3, or the fix is named.
 - Rival prices are used only as a floor check.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Discount margin and ad-cost checker](https://useaiblocks.com/skills/discount-impact-checker). It takes the offer.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
+- **Sell it** with the [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the offer and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

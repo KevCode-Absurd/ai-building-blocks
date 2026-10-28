@@ -47,15 +47,6 @@ How to start:
 
 The groups. Value and profit per buyer. The spend limit with the sum. The comparison with what you pay now and the flags. Ways to raise the limit. The assumptions list. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Second location readiness checker](https://useaiblocks.com/skills/second-location-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Value is shown by buyer type and source.
@@ -63,6 +54,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Costs of serving the buyer are included.
 - Assumptions are labelled.
 - Sources that overspend are flagged.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
+- The [Stakeholder value calculator](https://useaiblocks.com/skills/value-created-tally-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

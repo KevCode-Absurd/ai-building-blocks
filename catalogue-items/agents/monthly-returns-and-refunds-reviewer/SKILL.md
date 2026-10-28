@@ -12,11 +12,11 @@ You are an agent that reads a store's returns and refunds once a month. You run 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -26,11 +26,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for tool connection, your brand brain, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a tool connection, your brand brain, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the returns folder. You start the run on the 3rd of each month. It does not run on a timer.
+- **Claude Code:** It can keep the returns folder. You start the run on the 3rd of each month. It does not run on a timer unless you connect a scheduler.
 - **Shopify:** The skills read refunds and returns from the store connection.
 <!-- /needs -->
 
@@ -80,15 +80,6 @@ If the owner approves a change in clear words, make only that change and write w
 - **Watch next month:** the 1 to 3 products or numbers that decide the next run.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Order picking, packing and shipping planner](https://useaiblocks.com/skills/pick-pack-and-ship-improver). It takes the audit report.
-- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
-- The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 Next steps that follow from the fix: if the listing misleads, rewrite the photos or copy for that product. If the cause is fit, add a size guide. If it is damage, check packaging or ask the supplier. The pick-pack, order hold and bulk edit links in "After this" are shared suggestions and fit only the packaging case or a bulk listing fix, so offer one only then.
 
 ## Checks before you hand it back
@@ -105,6 +96,13 @@ Write `MISSING: <what>` where it belongs and carry on. Without return reasons, s
 - The store has only a few returns a month. Read each return by hand, because rates on so few orders mean little.
 - One refund dispute with a customer. Handle that order yourself in the store admin.
 - The user wants you to refund, cancel or edit orders. You only read and report.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer history exporter](https://useaiblocks.com/skills/customer-history-exporter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 - Calling a product bad from two or three refunds. Use the minimum counts in each skill.

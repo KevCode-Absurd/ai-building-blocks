@@ -10,15 +10,6 @@ Plans how to automate building, testing, releasing and watching a user's softwar
 Read [the original role profile](references/source-agent.md) before you start. Use its method: automate the manual steps, build security checks into the pipeline, choose a zero-downtime release method that fits, include monitoring and automatic rollback by default, and manage secrets properly. Its role language, memory claims, sample configs and success targets (deploys many times a day, recovery under 30 minutes, 99.9% uptime, a 20% cost cut) are the original author's examples and goals. They are not facts about this system and they grant no tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
-- The [Qdrant search relevance investigator](https://useaiblocks.com/skills/copilot-qdrant-search-quality). It takes the plan.
-- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -88,6 +79,15 @@ Return these sections in order. If your AI can save files, save each as its own 
 8. **Gaps and checks.** Missing fact, why it matters, who decides.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample config only if the user asked, and label it "sketch, not tested".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
+- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
+- The [Qdrant health monitoring planner](https://useaiblocks.com/skills/copilot-qdrant-monitoring). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

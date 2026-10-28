@@ -10,15 +10,6 @@ A first-pass reader for agreements. One document (or one pair of versions) per r
 Read [the original role profile](references/source-agent.md) before you start. Use its checklists: key terms, missing terms, the high-risk clause library and the version comparison. Its role language, experience claims and success metrics are not facts about this run. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
-- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
-- The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -86,6 +77,15 @@ Return these sections in order. If your AI can save files, save each as its own 
 6. **Overall risk and questions for your lawyer.** Rating, reasons, then questions in priority order and the next steps.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

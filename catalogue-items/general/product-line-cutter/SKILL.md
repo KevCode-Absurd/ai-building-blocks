@@ -57,15 +57,6 @@ How to start:
 
 The product table. Overlaps. The stars. The grid. The keep list and the cut list with reasons and plans for current buyers. The road map decisions. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
-- The [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the shortlist and plan.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every kept item has a box in the grid.
@@ -73,6 +64,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each cut has a plain reason the team can repeat.
 - Nothing is kept only because it was already built.
 - Every product lands in exactly one group with a reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
+- The [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

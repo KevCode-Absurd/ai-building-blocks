@@ -71,15 +71,6 @@ Five step files and a `HAND-BACK SUMMARY`:
 
 This prepares your questions and your numbers. A lawyer and an accountant should check the answers and the contract before you make an offer.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
-- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
-- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the files and answers listed for it in Steps.
@@ -90,3 +81,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Owner earnings take off a fair wage for the owner's work. If the owner draws little or nothing, step 4 says what it added.
 - Customer concentration (one customer with a large share of revenue) and the lease terms appear in the checklist and, if they are in the books, in the statement read and the value range's still-to-verify list.
 - The value range shows its method and names a walk-away price, and the still-to-verify list is not empty.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
+- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
+- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

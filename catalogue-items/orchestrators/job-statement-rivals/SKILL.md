@@ -69,18 +69,16 @@ Pause here: Go and watch the top leads in real life, and talk to the people in t
 ## What you hand back
 Four step files, then the HAND-BACK SUMMARY as the last file: ranked leads with a visit plan, one job written as a situation, every rival with a resume, and a rating grid that shows where nobody is strong.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
-- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
-- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Step 1 has leads with evidence, and hunches kept apart. Step 2 has one job for one circumstance, built on a real struggle from your notes. Step 3 lists doing nothing and homemade fixes as rivals. Step 4 marks every rating without evidence as a guess. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Test the idea with real people** with the [Product alternative comparison reviewer](https://useaiblocks.com/skills/ten-times-better-checker). It takes the audit report.
+- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

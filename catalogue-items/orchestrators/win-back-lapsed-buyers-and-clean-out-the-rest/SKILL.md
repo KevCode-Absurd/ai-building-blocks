@@ -77,17 +77,6 @@ Pause here: Run the flows for about four weeks, then export the quiet subscriber
 - Step 5, results read: diagnosis, what to repeat or rework, deliverability status, score.
 - Hand-back summary: each file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
-- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -96,3 +85,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The bottleneck rests on numbers from your export, and the trigger day matches how long your buyers wait between orders.
 - No buyer who ordered, returned or opened recently is in the clean-out list, and the rule says suppress, not delete.
 - The results read separates what the win-back earned from sales that would have happened anyway.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
+- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

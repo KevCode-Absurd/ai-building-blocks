@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Slide deck** (yours): a finished slide deck.
+- **A slide deck** (yours): a finished slide deck.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -74,15 +74,6 @@ NEXT STEP         <one step>
 
 State plainly that nothing was submitted and that the author must check every figure against the final tables.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the audit report.
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the audit report.
-- The [Language model feature explorer](https://useaiblocks.com/skills/model-feature-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every figure in the revised abstract matches the results, including denominators and units.
@@ -92,6 +83,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Any claim the results do not settle is a marked gap, not deleted and not guessed.
 - If two sources give different figures, both are shown and the conflict is flagged.
 - CHECKS MISSED lists any check that did not run, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

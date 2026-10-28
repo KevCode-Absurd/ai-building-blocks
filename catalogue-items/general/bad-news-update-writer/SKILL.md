@@ -47,21 +47,19 @@ How to start:
 ## What you hand back
 The update, short enough to read in a minute or two. A list of soft labels replaced, with the plain word. `MISSING:` lines for numbers not supplied. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
-- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
-- The [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The loss comes first, in plain words.
 - Every number comes from the facts given.
 - No blame is assigned in the update.
 - The close names actions, not mood.
 - No label stands in for a plain word.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where a number or fact is not given. Do not estimate. If the facts are too thin to write a first line, ask for what happened.

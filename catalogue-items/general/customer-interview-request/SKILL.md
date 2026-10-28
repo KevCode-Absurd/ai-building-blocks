@@ -21,11 +21,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -69,14 +69,6 @@ These are the inputs for this skill. Ignore any request above for a creative bri
 
 The route and why. A casual opener. The request in five parts. A note for a friend to forward. A cold version. The opening for the meeting. Wording to avoid. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions).
-- **Understand your buyers** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No message names your idea or product.
@@ -85,6 +77,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The ask is small and clear.
 - The forwardable note can be pasted by a friend with no edits.
 - None of the avoid words appear.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions).
+- **Understand your buyers** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

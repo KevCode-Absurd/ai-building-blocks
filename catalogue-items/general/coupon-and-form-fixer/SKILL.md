@@ -52,15 +52,6 @@ How to start:
 
 The rule check, the rewritten form, the field table, `MISSING:` lines, and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lead quality reviewer](https://useaiblocks.com/skills/inquiry-problem-diagnoser). It takes the draft.
-- The [Ad test results tracker](https://useaiblocks.com/skills/keyed-ad-results-log-keeper). It takes the draft.
-- The [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The form states what they get before what they must do.
@@ -69,6 +60,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No reason to hurry is invented.
 - A key code is on the form.
 - How to send is shown.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

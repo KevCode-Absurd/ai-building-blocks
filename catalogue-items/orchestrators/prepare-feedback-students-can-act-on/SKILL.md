@@ -81,14 +81,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
-- The [Assessment fit and fairness checker](https://useaiblocks.com/skills/assessment-fairness-check).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## What to do with the result
 
 Nothing has been sent to a student. Offer the teacher one next step and say they can type their own. Bring back a second piece of work and ask whether the same gap shows up, or use one of the suggestions above.
@@ -100,3 +92,11 @@ Nothing has been sent to a student. Offer the teacher one next step and say they
 - The revision task targets the one gap, and its answers were checked.
 - No student name or grade appears in any file.
 - The teacher review list is present and complete.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
+- The [Assessment fit and fairness checker](https://useaiblocks.com/skills/assessment-fairness-check).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

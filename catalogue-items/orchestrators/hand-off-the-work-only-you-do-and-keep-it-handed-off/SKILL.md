@@ -58,17 +58,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2, one-page agreement: the results wanted, the limits, the help the person gets and the review dates. It is a working agreement, not an employment contract. For pay or contract terms, ask your lawyer or HR adviser.
 - Step 3, meeting plan: the one-on-one rhythm, agenda rules and follow-up. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- The [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
-Use this section, not the shared "After this" list above, whose links (partner screener, pay plan checker, review theme sorter) do not fit a hand-off. Suggest one next step as a short question:
+Use this section, not the shared "After this" list above, whose pay plan checker does not fit a hand-off. Suggest one next step as a short question:
 - Send the one-page agreement to the person taking the job yourself, and book the first one-on-one. Nothing here sends it.
 - Check the agreement against the real week after the first review date, and move the next job across.
 
@@ -77,3 +68,10 @@ Use this section, not the shared "After this" list above, whose links (partner s
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

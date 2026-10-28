@@ -75,6 +75,14 @@ You never do these yourself. You list them for approval:
 - **What would change the call next month.**
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
+## Checks before you hand it back
+- Every change is set against that rival's own last month.
+- No claim about rival spend, sales or results is made.
+- No move is proposed that your proof cannot support.
+- Ads collected in different ways in different months were flagged.
+- Nothing was changed or sent without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -85,14 +93,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan your strategy** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every change is set against that rival's own last month.
-- No claim about rival spend, sales or results is made.
-- No move is proposed that your proof cannot support.
-- Ads collected in different ways in different months were flagged.
-- Nothing was changed or sent without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. If a rival has no ads this month, say whether it has none or you did not collect any. Without last month's history, treat the month as a base. Without the brand file, list gaps but mark each "proof not checked".

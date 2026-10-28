@@ -54,15 +54,6 @@ How to start:
 
 The root and why. The sound rules. The word list with meanings. The names, each with what it names, meaning, older form and a line of history (all labelled "invented for this set" unless sourced). Names dropped and why. Names left half-explained. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
-- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All names draw on the same root and sound rules.
@@ -71,6 +62,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The set sounds right when read aloud.
 - No name is claimed as trademark-free or available. That needs a search.
 - Any older form or history shown as real has a source from the user. Otherwise it is labelled "invented for this set".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

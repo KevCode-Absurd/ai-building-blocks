@@ -48,15 +48,6 @@ How to start:
 
 The surprise and the comparison. The eliminations with facts. The four patterns tested. The ranked causes with fit, what else must be true, and a check. The first test. What stays unexplained. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-- The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every elimination cites a fact.
@@ -64,6 +55,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each cause says what else must be true.
 - Likelihoods are high, medium or low, with no false percentages.
 - The first test separates the top two causes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

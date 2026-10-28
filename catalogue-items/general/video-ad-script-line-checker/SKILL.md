@@ -15,8 +15,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
-2. **A video ad script** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It uses your brand brain and a buyer brief.
+1. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It uses your brand brain and buyer brief.
 3. This one.
 
 How to start:
@@ -55,6 +55,13 @@ How to start:
 ## What you hand back
 Used to judge: one block per weak line (`line | check | what's wrong | fix`), then missing beats, the word count against budget, a list of MISSING facts, and the score now and after the fixes, each with its sum. Used as a guide: no separate review; the script follows the checks, and the score comes at the end.
 
+## Check before you hand it back
+- Every check you cite exists in the reference, and the reason matches it.
+- Every quoted line is really in the script.
+- No example from the reference appears as a fact.
+- Every fix rests on a fact you were given.
+- The score's sum matches the problems found, line for line.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -63,13 +70,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every check you cite exists in the reference, and the reason matches it.
-- Every quoted line is really in the script.
-- No example from the reference appears as a fact.
-- Every fix rests on a fact you were given.
-- The score's sum matches the problems found, line for line.
 
 ## If something is missing
 Reordered or kept not given: write `MISSING: reordered or kept`, apply both versions of the checks that differ, and name the difference. A fix that needs a fact you don't have: write `MISSING: <fact>` instead of filling it in.

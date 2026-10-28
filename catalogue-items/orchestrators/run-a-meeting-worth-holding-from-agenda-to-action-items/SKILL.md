@@ -22,12 +22,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audio** (yours): a sound or voice recording.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, audio, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, audio, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -66,15 +66,6 @@ Pause here: Send the pre-read, hold the meeting and record it.
 - Step 3: the transcript by speaker, a summary, decisions marked decided or open, and action items with one owner and a date each. An action with no owner or no date is flagged.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes and plan.
-- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
-- The [Meeting and written update planner](https://useaiblocks.com/prompts/meeting-to-written-update-converter). It takes the meeting notes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +76,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each action in step 3 has one owner and a date taken from the recording.
 - Every agenda topic has an outcome, and decisions come first.
 - Each action item has one owner and a date, and the notes match what was said.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes and plan.
+- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
+- The [Meeting and written update planner](https://useaiblocks.com/prompts/meeting-to-written-update-converter). It takes the meeting notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

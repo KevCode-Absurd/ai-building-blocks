@@ -56,15 +56,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3 file: your ask split into parts with ranges, what they can pay, the gap and one proposed sum or set of terms.
 - Step 4 file: your opening lines, your questions, a safe-no question and what to listen for. This is the plan for the call.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the plan.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
-- The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Your walk-away line is written down before the talk, with what you would do instead.
 - Every figure for their means has a source or is marked as a guess.
@@ -73,3 +64,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the plan.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
+- The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

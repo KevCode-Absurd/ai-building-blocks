@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your website** (yours): the link to your site or the page.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your website, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your website, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -52,14 +52,6 @@ How to start:
 
 The score out of 100 with how it was worked out. Duplicates by pattern with counts. The sitemap status. The 404 list with destinations. The pages with no traffic. A plan for the 404 page. The fix list ranked by pages affected. A re-check date. The dated-advice note. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
-- The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each finding names the exact pages affected.
@@ -68,6 +60,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The advice is dated 2013 and flagged for the user to check against current search guidance.
 - The score shows its sums.
 - No 404 is redirected to the homepage by default.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
+- The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

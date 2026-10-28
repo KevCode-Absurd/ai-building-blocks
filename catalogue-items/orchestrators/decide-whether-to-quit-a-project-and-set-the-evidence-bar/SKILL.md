@@ -57,6 +57,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 3:** the unrecoverable loss, fixes with cost, and an early sign.
 - **Step 4:** how reversible the choice is, the bar for proof, the first fact to get and the date to decide.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- The call matches the logged evidence, even if it is not the one you hoped for.
+- The decision date is a real date, and you have put it in your calendar.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -65,11 +73,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Team stop-doing list writer](https://useaiblocks.com/prompts/stop-doing-list-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- The call matches the logged evidence, even if it is not the one you hoped for.
-- The decision date is a real date, and you have put it in your calendar.

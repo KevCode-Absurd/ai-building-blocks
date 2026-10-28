@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -159,15 +159,6 @@ STAGE 5  CLIP <n> (<s>, start F<n>, end <frame or none>)
 CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - You stopped for approval after stages 1, 3 and 4, or, when asked for every stage at once, marked those three points "(approve)" and asked for each yes.
 - The material sentence and lock lines are word for word the same in every image prompt.
@@ -176,6 +167,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No brush, hand-held tool or desk is written into any prompt.
 - No painted words beyond the 3 label lines; no child, real person, speaking figure or cloned voice.
 - Nothing painted goes beyond the brand's claims and ingredient list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo or label text at all: ask for them in one short message, then carry on from any description you have and mark the gaps. No cast note: choose from the script and mark it `inferred`. No ingredient list: drop ingredient shapes from the turn.

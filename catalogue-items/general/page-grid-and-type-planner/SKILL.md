@@ -58,14 +58,6 @@ How to start:
 
 Meaning and reader. The grid. The type list. The order and white-space plan. Layout for every page. Changes with no reason. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
-- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Only one or two type sizes are in the plan.
@@ -73,6 +65,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - White space is planned, not left over.
 - A new reader could say what the page is for in five seconds.
 - Only one typeface family is chosen.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

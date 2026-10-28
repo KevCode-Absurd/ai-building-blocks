@@ -12,15 +12,15 @@ A value built on last year's profit moves with the weather. A value built on the
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). Bring audit report, source text (optional).
+1. **An audit report** with the [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). Bring an audit report, source text (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -63,15 +63,6 @@ How to start:
 
 The window and the share count used. Both averages. Whether the latest year was used and why not. The candidate earnings per share and in total, each with its reason. RANGE ORDER: PASS or FAIL with the actual inequality. A validated range and its limits only after the source and order checks pass; otherwise NO VALID ORDERED RANGE with no valuation conclusion. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
-- The [Earnings-based share value calculator](https://useaiblocks.com/skills/earnings-value-range-builder). It takes the audit report.
-- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The reliability rating was applied first.
@@ -81,6 +72,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The latest year was used alone only when all three conditions held.
 - No trend was projected past what a normal year has produced.
 - Nothing was invented and no security was named as one to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
+- The [Earnings-based share value calculator](https://useaiblocks.com/skills/earnings-value-range-builder). It takes the audit report.
+- The [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

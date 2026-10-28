@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The policy** (yours): the written policy or rules, with the date they start.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). Bring your question, spreadsheet (optional), audit report (optional), document (optional).
+1. **A draft** with the [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). Bring your question, a spreadsheet (optional), an audit report (optional), a document (optional).
 2. This one.
 
 How to start:

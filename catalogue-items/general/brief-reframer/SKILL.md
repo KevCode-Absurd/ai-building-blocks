@@ -56,15 +56,6 @@ How to start:
 
 The brief as written. Why the job exists. Ready-made answers. Two or three new versions, each with a cheap test and a way to judge it. The issue under the brief. Where to start. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the question.
-- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan and question.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The original brief is quoted.
@@ -72,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A cheap perception change is named for each.
 - One odd idea is included and marked as odd.
 - A way to judge the test is given.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

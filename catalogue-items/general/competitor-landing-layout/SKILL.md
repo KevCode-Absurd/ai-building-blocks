@@ -75,17 +75,6 @@ How to start:
 5. Optional skeleton HTML.
 6. **CHECKS MISSED**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
-- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page and page layout spec.
-- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
-- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
-- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page and page layout spec.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No sentence from the reference appears in the output.
 - Every fact on the page is in your supplied facts.
@@ -93,6 +82,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The first screen carries on from the ad.
 - Sections that suit the wrong way of buying are changed or removed.
 - The colours and fonts are yours.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page and page layout spec.
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
+- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page and page layout spec.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. Colour jobs not defined: reuse one value for several roles and say so; don't invent a shade. No photos: labelled boxes.

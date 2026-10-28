@@ -21,11 +21,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 How to start:
@@ -34,8 +34,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude:** Optional, any strong chat AI works; Claude has free and paid plans. Keeps your offer terms, the ad's words and four steps of work straight in one run.
-- **Figma:** Optional and not needed for the steps; it has a free plan and paid plans. Holds the chosen design direction as phone and desktop frames your builder can follow.
+- **Claude:** Keeps your offer terms, the ad's words and four steps of work straight in one run.
+- **Figma:** Holds the chosen design direction as phone and desktop frames your builder can follow.
 - **PageSpeed Insights:** Free Google check of a built page for phone speed, contrast and tap target problems.
 <!-- /needs -->
 
@@ -67,14 +67,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 Four step files plus the summary, which ends with MISSING lines and CHECKS MISSED. The last files hold the design plan and the review, with the brand file and the page copy before them.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
-- The [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: the Shopify landing page builder takes the design direction you pick. The Competitor comparison page writer fits only if you also want a page that compares you with a rival.
 
 ## Check before you hand it back
@@ -82,6 +74,13 @@ What next: the Shopify landing page builder takes the design direction you pick.
 - The page's headline carries the ad's main words, its first offer is the one the ad named, and the full cost is stated before the last button.
 - Every number, price and claim on the page is in the brand file or the offer.
 - The output ends with the hand-back summary. Without it, the run isn't finished.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing. With no ad, the review marks checks 1 to 3 "can't tell".

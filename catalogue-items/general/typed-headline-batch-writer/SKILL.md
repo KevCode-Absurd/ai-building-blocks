@@ -65,13 +65,6 @@ How to start:
 
 A numbered list of at least twenty headlines, each with its type, its buying reason and its detail. A count by type. The lines you cut and why, in one line each. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - At least twenty headlines, or a stated reason for fewer.
@@ -80,6 +73,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No curiosity line is a bare puzzle.
 - Every figure and detail comes from what was supplied.
 - No two headlines say the same thing in different words.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

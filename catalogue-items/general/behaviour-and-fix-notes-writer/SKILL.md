@@ -46,6 +46,14 @@ How to start:
 
 Whether it is worth raising. The behaviour and the result wanted. Your part. The fair reason, marked KNOWN or GUESS, with a question. The true strengths. The smallest fix. The keep, change and leave-out lists. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The behaviour could be filmed and has no word about character.
+- Every strength is true and has an example.
+- The fix is small and easy for this person.
+- Your own part is written, or says none.
+- The leave-out list holds old faults you will not raise.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -54,14 +62,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The behaviour could be filmed and has no word about character.
-- Every strength is true and has an example.
-- The fix is small and easy for this person.
-- Your own part is written, or says none.
-- The leave-out list holds old faults you will not raise.
 
 ## If something is missing
 

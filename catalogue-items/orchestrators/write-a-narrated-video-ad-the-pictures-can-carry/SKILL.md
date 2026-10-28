@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your a video ad script and brand brain.
+3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand brain.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -82,17 +82,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Once the clips are made, the workflow "Cut, caption and check a video ad before launch" takes your clips and the final script.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the script and edit plan.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and image prompt.
-- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the script.
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -101,3 +90,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every narration line left adds something the picture cannot show, and each replaced line became an action you could film.
 - No fact was lost in the trim, and the script still makes sense to someone watching with no sound.
 - Each shot has one action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the script and edit plan.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and image prompt.
+- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

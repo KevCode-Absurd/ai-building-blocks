@@ -29,8 +29,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Meta Ads Manager:** Exports spend by ad for last year's sale period.
-- **Canva:** A fast way to make the offer statics in bulk with a template.
+- **Meta Ads Manager:** Free to use; you pay only for ad spend. Exports spend by ad for last year's sale period.
+- **Canva:** Has a free plan. Making many offer statics from one template in bulk may need a paid plan, so check yours first.
 - **Any good chat AI:** Does the sums and builds the phase list from the sheet you paste.
 <!-- /needs -->
 
@@ -94,11 +94,7 @@ MISSING: <what was not supplied>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
 - **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
-- **Read your ad results** with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

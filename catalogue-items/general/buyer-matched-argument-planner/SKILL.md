@@ -64,6 +64,13 @@ These headings, in this order:
 
 A brand brain is not needed. Product facts are the only required input.
 
+## Check before you hand it back
+
+- Every argument is a true fact about the product.
+- Each buyer type has one lead argument and a reason.
+- A first question is given for each buyer type.
+- No argument depends on a false pretext.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -71,13 +78,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every argument is a true fact about the product.
-- Each buyer type has one lead argument and a reason.
-- A first question is given for each buyer type.
-- No argument depends on a false pretext.
 
 ## If something is missing
 

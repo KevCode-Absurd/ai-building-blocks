@@ -10,15 +10,6 @@ Plans a machine learning job that extracts information from satellite, aerial or
 Read [the original role profile](references/source-agent.md) before you plan. Use its method for the user's task. Its role language and its "experience" lines are a reference, not evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -85,6 +76,13 @@ Return these sections in this order. Use the same headings.
 7. `CHECKS LEFT AND NEXT STEP`: what the user must run, and the next action. If the imagery needs cleaning or conversion first, point to the Spatial Data Engineer agent. If the result will feed a map product, point to the Web GIS Developer agent.
 
 End with `CHECKS MISSED:` listing any check that could not be done, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data system design reviewer](https://useaiblocks.com/skills/data-system-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

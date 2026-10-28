@@ -51,15 +51,6 @@ How to start:
 
 The change in one line. The cases in order, each with its group and size. The case to start with and its check in plain words. Decisions for later. How to keep the list. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
-- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every case describes behaviour, not how to build it.
@@ -67,6 +58,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The first case is small enough to finish in one sitting.
 - No case is a vague area such as "handle errors".
 - Each case has a clear pass or fail.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

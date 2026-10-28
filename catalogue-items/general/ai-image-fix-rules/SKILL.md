@@ -80,6 +80,12 @@ How to start:
 - **After feedback:** each comment sorted (rule or one-off, where it slipped in, which list), then each new or updated rule with its prompt line, check line, reason, work covered and count.
 - **Checks missed:** one line per check the rules still miss, or "none". When you checked a finished piece, each check line it fails, or "none".
 
+## Check before you hand it back
+- Every rule has a prompt line and a check line that can be checked on a finished piece.
+- Every rule names where the mistake slipped in, a reason and the work it covers.
+- No product fact sits on the any-product list.
+- Repeats are counted, not rewritten.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -88,12 +94,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Sell it** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every rule has a prompt line and a check line that can be checked on a finished piece.
-- Every rule names where the mistake slipped in, a reason and the work it covers.
-- No product fact sits on the any-product list.
-- Repeats are counted, not rewritten.
 
 ## If something is missing
 Write `MISSING: <what>` for a product step nobody has described. Until someone answers, keep the product shut and still, and ask the brand rather than guessing.

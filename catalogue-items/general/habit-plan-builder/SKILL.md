@@ -51,17 +51,6 @@ How to start:
 
 The identity statement. The ranked versions. The gateway step. The cue sentence. The four parts. Friction changes. The rule. The tracking table. The restart rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
-- **Tell it as a story** with the [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The first step takes under two minutes.
@@ -69,6 +58,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - There is an identity statement.
 - There is a restart rule that does not shame.
 - All four of cue, craving, response and reward are mapped.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
+- The [Digital tool audit planner](https://useaiblocks.com/skills/digital-tool-audit-planner).
+- The [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
+- The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
+- **Tell it as a story** with the [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

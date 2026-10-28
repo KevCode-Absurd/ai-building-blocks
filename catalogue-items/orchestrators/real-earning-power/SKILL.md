@@ -50,14 +50,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. The first holds the one-off table, the second the padding call, the third the rating, and the last the normal earnings range.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety). It takes the audit report.
-- The [Business valuation and price reviewer](https://useaiblocks.com/workflows/business-valuation-discount).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -66,3 +58,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The latest year was not used alone unless all three conditions held.
 - Nothing names a security to buy or sell.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock valuation margin-of-safety reviewer](https://useaiblocks.com/workflows/stock-margin-of-safety). It takes the audit report.
+- The [Business valuation and price reviewer](https://useaiblocks.com/workflows/business-valuation-discount).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

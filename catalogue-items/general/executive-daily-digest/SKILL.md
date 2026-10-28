@@ -6,31 +6,22 @@ description: "Share your calendar, action list and updates. Get a dated brief of
 # Executive daily briefing writer
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
-- The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register). Bring meeting notes (optional), plan (optional), document (optional), audit report (optional), spreadsheet (optional).
+1. **A plan** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register). Bring meeting notes (optional), a plan (optional), a document (optional), an audit report (optional), a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -76,3 +67,12 @@ daily-brief.md, in this order and kept to one page:
 End with source coverage, missing facts, proposed external actions and one next step. Under CHECKS MISSED, list any check that failed or could not run, or write "none".
 
 What to bring next: the [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper) takes your action list and this brief. The [Action item tracker](https://useaiblocks.com/skills/executive-action-register) takes the meeting notes or email threads. The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup) takes updates from several tools.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
+- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

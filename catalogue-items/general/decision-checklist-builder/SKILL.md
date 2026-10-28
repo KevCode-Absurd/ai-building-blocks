@@ -61,14 +61,6 @@ Your mistake log is the main input. It is the "lessons" the section above asks f
 
 The trigger and who runs it. The checklist in order, each item with the question, pass line and where to find the answer. The rules of use. The test on two past cases with the catch rate and any change made. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-- The [Decision backup planner](https://useaiblocks.com/skills/decision-tripwire-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Twelve items or fewer, each one line.
@@ -76,6 +68,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each item can be answered from a fact, with a pass line.
 - Every repeat offender in the log has an item or a reason it does not.
 - The test on two cases is shown, with any change made after it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Decision backup planner](https://useaiblocks.com/skills/decision-tripwire-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

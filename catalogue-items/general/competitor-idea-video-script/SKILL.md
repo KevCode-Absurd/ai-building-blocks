@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
 3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 4. This one.
 
@@ -89,19 +89,19 @@ CHECKS MISSED
 <one line per check still missed, or "none">
 ```
 
+## Check before you hand it back
+- REFERENCE names a real ad, and quotes its own words when there's no ID or link; the idea works for another category and shapes one or two named parts.
+- All five distance lines say yes.
+- SCRIPT has every part of the layout: belief shift, assumed, the beat table with its Evidence column, opening variants, selling beat, test plan and placeholders.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 - **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
-- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- REFERENCE names a real ad, and quotes its own words when there's no ID or link; the idea works for another category and shapes one or two named parts.
-- All five distance lines say yes.
-- SCRIPT has every part of the layout: belief shift, assumed, the beat table with its Evidence column, opening variants, selling beat, test plan and placeholders.
 
 ## If something is missing
 - **No real ad:** `MISSING: a reference ad`, with what to collect by hand from the public Meta Ad Library next time: for one to three ads, the library ID or link, advertiser, start date, the words, and a screenshot or first frames. Then carry on as the gate says.

@@ -44,15 +44,6 @@ How to start:
 
 The facts in order. The map: call (with its label), threshold, trial and loss, what they took in, return and who gains. A note on forced or thin stages that were cut. A short draft. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story shape mapper](https://useaiblocks.com/skills/story-shape-mapper). It takes the draft.
-- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the draft and plan.
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every stage comes from a fact the user gave, with nothing invented.
@@ -60,6 +51,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It does not force stages where the facts show fewer.
 - The return says what others gain.
 - The draft adds no event, date or number that was not given.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story shape mapper](https://useaiblocks.com/skills/story-shape-mapper). It takes the draft.
+- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

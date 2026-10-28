@@ -10,15 +10,6 @@ Plans the interface of one XR app: how users act, how screens flow and where pan
 When not to use it: for a seated vehicle with levers and gauges, use the XR Cockpit Interaction Specialist agent. To build the app in WebXR, use the XR Immersive Developer agent. For Apple Vision Pro, use the visionOS Spatial Engineer agent. For flat screens on the web or a phone, use the UI Designer agent.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
-- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -87,6 +78,14 @@ Return these sections in order, each with its own heading. If your AI can save f
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
 Next step to tell the user: run the validation experiments with real users, then bring the results back for a revised plan.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
+- The [Product-specific interface designer](https://useaiblocks.com/skills/product-true-ui-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

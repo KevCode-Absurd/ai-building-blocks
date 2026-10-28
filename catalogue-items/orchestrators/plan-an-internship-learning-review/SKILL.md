@@ -71,14 +71,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course). It takes the document.
-- The [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Nothing has been shared with the host or the intern. Offer one next step and say the person can type their own:
@@ -94,3 +86,11 @@ Nothing has been shared with the host or the intern. Offer one next step and say
 - Planned time fits the weekly time given.
 - Each skill has a milestone for each review date, or a note saying why not.
 - Nothing rates the intern or predicts an outcome.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course). It takes the document.
+- The [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

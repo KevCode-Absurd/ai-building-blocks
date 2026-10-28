@@ -21,11 +21,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Makes it better (optional):**
-- **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your idea, shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your idea, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -72,14 +72,6 @@ These are the inputs for this skill. Ignore any request above for a creative bri
 
 Who you'll talk to and the stage. The big three, each with what it could change. The scary question and how to ask it. The three-line opening. Your questions fixed, one by one. Extra questions about their life. The recovery lines. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No question names your idea or asks for an opinion on it.
@@ -88,6 +80,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least one question is one the person is afraid to ask.
 - Each rewrite says what was wrong with the original.
 - Market risk and product risk are named.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Understand your buyers** with the [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

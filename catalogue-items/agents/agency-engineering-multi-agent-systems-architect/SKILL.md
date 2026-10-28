@@ -10,14 +10,6 @@ Designs a team of AI agents so it holds up under failure, messy input and real l
 Read [the original role profile](references/source-agent.md) before you start. Use its method: treat the agent team like a distributed system, choose the simplest topology that fits, give each agent a contract, list failure modes with recovery paths, scope access to the least needed, and place human approval where it counts. Its role language, memory claims and numeric rules of thumb (for example maximum chain length, fan-out width, a minimum of 20 test cases, a confidence cut-off of 0.7) are the original author's guidance. Offer them as starting points the user can change, not as facts. The profile grants no tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Data system design reviewer](https://useaiblocks.com/skills/data-system-designer). It takes the plan.
-- **Build it** with the [System design planner](https://useaiblocks.com/skills/system-design-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 

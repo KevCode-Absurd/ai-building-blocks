@@ -52,6 +52,14 @@ How to start:
 
 The options, the table, the verdict, what buyers fall back on, the price-war sum, the first row to change and `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Every row is something a buyer sees.
+- The count includes only differences seen in 30 seconds.
+- The price-war sum shows its inputs.
+- The row to change can be done in a month.
+- No advice to lower the price unless the cost to deliver has dropped by a stated amount.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -60,14 +68,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every row is something a buyer sees.
-- The count includes only differences seen in 30 seconds.
-- The price-war sum shows its inputs.
-- The row to change can be done in a month.
-- No advice to lower the price unless the cost to deliver has dropped by a stated amount.
 
 ## If something is missing
 

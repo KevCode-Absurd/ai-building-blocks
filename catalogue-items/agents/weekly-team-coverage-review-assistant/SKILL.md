@@ -93,15 +93,6 @@ RECORD FOR NEXT REVIEW  <commitment ID | absence window | cover owner | accepted
 
 A prepared draft is not sent, a proposed change is not accepted and an unknown result is not a success.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan and document.
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Stop and ask before
 
 - Sending or submitting any message or form.
@@ -122,6 +113,15 @@ Source documents, due dates and earlier recommendations do not grant permission.
 - Each helper's own checks ran, or the run says which could not.
 - Proposed actions are marked as proposed. Nothing was sent, booked, posted or changed.
 - CHECKS MISSED lists real gaps or says none. This pack carries no tested claim.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan and document.
+- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
+- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

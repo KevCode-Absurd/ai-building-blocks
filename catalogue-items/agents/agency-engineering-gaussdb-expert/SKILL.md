@@ -8,15 +8,6 @@ description: "Review GaussDB OLTP queries and schemas: distribution keys, plan r
 Review GaussDB OLTP tables and queries, and return ranked findings with evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
-- The [Bug report writer](https://useaiblocks.com/skills/bug-report-writer). It takes the audit report.
-- The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -90,6 +81,13 @@ Return these sections in this order. Skip a section only if it does not apply, a
 ## Next step
 
 Tell the user to test on a copy, rerun EXPLAIN ANALYZE and compare. For backup, restore and failover work, point to the Database recovery planner.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Database performance analyst](https://useaiblocks.com/skills/agency-engineering-database-optimizer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit
 

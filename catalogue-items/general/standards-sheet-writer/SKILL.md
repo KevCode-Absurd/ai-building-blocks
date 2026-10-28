@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand brain, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,17 +55,6 @@ How to start:
 ## What you hand back
 A one-page sheet: the order-to-hand-off walk, the standards by area, the never-cut list, roles with one job each, the training plan, the visit check and the local-ideas rule. Then `MISSING:` lines for numbers the user did not give. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
-- **Plan your strategy** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: lead with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer), which turns this sheet into a full manual. The pay, partner and recognition links under "After this" only fit if you are also planning pay, partners or staff awards.
 
 ## Check before you hand it back
@@ -73,6 +62,14 @@ What next: lead with the [Operations manual writer](https://useaiblocks.com/skil
 - Every number comes from the user, not from you.
 - The never-cut list is present and specific.
 - The sheet says where local ideas can be collected.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the plan.
+- The [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <number or fact> for <standard>` and keep the standard as a blank to fill. Never invent a weight, time or price.

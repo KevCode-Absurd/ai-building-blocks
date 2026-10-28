@@ -8,15 +8,6 @@ description: "Plan an Unreal Engine 5 open world: World Partition grid and data 
 Plans the world setup of one Unreal Engine 5 open-world project: streaming grid, landscape, HLOD and population. It follows the Unreal World Builder role profile in references/source-agent.md. It works from what the user supplies. It cannot open Unreal or profile a build.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -85,6 +76,13 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Risks and open questions**: scale risks and gaps.
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). Next step: build in the order given, then bring back the profiler results. The generic "After this" list above (usability and design links) does not fit a world plan. Do not offer those links. For one material or effect, use the [Unreal Technical Artist agent](https://useaiblocks.com/skills/agency-unreal-technical-artist). For gameplay code, use the [Unreal Systems Engineer agent](https://useaiblocks.com/skills/agency-unreal-systems-engineer).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

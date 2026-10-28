@@ -8,15 +8,6 @@ description: "Turn pasted reviews, tickets, survey answers and interview notes i
 Turn the user's pile of feedback into ranked themes, real quotes and clear next steps. Every count and quote must come from what the user pasted.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the audit report.
-- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,13 @@ Return these sections, in this order:
 - **Priorities**: Scored requests, if asked.
 - **Recommendations**: Product, support, and what to ask users next.
 - **Open checks**: Bias, gaps and what to confirm. Also list every check that failed or could not run (this is the CHECKS MISSED list), or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

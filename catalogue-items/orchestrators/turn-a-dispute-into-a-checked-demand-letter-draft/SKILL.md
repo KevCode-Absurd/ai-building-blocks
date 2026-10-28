@@ -19,14 +19,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, document, the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a document, the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -62,15 +62,6 @@ Pause here: Have a qualified lawyer read the letter before it goes out. Letters 
 - Step 3, demand letter draft: the letter, the items to verify, and a checklist for after sending.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
-- The [Cease-and-desist letter drafter](https://useaiblocks.com/skills/cease-and-desist-letter-helper). It takes the document.
-- The [Lab and device standards evidence planner](https://useaiblocks.com/skills/lab-and-device-standards-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -79,3 +70,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every date and amount in the letter matches the timeline and a document the person gave.
 - Quotes are exact or marked `verify`.
 - The letter says what is wanted, by when, and what happens if nothing changes, and the pause tells the person to see a qualified lawyer.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
+- The [Cease-and-desist letter drafter](https://useaiblocks.com/skills/cease-and-desist-letter-helper). It takes the document.
+- The [Infringement claim screening reviewer](https://useaiblocks.com/skills/infringement-first-look-sorter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

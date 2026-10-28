@@ -58,15 +58,6 @@ Two step files and the summary, in this shape:
 - Step 2: where you sit on the care and challenge chart, the praise to open with, the behaviour and its effect, questions to ask, and a follow-up date. This file holds the plan.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
-- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -75,3 +66,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The go-to question cannot be answered with yes or no.
 - The praise in step 2 names a real thing the person did. The feedback describes what they did and what it caused, not what kind of person they are.
 - The plan ends with a follow-up date.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

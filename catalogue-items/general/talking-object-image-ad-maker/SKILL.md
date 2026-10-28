@@ -144,17 +144,6 @@ CHECKS MISSED  <one line per check still missed, or none>
 MISSING: <facts it needed>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-- The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker). It takes the ad copy.
-- The [Empty-room photo ad brief writer](https://useaiblocks.com/skills/empty-room-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - It passes the glance test: one object, one feeling, one idea.
 - Bubble line of 7 words or fewer, first person, no "you"; at most 3 other things to read; type 30 px or more.
@@ -162,6 +151,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The object passes all four tests and isn't the product or a rival's.
 - Nothing the object couldn't have seen; every fact matches the claims word for word.
 - The product has its real label and no face.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
+- The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker). It takes the ad copy.
+- The [Empty-room photo ad brief writer](https://useaiblocks.com/skills/empty-room-image-ad-maker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No object in the research: ask once what sits in the room when the problem happens. If no answer comes, use the likeliest object from the brief, mark it `[inferred]`, and say a real object from their reviews would be better. Photos named but not visible to you: say so in one line, take the product's look and label words from the brand file or the input, mark "check the pack against the real photos" as still to do in the edit step, and never describe a photo you didn't see. No photo and no written look for the product at all: leave the product out and say so. Before you write `MISSING:` for a fact, look for it in the brand file and the input; write it only when both lack it. No humour limit given: use deadpan or sheepish. No offer: no offer line and no price.

@@ -47,15 +47,6 @@ How to start:
 
 The read note. Pages to change. Small errors. Out-of-character acts. Big holes. The flailing. Things that recur. The score with its sum. CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
-- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every item names a page or scene.
@@ -63,6 +54,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The recurring list has page numbers.
 - The score sum re-adds.
 - Nothing in the draft was rewritten.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor).
+- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

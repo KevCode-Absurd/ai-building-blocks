@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -80,15 +80,6 @@ Use these in place of the generic "After this" list above. Offer them:
 - **Step 3, screening memo:** the call (pass, proceed or wait for a named piece of evidence), the three facts it rests on, and the open risk.
 - **Step 4, committee memo (if proceed):** case for, case against, terms, risks, and what would change your mind.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
-- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -97,3 +88,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The review marks the deck's numbers as claims to check, not facts, and the valuation range shows its method next to the founder's ask.
 - The screening call is one word with three facts under it, and the committee memo's case against is as long as its case for.
 - If the call was not proceed, step 4 is marked not run.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
+- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

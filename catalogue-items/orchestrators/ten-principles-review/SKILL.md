@@ -58,14 +58,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 2 step files and the summary. The first holds the review and the parts list, and the second the keep, cut and merge plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the landing page** with the [Page usability test planner](https://useaiblocks.com/workflows/page-usability-review).
-- **Plan your strategy** with the [Customer-goal product design planner](https://useaiblocks.com/workflows/job-based-product-design).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -74,3 +66,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every part appears in the list, including small ones, and each cut names what happens to the job it did.
 - The plan keeps the product's main job working.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [Page usability test planner](https://useaiblocks.com/workflows/page-usability-review).
+- **Plan your strategy** with the [Customer-goal product design planner](https://useaiblocks.com/workflows/job-based-product-design).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

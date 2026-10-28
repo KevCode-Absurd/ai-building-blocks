@@ -18,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your results, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your results, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,15 +55,6 @@ How to start:
 
 The years covered. The first-and-last comparison. The table with average, best and worst year and the spread. The flags with years. For each bad year, cycle or change. The two or three ten-year risks with signs to watch. The call: steady, mixed, changing or too young, and the fact that would change it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
-- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
-- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: the links under "After this" take this record, not an audit report. Bring the table, the flags and the call to the [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker), or run the [Business power tester](https://useaiblocks.com/skills/business-power-tester) to check for a lasting edge.
 
 ## Check before you hand it back
@@ -74,6 +65,13 @@ What next: the links under "After this" take this record, not an audit report. B
 - Every bad year is marked as cycle or change.
 - The call matches the rule, or says which other rule was used.
 - Nothing says to buy or sell a named security.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -85,14 +85,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan and document.
-- **Lead the team** with the [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the notes and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Nothing has been said or sent. Offer one next step and say the person can type their own:
@@ -108,3 +100,11 @@ Nothing has been said or sent. Offer one next step and say the person can type t
 - The opening has one clear request and a way for the other person to answer.
 - The follow-up has a date.
 - Nothing was sent, scheduled or posted.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan and document.
+- **Lead the team** with the [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the notes and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

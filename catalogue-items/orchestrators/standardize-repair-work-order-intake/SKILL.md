@@ -77,17 +77,6 @@ CHECKS MISSED          <one line each, or none>
 
 End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and every `MISSING:` line in one list. State that nothing was sent and no job was changed.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
-- The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
-- The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
-- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the document and plan.
-- The [Obsidian Web Clipper template maker](https://useaiblocks.com/skills/web-clipper-template-maker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## If something is missing
 
 Write `MISSING: <what>` beside the affected line and carry on with the rest. Stop a step only when its required source is absent, and return what you finished with the exact input needed to resume.
@@ -98,3 +87,11 @@ Use these instead of the general "After this" list above. Suggest one next step 
 - **Check the procedure** with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker), which takes the finished document.
 - **Keep the open list moving** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
 Nothing here contacts a customer or starts a repair. A person does that.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
+- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -8,15 +8,6 @@ description: "Use when you have support tickets, reviews or survey comments and 
 Turn complaints into questions you can test. Three steps run in order: group the complaints by user task, turn the strongest themes into ranked questions, then plan the research that answers them. Each step hands the next its file.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product ease of use checker](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser). It takes the question.
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and question and plan.
-- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer). It takes the question.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -77,6 +68,15 @@ Ignore the "After this" list above and use only this list. Suggest one next step
 - **Turn a known problem into changes** with the [Turn a design review into fixes](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
 - **Dig into one repeated mistake** with the [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser).
 Nothing here contacts any customer.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product ease of use checker](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser). It takes the question.
+- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer). It takes the question.
+- The [User flow designer](https://useaiblocks.com/skills/user-flow-designer). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

@@ -71,6 +71,10 @@ NOT RUN
 
 What to do next: paste the prompt into a video tool you choose (Kling, Veo or Higgsfield suit short product spots). On the first render, check that the final label is readable, that each beat lasts about the time you planned, and that the pack shape did not change. If a beat reads too fast, go back to method step 5 and merge beats (for example from ten to six or seven), then render again. The checks listed under NOT RUN are for you to do on the render: label readable, pack shape fixed, beat timing.
 
+## Check before handing back
+
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -80,10 +84,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the shot list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Optional reference modules
 

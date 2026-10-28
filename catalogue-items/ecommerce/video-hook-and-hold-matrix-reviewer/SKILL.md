@@ -5,15 +5,6 @@ description: Use view counts to place video ads in a hook and hold matrix. Get f
 
 # Video hook and hold matrix reviewer
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
-- The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## When not to use
 - Static or carousel ads. The hook and hold math needs video views. Compare clicks and sales instead.
 - Very little spend or very few views. The labels will be unsure. Wait for more data.
@@ -84,3 +75,11 @@ Use these sections, in this order:
 ## Final check
 
 Give the requested deliverables, evidence used, assumptions, missing inputs, and the smallest useful next step. Distinguish an idea, a calculation, a proposed action and a completed tool action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Understand your buyers** with the [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the audit report.
+- **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

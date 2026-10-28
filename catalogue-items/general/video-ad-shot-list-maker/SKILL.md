@@ -22,8 +22,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
-3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your a video ad script and brand brain.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
+3. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand brain.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -149,17 +149,6 @@ MISSING: <..>
 CHECKS MISSED  <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- The [Video ad script and prompt writer](https://useaiblocks.com/skills/weekly-video-ad-batch-maker).
-- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Approval points are marked after stages 1, 3 and 4; no face was invented inside a clip prompt.
 - Shot times add up to the words at the stated pace, within 10%.
@@ -167,6 +156,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One action per shot, checked shot by shot: one moving verb, no hand action joined to a body move, no "stays" or "remains". Any shot that fails and wasn't split is named under CHECKS MISSED.
 - The product is absent until its line, and nothing appears from hiding mid-shot.
 - Shot 1 is mid-action; only the final shot of the video holds.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [Video ad script and prompt writer](https://useaiblocks.com/skills/weekly-video-ad-batch-maker).
+- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts).
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No pace: use normal, 2.6 words a second. No look: assume live action. No sheets for AI video: write your own lock lines, marked `[inferred]` and `(approve)` (stages 1 to 3), and carry on.

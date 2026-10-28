@@ -10,15 +10,6 @@ Reviews the speed of one Drupal 10 or 11 site. One site per request. It works fr
 Read [the original role profile](references/source-agent.md) before you start. Use its method: measure before changing anything, fix cache tags and contexts instead of disabling caches, isolate uncacheable parts behind lazy builders, bound and index queries and Views, trim front-end weight, then tune PHP and cache storage. Its role language, memory claims and success targets are not facts about this run. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [WordPress performance reviewer](https://useaiblocks.com/skills/agency-engineering-wordpress-performance). It takes the audit report.
-- The [Website performance fix ranker](https://useaiblocks.com/skills/speed-fix-ranker). It takes the audit report.
-- The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the audit report and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -82,6 +73,15 @@ Return these sections in order. If your AI can save files, save one file. If not
 6. **Front-end fixes.** Script, style or image, problem, fix.
 7. **Hosting and PHP notes.** Setting, current value, question for the developer or host.
 8. **Assumptions and checks missed.** End with `CHECKS MISSED:` and the list, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [WordPress performance reviewer](https://useaiblocks.com/skills/agency-engineering-wordpress-performance). It takes the audit report.
+- The [Website performance fix ranker](https://useaiblocks.com/skills/speed-fix-ranker). It takes the audit report.
+- The [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

@@ -10,15 +10,6 @@ Tests whether one trend is real, and writes a brief the user can act on. It work
 Read [the original role profile](references/source-agent.md) before you start. Use its method: the signal-to-action process (collect, pattern, context, impact, validate, forecast, act), the lifecycle and adoption stages, the competitor groups and the market sizing steps. Its role language, tool lists, experience claims and success targets (such as forecast accuracy or lead time) are not facts about this run. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -83,6 +74,13 @@ Return these sections in order. If your AI can save files, save the brief as one
 9. **Checks still needed.**
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research paper discovery reviewer](https://useaiblocks.com/skills/research-topic-watcher). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

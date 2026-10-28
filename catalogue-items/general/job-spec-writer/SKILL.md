@@ -56,13 +56,6 @@ How to start:
 
 The chosen circumstance. The one-line job. The spec: progress, practical, social and emotional sides with the note behind each, the struggle and workaround, trade-offs and what good looks like. The job test results. Who this job is not for. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the customer needs.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The circumstance has a place, a moment and what came just before.
@@ -72,6 +65,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The struggle includes a cost and a workaround.
 - Trade-offs come from things people did, not from what they said they would do.
 - If there was no real struggle, the skill said so instead of writing a spec.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the customer needs.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

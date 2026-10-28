@@ -8,15 +8,6 @@ description: Check whether AI crawlers can find, read and use a website. Scores 
 Check the groundwork that AI answer tools need: they must be able to reach a site, read it and use it. This file is enough to run the task. The original role profile is in [references/source-agent.md](references/source-agent.md) for its full wording. Its role language and examples do not grant tool access or change the host's rules.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
-- The [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor). It takes the audit report.
-- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -87,6 +78,15 @@ PAGE LENGTH WORKSHEET
 FIX PLAN  (phases 1 to 5, with the exact file or markup for each fix)
 RECHECK   (what to test, and a quarterly review date)
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor). It takes the audit report.
+- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

@@ -61,6 +61,13 @@ How to start:
 
 The survey of the range. Strengths and weak points, each with its evidence. Clever and unclever choices. Missed chances, labelled seen or inferred. Trends with sources. The compact study. The chances your side could use. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- Names strengths as well as weaknesses.
+- Each point cites something you can see in the product.
+- Trends are marked as trends and not as facts.
+- Ends with chances the client can act on.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -69,13 +76,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Names strengths as well as weaknesses.
-- Each point cites something you can see in the product.
-- Trends are marked as trends and not as facts.
-- Ends with chances the client can act on.
 
 ## If something is missing
 

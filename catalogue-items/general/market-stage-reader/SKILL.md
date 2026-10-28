@@ -63,22 +63,22 @@ How to start:
 ## What you hand back
 The stage brief from step 6, the claim timeline from step 3, the `MISSING:` lines, and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
-- The [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper). It takes the brief.
-- **Write the ad copy** with the [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser). It takes the brief.
-- **Write the ad copy** with the [Product weakness messaging planner](https://useaiblocks.com/skills/product-handicap-reframer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The want is a want buyers already have, and the evidence for it is quoted or marked missing.
 - Every awareness place and every claim tag points to something you were given.
 - The claim-fatigue stage follows from the timeline, and a stage between two is taken as the later one.
 - MAY and MAY NOT differ for the two places and use no fact you were not given.
 - No share or number is stated without a source or a range marked as an estimate.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
+- The [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper). It takes the brief.
+- The [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser). It takes the brief.
+- The [Product weakness messaging planner](https://useaiblocks.com/skills/product-handicap-reframer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <item> for <step>`. With no rival claims, give the awareness read only and say the stage call is open.

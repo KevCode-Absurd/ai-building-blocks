@@ -100,6 +100,13 @@ FLAGS
 CHECKS MISSED  <one line each, or none>
 ```
 
+## Check before you hand it back
+- The quote on the image matches the source word for word, or the cut is recorded.
+- Each ad uses a different customer, and only one reason to buy runs through the set.
+- Headlines are 27 characters or fewer, or flagged. Short main text is 50 to 150 characters.
+- A number or health claim inside a quote is still a claim the brand must be able to back. Any product number or nutrition fact in the feed text comes from the brand file, never from memory. Supplement and health claims may need a legal or ad-policy check before paid use.
+- Free products, payments and unverified reviews are flagged before paid use.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -107,16 +114,9 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image ads.
 - The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
 - The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy and image ads.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy and image ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The quote on the image matches the source word for word, or the cut is recorded.
-- Each ad uses a different customer, and only one reason to buy runs through the set.
-- Headlines are 27 characters or fewer, or flagged. Short main text is 50 to 150 characters.
-- A number or health claim inside a quote is still a claim the brand must be able to back. Any product number or nutrition fact in the feed text comes from the brand file, never from memory. Supplement and health claims may need a legal or ad-policy check before paid use.
-- Free products, payments and unverified reviews are flagged before paid use.
 
 ## If something is missing
 Write `MISSING: <source id | verified status | free product status | backup quotes | photo>`. If a line isn't in a source, it doesn't go in the ad. If no real quote fits a job, skip that layout. Before you write MISSING for a fact, look for it in the brand file and the input; write it only when both lack it.

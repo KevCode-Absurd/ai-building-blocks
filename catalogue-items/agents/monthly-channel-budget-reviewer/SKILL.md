@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your results, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your results, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -77,17 +77,6 @@ You list them as steps for the owner to approve.
 - **Watch next month:** the 1 to 3 numbers that decide the next review.
 - **Files:** each step's file and the updated `months.md`. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
-- The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
-- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Plan what to test** with the [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every return is shown next to break-even, with the sums.
 - No budget is proposed into a channel below break-even or one that fell two months running.
@@ -95,6 +84,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Store totals are the base for the combined store measure. Each channel estimate has separate source evidence, method and limits; no per-channel causal effect is inferred from totals alone.
 - Nothing was moved, paused or changed.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without store totals, stop after step 1 and ask for them, because the true return depends on them. Without a past month, skip step 4 and say fading cannot be judged yet.

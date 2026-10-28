@@ -26,15 +26,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A shot list**, made by the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): the video broken into shots, with timing and on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-4. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
-5. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+4. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and video ad script and character sheet.
+5. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 6. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -78,15 +78,6 @@ Three step files and the summary. The last step file holds the launch check.
 - **Step 3, launch check:** stop-ship mistakes first, each with a fix, then things worth a look, things for a person to check, the score and the verdict.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the audit report.
-- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the audit report.
-- The [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -95,3 +86,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Steps 2 and 3 worked on the exported video, not on the raw clips.
 - Every caption says what the speaker says, in the same order, and none sits under the app buttons.
 - Every stop-ship mistake has a one-line fix, and any check that could not run is listed as not checked.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

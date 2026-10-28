@@ -66,16 +66,16 @@ CHECKS MISSED
 [one line each, or none]
 ```
 
+## Check before handing back
+
+The user receives one still-image prompt, two or three variations and a next step. Before you hand it back, check that the prompt keeps their scene idea, shows the uncanny hook in the first look, uses a palette that matches the chosen lane, and names no living artist or franchise character. After the picture is made, the user should check it for stray text, odd hands and a hook that still reads at a glance. If they ask for a revision, keep the parts they approved and change only what they name.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-The user receives one still-image prompt, two or three variations and a next step. Before you hand it back, check that the prompt keeps their scene idea, shows the uncanny hook in the first look, uses a palette that matches the chosen lane, and names no living artist or franchise character. After the picture is made, the user should check it for stray text, odd hands and a hook that still reads at a glance. If they ask for a revision, keep the parts they approved and change only what they name.
 
 ## Offline practice case
 

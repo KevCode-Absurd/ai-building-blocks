@@ -81,14 +81,6 @@ CHECKS MISSED
 <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
-- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every claim in the scene is something a person could observe.
@@ -96,6 +88,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Fake differences are listed with the cause, or marked as none found.
 - The plan changes if the check misses, and the change is written.
 - Each part has a stated job.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
+- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

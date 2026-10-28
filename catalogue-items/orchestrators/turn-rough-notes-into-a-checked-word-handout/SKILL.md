@@ -97,14 +97,6 @@ HAND-BACK SUMMARY
 Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
-- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps to offer
 
 Ignore the "After this" list above and use only this list. Offer one next step and say they can type their own:
@@ -120,3 +112,11 @@ Ignore the "After this" list above and use only this list. Offer one next step a
 - Every page is logged as passed, failed or not run.
 - The source notes are untouched.
 - Every date, figure and name traces to the notes or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
+- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

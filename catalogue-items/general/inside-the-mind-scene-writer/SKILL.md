@@ -55,17 +55,6 @@ How to start:
 
 Who and what: character, errand, day and place. The noticed list in order. The scene. The time markers and where they sit. What was cut and why. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Character motivation scene editor](https://useaiblocks.com/skills/scene-want-and-tactic-rewriter). It takes the draft.
-- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft.
-- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
-- The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the draft.
-- The [Company update email rewriter](https://useaiblocks.com/prompts/dull-update-email-rewriter). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The scene is one errand on one day.
@@ -74,6 +63,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No inner thought is explained away by the narrator.
 - The ending does not tie everything up.
 - The errand shows something about the person's life that is never stated.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Character motivation scene editor](https://useaiblocks.com/skills/scene-want-and-tactic-rewriter). It takes the draft.
+- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft.
+- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

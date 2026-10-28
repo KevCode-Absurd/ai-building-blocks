@@ -88,17 +88,6 @@ Say who carries the ad and why, in two or three lines: the skeleton (default, wi
 - `MISSING:` lines.
 - The `CHECKS MISSED` line: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts). It takes the script.
-- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The question is about the viewer's habit, and rung 4 answers it.
 - Four rungs (three at 15 seconds), each one step further on the same dial.
@@ -107,6 +96,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every result, time or count claim is approved, and no time label carries an unsourced result.
 - The word count is within 10% of the target.
 - The cast note names the skeleton's look and gives its reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts). It takes the script.
+- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No old way to replace: run it `with it`, or ask. No time points: use count, distance or crowd labels. No buyer words: build the world from the habit and mark it `inferred`.

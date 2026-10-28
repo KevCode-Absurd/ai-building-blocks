@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Customer needs** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring customer words (optional). It uses your a shortlist.
+1. **Customer needs** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring customer words (optional). It uses your shortlist.
 2. This one.
 
 How to start:
@@ -56,6 +56,15 @@ How to start:
 
 The circumstance and the job in one line. A rival table: group, name, source, the three-line resume, ratings on the three sides, what must be fired. The nonconsumption note. The odd ones out. The five-line read. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- At least eight rivals, with doing nothing and a homemade fix among them.
+- At least one rival comes from outside your category.
+- Each rival has a resume and says what must be fired to leave it.
+- Your own ratings follow the same rule as the others and rest on evidence.
+- Customer-sourced rivals are marked apart from guesses.
+- The read names a first rival to study and why.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -66,15 +75,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- At least eight rivals, with doing nothing and a homemade fix among them.
-- At least one rival comes from outside your category.
-- Each rival has a resume and says what must be fired to leave it.
-- Your own ratings follow the same rule as the others and rest on evidence.
-- Customer-sourced rivals are marked apart from guesses.
-- The read names a first rival to study and why.
 
 ## If something is missing
 

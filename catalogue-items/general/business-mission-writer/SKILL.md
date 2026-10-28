@@ -55,16 +55,6 @@ How to start:
 
 The mission paragraph. Who is helped and what they can do afterwards. The stages. What the business will not do for growth. Why the old goal no longer fits. The announcement plan with the spoken version. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
-- The [Second location readiness checker](https://useaiblocks.com/skills/second-location-check). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- **Lead the team** with the [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the plan and draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The mission names who is helped and how.
@@ -73,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It says what the business will not do for growth.
 - The announcement plan includes a spoken version.
 - Every fact about the business comes from the input.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

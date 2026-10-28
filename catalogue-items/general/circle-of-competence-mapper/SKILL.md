@@ -46,15 +46,6 @@ How to start:
 
 The decision and the cost of a bad outcome. The parts, each marked known, partly or not, with the source. The edge. The aptitude check. The basket with the rule and reason. A narrow area to build. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
-- The [Subject knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester). It takes the audit report.
-- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every part has a mark and a source, or `MISSING:`.
@@ -62,6 +53,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The edge is named, or the answer says the person cannot name one.
 - The aptitude check is stated.
 - The basket follows the rule in step seven.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
+- The [Subject knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester). It takes the audit report.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

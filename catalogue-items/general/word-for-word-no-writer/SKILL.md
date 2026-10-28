@@ -47,8 +47,6 @@ Then say what to do next: say it or send it, and if the talk has many parts, run
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the draft.
-- The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

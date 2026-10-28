@@ -47,16 +47,6 @@ How to start:
 
 Use these headings, in order: OUTPUTS TODAY (output, period, value); INPUTS THAT CAUSE THEM; CHOSEN INPUTS (3 to 6, each with customer effect, owner, target and review date); PROXY TEST (with a guard for each); OUTPUT KEPT AS A CHECK; GOAL SPLIT; MISSING (`MISSING:` lines); CHECKS MISSED (one line per check still missed, or "none").
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- **Check the money** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Three to six inputs are chosen, each controllable.
@@ -65,6 +55,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One output is kept, and what to do if it lags is stated.
 - Every input has an owner, a target and a review date.
 - No target is invented without a base figure.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
+- **Check the money** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

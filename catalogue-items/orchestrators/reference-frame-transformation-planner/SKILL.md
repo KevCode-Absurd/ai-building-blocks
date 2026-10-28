@@ -7,6 +7,8 @@ description: Use when the user wants a controlled before/after image-to-video tr
 
 Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks. A scene lock is anything that must stay the same in both frames, such as the camera crop, lighting, scale or text.
 
+When not to use: you want a video from scratch with no before and after frames (use the [Rapid-cut product video prompt](https://useaiblocks.com/skills/rapid-cut-product-video-prompt)). You need a story with a character across many scenes (use the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner)). You need a 3D explainer of how something works (use the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts)).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,8 +29,6 @@ How to start:
 2. **Check what's missing.** Look for a buyer brief, an approved picture, reference ads. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
-
-When not to use: you want a video from scratch with no before and after frames (use the [Rapid-cut product video prompt](https://useaiblocks.com/skills/rapid-cut-product-video-prompt)). You need a story with a character across many scenes (use the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner)). You need a 3D explainer of how something works (use the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts)).
 
 ## Scope and intake
 
@@ -77,20 +77,19 @@ Generate the after frame with an image tool, using the after-frame edit prompt. 
 
 The ad-policy links below apply only if you will run the clip as a paid ad. For a personal or product demo, skip them.
 
+## Check before handing back
+
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
 - The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
-- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
+- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Optional reference modules
 

@@ -64,19 +64,19 @@ Pause here: Add the negatives in Google Ads and save the winning terms in a shee
 ## What you hand back
 3 step files and the summary. The last file holds the page layout spec and the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the plan.
-- The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the plan.
-- The [Performance Max campaign reviewer](https://useaiblocks.com/skills/performance-max-routine-keeper). It takes the plan.
-- **Write the landing page** with the [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer). It takes the page layout spec.
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page layout spec.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the landing page** with the [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer). It takes the page layout spec.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page layout spec.
+- The [Amazon Sponsored Products ad planner](https://useaiblocks.com/skills/amazon-ppc-launch-builder). It takes the keyword list.
+- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page layout spec.
+- The [Product page SEO builder](https://useaiblocks.com/skills/product-page-seo-builder). It takes the keyword list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

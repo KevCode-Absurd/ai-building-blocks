@@ -60,6 +60,12 @@ Pause here: Build the checker and send ads or posts to it for one to two weeks. 
 ## What you hand back
 3 step files and the summary. The last file holds the offer.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -70,9 +76,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Grow on social** with the [Comment-to-message funnel planner](https://useaiblocks.com/skills/comment-keyword-dm-funnel-builder). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.

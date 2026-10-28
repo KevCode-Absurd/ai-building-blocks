@@ -16,17 +16,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Ad breakdowns**, made by the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): what each reference ad does: opening, angle, format, offer and proof.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
-2. **Audit report** with the [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). Bring your results, store capture (optional), audit report (optional).
-3. This one.
+1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, ad breakdowns, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, ad breakdowns, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -116,7 +115,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report and brief.
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). It takes the audit report.
 - **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
-- **Plan what to test** with the [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

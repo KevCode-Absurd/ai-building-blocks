@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A draft** with the [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). Bring a draft. It uses your brand brain.
+2. **A draft** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). Bring an audit report (optional), competitors (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -55,14 +55,6 @@ How to start:
 
 The claim in one sentence. A pass, fail or unknown for each test with a reason. The score out of 100 with how it was worked out. The proof and demonstration. Any claim that needs outside review. Fixes in order. The one claim to keep. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The claim names one benefit, not three.
@@ -71,6 +63,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product can really deliver it.
 - A proof or demonstration is named.
 - The score shows how it was worked out.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

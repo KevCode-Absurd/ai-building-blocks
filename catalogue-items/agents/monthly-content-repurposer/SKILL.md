@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
-- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -74,15 +74,6 @@ You never do these yourself, even if you can reach the platforms. You list them 
 - **Voice fixes:** what the check changed.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The picks are ranked from the results file, replies and shares first.
 - No piece in `pieces.md` was repurposed twice.
@@ -90,6 +81,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every fact and claim comes from the original piece or the brand brain.
 - Nothing was published or scheduled.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without results, pick by what the person says landed and mark the choice as a guess. Without the full text of a piece, do not repurpose from a summary; ask for the text. Without a brand brain, skip the voice check and say the posts were shaped for format only.

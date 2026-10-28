@@ -46,15 +46,6 @@ How to start:
 
 The target in one line. The big questions, split into settled (each with a reason, how sure, and what would reverse it) and open. The sum, with each factor marked given or assumed. The paths crossed off. The restated problem with at most three open questions. The soft spots. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the question and plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan and question.
-- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the question and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every settled answer has a reason and a note on what would reverse it.
@@ -62,6 +53,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No question is marked obvious when its answer depends on a missing fact.
 - No more than three open questions remain, ranked by effect.
 - At least one path is crossed off with the number that rules it out, or the answer says none could be.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the question and plan.
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the plan.
+- The [Project decision checker](https://useaiblocks.com/skills/dip-or-dead-end-checker). It takes the question.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

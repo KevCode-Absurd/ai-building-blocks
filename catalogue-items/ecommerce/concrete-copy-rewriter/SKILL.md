@@ -82,10 +82,6 @@ Give two or three rewrites, not one.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- **Check it before it goes live** with the [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
-- The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

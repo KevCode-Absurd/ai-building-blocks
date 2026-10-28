@@ -8,16 +8,6 @@ description: "Review your study progress against your plan. See what is on track
 Reviews a learner's study plan against the sessions done and the real practice answers, then adjusts the plan and writes the next understanding check. One bounded run per request, started by hand about once a week or at an agreed checkpoint. It compares with the last review when one is supplied. It does not book sessions, message anyone or start a schedule.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
-- The [System design practice reviewer](https://useaiblocks.com/skills/system-design-practice-review). It takes the document.
-- The [Research paper comparison writer](https://useaiblocks.com/skills/research-literature-comparison). It takes the audit report.
-- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -76,6 +66,15 @@ Keep personal details to the minimum: a first name or initials is enough. Do not
 - `adjusted-plan.md`: the next one to two weeks, with kept, moved, added or dropped and why.
 - `next-check.md`: questions on weak topics, not yet run.
 - `review-log.md`: missing facts, checks missed, changes and state for next time.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
+- The [System design practice reviewer](https://useaiblocks.com/skills/system-design-practice-review). It takes the document.
+- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

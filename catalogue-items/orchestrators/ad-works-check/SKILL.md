@@ -69,15 +69,6 @@ Four step files and the summary, in this shape:
 - Step 4: fit, coverage, next money in order, when to add repeats. This file is the plan.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
-- The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
-- The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -86,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The survey was asked of at least a hundred likely buyers before any sums were run. If fewer, the result says it is a rough read.
 - The pull is shown as two buying rates, their gap and a margin, and the keep, fix or replace call follows from the step 3 checks, not from opinion.
 - Step 4 counts unique people, not views.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

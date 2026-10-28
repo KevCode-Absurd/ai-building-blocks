@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Buyer pain points** with the [Rating gap product finder](https://useaiblocks.com/skills/rating-gap-product-finder). Bring a product category. It lists unmet pain points with proof links, which you can bring back here as customer words.
+1. **Customer words** with the [Product opportunity reviewer](https://useaiblocks.com/skills/rating-gap-product-finder). Bring your question, customer words (optional).
 2. This one.
 
 How to start:
@@ -100,7 +100,6 @@ MISSING: <what>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Crowded market opportunity finder](https://useaiblocks.com/skills/crowded-category-white-space-finder). It takes the competitors.
-- The [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

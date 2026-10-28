@@ -18,16 +18,16 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, your question, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -71,15 +71,6 @@ The three skills named in the steps come in the downloaded pack. Keep them in th
 - **Step 2, six-week bet:** the score, the bet and the team size, what is cut, the no list and the default answer of no.
 - **Step 3, request screen:** each request with how many people asked, the full cost of a yes, whether it fits the bet, a ruling of yes, later or no with one reason, and a reply.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
-- The [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder). It takes the shortlist.
-- The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -88,3 +79,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The bet fits six weeks and the team size given, and the no list names real features, not vague areas.
 - One person asking five times counts once, and every yes shows its full cost.
 - Every reply is kind, gives the reason and promises no date.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

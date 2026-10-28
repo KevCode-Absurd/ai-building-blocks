@@ -75,13 +75,6 @@ Five step files and the summary. In order:
 - **The log entry.** One per ad, with the next change to try. This is the lessons register, and it is part of what you get back.
 - **HAND-BACK SUMMARY.** Files, steps not run and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the lessons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +84,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - All three offer changes in step 2 come from one list, the raise list or the cut list.
 - The form carries a key code, and every field has a reason.
 - Step 4 used totals from before and after the run. No gap under 15 percent is called a win.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide what to do** with the [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

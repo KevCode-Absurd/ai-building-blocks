@@ -48,23 +48,19 @@ How to start:
 
 The result the customer paid for. The leave reasons in groups with counts. The stall points. The first-days plan. The teaching list. The community step. A table of warning signals and responses. Owners, dates and cost. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-- The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
-- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher).
-- The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The plan starts from the customer result, not a feature list.
 - Every step has an owner and a date.
 - A warning signal is named for each risk.
 - The total cost fits what the firm can pay.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

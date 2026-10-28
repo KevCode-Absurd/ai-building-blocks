@@ -80,6 +80,15 @@ Sections in this order:
 6. `MISSING`: facts that would change the list.
 7. `CHECKS MISSED`: one line per check still missed, or "none".
 
+## Check before you hand it back
+- Every live offer appears, in the brand's own words.
+- Every price is the brand's own, or worked from it (per day, per pack) with the sum shown.
+- No invented fact, result, gift or size. New things sit under `Must arrange`.
+- Two money-off proposals at most.
+- Each "free", "was", subscription and urgency line passes step 6.
+- No "exclusive", "limited time", hype words or exclamation marks without a real limit behind them.
+- A second run gives the same `LIVE` and `CLASHES`. Only `NEW` may change.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -90,15 +99,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Article-style landing page writer](https://useaiblocks.com/skills/article-landing-page). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every live offer appears, in the brand's own words.
-- Every price is the brand's own, or worked from it (per day, per pack) with the sum shown.
-- No invented fact, result, gift or size. New things sit under `Must arrange`.
-- Two money-off proposals at most.
-- Each "free", "was", subscription and urgency line passes step 6.
-- No "exclusive", "limited time", hype words or exclamation marks without a real limit behind them.
-- A second run gives the same `LIVE` and `CLASHES`. Only `NEW` may change.
 
 ## If something is missing
 Write `MISSING: <what>` and carry on with what you have. With no live offers, say so and build from the price list and stock alone.

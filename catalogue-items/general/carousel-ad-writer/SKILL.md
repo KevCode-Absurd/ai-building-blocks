@@ -73,17 +73,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## What you hand back
 One block per card: `Card n | job | words | picture note | headline | gap to the next card`. Then the text above the ad, the sources for every number, quote and term, and CHECKS MISSED with one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Story carousel ad writer](https://useaiblocks.com/skills/story-carousel-ad-writer). It takes the ad copy.
-- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
-- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-- The [Visible symptom image ad maker](https://useaiblocks.com/skills/visible-symptom-image-ad-maker). It takes the ad copy.
-- **Write the ad copy** with the [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Card 1 makes sense with no other card.
 - Every card is 12 words or fewer, the last 20 or fewer.
@@ -92,6 +81,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Card 1 and the text above the ad make the same claim.
 - Every number, quote and term is in the brand facts.
 - The same person, product and look on every card.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Story carousel ad writer](https://useaiblocks.com/skills/story-carousel-ad-writer). It takes the ad copy.
+- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
+- The [Visible symptom image ad maker](https://useaiblocks.com/skills/visible-symptom-image-ad-maker). It takes the ad copy.
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No proof on file: the proof card answers the loudest doubt instead. No facts on how it's used: show the product closed. No customer language: work from the product facts and label the copy "inferred".

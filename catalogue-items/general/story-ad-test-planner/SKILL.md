@@ -80,17 +80,6 @@ Use these headings, in this order:
 11. **MISSING**: every `MISSING:` line from above, in one list, so nobody has to hunt.
 12. **CHECKS MISSED**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Reading results
 - Compare each story only with your other ads for new customers, never with ads shown to past visitors.
 - Give every row the same budget and the same days before you judge.
@@ -105,6 +94,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The narrator is one of the four, and no invented person appears anywhere.
 - The test rows differ on all three of force, trace and opener.
 - The sheet ends with the MISSING list, then the `CHECKS MISSED` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
+- The [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 - No customer words: ask once for them (reviews, support emails or notes in their own words). If none come, carry on from the product facts: mark the fit, the problems and the switch reasons `[inferred]`, put review counts as `MISSING`, quote no one, and say the stories need real customer words before they run.

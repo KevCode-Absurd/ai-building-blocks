@@ -73,14 +73,6 @@ CHECKS MISSED
 [one line each for any check that failed or could not run, or none]
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
-- The [Midjourney image prompt writer](https://useaiblocks.com/skills/midjourney-four-direction-prompt-writer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: use the Multi-provider image maker to make the picture from the prompt. Use the Midjourney image prompt writer only if you work in Midjourney, which reads its own prompt format.
 
 ## Check before handing back
@@ -90,6 +82,13 @@ Check the required facts, format and internal consistency against the actual inp
 ## When not to use this
 
 Use the [Rough prompt rebuilder](https://useaiblocks.com/skills/rough-prompt-rebuilder) for a prompt only needing a tidy-up, the [Marketing image prompt writer](https://useaiblocks.com/skills/marketing-image-prompt-writer) for ad images, and the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker) when you need shots before prompts. This skill does not make the picture.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Optional reference modules
 

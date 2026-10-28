@@ -124,6 +124,13 @@ SCORE     <passed> of <all> checks = <score> out of 100
           Missed: <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+- Every card has a library ID, advertiser and start date, or "not shown".
+- Claims are word for word; cards come from the creative, or are labelled text only.
+- "Winner" and "profitable" appear nowhere about a competitor.
+- Every gap has both a map or buyer reason and proof on file. A `CANDIDATE` gap misses this check: score it as missed and say what proof it needs.
+- No competitor words, people, footage or logos appear in the briefs, and every claim is on the business's allowed list.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -134,13 +141,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every card has a library ID, advertiser and start date, or "not shown".
-- Claims are word for word; cards come from the creative, or are labelled text only.
-- "Winner" and "profitable" appear nowhere about a competitor.
-- Every gap has both a map or buyer reason and proof on file. A `CANDIDATE` gap misses this check: score it as missed and say what proof it needs.
-- No competitor words, people, footage or logos appear in the briefs, and every claim is on the business's allowed list.
 
 ## If something is missing
 Write `MISSING: <what>`. Before you write it for a fact, look for it in the brand file and the input; write it only when both lack it. No creative: text-only cards, labelled. No facts, claims list or reviews from the business: run the whole study, mark the gaps `CANDIDATE` (step 7), and ask for those files in one line at the end. No start date: tier "unknown". Fewer than 3 competitors: say the map shows those brands' habits, not the category's.

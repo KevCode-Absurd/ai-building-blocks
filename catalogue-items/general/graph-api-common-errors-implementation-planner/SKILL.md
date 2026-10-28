@@ -12,17 +12,6 @@ Work out why Meta Graph API calls fail. The usual causes are an expired or wrong
 **Not for:** a Meta developer app or token you have not made yet (set that up in your Meta app dashboard first), a permission Meta has not approved for your app (only Meta app review fixes that), or a rejected ad or restricted account (use the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)). To get code that pulls your Meta report, use the [Meta Ads report coding prompt](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
-- The [API spec writer](https://useaiblocks.com/skills/api-spec-writer). It takes the plan.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
-- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -113,7 +102,7 @@ NEXT STEP
 <one smallest useful step, usually one call to test again>
 ```
 
-After you hand it back, offer the [API retry handler](https://useaiblocks.com/skills/api-retry-handler) for the retry plan, or the Meta Ads report coding prompt above once your calls work. The Oracle migration link in the list above does not fit this skill, so skip it.
+After you hand it back, offer the [API retry handler](https://useaiblocks.com/skills/api-retry-handler) for the retry plan, or the Meta Ads report coding prompt above once your calls work.
 
 ## If something is missing
 
@@ -125,3 +114,12 @@ After you hand it back, offer the [API retry handler](https://useaiblocks.com/sk
 ## Final check
 
 Give the deliverables, the evidence used, the assumptions, the missing inputs and the smallest useful next step. Say which parts are a diagnosis, a proposed fix and a completed action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
+- The [API spec writer](https://useaiblocks.com/skills/api-spec-writer). It takes the plan.
+- The [vLLM model server setup planner](https://useaiblocks.com/skills/vllm-model-server-setup). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

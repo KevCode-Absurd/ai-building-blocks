@@ -15,13 +15,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
-- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -31,7 +31,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for source text, document, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, a document, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -82,15 +82,6 @@ You never do these yourself, even if you can reach the help centre or the suppor
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** the owner publishes the approved articles and records each publish date in `articles.md`. Next month's run uses those dates to check whether tickets on that topic fell.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review). It takes the document.
-- The [Support bot error reviewer](https://useaiblocks.com/skills/review-support-bot-errors-with-retest-cases). It takes the document.
-- The [Pilot customer promise reviewer](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every topic count comes from the sorted tickets.
 - No article contains a name, email, order number or anything that points at one customer.
@@ -98,6 +89,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every rewrite kept the answer support gave, unless flagged as a mismatch.
 - Nothing was published or sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without the help centre text, count the topics and say the gap check was skipped. Without solved replies in the export, list the topics with no article and say the drafts wait for a solved ticket. Without the page a customer visited first, treat every repeat topic as "not found or did not answer" and say which.

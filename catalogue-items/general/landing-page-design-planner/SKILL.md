@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), objection map (optional), a draft (optional). It uses your brand brain and offer and ad copy.
+2. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), an objection map (optional), a draft (optional). It uses your brand brain and offer and ad copy.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -65,14 +65,6 @@ How to start:
 - **Review (if applicable)**: visual findings and technical findings in separate lists, each with section, screen size and fix, plus what couldn't be checked.
 - **Checks missed**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
-- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the design direction.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - All colours and fonts come from the supplied brand.
 - The three directions differ in layout and what the images do, not only colour.
@@ -80,6 +72,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Essential terms stay visible on phones.
 - Findings name the section they belong to and the screen size.
 - Anything unchecked (contrast over images, files that didn't load, behaviour beyond the preview, analytics) is listed as unchecked.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the design direction.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No reference images: plan from the brand and the product anyway. No photos of the real product: leave labelled image slots rather than generated stand-ins.

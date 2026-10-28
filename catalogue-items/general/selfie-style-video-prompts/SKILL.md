@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -121,17 +121,6 @@ One file per stage:
 7. **Edit list** with captions, the AI label and the disclosure line.
 8. **CHECKS MISSED:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the character sheet.
-- The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the character sheet.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the character sheet.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
 - The presenter is a made-up adult who says nothing only a real customer could.
@@ -139,6 +128,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One action per clip; both hands free when a task needs two (propped phone).
 - No film word in any prompt; the product matches its photos and is handled the brand's way.
 - Every scripted word is said, unchanged. No music or text from the video tool; the AI label and disclosure line are in the edit.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the character sheet.
+- The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the character sheet.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the character sheet.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`, ask once for what you can't work without, then carry on. No product photo: write the cards, room sheet and storyboard with the product slot marked `MISSING: product photo`, and make no product sheet or clip until a real photo arrives, so a made-up pack is never shown as theirs. No handling notes but the script shows use: ask, and show the product only held or on a surface. Accent unknown: ask.

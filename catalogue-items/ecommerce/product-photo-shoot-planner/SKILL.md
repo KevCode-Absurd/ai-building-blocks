@@ -89,21 +89,21 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## What you hand back
 The style sheet, the frame list, one prompt per frame, the photos named `<nn>_<job>` (marked as made with AI and kept apart from real photos), and the contact-sheet check. The clip plan if asked. Last, the `CHECKS MISSED` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
-- The [Product photo set maker](https://useaiblocks.com/skills/product-photo-set-maker).
-- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The product is identical in every frame: label, shape, colours, finish.
 - The colour plan colours the scene, never the product, and the product's edge stays clear.
 - The light, lens and finish lines are word for word the same in every prompt.
 - No two frames share job, distance and angle.
 - No added words or logos. Made-up adults only, no child or part of one, whole hands, no finger over the label.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <photo | brand colours | where the photos go | music rights>`. Drop the frames that depend on it and say which.

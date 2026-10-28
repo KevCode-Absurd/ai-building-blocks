@@ -109,15 +109,6 @@ At the agreed review point, report purchases, spend, exposure, audience and peri
 2. The pilot row, then the other briefs.
 3. The finished images and their check results, filterable by argument, type, dress and result.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the image ads and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every argument and type has its proof on file. EMPTY cells are marked, not faked.
 - At least 3 questions are covered. For New, at most 1 "Why now?" type.
@@ -125,6 +116,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No invented expert, press, study, review, number or deadline. No competitor, no child, no generated customer.
 - Headlines are 7 words or fewer, 12 for a real quote, and no two in a row or column open the same way.
 - The grid and the pilot row were approved before the next stage.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the image ads and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <photos | research | live offer | source>` in the plan. If fewer than 5 arguments or types have proof, shrink the grid to 4 x 4 or 3 x 3 rather than pad it. Do the shrink in the plan you hand back, with its new counts and budget check. A row "to verify later" is padding.

@@ -74,15 +74,6 @@ You never do these. You list them for the person:
 - **Files and `MISSING:` lines** in one list.
 - **The reminder:** this is a first check, not legal advice. Check with a qualified lawyer before you sign, and especially for anything yellow or red.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
-- The [Shopify store policy checker](https://useaiblocks.com/skills/store-policy-checker). It takes the draft.
-- The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The document type is named with the words that decided it.
 - The rating names the clause that set it.
@@ -91,6 +82,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was signed, accepted or sent.
 - The lawyer reminder is in the hand-back.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. If part of the contract is unreadable, or a schedule or linked policy is not attached, say which part was not reviewed and do not rate that area. If you do not know which side the person is on, stop and ask, because the flags depend on it.

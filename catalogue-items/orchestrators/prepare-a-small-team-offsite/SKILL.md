@@ -83,6 +83,14 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was booked, sent or paid.
 
+## Check before you hand it back
+
+- The verdict comes first. If it is not `MEET`, no agenda is shown as final.
+- Every session has a purpose and a result, and the agenda fits the stated length.
+- Costs come only from figures the user gave, or show as a formula.
+- Access, travel and budget assumptions are visible.
+- End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -93,14 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Lead the team** with the [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the meeting notes and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The verdict comes first. If it is not `MEET`, no agenda is shown as final.
-- Every session has a purpose and a result, and the agenda fits the stated length.
-- Costs come only from figures the user gave, or show as a formula.
-- Access, travel and budget assumptions are visible.
-- End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
 
 ## What to do with the result
 

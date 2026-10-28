@@ -83,14 +83,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course). It takes the lesson plan and document.
-- **Decide what to do** with the [Evidence-based feedback conversation planner](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Offer one next step and say they can type their own:
@@ -107,3 +99,11 @@ Offer one next step and say they can type their own:
 - No manager is named, and no policy is quoted unless it was pasted in.
 - The checklist covers one trained skill only.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Post-course skill reviewer](https://useaiblocks.com/workflows/check-training-transfer-after-a-course). It takes the lesson plan and document.
+- **Decide what to do** with the [Evidence-based feedback conversation planner](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

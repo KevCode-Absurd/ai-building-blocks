@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -68,17 +68,15 @@ Pause here: Pick the lapse points the audit flagged and export the orders of sub
 ## What you hand back
 6 step files and the summary. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unboxing insert and gift planner](https://useaiblocks.com/skills/unboxing-insert-and-gift-planner). It takes the plan.
-- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
-- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The payback call is on file, and the run stopped there if it said switch to bundles. No save offer is more generous than the payback limit. Steps 5 and 6 used real exports, not estimates. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Unboxing insert and gift planner](https://useaiblocks.com/skills/unboxing-insert-and-gift-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

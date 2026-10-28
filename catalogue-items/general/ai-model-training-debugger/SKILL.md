@@ -48,13 +48,6 @@ Next step: once tuning starts, record the final settings in the change log, then
 
 The setup. The check order with the expected and found result of each. What each failed check points to. The change log. The stop point between checking and tuning. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The data was inspected by hand before any model change.
@@ -62,6 +55,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One tiny batch can be overfit.
 - Only one change was made per run.
 - Every step states what result was expected before it ran.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -73,6 +73,15 @@ Use these instead of the general "After this" list above:
 - Review the code for bugs and security with the [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
 - Build an app on the API with the [Build an app from an OpenAPI spec](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec) workflow.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- Every route in the API spec exists in the code, and the spec has no empty placeholders.
+- Every route has tests for sign-in, bad input and at least one error code.
+- The tests were run, and the hand-back says which passed and which failed.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -83,12 +92,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [API test planner](https://useaiblocks.com/skills/agency-testing-api-tester). It takes the API spec.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- Every route in the API spec exists in the code, and the spec has no empty placeholders.
-- Every route has tests for sign-in, bad input and at least one error code.
-- The tests were run, and the hand-back says which passed and which failed.

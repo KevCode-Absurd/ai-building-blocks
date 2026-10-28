@@ -61,15 +61,6 @@ Use these instead of the general "After this" list above:
 - **Step 4, copy or skip:** each cause with its conditions, hidden parts and a COPY, ADAPT, SKIP or LUCK sort, then the tests and the list of what to stop copying.
 - **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan and audit report.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan and audit report.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -78,3 +69,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each cause ruled out cites a fact you can see, and the ranked causes differ from one another.
 - Likelihoods are high, medium or low, with no exact percentages.
 - Each cause is sorted with a reason tied to a condition, and each test you keep has a pass number and a fail number.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

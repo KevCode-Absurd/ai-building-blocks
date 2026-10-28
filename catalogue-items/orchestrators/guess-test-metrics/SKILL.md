@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your notes** (yours): what to keep, change or drop.
 - **Your business plan** (yours): the idea, customers, market, how it makes money and the key numbers.
 
@@ -65,17 +65,15 @@ Three step files and the summary:
 - Step 3, root cause: the chain of whys with a fact behind each, the cause you can fix and a prevention check. If the test passed, it says so and stops.
 - Summary: each file, steps not run, `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
-- The [Ten-year durability checker](https://useaiblocks.com/skills/ten-year-durability-checker). It takes the audit report.
-- The [Product alternative comparison reviewer](https://useaiblocks.com/skills/ten-times-better-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

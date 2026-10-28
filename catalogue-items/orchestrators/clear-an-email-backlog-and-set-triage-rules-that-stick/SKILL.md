@@ -15,14 +15,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, document, tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a document, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -55,15 +55,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 3 step files and the summary. The first file is the guide to keep; the last holds the checked drafts.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use these first. Suggest one next step as a short question:
 - Send the checked drafts yourself in small batches, then use the [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer) on any you want a second look at.
@@ -77,3 +68,11 @@ Use these first. Suggest one next step as a short question:
 - No email was sent or archived by the workflow. Every action is a draft for the person.
 - Every email in the backlog has one call, and every email only the person can answer has the "Only you" marker.
 - Every draft was checked against the promise list, when one was given.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
+- The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

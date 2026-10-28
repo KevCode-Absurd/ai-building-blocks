@@ -14,15 +14,6 @@ When not to use: for an adviser's fee inside seller closing proceeds, use Check 
 This skill's inputs are the signed engagement letter and the deal value (see "What you need" below). This is arithmetic, not legal or financial advice: a lawyer or adviser should read the letter before anyone pays.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Seller closing cash and escrow reviewer](https://useaiblocks.com/skills/seller-closing-revision-assistant). It takes the spreadsheet and document.
-- The [Business sale proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker). It takes the document and spreadsheet.
-- The [Fund management fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -31,11 +22,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the contract, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -102,3 +93,12 @@ These links identify public methods and definitions. All instructions and practi
 Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 What to do next: before anyone pays the invoice, send each MISSING line and each CHECKS MISSED line to the adviser or the lawyer who holds the signed letter, and get them answered in writing.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Seller closing cash and escrow reviewer](https://useaiblocks.com/skills/seller-closing-revision-assistant). It takes the spreadsheet and document.
+- The [Business sale proceeds checker](https://useaiblocks.com/skills/closing-equity-proceeds-checker). It takes the document and spreadsheet.
+- The [Fund management fee offset checker](https://useaiblocks.com/skills/transaction-fee-offset-checker). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

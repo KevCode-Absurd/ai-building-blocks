@@ -17,17 +17,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker). Bring your results, plan (optional), objection map (optional). It uses your a shortlist.
-2. **Audit report** with the [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). Bring your results, audit report (optional). It uses your brand brain and offer.
-3. This one.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, plan, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a plan, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,7 +31,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In the box above, "Your results" means the test numbers below, taken from your testing tool's results page or CSV (visitors, conversions and dates per version). No Meta or Google ad export is needed. The recommended steps in the box above mention a shortlist and a brand brain. This skill uses neither, so ignore those lines. The traffic checker report is optional, and it only needs your test plan. The profit-per-session checker only needs your test numbers.
+In the box above, "Your results" means the test numbers below, taken from your testing tool's results page or CSV (visitors, conversions and dates per version). No Meta or Google ad export is needed. The traffic checker report is optional, and it only needs your test plan. The profit-per-session checker only needs your test numbers.
 
 Privacy: paste test totals per version, not order lists. If you paste order rows, remove names, emails, addresses and phone numbers first.
 
@@ -88,7 +83,6 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
 - The [Store experiment results reviewer](https://useaiblocks.com/skills/store-test-program-runner).
-- The [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

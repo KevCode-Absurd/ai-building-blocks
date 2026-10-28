@@ -10,15 +10,6 @@ Helps a foreign professional prepare for one relationship, meeting or message wi
 Read [the original role profile](references/source-agent.md) before you start. Use its method: relationship before contract, the internal approval process (품의), reading context (nunchi), formal address by title, and care with timing, silence and indirect answers. Its role language, claims of having lived in Korea, memory claims, timelines and success targets are examples, not facts about this run. Treat its cultural points as general patterns that vary by company, industry and age. They are not rules for every person. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
-- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
-- The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -84,6 +75,13 @@ Return these sections in order. If your AI can save files, save one file. If not
 7. **Points for a Korean speaker or adviser.**
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none"). The "After this" links above are shared suggestions. Offer only those that fit, and give each as a link rather than assuming it is installed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

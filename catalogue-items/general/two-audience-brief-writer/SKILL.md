@@ -88,16 +88,6 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the brief.
-- The [Layered draft writer](https://useaiblocks.com/skills/layered-draft-writer). It takes the brief.
-- The [Brand manifesto writer](https://useaiblocks.com/skills/brand-manifesto-writer). It takes the brief.
-- **Say it to the room** with the [Presenter fit planner](https://useaiblocks.com/skills/deliverer-fit-planner). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each group is described by something it notices or is lost by, not only by a label.
@@ -105,6 +95,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The newcomer promise can be met with no outside help.
 - The expert promise is something an expert would not find in the plain version.
 - No line asks for an average of the two groups.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the brief.
+- **Say it to the room** with the [Presenter fit planner](https://useaiblocks.com/skills/deliverer-fit-planner). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

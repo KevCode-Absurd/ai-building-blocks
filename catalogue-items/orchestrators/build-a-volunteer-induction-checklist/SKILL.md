@@ -81,14 +81,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document.
-- The [Nonprofit volunteer program planner](https://useaiblocks.com/skills/nonprofit-volunteer-program-planner). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Offer one next step and say they can type their own:
@@ -105,3 +97,11 @@ Offer one next step and say they can type their own:
 - Every role has a named supervisor, or appears in the supervision gaps.
 - No role is given tasks it was not approved for.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document.
+- The [Nonprofit volunteer program planner](https://useaiblocks.com/skills/nonprofit-volunteer-program-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

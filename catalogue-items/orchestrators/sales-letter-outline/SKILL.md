@@ -68,17 +68,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Give the step 3 file (`outputs/step-03-sales-letter-outline-planner.md`) to the writing skill you choose next. It holds the brief. Add the step 1 angle library if the writer needs more proof.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the brief.
-- The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter). It takes the brief.
-- The [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer). It takes the brief.
-- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons and brief.
-- **Understand your buyers** with the [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +78,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - If customer words were given, at least three of every five fit the dominant feeling. If they do not, say so and name the feeling that does fit.
 - The outline carries a claim-to-proof table: every claim in the page plan on one row, with the proof beside it or `MISSING: proof`.
 - The runner-up theme is named, with the reason it lost to the chosen one.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons and brief.
+- **Understand your buyers** with the [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
+- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
+- **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the buying reasons and brief.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

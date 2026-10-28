@@ -56,8 +56,8 @@ MISSING: <what was not given, and any check you could not run, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
-- The [Search term sorter](https://useaiblocks.com/skills/search-term-sorter). It takes the audit report.
 - The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
+- The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

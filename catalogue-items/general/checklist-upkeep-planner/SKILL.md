@@ -12,18 +12,14 @@ Judge a decision by how it was made as well as how it turned out. Sometimes you 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). Bring plan, your question, audit report (optional), spreadsheet (optional).
-2. This one.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -52,15 +48,6 @@ How to start:
 
 Expected versus actual. The call's box with the reasons. The causes, each marked covered, weak or missing. The changes to the list and the new version. The version log. Three practice cases with what each should catch. The review dates. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the plan.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## What next
 
 Use the new version of the list on your next decision, in the Decision checklist runner. Run one practice case a month and keep the version log beside the list.
@@ -72,6 +59,15 @@ Use the new version of the list on your next decision, in the Decision checklist
 - The list stays at twelve items or fewer.
 - Every change has a date and a reason in the log.
 - Practice cases are clearly marked as real or invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the plan.
+- The [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). It takes the plan.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

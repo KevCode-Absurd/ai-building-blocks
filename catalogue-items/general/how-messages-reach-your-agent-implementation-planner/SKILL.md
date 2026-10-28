@@ -8,15 +8,6 @@ description: Plan how Slack messages reach the right AI agent, with scope checks
 Plan the router that takes a Slack message and turns it into a queued job for one AI agent. The router checks channel and client scope, drops bot messages and repeat events, matches the message to one agent, keeps thread context, checks the user's access and only then saves the job and queues its ID. This skill plans it from the user's own channel map, permissions and agent list, and drafts code. It does not install anything, connect to Slack, run a queue or run the router.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Logging and alerts code writer](https://useaiblocks.com/skills/logging-and-alerts-setter). It takes the code change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -24,12 +15,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
-- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase, code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a codebase, a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -116,3 +107,10 @@ If the owner allows it, add `DRAFT CHANGES` after JOB FIELDS with code for the c
 ## Final check
 
 Give the deliverables, the evidence used, the assumptions, the missing inputs and the smallest useful next step. Say which parts are an idea, a proposed change and a completed action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Logging and alerts code writer](https://useaiblocks.com/skills/logging-and-alerts-setter). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

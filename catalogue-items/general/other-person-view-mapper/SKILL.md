@@ -50,15 +50,6 @@ How to start:
 
 The matter. What they want, marked KNOWN or GUESS. The fair reason they act as they do. Where they are right. What they gain and lose. How they can keep their pride. A true sympathy line, or "none yet". Questions to ask them. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the brand brain.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the brand brain.
-- The [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every want is stated from their side and marked known or guess.
@@ -66,6 +57,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least one point is marked as true in their view.
 - There is a real way for them to keep their pride.
 - Nothing in it is a plan to trick or corner them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the buyer profile.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the buyer profile.
+- The [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

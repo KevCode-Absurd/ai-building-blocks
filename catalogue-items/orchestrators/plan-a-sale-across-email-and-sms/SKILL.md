@@ -23,14 +23,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+- **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -85,14 +85,6 @@ Pause here: Send the emails and texts, then export the results for the sale wind
 Five step files and the summary. The audit report is the step 5 file, `outputs/step-05-email-and-sms-performance-reader.md`.
 - STEP 1 TEXT PLAN, STEP 2 EMAIL CALENDAR, STEP 3 SALE EMAIL, STEP 4 TEXT CHECK, STEP 5 RESULTS READ, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
-- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every text is tied to a real event or a true restock, and nothing is sent outside quiet hours.
 - The text cost shows its sum, list size times cost per text.
@@ -101,3 +93,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The results read quotes numbers from the person's data.
 - Both pauses happened, or the run says which was skipped and why.
 - Every gap is a `MISSING:` line, and nothing was sent, published or paid for.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 4. This one.
 
@@ -94,16 +94,6 @@ MISSING: <facts it needed and didn't get>
 CHECKS MISSED  <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
-- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
-- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every word is an unbroken phrase from the approved script or allowed copy.
 - Nothing covers the product, a face or a hand, or repeats a caption.
@@ -111,6 +101,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No two overlays at once; each stays long enough to read.
 - The count is under the ceiling; the first 1.5 seconds are clear if the opening has a caption.
 - Played muted at phone size, the three questions get answered.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Before you write `MISSING:` for a fact, look for it in the brand file and the input; write it only when both lack it. Frames named but not visible to you: say so in one line, judge placement on the written frame notes if there are any, mark every placement as unchecked, and never describe a frame you didn't see. Write `MISSING: <what>`. No scene lengths: label every time an estimate. No allowed copy: use only the script's words and flag every number for checking. No format given: premium for demos, clean for people talking.

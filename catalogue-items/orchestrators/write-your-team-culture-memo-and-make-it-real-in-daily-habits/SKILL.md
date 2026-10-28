@@ -9,6 +9,11 @@ Give it how your team works. Get a culture memo, a standards sheet and a rule to
 
 This workflow chains 4 skills into one job. You run them one after another, and each skill's result is saved and passed to the next. The four skill files come in the handoff pack with HANDOFF.md. If one is missing, stop at that step.
 
+## When not to use
+- You only want to drop one rule: use the Policy removal test planner (`policy-removal-test-planner`) on its own.
+- You are bringing in a new hire: use the 30-60-90 day onboarding planner.
+- You need a legal code of conduct or an employee handbook: have an HR or legal adviser write it. This memo is not a legal document.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -36,11 +41,6 @@ How to start:
 - **Any good chat AI:** Every step is a plan or a piece of writing.
 - **A shared document:** The memo and standards live where everyone reads them.
 <!-- /needs -->
-
-## When not to use
-- You only want to drop one rule: use the Policy removal test planner (`policy-removal-test-planner`) on its own.
-- You are bringing in a new hire: use the 30-60-90 day onboarding planner.
-- You need a legal code of conduct or an employee handbook: have an HR or legal adviser write it. This memo is not a legal document.
 
 ## What you need
 - **How your team works, and what you want it to do differently on Monday** (required). Say how big the team is, what you do when two good things collide, and a few real moments you were proud of or let down by.
@@ -74,18 +74,16 @@ Ignore the "After this" list above and use only these:
 ## What you hand back
 4 step files and the summary. Step 1 holds the memo. Step 2 holds the standards sheet. Step 3 holds the praise plan. Step 4 holds the rule trial.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the plan.
+- **Say it to the room** with the [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -53,21 +53,19 @@ How to start:
 
 The first users. The networks compared, with the pick and why. The first use and how it invites another. The tipping-point number, how it is counted and by when. The step to word of mouth. The exit. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
-- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each step names a real network or channel.
 - A tipping-point number is set, with a count method and a date.
 - The plan has an exit if distribution fails.
 - The first use invites another person.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

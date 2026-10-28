@@ -58,13 +58,6 @@ How to start:
 
 The groups with numbers. The offer in one line and the reason to act now. Each message: day, group, the new reason, subject, body, one next step and its tracking. The schedule and stop rule. The plan for the silent ones. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Email consent and message reviewer](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every message states the offer and one next step.
@@ -73,6 +66,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each message can be traced to a sale.
 - No claim goes beyond the offer facts.
 - Proof used was supplied, not made up.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Email consent and message reviewer](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

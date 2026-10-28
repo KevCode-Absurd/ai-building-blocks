@@ -12,16 +12,11 @@ A long list of problems helps nobody until each item has a next step. This skill
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). Bring your page, objection map (optional), your results (optional). It uses your brand brain and ad copy.
-2. **Audit report** with the [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). Bring store capture, your results (optional), audit report (optional).
-3. This one.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -51,6 +46,15 @@ How to start:
 
 The buckets with every issue, proof and next step. Test ideas in the change, effect, reason form. The no-proof list. The ranked order with reasons. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Every issue sits in exactly one bucket.
+- Each test idea states what it expects to change.
+- Quick fixes are not held up for a test.
+- The ranking reasons are shown.
+- Tracking faults come before everything else.
+- Issues with no proof are listed apart, not dropped.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -60,15 +64,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Website quality improvement reviewer](https://useaiblocks.com/skills/website-quality-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every issue sits in exactly one bucket.
-- Each test idea states what it expects to change.
-- Quick fixes are not held up for a test.
-- The ranking reasons are shown.
-- Tracking faults come before everything else.
-- Issues with no proof are listed apart, not dropped.
 
 ## If something is missing
 

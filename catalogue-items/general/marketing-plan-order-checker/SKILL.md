@@ -60,15 +60,6 @@ How to start:
 
 The sort of every line. The tactics with no strategy above them. The research to do first. The plan in order. The score out of 100 with the six results. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
-- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every tactic points to a target, position and objective, or is parked.
@@ -77,6 +68,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each objective has a way to be measured.
 - The score shows its six checks.
 - No customer fact is invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

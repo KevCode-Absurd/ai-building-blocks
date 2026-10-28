@@ -56,8 +56,6 @@ MISSING: anything not given.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the plan.
-- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
-- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

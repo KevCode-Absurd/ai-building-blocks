@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -134,14 +134,6 @@ One file per stage:
 6. **Edit list:** order, cuts, captions, label overlay, voice and sound, end card, safe zones, and `MISSING:` lines.
 7. **Checks missed:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - You stopped for approval after stages 1, 3 and 4, unless the person approved them ahead.
 - The material sentence is word for word the same in every image prompt, and the doll card in every frame the doll is in.
@@ -150,6 +142,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Check each frame and clip on its own: if any part of the doll is in frame, hands only included, the doll card is pasted in.
 - No face close-ups; no child, real person, speaking doll or cloned voice.
 - The product has its true shape and only its real label lines; nothing shown beyond the brand's claims, and no body getting better.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Before you write MISSING for a product fact, look for it in the brand file and the input; write `MISSING: <what>` only when both lack it. If photos are listed but you can't see them, say so in one line (never say they weren't sent), take the product's look and label words from the input or the brand file, mark the product sheet's match to the real pack as still to check, never describe a photo you didn't see, and carry on. No label text anywhere and no photo: ask before any product prompt, and keep going with the shots the product isn't in. A night scene with no light named: pick a lamp and mark it `proposed`. No cast note: choose from the script and mark it `inferred`.

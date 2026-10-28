@@ -45,6 +45,14 @@ How to start:
 
 The list, dated, with the re-grade day. The A's, each with timing and next step. The B's, each with rhythm and next touch. The C's, removed with reasons. The prospects needing timing and the question for each. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Every grade rests on a stated timing.
+- C's are removed, not chased.
+- A's have a next step within a day.
+- B's have a contact rhythm.
+- The list is dated.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -53,14 +61,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Deal notes and CRM updater](https://useaiblocks.com/skills/deal-notes-and-crm-updater). It takes the lead list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every grade rests on a stated timing.
-- C's are removed, not chased.
-- A's have a next step within a day.
-- B's have a contact rhythm.
-- The list is dated.
 
 ## If something is missing
 

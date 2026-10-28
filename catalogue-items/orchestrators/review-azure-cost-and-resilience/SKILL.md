@@ -6,15 +6,6 @@ description: "Share your Azure resources. Get a resource map, current price esti
 # Review Azure cost and resilience
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the document.
-- The [Mobile app release planner](https://useaiblocks.com/skills/agency-engineering-mobile-release-engineer). It takes the document.
-- The [Site reliability engineer](https://useaiblocks.com/skills/agency-engineering-sre). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -22,11 +13,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -83,6 +74,13 @@ Price assumptions: retail price per service, size and region, with monthly and y
 Cost and workload findings: each saving tied to a named resource, with the fix, the saving, the risk and the effort, then the architecture gaps rated high, medium or low.
 
 Include source coverage, unresolved findings, missing facts and one next action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Azure service health investigator](https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## What to do with the result
 

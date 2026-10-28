@@ -14,18 +14,18 @@ Winning an argument usually costs you the person. This skill gives you a way to 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). Bring plan, objection map (optional).
+1. **A plan** with the [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). Bring a plan, an objection map (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, objection map. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, an objection map. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -56,15 +56,6 @@ How to start:
 
 The moments. For each: the welcome, the listening line, the agreement, your admission, the line that holds your view. The lines it replaced. The line for taking time. The pause rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
-- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
-- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No line says or hints that they are wrong.
@@ -72,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Your admission has no "but" and no excuse, or says none.
 - The listening line gives their point back accurately.
 - There is a line to take time, with a named time.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Disagreement perspective mapper](https://useaiblocks.com/skills/other-person-view-mapper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

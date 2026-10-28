@@ -73,6 +73,15 @@ Five step files and the summary, in this shape:
 - Step 5: the style guide (story, logo, colour, type, imagery, voice, applications, dos and don'ts). This file holds the brand guide.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- Every claim in the messages has a fact in the brand file behind it.
+- The three visual directions in step 4 are truly different, the merged one says what it took from each, and each photo rule can be answered yes or no by looking at a picture.
+- Every rule in the style guide has an example from the brand file or a `MISSING:` line, and no example was invented.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -82,12 +91,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner). It takes the brand guide.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- Every claim in the messages has a fact in the brand file behind it.
-- The three visual directions in step 4 are truly different, the merged one says what it took from each, and each photo rule can be answered yes or no by looking at a picture.
-- Every rule in the style guide has an example from the brand file or a `MISSING:` line, and no example was invented.

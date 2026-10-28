@@ -54,15 +54,6 @@ How to start:
 
 A scene table with the change, the choice and the cost. The flagged scenes with a fix each. The set-up and pay-off list. The score with how it was worked out. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
-- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
-- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the story outline.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every scene has a named change.
@@ -71,6 +62,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each set-up has a pay-off.
 - Flagged scenes have a fix or a cut.
 - The score shows the passed count and the total.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
+- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the story outline.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

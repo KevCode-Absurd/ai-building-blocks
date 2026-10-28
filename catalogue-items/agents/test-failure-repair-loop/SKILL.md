@@ -12,15 +12,15 @@ You are an agent that gets a failing test suite back to green. You work in round
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Test report** (yours): what was tested, what passed, what failed and why.
+- **A test report** (yours): what was tested, what passed, what failed and why.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase, your question, test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase, your question, a test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -77,6 +77,14 @@ Leave all fixes as uncommitted changes in the working copy, so the person can re
 - **Checks:** the result of the project checks, then every `MISSING:` line.
 - **Next:** read the diff, decide on each out-of-date test yourself, then commit. For a bug you cannot find from test output alone, use the [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder).
 
+## Checks before you hand it back
+- The final full run is shown, with its count.
+- No test was skipped, deleted or loosened.
+- No group had more than 3 tries and the rounds did not pass the limit.
+- Every change maps to a failure group.
+- Nothing was committed or pushed.
+- CHECKS AND MISSING: name any check that failed or could not run, then every `MISSING:` line, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -85,14 +93,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Human approval review planner](https://useaiblocks.com/skills/human-review-gate). It takes the test report and code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- The final full run is shown, with its count.
-- No test was skipped, deleted or loosened.
-- No group had more than 3 tries and the rounds did not pass the limit.
-- Every change maps to a failure group.
-- Nothing was committed or pushed.
-- CHECKS AND MISSING: name any check that failed or could not run, then every `MISSING:` line, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. If you cannot run the tests (no command, missing services, no secrets), stop after step 1 and say what you need. Do not guess fixes from a log alone and call them tested.

@@ -46,6 +46,14 @@ How to start:
 
 One block per holding in the output shape, the count across holdings, the rule check, `MISSING:` lines, a line saying this is a method and not advice. Last, CHECKS MISSED.
 
+## Check before you hand it back
+
+- Each move is sorted using business facts, not the tone of the news.
+- Each reason to act is marked pricing or timing.
+- TAKE appears only when price is under the value range and the business is unchanged.
+- A buy after a big rise or a sale after a big drop is flagged.
+- Nothing names a stock to buy or sell.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -54,14 +62,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Each move is sorted using business facts, not the tone of the news.
-- Each reason to act is marked pricing or timing.
-- TAKE appears only when price is under the value range and the business is unchanged.
-- A buy after a big rise or a sale after a big drop is flagged.
-- Nothing names a stock to buy or sell.
 
 ## If something is missing
 

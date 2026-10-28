@@ -58,15 +58,6 @@ Three step files and the summary, in this shape:
 - Step 3: big and small tasks, the main task, the task put off longest with a verdict, three priorities with protected time, and tomorrow's list. This file holds the plan.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -75,3 +66,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every worst case has a harm rating, a likelihood and a repair, and the cost of doing nothing is stated at one, five and ten years.
 - Each stop rule has a number or limit, not "try to do less".
 - The three priorities include the task put off longest, or say why it is not big. Nothing about the person's money, time or work is invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

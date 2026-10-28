@@ -52,23 +52,22 @@ How to start:
 ## What you hand back
 The promise and the doubt. The causes list with its tags. The level chosen and why. The chain. The passage in place in the draft. The `MISSING:` lines and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
-- **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
-- The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- The [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every link in the chain is backed by a fact supplied, or by a named standard the user supplied or confirmed.
 - The chain has at least two links, or the passage says it is a single-link claim.
 - The passage ends on the promise's result.
 - No technical word the buyer would not know is left unexplained.
 - Nothing is said about how it works that the facts do not show.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
+- The [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
+- The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft.
+- The [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <cause> for link <n>` and write the passage only with the links you can back. If no chain can be built, say so in one line and do not write the passage.

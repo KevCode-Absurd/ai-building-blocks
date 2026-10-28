@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -59,17 +59,6 @@ How to start:
 
 Rivals as buyers see them. The features. The grid. The gaps with evidence. Where to stop fighting. The rejected gap and its reason. The small test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
-- The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
-- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
-- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
-- **Plan your strategy** with the [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Rivals are rated as customers see them.
@@ -78,6 +67,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least one gap is rejected with a reason.
 - Unknown ratings are marked unknown.
 - No rival fact is invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
+- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
+- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
+- The [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

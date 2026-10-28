@@ -19,12 +19,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Plan** with the [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). Bring a keyword list, your results (optional), audit report (optional). It uses your brand brain.
+2. **A plan** with the [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). Bring a keyword list, your results (optional), an audit report (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -113,8 +113,6 @@ MISSING: <what>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the pdp copy.
-- The [Store SEO completeness checker](https://useaiblocks.com/skills/store-seo-gap-finder).
-- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

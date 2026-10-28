@@ -50,15 +50,6 @@ How to start:
 
 The import table with sources. The top three items and the pick. The infrastructure list with costs. The plant size and logic. The funding and fallback. The buffer. The policy risks with signals. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each import named has a source.
@@ -66,6 +57,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A cost overrun buffer is shown.
 - The funding fallback is named.
 - The policy risk has a watch signal.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

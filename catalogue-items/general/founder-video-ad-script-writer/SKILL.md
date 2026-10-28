@@ -69,17 +69,6 @@ How to start:
 - The casting and wardrobe note.
 - `CHECKS MISSED:` one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
-- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No generated face, body, hands or voice anywhere.
 - Every decision, number and story traces to the founder's words or the brand facts, or is a bracketed question.
@@ -87,6 +76,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each founder claim has stronger proof beside it, or is softened.
 - No health or performance result told as the founder's own unless it's true and was asked for.
 - Every picture has a source tag.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Before you write MISSING for a fact, look for it in the brand facts and in the input. Write `MISSING: <what>` only when both lack it. If photos or footage are named but you can't see them, say so in one line, take the product's look from the brand facts, tag those pictures `to check`, and never describe a picture you didn't see. If the material holds neither the founder's words nor any decisions, hand back the interview guide and the brief's shape with bracketed questions, and say their answers fill it in.

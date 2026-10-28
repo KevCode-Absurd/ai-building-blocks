@@ -10,14 +10,6 @@ A historical contract-liability roll-forward with inferred release and reconcili
 It looks back at one past period. It shows how much of the money customers paid in advance was turned into revenue, and whether that matches what the company says it released. It covers only deferred-revenue balances and their release. It does not bridge gross sales to net revenue: use the Gross-to-net revenue bridge for that.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unbilled work to cash tracker](https://useaiblocks.com/skills/contract-asset-billing-cash-bridge). It takes the spreadsheet.
-- The [Gross to net revenue checker](https://useaiblocks.com/skills/gross-to-net-revenue-bridge). It takes the spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -26,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, financial statements, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, financial statements, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -112,3 +104,11 @@ These links identify public methods and definitions. All instructions and practi
 ## Hand back
 
 Use these five headings in order: Scope and dated sources; Inputs and assumptions; Model calculations and reconciliations (roll-forward, inferred release, residual); Actual file verification; MISSING and CHECKS MISSED. Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Unbilled work to cash tracker](https://useaiblocks.com/skills/contract-asset-billing-cash-bridge). It takes the spreadsheet.
+- The [Gross to net revenue checker](https://useaiblocks.com/skills/gross-to-net-revenue-bridge). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

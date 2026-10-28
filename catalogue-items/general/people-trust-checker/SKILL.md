@@ -12,14 +12,14 @@ The people behind a plan decide whether it works and whether you are treated fai
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -50,16 +50,6 @@ How to start:
 
 Who counts, with facts marked told or checked. A rating for each test for each person. The pay review. The weighing against the case. Five checking questions and three documents. The verdict and its deciding fact. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report.
-- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report.
-- **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each rating has a fact behind it and is marked told or checked.
@@ -67,6 +57,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A clear case of dishonesty gives do not trust.
 - The pay review says where their interest and yours differ.
 - The checking questions are about events, and are for people the person did not name.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

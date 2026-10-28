@@ -44,22 +44,21 @@ How to start:
 ## What you hand back
 The effect. The first-sentence verdict. A table of paragraphs with marks and reasons. Where attention slips. The length check. Any stolen climax. The cuts and fixes. The score and how it was worked out. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
-- The [Case study story planner](https://useaiblocks.com/skills/case-first-story-builder). It takes the audit report.
-- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
-- **Say it to the room** with the [Lesson talk writer](https://useaiblocks.com/skills/lesson-talk-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The effect is named before any judgment.
 - Each failure is pinned to an exact line or paragraph.
 - Every cut is tied to the effect.
 - The tone is about the work, not the writer.
 - The score shows how it was worked out.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ending-first story planner](https://useaiblocks.com/skills/ending-first-story-planner).
+- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
+- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. If no effect is given, propose one from the draft and mark it as a guess until confirmed. Do not rewrite the draft; give directions.

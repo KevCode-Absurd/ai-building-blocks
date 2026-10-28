@@ -302,6 +302,8 @@ const CHECK_QUESTION = /\b(?:is (?:it|this|my \w+) (?:any )?(?:good|ok|okay|righ
 export const wantsCheck = (goal: string) => isReviewRequest(goal) || CHECK_QUESTION.test(goal);
 /** How many of the best-matching ready workflows lend weight to their own steps. */
 const LENDING_FLOWS = 5;
+/** How much the word match on a request's everyday stand-ins counts beside the match on its own words. */
+const STAND_IN_WEIGHT = 0.3;
 export function startPicks<P extends Part>(c: { blocks: P[]; bySlug: Record<string, P> }, goal: string, limit = 6): { tasks: StartPick<P>[]; workflows: StartPick<P>[] } {
   const lib = c as unknown as Library, focus = taskFocus(positiveRequest(goal)), review = wantsCheck(goal);
   const code = /\b(code|coding|app|api|website|site|software|react|html|shopify|webhook|program|plugin|deploy)\b/i.test(goal);
@@ -311,7 +313,11 @@ export function startPicks<P extends Part>(c: { blocks: P[]; bySlug: Record<stri
   const matches = goalMatches(lib, positiveRequest(goal), 80), score = new Map<string, number>();
   const add = (slug: string, value: number) => score.set(slug, (score.get(slug) ?? 0) + value);
   matches.forEach((m, i) => add(m.b.slug, 1 / (i + 6)));
+  // The word match reads the everyday stand-ins too (library-search-language.ts), as the library search does, so
+  // "fix this python error" also looks for debugging, not only for things named Python.
+  const standIns = [...new Set(Object.values(queryTokens(focus).alternatives).flat())].join(" ");
   retrieve(lib, focus, 40).forEach((b, i) => add(b.slug, 1 / (i + 6)));
+  if (standIns) retrieve(lib, `${focus} ${standIns}`, 40).forEach((b, i) => add(b.slug, STAND_IN_WEIGHT / (i + 6)));
   // A request to check something also reads as a search for checks of it, so the checks are in the running.
   if (review) goalMatches(lib, `${positiveRequest(goal)} check`, 40).filter(m => m.b.role === "check").forEach((m, i) => add(m.b.slug, 1 / (i + 6)));
   matches.map((m, i) => ({ m, i })).filter(({ m }) => (isFlow(m.b) || m.b.type === "agent") && m.b.steps?.length).slice(0, LENDING_FLOWS)

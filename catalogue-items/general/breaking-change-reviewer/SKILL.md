@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **A code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -48,15 +48,6 @@ How to start:
 
 The change. Who it breaks with evidence. What must keep working. Dates rejected. Leftover options. The safety score with its six marks. The safer rollout with the fix-on-report and revert paths. The one-sentence verdict. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
-- The [Bug report writer](https://useaiblocks.com/skills/bug-report-writer). It takes the audit report.
-- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every affected user group is named.
@@ -65,6 +56,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No dummy option is left in place.
 - A fix-on-report path and a revert path exist.
 - The verdict is stated in one sentence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Protobuf compatibility reviewer](https://useaiblocks.com/skills/copilot-protobuf-grpc-api-review).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

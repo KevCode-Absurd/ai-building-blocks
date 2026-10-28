@@ -74,15 +74,6 @@ NEXT STEP         <one step>
 
 State plainly that nothing was sent to the journal and that no comment is marked answered without revised text.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Journal revision and response tracker](https://useaiblocks.com/skills/reviewer-response-progress-assistant).
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
-- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every comment appears once, quoted word for word, with its reviewer and number.
@@ -103,6 +94,15 @@ Suggest one next step as a short question, and say the user can type their own:
 - **Keep track while you revise.** Use the [Reviewer response progress assistant](https://useaiblocks.com/agents/reviewer-response-progress-assistant), which keeps the matrix and updates status as you change the manuscript.
 - **Polish your own response letter.** Run the [Proofreader](https://useaiblocks.com/skills/proofreader) on the draft you write.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Journal revision and response tracker](https://useaiblocks.com/skills/reviewer-response-progress-assistant).
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
+- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

@@ -58,14 +58,6 @@ Five step files and a `HAND-BACK SUMMARY`:
 
 Nothing is published and no cuts are applied for you.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
-- **Make video ads** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order. Steps 4 and 5 used the step 2 transcript, not the step 3 cut list.
@@ -75,3 +67,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every cut keeps a breath on both sides, and the time saved counts speech only.
 - The first chapter starts at 00:00, there are at least three, and each is at least ten seconds long.
 - Every clip opens on a complete thought, and every timecode appears in the transcript.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make video ads** with the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

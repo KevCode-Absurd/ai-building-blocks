@@ -10,17 +10,6 @@ You rebuild one month of bank service charges from the agreement and compare the
 When not to use: to match bank statement lines to your ledger, use the Bank and ledger matcher. For interest and fees on a revolving credit line, use the Revolver interest and fee checker. For group cash pool charges, use the Cash pool interest and fee checker. This skill does not tell you whether a refund is owed, and it changes nothing with the bank.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Clinic payment reconciliation reviewer](https://useaiblocks.com/skills/clinic-claims-collections-bridge). It takes the document and spreadsheet.
-- The [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker). It takes the document and spreadsheet and audit report.
-- The [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer). It takes the spreadsheet.
-- **Check the money** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the document and spreadsheet.
-- The [Cash settlement forecast reviewer](https://useaiblocks.com/skills/treasury-settlement-evidence-reviewer). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -29,11 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the contract, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -106,3 +95,14 @@ Show the bridge as a table:
 Then: fixed fee, gross fees, credit applied, expected charge, billed amount and gap (billed minus expected), each on its own line.
 
 Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Clinic payment reconciliation reviewer](https://useaiblocks.com/skills/clinic-claims-collections-bridge). It takes the document and spreadsheet.
+- The [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer). It takes the spreadsheet.
+- The [Bank and ledger matcher](https://useaiblocks.com/skills/bank-and-ledger-matcher). It takes the spreadsheet.
+- **Check the money** with the [Revolving loan interest and fee checker](https://useaiblocks.com/skills/revolver-interest-fee-checker). It takes the document and spreadsheet.
+- The [Cash settlement forecast reviewer](https://useaiblocks.com/skills/treasury-settlement-evidence-reviewer). It takes the spreadsheet and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -144,20 +144,20 @@ MISSING  <material a choice needs that you didn't send, or nothing>
 CHECKS MISSED  <each check missed, and why, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
-- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the brief.
-- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One choice per setting, each snippet pasted whole.
 - The conflict check names any pair that fights, using the table.
 - No snippet names a brand, product, category, AI model or tool.
 - Every choice that needs material either has it or has a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+- The [Video opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` when a choice needs material that wasn't sent (for example "match the reference" with no reference). Don't substitute something else.

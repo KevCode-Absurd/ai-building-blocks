@@ -12,14 +12,14 @@ Operating data is loud. It arrives on its own, it is easy to chart and it asks f
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
 - **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, customer needs. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan, customer needs. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -51,15 +51,6 @@ How to start:
 
 The tracked numbers with their tags and trap results. The promises from the job. The three to five chosen measures, each with formula, source, collector, rhythm, target and defect rule. The repeat-use measure. Gaming checks and guards. Owners and actions. The numbers demoted. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job name picker](https://useaiblocks.com/skills/job-name-picker). It takes the plan.
-- The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan.
-- The [Learning milestone planner](https://useaiblocks.com/skills/learning-milestone-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every tracked number has a tag and a result for the three traps.
@@ -69,6 +60,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each measure has a gaming check and a guard.
 - Each has an owner and an action if it moves the wrong way.
 - Estimated measures are labelled as estimates.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job name picker](https://useaiblocks.com/skills/job-name-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

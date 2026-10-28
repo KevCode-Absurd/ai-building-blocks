@@ -75,16 +75,6 @@ Pause here: Choose the first collection from the plan and note its keyword, its 
 - Step 2 file: the collection map (columns: collection, keyword, handle, products, parent, children), a brief for each collection, the build order and the collections flagged to merge.
 - Step 3 file: the page copy for the first collection. This is the finished page.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search page brief writer](https://useaiblocks.com/skills/search-page-brief-writer).
-- The [Customer question keyword finder](https://useaiblocks.com/prompts/customer-question-keyword-finder).
-- The [Customer search question mapper](https://useaiblocks.com/skills/shopper-question-and-fan-out-mapper).
-- **Write the landing page** with the [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the page.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every kept keyword has buying intent and a stated reason (the "review line" rule: a keyword with no buyer intent in its line is rejected), and every rejected one has a reason.
 - No two collections share a keyword, and every collection has at least three products or is flagged for merging.
@@ -93,3 +83,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the landing page** with the [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the page.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

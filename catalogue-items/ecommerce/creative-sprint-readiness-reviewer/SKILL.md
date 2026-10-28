@@ -12,13 +12,6 @@ Use each fixed count, freshness interval, character limit and platform label bel
 When not to use: for one ad with no sprint, check it against the platform's ad rules by hand. To edit copy only, use a plain copy edit with your brand voice notes. To make the briefs or images, do that first; this skill only reviews work that exists. When the report is done, fix each FIX with its owner, then rerun the gate that failed.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -162,3 +155,10 @@ awareness stage)
 ## Report
 
 For each gate give PASS, FIX or NOT CHECKED, then its evidence, defect, severity, owner and recheck action. Separate blocking product/claim errors from optional style preferences. State which actual files were inspected. Only an authorized owner can approve use of the assets; a completed checklist does not itself publish them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

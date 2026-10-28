@@ -64,14 +64,6 @@ Three step files and the summary. The last file holds the marketplace rules chec
 - **Step 3, marketplace check:** pass or reject per rule, and a fix for each reject.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer).
-- The [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every photo shows the right product, in the right colour, and never a shape or colour the real item lacks.
 - Backdrop, light and angle match across the set, and the cost stayed under your limit.
@@ -79,3 +71,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Check that your marketplace allows AI-drawn product photos and whether it asks for a label. Confirm each photo you list is allowed and, where a label is required, labelled as AI-generated.
 - Each marketplace reject has a fix.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

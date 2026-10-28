@@ -67,8 +67,6 @@ MISSING: <facts or phrases you did not give>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Amazon keyword picker](https://useaiblocks.com/skills/amazon-keyword-picker).
-- The [Amazon Sponsored Products ad planner](https://useaiblocks.com/skills/amazon-ppc-launch-builder).
-- The [Amazon product opportunity finder](https://useaiblocks.com/skills/amazon-search-gap-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

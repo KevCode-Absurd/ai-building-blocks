@@ -71,14 +71,6 @@ Pause here: Redo or retouch any picture the inspector flagged, then save the fin
 - Step 5, marketplace check: pass or reject for each rule, and a fix for each reject.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Clothing photo model and background editor](https://useaiblocks.com/skills/model-and-scene-swapper).
-- The [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -88,3 +80,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Collar, cuff, hem and seam detail in each picture match the real garment, checked by the person against the garment itself.
 - No picture is in the final set that the inspector rated high risk.
 - Every rejected marketplace rule has a fix the person can act on.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -10,15 +10,6 @@ Turns raw email into structured, checkable context. Two modes: **Parse** (one th
 Read [the original role profile](references/source-agent.md) before you start. Use its rules about thread structure, quoted text, sender identity, decision and task attribution, and privacy. Its code samples show intent only. Its role language, experience claims and accuracy targets are not facts about this run, and they do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Microsoft 365 admin helper](https://useaiblocks.com/skills/microsoft-365-admin-helper). It takes the spreadsheet.
-- The [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer). It takes the plan.
-- The [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -100,6 +91,13 @@ Return these sections in order. If your AI can save files, save each as its own 
 7. **Pipeline plan.** Goal, fields, thread rules, quote removal, private data, answers with sources, tests.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

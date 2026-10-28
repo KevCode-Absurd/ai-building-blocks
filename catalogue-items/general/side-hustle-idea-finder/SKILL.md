@@ -67,7 +67,7 @@ CHECKS MISSED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Test the idea with real people** with the [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions). It takes the shortlist.
-- **Test the idea with real people** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
+- The [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
 - **Make an offer people want** with the [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

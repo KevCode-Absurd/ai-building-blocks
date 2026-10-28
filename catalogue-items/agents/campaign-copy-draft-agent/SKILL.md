@@ -8,15 +8,6 @@ description: "Get campaign copy checked against your approved claims. Every clai
 Writes campaign copy in several different angles from the user's brief, offer and approved claims, and checks every claim in the copy against the proof the user supplied. One bounded run per request. It drafts only. It does not publish, send, spend money or log in to any account. Installing it does not create a schedule.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the ad copy.
-- **Check it before it goes live** with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the ad copy.
-- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -26,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -90,6 +81,15 @@ Optional files you can adapt: `references/editable-role-template.md` (a role fil
 - `checkpoint.md`: the record for the next revision.
 
 Finish with the evidence used, assumptions, open questions and `CHECKS MISSED:`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the ad copy.
+- The [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the ad copy.
+- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

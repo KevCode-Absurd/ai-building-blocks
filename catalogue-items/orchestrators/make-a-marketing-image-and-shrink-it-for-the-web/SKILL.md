@@ -59,18 +59,16 @@ Three step files and the summary. The last file holds the smaller image.
 - **Step 3, smaller file:** the compressed file, format and quality, size before and after.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor). It takes the image.
-- The [Brand sticker set maker](https://useaiblocks.com/skills/brand-sticker-set-maker). It takes the image.
-- The [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker). It takes the image.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The picture matches what you asked for and the placement, and the crop is right at real size.
 - Any text in the picture is spelled right.
 - Open the original and the compressed file side by side at 100% zoom, at the size the placement really shows. You see no difference in edges, text or colour, and the new file is clearly smaller. If you do see one, rerun step 3 at a higher quality.
 - File names and sizes match the step 1 plan.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor). It takes the image.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

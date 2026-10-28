@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -76,18 +76,18 @@ HAND-BACK SUMMARY
 
 Say plainly that search numbers are estimates, that a gap shows searches exist and not that buyers will convert, and that fees change, so the person should check current fees in Seller Central and search the trademark database before ordering.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the idea.
-- **Test the idea with real people** with the [Product idea risk checker](https://useaiblocks.com/skills/product-idea-risk-checker). It takes the idea.
-- **Test the idea with real people** with the [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner). It takes the idea.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - Step 2 used the idea the person picked and the page 1 evidence from step 1.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line, and no volume, revenue or review figure is made up.
 - Where the sources disagree on a threshold, such as the price floor, both views are shown.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the idea.
+- **Test the idea with real people** with the [Product idea risk checker](https://useaiblocks.com/skills/product-idea-risk-checker). It takes the idea.
+- The [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner). It takes the idea.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

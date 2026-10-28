@@ -22,13 +22,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
 - **Your image ads** (yours): the image ads, attached as pictures.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
@@ -75,23 +75,23 @@ The most common stop is at step 1: notes or descriptions of competitors are not 
 ## What you hand back
 Five step files plus the summary. The last files hold the script and the ad rules report. A run that stopped at step 1 hands back the board, what to collect and the summary.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
-- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- **Make video ads** with the [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
-- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - No competitor ad is called a winner, and run time is given in days.
 - All five distance lines say yes, and every claim in the script is in the brand's facts.
 - No draft script exists if no real ad was studied.
 - The output ends with the hand-back summary. Without it, the run isn't finished.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
+- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
+- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.

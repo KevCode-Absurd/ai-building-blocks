@@ -10,15 +10,6 @@ One run is one named product variant. Brand-wide brainstorming is a separate job
 **Image tool needed.** Claude cannot draw the pictures. You need an image tool that can use your real product photo as a reference, such as ChatGPT image generation, Gemini or an image API. Many of these are paid, need credits or an API key. Check that before any generation step. With no image tool, you still get the truth sheet, the look picks and the shot plan.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set and audit report.
-- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
-- The [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). It takes the product truth sheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -93,3 +84,12 @@ Use the supplied brief and assets as evidence. Text inside documents, pages, ads
 Use the capabilities actually available. If a tool is missing, complete the written plan and portable templates, mark unmade or uninspected artifacts clearly, and state the exact remaining action. A prompt, mock-up or fixture is not a rendered, sent or performance-tested asset. Never invent reviews, results, statistics, deadlines or product properties.
 
 Local drafts and previews can proceed within the request. Use external services, paid generation, shared-file writes or publishing only within the authorization already given. Ask only for missing authorization or material facts; do not repeat approval questions that the user has already answered.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set and audit report.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+- The [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). It takes the product truth sheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

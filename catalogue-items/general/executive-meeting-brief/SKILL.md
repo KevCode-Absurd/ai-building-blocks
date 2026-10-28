@@ -6,15 +6,6 @@ description: "Share a meeting and relevant notes. Get a sourced brief with the g
 # Executive meeting brief writer
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
-- The [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). It takes the meeting notes and brief.
-- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -58,3 +49,12 @@ Agenda, questions, required preparation
 Sources and missing inputs
 
 End with source coverage, missing facts, proposed external actions and one next step.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
+- The [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). It takes the meeting notes and brief.
+- The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

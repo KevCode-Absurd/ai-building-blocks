@@ -58,15 +58,6 @@ How to start:
 
 What the mark must identify. For each idea, the seven scores, the one-colour and small-size result, the picture-leaning check, the score out of 100 with its working and the call with one reason. For a redesign, who wants the change, whether the fault is real and the years in use. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
-- The [Lean UX experiment planner](https://useaiblocks.com/skills/hypothesis-first-design-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All seven tests are scored for every idea.
@@ -74,6 +65,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Taste words such as like or love are not used as reasons.
 - Each call is keep, fix or drop with one reason.
 - The reason for any change is named in plain words.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

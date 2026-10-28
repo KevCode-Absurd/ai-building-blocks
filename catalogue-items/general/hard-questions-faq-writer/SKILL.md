@@ -19,13 +19,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer). Bring your idea, customer needs (optional).
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a draft, customer needs. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a draft, customer needs. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,17 +49,6 @@ How to start:
 
 Customer questions, team questions, graded answers, the ranked gaps with what would close each, the release changes, `MISSING:` lines and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). It takes the draft.
-- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the draft.
-- The [Trust barrier and proof checker](https://useaiblocks.com/skills/trust-barrier-fixer). It takes the draft.
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the draft.
-- **Say it to the room** with the [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Both sets of questions include uncomfortable ones, such as price, trust and failure.
@@ -71,6 +56,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No answer states a fact the person did not give.
 - Gaps are ranked by effect on the plan.
 - At least one release claim changed, or the skill says why not.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Say it to the room** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

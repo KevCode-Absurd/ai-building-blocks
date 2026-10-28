@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your prompt** (yours): the full prompt or instructions you give the AI.
 - **Skill files** (yours): a skill's folder: its SKILL.md and any files it needs.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **A test set** (yours): test cases for the AI, each with the answer that counts as a pass.
 
 How to start:
@@ -77,15 +77,6 @@ If the owner approves one of these in clear words, do only that one. Then write 
 - **Safety:** the result of the safety check, or "not run" for a prompt.
 - **Files:** each round's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt.
-- The [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review). It takes the prompt.
-- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The same test cases were used in every round.
 - Each round changed one thing, and its effect is in `log.md`.
@@ -94,6 +85,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The round count is at most 4.
 - Nothing was shared or published without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt.
+- The [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review). It takes the prompt.
+- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without test cases, stop after step 2 and ask for them. Without the skill's scripts, say the script tests were not run.

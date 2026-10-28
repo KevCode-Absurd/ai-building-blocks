@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your a video ad script and brand brain.
+2. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand brain.
 3. This one.
 
 How to start:
@@ -78,18 +78,16 @@ NOT RUN
 
 The plan is not a finished clip. Run the transfer brief in a motion-control video tool, or hand it to a human editor. Then use the review checklist on the clip you get back. If you have no performance footage, use the Video avatar and storyboard planner first.
 
+## Check before handing back
+
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
-- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before handing back
-
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Offline practice case
 

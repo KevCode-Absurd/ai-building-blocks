@@ -96,14 +96,6 @@ CHECKS MISSED
 <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The cost claims are numbers you can show, not guesses.
@@ -111,6 +103,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The tone does not accuse readers of theft without cause.
 - A price model is chosen with a reason, and any assumption is stated.
 - No reply promises a free sample or discount the person did not give.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Say it to the room** with the [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
+- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -83,13 +83,6 @@ HAND-BACK SUMMARY
 Files | MISSING | steps not run | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Student feedback and revision task planner](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on). It takes the lesson plan and notes.
-- The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 Use this note first, then the shared "After this" list above. Nothing has been shared with reviewers. After the session, bring the typed comments back to run the sorting step and fill the record. Then plan the writer's rewrite of one draft from the sorted list.
 
 ## Check before you hand it back
@@ -99,3 +92,11 @@ Use this note first, then the shared "After this" list above. Nothing has been s
 - Every rule and timing in the plan fits the time given, or the overrun is stated.
 - The record leaves decisions to the writers.
 - No grade or mark appears anywhere in the files.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student feedback and revision task planner](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on). It takes the lesson plan and notes.
+- The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

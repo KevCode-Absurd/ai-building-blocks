@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your prompt** (yours): the full prompt or instructions you give the AI.
 
 **Makes it better (optional):**
-- **Persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
+- **A persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 How to start:

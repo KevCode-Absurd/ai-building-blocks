@@ -18,7 +18,7 @@ Not for: a plan that already has sales or usage data behind it (test the change 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Makes it better (optional):**
@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, your idea, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, your idea, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -60,15 +60,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3: pass, fail and middle numbers with sample and time, the run plan by group, how results are read, and the pass, fail and middle rule with a stop after a set number of tests.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- The [Paid idea test planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -77,3 +68,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The riskiest guess is one the whole plan depends on, and each guess has a number a stranger could check. Any number not from the plan is marked as a guess.
 - The pass number is something people do, not something they say, and it was set before the test.
 - The test costs far less than building the product, and the rule covers a pass, a fail and a middle result.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

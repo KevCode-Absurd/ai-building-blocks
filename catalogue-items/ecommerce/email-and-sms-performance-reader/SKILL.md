@@ -17,17 +17,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+- **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring email flow. It uses your brand brain.
-2. **Email flow** with the [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner). Bring your question, your results (optional), email flow (optional). It uses your offer.
+1. **An email flow** with the [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner). Bring an email flow. It uses your brand brain.
+2. **An email flow** with the [Inactive subscriber cleanup planner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner). Bring your question, your results (optional), an email flow (optional). It uses your offer.
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, email flow, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, an email flow, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -84,20 +84,18 @@ MISSING: <what was not given>
 CHECKS MISSED: <none | checks that failed or could not run>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
-- The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
-- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Next steps to offer
 
 Offer these first. The links in "After this" are optional:
 - If deliverability looks weak, use the [Inbox placement recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner).
 - Turn the tests to run first into a plan with the [Email test planner](https://useaiblocks.com/skills/email-test-planner).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 Run these before handing back and fix anything that fails.

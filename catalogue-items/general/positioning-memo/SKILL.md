@@ -53,15 +53,6 @@ How to start:
 
 The memo, with these parts: what customers think they shop for, the outcome, who they become, the analogy, the example user (labelled invented), the one line and the polish bar. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
-- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-- The [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The outcome is not the feature list.
@@ -69,6 +60,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The example user is clearly invented.
 - Claims match the product facts.
 - Nothing about customer results or numbers is made up.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code review comment editor](https://useaiblocks.com/skills/review-comment-humaniser). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

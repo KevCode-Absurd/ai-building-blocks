@@ -58,6 +58,14 @@ How to start:
 
 A table of one-off items by year. The pairs, with their net. ORDINARY EARNINGS by year with a column per adjustment. The ordinary average and the all-in average. Notes on any trading-business treatment. The list of open questions for the next step. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
+## Check before you hand it back
+
+- Every year has been read line by line, not by its total.
+- Each adjustment shows the year, amount, where it sat and the tax assumption.
+- Gains and losses of the same kind were paired.
+- The long-run figure includes the one-offs.
+- Nothing was invented and no security was named as one to buy or sell.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -66,14 +74,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every year has been read line by line, not by its total.
-- Each adjustment shows the year, amount, where it sat and the tax assumption.
-- Gains and losses of the same kind were paired.
-- The long-run figure includes the one-offs.
-- Nothing was invented and no security was named as one to buy or sell.
 
 ## If something is missing
 

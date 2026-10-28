@@ -51,15 +51,6 @@ How to start:
 
 The main idea. The scored inventory. The cut draft with before and after counts. The cut list with reasons. The parking list. The put-back order. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the draft.
-- The [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter). It takes the notes and draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The main idea is one sentence.
@@ -67,6 +58,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing new was added except joining words.
 - The strongest moment is the last thing in the draft.
 - Each cut has a reason, and the put-back order is given.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
+- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the draft.
+- The [Story impact reviewer](https://useaiblocks.com/skills/single-effect-draft-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

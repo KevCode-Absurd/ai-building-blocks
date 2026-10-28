@@ -102,11 +102,10 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Selling points writer](https://useaiblocks.com/skills/selling-points-writer). It takes the brief.
-- The [Ad evidence planner](https://useaiblocks.com/skills/four-kind-proof-finder). It takes the brief.
-- The [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brief.
 - **Make image ads** with the [3D cutaway image ad maker](https://useaiblocks.com/skills/3d-cutaway-image-ad-maker). It takes the brief.
 - **Write the landing page** with the [Store advertorial writer](https://useaiblocks.com/skills/store-advertorial-writer). It takes the brief.
+- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the brief.
+- The [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer). It takes the customer needs.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

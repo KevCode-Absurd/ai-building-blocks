@@ -72,6 +72,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 4: per email, a score out of 100, links, length, spam triggers, the unsubscribe line and what to fix first.
 - The summary lists each file, any step not run, and every `MISSING:` line.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The steps ran in order, and each one used the result of the one before.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- No email was sent by the workflow, and no email claims what the proof does not show.
+- Each email teaches one thing a reader could act on today, has one action, and carries no ask before the allowed email.
+- Every claim in the fixed emails has a reason why or proof next to it, and every email has an unsubscribe line.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -81,12 +90,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check the landing page** with the [Email sequence results auditor](https://useaiblocks.com/skills/email-sequence-auditor). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- The steps ran in order, and each one used the result of the one before.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- No email was sent by the workflow, and no email claims what the proof does not show.
-- Each email teaches one thing a reader could act on today, has one action, and carries no ask before the allowed email.
-- Every claim in the fixed emails has a reason why or proof next to it, and every email has an unsubscribe line.

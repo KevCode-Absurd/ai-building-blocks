@@ -48,15 +48,6 @@ How to start:
 
 The situation in four facts. The stance for each side with evidence. When each stance fits. The courage and consideration scores with one sentence each. The win lists. The no-deal line and how to say it. The setting check. The talk brief. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the question and plan.
-- The [Disagreement perspective mapper](https://useaiblocks.com/skills/other-person-view-mapper). It takes the question.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the question and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each stance is backed by a quote or a fact from the input.
@@ -65,6 +56,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Courage and consideration both have a concrete action.
 - If the dealing continues, the plan says what a win-lose result would cost later.
 - The talk brief names one thing to do about trust.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). It takes the question and plan.
+- The [Disagreement perspective mapper](https://useaiblocks.com/skills/other-person-view-mapper). It takes the question.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the question and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

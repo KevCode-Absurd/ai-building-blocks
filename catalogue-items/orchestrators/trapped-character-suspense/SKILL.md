@@ -74,15 +74,6 @@ Use these instead of the general "After this" list above, which is not about sto
 - Step 5, scene check: each scene with what changes, the choice that changes it, and whether it is flagged.
 - The hand-back summary: each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
-- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the plan.
-- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +82,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every exit, including phones and people, is shut for a reason that survives "why not just?".
 - Each rung of the ladder costs more than the one before, and every escape names the scene that planted its means.
 - Every flagged scene comes with a fix.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
+- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the plan.
+- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

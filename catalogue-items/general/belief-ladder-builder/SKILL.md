@@ -21,8 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **A draft** with the [Product benefit copy writer](https://useaiblocks.com/skills/desire-section-writer). It uses your brand brain and a buyer brief and ad copy.
-3. This one.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -60,17 +59,6 @@ How to start:
 ## What you hand back
 The goal claim and the beliefs it runs against. A ladder table: each rung, its tool, its score, and the jump from the one before. The redrafted copy in the new order. Any rung that needs a fact you lack, as `MISSING:`, and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
-- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- **Check it before it goes live** with the [Ad claims checker](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder). It takes the draft.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Worked check (invented example)
 A draft says in line 1: "Fix your own washing machine in 20 minutes." Score 1. The ladder: (5) "Washing machines break more often than people expect." (4) "Most breakdowns come from a few simple parts." (3) "Those parts sit behind one panel on most models." (2) "The panel comes off with one screwdriver." (1) the goal claim. The jumps are one point each, so the ladder passes.
 
@@ -80,6 +68,13 @@ A draft says in line 1: "Fix your own washing machine in 20 minutes." Score 1. T
 - Every rung is backed by a fact in the draft, the brief or common knowledge.
 - The goal claim is the last rung, not the first.
 - The redraft changes order and adds linking text only. It adds no new claim.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <belief or fact> for rung <n>` and leave a gap marked in the ladder. With no brief, say the beliefs map rests on the draft alone.

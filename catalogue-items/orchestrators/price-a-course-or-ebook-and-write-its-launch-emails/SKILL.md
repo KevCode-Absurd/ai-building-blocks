@@ -63,6 +63,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 4 step files and the summary. The first file holds the price, the third the discount wording, the last the email sequence.
 
+## Check before you hand it back
+- The price has a reason that names what the product does for the buyer, not only what others charge.
+- The digits have one stated reason, and it fits the product.
+- Every email has one offer, a reason why and a piece of proof you can point to.
+- Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+- Nothing was sent, published or paid for without a clear yes.
+- The discount has a real end date, and the emails claim nothing the product does not do.
+- The digits in step 2 and the discount reasons in step 3 cite the product's own facts, not a competitor's page alone.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -73,13 +83,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The price has a reason that names what the product does for the buyer, not only what others charge.
-- The digits have one stated reason, and it fits the product.
-- Every email has one offer, a reason why and a piece of proof you can point to.
-- Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
-- Nothing was sent, published or paid for without a clear yes.
-- The discount has a real end date, and the emails claim nothing the product does not do.
-- The digits in step 2 and the discount reasons in step 3 cite the product's own facts, not a competitor's page alone.

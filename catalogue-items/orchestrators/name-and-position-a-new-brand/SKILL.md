@@ -72,15 +72,6 @@ Five step files and the summary:
 - STEP 1 RIVAL MAP, STEP 2 POSITION (the plan), STEP 3 NAMES, STEP 4 NAME TEST, STEP 5 STRETCH CHECK (the last file holds the stretch call).
 - HAND-BACK SUMMARY: each file, and every MISSING line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner). It takes the plan.
-- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
-- The [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The position is one plain line a stranger could say back.
 - The corner chosen is one that no rival already holds.
@@ -88,3 +79,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The name test says it is a risk check, not a trademark clearance, and the clearance to-do list stays with the person.
 - The stretch call gives a reason, not only a score.
 - Every gap is a `MISSING:` line, and nothing was bought, registered or published.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner). It takes the plan.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

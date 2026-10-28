@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 - **Your video ads** (yours): the video ads, attached or linked.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your website** (yours): the link to your site or the page.
@@ -29,10 +29,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-4. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
+4. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 5. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-6. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
+6. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and video ad script and character sheet.
 7. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -96,6 +96,14 @@ If the owner answers an owner's-call item in clear words, apply that answer, sav
 - **Repeat flaws:** which findings are in `recurring.md`, so the next ad avoids them.
 - **Files:** each round's file, and every `MISSING:` line.
 
+## Checks before you hand it back
+- No claim, price or offer term was added that the owner did not supply.
+- Every line that passed was kept word for word.
+- Every fix names the check that asked for it.
+- A "cleared" result has no stop-ship item and no claim ahead of its proof.
+- The ad was not uploaded or published.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -105,14 +113,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- No claim, price or offer term was added that the owner did not supply.
-- Every line that passed was kept word for word.
-- Every fix names the check that asked for it.
-- A "cleared" result has no stop-ship item and no claim ahead of its proof.
-- The ad was not uploaded or published.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. With no facts, mark every claim "not confirmed" and never pass the ad as cleared. With no page, skip the match check and say so. With only a description of the picture, move size, safe zones, spelling and the logo to "for a person". Rules change: the checks give a read of the platform's rules, not a ruling, and the platform makes the last call. Health, money and legal claims need a check with a qualified person.

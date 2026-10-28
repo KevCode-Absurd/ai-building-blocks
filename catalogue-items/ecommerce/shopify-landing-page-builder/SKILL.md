@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
-- **Page layout spec** (yours): a section-by-section layout for a page, with what each section holds.
+- **A page layout spec** (yours): a section-by-section layout for a page, with what each section holds.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -69,17 +69,6 @@ How to start:
 4. **MISSING list**: every fact slot left empty because the store doesn't hold it.
 5. **CHECKS MISSED**: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the landing page** with the [Product page screenshot auditor](https://useaiblocks.com/skills/product-page-screenshot-auditor). It takes the theme files.
-- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner).
-- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker).
-- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder).
-- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The template JSON is valid, and every block type it names exists in the section's schema.
 - Every price and policy is read from store objects.
@@ -88,6 +77,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The "Advertisement" label exists on article-style pages and can't be switched off.
 - CSS is scoped to the section; images have `alt`.
 - You say what's untested: whether Theme Check ran, and that cart and payment need a test order inside the store.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the landing page** with the [Product page screenshot auditor](https://useaiblocks.com/skills/product-page-screenshot-auditor). It takes the theme files.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner).
+- The [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker).
+- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder).
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product handle: leave the picker empty. No subscription app info: build a one-time purchase only and say so.

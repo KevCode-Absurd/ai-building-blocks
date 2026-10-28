@@ -7,15 +7,6 @@ description: "Check a deal ticking fee. Get the extra price that builds up from 
 
 Checks a ticking fee, the extra amount a buyer pays for each eligible day a deal closes late. It multiplies the eligible days by the fixed daily amount, adds the fee to the base price, and checks the fee was not already included or paid in advance. It does not decide whether a delay triggers the fee, whether a breach happened or whether a payment is owed. For the cash needed at closing, use the Deal funding gap checker. For a payment that depends on a metric instead of days, use the Earnout payout checker.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Remaining fund commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker). It takes the document and spreadsheet.
-- The [Customer invoice borrowing limit calculator](https://useaiblocks.com/skills/receivables-borrowing-base-builder). It takes the document and spreadsheet.
-- The [Inventory borrowing limit calculator](https://useaiblocks.com/skills/inventory-borrowing-base-builder). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## When not to use
 
 - You want to know whether a delay triggers the fee or whether a breach happened. Take that to your lawyer.
@@ -40,15 +31,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Locked-box seller transfer checker](https://useaiblocks.com/skills/locked-box-leakage-checker). Bring document, the deal terms, spreadsheet (optional).
+1. **A spreadsheet** with the [Locked-box seller transfer checker](https://useaiblocks.com/skills/locked-box-leakage-checker). Bring a document, the deal terms, a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, the deal terms, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the deal terms, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -148,3 +139,11 @@ The link names a public example. The instructions and practice numbers in this p
 ## Hand back
 
 Return the result, the source list, the dated assumptions, the reconciliations, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal or accounting conclusion unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Deal funding gap checker](https://useaiblocks.com/skills/deal-funding-gap-checker). It takes the document and spreadsheet.
+- The [Sale earnout payout checker](https://useaiblocks.com/skills/earnout-payout-checker). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

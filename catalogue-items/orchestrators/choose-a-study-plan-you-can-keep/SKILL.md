@@ -87,13 +87,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study practice progress reviewer](https://useaiblocks.com/skills/study-plan-progress-review-assistant).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 
 Use this list, not the shared "After this" list above. Offer one next step and say they can type their own:
@@ -110,3 +103,10 @@ Use this list, not the shared "After this" list above. Offer one next step and s
 - No score or grade is promised, and no reading is called confirmed without a source.
 - Session prompts are marked not yet observed unless the learner answered them.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Study practice progress reviewer](https://useaiblocks.com/skills/study-plan-progress-review-assistant).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -14,15 +14,6 @@ Needs no account, API key or paid tool, and no scraping. Paste your product URL 
 When not to use: if you have no public product page and no text to paste, write a short sales plan with someone who knows your buyers first. If you already have a profile and want channels ranked, use the Growth channel shortlist planner (traction-channel-ranker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker). It takes the business profile.
-- The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent). It takes the business profile.
-- The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the business profile.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -74,3 +65,12 @@ Use one dated quantitative growth goal and work backwards to the next bottleneck
 4. Any past tests and their results.
 
 Mark anything not supplied as MISSING. Hand the saved profile to the ranker.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker). It takes the business profile.
+- The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent). It takes the business profile.
+- The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the business profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

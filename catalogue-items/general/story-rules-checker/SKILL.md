@@ -73,14 +73,6 @@ These are our wording of the rules in Mark Twain's 1895 essay. Number them in yo
 
 The rules in order, each with pass, fail or not applicable and the line quoted. The surplus words list. The voice breaks. The score with how it was worked out. Fixes for each fail, with any fix that changes the plot flagged. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter).
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each rule gets a pass or fail with the line quoted.
@@ -88,6 +80,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Voice breaks are named.
 - No fix changes the plot without saying so.
 - The score shows the passed count and the applicable count.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter).
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

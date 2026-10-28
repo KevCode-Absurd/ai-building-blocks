@@ -8,15 +8,6 @@ description: "Plan a map or a spatial query step by step: data checks, query and
 Turn a map or location question into a work plan: data checks first, then the queries, the map design, the layout and a final check against the question.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
-- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
-- The [GIS solution designer](https://useaiblocks.com/skills/agency-gis-solution-engineer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -72,6 +63,14 @@ Return these sections, in this order:
 - **Layout and export**: Placement of each element, export format.
 - **Final check**: How to confirm the answer, spot checks, what to document.
 - **Open questions**: What is unknown and what each answer changes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
+- The [GIS solution designer](https://useaiblocks.com/skills/agency-gis-solution-engineer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

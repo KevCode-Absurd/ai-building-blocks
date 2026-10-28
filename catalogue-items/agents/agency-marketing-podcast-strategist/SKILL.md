@@ -8,14 +8,6 @@ description: "Plan a Chinese-language podcast for Xiaoyuzhou, Ximalaya and other
 Plan a podcast for listeners in China: a clear show focus, a first season, an episode outline, how to publish, how to grow and how to earn.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video dubbing editor](https://useaiblocks.com/skills/video-dubbing-editor).
-- The [Global podcast strategist agent](https://useaiblocks.com/skills/agency-marketing-global-podcast-strategist).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -73,6 +65,13 @@ Return these sections, in this order:
 - **Money** (if asked)
 - **What to track**
 - **Open checks**: every platform rule and feature detail comes from the original author, so confirm each on that platform's own help pages before you act. This section is also where you list any check that failed or could not run (the CHECKS MISSED list), or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video dubbing editor](https://useaiblocks.com/skills/video-dubbing-editor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

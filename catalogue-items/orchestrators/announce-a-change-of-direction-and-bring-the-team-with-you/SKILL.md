@@ -63,16 +63,6 @@ Four step files and the summary, in this shape:
 - **Listening talks** (step 4): for each person likely to push back, the setting, how you give them the floor, what you will listen for, how you check they feel heard, your side said once, and one agreed next step with a date.
 - **HAND-BACK SUMMARY:** each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -81,3 +71,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The announcement was not sent before the listening talks were held, and nothing in it promises what the memo does not.
 - The memo fits on one page and says what stops.
 - Every person you named as likely to push back has a talk, and each talk opens with their view, not your case.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+- The [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement). It takes the document.
+- The [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer). It takes the draft.
+- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

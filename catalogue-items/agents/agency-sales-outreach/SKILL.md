@@ -9,15 +9,6 @@ Writes B2B outreach for one named prospect and plans the next step. It drafts. I
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: lead with what the prospect cares about, one clear ask per message, each follow-up adds new value, answer objections with a question first, know when to walk away. Its role language, memory claims, experience stories and success targets are examples, not facts about this run. Ask the user to paste any history, because you do not remember it. The profile also covers a full proposal and a pipeline system. For a full proposal point the user to the Proposal Strategist agent. For a list of accounts, point them to the Outbound Strategist agent.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.
-- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Pick the job
 
 Ask which one the user wants, then run only that job.
@@ -100,6 +91,15 @@ Return these sections in order. If your AI can save files, save one file. If not
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
 When to stop and hand off: if the buyer asks for a full proposal, move to the [Proposal Strategist agent](https://useaiblocks.com/skills/agency-sales-proposal-strategist). If the user needs a plan for a list of accounts, move to the [Outbound Strategist agent](https://useaiblocks.com/skills/agency-sales-outbound-strategist). The "After this" links above are shared suggestions: offer the ones that fit.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.
+- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
+- The [Cold call script writer](https://useaiblocks.com/skills/cold-call-script-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

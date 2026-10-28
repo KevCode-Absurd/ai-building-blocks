@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Competitors** (yours): the brands buyers compare you with.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -80,6 +80,14 @@ You never do these yourself. You list them for approval:
 - **Archive:** cards for rivals not met in a year.
 - **Files:** each step's file, and every `MISSING:` line.
 
+## Checks before you hand it back
+- Every fact about a rival names its source and date.
+- Every rival on a card appeared in a deal this year, or is marked for the archive.
+- The edge check used the won deals as well as the lost ones.
+- Every objection answer has proof or is marked missing.
+- Nothing was sent, claimed or changed.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -89,14 +97,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every fact about a rival names its source and date.
-- Every rival on a card appeared in a deal this year, or is marked for the archive.
-- The edge check used the won deals as well as the lost ones.
-- Every objection answer has proof or is marked missing.
-- Nothing was sent, claimed or changed.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without reasons in the deals, count the shortlist and say the edge check is weak. Without your proof, write the objection answers and mark each `MISSING: proof`. Without the current cards, build them and say they are first drafts for the team to correct.

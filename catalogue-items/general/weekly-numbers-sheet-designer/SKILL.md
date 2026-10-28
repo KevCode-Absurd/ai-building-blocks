@@ -59,8 +59,6 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly store ad performance reviewer](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker). It takes the spreadsheet.
-- The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the spreadsheet.
-- The [Supply chain dashboard designer](https://useaiblocks.com/skills/supply-chain-dashboard-designer). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

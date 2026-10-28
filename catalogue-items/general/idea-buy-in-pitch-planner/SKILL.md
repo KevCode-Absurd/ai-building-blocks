@@ -67,15 +67,6 @@ How to start:
 
 The idea and the ask. The four stages with a planned answer for each. The story. The vision picture. The rough measures. The people list with a pitch line for each. The order of approach with the sponsor named. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the draft and plan.
-- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft and plan.
-- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The vision is a picture, not a target number.
@@ -84,6 +75,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The story fits in under two minutes.
 - Each pitch is about the listener's need, not the builder's.
 - No fact about a person or result is invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the draft and plan.
+- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft and plan.
+- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

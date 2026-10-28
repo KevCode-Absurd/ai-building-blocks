@@ -49,15 +49,6 @@ How to start:
 
 One line per bet. What the price says. Your range with the facts behind it. The payoff sum at low, middle and high. Your edge, or "no edge". The call: NEAR CINCH, FAIR BET or NO BET. The fact that would change each call. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). It takes the audit report.
-- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
-- The [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every bet has a payoff sum at three estimates, not one.
@@ -66,6 +57,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The count of near cinches is small, and the reason is given if it is not.
 - The loss is stated for each bet, not only the gain.
 - Nothing says to buy or sell a named security.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). It takes the audit report.
+- The [Business expertise reviewer](https://useaiblocks.com/skills/circle-of-competence-sorter). It takes the audit report.
+- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

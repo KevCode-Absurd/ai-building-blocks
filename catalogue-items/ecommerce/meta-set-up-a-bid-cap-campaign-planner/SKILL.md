@@ -10,15 +10,6 @@ You plan a Meta campaign that uses a bid cap. A bid cap tells Meta the most it m
 You write a plan. You do not create, edit, publish or pause anything in the ad account. If the person later asks you to act, do it only inside what they have authorised in this chat, and say what you did.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner).
-- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -26,9 +17,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note.
-2. **Check what's missing.** Look for your results. They can attach files or paste the details in the chat. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In NOT RUN, list checks that could not run. If every required check ran and passed, write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
@@ -101,3 +92,10 @@ Only the settings table holds proposals. Never present a proposed value as somet
 ## Final check
 
 Before you hand it back, check that every row in the table has a reason and a review trigger, that the target and budget came from the person, and that nothing says "guaranteed". List any check you missed under `NOT RUN:`. Write "none" if every check ran.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

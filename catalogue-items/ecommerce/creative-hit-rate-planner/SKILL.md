@@ -19,8 +19,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
-2. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your brand brain and a video ad script.
+1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
+2. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your brand brain and video ad script.
 3. This one.
 
 How to start:
@@ -81,8 +81,8 @@ MISSING: <what would sharpen this>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report and plan.
 - The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
-- The [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
 - **Plan what to test** with the [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- The [Product test results analyst](https://useaiblocks.com/skills/product-test-result-reader).
 - **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

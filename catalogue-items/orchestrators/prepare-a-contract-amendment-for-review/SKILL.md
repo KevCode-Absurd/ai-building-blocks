@@ -59,15 +59,6 @@ Before each step, write a short brief for it: the result wanted, the source refe
 
 Lead with the issue list, high risks first. Then give the change trace, the plain summary and the questions for the reviewer. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, every MISSING: line and CHECKS MISSED. If a tool made a native file, include it with its real verification result. An outline is not a finished document, and a plan is not a completed action.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
-- The [Policy change impact reviewer](https://useaiblocks.com/skills/rule-change-policy-comparer). It takes the document.
-- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Original and proposed language stay distinguishable; commercial intent is not mistaken for accepted terms.
@@ -78,6 +69,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Step inputs use the right meaning, units, period and version.
 - Every unresolved fact is a MISSING: line, and proposed actions stay apart from completed ones.
 - End with CHECKS MISSED: followed by the checks that failed or could not run, or none. Never add a tested badge without recorded run evidence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [US defense contractor security checker](https://useaiblocks.com/skills/defense-contractor-security). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

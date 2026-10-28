@@ -73,15 +73,6 @@ Four step files and the summary, in this shape:
 - Step 4: your market stage, the power to build, a first test, a pass line and a check-in date. This file holds the plan.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -90,3 +81,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The model in step 2 is better for named buyers, not only different, and a price cut alone is never called counter-positioning.
 - The copy sum shows its arithmetic and marks every estimate. The limit is stated: the model protects you from the leader only, not from another newcomer.
 - Step 4 gives a first test with a pass line and a check-in date.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

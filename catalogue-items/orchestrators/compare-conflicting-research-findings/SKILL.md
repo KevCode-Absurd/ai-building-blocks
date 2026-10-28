@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-- **Slide deck** (yours): a finished slide deck.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A slide deck** (yours): a finished slide deck.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -72,15 +72,6 @@ CHECKS MISSED      <one line each, or none>
 NEXT STEP          <one step>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Research finding comparison reviewer](https://useaiblocks.com/skills/research-contradiction-review-assistant).
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every cell in the comparison table has a location in a paper.
@@ -89,6 +80,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No paper outside the supplied set appears. Nothing was ranked or called correct.
 - The wording check names the sentence it flags.
 - CHECKS MISSED lists any check that did not run, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research finding comparison reviewer](https://useaiblocks.com/skills/research-contradiction-review-assistant).
+- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

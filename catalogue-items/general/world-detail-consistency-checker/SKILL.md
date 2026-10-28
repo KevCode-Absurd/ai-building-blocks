@@ -51,15 +51,6 @@ The "draft" and "story outline" wording in the block above does not apply. Ignor
 
 The fixed facts found. The clashes, each with both passages, the weight, the winner with its reason, the fix and any world rule that explains it. The fact log. The score, with the numbers behind it. `MISSING:` lines for facts you could not check. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
-- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: run the Text proofreader only after every clash is decided and the fix is made, so it does not tidy lines you are about to change. Use the Story theme and scene reviewer when the facts agree and you want to test whether the scene works.
 
 ## Check before you hand it back
@@ -70,6 +61,14 @@ What next: run the Text proofreader only after every clash is decided and the fi
 - The fact log is included and lists each fact once.
 - The score shows how it was worked out.
 - Nothing is claimed about material you were not given.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -61,15 +61,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 5 step files and the summary. The last file holds the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the plan.
-- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
-- The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -77,3 +68,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was sent, published or paid for without a clear yes.
 - Every bet kept has a payoff figure and a low, middle and high chance supplied by the person.
 - The sized plan from step 2 exists before steps 3 to 5 run, and every size stays within the survival limit.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Edit plan** (yours): a cut list: which takes, in what order, with trims, captions and sound.
+- **An edit plan** (yours): a cut list: which takes, in what order, with trims, captions and sound.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -109,6 +109,14 @@ CHECKS MISSED
 <one line per check missed or blocked, or none>
 ```
 
+## Check before you hand it back
+- Every caption matches the transcript word for word, apart from number format.
+- Every line was measured with the brand's font file; no fallback font appears.
+- No group runs across a cut, and none goes over 17 characters a second.
+- No caption sits in the app's covered areas or over the label, a face or the demo.
+- The .srt file matches the burned-in captions.
+- Anything that couldn't be checked is marked blocked, never passed.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -118,14 +126,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every caption matches the transcript word for word, apart from number format.
-- Every line was measured with the brand's font file; no fallback font appears.
-- No group runs across a cut, and none goes over 17 characters a second.
-- No caption sits in the app's covered areas or over the label, a face or the demo.
-- The .srt file matches the burned-in captions.
-- Anything that couldn't be checked is marked blocked, never passed.
 
 ## If something is missing
 Write `MISSING: <font file | clip length | transcript | logo file>`. Ask once, in one short message, for what's missing. Mark the checks it blocks as blocked, and carry on with every other step, using planned values marked `[inferred]`. Don't guess a font or a real length.

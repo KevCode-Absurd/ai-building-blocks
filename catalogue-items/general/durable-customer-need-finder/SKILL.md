@@ -47,6 +47,15 @@ How to start:
 
 The customer, the need as a result, the ten-year test, asked versus unasked, the skills gap, the four marks, the need statement, the biggest unknown, `MISSING:` lines and CHECKS MISSED.
 
+## Check before you hand it back
+
+- The need sentence has no product or feature in it.
+- The ten-year test names a specific opposite.
+- At least one need comes from behaviour, not from what customers said.
+- The skills gap names at least one skill the team lacks, or says none after real thought.
+- Each of the four marks has evidence or a MISSING note.
+- The statement is about 100 words and a customer could read it.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -56,15 +65,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer). It takes the customer needs.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The need sentence has no product or feature in it.
-- The ten-year test names a specific opposite.
-- At least one need comes from behaviour, not from what customers said.
-- The skills gap names at least one skill the team lacks, or says none after real thought.
-- Each of the four marks has evidence or a MISSING note.
-- The statement is about 100 words and a customer could read it.
 
 ## If something is missing
 

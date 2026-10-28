@@ -61,16 +61,6 @@ Treat its limit numbers as items to check, not facts. The query, change, CPU, me
 
 Use these sections, in this order: RECOMMENDATION, DATA MODEL, INTEGRATIONS, AUTOMATION, DECISION RECORDS, LIMITS TO CHECK, RELEASE PLAN, OPEN CHECKS. Add assumptions and source references.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer). It takes the plan.
-- The [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer). It takes the plan.
-- The [Python MCP server starter builder](https://useaiblocks.com/skills/copilot-python-mcp-server-generator). It takes the plan.
-- The [Power BI data model checker](https://useaiblocks.com/skills/review-a-power-bi-data-model). It takes the the data model.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand back
 
 - The recommendation comes first and says why.
@@ -78,6 +68,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every limit number is marked to check, or comes from a page the user gave you.
 - No claim about the user's org that the user did not tell you.
 - Personal data is named, with a question about how it is protected.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Power BI data model checker](https://useaiblocks.com/skills/review-a-power-bi-data-model). It takes the data model.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

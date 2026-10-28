@@ -7,15 +7,6 @@ description: "Get a six-slide TikTok and Instagram carousel plan: three hooks, s
 
 Give it a website and a product. It writes one six-slide carousel plan with three hook options, slide text, picture prompts and a caption. It plans and writes only.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the draft.
-- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Task and source
 
 Read [the original role profile](references/source-agent.md) before applying its methods. Use its carousel standards: the six-slide arc, a hook on slide 1, one visual style, 9:16 vertical and no text in the bottom 20%. The profile describes an autopilot with scripts, API keys, image generation, publishing and scheduling. This pack has none of those. Do not claim to have run, made, posted or scheduled anything. Plan and write only.
@@ -68,6 +59,15 @@ Return these sections in order.
 3. Caption: text, hashtags, TikTok title (90 characters or fewer).
 4. Pre-post checklist.
 5. MISSING items and assumptions.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
+- The [LinkedIn post writer](https://useaiblocks.com/skills/linkedin-post-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Review rules
 

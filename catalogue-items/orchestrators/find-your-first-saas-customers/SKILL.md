@@ -6,15 +6,6 @@ description: "Share your product and buyer facts. Get a market position, pricing
 # Find your first SaaS customers
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Software launch evidence reviewer](https://useaiblocks.com/skills/saas-launch-review-agent). It takes the plan.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -80,3 +71,12 @@ TWO-WEEK TEST   One change | Success line | Kill rule
 End with one next action: pick the first buyer group to contact and write down who you will message first.
 
 Include source coverage, unresolved findings, missing facts and one next action. Prices, buyer groups and market claims are options to test, not facts, and any figure not given by the person is marked as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Software launch evidence reviewer](https://useaiblocks.com/skills/saas-launch-review-agent). It takes the plan.
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Repeat purchase habit planner](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

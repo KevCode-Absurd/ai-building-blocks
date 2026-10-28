@@ -70,15 +70,6 @@ Pause here: Run five to eight interviews. Record or write what was said in the p
 - Step 3, plan: holding forces ranked, two fixes each, not-for line, first test.
 - Hand-back summary: each file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-- The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -87,3 +78,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Everyone interviewed bought recently, and no question asks why, asks for a rating or asks about an ideal product.
 - Every story line points to a note, or says `MISSING:`, and each cluster rests on two or more separate people.
 - No fix uses pressure or hides a cost.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
+- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
+- The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

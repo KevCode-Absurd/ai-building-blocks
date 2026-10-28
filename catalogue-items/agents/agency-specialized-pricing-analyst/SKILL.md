@@ -12,15 +12,6 @@ Read [the original role profile](references/source-agent.md) before you start. U
 When not to use it: for one safe test price from sales data, use the Price test planner. To see how sales move as price changes, use the Price sensitivity analyst. For a letter that tells customers about a price rise, use the Price rise letter writer. For a quick three-tier ladder for software, use the Three-tier price ladder drafter. Prices set by law or contract need a pricing or legal professional.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
-- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan.
-- The [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -30,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -101,6 +92,15 @@ Return these sections in order. If your AI can save files, save one file. If not
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
 Next steps to offer, instead of the generic "After this" list above: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan.
+- The [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

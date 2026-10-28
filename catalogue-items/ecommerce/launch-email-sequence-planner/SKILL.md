@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -94,7 +94,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 - The [CRM and email strategist](https://useaiblocks.com/skills/crm-and-email-strategist). It takes the email flow.
 - The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the email flow.
-- **Audit the sequence once it has run** with the [Email sequence results auditor](https://useaiblocks.com/skills/email-sequence-auditor). It takes the email flow.
+- **Check the landing page** with the [Email sequence results auditor](https://useaiblocks.com/skills/email-sequence-auditor). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

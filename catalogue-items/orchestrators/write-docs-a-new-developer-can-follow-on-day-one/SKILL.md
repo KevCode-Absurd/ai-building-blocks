@@ -18,15 +18,15 @@ This workflow chains 5 skills into one job. You run them one after another, and 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase, your question, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase, your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -71,15 +71,6 @@ Pause here: Answer its questions about why the code is shaped this way. Fifteen 
 - Step 5: each quickstart step marked OK, BROKEN, MISSING or UNVERIFIED, with assumed knowledge and a fix.
 - The summary lists each file, any step not run, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
-- The [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner). It takes the document.
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +80,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The architecture read names every main part and how it talks to the others, and the quickstart gives the expected output for every command.
 - No quickstart command was run without the person's yes, and none was run outside a clean setup.
 - The first-run report says which steps it tried, which it could only check by reading, and which broke.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
+- The [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner). It takes the document.
+- The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

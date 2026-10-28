@@ -45,13 +45,6 @@ How to start:
 
 The audience and anything dropped. The sources. All pairings with verdicts. The limit and how it applies. The accident and what it changed. The shortlist, each with what it borrows from each field, its comfort result and a first test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [XR interface architect agent](https://useaiblocks.com/skills/agency-xr-interface-architect). It takes the idea.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: turn the pairing you pick into a short brief or first draft and show it to two people from the audience. The XR interface architect link under "After this" only fits if your pairing is a spatial or XR product. For anything else, skip it.
 
 ## Check before you hand it back
@@ -62,6 +55,13 @@ What next: turn the pairing you pick into a short brief or first draft and show 
 - Each survivor passes a comfort check.
 - The shortlist says what each pairing borrows from each field.
 - No claim is made that an idea has worked before.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [XR interface architect agent](https://useaiblocks.com/skills/agency-xr-interface-architect). It takes the idea.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -10,15 +10,6 @@ Plans one Unity shader at a time from a visual target. It follows the Unity Shad
 When not to use it: for gameplay code in C#, use the Unity Architect agent. For a custom editor window or tool, use the Unity Editor Tool Developer agent. For an Unreal project, use the Unreal Technical Artist agent. For Godot, use the Godot Shader Developer agent. For art budgets and import rules that apply to any engine, use the Technical Artist agent.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
-- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -88,6 +79,13 @@ Return these sections in order, each with its own heading. If your AI can save f
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
 Next steps for a shader plan: build the Sub-Graphs in Unity, then bring back the Frame Debugger and GPU profiler results for a second look. For art budgets and import rules, use the Technical Artist agent. The generic "After this" list above (usability and design-token links) does not take a shader plan. Do not offer those links unless the user asks. Offer only the next steps in this paragraph.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

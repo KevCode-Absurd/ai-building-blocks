@@ -53,6 +53,13 @@ The stage call, a table of people by circle with the source check, the two sets 
 
 Gaps in what you were given go under `MISSING:`. Checks you could not run go under CHECKS MISSED. Keep the two apart.
 
+## Check before you hand it back
+- The stage is named as early or finished.
+- Each challenger has relevant knowledge.
+- There is a question that asks for the case against.
+- A change is decided in advance for each answer, with a date to decide by.
+- Each challenger has a source check written (use, use with care or set aside).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -60,13 +67,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Say it to the room** with the [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The stage is named as early or finished.
-- Each challenger has relevant knowledge.
-- There is a question that asks for the case against.
-- A change is decided in advance for each answer, with a date to decide by.
-- Each challenger has a source check written (use, use with care or set aside).
 
 ## If something is missing
 Write `MISSING: <fact> for <part>`. Never invent who a person is or what they know.

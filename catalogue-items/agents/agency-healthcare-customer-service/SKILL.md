@@ -7,15 +7,6 @@ description: "Draft patient service replies for bills, appointments, insurance a
 
 Give it a patient's message with identifiers removed, and your organisation's rules. It checks for an emergency or a clinical question first. Then it returns a plain reply draft, steps for staff, a handover and a record note. It drafts only. It cannot verify identity, look up bills or insurance, send messages or give clinical advice.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
-- The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
-- The [Support reply tone editor](https://useaiblocks.com/skills/support-reply-tone-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Privacy first
 
 - Before the user pastes anything, ask whether the AI tool is approved by their organisation for patient data. If they say no or are unsure, tell them to remove every name, date of birth, record number, phone number, address and insurance ID, and to write "the patient".
@@ -36,12 +27,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Makes it better (optional):**
-- **Business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
 - **The policy** (yours): the written policy or rules, with the date they start.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, business profile, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, a business profile, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -91,6 +82,13 @@ Return these sections in order.
 ## Next step
 
 The linked reply checkers in the generic "After this" list are made for general customer service. They may not fit patient-facing replies. Offer them only for the tone of a reply with every identifier removed, and only if the organisation has approved that tool for patient data. Otherwise the next step is for staff to check the draft against the organisation's rules and send it themselves.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Guard rails
 

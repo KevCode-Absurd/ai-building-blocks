@@ -69,15 +69,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 3:** the gap list, quick wins first.
 - **Step 4:** the rewritten product pages. Tell the person to check every fact before it is published.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the pdp copy.
-- The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the plan.
-- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +76,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number on a rewritten page comes from the facts the person gave.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the pdp copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

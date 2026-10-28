@@ -45,16 +45,6 @@ How to start:
 
 The class of failure and the trigger rule. The list of attendees with a reason for each. The moderator. The ground rules and the line for when blame starts. The low-trust option. The one-page agenda with minutes and what to bring. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
-- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- **Decide what to do** with the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The class of failure fits in one line and a stranger could apply it.
@@ -63,6 +53,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A moderator is named, or the gap is stated.
 - Both ground rules and a line for when blame starts are written.
 - The agenda has minutes and a parking list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
+- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the plan.
+- **Decide what to do** with the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
+- The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 4. This one.
 
@@ -113,6 +113,13 @@ Go through "Check before you hand it back". Fix only what is yours to change: th
 8. **Notes:** a word count (original against remake), flags, `MISSING:` lines.
 9. **Checks missed:** one line per check still missed, or "none".
 
+## Check before you hand it back
+- Every original word appears once, in order, across the images and the post text.
+- No new claim or number anywhere.
+- Each image or card passes the glance test; headlines of 7 words or fewer, or flagged; at most 3 other things to read; type 30 px or more; contrast 4.5:1 or more; 4:5 or 1:1.
+- The product matches its photos, with the real pack laid on.
+- No real person, celebrity or someone else's character recreated.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -120,16 +127,9 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
 - The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every original word appears once, in order, across the images and the post text.
-- No new claim or number anywhere.
-- Each image or card passes the glance test; headlines of 7 words or fewer, or flagged; at most 3 other things to read; type 30 px or more; contrast 4.5:1 or more; 4:5 or 1:1.
-- The product matches its photos, with the real pack laid on.
-- No real person, celebrity or someone else's character recreated.
 
 ## If something is missing
 Write `MISSING: <what>`. Never fill a product detail from the original's picture alone. No post text on file: the post text stays empty and flagged.

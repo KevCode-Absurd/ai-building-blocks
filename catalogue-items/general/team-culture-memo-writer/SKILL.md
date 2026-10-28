@@ -52,6 +52,13 @@ How to start:
 ## What you hand back
 The memo, then a table of decisions marked alone, tell or ask, then the behaviours list. Then `MISSING:` lines for facts you could not fill. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+- Wherever a rule exists, it says what context would let you drop it, or names an owner.
+- The memo says who it is not for.
+- The feedback rule names the person it goes to.
+- No slogan appears without a behaviour behind it.
+- Every item in the behaviour list is something a person can do.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -59,13 +66,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Wherever a rule exists, it says what context would let you drop it, or names an owner.
-- The memo says who it is not for.
-- The feedback rule names the person it goes to.
-- No slogan appears without a behaviour behind it.
-- Every item in the behaviour list is something a person can do.
 
 ## If something is missing
 Write `MISSING: <fact> for <part>` and keep the part blank. Never invent a pay figure, result or past incident.

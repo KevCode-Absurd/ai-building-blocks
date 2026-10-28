@@ -28,12 +28,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
-- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
+- **An image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
@@ -75,15 +75,6 @@ Four step files and the summary. The last step file holds the Meta rules report.
 - **Step 4, Meta check:** a verdict (ready to run, fix first or likely rejected; an AI estimate, so preview the ad in Meta before you run it), a score out of 100, each finding with its rule, where it appears and the fix, and the rewritten lines.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
-- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
-- The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use these first. Suggest one next step as a short question:
 - Turn the best gap into a video script with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring the gap brief from step 2.
@@ -97,3 +88,10 @@ Use these first. Suggest one next step as a short question:
 - Every ad on the board has a library ID, and was filed from the picture, not the caption.
 - No copy line uses a claim, figure or quote taken from a competitor's ad.
 - Every finding in the Meta report names its rule and where it appears.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

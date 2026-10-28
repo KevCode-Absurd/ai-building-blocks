@@ -51,15 +51,6 @@ How to start:
 
 Effort, skill and nerve results in the person's words, the type with three ranked reasons, what the path asks, the paths to skip with reasons, a plain note on fair expectations, `MISSING:` lines, a line saying this is a method and not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock and bond split planner](https://useaiblocks.com/skills/stock-and-bond-split-planner). It takes the audit report.
-- The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the audit report.
-- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The type follows from the answers, and each answer used is shown.
@@ -68,6 +59,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The paths to skip are named with a reason.
 - Expectations promise no return.
 - Nothing names a security to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock and bond split planner](https://useaiblocks.com/skills/stock-and-bond-split-planner). It takes the audit report.
+- The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the audit report.
+- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

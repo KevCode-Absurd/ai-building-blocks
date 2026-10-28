@@ -101,6 +101,14 @@ NOTES
 CHECKS MISSED  <one line each, or none>
 ```
 
+## Check before you hand it back
+- One set card, one narrator, no figure speaks.
+- Every claim and how-it-works moment is in the facts; label words are exact.
+- The lead is described in the same words every time.
+- One mover per shot, and at most one morph in the ad.
+- Word count within 10% of the length target.
+- The cast note gives the lead in full and a reason.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -110,14 +118,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- One set card, one narrator, no figure speaks.
-- Every claim and how-it-works moment is in the facts; label words are exact.
-- The lead is described in the same words every time.
-- One mover per shot, and at most one morph in the ad.
-- Word count within 10% of the length target.
-- The cast note gives the lead in full and a reason.
 
 ## If something is missing
 Write `MISSING: <what>`. Label words unknown: ask for them, and turn that side of the pack away from camera meanwhile. The brand never says how it works: the swap shows it being used, nothing more. No place or lead given: pick them from the buyer's day and mark both `inferred`.

@@ -87,11 +87,7 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- The [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the draft.
 - **Check the landing page** with the [Article-style ad readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker). It takes the draft.
-- The [Nonprofit giving page writer](https://useaiblocks.com/skills/nonprofit-donation-page-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

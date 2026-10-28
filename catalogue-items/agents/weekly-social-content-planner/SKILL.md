@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -83,15 +83,6 @@ If the owner approves one action in clear words and you are connected, do only t
 - **Pace:** posts a week and the time they take, set from what the owner really kept.
 - **Files and missing:** each step's file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
-- The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every lesson names the posts it comes from. No lesson comes from a single post unless it is marked as a guess.
 - No format was dropped on fewer than 20 posts.
@@ -100,6 +91,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The number of posts matches the pace the owner kept last week.
 - Nothing was posted, sent or paid for.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
+- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
+- The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without numbers for last week, plan from the saved lessons and say so. Without a brand file, stop and ask, because posts need the voice and the claims. Without hold or watch-time data, judge on shares and saves and say so.

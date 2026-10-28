@@ -22,8 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **A draft** with the [Product launch FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). Bring a draft, customer needs (optional).
-3. This one.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -57,15 +56,6 @@ How to start:
 
 The memo, up to six pages, with no author name, the writing schedule, `MISSING:` lines and CHECKS MISSED. Mention that it should be read in silence at the start of the meeting. Then say what next: bring the memo and the meeting date to the [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker).
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
-- The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the draft.
-- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Page one states the ask, the owner of the decision and the date.
@@ -74,6 +64,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number has an assumption or a MISSING note.
 - The unknowns and the fallback are stated.
 - The schedule allows a week or more and does not promise a good memo in a day.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

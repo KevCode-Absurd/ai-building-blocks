@@ -18,15 +18,6 @@ Do not use it for:
 - netting several exposures (use the Currency exposure netting checker)
 - comparing a cash forecast with what happened (use the Treasury forecast backtest checker)
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Currency forward contract coverage reviewer](https://useaiblocks.com/skills/currency-maturity-evidence-reviewer). It takes the spreadsheet and document.
-- The [Foreign currency exposure checker](https://useaiblocks.com/skills/currency-exposure-netting-checker). It takes the document and spreadsheet.
-- The [Remaining fund commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## How to work
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
@@ -42,15 +33,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Foreign currency exposure checker](https://useaiblocks.com/skills/currency-exposure-netting-checker). Bring document, spreadsheet (optional).
+1. **A spreadsheet** with the [Foreign currency exposure checker](https://useaiblocks.com/skills/currency-exposure-netting-checker). Bring a document, a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, the deal terms, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the deal terms, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -150,7 +141,7 @@ The link names a public method. The instructions and practice numbers in this pa
 
 ## What next
 
-The generated "After this" list above names items that do not fit a currency forward. Use the two items below instead. The "Foreign currency exposure checker" in the "Before you start" list is the same item as the Currency exposure netting checker.
+The "Foreign currency exposure checker" in the "Before you start" list is the same item as the Currency exposure netting checker.
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 
@@ -162,3 +153,11 @@ If they pick one and it is not added here, give the link and say what to bring.
 ## Hand back
 
 Return the result, the source list, the dated assumptions, the reconciliations, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any legal, accounting or investment conclusion unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Treasury forecast backtest checker](https://useaiblocks.com/skills/treasury-forecast-backtest-checker). It takes the spreadsheet and document.
+- The [Foreign currency exposure checker](https://useaiblocks.com/skills/currency-exposure-netting-checker). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

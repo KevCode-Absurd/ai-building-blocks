@@ -12,15 +12,6 @@ Read [the original role profile](references/source-agent.md) before you start. I
 When not to use it: to sort a week of tasks and close open loops, use the Weekly review keeper. For three priorities from a task list and your real hours, use the Week priority picker. For meeting notes turned into actions, use the Weekly meeting actions keeper. For one choice written up for the record, use the Decision record writer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -77,6 +68,13 @@ Use these headings, in this order. Skip a heading that does not apply and say so
 5. Open hand-offs
 6. Documents to update
 7. Checks still needed (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

@@ -60,8 +60,8 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
-- The [Landed cost allocator](https://useaiblocks.com/skills/landed-cost-allocator). It takes the spreadsheet.
 - The [Restaurant portion cost calculator](https://useaiblocks.com/skills/restaurant-portion-cost-builder). It takes the spreadsheet.
+- The [Store profit and loss builder](https://useaiblocks.com/skills/store-pl-builder). It takes the spreadsheet.
 - The [Book value per share calculator](https://useaiblocks.com/skills/book-value-per-share-rollforward). It takes the spreadsheet.
 - **Check the money** with the [Holding company value calculator](https://useaiblocks.com/skills/listed-holding-lookthrough-nav). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

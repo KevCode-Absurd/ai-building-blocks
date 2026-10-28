@@ -56,15 +56,6 @@ Messages in order of cost, each with the original, trigger, cost, the rewrite an
 
 Next step: put the final messages into your code and your style guide so new ones match. If the whole flow feels confusing, run the [Usability heuristic reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer) on it.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the draft.
-- The [Interface interaction details designer](https://useaiblocks.com/skills/small-interface-details-designer). It takes the draft.
-- The [Page readability and layout checker](https://useaiblocks.com/skills/plain-page-type-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No message shows a code without a plain sentence.
@@ -72,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Blame is never placed on the user.
 - High-cost errors are listed first.
 - If a check fails, fix that rewrite. If you cannot tell the cause from the trigger, ask once for it. If it is still unknown, keep the message and mark `MISSING: trigger`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interface interaction details designer](https://useaiblocks.com/skills/small-interface-details-designer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

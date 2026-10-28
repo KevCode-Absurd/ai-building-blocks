@@ -64,6 +64,15 @@ How to start:
 
 The sample and why. The offer words. Who gets it, the limit and how they claim it. What it is tied to and the keys. The budget, cap and stop rule. The cost-per-customer check. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The sample is free with no hidden charge.
+- A claim method is chosen on ease for the buyer.
+- Every reply can be traced to its ad.
+- Cost per customer is worked out, not just cost per request.
+- The sample cost per buyer is shown.
+- Offer facts come only from the product data.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -74,15 +83,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the offer and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The sample is free with no hidden charge.
-- A claim method is chosen on ease for the buyer.
-- Every reply can be traced to its ad.
-- Cost per customer is worked out, not just cost per request.
-- The sample cost per buyer is shown.
-- Offer facts come only from the product data.
 
 ## If something is missing
 

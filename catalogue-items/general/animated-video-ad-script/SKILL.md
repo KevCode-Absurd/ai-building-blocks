@@ -58,17 +58,6 @@ How to start:
 ## What you hand back
 The story line, the three light keys, the casting card, then a table of `Line | speaker | words | picture (subject, action, light key) | cut | seconds`, then notes, then the cast note, then CHECKS MISSED with one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Animated film video clip prompt writer](https://useaiblocks.com/skills/animated-video-ad-prompts). It takes the script.
-- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
-- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The story line has a clear "but" and a "therefore" the claims support.
 - Light changes only between the three parts.
@@ -76,6 +65,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every feeling is written as three gestures.
 - The product enters at "therefore", in use, label exact.
 - The cast note names one carrier and gives a reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Animated film video clip prompt writer](https://useaiblocks.com/skills/animated-video-ad-prompts). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works" from the brand: leave out the inside view and ask. No buyer details: mark the moment "inferred".

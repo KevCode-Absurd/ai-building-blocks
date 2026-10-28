@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and a shortlist.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
@@ -89,17 +89,6 @@ You never do these yourself, even if you can reach the account:
 - **Where the sprint stands:** rounds used out of the cap, ads tested, hit rate if readable.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
-- **Read your ad results** with the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
-- **Read your ad results** with the [Two-version response results reviewer](https://useaiblocks.com/prompts/two-version-result-reader). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every verdict is measured against the target, and the sums are shown.
 - No ad was judged on a few hundred impressions.
@@ -107,6 +96,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each round changes one thing, and the lesson says which.
 - Nothing was launched, spent or turned off without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. With no target, stop and ask, because no verdict means anything without it. With no brand brain, plan nothing for round 1 and ask for it. With no ad-level data at the end of a round, you can read the round only at ad set level, and the read is marked unsafe.

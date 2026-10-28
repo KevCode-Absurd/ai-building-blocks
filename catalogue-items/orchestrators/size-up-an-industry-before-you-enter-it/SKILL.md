@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -73,15 +73,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 5: go or no go, three facts, weak joints, what would change the call.
 - Summary: each step's file and one list of `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
-- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
-- The [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -90,3 +81,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each force has a score and evidence, and the powers test says no to the powers they could not build.
 - The counter-position says why incumbents cannot copy it, or says plainly that there is none.
 - The call rests on three facts and says what would change it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- The [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
+- The [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

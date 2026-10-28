@@ -71,15 +71,6 @@ Pause here: Run the test to the planned sample and dates without stopping early,
 - Step 5: the call (ship, do not ship, re-test or inconclusive), the trust score, the checks, the result as a range, money per month at the low, middle and high end, and the log entry.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store experiment result reviewer](https://useaiblocks.com/prompts/test-result-trust-checker). It takes the plan.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report and plan.
-- The [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Also offer
 - If step 1 stopped the run (repair first, research only or under about 30 orders), offer the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker) to pick what to change first.
 - If the person only wants to know whether their traffic can prove a test, offer the [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker).
@@ -92,3 +83,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The readiness call matches the person's orders, and very low traffic got repairs or bold tests, not small tweaks.
 - The plan changes exactly one thing and lists what stays fixed.
 - The verdict shows its split, length and stopping checks, and the money line is a range at low, middle and high.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

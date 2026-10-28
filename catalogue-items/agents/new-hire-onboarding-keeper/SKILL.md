@@ -70,16 +70,6 @@ If the manager says yes in clear words to one named action, do only that action.
 - **Watch next week:** one or two items that decide next week's path.
 - **Files, and every `MISSING:` line** from all steps in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The path was chosen from the notes and the plan, and the share done is shown with its sums.
 - Company-side causes were listed before any note about the person.
@@ -87,6 +77,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Anything about safety, discrimination, health or a complaint was passed to a person, not handled here.
 - Nothing was sent, booked, ordered or changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With no check-in notes this week, do not guess progress: ask for them and stop. With no manager approval of the plan, stop after step 1. With no role goals, build a generic 30-60-90 and mark every goal "to confirm".

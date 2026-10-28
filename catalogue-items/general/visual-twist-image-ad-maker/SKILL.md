@@ -109,23 +109,23 @@ CHECKS MISSED: <one line each, or none>
 Still to do: <a check that needs a photo you couldn't see, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Cover the words. The picture still makes the point.
 - The product is in the ad, true to its photo. In a drawn look it keeps its shape, colours and large print; small print is left out, never invented.
 - Every result in the picture is one the facts state. A changed face or body, a before-and-after, or a made-up chart or timeline doesn't belong.
 - No picture or line says the reader has a condition. No children. Generated people are made-up adults, never shown as customers, experts or the founder.
 - Any label in the picture is a word or two, because image tools garble longer ones.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <buyer quote | how it works | product photo | brand look>`. Without a quote, mark the problem "inferred". Without a new fact on file, don't write a news headline.

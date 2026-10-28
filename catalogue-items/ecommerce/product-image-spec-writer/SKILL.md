@@ -60,6 +60,13 @@ How to start:
 ## What you hand back
 The photo check, the sheet in seven parts with a source on every line, the lock lines, the blocked shots, the one photo to ask for next, and the `CHECKS MISSED` line.
 
+## Check before you hand it back
+- Every line has a source: a photo, a fact, or `MISSING`.
+- Printed words were read from a photo, not assumed from the brand name.
+- The lookalike names a real thing a model would draw for this category.
+- No generated picture is listed as evidence.
+- Every gap names the shots it blocks.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -68,13 +75,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every line has a source: a photo, a fact, or `MISSING`.
-- Printed words were read from a photo, not assumed from the brand name.
-- The lookalike names a real thing a model would draw for this category.
-- No generated picture is listed as evidence.
-- Every gap names the shots it blocks.
 
 ## If something is missing
 Write `MISSING: <line>` and add the shots it blocks. If no photo shows the exact variant, ask once for one, then carry on: write the sheet from the facts you have and mark every line a photo would source `MISSING`. Never use a sibling, a lookalike or a drawing as a stand-in.

@@ -89,15 +89,6 @@ If the owner approves one in clear words, make only that change and log it in `o
 - **Look again:** the date and what to bring.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every offer is compared on profit per session, with the sums shown.
 - Cost lines include shipping, handling, fees, gifts and discounts, rounded up.
@@ -106,6 +97,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Any urgency or limit is true today.
 - The log is updated.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. With no unit costs, show revenue per session only, call no winner, and ask for costs. Without last quarter's log, skip the comparison and say the path was not chosen on a trend.

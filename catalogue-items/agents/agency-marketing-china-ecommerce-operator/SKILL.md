@@ -10,15 +10,6 @@ Builds an operating plan for selling inside China's online shops. One plan per r
 Read [the original role profile](references/source-agent.md) before you start. Use its methods: platform-specific listing titles, the five main image slots, the detail page layout, the ad tools for each platform, the live selling approach and the sale countdown. Its role language, experience claims and success targets (for example an ad return of 3 to 1 or a store rating of 4.8) are not facts about this user's store. They are goals from the original author. Never present them as benchmarks, and never use them to fill a missing number.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
-- The [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder). It takes the plan.
-- The [Product listing localizer](https://useaiblocks.com/skills/overseas-listing-localizer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -85,6 +76,13 @@ Return these sections in order. If your AI can save files, save each as its own 
 6. **Gaps and checks.** Missing item, why it matters, where to check it.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cross-border ecommerce planner](https://useaiblocks.com/skills/agency-marketing-cross-border-ecommerce).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

@@ -61,21 +61,19 @@ How to start:
 
 The change and who must make it. The five barrier checks, each with evidence from their words or marked GUESS. The barriers ranked. The plan, with the first small ask, the choices on offer, the cost of inaction, the trial and the proof sources. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
-- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each barrier is tested against what the person said, not assumed.
 - The plan gives choices, not orders.
 - The first ask is small enough to say yes to.
 - Costs of inaction are stated honestly.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

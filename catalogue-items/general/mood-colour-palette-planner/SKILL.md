@@ -55,6 +55,14 @@ How to start:
 
 The feeling. The plain baseline. The palette table with a one-line job for each colour. The push and what it adds. The background and why. The cut list. The frame. The glance test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Each colour has a one-line job.
+- The feeling is named in a word.
+- Colours that fight the feeling were removed, with reasons.
+- No colour is there only because it matches real life.
+- Text on its background is readable, and the main pair works for people who are colour-blind.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -63,14 +71,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Each colour has a one-line job.
-- The feeling is named in a word.
-- Colours that fight the feeling were removed, with reasons.
-- No colour is there only because it matches real life.
-- Text on its background is readable, and the main pair works for people who are colour-blind.
 
 ## If something is missing
 

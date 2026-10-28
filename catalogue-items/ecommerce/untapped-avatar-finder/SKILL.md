@@ -89,9 +89,9 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger). It takes the brand brain.
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain.
+- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger). It takes the buyer profile.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

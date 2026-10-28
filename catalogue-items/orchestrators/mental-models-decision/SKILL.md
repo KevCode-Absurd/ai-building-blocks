@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -58,14 +58,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 7 step files and the summary. The first holds the settled questions and the sharper question. The middle five hold the field answers, the pressures, the rewards, the consequences and the failure risks. The last holds the case against the plan and the go, change or wait call, with the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner). It takes the plan.
-- The [Design review coordinator](https://useaiblocks.com/skills/design-review-panel). It takes the plan.
-- The [Plan failure risk reviewer](https://useaiblocks.com/prompts/plan-inversion-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 The best next step is to act on the go, change or wait call. For a decision you keep making, turn the questions that mattered into a short checklist you reuse. The plan review links above repeat steps 6 and 7, so offer them only if the plan changed a lot.
 
 ## Check before you hand it back
@@ -73,3 +65,10 @@ The best next step is to act on the go, change or wait call. For a decision you 
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

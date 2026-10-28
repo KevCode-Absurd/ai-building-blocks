@@ -6,15 +6,6 @@ description: Choose from twelve static ad patterns by buyer stage and proof. Get
 # Twelve-pattern static ad brief maker
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). It takes the brief.
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
-- The [3D cutaway image ad maker](https://useaiblocks.com/skills/3d-cutaway-image-ad-maker). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -166,3 +157,10 @@ Test the brief and its opposite with the [Ad test brief writer](https://useaiblo
 ## Final check
 
 Give the requested deliverables, evidence used, assumptions, missing inputs, and the smallest useful next step. Distinguish an idea, a calculation, a proposed action and a completed tool action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

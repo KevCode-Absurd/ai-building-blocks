@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -84,17 +84,6 @@ How to start:
 ## What you hand back
 `ad-brief`: a header (evidence grade, plan and why, the three-line diagnosis), three ideas with their thinking blocks, product and price, then versions A, B and C with every field. Then the footer, and last CHECKS MISSED with one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
-- The [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier). It takes the brief.
-- The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the brief.
-- **Write the ad copy** with the [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every thinking block is filled; every guess says "inferred".
 - No two ideas answer the same doubt. No idea repeats the last brief.
@@ -102,6 +91,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A point on the ad says what the buyer gets. A material or amount appears with what it does.
 - Claims, prices, offers and deadlines are only the brand's own facts. No urgency that isn't real.
 - No child. No person shown as a founder, customer or expert without that person's own photo and consent.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
+- The [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier). It takes the brief.
+- The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the brief.
+- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` or mark the field "inferred", and put the question in the footer. No before-and-after picture without a recorded, visible result.

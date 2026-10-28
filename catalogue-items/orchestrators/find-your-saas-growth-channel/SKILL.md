@@ -10,15 +10,6 @@ description: "Paste your product link. Get all 19 growth channels compared, a fe
 **When not to use it.** You already have steady paying customers and want to review one running channel: use the Customer acquisition experiment reviewer (https://useaiblocks.com/skills/traction-experiment-reviewer). You sell goods through a store, not software: use the ecommerce workflows. You want a single launch plan for a new product: use the Find your first SaaS customers workflow (https://useaiblocks.com/workflows/find-your-first-saas-customers).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the business profile and channel experiment.
-- The [Growth channel experiment tracker](https://useaiblocks.com/skills/traction-experiment-keeper). It takes the business profile.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -74,3 +65,12 @@ Every pilot has cash and time caps, a defined customer-quality outcome and a rev
 ## Hand back
 
 A product-specific recommendation, source ledger, all-19 matrix, selected pilots with combined limits, skipped specialists, pending approvals, MISSING and the next action. If no results were supplied, label the focus decision pending. Do not present planning as a tested channel or revenue promise.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the business profile and channel experiment.
+- The [Growth channel experiment tracker](https://useaiblocks.com/skills/traction-experiment-keeper). It takes the business profile.
+- The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent). It takes the business profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

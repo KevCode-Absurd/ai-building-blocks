@@ -76,15 +76,6 @@ Four step files and the summary, in this shape:
 - **Remarketing** (step 4): list sizes, audiences, setup, budget and frequency cap, and five ad ideas. The last file holds the plan and the brief.
 - **HAND-BACK SUMMARY:** each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the plan.
-- The [Performance Max campaign reviewer](https://useaiblocks.com/skills/performance-max-routine-keeper). It takes the plan.
-- The [Non-brand Search campaign builder](https://useaiblocks.com/skills/non-brand-search-campaign-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -93,3 +84,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The readiness call lists which of the ten checks passed. A hard stop forces wait, and the run stops there.
 - Step 3 judges each ad against your break-even cost per new customer, not Google's own figure alone.
 - The remarketing ads use only reviews, terms and proof you supplied.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Grow on social** with the [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check). It takes the brief.
+- The [YouTube title and tags writer](https://useaiblocks.com/skills/youtube-title-and-tags-writer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

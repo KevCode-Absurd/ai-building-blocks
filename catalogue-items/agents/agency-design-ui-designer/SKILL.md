@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -70,6 +70,13 @@ If the user asks for "everything", do the foundations and five core components f
 
 Use these sections, in this order: FOUNDATIONS, COMPONENTS, RESPONSIVE, ACCESSIBILITY, DEVELOPER HANDOFF, OPEN CHECKS. Add assumptions and source references.
 
+## Checks before you hand back
+
+- Every component lists all its states.
+- Every colour pair has a ratio with working, or "not checked".
+- Sample values are labelled as proposed.
+- Nothing is called tested, built or approved.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -78,13 +85,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Design handoff specification writer](https://useaiblocks.com/skills/developer-handoff-spec-writer). It takes the design tokens.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand back
-
-- Every component lists all its states.
-- Every colour pair has a ratio with working, or "not checked".
-- Sample values are labelled as proposed.
-- Nothing is called tested, built or approved.
 
 ## If something is missing
 

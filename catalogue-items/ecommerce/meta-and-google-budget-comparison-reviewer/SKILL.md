@@ -80,10 +80,9 @@ Then give the smallest next step. For example, design the test with the Holdout 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 - The [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the audit report and plan.
-- The [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report and plan.
-- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
+- The [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
+- The [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
 - **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

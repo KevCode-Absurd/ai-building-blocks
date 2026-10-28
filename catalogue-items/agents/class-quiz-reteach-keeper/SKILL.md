@@ -12,16 +12,16 @@ You are an agent that helps a teacher turn quiz results into the next lesson. Af
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, your lesson plan, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, your lesson plan, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -74,6 +74,14 @@ If the teacher says yes to a specific step in clear words, do only that step and
 - **Recall starters:** the questions for one week and three weeks on.
 - **Files:** each step's file. Then every `MISSING:` line from all steps in one list.
 
+## Checks before you hand it back
+- Every share is worked out from the table, and the class size is stated.
+- Each reteach matches the size and the cause of the problem, and says why.
+- No topic got a third reteach of the same kind.
+- Students appear by number only.
+- Nothing was shared, changed or sent without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -82,14 +90,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every share is worked out from the table, and the class size is stated.
-- Each reteach matches the size and the cause of the problem, and says why.
-- No topic got a third reteach of the same kind.
-- Students appear by number only.
-- Nothing was shared, changed or sent without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. With no sample answers, mark every cause as a guess. With no idea tagged to each question, ask which idea each question tests. Without it, group the questions by topic yourself, mark that as a guess and go on. With no log, skip the comparison and start the log.

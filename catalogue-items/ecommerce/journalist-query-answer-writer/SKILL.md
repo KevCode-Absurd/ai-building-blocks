@@ -97,9 +97,8 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the draft.
-- The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the spreadsheet.
-- The [Website crawl fix planner](https://useaiblocks.com/skills/crawl-error-triage-planner). It takes the spreadsheet.
+- The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder). It takes the spreadsheet.
+- The [Store backlink opportunity planner](https://useaiblocks.com/skills/store-link-gap-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

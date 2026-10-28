@@ -49,6 +49,14 @@ How to start:
 
 The question in one sentence. The person and the stakes. Why the reader cares. The stop line and why. The answer in the next scene, with its cost and its new question. The plants. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The question is one sentence with a person in it.
+- The stakes name something specific the reader has seen valued.
+- The stop comes before the answer and shows the trouble in full.
+- The answer costs something and opens a new question.
+- Every plant is something the story already has or plans to show.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -57,14 +65,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The question is one sentence with a person in it.
-- The stakes name something specific the reader has seen valued.
-- The stop comes before the answer and shows the trouble in full.
-- The answer costs something and opens a new question.
-- Every plant is something the story already has or plans to show.
 
 ## If something is missing
 

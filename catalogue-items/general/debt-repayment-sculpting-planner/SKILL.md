@@ -7,14 +7,6 @@ description: "Plan a three-year debt repayment sized to your cash flow and targe
 
 Builds a three-year sculpted repayment schedule. Each year's debt service is capped at that year's cash flow divided by the target cover. Interest comes off the opening balance first, the rest goes to principal up to the debt still owed, and the closing balance rolls forward. It shows any year where the cap cannot cover interest and any balance left after year three. It does not size the loan, model fees, grace periods or a cash sweep, or say whether a covenant is met. For a covenant test use the Debt service covenant headroom checker. For cover over the whole loan life use the Loan life cash cover checker.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker). It takes the spreadsheet.
-- The [Loan lifetime cash coverage checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker). It takes the spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## When not to use
 
 - You have fees, a grace period, a cash sweep or repayments that are not once a year. This version has none of those.
@@ -35,19 +27,19 @@ If the figures are not in the chat, ask once for the missing items in "What you 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Project cash for debt checker](https://useaiblocks.com/skills/project-cash-available-bridge). Bring document, the contract, spreadsheet (optional).
+1. **A spreadsheet** with the [Project cash for debt checker](https://useaiblocks.com/skills/project-cash-available-bridge). Bring a document, the contract, a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, spreadsheet, the contract. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, a spreadsheet, the contract. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -158,3 +150,11 @@ If they pick one and it is not added here, give the link and say what to bring.
 ## Hand back
 
 Return the result, the source list, the dated assumptions, the reconciliations, the files you made (if any) and every `MISSING:` line. State which checks ran. End with CHECKS MISSED: none, or the exact checks still open. Leave any financing or legal conclusion unresolved.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker). It takes the spreadsheet.
+- The [Loan lifetime cash coverage checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

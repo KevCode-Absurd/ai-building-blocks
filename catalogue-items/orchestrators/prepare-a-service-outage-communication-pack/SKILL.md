@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -87,15 +87,6 @@ MISSING, CHECKS MISSED, NEXT STEP
 
 Keep the user's original files as they are. Give each new file its own name.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
-- The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
-- The [Support reply tone editor](https://useaiblocks.com/skills/support-reply-tone-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Messages separate known facts from what is being investigated and avoid unsupported recovery estimates.
@@ -105,6 +96,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each handoff used the real content of the earlier file, not just its title.
 - Every unknown shows as a `MISSING:` line, and proposed actions stay apart from actions done.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Say it to the room** with the [Public relations message planner](https://useaiblocks.com/skills/agency-marketing-pr-communications-manager). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

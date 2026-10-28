@@ -77,15 +77,6 @@ Use these instead of the general "After this" list above:
 
 Before you give the talk, run three checks. Tell one story to a friend and ask what the lesson was. Time the talk aloud against your slot. At the end, ask the audience to say one lesson back.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
-- The [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner). It takes the draft.
-- The [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -94,3 +85,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each lesson is one sentence a listener could repeat, and each story has one comic turn and ends on a consequence with no moral stated.
 - No paragraph is still marked competing, and every story in the talk is a true one you supplied.
 - The opening joke is at your own cost, and outside voices are ones you supplied or are marked missing.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner). It takes the draft.
+- The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

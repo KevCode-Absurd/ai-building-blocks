@@ -65,15 +65,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3, the buy-in plan: the idea and the ask, the four stages, story, vision picture, rough measures, pitch order.
 - Hand-back summary: each file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -82,3 +73,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The grid rates each rival with evidence, and every gap shows evidence and why it fits you.
 - The chosen sentence fails the swap test for every rival you named.
 - The buy-in plan gives a different pitch to each person, and no rival, quote or buyer is invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the audit report.
+- The [Brand focus word picker](https://useaiblocks.com/skills/ownable-word-picker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

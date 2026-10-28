@@ -12,18 +12,18 @@ An average of ten years of profit looks solid. It is only useful if the years ar
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, financial statements (optional).
+1. **An audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring an audit report, financial statements (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for an audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -64,15 +64,6 @@ How to start:
 
 The record and its scatter. A line on each of the six tests with the finding. The rating, the ranked reasons, the effect on the range and what would raise the rating. `MISSING:` lines. A line saying this is a method, not advice. Last, CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator). It takes the audit report.
-- The [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Scatter, business, temporary profits, place, loss years and trend were each checked.
@@ -80,6 +71,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The effect on the next step's range is stated.
 - No forecast was presented as a fact.
 - Nothing was invented and no security was named as one to buy or sell.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator). It takes the audit report.
+- The [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator). It takes the audit report.
+- The [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

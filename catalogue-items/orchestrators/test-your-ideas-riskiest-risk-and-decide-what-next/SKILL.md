@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -68,15 +68,6 @@ Pause here: Run the test with your five to twenty people and write down what eac
 - **Step 3, keep or change:** your results against the fail line, the signs you are stuck, the kind of change, a new guess and test, and a review date.
 - **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the audit report.
-- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
-- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +76,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The weakest risk is backed by what people did, not by opinion, and the yes action is something people do, such as pay, sign up or come back.
 - The fail line was written before the results came in and was not changed after, and it is a number or an action you could count.
 - The final call names a kind of change and a review date, not just "keep going".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the audit report.
+- The [Usability test planner](https://useaiblocks.com/skills/usability-test-runner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

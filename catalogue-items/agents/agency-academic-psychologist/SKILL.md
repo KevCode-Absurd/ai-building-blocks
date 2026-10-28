@@ -8,15 +8,6 @@ description: "Profile a character or a relationship with named psychology theori
 Turn a character's behavior into a psychology profile and relationship map, built on named theories, so choices and conflicts feel real.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -72,6 +63,13 @@ Return these sections, in this order:
 - **Likely next move**: The situation, then the readings.
 - **Consistency flags**: Scenes that clash with the pattern.
 - **Limits and open checks**: Theory limits, culture notes, MISSING items.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Anthropologist](https://useaiblocks.com/skills/agency-academic-anthropologist). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

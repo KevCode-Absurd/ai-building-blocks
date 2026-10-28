@@ -52,6 +52,14 @@ How to start:
 
 The contest in a line. The scores by factor with evidence and totals out of 25 for each side, and a line saying how the totals were worked out. The seven answers. The options ranked cheapest first with the best marked. The thin spots. The cost of a long contest. The position to hold and the opening to wait for. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Both sides are scored on the same five factors.
+- Guesses are marked as guesses and capped at 3.
+- Cost and time of a long contest are priced or marked MISSING.
+- It names a cheaper path than a head-on fight, or says why none exists.
+- Each total is the sum of the factor scores shown.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -61,14 +69,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Both sides are scored on the same five factors.
-- Guesses are marked as guesses and capped at 3.
-- Cost and time of a long contest are priced or marked MISSING.
-- It names a cheaper path than a head-on fight, or says why none exists.
-- Each total is the sum of the factor scores shown.
 
 ## If something is missing
 

@@ -50,13 +50,6 @@ How to start:
 
 What you have. The research order, each step with its question, how and what done looks like. The issue format. The hold on tests. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Tracking is checked before any numbers are trusted.
@@ -65,6 +58,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - It lists the data still missing.
 - Each step says what done looks like.
 - Opinions are kept apart from issues with proof.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

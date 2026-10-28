@@ -76,14 +76,6 @@ MISSING, CHECKS MISSED, NEXT STEP
 
 Keep the user's original files as they are. Give each new file its own name.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job reference list builder](https://useaiblocks.com/skills/job-reference-list-builder). It takes the document.
-- The [Job application evidence reviewer](https://useaiblocks.com/skills/job-application-evidence-review-assistant). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Examples describe the user's actual contribution and outcomes. Practice questions are not claims about the employer.
@@ -93,6 +85,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each handoff used the real content of the earlier file, not just its title.
 - Every unknown shows as a `MISSING:` line, and proposed actions stay apart from actions done.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job reference list builder](https://useaiblocks.com/skills/job-reference-list-builder). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

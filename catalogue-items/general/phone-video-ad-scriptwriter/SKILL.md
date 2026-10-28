@@ -75,7 +75,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
 - The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the script.
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

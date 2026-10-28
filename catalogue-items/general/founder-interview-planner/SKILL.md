@@ -98,15 +98,6 @@ Pick only what the gaps call for. Starred questions suit the call.
 - **After the call:** each answer filed with its tag, the claims still pending and the file each needs, the one-page readback, and the open questions.
 - **Checks missed:** one line each, or "none", each time, plus the gaps closed count after the call.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain.
-- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No `[confirmed]` fact was asked as a fresh question.
 - Every call question and every form row names its gap tag and target file.
@@ -115,6 +106,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every right on file names who, where, how long and paid or unpaid.
 - Where founder and reviews disagree about the buyer, both are kept and the reviews lead the ad.
 - Answers about how things look are kept in the founder's words ("matt, off-white, the size of a thumb").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the brand brain.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Mark an unanswered starred question `[unknown: founder]` in its file and list it in the readback. "I don't know" and "we never checked" are real answers; file them, because they tell writers what not to say.

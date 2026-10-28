@@ -117,13 +117,6 @@ CHECKS MISSED
 <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - None of your own ads are on the board.
 - Every card was looked at, and has a library ID and start date.
@@ -131,6 +124,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Any type shown as full has three cards from at least two advertisers. Every thinner type is listed under GAPS, never padded.
 - At least one type is full.
 - Nothing is called a winner. Tiers are labelled hints.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No start date: leave the tier blank. No screenshot: don't file it. Can't reach the library: ask for screenshots the user took there.

@@ -31,7 +31,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 4. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand brain.
-5. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
+5. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and video ad script and character sheet.
 6. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -85,18 +85,17 @@ Pause here: Send the brief to the creator and get the footage back.
 Six step files and the summary. The step 6 file holds the edit plan.
 - BRIEF, SCRIPT, LINE CHECK, READ-ALOUD FIXES and FINAL SCRIPT, FILMING BRIEF, CUT LIST, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
-- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every spoken line passes the read-aloud test, with no phrase nobody would say.
 - Each claim in the script appears in your product facts.
 - The filming brief lists the shots in order, with a must-have list, and states whether the speaker is paid, gifted or affiliated.
 - The cut list opens on a clean first frame and keeps the product in view.
 - Every gap is a `MISSING:` line, and nothing was sent, published or paid for.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

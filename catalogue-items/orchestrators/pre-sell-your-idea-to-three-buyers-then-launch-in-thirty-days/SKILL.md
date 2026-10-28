@@ -65,16 +65,6 @@ Pause here: Run the ask for two days. Record who said yes, who said no and why, 
 ## What you hand back
 4 step files and the summary. If the ask is still marked `NOT CLEARED TO SEND`, the summary says so first. The second file holds the paid ask script; the third the launch plan or the change; the last the trial log.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons and plan.
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The test counts money, not kind words.
 - The ask says how to pay today, what the buyer gets by when, that the product is not built yet and what happens if you miss the date (a refund).
@@ -84,3 +74,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - Nothing was promised to a buyer that the thirty-day plan cannot deliver, and no money was taken by the workflow.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons and plan.
+- **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

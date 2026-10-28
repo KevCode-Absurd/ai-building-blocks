@@ -68,10 +68,7 @@ MISSING: <numbers not given>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the plan and audit report.
-- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report and plan.
 - **Plan what to test** with the [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
-- The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

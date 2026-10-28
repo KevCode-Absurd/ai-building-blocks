@@ -53,16 +53,6 @@ How to start:
 ## What you hand back
 The handicap in the buyer's words and its kind. The test result for each redefinition tried. The new definition, the carrying passage, the rival passage if used, the truth test result, the `MISSING:` lines and CHECKS MISSED.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- The [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Worked sum (invented numbers)
 A cleaner costs 24 and one bottle lasts 40 uses. The usual alternative costs 4 per use. 24 divided by 40 is 0.60 per use, compared with 4. The frame "60 cents a use" is true. Without the number of uses it is not allowed.
 
@@ -72,6 +62,14 @@ A cleaner costs 24 and one bottle lasts 40 uses. The usual alternative costs 4 p
 - The chosen frame is true of the product and of what the buyer receives.
 - Any price sum shows its numbers and divides correctly.
 - No claim about a rival goes beyond a fact you hold.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
+- The [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <fact> for <redefinition>` and drop that redefinition. If none can be kept, write that no honest reframe exists and suggest leading with another strength.

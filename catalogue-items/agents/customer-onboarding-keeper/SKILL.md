@@ -83,15 +83,6 @@ You never do these yourself, even if you can reach the email tool or the product
 - **Changes to approve:** each email, text or flow change, one line each.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
-- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 Next step: the links in the "After this" list above are suggestions for later. The usual next step is to approve the one fix, ship it, and bring next week's export so the fix can be judged. Name the exact file you hand back: `onboarding/<date>/` with the chart, the verdict and the one fix.
 
 ## Checks before you hand it back
@@ -101,6 +92,15 @@ Next step: the links in the "After this" list above are suggestions for later. T
 - Every email or text uses only claims from the brand brain or product facts.
 - Nothing was sent or changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
+- The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
+- The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. With fewer than three groups there is no comparison; build the plan, start the chart and say the first verdict waits. Without product facts, ask what the first win is before writing any flow. Without a brand brain, write the sequence with placeholders for claims and mark each one.

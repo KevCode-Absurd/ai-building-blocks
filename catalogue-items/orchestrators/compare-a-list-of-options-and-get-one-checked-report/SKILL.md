@@ -56,15 +56,6 @@ Three step files and the summary. The last step file holds the report.
 - **Step 3, report:** a contents list with the numbers the person chose, and a section per item with no unsure answers.
 - **Hand-back summary:** each step's file, items not researched and why, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use this first, because this workflow compares tools, vendors and markets, not academic papers. Suggest one next step as a short question:
 - Turn the report into a decision with the [Narrative decision memo writer](https://useaiblocks.com/skills/narrative-decision-memo-writer). Bring `outputs/step-03-research-results-report-builder.md`.
@@ -78,3 +69,10 @@ Use this first, because this workflow compares tools, vendors and markets, not a
 - Every item in the confirmed outline has a file, or the summary says why it does not.
 - No answer marked unsure in an item file appears in the report.
 - The report lists every researched item in the contents list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Research project runner](https://useaiblocks.com/skills/research-project-runner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

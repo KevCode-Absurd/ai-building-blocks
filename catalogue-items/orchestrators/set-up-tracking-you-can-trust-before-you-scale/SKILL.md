@@ -60,15 +60,6 @@ Pause here: Run the tagged campaigns for two weeks, then pull platform ROAS and 
 ## What you hand back
 4 step files and the summary. The last file holds the audit report.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Metric mismatch tracer](https://useaiblocks.com/skills/metric-mismatch-tracer). It takes the audit report.
-- The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the audit report.
-- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -77,3 +68,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One test purchase shows once in GA4 and once in Meta, or the report says it was not confirmed.
 - Every tagged link uses the source and campaign names from the naming rules, and each is said to land under the right campaign in Shopify.
 - Step 4 uses new-customer revenue from the store, not Shopify's own attribution report, and says how far to trust each channel.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

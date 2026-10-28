@@ -67,21 +67,19 @@ Its shell steps read files such as `ai/memory-bank/brand-guidelines.md`. Those f
 
 Use these sections, in this order: STORY GOAL, ARC, FRAME SEQUENCE, CHANNEL VERSIONS, ACCESSIBILITY, STILL TO MAKE, OPEN CHECKS. Add assumptions and source references. OPEN CHECKS is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Slide and page style designer](https://useaiblocks.com/skills/slide-and-page-styler). It takes the document.
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the plan.
-- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand back
 
 - The story can be told in three lines.
 - Every frame has one message.
 - Every number and quote is the user's, with its source.
 - Channel notes make no claim you could not support.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

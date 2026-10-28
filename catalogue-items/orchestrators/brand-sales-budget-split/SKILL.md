@@ -66,17 +66,6 @@ Two step files and the summary, in this shape:
 - Step 2: each channel marked brand building or sales, your split against about 60 to 40, the share of voice reading (grow, hold or shrink), the message and reach checks, the smallest shift to test and what the split depends on. This file holds the plan.
 - `HAND-BACK SUMMARY`: each file, any step not run and why, every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
-- **Lead the team** with the [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- **Lead the team** with the [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +74,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every metric on the scorecard is marked short term or long term, with the question it answers, and no long-term measure is read against a short window.
 - The split is worked from your spend with the sums shown. The 60 to 40 guide is called a starting point, not a rule, and any rival spend that was guessed is marked as an estimate.
 - The shift is small enough to test, and the output says what would change the advice.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

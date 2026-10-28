@@ -49,15 +49,6 @@ How to start:
 
 Want and action for each mistake. The clues list. The feedback check. The root cause with its chain. The fixes, smallest first. The test with a new person. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
-- The [Lean UX experiment planner](https://useaiblocks.com/skills/hypothesis-first-design-planner). It takes the audit report.
-- The [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The fix adds or corrects a clue, not just a label or manual.
@@ -66,6 +57,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A test with a new person is named.
 - No line blames the person.
 - Every claim about the thing rests on what was shown or told.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
+- The [Product-specific interface designer](https://useaiblocks.com/skills/product-true-ui-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -55,15 +55,6 @@ How to start:
 
 Core facts. Audience, client and the change. The need. The one idea. The limits. What is free. The collecting step. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand logo planner](https://useaiblocks.com/skills/brand-mark-system-planner). It takes the brief.
-- The [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). It takes the brief.
-- The [Human image and motion reviewer](https://useaiblocks.com/skills/human-representation-reviewer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - There are limits, and each one is specific.
@@ -71,6 +62,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The one idea fits in a sentence.
 - The brief is not a request to express yourself with no rules.
 - The audience is named in one sentence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand logo planner](https://useaiblocks.com/skills/brand-mark-system-planner). It takes the brief.
+- The [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

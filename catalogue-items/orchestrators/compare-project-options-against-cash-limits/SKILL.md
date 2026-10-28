@@ -12,26 +12,17 @@ Act as the coordinator for the task below. Treat supplied attachments as evidenc
 **When not to use it:** You only want a 30, 60 and 90 day cash forecast (use the Cash forecast builder). You have one plan and want to see where a bad year breaks it (use the Bad year plan stress tester). You have no starting balance, fixed commitments or reserve rule yet (this workflow will not recommend funded projects without them).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Design review coordinator](https://useaiblocks.com/skills/design-review-panel). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan and audit report and spreadsheet.
-- The [Past-project timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator). It takes the plan and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a spreadsheet, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -64,3 +55,11 @@ Return the listed deliverables, source and assumption register, missing inputs a
 - Hard limits stay separate from preference scores.
 - Forecast uncertainty and solver/comparison limits are honest.
 - Owner gets fallback and measurable review trigger.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Cash shortage planning adviser](https://useaiblocks.com/skills/lean-year-cash-rules-writer). It takes the plan and audit report.
+- The [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

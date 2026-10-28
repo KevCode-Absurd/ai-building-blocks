@@ -22,8 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A brief** with the [Design brief rules writer](https://useaiblocks.com/skills/design-brief-rules-writer). Bring your question. It uses your brand brain.
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -61,6 +60,14 @@ How to start:
 
 Use these headings, in this order: THE ANSWER IN THE BRIEF, OBVIOUS OPTIONS (each with what happened when tried), KEEP AND ADD (what people know, and the one surprising move), LISTENING CALL, SOFT STRATEGY, THE FRAME, TESTS (smallest and largest use), SKETCH LIST, MISSING, and last CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- Every idea traces back to a line in the brief.
+- The obvious option was tried before it was rejected.
+- The mark still reads at tiny and huge sizes.
+- A non-designer could reproduce it by hand.
+- Nothing drops the old equity without a stated reason.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -69,14 +76,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every idea traces back to a line in the brief.
-- The obvious option was tried before it was rejected.
-- The mark still reads at tiny and huge sizes.
-- A non-designer could reproduce it by hand.
-- Nothing drops the old equity without a stated reason.
 
 ## If something is missing
 

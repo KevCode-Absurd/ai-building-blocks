@@ -15,15 +15,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). Bring plan, audit report (optional).
+1. **A draft** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). Bring a plan, an audit report (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a draft, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a draft, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -60,15 +60,6 @@ How to start:
 
 The question. The paragraph table. The lowest-pull paragraph and its fix. The opening and last-line tests. The verdict and what would move it up. Three notes for the rewrite. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter). It takes the notes.
-- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The question has a person in it and fits in one sentence.
@@ -76,6 +67,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The lowest-pull paragraph is named with a fix.
 - The last line is tested alone.
 - The verdict matches the count of marks.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

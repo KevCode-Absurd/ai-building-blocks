@@ -100,17 +100,6 @@ Run the checks in "Check before you hand it back" and fix any that fail. List ea
 5. `MISSING:` lines for facts you needed.
 6. **Checks missed**: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts). It takes the script.
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One turn; its mechanism fits the show job; at most one paper-made scene change.
 - Every object in every picture note names its paper, in every row, even if an earlier row named it.
@@ -119,6 +108,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No speaking or testimonial figure; no child or real person.
 - 5 words or fewer over the turn; total words fit the length.
 - The cast note names one choice and gives its reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No how-it-works facts: tell the problem and the product without a how-it-works shot. No label lines: ask once, then carry on with the label shown but unread, marked `MISSING: label lines`. No buyer moment: pick one from the brief and mark it `inferred`. No selling idea or no approved claims: ask once for them in one line. If they still don't come, write the script with plain, claim-free pictures and mark `MISSING: selling idea` or `MISSING: approved claims`. Never invent a claim to fill the gap.

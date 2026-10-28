@@ -63,6 +63,14 @@ How to start:
 4. **Cast note**: who carries it, why, the voice, what never changes.
 5. **CHECKS MISSED**: one line for each check still missed, or "none".
 
+## Check before you hand it back
+- All three states can be seen, and the change reads with the sound off.
+- How it works is shown, not only said.
+- No picture claims more than the approved claims.
+- One mover per shot, one morph at most.
+- The character never speaks or gives a testimonial; no clay letters on the product.
+- The cast note names who carries the ad and why.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -72,14 +80,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- All three states can be seen, and the change reads with the sound off.
-- How it works is shown, not only said.
-- No picture claims more than the approved claims.
-- One mover per shot, one morph at most.
-- The character never speaks or gives a testimonial; no clay letters on the product.
-- The cast note names who carries the ad and why.
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": show the routine or a plain metaphor, never an invented process. No label text: the pack turns its label away until it's given. No buyer moment: ask, or mark the story "inferred".

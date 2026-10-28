@@ -8,15 +8,6 @@ description: "Plan a 3D web map scene: engine choice, data and datum checks, bui
 Turn a 3D web scene brief into a plan: the scene type and engine, the data checks, the build order, the speed plan, the camera and the tests.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
-- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
-- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,13 @@ Return these sections, in this order:
 - **Speed plan**: Tiling, simplifying and streaming for each layer.
 - **Style, camera and access**: Lighting, starting view, controls, sign-in setup.
 - **Tests and open questions**: Device checks with a pass line, and what is unknown.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

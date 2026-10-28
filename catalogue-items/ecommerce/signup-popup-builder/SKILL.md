@@ -105,8 +105,6 @@ MISSING: <margin | order value | tools | regions>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the draft.
-- The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

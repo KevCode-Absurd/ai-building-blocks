@@ -10,15 +10,6 @@ Check a build against its spec with visual proof. Report each problem with a scr
 When not to use it: for a final go or no-go call that also checks earlier QA claims, use the [Reality Checker agent](https://useaiblocks.com/skills/agency-testing-reality-checker). For screen reader and keyboard checks, use the [Accessibility Auditor agent](https://useaiblocks.com/skills/agency-testing-accessibility-auditor). For test code that runs on every release, use the [Test Automation Engineer agent](https://useaiblocks.com/skills/agency-testing-test-automation-engineer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
-- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,13 @@ Return these sections, in this order:
 - **Repeatable issues**: Numbered, each with evidence, steps and priority. Write "None found in the tested scope" if empty.
 - **Quality and status**: Design level and status, with the reason.
 - **Next steps**: Fixes owed, re-tests needed, and every NOT TESTED item.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

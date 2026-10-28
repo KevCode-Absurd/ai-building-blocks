@@ -8,25 +8,15 @@ description: Adapt a starter TypeScript agent worker for your project, with loca
 Plan how to adapt a small starter for an AI agent worker to your own project. The starter is a Node and TypeScript process that boots in ten steps. It has a job queue, a Slack command router, a repeating heartbeat and two example agents. This skill reads the starter, lists what it leaves out, and plans the changes, the local setup and the tests. It drafts code and plans. It does not install anything, start Docker, connect to Slack or run the worker.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
-- The [Slack agent message router builder](https://useaiblocks.com/skills/how-messages-reach-your-agent-implementation-planner). It takes the code change.
-- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
-- The [Parallel code reviewer](https://useaiblocks.com/skills/parallel-code-reviewer). It takes the code change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -128,3 +118,12 @@ If the owner allows it, add `DRAFT CHANGES` after FILE PLAN with the code for th
 ## Final check
 
 Before you send the result, confirm: no secret or token appears; no check is marked `pass` without evidence; every proposed change names the file it touches; nothing says a command ran or a test passed unless it did; NEXT STEP is one step the owner can do today; CHECKS MISSED lists each check that failed or could not run, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Slack agent message router builder](https://useaiblocks.com/skills/how-messages-reach-your-agent-implementation-planner). It takes the code change.
+- The [Desktop app engineer agent](https://useaiblocks.com/skills/agency-engineering-desktop-app-engineer). It takes the code change.
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

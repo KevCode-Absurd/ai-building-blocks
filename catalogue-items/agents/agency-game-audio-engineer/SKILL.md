@@ -8,13 +8,6 @@ description: "Plan a game's audio system: sound event table, adaptive music rule
 Plan the user's game audio system before it is built: every sound event, how the music reacts, the budget and the tests.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Voice AI integration planner](https://useaiblocks.com/skills/agency-engineering-voice-ai-integration-engineer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -71,6 +64,13 @@ Return these sections, in this order:
 - **Integration checks**
 - **Hand-off**
 - **Open checks**: Assumptions, MISSING items and who confirms them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Voice AI integration planner](https://useaiblocks.com/skills/agency-engineering-voice-ai-integration-engineer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

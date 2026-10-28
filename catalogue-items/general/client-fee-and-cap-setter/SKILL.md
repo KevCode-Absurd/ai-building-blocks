@@ -23,15 +23,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator). Bring your question, spreadsheet (optional).
+1. **An audit report** with the [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator). Bring your question, a spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -65,17 +65,6 @@ These are the inputs for this skill. Ignore any generic request above for a ques
 
 The prices found and the top third. The fees compared. The chosen fee with its reason. The cap with its hours sum. The billing terms. The discount rule. The reply to 'why do you cost more?'. `MISSING:` lines. A line that this is a planning aid and not personal financial advice. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the plan.
-- The [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). It takes the plan.
-- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the plan.
-- **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the offer and plan.
-- **Grow on social** with the [First customer outreach planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). It takes the offer.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The prices are real and sourced, or marked `MISSING:`.
@@ -84,6 +73,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The cap uses no more than 60% of working hours.
 - The terms say the fee is due whether or not the client uses the time.
 - No lower rate is offered for the same service.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the plan.
+- The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
+- **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the offer and plan.
+- **Grow on social** with the [First customer outreach planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). It takes the offer.
+- The [Client fee and work-hour reviewer](https://useaiblocks.com/skills/quarterly-client-rate-reviewer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

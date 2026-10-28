@@ -54,15 +54,6 @@ How to start:
 
 The thank-you note. The invitation and service promise. The list of facts to record and where. The contact schedule with dates and reasons. The problem plan. The referral ask and when to send it. Notes on no-pressure follow-up. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
-- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
-- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The note names the buyer, what they bought and one true detail they gave, and is under 80 words.
@@ -71,6 +62,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The referral ask comes after the first check-in, never in the thank-you, and says names are contacted only if the buyer agrees.
 - The problem plan has a reply time and an opening line.
 - No line pushes another sale.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Renewal watch planner](https://useaiblocks.com/skills/renewal-watch-planner).
+- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher).
+- The [Customer renewal risk reviewer](https://useaiblocks.com/skills/weekly-customer-health-watcher).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -66,6 +66,13 @@ Some of it belongs to the original project setup. Skip the shell commands that r
 
 Use these sections, in this order: PAGE STRUCTURE, CSS SYSTEM, LAYOUT, THEME TOGGLE, FILES AND BUILD ORDER, ACCESSIBILITY, OPEN CHECKS. Add assumptions and source references. OPEN CHECKS is also your CHECKS MISSED list: say which checks failed or could not run, or write "none" if every check ran and passed.
 
+## Checks before you hand back
+
+- The variable names in the CSS match the names used by the toggle and the components.
+- Every section on the page has a reason to be there.
+- Sample values are labelled as proposed.
+- Nothing is called tested. Tell the user to open the page on a phone and a desktop.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -74,13 +81,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand back
-
-- The variable names in the CSS match the names used by the toggle and the components.
-- Every section on the page has a reason to be there.
-- Sample values are labelled as proposed.
-- Nothing is called tested. Tell the user to open the page on a phone and a desktop.
 
 ## If something is missing
 

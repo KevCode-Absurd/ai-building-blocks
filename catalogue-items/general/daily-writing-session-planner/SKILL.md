@@ -48,15 +48,6 @@ How to start:
 
 A one-page plan. The session (place, start, end, rule). The two passes (draft day, rewrite day and how to rewrite). The idea file and notebook setup. The long-form rule if it applies. The test-on-people step and reading slots. The hours log. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
-- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
-- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The session has a fixed end time.
@@ -65,6 +56,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - There is a way to test the work on real people.
 - Hours are logged.
 - Every hour and day in the plan was given by the person.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
+- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

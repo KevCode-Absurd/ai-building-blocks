@@ -61,6 +61,13 @@ Use these headings, in this order, exactly as written:
 - **MISSING**: `MISSING:` lines for gaps.
 - **CHECKS MISSED**: see below.
 
+## Check before you hand it back
+
+- Each note says what was seen, apart from what it means.
+- Every pattern rests on more than one named person.
+- Awkward findings are kept in.
+- Each test says what result would change your mind.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -68,13 +75,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Customer job interview planner](https://useaiblocks.com/skills/customer-job-interview-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Each note says what was seen, apart from what it means.
-- Every pattern rests on more than one named person.
-- Awkward findings are kept in.
-- Each test says what result would change your mind.
 
 ## If something is missing
 

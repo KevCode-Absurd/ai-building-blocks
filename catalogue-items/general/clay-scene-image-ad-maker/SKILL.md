@@ -89,17 +89,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 7. **Notes**: each claim used and its source, anything MISSING.
 8. **CHECKS MISSED**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
-- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The change reads from the picture alone.
 - One moment, one changing object, one character at most.
@@ -107,6 +96,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Headline 7 words or fewer, at most 3 other things to read, nothing under 30 px, every word at 4.5:1 or more.
 - No clay letters; the product's label is exactly as printed.
 - For a food, supplement or health product, the picture also passes the claim rules in step 4 before it is shown.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": show the routine or a plain metaphor, never an invented process. No label lines: the product turns its label away until they're given. Contents of the product not given (colour, shape, count): `MISSING: what the product looks like inside`, and keep it out of the picture. No product photo: plan the set and write the prompt from the facts, mark `MISSING: product photo`, and say to attach the photo before making the image so the product comes out exact.

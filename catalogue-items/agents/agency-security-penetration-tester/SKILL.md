@@ -14,14 +14,6 @@ Read [the original role profile](references/source-agent.md) for its full method
 
 When not to use it: for an automated scan of a live app you may already test, use the Live app security tester. To review a system's design instead of attacking it, use the Security Architect agent. To turn findings into code or policy changes, use the Application Security Engineer agent or the Cloud Security Architect agent. Without written authorization and a named scope, do not use it at all.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Required gate: authorization and scope
 
 Before planning anything else, get all of these, in plain words from the user:
@@ -86,6 +78,13 @@ Return these sections in order, each a file if your AI can save files:
 5. **Assumptions and checks still needed.** What you assumed, and how to verify it.
 
 Finish with `CHECKS MISSED:` listing anything you could not evaluate (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

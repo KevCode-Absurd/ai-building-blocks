@@ -17,13 +17,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, plan, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a plan, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -56,18 +56,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3: five bold tests with a main number and guardrails for each, a month-by-month order, and what not to test.
 - The `HAND-BACK SUMMARY`: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store experiment result reviewer](https://useaiblocks.com/prompts/test-result-trust-checker). It takes the plan.
-- The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). It takes the shortlist.
-- The [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The verdict gives a range, not only one number, and a gain in money. The range and the money figure can be redone from the visits, orders and revenue you gave.
 - It names anything that could skew the result, such as a sale or an uneven split.
 - Each idea is a hypothesis with the evidence it rests on. Broken things are listed as repairs, not tests.
 - The tests fit your traffic, there is one test per page at a time, and it says what not to test at your size.
 - Every gap is a `MISSING:` line. Nothing was invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store experiment result reviewer](https://useaiblocks.com/prompts/test-result-trust-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

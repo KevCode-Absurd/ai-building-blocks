@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -99,17 +99,6 @@ Before the final hand-back, check the run against the 6 checks under "Check befo
 6. **Clip prompts** and the **edit list**: voice brief with spellings by sound, caption list, cuts, offer, safe zones, retake notes (stage 5).
 7. **Checks missed:** one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
-- The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the script.
-- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and image prompt.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - You stopped after stages 1, 3 and 4 (and after the story options, if you wrote them), or marked each "(approve)" when asked to run every stage at once.
 - Every link and every picture traces to a source or common knowledge.
@@ -117,6 +106,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The parts key never changes colour, shape or name.
 - No unsupported number, no body before and after.
 - The voice is one the brand may use, and a person approved it.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
+- The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and image prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": ask once, and never make one up. Build chains only from links you can back (common knowledge counts), mark the rest `MISSING:`, and if no chain passes the tests, say so and recommend another format.

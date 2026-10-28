@@ -21,12 +21,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, competitors, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, competitors, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -68,15 +68,6 @@ Use these instead of the general "After this" list above:
 - Step 4: ways to fail, plan coverage, survival risks, attacks and changes.
 - Summary: each step's file and one list of `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
-- The [SaaS pricing planner](https://useaiblocks.com/skills/copilot-gtm-technical-product-pricing). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -85,3 +76,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The position is one choice, and the not-do list has at least four real items.
 - Each roadmap result names a customer and a measure someone can pull from a system or a count.
 - The backward check starts from the end date, and every step 4 change is a change to the plan, not advice.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [SaaS pricing planner](https://useaiblocks.com/skills/copilot-gtm-technical-product-pricing). It takes the plan.
+- The [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -92,8 +92,7 @@ MISSING: <what>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store funnel benchmark checker](https://useaiblocks.com/skills/store-funnel-benchmark-checker).
-- **Check the landing page** with the [Store usability checker](https://useaiblocks.com/skills/store-friction-checker). Bring the landing page that ranked lowest and the worst funnel step.
-- For the funnel, bring the step counts to the Store funnel benchmark checker to compare with the store's own past results.
+- **Check the landing page** with the [Store usability checker](https://useaiblocks.com/skills/store-friction-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -21,17 +21,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
-- **Test report** (yours): what was tested, what passed, what failed and why.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A test report** (yours): what was tested, what passed, what failed and why.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your idea, codebase, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your idea, a codebase, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -73,16 +73,6 @@ Pause here: Add the tests it proposes for the riskiest gaps and run the suite.
 - Step 5, pull request: a summary, before and after proof, and the danger of merging.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Task breakdown planner](https://useaiblocks.com/skills/task-breakdown-planner). It takes the the product spec.
-- The [Starter code project builder](https://useaiblocks.com/skills/spec-to-starter-repo-builder). It takes the the product spec.
-- The [Work ticket writer](https://useaiblocks.com/skills/work-ticket-writer). It takes the the product spec and document.
-- The [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer). It takes the code change.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +81,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every user story in the spec has a ticket that delivers it, and the blocking order has no loop.
 - The built change matches the spec, with nothing added that the spec did not ask for.
 - Each behaviour marked covered names a real test, and the pull request shows proof the person can verify.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Task breakdown planner](https://useaiblocks.com/skills/task-breakdown-planner). It takes the product spec.
+- The [Starter code project builder](https://useaiblocks.com/skills/spec-to-starter-repo-builder). It takes the product spec.
+- The [Work ticket writer](https://useaiblocks.com/skills/work-ticket-writer). It takes the product spec and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

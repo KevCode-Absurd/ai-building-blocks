@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -80,16 +80,6 @@ Use these instead of the general "After this" list above:
 - Step 3: gaps ranked by weight, each with a before and after, and claims that need proof.
 - The summary lists each file, any step not run, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand voice consistency reviewer](https://useaiblocks.com/skills/brand-voice-reviewer). It takes the brand guide and draft.
-- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
-- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer).
-- The [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner). It takes the brand guide.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -98,3 +88,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every rule in the guide shows how many sources back it, and low-confidence rules are marked.
 - Voice and tone are kept apart, and the new piece keeps its claims to facts the person gave.
 - Every gap in the check has a before and after, and unsupported claims are flagged, not kept.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Brand voice consistency reviewer](https://useaiblocks.com/skills/brand-voice-reviewer). It takes the brand guide and draft.
+- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer).
+- The [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer). It takes the draft.
+- The [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner). It takes the brand guide.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

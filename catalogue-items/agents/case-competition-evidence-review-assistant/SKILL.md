@@ -10,17 +10,6 @@ Reviews a case competition recommendation against the judging rubric and the cas
 When not to use it: for a first pass with no earlier review, run the Stress test a case competition recommendation workflow. For practice judge questions only, use the Prepare case competition judge questions workflow. For a talk story rather than a deck review, use the Build a talk around one real case workflow.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach). It takes the document.
-- The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
-- The [Numbers explainer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer). It takes the audit report.
-- The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
-- The [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -83,6 +72,14 @@ If the deck builder files are not in the pack, or you cannot run Python, do not 
 - `rubric-check.md`: criterion, slide, gap.
 - `unsupported-claims.md`: slide, claim, action.
 - `review-log.md`: what changed, path, checks done and missed, next state.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

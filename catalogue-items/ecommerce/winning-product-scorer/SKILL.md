@@ -15,17 +15,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 
 **Makes it better (optional):**
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Shortlist** with the [Product opportunity reviewer](https://useaiblocks.com/skills/rating-gap-product-finder). Bring your question, customer words (optional).
+1. **A shortlist** with the [Product opportunity reviewer](https://useaiblocks.com/skills/rating-gap-product-finder). Bring your question, customer words (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for product data, store capture, shortlist. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for product data, a store capture, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -131,7 +131,6 @@ MISSING: <what>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product candidate test planner](https://useaiblocks.com/skills/monthly-product-opportunity-scout).
 - The [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker).
-- The [New product line checker](https://useaiblocks.com/skills/new-product-line-checker). It takes the audit report.
 - **Test the idea with real people** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

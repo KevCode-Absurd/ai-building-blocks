@@ -44,15 +44,6 @@ How to start:
 
 The frame used. The twelve sentences, grouped by speaker. The being list and the doing list. The five ranked values and contributions, each with its evidence, score and one month-sized next step. The biggest gap. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the shortlist.
-- The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the shortlist.
-- The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each speaker has three sentences, and at least one per speaker names a specific act or moment.
@@ -60,6 +51,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every score has a real example from the last thirty days, or says `MISSING:`.
 - At least one gap is named, or the skill says plainly that none was found and why.
 - Nothing in the list comes from the skill's own guess about what people should value.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

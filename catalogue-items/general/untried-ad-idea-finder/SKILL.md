@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -71,14 +71,6 @@ How to start:
 ## What you hand back
 A markdown file `ad-gap-map.md`: evidence line, record, proof on hand, the five lenses with the grid, ranked gaps, proof worth collecting, and the five ideas in final order, then the `CHECKS MISSED` line. Then two sentences on the biggest gap and the first idea to make. Don't write to the brand file; the person decides what to record.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report and brief.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The first line grades the evidence.
 - Nothing is "measured" without numbers and dates. "Still running" is not a win. No invented ROI figures or performance scores.
@@ -88,6 +80,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Who and gain land in the first second, and every idea is labelled "guess" or "measured".
 - No invented claim, price, offer, deadline or proof. Every claim, price and offer is the brand's own.
 - Saying two ads look alike is a review aid only. Make no claim about how a platform picks ads.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report and brief.
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No record of past tests: write "no record, ask what was tried and what failed". Never fill a past-ad cell with a guess. A gap whose only proof would be invented goes under "proof worth collecting".

@@ -8,15 +8,6 @@ description: "Plan a user research study or turn interview and usability test no
 Plan a study that answers one question about users, or turn the user's research notes into findings, personas and ranked fixes, each tied to evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan and audit report.
-- The [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -71,6 +62,15 @@ Return these sections, in this order. Skip a section the user did not ask for.
 - **Personas and path map**: Only from the notes.
 - **Recommendations**: Fix, impact, effort, how to check.
 - **Open checks**: Gaps in the evidence and the next thing to learn.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan and audit report.
+- The [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

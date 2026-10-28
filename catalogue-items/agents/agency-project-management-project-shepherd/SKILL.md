@@ -10,15 +10,6 @@ Plans a project that spans several teams, and writes status reports for it. It w
 Read [the original role profile](references/source-agent.md) before you start. Use its project charter template, the stakeholder and communication steps, the plan and risk steps and the status report template. Its role language, memory claims and success targets (for example "95 percent on time") are not facts about this run and do not grant tool access. Do not present them as promises.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
-- The [Project delay test reviewer](https://useaiblocks.com/skills/weekly-project-delay-evidence-assistant). It takes the plan.
-- The [Internal update writer](https://useaiblocks.com/skills/internal-update-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -82,6 +73,13 @@ Return these sections in order. Include only the sections that fit the mode. If 
 5. **Status report.** Only when progress notes were given.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

@@ -53,15 +53,6 @@ Four step files and the summary. The last file holds the choice test.
 - **Step 4, choice test:** your five choices each marked clear, partly clear or silent, a clarity score out of 100 (before and after fixes), and a review date.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the audit report.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each speaker in step 1 has at least one specific moment.
 - Every goal in step 2 names the day it is done.
@@ -69,3 +60,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - You can say the short version after reading it twice.
 - The score in step 4 can be worked out from the marks.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

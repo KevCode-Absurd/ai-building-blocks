@@ -66,17 +66,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 Four step files and the summary: the stage brief, the new definition with each fix tried and its result, the how-it-works chain with the passage, and the claim check with fixes.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
-- The [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-- The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

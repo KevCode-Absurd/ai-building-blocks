@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Ad breakdowns** (yours): what each reference ad does: opening, angle, format, offer and proof.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, product data, store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, product data, a store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -77,14 +77,6 @@ You list them as steps for the owner to approve.
 - **Needs from you:** costs or evidence missing, so next month can score them.
 - **Files:** each step's file and the updated `scout/pipeline.md`. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the idea and shortlist.
-- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every score came from the scoring skill, with the sums shown. You did not score by feel.
 - No candidate was scored without a landed cost and a target price.
@@ -92,6 +84,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every drop and every watch has a reason in the pipeline.
 - Nothing was ordered, sent, listed or spent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the idea and shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without evidence to read, stop after step 2 and ask for the ad library or product-graph captures, because the scout skills cannot browse. Without costs, list the candidates and ask for costs rather than scoring them.

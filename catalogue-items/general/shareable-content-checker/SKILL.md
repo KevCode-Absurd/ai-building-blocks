@@ -58,15 +58,6 @@ How to start:
 
 The draft in a line. The six ratings, each with its reason from the draft. The score out of 30 with the sum, and a line saying what it measures. The weakest reason. One angle to test and one change. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
-- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the audit report.
-- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each of the six has a rating and a reason from the draft.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score does not promise reach or virality.
 - The brand is inside the story, not a tag at the end.
 - One concrete change is offered to test.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
+- The [Social post ad reviewer](https://useaiblocks.com/skills/organic-post-to-ad-promoter).
+- The [Social media results analyst](https://useaiblocks.com/skills/social-media-results-analyst).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

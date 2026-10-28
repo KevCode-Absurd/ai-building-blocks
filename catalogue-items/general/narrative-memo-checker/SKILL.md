@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). Bring a draft. It uses your a buyer brief.
+1. **A draft** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). Bring a draft. It uses your buyer brief.
 2. This one.
 
 How to start:
@@ -52,15 +52,6 @@ How to start:
 
 The cold ask, the score out of 100 with the working per check, each weak spot with its line, the three fixes, the score after fixes, `MISSING:` lines and CHECKS MISSED. Then say what next: for a full rewrite, use the Six-page narrative memo writer, and bring the memo and the three fixes.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Numbers explainer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer). It takes the audit report.
-- The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the audit report.
-- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The cold ask is written before the scoring.
@@ -68,6 +59,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each weak spot quotes a line from the memo.
 - The fixes are specific and not generic advice.
 - The second score reflects only fixes that were actually made.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson talk writer](https://useaiblocks.com/skills/lesson-talk-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

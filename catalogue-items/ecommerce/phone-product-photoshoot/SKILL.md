@@ -89,6 +89,13 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. Every approved size, named `<nn>_<job>_<size>`, marked as made with AI and kept apart from the real photos.
 5. A pass or fail line per file.
 
+## Check before you hand it back
+- Every photo has a job, and no two share job, distance and angle.
+- The product matches its real photo with the label zoomed to full screen.
+- Shadows and reflections agree with each shot's light card.
+- Both approvals were recorded before the set was made.
+- No child, no real person's face, no second brand, no use the product's instructions warn against.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -97,13 +104,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every photo has a job, and no two share job, distance and angle.
-- The product matches its real photo with the label zoomed to full screen.
-- Shadows and reflections agree with each shot's light card.
-- Both approvals were recorded before the set was made.
-- No child, no real person's face, no second brand, no use the product's instructions warn against.
 
 ## If something is missing
 Write `MISSING: <photo job | fact | size>` and drop the shots that depend on it, saying which and why. Never draw an unseen side, an inside or a use from a description.

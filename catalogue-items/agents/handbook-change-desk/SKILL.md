@@ -68,16 +68,6 @@ You never do these yourself. You list them for approval:
 - **Quarterly sweep:** removal candidates with origins, when it ran.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document and audit report.
-- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the document and plan and audit report.
-- The [Policy change reviewer](https://useaiblocks.com/skills/rule-change-policy-keeper). It takes the the policy and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The problem the change solves is written in one line, or the absence is named.
 - No removal is proposed for everyone at once; each has a small test.
@@ -85,6 +75,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The announcement was written only after approval.
 - Nothing in the live handbook was changed and nothing was sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Policy change reviewer](https://useaiblocks.com/skills/rule-change-policy-keeper). It takes the policy and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without the handbook, check the change against the proposal alone and say the cross-check was skipped. Without the places you operate, skip place-by-place differences and say so. Without the problem behind the proposal, ask for it before drafting anything.

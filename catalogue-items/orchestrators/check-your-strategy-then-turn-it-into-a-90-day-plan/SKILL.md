@@ -64,15 +64,6 @@ Three step files and the summary. The last step file holds the 90-day plan.
 - **Step 3, 90-day plan:** outcome, workstreams and owners, weekly milestones, check-ins, risks, stop signs.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
-- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -81,3 +72,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Step 2 was built from the person's half-page brief, not from the original strategy text.
 - Every action in the marketing plan traces back to the guiding policy.
 - Every workstream has one owner and every week has a milestone.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
+- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

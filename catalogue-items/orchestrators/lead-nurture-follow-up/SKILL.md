@@ -58,15 +58,6 @@ Two step files and the summary. The last file holds the email flow.
 - **Step 2, follow-up emails:** the group each email is for, with its subject, body, one next step and new reason; the send schedule; the stop rule; how each email links to a sale; the plan for non-responders.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store drop and urgency planner](https://useaiblocks.com/skills/store-urgency-and-drop-planner). It takes the email flow.
-- The [Free guide and checklist planner](https://useaiblocks.com/skills/free-giveaway-designer).
-- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The offer is information the buyer would ask for, not a pitch in disguise.
 - A reply is defined, recorded and handed to a named person with a time.
@@ -74,3 +65,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every deadline and limit is one you gave it. Nothing was invented to fill a gap; every gap is a `MISSING:` line.
 - There is a stop rule.
 - Nothing was sent without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store drop and urgency planner](https://useaiblocks.com/skills/store-urgency-and-drop-planner). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

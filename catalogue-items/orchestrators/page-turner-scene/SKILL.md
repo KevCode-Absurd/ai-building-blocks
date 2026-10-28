@@ -60,16 +60,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Four step files and the summary. The step 4 file holds the pull check and the fix for the lowest paragraph.
 - STEP 1 HOOK PLAN, STEP 2 FAIRNESS CHECK, STEP 3 THE SCENE, STEP 4 PULL CHECK, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft and audit report.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the draft and audit report.
-- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The question is one sentence with a person in it.
 - The stop line comes before the answer, and the answer is not in the scene.
@@ -77,3 +67,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The draft opens with a person under pressure and one concrete detail.
 - The lowest-pull paragraph is named, with a fix.
 - Every gap is a `MISSING:` line, and nothing was published or sent.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the draft and audit report.
+- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
+- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

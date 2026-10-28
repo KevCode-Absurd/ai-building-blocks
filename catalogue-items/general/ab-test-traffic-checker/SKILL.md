@@ -15,18 +15,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **Objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand brain.
+2. **An objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand brain.
 3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, plan, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a plan, a shortlist. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -66,6 +66,13 @@ How to start:
 - **Next three actions**, each tied to a number.
 - Every figure labelled **your data** or **rule of thumb**.
 
+## Check before you hand it back
+- Revenue per visitor is shown, not conversion rate alone.
+- The sample-size sum is written out and the lift it uses is named.
+- No other business's number is used as a target.
+- Nothing is called "significant" without the planned sample reached.
+- Any before-and-after comparison names the traffic mix in each period.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -73,13 +80,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Revenue per visitor is shown, not conversion rate alone.
-- The sample-size sum is written out and the lift it uses is named.
-- No other business's number is used as a target.
-- Nothing is called "significant" without the planned sample reached.
-- Any before-and-after comparison names the traffic mix in each period.
 
 ## If something is missing
 Write `MISSING: <what>`. No dates: give visitors needed but not days. No average order value: give conversion rate and say what revenue per visitor would add. Never fill a gap with an industry average.

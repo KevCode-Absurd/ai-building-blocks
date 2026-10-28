@@ -8,16 +8,6 @@ description: "Check one charter-defined conversion price reset after a qualifyin
 Works out the revised conversion price and conversion ratio for one series of protected shares after one cash issuance below the old price, using the charter’s own weighted-average clause. It does not cover full-ratchet clauses, several series or a fixed share exchange (use the [Fixed-exchange consideration checker](https://useaiblocks.com/skills/fixed-exchange-consideration-checker)), or a note with a cap or discount (use the [Cap and discount conversion checker](https://useaiblocks.com/skills/cap-and-discount-conversion-checker)).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SAFE ownership and share-pool reviewer](https://useaiblocks.com/skills/safe-financing-revision-assistant). It takes the spreadsheet and document.
-- The [Employee option pool top-up calculator](https://useaiblocks.com/skills/option-pool-top-up-checker). It takes the spreadsheet and document.
-- The [Post-money SAFE ownership calculator](https://useaiblocks.com/skills/post-money-safe-ownership-checker). It takes the document and spreadsheet.
-- **Check the money** with the [Loan lifetime cash coverage checker](https://useaiblocks.com/skills/loan-life-cash-cover-checker). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -26,11 +16,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, the deal terms, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the deal terms, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -110,3 +100,12 @@ Use these five parts, in this order:
 If a workbook was built, also say which file checks ran. Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 Next steps: send the result, the clause you read and your assumptions to your startup lawyer to confirm the charter reading, then update the cap table. Do not treat this as legal advice.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SAFE ownership and share-pool reviewer](https://useaiblocks.com/skills/safe-financing-revision-assistant). It takes the spreadsheet and document.
+- The [Employee option pool top-up calculator](https://useaiblocks.com/skills/option-pool-top-up-checker). It takes the spreadsheet and document.
+- The [Post-money SAFE ownership calculator](https://useaiblocks.com/skills/post-money-safe-ownership-checker). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

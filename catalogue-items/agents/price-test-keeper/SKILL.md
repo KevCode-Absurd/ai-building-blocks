@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -80,15 +80,6 @@ You list them for the owner to approve. Prices and comparison prices are covered
 - **Running now:** tests still running with days left and any disturbance.
 - **Files:** each step's file and the updated `tests.md`. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
-- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the plan and audit report.
-- The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every proposed price is at or above the floor.
 - Every test result is judged on profit per visitor, with the sums shown.
@@ -96,6 +87,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No product was rerun more than once.
 - Nothing was changed on the live store.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without costs, stop and ask, because the floor depends on them. Without visitor counts for a finished test, you cannot read it: say so and ask for them.

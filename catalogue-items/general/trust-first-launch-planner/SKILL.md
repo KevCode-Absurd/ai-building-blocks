@@ -52,6 +52,13 @@ How to start:
 
 The doubt. The audience number and its basis. The tactics. The first message and group. The proof sequence with held or missing. The tracking rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The core doubt is stated in the buyer's words.
+- The audience size has a stated basis.
+- Each tactic costs little and is public.
+- No tactic misleads people about what the product does.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -59,13 +66,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The core doubt is stated in the buyer's words.
-- The audience size has a stated basis.
-- Each tactic costs little and is public.
-- No tactic misleads people about what the product does.
 
 ## If something is missing
 

@@ -72,15 +72,6 @@ Seven step files and the summary:
 - **Step 6:** owner earnings as a low, middle and high figure.
 - **Step 7:** the ten tests, a verdict (too hard, not worth a price check, dig more, or worth a price check), red flags and what to read or ask next. This is the audit report.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
-- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
-- The [Earnings history reliability reviewer](https://useaiblocks.com/skills/earnings-reliability-check). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +80,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number comes from the accounts given, or is marked missing. A gap is shown as unknown, never as a pass.
 - The verdict follows the stated ladder in step 7.
 - Nothing says to buy or sell a named security, and no test is presented as catching fraud.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bargain investment portfolio planner](https://useaiblocks.com/skills/bargain-group-rules-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

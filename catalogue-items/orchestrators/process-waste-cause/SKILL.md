@@ -9,6 +9,8 @@ Paste your process step by step. Get the waste named, one change to try and the 
 
 This workflow is inspired by An Interview with Taiichi Ohno by Taiichi Ohno. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+When not to use: you want to design a process from scratch (design it first, then run this on the draft). You need pricing or strategy advice (use a pricing or strategy skill instead). You have one incident and no repeatable steps (use the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder) on its own). The method is inspired by Taiichi Ohno's published ideas on production, and the step order is this library's own. It does not claim to be his method.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -17,16 +19,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your notes** (yours): what to keep, change or drop.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
-
-When not to use: you want to design a process from scratch (design it first, then run this on the draft). You need pricing or strategy advice (use a pricing or strategy skill instead). You have one incident and no repeatable steps (use the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder) on its own). The method is inspired by Taiichi Ohno's published ideas on production, and the step order is this library's own. It does not claim to be his method.
 
 ## What you need
 - **Your process, step by step, with who does each step** (required). This is what the run depends on most. Paste one line per step in this shape: `step | who | work time | wait time`, for example `[STEP NAME] | [ROLE] | [MINUTES OF WORK] | [MINUTES WAITING]`. Rough times are fine. Leave a time blank if you do not know it, and it is marked `MISSING:`.
@@ -55,16 +55,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 What to do with it: make the one change to the worst-waste step first, then run the waste map again after the change to find the next worst waste.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
-- The [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the audit report.
-- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
-- **Lead the team** with the [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every step in the map has a who, a work time and a wait time, or is marked missing.
 - Each why is backed by a record or something seen, not a guess. A why with no record is marked unchecked.
@@ -72,3 +62,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

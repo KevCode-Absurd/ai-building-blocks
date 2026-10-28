@@ -51,6 +51,14 @@ How to start:
 
 The line table. The failing lines and fixes. The voice check. The language note. The score with its sum. The fixed scene. CHECKS MISSED.
 
+## Check before you hand it back
+
+- Every line was tested on all four questions.
+- Each fix keeps the speaker's voice and the plot fact.
+- The score sum re-adds.
+- No line outside the scene was changed.
+- Tags in the fixed scene are said unless an exception is explained.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -59,14 +67,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every line was tested on all four questions.
-- Each fix keeps the speaker's voice and the plot fact.
-- The score sum re-adds.
-- No line outside the scene was changed.
-- Tags in the fixed scene are said unless an exception is explained.
 
 ## If something is missing
 

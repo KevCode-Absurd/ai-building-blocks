@@ -77,17 +77,6 @@ If the owner approves a brand file change in clear words, make only that change,
 - **Watch list:** phrases and doubts seen once or twice, to count next month.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain.
-- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader). It takes the brand brain.
-- The [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst). It takes the brand brain.
-- **Write the ad copy** with the [Winning ad variant writer](https://useaiblocks.com/skills/winning-ad-variant-writer). It takes the brand brain.
-- The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every proposed line has customer words and source IDs behind it.
 - No change rests on fewer than 3 separate people.
@@ -95,6 +84,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The brand file was not edited without a clear yes.
 - Customer quotes are exact, not tidied.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain and buyer profile.
+- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader). It takes the product facts.
+- The [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst). It takes the brand brain.
+- **Write the ad copy** with the [Winning ad variant writer](https://useaiblocks.com/skills/winning-ad-variant-writer). It takes the product facts and buyer profile.
+- The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper). It takes the product facts.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without last month's files, treat the run as a base run. Without star ratings, skip step 4 and say so.

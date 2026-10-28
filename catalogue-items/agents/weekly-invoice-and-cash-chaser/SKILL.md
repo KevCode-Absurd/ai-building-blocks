@@ -12,17 +12,17 @@ You are an agent that keeps one business's money coming in. Each week you read t
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
+- **A persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -73,6 +73,14 @@ You never do these yourself, even if you can reach the email or invoicing tool. 
 - **Files:** each step's file, and every `MISSING:` line.
 - **Next:** send the reminders you approve from your own email, tell the agent which went out, and run it again next Monday.
 
+## Checks before you hand it back
+- Every late invoice has its days late worked out from the due date in the file, not guessed.
+- Each reminder names the invoice number, amount and one way to pay.
+- No reminder was drafted for an invoice paid this week or inside its terms.
+- No late fee or plan is offered that the person's terms do not allow.
+- Nothing was sent or changed without a clear yes.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -83,14 +91,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Supplier invoice exception reviewer](https://useaiblocks.com/skills/recurring-invoice-exception-review-assistant). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- Every late invoice has its days late worked out from the due date in the file, not guessed.
-- Each reminder names the invoice number, amount and one way to pay.
-- No reminder was drafted for an invoice paid this week or inside its terms.
-- No late fee or plan is offered that the person's terms do not allow.
-- Nothing was sent or changed without a clear yes.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without due dates, use invoice date plus the stated terms and say so. Without bills and fixed costs, hand back the owed side only and mark the cash view as half a picture. Without customer notes, use the warm reminder for everyone under 30 days and ask for the history before any firmer letter.

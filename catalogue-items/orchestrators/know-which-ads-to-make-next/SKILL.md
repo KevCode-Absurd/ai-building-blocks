@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
@@ -70,6 +70,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 Four step files plus the summary. The last file holds the scored opening lines, with the report, gap map and brief before it.
 
+## Check before you hand it back
+- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- Every figure, including every group figure, is recomputed from the export, with the sums shown.
+- No ad is called a winner without numbers, and running a long time isn't winning.
+- The final results use only facts, prices and claims in the export or the brand file.
+- The output ends with the hand-back summary. Without it, the run isn't finished.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -77,13 +84,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
-- Every figure, including every group figure, is recomputed from the export, with the sums shown.
-- No ad is called a winner without numbers, and running a long time isn't winning.
-- The final results use only facts, prices and claims in the export or the brand file.
-- The output ends with the hand-back summary. Without it, the run isn't finished.
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing. No targets means numbers without a verdict of good or bad.

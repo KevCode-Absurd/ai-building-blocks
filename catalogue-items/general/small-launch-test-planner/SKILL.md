@@ -55,15 +55,6 @@ How to start:
 
 The question. The places and keys. The table to record. What stays apart. The cap and stop rule. The decision rule. The scaling steps. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the plan.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The test answers one stated question.
@@ -72,6 +63,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Results are measured per customer, not per click or reply.
 - Each place has its own key.
 - The current campaign is kept apart.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Read your ad results** with the [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -12,15 +12,15 @@ A villain who is always cruel is easy to predict. A villain who swings between k
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Closed story setting planner](https://useaiblocks.com/skills/closed-setting-planner). Bring your question.
+1. **A plan** with the [Closed story setting planner](https://useaiblocks.com/skills/closed-setting-planner). Bring your question.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -50,15 +50,6 @@ How to start:
 
 The person in four lines. The scale: mood, sign, what they do, what it costs. The triggers. Their reason in their own words. What the trapped person learns to read. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story conflict escalation planner](https://useaiblocks.com/skills/rising-cost-ladder-builder). It takes the plan.
-- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The calm mood is warm enough that a reader would relax.
@@ -66,6 +57,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least two triggers are ordinary, and at least two are seen by the reader first.
 - Every mood costs the trapped person something.
 - The sincere reason makes sense from inside the person's head.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story conflict escalation planner](https://useaiblocks.com/skills/rising-cost-ladder-builder). It takes the plan.
+- The [Fictional world logic reviewer](https://useaiblocks.com/prompts/fictional-setting-plausibility-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

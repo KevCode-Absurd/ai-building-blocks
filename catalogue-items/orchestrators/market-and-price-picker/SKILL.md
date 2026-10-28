@@ -69,6 +69,13 @@ Four step files and the summary. The last file holds the price and the reason it
 - **Step 4, the price:** what the result is worth, price band and pick, gap and cost multiple, two tests.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
+## Check before you hand it back
+- Only differences a buyer can see in seconds are counted in step 1.
+- A group with a zero in pain, money or growth is ruled out in step 2.
+- Each narrower level uses that group's own words and a problem only they have.
+- The price comes from what the result is worth, and rival prices appear only as a floor check.
+- Nothing about group sizes or prices is invented. Every gap is a `MISSING:` line.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -78,10 +85,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Only differences a buyer can see in seconds are counted in step 1.
-- A group with a zero in pain, money or growth is ruled out in step 2.
-- Each narrower level uses that group's own words and a problem only they have.
-- The price comes from what the result is worth, and rival prices appear only as a floor check.
-- Nothing about group sizes or prices is invented. Every gap is a `MISSING:` line.

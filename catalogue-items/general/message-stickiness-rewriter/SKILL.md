@@ -65,4 +65,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 For the full version with every check, use the [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer).
 
-What next: test the pick on someone who does not know your business and ask what they remember. Keep the one they can repeat back. The Feeling-to-action rewriter and the Page-pull scene checker under After this are for fiction scenes. Use them only if your message is part of a story.
+What next: test the pick on someone who does not know your business and ask what they remember. Keep the one they can repeat back. The Emotional scene editor and the Scene suspense reviewer under After this are for fiction scenes. Use them only if your message is part of a story.

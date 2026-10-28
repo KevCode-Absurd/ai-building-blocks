@@ -47,6 +47,13 @@ How to start:
 ## What you hand back
 The rewritten paragraph. What happened, in order. A list of feeling words cut, each with the thing that replaced it. The one true detail used and where it came from. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none". If no paragraph is given, still print every heading of the output shape in order (REWRITE, WHAT HAPPENED, IN ORDER, FEELING WORDS CUT, THE DETAIL, MISSING, CHECKS MISSED) with a `MISSING:` line under each, then ask for the paragraph.
 
+## Check before you hand it back
+- No sentence names a big feeling the scene could show.
+- Every noun is something you can see.
+- The ending is an action or a plain line.
+- Nothing is left out only because it is unknown.
+- No event was added that was not in the paragraph or the facts.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -55,13 +62,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Story impact reviewer](https://useaiblocks.com/skills/single-effect-draft-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- No sentence names a big feeling the scene could show.
-- Every noun is something you can see.
-- The ending is an action or a plain line.
-- Nothing is left out only because it is unknown.
-- No event was added that was not in the paragraph or the facts.
 
 ## If something is missing
 Write `MISSING: <what> for <line>`. Do not invent a place, an object or a line of speech to make the rewrite more vivid. Ask for it.

@@ -67,17 +67,6 @@ Two step files and a `HAND-BACK SUMMARY`:
 
 Until you bring back the interviews, the job is a plan, not a finding.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
-- The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
-- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons.
-- **Write the ad copy** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order. Step 2 used the answers you collected, not the step 1 plan.
@@ -87,3 +76,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Reasons are counted by separate people, not by mentions.
 - Any reason said by fewer than 5 people, or from one kind of source, is marked thin.
 - Every person to interview in the plan switched to you within about a year.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons.
+- **Write the ad copy** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+- The [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

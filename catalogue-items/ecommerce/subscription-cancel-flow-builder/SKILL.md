@@ -25,12 +25,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Audit report** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker). Bring your results. It uses your brand brain and offer.
+2. **An audit report** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker). Bring your results. It uses your brand brain and offer.
 3. This one.
 
 How to start:

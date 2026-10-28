@@ -45,23 +45,20 @@ How to start:
 ## What you hand back
 What the learner will be able to do. The small example with named values. The trace. The predictions, with answers after. The check against the reference and its result. What the small version leaves out. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
-- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
-- The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the draft.
-- The [Course lesson update reviewer](https://useaiblocks.com/skills/monthly-course-lesson-keeper).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every intermediate value has a name.
 - A learner can predict one result before running it.
 - The example is checked against a trusted reference.
 - The limits of the small version are stated.
 - It can be read in one sitting.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
+- The [Course lesson update reviewer](https://useaiblocks.com/skills/monthly-course-lesson-keeper).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what> for <step>`. If you cannot check the example against a reference, say so and show a second route to the same answer. Never state a result you have not worked out.

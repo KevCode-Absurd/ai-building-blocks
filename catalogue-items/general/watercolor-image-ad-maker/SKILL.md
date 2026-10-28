@@ -35,7 +35,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Nano Banana:** Works from your product photos as references, so the painted pack keeps its true shape.
+- **Nano Banana:** Google's image model, free in Gemini with daily limits, or billed per picture through Google's API. Works from your product photos as references, so the painted pack keeps its true shape.
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
 <!-- /needs -->
 
@@ -115,17 +115,6 @@ Run the six checks under "Check before you hand it back" and fix any that fail. 
 7. **Checks missed:** one line for each check you couldn't fix, or "none".
 8. `MISSING:` lines.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker). It takes the ad copy.
-- The [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad). It takes the ad copy.
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - It passes the glance test: one moment, one idea.
 - Headline of 7 words or fewer, at most 3 other things to read, type 30 px or more.
@@ -133,6 +122,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The implied sentence is backed; no ingredient off the list; no body change.
 - No opposite colours mixed; the product has the crispest edges and its real label.
 - No child, real person or speaking figure.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker). It takes the ad copy.
+- The [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad). It takes the ad copy.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
+- The [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo: ask, or leave the product out and say so. No ingredient list: don't paint ingredients; use Spread, Calm or Hold. No offer: no offer line and no price.

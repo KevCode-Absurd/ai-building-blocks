@@ -110,10 +110,7 @@ MISSING: <revenue | margin | skill ratings | traffic data>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the audit report.
 - **Lead the team** with the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the audit report.
-- The [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter). It takes the audit report.
-- The [Hiring headcount planner](https://useaiblocks.com/skills/headcount-plan-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

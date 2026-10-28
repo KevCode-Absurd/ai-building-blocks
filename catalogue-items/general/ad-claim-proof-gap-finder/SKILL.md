@@ -58,14 +58,6 @@ MISSING: proof for claim <n>
 CHECK WITH A QUALIFIED PERSON: <any health, money or legal claim>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
-- **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks
 - Every claim is listed with its proof or a GAP.
 - No fix invents proof you do not hold.

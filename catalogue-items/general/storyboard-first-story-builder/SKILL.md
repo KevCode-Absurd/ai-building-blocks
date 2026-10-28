@@ -83,6 +83,13 @@ CHECKS MISSED
 <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+- Every hurdle is realistic for the person who faces it.
+- The plot makes sense on its own terms.
+- The hero is an ordinary person, not a type.
+- There is room left for the ending to change.
+- Nothing in the board was invented that did not come from the brief or the questions.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -91,13 +98,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every hurdle is realistic for the person who faces it.
-- The plot makes sense on its own terms.
-- The hero is an ordinary person, not a type.
-- There is room left for the ending to change.
-- Nothing in the board was invented that did not come from the brief or the questions.
 
 ## If something is missing
 If the user gave fewer than five places, memories or objects, stop. Reply with only this: "Give me at least five places, memories or objects you keep returning to, one line each. A real person of the right age to base the hero on helps too." Do this even if they say go ahead. Do not draw a board from generic scenes.

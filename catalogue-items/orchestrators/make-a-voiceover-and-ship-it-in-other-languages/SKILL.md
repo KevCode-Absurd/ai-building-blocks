@@ -62,15 +62,6 @@ Three step files and the summary. The last file holds the subtitles and transcri
 - **Step 3, subtitles:** a subtitle file with timing for each corrected language.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Dialpad and Leexi call summarizer](https://useaiblocks.com/skills/dialpad-and-leexi-call-summarizer). It takes the transcript.
-- The [ElevenLabs multilingual narrator](https://useaiblocks.com/skills/multilingual-narrator).
-- The [Voice AI integration planner](https://useaiblocks.com/skills/agency-engineering-voice-ai-integration-engineer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use this section, not the shared "After this" list above, whose call summarizer takes a call transcript, which this workflow does not make. Suggest one next step as a short question:
 - Load each subtitle file into your video editor or video host with its matching dubbed audio, and watch one full language version before you publish. Nothing here publishes for you.
@@ -83,3 +74,10 @@ Use this section, not the shared "After this" list above, whose call summarizer 
 - The subtitles match the corrected audio, not the first dub.
 - You have the right to use the voice you chose.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Dialpad and Leexi call summarizer](https://useaiblocks.com/skills/dialpad-and-leexi-call-summarizer). It takes the transcript.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

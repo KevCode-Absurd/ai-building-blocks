@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for video clips, your brand brain, transcript. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for video clips, your brand brain, a transcript. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -86,16 +86,6 @@ Pick passages that stand alone, each with in and out times, opening line, what t
 8. SAVE FOR ANOTHER POST, NOT USED and MISSING, where there are any.
 9. CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker).
-- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner).
-- The [Xiaohongshu post planner](https://useaiblocks.com/skills/xiaohongshu-post-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One idea, and an opening that makes sense alone.
 - Captions match the kept speech.
@@ -103,6 +93,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Use and care steps keep their warnings; no shot breaks the brand's rules.
 - No invented testimonial, milestone or offer, and no sales ending unless asked.
 - Captions sit in the safe area and stay up long enough to read.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Make video ads** with the [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No transcript: write one from the audio and flag the opening, names and numbers. No footage for a line: name the shot to film. You plan the edit. Never claim a finished video exists.

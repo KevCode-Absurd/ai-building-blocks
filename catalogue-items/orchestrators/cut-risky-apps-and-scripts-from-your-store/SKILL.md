@@ -16,15 +16,15 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, store capture, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet, a store capture, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -61,15 +61,6 @@ Two step files and the summary. The last step file holds the risk audit and the 
 - **Notes for a developer:** pinned versions and a content security policy, for custom builds.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). It takes the audit report.
-- The [Sign-in security checker](https://useaiblocks.com/skills/store-sign-in-security-checker). It takes the audit report.
-- The [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 Use this first. For a deeper check of logins, fraud rules and bots, use the [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). Bring the step 2 audit report and its clean-up list.
 
@@ -81,3 +72,10 @@ Use this first. For a deeper check of logins, fraud rules and bots, use the [Sto
 - Every app has a verdict and a reason, and no review or email app is cut without a note to export its data first.
 - Step 2 covers only the apps on the keep list and the scripts the person saved at the pause.
 - Every script has an owner, a purpose, a risk level and one action, and the clean-up list names keys, webhooks and seats to revoke.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

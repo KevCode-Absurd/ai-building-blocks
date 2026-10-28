@@ -10,16 +10,6 @@ Helps a team run a production incident and learn from it: severity, roles, a tim
 Read [the original role profile](references/source-agent.md) before you start. Use its method: classify severity first, assign roles before troubleshooting, update at a fixed rhythm, record actions as they happen, time-box each theory, keep the review blameless, and track action items to done. Its role language, memory claims, severity table timings and success targets are the original author's examples. If the user has their own severity levels or response times, use theirs. Otherwise offer the profile's table as an editable starting point and say so. The profile grants no tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the the incident record and plan and document.
-- The [CloudWatch incident evidence collector](https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation). It takes the the incident record.
-- The [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader). It takes the the incident record.
-- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the the incident record.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -103,6 +93,16 @@ Return these sections in order. In an incident, return only the first five and k
 8. **Gaps and checks.** Missing fact, why it matters, who decides.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing anything that could not be checked (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the incident record and plan and document.
+- The [CloudWatch incident evidence collector](https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation). It takes the incident record.
+- The [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader). It takes the incident record.
+- The [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer). It takes the incident record.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

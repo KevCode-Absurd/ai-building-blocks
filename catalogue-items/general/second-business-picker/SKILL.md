@@ -56,21 +56,19 @@ How to start:
 
 What you own. Each idea sorted, with its carry-over or the reason it was dropped. The fit check. The power to build. The ranking and the pick. The evidence still needed. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the shortlist.
-- The [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every idea is sorted into a type.
 - Unrelated ideas have a stated carry-over or are dropped.
 - Each pick names a power to build.
 - Evidence still needed is listed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

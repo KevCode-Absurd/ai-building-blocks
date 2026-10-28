@@ -72,17 +72,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 The image prompt is a prompt only. Claude cannot draw it unless an image tool is connected. The story image ad file says how to finish the picture.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
-- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +80,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The first card or line names the buyer's moment, not the product, and the product appears only after the problem is clear.
 - Every fact in the story, the cards and the image ad is in your product facts or reviews, and every quote is word for word.
 - Each carousel card carries one idea and a headline, and card 1 works alone.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

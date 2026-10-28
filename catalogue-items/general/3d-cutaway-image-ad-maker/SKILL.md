@@ -86,23 +86,23 @@ If an image tool is connected, offer to make the picture with it, and ask before
 8. **Notes**: inferred links for the brand to confirm, claims left out, anything MISSING.
 9. **CHECKS MISSED**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
-- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - All three tests passed, or the failure is stated and no plan follows.
 - Every part and number traces to a source or common knowledge.
 - One link frozen, never the whole chain.
 - Headline 7 words or fewer, at most 3 other things to read, nothing under 30 px, every word at 4.5:1 or more.
 - No picture shows more than the approved claims.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the ad copy.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
+- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": ask once, and never invent one; build the chain only from links you can back. A link with no source and no textbook support is cut, not softened.

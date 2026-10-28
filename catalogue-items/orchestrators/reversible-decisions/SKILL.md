@@ -84,19 +84,16 @@ HAND-BACK SUMMARY
   Files: <each step's file> | MISSING: <every line, in one list>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the audit report.
-- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the audit report.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
-- **Lead the team** with the [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The sort names what makes the choice hard or easy to undo.
 - A two-way choice has one owner and a review date. A one-way choice lists what is still unknown.
 - The long shot has a loss cap, a short build time and a stated rule for what counts as learning. The odds are honest, not a hopeful guess.
 - Every program in the review has a decision and a reason, and cash comes before how it looks on paper.
 - Every gap is a `MISSING:` line. Nothing was invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

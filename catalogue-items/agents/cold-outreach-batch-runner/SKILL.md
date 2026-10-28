@@ -84,15 +84,6 @@ Rules for commercial email differ by country. Ask a qualified person to check yo
 - **Next week:** the one thing you will change and how you will read it.
 - **Files:** the batch folder and the log line. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
-- The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the email flow.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - No email states a fact about a prospect that is not in the list or the supplied text.
 - Every email has one ask and the sender details.
@@ -101,6 +92,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Only one thing changed since last week, and it is named.
 - Nothing was sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+- The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. Without last batch's numbers, say the path was not chosen on data and keep the angle. If no prospect has a fact, stop and ask for them, because the checks cannot pass without them. If only a few lack one, they get the short "no fact" email from step 4. Without sender details, mark the emails not ready to send.

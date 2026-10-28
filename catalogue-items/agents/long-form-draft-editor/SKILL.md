@@ -92,15 +92,6 @@ If the piece gives health, legal or tax advice, say it needs a check from a qual
 - **Questions for first readers:** the sheet, or "waits for your decisions".
 - **Files:** each round's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the draft.
-- The [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). It takes the draft.
-- The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The original is untouched.
 - No plot point, fact, quote or name was changed by you.
@@ -109,6 +100,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing in `kept-on-purpose.md` was undone.
 - The scores shown are the ones the skills gave, with their sums.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the draft.
+- The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 If your AI cannot save files, say so at the start. Ask the writer to paste the latest round, the `kept-on-purpose.md` list and the scores back into the chat at the start of each round, and name anything you could not keep between rounds under `MISSING:`. Write `MISSING: <what>` where it belongs and carry on with what you have. Without the kind of piece, ask once. Without facts for an article, say the fact check could not run and list every number and claim as unchecked. If the draft is under about 1,000 words, say a short piece may not need rounds and run one round at most.

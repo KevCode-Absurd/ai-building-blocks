@@ -10,15 +10,6 @@ Plans the extract, transform and load work for geospatial data: reading files fr
 Read [the original role profile](references/source-agent.md) before you plan. Use its rules and pipeline patterns for the user's task. Its role language, its "experience" lines and its remembered format quirks are a reference, not evidence about this user's files.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
-- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -83,6 +74,15 @@ Return these sections in this order. Use the same headings.
 7. `KNOWN ISSUES AND NEXT STEP`: if the clean data needs a statistical study, point to the Spatial Data Scientist agent. If it needs a live web map, point to the Web GIS Developer agent. If the data is imagery to be read by a model, point to the GeoAI/ML Engineer agent.
 
 End with `CHECKS MISSED:` listing any check that could not be done, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
+- The [Database schema designer](https://useaiblocks.com/skills/database-schema-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

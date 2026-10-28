@@ -55,6 +55,14 @@ How to start:
 
 The platform and why. How people post there. The audience topics. The month of pieces with format, topic and first line. The rhythm. The first three to post now. The monthly review rule. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The pieces are made for the platform.
+- Each piece ties to something the audience cares about.
+- The rhythm is one the person can keep for a year.
+- The first posts are set before the plan is perfect.
+- Selling is left out of most pieces.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -63,14 +71,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The pieces are made for the platform.
-- Each piece ties to something the audience cares about.
-- The rhythm is one the person can keep for a year.
-- The first posts are set before the plan is perfect.
-- Selling is left out of most pieces.
 
 ## If something is missing
 

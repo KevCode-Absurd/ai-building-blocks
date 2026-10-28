@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,15 +57,6 @@ How to start:
 
 The one-sentence business. The five answers, each marked KNOW, GUESS or BLANK. Your edge, or "no edge". The basket (YES, NO or TOO TOUGH) with the reason. The first question you cannot answer. A widening plan if you want one, with a pass call if it is not worth it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). It takes the audit report.
-- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The business is described in one sentence a stranger could follow.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The basket matches the rule in step 5.
 - The boundary question is real and specific.
 - Nothing says to buy or sell a named security.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). It takes the audit report.
+- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
+- The [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

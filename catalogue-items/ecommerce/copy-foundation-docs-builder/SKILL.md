@@ -91,11 +91,11 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain and brief.
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain.
-- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger). It takes the brand brain.
-- **Write the landing page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). It takes the brand brain.
-- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the brief.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile and brief.
+- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the buyer profile.
+- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger). It takes the buyer profile.
+- **Write the landing page** with the [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder). It takes the buyer profile.
+- **Write the ad copy** with the [Headline option writer](https://useaiblocks.com/skills/headline-option-writer). It takes the brief and buyer profile.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

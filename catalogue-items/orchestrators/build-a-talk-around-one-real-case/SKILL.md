@@ -65,16 +65,6 @@ Three step files and the summary:
 - **Step 2:** the idea and ask, reactions by stage, a story under two minutes, a picture of life after, and small measures.
 - **Step 3:** the news the room cares about most, the first minute, the clock, the slides that move or only explain, and the new order with times. This is the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
-- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
-- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the plan.
-- **Plan your strategy** with the [First customer launch planner](https://useaiblocks.com/skills/copilot-gtm-0-to-1-launch). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -83,3 +73,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The case is a real, named person or event from the person's notes, not an invented one, and the case that cuts the other way is shown.
 - The first minute states what is at stake before any background, and the clock is a real date or number from the material.
 - The story in step 2 takes under two minutes to say.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

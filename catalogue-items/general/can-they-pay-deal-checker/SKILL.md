@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -60,6 +60,13 @@ How to start:
 
 The ask split into parts with ranges and sources. Their payment range and the assumptions behind it. The comparison and the verdict. Who gains from each term. The proposed sum or terms with the reason and schedule. What would change the number. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Every part of the ask has a number or a marked guess.
+- The proposed sum sits inside the stated range.
+- Who gains from each term is named.
+- One condition that would change the number is written.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -69,13 +76,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Lead the team** with the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every part of the ask has a number or a marked guess.
-- The proposed sum sits inside the stated range.
-- Who gains from each term is named.
-- One condition that would change the number is written.
 
 ## If something is missing
 

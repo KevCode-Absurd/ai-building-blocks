@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+- **An email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -72,15 +72,6 @@ Pause here: Send the email to part of your list, alongside your usual sends. Aft
 - Step 4, results: diagnosis ranked, what to repeat, one fix to test, score out of 100.
 - Hand-back summary: each file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
-- The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -89,3 +80,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The email tells one true story, with one idea and one call to action, and every claim, price and deadline matches the facts you gave.
 - Step 3 worked on the draft you picked with the cuts applied, not on a different draft.
 - The results read compares the story email with your usual sends, not with nothing.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
+- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
+- The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -70,15 +70,6 @@ Pause here: Publish the top pair. After a week or more, export the audience rete
 Four step files and the summary. The step 4 file holds the retention findings.
 - STEP 1 PAIRS, STEP 2 THREE TO TEST, STEP 3 TRANSCRIPT, STEP 4 WHERE VIEWERS LEAVE, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [YouTube upload planner](https://useaiblocks.com/skills/youtube-upload-planner). It takes the audit report.
-- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the audit report.
-- The [Short video format picker](https://useaiblocks.com/skills/short-video-format-picker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The title and thumbnail make the same single promise.
 - Each pair differs from the base by one change, so a result can be read.
@@ -87,3 +78,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The report names one change, not five.
 - The transcript came from pasted captions or from a service the person agreed to, and the run says which.
 - Every gap is a `MISSING:` line.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [YouTube upload planner](https://useaiblocks.com/skills/youtube-upload-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

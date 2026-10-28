@@ -55,13 +55,6 @@ How to start:
 
 The open parts of the ad. The groups. The intended and rival readings. The two questions for each group with answer options. The read-out plan and the limits. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Intended and rival readings are written down before testing.

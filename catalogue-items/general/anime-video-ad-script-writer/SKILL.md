@@ -64,17 +64,6 @@ How to start:
 4. **Cast note**: who carries it, why, their voice, what never changes.
 5. **CHECKS MISSED**: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Anime video clip prompt writer](https://useaiblocks.com/skills/anime-video-clip-prompt-writer). It takes the script.
-- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One look, one hero, one exaggeration, named at the top.
 - The hero reads as an adult in solid black.
@@ -83,6 +72,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing drawn goes beyond the approved claims.
 - The cast note names one carrier and gives a reason.
 - No artist, studio, show, character or competitor named.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Anime video clip prompt writer](https://useaiblocks.com/skills/anime-video-clip-prompt-writer). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No "old way": ask, or use the feeling or speed exaggeration instead. No label words: the product faces sideways until they're given. No customer facts: mark the hero "inferred".

@@ -17,12 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Audit report** with the [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). Bring your question, plan (optional).
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -103,7 +102,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make video ads** with the [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
 - The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
-- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

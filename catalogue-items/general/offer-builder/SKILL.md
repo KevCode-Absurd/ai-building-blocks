@@ -77,6 +77,12 @@ For each offer (up to three, each on a different lever):
 - The five checks, each passed or fixed, and CHECKS MISSED with one line per check still missed, or "none".
 - A test plan: run it on its own page beside the current offer, which stays until something beats it. Ask new buyers two questions: what nearly stopped you, and what made you go ahead?
 
+## Check before you hand it back
+- Each offer names one buyer and answers a stated doubt.
+- No fact about the product is invented: no count, dose, material, result or lifespan.
+- No urgency without a real date or limit.
+- Every offer can be delivered today, or the gap is under "must arrange".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -87,12 +93,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each offer names one buyer and answers a stated doubt.
-- No fact about the product is invented: no count, dose, material, result or lifespan.
-- No urgency without a real date or limit.
-- Every offer can be delivered today, or the gap is under "must arrange".
 
 ## If something is missing
 Write `MISSING: <what>`. With no cost data, propose offers on the result, certainty or effort levers that move no price, and say so.

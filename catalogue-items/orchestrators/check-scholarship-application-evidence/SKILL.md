@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Slide deck** (yours): a finished slide deck.
+- **A slide deck** (yours): a finished slide deck.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -85,14 +85,6 @@ HAND-BACK SUMMARY
 Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the document and audit report and draft.
-- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this (for this job)
 
 Use these instead of the general suggestions above, because the proofreader and the unsupported claim spotter are already steps in this workflow. Offer one next step and say they can type their own:
@@ -109,3 +101,11 @@ Use these instead of the general suggestions above, because the proofreader and 
 - No qualification ruling was given.
 - The original draft is untouched, and personal identifiers are left out.
 - Every date, figure and name traces to the records or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the document and audit report and draft.
+- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

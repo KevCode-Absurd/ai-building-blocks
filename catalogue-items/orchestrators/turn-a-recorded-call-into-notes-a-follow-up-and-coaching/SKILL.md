@@ -65,14 +65,6 @@ Use these instead of the general "After this" list above:
 - Step 3, coaching: speaking share, habits with quotes, and what to change on the next call.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber).
-- The [Dialpad and Leexi call summarizer](https://useaiblocks.com/skills/dialpad-and-leexi-call-summarizer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -81,3 +73,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every action has an owner and a date, or is marked `MISSING:`.
 - The follow-up states only what was agreed on the call.
 - Each coaching point has a quote that is in the transcript word for word.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

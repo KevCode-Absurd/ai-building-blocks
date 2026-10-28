@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -87,15 +87,6 @@ Pause here: Run the interviews and the work test. Every interviewer fills in the
 
 Next step: read the replies, send them yourself, then record each candidate's reply and the offer date in your hiring tool. Ignore the "After this" list below unless one item fits what you need.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
-- The [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker). It takes the document.
-- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -105,3 +96,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every stage checks something different, and each scorecard question has a strong and a weak answer written next to it.
 - The work test comes from the real job. Every claim in the comparison cites scorecard evidence.
 - The replies give a real reason, say nothing about protected traits, and were not sent.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
+- The [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker). It takes the document.
+- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

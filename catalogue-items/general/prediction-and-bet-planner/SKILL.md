@@ -80,14 +80,6 @@ CHECKS MISSED
 <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the plan.
-- **Decide what to do** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every prediction can be checked by a named result, and is about something seen, not a feeling.
@@ -95,6 +87,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The stake and date are set.
 - At least one rival explanation is listed fairly.
 - The stake is small and is not a money wager.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner). It takes the plan.
+- **Decide what to do** with the [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

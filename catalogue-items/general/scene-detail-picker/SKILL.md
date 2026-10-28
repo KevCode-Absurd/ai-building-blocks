@@ -47,6 +47,14 @@ How to start:
 
 One block per place with four details, a comparison or none, a skip list and a line to leave to the reader. A note on length. CHECKS MISSED.
 
+## Check before you hand it back
+
+- Every place has four details, not more.
+- At least two senses appear in each place.
+- No face or clothing list got through.
+- Every invented detail is marked.
+- Every comparison was tested for being stock.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -55,14 +63,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every place has four details, not more.
-- At least two senses appear in each place.
-- No face or clothing list got through.
-- Every invented detail is marked.
-- Every comparison was tested for being stock.
 
 ## If something is missing
 

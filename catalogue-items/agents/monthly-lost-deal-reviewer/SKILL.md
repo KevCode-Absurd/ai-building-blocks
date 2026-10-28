@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -81,16 +81,6 @@ You never do these yourself. You list them for approval:
 - **Shape:** lay the result out in the sections of the page's output shape: the month, the causes, the revised pitch, objection answers, the edge, rules, the register, files and missing.
 - **Next:** the owner shares the approved pitch and answers with the team, asks the next buyers the advice question, and brings their answers to next month's run.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
-- The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer).
-- The [Sales deal follow-up tracker](https://useaiblocks.com/skills/stalled-deal-revival-desk). It takes the objection map.
-- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every lost deal has a grade before any lesson is drawn from it.
 - Every cause came from a chain of whys against the notes, not from the reason given.
@@ -98,6 +88,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every objection answer has proof or a missing mark.
 - Nothing was sent, changed or written to the CRM.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
+- The [Sales deal follow-up tracker](https://useaiblocks.com/skills/stalled-deal-revival-desk). It takes the objection map.
+- The [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner). It takes the objection map.
+- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without buyer words, find the cause as far as the notes go and say it is a reading. Without the pitch, hand back the causes and doubts and say the revision waits for the pitch. Without won deals at quarter end, skip the edge check and say the pitch is being revised from losses alone, which can mislead.

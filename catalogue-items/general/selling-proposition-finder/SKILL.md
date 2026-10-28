@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -26,7 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, audit report, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, an audit report, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,17 +57,6 @@ How to start:
 
 The frame. The claims with road, three scores and total. The struck claims with reasons. Any product change worth making. The top claim and its supports. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
-- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- **Check it before it goes live** with the [Ad claims checker](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder). It takes the draft.
-- The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every claim fits the frame.
@@ -76,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Rival scores come from rival material, or are marked MISSING.
 - The top claim is one benefit.
 - No claim says more than the product facts allow.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
+- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
+- The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

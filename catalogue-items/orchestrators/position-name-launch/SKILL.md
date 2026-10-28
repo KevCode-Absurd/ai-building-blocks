@@ -72,15 +72,6 @@ First next step: run the Go or no-go launch checker (`go-or-no-go-launch-checker
 - Step 2 file: what your name means now, the stretch score, and the call to use the name, make a new one or skip, with the cost to the core if it fails.
 - Step 3 file: the idea to own, the news angle, the press and third-party plan, and when ads begin. This is the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
-- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The position is one idea, and the line needs no explaining.
 - The rival weakness is true and says how to check it.
@@ -89,3 +80,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the plan.
+- The [Software launch evidence reviewer](https://useaiblocks.com/skills/saas-launch-review-agent). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -75,6 +75,9 @@ CHECKS MISSED: <none or the list>
 MISSING: <orders | margins | shipping costs>
 ```
 
+## When not to use
+With a few hundred orders or fewer, treat the result as a first guess. To check how stacked discount codes combine, use the discount impact checker (step 8 uses it on every tier). For a free gift as the second reward in the cart bar, use the gift with purchase planner.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -83,9 +86,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## When not to use
-With a few hundred orders or fewer, treat the result as a first guess. To check how stacked discount codes combine, use the discount impact checker (step 8 uses it on every tier). For a free gift as the second reward in the cart bar, use the gift with purchase planner.
 
 ## Checks
 - The order spread was read in buckets, and the average was not used to set a line.

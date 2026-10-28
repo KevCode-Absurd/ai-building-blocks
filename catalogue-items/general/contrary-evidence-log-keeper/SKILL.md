@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -50,6 +50,14 @@ How to start:
 
 The belief in one line, split into numbered parts if needed. The log table with the rows you have. The entry rules and trigger list. The review: explained facts, unexplained facts, the weakest part. The belief restated. The next review date. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Every row has a date and a source, or says `MISSING:` for one.
+- Against-facts are logged as readily as for-facts.
+- The review names the weakest part of the belief.
+- The belief is restated after each review.
+- No row was left out for being small.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -58,14 +66,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Test the idea with real people** with the [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Every row has a date and a source, or says `MISSING:` for one.
-- Against-facts are logged as readily as for-facts.
-- The review names the weakest part of the belief.
-- The belief is restated after each review.
-- No row was left out for being small.
 
 ## If something is missing
 

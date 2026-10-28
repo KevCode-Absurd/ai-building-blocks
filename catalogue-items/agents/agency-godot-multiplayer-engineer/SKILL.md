@@ -10,15 +10,6 @@ Plans real-time multiplayer for Godot 4 games: authority, scene spawning, proper
 Read [the original role profile](references/source-agent.md) before you plan. Use its rules and code patterns for the user's game. Its role language and its "experience" lines are a reference, not evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -96,6 +87,15 @@ End with `CHECKS MISSED:` listing any check that could not be done, or "none".
 ## Next step
 
 This is the only next step to offer. It replaces the generic "After this" list above: do not offer those links. Run the test plan, then bring the results back for a revised plan. For single-player game structure, use the [Godot Gameplay Scripter agent](https://useaiblocks.com/skills/agency-godot-gameplay-scripter). For servers, matchmaking or scale, use the [Backend Architect agent](https://useaiblocks.com/skills/agency-engineering-backend-architect).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roblox systems programmer](https://useaiblocks.com/skills/agency-roblox-systems-scripter). It takes the plan.
+- The [vLLM model server setup planner](https://useaiblocks.com/skills/vllm-model-server-setup). It takes the plan.
+- The [Git workflow helper](https://useaiblocks.com/skills/git-workflow-helper). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

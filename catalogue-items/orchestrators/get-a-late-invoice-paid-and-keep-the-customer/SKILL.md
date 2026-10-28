@@ -67,18 +67,16 @@ Pause here: Send the proposed terms yourself. Wait the days you set.
 
 If the firm letter brings nothing, run step 2 again with what you have learned about their means. If the customer says the invoice is wrong or the work was faulty, use the workflow Turn a dispute into a checked demand letter draft instead.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
-- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - No letter threatens anything you have not said you would do.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

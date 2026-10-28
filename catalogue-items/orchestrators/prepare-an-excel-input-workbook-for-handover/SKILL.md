@@ -6,15 +6,6 @@ description: "Share your field rules. Get a checked input workbook and a guide f
 # Prepare an Excel input workbook for handover
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Excel workbook change reviewer](https://useaiblocks.com/skills/excel-workbook-change-reviewer). It takes the spreadsheet.
-- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the spreadsheet.
-- The [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder). It takes the document and spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -66,6 +57,15 @@ Use an actual tool that can read and write the required native format. Plain tex
 The native files and reports produced by the component methods, plus a run register and unresolved-input list.
 Next step: ask the owner to open the workbook, enter one real record and one bad record, and confirm the check catches the bad one. Send the workbook and the guide to the named owner only after every CHECKS row is passed or clearly marked not run. Open items stay in the guide, with a person named for each. Nothing is sent for the user.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Excel workbook change reviewer](https://useaiblocks.com/skills/excel-workbook-change-reviewer). It takes the spreadsheet.
+- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the spreadsheet.
+- The [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder). It takes the document and spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Verification cases
 Read each component’s packaged tests/cases.json and run the applicable cases. Verify the semantic handoff between component outputs and inputs. A matching type name alone does not prove compatibility.

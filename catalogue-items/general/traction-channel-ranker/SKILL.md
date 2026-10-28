@@ -8,27 +8,19 @@ description: "Share your product facts. Get all 19 channels compared and a short
 Needs no account, API key or paid tool, and no scraping. Start with a business profile (from the [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler)), or with a product link plus your growth goal, the most you can spend and your hours a week. If your AI cannot browse, paste your page text. It ranks and plans only: it sends nothing, spends nothing and publishes nothing.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent).
-- The [Viral growth experiment planner](https://useaiblocks.com/skills/traction-viral-marketing). It takes the traction shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Business profile** with the [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler). Bring your website (optional).
+1. **A business profile** with the [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler). Bring your website (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for business profile. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a business profile. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -71,3 +63,11 @@ Shape of the two files, with placeholders:
 Save shortlist.md with selected skill slugs, shared resource allocation, one primary outcome per test, review timing and the most important uncertainty. Use small tests to replace assumptions, then focus effort only when results justify it. Do not confuse simultaneous cheap exploration with scaling every channel. If none fits the current constraints, explain the limitation and choose a smaller research step.
 
 No sending, spending or publishing is authorized by a ranking. End with MISSING and the next step.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent).
+- The [Viral growth experiment planner](https://useaiblocks.com/skills/traction-viral-marketing). It takes the traction shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

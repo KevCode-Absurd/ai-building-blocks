@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -64,6 +64,14 @@ Four step files and the summary. The last file holds the names.
 - **Step 4, names:** ten names with parts marked, three to test, the refresh order.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
+## Check before you hand it back
+- Every cap and date is one you can keep, and no timer or count is fake.
+- Every bonus answers one named doubt and has a value with a basis.
+- The guarantee has an if, a time and an or what, and the sums include delivery cost on refunds.
+- Names use three to five parts and can be said in one breath.
+- No step discounts the core offer.
+- Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was published without a clear yes.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -72,11 +80,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every cap and date is one you can keep, and no timer or count is fake.
-- Every bonus answers one named doubt and has a value with a basis.
-- The guarantee has an if, a time and an or what, and the sums include delivery cost on refunds.
-- Names use three to five parts and can be said in one breath.
-- No step discounts the core offer.
-- Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was published without a clear yes.

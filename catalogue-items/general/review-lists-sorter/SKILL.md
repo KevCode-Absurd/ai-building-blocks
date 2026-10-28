@@ -15,15 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your notes** (yours): what to keep, change or drop.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Project review prep planner](https://useaiblocks.com/skills/project-review-prep-planner). Bring your question.
-2. This one.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your notes, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your notes, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -58,15 +54,6 @@ A team that moved offices lists "the packing labels" under do again for four peo
 
 Who answered and who did not. The themes, with counts on each list. The contested themes side by side. Each theme with its number line. The challenges to first conclusions. What cannot be seen. The list of old hurts, in neutral words. The top five themes with two questions each. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
-- The [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). It takes the audit report.
-- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The count of who answered is stated, and silent roles are listed.
@@ -75,6 +62,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Number links are written as questions, not conclusions.
 - No theme repeats a verdict on the project without a question about the process.
 - Names are not shown unless the team agreed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 

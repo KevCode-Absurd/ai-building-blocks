@@ -10,14 +10,6 @@ Designs how AI agents prove who they are, what they are allowed to do, and what 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: threat-model first, then identity issuance, trust rules based on checkable evidence, an append-only evidence record, delegation chains that only narrow, peer verification, and a plan for changing algorithms later. Its role language, experience claims, code samples and success targets (for example response times or "100% enforcement") are not facts about this system. They are goals and sketches from the original author. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
-- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -81,6 +73,14 @@ Return these sections in order. If your AI can save files, save each as its own 
 8. **Gaps and checks.** Missing item, why it matters, who should decide.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample code only if the user asked for it, and label it "sketch, not tested".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

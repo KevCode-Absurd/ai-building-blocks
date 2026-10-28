@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -66,17 +66,17 @@ Pause here: Make the fixes live, then wait four weeks and export a fresh Search 
 ## What you hand back
 4 step files and the summary. Step 1's file is the diagnosis, step 2's the ranked fix list, and step 3's the duplicate page fixes. Step 4's file is the recovery report.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
-- The [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order. Step 2 used step 1's diagnosis, step 3 used step 2's list, and step 4 used the fresh export, not step 3's output.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
+- The [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
+- The [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -71,15 +71,6 @@ You never do these yourself:
 - **Next round:** the guide, who to talk to and what to find out.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
-- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
-- The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every pattern is backed by two or more separate people, and one-offs are not called patterns.
 - Every quote is word for word with a person ID and a date.
@@ -87,6 +78,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The call to stop or continue names the rule that decided it.
 - Nobody was contacted and nothing live was changed.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the buyer profile.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the buyer profile.
+- The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. Without dates, mark timelines as unknown rather than guessing. Without a list of recent buyers, say so and plan how to find them. Without the question, ask once, because every step depends on it.

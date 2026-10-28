@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Competitors** (yours): the brands buyers compare you with.
 
@@ -32,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, customer words, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, customer words, a plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -70,6 +70,15 @@ Five step files and the summary. The step 5 file holds the priced offer.
 - STEP 1 PROBLEMS AND PROMISES, STEP 2 DELIVERY OPTIONS, STEP 3 THE STACK, STEP 4 VALUE SCORE, STEP 5 THE PRICE.
 - HAND-BACK SUMMARY: each file, and every MISSING line in one list.
 
+## Check before you hand it back
+- Every promise in step 1 traces to a buyer problem, and quotes are separated from guesses.
+- After trimming, every problem still has an answer.
+- Every stated value has a basis, and none is padded.
+- The price is shown as a share of what the result is worth, not copied from rivals.
+- Redo the sums in steps 3 and 5. The totals and ratios match.
+- Estimates (worth, default hours) are marked as estimates, with a `MISSING:` line.
+- No fact is invented, and nothing was sent, published or paid for.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -80,12 +89,3 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the landing page** with the [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every promise in step 1 traces to a buyer problem, and quotes are separated from guesses.
-- After trimming, every problem still has an answer.
-- Every stated value has a basis, and none is padded.
-- The price is shown as a share of what the result is worth, not copied from rivals.
-- Redo the sums in steps 3 and 5. The totals and ratios match.
-- Estimates (worth, default hours) are marked as estimates, with a `MISSING:` line.
-- No fact is invented, and nothing was sent, published or paid for.

@@ -8,15 +8,6 @@ description: Plan adaptive video streaming, with a bitrate ladder, HLS and DASH 
 Plan the whole chain that decides whether video starts fast and plays smoothly: encode, package, protect, deliver, play and measure.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the document.
-- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -82,6 +73,13 @@ Use these headings, in this order:
 - CHECKS MISSED: name every check that failed or could not run, or write "none" if every check ran and passed.
 
 Sample ffmpeg commands are fine when asked. Label them untested, and tell the user ffmpeg must be installed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Review rules
 

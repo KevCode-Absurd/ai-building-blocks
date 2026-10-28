@@ -50,8 +50,6 @@ For each request: REPEATS (who, how long), COST (if it counts), FIT (with, again
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Feature priority scorer](https://useaiblocks.com/skills/feature-priority-scorer). It takes the shortlist.
-- The [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder). It takes the shortlist.
-- The [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

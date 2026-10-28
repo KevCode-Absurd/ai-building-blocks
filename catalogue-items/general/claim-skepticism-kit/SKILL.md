@@ -45,21 +45,19 @@ How to start:
 ## What you hand back
 A report: the claim, a confirmation table, the explanations compared, the knock-down test, the disproof result, the plain restatement, the label and profit checks, the evidence bar and a red-flag list with source lines. Then `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report.
-- The [Working relationship trust reviewer](https://useaiblocks.com/skills/people-trust-checker). It takes the audit report.
-- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Independent confirmation is asked for.
 - At least two explanations are compared.
 - A disproving result is named or its absence is flagged.
 - The evidence asked for matches how surprising the claim is.
 - Each red flag points to a number or a line in the source.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <evidence> for <part>`. Never invent a study, a source, a number or a rival explanation's data.

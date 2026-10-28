@@ -103,6 +103,7 @@ MISSING: <what, if anything>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store brand consistency reviewer](https://useaiblocks.com/skills/store-brand-signal-auditor).
 - The [Store value proposition writer](https://useaiblocks.com/skills/store-promise-writer).
+- The [Competitor positioning mapper](https://useaiblocks.com/skills/positioning-grid-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

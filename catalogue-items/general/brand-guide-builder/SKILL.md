@@ -59,16 +59,6 @@ How to start:
 - A two-line note: pages left out and why, and any colour pair that fails for text.
 - CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
-- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor).
-- **Design it** with the [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design tokens.
-- The [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Colours and fonts are the brand's own, not defaults.
 - Every topic page opens with its reason, and every reason and rule comes from the brand file or is marked "the guide's reading, not on file".
@@ -77,6 +67,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every blank in the brand file appears under "Not yet captured".
 - No generated pictures of the product or people.
 - It prints one topic per page, with nothing cut off or scrolling.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
+- **Design it** with the [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design tokens.
+- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). It takes the brand guide.
+- The [Product-page brand analyst](https://useaiblocks.com/skills/product-page-brand-profile-extractor). It takes the brand guide.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Leave the page out and list the gap. Never invent a colour, font, tagline or logo rule. A logo with no clear space or smallest size on file is a gap, not a guess.

@@ -8,15 +8,6 @@ description: "Plan an interactive web map: library choice, data and tile plan, i
 Turn a web map brief into a plan: the mapping library, how the data is served, the interactions and layout, and the checks that show it works on phones.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer). It takes the audit report.
-- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the plan.
-- The [Shopify AI search attribute updater](https://useaiblocks.com/skills/product-attribute-field-setter). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -80,6 +71,13 @@ Return these sections, in this order:
 The open questions and the numbered checks are also your CHECKS MISSED list: name every check that could not run, or write "none".
 
 Next: to clean the data first, use the [Spatial Data Engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). For colours, labels and basemap design, use the [Cartography Designer agent](https://useaiblocks.com/skills/agency-gis-cartography-designer).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

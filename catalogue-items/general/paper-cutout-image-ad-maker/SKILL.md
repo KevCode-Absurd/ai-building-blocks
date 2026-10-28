@@ -93,17 +93,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 7. **Notes**: every figure's source, anything MISSING.
 8. **Checks missed**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
-- The [Handwritten note ad photo planner](https://useaiblocks.com/skills/handwritten-note-image-ad-maker). It takes the ad copy.
-- The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker). It takes the ad copy.
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One point, with one "but", and one proof picture that matches the claim's verb.
 - One signal, on the part that matters, and no other arrow, dashed line or pointer in the frame.
@@ -112,6 +101,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every figure has a source, or isn't there.
 - The product comes from its photo with no letter redrawn.
 - No named rival, real person or body before and after.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy and image prompt.
+- The [Handwritten note ad photo planner](https://useaiblocks.com/skills/handwritten-note-image-ad-maker). It takes the ad copy.
+- The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker). It takes the ad copy.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No product photo: ask once, then plan the layout and write the prompt with a labelled empty slot where the product photo goes, marked `MISSING: product photo`. Never let the image tool invent the product. No figures: no chart. No "how it works": no diagram; prove the steps or the swap instead.

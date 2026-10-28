@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, a plan (optional). It uses your brand brain and offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -134,6 +134,14 @@ STAGE 5  CLIP <n> (<s>, start F<n>)  Beat 1 <...> Beat 2 <...>
 CHECKS MISSED  <one line per check still missed, or none>
 ```
 
+## Check before you hand it back
+- Approval points are marked after stages 1, 3 and 4, each saying what to check before the next pictures are made.
+- Every rung shot uses the same camera, and only the dial changes between them.
+- The CHARACTER, LOOK and CLEAN lines are word for word the same in every prompt.
+- No exact count, word, clock or calendar is asked of the image tool.
+- The product matches its photos and opens the way the brand shows it.
+- The skeleton never speaks, never changes shape, and reads as friendly; no real person, child, known character or cloned voice.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -142,14 +150,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Approval points are marked after stages 1, 3 and 4, each saying what to check before the next pictures are made.
-- Every rung shot uses the same camera, and only the dial changes between them.
-- The CHARACTER, LOOK and CLEAN lines are word for word the same in every prompt.
-- No exact count, word, clock or calendar is asked of the image tool.
-- The product matches its photos and opens the way the brand shows it.
-- The skeleton never speaks, never changes shape, and reads as friendly; no real person, child, known character or cloned voice.
 
 ## If something is missing
 Before you write `MISSING:` for a fact, look for it in the brand file and the input. Write `MISSING: <what>` only when both lack it. Photos named but not visible to you: say so in one line, take the product's look and label words from the brand file or the input, write the product sheet from those, mark "check the product sheet against the real pack" as still to do, and never describe a photo you didn't see. No photo or description of the product at all: ask for one in one short message, and leave the product out of the frames until it comes. No narration yet: time the clips at 2.3 spoken words a second and mark each time `estimate`. A rung with a result the brand can't source: keep its label, drop the result.

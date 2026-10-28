@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your a video ad script and brand brain.
+2. **A character sheet** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). Bring product photos (optional). It uses your video ad script and brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -104,6 +104,13 @@ One opening frame and one shot card per opening:
 6. **Edit list:** the joins, captions, AI label and what to deliver.
 7. **CHECKS MISSED:** one line for each check still missed, or "none".
 
+## Check before you hand it back
+- Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
+- Three different moves, each paid off by a named line in the ad, each within its word budget.
+- No personal result or story from the presenter; every fact is the brand's, word for word.
+- One opening matches the ad's first frame on both dials.
+- The product is in frame from the first frame.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -111,16 +118,9 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
 - The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Each approval came before the next stage, or was marked "(approve)" when every stage was asked for in one go.
-- Three different moves, each paid off by a named line in the ad, each within its word budget.
-- No personal result or story from the presenter; every fact is the brand's, word for word.
-- One opening matches the ad's first frame on both dials.
-- The product is in frame from the first frame.
 
 ## If something is missing
 Write `MISSING: <what>`, ask once for what you can't work without, then carry on. No product photo: write the three openings, cards and storyboard with the product slot marked `MISSING: product photo`, and make no product sheet or clip until a real photo arrives. No visible result: no promise preview. No sourced quote: no real-line proof. No real date: no timing.

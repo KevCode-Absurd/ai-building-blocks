@@ -87,23 +87,23 @@ If an image tool is connected, offer to make the picture with it, and ask before
 8. **Notes**: buyer words used, claims left out, anything MISSING.
 9. **Checks missed**: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
-- The [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker). It takes the ad copy.
-- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
-- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - One claim, including inside any cutaway.
 - Cover the words: the drawings still tell the story.
 - Headline 7 words or fewer, at most 3 other things to read, nothing under 30 px, every word at 4.5:1 or more.
 - The drawn product has no letters, and the photo panel shows the real one.
 - No drawn customer, expert or child; the land panel claims no more than the brand states.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker). It takes the ad copy.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`, or mark the line "inferred". No product photo: ask once, then plan the strip and write the prompt from the description, mark `MISSING: product photo`, and say the drawn product won't match the real one until a photo is attached. No source for how it works: no cutaway. Never fill in a claim.

@@ -13,15 +13,6 @@ metadata:
 Share a research question, a date range and the posts or files to review. It groups themes, checks quotes and compares conflicting views. Get an evidence table and a short brief with sources, counts and gaps.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -91,6 +82,13 @@ Link each row to a source URL or supplied-file locator. Do not use a citation th
 4. **Counts:** records examined, excluded, duplicate records, unique threads or items where known, and coding counts with denominators.
 5. **Limits and gaps:** selection bias, missing groups or dates, access failures, and uncertainty.
 6. **Next useful evidence:** the smallest additional source or question that would reduce the main uncertainty.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Community needs research planner](https://useaiblocks.com/skills/community-needs-research-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Worked examples — fictional data
 

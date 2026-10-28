@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -84,19 +84,18 @@ MYTHS CHECKED: <claim, verdict, how to test it yourself>
 CHECKS MISSED: <list or none>
 ```
 
+## When not to use
+For a keep, merge or cut call on campaigns, use the Meta campaign purpose checker. To lay out campaigns and ad sets, use the Meta account structure planner. With less than 7 days of results, wait and collect more first.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 - The [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
 - The [Meta Ads weekly account reviewer](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
-- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report.
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## When not to use
-For a keep, merge or cut call on campaigns, use the Meta campaign purpose checker. To lay out campaigns and ad sets, use the Meta account structure planner. With less than 7 days of results, wait and collect more first.
 
 ## Checks
 Run these before handing back. Fix any that fail.

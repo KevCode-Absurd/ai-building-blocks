@@ -56,17 +56,6 @@ Five step files and the summary:
 - **Step 4:** the questions to answer, the signals that answer them, and alerts.
 - **Step 5:** the tests written, results, coverage and the gaps left. This is the test report.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the codebase.
-- The [AI cost cutter](https://useaiblocks.com/skills/ai-cost-cutter). It takes the codebase.
-- The [Prompt attack detector](https://useaiblocks.com/skills/prompt-attack-detector). It takes the codebase.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the test report and codebase.
-- The [Human approval review planner](https://useaiblocks.com/skills/human-review-gate). It takes the test report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -75,3 +64,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No secret key appears in the code. Every key comes from the settings file.
 - Webhooks check a signature and handle the same event twice without harm.
 - The test report lists what is still untested, and the person is told to have a developer review the code before real payments.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [TypeScript agent worker builder](https://useaiblocks.com/skills/course-wide-implementation-planner). It takes the codebase.
+- The [API spec writer](https://useaiblocks.com/skills/api-spec-writer). It takes the test report and codebase.
+- The [Agent anomaly monitor builder](https://useaiblocks.com/skills/the-monitoring-loop-always-watching-implementation-planner). It takes the codebase.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the test report and codebase.
+- The [Human approval review planner](https://useaiblocks.com/skills/human-review-gate). It takes the test report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

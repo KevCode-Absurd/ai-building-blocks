@@ -12,15 +12,6 @@ Read [the original role profile](references/source-agent.md) before you start. I
 When not to use it: for a short requirements doc from a few lines, use the Product requirements writer. To order tickets for a sprint, use the Sprint Prioritizer agent. For raw customer feedback to sort first, use the Feedback Synthesizer agent. If the request is still vague, use the Requirements question asker first. Engineering estimates, legal review and financial forecasts need the engineers, a lawyer or a finance lead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-- The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan and document.
-- The [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -75,6 +66,15 @@ Use these headings, in this order:
 5. The document you chose
 6. What we are not building
 7. Open questions and next step (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer). It takes the plan.
+- The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future). It takes the product spec and document.
+- The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

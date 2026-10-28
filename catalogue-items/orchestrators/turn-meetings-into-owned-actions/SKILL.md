@@ -23,11 +23,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for meeting notes, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for meeting notes, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -69,15 +69,6 @@ At the end, show any conflict between sources instead of hiding it. Keep done wo
 
 End with source coverage, what is missing and one next action. Next, read each draft and send the ones you approve yourself. If a task's facts change, run step 2 again for that task only.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). It takes the plan.
-- The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan and draft.
-- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -86,3 +77,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was sent, published, created or changed without a clear yes.
 - Every action traces back to a line in the notes, and proposed actions are kept apart from completed ones.
 - No draft is counted as sent, and no task is marked done because a draft exists.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). It takes the plan.
+- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
+- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

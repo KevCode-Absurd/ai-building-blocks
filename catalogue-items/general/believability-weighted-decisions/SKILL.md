@@ -48,15 +48,6 @@ How to start:
 
 The decision and the goal. The views, rated. The strongest dissent. The weighed result. The call and what would change it. How disagreement ends. The record with a review date. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
-- The [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Believability is rated on this topic, not overall seniority.
@@ -65,6 +56,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No person is scored in a public ranking.
 - Where the record is thin, the rating says unknown.
 - The call follows from the weights, or says why it cannot.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+- The [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

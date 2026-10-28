@@ -26,7 +26,7 @@ How to start:
 
 ## What you need
 
-The inputs are the six items below, not a general "question". The worked example in references/worked-example.md is a fictional practice case, and every output of this workflow is a plan, not evidence of real results. Ignore the generic "After this" list above: it is for sales teams. Use "Next steps for this workflow" below instead. Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
+The inputs are the six items below, not a general "question". The worked example in references/worked-example.md is a fictional practice case, and every output of this workflow is a plan, not evidence of real results. For what to do next, use "Next steps for this workflow" below. Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
 
 - **The one deliverable** (required): product images, ad visuals, creator-style content or short video.
 - **The one customer type** (required): for example small ceramic makers.
@@ -75,15 +75,6 @@ MISSING                   <each gap and the line it stops>
 CHECKS MISSED             <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the document and plan.
-- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before handing back
 
 - One offer for one customer, stated in a line.
@@ -99,11 +90,18 @@ Write `MISSING: <what>` next to the affected line and carry on with the parts th
 
 ## Next steps for this workflow
 
-This is the only next-step list for this workflow. The deal tools in the generic list above (Mutual action plan builder, Deal health reviewer, Deal payment checker) are for sales teams and do not apply, so do not offer them. This workflow is one planning run with no sub-skills. Suggest one next step as a short question, and say the user can type their own:
+This is the only next-step list for this workflow. This workflow is one planning run with no sub-skills. Suggest one next step as a short question, and say the user can type their own:
 - **A client asked for a price.** Use the [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote) workflow.
 - **A client wants more after signing.** Use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 - **Polish one pitch.** Use the [Capability pitch letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer).
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit sponsor package planner](https://useaiblocks.com/skills/nonprofit-sponsor-package-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Practice case
 

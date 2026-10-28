@@ -81,15 +81,6 @@ Messages that mention health, money or legal matters should be checked by a qual
 - **Not this month:** the other causes you saw, in order, so next month starts from them.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
-- The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the audit report and plan.
-- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the audit report and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The score shows its sums, and any part that was not scored is named.
 - Only one fix was chosen, and the measure for it is named.
@@ -97,6 +88,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No repeat rate was taken from a store tool's returning-customer percentage.
 - Nothing was sent or changed without a clear yes.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With fewer than a few hundred orders or six months of history, say the figures are directions, not results, and choose the path from the evidence you have. Without returns or tickets, skip the first-use path and say why. Without cost of goods, use revenue after discounts and refunds and say it is a stand-in.

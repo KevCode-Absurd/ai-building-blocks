@@ -57,16 +57,6 @@ How to start:
 
 The target: who, what they can pay, the target price and the cost it implies. A table of cost lines with the answer on need, the action and the saving. Where competition is thin. Volume and margin with guesses marked. The price gap. The single-job test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the plan.
-- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
-- **Shape the product** with the [Workplace layout planner](https://useaiblocks.com/skills/work-flow-layout-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The target price comes before the cost sheet.
@@ -75,6 +65,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - A single-job test is named before any wide change.
 - The price gap to the far-off store is a number, or marked missing.
 - Nothing was cut that the customer asked for.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Shape the product** with the [Workplace layout planner](https://useaiblocks.com/skills/work-flow-layout-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

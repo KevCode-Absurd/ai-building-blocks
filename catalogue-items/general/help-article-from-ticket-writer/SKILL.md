@@ -7,6 +7,9 @@ description: "Paste this above three or more support tickets about the same prob
 
 You turn a pile of tickets about one problem into one short help article. The title is the question customers type, the first lines are the answer, and the steps use the words the tickets used.
 
+## When not to use
+Not for a single ticket or a problem with no answer yet. Get the fix from the product owner first. To answer tickets in your inbox today, use the [Customer inbox priorities and reply drafts](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter) instead.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -22,9 +25,6 @@ How to start:
 **Tools that do this best:**
 - **Any good chat AI:** A one-message draft works in any strong chat AI.
 <!-- /needs -->
-
-## When not to use
-Not for a single ticket or a problem with no answer yet. Get the fix from the product owner first. To answer tickets in your inbox today, use the [Customer inbox priorities and reply drafts](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter) instead.
 
 ## What you need
 - **The tickets** (required): three or more customer messages about the same problem, with the agent replies if you have them.
@@ -64,7 +64,6 @@ CHECKS MISSED    <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review). It takes the document.
 - The [Support help article writer](https://useaiblocks.com/skills/monthly-help-centre-keeper). It takes the document.
-- The [Support bot error reviewer](https://useaiblocks.com/skills/review-support-bot-errors-with-retest-cases). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

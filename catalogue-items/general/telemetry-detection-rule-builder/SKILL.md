@@ -10,17 +10,6 @@ description: Share one threat behavior and redacted logs. Draft a detection
 Share one threat behavior and redacted logs. Draft a detection rule, test cases and an honest validation report.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
-- The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer). It takes the code change.
-- The [Code security warning checker](https://useaiblocks.com/skills/insecure-code-catcher). It takes the code change.
-- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the test report and code change.
-- The [Software test gap finder](https://useaiblocks.com/skills/copilot-test-gap-audit). It takes the test report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -88,6 +77,17 @@ These are selected, rewritten task instructions. The original role profiles are 
 - Required fixtures and fields block a validation pass when absent.
 - A lookalike trusted-tool string cannot silently trigger an allowlist exemption.
 - Compilation/replay statuses describe actual target-engine checks, not guessed success.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
+- The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer). It takes the code change.
+- The [Code security warning checker](https://useaiblocks.com/skills/insecure-code-catcher). It takes the code change.
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the test report and code change.
+- The [Software test gap finder](https://useaiblocks.com/skills/copilot-test-gap-audit). It takes the test report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Source credit
 

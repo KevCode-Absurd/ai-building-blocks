@@ -21,6 +21,14 @@
 // 95.9% of "Before you start" steps make an input of the item, all in the same line of work.
 // After the step-ranking pass (same day): 93.9% take something the item makes, 46.6% as a required input, 6.1% hand
 // nothing over, 0.2% of items have no link; 95.2% of "Before you start" steps make an input (floor kept at 95.9 - 2).
+// After the topic-fit pass of 2026-10-28 (tools/lib/needs.mjs fitsAfter): a link whose only hand-off is a loose one (a
+// report, a plan, a document) must also share a topic word with the item (the same job alone is not enough), and when
+// nothing fits there is one same-job fallback (a general tool that takes the result, or a close sibling) or none.
+// That drops links such as a direct mail review -> store SEO fixes, which took the report as a required input, so
+// 90.5% take something the item makes, 40.0% as a required input (was 46.6%), 9.5% hand nothing over (mostly the
+// close-sibling fallback), and 2.0% of items (mostly "Set up AI" and ad or page checks) have no link rather than an
+// unrelated one. Labelled precision rose: page strict 0.442 -> 0.496, lenient 0.898 -> 0.913, items with a good link
+// 0.786 -> 0.81. The floors below are these measurements.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
@@ -30,7 +38,7 @@ import path from 'node:path';
 
 const MEASURED = { top1: 0.704, top5: 0.933, keywordHit1: 0.917, keywordHit5: 0.984 };
 const NEXT_MEASURED = { page: { precisionStrict: 0.444, precisionLenient: 0.908, itemsWithAGoodLink: 0.786 }, builder: { precisionStrict: 0.455, precisionLenient: 0.917, itemsWithAGoodLink: 0.786 } };
-const HANDOFF_MEASURED = { takesSomethingItMakes: 0.939, asRequiredInput: 0.466, noHandoff: 0.061, itemsWithNoLinks: 0.002, chainMakesAnInput: 0.959 };
+const HANDOFF_MEASURED = { takesSomethingItMakes: 0.905, asRequiredInput: 0.4, noHandoff: 0.095, itemsWithNoLinks: 0.02, chainMakesAnInput: 0.959 };
 const FLOOR = Object.fromEntries(Object.entries(MEASURED).map(([key, value]) => [key, Number((value - 0.02).toFixed(3))]));
 const site = path.resolve(import.meta.dirname, '..');
 

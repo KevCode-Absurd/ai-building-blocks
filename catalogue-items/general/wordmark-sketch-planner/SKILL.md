@@ -58,6 +58,14 @@ How to start:
 
 Name, meaning and feeling. The sketch ideas with typeface, spacing and reading cost. The pick and why. The small-size result. An image plan of what to draw first. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- At least five different shape ideas are listed.
+- The pick works with no picture beside it.
+- The loss in ease of reading is stated for the pick.
+- The name is still readable at small size.
+- Spacing is described for every line.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -66,14 +74,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Poster designer](https://useaiblocks.com/skills/poster-designer). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- At least five different shape ideas are listed.
-- The pick works with no picture beside it.
-- The loss in ease of reading is stated for the pick.
-- The name is still readable at small size.
-- Spacing is described for every line.
 
 ## If something is missing
 

@@ -30,7 +30,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. This one.
 
 How to start:
@@ -72,17 +72,6 @@ Pause here: Put the new top screen live for the test, run it for at least two fu
 - Step 3: split check, how the test ended, the lift as a range, the gain in money, an order value and margin check, and a ship, do not ship or re-test call.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the draft.
-- **Check it before it goes live** with the [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
-- The [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the draft.
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- The [Article-style ad draft editor](https://useaiblocks.com/skills/advertorial-draft-editor). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -91,3 +80,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The headline repeats the ad's promise, and every proof item is real with a source.
 - The test changes the top screen and nothing else, and the plan says what no effect looks like before the test starts.
 - The call gives a range and a money figure, and checks order value as well as orders.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit giving page writer](https://useaiblocks.com/skills/nonprofit-donation-page-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

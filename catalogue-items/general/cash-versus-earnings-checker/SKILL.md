@@ -23,11 +23,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for financial statements, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for financial statements, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -59,6 +59,15 @@ These are the inputs for this skill. If the section above asks for an ads export
 
 The figure table, free cash flow by year, the four tests with working, the score out of 100 (what it measures: how well cash backs earnings, not a valuation), what growth is costing, the score after any fixes, `MISSING:` lines and CHECKS MISSED.
 
+## Check before you hand it back
+
+- Free cash flow is worked out for every year given.
+- Each test shows its working and points.
+- The score is the sum of four tests and says what it measures.
+- No missing figure is estimated.
+- The note says this is not personal financial advice.
+- No security is named to buy or sell.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -68,15 +77,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Free cash flow is worked out for every year given.
-- Each test shows its working and points.
-- The score is the sum of four tests and says what it measures.
-- No missing figure is estimated.
-- The note says this is not personal financial advice.
-- No security is named to buy or sell.
 
 ## If something is missing
 

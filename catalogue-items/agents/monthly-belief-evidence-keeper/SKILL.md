@@ -25,7 +25,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep one file per belief and the register between months. You start the run on the first Friday of each month. It does not run on a timer.
+- **Claude Code:** It can keep one file per belief and the register between months. You start the run on the first Friday of each month. It does not run on a timer unless you set up a scheduled task or connect a scheduler.
 - **Any good chat AI:** Paste the agent, your beliefs and the month's evidence. Keep the register in a note yourself.
 <!-- /needs -->
 
@@ -69,15 +69,6 @@ You never do these yourself. You list them for approval:
 - **What the record cannot show:** one line per belief, with the fact that would settle it.
 - **Files:** each step's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan and audit report.
-- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-- The [Working relationship trust reviewer](https://useaiblocks.com/skills/people-trust-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - Every belief has a written prediction and the fact that would sink it.
 - Facts against were logged before facts for, each with a source and date.
@@ -85,6 +76,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No bet was marked held or failed without its numbers.
 - Nothing in the plan was changed and nothing was sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the lessons and plan and audit report.
+- The [Decision mistake collector](https://useaiblocks.com/skills/decision-mistake-collector). It takes the lessons.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without new evidence this month, log "no evidence" against the month and move the quiet counter forward; three quiet months trigger the knowledge test. Without sources, log the fact as unsourced and say the verdict leans less on it. Without the plan, review the beliefs on their own and say the link to the plan is unknown.

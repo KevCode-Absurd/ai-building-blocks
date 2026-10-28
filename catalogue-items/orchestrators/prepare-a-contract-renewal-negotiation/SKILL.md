@@ -15,12 +15,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for the contract, spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -63,13 +63,6 @@ Before each step, write a short brief for it: the result wanted, the source refe
 
 Lead with the notice date and what must be decided before it. Then give the options and the negotiation brief. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, every MISSING: line and CHECKS MISSED. If a tool made a native file, include it with its real verification result. An outline is not a finished document, and a plan is not a completed action.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Negotiation prep coach](https://useaiblocks.com/skills/negotiation-prep-coach). It takes the negotiation brief.
-- The [Renewal watch planner](https://useaiblocks.com/skills/renewal-watch-planner). It tracks the other renewals coming up.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 Also offer to give the negotiation brief to the budget owner before the notice date. Nothing here sends, signs or changes anything outside the working files.
 
 ## Check before you hand it back
@@ -82,6 +75,15 @@ Also offer to give the negotiation brief to the budget owner before the notice d
 - Step inputs use the right meaning, units, period and version.
 - Every unresolved fact is a MISSING: line, and proposed actions stay apart from completed ones.
 - End with CHECKS MISSED: followed by the checks that failed or could not run, or none. Never add a tested badge without recorded run evidence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
+- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
+- The [Company filing deadline tracker](https://useaiblocks.com/skills/company-filing-deadline-tracker). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

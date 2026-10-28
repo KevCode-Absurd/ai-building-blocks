@@ -16,14 +16,14 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, a tool connection. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -56,18 +56,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 3, savings:** supplier groups ranked by possible saving, with the bills each rests on.
 - **Hand-back summary:** each file, every `MISSING:` line and the `CHECKS MISSED` list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer). It takes the spreadsheet.
-- The [Intercompany balance matcher](https://useaiblocks.com/skills/intercompany-balance-matcher). It takes the spreadsheet.
-- The [Product cost sorter](https://useaiblocks.com/skills/cogs-line-sorter). It takes the spreadsheet.
-- **Check the money** with the [Fixed payment cash coverage checker](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder). It takes the spreadsheet.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer). It takes the spreadsheet.
+- The [Intercompany balance matcher](https://useaiblocks.com/skills/intercompany-balance-matcher). It takes the spreadsheet.
+- The [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter). It takes the spreadsheet.
+- **Check the money** with the [Fixed payment cash coverage checker](https://useaiblocks.com/skills/fixed-charge-coverage-bridge-builder). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

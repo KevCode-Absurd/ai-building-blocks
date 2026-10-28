@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your resume** (yours): your resume or CV, pasted or attached.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -64,16 +64,16 @@ This check is not legal advice. Have a lawyer review the flagged terms before yo
 ## What you hand back
 One file for each step, plus the summary. Step 1 saves the hiring packet and step 2 the shortlist. Step 3 saves the comparison. Step 4 saves the offer check, so it is the last file. If you have not finished the interviews or filled in the offer, the run ends at that pause and the summary says which steps were not run.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [New hire first week planner](https://useaiblocks.com/prompts/new-hire-first-week-planner).
-- The [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner). It takes the the job description.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [New hire first week planner](https://useaiblocks.com/prompts/new-hire-first-week-planner).
+- The [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner). It takes the job description.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

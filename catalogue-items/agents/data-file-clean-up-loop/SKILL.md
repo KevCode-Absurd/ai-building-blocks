@@ -13,14 +13,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your data** (yours): the data files, with their format and where they came from.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your data, spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -72,17 +72,6 @@ If the person approves a specific change in clear words, make only that change a
 - **Rules saved:** what is now in `clean/rules.md`.
 - **Files:** each round's files. Then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the spreadsheet and audit report.
-- The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the spreadsheet and audit report.
-- The [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter). It takes the spreadsheet.
-- **Build it** with the [Training data curation planner](https://useaiblocks.com/skills/training-data-cleaner). It takes the data.
-- **Build it** with the [Single-cell analysis workflow planner](https://useaiblocks.com/skills/single-cell-deep-learning). It takes the data.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - The original file is untouched.
 - Every change maps to a rule, and no blank was filled with a guess.
@@ -90,6 +79,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The counts after the last round are shown next to the counts before the first.
 - Formula totals still tie out, if the file has formulas.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the spreadsheet and audit report.
+- The [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter). It takes the spreadsheet.
+- The [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder). It takes the spreadsheet.
+- **Build it** with the [Training data curation planner](https://useaiblocks.com/skills/training-data-cleaner). It takes the data.
+- The [Single-cell analysis workflow planner](https://useaiblocks.com/skills/single-cell-deep-learning). It takes the data.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With no column list, infer meanings from the headers, mark each one as inferred and ask for a yes on the pass rules before round 1. With a file too large to open, work on a sample and say how big the sample was.

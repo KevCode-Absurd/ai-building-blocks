@@ -74,7 +74,7 @@ CHECKS MISSED
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Grow on social** with the [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
 - The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
-- **Grow on social** with the [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

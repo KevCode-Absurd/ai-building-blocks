@@ -59,15 +59,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Three step files and the summary. The step 3 file holds the revision schedule.
 - STEP 1 UNIT PLAN, STEP 2 MIXED PRACTICE PLAN, STEP 3 REVISION SCHEDULE, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
-- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
-- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The end goal is something students do, not something they hear about.
 - Every lesson in the plan has a line saying how it leads to the proof of learning.
@@ -76,3 +67,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No topic goes longer than the longest gap without returning.
 - Each retrieval task takes a few minutes and has an answer the teacher can check.
 - Every gap is a `MISSING:` line. The person is told to check the dates against the real school calendar.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -7,7 +7,7 @@
 // Used by tools/add-needs.mjs (the "Before you start" and "After this" sections in each SKILL.md) and by
 // site/scripts/build-index.mjs (the same chain on each block page and in workflow packs).
 
-import { GENERIC_PORTS, familiesOf, nextSteps, sameFamily, subjectSimilarity, workflowPredecessors } from "../../site/src/lib/next-steps.mjs";
+import { GENERIC_PORTS, familiesOf, nextSteps, sameFamily, subjectSimilarity, subjectWords, workflowPredecessors } from "../../site/src/lib/next-steps.mjs";
 
 export const SITE = "https://useaiblocks.com";
 export const BRAND_BRAIN = "website-brand-brain-builder";
@@ -122,8 +122,89 @@ const pathOf = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrato
 export const urlOf = (b) => `${SITE}/${pathOf(b)}/${b.slug}`;
 const ref = (b) => ({ slug: b.slug, name: b.name, url: urlOf(b) });
 const lower = (s) => s.charAt(0).toLowerCase() + s.slice(1);
-/** "A video ad script" or "Your offer" as it reads after "the": "video ad script", "offer". */
-const bare = (s) => lower(s).replace(/^(a|an|your) /, "");
+/** "A video ad script", "Your offer" or "The deal terms" as it reads after "the" or "your": "video ad script", "offer", "deal terms". */
+const bare = (s) => lower(s).replace(/^(a|an|your|the) /, "");
+
+/**
+ * Topic fit, for links whose only hand-off is a loose one (a report, a plan, a document, a spreadsheet): nearly every
+ * block takes or makes one, and one job holds very different work (a five whys session and a partner screener are both
+ * "Lead the team"; a direct mail review and a store SEO plan both hand over a report), so a shared loose hand-off, or
+ * the same job, says nothing on its own. The two must also share a topic word in their names, aliases or summaries:
+ * a word only a few jobs use ("currency", "deck", "interview", "invoice"), not one every kind of work uses ("score",
+ * "fix", "cost", "customer"). In the same job one shared topic word is enough; across jobs it must be in both names,
+ * or two must be shared.
+ */
+const TOPIC_JOBS = 20; // a word used by items in this many jobs or more is not a topic
+/** Everyday words that spread over fewer jobs but still say nothing about the subject. */
+const PLAIN_WORDS = new Set(("remain remaining likely total fail failure cause before after first last next start end turn keep keeps find finds "
+  + "help helps need needs want wants right wrong good best better bad set sets run runs show shows add adds change changes point points line lines "
+  + "part parts kind kinds way ways thing things time times day days week weeks month months year years people person team owner owners "
+  + "detail details note notes idea ideas option options choice choices answer answers question questions fact facts number numbers figure figures "
+  + "result results report reports summary draft drafts document documents file files page pages sheet sheets table tables list lists template "
+  + "score scores fix fixes rule rules cost costs risk risks gap gaps issue issues problem problems case cases test tests check checks review "
+  + "reviews plan plans guide guides brief briefs workflow skill skills prompt prompts agent agents tool tools task tasks "
+  // Role and timing words in agent names ("GIS QA engineer", "quarterly keeper") say who or when, not what about.
+  + "engineer engineers developer developers specialist specialists expert experts manager managers analyst analysts strategist "
+  + "consultant consultants designer designers assistant assistants coordinator architect lead daily weekly monthly quarterly yearly "
+  // What kind of tool it is, not what it is about ("generator" in a report code generator and an audio plugin generator).
+  + "finder auditor drafter tracker coach picker tester mapper fixer researcher sorter modeler modeller reader investigator runner "
+  + "scorer reporter updater helper collector rewriter explainer converter generator organizer organiser cleaner tuner estimator "
+  + "screener ranker trainer simulator chooser copywriter preparer advisor matcher migrator troubleshooter spotter tracer producer "
+  + "analyzer analyser splitter reconciler connector extractor profiler keeper editor editors "
+  // Word parts and loose verbs left by hyphens and stems ("pre-launch", "pre-read"; "act" from "actions").
+  + "pre post non sub act action actions self full high low top small big long quick fast easy").split(" ").map((w) => subjectWords(w)[0]).filter(Boolean));
+const TOPICS = new WeakMap();
+function topics(all) {
+  let t = TOPICS.get(all);
+  if (t) return t;
+  const words = new Map(), names = new Map(), jobs = new Map(), follows = new Set();
+  for (const b of all) {
+    if (b.type === "mind") continue;
+    const alias = (b.aliases ?? []).join(" ");
+    words.set(b.slug, subjectWords(`${b.name} ${alias} ${b.summary ?? ""}`));
+    names.set(b.slug, new Set(subjectWords(`${b.name} ${alias}`)));
+    for (const w of words.get(b.slug)) { let s = jobs.get(w); if (!s) jobs.set(w, (s = new Set())); s.add(b.task); }
+    // Reviewed evidence: a workflow runs one straight after the other, or one is built on ("uses") the other.
+    const steps = (b.steps ?? []).map((s) => (typeof s === "string" ? s : Array.isArray(s) ? s[0] : s.uses));
+    steps.forEach((s, i) => { if (steps[i + 1] && steps[i + 1] !== s) follows.add(`${s}>${steps[i + 1]}`); });
+    for (const u of b.uses ?? []) if (u !== b.slug) follows.add(`${u}>${b.slug}`);
+  }
+  const topical = (w) => (jobs.get(w)?.size ?? 0) < TOPIC_JOBS && !PLAIN_WORDS.has(w) && !/^\d+$/.test(w);
+  t = { words, names, topical, follows };
+  TOPICS.set(all, t);
+  return t;
+}
+/** The topic words two blocks share (see TOPIC_JOBS). */
+export function sharedTopics(a, b, all) {
+  const { words, topical } = topics(all), other = new Set(words.get(b.slug) ?? []);
+  return (words.get(a.slug) ?? []).filter((w) => other.has(w) && topical(w));
+}
+/** Whether two blocks are about the same subject: in the same job one shared topic word; across jobs one in both names, or two. */
+export function sameTopic(a, b, all) {
+  const shared = sharedTopics(a, b, all), { names } = topics(all);
+  return shared.length >= (a.task === b.task ? 1 : 2) || shared.some((w) => names.get(a.slug)?.has(w) && names.get(b.slug)?.has(w));
+}
+/** Whether a block is a general tool for its job: no topic word in its name ("Plan failure reviewer", "Action item tracker"). */
+export function generalTool(b, all) {
+  const { names, topical } = topics(all);
+  return ![...(names.get(b.slug) ?? [])].some(topical);
+}
+/** Subject closeness (site/src/lib/next-steps.mjs subjectSimilarity) at which a same-job fallback counts as near. */
+const FALLBACK_NEAR = 0.1;
+/** Whether a reviewed workflow runs `to` straight after `from`, or `to` is built on ("uses") `from`. */
+const reviewedAfter = (from, to, all) => topics(all).follows.has(`${from.slug}>${to.slug}`);
+/**
+ * Whether `to` fits after `from` (`made`: the types `from` hands over; `alike`: types they stand in for): a reviewed
+ * workflow or build-on links them, or `to` takes something `from` makes and that is either a specific thing (a job
+ * description, a slide deck, deal terms) or a loose one (a report, a plan, a stand-in) on the same topic (sameTopic).
+ * A block that takes nothing from this one (another tool for the same job) is not a next step.
+ */
+export function fitsAfter(from, to, all, made, alike = new Set()) {
+  if (reviewedAfter(from, to, all)) return true;
+  const inputs = to.inputs ?? [];
+  if (inputs.some((p) => made.has(p.type) && !GENERIC_PORTS.has(p.type))) return true;
+  return inputs.some((p) => made.has(p.type) || alike.has(p.type)) && sameTopic(from, to, all);
+}
 
 /**
  * The inputs a block takes from outside: its own inputs, and for a workflow anything specific a step needs that no
@@ -217,7 +298,8 @@ export function chainOf(b, bySlug, describe, { before, all } = {}) {
       if (order.length >= 2) break;
       if (seen.has(x.slug) || x.type === "mind" || x.category === "orchestrator" || !sameFamily(b.task, x.task)) continue;
       const hands = (x.outputs ?? []).map((o) => o.type).filter((t) => reads.has(t));
-      if (!hands.length || (hands.every((t) => GENERIC_PORTS.has(t)) && subjectSimilarity(b, x, all) < 0.05)) continue;
+      // A loose hand-off (a report, a plan) only counts between blocks on the same topic (sameTopic).
+      if (!hands.length || (hands.every((t) => GENERIC_PORTS.has(t)) && !sameTopic(x, b, all))) continue;
       seen.add(x.slug);
       const own = needsOf(x, bySlug, describe), info = inputInfo(hands[0], b.task, bySlug, describe);
       order.push({ ...ref(x), label: info.label, bring: [...own.needed, ...own.helps].filter((i) => !i.maker).map((i) => `${lower(i.label)}${i.required ? "" : " (optional)"}`), uses: [...own.needed, ...own.helps].filter((i) => i.maker).map((i) => i.label) });
@@ -271,9 +353,18 @@ const NEXT_CHOSEN = {
   "rough-notes-to-minutes-writer": ["weekly-meeting-actions-keeper", "board-minutes-drafter"],
 };
 
+/** The brand brain's parts as a hand-off: a buyer profile builder hands over a buyer profile, not the whole brand brain. */
+const PART_LABEL = { persona: "buyer profile", product_data: "product facts" };
 /** A hand-off as "Takes the …" names it. What it takes is what this block made, so a brief is "the brief", not a buyer brief. */
-export const handoffLabel = (type) => bare((PLAIN[type] ?? INPUTS[type])?.label ?? type.replace(/_/g, " "));
+export const handoffLabel = (type) => PART_LABEL[type] ?? bare((PLAIN[type] ?? INPUTS[type])?.label ?? type.replace(/_/g, " "));
 
+/**
+ * How many links the fallback gives when nothing fits: one, as a suggestion, not a padded list. It is the best link in
+ * the same job that takes something this one makes and is close in subject (FALLBACK_NEAR) or a general tool for that
+ * job (generalTool); with no such hand-off, a close sibling. Never a tool for some other subject (a MATLAB audio plugin
+ * after a Google Ads report script): then the page suggests nothing.
+ */
+const FALLBACK_LINKS = 1;
 export function nextOf(b, all, max = 5, override) {
   const outs = new Set((b.outputs ?? []).map((o) => o.type));
   if (outs.has("brand_brain")) { outs.add("product_data"); outs.add("persona"); } // its products and buyers parts
@@ -288,7 +379,16 @@ export function nextOf(b, all, max = 5, override) {
   // Reviewed workflows, specific hand-offs and the same subject decide (site/src/lib/next-steps.mjs). A check comes
   // first after something people will see; a generic report or brief only links within the same job and subject.
   // Its hand-offs come strongest first (a specific thing the next block needs, then a generic one).
-  return nextSteps(b, all, { max, outs: [...outs], alike, startHere: START_HERE }).map(({ x, takes }) => link(x, takes));
+  // Only blocks that fit this one's job are suggested (fitsAfter): a workflow or build-on link, a specific hand-off, or
+  // a loose hand-off on the same topic. Only when nothing fits, one fallback within the same job (FALLBACK_LINKS).
+  const made = new Set(outs), options = { max, outs: [...outs], alike, startHere: START_HERE };
+  const takes = (x) => (x.inputs ?? []).some((p) => made.has(p.type) || alike.includes(p.type));
+  let found = nextSteps(b, all, { ...options, exclude: (x) => !fitsAfter(b, x, all, made, new Set(alike)) });
+  const fallback = (ok) => nextSteps(b, all, { ...options, max: Math.min(max, FALLBACK_LINKS), exclude: (x) => x.task !== b.task || !ok(x) });
+  if (!found.length) found = fallback((x) => takes(x) && (generalTool(x, all) || subjectSimilarity(b, x, all) >= FALLBACK_NEAR));
+  // With no hand-off at all, a close sibling: another tool for the same thing (an Amazon keyword picker after a listing draft).
+  if (!found.length) found = fallback((x) => subjectSimilarity(b, x, all) >= FALLBACK_NEAR);
+  return found.map(({ x, takes }) => link(x, takes));
 }
 
 /** Everything the page and the SKILL.md show: the needs, the chain before, the brand brain files and the next steps. */
@@ -315,8 +415,8 @@ export function beforeSection(plan, tools = [], nl = "\n") {
     out.push("**Recommended steps before this one** (optional; do each once, then reuse what it makes):");
     chain.forEach((s, n) => {
       const bring = s.bring.length ? ` Bring ${s.bring.join(", ")}.` : "";
-      // Some labels already say "your" ("Your offer"), so it isn't repeated.
-      const uses = s.uses.length ? ` It uses your ${s.uses.map((u) => lower(u).replace(/^your /, "")).join(" and ")}.` : "";
+      // Labels start "A", "Your" or "The" ("A buyer brief", "Your offer"); after "your" they read "buyer brief", "offer".
+      const uses = s.uses.length ? ` It uses your ${s.uses.map(bare).join(" and ")}.` : "";
       out.push(`${n + 1}. **${s.label}** with the [${s.name}](${s.url}).${bring}${uses}`);
     });
     out.push(`${chain.length + 1}. This one.`, "");
@@ -344,11 +444,12 @@ export function afterSection(plan, nl = "\n") {
     "When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:",
     // A job with no "next" label falls back to the skill's own name; then just name the skill once.
     // A reviewed next-step list can name a skill whose inputs match nothing this one makes; then leave out "It takes the ."
-    ...plan.next.map((x) => {
+    ...plan.next.map((x, n) => {
       const t = takes(x);
       const tail = t ? ` It takes the ${t}.` : "";
       // The job's phrase only says something when the link moves to another job, and "Set up AI" holds unrelated set-ups.
-      const named = x.label === x.name || x.job === plan.job || x.job === "set-up-ai";
+      // Said once: two checks in a row read "Check it before it goes live" over the first only.
+      const named = x.label === x.name || x.job === plan.job || x.job === "set-up-ai" || plan.next.slice(0, n).some((y) => y.job === x.job);
       return named ? `- The [${x.name}](${x.url}).${tail}` : `- **${x.label}** with the [${x.name}](${x.url}).${tail}`;
     }),
     "If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.",

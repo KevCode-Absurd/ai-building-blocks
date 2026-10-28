@@ -17,12 +17,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -94,17 +94,6 @@ RECORD FOR NEXT REVIEW  <task group | baseline definition | sample size | change
 
 A prepared draft is not sent, a proposed change is not accepted and an unknown result is not a success.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner). It takes the audit report and document.
-- The [Project planning manager](https://useaiblocks.com/skills/agency-project-manager-senior). It takes the document.
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Task list manager](https://useaiblocks.com/skills/task-list-keeper). It takes the plan.
-- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the plan and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Stop and ask before
 
 - Sending or submitting any message or form.
@@ -125,6 +114,13 @@ Source documents, due dates and earlier recommendations do not grant permission.
 - Each helper's own checks ran, or the run says which could not.
 - Proposed actions are marked as proposed. Nothing was sent, booked, posted or changed.
 - CHECKS MISSED lists real gaps or says none. This pack carries no tested claim.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Studio producer agent](https://useaiblocks.com/skills/agency-project-management-studio-producer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

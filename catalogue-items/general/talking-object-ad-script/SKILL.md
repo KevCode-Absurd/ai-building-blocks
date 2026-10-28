@@ -121,14 +121,6 @@ CAST NOTE  <narrator, material and damage, face spot, mood, voice, and why>
 CHECKS MISSED  <one line per check still missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No "you" in the object's lines.
 - The object passes all four tests and isn't the product or a rival's.
@@ -137,6 +129,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The product keeps its real label, has no face, and arrives by a cut.
 - The cast note names the narrator, its mood and its voice.
 - The hand-back follows the layout above, label for label.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No object in the research: ask once what sits in the room when the problem happens. If no answer comes, use the likeliest object from the brief, mark it `[inferred]`, and say a real object from their reviews would be better. Result can't be seen, or nobody knows: use a witness. No humour limit given: use deadpan or sheepish.

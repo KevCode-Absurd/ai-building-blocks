@@ -53,15 +53,6 @@ How to start:
 
 The place they arrive. The stages. A table of stage, problem, driver, candidate outcome, problem evidence and separate capability/claim status. The count by driver. Unapproved outcomes and proof needed. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or “none”.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offer delivery options planner](https://useaiblocks.com/skills/delivery-option-generator). It takes the objection map.
-- The [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder). It takes the objection map.
-- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The arrival line has no product noun in it.
@@ -70,6 +61,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every candidate outcome starts with “How to” and names a proposed result. It retains problem evidence/guess status and a separate capability/claim check; missing proof never becomes an approved promise.
 - No quote is made up; guesses are marked GUESS.
 - There are at least 15 problems.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Offer delivery options planner](https://useaiblocks.com/skills/delivery-option-generator). It takes the objection map.
+- The [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder). It takes the objection map.
+- The [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the objection map.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
@@ -35,7 +35,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your offer, objection map. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your offer, an objection map. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -73,15 +73,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 4: closing questions with two ways to say yes, the order to ask them in, buying signals and what to do on each, and a line for a buyer on the fence.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-- The [Cold call script writer](https://useaiblocks.com/skills/cold-call-script-writer). It takes the draft.
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -90,3 +81,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The opener is true, short and a question, with no trick or false reason to be there.
 - The lead argument changes with the buyer type, and each answer agrees with what is true before it gives a fact.
 - Proof is something the person can show. The close offers real choices and is not pressure.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
+- The [Cold call script writer](https://useaiblocks.com/skills/cold-call-script-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

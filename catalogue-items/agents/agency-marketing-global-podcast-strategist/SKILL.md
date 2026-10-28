@@ -8,13 +8,6 @@ description: "Plan and grow a podcast on Spotify, Apple Podcasts and YouTube: sh
 Plan a podcast for listeners on Spotify, Apple Podcasts and YouTube: a clear show document, a calendar, an episode brief, guest outreach, growth steps and income paths.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Podcast strategist](https://useaiblocks.com/skills/agency-marketing-podcast-strategist).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -77,6 +70,13 @@ Return these sections, in this order:
 - **Growth and tracking**
 - **Income paths**
 - **Open checks**
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Podcast strategist](https://useaiblocks.com/skills/agency-marketing-podcast-strategist).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

@@ -17,11 +17,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
+- **A council brief** (yours): the chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a council brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -54,15 +54,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2 file: who is rewarded for what, where it pulls the wrong way and the fix.
 - Step 3 file: what would guarantee failure, survival risks and other ways to fail with a change for each, the bet, and the attacks. This is the plan.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan failure risk reviewer](https://useaiblocks.com/prompts/plan-inversion-checker). It takes the plan.
-- The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner). It takes the plan.
-- The [Decision method planner](https://useaiblocks.com/skills/math-or-judgment-call-sorter). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Your clear case comes before any pressure is named, and each pressure is tied to a fact in your situation.
 - The incentive fix pays for the outcome you want and says how it could be gamed.
@@ -71,3 +62,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Plan failure risk reviewer](https://useaiblocks.com/prompts/plan-inversion-checker). It takes the plan.
+- The [Decision method planner](https://useaiblocks.com/skills/math-or-judgment-call-sorter). It takes the plan.
+- The [Past-project timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -80,14 +80,6 @@ HAND-BACK SUMMARY
 Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Portfolio case study writer](https://useaiblocks.com/skills/portfolio-case-study-writer).
-- **Say it to the room** with the [Case-based pitch and talk writer](https://useaiblocks.com/workflows/build-a-talk-around-one-real-case). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Offer one next step and say they can type their own:
@@ -104,3 +96,11 @@ Offer one next step and say they can type their own:
 - The outline makes no claim about other customers.
 - The checklist lists every quote, number and detail that will appear.
 - The original interview files are untouched.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Portfolio case study writer](https://useaiblocks.com/skills/portfolio-case-study-writer).
+- **Say it to the room** with the [Case-based pitch and talk writer](https://useaiblocks.com/workflows/build-a-talk-around-one-real-case). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

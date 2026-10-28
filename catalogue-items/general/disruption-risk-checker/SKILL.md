@@ -16,15 +16,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). Bring competitors, customer words (optional). It uses your ad breakdowns.
+1. **An audit report** with the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). Bring competitors, customer words (optional). It uses your ad breakdowns.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for competitors, your question, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for competitors, your question, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,6 +53,13 @@ How to start:
 
 The score out of 100 and what it measures. The verdict. For each of the four tests, the score and the fact behind it. The argument against and any points subtracted. The response, owner and date. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- Does it say where the rival began?
+- Does it separate a real disruptor from a rival that is only strong?
+- Is there one fact that argues against the verdict?
+- Does the response name who owns it?
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -61,13 +68,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Does it say where the rival began?
-- Does it separate a real disruptor from a rival that is only strong?
-- Is there one fact that argues against the verdict?
-- Does the response name who owns it?
 
 ## If something is missing
 

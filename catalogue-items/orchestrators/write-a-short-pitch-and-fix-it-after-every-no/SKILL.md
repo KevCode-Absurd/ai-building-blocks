@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your notes** (yours): what to keep, change or drop.
-- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -74,16 +74,6 @@ Pause here: Give the pitch to about five people who can say no. Open each meetin
 - Step 4: doubt log, doubts by group, fix now or later, new opening, what to keep and the next advice question.
 - The summary lists each file, any step not run, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Persuasion and trust reviewer](https://useaiblocks.com/skills/honest-persuasion-advisor). It takes the draft.
-- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
-- The [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). It takes the draft.
-- **Sell it** with the [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -92,3 +82,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every claim in the pitch is backed by a fact the person gave, or is marked `MISSING:`. At most two persuasion levers are left, and both are true.
 - The objections include ones the person did not want to hear.
 - Each no in the log is in the speaker's words, with who said it. The new opening uses only figures the person supplied.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Persuasion and trust reviewer](https://useaiblocks.com/skills/honest-persuasion-advisor). It takes the draft.
+- The [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30). It takes the draft.
+- The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the draft.
+- **Sell it** with the [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -59,13 +59,6 @@ How to start:
 
 The target answer and near misses. Who to ask and how to reach them. The four questions. The scoring rule. How many people to ask. The answer sheet. The repeat date. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad survey results calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No question hints at the claim.
@@ -74,6 +67,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The sample size is worked out from expected recall.
 - The sheet has every column the calculator needs.
 - The reach limit is stated if only customers can be asked.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad survey results calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

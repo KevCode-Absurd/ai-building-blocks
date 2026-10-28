@@ -72,15 +72,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2 file: three test prices with estimated sales and total profit, the pick, a floor check and the one number to watch.
 - Step 3 file: profit at full price, the sales jump a discount needs, the best depth, an offer comparison and a verdict with a score out of 100. This is the report.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
-- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the audit report.
-- The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Tax is out of the price, and every cost line has a number from you or is marked as a guess.
 - Break-even ad return is one divided by gross margin, and you can redo it by hand.
@@ -89,3 +80,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order and used the file from the step before, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
+- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -6,14 +6,6 @@ description: Generate ad concepts in seven groups. Rank the best eight by fit, p
 # Seven-bucket ad concept brainstormer
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer).
-- The [Small-budget ad test planner](https://useaiblocks.com/skills/small-budget-ad-test-planner).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -150,3 +142,11 @@ When not to use: if you need one finished ad, ask for a single ad instead. If yo
 ## Final check
 
 Give the requested deliverables, evidence used, assumptions, missing inputs, and the smallest useful next step. Distinguish an idea, a calculation, a proposed action and a completed tool action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer).
+- The [Small-budget ad test planner](https://useaiblocks.com/skills/small-budget-ad-test-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -46,15 +46,6 @@ How to start:
 
 Who and why. What they care about, with sources. The people around them. Two honest admirations. Common ground. The one question. The size of your ask. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Conversation question planner](https://useaiblocks.com/skills/get-them-talking-plan). It takes the brand brain.
-- The [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer). It takes the brand brain.
-- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the brand brain.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every fact has a source from public material.
@@ -62,6 +53,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The question could only be put to this person.
 - The ask is the smallest useful one.
 - Nothing is private or invented.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Conversation question planner](https://useaiblocks.com/skills/get-them-talking-plan). It takes the buyer profile.
+- The [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer). It takes the buyer profile.
+- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the buyer profile.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

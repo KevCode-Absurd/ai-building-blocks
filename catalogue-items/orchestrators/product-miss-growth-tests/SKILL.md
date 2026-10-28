@@ -65,15 +65,6 @@ Pause here: Send the survey and wait for the answers. Bring back the answers, in
 - Step 1 file: who to ask, the survey, how to count the 40 percent test, how to study the fans and one change to try.
 - Step 2 file: every idea scored and sorted, the first three tests with a measure and stop date, and the run order. This is the shortlist.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- The [Market definition and share checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the plan and shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The key question has fixed answers, so the share is easy to count. The 40 percent line is described as a signal, not proof.
 - Each score has a reason, and the average is shown.
@@ -82,3 +73,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each step ran in order, or the run stopped at the step that failed and says why.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

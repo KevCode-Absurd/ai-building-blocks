@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
@@ -35,7 +35,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, a spreadsheet, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -81,18 +81,9 @@ Pause here: After the owner authorizes the bounded budget plan, implement only t
 - **Step 3, budget split:** a ranking for the next $10,000, a stop point per channel, a retargeting check and tests that would change the ranking.
 - **Step 4, delivery check:** symptoms with numbers, the failing step, what to change first, what to leave alone and a 7-day test.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
-- The [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker). It takes the audit report.
-- **Read your ad results** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## What to do with the result
 
-Ignore the "After this" list above, whose TikTok items do not fit a Meta scaling plan. Offer one next step as a short question: read the scale-test numbers with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer), or come back with the test results for step 4. Raising ad spend risks real money, so the owner approves every budget change and the stop and rollback rules apply from the first day.
+Offer one next step as a short question: read the scale-test numbers with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer), or come back with the test results for step 4. Raising ad spend risks real money, so the owner approves every budget change and the stop and rollback rules apply from the first day.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -102,3 +93,11 @@ Ignore the "After this" list above, whose TikTok items do not fit a Meta scaling
 - The store's own return comes from the order data, not the platform, and the break-even return is one divided by the margin with the sum shown.
 - Every step on the spend ladder has a hold time and a stop rule.
 - Step 4 names one failing step with a number that proves it, or says it was not run.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
+- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

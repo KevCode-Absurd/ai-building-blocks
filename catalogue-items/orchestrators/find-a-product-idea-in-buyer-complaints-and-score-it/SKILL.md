@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -64,19 +64,18 @@ Pause here: Pick one product for the top gap. Write down its cost, shipping cost
 - **Step 4, score:** the margin sums, each rule marked pass, warn or fail, a score out of 100, a go or no-go and the first fix.
 - **Hand-back summary:** each file, every `MISSING:` line and the `CHECKS MISSED` list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Category and trend risk checker](https://useaiblocks.com/skills/category-and-trend-risk-checker). It takes the idea.
-- The [New product line checker](https://useaiblocks.com/skills/new-product-line-checker). It takes the audit report.
-- **Shape the product** with the [Product build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer). It takes the idea.
-- **Test the idea with real people** with the [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher). It takes the idea.
-- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the idea and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Category and trend risk checker](https://useaiblocks.com/skills/category-and-trend-risk-checker). It takes the idea.
+- **Shape the product** with the [Product build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer). It takes the idea.
+- **Test the idea with real people** with the [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher). It takes the idea.
+- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the idea and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

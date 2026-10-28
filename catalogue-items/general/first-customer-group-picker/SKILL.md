@@ -65,15 +65,6 @@ How to start:
 
 The starting point in one line. A numbered list of slices, each with why they want it, what they already do, where to find them, and the pay, reach and fit scores with reasons. Then the group to start with and a backup, the other sides to remember, the plan for week one, `MISSING:` lines, and CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
-- The [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions). It takes the shortlist.
-- The [Market definition and share checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every slice is a type of person plus a place or habit, with no "everyone".
@@ -82,6 +73,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No slice was kept that has no way to find it.
 - Other sides, such as buyers and partners, are named.
 - The scores are given with reasons.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
+- The [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions). It takes the shortlist.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

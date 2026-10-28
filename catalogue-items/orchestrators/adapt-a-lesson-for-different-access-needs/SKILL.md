@@ -79,14 +79,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
-- The [Lesson and recall quiz planner](https://useaiblocks.com/workflows/build-a-lesson-from-explanation-to-practice-and-a-quiz). It takes the lesson plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Offer one next step and say they can type their own:
@@ -103,3 +95,11 @@ Offer one next step and say they can type their own:
 - Each check measures the goal, not the barrier.
 - The original lesson files are untouched.
 - Every date, figure and name traces to something the user gave, or is labelled as an assumption.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson readiness reviewer](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it). It takes the lesson plan.
+- The [Lesson and recall quiz planner](https://useaiblocks.com/workflows/build-a-lesson-from-explanation-to-practice-and-a-quiz). It takes the lesson plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -45,15 +45,6 @@ How to start:
 
 If no notes were given: the subject, the interview plan, the site plan and the paragraph map. If notes were given: the draft, the word count, the fact check and `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
-- The [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). It takes the draft.
-- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each paragraph does only one job.
@@ -62,6 +53,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The piece is at or under the word limit.
 - No quote is changed from the notes.
 - Verbs are active.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
+- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -8,15 +8,6 @@ description: "Plan a staged over-the-air firmware rollout for an IoT device flee
 Plan a safe staged firmware rollout for a fleet of devices that are hard to reach.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -92,6 +83,13 @@ Return these sections in this order. Skip a section only if it does not apply, a
 ## Next step
 
 Tell the user to run stage one on a small test group and review the health numbers before widening. For one misbehaving device, point to the Embedded firmware engineer.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit
 

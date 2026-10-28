@@ -9,6 +9,8 @@ Give it a draft that sounds like every other ad. Get concrete lines, a believabl
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** you have no product facts yet (write them down first, or build a [brand file](https://useaiblocks.com/skills/website-brand-brain-builder)), or you only need a headline (use the [Headline test](https://useaiblocks.com/workflows/headline-test) workflow).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -32,8 +34,6 @@ How to start:
 2. **Check what's missing.** Look for your brand brain, a draft, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
-
-**When not to use it:** you have no product facts yet (write them down first, or build a [brand file](https://useaiblocks.com/skills/website-brand-brain-builder)), or you only need a headline (use the [Headline test](https://useaiblocks.com/workflows/headline-test) workflow).
 
 ## What you need
 This list replaces the shared "Before you start" block above. Check the draft first: it must be real copy that was meant to run, not notes. If you have a brand brain, step 1 reads `offers.md` and `proof-and-claims.md` for facts, and step 3 reads `offers.md` for the dates and limits. Without one, use the product facts you give.
@@ -67,18 +67,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 4, edited ad: the final draft and a log of each change with its gain. This file is the audit report.
 - HAND-BACK SUMMARY: each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
-- The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
-- The [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every rewrite in step 1 shows the fact behind it, and step 2 and step 3 add no claim your facts do not support. Check the final ad against the rules of the platform where it will run. If a step is missing, the run stopped there and says why. If a named skill is not in your pack, stop at that step, write `MISSING: skill <name>` and do not do its job from memory.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

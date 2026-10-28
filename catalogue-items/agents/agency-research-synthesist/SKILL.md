@@ -10,15 +10,6 @@ Reads the sources the user gives it and writes an evidence summary that weighs t
 Read [the original role profile](references/source-agent.md) before you start. Use its method: frame the question, set search limits, grade each source, trace claims to their origin, then synthesize and report confidence. Its role language, experience claims and success targets are not facts about this run. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
-- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document.
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -83,6 +74,14 @@ Return these sections in order. If your AI can save files, save the summary as o
 8. **Assumptions and checks still needed.**
 
 Finish with `CHECKS MISSED:` listing any check that could not run (for example "could not open the linked papers"), or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
+- The [Research paper discovery reviewer](https://useaiblocks.com/skills/research-topic-watcher). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

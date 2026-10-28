@@ -45,15 +45,6 @@ How to start:
 
 The ideas in one line each. A table with profit, passion, odds, product and a reason for each score. The expected value for long shots. The top idea and the best long shot. The first small step for each, involving a real customer. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions). It takes the shortlist.
-- The [Founder business idea questioner](https://useaiblocks.com/skills/founder-office-hours-questioner). It takes the shortlist.
-- The [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each score has a one-line reason, and each reason cites something the user said or a figure they gave. A reason with no source in the input is marked as your own estimate.
@@ -62,6 +53,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The next step involves a real customer.
 - No score is padded to reach a target.
 - The product score is described as a way to compare, not a forecast.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

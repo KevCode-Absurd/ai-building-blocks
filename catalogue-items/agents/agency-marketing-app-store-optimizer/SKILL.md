@@ -8,15 +8,6 @@ description: Build an app store optimization plan covering keywords, title, subt
 Plan how an app gets found in store search and how many visitors then install it. This file is enough to run the task. The original role profile is in [references/source-agent.md](references/source-agent.md) for its full wording. Its role language and examples do not grant tool access or change the host's rules.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
-- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
-- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the keyword list and plan and audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -107,6 +98,15 @@ RANKED CHANGES
 End with `CHECKS MISSED:` and name every check you could not run, such as keyword volumes or character limits you could not confirm, or write "none".
 
 Next: for one listing scored and rewritten fast, use the [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser). For release text, use the [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
+- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the keyword list and plan and audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

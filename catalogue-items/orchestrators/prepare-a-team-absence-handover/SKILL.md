@@ -80,22 +80,21 @@ CHECKS MISSED <one line each, or none>
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent or reassigned.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Team absence coverage reviewer](https://useaiblocks.com/skills/weekly-team-coverage-review-assistant).
-- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner). It takes the document.
-- The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every critical task has an accepted cover owner or an explicit `GAP`.
 - No credential appears anywhere.
 - Hours and dates trace to the user's figures or are marked as assumptions.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Team absence coverage reviewer](https://useaiblocks.com/skills/weekly-team-coverage-review-assistant).
+- The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
+- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

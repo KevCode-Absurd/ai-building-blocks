@@ -99,8 +99,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Monthly store profit reviewer](https://useaiblocks.com/skills/monthly-profit-close).
 - **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 - The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the audit report.
 - **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
+- The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

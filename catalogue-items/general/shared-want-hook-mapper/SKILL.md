@@ -91,14 +91,6 @@ CHECKS MISSED
 <one line per check that failed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer motivation and proof mapper](https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper).
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the hooks.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The main want is in the customers' own words, or marked as a guess.
@@ -107,6 +99,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No hook promises more than the product does.
 - Test hooks differ in appeal, not just in wording.
 - Every quote and fact appears in what was pasted in.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the hooks.
+- The [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the hooks.
+- The [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

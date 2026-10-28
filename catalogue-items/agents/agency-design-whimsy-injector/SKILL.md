@@ -65,15 +65,6 @@ Its sample lines and code are examples, not the user's voice. Rewrite them to ma
 
 Use these sections, in this order: BRAND AND CONTEXT, IDEAS (three to five, numbered), SAMPLE CODE (only if asked), OPEN CHECKS. Add assumptions and source references.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
-- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the draft and plan.
-- The [Page readability and layout checker](https://useaiblocks.com/skills/plain-page-type-checker). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand back
 
 - Every idea has a purpose that helps the user finish what they came to do.
@@ -81,6 +72,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No joke sits on a payment, legal, health or data loss moment.
 - Words are in the user's voice, or labelled "proposed voice".
 - No claim about how users will feel or act.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [UI designer agent](https://useaiblocks.com/skills/agency-design-ui-designer). It takes the plan.
+- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the draft and plan.
+- The [Interface interaction details designer](https://useaiblocks.com/skills/small-interface-details-designer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

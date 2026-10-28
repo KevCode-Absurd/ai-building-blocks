@@ -56,15 +56,6 @@ The dependence map with shares and ratings. The client terms check. The limits t
 
 **What next:** to prepare the talk with your biggest client, use the Negotiation prep planner for the weaker side. To set better terms with a key supplier, use the Supplier partner terms planner. To bring in more clients, use the Prospecting block planner.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the plan.
-- **Sell it** with the [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner).
-- **Sell it** with the [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - All five kinds of dependence are checked.
@@ -72,6 +63,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The refuse-terms case has a polite exit written.
 - No client is named unless it appears in the data you were given.
 - Every supplier above the share line is listed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the plan.
+- The [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner).
+- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

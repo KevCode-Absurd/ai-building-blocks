@@ -10,15 +10,6 @@ Builds a plan for selling products in other countries through online marketplace
 Read [the original role profile](references/source-agent.md) before you start. Use its methods: the per-product cost breakdown, the product scorecard (market, margin, compliance), the platform comparison, the compliance red lines, listing localization and the phased ad plan. Its role language, experience claims, margin ranges and success targets are not facts about this user's business. They are goals or examples from the original author. Never present them as benchmarks, and never use them to fill a missing number.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder). It takes the plan.
-- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
-- The [Product listing localizer](https://useaiblocks.com/skills/overseas-listing-localizer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -85,6 +76,13 @@ Return these sections in order. If your AI can save files, save each as its own 
 6. **Gaps and checks.** Missing item, why it matters, where to check it.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [China ecommerce operations planner](https://useaiblocks.com/skills/agency-marketing-china-ecommerce-operator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

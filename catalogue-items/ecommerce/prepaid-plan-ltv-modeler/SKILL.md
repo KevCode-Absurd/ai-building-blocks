@@ -93,7 +93,6 @@ MISSING: <what you did not give>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Subscriber retention calendar planner](https://useaiblocks.com/skills/subscriber-retention-calendar). It takes the audit report.
-- The [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). It takes the audit report.
 - The [Loyalty and VIP program designer](https://useaiblocks.com/skills/loyalty-and-vip-program-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

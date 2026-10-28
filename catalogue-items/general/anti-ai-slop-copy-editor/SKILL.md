@@ -87,17 +87,17 @@ Before: 100 - (<hits per 100 words> x 10) - <10 if rhythm fails> = <score>
 After: <score>
 ```
 
+## Check before you hand it back
+- Every hit is quoted exactly.
+- Fixes add no fact, claim, number or instruction. Each one only rewords or deletes.
+- The rewrite keeps the meaning and the original line order. A fix hasn't turned one sign into another (no new list of three).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every hit is quoted exactly.
-- Fixes add no fact, claim, number or instruction. Each one only rewords or deletes.
-- The rewrite keeps the meaning and the original line order. A fix hasn't turned one sign into another (no new list of three).
 
 ## If something is missing
 With nothing to scan, write `MISSING: copy`. If a fix needs a fact the copy doesn't have, write `MISSING: <fact>` and cut the flourish instead.

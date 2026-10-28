@@ -47,21 +47,19 @@ How to start:
 
 The benefit sentence. The meaning. Three mantras with their grid ratings. The pick and why. The test with a pass mark. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SaaS market position adviser](https://useaiblocks.com/skills/copilot-gtm-positioning-strategy). It takes the brief.
-- The [Event marketing planner](https://useaiblocks.com/skills/event-marketing-planner). It takes the brief.
-- The [Content topic planner](https://useaiblocks.com/skills/content-topic-planner). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each mantra is two to four words.
 - It names a benefit, not a product.
 - It passes the value and uniqueness grid.
 - Three people can repeat it back (this is a plan until the test is done; say so).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Event marketing planner](https://useaiblocks.com/skills/event-marketing-planner). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

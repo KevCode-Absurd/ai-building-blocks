@@ -6,16 +6,6 @@ description: Build an ad around trigger, emotion, evidence and payoff. Place eac
 # Trigger-to-payoff ad structure planner
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Paid campaign builder](https://useaiblocks.com/skills/paid-campaign-builder). It takes the brief.
-- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
-- The [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier). It takes the brief.
-- **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -157,3 +147,10 @@ Write the copy from the approved brief with the Fact-based ad copy writer. Plan 
 ## Final check
 
 Give the requested deliverables, evidence used, assumptions, missing inputs, and the smallest useful next step. Distinguish an idea, a calculation, a proposed action and a completed tool action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Paid campaign builder](https://useaiblocks.com/skills/paid-campaign-builder). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

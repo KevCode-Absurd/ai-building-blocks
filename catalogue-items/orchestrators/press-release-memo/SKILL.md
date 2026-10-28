@@ -57,17 +57,15 @@ If the user runs step 5 straight away, without the edited memo, check the draft 
 
 This workflow is five separate skills run in order. If you only want the press release, run `future-press-release-writer` alone from [its page](https://useaiblocks.com/skills/future-press-release-writer). It then works from your description and not from a checked need statement.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
-- The [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer). It takes the draft.
-- The [Product behaviour change planner](https://useaiblocks.com/skills/agency-product-behavioral-nudge-engine). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

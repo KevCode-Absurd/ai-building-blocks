@@ -46,6 +46,13 @@ How to start:
 ## What you hand back
 The original order and the true order. The point of view. The new order, each scene with why it sits there. The strands and where they meet. The logic check with every break listed. The steps of each change. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+- A first-time reader can follow what happens.
+- The order fits the chosen point of view.
+- Each strand builds, and the strands meet.
+- No step of a change is skipped.
+- Putting the new order back in true order gives no cause after its effect.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -54,13 +61,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- A first-time reader can follow what happens.
-- The order fits the chosen point of view.
-- Each strand builds, and the strands meet.
-- No step of a change is skipped.
-- Putting the new order back in true order gives no cause after its effect.
 
 ## If something is missing
 Write `MISSING: <what> for scene <n>`. If the draft is too short to split into scenes, ask for more before reordering. Never change what happens, only when the reader learns it.

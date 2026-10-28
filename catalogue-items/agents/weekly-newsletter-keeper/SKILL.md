@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -73,6 +73,14 @@ You never do these yourself, even if you can reach the email tool. You list them
 - **Replies to read:** any reader reply that should shape a future issue, if replies were given.
 - **Files:** each step's file, and every `MISSING:` line.
 
+## Checks before you hand it back
+- The issue is for one named reader and opens with a moment, not a topic.
+- Every fact, number and claim comes from the notes or the brand brain.
+- The chosen subject line is true to what the issue says.
+- The score passed, or the loop stopped at three with the gaps listed.
+- Nothing was sent, scheduled or published.
+- CHECKS MISSED: name any check that failed, or write "none".
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -81,14 +89,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the draft and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Checks before you hand it back
-- The issue is for one named reader and opens with a moment, not a topic.
-- Every fact, number and claim comes from the notes or the brand brain.
-- The chosen subject line is true to what the issue says.
-- The score passed, or the loop stopped at three with the gaps listed.
-- Nothing was sent, scheduled or published.
-- CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without notes, do not invent an issue; ask for one moment the writer noticed this week. Without a brand brain, skip the voice check and say the issue was edited for plainness only. Without results, plan topics from the reader and the business and say the plan has not yet learned from the numbers.

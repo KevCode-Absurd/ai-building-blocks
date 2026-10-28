@@ -86,17 +86,6 @@ How to start:
 - The cast note: the voice and who is on screen, and why.
 - `CHECKS MISSED`: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Jingle video clip prompt writer](https://useaiblocks.com/skills/jingle-video-clip-prompt-writer). It takes the script.
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The hook is sung in bar 1, and comes back the planned number of times on the same tune.
 - Every verse and lift line is 5 to 9 syllables. The hook may be 4 to 8, and a long claim or brand line may take two bars. Key words land on the beat.
@@ -105,6 +94,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number, time, health result or rival in the lyric is in the approved claims.
 - No artist or band is named. On-screen text is on the tag only.
 - The cast note names the voice and who is on screen, with a reason.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Jingle video clip prompt writer](https://useaiblocks.com/skills/jingle-video-clip-prompt-writer). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Music rights
 A song made in a music tool is only safe to run in an ad if that tool's current licence allows it. Tell the user to check the tool's current terms for their plan before the ad runs. Never state that a plan covers ads.

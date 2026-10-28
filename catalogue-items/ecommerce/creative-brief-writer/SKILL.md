@@ -103,8 +103,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
 - The [Ad creative variation planner](https://useaiblocks.com/skills/ad-creative-variation-planner). It takes the brief.
 - The [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier). It takes the brief.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brief.
-- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

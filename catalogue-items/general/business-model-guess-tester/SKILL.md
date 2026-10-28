@@ -48,16 +48,6 @@ How to start:
 
 The call on searching or executing. The one-page model. The guesses with fact or guess marks. The top three by risk. The test and pass line for each. What to hold back. The change log. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
-- The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every box is phrased as a guess.
@@ -65,6 +55,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The search or execute call is stated with reasons.
 - A failed test changes the model, not the team.
 - No guess is marked as fact without evidence.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
+- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

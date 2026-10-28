@@ -64,13 +64,6 @@ Your meeting notes are the only required input. It does not use a brand brain an
 
 The name block. When and where you met. What they shared. Asks and gaps. Promises with dates and owners. The next touch with its reason and the follow-up question. Dates for your calendar. What was left out. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The name is exact or marked to check.
@@ -78,6 +71,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing sensitive is kept without a reason.
 - The next touch has a reason that is about them.
 - The card can be read in thirty seconds.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

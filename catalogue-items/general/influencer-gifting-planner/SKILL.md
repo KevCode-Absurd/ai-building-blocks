@@ -100,16 +100,6 @@ median | saves+shares | buyer comments | group | permission
 7. CHECKS MISSED: <one line each, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the brief and plan.
-- The [Customer content planner](https://useaiblocks.com/skills/customer-content-planner). It takes the brief.
-- The [LinkedIn hook post writer](https://useaiblocks.com/skills/linkedin-hook-post-writer). It takes the brief.
-- **Make video ads** with the [Selfie-style video ad script writer](https://useaiblocks.com/skills/selfie-style-ad-script). It takes the brief.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The card fits on one card and has no lines for the creator to read out.
 - Every card carries the disclosure wording.
@@ -117,6 +107,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No post runs without platform permission and a written agreement on record.
 - No claim on the card that isn't in the brand's list.
 - No pay figure offered as a recommendation.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer content planner](https://useaiblocks.com/skills/customer-content-planner). It takes the brief.
+- The [Creator partnership planner](https://useaiblocks.com/skills/creator-partnership-planner). It takes the brief.
+- **Make video ads** with the [Selfie-style video ad script writer](https://useaiblocks.com/skills/selfie-style-ad-script). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No list of claims: tell creators to describe only what they saw, tasted or did, with no health, income or results claims.

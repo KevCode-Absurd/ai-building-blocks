@@ -78,15 +78,6 @@ Pause here: Post your best 10 to 15 videos by hand over three weeks. Export view
 - **Step 4, what worked:** top posts by views, followers and comments, flops, a verdict by format and hook type, and the next test.
 - **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
-- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -95,3 +86,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each of the eight setup rules says pass, fix or not checked, with a reason tied to your accounts, and the score shows its sum.
 - Every format pick says why it fits the people and props you have, and no hook invents a result, a person or a claim.
 - Step 4 verdicts cite your own post numbers, and say "too early" where a format has too few posts.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
+- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

@@ -76,14 +76,6 @@ HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lesson access and activity planner](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs). It takes the lesson plan.
-- The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## After this
 
 Nothing has been taught or changed in the original plan. Offer one next step and say the teacher can type their own:
@@ -99,3 +91,11 @@ Nothing has been taught or changed in the original plan. Offer one next step and
 - No activity was added that does not serve the stated goal.
 - Every class need named in the barrier check came from the notes given, or is marked as an assumption.
 - The original plan is unchanged and the revised file has its own name.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Lesson access and activity planner](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs). It takes the lesson plan.
+- The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

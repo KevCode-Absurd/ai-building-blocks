@@ -108,21 +108,20 @@ STOP 1   <what to correct before anything is made>
 
 Count headline words one by one; a word is anything between two spaces.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the brief.
-- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the brief.
-- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Six or more measured ads, or the run is labelled "single reference".
 - Every kept trait shows its counts and passes the top and bottom rule.
 - The named product, not an assumed one. Every claim, price and offer is current for it.
 - Each new ad changes exactly one position. No winner's words, people or product carried over.
 - "Not recorded" appears wherever the reason is unknown.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the brief.
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No clean product photo, or no images for the visual traits: plan the words only and make nothing. No results: don't call any ad a winner.

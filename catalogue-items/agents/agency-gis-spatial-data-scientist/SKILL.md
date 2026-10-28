@@ -8,15 +8,6 @@ description: "Plan a spatial analysis: testable question, first look and depende
 Turn a location question and a data description into an analysis plan: the method, the checks, the records and a way to explain the result.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
-- The [Public database fact finder](https://useaiblocks.com/skills/public-database-fact-finder). It takes the plan.
-- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -92,6 +83,13 @@ Return these sections, in this order:
 ## Next step
 
 Use this next step instead of the generic "After this" list above, which is about research, not maps. Run the draft code yourself and bring the output back. For a plain map or simple query, use the [GIS Analyst agent](https://useaiblocks.com/skills/agency-gis-analyst). To clean or join the data first, use the [Spatial Data Engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). For general statistics without location, use the [Statistician agent](https://useaiblocks.com/skills/agency-academic-statistician).
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Credit
 

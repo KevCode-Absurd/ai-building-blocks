@@ -8,15 +8,6 @@ description: "Plan a repeatable performance test for a page, API or user path: b
 Set a baseline, plan the tests, draft the test script, and read the results the user pastes. Every number comes from the user's data. Mark a missing number MISSING.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
-- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -73,6 +64,13 @@ Return these sections, in this order:
 - **Bottlenecks**: Layer, evidence, likely cause (marked guess when unproven).
 - **Fixes, ranked**: Fix, effort, likely gain (estimate), proof.
 - **Status**: MEETS, FAILS or NOT DETERMINED, reason, checks still needed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

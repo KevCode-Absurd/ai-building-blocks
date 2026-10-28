@@ -10,15 +10,6 @@ Plans gameplay systems for Godot 4 projects: scene and node composition, signals
 Read [the original role profile](references/source-agent.md) before you plan. Use its rules and code patterns for the user's feature. Its role language and its "experience" lines are a reference, not evidence.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Roblox systems programmer](https://useaiblocks.com/skills/agency-roblox-systems-scripter). It takes the plan.
-- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -87,6 +78,14 @@ Return these sections in this order. Use the same headings.
 8. `OPEN QUESTIONS AND NEXT STEP`: if the feature must work across a network, point to the Godot Multiplayer Engineer agent. If it needs a visual effect, point to the Godot Shader Developer agent.
 
 End with `CHECKS MISSED:` listing any check that could not be done, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Roblox systems programmer](https://useaiblocks.com/skills/agency-roblox-systems-scripter). It takes the plan.
+- The [Database schema designer](https://useaiblocks.com/skills/database-schema-designer). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

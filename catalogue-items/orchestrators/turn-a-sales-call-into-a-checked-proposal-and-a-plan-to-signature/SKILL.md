@@ -18,7 +18,7 @@ Not for: a price quote with no call (write it from your price list); no call not
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Transcript** (yours): the words from a recording, written out, with who said what.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
@@ -26,11 +26,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **The contract** (yours): the full agreement or terms, with dates and any changes.
-- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for transcript, your offer, the deal terms. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a transcript, your offer, the deal terms. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -75,16 +75,6 @@ Pause here: Send the follow-up and the corrected proposal yourself.
 - Step 4, mutual action plan: the why-buy case, and each task with who owns it and a date, up to a signature date.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Quote and proposal builder](https://useaiblocks.com/skills/quote-and-proposal-builder). It takes the document.
-- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
-- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
-- The [Contract and proposal drafter](https://useaiblocks.com/skills/contract-and-proposal-drafter). It takes the the deal terms and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -93,3 +83,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The follow-up names the next step and its date.
 - The proposal's needs section uses the buyer's words, and the deal desk review states the margin as a number and flags every non-standard term.
 - The action plan gives the buyer a task in the first week.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Quote and proposal builder](https://useaiblocks.com/skills/quote-and-proposal-builder). It takes the document.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Sales proposal narrative writer](https://useaiblocks.com/skills/agency-sales-proposal-strategist). It takes the document.
+- The [Contract and proposal drafter](https://useaiblocks.com/skills/contract-and-proposal-drafter). It takes the deal terms and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

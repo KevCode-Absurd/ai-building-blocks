@@ -19,11 +19,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Audit report** with the [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). Bring a keyword list, competitors (optional). It uses your brand brain.
+2. **An audit report** with the [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). Bring a keyword list, competitors (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -94,8 +94,8 @@ MISSING: <what>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan.
-- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
 - The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the plan.
+- The [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -75,14 +75,6 @@ Five step files and the summary. The third file holds the metrics decided before
 - **Step 5, results:** for each metric, the target, the actual number, what it means, what it cannot yet say, and keep, change or pull.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
-- The [Product requirements writer](https://useaiblocks.com/skills/product-requirements-writer). It takes the plan and document.
-- The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 Of the shared "After this" links above, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The Product feature review planner fits this run best.
 
 ## Check before you hand it back
@@ -91,3 +83,12 @@ Of the shared "After this" links above, offer the Feature request screener only 
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - The metrics were written before launch, and the results read uses those metrics and no new ones.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer). It takes the plan.
+- The [User story writer](https://useaiblocks.com/skills/user-story-writer). It takes the plan.
+- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

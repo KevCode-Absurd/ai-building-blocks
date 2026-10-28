@@ -19,13 +19,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 - **Your website** (yours): the link to your site or the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -79,15 +79,6 @@ You never do these yourself, even if you can reach the site. You list them for a
 - **Pattern:** from `log.md`, the one thing this writer's drafts keep needing.
 - **Files:** each round's file, and every `MISSING:` line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
-- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
-- The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Checks before you hand it back
 - No claim, number or quote was changed or added.
 - Every unsupported claim is in the writer's list with its line.
@@ -95,6 +86,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every round's score is recorded.
 - Nothing was published or sent.
 - CHECKS MISSED: name any check that failed, or write "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
+- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
+- The [Story structure reorderer](https://useaiblocks.com/skills/story-structure-reorderer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and carry on. Without a brand brain, check claims against the draft's own sources only and say so. Without the writer's one sentence, write yours and ask before editing. Without the kind of piece, treat it as an article and skip the answer-first pass.

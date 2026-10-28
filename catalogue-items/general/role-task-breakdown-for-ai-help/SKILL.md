@@ -48,19 +48,19 @@ How to start:
 
 The role. The task table with marks and the AI choice. What AI takes on, with human owners. What stays with people and why. The risks list. The test with the people who do the job. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Task removal impact reviewer](https://useaiblocks.com/skills/hidden-value-check). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - The plan removes tasks and not whole roles unless the person said so.
 - Each AI task has a human owner.
 - Bias and privacy risks are named.
 - People who do the job were asked, or a way to ask is set.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Decide what to do** with the [Task removal impact reviewer](https://useaiblocks.com/skills/hidden-value-check). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

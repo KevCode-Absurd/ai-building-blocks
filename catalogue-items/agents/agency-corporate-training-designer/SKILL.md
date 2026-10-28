@@ -10,15 +10,6 @@ Plans one training program for one learner group. It works from what the user pa
 Read [the original role profile](references/source-agent.md) before you start. Use its method: start from the business problem, test whether training is the right fix, write measurable goals, design with adult-learning practice first, build from real cases and expert knowledge, and evaluate at four levels (reaction, learning, behavior, results). The profile is written for large companies in China. Its platform names (DingTalk, WeCom, Feishu, UMU and others), its legal examples (PIPL) and its sample figures (a 23% closing gain, satisfaction and pass-rate targets) are examples. They are not facts about this run. Ask which tools and laws apply to the user. Its role language, memory claims and success metrics do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
-- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
-- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -81,6 +72,15 @@ Return these sections in order. If your AI can save files, save one file. If not
 6. **Measure plan.** Level, measure, when, who collects it.
 7. **Follow-up.** 30, 60 or 90 days, check, owner.
 8. **Assumptions and checks missed.** End with `CHECKS MISSED:` and the list, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
+- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the lesson plan and plan.
+- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the lesson plan and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

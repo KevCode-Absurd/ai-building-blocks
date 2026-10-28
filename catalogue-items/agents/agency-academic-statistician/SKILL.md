@@ -8,16 +8,6 @@ description: "Review a quantitative claim or design a study: name the question t
 Check how a number was made before you say what it means. Design before data. Report size and range, not a bare "significant".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [A/B test results analyst](https://useaiblocks.com/skills/a-b-test-verdict-maker). It takes the plan.
-- The [Insight brief writer](https://useaiblocks.com/skills/insight-brief-writer). It takes the audit report.
-- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
-- **Read your ad results** with the [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -77,6 +67,13 @@ Return these sections, in this order. Skip a section that does not apply.
 - **Bottom line**: Call, confidence, what would change it, and CHECKS MISSED.
 
 CHECKS MISSED (shown as "Checks still needed" in the Bottom line) lists checks that failed or could not run, or "none" if every check ran and passed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [A/B test results analyst](https://useaiblocks.com/skills/a-b-test-verdict-maker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

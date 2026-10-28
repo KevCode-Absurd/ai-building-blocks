@@ -66,15 +66,6 @@ Pause here: Hold the session and write down every note as it is said, with who s
 - Step 4: the goal, headlines, what to blow up, go back on and love, the owner's choice sheet, first moves, the next look and a stuck test.
 - Summary: each step's file and every `MISSING:` line in one list.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
-- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -83,3 +74,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No reviewer outranks the owner, and senior voices are held back at the start.
 - Every note is about the work, carries a place or a missing-place line, and every fix is on its own line marked as an example.
 - The choice sheet is blank for the owner to fill in.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

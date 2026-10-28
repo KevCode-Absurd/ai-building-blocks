@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and buyer brief.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
@@ -69,15 +69,6 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 3, the test brief:** the evidence grade, the plan, and three ideas, each aimed at a different buyer doubt, with versions of each.
 - **Step 4, headlines:** a table with the idea, the headline, the way in, and the one to test first.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Plan what to test** with the [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner). It takes the ad copy.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -88,3 +79,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No ad is called a winner without numbers.
 - No statistic appears in the brief or the headlines unless it is in the brand file or the export.
 - Health, medical and guaranteed-result claims are flagged for review.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). It takes the ad copy.
+- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- **Plan what to test** with the [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

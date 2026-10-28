@@ -32,7 +32,7 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** It does the tier maths and writes the lines from the numbers you paste.
-- **Shopify:** Shopify has bundle features, and apps add quantity breaks and pack builders. Check what your theme supports.
+- **Shopify:** Shopify has bundle features, and apps add quantity breaks and pack builders. Bundle and pack-builder apps may need a paid plan or a monthly fee, so check cost against your store's plan. Check what your theme supports.
 <!-- /needs -->
 
 ## What you need

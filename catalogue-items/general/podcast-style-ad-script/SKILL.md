@@ -74,17 +74,6 @@ How to start:
 - The cast note.
 - `CHECKS MISSED`: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
-- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Both speakers are made up, unnamed, and neither expert nor customer; Host left, Guest right throughout.
 - No one states a result, how long they've used it, or an unsourced number.
@@ -92,6 +81,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The opener isn't a greeting, and the offer isn't spoken.
 - The word count fits the length, and every spoken fact is on the facts list.
 - The cast note names two made-up adults and says why they fit.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>`. No customer doubt or myth on file: use problem then fix, or discovery. No reason it works: ask once, never invent it. With none, the Guest explains what it does, not why, and the gap is marked `MISSING: reason it works`. No note on how the brand name sounds: write it the way it would be said and flag it as "inferred".

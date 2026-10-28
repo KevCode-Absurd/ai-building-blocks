@@ -67,15 +67,6 @@ Five step files and the summary:
 
 Cost fields: step 2 needs product costs, average order value and shipping cost. Step 4 needs costs per order and the discount you are weighing. If a cost is missing, mark it `MISSING:` and do not guess a margin.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
-- The [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner). It takes the audit report.
-- The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -84,3 +75,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Margin and break-even are shown at every tier, and the guarantee sums include return shipping and lost stock.
 - The offer answers one named buyer doubt and does not cut the core price.
 - The winner in step 5 is picked on profit per visitor, and the trust score is explained.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
+- The [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

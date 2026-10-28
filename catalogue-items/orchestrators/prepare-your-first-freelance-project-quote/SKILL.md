@@ -76,17 +76,6 @@ NEXT STEP         <one step>
 
 State plainly that nothing was sent to the client.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the plan and audit report.
-- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan and audit report.
-- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
-- **Check the money** with the [Currency forward payment checker](https://useaiblocks.com/skills/currency-forward-settlement-checker). It takes the the deal terms.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the the deal terms and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every price line shows hours, rate and cost, or a `MISSING:` line.
@@ -97,13 +86,22 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No claim about the client, past work or results that the user did not supply.
 - CHECKS MISSED lists any check that did not run, or says none.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check the money** with the [Currency forward payment checker](https://useaiblocks.com/skills/currency-forward-settlement-checker). It takes the deal terms.
+- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the deal terms and document.
+- The [Contract and term sheet reviewer](https://useaiblocks.com/skills/contract-and-term-sheet-reviewer). It takes the deal terms.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## If something is missing
 
 Write `MISSING: <what>` next to the affected line. Carry on with work that does not depend on it. Stop the quote when hours or rate are absent for most lines, and say exactly what to add. Never use a typical market rate in place of the user's.
 
 ## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own. Ignore the "After this" list in the generated block above and offer only the two below. Do not offer the store pricing, price ending, currency forward or shipping inspection items in the generated list above, because they do not fit a freelance quote:
+Suggest one next step as a short question, and say the user can type their own. Ignore the "After this" list in the generated block above and offer only the two below. Do not offer the currency forward or shipping inspection items in the generated list above, because they do not fit a freelance quote:
 - **Price tiers.** If the client wants options, offer the [Three-tier price ladder drafter](https://useaiblocks.com/skills/three-tier-price-ladder-drafter).
 - **A change after signing.** When the client later asks for more, use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

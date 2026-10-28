@@ -57,15 +57,6 @@ How to start:
 
 The aim and the belief to hold back. The list of who to talk to with the request note. The opening. The seven-stop question list with probes. The dropped-items questions. The questions to avoid with three rewrites. The recording plan. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
-- The [Customer interview pattern tracker](https://useaiblocks.com/skills/customer-interview-program-keeper).
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every interviewee bought recently, and no friend, staff member or fan is on the list.
@@ -74,6 +65,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Questions ask about days, places, people and things done, not opinions.
 - The guide asks what they used before and what they dropped.
 - Exact words are captured, with an ID and date for each person.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
+- The [Customer interview pattern tracker](https://useaiblocks.com/skills/customer-interview-program-keeper).
+- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

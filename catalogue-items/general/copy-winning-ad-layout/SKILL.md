@@ -120,14 +120,6 @@ Layout skeletons: **Stack** (words in one band, picture in the other), **Split**
 ## What you hand back
 For each reference: the spot test and the verdict, then for each approved ad the 4:5 and 9:16 images, the plan, the claims table, and a record of where everything came from (reference, assets, copy, type switches, revision log). Plus the review deck.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
-- **Check it before it goes live** with the [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - No kept spot relies on proof that isn't on hand, and no cell is left blank to imply a rival lacks something.
 - Every line has a label, every quote matches its source word for word, and anything the reference claimed that this brand can't is cut or switched, with the change recorded.
@@ -135,6 +127,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Real photos were used before generated ones, and the product is a real, named variant, right in colour, shape and print. If it can't be shown truthfully in this layout, the type changes, never the product.
 - No generated child. A founder, customer or expert appears only in their own photo. Generated people are fictional adults, cast unlike the reference.
 - Ad library data (how long an ad ran, how many saw it) is treated as a hint, never as proof it sells.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
+- The [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <logo | typeface | photo | source | live offer>`, ask once, then build around a marked gap; the ad isn't ready to run until each gap is filled. A type the brand can't fill is marked "can't fill" and the nearest fillable type under the same question is planned instead.

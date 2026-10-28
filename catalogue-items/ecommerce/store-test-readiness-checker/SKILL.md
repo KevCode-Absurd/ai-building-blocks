@@ -27,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **A shortlist** with the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). Bring your results, audit report (optional), your question (optional). It uses your a shortlist.
+2. **A shortlist** with the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). Bring your results, an audit report (optional), your question (optional). It uses your shortlist.
 3. This one.
 
 How to start:

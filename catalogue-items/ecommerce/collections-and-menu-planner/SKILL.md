@@ -30,7 +30,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Shopify Search & Discovery:** A free Shopify app for filters and synonyms, with filters you can order by importance.
+- **Shopify Search & Discovery:** A Shopify app for filters and synonyms, with filters you can order by importance. Check its current price in the Shopify app store.
 - **Shopify:** Smart collections, nested menus and a bulk editor for tags and types are built in.
 - **Any good chat AI:** Any current chat AI can sort a product list into tags and collections.
 <!-- /needs -->
@@ -103,8 +103,8 @@ CHECKS MISSED: <none, or the checks you could not run>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the plan.
-- The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the plan.
 - The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
+- The [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

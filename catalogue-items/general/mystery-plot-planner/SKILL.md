@@ -44,6 +44,13 @@ How to start:
 ## What you hand back
 The solution in four lines. The setting and the cast, with wants and secrets. The clue map (real and planted, with the scene for each). The viewpoint and what it misreads. The timeline. The final explanation, in order. Any cast cut and why. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+- Every fact the solver uses was shown earlier.
+- The planted clues can be told from the real ones.
+- The answer feels inevitable on a second read.
+- Nobody on the cast list is unnecessary.
+- No two people are in two places at the same time.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -52,13 +59,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- Every fact the solver uses was shown earlier.
-- The planted clues can be told from the real ones.
-- The answer feels inevitable on a second read.
-- Nobody on the cast list is unnecessary.
-- No two people are in two places at the same time.
 
 ## If something is missing
 Write `MISSING: <what> for <step>`. If the puzzle has no solution yet, offer options and stop for a choice. Never leave a real clue out of the map to save the surprise.

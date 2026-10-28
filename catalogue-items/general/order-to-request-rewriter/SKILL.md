@@ -17,13 +17,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your notes** (yours): what to keep, change or drop.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). Bring your question, your notes (optional), plan (optional).
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a draft, your notes. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a draft, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,15 +49,6 @@ How to start:
 
 The rewritten message. For each changed line: the order, the new line and their gain with its source. The good name used and its evidence. The first step. The need and the deadline. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the draft.
-- The [Repeatable standards sheet writer](https://useaiblocks.com/skills/standards-sheet-writer). It takes the draft.
-- The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - No line is an order dressed as a question.
@@ -69,6 +56,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The good name is backed by something real.
 - The first step is small and clear.
 - The message still says what you need and by when.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the draft.
+- The [Repeatable standards sheet writer](https://useaiblocks.com/skills/standards-sheet-writer). It takes the draft.
+- The [Small-win praise planner](https://useaiblocks.com/skills/small-win-praise-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

@@ -8,14 +8,6 @@ description: "Write prompts for instrumental focus music in Suno, Udio or Stable
 Write copy-and-paste prompts for instrumental focus music, matched to the user's task, with a leave-out list and a listening check.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [ElevenLabs spoken script writer](https://useaiblocks.com/skills/elevenlabs-spoken-script-writer). It takes the prompt.
-- The [Suno music prompt writer](https://useaiblocks.com/skills/suno-song-and-music-bed-prompt-writer).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -71,7 +63,14 @@ Return these sections, in this order:
 - **Listening check**
 - **Rights and limits**
 
-Finish with `CHECKS MISSED:` listing any check you could not run, such as "not listened to", or "none". Next step: the Suno music prompt writer in "After this" fits a track with a song feel. The ElevenLabs spoken script writer fits only if the user wants a spoken intro over the music, so offer it last.
+Finish with `CHECKS MISSED:` listing any check you could not run, such as "not listened to", or "none". Next step: the Suno music prompt writer fits a track with a song feel. The ElevenLabs spoken script writer fits only if the user wants a spoken intro over the music, so offer it last.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [ElevenLabs spoken script writer](https://useaiblocks.com/skills/elevenlabs-spoken-script-writer). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Rules
 

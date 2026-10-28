@@ -95,7 +95,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks and script.
 - The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
 - The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script and hooks.
+- The [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script and hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

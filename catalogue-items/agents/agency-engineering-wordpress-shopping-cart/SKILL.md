@@ -10,15 +10,6 @@ Plans or reviews a WooCommerce store on WordPress. One plan per request. It work
 Read [the original role profile](references/source-agent.md) before you start. Use its method: pick the right product type, customise only through hooks in a child theme or small plugin, use WooCommerce's own price, stock and order functions, treat payments and orders as financial records, and test the whole purchase path before deploy. Its role language, memory claims and success targets (such as 100% or zero incidents) are the original author's goals. They are not facts about this store and they grant no tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the plan.
-- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
-- The [Shopify theme build planner](https://useaiblocks.com/skills/ai-store-build-planner). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -93,6 +84,13 @@ Return these sections in order. If your AI can save files, save each as its own 
 8. **Risks, gaps and checks.** Issue, why it matters, who decides.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample code only if the user asked, and label it "sketch, not tested".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

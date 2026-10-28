@@ -111,6 +111,13 @@ CHECKS MISSED
 ```
 If no pictures were made yet, say so and check the prompts instead.
 
+## Check before you hand it back
+- The light matches the dials: shadow position for the falloff, glow for the ambient, cast for the colour.
+- The label is sharp, faces the lens and sits outside the brightest spot. White parts of the pack read white or warm white, never orange.
+- Container, closure, colours and size in the hand are right. One use is one real amount.
+- Hands could hold that, with five fingers. Nobody poses.
+- No child or part of one, no real person's face, no other brand's mark, no added words.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -119,13 +126,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The light matches the dials: shadow position for the falloff, glow for the ambient, cast for the colour.
-- The label is sharp, faces the lens and sits outside the brightest spot. White parts of the pack read white or warm white, never orange.
-- Container, closure, colours and size in the hand are right. One use is one real amount.
-- Hands could hold that, with five fingers. Nobody poses.
-- No child or part of one, no real person's face, no other brand's mark, no added words.
 
 ## If something is missing
 Write `MISSING: <photo in a hand | buyer moment | product fact>`. Until it arrives, show the product shut and still, seen from an angle one of its real photos covers.

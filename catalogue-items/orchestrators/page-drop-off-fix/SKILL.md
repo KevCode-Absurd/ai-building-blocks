@@ -76,15 +76,6 @@ Pause here: Add the answers to the page, then export visits and orders for the l
 Three step files and the summary. The step 3 file holds the test size and verdict.
 - STEP TABLE and FIXES, OPEN DOUBTS, TEST SIZE, then HAND-BACK SUMMARY with each file and every MISSING line.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
-- The [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). It takes the audit report.
-- The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The step table adds up: each step's visits are no more than the step before.
 - The leakiest step is the one with the biggest drop that the person could act on.

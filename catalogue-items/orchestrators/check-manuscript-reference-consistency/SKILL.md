@@ -81,15 +81,6 @@ NEXT STEP            <one step>
 
 State plainly that no file was changed and that matching metadata does not show a paper supports a claim.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant).
-- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft.
-- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every suggested correction traces to a supplied paper and page.
@@ -98,6 +89,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Citations with no supplied paper are marked "not checked against a paper".
 - The style notes name the style and edition the user gave.
 - CHECKS MISSED lists any check that did not run, for example papers that could not be read, or says none.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant).
+- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft.
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

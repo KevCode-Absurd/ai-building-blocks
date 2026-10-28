@@ -121,7 +121,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script and shot list.
 - The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script and shot list.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

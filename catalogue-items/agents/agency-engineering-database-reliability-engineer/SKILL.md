@@ -10,15 +10,6 @@ Plans how to keep a database available and recoverable: backups with tested rest
 Read [the original role profile](references/source-agent.md) before you start. Use its method: set recovery targets first, prove backups with a real restore, rehearse failover, change tables in small steps with lock limits, protect the connection layer, and keep drills on a schedule. Its role language, memory claims, sample figures (for example "RPO under 1 minute", "RTO under 30 minutes") and success targets are the original author's examples. They are not facts about this system and they grant no tool access. The profile is about availability and recovery, not about tuning slow queries.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review). It takes the plan.
-- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
-- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -86,6 +77,13 @@ Return these sections in order. If your AI can save files, save each as its own 
 8. **Gaps and checks.** Missing fact, why it matters, who decides.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none"). Add sample SQL or commands only if the user asked, and label them "sketch, not tested".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -73,17 +73,6 @@ Pause here: Build the flows in your email tool and let them run for 30 days. The
 - **Step 3, show and hide rules:** the fields and exact values, the rules, the product block, tests and a QA list.
 - **Step 4, results:** a ranked diagnosis, which branch earned, one fix per cause, and a score out of 100.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
-- The [Subscriber retention calendar planner](https://useaiblocks.com/skills/subscriber-retention-calendar). It takes the audit report.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
-- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
-- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
@@ -92,3 +81,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each refill time shows its sum from the usage time and delivery time.
 - New buyers get a second-order message, and every offer is capped and checked against margin.
 - Show and hide rules use exact field values from the email tool, and the results read names one fix per cause.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
+- The [Subscriber retention calendar planner](https://useaiblocks.com/skills/subscriber-retention-calendar). It takes the audit report.
+- The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

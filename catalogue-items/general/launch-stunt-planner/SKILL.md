@@ -51,21 +51,19 @@ How to start:
 
 The rival and your contrast. Three stunts, each with a headline, what happens, a worst case, a money cap and any sign-off needed. The pick and why. The same-week review. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
-- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Each stunt has a one-line headline.
 - Each has a worst case and a money cap.
 - It names the rival and why the contrast helps.
 - No stunt depends on a permit or safety sign-off that is missing.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

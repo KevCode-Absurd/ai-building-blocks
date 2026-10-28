@@ -10,15 +10,6 @@ Builds an outbound sales plan from what the user knows about their buyers. It pl
 Read [the original role profile](references/source-agent.md) before you start. Use its method: reach out because of a buying signal, not a quota; a target profile that rules companies out; tiered accounts; channel by job level; sequences where every touch adds a new angle; test one variable at a time. Its role language, experience claims, reply-rate benchmarks and metric targets are examples, not facts about this run. Never present them as results the user will get. They do not grant tool access.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
-- The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.
-- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -28,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -92,6 +83,13 @@ Return these sections in order. If your AI can save files, save one file. If not
 8. **Assumptions and checks.** Assumptions with source.
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Stop and ask before
 

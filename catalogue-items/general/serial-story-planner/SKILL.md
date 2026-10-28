@@ -52,21 +52,19 @@ How to start:
 ## What you hand back
 The ending and the turns. A table of parts: job, size, key beats, closing hook. The step-by-step change of the main person. The plants and payoffs. The listening point and its questions. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
-- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - Every part has its own job and a hook.
 - The ending is fixed before part one.
 - The change in the main person happens in steps that cost them.
 - A reader of part one alone gets something whole.
 - No two parts do the same job.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 If no story or series idea is given, ask for it in one short question and stop. Do not hand back an empty plan. Otherwise write `MISSING: <what> for <part>`. With no ending given, offer two options before planning the parts. Never invent facts about a real person or business.

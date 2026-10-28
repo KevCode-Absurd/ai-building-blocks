@@ -22,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A gallery plan** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). Bring product photos, customer words (optional). It uses your brand brain and a product truth sheet.
+2. **A gallery plan** with the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). Bring product photos, customer words (optional). It uses your brand brain and product truth sheet.
 3. **A product truth sheet** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). Bring product photos. It uses your brand brain.
 4. This one.
 
@@ -92,6 +92,13 @@ If a skill named below isn't added here, do its step yourself from this page, an
 4. The final files in upload order, in each shape, with alt text.
 5. The check results and the review sheet.
 
+## Check before you hand it back
+- The audit came before the plan, and the plan answers the biggest stopper in slot 2.
+- Every word on every image is in the plan with a source.
+- Every image passes the check; failures were remade, not waved through.
+- Files are numbered in upload order; each shape was composed, not cropped from another.
+- A marketplace gallery opens with that platform's plain main image.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -99,13 +106,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-- The audit came before the plan, and the plan answers the biggest stopper in slot 2.
-- Every word on every image is in the plan with a source.
-- Every image passes the check; failures were remade, not waved through.
-- Files are numbered in upload order; each shape was composed, not cropped from another.
-- A marketplace gallery opens with that platform's plain main image.
 
 ## If something is missing
 Write `NEED: <fact | photo job | review>` and swap or bend the image rather than invent. If the person wants photos only, list what that leaves unanswered: everything a shopper asks after "what is it".

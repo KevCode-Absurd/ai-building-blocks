@@ -54,16 +54,6 @@ How to start:
 
 The promise. The base pair. The pairs to test, each with its one change. The feed-size check. The first minute. The empty result log. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
-- **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
-- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 What next: the links under "After this" are about ads and social posts. For a video, the useful follow-on is to publish the pairs one at a time, record each in the result log, and bring the winner and your YouTube Studio numbers back here for the next batch. Use the Shareable content checker only if you also post clips to social.
 
 ## Check before you hand it back
@@ -73,6 +63,15 @@ What next: the links under "After this" are about ads and social posts. For a vi
 - Pairs differ by one change so results can be read.
 - The first minute pays off the promise.
 - A result log is set up before the first test.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
+- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

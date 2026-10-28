@@ -73,15 +73,6 @@ How to start:
 - A list of every claim, number and quote with its source, and every blank or gap.
 - The `CHECKS MISSED` line: one line for each check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- The [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
-- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 - The spine has a real "but", and the hook opens on it with no brand name and no greeting.
 - One anchor in the spoken lines, from the facts, and seen on screen.
@@ -90,6 +81,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The honest result claims less than the facts allow.
 - Word count fits the length at about 2.5 words a second, and nothing sits in the button areas.
 - The cast note says who carries it and why, and never casts a real person as an AI avatar.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 Write `MISSING: <what>` and ask once, in one short message, then carry on. No buyer: write for the buyer the brief and facts point to, mark them `[inferred]`, and put no words in their mouth. No quote on file: use an observation and put nothing in quotation marks. No "how it's used": the product is held, never opened. Display-only handling: the product sits sealed on a surface, label turned to camera. No visible result: claim nothing about what's seen. No number in the facts: anchor on a moment instead.

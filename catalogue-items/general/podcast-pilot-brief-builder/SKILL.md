@@ -9,15 +9,6 @@ description: Share your show idea and listener. Get a pilot hook, timed run
 Share your show idea and listener. Get a pilot hook, timed run sheet, questions and a recording brief.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [YouTube script writer](https://useaiblocks.com/skills/youtube-script-writer). It takes the brief.
-- The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-- The [Layered draft writer](https://useaiblocks.com/skills/layered-draft-writer). It takes the brief and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -67,6 +58,14 @@ These are selected, rewritten task instructions. The original role profiles are 
 - Guest expertise, stories and proof points are supplied or remain unverified.
 - Optional sponsor/guest sections apply only to actual choices.
 - The result is a planning artifact, with no fabricated recording or distribution results.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [YouTube script writer](https://useaiblocks.com/skills/youtube-script-writer). It takes the brief.
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Source credit
 

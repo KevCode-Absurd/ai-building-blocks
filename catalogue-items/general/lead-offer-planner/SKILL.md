@@ -53,6 +53,15 @@ How to start:
 
 The costly problem. The offer: name, format, why they want it. What counts as a reply. The short ad or letter. The routing table with owners and times. The counting plan with a review date. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- The offer is information the buyer would ask for, not a pitch.
+- A reply is defined and countable.
+- Every reply has an owner and a next-contact time.
+- The problem named is one the buyer already has.
+- The ask is one clear step.
+- Nothing in the ad or letter goes beyond your product facts.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -62,15 +71,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Sales follow-up email writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- The offer is information the buyer would ask for, not a pitch.
-- A reply is defined and countable.
-- Every reply has an owner and a next-contact time.
-- The problem named is one the buyer already has.
-- The ask is one clear step.
-- Nothing in the ad or letter goes beyond your product facts.
 
 ## If something is missing
 

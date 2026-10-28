@@ -55,6 +55,14 @@ How to start:
 
 The client study. The three phases. The fixed core and moving parts. The test on every place. The launch note. The hand-off guide outline. The decision-maker. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
+## Check before you hand it back
+
+- It names the fixed core and the parts that move.
+- It is tested on every place the brand will appear.
+- One decision-maker is named.
+- It is odd enough to remember and simple enough to reuse.
+- It includes a hand-off guide.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -64,14 +72,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- It names the fixed core and the parts that move.
-- It is tested on every place the brand will appear.
-- One decision-maker is named.
-- It is odd enough to remember and simple enough to reuse.
-- It includes a hand-off guide.
 
 ## If something is missing
 

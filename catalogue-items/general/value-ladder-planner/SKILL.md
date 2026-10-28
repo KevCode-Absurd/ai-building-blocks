@@ -67,6 +67,15 @@ Use these headings, in this order, even when parts are MISSING:
 6. **MISSING**: every `MISSING:` line.
 7. **CHECKS MISSED**: one line per check missed, or "none".
 
+## Check before you hand it back
+
+- Rungs rise in price and in result.
+- The first rung is free or low and solves one problem.
+- One core path is marked.
+- Every step names what moves the buyer up.
+- Only one rung is chosen to fix first.
+- Every price and result came from the input.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -76,15 +85,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan what to test** with the [Small test and rollout planner](https://useaiblocks.com/skills/small-test-and-rollout-planner). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## Check before you hand it back
-
-- Rungs rise in price and in result.
-- The first rung is free or low and solves one problem.
-- One core path is marked.
-- Every step names what moves the buyer up.
-- Only one rung is chosen to fix first.
-- Every price and result came from the input.
 
 ## If something is missing
 

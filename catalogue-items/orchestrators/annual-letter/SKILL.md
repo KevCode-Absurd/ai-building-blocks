@@ -64,20 +64,10 @@ Five step files and the summary, in this shape:
 - **Input metrics** (step 2): each input with owner, target, review date and proxy guard, and the output kept as a check.
 - **Cash view** (step 3): free cash flow by year, the four tests, what growth costs and the score out of 100.
 - **Value tally** (step 4): each group with its measure, figure and assumption, and the group served least well.
-- **The letter** (step 5): 700 to 1,200 words with the result and bad news first, the promises, what moved, cash and value, the mistakes, next year and a close. The last file holds the draft. Next, send the draft to two readers you trust and have your accountant check the cash and value figures. The follow-on tools in the generic "After this" list below (request editor, root cause tracer, rollout planner, job post writer) do not fit a letter, so do not offer them unless the person asks. Instead offer to redraft the letter for a second reader with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer), reusing the same step files.
+- **The letter** (step 5): 700 to 1,200 words with the result and bad news first, the promises, what moved, cash and value, the mistakes, next year and a close. The last file holds the draft. Next, send the draft to two readers you trust and have your accountant check the cash and value figures. The generic "After this" list below does not fit a letter, so do not offer it unless the person asks. Instead offer to redraft the letter for a second reader with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer), reusing the same step files.
 - **HAND-BACK SUMMARY:** each step's file and every `MISSING:` line in one list.
 
 The cash and value figures are working estimates, not audited accounts. Have your accountant check them before the letter goes to owners or backers.
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the draft.
-- The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft.
-- The [Job post writer](https://useaiblocks.com/skills/job-post-writer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -87,3 +77,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Free cash flow is worked out for every year you gave, and no missing figure is guessed.
 - Every group in the tally has an assumption beside its figure.
 - Every number in the letter comes from steps 1 to 4 or from your own figures, and the letter opens with the result and the bad news.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

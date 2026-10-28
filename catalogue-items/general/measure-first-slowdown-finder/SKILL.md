@@ -50,17 +50,6 @@ The slow moment. What to time and how. The numbers table with average, worst, be
 
 Then say what to do next: fix the top item, measure again with the same tool and the same cases, and bring the new numbers back. If the top stage is code, take it to "Slow code fixer".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
-- The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
-- The [MATLAB signal filter designer](https://useaiblocks.com/skills/digital-filter-designer). It takes the audit report.
-- The [Bug report writer](https://useaiblocks.com/skills/bug-report-writer). It takes the audit report.
-- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
 ## Check before you hand it back
 
 - Every claim has a number beside it, or is marked as not measured.
@@ -68,6 +57,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The ranked list has the biggest cost first.
 - Each fix names how it will be re-measured.
 - Dropped ideas are listed with the number that killed them.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

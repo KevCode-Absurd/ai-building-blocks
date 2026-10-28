@@ -53,7 +53,7 @@ export function buildTool(tool) {
     [`${tool.slug}.py`]: buildPython(tool, SITE),
     "save-it-in-your-ai.md": buildGuide(tool),
   };
-  const mtime = new Date("2026-01-01T00:00:00Z");
+  const mtime = new Date(2026, 0, 1, 5, 30, 0);
   files[`${tool.slug}-skill.zip`] = fflate.zipSync({ [`${tool.slug}/SKILL.md`]: [fflate.strToU8(files["SKILL.md"]), { mtime }] });
   return { files, examples, problems };
 }

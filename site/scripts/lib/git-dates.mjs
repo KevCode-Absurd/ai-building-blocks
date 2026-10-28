@@ -13,24 +13,27 @@ const day = (iso) => (iso ? new Date(iso).toISOString().slice(0, 10) : "");
 
 /** Reads the history under `dir` once. Returns lookups by absolute path. */
 export function gitDates(dir) {
-  const root = path.resolve(dir);
+  // Git can expand Windows short paths or filesystem aliases differently from the caller.
+  const realPaths = new Map();
+  const normalize = file => { const absolute = path.resolve(file); if (!realPaths.has(absolute)) { try { realPaths.set(absolute, fs.realpathSync(absolute)); } catch { realPaths.set(absolute, absolute); } } return realPaths.get(absolute); };
+  const root = normalize(dir);
   const last = new Map(), first = new Map(), dirty = new Set();
   let usable = false, shallow = false;
   try {
-    const top = path.resolve(git(root, ["rev-parse", "--show-toplevel"]).trim());
+    const top = normalize(git(root, ["rev-parse", "--show-toplevel"]).trim());
     shallow = git(root, ["rev-parse", "--is-shallow-repository"]).trim() === "true";
     // Newest commit first: the first date seen for a file is its last change, the final one its first appearance.
     let when = "";
-    for (const line of git(root, ["log", "--format=@%cI", "--name-only", "--no-renames", "--", "."]).split("\n")) {
+    for (const line of git(root, ["log", "--format=@%cI", "--name-only", "--no-renames", "--", "."]).split(/\r?\n/)) {
       if (!line) continue;
       if (line.startsWith("@")) { when = line.slice(1); continue; }
-      const file = path.resolve(top, unquote(line));
+      const file = normalize(path.resolve(top, unquote(line)));
       if (!last.has(file)) last.set(file, when);
       first.set(file, when);
     }
     // Uncommitted edits and new files: their file time is the honest date until they are committed.
     for (const entry of git(root, ["status", "--porcelain", "-z", "--untracked-files=all", "--", "."]).split("\0")) {
-      if (entry.length > 3 && entry[2] === " ") dirty.add(path.resolve(top, entry.slice(3)));
+      if (entry.length > 3 && entry[2] === " ") dirty.add(normalize(path.resolve(top, entry.slice(3))));
     }
     usable = true;
   } catch { /* Not a git checkout, or no git: file times only. */ }
@@ -38,12 +41,12 @@ export function gitDates(dir) {
   const exists = (file) => fs.existsSync(file);
   /** The newest change among the files that exist, as a full ISO time. */
   const modifiedAt = (files) => {
-    const times = files.map((f) => path.resolve(f)).filter(exists).map((f) => (usable && !dirty.has(f) && last.has(f) ? last.get(f) : mtime(f))).filter(Boolean);
+    const times = files.map((f) => normalize(f)).filter(exists).map((f) => (usable && !dirty.has(f) && last.has(f) ? last.get(f) : mtime(f))).filter(Boolean);
     return times.length ? times.reduce((a, b) => (Date.parse(a) >= Date.parse(b) ? a : b)) : "";
   };
   /** The first day any of the files was committed (or its file time when none has been). */
   const publishedAt = (files) => {
-    const times = files.map((f) => path.resolve(f)).filter(exists).map((f) => (usable && first.has(f) ? first.get(f) : mtime(f))).filter(Boolean);
+    const times = files.map((f) => normalize(f)).filter(exists).map((f) => (usable && first.has(f) ? first.get(f) : mtime(f))).filter(Boolean);
     return times.length ? times.reduce((a, b) => (Date.parse(a) <= Date.parse(b) ? a : b)) : "";
   };
   return {

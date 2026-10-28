@@ -255,6 +255,6 @@ export async function buildIntakePack(c: Catalogue, i: IntakeInput, biz: Busines
   if ("error" in result) return result;
   const files = unzipSync(new Uint8Array(await result.blob.arrayBuffer()));
   const tree: Zippable = {};
-  for (const [p, bytes] of Object.entries(files)) tree[`${slug}/${p}`] = [bytes, { mtime: new Date("2026-01-01T00:00:00Z") }];
+  for (const [p, bytes] of Object.entries(files)) tree[`${slug}/${p}`] = [bytes, { mtime: new Date(2026, 0, 1, 5, 30, 0) }];
   return { blob: new Blob([zipSync(tree)], { type: "application/zip" }), filename: `${slug}.zip`, words } as const;
 }

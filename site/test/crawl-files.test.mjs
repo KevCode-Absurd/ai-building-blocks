@@ -91,13 +91,13 @@ test('llms.txt opens with how to connect', () => {
 
 test('lastmod comes from git: a rebuild, a touch or a fresh clone never moves it; uncommitted edits use the file time', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-dates-'));
-  const git = (...args) => execFileSync('git', ['-C', dir, ...args], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-01T10:00:00Z', GIT_COMMITTER_DATE: process.env.TEST_DATE ?? '2026-10-01T10:00:00Z' } });
+  const git = (...args) => execFileSync('git', ['-c', 'core.longpaths=true', '-C', dir, ...args], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-01T10:00:00Z', GIT_COMMITTER_DATE: process.env.TEST_DATE ?? '2026-10-01T10:00:00Z' } });
   git('init', '-q'); git('config', 'user.email', 't@example.test'); git('config', 'user.name', 'Test'); git('config', 'commit.gpgsign', 'false');
   fs.mkdirSync(path.join(dir, 'a'));
   for (const f of ['item.yaml', 'SKILL.md']) fs.writeFileSync(path.join(dir, 'a', f), f);
   git('add', '.'); git('commit', '-qm', 'one');
   fs.writeFileSync(path.join(dir, 'a', 'SKILL.md'), 'changed');
-  execFileSync('git', ['-C', dir, 'commit', '-qam', 'two'], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-05T10:00:00Z', GIT_COMMITTER_DATE: '2026-10-05T10:00:00Z' } });
+  execFileSync('git', ['-c', 'core.longpaths=true', '-C', dir, 'commit', '-qam', 'two'], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-05T10:00:00Z', GIT_COMMITTER_DATE: '2026-10-05T10:00:00Z' } });
   const files = ['item.yaml', 'SKILL.md', 'page.yaml'].map((f) => path.join(dir, 'a', f));
   const first = gitDates(dir);
   assert.equal(first.usable, true);
@@ -109,7 +109,7 @@ test('lastmod comes from git: a rebuild, a touch or a fresh clone never moves it
   assert.equal(gitDates(dir).modified(files), '2026-10-05');
   // A fresh clone has new file times and the same dates.
   const clone = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-clone-'));
-  execFileSync('git', ['clone', '-q', dir, clone], { stdio: 'pipe' });
+  execFileSync('git', ['-c', 'core.longpaths=true', 'clone', '-q', dir, clone], { stdio: 'pipe' });
   assert.equal(gitDates(clone).modified(['item.yaml', 'SKILL.md'].map((f) => path.join(clone, 'a', f))), '2026-10-05');
   // An uncommitted edit is a real change: it uses the file's own time until it is committed.
   fs.writeFileSync(path.join(dir, 'a', 'item.yaml'), 'edited');
@@ -123,4 +123,24 @@ test('lastmod comes from git: a rebuild, a touch or a fresh clone never moves it
   assert.equal(none.usable, false);
   assert.equal(none.modified([path.join(plain, 'SKILL.md')]), '2026-10-09');
   for (const d of [dir, clone, plain]) fs.rmSync(d, { recursive: true, force: true });
+});
+
+test('Git dates resolve filesystem aliases before looking up committed file times', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-date-path-')), real = path.join(root, 'real'), alias = path.join(root, 'alias');
+  fs.mkdirSync(real); const hooks = path.join(root, 'empty-hooks'); fs.mkdirSync(hooks);
+  t.after(() => {
+    if (!path.resolve(root).startsWith(path.resolve(os.tmpdir()) + path.sep) || !path.basename(root).startsWith('abb-date-path-')) throw Error('Unexpected fixture path');
+    if (fs.existsSync(alias)) { if (!fs.realpathSync(alias).startsWith(fs.realpathSync(root) + path.sep)) throw Error('Fixture alias escaped its root'); fs.unlinkSync(alias); }
+    fs.rmSync(root, { recursive: true, force: true });
+  });
+  const git = (...args) => execFileSync('git', ['-c', 'core.longpaths=true', '-c', 'core.autocrlf=false', '-c', `core.hooksPath=${hooks}`, '-c', 'commit.gpgsign=false', '-c', 'user.name=QA Fixture', '-c', 'user.email=qa@example.invalid', '-C', real, ...args], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-05T10:00:00Z', GIT_COMMITTER_DATE: '2026-10-05T10:00:00Z' } });
+  git('init', '--initial-branch=codex/date-path-fixture');
+  fs.writeFileSync(path.join(real, 'SKILL.md'), '# Synthetic date fixture\n');
+  git('add', '--', 'SKILL.md'); git('commit', '-m', 'Synthetic date fixture\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>');
+  const future = new Date('2030-01-01T00:00:00Z'); fs.utimesSync(path.join(real, 'SKILL.md'), future, future);
+  fs.symlinkSync(real, alias, 'junction');
+  const dates = gitDates(alias);
+  assert.equal(dates.usable, true);
+  assert.equal(dates.modified([path.join(alias, 'SKILL.md')]), '2026-10-05');
+  assert.equal(dates.published([path.join(alias, 'SKILL.md')]), '2026-10-05');
 });

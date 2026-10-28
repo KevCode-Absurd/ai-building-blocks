@@ -7,6 +7,7 @@ import { changedContent, checkedPath, git, readBlobs, REPO, workingContent, work
 import { checkTextChange } from './source-validation.mjs';
 import { digest, methodBody } from './contract-evidence.mjs';
 import { linkDefinitions, reviewCatalogue } from './catalogue-review.mjs';
+import { primarySkillName } from '../../site/scripts/lib/skill-file.mjs';
 const YAML = createRequire(new URL('../../site/package.json', import.meta.url))('yaml');
 const decode = text => YAML.parse(text, { maxAliasCount: 100 });
 export function runChecks({ root = REPO, worktree = false, base, contracts = true } = {}) {
@@ -16,6 +17,9 @@ export function runChecks({ root = REPO, worktree = false, base, contracts = tru
   if (!contracts || failures.length) return { failures, files: changes.length };
   const listed = git(root, base ? ['ls-tree', '-r', '--name-only', '-z', 'HEAD', '--', 'catalogue-items', 'tools/orchestrator-pages'] : ['ls-files', '--cached', ...(worktree ? ['--others', '--exclude-standard'] : []), '-z', '--', 'catalogue-items', 'tools/orchestrator-pages']).toString('utf8').split('\0').filter(Boolean);
   const allPaths = [...new Set(listed)]; allPaths.forEach(checkedPath);
+  const primaries = new Map();
+  for (const file of allPaths.filter(file => /\/skill\.md$/i.test(file))) { const folder = path.posix.dirname(file), names = primaries.get(folder) ?? []; names.push(path.posix.basename(file)); primaries.set(folder, names); }
+  const methodPath = file => { const folder = path.posix.dirname(file); return folder + '/' + (primarySkillName(primaries.get(folder) ?? []) ?? 'SKILL.md'); };
   const readMany = files => worktree ? files.map(file => worktreeText(root, file)) : readBlobs(root, files.map(file => staged ? `:${file}` : `HEAD:${file}`)).map(bytes => bytes?.toString('utf8') ?? null);
   const itemFiles = allPaths.filter(file => file.endsWith('/item.yaml'));
   const items = new Map();
@@ -46,16 +50,16 @@ export function runChecks({ root = REPO, worktree = false, base, contracts = tru
       contractChanges.push({ file: change.file, before: change.before ? decode(change.before.toString('utf8')) : null, after: change.after ? decode(change.after.toString('utf8')) : null });
     } else if (change.file.endsWith('/page.yaml') || /^tools\/orchestrator-pages\/[^/]+\.ya?ml$/.test(change.file)) {
       contractChanges.push({ file: change.file, before: change.before ? decode(change.before.toString('utf8')) : null, after: change.after ? decode(change.after.toString('utf8')) : null });
-    } else if (change.file.endsWith('/SKILL.md')) {
+    } else if (/\/skill\.md$/i.test(change.file)) {
       let methodChanged = true;
       try { methodChanged = digest(methodBody(change.before?.toString('utf8') ?? '')) !== digest(methodBody(change.after?.toString('utf8') ?? '')); } catch { /* let the review report the malformed method */ }
-      const file = change.file.replace(/SKILL\.md$/, 'item.yaml'); needed.add(file);
+      const file = change.file.replace(/skill\.md$/i, 'item.yaml'); needed.add(file);
       contractChanges.push({ file: change.file, methodChanged });
     }
   }
   for (const [owner, item] of items) for (const definition of linkDefinitions(owner, item)) for (const target of definition.targets) { needed.add(owner); if (bySlug.has(target)) needed.add(bySlug.get(target)); }
   const methodItems = [...needed].filter(file => items.has(file));
-  const methods = new Map(); readMany(methodItems.map(file => file.replace(/item\.yaml$/, 'SKILL.md'))).forEach((text, index) => { if (text !== null) methods.set(methodItems[index], text); });
+  const methods = new Map(); readMany(methodItems.map(methodPath)).forEach((text, index) => { if (text !== null) methods.set(methodItems[index], text); });
   const review = reviewCatalogue({ items, methods, registry, changes: contractChanges });
   return { files: changes.length, ...review, failures: [...failures, ...review.failures] };
 }

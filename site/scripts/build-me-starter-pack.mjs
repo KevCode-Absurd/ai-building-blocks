@@ -20,7 +20,7 @@ or private facts about other people.
 `;
 
 export function starterPackBytes() {
-  const mtime = new Date("2026-10-27T00:00:00Z");
+  const mtime = new Date(2026, 9, 27, 5, 30, 0);
   const files = { "me-md-starter-pack/README.txt": [strToU8(README), { mtime }] };
   for (const name of STARTER_FILES) files[`me-md-starter-pack/${name}`] = [new Uint8Array(fs.readFileSync(new URL(name, DIR))), { mtime }];
   return zipSync(files, { level: 9 });

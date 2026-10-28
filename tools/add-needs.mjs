@@ -9,6 +9,7 @@
 //   --check: exit 1 if any file would change. --dry: write nothing, just count.
 //   --out: write nothing; save the old and new sections of each page that would change to <file> (Markdown).
 import fs from "node:fs";
+import { primarySkillFile } from "../site/scripts/lib/skill-file.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -145,9 +146,9 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents", "impo
   if (!fs.existsSync(dir)) continue;
   for (const slug of fs.readdirSync(dir)) {
     if (ONLY && !ONLY.has(slug)) continue;
-    const file = path.join(dir, slug, "SKILL.md");
+    const file = primarySkillFile(path.join(dir, slug));
     const b = bySlug[slug];
-    if (!fs.existsSync(file) || !b) continue;
+    if (!file || !b) continue;
     const itemPath = path.join(dir, slug, "item.yaml");
     const itemText = fs.existsSync(itemPath) ? fs.readFileSync(itemPath, "utf8") : "";
     const item = itemText ? YAML.parse(itemText) : null;

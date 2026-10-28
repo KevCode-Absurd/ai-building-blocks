@@ -224,7 +224,7 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
   };
 }
 
-const FIXED_TIME = new Date("2026-01-01T00:00:00Z"); // fixed dates keep the zip byte-for-byte repeatable
+const FIXED_TIME = new Date(2026, 0, 1, 5, 30, 0); // fixed dates keep the zip byte-for-byte repeatable
 
 /** What the workflow hands back at the end: the outputs of its last steps. When a last step is a check,
  *  the work it checked comes back too, since that's what the person came for. */

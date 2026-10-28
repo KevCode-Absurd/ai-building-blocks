@@ -1,6 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { unzipSync, strFromU8 } from "fflate";
 import { STARTER_FILES, ZIP, starterPackBytes } from "../scripts/build-me-starter-pack.mjs";
 import { MAKE_ME_PROMPT } from "../src/lib/me-prompts.ts";
@@ -11,6 +13,16 @@ test("the starter pack zip matches the template files (run scripts/build-me-star
   assert.deepEqual(new Uint8Array(fs.readFileSync(ZIP)), starterPackBytes());
   const files = unzipSync(new Uint8Array(fs.readFileSync(ZIP)));
   for (const name of STARTER_FILES) assert.ok(files[`me-md-starter-pack/${name}`], name);
+});
+
+test("the checked-in starter archive is byte-identical in different time zones", () => {
+  const module = new URL('../scripts/build-me-starter-pack.mjs', import.meta.url).href;
+  const code = `import { starterPackBytes } from ${JSON.stringify(module)}; import { createHash } from 'node:crypto'; process.stdout.write(createHash('sha256').update(starterPackBytes()).digest('hex'));`;
+  const expected = createHash('sha256').update(fs.readFileSync(ZIP)).digest('hex');
+  for (const TZ of ['UTC', 'Asia/Kolkata', 'America/Los_Angeles']) {
+    const actual = execFileSync(process.execPath, ['--input-type=module', '-e', code], { env: { ...process.env, TZ }, encoding: 'utf8' });
+    assert.equal(actual, expected, TZ);
+  }
 });
 
 test("the copyable prompt and the starter pack prompt are the same text", () => {

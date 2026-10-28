@@ -19,7 +19,7 @@ export function reviewCatalogue({ items, methods, registry, changes = [] }) {
       if (!same({ inputs: ports(before?.inputs), outputs: ports(before?.outputs) }, { inputs: ports(after.inputs), outputs: ports(after.outputs) })) editedPorts.add(file);
     }
     if (/\.ya?ml$/.test(file) && after) for (const field of ['next', 'before']) for (const target of after[field] ?? []) if (!(before?.[field] ?? []).includes(target)) newLinks.add(`${file}#${field}#${target}`);
-    if (file.endsWith('/SKILL.md') && change.methodChanged) editedMethods.add(file.replace(/SKILL\.md$/, 'item.yaml'));
+    if (/\/skill\.md$/i.test(file) && change.methodChanged) editedMethods.add(file.replace(/skill\.md$/i, 'item.yaml'));
   }
   let reviewedInputs = 0, inputItems = 0;
   for (const [file, item] of items) {

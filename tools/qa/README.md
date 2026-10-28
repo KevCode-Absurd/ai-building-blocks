@@ -23,6 +23,10 @@ Each reviewed handoff names its real producer and consumer ports, quotes both me
 
 The method and port hashes bind each record to the content reviewed. A later change requires another review. A generated-section rebuild alone does not invalidate a method review.
 
+Original instruction filename casing is preserved. Both the build and the guard can read an imported `skill.md`; public downloads use `SKILL.md`. Case-colliding primary files are rejected.
+
+Maintained ZIP generators use a fixed calendar stamp of 05:30, matching the existing published archives. ZIP headers store calendar fields without a timezone. This keeps archive bytes consistent between machines; real publication dates still come from source history.
+
 The check covers lists in `item.yaml`, `page.yaml` and the active fallback under `tools/orchestrator-pages`. New or changed input contracts and handoffs require evidence. Older unreviewed contracts remain visible in the coverage counts. Passing this guard does not mean every legacy item or recommendation has been reviewed or executed.
 
 The initial records contain 12 input-contract reviews and three handoff reviews. They are AI Blocks source reviews, not a claim that Kevin approved them or that a workflow ran successfully. Do not generate approval records from type matches alone.

@@ -160,7 +160,7 @@ export function buildXlsx(tool, opts, zip) {
     "xl/styles.xml": styles,
   };
   // A fixed date on every entry, so the same tool always makes the same bytes.
-  const mtime = new Date("2026-01-01T00:00:00Z");
+  const mtime = new Date(2026, 0, 1, 5, 30, 0);
   const tree = Object.fromEntries(Object.entries(files).map(([k, v]) => [k, [zip.strToU8(v), { mtime }]]));
   return zip.zipSync(tree, { level: 6 });
 }

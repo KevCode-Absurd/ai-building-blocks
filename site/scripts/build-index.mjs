@@ -1,6 +1,7 @@
 // Reads catalogue-items/** and writes the site's data: one small index for the library,
 // plus each block's SKILL.md under public/skills/<slug>/ (fetched only when a block page opens), and a zip for a skill with extra files.
 import fs from "node:fs";
+import { primarySkillFile } from "./lib/skill-file.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import path from "node:path";
 import YAML from "yaml";
@@ -27,7 +28,7 @@ const copyUsed = new Set();
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
 // One fixed date inside every zip, so the same files always make the same zip.
-const ZIP_DATE = new Date("2026-01-01T00:00:00Z");
+const ZIP_DATE = new Date(2026, 0, 1, 5, 30, 0);
 // Headings inside a skill's text drop one level (h1 to h2 and so on), so every page has one h1: its own title.
 const sub = (html) => html.replace(/<(\/?)h([1-5])\b/g, (_, slash, n) => `<${slash}h${Number(n) + 1}`);
 const OUT_PAGES = "public/data/pages";
@@ -113,10 +114,10 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
   for (const slug of fs.readdirSync(dir).sort()) {
     const folder = path.join(dir, slug);
     const yamlPath = path.join(folder, "item.yaml");
-    const skillPath = path.join(folder, "SKILL.md");
-    if (!fs.existsSync(yamlPath) || !fs.existsSync(skillPath)) {
+    const skillPath = primarySkillFile(folder);
+    if (!fs.existsSync(yamlPath) || !skillPath) {
       // Empty folders left by a rename contain no catalogue entry.
-      if (fs.readdirSync(folder).length) problems.push(`${category}/${slug}: missing item.yaml or SKILL.md`);
+      if (fs.readdirSync(folder).length) problems.push(`${dirName}/${slug}: missing item.yaml or primary instruction file`);
       continue;
     }
     let item;
@@ -213,8 +214,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       // The minds whose work the skill comes from (docs/SOURCE-SKILLS-PRD.md). Checked against the roster below.
       minds: Array.isArray(item.minds) ? item.minds.map(String) : [],
       files,
-      added: lastChange(folder, ["item.yaml", "page.yaml", "SKILL.md"], pagePath?.startsWith(WORKFLOW_PAGES) ? pagePath : undefined),
-      published: firstSeen(folder, ["item.yaml", "page.yaml", "SKILL.md"]),
+      added: lastChange(folder, ["item.yaml", "page.yaml", path.basename(skillPath)], pagePath?.startsWith(WORKFLOW_PAGES) ? pagePath : undefined),
+      published: firstSeen(folder, ["item.yaml", "page.yaml", path.basename(skillPath)]),
     });
   }
 }

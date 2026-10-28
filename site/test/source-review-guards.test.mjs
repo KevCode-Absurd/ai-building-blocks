@@ -9,6 +9,7 @@ import { changedContent, git, readBlobs } from '../../tools/qa/git-content.mjs';
 import { reviewCatalogue } from '../../tools/qa/catalogue-review.mjs';
 import { selectCiBase } from '../../tools/qa/check-ci.mjs';
 import { runChecks } from '../../tools/qa/check.mjs';
+import { primarySkillFile, primarySkillName } from '../scripts/lib/skill-file.mjs';
 const method = '# Synthetic fixture\n\nRead the supplied markdown file of raw notes.\nWrite a checked draft from those notes.\n';
 const item = { slug: 'fixture', inputs: [{ type: 'document', required: true }], outputs: [{ type: 'copy_draft', required: true }] };
 const inputReview = () => ({ method_sha256: digest(methodBody(method)), inputs: item.inputs, evidence: [{ type: 'document', quote: 'Read the supplied markdown file of raw notes.', rationale: 'The method reads the user-owned notes file, rather than somebody else’s source article.' }] });
@@ -110,4 +111,26 @@ test('CI validates its event base and never hides a missing force-push base', ()
   assert.throws(() => selectCiBase({ before: sha }, () => { throw Error('Missing base'); }), /Missing base/);
   assert.equal(selectCiBase({ before: '0'.repeat(40) }, args => { assert.deepEqual(args, ['rev-parse', '--verify', 'HEAD^']); return sha; }), sha);
   assert.equal(selectCiBase({ pull_request: { base: { sha } }, before: '0'.repeat(40) }, () => ''), sha);
+});
+test('primary instruction discovery preserves an imported lowercase filename', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-qa-skill-case-'));
+  t.after(() => { if (!path.resolve(root).startsWith(path.resolve(os.tmpdir()) + path.sep) || !path.basename(root).startsWith('abb-qa-skill-case-')) throw Error('Unexpected fixture path'); fs.rmSync(root, { recursive: true, force: true }); });
+  fs.writeFileSync(path.join(root, 'skill.md'), method);
+  assert.equal(path.basename(primarySkillFile(root)), 'skill.md');
+  assert.equal(fs.readFileSync(primarySkillFile(root), 'utf8'), method);
+  assert.deepEqual(fs.readdirSync(root), ['skill.md'], 'discovery must not rename or rewrite the import');
+  assert.equal(primarySkillName(['README.md', 'SKILL.md']), 'SKILL.md');
+  assert.equal(primarySkillName(['README.md']), null);
+});
+test('ambiguous case variants and a directory posing as the primary file are rejected', t => {
+  assert.throws(() => primarySkillName(['SKILL.md', 'skill.md']), /Conflicting primary/);
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-qa-skill-dir-'));
+  t.after(() => { if (!path.resolve(root).startsWith(path.resolve(os.tmpdir()) + path.sep) || !path.basename(root).startsWith('abb-qa-skill-dir-')) throw Error('Unexpected fixture path'); fs.rmSync(root, { recursive: true, force: true }); });
+  fs.mkdirSync(path.join(root, 'SKILL.md'));
+  assert.throws(() => primarySkillFile(root), /regular file/);
+});
+test('a changed lowercase imported method still requires an input-contract review', () => {
+  const file = 'catalogue-items/imported/fixture/item.yaml';
+  const result = reviewCatalogue({ items: new Map([[file, item]]), methods: new Map([[file, method]]), registry: { schema: 'abb-source-review/1', inputs: {}, handoffs: {} }, changes: [{ file: file.replace('item.yaml', 'skill.md'), methodChanged: true }] });
+  assert.match(result.failures.map(row => row.message).join('\n'), /Input contract needs review/);
 });

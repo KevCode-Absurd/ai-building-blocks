@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A draft** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). Bring a draft. It uses your buyer brief.
+1. **A draft** with the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer). Bring a draft, a brief (optional).
 2. This one.
 
 How to start:

@@ -12,7 +12,7 @@ A small market is a start, not a destination. This skill lays out the next marke
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.

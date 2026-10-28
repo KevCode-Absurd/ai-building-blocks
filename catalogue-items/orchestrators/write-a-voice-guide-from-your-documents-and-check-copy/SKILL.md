@@ -26,6 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **A transcript** (yours): the words from a recording, written out, with who said what.
+- **The post or message** (yours): the post, comment, message or email you're replying to, with who wrote it and where.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).

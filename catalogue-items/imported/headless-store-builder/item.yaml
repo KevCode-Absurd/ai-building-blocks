@@ -1,6 +1,6 @@
 slug: headless-store-builder
 name: Headless store builder
-summary: Describe the store you want. Get a fast custom Shopify storefront built on Hydrogen, with deploy steps.
+summary: "Describe your shop. Get a pinned Hydrogen storefront project, build checks and steps to connect and deploy."
 category: general
 boards: []
 type: skill
@@ -32,8 +32,12 @@ credits:
   - title: headless-hydrogen skill
     by: dragnoir
     url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/headless-hydrogen
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: "Copied under the MIT licence. We gave it a plain name. AI Blocks: Replaced the broken, unpinned Remix fragments and expired API setup with a pinned Hydrogen 2026.10.2 React Router starter. Added the locked-package scaffold script, a visible fictional-data label and a Windows-safe local GraphQL checker. Recorded the actual demo build and check scope; live store, payments, OAuth and deployment remain untested. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links."
   - title: Original author
     by: dragnoir
     url: https://github.com/dragnoir
     used: Wrote the skill; dragnoir shared it in their collection.
+  - title: Hydrogen React Router starter template
+    by: Shopify
+    url: https://github.com/Shopify/hydrogen/tree/8e5ea1124ffcabdb901b3a374e374f4908897190/templates/react-router
+    used: "The project script fetches this MIT-licensed template at the exact commit. AI Blocks pins the packages and lockfile, adds the demo label and uses a relative-path GraphQL checker. The template licence is included in references/SHOPIFY-TEMPLATE-LICENSE.md and kept in generated projects."

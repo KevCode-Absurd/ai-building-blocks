@@ -1,477 +1,144 @@
 ---
 name: headless-hydrogen
-description: Build headless Shopify storefronts with Hydrogen and Oxygen. Use this skill for creating custom React-based storefronts, using Hydrogen components, deploying to Oxygen hosting, working with the Storefront API, and building high-performance e-commerce experiences. Also covers bringing your own stack with custom frameworks.
+description: Build a TypeScript Shopify storefront from a pinned Hydrogen React Router starter, check it locally, and provide store-connection and Oxygen deployment steps. Use for a custom storefront that needs more control than a Shopify theme.
 license: MIT
-compatibility: Requires Node.js 18+, React knowledge, and a Shopify store
+compatibility: Node.js 22.12 or later in the 22 release line, or Node.js 24; project files and a terminal for build checks. A real store is needed only to connect and launch.
 metadata:
   author: shopify-agent-skills
-  version: "1.0"
-  shopify-api-version: "2025-01"
+  version: "1.1-ai-blocks"
+  shopify-api-version: "2026-10"
 ---
 
-# Headless Commerce with Hydrogen
+# Build a Shopify storefront from a pinned starter
 
-## When to use this skill
+Get home, product, collection, search and cart pages in one TypeScript project. Start with clearly labelled fictional data. Connect a real store only when its owner is ready.
 
-Use this skill when:
+**AI Blocks adaptation, checked 28 October 2026:** This replaces the old Remix fragments with Shopify's React Router template at commit `8e5ea1124ffcabdb901b3a374e374f4908897190`. The bundled starter pins Hydrogen `2026.10.2`, React Router `7.15.1`, React `19.2.7` and the rest of the packages. A lockfile pins their dependencies. Keep the original import licence and the Shopify template licence with the files.
 
-- Building a custom headless storefront
-- Using Hydrogen framework for e-commerce
-- Deploying to Oxygen (Shopify's edge hosting)
-- Working with the Storefront API
-- Creating high-performance, custom storefronts
-- Integrating Shopify with custom tech stacks
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-## What is Hydrogen?
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
-Hydrogen is Shopify's official headless commerce framework built on:
+**Makes it better (optional):**
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
-- **React Router** - For routing and data loading
-- **React** - Component-based UI
-- **GraphQL** - Data fetching from Storefront API
-- **Oxygen** - Global edge deployment (free hosting)
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
 
-### Key Benefits
+## What to ask for
 
-- **Build-ready components** - Pre-built commerce components
-- **Free hosting** - Deploy to Oxygen at no extra cost
-- **Fast by default** - SSR, progressive enhancement, nested routes
-- **Shopify-native** - Deep integration with Shopify APIs
+- The design brief: who shops here, the pages needed, supplied brand assets and the changes wanted.
+- A new project folder, or read access to an existing project to assess a migration. The starter never overwrites an existing folder.
+- Demo or real-store mode. Demo mode needs no account or token. For a real store, ask for its domain and the owner's intended environment. The owner keeps credentials outside chat.
+- Node.js 22.12 or later in the 22 release line, or Node.js 24, and a terminal. The recorded local check used Node.js 24 on Windows.
 
-## Getting Started
+If you have no file or terminal access, explain the file plan and commands for the owner to run. Mark checks **Not run** until you receive their actual results. Do not claim you created, built, connected or deployed a storefront.
 
-### 1. Create a Hydrogen App
+## 1. Create the pinned project
 
-```bash
-# Create new Hydrogen project
-npm create @shopify/hydrogen@latest
-
-# Follow the prompts:
-# - Choose a template (Demo store, Hello World, Skeleton)
-# - Enter your store URL
-# - Select JavaScript or TypeScript
-```
-
-### 2. Project Structure
-
-```
-hydrogen-app/
-├── app/
-│   ├── components/        # React components
-│   ├── routes/            # Page routes
-│   │   ├── _index.tsx     # Home page
-│   │   ├── products.$handle.tsx  # Product page
-│   │   └── collections.$handle.tsx
-│   ├── styles/            # CSS files
-│   ├── entry.client.tsx   # Client entry
-│   └── entry.server.tsx   # Server entry
-├── public/                # Static assets
-├── .env                   # Environment variables
-├── hydrogen.config.ts     # Hydrogen config
-└── package.json
-```
-
-### 3. Environment Setup
-
-```env
-# .env
-SESSION_SECRET=your-session-secret
-PUBLIC_STOREFRONT_API_TOKEN=your-storefront-api-token
-PUBLIC_STORE_DOMAIN=your-store.myshopify.com
-```
-
-### 4. Start Development
+Read `scripts/create-project.mjs` before running it. From the downloaded skill folder, run this with a new folder path:
 
 ```bash
+node scripts/create-project.mjs <new-project-folder>
+```
+
+The script fetches the exact Shopify template commit. It keeps the upstream licences, applies the pinned package file and lockfile, adds a visible demo-data label, and creates `.env` with `MOCK_SHOP=1`. It does not run a package installer, log in, link a store or deploy.
+
+In the new project folder, run these commands in order. Stop at the first failure:
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+npm run typecheck
+npm run build
 npm run dev
 ```
 
-## Core Concepts
+Keep the lockfile. Do not replace these versions with `latest`. If a download fails, the script leaves an incomplete marker and explains the failure. Do not build that incomplete folder or delete an existing project to retry.
 
-### Routes and Data Loading
+The typecheck validates both the Storefront and Customer Account GraphQL schemas shipped with the pinned Hydrogen package. `scripts/check-graphql.mjs` uses relative schema paths to avoid a Windows path bug in the upstream CLI. It still fails on warnings; it does not skip query checks or fetch a different schema.
 
-> Note: these samples are written for the `@remix-run/react` and `@remix-run/cloudflare` packages. Newer Hydrogen projects import the same names from `react-router`. Check your project's package.json and switch every import in the samples to the package it uses. The samples are short fragments to adapt, not a finished storefront.
+## 2. Use the project that was created
 
-```tsx
-// app/routes/products.$handle.tsx
-import { useLoaderData } from "@remix-run/react";
-import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { CartForm, Money } from "@shopify/hydrogen";
+| Part | File |
+|---|---|
+| Page registration | `app/routes.ts` |
+| Home | `app/routes/home.tsx` |
+| Product | `app/routes/product.tsx` |
+| Collection list and collection | `app/routes/collections.tsx`, `app/routes/collection.tsx` |
+| Search and cart pages | `app/routes/search.tsx`, `app/routes/cart.tsx` |
+| Request handling | The middleware in `app/root.tsx` |
+| Storefront client | `app/lib/storefront.ts` |
+| Cart handlers and state | `app/lib/cart-handlers.ts`, `app/lib/cart.ts` |
+| Store settings | `app/lib/shop.ts` |
+| Styles | `app/tokens.css`, `app/app.css` |
 
-export async function loader({ params, context }: LoaderFunctionArgs) {
-  const { storefront } = context;
-  const { handle } = params;
+Hydrogen 2026-10 is a library composed into the app. This project owns its router, server entry and Vite build. Its middleware creates the request client and runs Shopify's handlers, including `/api/cart`. Route loaders use the typed client. Do not paste legacy `CartForm`, `context.cart`, `context.storefront.query()` or `@remix-run/react` fragments into this starter.
 
-  const { product } = await storefront.query(PRODUCT_QUERY, {
-    variables: { handle },
-  });
+For an existing storefront, inspect its package file and routes first. Use the official migration guide for its starting version. Keep a copy of the old project and assess each migration step. The recorded checks here cover this starter, not an arbitrary migrated app or a JavaScript conversion.
 
-  if (!product) {
-    throw new Response("Not Found", { status: 404 });
-  }
+## 3. Apply the supplied design
 
-  return { product };
-}
+Make the requested page, style and component changes in the project. Use supplied copy, product facts and images. Do not invent real products, customers, sales figures, reviews, awards or performance results.
 
-export default function ProductPage() {
-  const { product } = useLoaderData<typeof loader>();
+Keep the visible demo label while using mock.shop. Its products and checkout are fictional. A screenshot of that demo is not evidence that a real store, payment or order works. Use the normal cart handlers and session flow; do not build a custom form that collects customer passwords.
 
-  return (
-    <div className="product-page">
-      <h1>{product.title}</h1>
-      <p>{product.description}</p>
-      <ProductPrice data={product} />
-      <AddToCartButton variantId={product.variants.nodes[0].id} />
-    </div>
-  );
-}
+## 4. Check the changed project
 
-// Small helper components used above (defined here so the sample is complete)
-function ProductPrice({ data }: { data: any }) {
-  return <Money data={data.variants.nodes[0].price} />;
-}
+Run `npm run typecheck` and `npm run build` after your changes. Then check the running app:
 
-function AddToCartButton({ variantId }: { variantId: string }) {
-  return (
-    <CartForm
-      route="/cart"
-      action={CartForm.ACTIONS.LinesAdd}
-      inputs={{ lines: [{ merchandiseId: variantId, quantity: 1 }] }}
-    >
-      <button type="submit">Add to Cart</button>
-    </CartForm>
-  );
-}
+- Home and collection pages load and link to actual products.
+- A product page handles variants and availability. A missing handle returns an appropriate not-found page.
+- Adding, updating and removing a cart line works. The displayed price, currency and stock match the store data.
+- Cart state persists for the visitor. Do not expose a private token in client code, HTML, browser requests or logs.
+- Keyboard controls, small screens, loading and error states work.
 
-const PRODUCT_QUERY = `#graphql
-  query Product($handle: String!) {
-    product(handle: $handle) {
-      id
-      title
-      description
-      handle
-      variants(first: 1) {
-        nodes {
-          id
-          price {
-            amount
-            currencyCode
-          }
-        }
-      }
-      featuredImage {
-        url
-        altText
-      }
-    }
-  }
-`;
-```
+Record actual commands, exit codes and failures. A build alone does not prove cart changes, checkout, customer sign-in, accessibility or speed. If a check could not run, say **Not run** and give the next check. Do not announce a launch-ready store with required checks still missing.
 
-### Hydrogen Components
+## 5. Connect a real store only in the owner's environment
 
-```tsx
-import {
-  Image,
-  Money,
-  CartForm,
-  CartLineQuantity,
-  useCart,
-} from '@shopify/hydrogen';
+Have the owner follow Shopify's current store-connection guide and review the target storefront. Keep private tokens and session secrets in the local `.env` or the host's secret settings, never in chat or source control. Do not ask the owner to paste them.
 
-// Image Component
-<Image
-  data={product.featuredImage}
-  aspectRatio="1/1"
-  sizes="(min-width: 45em) 50vw, 100vw"
-/>
-
-// Money Component
-<Money data={product.price} />
-
-// Add to Cart
-<CartForm
-  route="/cart"
-  action={CartForm.ACTIONS.LinesAdd}
-  inputs={{
-    lines: [{ merchandiseId: variantId, quantity: 1 }],
-  }}
->
-  <button type="submit">Add to Cart</button>
-</CartForm>
-```
-
-### Cart Management
-
-```tsx
-// app/routes/cart.tsx
-import { CartForm, Money } from "@shopify/hydrogen";
-import { useLoaderData } from "@remix-run/react";
-import { type ActionFunctionArgs, type LoaderFunctionArgs } from "@remix-run/cloudflare";
-
-export async function loader({ context }: LoaderFunctionArgs) {
-  // Reads the current cart for this visitor (may be null if the cart is empty)
-  return { cart: await context.cart.get() };
-}
-
-export async function action({ request, context }: ActionFunctionArgs) {
-  const { cart } = context;
-  const formData = await request.formData();
-  const { action, inputs } = CartForm.getFormInput(formData);
-
-  switch (action) {
-    case CartForm.ACTIONS.LinesAdd:
-      return await cart.addLines(inputs.lines);
-    case CartForm.ACTIONS.LinesUpdate:
-      return await cart.updateLines(inputs.lines);
-    case CartForm.ACTIONS.LinesRemove:
-      return await cart.removeLines(inputs.lineIds);
-    default:
-      throw new Error("Unknown cart action");
-  }
-}
-
-// Minimal line item so the sample is complete. Replace it with your own design.
-function CartLineItem({ line }: { line: any }) {
-  return (
-    <div>
-      {line.merchandise.product.title} x {line.quantity}
-    </div>
-  );
-}
-
-export default function CartPage() {
-  const { cart } = useLoaderData<typeof loader>();
-  if (!cart || cart.lines.nodes.length === 0) return <p>Your cart is empty.</p>;
-
-  return (
-    <div className="cart">
-      {cart.lines.nodes.map((line: any) => (
-        <CartLineItem key={line.id} line={line} />
-      ))}
-      <Money data={cart.cost.totalAmount} />
-    </div>
-  );
-}
-```
-
-### Collections
-
-```tsx
-// app/routes/collections.$handle.tsx
-import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
-
-export async function loader({ params, context }: LoaderFunctionArgs) {
-  const { handle } = params;
-  const { storefront } = context;
-
-  const { collection } = await storefront.query(COLLECTION_QUERY, {
-    variables: { handle, first: 24 },
-  });
-
-  return { collection };
-}
-
-const COLLECTION_QUERY = `#graphql
-  query Collection($handle: String!, $first: Int!) {
-    collection(handle: $handle) {
-      id
-      title
-      description
-      products(first: $first) {
-        nodes {
-          id
-          title
-          handle
-          featuredImage {
-            url
-            altText
-          }
-          priceRange {
-            minVariantPrice {
-              amount
-              currencyCode
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-```
-
-## Advanced Patterns
-
-### Search Implementation
-
-```tsx
-// app/routes/search.tsx
-import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
-
-export async function loader({ request, context }: LoaderFunctionArgs) {
-  const url = new URL(request.url);
-  const searchTerm = url.searchParams.get("q");
-
-  if (!searchTerm) {
-    return { results: null };
-  }
-
-  const { storefront } = context;
-  const { products } = await storefront.query(SEARCH_QUERY, {
-    variables: { query: searchTerm, first: 20 },
-  });
-
-  return { results: products };
-}
-
-const SEARCH_QUERY = `#graphql
-  query Search($query: String!, $first: Int!) {
-    products(query: $query, first: $first) {
-      nodes {
-        id
-        title
-        handle
-        featuredImage {
-          url
-          altText
-        }
-      }
-    }
-  }
-`;
-```
-
-### Customer Authentication (not covered here)
-
-This skill does not include a working sign-in. Do not write a custom form that collects a customer's email and password. For customer accounts, use Shopify's hosted Customer Account login and follow Shopify's current docs for your Hydrogen version. Tell the user this, and do not present any login code as ready to deploy.
-
-### Localization (not covered here)
-
-This skill does not include working code for multiple currencies or languages. Point the user to Shopify's current Hydrogen localization docs and write the code from those. Tell the user it is not covered here, and do not present any localization code as ready to deploy.
-
-## Oxygen Deployment
-
-### Deploy from CLI
+For the pinned React Router template, the documented connection commands are:
 
 ```bash
-# Link to Shopify store
-npx shopify hydrogen link
-
-# Deploy to Oxygen
-npx shopify hydrogen deploy
+npx --no-install shopify hydrogen link
+npx --no-install shopify hydrogen env pull
 ```
 
-### Environment Variables
+These steps require the owner's authorised store access. The owner handles any sign-in. They can write environment files, so review the target and local changes before running them. Do not run them merely to test the demo.
 
-Set environment variables in Shopify admin:
+The template uses `PUBLIC_STORE_DOMAIN` and the server-only `PRIVATE_STOREFRONT_API_TOKEN`. `PUBLIC_STOREFRONT_ID` is optional and enables Shopify analytics. Remove `MOCK_SHOP=1` only when the real-store configuration is ready; confirm the app reads the intended store and the demo label disappears. Publish the intended products to the correct channel.
 
-1. Go to Sales channels > Hydrogen
-2. Select your storefront
-3. Add environment variables
+Customer accounts use Shopify's hosted OAuth flow. They need the matching client settings, `SHOP_ID`, a session secret and HTTPS. Follow the current customer-account guide. Do not claim that sign-in, consent, multiple markets, currencies or languages have been checked until you have tested the actual configuration. Local HTTPS setup can change certificate trust and callback settings; the owner must review those changes first.
 
-### Preview Deployments
+## 6. Prepare deployment and hand back
 
-Every git push creates a preview URL for testing.
+Confirm the destination, environment values and any hosting or plan limits with the owner. This skill does not promise free hosting or a measured speed result. The pinned project's `npm run deploy` uses Shopify CLI to deploy `dist/client` and `dist/server` to Oxygen. Run it only when the owner has authorised that deployment and the required checks pass. Do not assume every Git push deploys; confirm the project's continuous-deployment setup.
 
-```bash
-# Push to create preview
-git push origin feature-branch
-```
+Hand back the project path, changed files, package versions, actual check results and remaining **Not run** checks. Include the owner's connection and deployment steps. Keep secrets out of the reply. Record whether the app still uses mock data.
 
-## Bring Your Own Stack
+## Scope of the recorded starter check
 
-If not using Hydrogen, you can use the Storefront API with any framework:
+On 28 October 2026, AI Blocks ran the pinned starter's typecheck, GraphQL checks, production build and 15 existing local mocked tests. Six local checks returned HTTP 200: home, collections, a demo product, a demo collection, cart and the cart API. The five HTML pages showed the fictional-data label. These checks used mock.shop with no real-store credentials. They did **not** test a real payment, order, customer OAuth login, deployment, cart-line changes, accessibility or a speed score. See `references/checked-build.json` for the exact scope. These checks do not alter the catalogue's separate tested record.
 
-### Install Headless Channel
+## Current primary references
 
-```bash
-# In your Shopify admin, install the Headless channel
-# Create a storefront and get API credentials
-```
+- [Pinned Shopify template](https://github.com/Shopify/hydrogen/tree/8e5ea1124ffcabdb901b3a374e374f4908897190/templates/react-router)
+- [Hydrogen migration](https://shopify.dev/docs/storefronts/hydrogen/migrate)
+- [Template and store connection](https://shopify.dev/docs/storefronts/hydrogen/getting-started/deploy-a-template)
+- [Customer accounts](https://shopify.dev/docs/storefronts/hydrogen/customer-accounts)
+- [Deployment](https://shopify.dev/docs/storefronts/hydrogen/deployments)
 
-### Use with Next.js
-
-```typescript
-// lib/shopify.ts
-const domain = process.env.SHOPIFY_STORE_DOMAIN;
-const storefrontAccessToken = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN;
-
-export async function shopifyFetch({ query, variables }) {
-  const endpoint = `https://${domain}/api/2025-01/graphql.json`;
-
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Shopify-Storefront-Access-Token": storefrontAccessToken,
-    },
-    body: JSON.stringify({ query, variables }),
-  });
-
-  return response.json();
-}
-```
-
-### Storefront Web Components
-
-```html
-<!-- Embed products anywhere with Web Components -->
-<script
-  type="module"
-  src="https://cdn.shopify.com/storefront-web-components/v1/storefront.js"
-></script>
-
-<shopify-product-provider store-domain="your-store.myshopify.com">
-  <shopify-product handle="product-handle">
-    <shopify-product-title></shopify-product-title>
-    <shopify-product-price></shopify-product-price>
-    <shopify-add-to-cart></shopify-add-to-cart>
-  </shopify-product>
-</shopify-product-provider>
-```
-
-## Performance Best Practices
-
-1. **Server-side rendering** - SSR for initial page load
-2. **Streaming** - Use React Suspense for progressive loading
-3. **Image optimization** - Use Hydrogen's Image component
-4. **Code splitting** - Lazy load non-critical components
-5. **Cache headers** - Configure appropriate cache policies
-6. **Prefetching** - Prefetch links on hover
-
-```tsx
-// Streaming example
-import { Suspense } from "react";
-
-function ProductPage() {
-  return (
-    <div>
-      <ProductInfo />
-      <Suspense fallback={<LoadingSkeleton />}>
-        <ProductRecommendations />
-      </Suspense>
-    </div>
-  );
-}
-```
-
-## CLI Commands Reference
-
-| Command                        | Description              |
-| ------------------------------ | ------------------------ |
-| `npm create @shopify/hydrogen` | Create new project       |
-| `npm run dev`                  | Start dev server         |
-| `npm run build`                | Build for production     |
-| `npx shopify hydrogen link`    | Link to store            |
-| `npx shopify hydrogen deploy`  | Deploy to Oxygen         |
-| `npx shopify hydrogen preview` | Preview production build |
-
-## Resources
-
-- [Hydrogen Documentation](https://shopify.dev/docs/storefronts/headless/hydrogen)
-- [Storefront API Reference](https://shopify.dev/docs/api/storefront)
-- [Hydrogen Components](https://shopify.dev/docs/api/hydrogen)
-- [Oxygen Hosting](https://shopify.dev/docs/storefronts/headless/hydrogen/deployments)
-- [Demo Store Template](https://github.com/Shopify/hydrogen/tree/main/templates/demo-store)
-
-For API details, see the [api-graphql](../api-graphql/SKILL.md) skill.
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer). It takes the web app.
+- The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->

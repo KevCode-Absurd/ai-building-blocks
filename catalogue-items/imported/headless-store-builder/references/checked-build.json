@@ -1,0 +1,28 @@
+{
+  "checkedOn": "2026-10-28",
+  "sourceCommit": "8e5ea1124ffcabdb901b3a374e374f4908897190",
+  "runtime": "Node.js 24.19.0 on Windows",
+  "mode": "fictional mock.shop; no real-store credentials",
+  "packageFile": "starter-package.json",
+  "lockfile": "starter-package-lock.json",
+  "passed": [
+    "React Router route type generation",
+    "TypeScript strict check",
+    "Storefront and Customer Account GraphQL checks with warnings as failures",
+    "Production client and server builds",
+    "15 existing upstream local mocked tests",
+    "6 local page/cart API smoke checks"
+  ],
+  "notChecked": [
+    "real store connection",
+    "cart-line changes",
+    "payment or real order",
+    "customer OAuth login",
+    "deployment",
+    "accessibility audit",
+    "speed score",
+    "other Node versions",
+    "customised or migrated projects"
+  ],
+  "catalogueTestRecordUnchanged": true
+}

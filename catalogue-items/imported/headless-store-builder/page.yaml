@@ -2,64 +2,63 @@ thinking: high
 thinking_why: A custom storefront has many linked design and code choices.
 new_slug: headless-store-builder
 name: Headless store builder
-summary: Build a custom Shopify storefront with Hydrogen. Get the project, home, product and collection pages, product queries and Oxygen deploy steps.
+summary: Build a TypeScript Shopify storefront from a pinned Hydrogen starter. Get home, product, collection, search and cart pages, plus build and launch checks.
 job: build-websites
 headline: Headless store builder
-subhead: Give it your Shopify store domain, design idea and page list. Your Storefront API token goes only in your .env file. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
-explain: |
-  A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
+subhead: Describe your shop. Start with a pinned React Router storefront and clearly labelled demo products. Connect a real Shopify store only when its owner is ready.
+explain: |-
+  Build a custom Shopify front end from one pinned TypeScript starter. It includes home, product, collection, search and cart pages. The package file and lockfile keep the checked versions together. The project script creates a new folder and leaves existing projects alone.
 
-  The skill walks through creating a Hydrogen app, understanding its folders and routes, and setting up environment values like your store domain and Storefront API token. It covers fetching products and collections with GraphQL, using ready-made commerce components for carts and product pages, and deploying to Oxygen. It also covers bringing your own stack. You need Node.js, React knowledge and a Shopify store.
+  Start with fictional products from mock.shop and a visible demo label. No account or token is needed for this route. On 28 October 2026, the starter passed typecheck, GraphQL checks, a production build, 15 existing local mocked tests and six local page/cart API checks. That does not prove a real payment, customer login, deployment or speed score. Recheck after changing the code.
+
+  A real store needs its owner to connect the intended storefront and keep private tokens outside chat and source control. Customer accounts use Shopify-hosted login. Hosting terms, markets, cart-line changes and checkout need their own checks before launch. The example below describes a real-store handover after the owner supplies the setup.
 when:
   - A theme limits the design you want for your shop.
   - Your store is slow and you want faster page loads.
   - You want a custom React front end on top of Shopify.
   - You plan to deploy a storefront to Shopify's own hosting.
 not_for:
-  - "You want a quick shop on a standard look: use a Shopify theme, which needs no code."
-  - "Your team does not know React or Node.js: use a Shopify theme, or hire a developer."
-  - "You only want to change a few words or colors: edit your current theme in Shopify admin."
+  - "You want a quick shop with a standard design: use a Shopify theme."
+  - "You cannot work with TypeScript, Node.js and project files: use a theme or a developer."
+  - "You need a store already verified for real payments, customer login or every market: those checks still need the actual store configuration."
 you_give:
-  - Your Shopify store domain
-  - Your Storefront API token (keep it in your .env file, never in the chat)
-  - Your design idea and page list
-  - Whether you use JavaScript or TypeScript
+  - Your design brief, page list and approved brand assets
+  - A new project folder, or existing code to assess a migration
+  - Demo or real-store mode; for a real store, its domain and intended environment
+  - The owner handles credentials and any sign-in outside chat
 you_get:
-  - A new Hydrogen project setup
-  - Pages for home, product and collection
-  - GraphQL queries for your products
-  - Deploy steps for Oxygen
+  - A pinned TypeScript storefront with home, product, collection, search and cart pages
+  - The package file, lockfile and local GraphQL checker
+  - Actual build results, or clear Not run labels and the remaining commands
+  - Owner-run store connection and Oxygen deployment steps
 how_to_use:
-  - "First run, in order: create the project, fill in your .env file, run npm run dev, check that the home, product and collection pages load, then deploy to Oxygen."
-  - Before you start, get your Storefront API token. In Shopify admin, install the Headless channel and create a storefront. Copy the token from there.
-  - Keep the token in your .env file. Never paste it into a chat.
-  - Paste this skill into Claude, ChatGPT or Gemini. Add your store domain, design idea, page list and JavaScript or TypeScript.
-  - Read each command before you run it, and run it only inside your project folder. This needs Node.js 18 or newer, so use an AI that can run code or run them yourself.
-  - The code samples are written for the @remix-run/react and @remix-run/cloudflare packages. Newer Hydrogen projects import the same names from react-router. Check your package.json and switch the imports to match.
-  - This skill has no working customer sign-in or multi-currency code. Use Shopify's hosted Customer Account login, and take any localization code from Shopify's current docs. Never build a form that collects customer passwords yourself.
-  - Check that the home, product and collection pages load. If a code sample fails, ask your AI to match it to the router package your project uses.
-  - Run the deploy steps to put your storefront on Oxygen.
-  - After the storefront loads, run the speed-budget-and-sale-check item to test page speed before launch. When you are ready to go live, use the site-go-live-runbook-writer item to write your launch steps.
+  - Download the skill folder. Read its create-project script, then run it with a new project folder path. It never overwrites an existing folder.
+  - In that project, run npm ci --ignore-scripts --no-audit --no-fund, npm run typecheck and npm run build in order. Stop at the first failure.
+  - Run npm run dev. The starting project uses fictional mock.shop products and shows a demo label.
+  - Give your AI the design brief, approved assets and requested changes. Use the created route files; do not paste the old Remix examples into them.
+  - Run the build checks again after changes. Check product variants, cart changes, keyboard use and small screens. Mark checks you could not run as Not run.
+  - The owner connects a real store and keeps private tokens outside chat. Check the intended products, currency, cart and checkout before launch. Customer login needs the hosted OAuth setup.
+  - Review the destination, secret settings, hosting terms and actual check results before authorising deployment. In a normal chat, get the plan and commands; do not treat them as executed.
 output_sample:
   input:
     - Your Shopify store domain
     - Your Storefront API token (kept in .env, not pasted)
     - Your design idea and page list
-    - JavaScript or TypeScript (your pick)
+    - TypeScript for the pinned starter; other targets need separate work and checks
   prerequisites:
-    - Node.js 18 or newer on your computer
+    - Node.js 22.12 or later in the 22 release line, or Node.js 24
     - Some React knowledge
     - An AI that can run code, or a developer to run the commands
     - A Shopify store
   output:
     - name: What a finished reply looks like
-      contains: A file tree for the new project, the commands to run in order, the route files it wrote, and a short list to check first, which is the .env values, the three pages loading and the router imports.
+      contains: The project path, changed files, pinned versions, commands and actual check results. Checks that could not run are marked Not run.
     - name: Hydrogen project
-      contains: A new storefront app made with the Hydrogen setup command, using the template and language you pick.
+      contains: A TypeScript React Router storefront from the pinned Shopify template, with an exact package file and lockfile.
     - name: .env file
-      contains: Your session secret, Storefront API token and store domain, kept out of the chat.
+      contains: MOCK_SHOP=1 for the demo. For a real store, the owner supplies the domain, private token and any required session secret outside chat.
     - name: Home page route
-      contains: The front page of your storefront, saved as _index.tsx.
+      contains: The home page of the storefront, saved as app/routes/home.tsx.
     - name: Product page route
       contains: A page that loads one product by its handle, with price, image and an add to cart button.
     - name: Collection page route

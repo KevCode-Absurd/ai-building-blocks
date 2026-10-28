@@ -1,6 +1,6 @@
 ---
 name: hidden-value-check
-description: Use when you want to cut, automate or remove a job, step or rule and want to know what it does besides the obvious task. Names the job simply, lists unseen effects, asks who gains from each, asks what would break, checks long-standing habits, prices the hidden value and decides: cut, keep or replace. Lists any checks it missed.
+description: "Use when you want to cut, automate or remove a job, step or rule and want to know what it does besides the obvious task. Names the job simply, lists unseen effects, asks who gains from each, asks what would break, checks long-standing habits, prices the hidden value and decides: cut, keep or replace. Lists any checks it missed."
 ---
 
 # Hidden value check

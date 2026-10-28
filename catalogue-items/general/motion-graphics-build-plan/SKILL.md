@@ -1,6 +1,6 @@
 ---
 name: motion-graphics-build-plan
-description: Use when you want a motion graphics ad built from a script: your own, or for a better start one from the motion graphics script skill (a fact sheet with sources, a look card, and a shot table of one fact per shot). It runs the full video process in six stages (script in, product card, product cutouts, product sheet and look card, storyboard of style frames, the build in code or an editor), stopping for your approval after the product card, the sheets and the storyboard. The product is the avatar. Each shot becomes a layer-by-layer build sheet with exact text, timings and easing, for Remotion with Claude Code or an editor, and video models only ever make wordless backgrounds. Ends with any check it missed.
+description: "Use when you want a motion graphics ad built from a script: your own, or for a better start one from the motion graphics script skill (a fact sheet with sources, a look card, and a shot table of one fact per shot). It runs the full video process in six stages (script in, product card, product cutouts, product sheet and look card, storyboard of style frames, the build in code or an editor), stopping for your approval after the product card, the sheets and the storyboard. The product is the avatar. Each shot becomes a layer-by-layer build sheet with exact text, timings and easing, for Remotion with Claude Code or an editor, and video models only ever make wordless backgrounds. Ends with any check it missed."
 ---
 
 # Motion graphics video build planner

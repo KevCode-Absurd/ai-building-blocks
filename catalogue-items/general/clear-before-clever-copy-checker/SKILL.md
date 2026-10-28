@@ -1,6 +1,6 @@
 ---
 name: clear-before-clever-copy-checker
-description: A short card to paste above any request for words a customer will read or hear (ads, pages, emails, scripts), or beside a draft you're checking. Five rules in a fixed order, from plain speech to brand style tricks. A line must pass each rule before the next one counts. Ends with a score out of 100: the share of lines that pass every rule.
+description: "A short card to paste above any request for words a customer will read or hear (ads, pages, emails, scripts), or beside a draft you're checking. Five rules in a fixed order, from plain speech to brand style tricks. A line must pass each rule before the next one counts. Ends with a score out of 100: the share of lines that pass every rule."
 ---
 
 # Clear-before-clever copy checker

@@ -1,6 +1,6 @@
 ---
 name: fast-first-draft
-description: Use when you have an idea for a story, book or long piece and want to get a whole first draft down before doubt sets in. It runs 4 skills in order: find the situation, set a daily word count, pick scene details and write the pages. It checks each result before the next step starts.
+description: "Use when you have an idea for a story, book or long piece and want to get a whole first draft down before doubt sets in. It runs 4 skills in order: find the situation, set a daily word count, pick scene details and write the pages. It checks each result before the next step starts."
 ---
 
 # Write a first draft fast with the door closed

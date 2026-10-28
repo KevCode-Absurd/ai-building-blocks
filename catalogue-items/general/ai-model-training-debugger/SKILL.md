@@ -1,6 +1,6 @@
 ---
 name: ai-model-training-debugger
-description: Use when a model trains but gives poor or odd results and you are about to tune. Sets a fixed check order: look at the data by hand, build a hard-to-break baseline, check the starting loss, overfit one tiny batch, grow the model, regularise, then tune. States the expected result before each step. Ends with any checks it missed.
+description: "Use when a model trains but gives poor or odd results and you are about to tune. Sets a fixed check order: look at the data by hand, build a hard-to-break baseline, check the starting loss, overfit one tiny batch, grow the model, regularise, then tune. States the expected result before each step. Ends with any checks it missed."
 ---
 
 # AI model training debugger

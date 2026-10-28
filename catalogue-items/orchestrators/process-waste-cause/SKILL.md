@@ -1,6 +1,6 @@
 ---
 name: process-waste-cause
-description: Use when a process feels slow or keeps going wrong and you want the real cause. It runs 2 skills in order: first it marks each step of your process as value or waste, then it follows the worst waste back to a cause you can fix. It checks each result before the next step starts.
+description: "Use when a process feels slow or keeps going wrong and you want the real cause. It runs 2 skills in order: first it marks each step of your process as value or waste, then it follows the worst waste back to a cause you can fix. It checks each result before the next step starts."
 ---
 
 # Find process waste and the cause behind it

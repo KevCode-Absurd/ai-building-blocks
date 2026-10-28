@@ -1,6 +1,6 @@
 ---
 name: phone-note-image-ad
-description: Use when a story ad's picture should be a screenshot of a note the narrator typed to themselves about the problem: a streak that keeps resetting, a list of things tried, a running cost, a plan that restarts every Monday. It picks the note's shape, writes 10 to 30 words, says to set the words as real text on a generic screen, and lists any check it missed.
+description: "Use when a story ad's picture should be a screenshot of a note the narrator typed to themselves about the problem: a streak that keeps resetting, a list of things tried, a running cost, a plan that restarts every Monday. It picks the note's shape, writes 10 to 30 words, says to set the words as real text on a generic screen, and lists any check it missed."
 ---
 
 # Phone note screenshot image ad maker

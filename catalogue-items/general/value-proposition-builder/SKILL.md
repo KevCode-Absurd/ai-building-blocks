@@ -1,6 +1,6 @@
 ---
 name: value-proposition-builder
-description: Use when your pitch lists what you are and buyers ask what is in it for them. Builds a value pitch in five and a half parts: company, product and seller value, one incentive marked one time only, the customer's profit with figures, what you give after the sale, and proof from a similar customer. Ends with any checks it missed.
+description: "Use when your pitch lists what you are and buyers ask what is in it for them. Builds a value pitch in five and a half parts: company, product and seller value, one incentive marked one time only, the customer's profit with figures, what you give after the sale, and proof from a similar customer. Ends with any checks it missed."
 ---
 
 # Value proposition builder

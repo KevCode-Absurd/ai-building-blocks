@@ -1,6 +1,6 @@
 ---
 name: handwritten-note-image-ad-maker
-description: Use when a story ad's picture should be a photo of a few handwritten lines in the narrator's words: a list, a sum, a note left for someone, an old note found later. It decides who the note was written for, which sets the paper and the words, and says the most reliable way to make it is to write it by hand and photograph it. Lists any check it missed.
+description: "Use when a story ad's picture should be a photo of a few handwritten lines in the narrator's words: a list, a sum, a note left for someone, an old note found later. It decides who the note was written for, which sets the paper and the words, and says the most reliable way to make it is to write it by hand and photograph it. Lists any check it missed."
 ---
 
 # Handwritten note image ad maker

@@ -1,6 +1,6 @@
 ---
 name: copy-foundation-docs-builder
-description: Use when a store wants reusable research behind its pages, ads and scripts. Takes a product page, runs a deep-research pass on the buyer's own words, and hands back four documents: a research doc, an avatar sheet with direct quotes, an offer brief and a list of at most six beliefs a buyer must hold to buy, plus four to six buyer archetypes.
+description: "Use when a store wants reusable research behind its pages, ads and scripts. Takes a product page, runs a deep-research pass on the buyer's own words, and hands back four documents: a research doc, an avatar sheet with direct quotes, an offer brief and a list of at most six beliefs a buyer must hold to buy, plus four to six buyer archetypes."
 ---
 
 # Copy foundation docs builder

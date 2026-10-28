@@ -1,6 +1,6 @@
 ---
 name: brand-name-stretch-checker
-description: Use when you want to put an existing brand name on a new product or service and are not sure it will hold. Writes what the name means to buyers in one line, describes the new product on its own, tests fit, checks whether specialist rivals are splitting the market, scores the stretch out of 100 with the working, and makes one call: use the name, make a new one or skip.
+description: "Use when you want to put an existing brand name on a new product or service and are not sure it will hold. Writes what the name means to buyers in one line, describes the new product on its own, tests fit, checks whether specialist rivals are splitting the market, scores the stretch out of 100 with the working, and makes one call: use the name, make a new one or skip."
 ---
 
 # Brand name stretch checker

@@ -1,6 +1,6 @@
 ---
 name: disagreement-calming-line-writer
-description: Use when you expect a person to dispute your point, or someone has just told you that you are wrong. Writes short true lines for each moment the talk could turn: welcome the disagreement, show you heard, agree where it is true, own your part, hold your view gently, take time. Ends with any checks it missed.
+description: "Use when you expect a person to dispute your point, or someone has just told you that you are wrong. Writes short true lines for each moment the talk could turn: welcome the disagreement, show you heard, agree where it is true, own your part, hold your view gently, take time. Ends with any checks it missed."
 ---
 
 # Disagreement calming line writer

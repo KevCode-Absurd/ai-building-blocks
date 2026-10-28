@@ -1,6 +1,6 @@
 ---
 name: staff-phishing-rules-briefer
-description: Use when a store owner wants staff trained to avoid fake login pages. From the accounts that matter, team size and tools in use, it writes a one-page rule sheet in plain words and a ten-minute drill with ten sample cases and answers. Defensive only: all example addresses are made up.
+description: "Use when a store owner wants staff trained to avoid fake login pages. From the accounts that matter, team size and tools in use, it writes a one-page rule sheet in plain words and a ten-minute drill with ten sample cases and answers. Defensive only: all example addresses are made up."
 ---
 
 # Staff phishing rules briefer

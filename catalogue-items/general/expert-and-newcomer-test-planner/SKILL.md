@@ -1,6 +1,6 @@
 ---
 name: expert-and-newcomer-test-planner
-description: Use when you have a draft meant for both experts and newcomers and want to test it on real people. Designs a small test: who to pick, how to show the piece with no preface, what to watch without asking, the same questions for each group, and a pass line for each set before the test. Ends with a record sheet and any checks it missed.
+description: "Use when you have a draft meant for both experts and newcomers and want to test it on real people. Designs a small test: who to pick, how to show the piece with no preface, what to watch without asking, the same questions for each group, and a pass line for each set before the test. Ends with a record sheet and any checks it missed."
 ---
 
 # Expert and newcomer test planner

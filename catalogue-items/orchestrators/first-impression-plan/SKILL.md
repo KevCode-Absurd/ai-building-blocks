@@ -1,6 +1,6 @@
 ---
 name: first-impression-plan
-description: Use when you are about to meet someone who matters to you and want them to remember you well. It runs 4 skills in order: learn what they care about, plan the meeting, write a memory card and write a thank-you note. It checks each result before the next step starts.
+description: "Use when you are about to meet someone who matters to you and want them to remember you well. It runs 4 skills in order: learn what they care about, plan the meeting, write a memory card and write a thank-you note. It checks each result before the next step starts."
 ---
 
 # Make a strong first impression and build the relationship

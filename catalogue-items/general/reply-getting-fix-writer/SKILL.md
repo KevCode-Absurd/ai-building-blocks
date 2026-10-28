@@ -1,6 +1,6 @@
 ---
 name: reply-getting-fix-writer
-description: Use when you have an ad, email or page and a diagnosis of why it gets few replies, and you want a fixed version. Changes only what the diagnosis calls for: moves the winning reason into the headline, puts the offer where it is seen and describes it so it is wanted, makes the reply easy, adds a reason to act now and swaps vague words for specific facts. Lists each change next to its cause.
+description: "Use when you have an ad, email or page and a diagnosis of why it gets few replies, and you want a fixed version. Changes only what the diagnosis calls for: moves the winning reason into the headline, puts the offer where it is seen and describes it so it is wanted, makes the reply easy, adds a reason to act now and swaps vague words for specific facts. Lists each change next to its cause."
 ---
 
 # Reply-getting fix writer

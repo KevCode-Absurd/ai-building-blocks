@@ -1,6 +1,6 @@
 ---
 name: copy-research-file-builder
-description: Use when you have a pile of product material (past issues, emails, bonuses, old promotions, reviews) and need it sorted before writing. Copies passages word for word into separate files by purpose: the people behind the product, the buyer's strong feelings, and the real problem. Values each bonus, picks proof you can give away and studies the past hits. Ends with any of its checks it missed.
+description: "Use when you have a pile of product material (past issues, emails, bonuses, old promotions, reviews) and need it sorted before writing. Copies passages word for word into separate files by purpose: the people behind the product, the buyer's strong feelings, and the real problem. Values each bonus, picks proof you can give away and studies the past hits. Ends with any of its checks it missed."
 ---
 
 # Copy research file builder

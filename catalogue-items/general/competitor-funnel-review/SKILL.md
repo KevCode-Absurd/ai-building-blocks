@@ -1,6 +1,6 @@
 ---
 name: competitor-funnel-review
-description: Use when you want to know how your rivals really sell after the first click. Plans a safe mystery shop: subscribe to each rival's list, buy a low-priced item, record every step and email, count upsells, describe the back end, say no to an offer and see what happens, check each site on a phone, and write what to copy, avoid or beat. Ends with any of its checks it missed.
+description: "Use when you want to know how your rivals really sell after the first click. Plans a safe mystery shop: subscribe to each rival's list, buy a low-priced item, record every step and email, count upsells, describe the back end, say no to an offer and see what happens, check each site on a phone, and write what to copy, avoid or beat. Ends with any of its checks it missed."
 ---
 
 # Competitor funnel mystery shopper

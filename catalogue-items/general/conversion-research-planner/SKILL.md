@@ -1,6 +1,6 @@
 ---
 name: conversion-research-planner
-description: Use when a page converts poorly and you need to know what to research before testing anything. Plans the order of work: check analytics are set up and not double counting, find the pages and steps where people drop, review key pages for clarity, relevance and friction, plan replays and user tests, plan surveys to learn why people hesitate, and write findings as issues. Leaves tests out until research is done. Ends with data still missing and any checks it missed.
+description: "Use when a page converts poorly and you need to know what to research before testing anything. Plans the order of work: check analytics are set up and not double counting, find the pages and steps where people drop, review key pages for clarity, relevance and friction, plan replays and user tests, plan surveys to learn why people hesitate, and write findings as issues. Leaves tests out until research is done. Ends with data still missing and any checks it missed."
 ---
 
 # Conversion research planner

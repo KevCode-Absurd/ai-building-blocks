@@ -1,6 +1,6 @@
 ---
 name: clay-scene-image-ad-maker
-description: Use when you want one claymation-style image ad: a photographed handmade tabletop set where one clay object shows the problem or the change your product makes, as one state or a before and after split. It uses the same set plan as the clay video (one finish, model-maker stand-ins, two palettes, one silent clay character), keeps the picture inside your approved claims, lays out a 4:5 or 1:1 frame with a headline of 7 words or fewer, and hands back the image prompt and the feed copy, with any check it missed.
+description: "Use when you want one claymation-style image ad: a photographed handmade tabletop set where one clay object shows the problem or the change your product makes, as one state or a before and after split. It uses the same set plan as the clay video (one finish, model-maker stand-ins, two palettes, one silent clay character), keeps the picture inside your approved claims, lays out a 4:5 or 1:1 frame with a headline of 7 words or fewer, and hands back the image prompt and the feed copy, with any check it missed."
 ---
 
 # Clay scene image ad maker

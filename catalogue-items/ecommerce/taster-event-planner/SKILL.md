@@ -1,6 +1,6 @@
 ---
 name: taster-event-planner
-description: Use when you sell a food, drink or other product people can sample, and want to test versions on real buyers in person while also filming content. It plans a one-day tasting event: setup, a sampling script, a shot list, a taster card, and a decision rule set before the day.
+description: "Use when you sell a food, drink or other product people can sample, and want to test versions on real buyers in person while also filming content. It plans a one-day tasting event: setup, a sampling script, a shot list, a taster card, and a decision rule set before the day."
 ---
 
 # Taster event planner

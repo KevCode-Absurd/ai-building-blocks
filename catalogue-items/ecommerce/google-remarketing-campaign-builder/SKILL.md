@@ -1,6 +1,6 @@
 ---
 name: google-remarketing-campaign-builder
-description: Use when a store wants to win back visitors who did not buy. It sets up Google remarketing (video then display, or a Demand Gen cart abandoner campaign) with budgets, frequency cap and audience splits, and writes five ad concepts, one for each reason people leave: distraction, price, trust, does it work and logistics.
+description: "Use when a store wants to win back visitors who did not buy. It sets up Google remarketing (video then display, or a Demand Gen cart abandoner campaign) with budgets, frequency cap and audience splits, and writes five ad concepts, one for each reason people leave: distraction, price, trust, does it work and logistics."
 ---
 
 # Google remarketing campaign builder

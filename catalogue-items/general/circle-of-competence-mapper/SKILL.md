@@ -1,6 +1,6 @@
 ---
 name: circle-of-competence-mapper
-description: Use when you are about to act in a field you only partly know, or someone is asking you to join something you cannot fully explain. Splits the topic into parts, tests each against evidence, finds the edge, checks whether others hold the aptitude advantage, and gives a verdict: in, learn first or pass. Ends with the checks it missed.
+description: "Use when you are about to act in a field you only partly know, or someone is asking you to join something you cannot fully explain. Splits the topic into parts, tests each against evidence, finds the edge, checks whether others hold the aptitude advantage, and gives a verdict: in, learn first or pass. Ends with the checks it missed."
 ---
 
 # Circle of competence mapper

@@ -1,6 +1,6 @@
 ---
 name: expert-and-newcomer-writing
-description: Use when you are making a talk, article, product or piece and want it to satisfy people who know the field and people who do not. It runs 6 skills in order: name both audiences, fit the piece to its deliverer, draft in layers, cut, plan a test and sort the feedback. It checks each result before the next step starts.
+description: "Use when you are making a talk, article, product or piece and want it to satisfy people who know the field and people who do not. It runs 6 skills in order: name both audiences, fit the piece to its deliverer, draft in layers, cut, plan a test and sort the feedback. It checks each result before the next step starts."
 ---
 
 # Write something experts admire and newcomers enjoy

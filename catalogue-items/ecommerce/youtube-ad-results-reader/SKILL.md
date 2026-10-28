@@ -1,6 +1,6 @@
 ---
 name: youtube-ad-results-reader
-description: Use when a store has YouTube ad results and needs to know which ads to scale, keep or pause. It rates view rate, click-through rate, conversion rate and new-customer cost per sale against thresholds, scores each ad out of 100, gives a verdict by a fixed rule and names the next test: hook, offer and call to action, or page.
+description: "Use when a store has YouTube ad results and needs to know which ads to scale, keep or pause. It rates view rate, click-through rate, conversion rate and new-customer cost per sale against thresholds, scores each ad out of 100, gives a verdict by a fixed rule and names the next test: hook, offer and call to action, or page."
 ---
 
 # YouTube ad results reader

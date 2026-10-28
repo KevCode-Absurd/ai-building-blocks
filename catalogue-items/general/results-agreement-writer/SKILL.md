@@ -1,6 +1,6 @@
 ---
 name: results-agreement-writer
-description: Use when you are handing a job to someone, or two sides are about to settle a deal, and you want both to know what success is. Writes a one-page agreement with five parts: the results wanted, the guidelines, the help on offer, how and when progress is judged, and what follows good and poor results. Flags any line that tells someone how to work. Ends with a say-it-back card and any checks it missed.
+description: "Use when you are handing a job to someone, or two sides are about to settle a deal, and you want both to know what success is. Writes a one-page agreement with five parts: the results wanted, the guidelines, the help on offer, how and when progress is judged, and what follows good and poor results. Flags any line that tells someone how to work. Ends with a say-it-back card and any checks it missed."
 ---
 
 # Results agreement writer

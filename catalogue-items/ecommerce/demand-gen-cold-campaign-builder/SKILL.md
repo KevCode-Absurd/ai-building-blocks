@@ -1,6 +1,6 @@
 ---
 name: demand-gen-cold-campaign-builder
-description: Use when a store with stable Search, Shopping and remarketing wants new customers from cold traffic on Google. It builds a Demand Gen campaign: timing, budget by AOV, bid path, audiences, Shorts and in-stream placements, testing and winning ad groups, video format, a creative brief with a 5-second hook and the scale order.
+description: "Use when a store with stable Search, Shopping and remarketing wants new customers from cold traffic on Google. It builds a Demand Gen campaign: timing, budget by AOV, bid path, audiences, Shorts and in-stream placements, testing and winning ad groups, video format, a creative brief with a 5-second hook and the scale order."
 ---
 
 # Demand Gen cold traffic builder

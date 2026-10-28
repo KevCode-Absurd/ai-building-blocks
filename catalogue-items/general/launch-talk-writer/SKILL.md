@@ -1,6 +1,6 @@
 ---
 name: launch-talk-writer
-description: Use when you must announce a product, feature or project to a room or a camera and a spec list will bore people. Writes a two-minute talk: the problem in human terms, what is wrong with today, a reveal that turns a list into one thing, a short demo with no spec dump, one real story, and a closing belief. Not for a room that disagrees with you or a long keynote. Ends with any of its checks it missed.
+description: "Use when you must announce a product, feature or project to a room or a camera and a spec list will bore people. Writes a two-minute talk: the problem in human terms, what is wrong with today, a reveal that turns a list into one thing, a short demo with no spec dump, one real story, and a closing belief. Not for a room that disagrees with you or a long keynote. Ends with any of its checks it missed."
 ---
 
 # Launch talk writer

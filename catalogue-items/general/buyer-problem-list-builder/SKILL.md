@@ -1,6 +1,6 @@
 ---
 name: buyer-problem-list-builder
-description: Use when building an offer to map possible buyer problems from the starting situation to a desired result. Lists stages, checks doubts about outcome, likelihood, effort and time, labels observed evidence and guesses, and proposes candidate How-to outcomes. A buyer problem is not proof of product capability: verify each proposed promise before use and leave unsupported speed, ease or result claims unapproved. Ends with CHECKS MISSED.
+description: "Use when building an offer to map possible buyer problems from the starting situation to a desired result. Lists stages, checks doubts about outcome, likelihood, effort and time, labels observed evidence and guesses, and proposes candidate How-to outcomes. A buyer problem is not proof of product capability: verify each proposed promise before use and leave unsupported speed, ease or result claims unapproved. Ends with CHECKS MISSED."
 ---
 
 # Buyer problem list builder

@@ -1,6 +1,6 @@
 ---
 name: seven-question-startup-scorer
-description: Use when you have an idea or plan and want a single go, fix or stop call. Scores seven questions with a rule for each: engineering, timing, monopoly, people, distribution, durability and secret. Marks anything that needs facts you have not given and names the weakest question as the first fix.
+description: "Use when you have an idea or plan and want a single go, fix or stop call. Scores seven questions with a rule for each: engineering, timing, monopoly, people, distribution, durability and secret. Marks anything that needs facts you have not given and names the weakest question as the first fix."
 ---
 
 # Seven-question startup scorer

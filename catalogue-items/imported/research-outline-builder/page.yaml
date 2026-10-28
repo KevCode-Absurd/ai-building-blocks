@@ -9,7 +9,7 @@ subhead: Give it a topic. It first drafts a list of items and fields from what y
 explain: |
   A research outline for any topic: the list of things to compare and the questions to answer about each one, filled in with results found online. You get a clear frame before the real research starts.
 
-  It first writes an initial list of items and fields from what the AI already knows, and you confirm or change it. Then you pick a time range, and a search agent looks the web up to add missing items and fields, with a strict fixed prompt. The result is saved as an outline file that later steps can use. It browses and scrapes web sites, so results depend on what is online. It suits technology choices, benchmarks and academic surveys.
+  It first writes an initial list of items and fields from what the AI already knows, and you confirm or change it. Then you pick a time range, and a search agent looks the web up to add missing items and fields, with a strict fixed prompt. The result is saved as an outline file that later steps can use. It uses web search, so additions depend on the public sources it finds. It suits technology choices, benchmarks and academic surveys.
 when:
   - You must compare several tools before choosing one.
   - You are starting a survey of a new field.
@@ -31,7 +31,7 @@ you_get:
   - Outline file for later steps
 how_to_use:
   - Open your AI tool and add the skill, or paste its instructions into a chat. It needs web search and file saving to run in full.
-  - Type /research followed by your topic.
+  - Give your topic and ask it to follow the research outline steps. The /research command works only in a tool that has registered it.
   - Check the first list of items and fields. Say what to add or remove.
   - Pick a time range for the web search, and share your own field file if you have one.
   - Read the new items, fields and sources. Check that each source link is real before you trust it.

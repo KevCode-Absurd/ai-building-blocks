@@ -1,15 +1,17 @@
 thinking: low
-thinking_why: It divides stock by sales speed.
+thinking_why: It compares stock with fulfilled units at each location.
 new_slug: days-of-stock-calculator
 name: Days of stock calculator
-summary: Find how many days of stock you have left for each product and location. Get a flagged reorder list from your Shopify sales and stock.
+summary: Compare available stock with each location's fulfilled units. Get days of cover, low-stock flags and collection gaps.
 job: run-your-store
 headline: Days of stock calculator
-subhead: Get how many days each product stock will last and how fast it sells, by location.
+subhead: Estimate stock cover at each location from available stock and fulfilled units. See missing records before using the numbers.
 explain: |
-  Per product and per location, you see how many days of stock remain at the current selling pace, and how much of your stock has sold. That tells you what to reorder and when.
+  See available stock, fulfilled units and estimated days of cover for each variant and location. Missing records are marked so they cannot look like zero sales.
 
-  The skill reads variants, orders and inventory from Shopify. It looks back over your chosen window, 30 days by default, to get a daily sales rate. Days of stock is the quantity on hand divided by that rate. Sell-through is units sold as a share of units sold plus units on hand. Anything under your alert level, 14 days by default, is flagged. You can narrow it to one supplier. It only reads and changes nothing. Your AI needs access to your Shopify store.
+  Your AI reads Shopify orders created in your chosen window, 30 days by default. It counts successful fulfilments made before the window ends and joins them to their actual locations. Current available stock divided by that daily rate gives estimated cover. This is not a physical stock count or a forecast of future demand.
+
+  The skill includes local scripts that write JSON and CSV reports. They make no store changes. The sell-through figure is a labelled proxy using current available stock, not inventory receipts. The 14-day alert is an adjustable default. Check it against your supplier lead times. AI Blocks checked API fields in the official documentation but has not run this against a live store.
 when:
   - You plan next week's purchase orders and need a reorder list.
   - A bestseller may run out before restock arrives.
@@ -26,14 +28,14 @@ you_give:
   - Supplier filter (optional)
 you_get:
   - Days of stock per item and location
-  - Sell-through rate
+  - A labelled sell-through proxy
   - Flagged low stock items
-  - Reorder planning list
+  - Missing-record notes for reorder planning
 how_to_use:
   - Open an AI that can run code and use the Shopify CLI, such as Claude Code, Cursor, Codex or Gemini CLI.
   - "Sign in to your store first. Run the Shopify CLI command: shopify store auth --store your-store.myshopify.com --scopes read_products,read_orders,read_inventory"
-  - Paste in the skill and give your store address. Add the sales window, alert level or supplier if you want them.
-  - Wait for the run. It only reads your store and changes nothing.
+  - Add the full skill folder, including its scripts. Give your store address, window, alert level and supplier filter.
+  - Ask your AI to collect all pages and run the local analyser. Keep the snapshot and reports in your approved working folder.
   - Check the critical list first. Then open the CSV and compare low items with your supplier lead times.
   - Use a 90-day window for slow or seasonal products. The default is 30 days. Shopify may limit older order history, so check that orders older than the window come back before you trust a 90-day run.
   - Take the flagged items to your supplier lead times. Use the Dead stock finder for items that did not sell.
@@ -49,12 +51,12 @@ output_sample:
     - Read access to products, orders and inventory in your Shopify store
   output:
     - name: Start banner
-      contains: The skill name, your store address and the start time.
+      contains: Your store, the order window, stock read time and collection status.
     - name: Step log
       contains: One line per step showing what was read and how many results came back.
     - name: Summary
-      contains: How many products were checked, and how many are critical, healthy or have no sales.
+      contains: Location rows checked, low-stock flags and incomplete rows, with collection gaps.
     - name: Critical list
       contains: Each product under your alert level, with its SKU, days of stock left and daily sales.
-    - name: velocity_<date>.csv
-      contains: One row per variant with stock, units sold, daily sales, days of stock, sell-through percent and an alert flag.
+    - name: velocity.csv and velocity.json
+      contains: One CSV row per variant and location, with available stock, fulfilled units, daily rate, cover, a sell-through proxy and status. JSON adds collection notes.

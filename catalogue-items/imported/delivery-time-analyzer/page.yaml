@@ -2,16 +2,18 @@ thinking: low
 thinking_why: It averages dates by carrier.
 new_slug: delivery-time-analyzer
 name: Delivery time analyzer
-summary: Find which carrier is slow. This delivery time analyzer gives the average days from shipment to delivery for each carrier, from your Shopify orders.
+summary: Compare fulfilment-to-delivery times by carrier and location. Get averages, order counts and missing-date notes.
 job: run-your-store
 headline: Delivery time analyzer
-subhead: Average days from shipment to delivery, split by carrier, so you can see which carriers are slow. It reads your fulfilled Shopify orders and measures the time from when the fulfilment was created to when it was delivered.
+subhead: See days from when Shopify logs a shipment to its recorded delivery. Filter by where it shipped from. Check how many orders each average covers.
 explain: |
-  Average days from shipment to delivery, split by carrier, so you can see which carriers are slow. It reads your fulfilled Shopify orders and measures the time from when the fulfilment was created to when it was delivered.
+  See average, shortest and longest elapsed times by carrier. The measure starts when Shopify creates the fulfilment, which may be before carrier pickup. It can include warehouse handling and does not prove who caused a delay.
 
-  You set the store, the look-back window (30 days by default), a minimum number of orders per carrier so tiny samples do not mislead, and optionally a single fulfilment location. A CSV file is always written, and the table or JSON is printed too. It needs a signed-in Shopify command line session with permission to read orders. It only reads data and changes nothing in the store.
+  The window selects orders created in that period, not every shipment sent then. A location filter is applied to the actual fulfilments before averages are calculated. The minimum counts distinct orders, even when an order has several shipments. It is a display setting, not a test of statistical significance.
+
+  Add the full skill folder so your AI can collect the records and run its local scripts. You get JSON and CSV reports with missing dates and other gaps. A missing delivery date is not labelled as a parcel in transit. The skill changes nothing in the store. AI Blocks checked API fields in the official documentation but has not run this against a live store.
 when:
-  - Customers complain about late parcels and you do not know which carrier is at fault.
+  - Customers report late parcels and you want to compare the recorded times.
   - You are deciding whether to switch carriers.
   - You want to check delivery promises on your product pages against real data.
   - One warehouse seems slower than another.
@@ -29,11 +31,11 @@ you_get:
   - Average delivery days per carrier
   - Order count behind each average
   - Slowest and fastest carriers
-  - A CSV of every shipment, plus a printed table or JSON
+  - CSV rows for the collected, filtered fulfilments, plus a JSON report
 how_to_use:
   - Check that your AI can run code and use the Shopify command line. Install the command line first if you do not have it.
   - Sign in to your store with permission to read orders. This skill only reads data and changes nothing.
-  - Paste the skill into your AI. Give your store domain, plus the days back, minimum orders and location if you want them.
+  - Add the full skill folder, including scripts. Give your store domain, window, minimum orders and optional location.
   - Check the table. Ignore carriers with few orders, and note how many orders had no delivery date.
   - Open the CSV file to see each shipment, then use the averages to decide whether to change carrier.
   - Pair the result with the WISMO bulk status report to see if slow carriers drive "where is my order" tickets. Run it again each month and before any carrier change.
@@ -49,10 +51,10 @@ output_sample:
     - A signed-in Shopify session that can read orders
   output:
     - name: Summary table or JSON
-      contains: Orders checked, orders with delivery dates, and each carrier's order count, average, fastest and slowest days.
+      contains: Each carrier's distinct order count, fulfilment count, average, shortest and longest elapsed days, with coverage notes.
     - name: delivery_analysis CSV file
-      contains: One row per shipment with order name, carrier, shipped date, delivered date and days in transit.
+      contains: One row per filtered fulfilment with location, carrier, creation date, delivery date, elapsed days and status.
     - name: Excluded carriers note
       contains: Carriers with too few orders are left out of the averages.
-    - name: In transit count
-      contains: Orders with no delivery date yet are left out of averages and counted as in transit.
+    - name: Missing delivery dates
+      contains: Fulfilments without a delivery date are counted as missing dates and excluded from averages. Their transit status is unknown.

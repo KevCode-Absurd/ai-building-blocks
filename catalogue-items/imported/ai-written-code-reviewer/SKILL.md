@@ -45,7 +45,7 @@ This skill analyzes code produced through rapid iteration, vibe coding, or AI as
 
 ## Pre-Audit Checklist
 
-Before beginning the audit, confirm the following. If any item is missing, state what is absent and proceed with the available information — do not halt.
+Before beginning the audit, check the following. Code is required. If optional context is missing, state assumptions and proceed with the available code. Ask before a step whose permission or safety boundary is unclear.
 
 - **Input received**: Source code or files are present in the conversation.
 - **Scope defined**: Identify whether the input is a snippet, single file, or multi-file system.
@@ -356,4 +356,4 @@ Before auditing, if not already provided, ask:
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+- Ask for the code if none is supplied; a directory listing alone is not code to audit. Ask before a step whose permission or safety boundary is unclear. Missing optional context or success criteria should be stated as a limit, not a reason to stop the review.

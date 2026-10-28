@@ -3,12 +3,11 @@ name: shopify-admin-delivery-time-analysis
 role: fulfillment-ops
 description: "Read-only: calculates average time from fulfillment creation to delivery by carrier using fulfillment and order data."
 toolkit: shopify-admin, shopify-admin-execution
-api_version: "2025-01"
+api_version: "2026-10"
 graphql_operations:
   - orders:query
-  - fulfillmentOrders:query
 status: stable
-compatibility: Claude Code, Cursor, Codex, Gemini CLI
+compatibility: Claude Code, Cursor, Codex, Gemini CLI; Node.js 22.12+ for local scripts
 ---
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
@@ -25,7 +24,7 @@ How to start:
 <!-- /needs -->
 
 ## Purpose
-Analyzes fulfilled orders to calculate average transit time (fulfillment created → delivered) broken down by carrier. Surfaces which carriers are consistently slow or missing delivery confirmations. Read-only — no mutations.
+Compares elapsed time from fulfilment creation to recorded delivery by carrier, with an optional actual fulfilment-location filter. This can include warehouse handling and does not prove a carrier caused a delay. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
@@ -36,146 +35,83 @@ Analyzes fulfilled orders to calculate average transit time (fulfillment created
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
-| days_back | integer | no | 30 | Lookback window for fulfilled orders |
+| days_back | integer | no | 30 | Order-creation look-back window |
 | min_orders | integer | no | 5 | Minimum orders per carrier to include in averages |
 | location_id | string | no | — | Filter by fulfillment location (optional) |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
 
-> ℹ️ Read-only skill — no mutations are executed. Safe to run at any time.
+> Read-only store access. The local snapshot and report can contain private business or customer records. Save them only in the owner-approved environment. This skill executes no store mutations.
 
 ## Workflow Steps
 
-1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "fulfillment_status:shipped created_at:>='<NOW - days_back days>'"`, `first: 250`, pagination cursor
-   **Expected output:** Orders with `fulfillments { createdAt, updatedAt, deliveredAt, trackingInfo { company } }`; paginate until `hasNextPage: false`
+**AI Blocks correction:** filter the actual `Fulfillment.location` before calculating carrier statistics. The former separate fulfilment-order lookup did not filter the measurements. This query was checked against Shopify's 2026-10 documentation on 28 October 2026; AI Blocks has not run it against a live store.
 
-2. Calculate transit times per carrier: `deliveredAt - createdAt` (skip orders where `deliveredAt` is null)
+1. Confirm the store, look-back range, optional location ID and minimum number of orders. Use timezone-bearing ISO timestamps for `[start, end)`. The range selects **orders created in the window**, with delivery recorded before its end. It does not include every shipment made during that period, since an older order may ship later. State this cohort in the result.
+2. Read every accessible page of orders in that range, including partially fulfilled orders. Keep every returned fulfilment with its actual location, creation time, delivery time and tracking company. Do not silently truncate an order's fulfilments. Record any history or access limit and whether collection was complete.
+3. If a location was requested, keep only fulfilments whose `location.id` matches it. Exclude unknown locations and count them as missing. Never fall back to all locations while labelling the result as filtered. If the store cannot supply location data, say the location-specific analysis could not be completed.
+4. Save the collected order nodes in a local JSON file:
 
-3. **OPERATION:** `fulfillmentOrders` — query (optional, for location breakdown)
-   **Inputs:** `query: "assigned_location_id:<location_id> status:closed"`, `includeClosed: true`, `first: 250`. If Shopify rejects this filter, skip the location breakdown, say it was skipped, and report the carrier averages for all locations
-   **Expected output:** Fulfilled orders per location for location-level segmentation
+   ```json
+   {
+     "window": {"start": "<ISO timestamp with timezone>", "end": "<ISO timestamp with timezone>"},
+     "complete": false,
+     "min_orders": 5,
+     "orders": []
+   }
+   ```
+
+   The angle-bracket strings are placeholders. Add `location_id` only for a requested filter. Set `complete` to true only when all accessible pages and the requested history were checked; it records the collector's declaration, not independent proof.
+5. Run the supplied analyser from a separate working folder:
+
+   ```bash
+   node "../delivery-time-analyzer/scripts/delivery-times.mjs" --input snapshot.json --out delivery_analysis
+   ```
+
+   The quoted path assumes the unzipped skill folder is next to your working folder. Adjust it to the actual installed path. It writes `delivery_analysis.json` and `delivery_analysis.csv`, makes no network calls or store changes, and refuses to overwrite an existing output. Download the full skill folder if the scripts are missing.
+6. For valid dated fulfilments, the measure is `deliveredAt - createdAt`. A missing delivery date is **not proof the parcel is in transit**. Keep it out of averages and report it as a missing date. Exclude invalid or negative time intervals. Unknown or ambiguous carrier names are not attributed to a named carrier.
+7. Apply `min_orders` after the location filter and date checks. Count distinct order IDs per carrier, not shipments: one order with two shipments is still one order for this threshold. Average the measured fulfilment durations and show both order and fulfilment counts. Keep the filtered shipment rows in the CSV even when a carrier has too few dated orders for an average.
+
+This measures from Shopify fulfilment creation, which can precede carrier pickup. It can include warehouse handling time and does not prove a carrier caused a delay. Small-sample filters are display settings, not a statistical significance test.
 
 ## GraphQL Operations
 
+Set `$query` to the confirmed order-creation range. Paginate until `hasNextPage` is false, and mark gaps honestly.
+
 ```graphql
-# orders:query — written for api_version 2025-01 (not re-run by AI Blocks; check it against your API version)
 query FulfilledOrders($query: String!, $after: String) {
-  orders(first: 250, after: $after, query: $query) {
-    edges {
-      node {
+  orders(first: 10, after: $after, query: $query) {
+    nodes {
+      id
+      name
+      createdAt
+      fulfillments {
         id
-        name
         createdAt
-        fulfillments {
-          id
-          createdAt
-          updatedAt
-          deliveredAt
-          status
-          trackingInfo {
-            company
-            number
-          }
-        }
+        deliveredAt
+        status
+        location { id name }
+        trackingInfo { company }
       }
     }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
+    pageInfo { hasNextPage endCursor }
   }
 }
 ```
 
-```graphql
-# fulfillmentOrders:query — written for api_version 2025-01 (not re-run by AI Blocks; check it against your API version)
-query FulfillmentOrdersByLocation($query: String!, $after: String) {
-  fulfillmentOrders(
-    first: 250
-    after: $after
-    query: $query
-    includeClosed: true
-  ) {
-    edges {
-      node {
-        id
-        assignedLocation {
-          location {
-            id
-            name
-          }
-        }
-        order {
-          id
-          name
-        }
-      }
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-  }
-}
-```
+Checked sources: [Fulfillment](https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Fulfillment) and [Order](https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Order). The filter uses where the fulfilment was processed, not an order's current assigned location.
 
 ## Session Tracking
 
-**Claude MUST emit the following output at each stage. This is mandatory.**
-
-**On start**, emit:
-```
-╔══════════════════════════════════════════════╗
-║  SKILL: Delivery Time Analysis               ║
-║  Store: <store domain>                       ║
-║  Started: <YYYY-MM-DD HH:MM UTC>             ║
-╚══════════════════════════════════════════════╝
-```
-
-**After each step**, emit:
-```
-[N/TOTAL] <QUERY|MUTATION>  <OperationName>
-          → Params: <brief summary of key inputs>
-          → Result: <count or outcome>
-```
-
-**On completion**, emit:
-
-For `format: human` (default):
-```
-══════════════════════════════════════════════
-DELIVERY TIME ANALYSIS  (<days_back> days)
-  Orders analyzed:     <n>
-  With delivery data:  <n>
-
-  Carrier              Orders  Avg Days  Min  Max
-  ─────────────────────────────────────────────
-  UPS                  <n>     <d>       <d>  <d>
-  USPS                 <n>     <d>       <d>  <d>
-  FedEx                <n>     <d>       <d>  <d>
-  (carriers below min_orders threshold excluded)
-  Output: delivery_analysis_<date>.csv
-══════════════════════════════════════════════
-```
-
-For `format: json`, emit:
-```json
-{
-  "skill": "delivery-time-analysis",
-  "store": "<domain>",
-  "period_days": 30,
-  "carriers": [
-    { "name": "UPS", "orders": 0, "avg_days": 0, "min_days": 0, "max_days": 0 }
-  ],
-  "output_file": "delivery_analysis_<date>.csv"
-}
-```
+Report the store, order-creation window, requested location and collection status. Log query counts without customer details. For `format: human`, show each measured carrier with distinct order count, fulfilment count, average, minimum and maximum days. For `format: json`, return the actual analyser report. Show missing dates and exclusions separately; never call them in-transit parcels without evidence.
 
 ## Output Format
-CSV file `delivery_analysis_<YYYY-MM-DD>.csv` with columns:
-`order_name`, `fulfillment_id`, `carrier`, `fulfilled_at`, `delivered_at`, `transit_days`
+
+The local analyser writes `delivery_analysis.json` and `delivery_analysis.csv`. CSV columns are:
+`order_id`, `order_name`, `fulfillment_id`, `location_id`, `carrier`, `fulfilled_at`, `delivered_at`, `transit_days`, `status`.
+
+The JSON includes carrier averages and diagnostics. Keep rows with missing dates in the CSV, with null transit days. Carriers below the distinct-order threshold stay out of averages.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
@@ -186,14 +122,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Error Handling
-| Error | Cause | Recovery |
-|-------|-------|----------|
-| `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| `deliveredAt` is null | Carrier hasn't confirmed delivery | Exclude from averages, count as "in transit" |
-| No fulfilled orders in window | Period too short or no orders | Exit with summary: 0 orders |
+| Error | Recovery |
+|-------|----------|
+| API throttling or access failure | Follow response retry timing; stop after bounded retries and mark collection incomplete. |
+| Missing delivery date | Exclude from averages and report a missing date. Do not infer transit status. |
+| Missing requested location | Exclude the fulfilment and count the gap. Never silently broaden the filter. |
+| No measured fulfilments | Report no valid dated fulfilments in this cohort, with exclusions and coverage. |
 
 ## Best Practices
-- Set `min_orders: 10` for statistically meaningful averages — carriers with fewer orders will skew results.
-- `deliveredAt` is populated only when the carrier confirms delivery via tracking events; some carriers do not report this, so null values are expected.
-- Run monthly to track carrier performance over time and inform carrier contract negotiations.
-- Cross-reference with the WISMO bulk status report skill to correlate slow delivery carriers with WISMO ticket volume.
+- Treat `min_orders` as a display setting. It does not make a sample statistically significant.
+- Compare equivalent order cohorts and report warehouse handling as a possible part of the elapsed time.
+- Check missing delivery dates before drawing conclusions about carrier performance.

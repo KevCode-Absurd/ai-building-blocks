@@ -1,6 +1,6 @@
 slug: research-outline-builder
 name: Research outline builder
-summary: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+summary: Give it a topic. Get a list of items to compare and questions to answer for each, checked with web search.
 category: general
 boards: []
 type: skill
@@ -14,8 +14,6 @@ outputs:
   - type: plan
 uses: []
 origin: imported
-warnings:
-  - scrapes
 source:
   by: Weizhena
   repo: Weizhena/Deep-Research-skills

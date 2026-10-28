@@ -1,6 +1,6 @@
 slug: duplicate-customer-finder
 name: Duplicate customer finder
-summary: Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review.
+summary: Find likely duplicate Shopify customers by email, phone or name. Get a local review list with order counts and spend currencies.
 category: general
 boards: []
 type: skill
@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-duplicate-customer-finder skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/customer-ops/shopify-admin-duplicate-customer-finder
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We aligned customer fields, implemented the group order threshold, corrected the merge API claim and added a local read-only analyser with safe CSV exports.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

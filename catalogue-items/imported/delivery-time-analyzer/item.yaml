@@ -1,6 +1,6 @@
 slug: delivery-time-analyzer
 name: Delivery time analyzer
-summary: Run it on your shipments. Get average days from shipment to delivery for each carrier.
+summary: Compare fulfilment-to-delivery times by carrier and location. Get averages, order counts and missing-date notes.
 category: general
 boards: []
 type: skill
@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-delivery-time-analysis skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops/shopify-admin-delivery-time-analysis
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We made the location filter apply to measured fulfilments, corrected missing-date handling and added a local analyser with distinct-order thresholds.
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

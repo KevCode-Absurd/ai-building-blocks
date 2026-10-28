@@ -9,7 +9,11 @@ subhead: A review list of customer records that probably belong to one person. R
 explain: |
   A review list of customer records that probably belong to one person. Run it on your Shopify store and see matches by email, phone or name, so order history stops splitting across profiles.
 
-  The skill is read-only and changes nothing. It signs in through the Shopify CLI with permission to read customers, then pulls all customers in pages of 250. It builds lookup tables for the match type you choose and reports any key shared by more than one record. You can set a minimum order count to skip trivial ones, and ask for plain or JSON output. Shopify does not allow merging by API, so you merge the flagged pairs yourself.
+  The skill reads customer records and changes nothing in Shopify. It collects pages of customers, then runs the local scripts in the full skill folder. Empty contact fields never count as a match. Names, shared inboxes and phone numbers still need human review.
+
+  Set a minimum order count to keep groups where at least one member meets it. The report keeps the other members too, so a zero-order duplicate is not lost. Each spend amount keeps its currency. Shopify has a merge API, but this skill does not use it or merge records. Review each group before a separate action in Shopify Admin.
+
+  Keep the local snapshot and reports in your approved working folder. JSON keeps the source strings; CSV protects contact fields that could run as spreadsheet formulas. AI Blocks checked API fields in the official documentation but has not run this against a live store.
 when:
   - Repeat buyers show up as two separate profiles.
   - You want a clean customer list before an email send.
@@ -31,11 +35,11 @@ you_get:
   - A list ready to merge by hand
 how_to_use:
   - Sign in to Shopify with the Shopify CLI and allow it to read customers. Your AI needs to run commands and save files for this.
-  - Paste the skill into your AI chat, or add the skill folder if your tool supports files.
+  - Add the full skill folder, including its local scripts, to your AI.
   - "Tell it your store domain. Pick a match type: email, phone, name or all. Email gives the most reliable matches."
-  - Add a minimum order count if you want to skip records with no orders (optional).
+  - Set a minimum order count if needed. A group stays when any member meets it, and keeps its lower-order members too.
   - Open the CSV and the report. Check each group, since common names can match different people.
-  - Merge the real duplicates yourself in Shopify Admin under Customers. Then delete the CSV, because it holds personal data.
+  - Review any merge separately in Shopify Admin. Keep or delete the local reports under your data policy; they hold personal details.
 output_sample:
   input:
     - Your store domain
@@ -47,12 +51,12 @@ output_sample:
     - The Shopify CLI signed in to your store with permission to read customers
   output:
     - name: Start banner
-      contains: Shows the skill name, your store and the start time.
+      contains: Identifies the store and whether all requested records were collected.
     - name: Step log
-      contains: One line per step with what was asked and how many records came back.
+      contains: Query and record counts without printing contact details to shared logs.
     - name: Duplicate customer report
       contains: Counts of customers scanned, duplicate groups found and customers affected, plus a sample of groups.
-    - name: duplicate_customers_<date>.csv
-      contains: One row per customer in each group, with match key, match type, name, email, phone, orders, spend and created date.
+    - name: duplicate_customers.csv
+      contains: One row per customer in each group, with match details, exact order count, spend amount, currency and created date.
     - name: JSON summary
-      contains: If you ask for JSON, the same counts and the CSV file name in a short block.
+      contains: A local JSON file with the groups, raw contact strings, counts, missing fields and collection status.

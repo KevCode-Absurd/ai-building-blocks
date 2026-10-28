@@ -3,11 +3,11 @@ name: shopify-admin-duplicate-customer-finder
 role: customer-ops
 description: "Read-only: finds likely duplicate customer records by matching email, phone, or name combinations."
 toolkit: shopify-admin, shopify-admin-execution
-api_version: "2025-01"
+api_version: "2026-10"
 graphql_operations:
   - customers:query
 status: stable
-compatibility: Claude Code, Cursor, Codex, Gemini CLI
+compatibility: Claude Code, Cursor, Codex, Gemini CLI; Node.js 22.12+ for local scripts
 ---
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
@@ -41,106 +41,66 @@ Scans the customer database for likely duplicate records using email, phone, and
 
 ## Safety
 
-> ℹ️ Read-only skill — no mutations are executed. Safe to run at any time. Duplicate merging is not supported by the Shopify Admin API — flagged duplicates must be merged manually in Shopify Admin.
+> Read-only store access. The local snapshot and report can contain private business or customer records. Save them only in the owner-approved environment. This skill executes no store mutations.
 
 ## Workflow Steps
 
-1. **OPERATION:** `customers` — query
-   **Inputs:** `first: 250`, select `email`, `phone`, `firstName`, `lastName`, `numberOfOrders`, `totalSpentV2`, pagination cursor
-   **Expected output:** All customers with contact and order data; paginate until `hasNextPage: false`
+**AI Blocks correction:** use the same current customer fields throughout collection and analysis, and apply `min_orders` to each duplicate group. The query was checked against Shopify's 2026-10 documentation on 28 October 2026. AI Blocks has not run it against a live store.
 
-2. Build in-memory lookup maps:
-   - `email → [customer_ids]`
-   - `phone → [customer_ids]` (if `match_on` includes phone)
-   - `"firstName lastName" → [customer_ids]` (if `match_on` includes name)
+1. Confirm the owner's store and read permission. Collect every accessible customer page using the query below. Do not collect passwords, payment details or unrelated addresses. The report contains personal contact details; keep the snapshot and results local to the owner's approved working environment.
+2. Save the collected customer nodes in a local JSON file:
 
-3. Report groups with > 1 customer per key as likely duplicates
+   ```json
+   {"complete": false, "match_on": "email", "min_orders": 0, "customers": []}
+   ```
+
+   This is an input shape, not a completed scan. Set `complete` to true only after all pages were collected. It records the collector's declaration. Use `email`, `phone`, `name` or `all` for `match_on`.
+3. Run the supplied analyser from a separate working folder:
+
+   ```bash
+   node "../duplicate-customer-finder/scripts/duplicate-customers.mjs" --input snapshot.json --out duplicate_customers
+   ```
+
+   The quoted path assumes the unzipped skill folder is next to your working folder. Adjust it to the actual installed path. It writes JSON and CSV reports without network calls, store changes or overwriting an existing output. Download the full skill folder if the scripts are missing.
+4. Match only the selected fields. Email matching trims spaces and folds case. Phone matching removes common separators but never invents a country code. Name matching requires both names. Empty values never form a duplicate group. These are likely matches for human review, not identity proof.
+5. Form groups before applying the order threshold. Keep a group when **at least one member** has `numberOfOrders >= min_orders`; retain its lower-order members too. Exclude a group only when none meets the threshold. Preserve Shopify's unsigned order counts as exact integer strings.
+6. Show each record's `amountSpent.amount` with its `currencyCode`; do not add amounts across currencies. Count customers affected once even if a record appears in more than one match group.
+7. Hand back the local report for review. This skill never merges, deletes or edits customer records. Shopify has a separate merge API, but it is outside this read-only skill. The owner checks whether records really belong to the same person before using Shopify Admin. Retain or remove the report under the owner's data policy.
+
+The JSON file preserves raw contact strings. CSV cells that could be interpreted as spreadsheet formulas are prefixed with an apostrophe. Use JSON when another system needs the exact source strings.
 
 ## GraphQL Operations
 
 ```graphql
-# customers:query — validated against api_version 2025-01
 query CustomersForDeduplication($after: String) {
   customers(first: 250, after: $after) {
-    edges {
-      node {
-        id
-        displayName
-        firstName
-        lastName
-        defaultEmailAddress {
-          emailAddress
-        }
-        phone
-        numberOfOrders
-        amountSpent {
-          amount
-          currencyCode
-        }
-        createdAt
-      }
+    nodes {
+      id
+      firstName
+      lastName
+      defaultEmailAddress { emailAddress }
+      defaultPhoneNumber { phoneNumber }
+      numberOfOrders
+      amountSpent { amount currencyCode }
+      createdAt
     }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
+    pageInfo { hasNextPage endCursor }
   }
 }
 ```
 
+Checked sources: [Customer fields](https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Customer) and [customerMerge](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/customerMerge). A partial scan can find real likely matches; its counts must be labelled as covering only the collected records.
+
 ## Session Tracking
 
-**Claude MUST emit the following output at each stage. This is mandatory.**
-
-**On start**, emit:
-```
-╔══════════════════════════════════════════════╗
-║  SKILL: Duplicate Customer Finder            ║
-║  Store: <store domain>                       ║
-║  Started: <YYYY-MM-DD HH:MM UTC>             ║
-╚══════════════════════════════════════════════╝
-```
-
-**After each step**, emit:
-```
-[N/TOTAL] <QUERY|MUTATION>  <OperationName>
-          → Params: <brief summary of key inputs>
-          → Result: <count or outcome>
-```
-
-**On completion**, emit:
-
-For `format: human` (default):
-```
-══════════════════════════════════════════════
-DUPLICATE CUSTOMER REPORT
-  Customers scanned:       <n>
-  Duplicate groups found:  <n>
-  Customers affected:      <n>
-
-  Duplicate groups (sample):
-    Email: user@example.com
-      Customer A — <n> orders, $<n> spent, created <date>
-      Customer B — <n> orders, $<n> spent, created <date>
-  Output: duplicate_customers_<date>.csv
-══════════════════════════════════════════════
-```
-
-For `format: json`, emit:
-```json
-{
-  "skill": "duplicate-customer-finder",
-  "store": "<domain>",
-  "customers_scanned": 0,
-  "duplicate_groups": 0,
-  "customers_affected": 0,
-  "output_file": "duplicate_customers_<date>.csv"
-}
-```
+Report the store and collection status. Show customers scanned, likely match groups, distinct customers affected, groups below the order threshold and missing match fields. For `format: human`, give a short summary without printing personal contact details to a shared log. For `format: json`, return the actual analyser report in the approved local working environment.
 
 ## Output Format
-CSV file `duplicate_customers_<YYYY-MM-DD>.csv` with columns:
-`duplicate_group_id`, `match_key`, `match_type`, `customer_id`, `name`, `email`, `phone`, `number_of_orders`, `total_spent`, `created_at`
+
+The local analyser writes `duplicate_customers.json` and `duplicate_customers.csv`. CSV columns are:
+`duplicate_group_id`, `match_key`, `match_type`, `customer_id`, `name`, `email`, `phone`, `number_of_orders`, `total_spent`, `currency_code`, `created_at`.
+
+The JSON contains the same rows, groups and coverage summary. Matching records require human review. An empty result means no likely matches under the selected fields and threshold in the collected records.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
@@ -151,13 +111,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Error Handling
-| Error | Cause | Recovery |
-|-------|-------|----------|
-| `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| No duplicates found | Clean customer database | Exit with ✅ no duplicates found |
+| Error | Recovery |
+|-------|----------|
+| API throttling or access failure | Follow response retry timing; stop after bounded retries and mark collection incomplete. |
+| No likely matches | State the selected fields, threshold, missing values and collection coverage. Do not claim the whole database is clean. |
+| Missing or invalid order count | Stop the local analysis and correct the snapshot; do not treat it as zero. |
 
 ## Best Practices
-- Shopify does not provide a native merge API — flagged duplicates must be resolved manually in Shopify Admin (Customers → Merge).
-- `match_on: email` finds the most reliable duplicates; `match_on: name` produces more false positives (common names).
-- Prioritize duplicates where at least one record has orders — these affect LTV and marketing segmentation most.
-- Common causes of duplicates: guest checkout followed by account creation, manual customer imports, or customers using multiple email addresses.
+- Shopify provides a customer merge API, but this skill uses no mutation. Review matches before any separate action in Shopify Admin.
+- Shared inboxes, phone numbers and common names can belong to different people. No match type proves identity.
+- Keep spend amounts with their currency codes. Never combine currencies without a defined conversion.
+- Retain or remove local reports according to the owner's data policy.

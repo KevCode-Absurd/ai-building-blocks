@@ -5,6 +5,8 @@ description: Build an agent wakeup flow with scoped events, duplicate checks, cl
 
 # Wakeups— How Agents Alert Each Other implementation planner
 
+**When not to use:** for one agent run loop that does a single task per run (use the Single-task agent heartbeat builder), for a job queue that survives crashes and caps retries (use the Recoverable agent job queue builder), or for a task table where an agent claims one task at a time (use the Agent task ownership workflow builder).
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -43,7 +45,7 @@ Gather these first, or each one is listed under Missing inputs: the list of even
 4. **Check pause and budget before waking.** Skip the dispatch when the agent is paused or over its budget. Leave the row pending and log why.
 5. **Dispatch a bounded heartbeat.** Wake the agent for a set number of events per run, in priority order. Cap retries. An agent never wakes itself; it creates an issue instead, so there are no loops.
 6. **Mark processed only after the handoff.** Set `processed` after the agent has taken the work. If the worker crashes first, the row stays `claimed`.
-7. **Recover stale claims.** Run a recovery job that puts `claimed` rows older than the lease (the starter uses 30 minutes; set your own) back to `pending`. Do not create a new user-visible thread when you do.
+7. **Recover stale claims.** Run a recovery job that puts `claimed` rows older than the lease (the starter uses 30 minutes; set your own) back to `pending`. A recovered claim keeps its existing row and the issue that was created before the first wake (step 1); the next run picks it up as the same work. Recovery never creates a new issue or a new user-visible thread.
 8. **Write the failure checklist and tests.** Cover lost wakeups, event storms, loops, double claims and crashes. Build synthetic test cases from made-up events: a duplicate, a crash before handoff, a paused agent and a stale claim.
 
 Read the supplied reference modules and method notes before adapting the code. Keep their invariants, schemas and failure paths; the steps above do not replace those implementation details.
@@ -59,7 +61,7 @@ Separate headed sections, in this order:
 - **Synthetic test cases**: each case with its made-up input and expected result.
 - **Missing inputs**: one line each, or "none".
 
-Say plainly that the code is a starter that has not been run or tested here.
+Say plainly that the code is a starter that has not been run or tested here, and that it must not be wired into a live system until the synthetic tests pass in a staging project and the user approves.
 
 ## Next steps
 

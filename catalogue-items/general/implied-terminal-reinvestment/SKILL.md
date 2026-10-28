@@ -5,9 +5,9 @@ description: "Backsolve reinvestment and capital returns embedded in a supplied 
 
 # Implied terminal reinvestment schedule
 
-An implied FCFF, reinvestment-rate and ROC workpaper. It starts from the terminal value and works backwards to the cash flow, reinvestment and return on new capital that value assumes.
+It starts from a terminal value you already have and works backwards to the cash flow (FCFF), reinvestment and return on new capital (ROC) that value assumes.
 
-Use this when you already have a terminal value and want to know what cash flow, reinvestment and return on capital it assumes. If you have growth and return on capital but no terminal value, use the [Terminal growth reinvestment checker](https://useaiblocks.com/skills/terminal-growth-reinvestment-consistency) instead.
+**When not to use:** for a bank, insurer or other financial firm (this method does not fit); when WACC is at or below growth, or the result gives zero, negative or above-100% reinvestment (the steady state fails, so rework the inputs first); or when you start from growth and return on capital with no terminal value (use the [Terminal growth reinvestment checker](https://useaiblocks.com/skills/terminal-growth-reinvestment-consistency) instead).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -52,8 +52,6 @@ Valuation date convention: the terminal value is the value at the end of the ter
 5. Reinvestment rate = implied reinvestment ÷ NOPAT. Flag a rate of zero, below zero or above one as a failed steady state.
 6. Implied return on new capital = growth ÷ reinvestment rate.
 7. Check cell: implied FCFF ÷ spread must equal the supplied terminal value. Show the difference; it should be zero.
-
-Workbook layout, if one is asked for: an Inputs sheet with the four numbers (terminal value, first stable-year NOPAT, growth, WACC) and their units; a Calculations sheet with steps 2 to 6, one per row; a Checks sheet with the step 7 check cell and any flag from step 5.
 
 ## Build and verify the requested workbook
 

@@ -14,7 +14,10 @@ when:
   - You need to compare an existing version with the supplied starter.
   - You want a starter to review: the output is not run or tested, so check it before you turn it on.
 you_give:
-  - Scoped event signals, deduplication key, claim lease and agent state
+  - The list of events that should wake an agent
+  - The fields that make two events the same (the dedup key)
+  - How long an agent may hold a claim (the lease length)
+  - Where agent state is stored, and the database and queue you use, such as Postgres or Redis. Your AI can often read these from your code.
 you_get:
   - A bounded wakeup dispatcher with retry and stale-claim recovery
   - A failure checklist and synthetic test cases

@@ -7,8 +7,6 @@ thinking: high
 thinking_why: "The formula changes with the charter's own definitions, so the clause must be read before any number is used."
 subhead: Paste your charter clause, the old conversion price, the share counts and the cash paid. You get the revised conversion price and ratio for one series after one cash issuance, with the sums shown.
 explain: |-
-  Revised conversion price and protected-series conversion ratio.
-
   When a company sells new shares below the old conversion price, a weighted-average clause in the charter lowers the investors' conversion price. This skill does that arithmetic for one cash issuance and one series. It reads your clause first, because each charter defines the terms its own way. It stops on any missing input instead of guessing zero.
 
   Illustrative figures only, not a real company:
@@ -31,7 +29,7 @@ not_for:
   - "You have a full-ratchet clause, several series or linked instruments: ask your startup lawyer, because this checks one cash issuance and one series."
   - "You do not have the charter text: get the signed charter from the company first, since the skill needs the real formula."
   - "You want to know who is legally owed shares or votes: ask counsel, because this only does the arithmetic."
-  - "You need the conversion price of a note with a cap or discount: use the Cap and discount conversion checker instead."
+  - "You need the conversion price of a note with a cap or discount: use the Convertible note price checker instead."
 you_give:
   - The charter clause that sets the reset, and the old conversion price
   - The A share count the clause defines, and the qualifying new shares (C)

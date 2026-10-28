@@ -18,7 +18,7 @@ not_for:
   - "Your EPS is zero or negative: the bridge needs positive EPS, so use a valuation model built for loss-making firms, or ask an analyst."
   - "You need dividends reinvested, tax, fees or a forecast: use a total-return model in a spreadsheet, as this bridge covers none of these."
   - "You want a buy, sell or price call: speak to a licensed adviser, because this only explains a past move."
-  - "You need basic EPS built from weighted-average shares: use the Weighted-average share schedule instead."
+  - "You need basic EPS built from weighted-average shares: use the Weighted share count calculator instead."
 you_give:
   - Positive comparable starting and ending EPS, dated P/E multiples, cash dividends and corporate-action adjustments.
   - "The start and end dates, plus the currency and scale used for the price return bridge."
@@ -56,12 +56,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that could not be found and checks that failed or did not run.
 how_it_works:
-  - title: 1. Put both EPS figures on the same split, accounting and period basis; derive comparable price from EPS times P/E at each date
-    text: Put both EPS figures on the same split, accounting and period basis; derive comparable price from EPS times P/E at each date.
-  - title: 2. Hold the opening multiple fixed to measure the EPS effect, then apply the ending EPS to the multiple change; show the chosen ordering
-    text: Hold the opening multiple fixed to measure the EPS effect, then apply the ending EPS to the multiple change; show the chosen ordering.
-  - title: 3. Divide each dollar effect and cash dividend by opening price and reconcile to the simple total holding-period return
-    text: Divide each dollar effect and cash dividend by opening price and reconcile to the simple total holding-period return.
+  - title: Lines up the two dates
+    text: Puts both EPS figures on the same share basis and the same kind of period, after any split. Price at each date is EPS times P/E.
+  - title: Splits the price move
+    text: The earnings part keeps the starting P/E and changes only EPS. The multiple part is the P/E change times the ending EPS. The two add up to the price change.
+  - title: Turns it into a return
+    text: Divides each part and the cash dividends by the starting price, so you see each one's share of your total return over the period.
 output_shape: |-
   A sequential price-return attribution that reconciles exactly to the observed change.
   Scope and dated sources
@@ -104,3 +104,7 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Holding-period return
+    meaning: Your total gain over the period, from the price change plus cash dividends, as a share of the starting price.
+  - term: Dividend-adjusted price series
+    meaning: Past prices lowered by data providers to build dividends in. Use it, or add dividends yourself, but never both, or the dividend counts twice.

@@ -24,9 +24,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **An idea, a rough prompt or a bad result** (one is required): the "brief" in Before you start means this, not an ad brief.
-- **Reference pictures** (optional): images whose look, face or product the prompt should follow.
-- **Reference images or clips** (optional).
+- **An idea, a rough prompt or a bad result** (one is required): the "brief" in Before you start means this, not an ad brief. A sentence or two is enough.
+- **Reference images or clips** (optional): pictures or clips whose look, face or product the prompt should follow.
 - **The image or video tool you will use** (optional). Without it the prompt stays tool-neutral.
 - No ad brief, ad copy, reference ads or draft is needed: only an idea, a rough prompt or a bad result.
 
@@ -43,6 +42,7 @@ This method produces image prompt, video prompt from the supplied brief. Read wh
    - **Detailed brief:** subject, setting, style and so on. Returns a tidy prompt with the layers in order.
    - **Prompt repair:** a prompt that gives poor results. Returns a repaired prompt and what changed.
    - **Bad-result diagnosis:** the prompt and the result it made. Returns the likely fault and one change to try.
+   If you get both a prompt and the result it made (or a description of it), use bad-result diagnosis. A prompt with no result is prompt repair.
 
 2. Extract confirmed subject, action, environment, light, camera, composition, palette, texture/style and, for video, motion/audio/timing. Mark meaningful choices made by the assistant as assumptions.
 
@@ -75,7 +75,7 @@ CHECKS MISSED
 [one line each for any check that failed or could not run, or none]
 ```
 
-What next: use the Multi-provider image maker to make the picture from the prompt. Use the Midjourney image prompt writer only if you work in Midjourney, which reads its own prompt format.
+What next: paste the PROMPT block, plus any reference pictures, into the Multi-provider image maker to make the picture. Keep the CONFIRMED DETAILS list for the next round. Use the Midjourney image prompt writer only if you work in Midjourney, which reads its own prompt format.
 
 ## Check before handing back
 

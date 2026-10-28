@@ -5,7 +5,7 @@ description: Use when you want honest notes on a draft. Asks what the maker love
 
 # Honest draft feedback giver
 
-Good feedback points at lines and leaves the choice with the maker. This skill reads your whole draft, tells you what works, asks about the weak lines one at a time and leaves alone what should stay. It does not judge whether the draft will sell. To choose between several drafts, use the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order). To tidy the wording, use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor).
+Good feedback points at lines and leaves the choice with the maker. This skill reads your whole draft, tells you what works, asks about the weak lines one at a time and leaves alone what should stay. It does not judge whether the draft will sell. To choose between several drafts, use the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order). To tidy the wording, use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It is meant for drafts that can still change: if the piece is final and only needs a last proofread, use the Plain English editor instead.
 
 Bring two things you must have and two that help: the whole draft, and what it is for and who reads it; then, if you can, what you love in it and a brief. When you are done, the [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener) can help you word these notes before you give them to the maker.
 

@@ -46,7 +46,7 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 - Each distribution is confirmed as eligible on its own; cash received is not recyclable by default.
 - Amounts already recycled are counted against the cap, even when the same distribution notice is reused.
-- Remaining cap = cap base x recycling fraction - recycled so far, and any overuse shows as a negative remaining cap, not a zero.
+- Remaining cap = cap base x recycling fraction - recycled so far. If that is below zero, the remaining cap is set to zero and the overuse is shown as its own positive line, as in method step 2.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.

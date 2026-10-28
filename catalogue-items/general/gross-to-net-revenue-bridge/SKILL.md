@@ -44,17 +44,16 @@ The included `examples/model.xlsx` is a focused editable example using illustrat
 
 Illustrative figures, in USD million. Gross billings of 1,000, less returns 50, rebates 30, collected taxes 20 and pass-through amounts 100, give net revenue of 800. If rebates were 50 instead, the bridge gives 780 and leaves 20 unexplained against the unchanged reported 800.
 
-Run `node scripts/run-model.mjs references/model.json` for the illustrative baseline. For actual numbers, provide a complete numeric input object with the names `billings`, `returns`, `rebates`, `taxes`, `passThrough` and `reported`, as in `examples/inputs.json`: `node scripts/run-model.mjs references/model.json inputs.json`. Every input is required; rates use decimal fractions and units must match the schema. The script performs local arithmetic and rejects missing or invalid inputs. It does not fetch data, inspect contracts or validate source truth. Save its output and the actual workbook check results separately.
+Run `node scripts/run-model.mjs references/model.json` for the illustrative baseline. For actual numbers, provide a complete numeric input object with the names `billings`, `returns`, `rebates`, `taxes`, `passThrough` and `reported`, as in `examples/inputs.json`: `node scripts/run-model.mjs references/model.json inputs.json`. All six inputs are required. Each is a currency amount in the same units (for example USD million); there are no rates. The script performs local arithmetic and rejects missing or invalid inputs. It does not fetch data, inspect contracts or validate source truth. Save its output and the actual workbook check results separately.
 
 ## Acceptance checks
 
 - Returns and rebates have not already been netted in the gross input.
 - Principal-versus-agent conclusions are supported by control evidence, not produced by the calculator.
-- Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
-- Preserve reported measures beside analytical measures and retain unexplained residuals.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
+- Each deduction is taken off once, and no two deductions cover the same amount.
+- Every input has its source, date, period, currency, scale and sign. A true zero is told apart from missing evidence, and unresolved MISSING: lines stay.
+- Reported net revenue stays beside the bridge figure, and any unexplained gap stays visible, never hidden in a balancing figure.
+- Workbook only: inputs are separate from formulas, a changed input was recalculated and the saved file reopened.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.
 
 ## What next

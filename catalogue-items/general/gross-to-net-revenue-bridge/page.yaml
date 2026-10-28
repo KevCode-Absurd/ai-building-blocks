@@ -18,7 +18,7 @@ not_for:
   - Your returns and rebates are already taken out of the gross figure. Fix the input first, or the bridge counts them twice.
   - You need to decide if you are principal or agent. Ask your accountant or auditor to review the contract and revenue policy.
   - You need a legal or investment opinion. Use a qualified adviser, because this only checks the arithmetic and your sources.
-  - "You need growth with acquisitions, disposals and currency taken out: use the Organic revenue perimeter bridge instead."
+  - "You need growth with acquisitions, disposals and currency taken out: use the Like-for-like sales growth checker instead."
 you_give:
   - Gross billings, returns, rebates, excluded collected taxes, pass-through amounts and principal-versus-agent policy evidence.
   - "The reporting period, plus the currency and scale used for the gross-to-net revenue bridge."

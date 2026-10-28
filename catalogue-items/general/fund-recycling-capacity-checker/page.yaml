@@ -19,7 +19,7 @@ not_for:
   - "You need to know if a distribution is legally eligible by date or recall rights: ask your fund's lawyer or the fund administrator."
   - "You want to decide on a new investment: use your investment committee process, as spare cap does not approve a deal."
   - "You need to track recalled amounts or commitment changes: use the fund administrator's ledger, as this checks one cap only."
-  - "You need to split a capital call across commitments: use the Capital call allocation checker instead."
+  - "You need to split a capital call across commitments: use the Fund capital call checker instead."
 you_give:
   - The commitment cap base from your fund agreement.
   - The recycling fraction in the agreement.

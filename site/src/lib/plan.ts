@@ -1,3 +1,4 @@
+import { WORKFLOW_NOTES_LIMIT } from "./workflow-limits.ts";
 import { validateCustomSkills, withCustomSkills, type CustomSkill } from "./custom-skills";
 import { assignedCustomMinds, validateCustomMinds, withCustomMinds, type CustomMind } from "./custom-minds";
 // The builder's helpers that work on a whole workflow: what to gather, what passes along each connection,
@@ -109,7 +110,7 @@ export function unpackFlow(c: Catalogue, code: string): Flow | null {
     const customSkills = validateCustomSkills(d.cs), customMinds = validateCustomMinds(d.cm); c = withCustomMinds(withCustomSkills(c, customSkills), customMinds);
     if (d.s.length > 40 || d.s.some(s => typeof s !== "string" || !c.bySlug[s])) return null;
     for (const [values, limit] of [[d.r, 120], [d.o, 2000]] as const) if (values !== undefined && (!Array.isArray(values) || values.some(s => typeof s !== "string" || s.length > limit))) return null;
-    if ((d.g !== undefined && (typeof d.g !== "string" || d.g.length > 10000)) || (d.gn !== undefined && (typeof d.gn !== "string" || d.gn.length > 10000))) return null;
+    if ((d.g !== undefined && (typeof d.g !== "string" || d.g.length > 10000)) || (d.gn !== undefined && (typeof d.gn !== "string" || d.gn.length > WORKFLOW_NOTES_LIMIT))) return null;
     if (d.t !== undefined && (!Array.isArray(d.t) || d.t.length > TEAM_MAX || d.t.some(s => !mindOk(s)))) return null;
     if ((d.ov && !mindOk(d.ov)) || (d.k !== undefined && (!Array.isArray(d.k) || d.k.some(s => s && !mindOk(s))))) return null;
     if (d.ks !== undefined && (!Array.isArray(d.ks) || d.ks.some(list => !Array.isArray(list) || list.length > TEAM_MAX || list.some(s => !mindOk(s))))) return null;
@@ -127,7 +128,7 @@ export function unpackFlow(c: Catalogue, code: string): Flow | null {
       if (Array.isArray(d.b?.[i])) node.bindings = d.b![i].map(b => ({ type: b.t, from: ids[b.f], instruction: b.i }));
     }
     if (d.gs !== undefined && (!Array.isArray(d.gs) || d.gs.length > 20 || d.gs.some(s => typeof s !== "string" || !/^[a-z0-9][a-z0-9-]*$/.test(s)))) return null;
-    return { governingSkills: d.gs, customMinds, customSkills, id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 10000), notes: clip(d.gn, 10000), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
+    return { governingSkills: d.gs, customMinds, customSkills, id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 10000), notes: clip(d.gn, WORKFLOW_NOTES_LIMIT), overseer: mindOk(d.ov), team: team.length ? { minds: team, mode: d.tm === "together" ? "together" : "split" } : undefined };
   } catch {
     return null;
   }

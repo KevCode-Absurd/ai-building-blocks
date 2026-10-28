@@ -1,3 +1,4 @@
+import { WORKFLOW_NOTES_LIMIT } from "./lib/workflow-limits.ts";
 // The pieces around the builder's canvas: connections that say what they carry, the step panel,
 // the "what you'll need" list, starting from a goal, and the step list phones get instead of the canvas.
 import { memo, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
@@ -178,7 +179,7 @@ export function StartPanel({ c, goal, notes, overseer, team, onChange, onClose }
         </label>
         <label className="sp-field">
           <span>Notes for every step</span>
-          <textarea value={notes} maxLength={2000} rows={3} placeholder="For example: We sell to small gyms. Keep every answer short." onChange={(e) => onChange({ notes: e.target.value })} data-testid="start-notes" />
+          <textarea value={notes} maxLength={WORKFLOW_NOTES_LIMIT} rows={3} placeholder="For example: We sell to small gyms. Keep every answer short." onChange={(e) => onChange({ notes: e.target.value })} data-testid="start-notes" />
         </label>
         <details className="workflow-options"><summary>Add expert perspectives (optional)</summary><Crew c={c} overseer={overseer} team={team} onChange={onChange} /></details>
       </div>

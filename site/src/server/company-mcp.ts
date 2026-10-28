@@ -1,3 +1,4 @@
+import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import { emailAllowed, readAccess, LINK_ACCESS } from "./space-access.ts";
 import type { ItemRow, SpaceRow, SpaceStore } from "./spaces.ts";
 import { customMindMarkdown, validateCustomMinds } from "../lib/custom-minds.ts";
@@ -164,7 +165,7 @@ export class CompanyMcpService {
       }
     }
     const selected = new Set<string>();
-    for (const key of ["goal", "notes"]) if (data[key] !== undefined && (typeof data[key] !== "string" || data[key].length > 10000)) blockers.push(`The saved workflow ${key} is invalid.`);
+    for (const key of ["goal", "notes"]) if (data[key] !== undefined && (typeof data[key] !== "string" || data[key].length > (key === "notes" ? WORKFLOW_NOTES_LIMIT : 10000))) blockers.push(`The saved workflow ${key} is invalid.`);
     for (const n of nodes) if (validNode(n)) {
       if (n.role !== undefined && (typeof n.role !== "string" || n.role.length > 120) || n.notes !== undefined && (typeof n.notes !== "string" || n.notes.length > 2000)) blockers.push("A saved step's role or notes are invalid.");
       if (n.bindings !== undefined && (!Array.isArray(n.bindings) || n.bindings.length > 20 || n.bindings.some(b => !obj(b) || typeof b.type !== "string" || typeof b.instruction !== "string" || b.instruction.length > 2000 || !edges.some(e => obj(e) && e.from === b.from && e.to === n.id)))) blockers.push("A saved step's input bindings are invalid.");

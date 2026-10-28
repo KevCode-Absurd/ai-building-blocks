@@ -327,3 +327,18 @@ test('get_me returns chosen sections, the Core with a dated list, or the whole f
   const big = await meFixture({ me: '## Core\n\n' + 'x'.repeat(41000) });
   await rejects(big.me({}), 413, 'me_file_too_large');
 });
+
+
+test('private saved workflow preparation keeps long composer notes and still blocks overflow', async () => {
+  const { WORKFLOW_NOTES_LIMIT } = await import('../src/lib/workflow-limits.ts');
+  for (const length of [12000, WORKFLOW_NOTES_LIMIT + 1]) {
+    const f = await fixture();
+    const saved = { ...flow, notes: 'Synthetic private context. '.padEnd(length, 'x') };
+    assert(await f.library.put('employee', { 'abb:v1': JSON.stringify({ ...blank(), flows: [saved] }) }, 1));
+    const selected = await item(f, saved.name);
+    const prepared = await f.service.callTool('prepare_saved_workflow', { item_id: selected.item_id, revision_sha256: selected.revision_sha256 });
+    assert.equal(prepared.stored_workflow.notes, saved.notes);
+    assert.equal(prepared.blockers.some(value => /workflow notes is invalid/.test(value)), length > WORKFLOW_NOTES_LIMIT);
+    assert.equal(prepared.steps_run, 0);
+  }
+});

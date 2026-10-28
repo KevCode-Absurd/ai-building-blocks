@@ -1,3 +1,4 @@
+import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import { unzipSync } from "fflate";
 import { makeSearchDocument } from "../lib/search-document.mjs";
 import { buildLibrarySearchIndex, searchLibraryIndex, validateLibrarySearchIndex, type LibrarySearchIndex, type SearchHit } from "../lib/library-search-core.ts";
@@ -770,7 +771,7 @@ export class PublicCatalogueService {
     // Checking a workflow needs only its step ids in order (slugs); a name and goal are then optional.
     if ((args.steps === undefined) === (args.slugs === undefined)) fail(400, "invalid_arguments", "Send steps (full step objects) or slugs (step ids in order), not both.");
     const goalArg = string(args.goal, "goal", 4000, true), nameArg = string(args.name, "name", 120, true);
-    const name = nameArg || (goalArg ? goalArg.trim().slice(0, 120) : "Untitled workflow"), goal = goalArg || name, notes = string(args.notes, "notes", 8000, true);
+    const name = nameArg || (goalArg ? goalArg.trim().slice(0, 120) : "Untitled workflow"), goal = goalArg || name, notes = string(args.notes, "notes", WORKFLOW_NOTES_LIMIT, true);
     const detailed = formatArg(args.response_format) === "detailed", bySlugs = args.slugs !== undefined;
     // Input types the user said they will give; only the hand-off check reads them, so they are not part of the draft hash.
     const userInputs = array(args.user_inputs, "user_inputs", 40, true).map(t => string(t, "user input type", 100));

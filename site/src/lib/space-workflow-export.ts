@@ -1,3 +1,4 @@
+import { WORKFLOW_NOTES_LIMIT } from "./workflow-limits.ts";
 import type { Catalogue } from "./data";
 import type { Item } from "../server/spaces";
 import type { Flow } from "./store";
@@ -24,7 +25,7 @@ export function spaceWorkflowFlow(c: Catalogue, item: Pick<Item, "id" | "title" 
   if (nodes.some(n => !n || typeof n.id !== "string" || !n.id.trim() || typeof n.slug !== "string" || !/^[a-z0-9][a-z0-9-]*$/.test(n.slug) || !Number.isFinite(n.x) || !Number.isFinite(n.y))) throw invalid();
   const ids = new Set(nodes.map(n => n.id));
   if (ids.size !== nodes.length || flow.edges.some(e => !e || typeof e.id !== "string" || !ids.has(e.from) || !ids.has(e.to) || e.from === e.to) || new Set(flow.edges.map(e => `${e.from}\u0000${e.to}`)).size !== flow.edges.length || !orderFlow(flow)) throw invalid();
-  for (const [value, limit] of [[flow.goal, 10000], [flow.notes, 10000]] as const) if (value !== undefined && (typeof value !== "string" || value.length > limit)) throw invalid();
+  for (const [value, limit] of [[flow.goal, 10000], [flow.notes, WORKFLOW_NOTES_LIMIT]] as const) if (value !== undefined && (typeof value !== "string" || value.length > limit)) throw invalid();
   if (flow.ended !== undefined && typeof flow.ended !== "boolean") throw invalid();
   if (flow.governingSkills !== undefined && (!Array.isArray(flow.governingSkills) || flow.governingSkills.length > 20 || flow.governingSkills.some(s => typeof s !== "string"))) throw invalid();
   if (flow.team !== undefined && (!flow.team || !["split", "together"].includes(flow.team.mode) || !Array.isArray(flow.team.minds) || flow.team.minds.length > 6)) throw invalid();

@@ -2,6 +2,7 @@ import { test, expect, type Page } from "@playwright/test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 import { choosePlanner, submitPlan, exportEditable, planOptions } from "./fixtures/workflow-ui";
 import fs from "node:fs/promises";
+import { unzipSync, strFromU8 } from "fflate";
 
 // All account, security and AI endpoints below are simulated. No provider calls.
 const goal = "Write a checked weekly report from my sales notes";
@@ -33,7 +34,7 @@ async function openAccountPage(page: Page, path: string) {
   await expect(page.getByTestId("account-page")).toHaveAttribute("data-save-status", "saved");
   if (path === "/#build") {
     await page.getByRole("link", { name: "AI Blocks, home", exact: true }).click();
-    await page.locator('.home-builder-actions a[href="/#build"]').click();
+    await page.locator(".hero").getByRole("link", { name: "Build a workflow", exact: true }).click();
     return;
   }
   await page.goto(path);
@@ -140,4 +141,30 @@ test("@mobile saved-context controls and the resulting workflow fit a phone", as
   expect(api.sent).toHaveLength(1); expect(api.sent[0].context).toContain("Research editing for science teams");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: info.outputPath("context-workflow-mobile.png"), fullPage: true });
+});
+
+test("the full 12,000-character context reopens and downloads as unvalidated planning context", async ({ page }, info) => {
+  const api = await setup(page); await openAccountPage(page, "/compose");
+  await page.getByTestId("compose-goal").fill(goal); await planOptions(page);
+  await page.getByText("Add context and constraints", { exact: true }).click();
+  await page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" }).uncheck();
+  const notes = "Synthetic source notes: preserve every character.\n".padEnd(12000, "x");
+  await page.getByLabel("Audience, offer, available inputs and limits").fill(notes);
+  await page.getByTestId("compose-assign-minds").uncheck(); await submitPlan(page);
+  await expect(page.getByTestId("flow-node")).toHaveCount(1);
+  expect(api.sent[0].context).toBe(notes);
+  await expect(page.getByTestId("workflow-inputs")).toContainText("Inputs your AI will check");
+  await expect.poll(() => !!api.data()["abb:composer"]).toBe(true);
+  await page.reload(); await expect(page.getByTestId("flow-node")).toHaveCount(1);
+  await planOptions(page); await page.getByText("Add context and constraints", { exact: true }).click();
+  await expect(page.getByLabel("Audience, offer, available inputs and limits")).toHaveValue(notes);
+  const download = page.waitForEvent("download"); await page.getByTestId("compose-download").click();
+  const zip = await download, file = info.outputPath(zip.suggestedFilename()); await zip.saveAs(file);
+  const files = unzipSync(await fs.readFile(file));
+  const inputs = JSON.parse(strFromU8(files["inputs.json"]));
+  expect(inputs.planning_context.status).toBe("PROVIDED_UNVALIDATED");
+  expect(inputs.planning_context.data.context).toBe(notes);
+  expect(inputs.planning_context.data.status).toBe("verify-supplied-context-first");
+  expect(inputs.inputs.every((input: any) => input.status === "MISSING" && input.acceptance_decision === null)).toBe(true);
+  expect(files["me.md"]).toBeUndefined();
 });

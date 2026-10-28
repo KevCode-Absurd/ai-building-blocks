@@ -180,3 +180,14 @@ test('an official MCP client gets plan_workflow and the changed tools as structu
     }
   } finally { await client.close(); }
 });
+
+
+test('public workflow preparation preserves long planning notes within the shared bound and rejects overflow', async () => {
+  const { WORKFLOW_NOTES_LIMIT } = await import('../src/lib/workflow-limits.ts');
+  const { svc } = service();
+  const notes = 'Synthetic planning context. '.padEnd(WORKFLOW_NOTES_LIMIT, 'x');
+  const prepared = await svc.callTool('prepare_workflow', { slugs: ['ad-writer'], notes });
+  assert.equal(prepared.workflow.notes, notes);
+  assert.equal(prepared.execution.model_calls_by_service, 0);
+  await assert.rejects(() => svc.callTool('prepare_workflow', { slugs: ['ad-writer'], notes: notes + 'x' }), /notes/);
+});

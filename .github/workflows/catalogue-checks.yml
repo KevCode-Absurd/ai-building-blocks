@@ -31,6 +31,8 @@ jobs:
           cache-dependency-path: site/package-lock.json
       - name: Install locked site dependencies
         run: npm --prefix site ci
+      - name: Check Git date portability
+        run: node --test "--test-name-pattern=lastmod comes|Git dates resolve" site/test/crawl-files.test.mjs
       - name: Check committed source and reviewed contracts
         run: node tools/qa/check-ci.mjs
       - name: Check minds and build catalogue indexes

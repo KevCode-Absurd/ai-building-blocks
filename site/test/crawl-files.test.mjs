@@ -101,7 +101,8 @@ test('lastmod comes from git: a rebuild, a touch or a fresh clone never moves it
   const files = ['item.yaml', 'SKILL.md', 'page.yaml'].map((f) => path.join(dir, 'a', f));
   const first = gitDates(dir);
   assert.equal(first.usable, true);
-  assert.equal(first.modified(files), '2026-10-05', 'the newest committed change; a missing page.yaml is skipped');
+  const observed = first.modified(files);
+  assert.equal(observed, '2026-10-05', 'the newest committed change; a missing page.yaml is skipped' + (observed === '2026-10-05' ? '' : dateFixtureDiagnostics(dir, files, first)));
   assert.equal(first.published(files), '2026-10-01');
   // Touching files (a checkout, a copy, a formatter that changes nothing) does not move the date.
   const later = new Date('2030-01-01T00:00:00Z');
@@ -141,6 +142,21 @@ test('Git dates resolve filesystem aliases before looking up committed file time
   fs.symlinkSync(real, alias, 'junction');
   const dates = gitDates(alias);
   assert.equal(dates.usable, true);
-  assert.equal(dates.modified([path.join(alias, 'SKILL.md')]), '2026-10-05');
+  const observed = dates.modified([path.join(alias, 'SKILL.md')]);
+  assert.equal(observed, '2026-10-05', observed === '2026-10-05' ? '' : dateFixtureDiagnostics(alias, [path.join(alias, 'SKILL.md')], dates));
   assert.equal(dates.published([path.join(alias, 'SKILL.md')]), '2026-10-05');
 });
+
+// Bounded diagnostics of this synthetic repository only, evaluated only if an unchanged date assertion fails.
+// No environment values, source contents, author details or credential configuration are printed.
+function dateFixtureDiagnostics(dir, files, dates) {
+  const run = args => { try { return execFileSync('git', ['-c', 'core.longpaths=true', '-C', dir, '-c', 'core.quotePath=false', ...args], { encoding: 'utf8', maxBuffer: 64 * 1024, stdio: ['ignore', 'pipe', 'ignore'] }); } catch { return 'diagnostic unavailable'; } };
+  return '\nSynthetic date fixture: ' + JSON.stringify({
+    platform: process.platform, node: process.version, dir, realRoot: fs.realpathSync(dir),
+    lookup: { usable: dates.usable, shallow: dates.shallow, dirty: dates.dirty },
+    files: files.map(file => ({ file, realPath: fs.existsSync(file) ? fs.realpathSync(file) : null })),
+    version: run(['--version']), top: run(['rev-parse', '--show-toplevel']),
+    log: run(['log', '-2', '--format=@%cI', '--name-only', '--no-renames', '--', '.']),
+    status: run(['status', '--porcelain', '-z', '--untracked-files=all', '--', '.']),
+  });
+}

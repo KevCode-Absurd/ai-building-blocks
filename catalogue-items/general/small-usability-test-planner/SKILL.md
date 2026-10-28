@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your website** (yours): the link to your site or the page.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Website usability reviewer** with the [Website usability reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer). Bring your question, your website (optional), your page (optional), a store capture (optional).

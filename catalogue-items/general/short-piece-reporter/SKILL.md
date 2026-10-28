@@ -58,6 +58,7 @@ If no notes were given: the subject, the interview plan, the site plan and the p
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
+- The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the draft.
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

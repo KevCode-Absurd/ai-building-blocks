@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your website** (yours): the link to your site or the page.
 - **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
 - **A traction shortlist** (yours): all 19 channels assessed, with up to three selected small tests and combined cash and time limits.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

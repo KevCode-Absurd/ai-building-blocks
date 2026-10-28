@@ -20,21 +20,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 - **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
-
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for a spreadsheet, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a spreadsheet, your question, competitors. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -43,7 +36,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list spells out the inputs named in "Before you start" above: the spreadsheet is hours and invoices by client, and the question is your floor and goals. This agent reads `clients.md` and `proposals.md`, not a brand brain, and needs no ad results. The brand brain and customer words lines come from the pricing steps; use them only if you already have them.
+Bring hours and invoices by client, plus your fee floor and goals. This agent keeps the client history in `clients.md` and the proposed changes in `proposals.md`. Add the costs and comparison rates listed below when available.
 
 - **Hours and invoices by client** (required): for the last quarter, each client with hours worked (or days), what was invoiced, what was paid and when. Rough hours are fine if you say so.
 - **Your floor and goals** (required): the lowest hourly or daily rate you can accept, the income you want this year, and how many hours you want to work.

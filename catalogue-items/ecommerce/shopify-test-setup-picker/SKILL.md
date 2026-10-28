@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Bold store experiment planner** with the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). Bring your results, an audit report (optional), your question (optional). It uses your shortlist.
+1. **Bold store experiment planner** with the [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). Bring your results, an audit report (optional), a shortlist (optional), your question (optional).
 2. This one.
 
 How to start:

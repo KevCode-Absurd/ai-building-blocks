@@ -30,7 +30,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A transcript** (yours): the words from a recording, written out, with who said what.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **An audit report** with the [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). Bring the deal terms, the contract (optional).
@@ -137,3 +137,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

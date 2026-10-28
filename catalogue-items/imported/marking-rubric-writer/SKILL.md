@@ -78,7 +78,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Media literacy lesson builder](https://useaiblocks.com/skills/media-literacy-lesson-builder). Bring source text, a plan (optional).

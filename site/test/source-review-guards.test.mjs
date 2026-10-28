@@ -134,3 +134,21 @@ test('a changed lowercase imported method still requires an input-contract revie
   const result = reviewCatalogue({ items: new Map([[file, item]]), methods: new Map([[file, method]]), registry: { schema: 'abb-source-review/1', inputs: {}, handoffs: {} }, changes: [{ file: file.replace('item.yaml', 'skill.md'), methodChanged: true }] });
   assert.match(result.failures.map(row => row.message).join('\n'), /Input contract needs review/);
 });
+
+test('a normal build can select canonical instructions from EOL-equivalent legacy case variants', () => {
+  const files = new Map([['skill.md', Buffer.from('# Method\r\nKeep the source.\r\n')], ['SKILL.md', Buffer.from('# Method\nKeep the source.\n')]]);
+  const before = [...files].map(([name, bytes]) => [name, Buffer.from(bytes)]);
+  assert.equal(primarySkillName([...files.keys()], name => files.get(name)), 'SKILL.md');
+  for (const [name, bytes] of before) assert.deepEqual(files.get(name), bytes, 'discovery must never rewrite either original');
+  files.set('skill.md', Buffer.from('# Different instructions\n'));
+  assert.throws(() => primarySkillName([...files.keys()], name => files.get(name)), /Conflicting primary instruction contents/);
+});
+
+test('YAML diagnostics never print collection-key contents through parser warnings', () => {
+  const old = process.emitWarning, warnings = [];
+  process.emitWarning = (...args) => warnings.push(args);
+  try {
+    checkTextChange({ file: 'fixture.md', before: null, after: Buffer.from('---\n? [SYNTHETIC_PRIVATE_LABEL]\n: value\nname: fixture\n---\n# Method\n') });
+    assert.deepEqual(warnings, []);
+  } finally { process.emitWarning = old; }
+});

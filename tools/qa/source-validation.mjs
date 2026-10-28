@@ -14,7 +14,7 @@ export function checkEndings(before, after) {
   return [];
 }
 function parse(text, label, failures) {
-  const document = YAML.parseDocument(text, { uniqueKeys: true, strict: true });
+  const document = YAML.parseDocument(text, { uniqueKeys: true, strict: true, logLevel: 'silent' });
   if (document.errors.length) {
     const error = document.errors[0], line = text.slice(0, error.pos?.[0] ?? 0).split('\n').length;
     failures.push(`${label}: ${error.code ?? 'invalid YAML'} at line ${line}`); return null;

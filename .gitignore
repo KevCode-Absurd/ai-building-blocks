@@ -49,6 +49,7 @@ site/.copyable-build/
 /tools/*
 !/tools/README.md
 !/tools/baseline-content.mjs
+!/tools/release.mjs
 !/tools/qa/
 !/tools/package.json
 !/tools/package-lock.json

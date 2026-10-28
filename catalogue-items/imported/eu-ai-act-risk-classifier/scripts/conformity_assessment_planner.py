@@ -50,6 +50,7 @@ SAMPLE: Dict[str, Any] = {
 
 
 # Annex IV — Technical Documentation requirements (per Article 11(1))
+# AI Blocks source check, 2026-10-28: https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-4
 ANNEX_IV_ITEMS = [
     {
         "id": "iv.1",
@@ -87,6 +88,15 @@ ANNEX_IV_ITEMS = [
     },
     {
         "id": "iv.4",
+        "title": "Appropriateness of the performance metrics",
+        "subitems": [
+            "why the selected metrics fit this system and its intended purpose",
+            "evidence supporting that choice and limits of what each metric establishes",
+        ],
+        "reusable_from": "Metric-selection rationale and supporting evaluation evidence; supply the actual evidence",
+    },
+    {
+        "id": "iv.5",
         "title": "Description of risk management system",
         "subitems": [
             "Article 9 risk management process",
@@ -97,7 +107,7 @@ ANNEX_IV_ITEMS = [
         "reusable_from": "ISO 42001 Clause 6.1 + Annex A.5 + Annex A.6.2.4; ISO 23894 process",
     },
     {
-        "id": "iv.5",
+        "id": "iv.6",
         "title": "Description of changes to the system after placing on market",
         "subitems": [
             "change-management procedure",
@@ -107,7 +117,7 @@ ANNEX_IV_ITEMS = [
         "reusable_from": "ISO 27001 A.8.32 change management; ISO 42001 A.6.2.5 deployment",
     },
     {
-        "id": "iv.6",
+        "id": "iv.7",
         "title": "List of harmonised standards applied",
         "subitems": [
             "presumption of conformity per Article 40",
@@ -116,7 +126,7 @@ ANNEX_IV_ITEMS = [
         "reusable_from": "Standards register",
     },
     {
-        "id": "iv.7",
+        "id": "iv.8",
         "title": "EU declaration of conformity",
         "subitems": [
             "Article 47 — provider declares conformity, signed by authorized signatory",
@@ -125,7 +135,7 @@ ANNEX_IV_ITEMS = [
         "reusable_from": "Template only — signed at end of process",
     },
     {
-        "id": "iv.8",
+        "id": "iv.9",
         "title": "Post-market monitoring system",
         "subitems": [
             "Article 72 — proactive collection of performance + incident data",
@@ -195,9 +205,9 @@ def reuse_summary(payload: Dict[str, Any]) -> List[str]:
     """What evidence can be reused from existing certifications."""
     notes = []
     if payload.get("existing_iso_42001_certification"):
-        notes.append("ISO 42001 certification: reuse AIMS Clause 6.1 risk evidence (Annex IV item 4)")
+        notes.append("ISO 42001 certification: reuse AIMS Clause 6.1 risk evidence (Annex IV item 5)")
         notes.append("ISO 42001 certification: reuse Annex A.6 lifecycle evidence (Annex IV items 1-3)")
-        notes.append("ISO 42001 certification: reuse Annex A.9 monitoring evidence (Annex IV item 8)")
+        notes.append("ISO 42001 certification: reuse Annex A.9 monitoring evidence (Annex IV item 9)")
     if payload.get("existing_iso_27001_certification"):
         notes.append("ISO 27001 certification: reuse cybersecurity evidence for Article 15 cybersecurity requirement")
         notes.append("ISO 27001 certification: reuse A.5.19 supplier mgmt for Article 25 value-chain responsibilities")
@@ -222,10 +232,10 @@ def plan(payload: Dict[str, Any]) -> Dict[str, Any]:
 def _next_steps(module: str) -> List[str]:
     base = [
         "Assemble Annex IV pack per the checklist (see Article 11 + Annex IV).",
-        "Conduct Article 9 risk management lifecycle (input to Annex IV item 4).",
+        "Conduct Article 9 risk management lifecycle (input to Annex IV item 5).",
         "Implement Article 12 logging capabilities (input to Annex IV item 3).",
         "Implement Article 14 human-oversight measures (input to Annex IV items 2-3).",
-        "Stand up Article 72 post-market monitoring (input to Annex IV item 8).",
+        "Stand up Article 72 post-market monitoring (input to Annex IV item 9).",
     ]
     if module == "H":
         base.append("Engage notified body for Module H assessment (Annex VII).")
@@ -264,7 +274,7 @@ def render_text(p: Dict[str, Any], source: str) -> str:
     lines.append(f"Rationale: {c['rationale']}")
     lines.append("")
     lines.append("-" * 72)
-    lines.append("ANNEX IV TECHNICAL DOCUMENTATION CHECKLIST (8 items):")
+    lines.append("ANNEX IV TECHNICAL DOCUMENTATION CHECKLIST (9 points):")
     lines.append("")
 
     for item in p["annex_iv_checklist"]:

@@ -10,6 +10,8 @@ explain: |
   The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned or high-risk, and which transparency duties apply on top, even to a high-risk system.
 
   You describe the system, its purpose and who uses it. The skill checks it against the banned practices first, then the high-risk areas such as hiring, credit and education. For high-risk systems it plans the conformity route and the technical documents. It then lists duties by your role: provider, user, importer or distributor, with the date each one starts. Each transparency duty goes to the role the law names. The maker of a chatbot must make it say it is an AI. The business that publishes a deepfake must label it. Three Python scripts back each step. It is not legal advice, and unclear cases should go to a lawyer.
+
+  Structure check, 28 Oct 2026: the [Commission's current text](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99) uses 13 Chapters and 14 Annexes. We corrected the reference guide's labels and ranges. This check does not validate every legal statement or decide which duties apply to your case.
 when:
   - You are about to launch an AI feature and need to know its risk tier.
   - You are not sure if your system counts as high-risk.

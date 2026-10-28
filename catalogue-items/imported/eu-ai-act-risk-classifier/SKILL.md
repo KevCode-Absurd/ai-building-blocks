@@ -26,6 +26,8 @@ This skill is **NOT a legal substitute**. The Act is binding regulation. For nov
 
 This skill is **NOT GDPR**. Many AI systems also trigger GDPR (training data, output processing). See `ra-qm-team/skills/gdpr-dsgvo-expert/` for DPIA + lawful basis work. The Acts interact (Recital 10, Article 10 for high-risk training data).
 
+**Annex IV correction by AI Blocks, 28 Oct 2026:** the bundled planner now includes all nine numbered points, including point 4 on the appropriateness of performance metrics. Source: [official Annex IV](https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-4). The checklist asks for evidence; it does not establish compliance.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -239,7 +241,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## References
 
-- [eu_ai_act_titles.md](references/eu_ai_act_titles.md) — Titles I–XII Article-by-Article walkthrough with deployer/provider/importer/distributor obligation breakdown
+- [eu_ai_act_titles.md](references/eu_ai_act_titles.md) — Chapters I–XIII guide with selected Articles with deployer/provider/importer/distributor obligation breakdown
 - [high_risk_systems_annex_iii.md](references/high_risk_systems_annex_iii.md) — Annex III 8 categories detailed + Article 6(2)–(3) interaction + carve-out test
 - [gpai_obligations.md](references/gpai_obligations.md) — Articles 51–55 GPAI track + systemic-risk threshold + transparency rules + Code of Practice status
 - [cross_framework_mapping_ai_act.md](references/cross_framework_mapping_ai_act.md) — AI Act ↔ ISO 42001 ↔ NIST AI RMF ↔ GDPR control-level mapping

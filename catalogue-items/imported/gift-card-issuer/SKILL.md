@@ -3,13 +3,18 @@ name: shopify-admin-gift-card-issuance
 role: conversion-optimization
 description: "Issue Shopify gift cards (store credit) to customers as a goodwill gesture, post-return incentive, or loyalty reward."
 toolkit: shopify-admin, shopify-admin-execution
-api_version: "2025-01"
+api_version: "2026-10"
 graphql_operations:
   - customer:query
   - giftCardCreate:mutation
+  - tagsAdd:mutation
 status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
+
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
+**Source check by AI Blocks, 28 Oct 2026:** [Shopify's giftCardCreate payload](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/giftCardCreate) returns the new code as giftCardCode, beside giftCard. The [GiftCard object](https://shopify.dev/docs/api/admin-graphql/2026-10/objects/GiftCard) exposes maskedCode and lastCharacters, not code. Read the issued code from giftCardCreate.giftCardCode. The [tagsAdd reference](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/tagsAdd) supports a Customer ID with id and tags arguments. No gift card or customer tag was created during this check.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
@@ -28,7 +33,7 @@ How to start:
 Issues Shopify native gift cards to customers programmatically — as goodwill for a delayed shipment, as store credit instead of a cash refund, or as a loyalty reward. Uses Shopify's built-in gift card system; no 3rd-party app required. Gift cards issued here are redeemable at checkout exactly like manual gift cards. Note: gift card availability depends on your Shopify plan and store settings. Whether `giftCardCreate` works on every plan is not verified here. Check that your plan supports gift cards and that they are turned on in settings. If the call fails with a plan or permission error, stop and tell the user.
 
 ## Prerequisites
-- `shopify auth login --store <domain>`
+- `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_customers`, `write_gift_cards`
 - Gift cards must be enabled in Shopify admin → Settings → Gift cards
 
@@ -71,7 +76,7 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
 ## GraphQL Operations
 
 ```graphql
-# customer:query — validated against api_version 2025-01
+# customer:query — field names checked against 2026-10 docs; not run on a store
 query CustomerByEmail($query: String!) {
   customers(first: 1, query: $query) {
     edges {
@@ -90,12 +95,11 @@ query CustomerByEmail($query: String!) {
 ```
 
 ```graphql
-# giftCardCreate:mutation — validated against api_version 2025-01
+# giftCardCreate:mutation — response shape checked against 2026-10 docs; not run on a store
 mutation GiftCardCreate($input: GiftCardCreateInput!) {
   giftCardCreate(input: $input) {
     giftCard {
       id
-      code
       balance {
         amount
         currencyCode
@@ -106,6 +110,7 @@ mutation GiftCardCreate($input: GiftCardCreateInput!) {
         id
       }
     }
+    giftCardCode
     userErrors {
       field
       message
@@ -115,7 +120,7 @@ mutation GiftCardCreate($input: GiftCardCreateInput!) {
 ```
 
 ```graphql
-# tagsAdd:mutation — added by AI Blocks, not validated by the original author
+# tagsAdd:mutation — Customer target and arguments checked against 2026-10 docs; not run on a store
 mutation TagCustomer($id: ID!, $tags: [String!]!) {
   tagsAdd(id: $id, tags: $tags) {
     node {
@@ -218,7 +223,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 | Customer not found | Email doesn't match any customer | Verify email; guest checkout customers may not have a customer record |
 | `userErrors` from giftCardCreate | Invalid amount (≤ 0) or missing required field | Verify `amount` is a positive number |
 | Gift cards not enabled | Store settings don't allow gift cards | Enable in Shopify admin → Settings → Gift cards |
-| `write_gift_cards` scope missing | Auth was done without this scope | Re-run `shopify auth login --store <domain>` and approve the `write_gift_cards` scope |
+| `write_gift_cards` scope missing | Auth was done without this scope | Re-run `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>` and approve the `write_gift_cards` scope |
 
 ## Best Practices
 1. Always run `dry_run: true` to confirm customer lookup succeeds and amount is correct before issuing.

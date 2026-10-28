@@ -55,7 +55,7 @@ The point: minimize duplicate work. EU AI Act compliance for high-risk systems r
 
 ### Article 11 — Technical Documentation (Annex IV)
 
-**EU AI Act requirement:** maintain technical documentation per Annex IV (8 items).
+**EU AI Act requirement:** maintain technical documentation per Annex IV (9 points).
 
 **Best reuse per Annex IV item:**
 

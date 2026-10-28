@@ -12,6 +12,8 @@ dependencies: [peft>=0.13.0, transformers>=4.45.0, torch>=2.0.0, bitsandbytes>=0
 
 Fine-tune LLMs by training <1% of parameters using LoRA, QLoRA, and 25+ adapter methods.
 
+**Source check by AI Blocks, 28 Oct 2026:** The [current TRL SFT reference](https://huggingface.co/docs/trl/sft_trainer) uses SFTConfig(max_length=...) and processing_class. We corrected the SFTConfig length argument. Model loading in other libraries may still use max_seq_length; these are different APIs. No model training was run.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -322,7 +324,7 @@ lora_config = LoraConfig(r=16, lora_alpha=32, target_modules="all-linear")
 
 trainer = SFTTrainer(
     model=model,
-    args=SFTConfig(output_dir="./output", max_seq_length=512),
+    args=SFTConfig(output_dir="./output", max_length=512),
     train_dataset=dataset,
     peft_config=lora_config,  # Pass LoRA config directly
 )

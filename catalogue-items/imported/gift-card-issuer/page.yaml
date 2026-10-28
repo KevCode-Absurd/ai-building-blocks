@@ -10,6 +10,8 @@ explain: |
   Store credit in your customers' hands, issued from one request. Name the customers and amounts, and it creates Shopify gift cards for goodwill after a late order, credit in place of a refund, or loyalty rewards.
 
   You can look up each customer by email or customer ID, add an internal reason, set an expiry date and tag the customer. A dry run shows what would be created before anything happens. This skill creates live gift cards that hold real value, so check the list first. It needs a signed-in Shopify session, write access to gift cards (and to customers, if you add a tag), and gift cards turned on in your store settings.
+
+  Source check, 28 Oct 2026: the [2026-10 API reference](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/giftCardCreate) returns the new code as giftCardCode. The [tagging reference](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/tagsAdd) supports Customer IDs. These queries were checked against docs; no gift card was issued and no live-store test was run.
 when:
   - An order shipped late and you want to send a goodwill credit.
   - A customer returned an item and you prefer store credit to a cash refund.

@@ -10,6 +10,8 @@ explain: |
   An AI model running on a Mac, a plain CPU or a non-Nvidia graphics card, with no CUDA needed. Name the model and your computer and get the commands that start it.
 
   It uses llama.cpp, which runs compact GGUF models from 1.5 to 8 bits. It builds for Apple Metal, AMD ROCm or plain CPU, then downloads or converts the model. You can chat in the terminal or start a server that speaks the OpenAI style, so existing apps can connect. The author says it can run several times faster than standard PyTorch on a CPU, but does not state the hardware or test conditions, so treat that as a rough claim. Your speed will differ. It explains the quantization formats so you pick one that fits your memory.
+
+  Source check, 28 Oct 2026: the [official build guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) confirms CMake. These commands were checked against documentation; no CPU or GPU build was run for this catalogue check.
 when:
   - You have an M-series Mac and want a local model.
   - Your graphics card is AMD or Intel.

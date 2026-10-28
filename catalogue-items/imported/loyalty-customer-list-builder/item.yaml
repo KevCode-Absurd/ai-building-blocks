@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-loyalty-segment-export skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/marketing/shopify-admin-loyalty-segment-export
-    used: Copied under the MIT licence. We gave it a plain name and added notes to check field names against current Shopify docs, protect the exported list and refresh old tags. We made the field-name check a required step, write the CSV before tagging, and added a documented tagsRemove undo step. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: "Copied under the MIT licence. We gave it a plain name and added notes to check field names against current Shopify docs, protect the exported list and refresh old tags. We made the field-name check a required step, write the CSV before tagging, and added a documented tagsRemove undo step. We added Before you start and After this sections that link to other AI Blocks steps. AI Blocks: Replaced unsupported shopify auth login --store examples with documented store auth, including its required scopes and placeholder/credential safeguards; no store login or API call was run."
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

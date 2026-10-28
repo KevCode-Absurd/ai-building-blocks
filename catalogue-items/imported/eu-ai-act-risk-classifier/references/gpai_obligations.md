@@ -10,7 +10,7 @@ Per **Article 3(63)**, a "general-purpose AI model" is:
 
 In practice: foundation models such as large language models, multimodal models, diffusion models for image/video generation. The distinguishing characteristic is generality + integration into downstream systems.
 
-GPAI is governed by **Title V** (Articles 51–55), separate from the high-risk AI system regime in Title III. A given application can simultaneously be a GPAI provider AND a high-risk system provider (e.g., a downstream provider fine-tuning a foundation model for credit scoring).
+GPAI is governed by **Chapter V** (Articles 51–55), separate from the high-risk AI system regime in Chapter III. A given application can simultaneously be a GPAI provider AND a high-risk system provider (e.g., a downstream provider fine-tuning a foundation model for credit scoring).
 
 ## Systemic-Risk GPAI Designation (Article 51)
 
@@ -84,7 +84,7 @@ A common ambiguity: when does a downstream provider become a GPAI provider in th
 
 Per **Article 25(3)**: a downstream provider that **substantially modifies** a GPAI model (e.g., extensive fine-tuning that changes the model's intended purpose) becomes a GPAI provider with its own Article 53 obligations.
 
-Per **Article 25(1)**: if a downstream provider integrates a GPAI model into a high-risk AI system, the downstream provider remains the high-risk AI system's provider with Title III obligations; the GPAI model's provider retains its Article 53 + (if applicable) Article 55 obligations.
+Per **Article 25(1)**: if a downstream provider integrates a GPAI model into a high-risk AI system, the downstream provider remains the high-risk AI system's provider with Chapter III obligations; the GPAI model's provider retains its Article 53 + (if applicable) Article 55 obligations.
 
 The Commission Q&A and emerging Code of Practice provide more detail on "substantial modification" boundary.
 
@@ -101,7 +101,7 @@ Is the model a GPAI per Article 3(63)?
 
 ## When This Reference Doesn't Help
 
-- **Article 5 prohibitions applied to GPAI use cases.** See `eu_ai_act_titles.md` Title II.
+- **Article 5 prohibitions applied to GPAI use cases.** See `eu_ai_act_titles.md` Chapter II.
 - **Article 40 harmonised standards for GPAI.** Not published as of mid-2026; CEN-CENELEC JTC 21 work in progress.
 - **Open-source GPAI carve-out (Article 53(2)).** GPAI models released under free + open-source license can be exempt from some Article 53 obligations IF they do not have systemic risk. Article 53(2) specifies the exact exemption scope.
 

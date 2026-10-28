@@ -12,6 +12,8 @@ dependencies: [llama-cpp-python]
 
 Pure C/C++ LLM inference with minimal dependencies, optimized for CPUs and non-NVIDIA hardware.
 
+**Source check by AI Blocks, 28 Oct 2026:** The [llama.cpp build guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) confirms CMake. The [project options](https://github.com/ggml-org/llama.cpp/blob/master/ggml/CMakeLists.txt) include GGML_METAL, GGML_CUDA and GGML_HIP. CPU, Metal, CUDA and ROCm builds were not run here. GPU toolchains and output paths depend on your platform and CMake generator; check the backend guide for your machine.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -53,10 +55,10 @@ How to start:
 brew install llama.cpp
 
 # Or build from source
-git clone https://github.com/ggerganov/llama.cpp
+git clone https://github.com/ggml-org/llama.cpp
 cd llama.cpp
 
-# CPU only
+# Default build (some platforms enable a GPU backend by default)
 cmake -B build
 cmake --build build --config Release
 
@@ -73,7 +75,7 @@ cmake -B build -DGGML_HIP=ON
 cmake --build build --config Release
 ```
 
-AI Blocks note: the original skill used older `make LLAMA_...` flags. We replaced them with the CMake commands current releases use. The built programs are in `build/bin/`. Check the llama.cpp build docs for your version before you run these commands. If the build fails, report the exact error and do not guess a fix.
+AI Blocks note: the original skill used older `make LLAMA_...` flags. We replaced them with the CMake commands current releases use. Look for the programs under `build/bin/`; some CMake generators put release binaries in a configuration subfolder. Check the llama.cpp build docs for your version before you run these commands. If the build fails, report the exact error and do not guess a fix.
 
 ### Download model
 
@@ -278,7 +280,7 @@ AI Blocks note: the speeds, speedups and prices below are the original author's 
 
 ## Resources
 
-- **GitHub**: https://github.com/ggerganov/llama.cpp
+- **GitHub**: https://github.com/ggml-org/llama.cpp
 - **Models**: https://huggingface.co/models?library=gguf
 - **Discord**: https://discord.gg/llama-cpp
 

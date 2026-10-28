@@ -10,6 +10,8 @@ explain: |
   A health check of the tracking that tells Meta who bought, with a score and fixes for your platform. Browser tracking alone misses a lot of sales, so the fix is to send events from your server as well and match them with shared event IDs.
 
   The skill audits what is set up, finds what is missing and tests events. It works toward a match quality score of 9.3 or more on purchases and 8 or more on leads. Those two targets are this skill's own guidance, not a Meta rule. Customer details are hashed before sending, never sent plain. Order of value for matching is email, phone, name, then browser cookies and device data. It knows platform traps like Next.js page loading and Shopify checkout limits. Scripts do the checks.
+
+  Source check, 28 Oct 2026: Meta's [Conversions API documentation](https://developers.facebook.com/docs/marketing-api/conversions-api/using-the-api/) could not be read because of a rate limit. Reporting and optimisation treatment of test events remains unverified. No test events were sent.
 when:
   - Meta reports fewer sales than your shop does.
   - Your match quality score is low.
@@ -34,7 +36,7 @@ how_to_use:
   - Give your AI the skill folder. Tell it your platform and your pixel ID or ad account ID. Set your token on your own computer as an environment variable named META_TOKEN. Do not paste the token into the chat.
   - "Step 1, audit: ask it to run the pixel audit script (pixel-audit.sh). Read the scorecard and the fix list."
   - "Step 2, setup: ask for the setup steps for your platform (pixel-setup.sh), and make the fixes."
-  - "Step 3, test: first copy the test event code from the Test Events tab in Events Manager. The test script (capi-test.sh) sends a fake purchase and page view to your pixel, and will not run without the code. Even with it, Meta does not promise to keep test events out of your data, so use a test pixel if you have one, or expect one 1 USD test purchase in your numbers. Confirm the pixel ID before it runs. Then check the Test Events tab."
+  - "Step 3, test: first copy the test event code from the Test Events tab in Events Manager. The test script (capi-test.sh) sends a fake purchase and page view to your pixel, and will not run without the code. We could not verify whether these events are excluded from reporting or ad optimisation; Meta's documentation returned a rate-limit error on 28 Oct 2026. Use a separate test pixel where possible. The script sends a synthetic purchase worth 1 USD. Confirm the pixel ID before it runs. Then check the Test Events tab."
   - "Step 4, match quality: ask it to run the match quality check (emq-check.sh). The score it gives is only an estimate, so check your real match quality in Events Manager."
 output_sample:
   input:

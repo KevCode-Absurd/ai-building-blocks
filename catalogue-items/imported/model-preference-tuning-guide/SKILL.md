@@ -10,6 +10,8 @@ dependencies: [trl, transformers, datasets, peft, accelerate, torch]
 
 # TRL - Transformer Reinforcement Learning
 
+**Source check by AI Blocks, 28 Oct 2026:** The [current TRL SFT reference](https://huggingface.co/docs/trl/sft_trainer) documents max_length and processing_class. PPO is a separate compatibility check: the [PPO reference](https://huggingface.co/docs/trl/main/en/ppo_trainer) is on main, uses trl.experimental.ppo, and shows a different script path from the legacy example below. No compatible pinned PPO release was verified here. Do not run the PPO examples until a maintainer checks the import, script and arguments against one pinned release. No training was run.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -152,7 +154,7 @@ trainer.save_model()
 
 **Step 3: PPO reinforcement learning**
 
-Optimize policy using reward model. The script path and option names below change between TRL versions, so check them against your installed TRL docs before you run this:
+Optimize the policy using a reward model. The following is a legacy, unverified PPO example. It is not a runnable command for current TRL without a version-specific rewrite. Stop before training until a maintainer supplies and checks one pinned release:
 
 ```bash
 python -m trl.scripts.ppo \

@@ -30,4 +30,4 @@ credits:
   - title: fine-tuning-with-trl skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/06-post-training/trl-fine-tuning
-    used: Copied under the MIT licence. We gave it a plain name and warned that the sample GRPO length reward teaches padding. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: "Copied under the MIT licence. We gave it a plain name and warned that the sample GRPO length reward teaches padding. We added Before you start and After this sections that link to other AI Blocks steps. AI Blocks: Corrected SFTConfig max_length in the packing reference and explicitly held the legacy PPO examples for a pinned-version compatibility check, with primary TRL sources."

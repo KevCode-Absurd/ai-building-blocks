@@ -30,7 +30,7 @@ credits:
   - title: shopify-admin-gift-card-issuance skill
     by: 40rty AI
     url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/conversion-optimization/shopify-admin-gift-card-issuance
-    used: Copied under the MIT licence. We gave it a plain name. We added the missing customer tag step (a tagsAdd mutation) so the tag_customer option works. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: "Copied under the MIT licence. We gave it a plain name. We added the missing customer tag step (a tagsAdd mutation) so the tag_customer option works. We added Before you start and After this sections that link to other AI Blocks steps. AI Blocks: Replaced unsupported shopify auth login --store examples with documented store auth, including its required scopes and placeholder/credential safeguards; no store login or API call was run. Corrected the giftCardCreate response to use payload.giftCardCode, pinned the documented examples to 2026-10 and listed the optional tagsAdd operation. Confirmed its Customer target and arguments in primary docs; no money or tags were issued."
   - title: Original author
     by: 40rty AI
     url: https://github.com/40rty-ai

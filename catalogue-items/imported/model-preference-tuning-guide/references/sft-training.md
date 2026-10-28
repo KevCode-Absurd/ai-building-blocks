@@ -108,7 +108,7 @@ Pack multiple sequences into one to maximize GPU utilization:
 ```python
 config = SFTConfig(
     packing=True,  # Enable packing
-    max_seq_length=2048,
+    max_length=2048,
     dataset_text_field="text"
 )
 ```

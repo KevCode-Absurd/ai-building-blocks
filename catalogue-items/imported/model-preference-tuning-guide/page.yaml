@@ -10,6 +10,8 @@ explain: |
   A language model tuned to answer the way you prefer, taught with examples of good and bad answers. You choose the method that fits your data and compute.
 
   The skill uses the TRL library. If you have pairs of preferred and rejected answers, it sets up DPO, the simplest route. If you want the classic path, it walks through three stages: teach basic instructions, train a reward model that scores answers, then tune with PPO. It also covers GRPO for tasks with checkable answers. It adds LoRA to cut memory use and ends by testing the tuned model against the original. This is for developers and technical staff. You need Python and an NVIDIA GPU. The PPO command lines depend on your TRL version, so check them against the TRL docs before you run them.
+
+  Source check, 28 Oct 2026: [TRL's SFT reference](https://huggingface.co/docs/trl/sft_trainer) confirms the SFT argument correction. PPO examples remain legacy and unverified against a pinned release. Stop before PPO training until their imports, script path and arguments are checked. No model training was run.
 when:
   - Your model gives answers that are correct but the wrong tone.
   - You have a pile of thumbs up and thumbs down examples.

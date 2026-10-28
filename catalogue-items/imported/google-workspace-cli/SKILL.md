@@ -12,6 +12,8 @@ Expert guidance and automation for Google Workspace administration using the ope
 > **Verify before scripting:** `gws` generates commands at runtime from Google's API discovery documents, and the CLI is pre-v1.0. Always confirm a command's exact surface with `gws --help`, `gws <service> --help`, or `gws schema <service>.<resource>.<method>` before putting it in automation. The commands in this skill were not run against a specific release, so no version number is given as checked. Commands in this skill marked *(verify)* are illustrative of the `gws <service> <resource> <method>` pattern and must be checked against your installed version.
 
 
+**Source check by AI Blocks, 28 Oct 2026:** The [project README](https://github.com/googleworkspace/cli) documents auth login -s, auth export --unmasked, schema, --params, --json, --dry-run and --page-all. It says this is not an officially supported Google product. This was a documentation check; no sign-in or Workspace API call was run. Keep the installed-version help checks below, because generated commands can change.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

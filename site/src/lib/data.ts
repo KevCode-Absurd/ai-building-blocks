@@ -1,4 +1,5 @@
 import type { Face } from "./face";
+import type { FactCheck } from "./fact-checks";
 import { useCallback, useEffect, useState } from "react";
 import { trackUxEvent } from "./ux-events";
 import { migrateSlugs } from "./store";
@@ -88,6 +89,8 @@ export type Plan = {
 };
 /** The full page for one block, loaded when its page opens. */
 export type Page = {
+  /** Scoped source checks; these do not claim a successful live test. */
+  fact_checks?: FactCheck[];
   /** Reviewed method adapters for this skill, generated from the published inputs and steps. */
   copyable?: ReturnType<typeof import('./copyable-task.mjs').makeTaskRecipe>;
   headline: string; subhead: string; explain: string; when: string[];

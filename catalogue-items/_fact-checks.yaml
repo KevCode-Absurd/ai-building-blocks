@@ -1,0 +1,130 @@
+# Scoped records from actual source reviews. A source date is not a live test or compliance decision.
+schema: abb-fact-checks/1
+checks:
+  eu-ai-act-risk-classifier:
+    - status: docs_checked
+      scope: Chapter and section labels, Annex II and XIV labels, and Article 113 application dates were compared with the
+        Commission explorer. Other legal claims need a case-specific check.
+      checked_on: 2026-10-28
+      sources:
+        - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99
+        - https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-2
+        - https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-14
+        - https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113
+      reviewed_files:
+        imported/eu-ai-act-risk-classifier/SKILL.md: 2d59b44d3324ac3854d140d4940e5cfa94c2f9528d35999a8a2b1877966d1f04
+        imported/eu-ai-act-risk-classifier/references/eu_ai_act_titles.md: 7f4a1eae11408b4fc1a368636a98097948255f716ac1adae28fdbbc0209911fd
+    - status: docs_checked
+      scope: Annex IV has nine documentation points, including point 4 on why the chosen performance metrics are appropriate.
+        The bundled planner was corrected to include that point. This does not establish compliance.
+      checked_on: 2026-10-28
+      sources:
+        - https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-4
+      reviewed_files:
+        imported/eu-ai-act-risk-classifier/scripts/conformity_assessment_planner.py: 67d6e45518b8af8cdae8a77ed43521fc9b65fae3b133f76f90eac219cf18ad7c
+  uk-cyber-essentials-checker:
+    - status: docs_checked
+      scope: NCSC requirements v3.3 start on 27 April 2026. IASME calls the matching question set Danzell. This check covers
+        the version and start date only.
+      checked_on: 2026-10-28
+      sources:
+        - https://www.ncsc.gov.uk/cyberessentials/resources
+        - https://iasme.co.uk/cyber-essentials/preview-the-self-assessment-questions-for-cyber-essentials/
+      reviewed_files:
+        imported/uk-cyber-essentials-checker/SKILL.md: a1a996dd5d6014fb1275c8d145b746749102fa38788f6153eb425dc89d00d3f8
+    - status: source_dated
+      scope: Other prices, insurance terms and deadlines retain the author’s 14 September 2026 figures. Check them separately
+        before relying on them.
+      source_date: 2026-09-14
+      sources:
+        - https://www.ncsc.gov.uk/cyberessentials/resources
+        - https://iasme.co.uk/cyber-essentials/preview-the-self-assessment-questions-for-cyber-essentials/
+      reviewed_files:
+        imported/uk-cyber-essentials-checker/SKILL.md: a1a996dd5d6014fb1275c8d145b746749102fa38788f6153eb425dc89d00d3f8
+  stock-count-updater:
+    - status: docs_checked
+      scope: Shopify CLI store auth requires --store and comma-separated --scopes. The auth login reference does not list
+        --store. No sign-in or store operation was run.
+      checked_on: 2026-10-28
+      sources:
+        - https://shopify.dev/docs/api/shopify-cli/general-commands/auth-login
+        - https://shopify.dev/docs/api/shopify-cli/store/store-auth
+      reviewed_files:
+        imported/stock-count-updater/SKILL.md: 72a0835943ec076d9b37af2b49432095d025cd63da46417b127c214857cabfde
+  gift-card-issuer:
+    - status: docs_checked
+      scope: The 2026-10 giftCardCreate payload returns giftCardCode beside giftCard. GiftCard exposes maskedCode and
+        lastCharacters. tagsAdd supports a Customer ID with id and tags. No gift card or tag was created.
+      checked_on: 2026-10-28
+      sources:
+        - https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/giftCardCreate
+        - https://shopify.dev/docs/api/admin-graphql/2026-10/objects/GiftCard
+        - https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/tagsAdd
+      reviewed_files:
+        imported/gift-card-issuer/SKILL.md: f3e2efbfe3e69e6611f0836c274904e802b638e0d635c1b1db69ab447f2c4e93
+  headless-store-builder:
+    - status: docs_checked
+      scope: Hydrogen 2026-10 migration and hosted customer account guidance informed the pinned starter rewrite. This record
+        covers documentation only. Real-store access, customer sign-in, payments and deployment were not tested.
+      checked_on: 2026-10-28
+      sources:
+        - https://shopify.dev/docs/storefronts/hydrogen/migrate
+        - https://shopify.dev/docs/storefronts/hydrogen/customer-accounts
+      reviewed_files:
+        imported/headless-store-builder/SKILL.md: b036c0e3c71b1da679691dc0faf84b6dce03036bbc76542feb4d6228766f46ad
+        imported/headless-store-builder/references/starter-snapshot.json: 5ec90febc6e76c1e3c3b6a6c3d57d1dbccf59af6ba8b80d51df796cdc2700b8c
+  google-workspace-cli:
+    - status: docs_checked
+      scope: The project README documents auth login -s, auth export --unmasked, schema, --params, --json, --dry-run and
+        --page-all. It says this is not an officially supported Google product. No sign-in or API call was run.
+      checked_on: 2026-10-28
+      sources:
+        - https://github.com/googleworkspace/cli
+      reviewed_files:
+        imported/google-workspace-cli/SKILL.md: 87c3369e24fcdeea4030fb1435b4347ec900bddc1ab654aa6f5ebb275bb82db8
+  low-memory-fine-tuning-guide:
+    - status: docs_checked
+      scope: TRL SFTConfig uses max_length and SFTTrainer uses processing_class. Other libraries may use max_seq_length for
+        model loading. No training was run.
+      checked_on: 2026-10-28
+      sources:
+        - https://huggingface.co/docs/trl/sft_trainer
+      reviewed_files:
+        imported/low-memory-fine-tuning-guide/SKILL.md: 2cd8ff2176ab034984eef64e8e83020048c523f86fbd346898dc1535633277e5
+  model-preference-tuning-guide:
+    - status: docs_checked
+      scope: TRL supervised fine-tuning uses max_length and processing_class. This check does not establish a compatible
+        pinned PPO release. The PPO examples still need that separate check. No training was run.
+      checked_on: 2026-10-28
+      sources:
+        - https://huggingface.co/docs/trl/sft_trainer
+        - https://huggingface.co/docs/trl/main/en/ppo_trainer
+      reviewed_files:
+        imported/model-preference-tuning-guide/SKILL.md: f58a51e378233496bfe73c96810ac3cdeb417645c912e947386606837db77fe3
+        imported/model-preference-tuning-guide/references/sft-training.md: 78281ff38e232aeaa299dafef33ebd0a163d7dfd70753a8c2eee8e7cd423ae02
+  meta-pixel-capi-fix:
+    - status: not_checked
+      scope: We could not check whether test events are excluded from reporting or ad optimisation. Meta’s documentation
+        returned a rate-limit error. Keep the test pixel, test code and approval safeguards. No events were sent.
+      attempted_on: 2026-10-28
+      sources:
+        - https://developers.facebook.com/docs/marketing-api/conversions-api/using-the-api/
+      reviewed_files:
+        imported/meta-pixel-capi-fix/SKILL.md: e387312bf0e604b53462255921f8f9764804168204027a1a7c884bd47fa571fa
+  uae-rules-finder:
+    - status: source_dated
+      scope: The source says its rules, fines and deadlines were checked on 15 August 2026. This is the author’s date. Confirm
+        each figure and date in the current official text before using it.
+      source_date: 2026-08-15
+      sources:
+        - https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/aab13e1/plugins/uae-grc/skills/uae-grc
+      reviewed_files:
+        imported/uae-rules-finder/SKILL.md: 0b78d542fc253785354975fece3ea096ebc13823ab3f1b3acc15f8875130adad
+  saudi-rules-finder:
+    - status: not_checked
+      scope: The current instructions require a new source check for each task. No independent check of the live Saudi rules,
+        applicability matrix or deadlines is recorded here.
+      sources:
+        - https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/aab13e1/plugins/saudi-arabia-grc/skills/saudi-arabia-grc
+      reviewed_files:
+        imported/saudi-rules-finder/SKILL.md: 06ca99fd9fa29fc59cf9c3bc129f40c41d883f1e24787e3c7776c7d4f5e21721

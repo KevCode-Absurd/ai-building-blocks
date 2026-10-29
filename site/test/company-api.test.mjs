@@ -198,3 +198,23 @@ test('personal saved library uses a distinct OAuth grant and reuses a saved work
     assert.match(Buffer.from(resource.structuredContent.content, 'base64').toString(), /Return the supplied facts concisely/);
   } finally { await client.close(); }
 });
+
+test('verified connection limits survive refresh and forged caller IDs while independent grants stay separate', async () => {
+  const counts = new Map(), seen = [];
+  const f = await fixture({ API_READ_LIMITER: { async limit({ key }) { seen.push(key); if (!key.startsWith('mcp-grant:')) return { success: true }; const count = (counts.get(key) ?? 0) + 1; counts.set(key, count); return { success: count <= 2 }; } } });
+  const first = await connect(f), read = token => f.get('/api/v1/company/'+workspace+'/items', { authorization: 'Bearer '+token, 'x-api-key': 'synthetic-changing-key', 'x-user-id': 'synthetic-changing-user' });
+  assert.equal((await read(first.token.access_token)).status, 200); assert.equal((await read(first.token.access_token)).status, 200);
+  const denied = await read(first.token.access_token); assert.equal(denied.status, 429); assert.equal(denied.headers.get('retry-after'), '60'); assert.match(denied.headers.get('access-control-expose-headers'), /Retry-After/);
+  assert.doesNotMatch(await denied.text(), /INTERNAL EVIDENCE|private-skill|OWNER_HASH/);
+  const refreshed = await f.post('/oauth/token', { grant_type: 'refresh_token', client_id: first.client.client_id, refresh_token: first.token.refresh_token, resource: endpoint }); assert.equal(refreshed.status, 200);
+  const rotated = await refreshed.json(); assert.equal((await read(rotated.access_token)).status, 429);
+  const other = await connect(f, 'Independent synthetic connection'); assert.equal((await read(other.token.access_token)).status, 200);
+  assert.equal(counts.size, 2); assert.ok(seen.includes(edge['cf-connecting-ip']), 'the shared IP guard still runs');
+  const before = [...counts.values()].reduce((a,b)=>a+b,0); assert.equal((await read('invalid-synthetic-token')).status, 401); assert.equal([...counts.values()].reduce((a,b)=>a+b,0), before);
+});
+
+test('connection protection outages fail closed before returning private data', async () => {
+  const f = await fixture({ API_READ_LIMITER: { async limit({ key }) { if (key.startsWith('mcp-grant:')) throw Error('Synthetic limiter outage'); return { success: true }; } } });
+  const connection = await connect(f), response = await f.get('/api/v1/company/'+workspace+'/items', { authorization: 'Bearer '+connection.token.access_token });
+  assert.equal(response.status, 503); assert.equal(response.headers.get('cache-control'), 'private, no-store'); assert.doesNotMatch(await response.text(), /INTERNAL EVIDENCE|private-skill|OWNER_HASH/);
+});

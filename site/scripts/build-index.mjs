@@ -2,6 +2,7 @@
 // plus each block's SKILL.md under public/skills/<slug>/ (fetched only when a block page opens), and a zip for a skill with extra files.
 import fs from "node:fs";
 import { primarySkillFile } from "./lib/skill-file.mjs";
+import { loadFactChecks } from "./lib/fact-checks.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import path from "node:path";
 import YAML from "yaml";
@@ -20,6 +21,7 @@ await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
+const factChecks = loadFactChecks(ROOT), sourceFactRows = new Map();
 const classificationFile = path.join(ROOT, "classification.yaml");
 const classifications = compileClassifications(fs.existsSync(classificationFile) ? YAML.parse(fs.readFileSync(classificationFile, "utf8")) : {});
 const copyFile = path.join(ROOT, "display-copy.yaml");
@@ -127,6 +129,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     seen.add(slug);
     const imported = dirName === "imported" || item.origin === "imported";
     const skill = fs.readFileSync(skillPath, "utf8");
+  sourceFactRows.set(path.basename(folder), factChecks.forItem(path.basename(folder), skill));
     fs.mkdirSync(path.join(OUT_SKILLS, slug), { recursive: true });
     fs.copyFileSync(skillPath, path.join(OUT_SKILLS, slug, "SKILL.md"));
     // Reference files and a licence travel with the skill, so a download installs complete.
@@ -246,6 +249,7 @@ for (const r of roster.minds) {
   }
   mindUseCases.set(r.slug, m.use_cases ?? []);
   const skill = fs.readFileSync(skillPath, "utf8");
+  sourceFactRows.set(path.basename(folder), factChecks.forItem(path.basename(folder), skill));
   fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
   fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
   // The parts go too, so a mind's pack can carry its playbook, personality, knowledge and sources as their own files.
@@ -310,6 +314,8 @@ for (const r of roster.minds) {
 for (const slug of Object.keys(copyEdits)) if (!copyUsed.has(slug)) problems.push(`display-copy.yaml: unknown or unsupported block "${slug}"`);
 
 // Exclude reviewed risks and their dependents from every published asset. Keep sources intact for review.
+factChecks.validateKnown(new Set(sourceFactRows.keys()));
+console.log("Source-check records:", JSON.stringify(factChecks.summary()));
 const quarantineFile = path.join(ROOT, "quarantine.yaml");
 const quarantine = fs.existsSync(quarantineFile) ? YAML.parse(fs.readFileSync(quarantineFile, "utf8")) ?? {} : {};
 const blocked = quarantineClosure(blocks, Object.keys(quarantine));
@@ -376,6 +382,9 @@ for (const b of blocks) {
   // twin is made from this one file and SKILL.md instead of the whole catalogue.
   if (b.published) pageData.published = b.published;
   pageData.facts = pageFacts(b, { bySlug, describe, taskName: (t) => TASKS.find((x) => x.id === t)?.name });
+  // Only the selected page carries source checks; the catalogue list and starter stay small.
+  const checks = sourceFactRows.get(b.slug);
+  if (checks?.length) pageData.fact_checks = checks;
   // The names of its extra files (a skill's are in its zip; a mind's are served one by one for its pack).
   if (b.files.length) pageData.files = b.files;
   // An imported skill's GitHub link, licence, first name and commit are only shown on its page; the list keeps just the maker.

@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import Comments from "./Comments";
+import FactCheckNotes from "./FactCheckNotes";
 import { StarButton } from "./CommunityStars";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, KitMenu } from "./ui";
@@ -522,6 +523,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             <Next plan={p!.plan!} />
           </section>
         )}
+
+        <FactCheckNotes checks={p?.fact_checks} />
 
         <DetailsPanel watch={p}>
           <nav className="bp-jump" aria-label="In the details">

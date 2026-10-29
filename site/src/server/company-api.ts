@@ -6,6 +6,7 @@ import { SavedLibraryMcpService, savedLibraryMcpTools } from './saved-library-mc
 import { d1Library, type LibraryStore } from './account-library.ts';
 import { d1Minds, type MindStore } from './account-minds.ts';
 import { PublicApiError } from './public-catalogue.ts';
+import { verifiedGrantLimit } from './mcp-grant-limit.ts';
 import { MAX_PUBLIC_BODY_BYTES, publicApiSecurity, publicCatalogueService, publicJson, readPublicBody, type PublicApiEnv } from './public-api.ts';
 import { d1McpOAuthStore, handleMcpOAuth, validateAuthorizationRequest, verifyMcpToken, OAuthError, type McpOAuthStore } from './mcp-oauth.ts';
 
@@ -35,7 +36,7 @@ export async function handleCompanyApi(request: Request, env: CompanyApiEnv, dep
     headers.set('cache-control', 'private, no-store'); headers.set('vary', 'Authorization, Origin');
     headers.set('x-content-type-options', 'nosniff'); headers.set('x-robots-tag', 'noindex, nofollow');
     headers.set('referrer-policy', 'no-referrer');
-    headers.set('access-control-expose-headers', 'WWW-Authenticate, MCP-Protocol-Version');
+    headers.set('access-control-expose-headers', 'WWW-Authenticate, MCP-Protocol-Version, Retry-After');
     if (request.headers.get('origin')) headers.set('access-control-allow-origin', request.headers.get('origin')!);
     return new Response(request.method === 'HEAD' ? null : out.body, { status: out.status, headers });
   };
@@ -113,6 +114,8 @@ export async function handleCompanyApi(request: Request, env: CompanyApiEnv, dep
     const challenge = { 'www-authenticate': `Bearer resource_metadata="${origin}/.well-known/oauth-protected-resource${new URL(resource).pathname}", scope="${scope}"` };
     const identity = await verifyMcpToken(new Request(resource, { headers: request.headers }), oauth);
     if (!identity || identity.resource !== resource) return finish(privateJson(401, { error: 'invalid_token', error_description: 'Connect your work account to this workspace.' }, challenge));
+    const limited = await verifiedGrantLimit(request, env, identity.grantId);
+    if (limited) return finish(limited);
     const company = service(identity.userId, resource);
     // Authorize even initialization/tool discovery, not just later reads.
     await company.callTool(personal ? 'list_saved_items' : 'list_company_items', { limit: 1 });

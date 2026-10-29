@@ -6,6 +6,8 @@
 // Checklists: the technical-seo-auditor, seo-site-auditor, ai-search-visibility-optimiser, structured-data-writer and
 // tool-pages-seo-fixer skills in our own library (catalogue-items/imported/).
 import fs from "node:fs";
+import { factCheckHtml } from "./lib/fact-check-html.mjs";
+import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -332,7 +334,8 @@ function pageFor(url) {
         ...(text(page.subhead) ? [`<p class="bp-sub">${esc(text(page.subhead))}</p>`, `<p>${esc(b.summary)}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`]),
         (page.hire?.jobs ?? []).length || mindFit.fitHtml || mindFit.sampleHtml ? `<section id="get"><h2>What you get</h2>${(page.hire?.jobs ?? []).length && !mindFit.hasSample ? `<p>What you can hire ${esc(b.name)} for.</p>${list(page.hire.jobs.slice(0, 5).map((j) => esc(j.title)))}` : ""}${mindFit.sampleHtml}${mindFit.fitHtml}</section>` : "",
         `<section id="task-start"><h2>Run it</h2><p>Add ${esc(b.name)} to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Copy and download buttons are on the page.</p></section>`,
-        `<details id="details"><summary><h2>Details</h2></summary>${[
+        factCheckHtml(page.fact_checks, esc),
+      `<details id="details"><summary><h2>Details</h2></summary>${[
           ideas.length ? `<h3>Big ideas</h3>${list(ideas.map((i) => `<b>${esc(i.title)}</b>: ${esc(words(text(i.text), 40))}`))}` : "",
           (page.hire?.jobs ?? []).length ? `<h3>Hire ${esc(b.name)} for</h3>${list(page.hire.jobs.slice(0, 8).map((j) => `<b>${esc(j.title)}</b>: ${esc(words(text(j.text), 30))}`))}` : "",
           skills.length ? `<h3>Skills from their work</h3>${list(skills.map(link))}` : "",
@@ -372,6 +375,7 @@ function pageFor(url) {
   const lead = subhead ? `${subhead}${isCoordinator ? ` ${kindLine}` : ""}` : `${b.name} is a free ${noun}${job ? ` for the job "${job}"` : ""}. ${kindLine}`;
   const kindKey = b.type === "agent" ? "agent" : isFlow ? "workflow" : b.type === "prompt" ? "prompt" : "skill";
   const seo = itemSeo({ block: b, page, job, kind: kindKey, steps: steps.map((x) => x.name) });
+  const usage = catalogueUsageHowTo({ name: b.name, pageUrl: SITE + url, steps: page.how_to_use });
   const rowText = value => typeof value === "string" ? value : Object.entries(value ?? {}).map(([, part]) => typeof part === "string" ? part : "").filter(Boolean).join(". ");
   const requiresFiles = !!b.hasFiles || b.type === "agent";
   const nextSteps = page.plan?.next ?? [];
@@ -396,6 +400,7 @@ function pageFor(url) {
       give.length ? `<section id="task-start"><h2>Fill it in</h2><p>${isFlow ? "Gather these first. You add them in your AI after you download." : "Add what this task works from, then copy the request."}</p>${list(give.map(esc))}</section>` : "",
       `<section id="${give.length ? "run" : "task-start"}"><h2>Run it</h2><p>${isCoordinator ? `Download the complete workflow pack. Give it to your AI, then ask it to read ${coordinatorFiles} and follow the governing instructions and checkpoints.` : isFlow ? "Get the plan and all the skill files. Give the complete pack to your AI, then ask it to follow HANDOFF.md." : requiresFiles ? "Download the complete instructions and supporting files. Add them to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Pasting the instructions into a chat works too." : "Add your task details in the form when the page opens. Copy the complete request into your AI. Or add the skill to Claude, ChatGPT or Gemini once and ask for it by name. Your AI does the work."}</p>${!isFlow ? `<p><a href="/skills/${esc(slug)}${b.hasFiles ? ".zip" : "/SKILL.md"}" download>${b.hasFiles ? "Download all files" : "Download the instructions"}</a></p>` : ""}</section>`,
       nextSteps.length ? `<section id="next"><h2>What to do next</h2>${list(nextSteps.map((x) => `<a href="${esc(String(x.url).replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(x.name)}</a>: ${esc(x.label)}`))}</section>` : "",
+      factCheckHtml(page.fact_checks, esc),
       `<details id="details"><summary><h2>Details</h2></summary>${[
         by && src.url ? `<p class="small">From ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; shared under its licence, with a plain name for this library.</p>` : "",
         explain ? `<section id="explain"><h3>What it does</h3><p>${esc(words(explain, 150))}</p></section>` : "",
@@ -410,7 +415,7 @@ function pageFor(url) {
     ].join(""),
     main: isFlow && steps.length
       ? { "@type": "HowTo", name: b.name, description: b.summary, step: steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.name, text: s.summary, url: `${SITE}${hrefOf(s)}` })) }
-      : { "@type": "CreativeWork", name: b.name, description: b.summary, inLanguage: "en", isAccessibleForFree: true, keywords: job || undefined, publisher: { "@id": `${SITE}/#org` },
+      : { "@type": "CreativeWork", name: b.name, description: b.summary, inLanguage: "en", isAccessibleForFree: true, keywords: job || undefined, publisher: { "@id": `${SITE}/#org` }, ...(usage ? { hasPart: usage } : {}),
           author: by ? { "@type": "Organization", name: by } : { "@id": `${SITE}/#org` }, ...(src.url ? { isBasedOn: src.url } : {}), ...(LICENCE_URL(src.licence) ? { license: LICENCE_URL(src.licence) } : {}),
           encoding: { "@type": "MediaObject", contentUrl: `${SITE}/skills/${slug}/SKILL.md`, encodingFormat: "text/markdown" } },
     markdown: isFlow ? null : `/skills/${slug}/SKILL.md`,
@@ -639,9 +644,11 @@ write("/jobs", render("/jobs", {
 }, { plain: true }));
 for (const [t, bs] of tasks) {
   const name = TASK_NAMES[t] ?? t;
+  // Keep the same existing recommendation order across the intro and paginated list.
+  const ranked = bestOf(bs, bs.length);
   for (let pg = 0; pg * PER < bs.length; pg++) {
     const url = jobHref(t) + (pg ? `/${pg + 1}` : "");
-    const items = bs.slice(pg * PER, (pg + 1) * PER);
+    const items = ranked.slice(pg * PER, (pg + 1) * PER);
     const pages = Math.ceil(bs.length / PER);
     const nav = pages > 1 ? `<nav class="hub-pages" aria-label="Pages">${Array.from({ length: pages }, (_, i) => (i === pg ? `<b aria-current="page">Page ${i + 1}</b>` : `<a href="${jobHref(t)}${i ? `/${i + 1}` : ""}">Page ${i + 1}</a>`)).join("")}</nav>` : "";
     write(url, render(url, {

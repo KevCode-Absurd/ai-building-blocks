@@ -1,4 +1,6 @@
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
+import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
+import { scanSourceFiles } from "./community-safety.ts";
 import { unzipSync } from "fflate";
 import { makeSearchDocument } from "../lib/search-document.mjs";
 import { buildLibrarySearchIndex, searchLibraryIndex, validateLibrarySearchIndex, type LibrarySearchIndex, type SearchHit } from "../lib/library-search-core.ts";
@@ -485,7 +487,7 @@ export class PublicCatalogueService {
     return this.blockItem(c, name, revision, detailed);
   }
 
-  private async page(entry: Entry): Promise<{ source?: unknown; stepNotes?: string[]; how_to_use?: unknown }> {
+  private async page(entry: Entry): Promise<{ source?: unknown; stepNotes?: string[]; how_to_use?: unknown; fact_checks?: FactCheck[] }> {
     if (!entry.page) return {};
     try { return JSON.parse(decoder.decode(await this.read(entry.page.path, 4_000_000, entry.page))); }
     catch (error) { if (error instanceof PublicApiError) throw error; return fail(503, "invalid_manifest", "The published item page is invalid."); }
@@ -496,7 +498,8 @@ export class PublicCatalogueService {
   private async blockItem(c: Catalogue, name: string, revision: string, detailed: boolean) {
     const { item, entry } = this.entry(c, name, revision);
     const isFlow = workflow(item), page = await this.page(entry);
-    const head = { ...this.blockRow(item), item_type: item.type, updated: entry.updated ?? null, job: item.task ?? null, level: item.level ?? null, skill_uri: this.skillEntry(c, name)?.uri ?? null };
+    const head = { ...this.blockRow(item), item_type: item.type, updated: entry.updated ?? null, job: item.task ?? null, level: item.level ?? null, skill_uri: this.skillEntry(c, name)?.uri ?? null,
+      ...(page.fact_checks?.length ? { fact_checks: page.fact_checks.map(check => ({ ...check, ...factCheckView(check) })) } : {}) };
     const person = item.type === "mind" ? { identity: item.identity ?? null, years: item.years ?? null, seats: item.seats ?? [], area: item.area ?? null, skills: (item.skills ?? []).slice(0, 12) } : {};
     const inventory = (entry.files ?? []).filter(f => f.path !== `${name}/SKILL.md`);
     // What usually goes before and after this item, and the input each one hands over (plan_workflow with this slug lists more).
@@ -777,6 +780,7 @@ export class PublicCatalogueService {
     const userInputs = array(args.user_inputs, "user_inputs", 40, true).map(t => string(t, "user input type", 100));
     const approved = hash(args.approved_draft_hash, true); const c = await this.catalogue();
     const custom = new Map<string, CustomSkill>();
+    const customReviews = [];
     for (const raw of array(args.custom_skills, "custom_skills", 10, true)) {
       const s = obj(raw, "custom skill"); keys(s, ["slug", "name", "instructions", "inputs", "outputs"]);
       const id = slug(s.slug);
@@ -785,6 +789,9 @@ export class PublicCatalogueService {
       try { verifyLocalReferences({ [`skills/${id}/SKILL.md`]: encoder.encode(instructions) }); }
       catch { return fail(400, "missing_custom_resources", "Custom skills cannot reference missing local files. Supply self-contained instructions in this release."); }
       const item = { slug: id, name: string(s.name, "custom name", 120), instructions, inputs: ports(s.inputs), outputs: ports(s.outputs) };
+      const scan = await scanSourceFiles([{ path: "listing.txt", content: JSON.stringify({ name: item.name, inputs: item.inputs, outputs: item.outputs }) }, { path: "SKILL.md", content: instructions }]);
+      if (scan.blocked) fail(422, "unsafe_custom_skill", "Custom source contains a blocked pattern. Review its instructions and metadata before preparing again. Static checks do not establish that other source is safe or authorized.");
+      customReviews.push({ slug: id, ...scan, notice: "Static source review only. Findings need host review; this does not establish safe behavior or execution permission." });
       custom.set(id, { ...item, revision_sha256: await sha256(encoder.encode(stable(item))) });
     }
     // slugs: each step pinned to its current revision, each after the one before (as get_workflow lists them).
@@ -852,6 +859,7 @@ export class PublicCatalogueService {
     const changes = this.reviewView(c, review, steps, custom, { name, goal, governing: governance.map(g => g.slug) }, detailed);
     return {
       schema: "abb-workflow-preparation/1", draft_sha256: draftHash, workflow: draft, resources,
+      ...(customReviews.length ? { custom_skill_reviews: customReviews } : {}),
       approval: { status: approved ? "HOST_REPORTED_APPROVED" : "REVIEW_REQUIRED", approved_draft_hash: approved || null, independently_verified: false, grants_execution_authority: false, notice: "A supplied hash only binds the host's approval report to this proposal. It does not prove human consent or authorize external actions." },
       state: "NOT_STARTED", execution: { location: "user-ai-environment", model_calls_by_service: 0, stored_by_service: false, execution_policy: executionPolicy(), instruction_coverage: "NOT_REVIEWED", capability_check: "NOT_RUN", semantic_compatibility: "NOT_REVIEWED", input_acceptance: "NOT_RUN" },
       inputs: steps.flatMap(step => { const local = custom.get(step.slug); const item = c.bySlug.get(step.slug); return (local?.inputs ?? cataloguePorts(item?.inputs)).map(p => ({ id: `${step.id}-input-${p.type}`, consumer_step: step.id, type: p.type, required: p.required, status: "MISSING", value: null, acceptance_decision: null, producer_candidates: steps.filter(s => step.depends_on.includes(s.id) && (custom.get(s.slug)?.outputs ?? cataloguePorts(c.bySlug.get(s.slug)?.outputs)).some(o => o.type === p.type)).map(s => ({ step_id: s.id, accepted_revision: null })) })); }),

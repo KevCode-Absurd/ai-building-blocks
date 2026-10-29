@@ -14,9 +14,13 @@ const rules: { id: string; severity: SafetyFinding["severity"]; pattern: RegExp;
   { id: "process-execution", severity: "review", pattern: /\b(?:subprocess|child_process|os\.system|shell\s*=\s*True|invoke-expression|exec\s*\(|eval\s*\()/i, message: "Review process execution in an isolated environment." },
 ];
 export async function scanCommunity(content: CommunityContent): Promise<SafetyReport> {
-  const digest = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(JSON.stringify(content))))].map(x => x.toString(16).padStart(2, "0")).join("");
+  return scanSourceFiles([{ path: "listing.txt", content: `${content.title}\n${content.description}\n${content.author}` }, { path: "SKILL.md", content: content.instructions }, ...content.files], content);
+}
+
+/** Shared static review of source text. No code execution, downloads or sharing-licence assumptions. */
+export async function scanSourceFiles(files: { path: string; content: string }[], digestContent: unknown = files): Promise<SafetyReport> {
+  const digest = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(JSON.stringify(digestContent))))].map(x => x.toString(16).padStart(2, "0")).join("");
   const findings: SafetyFinding[] = [];
-  const files = [{ path: "listing.txt", content: `${content.title}\n${content.description}\n${content.author}` }, { path: "SKILL.md", content: content.instructions }, ...content.files];
   for (const file of files) {
     if (/\.(py|js|mjs|ts|sh|ps1)$/i.test(file.path)) findings.push({ rule: "executable-source", severity: "review", file: file.path, line: 1, message: "Code requires isolated behavior testing and human source review." });
     const normalized = file.content.normalize("NFKC").replace(/[\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]/g, "");

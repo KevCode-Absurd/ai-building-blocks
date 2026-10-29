@@ -208,14 +208,14 @@ export async function handleMcpOAuth(request: Request, env: McpOAuthEnv, store: 
 }
 
 /** Only an opaque OAuth access token is accepted; query strings, cookies and Clerk sessions are not borrowed. */
-export async function verifyMcpToken(request: Request, store: McpOAuthStore): Promise<{ userId: string; workspaceToken?: string; resource: string; scope: McpOAuthScope } | null> {
+export async function verifyMcpToken(request: Request, store: McpOAuthStore): Promise<{ userId: string; grantId: string; workspaceToken?: string; resource: string; scope: McpOAuthScope } | null> {
   const value = request.headers.get("authorization") ?? "";
   if (!/^Bearer [a-f0-9]{64}$/.test(value)) return null;
   const grant = await store.getAccess(await hash(value.slice(7)), nowSeconds());
   const url = new URL(request.url);
   if (!/^\/mcp\/(?:personal|company(?:\/[A-Za-z0-9_-]{8,128})?)$/.test(url.pathname) || !grant || grant.revoked_at !== null || grant.scope !== scopeForResource(grant.resource) || grant.resource !== `${url.origin}${url.pathname}`) return null;
   const workspaceToken = url.pathname.startsWith("/mcp/company/") ? url.pathname.slice("/mcp/company/".length) : undefined;
-  return { userId: grant.user_id, ...(workspaceToken ? { workspaceToken } : {}), resource: grant.resource, scope: grant.scope as McpOAuthScope };
+  return { userId: grant.user_id, grantId: grant.id, ...(workspaceToken ? { workspaceToken } : {}), resource: grant.resource, scope: grant.scope as McpOAuthScope };
 }
 
 export function memoryMcpOAuthStore(): McpOAuthStore {

@@ -101,7 +101,8 @@ for (const backend of ['memory', 'D1']) test(`${backend}: personal saved-library
   const token = await invoke(store, '/oauth/token', { ...exchange(client, code), resource: personal });
   assert.equal(token.status, 200); assert.equal(token.body.scope, 'saved:read');
   const identity = await verifyMcpToken(accessRequest(token.body.access_token, personal), store);
-  assert.deepEqual(identity, { userId: 'user_abc', resource: personal, scope: 'saved:read' });
+  assert.match(identity.grantId, /^[a-f0-9]{64}$/);
+  assert.deepEqual(identity, { userId: 'user_abc', grantId: identity.grantId, resource: personal, scope: 'saved:read' });
   assert.equal(await verifyMcpToken(accessRequest(token.body.access_token, resource), store), null);
   assert.equal(await verifyMcpToken(accessRequest(token.body.access_token, `${origin}/mcp/company`), store), null);
   const refresh = { grant_type: 'refresh_token', client_id: client.client_id, refresh_token: token.body.refresh_token, resource: personal };
@@ -109,7 +110,7 @@ for (const backend of ['memory', 'D1']) test(`${backend}: personal saved-library
   assert.equal((await invoke(store, '/oauth/token', { ...refresh, resource, scope: 'company:read' })).status, 400);
   const rotated = await invoke(store, '/oauth/token', { ...refresh, scope: 'saved:read' });
   assert.equal(rotated.status, 200); assert.equal(rotated.body.scope, 'saved:read');
-  assert.ok(await verifyMcpToken(accessRequest(rotated.body.access_token, personal), store));
+  assert.equal((await verifyMcpToken(accessRequest(rotated.body.access_token, personal), store)).grantId, identity.grantId);
   const companyCode = await getCode(store, client), company = await invoke(store, '/oauth/token', exchange(client, companyCode));
   assert.equal(company.status, 200);
   assert.equal(await verifyMcpToken(accessRequest(company.body.access_token, personal), store), null);
@@ -189,7 +190,7 @@ for (const backend of ['memory', 'D1']) test(`${backend}: PKCE exchange, one-tim
   assert.equal(await verifyMcpToken(new Request(resource, { headers: { authorization: 'Bearer clerk_session_value' } }), store), null);
   assert.equal((await invoke(store, '/oauth/token', { grant_type: 'refresh_token', client_id: client.client_id, refresh_token: token.body.refresh_token, resource: `${origin}/mcp/company/another_abcdefgh` })).status, 400);
   const refreshed = await invoke(store, '/oauth/token', { grant_type: 'refresh_token', client_id: client.client_id, refresh_token: token.body.refresh_token, resource }); assert.equal(refreshed.status, 200);
-  assert.ok(await verifyMcpToken(accessRequest(refreshed.body.access_token), store));
+  assert.equal((await verifyMcpToken(accessRequest(refreshed.body.access_token), store)).grantId, verified.grantId);
   if (fixture.db) {
     const stored = fixture.db.prepare('SELECT * FROM mcp_oauth_tokens').all();
     assert.ok(stored.length >= 4); assert.ok(stored.every(row => /^[a-f0-9]{64}$/.test(row.token_hash)));

@@ -53,8 +53,42 @@ export async function writePublicLibrarySearch(publicRoot = path.resolve(import.
     await fs.mkdir(path.dirname(path.join(outputRoot, file)), { recursive: true });
     await fs.writeFile(path.join(outputRoot, file), bytes); files[file] = sha(bytes);
   }
-  console.log(JSON.stringify({ searchDocuments: result.index.docs.length, searchTerms: result.index.terms.length, fullBytes: result.bytes.length, manifestBytes: artifacts['data/library-search.json'].length, files: Object.keys(files).length, sourceHash: result.index.sourceHash, corpusHash: result.index.corpusHash }));
-  return { ...result, files };
+  const cleanup = await pruneLibrarySearchShards(outputRoot);
+  console.log(JSON.stringify({ searchDocuments: result.index.docs.length, searchTerms: result.index.terms.length, fullBytes: result.bytes.length, manifestBytes: artifacts['data/library-search.json'].length, files: Object.keys(files).length, sourceHash: result.index.sourceHash, corpusHash: result.index.corpusHash, cleanup }));
+  return { ...result, files, cleanup };
+}
+
+/** Only remove obsolete content-addressed shards after every current shard is verified. */
+export async function pruneLibrarySearchShards(outputRoot) {
+  const root = await fs.realpath(path.resolve(outputRoot));
+  const folder = path.join(root, 'data/library-search');
+  const manifest = JSON.parse(await fs.readFile(path.join(root, 'data/library-search.json'), 'utf8'));
+  assert(Array.isArray(manifest.shards?.files), 'Missing public search shard inventory');
+  const active = new Set();
+  for (const row of manifest.shards.files) {
+    assert(/^[a-f0-9]{64}$/.test(row.sha256) && row.file === `/data/library-search/${row.sha256}.json`, 'Invalid public search shard path');
+    active.add(`${row.sha256}.json`);
+  }
+  try {
+    assert.equal(await fs.realpath(folder), folder, 'Search shard directory must not be a link');
+  } catch (error) {
+    if (error.code === 'ENOENT' && !active.size) return { removed: 0, bytes: 0 };
+    throw error;
+  }
+  // Plan all removals before deleting anything; never follow links or remove directories.
+  const stale = [];
+  for (const entry of await fs.readdir(folder, { withFileTypes: true })) {
+    if (!/^[a-f0-9]{64}\.json$/.test(entry.name)) continue;
+    assert(entry.isFile() && !entry.isSymbolicLink(), 'Search shard must be a regular file');
+    const file = path.join(folder, entry.name);
+    if (active.has(entry.name)) {
+      assert.equal(sha(await fs.readFile(file)), entry.name.slice(0, -5), 'Search shard checksum mismatch');
+      active.delete(entry.name);
+    } else stale.push({ file, bytes: (await fs.stat(file)).size });
+  }
+  assert.equal(active.size, 0, 'Current search shard is missing; keep old shards until the build succeeds');
+  for (const { file } of stale) await fs.unlink(file);
+  return { removed: stale.length, bytes: stale.reduce((total, row) => total + row.bytes, 0) };
 }
 export function serializeLibrarySearch(index) {
   const artifacts = {}, files = [], size = 1024;

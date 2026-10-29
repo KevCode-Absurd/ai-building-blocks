@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { buildLibrarySearchIndex, searchLibraryIndex, searchShardIds, validateLibrarySearchIndex } from '../src/lib/library-search-core.ts';
-import { buildPublicLibrarySearch, serializeLibrarySearch } from '../scripts/build-library-search.mjs';
+import { buildPublicLibrarySearch, serializeLibrarySearch, pruneLibrarySearchShards } from '../scripts/build-library-search.mjs';
 const sourceHash = 'a'.repeat(64);
 const ranked = (index, query) => [...searchLibraryIndex(index, query)].sort((a, b) => b[1].score - a[1].score);
 
@@ -98,6 +98,40 @@ test('content-addressed query chunks round-trip complete matches without loading
   }
   assert.deepEqual(searchLibraryIndex(manifest, 'deepneedle'), searchLibraryIndex(index, 'deepneedle'));
   assert.equal(searchShardIds(manifest, 'deepneedle').length, 0);
+});
+
+test('search cleanup removes only obsolete generated shards and preserves the complete active index', async t => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'search-cleanup-'));
+  t.after(() => fs.rm(root, { recursive: true, force: true }));
+  const folder = path.join(root, 'data/library-search'); await fs.mkdir(folder, { recursive: true });
+  const index = buildLibrarySearchIndex([{ slug: 'sample', title: 'Sample', body: 'deepneedle' }], sourceHash);
+  const files = serializeLibrarySearch(index);
+  for (const [file, bytes] of Object.entries(files)) await fs.writeFile(path.join(root, file), bytes);
+  const stale = '0'.repeat(64) + '.json'; await fs.writeFile(path.join(folder, stale), 'obsolete');
+  await fs.writeFile(path.join(folder, 'README.md'), 'Keep unrelated files.');
+  const outside = path.join(root, 'keep.json'); await fs.writeFile(outside, 'Keep files outside this directory.');
+  assert.deepEqual(await pruneLibrarySearchShards(root), { removed: 1, bytes: 8 });
+  for (const [file, bytes] of Object.entries(files)) assert.deepEqual(await fs.readFile(path.join(root, file)), bytes);
+  assert.equal(await fs.readFile(path.join(folder, 'README.md'), 'utf8'), 'Keep unrelated files.');
+  assert.equal(await fs.readFile(outside, 'utf8'), 'Keep files outside this directory.');
+  assert.deepEqual(await pruneLibrarySearchShards(root), { removed: 0, bytes: 0 });
+});
+
+test('search cleanup preserves old files if current shards are missing, corrupt or outside the owned folder', async t => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'search-cleanup-invalid-'));
+  t.after(() => fs.rm(root, { recursive: true, force: true }));
+  const folder = path.join(root, 'data/library-search'); await fs.mkdir(folder, { recursive: true });
+  const stale = path.join(folder, '0'.repeat(64) + '.json'); await fs.writeFile(stale, 'obsolete');
+  const file = 'data/library-search/' + 'a'.repeat(64) + '.json';
+  const manifest = { shards: { files: [{ file: '/' + file, sha256: 'a'.repeat(64) }] } };
+  await fs.writeFile(path.join(root, 'data/library-search.json'), JSON.stringify(manifest));
+  await assert.rejects(pruneLibrarySearchShards(root), /Current search shard is missing/);
+  await fs.writeFile(path.join(root, file), 'corrupt');
+  await assert.rejects(pruneLibrarySearchShards(root), /checksum mismatch/);
+  manifest.shards.files[0].file = '/data/library-search/../../keep.json';
+  await fs.writeFile(path.join(root, 'data/library-search.json'), JSON.stringify(manifest));
+  await assert.rejects(pruneLibrarySearchShards(root), /Invalid public search shard path/);
+  assert.equal(await fs.readFile(stale, 'utf8'), 'obsolete');
 });
 test('natural job goldens retrieve purpose matches without requiring title words', () => {
   const index = buildLibrarySearchIndex([

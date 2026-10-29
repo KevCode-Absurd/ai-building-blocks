@@ -8,6 +8,8 @@
 import fs from "node:fs";
 import { factCheckHtml } from "./lib/fact-check-html.mjs";
 import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
+import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
+import { hubDescription } from "./lib/hub-description.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -19,6 +21,30 @@ import { BRAND, describe, fitTitle, itemSeo, lowerFirst, mindTitle, pageTitle, t
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
 const SEO_TITLES = {
+  "/skills/check-translation-parity-across-three-languages": "Check Russian, English and Brazilian Portuguese | AI Blocks",
+  "/workflows/check-management-payout-and-sponsor-receipts": "Check management awards and investor returns | AI Blocks",
+  "/workflows/clean-up-your-meta-account-and-rebuild-it-to-scale": "Meta account review and restructure plan | AI Blocks",
+  "/workflows/fix-inbox-placement-and-win-back-your-opens": "Email delivery and quiet-subscriber recovery | AI Blocks",
+  "/workflows/investment-results-review": "Review holdings against business results | AI Blocks",
+  "/workflows/make-your-me-md-and-set-it-up-in-every-ai": "Build your me.md for use across AI tools | AI Blocks",
+  "/workflows/real-earning-power": "Company earnings reliability and adjustments | AI Blocks",
+  "/workflows/reconcile-seller-closing-cash": "Check seller proceeds and retained cash | AI Blocks",
+  "/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l": "Bank reconciliation and financial statements | AI Blocks",
+  "/workflows/review-a-down-round-rights-change": "Review down-round and option-pool changes | AI Blocks",
+  "/workflows/run-fair-interviews-and-choose-on-evidence": "Interview plans and candidate comparisons | AI Blocks",
+  "/workflows/separate-financing-effects-from-operating-cash": "Review factoring and supplier finance cash | AI Blocks",
+  "/workflows/separate-pension-cost-funding-and-remeasurement": "Check pension funding and expense changes | AI Blocks",
+  "/workflows/set-up-a-documentation-system-and-write-sops-that-pass-a-check": "Plan team documentation, SOPs and runbooks | AI Blocks",
+  "/workflows/set-up-product-tracking-and-build-a-retention-dashboard": "Product tracking and retention dashboard | AI Blocks",
+  "/workflows/set-your-cac-limit-and-test-what-ads-really-add": "Customer acquisition cost and ad-lift tests | AI Blocks",
+  "/workflows/ship-stock-to-amazon-and-claim-back-what-goes-missing": "Amazon stock shipments and reimbursement | AI Blocks",
+  "/workflows/stress-test-a-business-plan-before-you-commit-money": "Review business plan downside scenarios | AI Blocks",
+  "/workflows/test-input-inflation-against-stock-clearance": "Stock clearance cash and replacement cost | AI Blocks",
+  "/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck": "Spreadsheet cleanup and checked slide decks | AI Blocks",
+  "/workflows/turn-a-report-into-an-editable-briefing-deck": "Report-to-slide briefing deck and review | AI Blocks",
+  "/workflows/turn-the-first-weeks-after-an-order-into-repeat-buyers": "Post-purchase emails and repeat-order tests | AI Blocks",
+  "/workflows/write-a-procedure-test-it-and-build-a-training-deck": "Procedure drafts, testing and training decks | AI Blocks",
+  "/agents/weekly-saas-numbers-keeper": "Review SaaS revenue, churn and customer cost | AI Blocks",
   "/workflows/build-google-remarketing-lists-and-campaigns-then-read-the-results": "Google Remarketing Campaigns and Results | AI Blocks",
   "/workflows/job-based-product-design": "Customer Jobs to Be Done Design Workflow | AI Blocks",
   "/tools/agency-or-in-house": "Agency vs In-House Cost Calculator, Free Tool | AI Blocks",
@@ -197,7 +223,7 @@ function communityBody() {
 const TOOL_AREA = { design: "design", hr: "hiring", finance: "money", personal: "personal effectiveness", operations: "operations", compliance: "compliance", work: "work" };
 const TOOL_TAIL = ["Free, runs in your browser, no sign-up.", "Free, in your browser, no sign-up.", "Free, in your browser."];
 const ALL_TOOLS = [...BROWSER_TOOLS, ...TOOLS];
-const toolTitle = (name) => pageTitle(name, ["free online tool, no sign-up", "free online tool", "free online calculator"]);
+const toolTitle = (name) => pageTitle(name, ["free online tool, no sign-up", "free online tool", "free online calculator", "free tool", "online tool", "online", "free"]);
 function relatedTools(t) {
   const same = ALL_TOOLS.filter((x) => x.category === t.category), at = same.indexOf(t);
   const pick = Array.from({ length: Math.min(6, same.length - 1) }, (_, i) => same[(at + 1 + i) % same.length]);
@@ -376,6 +402,9 @@ function pageFor(url) {
   const kindKey = b.type === "agent" ? "agent" : isFlow ? "workflow" : b.type === "prompt" ? "prompt" : "skill";
   const seo = itemSeo({ block: b, page, job, kind: kindKey, steps: steps.map((x) => x.name) });
   const usage = catalogueUsageHowTo({ name: b.name, pageUrl: SITE + url, steps: page.how_to_use });
+  const neighbours = skillNeighbours(b.slug, page.plan, bySlug);
+  const neighbourList = (rows) => list(rows.map(row => `<a href="${esc(row.url.replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(row.name)}</a><p class="small">${esc(row.note)}</p>`));
+  const neighbourView = !isFlow && page.plan ? `<section id="next" class="bp-next skill-neighbours"><h2>Before and after this skill</h2><p>Choose the steps you need. Bring your own material when you have it.</p><div class="skill-neighbours-grid"><div class="skill-neighbours-card"><h3>Before</h3>${neighbours.before.length ? neighbourList(neighbours.before) : "<p>Bring the material listed under Fill it in.</p>"}</div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>This skill</h3><p><b>${esc(b.name)}</b></p><a href="/#build">Open builder</a></div><span aria-hidden="true">→</span><div class="skill-neighbours-card"><h3>After</h3>${neighbours.after.length ? neighbourList(neighbours.after) : "<p>Use the result on its own, or choose another skill in the builder.</p>"}</div></div></section>` : "";
   const rowText = value => typeof value === "string" ? value : Object.entries(value ?? {}).map(([, part]) => typeof part === "string" ? part : "").filter(Boolean).join(". ");
   const requiresFiles = !!b.hasFiles || b.type === "agent";
   const nextSteps = page.plan?.next ?? [];
@@ -399,7 +428,7 @@ function pageFor(url) {
       page.output_shape || get.length || fitHtml || sampleHtml ? `<section id="get"><h2>What you get</h2>${sampleHtml}${page.output_shape ? (hasSample ? `<details><summary>See the full layout</summary><p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre></details>` : `<p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre>`) : hasSample ? "" : list(get.map(esc))}${fitHtml}</section>` : "",
       give.length ? `<section id="task-start"><h2>Fill it in</h2><p>${isFlow ? "Gather these first. You add them in your AI after you download." : "Add what this task works from, then copy the request."}</p>${list(give.map(esc))}</section>` : "",
       `<section id="${give.length ? "run" : "task-start"}"><h2>Run it</h2><p>${isCoordinator ? `Download the complete workflow pack. Give it to your AI, then ask it to read ${coordinatorFiles} and follow the governing instructions and checkpoints.` : isFlow ? "Get the plan and all the skill files. Give the complete pack to your AI, then ask it to follow HANDOFF.md." : requiresFiles ? "Download the complete instructions and supporting files. Add them to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Pasting the instructions into a chat works too." : "Add your task details in the form when the page opens. Copy the complete request into your AI. Or add the skill to Claude, ChatGPT or Gemini once and ask for it by name. Your AI does the work."}</p>${!isFlow ? `<p><a href="/skills/${esc(slug)}${b.hasFiles ? ".zip" : "/SKILL.md"}" download>${b.hasFiles ? "Download all files" : "Download the instructions"}</a></p>` : ""}</section>`,
-      nextSteps.length ? `<section id="next"><h2>What to do next</h2>${list(nextSteps.map((x) => `<a href="${esc(String(x.url).replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(x.name)}</a>: ${esc(x.label)}`))}</section>` : "",
+      neighbourView || (nextSteps.length ? `<section id="next"><h2>What to do next</h2>${list(nextSteps.map((x) => `<a href="${esc(String(x.url).replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(x.name)}</a>: ${esc(x.label)}`))}</section>` : ""),
       factCheckHtml(page.fact_checks, esc),
       `<details id="details"><summary><h2>Details</h2></summary>${[
         by && src.url ? `<p class="small">From ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; shared under its licence, with a plain name for this library.</p>` : "",
@@ -601,23 +630,8 @@ function hubIntro(t, name, bs) {
     `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
   ].join("");
 }
-const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, [`${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills"]));
-// Names the first few skills until the 155-character limit, so each hub says something only it can say.
-function hubDescription(name, n, items, pg, pages) {
-  // A job with one item names it and says what it does, so the description is still long enough to be useful.
-  if (n === 1 && items[0]) {
-    const { name: item, summary = "" } = items[0];
-    const tries = [`The ${item}, a free AI skill. ${summary}`, `Free: the ${item}. ${summary}`, `The ${item}. ${summary}`];
-    return trimDescription(tries.find((t) => t.trim().length <= 155)?.trim() ?? `The ${item}, a free AI skill to ${lowerFirst(name)}.`);
-  }
-  const lead = pg ? `Page ${pg + 1} of ${pages}: free AI skills and workflows to ${lowerFirst(name)}, including` : `${n} free AI skills and workflows to ${lowerFirst(name)}, including`;
-  const names = items.slice(0, 5).map((x) => x.name);
-  for (let k = names.length; k >= 1; k--) {
-    const text = `${lead} ${names.slice(0, k).join(", ")}.`;
-    if (text.length <= 155) return text;
-  }
-  return trimDescription(`${lead} ${names[0] ?? "more"}.`);
-}
+const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, [`${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills", `${n} free AI skills to use`, "AI skills"]));
+
 const hubUrls = ["/jobs"];
 // /jobs groups the jobs under the library's broad areas, each job once, in the area it is listed under first.
 const jobCount = new Map(tasks.map(([t, bs]) => [t, bs]));

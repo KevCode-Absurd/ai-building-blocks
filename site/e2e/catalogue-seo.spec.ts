@@ -35,3 +35,20 @@ test('internal skill navigation keeps the generated title, canonical and structu
   await expect(page.locator('html')).toHaveAttribute('data-metadata-path',target!);
   const schema=await page.locator('script[type="application/ld+json"]').textContent();expect(schema).toContain('https://useaiblocks.com'+target);
 });
+
+for (const mobile of [false,true]) test((mobile?'@mobile ':'')+'skill diagram keeps an existing unsaved task and opens the current before/after controls',async({page},info)=>{
+  const writes:string[]=[];
+  await page.route('**/api/**',route=>{if(!['GET','HEAD','OPTIONS'].includes(route.request().method()))writes.push(route.request().url());return route.fulfill({status:401,json:{error:'Blocked by local fixture'}});});
+  await page.addInitScript(()=>localStorage.setItem('abb:v1',JSON.stringify({kits:[],flows:[],recent:[],currentFlow:null,draft:{id:'synthetic-draft',name:'Synthetic existing task',goal:'Keep the supplied goal',notes:'KEEP_SYNTHETIC_FLOW_NOTES',nodes:[{id:'existing',slug:'request-deliverable-drafter',x:40,y:0,notes:'KEEP_SYNTHETIC_STEP_NOTES'}],edges:[],updated:0}})));
+  if(mobile)await page.setViewportSize({width:375,height:812});
+  await page.goto('/skills/voice-and-tone-guide-writer');
+  const diagram=page.getByTestId('skill-neighbours');await expect(diagram).toBeVisible();
+  await expect(page.getByTestId('skill-before')).toBeVisible();await expect(page.getByTestId('skill-after')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await diagram.screenshot({path:info.outputPath(mobile?'neighbours-mobile.png':'neighbours-desktop.png')});
+  await page.getByTestId('add-this-skill').click();await expect(page.getByTestId('builder')).toBeVisible();
+  await expect(page.getByTestId('flow-node')).toHaveCount(2);await expect(page.getByRole('textbox',{name:'Workflow name',exact:true})).toHaveValue('Synthetic existing task');
+  await expect(page.getByTestId('chain-before')).toBeVisible();await expect(page.getByTestId('chain-after')).toBeVisible();
+  await expect.poll(()=>page.evaluate(()=>{const draft=JSON.parse(localStorage.getItem('abb:v1')||'{}').draft;return draft?.notes==='KEEP_SYNTHETIC_FLOW_NOTES'&&draft.nodes.some((node:any)=>node.id==='existing'&&node.notes==='KEEP_SYNTHETIC_STEP_NOTES');})).toBe(true);
+  expect(writes).toHaveLength(0);
+});

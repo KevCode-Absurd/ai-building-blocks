@@ -7,7 +7,7 @@ async function setup(page:Page){await page.goto('/roles/coding-specialist');awai
 for(const mobile of [false,true]){
  test(`${mobile?'@mobile ':''}roles load one batch, search the full library, paginate and keep navigation usable`,async({page})=>{
   if(mobile)await page.setViewportSize({width:390,height:844});await offline(page);const requests:string[]=[];page.on('request',r=>requests.push(new URL(r.url()).pathname));
-  await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);
+  await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);await expect(page.getByRole('link',{name:'Set up role: Coding specialist',exact:true})).toBeVisible();
   expect(requests).not.toContain('/data/blocks.json');expect(requests).not.toContain('/data/roles-search.json');
   await page.getByTestId('roles-more').click();await expect(page.getByTestId('role-card')).toHaveCount(48);
   await page.getByTestId('role-search').fill('executive assistant');await expect(page.getByTestId('role-card').filter({hasText:'Executive assistant'})).toBeVisible();

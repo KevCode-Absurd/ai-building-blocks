@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { LIMITS } from "./lib/composer-core";
+import { LIMITS } from "./lib/composer-request";
 import { protectedHeaders } from "./lib/turnstile";
 import { pcmWav } from "./lib/voice-audio";
 const MAX_MS = 300000;

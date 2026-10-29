@@ -277,26 +277,29 @@ export function loadItemCatalogue(slug: string): Promise<Catalogue> {
     }).catch(() => { itemCatalogues.delete(slug); return loadCatalogue(); }));
   return itemCatalogues.get(slug)!;
 }
-/** Show the exact item and its existing links first, then complete the library after its page opens. */
+/** Show the exact item and existing links. Warm the complete library on interaction, not during first paint. */
 export function useItemCatalogue(slug: string | null) {
   const [state, setState] = useState<{slug: string | null; catalogue: Catalogue | null; error: string}>({slug: null, catalogue: null, error: ""});
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     if (!slug) return;
     let live = true;
-    let firstFrame = 0, secondFrame = 0;
     const complete = () => {
-      firstFrame = requestAnimationFrame(() => { secondFrame = requestAnimationFrame(() => {
-        if (live) void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {});
-      }); });
+      document.removeEventListener("pointerdown", complete);
+      document.removeEventListener("keydown", complete);
+      if (live) void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {});
+    };
+    const prepare = () => {
+      document.addEventListener("pointerdown", complete, {once: true, passive: true});
+      document.addEventListener("keydown", complete, {once: true});
     };
     void loadItemCatalogue(slug).then(catalogue => {
       if (!live) return; setState({slug, catalogue, error: ""});
       if (!catalogue.itemSlug) return;
-      if (document.documentElement.dataset.boot === "ready") complete();
-      else document.addEventListener("abb:ready", complete, {once: true});
+      if (document.documentElement.dataset.boot === "ready") prepare();
+      else document.addEventListener("abb:ready", prepare, {once: true});
     }).catch(() => { if (live) setState({slug, catalogue: null, error: "The task library could not load. Check your connection and try again."}); });
-    return () => { live = false; cancelAnimationFrame(firstFrame); cancelAnimationFrame(secondFrame); document.removeEventListener("abb:ready", complete); };
+    return () => { live = false; document.removeEventListener("abb:ready", prepare); document.removeEventListener("pointerdown", complete); document.removeEventListener("keydown", complete); };
   }, [slug, attempt]);
   return {catalogue: state.slug === slug ? state.catalogue : null, error: state.slug === slug ? state.error : "", retry: useCallback(() => setAttempt(n => n + 1), [])};
 }

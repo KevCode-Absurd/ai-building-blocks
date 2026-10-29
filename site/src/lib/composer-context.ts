@@ -1,5 +1,5 @@
 // Planning uses the original me.md, not a previously rendered context snapshot.
-import { LIMITS } from "./composer-core.ts";
+import { LIMITS } from "./composer-request.ts";
 import { meContext, pickSections, voiceRule, type SectionId } from "./me-file.ts";
 
 export function planningMeContext(file: string, goal: string, today?: string): string {

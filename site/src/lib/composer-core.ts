@@ -1,3 +1,5 @@
+import {type Choices, GENERIC, LANDING, ACTIONS, LIMITS, QUESTIONS, terms, requestError, questionsFor, positiveRequest} from "./composer-request.ts";
+export {type Choices, validateChoices, QUESTIONS, LEGACY_REQUEST_LIMIT, LIMITS, terms, requestError, questionsFor, positiveRequest} from "./composer-request.ts";
 // Shared, provider-independent planning and validation. No network or browser globals.
 import { recipeFor } from "./composer-recipes.ts";
 import { isReviewRequest, taskFocus } from "./composer-intent.ts";
@@ -7,47 +9,8 @@ import { CLEAR_FIT, mindsFor, stepTopic } from "./mind-match.ts";
 import type { Block, Catalogue } from "./data.ts";
 export type Part = { slug: string; name: string; summary: string; cues?: string; area?: string; also?: string[]; seats?: string[]; identity?: string; headline?: string; aliases?: string[]; type?: string; category?: string; role?: string; task?: string; usedIn?: number; execution?: string; inputs: { type: string; required: boolean }[]; outputs: { type: string }[]; steps?: { uses: string; note: string }[]; uses?: string[]; warnings?: string[]; version?: string };
 export type Library = { blocks: Part[]; bySlug: Record<string, Part>; built?: string };
-export type Choices = { mode?: string; reference?: string; delivery?: string; automation?: string };
-export function validateChoices(raw: unknown): Choices {
-  const values: Record<string, string[]> = { mode: ["new", "existing"], reference: ["none", "reference"], delivery: ["code", "shopify", "publish"], automation: ["once", "recurring"] };
-  if (!raw || typeof raw !== "object" || Array.isArray(raw) || Object.entries(raw).some(([key, value]) => !Object.hasOwn(values, key) || typeof value !== "string" || !values[key].includes(value))) throw new Error("Choose one of the supplied workflow options.");
-  return { ...raw } as Choices;
-}
 export type Selection = { title: string; summary: string; steps: { slug: string; reason: string; notes: string; minds?: string[] }[]; questionIds: string[]; assumptions: string[] };
 export type Composition = Selection & { source: "free" | "ai"; missing: { type: string; steps: number[] }[]; warnings: string[]; dependencies: [number, number][]; bindings: { step: number; from: number; type: string; instruction: string }[] };
-export const QUESTIONS = {
-  mode: { text: "Are you creating something new or improving existing work?", options: [["new", "Create from scratch"], ["existing", "Improve existing work"]] },
-  reference: { text: "Would you like to use a competitor or design reference?", options: [["none", "Original direction"], ["reference", "Use a URL or screenshot"]] },
-  delivery: { text: "What should the landing-page workflow hand back?", options: [["code", "Source code"], ["shopify", "Shopify theme files"], ["publish", "Prepare to publish"]] },
-  automation: { text: "How should this run?", options: [["once", "Run once"], ["recurring", "Repeat with an agent"]] },
-} as const;
-export const LEGACY_REQUEST_LIMIT = 10000;
-export const LIMITS = { request: 3000, context: 12000, steps: 16, candidates: 64, output: 5000 };
-const STOP = new Set("a an the for my our your of to from and i we want need get make me with that this in on into it some new can do how help please hi hello hey you are is be as have using then also would like just something".split(" "));
-const GENERIC = new Set("build create write plan check improve fix find work use output result workflow skill prompt tool agent".split(" "));
-const SYNONYMS: [RegExp, string][] = [
-  [/\b(landing\s*page|landingpage|homepage)\b/g, " landing page website"],
-  [/\b(adverts?|advertisements?|advertising)\b/g, " ad ads"],
-  [/\b(onboarding|welcome)\b/g, " onboarding welcome"],
-  [/\b(search engine|google ranking|organic traffic)\b/g, " seo"],
-  [/\b(hire|recruit|recruitment)\b/g, " hiring candidate interview"],
-  [/\b(dashboard|kpis?|reporting)\b/g, " dashboard report metric"],
-  [/\b(automate|automation|recurring|weekly|daily|monitor)\b/g, " automation"],
-  [/\b(competitor|rival)\b/g, " competitor reference"],
-  [/\b(small business|online store|ecommerce)\b/g, " business store"],
-];
-const stem = (w: string) => w.length < 5 ? w : w.replace(/ies$/, "y").replace(/(ing|ed|es|s)$/, "");
-export function terms(text: string, expand = true): string[] {
-  let s = text.toLowerCase().normalize("NFKC").replace(/[’']/g, "");
-  if (expand) { const raw = s; for (const [re, extra] of SYNONYMS) if (raw.match(re)) s += extra; }
-  return [...new Set(s.replace(/[^\p{L}\p{N}]+/gu, " ").split(/\s+/).filter(w => w.length > 1 && !STOP.has(w)).map(stem))];
-}
-export function requestError(goal: string): string | null {
-  if (goal.length > LIMITS.request) return `Keep the request under ${LIMITS.request} characters.`;
-  const t = terms(goal).filter(w => !GENERIC.has(w));
-  if (!t.length || /^(how are you|whats up|good morning|thanks|thank you|tell me a joke)[.!?\s]*$/i.test(goal.trim())) return "Describe a result you want, such as a landing page, hiring plan or weekly report.";
-  return null;
-}
 export function decodeCatalogue(data: { blocks: Record<string, unknown>[]; built?: string }): Library {
   const blocks = data.blocks.map(w => ({ type: "skill", role: "make", category: "general", usedIn: 0, ...w,
     inputs: ((w.inputs ?? []) as (string | { type: string; required: boolean })[]).map(p => typeof p === "string" ? { type: p.replace(/\?$/, ""), required: !p.endsWith("?") } : p),
@@ -83,31 +46,10 @@ export function retrieve(c: Library, goal: string, limit = LIMITS.candidates): P
     return { b: d.b, score };
   }).filter(x => x.score > 0).sort((a, b) => b.score - a.score || a.b.slug.localeCompare(b.b.slug)).slice(0, limit).map(x => x.b);
 }
-const LANDING = /\b(landing\s*page|homepage)\b/i;
-const RECURRING = /\b(daily|weekly|monthly|recurring|monitor|repeat|schedule|automation|automate)\b/i;
-export function questionsFor(goal: string, choices: Choices = {}, context = ""): string[] {
-  goal = positiveRequest([goal, context].filter(Boolean).join("\n"));
-  const ids: string[] = [];
-  if (LANDING.test(goal)) {
-    if (!choices.mode && !/\b(existing|current|audit|improve|redesign|from scratch|new page)\b/i.test(goal)) ids.push("mode");
-    if (!choices.reference && !/\b(competitor|rival|reference|original|from scratch)\b/i.test(goal)) ids.push("reference");
-    if (!choices.delivery && !/\b(code|html|react|shopify|publish|deploy)\b/i.test(goal)) ids.push("delivery");
-  }
-  if (RECURRING.test(goal) && !choices.automation) ids.push("automation");
-  return ids.slice(0, 3);
-}
 function entries(c: Library, b: Part): Part[] {
   // Keep coordinators intact: flattening them loses their branch/resume rules.
   if (b.type === "agent" || b.execution === "coordinator" || !b.steps?.length) return [b];
   return b.steps.map(s => c.bySlug[s.uses]).filter(Boolean);
-}
-const ACTIONS = "build|create|write|draft|design|prepare|make|plan|audit|check|review|summari[sz]e|compare|analy[sz]e|translate|organize|organise|produce|generate|turn|develop|deliver|give|export|collect|research|score|test|optimi[sz]e|fix|publish|send";
-/** This is a bounded language heuristic, not semantic understanding. Preserve the full original in the pack. */
-export function positiveRequest(request: string): string {
-  return request.replace(/\b(?:do not|don['’]?t|never|without|no|not(?! only\b))\s+[^.;\n,]+/gi, segment => {
-    const resume = segment.search(new RegExp(`\\b(?:but|and)\\s+(?:${ACTIONS})\\b`, "i"));
-    return resume >= 0 ? segment.slice(resume).replace(/^(but|and)\s+/i, "") : " ";
-  }).trim();
 }
 export function requestClauses(request: string): string[] {
   return request.split(new RegExp(`\\b(?:and then|then|plus|as well as)\\b|[;\\n]|[.,]\\s+(?=(?:${ACTIONS})\\b)|\\band\\s+(?=(?:(?:also\\s+)?(?:${ACTIONS})\\b|(?:a|an)\\s+))`, "i")).map(s => s.trim()).filter(s => terms(s).length > 0).slice(0, 8);

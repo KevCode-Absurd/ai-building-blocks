@@ -1024,7 +1024,7 @@ Expected response:
 ### 9. Testing with test_event_code in production
 
 **Symptom:** Conversions don't register in campaign reporting.
-**Fix:** Remove `test_event_code` from production CAPI calls. Test events are isolated from campaign data.
+**Fix:** Keep test calls separate from production calls. Use a dedicated test pixel where possible and require a test event code for test calls. We could not verify whether test events are excluded from reporting or ad optimisation: Meta’s official documentation returned a rate-limit error on 28 and 29 Oct 2026. Do not infer exclusion from the test code alone. Confirm the pixel and test code with the user before sending a test event.
 
 ### 10. Low EMQ on ViewContent/PageView and treating it as a problem
 

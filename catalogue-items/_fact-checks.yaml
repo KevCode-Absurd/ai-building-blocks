@@ -106,11 +106,12 @@ checks:
     - status: not_checked
       scope: We could not check whether test events are excluded from reporting or ad optimisation. Meta’s documentation
         returned a rate-limit error. Keep the test pixel, test code and approval safeguards. No events were sent.
-      attempted_on: 2026-10-28
+      attempted_on: 2026-10-29
       sources:
         - https://developers.facebook.com/docs/marketing-api/conversions-api/using-the-api/
       reviewed_files:
         imported/meta-pixel-capi-fix/SKILL.md: e387312bf0e604b53462255921f8f9764804168204027a1a7c884bd47fa571fa
+        imported/meta-pixel-capi-fix/references/pixel-capi-reference.md: a6b63aa42bdaacde2a546a83d63dbc769d77e8e3576fd056661e7de0f118f3ff
   uae-rules-finder:
     - status: source_dated
       scope: The source says its rules, fines and deadlines were checked on 15 August 2026. This is the author’s date. Confirm

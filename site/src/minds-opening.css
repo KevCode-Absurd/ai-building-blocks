@@ -4,3 +4,7 @@
 .mind-browse-links a:first-child { font-weight: 600; }
 .minds-wall { padding-bottom: 24px; }
 .minds-pending { min-height: 100svh; padding-top: 24px; }
+@media (max-width: 640px) {
+  .minds-browse .bp-hero { padding-top: 28px; }
+  .mind-browse-links { column-gap: 18px; row-gap: 0; margin-top: 12px; }
+}

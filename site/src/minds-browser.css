@@ -23,8 +23,6 @@
 .mind-seat-plus { font-size: 18px; line-height: 1; margin-right: 6px; }
 .minds-browse .mind-seat-btn { min-height: 40px; }
 @media (max-width: 640px) {
-  .minds-browse .bp-hero { padding-top: 28px; }
-  .mind-browse-links { column-gap: 18px; row-gap: 0; margin-top: 12px; }
   .minds-browse .face-wall { max-height: 48px; margin-top: 14px; }
   .mind-role-filter { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding: 0; gap: 7px; }
   .mind-role-filter .lchip { min-height: 38px; height: auto; }

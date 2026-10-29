@@ -5,23 +5,31 @@ for (const mobile of [false, true]) {
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
     if (mobile) await page.setViewportSize({width: 412, height: 823});
     const roster = (await (await request.get('/data/minds-index.json')).json()).minds.roster;
-    let releaseStarter!: () => void, releaseFull!: () => void, fullRequested = false;
+    let releaseStarter!: () => void, releaseFull!: () => void, releaseStyles!: () => void, fullRequested = false, stylesRequested = false;
     const starter = new Promise<void>(resolve => { releaseStarter = resolve; });
     const full = new Promise<void>(resolve => { releaseFull = resolve; });
+    const styles = new Promise<void>(resolve => { releaseStyles = resolve; });
     await page.route('**/data/minds-starter.json', async r => { await starter; await r.continue(); });
     await page.route('**/data/minds-index.json', async r => { fullRequested = true; await full; await r.continue(); });
+    await page.route(/\/assets\/MindsPage-[^/]+\.css(?:\?.*)?$/, async r => { stylesRequested = true; await styles; await r.continue(); });
     try {
       await page.goto('/minds', {waitUntil: 'domcontentloaded'});
       const heading = page.getByRole('heading', {name: 'Borrow a great mind', exact: true});
       await expect(heading).toBeVisible();
       await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
       await page.evaluate(() => document.fonts.ready);
+      await expect.poll(() => stylesRequested).toBe(true);
       await heading.evaluate(el => { (window as any).__mindsHeading = el; });
       const before = await heading.boundingBox();
+      const opening = page.locator('.minds-opening'), openingBefore = await opening.boundingBox();
+      releaseStyles();
       releaseStarter();
       await expect(page.getByTestId('mind-card')).toHaveCount(24);
       expect(await heading.evaluate(el => el === (window as any).__mindsHeading)).toBe(true);
       expect(Math.abs((await heading.boundingBox())!.y - before!.y)).toBeLessThan(1);
+      const openingAfter = await opening.boundingBox();
+      expect(Math.abs(openingAfter!.y - openingBefore!.y)).toBeLessThan(1);
+      expect(Math.abs(openingAfter!.height - openingBefore!.height)).toBeLessThan(1);
       const query = page.getByRole('searchbox', {name: 'Search minds', exact: true});
       await query.fill(roster.at(-1).name);
       await expect.poll(() => fullRequested).toBe(true);
@@ -33,7 +41,7 @@ for (const mobile of [false, true]) {
       await expect(query).toHaveValue(roster.at(-1).name);
       expect(await query.evaluate(el => el === (window as any).__mindsInput)).toBe(true);
       expect(await heading.evaluate(el => el === (window as any).__mindsHeading)).toBe(true);
-    } finally { releaseStarter(); releaseFull(); }
+    } finally { releaseStyles(); releaseStarter(); releaseFull(); }
   });
   test((mobile ? '@mobile ' : '') + 'minds browse in small batches while search, filters and council choices cover the full roster', async ({page, request}) => {
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));

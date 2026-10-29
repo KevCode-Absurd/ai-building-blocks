@@ -20,7 +20,7 @@ for(const mobile of [false,true]){
   if(mobile)await page.setViewportSize({width:390,height:844});await offline(page);await setup(page);
   for(const name of ['Capabilities','Tasks you can use it for','How the role works','Functions and deliverables','Best way to use this role'])await expect(page.getByRole('heading',{name,exact:true})).toBeVisible();
   await page.getByText('Review the complete launch brief',{exact:true}).click();await expect(page.getByTestId('role-prompt-preview')).toContainText(goal);await expect(page.getByTestId('role-prompt-preview')).toContainText('Synthetic project files attached');
-  await page.getByTestId('role-save').click();await expect(page.getByText('Saved with your workflows.',{exact:false})).toBeVisible();
+  await page.getByTestId('role-save').click();await expect(page.getByTestId('role-setup').getByText('Saved with your workflows.',{exact:false})).toBeVisible();
   await page.reload();await expect(page.getByTestId('role-goal')).toHaveValue(goal);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.screenshot({path:info.outputPath('role-profile.png'),fullPage:true});
@@ -38,5 +38,5 @@ test('AI tailoring passes the task and context privately and does not call a pro
  await expect(page).toHaveURL(/\/compose\?role_setup=/);expect(page.url()).not.toContain('Synthetic');await expect(page.getByTestId('compose-goal')).toHaveValue(goal);expect(posts).toBe(0);
 });
 test('failed full search preserves typed query and offers retry without losing the initial cards',async({page})=>{
- await offline(page);let failed=true;await page.route('**/data/roles-search.json',async r=>failed?r.fulfill({status:503,body:'Unavailable'}):r.continue());await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);await page.getByTestId('role-search').fill('coding specialist');await expect(page.getByRole('alert')).toBeVisible();await expect(page.getByTestId('role-search')).toHaveValue('coding specialist');failed=false;await page.getByRole('button',{name:'Try again',exact:true}).click();await expect(page.getByTestId('role-card')).toHaveCount(1);
+ await offline(page);let failed=true;await page.route('**/data/roles-search.json',async r=>failed?r.fulfill({status:503,body:'Unavailable'}):r.continue());await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);await page.getByTestId('role-search').fill('coding specialist');await expect(page.getByRole('alert')).toBeVisible();await expect(page.getByTestId('role-search')).toHaveValue('coding specialist');failed=false;await page.getByRole('button',{name:'Try again',exact:true}).click();await expect(page.getByTestId('role-grid').getByRole('link',{name:'Coding specialist',exact:true})).toBeVisible();await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.getByTestId('role-search')).toHaveValue('coding specialist');
 });

@@ -13,13 +13,13 @@ const stem=w=>w.replace(/(?:ing|ers|er|ed|s)$/,'');
 const words=s=>[...new Set((s.toLowerCase().match(/[a-z0-9]+/g)??[]).filter(w=>w.length>1&&!STOP.has(w)).map(stem))];
 // Broad jobs should start with a complete matching remit rather than an incidental word.
 const intents=[
- [/\b(?:bug|debug|debugging)\b/i,'fix-a-bug-with-proof-and-a-clear-pull-request'],
+ [/\b(?:bug|debug|debugging)\b|\b(?:error|failure)\b.*\b(?:code|codebase|repo|json|test)\b|\b(?:code|codebase|repo|json|test)\b.*\b(?:error|failure)\b/i,'fix-a-bug-with-proof-and-a-clear-pull-request'],
  [/\b(?:build|create|implement|code)\b.*\blanding page\b/i,'build-a-landing-page-fix-it-and-prove-the-top-change'],
  [/\b(?:meta|facebook|instagram)\b.*\b(?:ads?|advertising|campaign)\b/i,'media-buyer'],
  [/\b(?:executive|daily brief|meeting preparation)\b/i,'executive-assistant'],
- [/\b(?:technical seo|seo audit|audit.*seo|indexing)\b/i,'seo-specialist'],
+ [/\bseo\b|\b(?:google|bing|search|website|site)\b.*\bindexing\b|\bindexing\b.*\b(?:google|bing|search|website|site)\b/i,'seo-specialist'],
  [/\b(?:support tickets?|customer support|helpdesk)\b/i,'customer-support-specialist'],
- [/\b(?:conversion|cro)\b/i,'cro-specialist'],
+ [/\bcro\b|\b(?:landing page|website|store|checkout|funnel)\b.*\bconversion\b|\bconversion\s+(?:rate|audit|optimi[sz])/i,'cro-specialist'],
 ];
 export function rankSpecialists(index,task,limit=5,area='all') {
  const terms=words(task);if(!terms.length)return [];

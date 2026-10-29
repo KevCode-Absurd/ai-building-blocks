@@ -17,7 +17,6 @@ import { DownloadDialog, TransferGuide } from "./DownloadDialog";
 import ExecutionPrompt from "./ExecutionPrompt";
 import type { Flow } from "./lib/store";
 import { Link, libraryReturnTo } from "./lib/router";
-import AddToFlow from "./AddToFlow";
 import Install from "./Install";
 import { Before, Next } from "./Needs";
 import RunInAi, { PullFromAi } from "./RunInAi";
@@ -69,8 +68,17 @@ function Credit({ b, source }: { b: Block; source: NonNullable<Block["source"]> 
 
 function FullAddToFlow(props: {slug: string; onClose: () => void; toast: (m: string) => void}) {
   const {catalogue, error, retry} = useCatalogueState(true);
-  if (catalogue) return <AddToFlow {...props} c={catalogue} />;
-  return <Drawer label="Add to a workflow" top={<h2>Add to a workflow</h2>} onClose={props.onClose}><p role="status">{error || "Opening your workflow choices…"}</p>{error && <button className="btn btn-line" onClick={retry}>Try again</button>}</Drawer>;
+  const [Editor, setEditor] = useState<typeof import("./AddToFlow").default | null>(null);
+  const [editorError, setEditorError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    let active = true;
+    setEditorError(false);
+    import("./AddToFlow").then(module => { if (active) setEditor(() => module.default); }).catch(() => { if (active) setEditorError(true); });
+    return () => { active = false; };
+  }, [attempt]);
+  if (catalogue && Editor) return <Editor {...props} c={catalogue} />;
+  return <Drawer label="Add to a workflow" top={<h2>Add to a workflow</h2>} onClose={props.onClose}><p role={error || editorError ? "alert" : "status"}>{error || (editorError ? "Your workflow choices could not open. Check your connection and try again." : "Opening your workflow choices…")}</p>{(error || editorError) && <button className="btn btn-line" onClick={() => { if (error) retry(); if (editorError) setAttempt(value => value + 1); }}>Try again</button>}</Drawer>;
 }
 
 type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };

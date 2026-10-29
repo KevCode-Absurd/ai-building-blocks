@@ -14,6 +14,7 @@ for (const mobile of [false, true]) {
       await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
       await page.waitForTimeout(1000);
       expect(requested).toBe(false);
+      expect(modules.some(p => /\/assets\/(?:AddToFlow|library-rank|library-search)-/.test(p))).toBe(false);
       // Reading and menus do not need the full catalogue. Only the editing control does.
       await page.locator("#root .bp-h1").click();
       expect(requested).toBe(false);
@@ -30,6 +31,57 @@ for (const mobile of [false, true]) {
       expect(await page.locator('#root .bp-h1').evaluate(el => el === (window as any).__firstSkillHeading)).toBe(true);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     } finally { release(); }
+  });
+
+  test((mobile ? '@mobile ' : '') + 'a delayed skill editor keeps reading and cancellation available', async ({page}) => {
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    let release!: () => void, requested = false;
+    const held = new Promise<void>(resolve => { release = resolve; });
+    await page.route('**/assets/AddToFlow-*.js', async r => { requested = true; await held; await r.continue(); });
+    try {
+      await page.goto('/skills/voice-and-tone-guide-writer');
+      await expect(page.getByTestId('skill-neighbours')).toBeVisible();
+      expect(requested).toBe(false);
+      await page.getByTestId('task-more').locator('summary').click();
+      await page.getByTestId('add-to-workflow').click();
+      await expect.poll(() => requested).toBe(true);
+      const opening = page.getByRole('dialog', {name: 'Add to a workflow', exact: true});
+      await expect(opening.getByRole('status')).toContainText('Opening your workflow choices');
+      await opening.getByRole('button', {name: 'Close', exact: true}).click();
+      await expect(opening).toHaveCount(0);
+      await expect(page.getByTestId('skill-neighbours')).toBeVisible();
+      release();
+      await page.getByTestId('add-to-workflow').click();
+      await expect(page.getByTestId('atf-new')).toBeVisible();
+      await page.getByTestId('add-to-flow').getByRole('button', {name: 'Close', exact: true}).click();
+      await expect(page.getByTestId('add-to-flow')).toHaveCount(0);
+    } finally { release(); }
+  });
+
+  test((mobile ? '@mobile ' : '') + 'the menu retains keyboard focus, scrolling, theme and outside dismissal', async ({page}) => {
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.goto('/skills/voice-and-tone-guide-writer');
+    await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
+    await page.evaluate(() => scrollTo({top: 600, behavior: 'instant'}));
+    const trigger = page.getByTestId('menu-btn');
+    await trigger.focus(); await trigger.press('Enter');
+    const menu = page.getByTestId('site-menu');
+    await expect(menu).toBeVisible();
+    await expect(menu.getByRole('link', {name: 'Find a task', exact: true})).toBeFocused();
+    const rect = await menu.boundingBox();
+    expect(rect!.y).toBeGreaterThanOrEqual(64);
+    expect(rect!.y + rect!.height).toBeLessThanOrEqual((page.viewportSize()!.height) + 1);
+    await menu.getByTestId('theme-toggle').click();
+    await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+    await page.keyboard.press('Escape');
+    await expect(menu).toHaveCount(0); await expect(trigger).toBeFocused();
+    await trigger.press('Enter');
+    await page.locator('#root .bp-h1').click({force: true});
+    await expect(menu).toHaveCount(0);
+    await expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 
   test((mobile ? '@mobile ' : '') + 'fresh planner defers the full library and canvas until they are needed', async ({page}) => {

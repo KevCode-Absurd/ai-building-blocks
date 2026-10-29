@@ -14,6 +14,7 @@ import { acquireBuildLock } from "./lib/build-lock.mjs";
 import { INFO_PAGES, POLICY_DATE } from "../src/lib/site-info.mjs";
 import { makeTaskRecipe } from "../src/lib/copyable-task.mjs";
 import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
+import {roleSeeds} from "../src/roles/role-definitions.mjs";
 import { compileClassifications } from "./lib/catalogue-classification.mjs";
 import { gitDates } from "./lib/git-dates.mjs";
 import { FEEDS, connectLines, feedItems, jobHubDates, jsonFeed, newest, pageFacts, rssFeed, sitemapIndex, urlset as sitemapUrlset } from "./lib/crawl-files.mjs";
@@ -439,7 +440,9 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const roles = roleSeeds(blocks);
+const roleUrls = roles.length ? ["/roles", ...Array.from({length:Math.ceil(roles.length/24)-1},(_,i)=>`/roles/page/${i+2}`), ...roles.map(r=>`/roles/${r.id}`)] : [];
+const urls = ["/", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.
 // lastmod is only a date we can vouch for: an item page's is the day its own files (item.yaml, page.yaml, SKILL.md) last
@@ -520,6 +523,7 @@ const intro = [
   `- [Every page by job](${SITE}/jobs), and the whole catalogue as data: [blocks.json](${SITE}/data/blocks.json)`, "",
   "## Main pages", "",
   `- [Workflow planner](${SITE}/compose): describe a task, review a plan and download it for your AI`,
+  `- [Hire an AI specialist](${SITE}/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.`,
   `- [Your me.md](${SITE}/me-md): prepare reusable context for your AI`,
   `- [API and MCP](${SITE}/api-and-mcp): connect an AI and read the public API documentation`,
   `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,

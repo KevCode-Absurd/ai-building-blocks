@@ -1,4 +1,7 @@
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
+import {rankSpecialists} from "../roles/specialist-matching.mjs";
+import {specialistFiles} from "../roles/specialist-worker.mjs";
+import {roleLaunchPrompt,validateRoleBrief} from "../roles/role-runtime.ts";
 import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
 import { scanSourceFiles } from "./community-safety.ts";
 import { unzipSync } from "fflate";
@@ -42,7 +45,7 @@ type Item = {
   role?: string; headline?: string; tested?: unknown; level?: string; job?: string;
   identity?: string; years?: string; seats?: string[]; area?: string; skills?: string[];
 };
-type CustomSkill = { slug: string; name: string; instructions: string; inputs: Port[]; outputs: Port[]; revision_sha256: string };
+type CustomSkill = { slug: string; name: string; instructions: string; inputs: Port[]; outputs: Port[]; resources?: {slug:string;revision_sha256:string}[]; revision_sha256: string };
 type Step = { id: string; slug: string; revision_sha256: string; notes: string; depends_on: string[] };
 /** Every kind of item the hub serves. AI tools and mini tools are not catalogue blocks: they come from the API extras. */
 export const KINDS = ["skill", "workflow", "agent", "prompt", "mind", "ai_tool", "mini_tool"] as const;
@@ -216,6 +219,8 @@ export class PublicCatalogueService {
       case "get_resource": return this.resource(args);
       case "plan_workflow": return this.plan(args);
       case "prepare_workflow": return this.prepare(args);
+      case "find_specialist": return this.findSpecialist(args);
+      case "prepare_specialist": return this.prepareSpecialist(args);
       case "search": return this.openSearch(args);
       case "fetch": return this.openFetch(args);
       default: return fail(404, "unknown_tool", "Unknown public catalogue operation.");
@@ -675,8 +680,49 @@ export class PublicCatalogueService {
   }
 
   /** resources/read: skill files (skill://), any item's short view (aiblocks://{type}/{id}) and the job list. */
+  async findSpecialist(args: Record<string,unknown>) {
+    keys(args,["task","area","limit"]);
+    const task=string(args.task,"task",3000),area=string(args.area,"area",80,true)||"all",limit=integer(args.limit,"limit",5,1,10),c=await this.catalogue();
+    const index=JSON.parse(decoder.decode(await this.read("/data/roles-index.json",1_000_000)));
+    if(index.schema!=="ai-blocks-roles/1"||index.sourceHash!==c.manifest.catalogue_sha256) return fail(503,"stale_roles","The specialist directory differs from the current catalogue.");
+    if(!index.areas.some((a:{id:string})=>a.id===area))return fail(400,"invalid_arguments","Choose an area from aiblocks://roles.");
+    const candidates=rankSpecialists(index,task,limit,area);
+    return {schema:"ai-blocks-specialist-matches/1",candidates,selection:candidates.length?"CANDIDATES_REQUIRE_SCOPE_CHECK":"NO_MATCH",model_calls:0,notice:"Task-word retrieval over real roles and their methods. The host AI must check the complete selected worker against all requested deliverables and private context; this is not a quality guarantee. Keep unrelated private information out of discovery.",next_action:candidates.length?"Use prepare_specialist with the selected role_id, task and relevant authorized context. Compare alternatives if the remit does not cover the job.":"Clarify the work or use search_library for a missing method. Do not force an unrelated specialist."};
+  }
+
+  async prepareSpecialist(args: Record<string,unknown>) {
+    keys(args,["role_id","task","context","tools","training","me"]);
+    const task=string(args.task,"task",3000),chosen=string(args.role_id,"role_id",70,true);
+    const matches=await this.findSpecialist({task,limit:5});
+    const id=chosen||matches.candidates[0]?.id;
+    if(!id)return fail(400,"specialist_selection_required","No matching specialist was found. Clarify the task or choose a role explicitly.");
+    if(!/^[a-z0-9][a-z0-9-]{0,69}$/.test(id))return fail(400,"invalid_arguments","Choose a valid specialist role id.");
+    const content=(await this.readResource(`aiblocks://roles/${id}`)).contents[0];
+    if(!('text' in content))return fail(503,"invalid_role","The worker resource is not text.");
+    const role=JSON.parse(content.text);
+    const brief={goal:task,context:string(args.context,"context",8000,true),tools:string(args.tools,"tools",2000,true),training:string(args.training,"training",6000,true),me:string(args.me,"me",8000,true),resources:role.resources.map((r:{slug:string})=>r.slug),deliverables:role.deliverables};
+    try{validateRoleBrief(role,brief);}catch{return fail(400,"invalid_arguments","Check the task, source choices and note lengths; remove credentials from task context.");}
+    const notes=`Task context:\n${brief.context}\n\nAvailable tools:\n${brief.tools}\n\nTraining and preferences:\n${brief.training}\n\nRelevant supplied me.md:\n${brief.me}`;
+    if(notes.length>WORKFLOW_NOTES_LIMIT)return fail(400,"invalid_arguments","Shorten the combined context, preferences and saved profile.");
+    const preparation=await this.prepare({name:role.name,goal:task,...(notes?{notes}:{}),steps:[{id:"specialist",slug:role.custom_skill.slug}],custom_skills:[role.custom_skill]});
+    const workerFiles=specialistFiles(role,brief);
+    return {schema:"ai-blocks-specialist-preparation/1",state:"NOT_STARTED",selected_role:{id,name:role.name,url:`${this.baseUrl}/roles/${id}`,selection:chosen?"EXPLICIT":"TASK_CANDIDATE",scope_review:"NOT_RUN"},alternatives:matches.candidates.filter((r:{id:string})=>r.id!==id),worker:role.worker,worker_files:workerFiles,worker_sha256:await sha256(encoder.encode(stable(workerFiles))),launch_brief:roleLaunchPrompt(role,brief),preparation,execution:{location:"user-ai-environment",model_calls_by_service:0,stored_by_service:false},next_action:"Read the worker files and complete pinned source methods, compare scope against every deliverable, reuse relevant supplied facts, verify real host tools and existing authorization, then execute the supported work in the host AI. Produce native artifacts and actual check evidence. This response does not start a worker or grant external-action permission."};
+  }
+
   async readResource(uri: string): Promise<{ skill: boolean; contents: ({ uri: string; mimeType: string; text: string } | { uri: string; mimeType: string; blob: string })[] }> {
     const c = await this.catalogue();
+    if (uri === "aiblocks://roles" || /^aiblocks:\/\/roles\/[a-z0-9][a-z0-9-]{0,69}$/.test(uri)) {
+      const index = JSON.parse(decoder.decode(await this.read("/data/roles-index.json", 1_000_000)));
+      if (index.schema !== "ai-blocks-roles/1" || index.sourceHash !== c.manifest.catalogue_sha256 || !Array.isArray(index.roles)) return fail(503, "stale_roles", "The role library is unavailable or differs from the current catalogue. Retry after publication completes.");
+      if (uri === "aiblocks://roles") return {skill:false,contents:[{uri,mimeType:"application/json",text:JSON.stringify({schema:index.schema,areas:index.areas,roles:index.roles.map((r:{id:string;name:string;area:string})=>({id:r.id,name:r.name,area:r.area,uri:`aiblocks://roles/${r.id}`,url:`${this.baseUrl}/roles/${r.id}`})),notice:"Role setups are prepared instructions. The host AI carries out authorized work with the user's context and available tools."})}]};
+      const id=uri.slice("aiblocks://roles/".length), descriptor=index.profiles?.[id];
+      if(!descriptor||!index.roles.some((r:{id:string})=>r.id===id)||!Number.isSafeInteger(descriptor.bytes)||!/^[a-f0-9]{64}$/.test(descriptor.sha256))return fail(404,"role_not_found","Choose a role from aiblocks://roles.");
+      const bytes=await this.read(`/data/roles/${id}.json`,250_000,{path:`/data/roles/${id}.json`,bytes:descriptor.bytes,sha256:descriptor.sha256});
+      const role=JSON.parse(decoder.decode(bytes));
+      if(role.schema!=="ai-blocks-role/1"||role.id!==id||role.catalogueHash!==c.manifest.catalogue_sha256||!Array.isArray(role.resources)||role.resources.some((r:{slug:string;revision:string})=>c.manifest.resources[r.slug]?.revision_sha256!==r.revision))return fail(503,"stale_role","The role's source revisions changed. Retrieve the current setup again.");
+      const lead=this.entry(c,role.lead).item;
+      return {skill:false,contents:[{uri,mimeType:"application/json",text:JSON.stringify({...role,execution_status:"NOT_STARTED",custom_skill:{slug:`custom-role-${id}`,name:role.name,instructions:role.instructions,inputs:cataloguePorts(lead.inputs),outputs:cataloguePorts(lead.outputs),resources:role.resources.map((r:{slug:string;revision:string})=>({slug:r.slug,revision_sha256:r.revision}))},next_action:"Read the role instructions and selected full methods. Resolve task-relevant user context and tool access. Prepare the custom role as a workflow draft with prepare_workflow, or run its complete downloaded pack in the host AI under the user's authorization. No model was called and no task has run."})}]};
+    }
     if (uri === "aiblocks://jobs") return { skill: false, contents: [{ uri, mimeType: "application/json", text: JSON.stringify(this.jobs(c)) }] };
     const item = uri.match(/^aiblocks:\/\/([a-z_-]{3,20})\/([a-z0-9][a-z0-9-]{0,119})$/);
     if (item) return { skill: false, contents: [{ uri, mimeType: "application/json", text: JSON.stringify(await this.getAny({ id: item[2], type: item[1] })) }] };
@@ -782,13 +828,15 @@ export class PublicCatalogueService {
     const custom = new Map<string, CustomSkill>();
     const customReviews = [];
     for (const raw of array(args.custom_skills, "custom_skills", 10, true)) {
-      const s = obj(raw, "custom skill"); keys(s, ["slug", "name", "instructions", "inputs", "outputs"]);
+      const s = obj(raw, "custom skill"); keys(s, ["slug", "name", "instructions", "inputs", "outputs", "resources"]);
       const id = slug(s.slug);
       if (!id.startsWith("custom-") || c.bySlug.has(id) || custom.has(id)) fail(400, "invalid_custom_skill", "Custom identifiers must start custom- and cannot collide with existing items.");
       const instructions = string(s.instructions, "instructions", 30000);
       try { verifyLocalReferences({ [`skills/${id}/SKILL.md`]: encoder.encode(instructions) }); }
       catch { return fail(400, "missing_custom_resources", "Custom skills cannot reference missing local files. Supply self-contained instructions in this release."); }
-      const item = { slug: id, name: string(s.name, "custom name", 120), instructions, inputs: ports(s.inputs), outputs: ports(s.outputs) };
+      const support=s.resources===undefined?undefined:array(s.resources,"custom resources",24).map(raw=>{const r=obj(raw,"custom resource");keys(r,["slug","revision_sha256"]);const name=slug(r.slug),revision=hash(r.revision_sha256);this.entry(c,name,revision);return {slug:name,revision_sha256:revision!};});
+      if(support&&new Set(support.map(r=>r.slug)).size!==support.length)fail(400,"duplicate_resource","A custom role resource appears more than once.");
+      const item = { slug: id, name: string(s.name, "custom name", 120), instructions, inputs: ports(s.inputs), outputs: ports(s.outputs), ...(support?{resources:support}:{}) };
       const scan = await scanSourceFiles([{ path: "listing.txt", content: JSON.stringify({ name: item.name, inputs: item.inputs, outputs: item.outputs }) }, { path: "SKILL.md", content: instructions }]);
       if (scan.blocked) fail(422, "unsafe_custom_skill", "Custom source contains a blocked pattern. Review its instructions and metadata before preparing again. Static checks do not establish that other source is safe or authorized.");
       customReviews.push({ slug: id, ...scan, notice: "Static source review only. Findings need host review; this does not establish safe behavior or execution permission." });
@@ -834,7 +882,8 @@ export class PublicCatalogueService {
     if (parents.length && !parents.some(p => governance.some(g => g.slug === p.slug))) fail(400, "missing_governance", `This sequence matches a library workflow. Include its governing skill (${parents.map(p => p.slug).join(", ")}) and review conflicts before execution.`);
     const closure = new Set<string>();
     const collect = (id: string) => {
-      if (closure.has(id) || custom.has(id)) return;
+      if (custom.has(id)) { for(const resource of custom.get(id)!.resources??[])collect(resource.slug); return; }
+      if (closure.has(id)) return;
       if (closure.size >= 100) fail(413, "workflow_too_large", "The workflow support closure exceeds 100 catalogue items. Split the proposal.");
       const { item, entry } = this.entry(c, id);
       if (entry.reference_validation?.status === "BLOCKED") fail(409, "incomplete_skill", `The published package for ${id} has unresolved required resources.`);

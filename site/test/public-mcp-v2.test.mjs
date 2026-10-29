@@ -178,13 +178,13 @@ const mcpClient = async () => {
 };
 const loose = z.object({}).passthrough();
 
-test('an official SDK client sees nine tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
+test('an official SDK client sees eleven tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
     assert.equal(client.getServerVersion().version, '2.0.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
-    assert.equal((await client.listTools()).tools.length, 9);
+    assert.equal((await client.listTools()).tools.length, 11);
     for (const [name, args] of [['search_library', { query: 'margin' }], ['get_item', { id: 'pic-maker' }], ['get_skill', { slug: 'brief-writer' }], ['get_workflow', { slug: 'ad-flow' }], ['search', { query: 'brief' }], ['fetch', { id: 'skill/draft-checker' }]]) {
       const result = await client.callTool({ name, arguments: args });
       assert.equal(result.isError, undefined, name);
@@ -206,8 +206,8 @@ test('an official SDK client sees nine tools, prompts, resources and the Skills 
     assert.match(news.messages[0].content.text, /since "\d{4}-\d{2}-\d{2}"/);
     await assert.rejects(() => client.getPrompt({ name: 'find-a-skill', arguments: {} }), /topic is required/);
     await assert.rejects(() => client.getPrompt({ name: 'no-such-prompt', arguments: {} }), /Unknown prompt/);
-    assert.deepEqual((await client.listResources()).resources.map(r => r.uri), ['aiblocks://jobs']);
-    assert.deepEqual((await client.listResourceTemplates()).resourceTemplates.map(t => t.uriTemplate), ['aiblocks://{type}/{id}', 'skill://{name}/SKILL.md']);
+    assert.deepEqual((await client.listResources()).resources.map(r => r.uri), ['aiblocks://jobs', 'aiblocks://roles']);
+    assert.deepEqual((await client.listResourceTemplates()).resourceTemplates.map(t => t.uriTemplate), ['aiblocks://roles/{id}', 'aiblocks://{type}/{id}', 'skill://{name}/SKILL.md']);
     const jobs = JSON.parse((await client.readResource({ uri: 'aiblocks://jobs' })).contents[0].text);
     assert.deepEqual(jobs.jobs.find(j => j.id === 'write-ad-copy').items, 5);
     const item = JSON.parse((await client.readResource({ uri: 'aiblocks://ai_tool/pic-maker' })).contents[0].text);

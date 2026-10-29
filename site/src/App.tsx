@@ -2,6 +2,8 @@ import {StartupContext,StartupReady} from "./StartupReady";
 import LibraryLoading from "./LibraryLoading";
 import ComposePage from "./ComposeRoute";
 import MindsRoute from "./MindsRoute";
+import RolesRoute from "./RolesRoute";
+import {prefetchRole} from "./roles/role-data";
 import { spaceKey, spaces } from "./lib/space";
 import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, lazy, useCallback, useEffect, useState, type ComponentType } from "react";
@@ -131,6 +133,7 @@ function useIdlePrefetch() {
   useEffect(() => {
     // Pointing at a link warms what it opens: a block's page file, or the code for that section.
     setPrefetch((to) => {
+      if (/^\/roles(?:\/|$)/.test(to)) { const id = /^\/roles\/([a-z0-9-]+)$/.exec(to)?.[1] ?? null; prefetchRole(id, Number(/^\/roles\/page\/([1-9]\d*)$/.exec(to)?.[1] ?? 1)); return; }
       const m = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)/.exec(to);
       if (m) { void loadPage(m[2]); return; }
       const page = sectionOf(to);
@@ -207,7 +210,7 @@ export default function App() {
   const parts = path.split("/").filter(Boolean);
   const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
   const itemState = useItemCatalogue(pageSlug);
-  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
+  const needsCatalogue = !infoPage(path) && !["/roles", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
   const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
@@ -283,6 +286,8 @@ export default function App() {
             <AppsPage path={path} toast={setToast} />
           ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
             <SpacePage path={path} c={c} toast={setToast} />
+          ) : path === "/roles" || path.startsWith("/roles/") ? (
+            <RolesRoute key={path} path={path} toast={setToast} />
           ) : path === "/minds" ? (
             <MindsRoute c={c} toBuilder={toBuilder} complete={mindsState.complete} onNeedFull={mindsState.requestFull} error={mindsState.error} retry={mindsState.retry} />
           ) : path === "/compose" ? (

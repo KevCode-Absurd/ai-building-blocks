@@ -33,6 +33,7 @@ export default function SiteHeader() {
       {open && <nav id="site-menu-links" className="site-menu-links" aria-label="Sections" data-testid="site-menu" onClick={event => { if ((event.target as Element).closest('a[href], [data-close-menu]')) setOpen(false); }}>
         <section aria-label="Main sections">
           <Link to="/#library" aria-current={current("/")} data-testid="nav-find">Find a task</Link>
+          <Link to="/roles" aria-current={path === "/roles" || path.startsWith("/roles/") ? "page" : undefined} data-testid="nav-roles">Hire an AI specialist</Link>
           <Link to="/compose" aria-current={current("/compose")} data-testid="nav-compose">Build a workflow</Link>
           <Link to="/minds" aria-current={current("/minds")} data-testid="nav-minds">Minds</Link>
           <Link to="/tools" aria-current={inTools ? "page" : undefined} data-testid="nav-tools">Tools</Link>

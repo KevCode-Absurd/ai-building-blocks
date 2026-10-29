@@ -1,0 +1,5 @@
+import type {workerContract} from './specialist-worker.mjs';
+export type RoleResource = {slug:string;name:string;summary:string;task?:string;kind:string;path:string;revision:string;skillPath:string;bundled?:boolean;license?:string;by?:string;sourceUrl?:string};
+export type RoleCard = {id:string;name:string;summary:string;area:string;deliverables:string[];resourceCount:number;featured:boolean};
+export type RoleProfile = RoleCard & {schema:'ai-blocks-role/1';worker:ReturnType<typeof workerContract>;workerFiles:Record<string,string>;lead:string;resources:RoleResource[];inputs:string[];helpfulInputs:string[];fit:string[];limits:string[];tools:string[];method:string[];capabilities:{name:string;description:string}[];functions:{name:string;description:string;method:string;when:string[];inputs:string[];deliverables:string[]}[];example:string;sourceHash:string;catalogueHash:string;sourceChecks:{completeMethods:number;referenceValidation:string};};
+export type RoleIndex = {schema:'ai-blocks-roles/1';sourceHash:string;starter?:true;page?:number;areas:{id:string;name:string}[];roles:RoleCard[]};

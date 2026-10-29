@@ -10,6 +10,7 @@ import { factCheckHtml } from "./lib/fact-check-html.mjs";
 import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
+import {rolePage} from "./lib/role-pages.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -63,6 +64,7 @@ const plainShell = shell
   .replace(/<link rel="preload" href="\/data\/blocks.json"[^>]*>\s*/, "");
 const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
 const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"));
+const roleIndex = JSON.parse(fs.readFileSync("public/data/roles-index.json", "utf8"));
 const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
 const { TOOLS } = await import("../../mini-tools/index.mjs");
@@ -116,12 +118,12 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"]];
-const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">My space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"]];
+const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">My space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
 const logo = `<svg viewBox="0 0 24 24" aria-hidden="true" class="logo">${GLOBE.flatMap((row, y) => [...row].map((c, x) => (c === "." ? "" : `<rect x="${(x * 3.4 + 0.3).toFixed(1)}" y="${(y * 3.4 + 0.3).toFixed(1)}" width="2.9" height="2.9" fill="currentColor"${c === "+" ? ' opacity="0.32"' : ""}/>`))).join("")}</svg>`;
-const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/compose">Build a workflow</a><a href="/tools">Tools</a><a href="/minds">Minds</a><a href="/space">My space</a></nav></div></header>`;
+const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/roles">Hire an AI specialist</a><a href="/compose">Build a workflow</a><a href="/tools">Tools</a><a href="/minds">Minds</a><a href="/space">My space</a></nav></div></header>`;
 const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p>${SOCIAL_PROFILES.length ? `<p>${SOCIAL_PROFILES.map((p) => `<a href="${esc(p.url)}" rel="me noopener">${esc(p.label)}</a>`).join(" · ")}</p>` : ""}</footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
@@ -259,6 +261,7 @@ function underH3(html) {
 const itemList = (entries) => ({ "@type": "ItemList", numberOfItems: entries.length, itemListElement: entries.map(([name, u], i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${u}`, name })) });
 
 function pageFor(url) {
+  if (url === "/roles" || url.startsWith("/roles/")) return rolePage(url, roleIndex, id => JSON.parse(fs.readFileSync(`public/data/roles/${id}.json`, "utf8")));
   if (url === "/api-and-mcp") return {
     title: "Connect your AI", h1: "Connect your AI once, then pull any skill or workflow it needs.", documentTitle: SEO_PAGES[url][0],
     desc: SEO_PAGES[url][1],

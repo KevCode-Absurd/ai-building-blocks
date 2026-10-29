@@ -215,6 +215,8 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   const bytesByPath: Record<string, Uint8Array> = {};
   const putBytes = (p: string, bytes: Uint8Array) => { if (!safePackagePath(p) || Object.hasOwn(bytesByPath, p)) throw Error(`Invalid or duplicate package path: ${p}`); bytesByPath[p] = bytes; files[p] = [bytes, { mtime: FIXED_TIME }]; };
   const put = (p: string, text: string) => putBytes(p, strToU8(text));
+  const workers = flow.customSkills?.filter(s => s.workerFiles) ?? [];
+  for (const worker of workers) for (const [name,text] of Object.entries(worker.workerFiles!)) put(workers.length===1?name:`workers/${worker.slug}/${name}`,text);
   const about = meFor(business, order.map(o => c.bySlug[o.node.slug]).filter(Boolean));
   let planningInputs: unknown = null;
   for (const [name, text] of Object.entries(extras)) {

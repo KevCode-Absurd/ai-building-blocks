@@ -41,6 +41,11 @@ export function fingerprints(dist) {
     const html = fs.readFileSync(file, 'utf8'), pathname = new URL(url).pathname;
     const slug = pathname.split('/').at(-1), own = /^\/(skills|workflows|agents|prompts|minds)\//.test(pathname) ? resources[slug]?.revision_sha256 : '';
     const extras = {};
+    if (/^\/roles(?:\/|$)/.test(pathname)) {
+      if (pathname === '/roles' || pathname.startsWith('/roles/page/')) extras.roles = sha256(fs.readFileSync(path.join(dist, 'data/roles-index.json')));
+      else extras.role = sha256(fs.readFileSync(path.join(dist, 'data/roles', slug + '.json')));
+      extras.roleMembers = [...html.matchAll(/href="\/(?:skills|workflows|agents|prompts|minds)\/([a-z0-9-]+)"/g)].map(m=>m[1]).filter(s=>resources[s]).sort().map(s=>[s,resources[s].revision_sha256]);
+    }
     // Collection pages inherit their listed package changes, even when their short card text is unchanged.
     if (/^\/jobs(?:\/|$)/.test(pathname) || /^\/(skills|workflows|agents|prompts|minds)$/.test(pathname)) {
       extras.members = [...html.matchAll(/href="\/(?:skills|workflows|agents|prompts|minds)\/([a-z0-9-]+)"/g)].map(match => match[1]).filter(name => resources[name]).sort().map(name => [name, resources[name].revision_sha256]);

@@ -1,4 +1,5 @@
 import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
+import {takeRolePlannerSeed} from "./roles/role-transfer";
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type Block, type Catalogue, portLabel, workflowEntries } from "./lib/data";
 import { type Choices, LEGACY_REQUEST_LIMIT, LIMITS, QUESTIONS, questionsFor, requestError, validateChoices } from "./lib/composer-request";
@@ -78,13 +79,18 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
   const remoteApplying = useRef(false), lastPersisted = useRef<string | null>(null);
   const editing = useRef({ busy, result, goal }); editing.current = { busy, result, goal };
   useEffect(() => {
+    const seed = takeRolePlannerSeed();
+    if (seed) { explicitImport.current = true; setGoal(seed.goal); setContext(seed.context); setUseContext(seed.useContext); setMode("ai"); setResult(null); setReview(false); }
+  }, []);
+  useEffect(() => {
     document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
-    try {
+    if (!explicitImport.current) try {
       const pending = JSON.parse(sessionStorage.getItem("abb:composer-signin") ?? "null");
       sessionStorage.removeItem("abb:composer-signin");
       if (pending && typeof pending.goal === "string" && typeof pending.context === "string") {
+        explicitImport.current = true;
         setGoal(pending.goal); setContext(pending.context.slice(0, LIMITS.context));
         setChoices(validateChoices(pending.choices ?? {})); setUseContext(pending.useContext === true);
         setAssignMinds(pending.assignMinds !== false);

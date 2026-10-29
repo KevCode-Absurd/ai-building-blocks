@@ -7,7 +7,8 @@ import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, KitMenu, Drawer } from "./ui";
 import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, useCatalogueState, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
-import { buildHandoffZip, buildSkillZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
+import { finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff-core";
+import { download } from "./lib/download";
 import { getBusiness, hasBusiness, meFor, useBusiness, withBusiness } from "./lib/business";
 import type { TaskLike } from "./lib/me-file";
 import { openTailor } from "./Tailor";
@@ -306,7 +307,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     const scope = currentTransfer.current;
     setDownloading(true); setDownloadError(""); trackUxEvent("pack_download_requested");
     try {
-      const result = isFlow ? await buildHandoffZip(c, workflowFlow(), getBusiness()) : { blob: await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness(), b), filename: `${b.slug}.zip` };
+      const packBusiness = getBusiness();
+      const {buildHandoffZip,buildSkillZip} = await import("./lib/handoff");
+      const result = isFlow ? await buildHandoffZip(c, workflowFlow(), packBusiness) : { blob: await buildSkillZip(b.slug, skill, b.hasFiles, packBusiness, b), filename: `${b.slug}.zip` };
       if (currentTransfer.current !== scope) return;
       if ("error" in result) throw Error(result.error);
       download(result.blob, result.filename); setTransferred(true);
@@ -317,7 +320,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const dlOrder = dl ? orderFlow(dl) : null;
   const getPack = async () => {
     if (!dl) return false;
-    const r = await buildHandoffZip(c, dl, getBusiness());
+    const packBusiness = getBusiness();
+    const {buildHandoffZip} = await import("./lib/handoff");
+    const r = await buildHandoffZip(c, dl, packBusiness);
     if ("error" in r) { toast(r.error); return false; }
     download(r.blob, r.filename);
     setTransferred(true);

@@ -5,7 +5,7 @@ import { assignedCustomMinds, validateCustomMinds, withCustomMinds, type CustomM
 // a tidy layout, a plan from a goal, and a link that carries the workflow. Plain code, same input, same answer.
 import { deflateSync, Inflate, strFromU8, strToU8 } from "fflate";
 import { type Catalogue, portLabel, wireSteps, workflowEntries } from "./data";
-import { orderFlow } from "./handoff";
+import { orderFlow } from "./handoff-core";
 import { type Flow, type FlowEdge, type FlowNode, TEAM_MAX, uid } from "./store";
 
 /** What one step hands the next: the types it makes that the next one reads. Empty when they don't match. */

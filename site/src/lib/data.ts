@@ -284,14 +284,19 @@ export function useItemCatalogue(slug: string | null) {
   useEffect(() => {
     if (!slug) return;
     let live = true;
-    const complete = () => { void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {}); };
+    let firstFrame = 0, secondFrame = 0;
+    const complete = () => {
+      firstFrame = requestAnimationFrame(() => { secondFrame = requestAnimationFrame(() => {
+        if (live) void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {});
+      }); });
+    };
     void loadItemCatalogue(slug).then(catalogue => {
       if (!live) return; setState({slug, catalogue, error: ""});
       if (!catalogue.itemSlug) return;
       if (document.documentElement.dataset.boot === "ready") complete();
       else document.addEventListener("abb:ready", complete, {once: true});
     }).catch(() => { if (live) setState({slug, catalogue: null, error: "The task library could not load. Check your connection and try again."}); });
-    return () => { live = false; document.removeEventListener("abb:ready", complete); };
+    return () => { live = false; cancelAnimationFrame(firstFrame); cancelAnimationFrame(secondFrame); document.removeEventListener("abb:ready", complete); };
   }, [slug, attempt]);
   return {catalogue: state.slug === slug ? state.catalogue : null, error: state.slug === slug ? state.error : "", retry: useCallback(() => setAttempt(n => n + 1), [])};
 }

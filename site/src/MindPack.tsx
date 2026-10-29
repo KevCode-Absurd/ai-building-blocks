@@ -3,7 +3,7 @@
 // On a skill's page you see who can help with it.
 import { useEffect, useState } from "react";
 import { type Block, type Catalogue, kindOf, pathOf } from "./lib/data";
-import { buildMindPack, download } from "./lib/handoff";
+import { download } from "./lib/download";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
 import { LabelBadges } from "./MindLabel";
@@ -22,7 +22,9 @@ export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toas
   const get = async () => {
     setBusy(true);
     try {
-      const r = await buildMindPack(c, mind.slug, skills.filter((s) => picked.has(s.slug)).map((s) => s.slug), getBusiness());
+      const business = getBusiness();
+      const {buildMindPack} = await import("./lib/handoff");
+      const r = await buildMindPack(c, mind.slug, skills.filter((s) => picked.has(s.slug)).map((s) => s.slug), business);
       if ("error" in r) { toast(r.error ?? "Couldn't make the pack."); return; }
       download(r.blob, r.filename);
       toast(r.skills ? `Downloaded ${first} with ${r.skills === 1 ? "1 skill" : `${r.skills} skills`}.` : `Downloaded ${first}.`);

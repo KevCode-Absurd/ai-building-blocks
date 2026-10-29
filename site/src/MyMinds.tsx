@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { customMindMarkdown, importMind, mindFile, validateCustomMinds, type CustomMind } from "./lib/custom-minds";
 import { useMindLibrary } from "./lib/mind-library";
-import { download } from "./lib/handoff";
+import { download } from "./lib/download";
 import "./my-minds.css";
 
 const fresh = (): CustomMind => ({ slug: `my-mind-${crypto.randomUUID()}`, name: "", specialty: "", voice: "", principles: "", avoid: "", examples: "" });

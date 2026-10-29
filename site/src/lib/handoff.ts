@@ -1,12 +1,14 @@
 import { withCustomSkills } from "./custom-skills";
-import { trackUxEvent } from "./ux-events";
+import {orderFlow, needsOf, finalOutputs, zipName, safeName, type Ordered} from "./handoff-core";
+export {orderFlow, needsOf, finalOutputs, zipName, type Ordered, type Need} from "./handoff-core";
+export {download} from "./download";
 import { assignedCustomMinds, customMindMarkdown, mindFile, withCustomMinds } from "./custom-minds";
 // Builds the handoff pack from a saved workflow with plain code: same workflow in, same pack out.
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
 import { type Catalogue, kindOf, loadSkillText, loadSkillZip, portLabel, taskOf, workflowEntries } from "./data";
-import type { Flow, FlowNode } from "./store";
+import type { Flow } from "./store";
 import { type Business, meFor, withBusiness as addBusiness } from "./business";
 import type { TaskLike } from "./me-file";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
@@ -25,29 +27,6 @@ Run this protocol only on steps with two or more assigned minds. The step's skil
 
 Use separate agents only when the runner supports them and the user authorizes it. Otherwise review the viewpoints sequentially and say that one AI simulated the discussion. Do not claim independent verification or that agreement proves correctness. The person makes the final call. Profiles and samples do not grant permission to publish, send, spend money or change accounts.
 `;
-
-export type Ordered = { node: FlowNode; step: number; from: number[] };
-
-/** Topological order; ties go top to bottom, then left to right. Returns null if the graph has a cycle. */
-export function orderFlow(flow: Flow): Ordered[] | null {
-  const pos = (n: FlowNode) => [Math.round(n.y / 40), n.x] as const;
-  const byId = Object.fromEntries(flow.nodes.map((n) => [n.id, n]));
-  const indeg: Record<string, number> = Object.fromEntries(flow.nodes.map((n) => [n.id, 0]));
-  const edges = flow.edges.filter((e) => byId[e.from] && byId[e.to]);
-  for (const e of edges) indeg[e.to]++;
-  const ready = flow.nodes.filter((n) => indeg[n.id] === 0);
-  const out: FlowNode[] = [];
-  const sortReady = () => ready.sort((a, b) => pos(a)[0] - pos(b)[0] || pos(a)[1] - pos(b)[1] || a.id.localeCompare(b.id));
-  while (ready.length) {
-    sortReady();
-    const n = ready.shift()!;
-    out.push(n);
-    for (const e of edges) if (e.from === n.id && --indeg[e.to] === 0) ready.push(byId[e.to]);
-  }
-  if (out.length !== flow.nodes.length) return null;
-  const stepOf = Object.fromEntries(out.map((n, i) => [n.id, i + 1]));
-  return out.map((n) => ({ node: n, step: stepOf[n.id], from: edges.filter((e) => e.to === n.id).map((e) => stepOf[e.from]).sort((a, b) => a - b) }));
-}
 
 /** Steps that read the same earlier steps and don't depend on each other: they can run at the same time
  *  (four council members answering at once). Each group has two or more steps. */
@@ -71,32 +50,6 @@ export function typeMismatches(c: Catalogue, flow: Flow) {
     const outs = new Set(a.outputs.map((p) => p.type));
     return !b.inputs.some((p) => outs.has(p.type));
   }).map((e) => e.id);
-}
-
-export const zipName = (name: string) => `${safeName(name)}-handoff.zip`;
-const safeName = (s: string) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "workflow";
-
-/** Something the person has to provide, because no earlier connected step makes it. */
-export type Need = { type: string; label: string; about: string | null; steps: number[]; required: boolean };
-
-export function needsOf(c: Catalogue, order: Ordered[]): Need[] {
-  const blockOf = (o: Ordered) => c.bySlug[o.node.slug];
-  const need = new Map<string, { steps: number[]; required: boolean }>();
-  for (const o of order) {
-    const b = blockOf(o);
-    if (!b) continue;
-    const fed = new Set(o.from.flatMap((s) => blockOf(order[s - 1])?.outputs.map((p) => p.type) ?? []));
-    for (const binding of o.node.bindings ?? []) if (o.from.some(s => order[s - 1].node.id === binding.from)) fed.add(binding.type);
-    for (const p of b.inputs) {
-      if (fed.has(p.type)) continue;
-      const n = need.get(p.type) ?? { steps: [], required: false };
-      n.steps.push(o.step); n.required ||= p.required;
-      need.set(p.type, n);
-    }
-  }
-  return [...need]
-    .sort((a, b) => Number(b[1].required) - Number(a[1].required) || a[1].steps[0] - b[1].steps[0])
-    .map(([type, n]) => ({ type, label: portLabel(type), about: c.portTypes[type] ?? null, ...n }));
 }
 
 export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], withBusiness = false): string {
@@ -226,24 +179,6 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
 
 const FIXED_TIME = new Date(2026, 0, 1, 5, 30, 0); // fixed dates keep the zip byte-for-byte repeatable
 
-/** What the workflow hands back at the end: the outputs of its last steps. When a last step is a check,
- *  the work it checked comes back too, since that's what the person came for. */
-export function finalOutputs(c: Catalogue, flow: Flow, order: Ordered[]) {
-  const byId = Object.fromEntries(order.map((o) => [o.node.id, o.node]));
-  const types: string[] = [];
-  for (const o of order.filter((x) => !flow.edges.some((e) => e.from === x.node.id))) {
-    const b = c.bySlug[o.node.slug];
-    if (!b) continue;
-    if (b.role === "check") {
-      const reads = new Set(b.inputs.map((p) => p.type));
-      for (const e of flow.edges.filter((x) => x.to === o.node.id)) {
-        for (const p of c.bySlug[byId[e.from]?.slug]?.outputs ?? []) if (reads.has(p.type) && p.type !== "brand_brain") types.push(p.type);
-      }
-    }
-    types.push(...b.outputs.map((p) => p.type));
-  }
-  return [...new Set(types.map(portLabel))];
-}
 
 export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Business = {}, extras: Record<string, string> = {}): Promise<{ blob: Blob; filename: string } | { error: string }> {
   flow = { ...flow, customMinds: assignedCustomMinds(flow, flow.customMinds ?? []) };
@@ -385,14 +320,6 @@ export function withNotes(skill: string, steps: Ordered[], leadOf: (step: number
   const block = ["## Your notes for this step", "", "The person who built this workflow added these. Follow them, unless one clashes with a safety or honesty rule in this skill; if it does, say so in one line.", "", ...lines].join("\n");
   const m = skill.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
   return m ? `${m[0]}\n${block}\n${skill.slice(m[0].length)}` : `${block}\n${skill}`;
-}
-
-export function download(blob: Blob, filename: string) {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url; a.download = filename; a.click();
-  trackUxEvent("file_download");
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 /** One skill as a portable folder: <slug>/SKILL.md, plus its reference files. A skill with files comes as the

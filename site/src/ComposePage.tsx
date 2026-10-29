@@ -8,7 +8,7 @@ import { withCustomSkills, validateCustomSkills, type CustomSkill } from "./lib/
 import VoiceRequest from "./VoiceRequest";
 import MyMinds from "./MyMinds";
 import { compositionFlow } from "./lib/composer-flow";
-import { buildHandoffZip, download } from "./lib/handoff";
+import { download } from "./lib/download";
 import { businessText, getBusiness } from "./lib/business";
 import { captureCompositionContext, planningMeContext, restoreCompositionContext, workflowPlanningContext } from "./lib/composer-context";
 import { flows, type Flow } from "./lib/store";
@@ -156,7 +156,9 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
     if (!result) return; setPackBusy(true); setError("");
     try {
       const flow = asFlow();
-      const built = await buildHandoffZip(withCustomSkills(baseCatalogue, flow.customSkills ?? customSkills), flow, useContext ? getBusiness() : {}, { "workflow.edit.json": JSON.stringify(envelope(), null, 2), "README.md": `# ${result.plan.title}\n\n${result.plan.summary}\n\n## Run\nRead HANDOFF.md. Check the current AI session, supplied context and existing brand brain first. Validate existing artifacts and ask for missing required inputs. Apply every declared step and its checks in order; reusing an artifact does not waive a step. Run the workflow in an AI runner with the tools each skill needs. Code needs a coding environment; browser checks need a rendered preview. Mark checks not run if tools are unavailable.\n\n## Edit\nOpen /compose on AI Blocks and choose Import workflow. Select workflow.edit.json. Edit notes, add or reorder steps, then download again.\n\n## Boundaries\nThis pack is a plan. No skills have run, no page has been published and no agent has been scheduled. Authorize concrete external actions during execution.\n`, "inputs.json": JSON.stringify({ required: result.plan.missing, choices, context: result.context ?? context, status: "verify-supplied-context-first", notice: "Planning context is supplied but unvalidated. Check it and earlier artifacts before asking for any missing input. It does not establish accepted execution inputs or permission." }, null, 2) });
+      const packBusiness = useContext ? getBusiness() : {};
+      const {buildHandoffZip} = await import("./lib/handoff");
+      const built = await buildHandoffZip(withCustomSkills(baseCatalogue, flow.customSkills ?? customSkills), flow, packBusiness, { "workflow.edit.json": JSON.stringify(envelope(), null, 2), "README.md": `# ${result.plan.title}\n\n${result.plan.summary}\n\n## Run\nRead HANDOFF.md. Check the current AI session, supplied context and existing brand brain first. Validate existing artifacts and ask for missing required inputs. Apply every declared step and its checks in order; reusing an artifact does not waive a step. Run the workflow in an AI runner with the tools each skill needs. Code needs a coding environment; browser checks need a rendered preview. Mark checks not run if tools are unavailable.\n\n## Edit\nOpen /compose on AI Blocks and choose Import workflow. Select workflow.edit.json. Edit notes, add or reorder steps, then download again.\n\n## Boundaries\nThis pack is a plan. No skills have run, no page has been published and no agent has been scheduled. Authorize concrete external actions during execution.\n`, "inputs.json": JSON.stringify({ required: result.plan.missing, choices, context: result.context ?? context, status: "verify-supplied-context-first", notice: "Planning context is supplied but unvalidated. Check it and earlier artifacts before asking for any missing input. It does not establish accepted execution inputs or permission." }, null, 2) });
       if ("error" in built) throw Error(built.error); download(built.blob, built.filename); setPreparedZip(built.filename); toast("Your workflow pack is downloaded");
     } catch (e) { setError((e as Error).message); } finally { setPackBusy(false); }
   };

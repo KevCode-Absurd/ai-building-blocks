@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import type { Block } from "./lib/data";
-import { buildSkillZip, download } from "./lib/handoff";
+import { download } from "./lib/download";
 import { getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
 import "./task-simplicity.css";
 import { trackUxEvent } from "./lib/ux-events";
@@ -26,7 +26,7 @@ export default function Install({ b, skill, toast, compact = false, onPrepared }
   const zip = async () => {
     if (!skill || busy) return;
     setBusy(true); setError(""); trackUxEvent("pack_download_requested");
-    try { download(await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness(), b), `${b.slug}.zip`); setPrepared(true); onPrepared?.(); toast("Files prepared. Follow the steps to use them in your AI."); }
+    try { const business = getBusiness(); const {buildSkillZip} = await import("./lib/handoff"); download(await buildSkillZip(b.slug, skill, b.hasFiles, business, b), `${b.slug}.zip`); setPrepared(true); onPrepared?.(); toast("Files prepared. Follow the steps to use them in your AI."); }
     catch { setError("The files could not be prepared. Your details are kept. Try downloading again."); }
     finally { setBusy(false); }
   };

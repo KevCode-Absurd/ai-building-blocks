@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { buildTaskPrompt, buildTaskWorkflow, taskInputSheet } from './lib/copyable-task.mjs';
-import { buildHandoffZip, download } from './lib/handoff';
+import { download } from './lib/download';
 import type { Block, Catalogue } from './lib/data';
 import type { Flow } from './lib/store';
 import './copyable-task.css';
@@ -25,6 +25,7 @@ export default function CopyableTask({ c, b, recipe, skill, toast }: { c: Catalo
     setBusy(true); setError('');
     const flow: Flow = { id:`task-${b.slug}`,name:`${b.name} task workflow`,updated:0,goal:`Follow the ${b.name} method using my supplied inputs. Read framework/task-workflow.md and resolve its input fields first.`,nodes:[{id:'task',slug:b.slug,x:0,y:0,notes:'Read framework/task-workflow.md for this task and its stage handoffs. Preserve the complete skill method and all checkpoints.'}],edges:[] };
     try {
+      const {buildHandoffZip} = await import("./lib/handoff");
       const result = await buildHandoffZip(c,flow,{}, {'framework/task-prompt.md':buildTaskPrompt(recipe,skill),'framework/task-workflow.md':buildTaskWorkflow(recipe,skill),'framework/task-inputs.md':taskInputSheet(recipe),'README.md':'## Start this task\n\nFill the fields in framework/task-inputs.md, then ask your AI to follow framework/task-workflow.md together with HANDOFF.md. The complete method and supporting files are under skills/. A chat-only assistant can use the inline task prompt for text work; file or tool steps still require the stated capabilities. All execution checks begin unrun.\n'});
       if (!active.current) return;
       if ('error' in result) throw Error(result.error);

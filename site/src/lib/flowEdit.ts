@@ -1,7 +1,7 @@
 // Edit a saved workflow as a simple list of steps (the "Add to a workflow" pop-up).
 // The builder stores a graph; this turns it into a list and back without losing hand-made connections.
 import { type Catalogue, wireSteps } from "./data";
-import { orderFlow } from "./handoff";
+import { orderFlow } from "./handoff-core";
 import { type Flow, type FlowEdge, type FlowNode, uid } from "./store";
 
 export type Step = { id: string; slug: string; added?: boolean };

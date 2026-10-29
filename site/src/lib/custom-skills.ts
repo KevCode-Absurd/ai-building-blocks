@@ -1,8 +1,8 @@
 import type { Catalogue } from "./data";
 import type { Part, Library } from "./composer-core";
 import { retrieve, terms } from "./composer-core.ts";
-export {type CustomSkill, CUSTOM_LIMIT, validateCustomSkills, withCustomSkills} from "./custom-skill-data";
-import {withCustomSkills} from "./custom-skill-data";
+export {type CustomSkill, CUSTOM_LIMIT, validateCustomSkills, withCustomSkills} from "./custom-skill-data.ts";
+import {withCustomSkills} from "./custom-skill-data.ts";
 import type { Flow } from "./store";
 
 export function replacementImpact(c: Library, old: Part, next: Part, before: string[], after: string[]) {

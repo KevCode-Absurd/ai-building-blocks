@@ -15,16 +15,17 @@ test('one label: Tested, or nothing', () => {
   for (const f of ['../src/ui.tsx', '../src/BlockPage.tsx', '../src/lib/site-info.mjs', '../src/HowItWorks.tsx']) assert.ok(!/not yet tested/i.test(read(f)), f);
 });
 
-test('the header menu has four main places and the footer stays short', () => {
+test('the menu and footer include Minds while navigation stays short', () => {
   const header = read('../src/SiteHeader.tsx');
   const main = header.slice(header.indexOf('aria-label="Main sections"'), header.indexOf('</section>', header.indexOf('aria-label="Main sections"')));
   const links = [...main.matchAll(/<Link to="([^"]+)"[^>]*>([^<]+)<\/Link>/g)].map((m) => [m[1], m[2]]);
-  assert.deepEqual(links, [['/#library', 'Find a task'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/space', 'My space']]);
-  for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/minds', '/ai-tools']) assert.ok(!header.includes(`to="${folded}"`), `${folded} is not a header link`);
+  assert.deepEqual(links, [['/#library', 'Find a task'], ['/compose', 'Build a workflow'], ['/minds', 'Minds'], ['/tools', 'Tools'], ['/space', 'My space']]);
+  for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/ai-tools']) assert.ok(!header.includes(`to="${folded}"`), `${folded} is not a header link`);
   const footer = read('../src/SiteFooter.tsx');
   const listed = [...footer.slice(footer.indexOf('const groups'), footer.indexOf('export default')).matchAll(/\["(\/[^"]*)", "([^"]+)"\]/g)].map((m) => m[1]);
+  assert.ok(listed.includes('/minds'), 'Minds remains directly reachable from the footer');
   assert.ok(listed.length <= 9, `footer lists ${listed.length} links`);
-  for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/minds']) assert.ok(!listed.includes(folded), `${folded} is not a footer link`);
+  for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people']) assert.ok(!listed.includes(folded), `${folded} is not a footer link`);
   assert.match(footer, /usePeopleVisible\(\)/);
   assert.match(footer, /people && <Link to="\/people"/);
 });

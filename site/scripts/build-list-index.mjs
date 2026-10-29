@@ -44,6 +44,22 @@ export function buildMindsIndex(catalogue, sourceBytes) {
     portTypes: catalogue.portTypes, renamed: catalogue.renamed ?? {}, minds: catalogue.minds, blocks};
 }
 
+/** First screen only. Keep all roster identities/role counts, the visible wall and 24 exact cards. */
+export function buildMindsStarterIndex(catalogue, sourceBytes) {
+  const roster = catalogue.minds?.roster ?? [];
+  const initial = new Set(roster.slice(0, 24).map(mind => mind.slug));
+  const blocks = catalogue.blocks.filter(block => block.type === 'mind' || block.slug === 'advisory-council')
+    .map(block => initial.has(block.slug) || block.slug === 'advisory-council' ? block : {slug: block.slug, name: block.name, type: 'mind', identity: block.identity, area: block.area});
+  return {built: catalogue.built, mindsStarter: true, sourceHash: createHash('sha256').update(sourceBytes).digest('hex'),
+    portTypes: catalogue.portTypes, renamed: catalogue.renamed ?? {}, blocks,
+    minds: {...catalogue.minds, roster: roster.map((mind, i) => {
+      if (i < 24) return mind;
+      const {useCases, ...header} = mind;
+      if (i < 150) return header; // At most 50 portraits × 3 visible rows.
+      const {face, ...identity} = header; return identity;
+    })}};
+}
+
 export function writeListIndex(root = process.cwd()) {
   const source = fs.readFileSync(path.join(root, 'public/data/blocks.json'));
   const index = buildListIndex(JSON.parse(source), source);
@@ -54,6 +70,10 @@ export function writeListIndex(root = process.cwd()) {
   const mindsFile = path.join(root, 'public/data/minds-index.json');
   fs.writeFileSync(mindsFile, JSON.stringify(minds));
   console.log(`Minds index: ${minds.minds.roster.length} complete profiles, ${fs.statSync(mindsFile).size} bytes`);
+  const starter = buildMindsStarterIndex(JSON.parse(source), source);
+  const starterFile = path.join(root, 'public/data/minds-starter.json');
+  fs.writeFileSync(starterFile, JSON.stringify(starter));
+  console.log(`Minds starter: 24 complete cards, ${starter.minds.roster.length} roster identities, ${fs.statSync(starterFile).size} bytes`);
   return index;
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) writeListIndex();

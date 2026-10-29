@@ -1,6 +1,7 @@
 import {StartupContext,StartupReady} from "./StartupReady";
 import LibraryLoading from "./LibraryLoading";
 import ComposePage from "./ComposeRoute";
+import MindsRoute from "./MindsRoute";
 import { spaceKey, spaces } from "./lib/space";
 import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, lazy, useCallback, useEffect, useState, type ComponentType } from "react";
@@ -95,7 +96,6 @@ const AiToolsPage = startupPage(PAGES.aitools);
 const TractionPage = startupPage(PAGES.traction);
 const AppsPage = startupPage(PAGES.apps);
 const SpacePage = startupPage(PAGES.space);
-const MindsPage = startupPage(PAGES.minds);
 const IntakePage = startupPage(PAGES.intake);
 const InfoPage = startupPage(PAGES.info);
 const AccountPage = startupPage(PAGES.account);
@@ -221,7 +221,7 @@ export default function App() {
   // Prepare the library on request intent; the untouched form needs no full catalogue.
   const [composeRequested, setComposeRequested] = useState(false);
   const requestComposeCatalogue = useCallback(() => { setComposeRequested(true); return loadCatalogue(); }, []);
-  const mindsState = useMindsCatalogue(path === "/minds");
+  const mindsState = useMindsCatalogue(path === "/minds", search.has("q"));
   const catalogueState = useCatalogueState((needsCatalogue && path !== "/minds" && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
   // Without starter picks there is nothing light to show, so open the library straight away.
   useEffect(() => { if (catalogueState.starterFailed) requestHomeCatalogue(); }, [catalogueState.starterFailed, requestHomeCatalogue]);
@@ -245,7 +245,7 @@ export default function App() {
   const here = now(pageSlug);
   const redirectTo = LEGACY_PATHS[path] ?? (old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null);
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && !pageError && (pageSlug !== null || ["/minds", "/from-a-source"].includes(path)
+  const waitingForCatalogue = !c && !pageError && (pageSlug !== null || ["/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });
@@ -267,7 +267,7 @@ export default function App() {
       <div id="main-content" tabIndex={-1}>
       <StartupContext.Provider value={!redirectTo && !waitingForCatalogue}>
         <PageRecovery key={path}><Suspense fallback={<main className="wrap bp-hero"><p className="small" role="status">Opening this page…</p></main>}>
-          {pageError && !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)) ? <main><StartupReady /><LibraryLoading error={pageError} retry={retryPage} /></main> : infoPage(path) ? (
+          {pageError && !c && (pageSlug !== null || ["/compose", "/from-a-source"].includes(path)) ? <main><StartupReady /><LibraryLoading error={pageError} retry={retryPage} /></main> : infoPage(path) ? (
             <InfoPage path={path} toast={setToast} />
           ) : ["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/") ? (
             <CommunityPage key={path} path={path} />
@@ -284,7 +284,7 @@ export default function App() {
           ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
             <SpacePage path={path} c={c} toast={setToast} />
           ) : path === "/minds" ? (
-            c ? <MindsPage c={c} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+            <MindsRoute c={c} toBuilder={toBuilder} complete={mindsState.complete} onNeedFull={mindsState.requestFull} error={mindsState.error} retry={mindsState.retry} />
           ) : path === "/compose" ? (
             // The builder opens at once; it plans once the task library is here (ComposePage.tsx).
             <ComposePage c={c} toast={setToast} requestCatalogue={requestComposeCatalogue} />

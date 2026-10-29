@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {gzipSync} from 'node:zlib';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
-import {buildMindsIndex} from '../scripts/build-list-index.mjs';
+import {buildMindsIndex, buildMindsStarterIndex} from '../scripts/build-list-index.mjs';
 
 const bundle = await build({stdin: {contents: 'export {decodeWire} from "./src/lib/data.ts"; export {mindsFor,mindSearchOrder} from "./src/lib/mind-match.ts";', resolveDir: fileURLToPath(new URL('..', import.meta.url))}, bundle: true, write: false, format: 'esm', platform: 'browser'});
 const {decodeWire, mindsFor, mindSearchOrder} = await import('data:text/javascript;base64,' + Buffer.from(bundle.outputFiles[0].text).toString('base64'));
@@ -33,4 +33,22 @@ test('the scoped catalogue gives the unchanged mind matcher identical names, sco
     assert.deepEqual(rows(after), rows(before), query);
     assert.deepEqual(mindSearchOrder(after, query, names), mindSearchOrder(before, query, names), query);
   }
+});
+
+test('the first Minds download retains exact visible cards, wall faces, all identities and role counts', () => {
+  const starter = buildMindsStarterIndex(full, source);
+  assert.equal(starter.mindsStarter, true);
+  assert.equal(starter.sourceHash, index.sourceHash);
+  assert.equal(starter.minds.roster.length, full.minds.roster.length);
+  for (const [i, mind] of full.minds.roster.entries()) {
+    const row = starter.minds.roster[i];
+    for (const key of ['slug', 'name', 'area', 'identity', 'seat', 'living', 'built', 'labels']) assert.deepEqual(row[key], mind[key], `${mind.slug}.${key}`);
+    assert.equal(starter.blocks.find(b => b.slug === mind.slug).type, 'mind', 'Saved selections outside the first batch stay valid.');
+    if (i < 150) assert.deepEqual(row.face, mind.face, 'Every visible wall face remains exact.');
+    if (i < 24) {
+      assert.deepEqual(row, mind);
+      assert.deepEqual(starter.blocks.find(b => b.slug === mind.slug), full.blocks.find(b => b.slug === mind.slug));
+    }
+  }
+  assert(gzipSync(Buffer.from(JSON.stringify(starter))).length < gzipSync(Buffer.from(JSON.stringify(index))).length / 2);
 });

@@ -1,0 +1,6 @@
+.minds-browse .minds-opening { padding-bottom: 0; }
+.mind-browse-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 18px; }
+.mind-browse-links a, .mind-back { display: inline-flex; gap: 6px; align-items: center; min-height: 36px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.mind-browse-links a:first-child { font-weight: 600; }
+.minds-wall { padding-bottom: 24px; }
+.minds-pending { min-height: 100svh; padding-top: 24px; }

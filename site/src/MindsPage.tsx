@@ -1,7 +1,7 @@
 import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
 // /minds: the people you can borrow a way of thinking from (docs/MINDS-PRD.md §4). Use one alone from its page,
 // or seat a few here and open the council in the builder: Start → the minds side by side → Advisory council → End.
-import { type CSSProperties, memo, Suspense, lazy, useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, memo, Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type Catalogue, type RosterMind, classificationText, pathOf } from "./lib/data";
 import { useLibrarySearch } from "./lib/library-search";
 import { rankLibraryResults } from "./lib/library-rank";
@@ -21,13 +21,13 @@ const BROWSE_ROLES = ["founder", "investor", "operator", "product", "marketer", 
 const normalizeSearch = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 let hasShownFaceWall = false;
 
-export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (slugs: string[], asNew?: string) => void }) {
+export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, onReset }: { c: Catalogue; toBuilder: (slugs: string[], asNew?: string) => void; complete?: boolean; onNeedFull?: () => void; onReset?: (reset: () => void) => void }) {
   const roster = c.minds?.roster ?? [];
   const areas = c.minds?.areas ?? {};
   const [label, setLabel] = useState("");
   const [page, setPage] = useState({query: "", label: "", count: PAGE_SIZE});
   const [query, setQuery] = useState(() => new URLSearchParams(location.search).get("q")?.slice(0, 120) ?? "");
-  const search = useLibrarySearch(c, query, { extraText: classificationText });
+  const search = useLibrarySearch(c, complete ? query : "", { extraText: classificationText });
   const myMinds = new URLSearchParams(location.search).get("view") === "my";
   const labels = c.minds?.labels ?? {};
   const [seated, setSeated] = useState<string[]>(() => {
@@ -56,6 +56,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
       ...(mind.labels ?? []).map((id) => labels[id]), ...(mind.useCases ?? [])].filter(Boolean).join(" ")),
   })), [roster, areas, labels, c.bySlug]);
   const shown = useMemo(() => {
+    if (!complete && (query.trim() || label)) return [];
     const terms = normalizeSearch(query).trim().split(/\s+/).filter(Boolean);
     const matched = searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
       && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term)))).map(({ mind }) => mind);
@@ -65,60 +66,46 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
     const ranked = rankLibraryResults(matched.map((mind) => c.bySlug[mind.slug] ?? { slug: mind.slug, name: mind.name, type: "mind" }), search.hits, query, { isTested: (b) => "tested" in b && isTested(b) }).map((b) => b.slug);
     const bySlug = new Map(roster.map((mind) => [mind.slug, mind]));
     return mindSearchOrder(c, query, ranked, (slug) => !label || !!bySlug.get(slug)?.labels?.includes(label)).map((slug) => bySlug.get(slug)).filter((mind): mind is RosterMind => !!mind);
-  }, [searchable, label, query, search.hits, c, roster]);
+  }, [searchable, label, query, search.hits, c, roster, complete]);
   const visibleCount = page.query === query && page.label === label ? page.count : PAGE_SIZE;
-  const clear = () => { setQuery(""); setLabel(""); setPage({query: "", label: "", count: PAGE_SIZE}); };
+  const paintCount = Math.min(visibleCount, complete ? shown.length : PAGE_SIZE);
+  const pendingSearch = !complete && !!(query.trim() || label);
+  const clear = useCallback(() => { setQuery(""); setLabel(""); setPage({query: "", label: "", count: PAGE_SIZE}); }, []);
+  useEffect(() => { onReset?.(clear); return () => onReset?.(() => {}); }, [onReset, clear]);
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {
     const names = seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s);
     toBuilder([...seated, ...(c.bySlug[COUNCIL] ? [COUNCIL] : [])], `Council: ${names.join(", ")}`);
   };
 
-  if (myMinds) return (
-    <main className="minds" data-testid="my-minds-page">
-      <header className="wrap bp-hero">
-        <Link to="/minds" className="mind-back">All minds <ArrowIcon size={12} /></Link>
-        <h1 className="bp-h1">My minds</h1>
-        <p className="bp-sub">Create a mind in your own voice, or import one to use across your workflows.</p>
-      </header>
-      <div className="wrap minds-body"><Suspense fallback={<p role="status">Opening your minds…</p>}><MyMinds /></Suspense></div>
-    </main>
-  );
+  if (myMinds) return <div className="wrap minds-body"><Suspense fallback={<p role="status">Opening your minds…</p>}><MyMinds /></Suspense></div>;
 
   return (
-    <main className="minds minds-browse" data-testid="minds-page">
-      <header className="wrap bp-hero">
-        <h1 className="bp-h1">Borrow a great mind</h1>
-        <nav className="mind-browse-links" aria-label="Mind tools">
-          <a href="#mind-results" onClick={clear}>All minds</a>
-          <Link to="/minds?view=my">My minds <ArrowIcon size={12} /></Link>
-          <Link to="/skills/advisory-council">Build an advisory council <ArrowIcon size={12} /></Link>
-        </nav>
-        <FaceWall roster={roster} />
-      </header>
+    <>
+      <div className="wrap minds-wall"><FaceWall roster={roster} /></div>
 
       <section className="wrap minds-body" aria-label="Find a mind">
         <div className="mind-search">
           <label htmlFor="mind-search">Search minds</label>
-          <input id="mind-search" type="search" value={query} onChange={(event) => setQuery(event.currentTarget.value)} placeholder="Search by name, e.g. Steve Jobs" />
+          <input id="mind-search" type="search" value={query} onFocus={() => onNeedFull?.()} onChange={(event) => { setQuery(event.currentTarget.value); onNeedFull?.(); }} placeholder="Search by name, e.g. Steve Jobs" />
         </div>
         <div className="label-filter mind-role-filter" role="group" aria-label="Filter minds by role" data-testid="label-filter">
           {BROWSE_ROLES.map((id) => {
             const n = roster.filter((m) => m.labels?.includes(id)).length;
-            return <button key={id} className="lchip" aria-pressed={label === id} aria-controls="mind-results" onClick={() => setLabel(label === id ? "" : id)} data-testid={`minds-label-${id}`}>
+            return <button key={id} className="lchip" aria-pressed={label === id} aria-controls="mind-results" onClick={() => { setLabel(label === id ? "" : id); onNeedFull?.(); }} data-testid={`minds-label-${id}`}>
               <LabelIcon id={id} size={13} />{labels[id]}<span className="count">{n}</span>
             </button>;
           })}
         </div>
         <div className="mind-results-meta">
-          <p className="small" role="status">{shown.length} {shown.length === 1 ? "mind" : "minds"}{label ? ` · ${labels[label]}` : ""}</p>
+          <p className="small" role="status">{pendingSearch ? "Searching all minds…" : <>{shown.length} {shown.length === 1 ? "mind" : "minds"}{label ? ` · ${labels[label]}` : ""}</>}</p>
           {(query || label) && <button className="link-btn" onClick={clear}>Clear search and filters</button>}
         </div>
         <ul className="mind-grid" id="mind-results" tabIndex={-1} aria-label="Matching minds" data-testid="mind-grid">
-          {shown.slice(0, visibleCount).map((m) => <MindCard key={m.slug} m={m} c={c} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
+          {shown.slice(0, paintCount).map((m) => <MindCard key={m.slug} m={m} c={c} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
         </ul>
-        {shown.length > visibleCount && <div className="mind-more"><p className="small" role="status">Showing {Math.min(visibleCount, shown.length)} of {shown.length} minds</p><button className="btn btn-line" type="button" aria-controls="mind-results" onClick={() => setPage({query, label, count: visibleCount + PAGE_SIZE})} data-testid="show-more-minds">Show {Math.min(PAGE_SIZE, shown.length - visibleCount)} more minds</button></div>}
-        {!shown.length && <p>No minds match this search. Try another name or clear the filters.</p>}
+        {shown.length > visibleCount && <div className="mind-more"><p className="small" role="status">Showing {paintCount} of {shown.length} minds</p><button className="btn btn-line" type="button" aria-controls="mind-results" disabled={!complete && visibleCount > PAGE_SIZE} onClick={() => { setPage({query, label, count: visibleCount + PAGE_SIZE}); onNeedFull?.(); }} data-testid="show-more-minds">{!complete && visibleCount > PAGE_SIZE ? "Opening more minds…" : <>Show {Math.min(PAGE_SIZE, shown.length - visibleCount)} more minds</>}</button></div>}
+        {!shown.length && !pendingSearch && <p>No minds match this search. Try another name or clear the filters.</p>}
         <p className="small mind-attribution">AI interpretations of public work. Explore a profile for its sources and methods.</p>
       </section>
 
@@ -130,7 +117,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
           <button className="btn btn-primary btn-sm" disabled={!seated.length} onClick={open} data-testid="open-council">Open the council in the builder</button>
         </div>
       </div>
-    </main>
+    </>
   );
 }
 

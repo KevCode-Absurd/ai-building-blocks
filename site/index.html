@@ -132,7 +132,7 @@
         const intent = location.hash === "#library" || location.hash === "#build" || ["q", "kind", "area", "fn", "job", "audience", "starred", "scope"].some(key => params.has(key));
         // Home lists cards from the small index; block pages and tools need the full catalogue.
         const item = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)$/.exec(location.pathname);
-        const list = home ? "/data/blocks-index.json" : location.pathname === "/minds" ? "/data/minds-index.json" : item ? "/data/items/" + item[2] + ".json" : "/data/blocks.json";
+        const list = home ? "/data/blocks-index.json" : location.pathname === "/minds" ? (params.has("q") ? "/data/minds-index.json" : "/data/minds-starter.json") : item ? "/data/items/" + item[2] + ".json" : "/data/blocks.json";
         for (const href of starter ? (intent ? [list, "/data/starter-blocks.json"] : ["/data/starter-blocks.json"]) : [list]) {
           const catalogue = document.createElement("link");
           catalogue.rel = "preload"; catalogue.href = href;

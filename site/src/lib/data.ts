@@ -3,6 +3,7 @@ import type { FactCheck } from "./fact-checks";
 import { useCallback, useEffect, useState } from "react";
 import { trackUxEvent } from "./ux-events";
 import { migrateSlugs } from "./store";
+import { libraryStorage } from "./library-storage";
 
 export type Thinking = "low" | "medium" | "high";
 export const THINKING: Record<Thinking, { name: string; line: string }> = {
@@ -141,7 +142,7 @@ function unwire(w: Wire): Block {
   } as Block;
 }
 /** `index` is set on the small list catalogue (blocks-index.json): cards, filters and quick search only, no ports, uses or roster. */
-export type Catalogue = { built: string; sourceHash?: string; itemSlug?: string; index?: true; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
+export type Catalogue = { built: string; sourceHash?: string; itemSlug?: string; mindsStarter?: true; index?: true; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -217,18 +218,40 @@ export function loadMindsCatalogue(): Promise<Catalogue> {
     resolvedMinds = decodeCatalogue(data); return resolvedMinds;
   }).catch(() => { mindsCatalogue = null; return loadCatalogue(); });
 }
-export function useMindsCatalogue(enabled: boolean) {
-  const [catalogue, setCatalogue] = useState<Catalogue | null>(() => resolvedCatalogue ?? resolvedMinds);
+let mindsStarter: Promise<Catalogue> | null = null;
+let resolvedMindsStarter: Catalogue | null = null;
+function savedCouncil() {
+  try { const value = JSON.parse(libraryStorage.getItem("aib-council-draft") ?? "[]"); return Array.isArray(value) && value.length > 0; } catch { return false; }
+}
+export function loadMindsStarterCatalogue(): Promise<Catalogue> {
+  if (resolvedCatalogue || resolvedMinds) return Promise.resolve((resolvedCatalogue ?? resolvedMinds)!);
+  return mindsStarter ??= fetchData("/data/minds-starter.json", {attempts: 1}).then(bytes => {
+    const data = JSON.parse(new TextDecoder().decode(bytes));
+    if (data.mindsStarter !== true || !Array.isArray(data.blocks) || !data.minds?.roster?.length || !/^[a-f\d]{64}$/.test(data.sourceHash ?? "")) throw Error("Invalid minds starter");
+    const slugs = new Set(data.blocks.filter((block: Wire) => block.type === "mind").map((block: Wire) => block.slug));
+    if (data.minds.roster.some((mind: RosterMind) => !slugs.has(mind.slug))) throw Error("Incomplete minds roster");
+    migrateSlugs(data.renamed ?? {});
+    resolvedMindsStarter = decodeCatalogue(data); return resolvedMindsStarter;
+  }).catch(() => { mindsStarter = null; return loadMindsCatalogue(); });
+}
+export function useMindsCatalogue(enabled: boolean, requireFull = false) {
+  const fullFirst = requireFull || (enabled && savedCouncil());
+  const [catalogue, setCatalogue] = useState<Catalogue | null>(() => resolvedCatalogue ?? resolvedMinds ?? (fullFirst ? null : resolvedMindsStarter));
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
+  const requestFull = useCallback(async () => {
+    setError("");
+    try { const value = await loadMindsCatalogue(); setCatalogue(value); return value; }
+    catch { setError("The full minds list could not load. Check your connection and try again."); return null; }
+  }, []);
   const retry = useCallback(() => setAttempt(value => value + 1), []);
   useEffect(() => {
     if (!enabled) return;
     let active = true; setError("");
-    loadMindsCatalogue().then(value => { if (active) setCatalogue(value); }).catch(() => { if (active) setError("Minds could not load. Check your connection and try again."); });
+    (fullFirst || attempt > 0 ? loadMindsCatalogue() : loadMindsStarterCatalogue()).then(value => { if (active) setCatalogue(value); }).catch(() => { if (active) setError("Minds could not load. Check your connection and try again."); });
     return () => { active = false; };
-  }, [enabled, attempt]);
-  return {catalogue, error, retry};
+  }, [enabled, fullFirst, attempt]);
+  return {catalogue, error, retry, requestFull, complete: !!catalogue && !catalogue.mindsStarter};
 }
 export function loadCatalogue(): Promise<Catalogue> {
   catalogue ??= fetchData("/data/blocks.json")

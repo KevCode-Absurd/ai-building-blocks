@@ -15,6 +15,38 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/meta-pixel-capi-fix",
+   "url": "https://useaiblocks.com/skills/meta-pixel-capi-fix",
+   "title": "Meta pixel and server events fixer",
+   "summary": "Share tracking setup and event evidence. Audit browser and server events, plan fixes and verify them with authorised tools.",
+   "content_text": "Share tracking setup and event evidence. Audit browser and server events, plan fixes and verify them with authorised tools. Updated 2026-10-29.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-10-29T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Track your numbers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/meta-pixel-capi-fix.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/meta-pixel-capi-fix/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/meta-pixel-capi-fix.md",
+    "json": "https://useaiblocks.com/skills/meta-pixel-capi-fix.json",
+    "skill": "https://useaiblocks.com/skills/meta-pixel-capi-fix/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
    "url": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
    "title": "Ask your AI what it knows about you",
@@ -3180,38 +3212,6 @@
     "markdown": "https://useaiblocks.com/agents/agency-engineering-drupal-performance.md",
     "json": "https://useaiblocks.com/agents/agency-engineering-drupal-performance.json",
     "skill": "https://useaiblocks.com/skills/agency-engineering-drupal-performance/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer",
-   "url": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer",
-   "title": "Electrical design reviewer",
-   "summary": "Get an electrical design review with checked units, sizing sums, standards and open risks. A licensed engineer must sign off before building.",
-   "content_text": "Get an electrical design review with checked units, sizing sums, standards and open risks. A licensed engineer must sign off before building. Updated 2026-10-28.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-10-28T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Build and ship software"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-engineering-electrical-engineer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer.md",
-    "json": "https://useaiblocks.com/agents/agency-engineering-electrical-engineer.json",
-    "skill": "https://useaiblocks.com/skills/agency-engineering-electrical-engineer/SKILL.md"
    }
   }
  ]

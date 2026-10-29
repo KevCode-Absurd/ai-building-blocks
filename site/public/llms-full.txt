@@ -25,7 +25,7 @@ Once connected, ask in plain words:
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last changed 2026-10-28. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
+- Last changed 2026-10-29. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
 
 ## How to use a skill
 

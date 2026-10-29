@@ -21,7 +21,7 @@ import { BRAND, describe, fitTitle, itemSeo, lowerFirst, mindTitle, pageTitle, t
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
 const SEO_TITLES = {
-  "/skills/check-translation-parity-across-three-languages": "Check Russian, English and Brazilian Portuguese | AI Blocks",
+  "/skills/check-translation-parity-across-three-languages": "Russian, English, Portuguese translation check | AI Blocks",
   "/workflows/check-management-payout-and-sponsor-receipts": "Check management awards and investor returns | AI Blocks",
   "/workflows/clean-up-your-meta-account-and-rebuild-it-to-scale": "Meta account review and restructure plan | AI Blocks",
   "/workflows/fix-inbox-placement-and-win-back-your-opens": "Email delivery and quiet-subscriber recovery | AI Blocks",

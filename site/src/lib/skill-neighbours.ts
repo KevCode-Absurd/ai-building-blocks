@@ -6,7 +6,7 @@ export function skillNeighbours(slug:string,plan:Plan|undefined,known:Record<str
     const seen=new Set<string>(),choices:Choice[]=[];
     for(const row of rows){
       if(row.slug===slug||!Object.hasOwn(known,row.slug)||seen.has(row.slug))continue;
-      seen.add(row.slug);choices.push(row);if(choices.length===3)break;
+      seen.add(row.slug);choices.push({...row,note:row.note.replace(/\bbrand brain\b/gi,match=>match.startsWith("B")?"Brand file":"brand file")});if(choices.length===3)break;
     }
     return choices;
   };

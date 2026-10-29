@@ -6,6 +6,7 @@
 // Checklists: the technical-seo-auditor, seo-site-auditor, ai-search-visibility-optimiser, structured-data-writer and
 // tool-pages-seo-fixer skills in our own library (catalogue-items/imported/).
 import fs from "node:fs";
+import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
@@ -24,9 +25,7 @@ const SEO_TITLES = {
   "/tools/stock-weeks-of-cover": "Stock Weeks of Cover Calculator, Free Tool | AI Blocks",
 };
 // The built index.html, as vite left it (a second run first strips what the last one added to the home page).
-const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
-  .replace(/<script type="application\/ld\+json">.*?<\/script>\n  /s, "")
-  .replace(/<div id="root">.*?<\/main><\/div>/s, '<div id="root"></div>');
+const shell = readPrerenderShell(fs.readFileSync(path.join(DIST, "index.html"), "utf8"));
 // The same page without the app: for hubs and the 404 page, which are complete as plain HTML.
 const plainShell = shell
   .replace(/<!-- APP_BOOT_START[\s\S]*?<!-- APP_BOOT_END -->\s*/g, "")
@@ -519,7 +518,7 @@ function render(url, p, { plain = false, noindex = false } = {}) {
     ...crawlHead(url, p),
     `<meta name="robots" content="${metadata.robots}" />`,
   ].filter(Boolean).join("\n    ");
-  return (plain ? plainShell : shell)
+  return injectPrerender((plain ? plainShell : shell)
     .replace(/<meta name="robots"[^>]*>\s*/g, "")
     .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
@@ -529,8 +528,7 @@ function render(url, p, { plain = false, noindex = false } = {}) {
     .replace(/(<meta property="og:description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
     .replace(/(<meta name="twitter:title" content=")[^"]*/, (_, prefix) => prefix + esc(title))
     .replace(/(<meta name="twitter:description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
-    .replace("</head>", () => `${head}\n  </head>`)
-    .replace('<div id="root"></div>', () => `<div id="root">${body}</div>`);
+    , head, body);
 }
 const write = (url, html) => { const out = path.join(DIST, `${url.slice(1)}.html`); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, html); };
 

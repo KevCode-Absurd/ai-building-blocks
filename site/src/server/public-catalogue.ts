@@ -1,6 +1,6 @@
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import {rankSpecialists} from "../roles/specialist-matching.mjs";
-import {specialistFiles} from "../roles/specialist-worker.mjs";
+import {specialistFiles,specialistPorts,TASK_DELIVERABLE} from "../roles/specialist-worker.mjs";
 import {roleLaunchPrompt,validateRoleBrief} from "../roles/role-runtime.ts";
 import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
 import { scanSourceFiles } from "./community-safety.ts";
@@ -691,7 +691,7 @@ export class PublicCatalogueService {
   }
 
   async prepareSpecialist(args: Record<string,unknown>) {
-    keys(args,["role_id","task","context","tools","training","me"]);
+    keys(args,["role_id","task","context","tools","training","me","deliverables"]);
     const task=string(args.task,"task",3000),chosen=string(args.role_id,"role_id",70,true);
     const matches=await this.findSpecialist({task,limit:5});
     const id=chosen||matches.candidates[0]?.id;
@@ -700,11 +700,11 @@ export class PublicCatalogueService {
     const content=(await this.readResource(`aiblocks://roles/${id}`)).contents[0];
     if(!('text' in content))return fail(503,"invalid_role","The worker resource is not text.");
     const role=JSON.parse(content.text);
-    const brief={goal:task,context:string(args.context,"context",8000,true),tools:string(args.tools,"tools",2000,true),training:string(args.training,"training",6000,true),me:string(args.me,"me",8000,true),resources:role.resources.map((r:{slug:string})=>r.slug),deliverables:role.deliverables};
+    const brief={goal:task,context:string(args.context,"context",8000,true),tools:string(args.tools,"tools",2000,true),training:string(args.training,"training",6000,true),me:string(args.me,"me",8000,true),resources:role.resources.map((r:{slug:string})=>r.slug),deliverables:args.deliverables===undefined?[TASK_DELIVERABLE]:array(args.deliverables,"deliverables",30).map(v=>string(v,"deliverable",1000))};
     try{validateRoleBrief(role,brief);}catch{return fail(400,"invalid_arguments","Check the task, source choices and note lengths; remove credentials from task context.");}
-    const notes=`Task context:\n${brief.context}\n\nAvailable tools:\n${brief.tools}\n\nTraining and preferences:\n${brief.training}\n\nRelevant supplied me.md:\n${brief.me}`;
+    const notes=`Requested deliverables:\n${brief.deliverables.map(d=>'- '+d).join('\n')}\n\nTask context:\n${brief.context}\n\nAvailable tools:\n${brief.tools}\n\nTraining and preferences:\n${brief.training}\n\nRelevant supplied me.md:\n${brief.me}`;
     if(notes.length>WORKFLOW_NOTES_LIMIT)return fail(400,"invalid_arguments","Shorten the combined context, preferences and saved profile.");
-    const preparation=await this.prepare({name:role.name,goal:task,...(notes?{notes}:{}),steps:[{id:"specialist",slug:role.custom_skill.slug}],custom_skills:[role.custom_skill]});
+    const preparation=await this.prepare({name:role.name,goal:task,...(notes?{notes}:{}),steps:[{id:"specialist",slug:role.custom_skill.slug}],custom_skills:[role.custom_skill],user_inputs:["short_text"]});
     const workerFiles=specialistFiles(role,brief);
     return {schema:"ai-blocks-specialist-preparation/1",state:"NOT_STARTED",selected_role:{id,name:role.name,url:`${this.baseUrl}/roles/${id}`,selection:chosen?"EXPLICIT":"TASK_CANDIDATE",scope_review:"NOT_RUN"},alternatives:matches.candidates.filter((r:{id:string})=>r.id!==id),worker:role.worker,worker_files:workerFiles,worker_sha256:await sha256(encoder.encode(stable(workerFiles))),launch_brief:roleLaunchPrompt(role,brief),preparation,execution:{location:"user-ai-environment",model_calls_by_service:0,stored_by_service:false},next_action:"Read the worker files and complete pinned source methods, compare scope against every deliverable, reuse relevant supplied facts, verify real host tools and existing authorization, then execute the supported work in the host AI. Produce native artifacts and actual check evidence. This response does not start a worker or grant external-action permission."};
   }
@@ -720,8 +720,8 @@ export class PublicCatalogueService {
       const bytes=await this.read(`/data/roles/${id}.json`,250_000,{path:`/data/roles/${id}.json`,bytes:descriptor.bytes,sha256:descriptor.sha256});
       const role=JSON.parse(decoder.decode(bytes));
       if(role.schema!=="ai-blocks-role/1"||role.id!==id||role.catalogueHash!==c.manifest.catalogue_sha256||!Array.isArray(role.resources)||role.resources.some((r:{slug:string;revision:string})=>c.manifest.resources[r.slug]?.revision_sha256!==r.revision))return fail(503,"stale_role","The role's source revisions changed. Retrieve the current setup again.");
-      const lead=this.entry(c,role.lead).item;
-      return {skill:false,contents:[{uri,mimeType:"application/json",text:JSON.stringify({...role,execution_status:"NOT_STARTED",custom_skill:{slug:`custom-role-${id}`,name:role.name,instructions:role.instructions,inputs:cataloguePorts(lead.inputs),outputs:cataloguePorts(lead.outputs),resources:role.resources.map((r:{slug:string;revision:string})=>({slug:r.slug,revision_sha256:r.revision}))},next_action:"Read the role instructions and selected full methods. Resolve task-relevant user context and tool access. Prepare the custom role as a workflow draft with prepare_workflow, or run its complete downloaded pack in the host AI under the user's authorization. No model was called and no task has run."})}]};
+      this.entry(c,role.lead);
+      return {skill:false,contents:[{uri,mimeType:"application/json",text:JSON.stringify({...role,execution_status:"NOT_STARTED",custom_skill:{slug:`custom-role-${id}`,name:role.name,instructions:role.instructions,...specialistPorts(),resources:role.resources.map((r:{slug:string;revision:string})=>({slug:r.slug,revision_sha256:r.revision}))},next_action:"Read the role instructions and selected full methods. Resolve task-relevant user context and tool access. Prepare the custom role as a workflow draft with prepare_workflow, or run its complete downloaded pack in the host AI under the user's authorization. No model was called and no task has run."})}]};
     }
     if (uri === "aiblocks://jobs") return { skill: false, contents: [{ uri, mimeType: "application/json", text: JSON.stringify(this.jobs(c)) }] };
     const item = uri.match(/^aiblocks:\/\/([a-z_-]{3,20})\/([a-z0-9][a-z0-9-]{0,119})$/);

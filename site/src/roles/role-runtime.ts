@@ -1,4 +1,4 @@
-import {specialistFiles} from './specialist-worker.mjs';
+import {specialistFiles,specialistPorts} from './specialist-worker.mjs';
 import type {Catalogue} from '../lib/data';
 import type {Flow} from '../lib/store';
 import {validateCustomSkills} from '../lib/custom-skill-data.ts';
@@ -9,10 +9,10 @@ export type RoleBrief = {goal:string;context:string;tools:string;deliverables:st
 import {roleInstructions} from './role-instructions.mjs';
 export {roleInstructions} from './role-instructions.mjs';
 export function validateRoleBrief(role:RoleProfile, brief:RoleBrief) {
- if(/(?:\b(?:sk-proj-|sk-ant-api\d+-)[A-Za-z0-9_-]{40,}|\bAKIA[A-Z0-9]{16}\b)/.test([brief.goal,brief.context,brief.tools,brief.me,brief.training??''].join('\n')))throw Error('Remove credentials from the role brief. Connect tools through their normal sign-in flow.');
+ if(/(?:\b(?:sk-proj-|sk-ant-api\d+-)[A-Za-z0-9_-]{40,}|\bAKIA[A-Z0-9]{16}\b)/.test([brief.goal,brief.context,brief.tools,brief.me,brief.training??'',...(Array.isArray(brief.deliverables)?brief.deliverables:[])].join('\n')))throw Error('Remove credentials from the role brief. Connect tools through their normal sign-in flow.');
  if(!brief.goal.trim()||brief.goal.length>3000)throw Error('Describe the task in 3,000 characters or fewer.');
  if(brief.context.length>8000||brief.tools.length>2000||brief.me.length>8000||(brief.training?.length??0)>6000)throw Error('Shorten the task notes or saved context before continuing.');
- if(!brief.deliverables.length||brief.deliverables.some(d=>!role.deliverables.includes(d)))throw Error('Choose the deliverables you need.');
+ if(!Array.isArray(brief.deliverables)||!brief.deliverables.length||brief.deliverables.length>30||brief.deliverables.some(d=>typeof d!=='string'||!d.trim()||d.length>1000)||brief.deliverables.join('\n').length>6000)throw Error('Describe up to 30 deliverables in 6,000 characters or fewer.');
  if(!brief.resources.includes(role.lead)||role.resources.some(r=>r.bundled&&!brief.resources.includes(r.slug))||brief.resources.some(id=>!role.resources.some(r=>r.slug===id)))throw Error('Keep the primary method and its bundled sources, and choose methods from this role.');
 }
 export function roleLaunchPrompt(role:RoleProfile, brief:RoleBrief) {
@@ -23,8 +23,8 @@ export function createRoleFlow(c:Catalogue,role:RoleProfile,brief:RoleBrief,id:s
  validateRoleBrief(role,brief);
  if(c.sourceHash&&c.sourceHash!==role.catalogueHash)throw Error('The library changed. Reload this role before saving or downloading it.');
  if(brief.resources.some(slug=>!c.bySlug[slug]))throw Error('A required method is unavailable. Reload this role and try again.');
- const lead=c.bySlug[role.lead],slug='custom-role-'+role.id;
- const customSkills=validateCustomSkills([{slug,name:role.name,summary:role.summary.slice(0,500),markdown:roleInstructions(role,brief.resources)+(brief.training?.trim()?`\n\n## User training and preferences\n${brief.training.trim()}\n`:''),role:'orchestrate',inputs:lead.inputs,outputs:lead.outputs,resources:brief.resources,workerFiles:specialistFiles(role,brief)}]);
+ const slug='custom-role-'+role.id;
+ const customSkills=validateCustomSkills([{slug,name:role.name,summary:role.summary.slice(0,500),markdown:roleInstructions(role,brief.resources)+(brief.training?.trim()?`\n\n## User training and preferences\n${brief.training.trim()}\n`:''),role:'orchestrate',...specialistPorts(),resources:brief.resources,workerFiles:specialistFiles(role,brief)}]);
  const flow={id,name:role.name,nodes:[{id:'role-task',slug,x:240,y:200,role:role.name}],edges:[],updated:Date.now(),goal:brief.goal.trim(),
   notes:`${brief.training?.trim()?`Training and preferences:\n${brief.training.trim()}\n\n`:''}Role setup: https://useaiblocks.com/roles/${role.id}\n\nRequested deliverables:\n${brief.deliverables.map(d=>'- '+d).join('\n')}\n\nTask context:\n${brief.context.trim()}\n\nAvailable tools and access:\n${brief.tools.trim()||'Verify access in the execution session.'}${brief.me?`\n\nRelevant saved me.md context (supplied, not yet validated):\n${brief.me}`:''}`,
   customSkills};

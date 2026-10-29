@@ -33,3 +33,6 @@
   .mind-role-filter { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding: 0; gap: 7px; }
   .mind-role-filter .lchip { min-height: 38px; height: auto; }
 }
+
+.mind-more { display: grid; justify-items: center; gap: 12px; margin-top: 24px; }
+.mind-more p { margin: 0; }

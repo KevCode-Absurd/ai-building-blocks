@@ -34,12 +34,26 @@ export function buildListIndex(catalogue, sourceBytes) {
   };
 }
 
+/** Complete mind records and roster, plus names used by the unchanged topic matcher. */
+export function buildMindsIndex(catalogue, sourceBytes) {
+  const minds = catalogue.blocks.filter(block => block.type === 'mind');
+  const names = new Set(minds.flatMap(mind => mind.skills ?? []));
+  const blocks = catalogue.blocks.filter(block => block.type === 'mind' || block.slug === 'advisory-council' || names.has(block.slug))
+    .map(block => block.type === 'mind' || block.slug === 'advisory-council' ? block : {slug: block.slug, name: block.name});
+  return {built: catalogue.built, mindsIndex: true, sourceHash: createHash('sha256').update(sourceBytes).digest('hex'),
+    portTypes: catalogue.portTypes, renamed: catalogue.renamed ?? {}, minds: catalogue.minds, blocks};
+}
+
 export function writeListIndex(root = process.cwd()) {
   const source = fs.readFileSync(path.join(root, 'public/data/blocks.json'));
   const index = buildListIndex(JSON.parse(source), source);
   const file = path.join(root, 'public/data/blocks-index.json');
   fs.writeFileSync(file, JSON.stringify(index));
   console.log(`List index: ${index.blocks.length} blocks, ${fs.statSync(file).size} bytes (full catalogue ${source.length} bytes)`);
+  const minds = buildMindsIndex(JSON.parse(source), source);
+  const mindsFile = path.join(root, 'public/data/minds-index.json');
+  fs.writeFileSync(mindsFile, JSON.stringify(minds));
+  console.log(`Minds index: ${minds.minds.roster.length} complete profiles, ${fs.statSync(mindsFile).size} bytes`);
   return index;
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) writeListIndex();

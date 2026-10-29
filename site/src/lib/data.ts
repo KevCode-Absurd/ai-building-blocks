@@ -203,6 +203,33 @@ export function loadStarterCatalogue(): Promise<Catalogue> {
     }).catch(error => { starter = null; throw error; });
   return starter;
 }
+let mindsCatalogue: Promise<Catalogue> | null = null;
+let resolvedMinds: Catalogue | null = null;
+/** Public browsing needs every mind, not every unrelated skill's workflow data. */
+export function loadMindsCatalogue(): Promise<Catalogue> {
+  if (resolvedCatalogue) return Promise.resolve(resolvedCatalogue);
+  return mindsCatalogue ??= fetchData("/data/minds-index.json", {attempts: 1}).then(bytes => {
+    const data = JSON.parse(new TextDecoder().decode(bytes));
+    if (data.mindsIndex !== true || !Array.isArray(data.blocks) || !data.minds?.roster?.length || !/^[a-f\d]{64}$/.test(data.sourceHash ?? "")) throw Error("Invalid minds data");
+    const slugs = new Set(data.blocks.filter((block: Wire) => block.type === "mind").map((block: Wire) => block.slug));
+    if (data.minds.roster.some((mind: RosterMind) => !slugs.has(mind.slug))) throw Error("Incomplete minds data");
+    migrateSlugs(data.renamed ?? {});
+    resolvedMinds = decodeCatalogue(data); return resolvedMinds;
+  }).catch(() => { mindsCatalogue = null; return loadCatalogue(); });
+}
+export function useMindsCatalogue(enabled: boolean) {
+  const [catalogue, setCatalogue] = useState<Catalogue | null>(() => resolvedCatalogue ?? resolvedMinds);
+  const [error, setError] = useState("");
+  const [attempt, setAttempt] = useState(0);
+  const retry = useCallback(() => setAttempt(value => value + 1), []);
+  useEffect(() => {
+    if (!enabled) return;
+    let active = true; setError("");
+    loadMindsCatalogue().then(value => { if (active) setCatalogue(value); }).catch(() => { if (active) setError("Minds could not load. Check your connection and try again."); });
+    return () => { active = false; };
+  }, [enabled, attempt]);
+  return {catalogue, error, retry};
+}
 export function loadCatalogue(): Promise<Catalogue> {
   catalogue ??= fetchData("/data/blocks.json")
     .then(async (bytes) => {

@@ -1,6 +1,43 @@
 import {test, expect} from '@playwright/test';
 
 for (const mobile of [false, true]) {
+  test((mobile ? '@mobile ' : '') + 'minds browse in small batches while search, filters and council choices cover the full roster', async ({page, request}) => {
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    const roster = (await (await request.get('/data/minds-index.json')).json()).minds.roster;
+    const requests: string[] = []; page.on('request', r => requests.push(new URL(r.url()).pathname));
+    await page.goto('/minds');
+    await expect(page.getByTestId('minds-page')).toBeVisible();
+    await expect(page.getByTestId('mind-card')).toHaveCount(24);
+    await page.getByTestId('show-more-minds').click();
+    await expect(page.getByTestId('mind-card')).toHaveCount(48);
+    const query = page.getByRole('searchbox', {name: 'Search minds', exact: true});
+    const last = roster.at(-1);
+    await query.fill(last.name);
+    await expect(page.locator(`[data-testid="mind-card"][data-slug="${last.slug}"]`)).toBeVisible();
+    await query.fill('Steve Jobs');
+    const card = page.getByTestId('mind-card').filter({hasText: 'Steve Jobs'}).first();
+    await expect(card).toBeVisible();
+    await card.getByTestId('seat-mind').click();
+    await expect(page.getByTestId('council-bar')).toContainText('Steve Jobs');
+    await page.reload();
+    await expect(page.getByTestId('council-bar')).toContainText('Steve Jobs');
+    await page.getByTestId('minds-label-founder').click();
+    await expect(page.getByTestId('minds-label-founder')).toHaveAttribute('aria-pressed', 'true');
+    await page.getByRole('button', {name: 'Clear search and filters', exact: true}).click();
+    await expect(page.getByTestId('mind-card')).toHaveCount(24);
+    expect(requests).not.toContain('/data/blocks.json');
+    expect(requests.some(p => /\/assets\/MyMinds-/.test(p))).toBe(false);
+    await page.getByTestId('menu-btn').click();
+    await expect(page.getByTestId('nav-minds')).toHaveAttribute('href', '/minds');
+    await expect(page.getByTestId('nav-minds')).toHaveAttribute('aria-current', 'page');
+    await page.keyboard.press('Escape');
+    await expect(page.getByRole('navigation', {name: 'Footer explore'}).getByRole('link', {name: 'Minds', exact: true})).toHaveAttribute('href', '/minds');
+    await page.getByTestId('open-council').click();
+    await expect(page.getByTestId('builder')).toBeVisible();
+    await expect(page.getByTestId('flow-node').filter({hasText: 'Steve Jobs'})).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  });
   test((mobile ? '@mobile ' : '') + 'skill content and existing recommendations work while the full catalogue is held', async ({page}) => {
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
     if (mobile) await page.setViewportSize({width: 412, height: 823});

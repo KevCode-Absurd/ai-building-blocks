@@ -5,7 +5,7 @@ import { spaceKey, spaces } from "./lib/space";
 import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, lazy, useCallback, useEffect, useState, type ComponentType } from "react";
 import { Drawer, Toast } from "./ui";
-import { type Catalogue, type Kind, KINDS, loadCatalogue, loadPage, pathOf, useCatalogueState, useItemCatalogue } from "./lib/data";
+import { type Catalogue, type Kind, KINDS, loadCatalogue, loadPage, pathOf, useCatalogueState, useItemCatalogue, useMindsCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { SaveHint } from "./AccountPersistence";
 import "./simplicity.css";
@@ -221,12 +221,13 @@ export default function App() {
   // Prepare the library on request intent; the untouched form needs no full catalogue.
   const [composeRequested, setComposeRequested] = useState(false);
   const requestComposeCatalogue = useCallback(() => { setComposeRequested(true); return loadCatalogue(); }, []);
-  const catalogueState = useCatalogueState((needsCatalogue && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
+  const mindsState = useMindsCatalogue(path === "/minds");
+  const catalogueState = useCatalogueState((needsCatalogue && path !== "/minds" && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
   // Without starter picks there is nothing light to show, so open the library straight away.
   useEffect(() => { if (catalogueState.starterFailed) requestHomeCatalogue(); }, [catalogueState.starterFailed, requestHomeCatalogue]);
-  const c = pageSlug ? itemState.catalogue : catalogueState.catalogue;
-  const pageError = pageSlug ? itemState.error : catalogueState.error;
-  const retryPage = pageSlug ? itemState.retry : catalogueState.retry;
+  const c = pageSlug ? itemState.catalogue : path === "/minds" ? mindsState.catalogue : catalogueState.catalogue;
+  const pageError = pageSlug ? itemState.error : path === "/minds" ? mindsState.error : catalogueState.error;
+  const retryPage = pageSlug ? itemState.retry : path === "/minds" ? mindsState.retry : catalogueState.retry;
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
   const [tailor, setTailor] = useState<string | null>(null);

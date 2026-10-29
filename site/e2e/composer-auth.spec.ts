@@ -10,7 +10,9 @@ test("anonymous visitors can switch to free assembly without sending AI requests
   await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await submitPlan(page);
-  await expect(page.getByTestId("compose-steps")).toBeVisible();
+  await expect(page.getByTestId("compose-start")).toBeVisible();
+  await page.getByTestId("compose-start").getByRole("button", {name: /^Start with:/}).first().click();
+  await expect(page.getByTestId("builder")).toBeVisible();
   expect(authRequests).toBeLessThanOrEqual(1); expect(aiRequests).toBe(0);
 });
 
@@ -79,10 +81,17 @@ test("missing Clerk configuration leaves free assembly usable", async ({ page })
   await page.goto("/compose");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await choosePlanner(page, "ai");
+  // Guest pages defer account configuration until a sign-in is requested.
+  await page.getByRole("button", {name: "Sign in", exact: true}).click();
+  await expect(page.getByTestId("compose-submit")).toHaveText("Continue");
+  await expect(page.getByTestId("compose-goal")).toHaveValue("Build a landing page from scratch");
+  await choosePlanner(page, "ai");
   await expect(page.getByTestId("compose-account")).toContainText("Sign-in is unavailable");
   await expect(page.getByTestId("compose-submit")).toBeDisabled();
   await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await submitPlan(page);
-  await expect(page.getByTestId("compose-steps")).toBeVisible();
+  await expect(page.getByTestId("compose-start")).toBeVisible();
+  await page.getByTestId("compose-start").getByRole("button", {name: /^Start with:/}).first().click();
+  await expect(page.getByTestId("builder")).toBeVisible();
 });

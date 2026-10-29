@@ -34,6 +34,7 @@ export default function SiteHeader() {
         <section aria-label="Main sections">
           <Link to="/#library" aria-current={current("/")} data-testid="nav-find">Find a task</Link>
           <Link to="/compose" aria-current={current("/compose")} data-testid="nav-compose">Build a workflow</Link>
+          <Link to="/minds" aria-current={current("/minds")} data-testid="nav-minds">Minds</Link>
           <Link to="/tools" aria-current={inTools ? "page" : undefined} data-testid="nav-tools">Tools</Link>
           <Link to="/space" aria-current={current("/space")} data-testid="nav-space">My space</Link>
         </section>

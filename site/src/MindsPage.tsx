@@ -1,7 +1,7 @@
 import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
 // /minds: the people you can borrow a way of thinking from (docs/MINDS-PRD.md §4). Use one alone from its page,
 // or seat a few here and open the council in the builder: Start → the minds side by side → Advisory council → End.
-import { type CSSProperties, memo, useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, memo, Suspense, lazy, useEffect, useMemo, useRef, useState } from "react";
 import { type Catalogue, type RosterMind, classificationText, pathOf } from "./lib/data";
 import { useLibrarySearch } from "./lib/library-search";
 import { rankLibraryResults } from "./lib/library-rank";
@@ -11,10 +11,11 @@ import { Link } from "./lib/router";
 import { ArrowIcon } from "./ui";
 import PixelFace from "./PixelFace";
 import { LabelBadges, LabelIcon } from "./MindLabel";
-import MyMinds from "./MyMinds";
+const MyMinds = lazy(() => import("./MyMinds"));
 import "./minds-browser.css";
 
 const MAX = 7;
+const PAGE_SIZE = 24;
 const COUNCIL = "advisory-council";
 const BROWSE_ROLES = ["founder", "investor", "operator", "product", "marketer", "seller", "creator", "designer", "artist", "musician", "filmmaker"];
 const normalizeSearch = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -24,6 +25,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   const roster = c.minds?.roster ?? [];
   const areas = c.minds?.areas ?? {};
   const [label, setLabel] = useState("");
+  const [page, setPage] = useState({query: "", label: "", count: PAGE_SIZE});
   const [query, setQuery] = useState(() => new URLSearchParams(location.search).get("q")?.slice(0, 120) ?? "");
   const search = useLibrarySearch(c, query, { extraText: classificationText });
   const myMinds = new URLSearchParams(location.search).get("view") === "my";
@@ -64,7 +66,8 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
     const bySlug = new Map(roster.map((mind) => [mind.slug, mind]));
     return mindSearchOrder(c, query, ranked, (slug) => !label || !!bySlug.get(slug)?.labels?.includes(label)).map((slug) => bySlug.get(slug)).filter((mind): mind is RosterMind => !!mind);
   }, [searchable, label, query, search.hits, c, roster]);
-  const clear = () => { setQuery(""); setLabel(""); };
+  const visibleCount = page.query === query && page.label === label ? page.count : PAGE_SIZE;
+  const clear = () => { setQuery(""); setLabel(""); setPage({query: "", label: "", count: PAGE_SIZE}); };
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {
     const names = seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s);
@@ -78,7 +81,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
         <h1 className="bp-h1">My minds</h1>
         <p className="bp-sub">Create a mind in your own voice, or import one to use across your workflows.</p>
       </header>
-      <div className="wrap minds-body"><MyMinds /></div>
+      <div className="wrap minds-body"><Suspense fallback={<p role="status">Opening your minds…</p>}><MyMinds /></Suspense></div>
     </main>
   );
 
@@ -112,8 +115,9 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
           {(query || label) && <button className="link-btn" onClick={clear}>Clear search and filters</button>}
         </div>
         <ul className="mind-grid" id="mind-results" tabIndex={-1} aria-label="Matching minds" data-testid="mind-grid">
-          {shown.map((m) => <MindCard key={m.slug} m={m} c={c} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
+          {shown.slice(0, visibleCount).map((m) => <MindCard key={m.slug} m={m} c={c} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
         </ul>
+        {shown.length > visibleCount && <div className="mind-more"><p className="small" role="status">Showing {Math.min(visibleCount, shown.length)} of {shown.length} minds</p><button className="btn btn-line" type="button" aria-controls="mind-results" onClick={() => setPage({query, label, count: visibleCount + PAGE_SIZE})} data-testid="show-more-minds">Show {Math.min(PAGE_SIZE, shown.length - visibleCount)} more minds</button></div>}
         {!shown.length && <p>No minds match this search. Try another name or clear the filters.</p>}
         <p className="small mind-attribution">AI interpretations of public work. Explore a profile for its sources and methods.</p>
       </section>
@@ -152,13 +156,20 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
   );
 }
 
-/** Every face on the roster in one pixel wall, so you can see who's in the room before you pick an area. */
+/** Draw only the portraits that fit inside the existing three-row decorative wall. */
 const FaceWall = memo(function FaceWall({ roster }: { roster: RosterMind[] }) {
   const animate = useMemo(() => !hasShownFaceWall, []);
+  const wall = useRef<HTMLDivElement>(null);
+  const [count, setCount] = useState(() => Math.ceil(Math.min(1200, innerWidth) / 24) * 3);
+  useEffect(() => {
+    if (!wall.current || typeof ResizeObserver === "undefined") return;
+    const observer = new ResizeObserver(([entry]) => setCount(Math.max(1, Math.floor(entry.contentRect.width / 24)) * 3));
+    observer.observe(wall.current); return () => observer.disconnect();
+  }, []);
   useEffect(() => { hasShownFaceWall = true; }, []);
   return (
-    <div className="face-wall" aria-hidden="true" data-testid="face-wall">
-      {roster.map((m, i) => (
+    <div className="face-wall" aria-hidden="true" data-testid="face-wall" ref={wall}>
+      {roster.slice(0, count).map((m, i) => (
         <span key={m.slug} className={m.built ? "" : "soon"} style={{ "--w": `${((i * 37) % roster.length) / roster.length}s`, animation: animate ? undefined : "none" } as CSSProperties}>
           <PixelFace face={m.face} area={m.area} slug={m.slug} size={24} />
         </span>

@@ -6918,9 +6918,9 @@
   "https://useaiblocks.com/workflows/write-your-founder-story-and-cut-it-to-what-moves": "d3b58522fbcd2768135f64c57f0aceb43caae14fb2734b62a9c5f079ebdbe6c9",
   "https://useaiblocks.com/workflows/write-your-team-culture-memo-and-make-it-real-in-daily-habits": "a7af4044f2df44b10d36e13bf72fd66b87760ac7f7d3e2cabb79e1c10fdb2020"
  },
- "source_commit": "9f5d2d593e84671d0008de585d69e8b333160a40",
+ "source_commit": "5ebdc4ed54125273bff024048982303efc447ec1",
  "note": "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.",
- "saved": "2026-10-29T20:07:13.972Z",
+ "saved": "2026-10-29T20:55:12.909Z",
  "count": 6911,
  "urls": {
   "https://useaiblocks.com/": "2026-10-29T19:40:49.000Z",

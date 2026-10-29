@@ -1,5 +1,5 @@
 import { Link } from "./lib/router";
-import { INFO_PAGES, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink } from "./lib/site-info.mjs";
+import { INFO_PAGES, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink } from "./lib/site-info-nav.mjs";
 import { openTailor } from "./Tailor";
 import { usePeopleVisible } from "./lib/people";
 

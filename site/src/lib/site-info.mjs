@@ -1,12 +1,6 @@
-// Shared by the app and prerenderer so visitors and search engines read the same policies.
-export const SUPPORT_EMAIL = "hello@useaiblocks.com";
-export const OPERATOR = "Kevin Mark";
-export const POLICY_DATE = "26 October 2026";
-// Public profiles for AI Blocks, listed once here. Each one goes into the site's structured data (Organization sameAs) and
-// the footer. Add only real, confirmed profiles, for example { label: "YouTube", url: "https://www.youtube.com/@name" }.
-// Left empty on purpose until the handles are confirmed.
-export const SOCIAL_PROFILES = [];
-export const emailLink = (subject = "AI Blocks support") => `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}`;
+// Shared full policy copy, loaded only on policy pages and by the prerenderer.
+import { SUPPORT_EMAIL, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, emailLink } from "./site-info-nav.mjs";
+export { SUPPORT_EMAIL, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, emailLink } from "./site-info-nav.mjs";
 
 /** @typedef {{ id: string, title: string, paragraphs: string[], items?: string[], links?: { label: string, href: string }[] }} InfoSection */
 /** @type {{path: string, label: string, title: string, description: string, sections: InfoSection[]}[]} */

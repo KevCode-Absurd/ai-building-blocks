@@ -4,8 +4,8 @@ import FactCheckNotes from "./FactCheckNotes";
 import SkillNeighbours from "./SkillNeighbours";
 import { StarButton } from "./CommunityStars";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
-import { ArrowIcon, KitMenu } from "./ui";
-import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
+import { ArrowIcon, KitMenu, Drawer } from "./ui";
+import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, useCatalogueState, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, buildSkillZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { getBusiness, hasBusiness, meFor, useBusiness, withBusiness } from "./lib/business";
@@ -64,6 +64,12 @@ function Credit({ b, source }: { b: Block; source: NonNullable<Block["source"]> 
       <p className="gh-note">From {source.by}. Shared under its licence, with a plain name for this library.{commit && <> Source version: <code>{commit}</code>.</>}</p>
     </div>
   );
+}
+
+function FullAddToFlow(props: {slug: string; onClose: () => void; toast: (m: string) => void}) {
+  const {catalogue, error, retry} = useCatalogueState(true);
+  if (catalogue) return <AddToFlow {...props} c={catalogue} />;
+  return <Drawer label="Add to a workflow" top={<h2>Add to a workflow</h2>} onClose={props.onClose}><p role="status">{error || "Opening your workflow choices…"}</p>{error && <button className="btn btn-line" onClick={retry}>Try again</button>}</Drawer>;
 }
 
 type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
@@ -380,7 +386,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   return (
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
       <Comments key={b.slug} slug={b.slug} name={b.name} also={oldNames} toast={toast} />
-      {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
+      {adding && <FullAddToFlow slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
       {dl && dlOrder && <DownloadDialog name={dl.name} goal={dl.goal} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} kind={isAgent ? "agent" : "workflow"} />}
       <header className="wrap bp-hero">
         <div className="bp-top">

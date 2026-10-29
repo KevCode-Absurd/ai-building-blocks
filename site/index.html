@@ -116,12 +116,12 @@
     </script>
     <!-- APP_BOOT_END -->
     <!-- Fonts are served from this site (Latin letters only), so text never waits on another server. -->
-    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high" />
+    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin fetchpriority="low" />
     <!-- The library list starts downloading alongside the code instead of after it. -->
     <script>
       // Only catalogue screens need the full index. Keep independent pages light. The builder (/compose) fetches it
-      // itself once its form has painted (App.tsx).
+      // itself when the visitor uses its form (App.tsx).
       if (location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|space|people|s|from-a-source)(\/|$)/.test(location.pathname)) {
         // Public files can load while sign-in opens. Keep the full homepage
         // catalogue behind critical code/fonts in the network queue.
@@ -131,7 +131,8 @@
         // A first visit to home shows only the starter picks; the list index waits for a search, scroll or library link.
         const intent = location.hash === "#library" || location.hash === "#build" || ["q", "kind", "area", "fn", "job", "audience", "starred", "scope"].some(key => params.has(key));
         // Home lists cards from the small index; block pages and tools need the full catalogue.
-        const list = home ? "/data/blocks-index.json" : "/data/blocks.json";
+        const item = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)$/.exec(location.pathname);
+        const list = home ? "/data/blocks-index.json" : item ? "/data/items/" + item[2] + ".json" : "/data/blocks.json";
         for (const href of starter ? (intent ? [list, "/data/starter-blocks.json"] : ["/data/starter-blocks.json"]) : [list]) {
           const catalogue = document.createElement("link");
           catalogue.rel = "preload"; catalogue.href = href;

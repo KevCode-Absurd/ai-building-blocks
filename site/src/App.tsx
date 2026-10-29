@@ -6,7 +6,7 @@ import { rankLibraryResults } from "./lib/library-rank";
 import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState, type ComponentType } from "react";
 import { ArrowIcon, BlockCard, Drawer, SearchIcon, Select, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindOf, loadPage, pathOf, useCatalogueState, workflowEntries } from "./lib/data";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindOf, loadCatalogue, loadPage, pathOf, useCatalogueState, useItemCatalogue, workflowEntries } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { SaveHint, usePersistence } from "./AccountPersistence";
 import { reviewedTask } from "./lib/task-discovery";
@@ -19,7 +19,7 @@ import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { TailorDrawer, useTailorOpener } from "./Tailor";
 import SiteHeader from "./SiteHeader";
 import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
-import { infoPage } from "./lib/site-info.mjs";
+import { infoPage } from "./lib/site-info-nav.mjs";
 import SiteFooter from "./SiteFooter";
 import PageRecovery from "./PageRecovery";
 import { initialPageHtml } from "./lib/public-opening";
@@ -502,6 +502,9 @@ export default function App() {
   useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
+  const parts = path.split("/").filter(Boolean);
+  const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
+  const itemState = useItemCatalogue(pageSlug);
   const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
@@ -513,23 +516,15 @@ export default function App() {
     if (path !== "/") setHomeCatalogueRequested(false);
     else if (hasHomeLibraryIntent) setHomeCatalogueRequested(true);
   }, [path, hasHomeLibraryIntent]);
-  // The builder paints its request form first and only then fetches the task library (about 1 MB), so on a phone the
-  // page shows at once instead of waiting behind the download.
-  const [builderPainted, setBuilderPainted] = useState(false);
-  useEffect(() => {
-    if (path !== "/compose" || builderPainted) return;
-    let timers: number[] = [];
-    const done = () => setBuilderPainted(true);
-    // A short pause after the cover lifts, so the form paints before the download starts; nothing needs the library
-    // until a request is sent.
-    const painted = () => { timers.push(window.setTimeout(done, 300)); };
-    if (document.documentElement.dataset.boot === "ready") painted(); else document.addEventListener("abb:ready", painted, { once: true });
-    return () => { document.removeEventListener("abb:ready", painted); timers.forEach(clearTimeout); timers = []; };
-  }, [path, builderPainted]);
-  const catalogueState = useCatalogueState((needsCatalogue && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || builderPainted)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
+  // Prepare the library on request intent; the untouched form needs no full catalogue.
+  const [composeRequested, setComposeRequested] = useState(false);
+  const requestComposeCatalogue = useCallback(() => { setComposeRequested(true); return loadCatalogue(); }, []);
+  const catalogueState = useCatalogueState((needsCatalogue && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
   // Without starter picks there is nothing light to show, so open the library straight away.
   useEffect(() => { if (catalogueState.starterFailed) requestHomeCatalogue(); }, [catalogueState.starterFailed, requestHomeCatalogue]);
-  const c = catalogueState.catalogue;
+  const c = pageSlug ? itemState.catalogue : catalogueState.catalogue;
+  const pageError = pageSlug ? itemState.error : catalogueState.error;
+  const retryPage = pageSlug ? itemState.retry : catalogueState.retry;
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
   const [tailor, setTailor] = useState<string | null>(null);
@@ -541,15 +536,13 @@ export default function App() {
   const closeKits = useCallback(() => setKitsOpen(false), []);
 
   // Old links (/?block=slug) and a page opened under the wrong type go to the right address.
-  const parts = path.split("/").filter(Boolean);
-  const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
   // Resolve renamed and legacy addresses before revealing the first page.
   const now = (s: string | null) => (c && s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
   const old = now(search.get("block"));
   const here = now(pageSlug);
   const redirectTo = LEGACY_PATHS[path] ?? (old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null);
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/from-a-source"].includes(path)
+  const waitingForCatalogue = !c && !pageError && (pageSlug !== null || ["/minds", "/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });
@@ -571,7 +564,7 @@ export default function App() {
       <div id="main-content" tabIndex={-1}>
       <StartupContext.Provider value={!redirectTo && !waitingForCatalogue}>
         <PageRecovery key={path}><Suspense fallback={<main className="wrap bp-hero"><p className="small" role="status">Opening this page…</p></main>}>
-          {catalogueState.error && !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)) ? <main><StartupReady /><LibraryLoading error={catalogueState.error} retry={catalogueState.retry} /></main> : infoPage(path) ? (
+          {pageError && !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)) ? <main><StartupReady /><LibraryLoading error={pageError} retry={retryPage} /></main> : infoPage(path) ? (
             <InfoPage path={path} toast={setToast} />
           ) : ["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/") ? (
             <CommunityPage key={path} path={path} />
@@ -591,7 +584,7 @@ export default function App() {
             c ? <MindsPage c={c} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : path === "/compose" ? (
             // The builder opens at once; it plans once the task library is here (ComposePage.tsx).
-            <ComposePage c={c} toast={setToast} />
+            <ComposePage c={c} toast={setToast} requestCatalogue={requestComposeCatalogue} />
           ) : path === "/from-a-source" ? (
             c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : ["/api-and-mcp", "/api-and-mcp.html"].includes(path) ? (
@@ -613,7 +606,7 @@ export default function App() {
       <SiteFooter />
       {bizOpen && <BusinessDrawer onClose={closeBiz} toast={setToast} />}
       {tailor !== null && <TailorDrawer skill={tailor} onClose={closeTailor} toast={setToast} />}
-      {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} toast={setToast} />}
+      {catalogueState.catalogue && kitsOpen && <KitsDrawer c={catalogueState.catalogue} onClose={closeKits} toBuilder={toBuilder} toast={setToast} />}
       <Toast message={toast} onDone={clearToast} />
     </>
   );

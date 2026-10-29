@@ -5,7 +5,7 @@ import base from "./playwright.config";
 // writes in these tests are intercepted; this configuration never enables live spending.
 export default defineConfig({
   ...base,
-  testMatch: ["composer-saved-context.spec.ts", "catalogue-loading.spec.ts", "catalogue-seo.spec.ts"],
+  testMatch: ["composer-saved-context.spec.ts", "catalogue-loading.spec.ts", "catalogue-seo.spec.ts", "performance-loading.spec.ts"],
   fullyParallel: false,
   workers: 1,
   use: { ...base.use, baseURL: "http://127.0.0.1:5191" },

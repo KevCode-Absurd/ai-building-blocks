@@ -1,8 +1,8 @@
 import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useMemo, useRef, useState } from "react";
 import { type Block, type Catalogue, portLabel, workflowEntries } from "./lib/data";
 import { type Choices, type Composition, finalize, LEGACY_REQUEST_LIMIT, LIMITS, QUESTIONS, questionsFor, requestError, startPicks, type StartPick, validateChoices } from "./lib/composer-core";
-import Builder from "./Builder";
+const Builder = lazy(() => import("./Builder"));
 import { flowFrom, packFlow, unpackFlow } from "./lib/plan";
 import { withCustomSkills, validateCustomSkills, type CustomSkill } from "./lib/custom-skills";
 import VoiceRequest from "./VoiceRequest";
@@ -25,8 +25,14 @@ type Result = { plan: Composition; model: string; cost: number; latencyMs: numbe
 const EXAMPLES = ["Build a landing page from scratch and give me source code", "Turn customer reviews into checked video ad scripts", "Create a weekly KPI report and dashboard", "Design an n8n automation with safe retries"];
 // Until the task library arrives the page is already usable: the request form shows at once and only planning waits.
 const EMPTY: Catalogue = { built: "", portTypes: {}, renamed: {}, blocks: [], bySlug: {} };
-export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null; toast: (message: string) => void }) {
+export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c: Catalogue | null; toast: (message: string) => void; requestCatalogue: () => Promise<Catalogue> }) {
   const baseCatalogue = loaded ?? EMPTY;
+  useEffect(() => {
+    // Existing local or account workflows still restore without a click.
+    const restore = () => { if (libraryStorage.getItem("abb:composer")) void requestCatalogue().catch(() => {}); };
+    restore(); window.addEventListener(REMOTE_LIBRARY_UPDATE, restore);
+    return () => window.removeEventListener(REMOTE_LIBRARY_UPDATE, restore);
+  }, [requestCatalogue]);
   const [customSkills, setCustomSkills] = useState<CustomSkill[]>([]);
   const c = useMemo(() => withCustomSkills(baseCatalogue, customSkills), [baseCatalogue, customSkills]);
   const [goal, setGoal] = useState("");
@@ -56,6 +62,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
   const [graphFlow, setGraphFlow] = useState<Flow | null>(null);
   const [restored, setRestored] = useState(false);
   const importRef = useRef<HTMLInputElement>(null);
+  const explicitImport = useRef(false);
   const resultRef = useRef<HTMLElement>(null);
   const requestRef = useRef(0);
   const remoteApplying = useRef(false), lastPersisted = useRef<string | null>(null);
@@ -64,7 +71,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
     document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
-    if (loaded) try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const savedContext = restoreCompositionContext(saved); const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(savedContext.context); setUseContext(savedContext.useContext); setResult({ plan, context: savedContext.planningContext, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
+    if (loaded && !explicitImport.current) try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const savedContext = restoreCompositionContext(saved); const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(savedContext.context); setUseContext(savedContext.useContext); setResult({ plan, context: savedContext.planningContext, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
     try {
       const pending = JSON.parse(sessionStorage.getItem("abb:composer-signin") ?? "null");
       sessionStorage.removeItem("abb:composer-signin");
@@ -154,9 +161,8 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
     } catch (e) { setError((e as Error).message); } finally { setPackBusy(false); }
   };
   const importPack = async (file?: File) => {
-    if (!file) return; setError("");
-    if (!loaded) { setError("The task library is still loading. Try again in a moment."); return; }
-    try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT) throw Error("Choose a workflow.edit.json exported from this composer."); const savedContext = restoreCompositionContext(data); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(savedContext.context); setUseContext(savedContext.useContext); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, context: savedContext.planningContext, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
+    if (!file) return; explicitImport.current = true; setError("");
+    try { const importCatalogue = loaded ?? await requestCatalogue(); if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT) throw Error("Choose a workflow.edit.json exported from this composer."); const savedContext = restoreCompositionContext(data); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(importCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(importCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(savedContext.context); setUseContext(savedContext.useContext); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, context: savedContext.planningContext, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
   };
 
   const questions = questionsFor([goal, context, useContext && planningMeContext(businessText(getBusiness()), goal)].filter(Boolean).join("\n"), choices);
@@ -164,7 +170,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
   const hasSpecialist = result?.plan.steps.some(s => !["request-acceptance-brief", "request-deliverable-drafter", "request-acceptance-checker"].includes(s.slug));
   const usableResult = !(hasGeneralTemplate && !hasSpecialist);
   const possibleQuestions = [...new Set([...questions, ...Object.keys(choices)])].filter(id => Object.hasOwn(QUESTIONS, id));
-  return <main className="wrap compose-page" data-testid="compose-page">
+  return <main className="wrap compose-page" data-testid="compose-page" onFocusCapture={() => { void requestCatalogue().catch(() => {}); }} onPointerDownCapture={() => { void requestCatalogue().catch(() => {}); }}>
     <div className="compose-intro"><span className="mono small">YOUR GOAL → YOUR WORKFLOW</span><h1 className="h2">Build a custom workflow</h1><p className="lede">Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI.</p><p className="small compose-source-entry">Already have an article, transcript or document? <Link to="/from-a-source" data-testid="compose-from-source">Start from a link or document</Link>.</p></div>
     <nav className="compose-navigation" aria-label="Composer sections"><a href="#compose-request">1. Your request</a>{busy || result || picks ? <a href="#compose-workflow">2. Your workflow</a> : <span aria-disabled="true">2. Your workflow</span>}</nav>
     <div className="compose-layout">
@@ -215,7 +221,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
           {usableResult && result.plan.missing.length > 0 && <details className="workflow-options" data-testid="workflow-inputs"><summary>Inputs your AI will check ({result.plan.missing.length})</summary><p className="small">You can download now. Your request, saved context or earlier files may already supply these. Your AI checks those first and asks only for missing inputs. You do not need to upload private files here.</p><ul>{result.plan.missing.map(item => <li key={item.type}>{portLabel(item.type)} · needed by step {item.steps.join(", ")}</li>)}</ul></details>}
           {hasGeneralTemplate && <div className="compose-match-notice" role="status" data-testid="compose-unmatched"><b>{hasSpecialist ? "Part of your request needs a specialist match" : "Your request did not match a specialist workflow"}</b><p className="small">{hasSpecialist ? "Unmatched parts use" : "The steps below are"} a general brief, draft and check template. Different unmatched requests produce the same steps. Choose AI composition for a tailored workflow.</p>{available ? <button className="btn btn-dark btn-sm" onClick={() => { setMode("ai"); setError(""); }}>Use AI composition for this request</button> : <p className="small">AI composition is currently unavailable. You can replace the template steps with skills from the library.</p>}</div>}
           {usableResult && <><p className="small">Read the steps in order. Open a step to see what to add and what it makes. Use Diagram view to edit connections.</p>
-          <div className="compose-workflow-canvas" data-testid="compose-steps">{initialGraph && <Builder key={initialGraph.id} c={baseCatalogue} toast={toast} initialFlow={initialGraph} onFlowChange={setGraphFlow} onDelete={reset} />}</div>
+          <div className="compose-workflow-canvas" data-testid="compose-steps">{initialGraph && <Suspense fallback={<p className="small" role="status">Opening the steps…</p>}><Builder key={initialGraph.id} c={baseCatalogue} toast={toast} initialFlow={initialGraph} onFlowChange={setGraphFlow} onDelete={reset} /></Suspense>}</div>
           <div className="compose-actions"><button className="link-btn" onClick={() => { const flow = asFlow(); flows.save(flow); flows.open(flow.id); navigate("/#build"); }}>Open in the full builder</button></div>{preparedZip && <TransferGuide name={asFlow().name} goal={asFlow().goal} zip={preparedZip} />}</>}
         </> : picks ? <div className="compose-start" data-testid="compose-start">
           <span className="mono small">START WITH</span><h2 className="h3">Pick your first step</h2>

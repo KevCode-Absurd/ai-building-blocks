@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Drawer } from "./ui";
-import { SUPPORT_EMAIL } from "./lib/site-info.mjs";
+import { SUPPORT_EMAIL } from "./lib/site-info-nav.mjs";
 
 // Every skill on the site is a base skill that works for anyone. People who want one shaped to their
 // industry ask here, and the request comes to us by email (the site has no server).

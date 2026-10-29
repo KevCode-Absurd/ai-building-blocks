@@ -141,7 +141,7 @@ function unwire(w: Wire): Block {
   } as Block;
 }
 /** `index` is set on the small list catalogue (blocks-index.json): cards, filters and quick search only, no ports, uses or roster. */
-export type Catalogue = { built: string; sourceHash?: string; index?: true; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
+export type Catalogue = { built: string; sourceHash?: string; itemSlug?: string; index?: true; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -263,6 +263,37 @@ export function useCatalogueState(enabled = true, { starterFirst = false, tier =
   }, [enabled, attempt, starterFirst, tier]);
   const shown = tier === "full" && catalogue?.index ? null : catalogue;
   return { catalogue: shown, starterCatalogue: starterFirst ? starterCatalogue : null, starterFailed: starterFirst && starterFailed, complete: shown !== null, loading, error, retry };
+}
+const itemCatalogues = new Map<string, Promise<Catalogue>>();
+export function loadItemCatalogue(slug: string): Promise<Catalogue> {
+  if (resolvedCatalogue) return Promise.resolve(resolvedCatalogue);
+  if (!/^[a-z0-9-]+$/.test(slug)) return loadCatalogue();
+  if (!itemCatalogues.has(slug)) itemCatalogues.set(slug, fetchData(`/data/items/${slug}.json`, {attempts: 1})
+    .then(bytes => {
+      const data = JSON.parse(new TextDecoder().decode(bytes));
+      if (data.itemSlug !== slug || !Array.isArray(data.blocks) || !data.blocks.some((b: Wire) => b.slug === slug) || !/^[a-f\d]{64}$/.test(data.sourceHash ?? "")) throw Error("Invalid item data");
+      if (data.page) pageCache.set(slug, Promise.resolve(data.page));
+      return decodeCatalogue(data);
+    }).catch(() => { itemCatalogues.delete(slug); return loadCatalogue(); }));
+  return itemCatalogues.get(slug)!;
+}
+/** Show the exact item and its existing links first, then complete the library after its page opens. */
+export function useItemCatalogue(slug: string | null) {
+  const [state, setState] = useState<{slug: string | null; catalogue: Catalogue | null; error: string}>({slug: null, catalogue: null, error: ""});
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    if (!slug) return;
+    let live = true;
+    const complete = () => { void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {}); };
+    void loadItemCatalogue(slug).then(catalogue => {
+      if (!live) return; setState({slug, catalogue, error: ""});
+      if (!catalogue.itemSlug) return;
+      if (document.documentElement.dataset.boot === "ready") complete();
+      else document.addEventListener("abb:ready", complete, {once: true});
+    }).catch(() => { if (live) setState({slug, catalogue: null, error: "The task library could not load. Check your connection and try again."}); });
+    return () => { live = false; document.removeEventListener("abb:ready", complete); };
+  }, [slug, attempt]);
+  return {catalogue: state.slug === slug ? state.catalogue : null, error: state.slug === slug ? state.error : "", retry: useCallback(() => setAttempt(n => n + 1), [])};
 }
 export function useCatalogue(enabled = true) { return useCatalogueState(enabled).catalogue; }
 const textCache = new Map<string, Promise<string | null>>();

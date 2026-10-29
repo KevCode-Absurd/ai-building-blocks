@@ -11,6 +11,7 @@ import {
   Background, BackgroundVariant, Handle, Panel, Position, ReactFlow, ReactFlowProvider, SelectionMode, addEdge, useEdgesState, useNodesState, useReactFlow,
   type Connection, type Node, type NodeProps,
 } from "@xyflow/react";
+import "./builder-base.css";
 import "@xyflow/react/dist/base.css";
 import "./workflow-selection.css";
 import "./workflow-simplicity.css";

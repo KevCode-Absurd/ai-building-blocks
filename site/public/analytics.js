@@ -143,11 +143,17 @@
     // so it never competes with the page's own code on a slow phone connection.
     const loadGoogle = () => {
       const google = document.createElement('script'); google.async = true;
+      if (!running || !safeHere()) return;
+      google.fetchPriority = 'low';
       google.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
       document.head.appendChild(google);
     };
-    if (document.readyState === 'complete') loadGoogle();
-    else window.addEventListener('load', loadGoogle, { once: true });
+    const scheduleGoogle = () => {
+      if (window.requestIdleCallback) window.requestIdleCallback(loadGoogle, { timeout: 3000 });
+      else loadGoogle();
+    };
+    if (document.readyState === 'complete') scheduleGoogle();
+    else window.addEventListener('load', scheduleGoogle, { once: true });
     if (replayStopped || location.search || !safeReferrer()) return;
     // The recorder is heavy on phones (seconds of main-thread work), so it starts on the first
     // scroll, tap or key press instead of while the page is painting. A click on Allow counts.

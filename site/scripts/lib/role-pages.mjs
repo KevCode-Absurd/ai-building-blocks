@@ -1,4 +1,4 @@
-import {pageTitle,describe,trimDescription,clean} from '../../src/lib/seo-meta.mjs';
+import {pageTitle,trimDescription,clean} from '../../src/lib/seo-meta.mjs';
 const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const list=rows=>`<ul>${rows.map(s=>`<li>${s}</li>`).join('')}</ul>`;
 const cut=(s,max)=>s.length<=max?s:s.slice(0,max+1).replace(/\s+\S*$/,'').replace(/[\s.,;:&-]+$/,'');
@@ -10,10 +10,11 @@ const roleTitle=r=>{
  const branded=`Hire ${short} | AI Blocks`;
  return branded.length<50?`Hire an AI ${short} | AI Blocks`:branded;
 };
-const roleDescription=r=>{
- const raw=clean(`Set up your AI ${r.name.toLowerCase()}. ${r.summary} Deliverables include ${r.deliverables.join('; ')}. Inputs: ${r.inputs.join('; ')}.`);
+const fitDescription=text=>{
+ const raw=clean(text);
  const sentence=trimDescription(raw);return sentence.length>=120?sentence:cut(raw,154)+'…';
 };
+const roleDescription=r=>fitDescription(`Set up your AI ${r.name.toLowerCase()}. ${r.summary} Deliverables include ${r.deliverables.join('; ')}. Inputs: ${r.inputs.join('; ')}.`);
 const workerOverview=r=>`<section><h2>Your specialist's working setup</h2><p>SOUL.md defines this worker's remit, capabilities and limits. KNOWLEDGE.md names its complete source methods. PLAYBOOK.md sets intake, planning, execution, checks and handoff. TOOL_ROUTER.md explains when to use each skill, workflow, prompt or agent.</p><h2>Train it for your way of working</h2><p>Edit TRAINING.md with preferences, templates, accepted examples and corrections. Supply relevant facts and me.md in CONTEXT.md and set the current deliverables in JOB.md. Keep these files in your AI project for later jobs. This is working guidance, not model fine-tuning or automatic memory.</p><h2>Files, tools and MCP connections</h2><p>CONNECTIONS.md lists the task material and capabilities to check. Connect required services through the host's normal sign-in or OAuth flow. The worker records the actual MCP or tool, workspace, account scope and connection check. A listed product is not connected automatically.</p><h2>Permissions and what it cannot do</h2><p>${esc(r.worker.permissions.local)} ${esc(r.worker.permissions.external)} ${esc(r.worker.permissions.background)}</p><p>Implementation requires an appropriate method and working tools. A plan is not a completed implementation. CHECKS.md requires actual files, evidence and passed, failed or blocked checks.</p><h2>Use this specialist through MCP or the API</h2><p>Call find_specialist with the task, check the role's remit, then call prepare_specialist with role_id ${esc(r.id)}, task, relevant context, tools and training preferences. The host AI reads the complete worker and source methods, checks access and authorization, and executes supported work.</p><p>API: GET /api/v1/specialists/${esc(r.id)} or POST /api/v1/specialist-preparations. The public catalogue prepares the worker; your AI supplies the model, tools and execution.</p></section>`;
 export function rolePage(url,index,load){
  if(!/^\/roles(?:\/|$)/.test(url))return null;
@@ -24,7 +25,7 @@ export function rolePage(url,index,load){
   const nav=`<nav class="hub-pages" aria-label="Role pages">${Array.from({length:pages},(_,i)=>i===page-1?`<b aria-current="page">Page ${i+1}</b>`:`<a href="${i?`/roles/page/${i+1}`:'/roles'}">Page ${i+1}</a>`).join('')}</nav>`;
   const body=rows.map(r=>`<li class="role-card"><p>${esc(index.areas.find(a=>a.id===r.area)?.name)}</p><h2><a href="/roles/${r.id}">${esc(r.name)}</a></h2><p>${esc(r.summary)}</p>${list(r.deliverables.slice(0,2).map(esc))}<p>${r.resourceCount} core ${r.resourceCount===1?'method':'methods'} and your task brief.</p><a href="/roles/${r.id}">Set up ${esc(r.name)}</a></li>`).join('');
   return {title:`AI specialist roles${page>1?`, page ${page}`:''}`,documentTitle:pageTitle(page===1?'Hire an AI specialist':`AI specialist roles, page ${page}`,['roles and work packs','skills, methods and work packs','role setups']),h1,
-   desc:describe({summary:`${page>1?`Page ${page} of ${pages}. `:''}Set up ${rows.slice(0,2).map(r=>r.name.toLowerCase()).join(' or ')}. Choose deliverables, add context and download the full methods for your AI.`}).text,
+   desc:fitDescription(`${page>1?`Page ${page} of ${pages}. `:''}Set up ${rows.slice(0,2).map(r=>r.name.toLowerCase()).join(' or ')}. Choose deliverables, add context and download the full methods for your AI.`),
    crumbs:page>1?[['AI roles','/roles']]:[],collection:true,
    content:`<header class="role-opening"><h1 id="role-heading">${h1}</h1><p>Choose a role. Give it a task. Take its complete work pack to your AI.</p><p>${index.roles.length} source-backed role setups across ${index.areas.length-1} areas.</p></header>${nav}<ul class="role-grid">${body}</ul>${nav}<h2>How to set up your role</h2><ol><li>Choose a specialist and read its deliverables, methods and limits.</li><li>Add your task, supplied facts, files and available tools.</li><li>Save the setup or download the complete role pack for your AI to carry out.</li></ol><p>Your AI checks context and tool access, makes the work plan, carries out supported tasks and reports the real files and checks. A setup does not mean work has already run.</p>`,
    main:{'@type':'ItemList',numberOfItems:rows.length,itemListElement:rows.map((r,i)=>({'@type':'ListItem',position:(page-1)*24+i+1,name:r.name,url:`https://useaiblocks.com/roles/${r.id}`}))}};

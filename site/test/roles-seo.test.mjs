@@ -10,4 +10,9 @@ test('every specialist has unique useful search text, branded titles and the com
   titles.add(p.documentTitle);descriptions.add(p.desc);assert(p.content.includes(`href="/api/v1/specialists/${row.id}"`));
  }
  const root=rolePage('/roles',index,()=>null);assert(root.documentTitle.length>=50&&root.documentTitle.length<=60);
+ for(let page=1;page<=Math.ceil(index.roles.length/24);page++){
+  const p=rolePage(page===1?'/roles':'/roles/page/'+page,index,()=>null);
+  assert(p.desc.length>=120&&p.desc.length<=155,'directory page '+page+' description');
+  assert(p.documentTitle.endsWith(' | AI Blocks'),'directory page '+page+' brand');
+ }
 });

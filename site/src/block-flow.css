@@ -67,7 +67,19 @@
 .skill-neighbours-card h3 { margin: 0 0 12px; font-size: 1rem; }
 .skill-neighbours-card ul { list-style: none; padding: 0; margin: 0; }
 .skill-neighbours-card li + li { margin-top: 16px; }
-.skill-neighbours-card a { overflow-wrap: anywhere; }
+.skill-neighbours a { overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 3px; }
+.skill-neighbours-choice { display: flex; align-items: start; gap: 10px; }
+.skill-neighbours-choice input { flex: 0 0 auto; width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--text); cursor: pointer; }
+.skill-neighbours-current > button { margin-top: 16px; }
+.skill-neighbours-selection { margin-top: 20px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
+.skill-neighbours-selection h3 { margin: 0 0 8px; font-size: 1rem; }
+.skill-neighbours-order { padding-left: 24px; }
+.skill-neighbours-order li { padding: 8px 0; overflow-wrap: anywhere; }
+.skill-neighbours-order li::marker { color: var(--muted); }
+.skill-neighbours-move { display: inline-flex; gap: 4px; margin-left: 12px; vertical-align: middle; }
+.skill-neighbours-move button { min-width: 44px; min-height: 44px; padding: 4px 10px; }
+.skill-neighbours-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+.skill-neighbours button:disabled { opacity: .5; cursor: not-allowed; }
 .skill-neighbours-card .small { margin: 6px 0 0; }
 .skill-neighbours-card button { max-width: 100%; white-space: normal; }
 .skill-neighbours-arrow { width: 20px; height: 20px; margin-top: 22px; color: var(--muted); }

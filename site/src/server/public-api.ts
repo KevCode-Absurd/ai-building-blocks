@@ -89,7 +89,7 @@ function serverCard(origin: string) {
     _meta: { 'com.useaiblocks/library': { openapi: `${origin}/api/v1/openapi.json`, extensions: [SKILLS_EXTENSION], read_only: true, authentication: 'none' } },
   };
 }
-const aiCatalog = (origin: string) => ({ specVersion: '1.0', entries: [{ identifier: `urn:air:${new URL(origin).hostname.replace(/^www\./, '')}:mcp:library`, type: 'application/mcp-server-card+json', url: `${origin}${SERVER_CARD}` }] });
+const aiCatalog = (origin: string) => ({ specVersion: '1.0', entries: [{ identifier: `urn:air:${new URL(origin).hostname.replace(/^www\./, '')}:mcp:library`, displayName: 'AI Blocks catalogue', description: 'Find reusable skills and build a workflow plan with instructions and checks for your own AI.', representativeQueries: ['Find a skill to write ad angles from supplied customer research.', 'Plan a workflow for a checked weekly sales report.', 'Read a skill and show what to prepare before it and what to do next.'], type: 'application/mcp-server-card+json', url: `${origin}${SERVER_CARD}` }] });
 
 async function discovery(request: Request, env: PublicApiEnv, route: string): Promise<Response> {
   const cors = { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'GET', 'access-control-allow-headers': 'Content-Type, If-None-Match', 'access-control-expose-headers': 'ETag', 'x-content-type-options': 'nosniff' };

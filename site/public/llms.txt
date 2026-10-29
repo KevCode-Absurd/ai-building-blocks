@@ -20,12 +20,19 @@ Once connected, ask in plain words:
 
 ## Key facts
 
-- Free to use, no account needed.
+- Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
 - 5021 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
 - Last changed 2026-10-29. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
+
+## Planning and privacy
+
+- Use search to find relevant skills. A skill page shows what to prepare before it and what can use its result next. Add the steps you need to the builder.
+- When planning with your AI, keep the original request and use relevant supplied context, including me.md when available. Read the chosen methods and supporting files. Give each step a clear task, required material, expected result and checks.
+- Public API and MCP workflow tools return plans and instructions. They do not run skills or make model calls on your behalf. Your AI runs the work with its own tools and credits. The signed-in website planner uses the AI Blocks service.
+- Saved personal and company workflows require their connected account and access checks. Never put credentials or private workflow links in public searches. A prepared plan is not approval to send, spend or publish.
 
 ## How to use a skill
 
@@ -34,6 +41,9 @@ Once connected, ask in plain words:
 
 ## Main pages
 
+- [Workflow planner](https://useaiblocks.com/compose): describe a task, review a plan and download it for your AI
+- [Your me.md](https://useaiblocks.com/me-md): prepare reusable context for your AI
+- [API and MCP](https://useaiblocks.com/api-and-mcp): connect an AI and read the public API documentation
 - [All skills by job](https://useaiblocks.com/jobs): every skill, workflow and prompt, sorted by the job it does
 - [How it works](https://useaiblocks.com/how-it-works): from one prompt to your own AI app
 - [Minds](https://useaiblocks.com/minds): hire a great thinker's method for your problem

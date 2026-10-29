@@ -307,7 +307,14 @@ test('the server card and AI Catalog follow the discovery draft: media types, op
   assert.equal(again.status, 304); assert.equal(await again.text(), '');
   const catalog = await handlePublicApi(get('/.well-known/ai-catalog.json'), e);
   assert.equal(catalog.headers.get('content-type'), 'application/ai-catalog+json');
-  assert.deepEqual(await catalog.json(), { specVersion: '1.0', entries: [{ identifier: 'urn:air:example.test:mcp:library', type: 'application/mcp-server-card+json', url: 'https://example.test/mcp/server-card' }] });
+  const manifest = await catalog.json(), entry = manifest.entries[0];
+  assert.equal(manifest.specVersion, '1.0');
+  assert.equal(entry.identifier, 'urn:air:example.test:mcp:library');
+  assert.equal(entry.displayName, 'AI Blocks catalogue');
+  assert.equal(entry.type, 'application/mcp-server-card+json'); assert.equal(entry.url, 'https://example.test/mcp/server-card');
+  assert(entry.description.length > 20); assert(entry.representativeQueries.length >= 2 && entry.representativeQueries.length <= 5);
+  assert(entry.representativeQueries.every(query => typeof query === 'string' && query.length > 20));
+  assert(!JSON.stringify(manifest).includes('hosted execution'));
   assert.equal((await handlePublicApi(get('/mcp/server-card'), env({ PUBLIC_API_ENABLED: 'false' }))).status, 503);
   assert.equal((await handlePublicApi(new Request(origin + '/mcp/server-card', { method: 'POST', headers: edge }), e)).status, 405);
   assert.equal((await handlePublicApi(new Request('https://other.test/mcp/server-card', { headers: edge }), e)).status, 403);

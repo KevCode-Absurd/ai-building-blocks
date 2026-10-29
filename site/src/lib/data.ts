@@ -277,29 +277,17 @@ export function loadItemCatalogue(slug: string): Promise<Catalogue> {
     }).catch(() => { itemCatalogues.delete(slug); return loadCatalogue(); }));
   return itemCatalogues.get(slug)!;
 }
-/** Show the exact item and existing links. Warm the complete library on interaction, not during first paint. */
+/** Reading an item needs only its complete local links. Editing controls load the full library themselves. */
 export function useItemCatalogue(slug: string | null) {
   const [state, setState] = useState<{slug: string | null; catalogue: Catalogue | null; error: string}>({slug: null, catalogue: null, error: ""});
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     if (!slug) return;
     let live = true;
-    const complete = () => {
-      document.removeEventListener("pointerdown", complete);
-      document.removeEventListener("keydown", complete);
-      if (live) void loadCatalogue().then(catalogue => { if (live) setState({slug, catalogue, error: ""}); }).catch(() => {});
-    };
-    const prepare = () => {
-      document.addEventListener("pointerdown", complete, {once: true, passive: true});
-      document.addEventListener("keydown", complete, {once: true});
-    };
     void loadItemCatalogue(slug).then(catalogue => {
       if (!live) return; setState({slug, catalogue, error: ""});
-      if (!catalogue.itemSlug) return;
-      if (document.documentElement.dataset.boot === "ready") prepare();
-      else document.addEventListener("abb:ready", prepare, {once: true});
     }).catch(() => { if (live) setState({slug, catalogue: null, error: "The task library could not load. Check your connection and try again."}); });
-    return () => { live = false; document.removeEventListener("abb:ready", prepare); document.removeEventListener("pointerdown", complete); document.removeEventListener("keydown", complete); };
+    return () => { live = false; };
   }, [slug, attempt]);
   return {catalogue: state.slug === slug ? state.catalogue : null, error: state.slug === slug ? state.error : "", retry: useCallback(() => setAttempt(n => n + 1), [])};
 }

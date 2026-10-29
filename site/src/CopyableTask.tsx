@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { previewChunks } from './lib/preview-text.mjs';
 import { buildTaskPrompt, buildTaskWorkflow, taskInputSheet } from './lib/copyable-task.mjs';
 import { download } from './lib/download';
 import type { Block, Catalogue } from './lib/data';
@@ -15,6 +16,7 @@ export default function CopyableTask({ c, b, recipe, skill, toast }: { c: Catalo
   const active = useRef(true);
   useEffect(() => { active.current=true; return () => { active.current=false; }; }, []);
   const content = skill ? (mode==='prompt' ? buildTaskPrompt(recipe,skill) : buildTaskWorkflow(recipe,skill)) : '';
+  const preview = useMemo(() => previewChunks(content || 'Loading the complete instructions…'), [content]);
   const copy = async () => {
     if (!content) return;
     try { await navigator.clipboard.writeText(content); setManual(false); toast(`${mode==='prompt'?'Task prompt':'Workflow'} copied. Replace the input fields and send it in your AI.`); }
@@ -40,7 +42,7 @@ export default function CopyableTask({ c, b, recipe, skill, toast }: { c: Catalo
     <label htmlFor="copyable-format">Choose what to copy</label>
     <select id="copyable-format" value={mode} onChange={e=>{setMode(e.currentTarget.value as 'prompt'|'workflow');setManual(false);}}><option value="prompt">Task prompt</option><option value="workflow">Step-by-step workflow</option></select>
     {(recipe.needsFiles || recipe.dependencies.length>0) && <p className="small">This skill uses supporting files or linked skills. Download the task pack and give its complete files to your AI before running those steps.</p>}
-    <details><summary>Preview the complete request</summary><pre style={{whiteSpace:'pre-wrap',maxHeight:'28rem',overflow:'auto'}}>{content || 'Loading the complete instructions…'}</pre></details>
+    <details><summary>Preview the complete request</summary><pre style={{whiteSpace:'pre-wrap',maxHeight:'28rem',overflow:'auto'}}>{preview.length === 1 ? preview[0] : preview.map((text, index) => <span className="task-preview-chunk" key={index}>{text}</span>)}</pre></details>
     <div className="bp-actions"><button className="btn btn-dark btn-sm" disabled={!content} onClick={()=>void copy()} data-testid="copy-task-adapter">Copy {mode==='prompt'?'task prompt':'workflow'}</button><button className="btn btn-line btn-sm" disabled={!skill || busy} onClick={()=>void pack()} data-testid="download-task-adapter">{busy?'Preparing task pack…':'Download task pack'}</button></div>
     {manual && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the complete request below.</p><textarea readOnly rows={8} value={content} aria-label="Copy task request manually" onFocus={e=>e.currentTarget.select()} /></div>}
     {error && <p role="alert">{error}</p>}

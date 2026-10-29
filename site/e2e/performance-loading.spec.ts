@@ -14,8 +14,12 @@ for (const mobile of [false, true]) {
       await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
       await page.waitForTimeout(1000);
       expect(requested).toBe(false);
-      // Start warming the full catalogue on real user intent, while the exact page stays usable.
+      // Reading and menus do not need the full catalogue. Only the editing control does.
       await page.locator("#root .bp-h1").click();
+      expect(requested).toBe(false);
+      await page.getByTestId('task-more').locator('summary').click();
+      expect(requested).toBe(false);
+      await page.getByTestId('add-to-workflow').click();
       await expect.poll(() => requested).toBe(true);
       expect(modules.some(p => /\/assets\/handoff-(?!core-)/.test(p))).toBe(false);
       const before = await page.getByTestId('skill-neighbours').innerText();
@@ -95,5 +99,34 @@ for (const mobile of [false, true]) {
       expect(Math.abs(after!.height - before!.height)).toBeLessThan(1);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     } finally { release(); }
+  });
+
+  test((mobile ? '@mobile ' : '') + 'large instruction previews retain full selection, scrolling and exact clipboard text', async ({page}) => {
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', {value: {writeText: async (text: string) => { (window as any).__previewCopied = text; }}}));
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.goto('/skills/claude-app-builder');
+    const block = page.getByTestId('copyable-task');
+    await expect(page.getByTestId('copy-task-adapter')).toBeEnabled();
+    await block.locator('details > summary').click();
+    const pre = block.locator('pre');
+    await pre.scrollIntoViewIfNeeded();
+    const text = await pre.textContent();
+    expect(text!.length).toBeGreaterThan(100000);
+    const before = await pre.boundingBox();
+    const scroll = await page.evaluate(() => scrollY);
+    await pre.locator('.task-preview-chunk').last().scrollIntoViewIfNeeded();
+    expect(Math.abs((await pre.boundingBox())!.height - before!.height)).toBeLessThan(1);
+    expect(Math.abs((await page.evaluate(() => scrollY)) - scroll)).toBeLessThan(1);
+    const selected = await pre.evaluate(el => {
+      const range = document.createRange(); range.selectNodeContents(el);
+      const selection = getSelection()!; selection.removeAllRanges(); selection.addRange(range);
+      const text = selection.toString(); selection.removeAllRanges(); return text;
+    });
+    expect(selected).toBe(text);
+    await page.getByTestId('copy-task-adapter').click();
+    expect(await page.evaluate(() => (window as any).__previewCopied)).toBe(text);
+    await expect(block.locator('summary')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 }

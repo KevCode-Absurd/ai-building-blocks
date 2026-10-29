@@ -6,6 +6,8 @@
 .task-copyable details{margin:20px 0}
 .task-copyable summary{cursor:pointer;font-weight:500}
 .task-copyable pre{padding:16px;border:1px solid var(--line-2);border-radius:6px;background:var(--bg);font:12px/1.7 var(--mono);overflow-wrap:anywhere}
+/* The scroll box keeps its existing height. All text stays selectable and searchable. */
+@supports (content-visibility:auto) and (contain-intrinsic-block-size:auto 500px){.task-preview-chunk{display:block;content-visibility:auto;contain-intrinsic-block-size:auto 500px}}
 .task-copyable .bp-actions{margin:20px 0 12px;gap:10px}
 .task-copyable>.small:last-child{margin-bottom:0;color:var(--muted)}
 @media(max-width:600px){.task-copyable{padding:20px}.task-copyable .bp-actions{align-items:stretch}.task-copyable .bp-actions .btn{max-width:100%;white-space:normal}}

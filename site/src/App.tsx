@@ -3,6 +3,7 @@ import LibraryLoading from "./LibraryLoading";
 import ComposePage from "./ComposeRoute";
 import MindsRoute from "./MindsRoute";
 import RolesRoute from "./RolesRoute";
+import BlockRoute from "./BlockRoute";
 import {prefetchRole} from "./roles/role-data";
 import { spaceKey, spaces } from "./lib/space";
 import { syncPageMetadata } from "./lib/page-metadata";
@@ -302,7 +303,8 @@ export default function App() {
           ) : path === "/how-it-works" ? (
             <HowItWorks toast={setToast} />
           ) : pageSlug ? (
-            c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <BlockPending path={path} />
+            parts[0] === "minds" ? (c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <BlockPending path={path} />)
+              : <BlockRoute key={pageSlug} c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} />
           ) : path === "/" ? (
             <Home c={c ?? catalogueState.starterCatalogue} complete={catalogueState.complete} toast={setToast} error={catalogueState.error} retry={catalogueState.retry} onNeedFull={requestHomeCatalogue} />
           ) : (

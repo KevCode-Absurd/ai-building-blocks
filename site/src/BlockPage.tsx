@@ -5,7 +5,7 @@ import SkillNeighbours from "./SkillNeighbours";
 import { StarButton } from "./CommunityStars";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, KitMenu, Drawer } from "./ui";
-import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, useCatalogueState, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
+import { type Block, type Catalogue, type Page, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, useCatalogueState, paidService, pathOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff-core";
 import { download } from "./lib/download";
@@ -16,7 +16,7 @@ import { BusinessNote, openBusiness } from "./Business";
 import { DownloadDialog, TransferGuide } from "./DownloadDialog";
 import ExecutionPrompt from "./ExecutionPrompt";
 import type { Flow } from "./lib/store";
-import { Link, libraryReturnTo } from "./lib/router";
+import { Link } from "./lib/router";
 import Install from "./Install";
 import { Before, Next } from "./Needs";
 import RunInAi, { PullFromAi } from "./RunInAi";
@@ -32,6 +32,7 @@ import { usePersistence } from "./AccountPersistence";
 import { normalizeSkillHtml } from "./lib/skill-html.mjs";
 import { TASK_STARTERS } from "./lib/task-discovery";
 import CopyableTask from "./CopyableTask";
+import BlockHeader from "./BlockHeader";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
@@ -81,7 +82,7 @@ function FullAddToFlow(props: {slug: string; onClose: () => void; toast: (m: str
   return <Drawer label="Add to a workflow" top={<h2>Add to a workflow</h2>} onClose={props.onClose}><p role={error || editorError ? "alert" : "status"}>{error || (editorError ? "Your workflow choices could not open. Check your connection and try again." : "Opening your workflow choices…")}</p>{(error || editorError) && <button className="btn btn-line" onClick={() => { if (error) retry(); if (editorError) setAttempt(value => value + 1); }}>Try again</button>}</Drawer>;
 }
 
-type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
+type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void; embedded?: boolean; initialPage?: Page | null; onPageLoaded?: (page: Page | null) => void };
 
 /** A code window with a file name, line numbers and a copy button.
  *  With `typed`, the text writes itself out when it scrolls into view, like your AI answering, and can be replayed. */
@@ -239,9 +240,9 @@ function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel,
   </div>;
 }
 
-export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
+export default function BlockPage({ c, slug, toast, toBuilder, embedded = false, initialPage, onPageLoaded }: Props) {
   const b = c.bySlug[slug];
-  const [page, setPage] = useState<Page | null | undefined>(undefined);
+  const [page, setPage] = useState<Page | null | undefined>(initialPage);
   const [skill, setSkill] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
   const [dl, setDl] = useState<Flow | null>(null);
@@ -262,14 +263,15 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const biz = hasBusiness(useBusiness());
   useEffect(() => {
     let active = true;
-    setPage(undefined); setSkill(null); setShowAllSample(false); setLoadError(false); setTransferred(false); setUseful(false); setCopyFailed(false);
-    loadPage(slug).then(value => { if (active) { setPage(value); if (!value && b?.headline) setLoadError(true); } }).catch(() => { if (active) { setPage(null); setLoadError(true); } });
+    if (!embedded) setPage(undefined);
+    setSkill(null); setShowAllSample(false); setLoadError(false); setTransferred(false); setUseful(false); setCopyFailed(false);
+    loadPage(slug).then(value => { if (active) { setPage(value); onPageLoaded?.(value); if (!value && b?.headline) setLoadError(true); } }).catch(() => { if (active) { setPage(null); onPageLoaded?.(null); setLoadError(true); } });
     loadSkillText(slug).then(value => { if (active) { setSkill(value); if (!value) setLoadError(true); } }).catch(() => { if (active) setLoadError(true); });
     markViewed(slug); trackUxEvent("task_started");
     return () => { active = false; };
-  }, [slug, reload]);
+  }, [slug, reload, onPageLoaded, embedded]);
   // Lift the startup cover once the page text is in (or failed), not before: the header grows when it arrives.
-  useLayoutEffect(() => { if (page !== undefined) document.dispatchEvent(new Event("abb:ready")); }, [page]);
+  useLayoutEffect(() => { if (!embedded && page !== undefined) document.dispatchEvent(new Event("abb:ready")); }, [page, embedded]);
   useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, [b]);
 
   if (!b) {
@@ -283,7 +285,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   }
 
   const kind = kindInfo(b);
-  const task = taskOf(b);
   const format = formatOf(b);
   const renders = rendersOf(b);
   const oldNames = Object.entries(c.renamed ?? {}).filter(([, to]) => to === b.slug).map(([from]) => from);
@@ -369,7 +370,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const hasCopyable = b.type === "skill" && !!p?.copyable;
   const hasFill = textTask || bring.length > 0 || betterWith.length > 0 || betterTools.length > 0 || hasCopyable;
   const noun = kind.name.toLowerCase();
-  const tested = b.tested?.result === "pass";
   let part = 0;
   const num = () => <span className="bp-n" aria-hidden="true">{++part}</span>;
   const local = (url: string) => url.replace(/^https:\/\/useaiblocks\.com/, "");
@@ -396,38 +396,15 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["file", isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file", true],
   ] as [string, string, boolean][]).filter(([, , show]) => show).map(([id, label]) => [id, label]);
 
+  const Root = embedded ? "div" : "main";
   return (
-    <main className="bp" data-testid="block-page" data-slug={b.slug}>
+    <Root className={embedded ? undefined : "bp"} data-testid={embedded ? "block-body" : "block-page"} data-slug={b.slug}>
       <Comments key={b.slug} slug={b.slug} name={b.name} also={oldNames} toast={toast} />
       {adding && <FullAddToFlow slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
       {dl && dlOrder && <DownloadDialog name={dl.name} goal={dl.goal} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} kind={isAgent ? "agent" : "workflow"} />}
-      <header className="wrap bp-hero">
-        <div className="bp-top">
-          <Link to={libraryReturnTo()} className="back"><span aria-hidden="true">←</span> Back to results</Link>
-        </div>
-        {isMind && <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" />}
-        <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
-        <h1 className="bp-h1">{p?.headline || b.name}</h1>
-        {isMind && b.identity && <p className="bp-identity" data-testid="mind-identity">{b.identity}</p>}
-        <p className="bp-sub">{p?.subhead || b.summary}</p>
-        <p className="bp-badges" data-testid="bp-badges">
-          <span>{cap(b.level)}</span>
-          {tested && <span className="is-tested" data-testid="tested" title="Passed our safety check, with a clear list of what goes in and what you get">Tested</span>}
-          {b.origin === "imported" && b.source?.by && <span>From {b.source.by}</span>}
-          {p?.added && <span data-testid="updated">Updated {new Date(`${p.added}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</span>}
-        </p>
-        {isMind && <LabelBadges c={c} labels={b.labels} />}
-        {b.warnings?.includes("scrapes") && (
-          <p className="bp-warn" data-testid="scrapes-note" role="note">
-            <b>This skill scrapes websites.</b> It collects data from web pages. Before you run it, check each site's terms, follow its robots.txt and go slowly so you don't overload it. Don't collect people's personal details.
-          </p>
-        )}
-        {paidService(b) && (
-          <p className="bp-warn" data-testid="paid-note" role="note">
-            <b>You need a paid {paidService(b)} account.</b> This skill sends its work to {paidService(b)}, so it only runs once you add your own key. Check their prices before you start.
-          </p>
-        )}
-      </header>
+      {!embedded && <BlockHeader b={b} p={p ?? null}
+        portrait={isMind ? <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" /> : undefined}
+        labels={isMind ? <LabelBadges c={c} labels={b.labels} /> : undefined} />}
 
       <div className="wrap bp-flow">
         {page === undefined && <p className="small" role="status">Loading…</p>}
@@ -758,6 +735,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           </DetailSection>
         </DetailsPanel>
       </div>
-    </main>
+    </Root>
   );
 }

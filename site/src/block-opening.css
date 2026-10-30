@@ -1,0 +1,8 @@
+/* Match the task page's final opening before its interactive body arrives. */
+.bp-badges{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;margin:1rem 0 0;font:400 12.5px var(--mono);color:var(--muted)}
+.bp-badges>span{border:1px solid var(--line);border-radius:999px;padding:.2rem .65rem}
+.bp-badges .is-tested{color:var(--text);border-color:currentColor}
+.bp>.bp-hero .bp-kicker{margin-top:18px}
+.bp[data-testid="block-page"] .bp-hero{padding-top:24px}
+/* Keep the footer outside the first viewport until the real body arrives. */
+.block-opening-pending{min-height:100vh;min-height:100svh}

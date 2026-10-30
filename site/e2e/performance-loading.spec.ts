@@ -1,5 +1,33 @@
 import {test, expect} from '@playwright/test';
 
+for(const mobile of [false,true]){
+ test((mobile?'@mobile ':'')+'skill opening remains readable and keeps the same heading while task controls download',async({page})=>{
+  if(mobile)await page.setViewportSize({width:412,height:823});
+  await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'Local read-only fixture'}}));
+  await page.addInitScript(()=>{(window as any).__openingShifts=0;new PerformanceObserver(list=>{for(const entry of list.getEntries())if(!(entry as any).hadRecentInput)(window as any).__openingShifts+=(entry as any).value;}).observe({type:'layout-shift',buffered:true});});
+  let release!:()=>void;const body=new Promise<void>(resolve=>{release=resolve;});
+  await page.route(/\/assets\/BlockPage-[^/]+\.js$/,async r=>{await body;await r.continue();});
+  const requests:string[]=[];page.on('request',r=>requests.push(new URL(r.url()).pathname));
+  try{
+   await page.goto('/skills/voice-and-tone-guide-writer',{waitUntil:'domcontentloaded'});
+   const opening=page.getByTestId('block-opening'),heading=opening.getByRole('heading',{level:1});
+   await expect(opening).toBeVisible();await expect(page.locator('html')).toHaveAttribute('data-boot','ready');
+   await expect(page.getByRole('status').filter({hasText:'Opening the task controls…'})).toBeVisible();
+   await page.evaluate(()=>document.fonts.ready);await heading.evaluate(el=>{(window as any).__skillHeading=el;});
+   const footer=page.locator('#root footer');await expect(footer).toHaveCount(1);
+   expect(await footer.evaluate(el=>el.getBoundingClientRect().top)).toBeGreaterThanOrEqual(await page.evaluate(()=>innerHeight));
+   const before=await opening.boundingBox();release();
+   await expect(page.getByTestId('skill-neighbours')).toBeVisible();
+   await page.waitForTimeout(250);
+   expect(await page.evaluate(()=>(window as any).__openingShifts)).toBeLessThan(.02);
+   expect(await heading.evaluate(el=>el===(window as any).__skillHeading)).toBe(true);
+   const after=await opening.boundingBox();expect(Math.abs(before!.height-after!.height)).toBeLessThan(1);
+   await expect(page.getByTestId('block-page').getByRole('heading',{level:1})).toHaveCount(1);
+   expect(requests).not.toContain('/data/blocks.json');expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+  }finally{release();}
+ });
+}
+
 for (const mobile of [false, true]) {
   test((mobile ? '@mobile ' : '') + 'Minds opens real content before the full data and preserves searches through delayed downloads', async ({page, request}) => {
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));

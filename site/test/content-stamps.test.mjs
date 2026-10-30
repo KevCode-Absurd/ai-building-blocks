@@ -46,6 +46,22 @@ function fixture(t) {
   fs.writeFileSync(path.join(dir, 'data/public-api-manifest.json'), JSON.stringify({ resources: { a: { revision_sha256: 'package-a' } } }));
   return dir;
 }
+
+test('paginated mind directories inherit only their listed source revisions', t => {
+  const dir = fixture(t), url = `${SITE}/minds/page/2`;
+  fs.mkdirSync(path.join(dir, 'minds/page'), {recursive: true});
+  const sitemap = path.join(dir, 'sitemap-skills.xml');
+  fs.writeFileSync(sitemap, fs.readFileSync(sitemap, 'utf8').replace('</urlset>', `<url><loc>${url}</loc></url></urlset>`));
+  fs.writeFileSync(path.join(dir, 'minds/page/2.html'), page('<a href="/minds/a">A source-backed mind</a>'));
+  const manifest = path.join(dir, 'data/public-api-manifest.json');
+  const write = (a, b) => fs.writeFileSync(manifest, JSON.stringify({resources: {a: {revision_sha256: a}, b: {revision_sha256: b}}}));
+  write('listed-original', 'unrelated-original');
+  const before = fingerprints(dir).hashes[url];
+  write('listed-original', 'unrelated-changed');
+  assert.equal(fingerprints(dir).hashes[url], before);
+  write('listed-changed', 'unrelated-changed');
+  assert.notEqual(fingerprints(dir).hashes[url], before);
+});
 test('package-only edits change the page fingerprint; missing child sitemap fails closed', t => {
   const dir = fixture(t), first = fingerprints(dir).hashes;
   fs.writeFileSync(path.join(dir, 'data/public-api-manifest.json'), JSON.stringify({ resources: { a: { revision_sha256: 'package-b' } } }));

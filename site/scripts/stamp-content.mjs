@@ -47,7 +47,7 @@ export function fingerprints(dist) {
       extras.roleMembers = [...html.matchAll(/href="\/(?:skills|workflows|agents|prompts|minds)\/([a-z0-9-]+)"/g)].map(m=>m[1]).filter(s=>resources[s]).sort().map(s=>[s,resources[s].revision_sha256]);
     }
     // Collection pages inherit their listed package changes, even when their short card text is unchanged.
-    if (/^\/jobs(?:\/|$)/.test(pathname) || /^\/(skills|workflows|agents|prompts|minds)$/.test(pathname)) {
+    if (/^\/jobs(?:\/|$)/.test(pathname) || /^\/(skills|workflows|agents|prompts|minds)$/.test(pathname) || /^\/minds\/page\/[1-9]\d*$/.test(pathname)) {
       extras.members = [...html.matchAll(/href="\/(?:skills|workflows|agents|prompts|minds)\/([a-z0-9-]+)"/g)].map(match => match[1]).filter(name => resources[name]).sort().map(name => [name, resources[name].revision_sha256]);
     }
     if (/^\/tools\//.test(pathname)) {

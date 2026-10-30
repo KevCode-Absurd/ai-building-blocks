@@ -43,13 +43,19 @@ function shell(){return `<div id="app-loader" data-home-shell>
 <main id="home-shell-main" tabindex="-1"><section class="hero"><div class="wrap hero-in"><h1 class="h1">Use AI like the top 1%</h1><p class="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p><div class="hero-actions">${link('/#library','Start with a task '+arrow,' class="btn btn-primary" data-home-intent="library"')}${link('/#build','Build a workflow '+arrow,' class="btn btn-line" data-testid="hero-build-workflow" data-home-intent="build"')}</div><p class="hero-connect small" data-testid="hero-connect"><a href="/api-and-mcp">Connect your AI once</a>. Then it pulls any skill or workflow it needs, when it needs it.</p></div></section></main>
 <div class="boot-recovery"><p>This is taking longer than expected.</p><a href="">Try again</a><a href="/jobs">Browse the library</a></div></div>`;}
 
-export function patchHomeInitialShell(html,{css,cssHref}){
+export function patchHomeInitialShell(html,{css,cssHref,introFont,introCodepoints,introText}){
   assert(html.includes('<link rel="canonical" href="https://useaiblocks.com/"'));assert(!html.includes('data-home-shell'));
   const tag='<link rel="stylesheet" crossorigin href="'+cssHref+'">';assert.equal(html.split(tag).length,2);
   const critical=homeCriticalCss(css);
+  const initialShell=shell();
+  const intro=initialShell.match(/<p class="lede typed" data-done="true">([^<]+)<\/p>/)?.[1];
+  assert(intro && introFont instanceof Uint8Array && introFont.length<10000,'Expected the verified small intro font');
+  assert.equal(intro,introText,'Rebuild the intro font after changing its copy');
+  assert(Array.isArray(introCodepoints) && [...intro].every(char=>introCodepoints.includes(char.codePointAt(0))),'Rebuild the intro font after changing its copy');
+  const introCss=`@font-face{font-family:"AI Blocks Intro Mono";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,${Buffer.from(introFont).toString('base64')}) format("woff2")}html .hero .lede{font-family:"AI Blocks Intro Mono",var(--mono)}`;
   let next=html.replace(tag,tag.replace('>',' media="print" data-home-full-css>')+'<noscript>'+tag+'</noscript>');
   const start=next.indexOf('    <!-- APP_LOADER_START -->'),end=next.indexOf('    <!-- APP_LOADER_END -->');assert(start>=0&&end>start);
-  next=next.slice(0,start)+'    <!-- APP_LOADER_START -->\n'+shell()+'\n<script>updateShellTheme();</script>\n'+next.slice(end);
+  next=next.slice(0,start)+'    <!-- APP_LOADER_START -->\n'+initialShell+'\n<script>updateShellTheme();</script>\n'+next.slice(end);
   const readyStart=next.indexOf('document.addEventListener("abb:ready", function () {'),readyEnd=next.indexOf('      }, { once: true });',readyStart);assert(readyStart>=0&&readyEnd>readyStart);
   let original=next.slice(readyStart+'document.addEventListener("abb:ready", function () {'.length,readyEnd);
   original=original.replace('        document.documentElement.dataset.boot = "ready";',`        const shell=document.getElementById("app-loader"), active=document.activeElement;
@@ -97,7 +103,10 @@ export function patchHomeInitialShell(html,{css,cssHref}){
       document.addEventListener("DOMContentLoaded",updateShellTheme,{once:true});`;
   next=next.slice(0,readyStart)+boot+next.slice(readyEnd+'      }, { once: true });'.length);
   const rules=`<style data-home-critical-css>${critical}\nhtml[data-boot] #app-loader{display:block;place-items:normal;padding:0;text-align:initial;font:400 16px/1.6 var(--sans);overflow-y:auto;background:var(--bg);color:var(--text);--dither-y:${heroMask()}}html[data-theme="dark"][data-boot] #app-loader{background:var(--bg);color:var(--text)}#home-shell-menu[hidden]{display:none}.boot-recovery{padding:24px}</style>`;
-  next=next.replace('<!-- APP_BOOT_END -->','<!-- APP_BOOT_END -->\n'+rules);
+  // Start decoding the already-inline font before body parsing. Do not wait,
+  // block rendering or hide the readable introduction if font loading fails.
+  const introStyle=`<style data-home-intro-font>${introCss}</style><script data-home-intro-font-decode>try{document.fonts?.load('400 13px "AI Blocks Intro Mono"').catch(()=>{});}catch{}</script>`;
+  next=next.replace('<!-- APP_BOOT_END -->','<!-- APP_BOOT_END -->\n'+rules+'\n'+introStyle);
   assert(next.includes('media="print" data-home-full-css'));assert(next.includes('data-home-shell'));return next;
 }
 

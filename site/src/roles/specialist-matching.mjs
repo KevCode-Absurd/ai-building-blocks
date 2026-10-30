@@ -1,6 +1,9 @@
 // Deterministic candidate retrieval; the host AI checks the full remit against private context.
 const STOP=new Set('a an the i my our your we you please need want help me with for to of in on and or as at by from it this that some task specialist role ai can do use using have would like'.split(' '));
 const aliases={
+ 'react-frontend-specialist':'react nextjs next frontend typescript javascript component components hooks testing',
+ 'shopify-theme-specialist':'shopify theme liquid section sections snippet templates storefront',
+ 'crm-records-specialist':'crm salesforce hubspot opportunity opportunities pipeline hygiene records fields',
  'coding-specialist':'code coding software engineering developer develop build implement implementation repository repo bug debugging testing deploy deployment api integration database script',
  'design-specialist':'design designer ui ux interface layout visual accessibility prototype figma',
  'executive-assistant':'executive assistant calendar schedule meetings inbox email admin administration day daily preparation',
@@ -20,10 +23,13 @@ function artifactIntent(task) {
  const software=/\b(?:api|sdk|integration|database|sql|typescript|javascript|python|react|code|codebase|repository|script|software|plugin)\b/i.test(task);
  const content=/\b(?:write|draft|create)\b[^.!?]{0,60}\b(?:ad copy|promotional copy|email sequence|blog post|article|newsletter)\b/i.test(task);
  if(content)return null;
+ if(build&&/\bshopify\b/i.test(task)&&/\b(?:theme|liquid|sections?|snippets?)\b/i.test(task)&&!/\b(?:app|checkout|payments?)\b/i.test(task))return 'shopify-theme-specialist';
+ if(build&&software&&/\b(?:react|next\.?js)\b/i.test(task))return 'react-frontend-specialist';
  if(build&&software)return 'coding-specialist';
  const design=/\b(?:design|redesign|prototype|wireframe)\b/i.test(task);
  const visual=/\b(?:interface|screen|layout|figma|prototype|wireframe|ui|ux|dashboard)\b/i.test(task);
  if(design&&visual&&!software)return 'design-specialist';
+ if(/\b(?:audit|review|check|clean)\b/i.test(task)&&/\b(?:crm|salesforce|hubspot)\b/i.test(task))return 'crm-records-specialist';
  return null;
 }
 const intents=[

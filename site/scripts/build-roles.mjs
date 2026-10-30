@@ -28,7 +28,7 @@ export function buildRoles({catalogue,manifest,page,skill}) {
   if(!capabilities.length)capabilities.push({name:lead.name,description:lead.summary});
   const functions=resources.map(r=>({name:r.name,description:r.summary,method:r.slug,when:strings(page(r.slug).when),inputs:strings(page(r.slug).you_give),deliverables:strings(page(r.slug).you_get)}));
   const profile={schema:'ai-blocks-role/1',id:seed.id,name:seed.name,summary:lead.summary,area:seed.area,lead:seed.lead,featured:seed.featured,
-   deliverables,inputs,helpfulInputs:strings(p.works_best_with?.inputs),fit:strings(p.when),limits:strings(p.not_for),tools:[...new Set([...seed.tools,...resources.flatMap(r=>toolsOf(page(r.slug)))])],
+   deliverables,inputs,helpfulInputs:strings(p.works_best_with?.inputs),fit:strings(p.when),limits:[...strings(p.not_for),...strings(seed.limits)],tools:[...new Set([...seed.tools,...resources.flatMap(r=>toolsOf(page(r.slug)))])],
    method:strings(p.how_to_use),capabilities,functions,example:seed.example??'',resources,resourceCount:resources.length,
    sourceChecks:{completeMethods:resources.length,referenceValidation:'PASS'},catalogueHash:manifest.catalogue_sha256,sourceHash:sha(JSON.stringify({seed,resources,deliverables,inputs,source:manifest.catalogue_sha256}))};
   profile.worker=workerContract(profile);

@@ -23,17 +23,18 @@ const brief=role=>({goal:'Complete the supplied synthetic task and hand back che
 
 test('every existing agent and complete workflow has a distinct role setup with the seven requested specialists',()=>{
  const composites=catalogue.blocks.filter(b=>['agent','workflow','routine'].includes(b.type)||b.category==='orchestrator');
- assert.equal(built.profiles.length,composites.length);
- assert.equal(new Set(built.profiles.map(r=>r.lead)).size,composites.length);
+ const expectedLeads=new Set([...composites.map(r=>r.slug),...FEATURED_ROLES.map(r=>r.lead)]);
+ assert.equal(built.profiles.length,expectedLeads.size);
+ assert.equal(new Set(built.profiles.map(r=>r.lead)).size,expectedLeads.size);
  assert.equal(new Set(built.profiles.map(r=>r.id)).size,built.profiles.length);
  assert.equal(new Set(built.profiles.map(r=>r.name.toLowerCase())).size,built.profiles.length);
  for(const featured of FEATURED_ROLES)assert.equal(byId.get(featured.id).lead,featured.lead);
- assert.deepEqual(new Set(roleSeeds(catalogue.blocks).map(r=>r.lead)),new Set(composites.map(r=>r.slug)));
+ assert.deepEqual(new Set(roleSeeds(catalogue.blocks).map(r=>r.lead)),expectedLeads);
 });
 test('role capabilities, inputs, outputs and usage come from their real methods, with complete sources and credits',()=>{
  for(const r of built.profiles){
   const p=page(r.lead);assert.deepEqual(r.inputs,strings(p.you_give),r.id);assert.deepEqual(r.deliverables,strings(p.you_get),r.id);
-  assert.deepEqual(r.fit,strings(p.when),r.id);assert.deepEqual(r.limits,strings(p.not_for),r.id);assert.deepEqual(r.method,strings(p.how_to_use),r.id);
+  assert.deepEqual(r.fit,strings(p.when),r.id);assert.deepEqual(r.limits,[...strings(p.not_for),...strings(FEATURED_ROLES.find(seed=>seed.id===r.id)?.limits)],r.id);assert.deepEqual(r.method,strings(p.how_to_use),r.id);
   assert(r.capabilities.length&&r.functions.length&&r.inputs.length&&r.deliverables.length,r.id);
   assert.equal(r.catalogueHash,c.sourceHash);assert(r.instructions.includes('not executed'));
   assert.equal(YAML.parse(r.instructions.split('---')[1]).name,'custom-role-'+r.id);

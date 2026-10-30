@@ -19,6 +19,6 @@ export default function BlockRoute(props:Props){
  if(!b||headerPage===undefined)return <Suspense fallback={<Pending/>}><Body {...props} c={null}/></Suspense>;
  return <main className="bp" data-testid="block-page" data-slug={b.slug}>
   <BlockHeader b={b} p={headerPage}/><StartupReady/>
-  <Suspense fallback={<Pending/>}><Body {...props} initialPage={page} onPageLoaded={setPage}/></Suspense>
+  <div className="block-route-body"><Suspense fallback={<Pending/>}><Body {...props} initialPage={page} onPageLoaded={setPage}/></Suspense></div>
  </main>;
 }

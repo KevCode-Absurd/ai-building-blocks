@@ -53,6 +53,36 @@ for(const mobile of [false,true]){
 }
 
 for (const mobile of [false, true]) {
+  test((mobile ? '@mobile ' : '') + 'skill body keeps its place when Suspense reattaches downloaded controls', async ({page}) => {
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    await page.addInitScript(() => {
+      (window as any).__bodyHandoffPositions = [];
+      const capture = () => {
+        const body = document.querySelector('[data-testid="block-body"]'), header = document.querySelector('[data-testid="block-opening"]');
+        if (body && header && document.documentElement.dataset.boot === 'ready') {
+          (window as any).__bodyHandoffPositions.push({body: body.getBoundingClientRect().top, header: header.getBoundingClientRect().bottom});
+        }
+      };
+      new MutationObserver(capture).observe(document, {childList: true, subtree: true});
+    });
+    let release!: () => void;
+    const held = new Promise<void>(resolve => { release = resolve; });
+    await page.route(/\/assets\/BlockPage-[^/]+\.js$/, async r => { await held; await r.continue(); });
+    try {
+      await page.goto('/skills/voice-and-tone-guide-writer', {waitUntil: 'domcontentloaded'});
+      await expect(page.getByText('Opening the task controls…', {exact: true})).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
+      release();
+      await expect(page.getByTestId('skill-neighbours')).toBeVisible();
+      const positions = await page.evaluate(() => (window as any).__bodyHandoffPositions as {body: number; header: number}[]);
+      expect(positions.length).toBeGreaterThan(0);
+      expect(positions.every(p => Math.abs(p.body - p.header) < 1)).toBe(true);
+      await expect(page.getByText('Opening the task controls…', {exact: true})).toHaveCount(0);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+    } finally { release(); }
+  });
+
   test((mobile ? '@mobile ' : '') + 'Minds opens real content before the full data and preserves searches through delayed downloads', async ({page, request}) => {
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
     if (mobile) await page.setViewportSize({width: 412, height: 823});

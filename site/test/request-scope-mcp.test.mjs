@@ -37,7 +37,9 @@ test('declared evidence revisions survive scope normalization and must match sel
   plan.context[0].revision_sha256 = s.sources[0].revision_sha256;
   const r = await invoke(); assert.equal(r.plan.context[0].revision_sha256, s.sources[0].revision_sha256);
   s.sources[0].revision_sha256 = 'c'.repeat(64); assert.notEqual((await prepareScopedRequest(s)).scope_sha256, p.scope_sha256);
-  s.sources[0].revision_sha256 = 'not-a-hash'; await assert.rejects(() => prepareScopedRequest(s), /SHA-256 source/);
+  for (const invalid of ['not-a-hash', ['b'.repeat(64)], null]) {
+    s.sources[0].revision_sha256 = invalid; await assert.rejects(() => prepareScopedRequest(s), /SHA-256 source/);
+  }
 });
 
 test('partial team exports only selected prompts and explicitly retains deferred and blocked backlog', async () => {

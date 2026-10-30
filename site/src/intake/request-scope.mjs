@@ -53,7 +53,7 @@ export function validateRequestScope(input) {
     if (date !== null && (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date)) fail('Use a real source date or null.');
     const result = { id: id(s.id), title: text(s.title, 'source title', 300), locator: locator(s.locator ?? ''), as_of: date, status: choice(s.status, ['SUPPLIED', 'MISSING', 'DISPUTED'], 'source status') };
     if (s.revision_sha256 !== undefined) {
-      if (!HASH.test(s.revision_sha256)) fail('Use a SHA-256 source revision.');
+      if (typeof s.revision_sha256 !== 'string' || !HASH.test(s.revision_sha256)) fail('Use a SHA-256 source revision.');
       result.revision_sha256 = s.revision_sha256;
     }
     if (result.status === 'SUPPLIED' && !result.locator) fail('Supplied evidence needs a source locator.'); return result;

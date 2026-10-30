@@ -1,4 +1,6 @@
 // Portable worker files. This describes a worker; the host supplies actual tools and execution.
+import {contextIntakeContract,contextIntakeInstructions} from './context-intake.mjs';
+import {feedbackLearningContract,feedbackLearningInstructions} from './feedback-learning.mjs';
 const bullets=rows=>rows.map(s=>`- ${s}`).join('\n');
 export const specialistPorts=()=>({inputs:[{type:'short_text',required:true}],outputs:[{type:'document',required:true}]});
 export const TASK_DELIVERABLE='The native deliverables requested in the task, with a checked handoff.';
@@ -7,6 +9,9 @@ export function workerContract(role) {
   schema:'ai-blocks-specialist-worker/1',id:role.id,name:role.name,
   interface:{...specialistPorts(),brief:'The current task in the workflow goal and supplied context.',handoff:'work/handoff.md indexes the actual native deliverables and checks. An index does not replace a requested implementation.'},
   identity:{remit:role.summary,capabilities:role.capabilities,limits:role.limits},
+  intake:contextIntakeContract(),
+  learning:feedbackLearningContract(),
+  coordination:{state:'PLAN_REQUIRED',entry:'coordinator',approval:'Review the contextual team plan, including a single-worker plan when sufficient. Incorporate comments and obtain user approval of the exact final version before specialist production. A preparation is not an approved plan.',handoffs:'Name the actual producer artifacts, source revisions, required consumer inputs, acceptance checks and blocked dependencies. Verify the artifact content before advancing.',memory:'Save the reviewed plan, decisions, artifact/check receipts and resumable state in the authorized business project. Actual persistent storage must be verified.'},
   routes:role.resources.map(r=>{
    const f=role.functions.find(f=>f.method===r.slug);
    return {method:r.slug,name:r.name,kind:r.kind,primary:r.slug===role.lead,
@@ -35,6 +40,14 @@ export function specialistFiles(role,brief={}) {
   'JOB.md':`# Current job\n\n${brief.goal?.trim()||'Ask for the actual task before execution.'}\n\n## Requested deliverables\n${bullets(brief.deliverables??role.deliverables)}\n\nConfirm the files, format, acceptance checks and intended use against the current request. No task has run merely because this folder exists.`,
   'CHECKS.md':`# Definition of done\n\nFor every deliverable, record the artifact path/revision, requested acceptance checks, source evidence, tool used and actual result. Use PASS, FAIL, NOT_RUN or BLOCKED accurately. Test code with relevant checks; inspect rendered designs/pages; reconcile analyses against source data; review campaign drafts and authorization before live changes. These examples do not claim every role supports every task.\n\nApply the active methods' specific checks and review gates. A successful download, source read or workflow preparation is not execution evidence. Correct supported faults within the source's limit and rerun affected checks. Hand back actual files and work/checks.md plus work/handoff.md. Do not call the job complete with a required deliverable or check still blocked.`,
  };
+ const intake=contextIntakeInstructions();
+ files['CONTEXT.md']+='\n\n'+intake;
+ files['PLAYBOOK.md']=files['PLAYBOOK.md'].replace('1. Read the task','0. Complete the context intake in CONTEXT.md before strategy or production. Inspect existing brand brain, brief, assets and project context; build the missing scoped context with the included method when appropriate. Write work/context-check.md and resolve only gaps that block the affected deliverable.\n1. Read the task');
+ files['TOOL_ROUTER.md']+='\n\nBefore routing production work, complete the context gate in CONTEXT.md. Load only the relevant business and memory slice. Choose methods from the actual task and verified inputs; the source list is not a fixed chain.';
+ files['KNOWLEDGE.md']+='\n\nThe business/project context is a separate evidence base. Load the current relevant slice from CONTEXT.md and brand-brain/ before dependent work. Never substitute a source method, sample, old campaign or competitor for this business\'s facts.';
+ files['CHECKS.md']+='\n\nContext gate: verify work/context-check.md names the files actually read, current approved facts, remaining conflicts and readiness for this scoped deliverable. Reconcile copy, design, offer terms and product assets against the relevant brand-brain slice. Pending or disputed claims cannot become publishable facts. Record durable corrections in the authorized project\'s log with their source and date.';
+ files['TRAINING.md']+='\n\n'+feedbackLearningInstructions();
+ files['PLAYBOOK.md']=files['PLAYBOOK.md'].replace('4. Follow a selected workflow', 'Before production, act through the coordinator: propose the smallest sufficient team and ordered work plan, define each worker\'s inputs, outputs, tools, permissions and checks, collect user comments, revise and obtain approval of the exact final plan. One worker still uses a short reviewed plan. Missing inputs block their dependent branch; request them with setup directions. Plan approval does not expand live-action authority.\n4. Follow a selected workflow');
  files['worker.json']=JSON.stringify({...worker,routes,selectedMethods:routes.map(r=>r.method)},null,2)+'\n';
  return Object.fromEntries(Object.entries(files).map(([p,text])=>[p,text+'\n']));
 }

@@ -54,6 +54,7 @@ test('role preparation rejects missing inputs, unknown sources, dropped bundled 
  assert.throws(()=>runtime.createRoleFlow(c,r,{...b,resources:[...b.resources,'unknown-method']},'x'),/methods from this role/);
  assert.throws(()=>runtime.createRoleFlow(c,r,{...b,resources:b.resources.filter(s=>s!==r.lead)},'x'),/primary method/);
  const child=r.resources.find(s=>s.bundled);assert(child);assert.throws(()=>runtime.createRoleFlow(c,r,{...b,resources:b.resources.filter(s=>s!==child.slug)},'x'),/bundled sources/);
+ const context=r.resources.find(s=>s.onboarding);assert(context);assert.throws(()=>runtime.createRoleFlow(c,r,{...b,resources:b.resources.filter(s=>s!==context.slug)},'x'),/context setup/);
  assert.throws(()=>runtime.createRoleFlow({...c,sourceHash:'0'.repeat(64)},r,b,'x'),/library changed/);
  assert.throws(()=>runtime.createRoleFlow(c,r,{...b,context:'x'.repeat(8001)},'x'),/Shorten/);
  assert.throws(()=>runtime.roleLaunchPrompt(r,{...b,tools:'sk-proj-'+'x'.repeat(48)}),/Remove credentials/);

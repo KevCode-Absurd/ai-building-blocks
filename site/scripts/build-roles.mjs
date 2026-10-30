@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {FEATURED_ROLES,ROLE_AREAS,roleSeeds} from '../src/roles/role-definitions.mjs';
 import {roleInstructions} from '../src/roles/role-instructions.mjs';
+import {CONTEXT_METHOD} from '../src/roles/context-intake.mjs';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const strings=value=>Array.isArray(value)?value.flatMap(v=>typeof v==='string'&&v.trim()?[v.trim()]:v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).length===1&&typeof Object.values(v)[0]==='string'?[`${Object.keys(v)[0]}: ${Object.values(v)[0]}`]:[]):[];
 const toolsOf=page=>Array.isArray(page.works_best_with?.tools)?page.works_best_with.tools.filter(t=>typeof t?.name==='string'&&typeof t?.why==='string').map(t=>`${t.name}: ${t.why}`):strings(page.works_best_with);
@@ -14,12 +15,12 @@ export function buildRoles({catalogue,manifest,page,skill}) {
  const bySlug=Object.fromEntries(catalogue.blocks.map(b=>[b.slug,b]));
  const profiles=roleSeeds(catalogue.blocks).map(seed=>{
   const lead=bySlug[seed.lead];if(!lead)throw Error('Missing role lead: '+seed.lead);
-  const p=page(seed.lead), resourceIds=[...new Set([seed.lead,...seed.resources,...(lead.uses??[])])];
+  const p=page(seed.lead), resourceIds=[...new Set([seed.lead,...seed.resources,...(lead.uses??[]),CONTEXT_METHOD])];
   if(resourceIds.length>24)throw Error('Review oversized role toolbox: '+seed.id);
   const resources=resourceIds.map(slug=>{
    const b=bySlug[slug], r=manifest.resources[slug];if(!b||!r||r.reference_validation?.status!=='PASS')throw Error('Unavailable role method: '+slug);
    const text=skill(slug);if(!text?.trim()||sha(Buffer.from(text))!==r.instruction.sha256)throw Error('Role instruction bytes differ: '+slug);
-   return {slug,name:b.name,summary:b.summary,task:b.task,kind:kind(b),path:href(b),revision:r.revision_sha256,skillPath:r.instruction.path,bundled:slug!==seed.lead&&(lead.uses??[]).includes(slug),
+   return {slug,name:b.name,summary:b.summary,task:b.task,kind:kind(b),path:href(b),revision:r.revision_sha256,skillPath:r.instruction.path,bundled:slug!==seed.lead&&(lead.uses??[]).includes(slug),onboarding:slug===CONTEXT_METHOD,
     ...(b.source?.license?{license:b.source.license}:{}),...(b.source?.by?{by:b.source.by}:{}),...(b.source?.url?{sourceUrl:b.source.url}:{})};
   });
   const deliverables=strings(p.you_get), inputs=strings(p.you_give);

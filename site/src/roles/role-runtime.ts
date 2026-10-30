@@ -13,6 +13,7 @@ export function validateRoleBrief(role:RoleProfile, brief:RoleBrief) {
  if(!brief.goal.trim()||brief.goal.length>3000)throw Error('Describe the task in 3,000 characters or fewer.');
  if(brief.context.length>8000||brief.tools.length>2000||brief.me.length>8000||(brief.training?.length??0)>6000)throw Error('Shorten the task notes or saved context before continuing.');
  if(!Array.isArray(brief.deliverables)||!brief.deliverables.length||brief.deliverables.length>30||brief.deliverables.some(d=>typeof d!=='string'||!d.trim()||d.length>1000)||brief.deliverables.join('\n').length>6000)throw Error('Describe up to 30 deliverables in 6,000 characters or fewer.');
+ if(role.resources.some(r=>r.onboarding&&!brief.resources.includes(r.slug)))throw Error('Keep the context setup method so the worker can build missing brand information.');
  if(!brief.resources.includes(role.lead)||role.resources.some(r=>r.bundled&&!brief.resources.includes(r.slug))||brief.resources.some(id=>!role.resources.some(r=>r.slug===id)))throw Error('Keep the primary method and its bundled sources, and choose methods from this role.');
 }
 export function roleLaunchPrompt(role:RoleProfile, brief:RoleBrief) {

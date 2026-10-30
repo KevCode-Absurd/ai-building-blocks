@@ -51,7 +51,7 @@ test('OAuth metadata is explicitly gated and DCR accepts exact safe public-clien
   const metadata = await handleMcpOAuth(new Request(`${origin}/.well-known/oauth-authorization-server`), env, store, options);
   const info = await metadata.json();
   assert.deepEqual(info.code_challenge_methods_supported, ['S256']);
-  assert.deepEqual(info.scopes_supported, ['company:read', 'saved:read']);
+  assert.deepEqual(info.scopes_supported, ['company:read', 'saved:read','company:write','saved:write']);
   assert.equal(info.authorization_response_iss_parameter_supported, true);
   for (const uri of ['http://client.test/callback', 'https://client.test/*', 'https://user:password@client.test/callback', 'https://client.test/callback#fragment']) {
     assert.equal((await invoke(store, '/oauth/register', { client_name: 'Unsafe', redirect_uris: [uri] })).status, 400);

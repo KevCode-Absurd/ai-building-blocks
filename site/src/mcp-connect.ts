@@ -21,9 +21,13 @@ async function boot() {
   }
   status.textContent = `Signed in as ${clerk.user?.primaryEmailAddress?.emailAddress ?? 'your work account'}.`;
   details.hidden = false;
-  const personal = context.scope === 'saved:read';
+  const personal = String(context.scope).startsWith('saved:read');
+  const write=String(context.scope).split(' ').some(s=>s.endsWith(':write'));
   details.textContent = `AI client (name supplied by the client): ${context.client_name ?? context.client_id}. Client callback: ${new URL(context.redirect_uri).origin}. ${personal ? 'Personal library' : 'Company workspace'} endpoint: ${new URL(context.resource).pathname}. Access: read ${personal ? 'your saved kits, workflows, skills, agents and profiles' : 'this company’s saved skills, workflows, kits and agents'} and supporting files. Your chosen AI provider receives the selected content.`;
   connect.disabled = false;
+  const access=document.querySelector<HTMLParagraphElement>('#access-policy');
+  if(access)access.textContent=write?'This connection can read this library and save/update or delete private workflow, memory and team checkpoint records after your explicit request. It can create or revoke a reviewed workflow share. It cannot publish ads, spend money or change your business systems from this grant.':'This connection has read access only. It cannot edit the saved library. Work runs in your AI tool.';
+  if(write)details.textContent+=' Additional access requested: save/update/delete workflows, memory and team checkpoints, and create/revoke explicitly approved sanitized workflow links. Existing read-only connections are unchanged.';
   connect.onclick = async () => {
     connect.disabled = true; error.textContent = '';
     try {

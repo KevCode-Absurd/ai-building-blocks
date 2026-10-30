@@ -265,7 +265,8 @@ export function memorySpaces(): SpaceStore {
 }
 
 /** The parts of Cloudflare's D1 database the store uses. */
-type D1 = { prepare(sql: string): { bind(...v: unknown[]): { all<T>(): Promise<{ results: T[] }>; first<T>(): Promise<T | null>; run(): Promise<unknown> } } };
+type D1Statement = { bind(...v: unknown[]): D1Statement; all<T>(): Promise<{ results: T[] }>; first<T>(): Promise<T | null>; run(): Promise<{ meta?: { changes?: number } }> };
+type D1 = { prepare(sql: string): D1Statement };
 type DbSpace = { user_id: string | null; access_policy: string; id: string; name: string; owner_hash: string; share_token: string; ip_hash: string; created: string; updated: string };
 type DbItem = { id: string; space_id: string; kind: Kind; title: string; summary: string; body: string; data: string | null; visibility: Visibility; hidden: number; created: string; updated: string; space_name?: string };
 const fromSpace = (r: DbSpace): SpaceRow => ({ userId: r.user_id, access: readAccess(JSON.parse(r.access_policy)), id: r.id, name: r.name, ownerHash: r.owner_hash, shareToken: r.share_token, ipHash: r.ip_hash, created: r.created, updated: r.updated });

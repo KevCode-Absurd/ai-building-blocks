@@ -1,6 +1,6 @@
-/** Read-only, resource-bound OAuth delegation for private MCP. No provider/model calls. */
+/** Resource-bound OAuth delegation. Existing read grants never gain write authority. */
 export type McpOAuthClient = { client_id: string; client_name: string; redirect_uris: string[]; created_at: number };
-export type McpOAuthScope = "company:read" | "saved:read";
+export type McpOAuthScope = "company:read" | "saved:read" | "company:read company:write" | "saved:read saved:write";
 type Authorization = {
   client_id: string; redirect_uri: string; response_type: "code"; code_challenge: string; code_challenge_method: "S256";
   resource: string; scope: McpOAuthScope; state: string;
@@ -27,7 +27,7 @@ export type McpOAuthEnv = { MCP_OAUTH_ENABLED?: string };
 export type McpOAuthOptions = {
   origin?: string;
   authenticate: (request: Request) => Promise<{ userId: string } | null>;
-  authorizeResource: (userId: string, resource: string) => Promise<boolean>;
+  authorizeResource: (userId: string, resource: string, scope?: McpOAuthScope) => Promise<boolean>;
 };
 const textEncoder = new TextEncoder();
 const nowSeconds = () => Math.floor(Date.now() / 1000);
@@ -62,10 +62,11 @@ function resource(value: unknown, origin: string) {
   return raw;
 }
 function scopeForResource(target: string): McpOAuthScope { return new URL(target).pathname === "/mcp/personal" ? "saved:read" : "company:read"; }
+export function validResourceScope(target:string,scope:unknown):scope is McpOAuthScope { const read=scopeForResource(target),write=read.replace(':read',':write');return scope===read||scope===`${read} ${write}`; }
 function registrationScope(value: unknown): string {
   if (value === undefined) return "company:read saved:read";
   const scopes = string(value, "scope", 100).split(" ");
-  if (new Set(scopes).size !== scopes.length || scopes.some(s => !["company:read", "saved:read"].includes(s))) error(400, "invalid_scope", "Only company:read and saved:read are available.");
+  if (new Set(scopes).size !== scopes.length || scopes.some(s => !["company:read", "saved:read","company:write","saved:write"].includes(s))) error(400, "invalid_scope", "Use only the documented read and optional write scopes.");
   return scopes.join(" ");
 }
 async function body(request: Request): Promise<Record<string, unknown>> {
@@ -108,8 +109,9 @@ export async function validateAuthorizationRequest(input: URL | URLSearchParams 
   if (!client!.redirect_uris.some(registered => redirectMatches(registered, redirectUri))) error(400, "invalid_redirect_uri", "Redirect URI does not match this registered client.");
   if (data.response_type !== "code") error(400, "unsupported_response_type", "Only authorization code is supported.");
   if (data.code_challenge_method !== "S256" || typeof data.code_challenge !== "string" || !/^[A-Za-z0-9_-]{43}$/.test(data.code_challenge)) error(400, "invalid_request", "PKCE S256 is required.");
-  const target = resource(data.resource, origin), scope = scopeForResource(target);
-  if (data.scope !== scope) error(400, "invalid_scope", `This resource requires exactly ${scope}. Personal and company permissions cannot be combined in one grant.`);
+  const target = resource(data.resource, origin);
+  if (!validResourceScope(target,data.scope)) error(400, "invalid_scope", `This resource requires ${scopeForResource(target)}, optionally followed by its matching write scope. Personal and company permissions cannot be combined.`);
+  const scope=data.scope as McpOAuthScope;
   return { client_id: clientId, client_name: client!.client_name, redirect_uri: redirectUri, response_type: "code", code_challenge: data.code_challenge as string, code_challenge_method: "S256", resource: target, scope, state: string(data.state, "state") };
 }
 
@@ -125,7 +127,7 @@ export async function handleMcpOAuth(request: Request, env: McpOAuthEnv, store: 
   try {
     if (url.pathname === "/.well-known/oauth-authorization-server") {
       if (request.method !== "GET") return json(405, { error: "invalid_request" }, { allow: "GET" });
-      return json(200, { issuer: origin, authorization_endpoint: `${origin}/oauth/authorize`, token_endpoint: `${origin}/oauth/token`, registration_endpoint: `${origin}/oauth/register`, revocation_endpoint: `${origin}/oauth/revoke`, response_types_supported: ["code"], grant_types_supported: ["authorization_code", "refresh_token"], token_endpoint_auth_methods_supported: ["none"], code_challenge_methods_supported: ["S256"], scopes_supported: ["company:read", "saved:read"], client_id_metadata_document_supported: false, authorization_response_iss_parameter_supported: true });
+      return json(200, { issuer: origin, authorization_endpoint: `${origin}/oauth/authorize`, token_endpoint: `${origin}/oauth/token`, registration_endpoint: `${origin}/oauth/register`, revocation_endpoint: `${origin}/oauth/revoke`, response_types_supported: ["code"], grant_types_supported: ["authorization_code", "refresh_token"], token_endpoint_auth_methods_supported: ["none"], code_challenge_methods_supported: ["S256"], scopes_supported: ["company:read", "saved:read","company:write","saved:write"], client_id_metadata_document_supported: false, authorization_response_iss_parameter_supported: true });
     }
     if (request.method === "OPTIONS" && url.pathname !== "/oauth/authorize") return new Response(null, { status: 204, headers: { ...securityHeaders, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", "access-control-max-age": "600" } });
     if (url.pathname === "/oauth/authorize" && request.method === "GET") return null; // Root renders the validated sign-in/consent page.
@@ -153,7 +155,7 @@ export async function handleMcpOAuth(request: Request, env: McpOAuthEnv, store: 
       const authorization = await validateAuthorizationRequest(authorizationData, store, origin);
       const user = await options.authenticate(request);
       if (!user?.userId) error(401, "access_denied", "Sign in before authorizing the connection.");
-      if (!(await options.authorizeResource(user!.userId, authorization.resource))) error(403, "access_denied", "Your account does not have access to this saved-library resource.");
+      if (!(await options.authorizeResource(user!.userId, authorization.resource,authorization.scope))) error(403, "access_denied", "Your account does not have the requested access to this saved-library resource.");
       const codeRaw = random(); const { client_name: _clientName, ...record } = authorization;
       await store.putCode({ ...record, user_id: user!.userId, code_hash: await hash(codeRaw), expires_at: now + 300 });
       const destination = new URL(authorization.redirect_uri); destination.searchParams.set("code", codeRaw); destination.searchParams.set("state", authorization.state); destination.searchParams.set("iss", origin);
@@ -179,12 +181,11 @@ export async function handleMcpOAuth(request: Request, env: McpOAuthEnv, store: 
       if (!code || code.expires_at <= now || code.client_id !== clientId || code.redirect_uri !== data.redirect_uri || code.resource !== target || await challengeFor(verifier) !== code.code_challenge) error(400, "invalid_grant", "The code, redirect, resource or PKCE verifier is invalid or expired.");
       const consumed = await store.consumeCode(codeHash, now);
       if (!consumed) error(400, "invalid_grant", "Authorization code has already been used.");
-      if (code!.scope !== scopeForResource(target)) error(400, "invalid_grant", "The authorization scope does not match this resource.");
+      if (!validResourceScope(target,code!.scope)) error(400, "invalid_grant", "The authorization scope does not match this resource.");
       grant = { id: random(), user_id: code!.user_id, client_id: clientId, resource: target, scope: code!.scope, revoked_at: null };
       await store.issue(grant, await tokenRecord(accessRaw, "access", grant, now + 3600), await tokenRecord(refreshRaw, "refresh", grant, now + 30 * 86400));
     } else if (data.grant_type === "refresh_token") {
       onlyKeys(data, ["grant_type", "refresh_token", "client_id", "resource", "scope"]);
-      if (data.scope !== undefined && data.scope !== scopeForResource(target)) error(400, "invalid_scope", "A refresh cannot expand or change scope.");
       const refreshHash = await hash(string(data.refresh_token, "refresh_token", 256));
       const existing = await store.getRefresh(refreshHash, clientId, now);
       if (!existing) {
@@ -193,7 +194,8 @@ export async function handleMcpOAuth(request: Request, env: McpOAuthEnv, store: 
         await store.revoke(refreshHash, clientId, now);
         error(400, "invalid_grant", "Refresh token is invalid, expired or revoked. Reconnect the client.");
       }
-      if (existing!.resource !== target || existing!.scope !== scopeForResource(target)) error(400, "invalid_grant", "Refresh token is bound to another resource or scope.");
+      if (existing!.resource !== target || !validResourceScope(target,existing!.scope)) error(400, "invalid_grant", "Refresh token is bound to another resource or scope.");
+      if(data.scope!==undefined&&data.scope!==existing!.scope)error(400,'invalid_scope','A refresh cannot expand or change the original consented scope.');
       grant = existing!;
       if (!(await store.rotate(refreshHash, clientId, now, await tokenRecord(accessRaw, "access", grant, now + 3600), await tokenRecord(refreshRaw, "refresh", grant, now + 30 * 86400)))) {
         await store.revoke(refreshHash, clientId, now);
@@ -213,7 +215,7 @@ export async function verifyMcpToken(request: Request, store: McpOAuthStore): Pr
   if (!/^Bearer [a-f0-9]{64}$/.test(value)) return null;
   const grant = await store.getAccess(await hash(value.slice(7)), nowSeconds());
   const url = new URL(request.url);
-  if (!/^\/mcp\/(?:personal|company(?:\/[A-Za-z0-9_-]{8,128})?)$/.test(url.pathname) || !grant || grant.revoked_at !== null || grant.scope !== scopeForResource(grant.resource) || grant.resource !== `${url.origin}${url.pathname}`) return null;
+  if (!/^\/mcp\/(?:personal|company(?:\/[A-Za-z0-9_-]{8,128})?)$/.test(url.pathname) || !grant || grant.revoked_at !== null || !validResourceScope(grant.resource,grant.scope) || grant.resource !== `${url.origin}${url.pathname}`) return null;
   const workspaceToken = url.pathname.startsWith("/mcp/company/") ? url.pathname.slice("/mcp/company/".length) : undefined;
   return { userId: grant.user_id, grantId: grant.id, ...(workspaceToken ? { workspaceToken } : {}), resource: grant.resource, scope: grant.scope as McpOAuthScope };
 }

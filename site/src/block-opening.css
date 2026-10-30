@@ -8,5 +8,5 @@
 .block-opening-pending{min-height:100vh;min-height:100svh}
 /* Suspense can reattach its body before removing the old loading message.
    Share a grid cell so that brief overlap cannot push the task down a viewport. */
-.block-route-body{display:grid;min-width:0;min-height:100vh;min-height:100svh}
+.block-route-body{display:grid;min-width:0}
 .block-route-body>*{grid-area:1/1;min-width:0}

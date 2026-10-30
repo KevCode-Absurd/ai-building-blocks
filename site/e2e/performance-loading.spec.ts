@@ -76,15 +76,24 @@ for (const mobile of [false, true]) {
     if (mobile) await page.setViewportSize({width: 412, height: 823});
     const roster = (await (await request.get('/data/minds-index.json')).json()).minds.roster;
     const requests: string[] = []; page.on('request', r => requests.push(new URL(r.url()).pathname));
+    const searchWorkers: string[] = []; page.on('worker', worker => { if (/library-search-worker/.test(worker.url())) searchWorkers.push(worker.url()); });
     await page.goto('/minds');
     await expect(page.getByTestId('minds-page')).toBeVisible();
     await expect(page.getByTestId('mind-card')).toHaveCount(24);
+    // Untouched browsing must not prepare metadata or start a search worker,
+    // including after fetching the full roster to show the next batch.
+    await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+    expect(searchWorkers).toEqual([]);
+    expect(requests).not.toContain('/data/library-search.json');
     await page.getByTestId('show-more-minds').click();
     await expect(page.getByTestId('mind-card')).toHaveCount(48);
+    expect(searchWorkers).toEqual([]);
+    expect(requests).not.toContain('/data/library-search.json');
     const query = page.getByRole('searchbox', {name: 'Search minds', exact: true});
     const last = roster.at(-1);
     await query.fill(last.name);
     await expect(page.locator(`[data-testid="mind-card"][data-slug="${last.slug}"]`)).toBeVisible();
+    await expect.poll(() => searchWorkers.length).toBeGreaterThan(0);
     await query.fill('Steve Jobs');
     const card = page.getByTestId('mind-card').filter({hasText: 'Steve Jobs'}).first();
     await expect(card).toBeVisible();

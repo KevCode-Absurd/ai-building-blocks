@@ -50,17 +50,18 @@ export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, o
     if (myMinds) document.querySelector('[data-testid="my-minds"] details')?.setAttribute("open", "");
     return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; };
   }, [myMinds]);
-  const searchable = useMemo(() => roster.map((mind) => ({
+  const hasQuery = !!query.trim();
+  const searchable = useMemo(() => !hasQuery ? [] : roster.map((mind) => ({
     mind,
     text: normalizeSearch([mind.name, mind.identity, mind.seat, areas[mind.area], c.bySlug[mind.slug]?.summary, c.bySlug[mind.slug] ? classificationText(c.bySlug[mind.slug]) : '',
       ...(mind.labels ?? []).map((id) => labels[id]), ...(mind.useCases ?? [])].filter(Boolean).join(" ")),
-  })), [roster, areas, labels, c.bySlug]);
+  })), [hasQuery, roster, areas, labels, c.bySlug]);
   const shown = useMemo(() => {
     if (!complete && (query.trim() || label)) return [];
     const terms = normalizeSearch(query).trim().split(/\s+/).filter(Boolean);
+    if (!terms.length) return roster.filter(mind => !label || mind.labels?.includes(label));
     const matched = searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
-      && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term)))).map(({ mind }) => mind);
-    if (!terms.length) return matched;
+      && (search.hits.has(mind.slug) || terms.every((term) => text.includes(term)))).map(({ mind }) => mind);
     // The library search's order (lib/library-rank.ts), then mind-match.ts: a typed name leads, then the minds best
     // known for the topic (also when no word of their page matched), then the other matches.
     const ranked = rankLibraryResults(matched.map((mind) => c.bySlug[mind.slug] ?? { slug: mind.slug, name: mind.name, type: "mind" }), search.hits, query, { isTested: (b) => "tested" in b && isTested(b) }).map((b) => b.slug);

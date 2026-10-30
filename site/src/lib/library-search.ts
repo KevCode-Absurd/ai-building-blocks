@@ -124,12 +124,15 @@ export function useLibrarySearch(catalogue: Catalogue, query: string, { extraTex
   const empty = useMemo(() => buildLibrarySearchIndex([], sourceHash), [sourceHash]);
   const metadata = metadataState?.catalogue === catalogue && metadataState.extraText === extraText ? metadataState.index : empty;
   useEffect(() => {
+    // Browsing does not use search metadata. Prepare documents and start the
+    // worker only when a query needs them; retain completed indexes for reuse.
+    if (!active) { setMetadataPending(false); return; }
     let current = true; setMetadataPending(true);
     const entry = acquireMetadata(catalogue, extraText);
     if (entry.index) { setMetadata({ catalogue, extraText, index: entry.index }); setMetadataPending(false); }
     else entry.promise.then(index => { if (current) setMetadata({ catalogue, extraText, index }); }).catch(() => { /* Full public search can still load independently. */ }).finally(() => { if (current) setMetadataPending(false); });
     return () => { current = false; entry.readers--; if (!entry.readers && !entry.index) entry.cancel(); };
-  }, [catalogue, extraText, attempt]);
+  }, [active, catalogue, extraText, attempt]);
   useEffect(() => {
     if (!active) { setLoading(false); setError(""); return; }
     const cached = loaded.get(sourceHash);

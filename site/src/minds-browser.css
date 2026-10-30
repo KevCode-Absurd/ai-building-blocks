@@ -1,4 +1,4 @@
-.minds-browse .face-wall { margin-top: 22px; max-height: 72px; overflow: hidden; mask-image: linear-gradient(#000 65%, transparent); }
+.minds-browse .face-wall { margin-top: 22px; height: 72px; max-height: 72px; overflow: hidden; mask-image: linear-gradient(#000 65%, transparent); }
 .minds-browse .mind-search { margin: 0 0 18px; max-width: 640px; }
 .minds-browse .mind-search input { min-height: 48px; }
 .mind-role-filter { margin-top: 0; }
@@ -23,7 +23,7 @@
 .mind-seat-plus { font-size: 18px; line-height: 1; margin-right: 6px; }
 .minds-browse .mind-seat-btn { min-height: 40px; }
 @media (max-width: 640px) {
-  .minds-browse .face-wall { max-height: 48px; margin-top: 14px; }
+  .minds-browse .face-wall { height: 48px; max-height: 48px; margin-top: 14px; }
   .mind-role-filter { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding: 0; gap: 7px; }
   .mind-role-filter .lchip { min-height: 38px; height: auto; }
 }

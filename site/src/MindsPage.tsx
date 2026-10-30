@@ -144,20 +144,36 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
   );
 }
 
-/** Draw only the portraits that fit inside the existing three-row decorative wall. */
+/** Paint decorative portraits between useful work, without moving the search or cards. */
 const FaceWall = memo(function FaceWall({ roster }: { roster: RosterMind[] }) {
   const animate = useMemo(() => !hasShownFaceWall, []);
   const wall = useRef<HTMLDivElement>(null);
-  const [count, setCount] = useState(() => Math.ceil(Math.min(1200, innerWidth) / 24) * 3);
+  const [count, setCount] = useState(() => Math.floor(Math.min(1200, innerWidth) / 24) * (innerWidth <= 640 ? 2 : 3));
+  const [painted, setPainted] = useState(() => animate ? 0 : count);
+  const target = Math.min(count, roster.length);
   useEffect(() => {
     if (!wall.current || typeof ResizeObserver === "undefined") return;
-    const observer = new ResizeObserver(([entry]) => setCount(Math.max(1, Math.floor(entry.contentRect.width / 24)) * 3));
+    const element = wall.current;
+    const observer = new ResizeObserver(([entry]) => {
+      const rows = Math.ceil(parseFloat(getComputedStyle(element).height) / 24);
+      setCount(Math.max(1, Math.floor(entry.contentRect.width / 24)) * rows);
+    });
     observer.observe(wall.current); return () => observer.disconnect();
   }, []);
+  useEffect(() => {
+    if (painted >= target) return;
+    const paint = () => setPainted(n => Math.min(target, n + 24));
+    if (typeof requestIdleCallback === "function") {
+      const pending = requestIdleCallback(paint, { timeout: 200 });
+      return () => cancelIdleCallback(pending);
+    }
+    const pending = setTimeout(paint, 32);
+    return () => clearTimeout(pending);
+  }, [painted, target]);
   useEffect(() => { hasShownFaceWall = true; }, []);
   return (
     <div className="face-wall" aria-hidden="true" data-testid="face-wall" ref={wall}>
-      {roster.slice(0, count).map((m, i) => (
+      {roster.slice(0, Math.min(painted, target)).map((m, i) => (
         <span key={m.slug} className={m.built ? "" : "soon"} style={{ "--w": `${((i * 37) % roster.length) / roster.length}s`, animation: animate ? undefined : "none" } as CSSProperties}>
           <PixelFace face={m.face} area={m.area} slug={m.slug} size={24} />
         </span>

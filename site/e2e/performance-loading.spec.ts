@@ -1,5 +1,40 @@
 import {test, expect} from '@playwright/test';
 
+for (const mobile of [false, true]) {
+ test((mobile ? '@mobile ' : '') + 'Minds cards work before decorative portraits paint and keep their position afterwards', async ({page}) => {
+  if (mobile) await page.setViewportSize({width: 412, height: 823});
+  await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+  await page.addInitScript(() => {
+   let next = 0;
+   const pending = new Map<number, IdleRequestCallback>();
+   window.requestIdleCallback = callback => { pending.set(++next, callback); return next; };
+   window.cancelIdleCallback = id => { pending.delete(id); };
+   (window as any).__paintIdle = () => {
+    const batch = [...pending.values()]; pending.clear();
+    for (const callback of batch) callback({didTimeout: false, timeRemaining: () => 10});
+   };
+  });
+  await page.goto('/minds', {waitUntil: 'domcontentloaded'});
+  const wall = page.getByTestId('face-wall'), cards = page.getByTestId('mind-card'), search = page.getByRole('searchbox', {name: 'Search minds'});
+  await expect(cards).toHaveCount(24); await expect(search).toBeVisible();
+  await expect(wall.locator('svg')).toHaveCount(0);
+  await page.evaluate(() => document.fonts.ready);
+  const before = await search.evaluate(el => el.getBoundingClientRect().top + scrollY);
+  expect((await wall.boundingBox())!.height).toBe(mobile ? 48 : 72);
+  const seat = page.getByTestId('seat-mind').first();
+  await seat.click(); await expect(seat).toHaveAttribute('aria-pressed', 'true');
+  for (let batch = 0; batch < 12; batch++) {
+   await page.evaluate(() => (window as any).__paintIdle());
+   await page.waitForTimeout(35);
+  }
+  const expected = await wall.evaluate(el => Math.floor(el.clientWidth / 24) * Math.ceil(el.clientHeight / 24));
+  await expect(wall.locator('svg')).toHaveCount(expected);
+  expect(Math.abs(await search.evaluate(el => el.getBoundingClientRect().top + scrollY) - before)).toBeLessThan(1);
+  await expect(cards).toHaveCount(24); await expect(seat).toHaveAttribute('aria-pressed', 'true');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+ });
+}
+
 for(const mobile of [false,true]){
  test((mobile?'@mobile ':'')+'public skill header opens before its item download and stays mounted when data arrives',async({page})=>{
   if(mobile)await page.setViewportSize({width:412,height:823});

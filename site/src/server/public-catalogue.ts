@@ -1,3 +1,4 @@
+import { createScopeMcpService, scopeMcpTools } from '../intake/request-scope-mcp.mjs';
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import {rankSpecialists} from "../roles/specialist-matching.mjs";
 import {specialistFiles,specialistPorts,TASK_DELIVERABLE} from "../roles/specialist-worker.mjs";
@@ -212,6 +213,13 @@ export class PublicCatalogueService {
 
   async callTool(name: string, args: Record<string, unknown>): Promise<unknown> {
     obj(args, "arguments");
+    if (scopeMcpTools.some(tool => tool.name === name)) {
+      try { return await createScopeMcpService(this).callTool(name, args); }
+      catch (error) {
+        if (error instanceof PublicApiError) throw error;
+        return fail(400, 'invalid_arguments', 'Check scoped work, evidence references, selection, exact digest and current catalogue availability. No work was executed or saved.');
+      }
+    }
     switch (name) {
       case "search_library": return this.search(args);
       case "get_skill": return this.getItem(args, false);

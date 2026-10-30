@@ -1,4 +1,5 @@
 // Portable worker files. This describes a worker; the host supplies actual tools and execution.
+import { outcomeDeliveryInstructions } from '../intake/outcome-delivery.mjs';
 import {contextIntakeContract,contextIntakeInstructions} from './context-intake.mjs';
 import {feedbackLearningContract,feedbackLearningInstructions} from './feedback-learning.mjs';
 const bullets=rows=>rows.map(s=>`- ${s}`).join('\n');
@@ -40,6 +41,7 @@ export function specialistFiles(role,brief={}) {
   'JOB.md':`# Current job\n\n${brief.goal?.trim()||'Ask for the actual task before execution.'}\n\n## Requested deliverables\n${bullets(brief.deliverables??role.deliverables)}\n\nConfirm the files, format, acceptance checks and intended use against the current request. No task has run merely because this folder exists.`,
   'CHECKS.md':`# Definition of done\n\nFor every deliverable, record the artifact path/revision, requested acceptance checks, source evidence, tool used and actual result. Use PASS, FAIL, NOT_RUN or BLOCKED accurately. Test code with relevant checks; inspect rendered designs/pages; reconcile analyses against source data; review campaign drafts and authorization before live changes. These examples do not claim every role supports every task.\n\nApply the active methods' specific checks and review gates. A successful download, source read or workflow preparation is not execution evidence. Correct supported faults within the source's limit and rerun affected checks. Hand back actual files and work/checks.md plus work/handoff.md. Do not call the job complete with a required deliverable or check still blocked.`,
  };
+ files['PLAYBOOK.md']+='\n\n## From selected recommendations to checked implementation\n\n'+outcomeDeliveryInstructions();
  const intake=contextIntakeInstructions();
  files['CONTEXT.md']+='\n\n'+intake;
  files['PLAYBOOK.md']=files['PLAYBOOK.md'].replace('1. Read the task','0. Complete the context intake in CONTEXT.md before strategy or production. Inspect existing brand brain, brief, assets and project context; build the missing scoped context with the included method when appropriate. Write work/context-check.md and resolve only gaps that block the affected deliverable.\n1. Read the task');

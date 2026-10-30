@@ -1,3 +1,5 @@
+import { outcomeDeliverySchema } from './outcome-delivery-schema.mjs';
+import { selectRecommendations } from './outcome-delivery.mjs';
 import { scopeSpecialistRequest, prepareScopedRequest, scopeDigest } from './request-scope.mjs';
 
 const str = (maxLength = 2000) => ({ type: 'string', minLength: 1, maxLength });
@@ -20,13 +22,15 @@ export const scopeInputSchema = obj({
   pipeline: obj({ stages: list(obj({ id: identifier, name: str(250), parent_id: { anyOf: [identifier, { type: 'null' }] }, source_ids: refs }, ['id', 'name']), 60), edges: list(obj({ from: identifier, to: identifier, kind: one(['flow', 'feedback']) }, ['from', 'to']), 100) }, []),
   findings: list(obj({ id: identifier, title: str(300), detail: str(3000), status: one(['SUPPORTED', 'HYPOTHESIS', 'UNKNOWN']), stage_ids: refs, source_ids: refs, alternatives: list(str(), 10), limitation: str(1500), next_test: { type: 'string', maxLength: 2000 } }, ['id', 'title', 'detail', 'status', 'limitation'])),
   work: list(obj({ id: identifier, title: str(200), task: str(4000), routing_task: { ...str(2000), description: 'Explicit discovery summary without private facts or source bodies. The host checks what is appropriate to include.' }, specialist_area: str(80), mode: one(['DIAGNOSE', 'FIX', 'MEASURE']), priority: one(['P0', 'P1', 'P2', 'P3', 'P4']), priority_reason: str(), finding_ids: refs, source_ids: refs, data_ids: refs, tool_ids: refs, depends_on: refs, inputs: list(obj({ name: str(300), from: inputSource }), 30), deliverables: list(output, 20), checks: strings }, ['id', 'title', 'task', 'routing_task', 'mode', 'priority', 'priority_reason', 'deliverables', 'checks']), 30)
+  , delivery: outcomeDeliverySchema
 }, ['id', 'request']);
-const definition = (name, description, properties, required) => ({ name, description, inputSchema: obj(properties, required), annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false } });
+const definition = (name, description, properties, required) => ({ name, description, inputSchema: obj(properties, required), outputSchema: { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true }, annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false } });
 export const scopeMcpTools = [
   definition('scope_specialist_request', 'Start before specialist matching. Preserve the original request, suggest direct/diagnostic intake and ask only unanswered qualifying questions. The host AI interprets intent; no model or diagnosis runs here.', { request: str(4000) }, ['request']),
   definition('prepare_scoped_specialist_work', 'Validate a host-authored scope dossier: context/evidence gaps, pipeline/subprocesses, supported findings versus hypotheses, priorities, dependencies, tool authority and detailed work prompts. No invented root cause, tool execution or storage.', { scope: scopeInputSchema, approved_scope_sha256: hash }, ['scope']),
-  definition('route_scoped_specialist_work', 'Find actual catalogue candidates for each ready scoped work item, in dependency/priority order. Blocked work is not matched. This does not prove fit or select/execute an agent.', { scope: scopeInputSchema, scope_sha256: hash }, ['scope', 'scope_sha256']),
-  definition('prepare_scoped_specialist_team', 'Bind an exact existing specialist team plan to selected scoped work. Checks work dependencies, outputs, acceptance checks, evidence context and required tool permissions before delegating to current catalogue plan/source validation. Review still required; no execution or durable storage.', { scope: scopeInputSchema, scope_sha256: hash, plan: { type: 'object', description: 'Complete ai-blocks-team-plan/1 as required by prepare_specialist_team. No approval is inferred.' }, assignments: list(obj({ work_id: identifier, stage_id: identifier }), 30) }, ['scope', 'scope_sha256', 'plan', 'assignments'])
+  definition('route_scoped_specialist_work', 'Find actual catalogue candidates for each ready scoped work item, in dependency/priority order. Blocked work is not matched. This does not prove fit or select/execute an agent.', { scope: scopeInputSchema, scope_sha256: hash, selected_recommendation_ids: refs }, ['scope', 'scope_sha256']),
+  definition('prepare_scoped_specialist_team', 'Bind an exact existing specialist team plan to selected scoped work. Checks work dependencies, outputs, acceptance checks, evidence context and required tool permissions before delegating to current catalogue plan/source validation. Review still required; no execution or durable storage.', { scope: scopeInputSchema, scope_sha256: hash, plan: { type: 'object', description: 'Complete ai-blocks-team-plan/1 as required by prepare_specialist_team. No approval is inferred.' }, assignments: list(obj({ work_id: identifier, stage_id: identifier }), 30), selected_recommendation_ids: refs }, ['scope', 'scope_sha256', 'plan', 'assignments']),
+  definition('prepare_recommendation_handoff', 'Turn the user-selected recommendation IDs into a dependency-aware packet for OUR next orchestrator: selected work, required prerequisites, native outputs/checks, evidence, acquisition instructions, measurement and remaining access/authority. Exact scope digest required. Does not execute, save or grant live-action permission.', { scope: scopeInputSchema, scope_sha256: hash, selected_recommendation_ids: { ...refs, minItems: 1 } }, ['scope', 'scope_sha256', 'selected_recommendation_ids'])
 ];
 const fail = message => { throw Error(message); };
 const same = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
@@ -40,9 +44,18 @@ export function createScopeMcpService(catalogue) {
     const prepared = await prepareScopedRequest(args.scope, name === 'prepare_scoped_specialist_work' && args.approved_scope_sha256 !== undefined ? { approved_scope_sha256: args.approved_scope_sha256 } : {});
     if (name === 'prepare_scoped_specialist_work') return prepared;
     if (!HASH(args.scope_sha256) || args.scope_sha256 !== prepared.scope_sha256) fail('Fetch and review this exact scope before routing or planning.');
+    const chosen = args.selected_recommendation_ids !== undefined ? selectRecommendations(prepared, args.selected_recommendation_ids) : null;
+    if (name === 'prepare_recommendation_handoff') {
+      const selection_sha256 = await scopeDigest({ scope_sha256: prepared.scope_sha256, ...chosen });
+      const selectedWork = prepared.work.filter(w => chosen.work_ids.includes(w.id));
+      const files = Object.fromEntries(Object.entries(prepared.files).filter(([file]) => !file.startsWith('prompts/') || chosen.work_ids.includes(file.slice(8, -4))));
+      files['delivery/selection.json'] = JSON.stringify({ scope_sha256: prepared.scope_sha256, selection_sha256, ...chosen }, null, 2) + '\n';
+      files['delivery/NEXT-ORCHESTRATOR.md'] = '# Continue the selected work\n\nRead scope.json, delivery/selection.json, delivery/OUTCOME.md, delivery/recommendations.json, delivery/DATA-REQUESTS.md, delivery/PLAYBOOK.md and only the selected prompts. Keep unselected recommendations deferred. Required prerequisites are visible in selection.json and still need matching authority.\n\nRetain the chosen objective, guardrails, exact evidence versions, findings and uncertainties. First perform authorized data acquisition and checks; do not replace missing evidence with assumptions. Route only selected work using selected_recommendation_ids. Inspect full candidate remits and methods, then prepare the concrete team plan with the same selection. Reuse existing authorization, obtain exact-plan review where required, and execute permitted work with real tools. Check native artifacts and read back external actions. Preserve blocked outputs and continue independent work. Selection and this packet do not authorize unspecified business actions.\n';
+      return { schema: 'ai-blocks-recommendation-handoff/1', state: 'EXECUTION_PROPOSAL_REQUIRES_REVIEW', scope_sha256: prepared.scope_sha256, selection_sha256, ...chosen, work: selectedWork, files, review: { status: 'REVIEW_REQUIRED', grants_execution_authority: false, independently_verified: false }, next_call: { name: 'route_scoped_specialist_work', arguments: { scope: prepared.scope, scope_sha256: prepared.scope_sha256, selected_recommendation_ids: chosen.selected_recommendation_ids } }, next_action: 'Show chosen recommendations and required prerequisite work, resolve only dependent input/tool/authority gaps, then hand this packet to the next orchestrator. Prepare and review the exact specialist plan before production; use existing authorization for covered work. Do not ask the user to implement the recommendations elsewhere.', model_calls: 0, hosted_execution: false, stored_by_service: false };
+    }
     if (name === 'route_scoped_specialist_work') {
       const routed = [];
-      for (const work of prepared.work) {
+      for (const work of prepared.work.filter(w => !chosen || chosen.work_ids.includes(w.id))) {
         if (work.state !== 'READY_FOR_PLAN_REVIEW') { routed.push({ work_id: work.id, state: work.state, blockers: work.blockers, candidates: [] }); continue; }
         // Local catalogue retrieval; private source bodies and findings are not used as search text.
         const result = await catalogue.callTool('find_specialist', { task: work.routing_task, area: work.specialist_area, limit: 5 });
@@ -58,6 +71,7 @@ export function createScopeMcpService(catalogue) {
     for (const a of args.assignments) {
       if (!a || Object.keys(a).some(k => !['work_id', 'stage_id'].includes(k)) || assignments.has(a.work_id) || stageIds.has(a.stage_id) || typeof a.work_id !== 'string' || typeof a.stage_id !== 'string') fail('Use one unique stage per selected work item.');
       const w = prepared.work.find(w => w.id === a.work_id), s = plan.stages.find(s => s.id === a.stage_id);
+      if (chosen && !chosen.work_ids.includes(a.work_id)) fail('Do not add unselected recommendation work to this team.');
       if (!w || !s || w.state !== 'READY_FOR_PLAN_REVIEW') fail('Only ready scoped work can enter a specialist team.');
       assignments.set(a.work_id, a.stage_id); stageIds.add(a.stage_id);
     }
@@ -93,3 +107,11 @@ export function createScopeMcpService(catalogue) {
   } };
 }
 const HASH = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+
+export const SCOPE_REST_OPERATIONS = {
+  '/api/v1/request-scopes': 'scope_specialist_request',
+  '/api/v1/scoped-work-preparations': 'prepare_scoped_specialist_work',
+  '/api/v1/scoped-work-routes': 'route_scoped_specialist_work',
+  '/api/v1/scoped-team-preparations': 'prepare_scoped_specialist_team',
+  '/api/v1/recommendation-handoffs': 'prepare_recommendation_handoff'
+};

@@ -23,13 +23,13 @@ export function buildRoles({catalogue,manifest,page,skill}) {
    return {slug,name:b.name,summary:b.summary,task:b.task,kind:kind(b),path:href(b),revision:r.revision_sha256,skillPath:r.instruction.path,bundled:slug!==seed.lead&&(lead.uses??[]).includes(slug),onboarding:slug===CONTEXT_METHOD,
     ...(b.source?.license?{license:b.source.license}:{}),...(b.source?.by?{by:b.source.by}:{}),...(b.source?.url?{sourceUrl:b.source.url}:{})};
   });
-  const deliverables=strings(p.you_get), inputs=strings(p.you_give);
+  const deliverables=strings(seed.remit?.deliverables??p.you_get), inputs=strings(seed.remit?.inputs??p.you_give);
   if(!deliverables.length||!inputs.length)throw Error('Role needs concrete inputs and deliverables: '+seed.id);
-  const capabilities=Array.isArray(p.how_it_works)?p.how_it_works.filter(v=>v&&typeof v.title==='string'&&typeof v.text==='string').map(v=>({name:v.title,description:v.text})):[];
+  const capabilities=seed.remit?.capabilities??(Array.isArray(p.how_it_works)?p.how_it_works.filter(v=>v&&typeof v.title==='string'&&typeof v.text==='string').map(v=>({name:v.title,description:v.text})):[]);
   if(!capabilities.length)capabilities.push({name:lead.name,description:lead.summary});
   const functions=resources.map(r=>({name:r.name,description:r.summary,method:r.slug,when:strings(page(r.slug).when),inputs:strings(page(r.slug).you_give),deliverables:strings(page(r.slug).you_get)}));
-  const profile={schema:'ai-blocks-role/1',id:seed.id,name:seed.name,summary:lead.summary,area:seed.area,lead:seed.lead,featured:seed.featured,
-   deliverables,inputs,helpfulInputs:strings(p.works_best_with?.inputs),fit:strings(p.when),limits:[...strings(p.not_for),...strings(seed.limits)],tools:[...new Set([...seed.tools,...resources.flatMap(r=>toolsOf(page(r.slug)))])],
+  const profile={schema:'ai-blocks-role/1',id:seed.id,name:seed.name,summary:seed.remit?.summary??lead.summary,area:seed.area,lead:seed.lead,featured:seed.featured,
+   deliverables,inputs,helpfulInputs:strings(p.works_best_with?.inputs),fit:strings(seed.remit?.fit??p.when),limits:[...strings(seed.remit?.limits??p.not_for),...strings(seed.limits)],tools:[...new Set([...seed.tools,...resources.flatMap(r=>toolsOf(page(r.slug)))])],
    method:strings(p.how_to_use),capabilities,functions,example:seed.example??'',resources,resourceCount:resources.length,
    sourceChecks:{completeMethods:resources.length,referenceValidation:'PASS'},catalogueHash:manifest.catalogue_sha256,sourceHash:sha(JSON.stringify({seed,resources,deliverables,inputs,source:manifest.catalogue_sha256}))};
   profile.worker=workerContract(profile);

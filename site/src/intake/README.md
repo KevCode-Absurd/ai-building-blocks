@@ -1,6 +1,6 @@
 # Request scoping before specialist selection
 
-This additive preview turns a one-line request into a host-authored, evidence-linked scope and ordered specialist work. It does not change the production worker, catalogue, OAuth, storage or team modules. The existing production context intake and coordinator plan remain the downstream execution gates.
+This stateless layer turns a one-line request into a host-authored, evidence-linked scope, selectable recommendations and ordered specialist work. The shared MCP/REST catalogue exposes preparation; the host AI supplies reasoning, local files and actual execution. Existing context intake and the exact team-plan protocol remain the downstream gates. No OAuth grants, private storage or hosted execution are added. See docs/public-mcp/outcome-delivery.md for the complete lifecycle.
 
 ## Native conversation
 
@@ -19,7 +19,7 @@ Missing data blocks dependent work and its consumers, while independent investig
 
 ## Local MCP preview
 
-Use Node 24 with the locked `site` dependencies. `site/scripts/scoping-mcp-preview.mjs` is a stdio server for a native AI host. It exposes the four scoping tools, public source retrieval and existing checkpoint tools. Direct specialist discovery/preparation is kept behind the scoped tools in this preview. It has no private storage, model client, hosted executor or marketplace actions.
+Use Node 24 with the locked `site` dependencies. `site/scripts/scoping-mcp-preview.mjs` is a stdio server for a native AI host. It exposes five scoping tools including prepare_recommendation_handoff, public source retrieval and existing checkpoint tools. The local inventory has 15 unique tools; the complete public registry has 18. Direct specialist discovery/preparation is kept behind the scoped tools in this preview. It has no private storage, model client, hosted executor or marketplace actions.
 
 ```powershell
 node site/scripts/scoping-mcp-preview.mjs
@@ -44,4 +44,4 @@ node site/scripts/demo-request-scoping.mjs --catalogue-dir site/public --output 
 
 The integration checks require generated catalogue assets, as the existing specialist API checks do. `SCOPE_TEST_CATALOGUE_DIR` can select an existing read-only generated catalogue for local tests. CI generates `site/public` before unit checks. Tests cover actual catalogue matching/current source validation and an official MCP SDK stdio client, plus missing evidence, causal uncertainty, dependencies, authority, stale digests and bounded exports. Synthetic examples do not prove diagnostic quality or business improvement.
 
-Production integration, UI onboarding, authenticated dossier storage, real-host user testing and measured diagnostic-quality evaluation remain follow-up work. Keep this isolated from the release until those changes are separately reviewed. The draft expert-agent storage stack and its remote preview remain separate; this local stateless scoping preview does not replace them.
+Shared MCP/REST integration and outcome-first host/worker instructions are included here. Deployment, native-host availability and measured diagnostic quality require their own receipts. Local files are the default; authenticated dossier storage and marketplace execution remain separate work. Keep this isolated until the additive release passes its checks and review. The draft expert-agent storage stack and its remote preview remain separate; this local stateless scoping preview does not replace them.

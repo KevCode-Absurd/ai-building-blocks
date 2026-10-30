@@ -1,0 +1,38 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {Client} from '@modelcontextprotocol/sdk/client/index.js';
+import {StreamableHTTPClientTransport} from '@modelcontextprotocol/sdk/client/streamableHttp.js';
+import {PublicCatalogueService} from '../src/server/public-catalogue.ts';
+import {handlePublicApi} from '../src/server/public-api.ts';
+import {handlePublicMcp} from '../src/server/public-mcp.ts';
+const origin='https://example.test',read=path=>fs.readFileSync(new URL('../public'+path,import.meta.url));
+const asset=async path=>{try{return new Response(read(path));}catch{return new Response('Missing',{status:404});}};
+const service=()=>new PublicCatalogueService(asset,origin);
+const env={PUBLIC_API_ENABLED:'true',API_ALLOWED_HOSTS:'example.test',API_READ_LIMITER:{async limit(){return {success:true};}},API_WRITE_LIMITER:{async limit(){return {success:true};}},ASSETS:{fetch:r=>asset(new URL(r.url).pathname)}};
+const post=(route,body)=>new Request(origin+route,{method:'POST',headers:{'content-type':'application/json','cf-connecting-ip':'192.0.2.5'},body:JSON.stringify(body)});
+const role=JSON.parse(read('/data/roles/seo-specialist.json')),method=slug=>{const r=role.resources.find(r=>r.slug===slug);assert(r,'The SEO role retains '+slug);return {slug:r.slug,revision_sha256:r.revision};};
+function plan(){return {id:'storefront-trial',business_id:'gehna',name:'Real storefront diagnosis',version:1,goal:'Inspect the actual public Gehna storefront and give an evidence-based SEO and source check.',route_options:[{id:'evidence',name:'Evidence first',reason:'Inspect before proposing code changes.'}],selected_route:'evidence',context:[{id:'business',path:'brand-brain/00-start-here.md',revision_sha256:null,status:'UNKNOWN'}],stages:[{id:'technical',name:'Technical audit',role_id:'seo-specialist',why:'Inspect public rendering and crawl signals.',methods:[method('technical-seo-auditor')],outputs:[{id:'audit',name:'Technical audit',format:'Markdown',path:'work/technical/report.md'}],checks:[{id:'sources',name:'Actual source evidence supports each finding.'}]},{id:'site',name:'Source and context audit',role_id:'seo-specialist',why:'Verify this separate stage can use the same specialist without losing identity.',depends_on:['technical'],methods:[method('seo-site-auditor')],inputs:[{id:'prior-audit',name:'Accepted technical audit',from:{stage_id:'technical',output_id:'audit'}}],outputs:[{id:'review',name:'Site review',format:'Markdown',path:'work/site/report.md'}],checks:[{id:'scope',name:'No invented rankings or traffic.'}],requires_context:['business']}],kpis:[{name:'Organic traffic',baseline:null,target:null}]};}
+
+test('real catalogue REST and MCP prepare exact version-pinned multi-stage teams without executing or storing private context',async()=>{
+ const s=service(),draft=await s.callTool('prepare_specialist_team',{plan:plan()});assert.equal(draft.state,'AWAITING_REVIEW');assert.equal(draft.review.status,'REVIEW_REQUIRED');assert.equal(draft.role_inventory_checked,true);assert.equal(draft.source_revisions_checked,true);assert.equal(draft.semantic_handoffs_verified,false);assert.equal(draft.model_calls,0);assert.equal(draft.stored_by_service,false);
+ assert.deepEqual(draft.specialists.map(r=>[r.stage_id,r.role_id]),[['technical','seo-specialist'],['site','seo-specialist']]);assert(draft.files['plan.json'].includes('work/site/report.md'));
+ const response=await handlePublicApi(post('/api/v1/specialist-team-preparations',{plan:plan()}),env);assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'no-store');const rest=await response.json();assert.equal(rest.plan_sha256,draft.plan_sha256);assert.equal(rest.hosted_execution,false);
+ const approved=await s.callTool('prepare_specialist_team',{plan:plan(),approved_plan_sha256:draft.plan_sha256});assert.equal(approved.review.status,'HOST_REPORTED_APPROVED');assert.equal(approved.review.independently_verified,false);assert.equal(approved.review.grants_execution_authority,false);
+ const client=new Client({name:'team-api-test',version:'1'});try{await client.connect(new StreamableHTTPClientTransport(new URL(origin+'/mcp'),{fetch:(input,init)=>handlePublicMcp(new Request(input,init),s)}));const names=(await client.listTools()).tools.map(t=>t.name);assert(names.includes('prepare_specialist_team')&&names.includes('checkpoint_specialist_team'));const result=await client.callTool({name:'prepare_specialist_team',arguments:{plan:plan()}});assert.equal(result.isError,undefined);assert.equal(result.structuredContent.plan_sha256,draft.plan_sha256);assert.equal(result.structuredContent.execution.model_calls_by_service,0);}finally{await client.close();}
+});
+
+test('live source validation rejects stale or out-of-remit methods and user edits invalidate the reviewed team digest',async()=>{
+ const s=service(),draft=await s.callTool('prepare_specialist_team',{plan:plan()});
+ let changed=plan();changed.stages[0].methods[0].revision_sha256='0'.repeat(64);await assert.rejects(()=>s.callTool('prepare_specialist_team',{plan:changed}),error=>error.status===409&&error.code==='stale_team_source');
+ changed=plan();const unrelated=JSON.parse(read('/data/public-api-manifest.json')).resources['react-and-next-js-builder'];assert(unrelated);changed.stages[0].methods=[{slug:'react-and-next-js-builder',revision_sha256:unrelated.revision_sha256}];await assert.rejects(()=>s.callTool('prepare_specialist_team',{plan:changed}),error=>error.status===409&&error.code==='stale_team_source');
+ changed=plan();changed.stages[0].role_id='unpublished-role';await assert.rejects(()=>s.callTool('prepare_specialist_team',{plan:changed}),error=>error.status===400);
+ changed=plan();changed.goal+=' Also publish a changed page.';await assert.rejects(()=>s.callTool('prepare_specialist_team',{plan:changed,approved_plan_sha256:draft.plan_sha256}),error=>error.status===400);
+});
+
+test('team checkpoint API enforces reviewed-plan binding and retains blocked context and real handoff checks',async()=>{
+ const s=service(),draft=await s.callTool('prepare_specialist_team',{plan:plan()});await assert.rejects(()=>s.callTool('checkpoint_specialist_team',{plan:plan(),operation:'start'}),error=>error.status===400);
+ const response=await handlePublicApi(post('/api/v1/specialist-team-checkpoints',{plan:plan(),operation:'start',approved_plan_sha256:draft.plan_sha256}),env);assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'no-store');const checkpoint=await response.json();assert.equal(checkpoint.assurance,'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED');assert.equal(checkpoint.stored_by_service,false);assert.equal(checkpoint.hosted_execution,false);assert.equal(checkpoint.run.stages[0].state,'READY');assert.equal(checkpoint.run.stages[1].state,'BLOCKED');
+ await assert.rejects(()=>s.callTool('checkpoint_specialist_team',{plan:plan(),operation:'stage',run:checkpoint.run,stage_id:'site',state:'RUNNING'}),error=>error.status===400);
+ await assert.rejects(()=>s.callTool('checkpoint_specialist_team',{plan:plan(),operation:'stage',run:checkpoint.run,stage_id:'technical',state:'COMPLETED'}),error=>error.status===400);
+ const corrupt=structuredClone(checkpoint.run);corrupt.hosted_execution=true;await assert.rejects(()=>s.callTool('checkpoint_specialist_team',{plan:plan(),operation:'reconcile',run:corrupt}),error=>error.status===400);
+ const schema=await(await handlePublicApi(new Request(origin+'/api/v1/openapi.json',{headers:{'cf-connecting-ip':'192.0.2.5'}}),env)).json();assert(schema.paths['/api/v1/specialist-team-preparations']);assert(schema.paths['/api/v1/specialist-team-checkpoints']);
+});

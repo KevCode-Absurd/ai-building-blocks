@@ -2,6 +2,7 @@ import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import {rankSpecialists} from "../roles/specialist-matching.mjs";
 import {specialistFiles,specialistPorts,TASK_DELIVERABLE} from "../roles/specialist-worker.mjs";
 import {roleLaunchPrompt,validateRoleBrief} from "../roles/role-runtime.ts";
+import {prepareTeamPlan,createTeamRun,reconcileTeamRun,recordTeamArtifact,acceptTeamInput,recordTeamCheck,setTeamStageState,recordTeamAction} from '../teams/team-contract.mjs';
 import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
 import { scanSourceFiles } from "./community-safety.ts";
 import { unzipSync } from "fflate";
@@ -221,6 +222,8 @@ export class PublicCatalogueService {
       case "prepare_workflow": return this.prepare(args);
       case "find_specialist": return this.findSpecialist(args);
       case "prepare_specialist": return this.prepareSpecialist(args);
+      case "prepare_specialist_team": return this.prepareSpecialistTeam(args);
+      case "checkpoint_specialist_team": return this.checkpointSpecialistTeam(args);
       case "search": return this.openSearch(args);
       case "fetch": return this.openFetch(args);
       default: return fail(404, "unknown_tool", "Unknown public catalogue operation.");
@@ -706,7 +709,47 @@ export class PublicCatalogueService {
     if(notes.length>WORKFLOW_NOTES_LIMIT)return fail(400,"invalid_arguments","Shorten the combined context, preferences and saved profile.");
     const preparation=await this.prepare({name:role.name,goal:task,...(notes?{notes}:{}),steps:[{id:"specialist",slug:role.custom_skill.slug}],custom_skills:[role.custom_skill],user_inputs:["short_text"]});
     const workerFiles=specialistFiles(role,brief);
-    return {schema:"ai-blocks-specialist-preparation/1",state:"NOT_STARTED",selected_role:{id,name:role.name,url:`${this.baseUrl}/roles/${id}`,selection:chosen?"EXPLICIT":"TASK_CANDIDATE",scope_review:"NOT_RUN"},alternatives:matches.candidates.filter((r:{id:string})=>r.id!==id),worker:role.worker,worker_files:workerFiles,worker_sha256:await sha256(encoder.encode(stable(workerFiles))),launch_brief:roleLaunchPrompt(role,brief),preparation,execution:{location:"user-ai-environment",model_calls_by_service:0,stored_by_service:false},next_action:"Read the worker files and complete pinned source methods, compare scope against every deliverable, reuse relevant supplied facts, verify real host tools and existing authorization, then execute the supported work in the host AI. Produce native artifacts and actual check evidence. This response does not start a worker or grant external-action permission."};
+    return {schema:"ai-blocks-specialist-preparation/1",state:"NOT_STARTED",selected_role:{id,name:role.name,url:`${this.baseUrl}/roles/${id}`,selection:chosen?"EXPLICIT":"TASK_CANDIDATE",scope_review:"NOT_RUN"},alternatives:matches.candidates.filter((r:{id:string})=>r.id!==id),context_review:JSON.parse(workerFiles["worker.json"]).intake,worker:JSON.parse(workerFiles["worker.json"]),worker_files:workerFiles,worker_sha256:await sha256(encoder.encode(stable(workerFiles))),launch_brief:roleLaunchPrompt(role,brief),preparation,execution:{location:"user-ai-environment",model_calls_by_service:0,stored_by_service:false},next_action:"Use a coordinator to present the contextual team or single-worker plan, incorporate user comments and obtain approval of the exact final version before production. Complete the context intake before strategy or production: reuse the existing brand brain/brief/assets, ask for missing essentials or build the scoped files with the included method. Read the worker files and complete pinned source methods, compare scope against every deliverable, reuse relevant supplied facts, verify real host tools and existing authorization, then execute the supported work in the host AI. Produce native artifacts and actual check evidence. This response does not start a worker or grant external-action permission."};
+  }
+
+  async prepareSpecialistTeam(args:Record<string,unknown>) {
+    keys(args,['plan','approved_plan_sha256']);
+    const c=await this.catalogue();
+    const rolesContent=(await this.readResource('aiblocks://roles')).contents[0];
+    const inventory=JSON.parse('text'in rolesContent?rolesContent.text:'{}');
+    const ids=(inventory.roles??[]).map((r:{id:string})=>r.id);
+    let prepared;try{prepared=await prepareTeamPlan(args.plan,{roleIds:ids,approved_digest:args.approved_plan_sha256});}
+    catch(error){return fail(400,'invalid_team_plan',error instanceof Error?error.message:'The team plan is invalid.');}
+    const workers=[];
+    for(const stage of prepared.plan.stages){
+      const response=(await this.readResource('aiblocks://roles/'+stage.role_id)).contents[0];
+      const role=JSON.parse('text'in response?response.text:'{}');
+      for(const method of stage.methods){
+        const source=c.manifest.resources[method.slug];
+        if(!role.resources.some((r:{slug:string;revision:string})=>r.slug===method.slug&&r.revision===method.revision_sha256)||source?.revision_sha256!==method.revision_sha256||source?.reference_validation?.status!=='PASS')return fail(409,'stale_team_source','A selected method is unavailable, outside this specialist or changed. Review the current plan and source revision.');
+      }
+      workers.push({stage_id:stage.id,role_id:role.id,url:this.baseUrl+'/roles/'+role.id,resource:'aiblocks://roles/'+role.id,methods:stage.methods});
+    }
+    return {...prepared,source_revisions_checked:true,specialists:workers,execution:{model_calls_by_service:0,hosted:false,stored_by_service:false},next_action:'Show the goal, route choices, ordered specialist stages, real inputs/outputs, source revisions, checks, missing access and action scopes. Incorporate user edits and obtain approval of the exact final plan digest before production. Read the complete selected methods and worker context gate. The execution host runs real tools and reports artifacts; checkpoint_specialist_team checks reported state but does not execute or independently prove consent, input acceptance or external actions. Save approved reusable templates only through an authorized private connection.'};
+  }
+
+  async checkpointSpecialistTeam(args:Record<string,unknown>) {
+    keys(args,['plan','run','operation','value','stage_id','state','approved_plan_sha256']);
+    const prepared=await this.prepareSpecialistTeam({plan:args.plan,...(args.approved_plan_sha256?{approved_plan_sha256:args.approved_plan_sha256}:{})});
+    try{
+      const op=string(args.operation,'operation',40);let run;
+      if(op==='start'){
+        if(!args.approved_plan_sha256)return fail(400,'team_approval_required','Report approval of this exact plan digest before starting a host checkpoint.');
+        run=await createTeamRun(prepared.plan,args.approved_plan_sha256);
+      }else if(op==='reconcile')run=await reconcileTeamRun(prepared.plan,args.run);
+      else if(op==='artifact')run=await recordTeamArtifact(prepared.plan,args.run,args.value);
+      else if(op==='accept_input')run=await acceptTeamInput(prepared.plan,args.run,args.value);
+      else if(op==='check')run=await recordTeamCheck(prepared.plan,args.run,args.value);
+      else if(op==='stage')run=await setTeamStageState(prepared.plan,args.run,args.stage_id,args.state);
+      else if(op==='action')run=await recordTeamAction(prepared.plan,args.run,args.value);
+      else return fail(400,'invalid_team_operation','Choose start, reconcile, artifact, accept_input, check, stage or action.');
+      return {schema:'ai-blocks-team-checkpoint/1',run,assurance:'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED',source_revisions_checked:true,stored_by_service:false,model_calls:0,hosted_execution:false,next_action:'Persist this checkpoint in the authorized business project. The host must perform and verify real work, inspect handoff content and retain actual evidence. This response does not run a worker or grant action permission.'};
+    }catch(error){if(error instanceof PublicApiError)throw error;return fail(400,'invalid_team_checkpoint',error instanceof Error?error.message:'Invalid host checkpoint.');}
   }
 
   async readResource(uri: string): Promise<{ skill: boolean; contents: ({ uri: string; mimeType: string; text: string } | { uri: string; mimeType: string; blob: string })[] }> {

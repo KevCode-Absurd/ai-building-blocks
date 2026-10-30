@@ -42,6 +42,7 @@ const PAGES = {
   builder: () => import("./Builder"),
   intake: () => import("./IntakePage"),
   compose: () => import("./ComposePage"),
+  teams: () => import("./teams/TeamPage"),
   info: () => import("./InfoPage"),
 };
 /** Which section's code a link opens, if it isn't the home page or a block. */
@@ -61,6 +62,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   if (path === "/minds") return "minds";
   if (path === "/from-a-source") return "intake";
   if (path === "/compose") return "compose";
+  if (path === "/teams") return "teams";
   if (path === "/how-it-works") return "guide";
   return null;
 }
@@ -98,6 +100,7 @@ function ToolsPage({ path, toast }: ToolPageProps) {
 const AiToolsPage = startupPage(PAGES.aitools);
 const TractionPage = startupPage(PAGES.traction);
 const AppsPage = startupPage(PAGES.apps);
+const TeamPage = startupPage(PAGES.teams,true);
 const SpacePage = startupPage(PAGES.space);
 const IntakePage = startupPage(PAGES.intake);
 const InfoPage = startupPage(PAGES.info);
@@ -211,7 +214,7 @@ export default function App() {
   const parts = path.split("/").filter(Boolean);
   const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
   const itemState = useItemCatalogue(pageSlug);
-  const needsCatalogue = !infoPage(path) && !["/roles", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
+  const needsCatalogue = !infoPage(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
   const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
@@ -287,6 +290,8 @@ export default function App() {
             <AppsPage path={path} toast={setToast} />
           ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
             <SpacePage path={path} c={c} toast={setToast} />
+          ) : path === "/teams" ? (
+            <TeamPage toast={setToast} />
           ) : path === "/roles" || path.startsWith("/roles/") ? (
             <RolesRoute key={path} path={path} toast={setToast} />
           ) : path === "/minds" ? (

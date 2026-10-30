@@ -442,7 +442,7 @@ const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "age
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const roles = roleSeeds(blocks);
 const roleUrls = roles.length ? ["/roles", ...Array.from({length:Math.ceil(roles.length/24)-1},(_,i)=>`/roles/page/${i+2}`), ...roles.map(r=>`/roles/${r.id}`)] : [];
-const urls = ["/", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.
 // lastmod is only a date we can vouch for: an item page's is the day its own files (item.yaml, page.yaml, SKILL.md) last
@@ -522,6 +522,7 @@ const intro = [
   `- Every skill has a page and a skill file. For example: [${example.name}](${SITE}/${kindPath(example)}/${example.slug}), and its file [SKILL.md](${SITE}/skills/${example.slug}/SKILL.md). Add the file to your AI as a skill, or paste it into a chat.`,
   `- [Every page by job](${SITE}/jobs), and the whole catalogue as data: [blocks.json](${SITE}/data/blocks.json)`, "",
   "## Main pages", "",
+  `- [Plan an AI team](${SITE}/teams): review coordinator-led specialist plans, input/output handoffs and permissions. MCP prepare_specialist_team and checkpoint_specialist_team validate current sources and host-reported checkpoints; authenticated personal/company connections support explicit workflow saves, scoped memory and reviewed revocable sharing. No public hosted execution.`,
   `- [Workflow planner](${SITE}/compose): describe a task, review a plan and download it for your AI`,
   `- [Hire an AI specialist](${SITE}/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.`,
   `- [Your me.md](${SITE}/me-md): prepare reusable context for your AI`,

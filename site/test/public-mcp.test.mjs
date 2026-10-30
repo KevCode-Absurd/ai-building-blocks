@@ -26,7 +26,7 @@ function fixture() {
   return { instructions, service: new PublicCatalogueService(async path => assets.has(path) ? new Response(assets.get(path)) : new Response('Missing', { status: 404 }), endpoint) };
 }
 
-test('official SDK client negotiates, discovers all eleven tools and retrieves/prepares with the real catalogue service', async () => {
+test('official SDK client negotiates, discovers all thirteen tools and retrieves/prepares with the real catalogue service', async () => {
   const { service, instructions } = fixture();
   const traffic = [];
   const transport = new StreamableHTTPClientTransport(new URL(endpoint), { fetch: async (input, init) => {
@@ -41,7 +41,7 @@ test('official SDK client negotiates, discovers all eleven tools and retrieves/p
     assert.equal(client.getServerVersion().name, 'ai-blocks-public-library');
     assert.match(client.getInstructions(), /own model/);
     assert.match(client.getInstructions(), /not evidence of human consent/);
-    assert.deepEqual((await client.listTools()).tools.map(t => t.name), ['find_specialist', 'prepare_specialist', 'search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow', 'get_item', 'search', 'fetch']);
+    assert.deepEqual((await client.listTools()).tools.map(t => t.name), ['prepare_specialist_team', 'checkpoint_specialist_team', 'find_specialist', 'prepare_specialist', 'search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow', 'get_item', 'search', 'fetch']);
     const search = await client.callTool({ name: 'search_library', arguments: { query: 'sample' } });
     assert.equal(search.isError, undefined);
     assert.match(search.content[0].text, /sample/);
@@ -130,7 +130,7 @@ test('separate private adapter uses its own tool registry and cannot reach publi
   assert.deepEqual(list.result.tools.map(t => t.name), ['company_read']);
   const denied = await (await handleMcp(request({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'get_skill', arguments: { slug: 'sample' } } }), service, options)).json();
   assert.equal(denied.error.code, -32602);
-  assert.equal(PUBLIC_MCP_TOOLS.length, 11);
+  assert.equal(PUBLIC_MCP_TOOLS.length, 13);
   const knownError = { async callTool() { throw new PublicApiError(403, 'forbidden', 'Company access denied.'); } };
   const forbidden = await (await handleMcp(request({ jsonrpc: '2.0', id: 6, method: 'tools/call', params: { name: 'company_read', arguments: {} } }), knownError, options)).json();
   assert.equal(forbidden.result.isError, true);

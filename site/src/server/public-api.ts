@@ -144,14 +144,15 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       mcp: { url: `${url.origin}/mcp`, server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
-    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations') {
+    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints') {
       if (request.method !== 'POST') return finish(publicJson(405, { error: { code: 'method_not_allowed', message: 'Use POST.' } }, { allow: 'POST, OPTIONS' }));
       if (!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type') ?? '')) return finish(publicJson(415, { error: { code: 'unsupported_media_type', message: 'Use application/json.' } }));
       let input: unknown;
       try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request))); }
       catch (error) { if (error instanceof PublicApiError) throw error; throw new PublicApiError(400, 'invalid_json', 'Send a valid JSON object.'); }
       if (!input || typeof input !== 'object' || Array.isArray(input)) throw new PublicApiError(400, 'invalid_arguments', 'Send a JSON object.');
-      return finish(publicJson(200, await service.callTool(route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow', input as Record<string, unknown>)));
+      const operation=route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow';
+      return finish(publicJson(200, await service.callTool(operation, input as Record<string, unknown>)));
     }
     if (route === '/api/v1/specialists' || /^\/api\/v1\/specialists\/[a-z0-9][a-z0-9-]{0,69}$/.test(route)) {
       if (!['GET','HEAD'].includes(request.method)) return finish(publicJson(405,{error:{code:'method_not_allowed',message:'Use GET.'}},{allow:'GET, HEAD, OPTIONS'}));
@@ -203,5 +204,7 @@ function openApi(origin: string) {
     '/api/v1/specialists': { get: {operationId:'find_specialist',parameters:parameters('find_specialist'),responses:{'200':response}} },
     '/api/v1/specialists/{role_id}': {get:{operationId:'get_specialist',parameters:[{name:'role_id',in:'path',required:true,schema:{type:'string'}}],responses:{'200':response}}},
     '/api/v1/specialist-preparations': {post:{operationId:'prepare_specialist',requestBody:{required:true,content:{'application/json':{schema:schema('prepare_specialist')}}},responses:{'200':response}}},
+    '/api/v1/specialist-team-preparations': {post:{operationId:'prepare_specialist_team',requestBody:{required:true,content:{'application/json':{schema:schema('prepare_specialist_team')}}},responses:{'200':response}}},
+    '/api/v1/specialist-team-checkpoints': {post:{operationId:'checkpoint_specialist_team',requestBody:{required:true,content:{'application/json':{schema:schema('checkpoint_specialist_team')}}},responses:{'200':response}}},
   } };
 }

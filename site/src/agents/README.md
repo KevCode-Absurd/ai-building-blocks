@@ -74,4 +74,10 @@ Development cases are visible to the expert. Hidden publication tests must live 
 
 [CAPTURE.md](CAPTURE.md) describes the interview/work-review flow, evidence, inactive proposals, exact preview review and parent-linked candidate revisions. The pure functions live in `expert-agent-capture.mjs`; they do not persist data or run a model. Add `site/test/expert-agent-capture.test.mjs` to the check command above to cover this flow.
 
-Next PRs add authenticated storage, real client trials and full private exports. Publication, marketplace hiring and commercial execution follow separate evidence and integration work.
+## Authenticated storage preview
+
+[STORAGE.md](STORAGE.md) describes the separate authenticated preview entry, private profile/agent/capture records, write consent, current membership, author ownership, optimistic concurrency and atomic reviewed revisions. These server modules add persistence around the pure preparation/capture code. They are not registered by the production worker or enabled in production configuration.
+
+Run all `site/test/expert-agent-*.test.mjs` checks, the dedicated `site/tsconfig.expert-agent.json` TypeScript check, and `site/scripts/demo-expert-agent-capture.mjs` for the synthetic local walkthrough. The demo makes no model calls.
+
+Next work adds complete evidence-bearing private exports, remote preview and real host trials, durable practice reports and retention controls. Publication, marketplace hiring and commercial execution follow separate evidence and integration work.

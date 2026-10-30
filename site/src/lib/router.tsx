@@ -114,9 +114,10 @@ export function setSearch(params: Record<string, string>) {
 // so the page is often ready by the time the click lands.
 let prefetch: ((to: string) => void) | null = null;
 export const setPrefetch = (fn: (to: string) => void) => { prefetch = fn; };
+export const warmRoute = (to: string) => { prefetch?.(to); };
 
 export function Link({ to, onClick, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }) {
-  const warm = () => prefetch?.(to);
+  const warm = () => warmRoute(to);
   const go = (e: MouseEvent<HTMLAnchorElement>) => {
     onClick?.(e);
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || rest.target && rest.target !== "_self" || rest.download !== undefined || new URL(to, location.origin).origin !== location.origin) return;

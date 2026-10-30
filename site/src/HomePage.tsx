@@ -2,7 +2,7 @@ import FeaturedTools from "./tools/FeaturedTools";
 import { HomeMinds, HomeWorkflows, HomeAgents } from "./HomeSections";
 import { useLibrarySearch } from "./lib/library-search";
 import { rankLibraryResults } from "./lib/library-rank";
-import { Suspense, lazy, useDeferredValue, useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { ArrowIcon, BlockCard, SearchIcon, Select } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindOf, useCatalogueState, workflowEntries } from "./lib/data";
 import { queueForCanvas } from "./lib/store";
@@ -11,7 +11,7 @@ import { reviewedTask } from "./lib/task-discovery";
 import { trackUxEvent } from "./lib/ux-events";
 import "./simplicity.css";
 import "./home-library.css";
-import { Link, navigate, setSearch, useLocation } from "./lib/router";
+import { Link, navigate, setSearch, useLocation, warmRoute } from "./lib/router";
 import MindsForSearch from "./MindsForSearch";
 import { openBusiness } from "./Business";
 import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
@@ -194,6 +194,39 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
 }
 
 export default function Home({ c, toast, error, retry, complete, onNeedFull }: { c: Catalogue | null; toast: (m: string) => void; error: string | null; retry: () => void; complete: boolean; onNeedFull: () => void }) {
+  // The first HTML already contains the real introduction. Keep those nodes
+  // when the ready app takes over instead of painting the same text twice.
+  const [initialHero] = useState(() => document.querySelector<HTMLElement>('#app-loader[data-home-shell] .hero-in'));
+  useLayoutEffect(() => {
+    if (!initialHero) return;
+    const follow = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !(event.target instanceof Element)) return;
+      const link = event.target.closest('a');
+      if (!link || !initialHero.contains(link) || link.target || link.hasAttribute('download')) return;
+      const href = link.getAttribute('href');
+      if (href !== '/#library' && href !== '/#build' && href !== '/api-and-mcp') return;
+      event.preventDefault();
+      if (href === '/#library' || href === '/#build') onNeedFull();
+      if (href === '/#library') trackUxEvent('task_started');
+      navigate(href);
+      if (href === '/#library') requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus());
+    };
+    const warm = (event: Event) => {
+      const link = event.target instanceof Element ? event.target.closest('a') : null;
+      const href = link?.getAttribute('href');
+      if (href === '/#library' || href === '/#build' || href === '/api-and-mcp') warmRoute(href);
+    };
+    initialHero.addEventListener('click', follow);
+    initialHero.addEventListener('pointerenter', warm, true);
+    initialHero.addEventListener('focusin', warm);
+    initialHero.addEventListener('touchstart', warm, {passive: true});
+    return () => {
+      initialHero.removeEventListener('click', follow);
+      initialHero.removeEventListener('pointerenter', warm, true);
+      initialHero.removeEventListener('focusin', warm);
+      initialHero.removeEventListener('touchstart', warm);
+    };
+  }, [initialHero, onNeedFull]);
   const { search } = useLocation();
   const selectedWorkflow = search.get("workflow") ?? "";
   const [buildOpen, setBuildOpen] = useState(() => location.hash === "#build");
@@ -254,9 +287,9 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
   return (
     <main id="top">
       <StartupReady />
-      <section className="hero">
+      <section className="hero" data-home-hero-host={initialHero ? '' : undefined}>
         {showGlobe && <Suspense fallback={null}><Globe /></Suspense>}
-        <div className="wrap hero-in">
+        {!initialHero && <div className="wrap hero-in">
           <h1 className="h1">Use AI like the top 1%</h1>
           <p className="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>
           <div className="hero-actions">
@@ -264,7 +297,7 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
             <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow" onClick={onNeedFull}>Build a workflow <ArrowIcon /></Link>
           </div>
           <p className="hero-connect small" data-testid="hero-connect"><Link to="/api-and-mcp">Connect your AI once</Link>. Then it pulls any skill or workflow it needs, when it needs it.</p>
-        </div>
+        </div>}
       </section>
 
       {c ? <Library c={c} complete={complete} error={error ?? ""} retry={retry} onNeedFull={onNeedFull} /> : <LibraryLoading error={error} retry={retry} />}

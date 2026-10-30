@@ -53,6 +53,75 @@ for(const mobile of [false,true]){
 }
 
 for (const mobile of [false, true]) {
+  test((mobile ? '@mobile ' : '') + 'home keeps its original introduction through startup, interaction and navigation', async ({page}) => {
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    let release!: () => void;
+    const held = new Promise<void>(resolve => { release = resolve; });
+    await page.route(/\/assets\/main-[^/]+\.js$/, async r => { await held; await r.continue(); });
+    try {
+      await page.goto('/', {waitUntil: 'domcontentloaded'});
+      const intro = page.locator('#app-loader .hero .lede');
+      await expect(intro).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
+      await intro.evaluate(el => { (window as any).__firstHomeIntro = el; });
+      const before = await intro.boundingBox();
+      release();
+      await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
+      const live = page.locator('#root .hero .lede');
+      await expect(live).toBeVisible();
+      expect(await live.evaluate(el => el === (window as any).__firstHomeIntro)).toBe(true);
+      const after = await live.boundingBox();
+      expect(Math.abs(after!.y - before!.y)).toBeLessThan(1);
+      expect(Math.abs(after!.height - before!.height)).toBeLessThan(1);
+      await page.waitForTimeout(1800);
+      expect(await live.evaluate(el => el === (window as any).__firstHomeIntro)).toBe(true);
+      await page.locator('#root .hero-actions').getByRole('link', {name: 'Start with a task', exact: true}).click();
+      await expect(page.getByTestId('library-search')).toBeFocused();
+      await page.getByTestId('hero-connect').getByRole('link').click();
+      await expect(page).toHaveURL(/\/api-and-mcp$/);
+      await page.getByRole('link', {name: 'AI Blocks, home', exact: true}).click();
+      await expect(page.locator('#root .hero .lede')).toBeVisible();
+      await expect(page.locator('#root .hero h1')).toHaveCount(1);
+      await expect(page.getByTestId('hero-connect')).toHaveCount(1);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+    } finally { release(); }
+  });
+
+  test((mobile ? '@mobile ' : '') + 'home keeps its readable opening and menu while full styles are delayed', async ({page}) => {
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    let release!: () => void;
+    const held = new Promise<void>(resolve => { release = resolve; });
+    await page.route(/\/assets\/main-[^/]+\.css$/, async r => { await held; await r.continue(); });
+    try {
+      await page.goto('/', {waitUntil: 'domcontentloaded'});
+      await page.locator('#root [data-home-hero-host]').waitFor({state: 'attached'});
+      const intro = page.locator('#app-loader .hero .lede');
+      await expect(intro).toBeVisible();
+      await intro.evaluate(el => { (window as any).__styleHeldIntro = el; });
+      await page.locator('#app-loader [data-testid="menu-btn"]').click();
+      await expect(page.locator('#app-loader [data-testid="menu-btn"]')).toHaveAttribute('aria-expanded', 'true');
+      release();
+      await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
+      expect(await page.locator('#root .hero .lede').evaluate(el => el === (window as any).__styleHeldIntro)).toBe(true);
+      await expect(page.locator('#root [data-testid="menu-btn"]')).toHaveAttribute('aria-expanded', 'true');
+      await page.keyboard.press('Escape');
+      await expect(page.locator('#root [data-testid="menu-btn"]')).toHaveAttribute('aria-expanded', 'false');
+    } finally { release(); }
+  });
+
+  test((mobile ? '@mobile ' : '') + 'home retains readable text and recovery links after a full stylesheet failure', async ({page}) => {
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    await page.route(/\/assets\/main-[^/]+\.css$/, r => r.abort());
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+    await expect(page.locator('html')).toHaveAttribute('data-boot', 'error');
+    await expect(page.locator('#app-loader .hero .lede')).toBeVisible();
+    await expect(page.locator('#app-loader .boot-recovery').getByRole('link', {name: 'Try again', exact: true})).toBeVisible();
+    await expect(page.locator('#root')).toBeHidden();
+  });
+
   test((mobile ? '@mobile ' : '') + 'skill body keeps its place when Suspense reattaches downloaded controls', async ({page}) => {
     if (mobile) await page.setViewportSize({width: 412, height: 823});
     await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));

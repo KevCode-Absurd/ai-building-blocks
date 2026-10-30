@@ -40,7 +40,7 @@ function shell(){return `<div id="app-loader" data-home-shell>
 <section aria-label="Explore">${[['/community','Community skills & workflows'],['/publish','Submit your skill or workflow'],['/minds','Minds'],['/tools','Browser tools'],['/apps','Apps'],['/ai-tools','AI tools'],['/tools/growth-channel-planner','Growth planner'],['/from-a-source','Create skills from content'],['/space','My space']].map(([href,text])=>link(href,text.replace('&','&amp;'))).join('')}<button type="button" data-home-business>Business details</button></section>
 <div class="site-menu-appearance"><span>Appearance</span><button class="icon-btn" aria-label="Switch to light mode" title="Switch to light mode" data-testid="theme-toggle">${sun}</button></div>
 <section aria-label="Help">${[['/how-it-works','How to use AI Blocks'],['/api-and-mcp','API & MCP'],['/api-and-mcp#api','Documentation'],['/support','Help & contact']].map(([href,text])=>link(href,text.replace('&','&amp;'))).join('')}</section></nav></div></div></header>
-<main id="home-shell-main" tabindex="-1"><section class="hero"><div class="wrap hero-in"><h1 class="h1">Use AI like the top 1%</h1><p class="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p><div class="hero-actions">${link('/#library','Start with a task '+arrow,' class="btn btn-primary" data-home-intent="library"')}${link('/#build','Build a workflow '+arrow,' class="btn btn-line" data-testid="hero-build-workflow" data-home-intent="build"')}</div></div></section></main>
+<main id="home-shell-main" tabindex="-1"><section class="hero"><div class="wrap hero-in"><h1 class="h1">Use AI like the top 1%</h1><p class="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p><div class="hero-actions">${link('/#library','Start with a task '+arrow,' class="btn btn-primary" data-home-intent="library"')}${link('/#build','Build a workflow '+arrow,' class="btn btn-line" data-testid="hero-build-workflow" data-home-intent="build"')}</div><p class="hero-connect small" data-testid="hero-connect"><a href="/api-and-mcp">Connect your AI once</a>. Then it pulls any skill or workflow it needs, when it needs it.</p></div></section></main>
 <div class="boot-recovery"><p>This is taking longer than expected.</p><a href="">Try again</a><a href="/jobs">Browse the library</a></div></div>`;}
 
 export function patchHomeInitialShell(html,{css,cssHref}){
@@ -55,6 +55,10 @@ export function patchHomeInitialShell(html,{css,cssHref}){
   original=original.replace('        document.documentElement.dataset.boot = "ready";',`        const shell=document.getElementById("app-loader"), active=document.activeElement;
         const focused=shell?.contains(active)?active:null;
         const opened=shell?.querySelector('[data-testid="menu-btn"]')?.getAttribute("aria-expanded")==="true";
+        const hero=shell?.querySelector('.hero-in'), heroHost=document.querySelector('#root [data-home-hero-host]');
+        // Move only at the existing app-and-CSS readiness gate: no blank frame,
+        // new text node or duplicate introduction during the handoff.
+        if(hero&&heroHost)heroHost.appendChild(hero);
         document.documentElement.dataset.boot = "ready";`);
   original=original.replace('        setTimeout(function () { document.getElementById("app-loader")?.remove(); }, 200);',`        queueMicrotask(function(){
           const root=document.getElementById("root"), trigger=root?.querySelector('[data-testid="menu-btn"]');

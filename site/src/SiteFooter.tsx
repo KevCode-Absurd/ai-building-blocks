@@ -3,10 +3,10 @@ import { INFO_PAGES, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink } from "./lib/sit
 import { openTailor } from "./Tailor";
 import { usePeopleVisible } from "./lib/people";
 
-// A short set: the four places people start, then help. Policies sit in the bottom row.
-// From a source, the growth planner and the app starter pack are reached from these pages, not listed again here.
+// Keep the starting points short, then help. Policies sit in the bottom row.
+// App tours are reached through How it works; source and growth tools have their own entry points.
 const groups = [
-  { label: "Explore", links: [["/#library", "Find a task"], ["/roles", "Hire an AI specialist"], ["/compose", "Build a workflow"], ["/tools", "Tools"], ["/minds", "Minds"], ["/apps", "Example apps"], ["/space", "My space"]] },
+  { label: "Explore", links: [["/#library", "Find a task"], ["/roles", "Hire an AI specialist"], ["/compose", "Build a workflow"], ["/tools", "Tools"], ["/minds", "Minds"], ["/space", "My space"]] },
   { label: "Help", links: [["/how-it-works", "How it works"], ["/support", "Help & contact"], ["/about", "About AI Blocks"]] },
 ];
 export default function SiteFooter() {

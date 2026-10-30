@@ -50,7 +50,8 @@ test('real specialist team preparation validates current methods and binds the e
   const r = await f.service.callTool('prepare_scoped_specialist_team', { scope: p.scope, scope_sha256: p.scope_sha256, plan, assignments: assignments(p) });
   assert.equal(r.source_revisions_checked, true); assert.equal(r.state, 'AWAITING_REVIEW');
   assert.equal(r.scoping.scope_sha256, p.scope_sha256); assert.equal(r.scoping.plan_sha256, r.plan_sha256);
-  assert(r.plan.notes.includes(p.scope_sha256)); assert(r.scope_files['prompts/fix.txt']); assert.equal(r.execution.model_calls_by_service, 0);
+  assert(r.plan.notes.includes(p.scope_sha256)); assert(r.files['scope/prompts/fix.txt']); assert.equal(r.execution.model_calls_by_service, 0);
+  assert(r.files['START_HERE.txt'].includes('scope/SCOPE.md')); assert.equal(JSON.parse(r.files['scope/scope.json']).request, p.scope.request);
   assert.equal(r.review.grants_execution_authority, false);
 });
 test('stale dossiers, removed dependencies, changed outputs and missing evidence stop before team preparation', async () => {

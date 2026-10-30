@@ -149,8 +149,11 @@ export async function prepareScopedRequest(input, options = {}) {
   const qualificationMissing = questions.length > 0;
   const contextMissing = scope.route === 'diagnostic' && (!scope.symptom || !scope.sources.some(s => s.status === 'SUPPLIED'));
   if (contextMissing) questions.push(question('diagnostic-context', 'Describe the observed symptom and select the relevant context/evidence or arrange a scoped read-only investigation.', 'Source and time-period gaps stay explicit. Reuse or build the business brief only if needed.'));
-  const diagnosisDataMissing = scope.data_needs.filter(d => d.required_for.includes('diagnosis') && !['SUPPLIED', 'NOT_NEEDED'].includes(d.status));
-  for (const d of diagnosisDataMissing) questions.push(question('data-' + d.id, `Can you supply ${d.name}, authorize the required read connection, or use the stated alternative?`, d.why));
+  const diagnosisDataMissing = scope.route === 'diagnostic' ? scope.data_needs.filter(d => d.required_for.includes('diagnosis') && !['SUPPLIED', 'NOT_NEEDED'].includes(d.status)) : [];
+  const requiredMissingData = scope.data_needs.filter(d => !['SUPPLIED', 'NOT_NEEDED'].includes(d.status) && (diagnosisDataMissing.includes(d) || scope.work.some(w => w.data_ids.includes(d.id) || d.required_for.includes(w.id))));
+  for (const d of requiredMissingData) questions.push(question('data-' + d.id, `Can you supply ${d.name}, authorize the required read connection, or use the stated alternative?`, d.why));
+  const activeSourceIds = new Set(scope.work.flatMap(w => [...w.source_ids, ...w.inputs.flatMap(i => i.from.source_id ? [i.from.source_id] : [])]));
+  for (const s of scope.sources.filter(s => activeSourceIds.has(s.id) && s.status !== 'SUPPLIED')) questions.push(question('source-' + s.id, `Can you supply or resolve ${s.title}, or choose a permitted alternative?`, 'Required source evidence is missing or disputed.'));
   const pipelineMissing = scope.route === 'diagnostic' && (scope.pipeline.stages.length < 2 || !scope.pipeline.edges.some(e => e.kind === 'flow'));
   if (pipelineMissing) questions.push(question('pipeline', 'Map the relevant end-to-end process and its subprocesses, sources, missing measurements and handoffs.', 'Do not select a corrective specialist from the initial symptom alone.'));
   const findingsMissing = scope.route === 'diagnostic' && !scope.findings.length;

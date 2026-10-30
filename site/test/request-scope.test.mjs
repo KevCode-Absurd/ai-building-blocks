@@ -45,6 +45,9 @@ test('missing data blocks only dependent work and propagates to its consumers', 
   const p = await prepareScopedRequest(s), byId = new Map(p.work.map(w => [w.id, w]));
   assert.equal(byId.get('audit').state, 'NEEDS_INPUT'); assert.equal(byId.get('fix').state, 'NEEDS_INPUT'); assert.equal(byId.get('independent').state, 'READY_FOR_PLAN_REVIEW');
   assert(byId.get('audit').brief.data_requirements[0].alternative.includes('crawler'));
+  assert(p.questions.some(q => q.id === 'data-logs'));
+  s.data_needs.push({ id: 'optional', name: 'Unrelated marketing report', why: 'Optional background.', status: 'UNKNOWN', required_for: [] });
+  assert(!(await prepareScopedRequest(s)).questions.some(q => q.id === 'data-optional'));
 });
 test('tool discovery and scope review do not grant action authority', async () => {
   const s = directScope(); s.tools = [{ id: 'deploy', name: 'Deployment API', access: 'write', status: 'UNKNOWN', authorization: 'NEEDS_APPROVAL', scope: 'Synthetic preview deployment only' }]; s.work[0].tool_ids = ['deploy'];

@@ -6,7 +6,7 @@
   "method": "Exact published manifest and sitemap match; unchanged published renderer/content inputs."
  },
  "fingerprints": {
-  "https://useaiblocks.com/": "4fe220fe20df1a36347ee11587d461052fd0319e3b9da227019e977b26348af9",
+  "https://useaiblocks.com/": "f67a3d91837b863d82aa055f1219cb3b063679a4fed0a589f5ea2aac649bb88c",
   "https://useaiblocks.com/about": "1c132fa32d80af1b705db6e471de8ece1697eb8bbc2ccb7faaeb5c1011c6ce77",
   "https://useaiblocks.com/agents/ad-fatigue-watcher": "235eb3be5a5415ece9bde02b1305b78f66539fd1ea84ecf90cfe4254e5a14771",
   "https://useaiblocks.com/agents/ad-test-sprint-runner": "2ddf0fdec139e74599c794ca47a27a2dae7fd2bd5f80275c29a014fa256bc268",
@@ -6943,12 +6943,12 @@
   "https://useaiblocks.com/workflows/write-your-founder-story-and-cut-it-to-what-moves": "56d5e93f4df8a68dfc4dbf34eaab766a852e2134d9027d25d8f4572bc43ff38b",
   "https://useaiblocks.com/workflows/write-your-team-culture-memo-and-make-it-real-in-daily-habits": "0996f2e5829dd400842ed8e8b5f32c89c17b7300c31acd6c611e78c2dc9e8191"
  },
- "source_commit": "0fa29e35f99b34551c8aedfd78a69134730985cb",
+ "source_commit": "6e251c5f99d48505181449523544ae628fdcb381",
  "note": "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.",
- "saved": "2026-10-30T13:57:46.573Z",
+ "saved": "2026-10-30T15:11:50.436Z",
  "count": 6936,
  "urls": {
-  "https://useaiblocks.com/": "2026-10-30T12:26:17.000Z",
+  "https://useaiblocks.com/": "2026-10-30T14:52:43.000Z",
   "https://useaiblocks.com/about": "2026-10-29T19:40:49.000Z",
   "https://useaiblocks.com/agents/ad-fatigue-watcher": "2026-10-30T09:37:30.000Z",
   "https://useaiblocks.com/agents/ad-test-sprint-runner": "2026-10-30T09:37:30.000Z",

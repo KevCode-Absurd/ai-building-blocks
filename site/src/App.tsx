@@ -22,6 +22,7 @@ import { infoPage } from "./lib/site-info-nav.mjs";
 import SiteFooter from "./SiteFooter";
 import PageRecovery from "./PageRecovery";
 import { initialPageHtml } from "./lib/public-opening";
+import {readItemOpening} from "./lib/item-opening";
 
 
 // The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
@@ -252,7 +253,7 @@ export default function App() {
   const here = now(pageSlug);
   const redirectTo = LEGACY_PATHS[path] ?? (old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null);
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && !pageError && (pageSlug !== null || ["/from-a-source"].includes(path)
+  const waitingForCatalogue = !c && !pageError && (pageSlug !== null && !readItemOpening(pageSlug) || ["/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });

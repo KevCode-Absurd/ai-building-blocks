@@ -11,6 +11,7 @@ import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
 import {rolePage} from "./lib/role-pages.mjs";
+import {mindDirectory, mindDirectoryUrls} from "./lib/mind-directory.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -67,6 +68,7 @@ const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"))
 const roleIndex = JSON.parse(fs.readFileSync("public/data/roles-index.json", "utf8"));
 const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
+const directoryMinds = cat.blocks.filter(b => b.type === "mind");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const TASK_NAMES = Object.fromEntries(TASKS.map(task => [task.id, task.name]));
 const AREAS = cat.minds?.areas ?? {};
@@ -261,6 +263,7 @@ function underH3(html) {
 const itemList = (entries) => ({ "@type": "ItemList", numberOfItems: entries.length, itemListElement: entries.map(([name, u], i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${u}`, name })) });
 
 function pageFor(url) {
+  if (url.startsWith("/minds/page/")) { const page = mindDirectory(url, directoryMinds); return page ? {...page, plain: true, hub: true, collection: true, crumbs: [["Minds", "/minds"]]} : null; }
   if(url==="/teams")return {title:"Plan your AI team",documentTitle:"Plan an AI specialist team with checked handoffs | AI Blocks",h1:"Plan your AI team",desc:"Plan a team of AI specialists around your task. Review context, methods, handoffs and checks, then save, download and share the workflow with your AI.",content:`<h1>Plan your AI team</h1><p>A coordinator checks the context, offers routes and chooses the smallest useful specialist team. Review the exact plan before production.</p><h2>Start with the right context</h2><p>Reuse your brand brain, brief, assets and project files, or build missing context from verified sources. Load only the relevant current facts and preferences.</p><h2>Review the team and handoffs</h2><p>Choose roles, method revisions, real inputs and outputs, dependencies, tools, permissions and acceptance checks. Edits need fresh review.</p><h2>Save, reuse and share</h2><p>Sign in to save versioned personal or company workflows. Retrieve accepted edits, export complete source files and review a sanitized template before creating a revocable link. Private memory and run data are excluded from sharing.</p><h2>Execute with your connected AI</h2><p>Your AI carries out authorized work with its real tools, checks handoff artifacts and records actual results. A prepared plan does not run a worker, connect an account or activate a schedule.</p><p><a href="/roles">Browse all specialists</a> · <a href="/api-and-mcp">Connect through API and MCP</a></p>`,main:{"@type":"CreativeWork",name:"AI specialist team planner",description:"Review and prepare a contextual team plan for your AI",isAccessibleForFree:true}};
   if (url === "/roles" || url.startsWith("/roles/")) return rolePage(url, roleIndex, id => JSON.parse(fs.readFileSync(`public/data/roles/${id}.json`, "utf8")));
   if (url === "/api-and-mcp") return {
@@ -310,8 +313,8 @@ function pageFor(url) {
   if (STATIC[url]) {
     const [t, d] = STATIC[url];
     let extra = "";
-    // The minds and tools pages list every mind and tool, so each is linked from a page a crawler can read.
-    if (url === "/minds") extra = Object.entries(AREAS).map(([a, name]) => { const ms = cat.blocks.filter((b) => b.type === "mind" && b.area === a); return ms.length ? `<h2>${esc(name)}</h2>${list(ms.map((m) => `${link(m)}: ${esc(m.identity || "")} · ${esc(m.summary)}`))}` : ""; }).join("");
+    // The mind directory links every profile through bounded pages; tools retain their complete list.
+    if (url === "/minds") extra = mindDirectory(url, directoryMinds)?.body ?? "";
     if (url === "/tools") extra = `<p><a href="/ai-tools">Read the AI tool guides</a>: find the right AI product for the job.</p>` + list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
     const [documentTitle, seoDesc] = SEO_PAGES[url] ?? [];
     if (url === "/how-it-works") extra = howItWorksBody();
@@ -320,7 +323,7 @@ function pageFor(url) {
     if (url === "/from-a-source") extra = sourceBody();
     if (url === "/community") extra = communityBody();
     const lede = ["/how-it-works", "/apps", "/compose", "/from-a-source", "/community"].includes(url) ? "" : `<p class="bp-sub">${esc(seoDesc ?? d)}</p>`;
-    const main = url === "/minds" ? itemList(cat.blocks.filter((b) => b.type === "mind").map((b) => [b.name, hrefOf(b)])) : url === "/tools" ? itemList([["Growth channel planner", "/tools/growth-channel-planner"], ...ALL_TOOLS.map((x) => [x.name ?? x.short, `/tools/${x.slug}`])]) : undefined;
+    const main = url === "/minds" ? mindDirectory(url, directoryMinds)?.main : url === "/tools" ? itemList([["Growth channel planner", "/tools/growth-channel-planner"], ...ALL_TOOLS.map((x) => [x.name ?? x.short, `/tools/${x.slug}`])]) : undefined;
     return { title: t, documentTitle, desc: seoDesc ?? d, h1: t, crumbs: [], collection: !!main, main, body: `${lede}${extra}`, ld: { "@type": "WebPage" } };
   }
   const [, kind, slug] = url.split("/");
@@ -524,7 +527,7 @@ function jobsSitemap(hubUrls) {
 }
 
 // One page's HTML: the shell with this page's head tags, structured data and first screen.
-function render(url, p, { plain = false, noindex = false } = {}) {
+function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
   const full = `${SITE}${url === "/" ? "/" : url}`;
   const suffixed = `${p.title} | ${BRAND}`;
   const title = SEO_TITLES[url] || p.documentTitle || (suffixed.length <= 60 ? suffixed : p.title);
@@ -549,7 +552,11 @@ function render(url, p, { plain = false, noindex = false } = {}) {
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
+  const openingBlock = /^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? bySlug[url.split("/")[2]] : null;
+  const openingPage = openingBlock ? readPage(openingBlock.slug) : null;
+  const opening = openingBlock && hrefOf(openingBlock) === url ? {schema: 1, path: url, slug: openingBlock.slug, block: openingBlock, page: Object.fromEntries(["headline", "subhead", "added"].filter(key => typeof openingPage[key] === "string").map(key => [key, openingPage[key]]))} : null;
   const head = [
+    opening ? `<script type="application/json" id="abb-item-opening">${JSON.stringify(opening).replace(/</g, "\\u003c")}</script>` : "",
     p.stylesheet ? `<link rel="stylesheet" href="/assets/${p.stylesheet}" />` : "",
     noindex ? "" : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`,
     p.markdown ? `<link rel="alternate" type="text/markdown" href="${p.markdown}" title="${p.json ? "Markdown version" : "The skill file"}" />` : "",
@@ -571,6 +578,12 @@ function render(url, p, { plain = false, noindex = false } = {}) {
 const write = (url, html) => { const out = path.join(DIST, `${url.slice(1)}.html`); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, html); };
 
 const urls = [...fs.readdirSync("public").filter((f) => /^sitemap-.*.xml$/.test(f)).map((f) => fs.readFileSync(`public/${f}`, "utf8")).join("").matchAll(/<loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>/g)].map((m) => m[1] || "/");
+const mindPages = mindDirectoryUrls(directoryMinds).slice(1);
+for (const url of mindPages) if (!urls.includes(url)) urls.push(url);
+// Keep the extra directory pages in the existing minds sitemap.
+const mindsSitemap = path.join(DIST, "sitemap-minds.xml");
+const mindsXml = fs.readFileSync(mindsSitemap, "utf8");
+fs.writeFileSync(mindsSitemap, mindsXml.replace(/\s*<url><loc>https:\/\/useaiblocks\.com\/minds\/page\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "").replace("</urlset>", mindPages.map(url => `  <url><loc>${SITE}${url}</loc></url>`).join("\n") + "\n</urlset>"));
 if (!urls.includes("/api-and-mcp")) urls.push("/api-and-mcp");
 if (!urls.includes("/me-md")) urls.push("/me-md");
 // Imported pages without a Tested label still get a page and stay indexable.

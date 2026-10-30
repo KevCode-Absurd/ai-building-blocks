@@ -1,6 +1,30 @@
 import {test, expect} from '@playwright/test';
 
 for(const mobile of [false,true]){
+ test((mobile?'@mobile ':'')+'public skill header opens before its item download and stays mounted when data arrives',async({page})=>{
+  if(mobile)await page.setViewportSize({width:412,height:823});
+  await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'Local read-only fixture'}}));
+  let release!:()=>void;const item=new Promise<void>(resolve=>{release=resolve;});
+  await page.route('**/data/items/voice-and-tone-guide-writer.json',async r=>{await item;await r.continue();});
+  try{
+   await page.goto('/skills/voice-and-tone-guide-writer',{waitUntil:'domcontentloaded'});
+   await expect(page.locator('#abb-item-opening')).toHaveCount(1);
+   const opening=page.getByTestId('block-opening'),heading=opening.getByRole('heading',{level:1});
+   await expect(opening).toBeVisible();await expect(page.locator('html')).toHaveAttribute('data-boot','ready');
+   await expect(page.getByText('Opening the task controls…',{exact:true})).toBeVisible();
+   await expect(page.getByTestId('skill-neighbours')).toHaveCount(0);
+   await page.evaluate(()=>document.fonts.ready);
+   const before=await opening.boundingBox(),copy=await opening.innerText();
+   await heading.evaluate(el=>{(window as any).__earlySkillHeading=el;});
+   await page.getByTestId('menu-btn').click();await expect(page.getByTestId('menu-btn')).toHaveAttribute('aria-expanded','true');
+   await page.keyboard.press('Escape');release();
+   await expect(page.getByTestId('skill-neighbours')).toBeVisible();
+   expect(await opening.innerText()).toBe(copy);
+   expect(await heading.evaluate(el=>el===(window as any).__earlySkillHeading)).toBe(true);
+   expect(Math.abs((await opening.boundingBox())!.height-before!.height)).toBeLessThan(1);
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+  }finally{release();}
+ });
  test((mobile?'@mobile ':'')+'skill opening remains readable and keeps the same heading while task controls download',async({page})=>{
   if(mobile)await page.setViewportSize({width:412,height:823});
   await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'Local read-only fixture'}}));

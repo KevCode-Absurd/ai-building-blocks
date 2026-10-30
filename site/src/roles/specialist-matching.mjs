@@ -1,7 +1,7 @@
 // Deterministic candidate retrieval; the host AI checks the full remit against private context.
 const STOP=new Set('a an the i my our your we you please need want help me with for to of in on and or as at by from it this that some task specialist role ai can do use using have would like'.split(' '));
 const aliases={
- 'coding-specialist':'code coding software engineering developer repository repo bug debugging implementation testing deploy deployment',
+ 'coding-specialist':'code coding software engineering developer develop build implement implementation repository repo bug debugging testing deploy deployment api integration database script',
  'design-specialist':'design designer ui ux interface layout visual accessibility prototype figma',
  'executive-assistant':'executive assistant calendar schedule meetings inbox email admin administration day daily preparation',
  'customer-support-specialist':'customer support helpdesk tickets replies refunds escalation service',
@@ -12,6 +12,20 @@ const aliases={
 const stem=w=>w.replace(/(?:ing|ers|er|ed|s)$/,'');
 const words=s=>[...new Set((s.toLowerCase().match(/[a-z0-9]+/g)??[]).filter(w=>w.length>1&&!STOP.has(w)).map(stem))];
 // Broad jobs should start with a complete matching remit rather than an incidental word.
+// Determine the requested artifact before its business domain: coding an SEO API
+// needs implementation methods; auditing a site's SEO still needs an SEO remit.
+function artifactIntent(task) {
+ const build=/\b(?:build|develop|implement|code|program|create)\b/i.test(task)
+   || /\b(?:write|convert|parse|transform)\b[^.!?]{0,100}\b(?:code|script|csv|json|records)\b/i.test(task);
+ const software=/\b(?:api|sdk|integration|database|sql|typescript|javascript|python|react|code|codebase|repository|script|software|plugin)\b/i.test(task);
+ const content=/\b(?:write|draft|create)\b[^.!?]{0,60}\b(?:ad copy|promotional copy|email sequence|blog post|article|newsletter)\b/i.test(task);
+ if(content)return null;
+ if(build&&software)return 'coding-specialist';
+ const design=/\b(?:design|redesign|prototype|wireframe)\b/i.test(task);
+ const visual=/\b(?:interface|screen|layout|figma|prototype|wireframe|ui|ux|dashboard)\b/i.test(task);
+ if(design&&visual&&!software)return 'design-specialist';
+ return null;
+}
 const intents=[
  [/\b(?:bug|debug|debugging)\b|\b(?:error|failure)\b.*\b(?:code|codebase|repo|json|test)\b|\b(?:code|codebase|repo|json|test)\b.*\b(?:error|failure)\b/i,'fix-a-bug-with-proof-and-a-clear-pull-request'],
  [/\b(?:build|create|implement|code)\b.*\blanding page\b/i,'build-a-landing-page-fix-it-and-prove-the-top-change'],
@@ -23,7 +37,7 @@ const intents=[
 ];
 export function rankSpecialists(index,task,limit=5,area='all') {
  const terms=words(task);if(!terms.length)return [];
- const preferred=intents.find(([pattern])=>pattern.test(task))?.[1];
+ const preferred=artifactIntent(task)??intents.find(([pattern])=>pattern.test(task))?.[1];
  const docs=index.roles.filter(r=>area==='all'||r.area===area).map(r=>({r,fields:[words(r.name),words(r.summary),words(r.deliverables.join(' ')),words(aliases[r.id]??'')]}));
  const frequency=new Map(terms.map(t=>[t,docs.filter(d=>d.fields.some(f=>f.includes(t))).length]));
  return docs.map(({r,fields})=>{

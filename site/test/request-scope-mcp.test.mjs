@@ -27,6 +27,30 @@ function realPlan(prepared) {
 }
 const assignments = p => p.work.map(w => ({ work_id: w.id, stage_id: w.id }));
 
+test('declared evidence revisions survive scope normalization and must match selected team context', async () => {
+  const f = fixture(), s = directScope(); s.sources[0].revision_sha256 = 'b'.repeat(64);
+  const p = await prepareScopedRequest(s), plan = realPlan(p);
+  assert.equal(p.scope.sources[0].revision_sha256, s.sources[0].revision_sha256);
+  const invoke = () => f.service.callTool('prepare_scoped_specialist_team', { scope: p.scope, scope_sha256: p.scope_sha256, plan, assignments: assignments(p) });
+  await assert.rejects(invoke, /source revisions/);
+  plan.context[0].revision_sha256 = 'c'.repeat(64); await assert.rejects(invoke, /source revisions/);
+  plan.context[0].revision_sha256 = s.sources[0].revision_sha256;
+  const r = await invoke(); assert.equal(r.plan.context[0].revision_sha256, s.sources[0].revision_sha256);
+  s.sources[0].revision_sha256 = 'c'.repeat(64); assert.notEqual((await prepareScopedRequest(s)).scope_sha256, p.scope_sha256);
+  s.sources[0].revision_sha256 = 'not-a-hash'; await assert.rejects(() => prepareScopedRequest(s), /SHA-256 source/);
+});
+
+test('partial team exports only selected prompts and explicitly retains deferred and blocked backlog', async () => {
+  const f = fixture(), s = diagnosticScope(); s.findings[0].status = 'HYPOTHESIS';
+  s.work.push({ ...structuredClone(s.work[1]), id: 'later-audit', title: 'Optional independent audit' });
+  const p = await prepareScopedRequest(s), plan = realPlan(p); plan.stages = plan.stages.filter(s => s.id === 'audit');
+  const r = await f.service.callTool('prepare_scoped_specialist_team', { scope: p.scope, scope_sha256: p.scope_sha256, plan, assignments: [{ work_id: 'audit', stage_id: 'audit' }] });
+  const selection = JSON.parse(r.files['scope/selection.json']);
+  assert.deepEqual(Object.fromEntries(selection.work.map(w => [w.work_id, w.disposition])), { audit: 'SELECTED', fix: 'BLOCKED', 'later-audit': 'DEFERRED' });
+  assert(r.files['scope/prompts/audit.txt']); assert.equal(r.files['scope/prompts/fix.txt'], undefined); assert.equal(r.files['scope/prompts/later-audit.txt'], undefined);
+  assert.equal(JSON.parse(r.files['scope/scope.json']).work.length, 3); assert(r.files['START_HERE.txt'].includes('must not run'));
+});
+
 test('real catalogue matching uses explicit discovery text and preserves private brief separately', async () => {
   const f = fixture(), s = directScope(); s.subject += ' PRIVATE_CONTEXT_SENTINEL';
   const p = await f.service.callTool('prepare_scoped_specialist_work', { scope: s });

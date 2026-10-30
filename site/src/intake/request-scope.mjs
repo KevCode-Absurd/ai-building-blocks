@@ -49,9 +49,13 @@ export function validateRequestScope(input) {
   keys(p, ['schema', 'id', 'request', 'route', 'domain', 'subject', 'goal', 'symptom', 'deliverables', 'acceptance_checks', 'constraints', 'exclusions', 'sources', 'data_needs', 'tools', 'pipeline', 'findings', 'work'], 'Scope');
   if (p.schema !== undefined && p.schema !== SCOPE_SCHEMA) fail('Unknown request-scope schema.');
   const sources = array(p.sources, 'sources').map(s => {
-    object(s, 'Source'); keys(s, ['id', 'title', 'locator', 'as_of', 'status'], 'Source'); const date = s.as_of ?? null;
+    object(s, 'Source'); keys(s, ['id', 'title', 'locator', 'as_of', 'status', 'revision_sha256'], 'Source'); const date = s.as_of ?? null;
     if (date !== null && (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date)) fail('Use a real source date or null.');
     const result = { id: id(s.id), title: text(s.title, 'source title', 300), locator: locator(s.locator ?? ''), as_of: date, status: choice(s.status, ['SUPPLIED', 'MISSING', 'DISPUTED'], 'source status') };
+    if (s.revision_sha256 !== undefined) {
+      if (!HASH.test(s.revision_sha256)) fail('Use a SHA-256 source revision.');
+      result.revision_sha256 = s.revision_sha256;
+    }
     if (result.status === 'SUPPLIED' && !result.locator) fail('Supplied evidence needs a source locator.'); return result;
   });
   const sourceMap = keyed(sources, 'Source ids');

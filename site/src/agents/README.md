@@ -70,4 +70,8 @@ No model calls, source discovery, credentials, semantic assessment, weight train
 
 Development cases are visible to the expert. Hidden publication tests must live in a different restricted evaluation service. Local JSON checks do not prove that a host obeys the worker instructions.
 
-Next PRs add guided capture/feedback, authenticated storage, real client trials and full private exports. Publication, marketplace hiring and commercial execution follow separate evidence and integration work.
+## Guided capture and feedback
+
+[CAPTURE.md](CAPTURE.md) describes the interview/work-review flow, evidence, inactive proposals, exact preview review and parent-linked candidate revisions. The pure functions live in `expert-agent-capture.mjs`; they do not persist data or run a model. Add `site/test/expert-agent-capture.test.mjs` to the check command above to cover this flow.
+
+Next PRs add authenticated storage, real client trials and full private exports. Publication, marketplace hiring and commercial execution follow separate evidence and integration work.

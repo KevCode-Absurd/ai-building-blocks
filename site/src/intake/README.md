@@ -27,6 +27,8 @@ node site/scripts/scoping-mcp-preview.mjs
 
 By default it reads public catalogue assets with HTTPS GET from `https://useaiblocks.com`. Private scope data stays in the local process; it is not posted to that origin. Model inference and task execution remain in the host AI. For offline/local trials, pass `--catalogue-dir PATH_TO_GENERATED_SITE_PUBLIC`. A separately deployed catalogue can be selected with `--catalogue-origin HTTPS_ORIGIN`. Normal source hash/revision checks still apply. No production configuration is changed by starting this local server.
 
+The preview keeps a catalogue snapshot for at most 30 seconds. A publication mismatch retries one read or preparation against a fresh snapshot, keeping the original inputs and pinned revisions. Repeated mismatches and validation failures remain errors. Failed loads do not poison later calls. Production API caching is unchanged.
+
 In a host's MCP settings, choose stdio, set the command to the absolute Node 24 executable, and pass the absolute path to `site/scripts/scoping-mcp-preview.mjs` as its argument. No API key is required for public catalogue reads. This PR supplies the entry point; it does not install it into the user's global settings or claim that a live Codex conversation has completed the workflow.
 
 ## Records and exports

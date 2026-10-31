@@ -13,6 +13,7 @@
 .result-line { margin-top: 20px; align-items: center; flex-wrap: wrap; }
 .result-line > span { flex: 1 1 160px; min-width: 0; }
 .result-line .btn { flex: 0 0 auto; white-space: nowrap; }
+.library-more { padding-bottom: 32px; }
 .home-collection { border-top: 1px solid var(--line); content-visibility: auto; contain-intrinsic-size: auto 720px; }
 .home-section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
 .home-section-head > div { max-width: 46em; min-width: 0; }

@@ -103,3 +103,5 @@ An enabled MCP configuration is not proof the current host exposes its tools. Ve
 - No live Gehna change occurs during the recommendations-only demonstration.
 
 Deployment and measured quality are verified by separate release receipts; this document alone does not prove either.
+
+Explicit recommendation selections require every selected dependency-closure task to be assigned or listed in `deferred_work` with a nonempty reason. Deferrals cannot overlap assignments or refer to unselected work. The exact recommendation IDs, selection digest and deferrals appear in the reviewed plan notes, `scope/selection.json` and scoping binding. This lets an independent ready phase proceed without silently dropping the remaining chosen work; deferred deliverables are not completed.

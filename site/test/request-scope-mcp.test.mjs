@@ -1,3 +1,4 @@
+import { outcomeScope } from './fixtures/outcome-delivery-fixtures.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -122,4 +123,35 @@ test('official MCP stdio client completes qualification, scoped matching, source
     const resource = await client.readResource({ uri: 'aiblocks://roles/seo-specialist' }); assert(resource.contents.length);
     const team = await call('prepare_scoped_specialist_team', { scope: s, scope_sha256: p.scope_sha256, plan: realPlan(p), assignments: assignments(p) }); assert.equal(team.state, 'AWAITING_REVIEW'); assert.equal(team.scoping.scope_sha256, p.scope_sha256);
   } finally { await client.close(); }
+});
+
+test('selected recommendations require a complete assigned or explicitly deferred work partition and bind the exact choice', async () => {
+  const f = fixture(), p = await prepareScopedRequest(outcomeScope()), full = realPlan(p);
+  const partial = structuredClone(full); partial.stages = partial.stages.filter(s => s.id !== 'other-fix');
+  const chosenAssignments = assignments(p).filter(a => a.work_id !== 'other-fix');
+  const invoke = (ids, deferred_work, plan = partial, selectedAssignments = chosenAssignments) => f.service.callTool('prepare_scoped_specialist_team', { scope: p.scope, scope_sha256: p.scope_sha256, plan, assignments: selectedAssignments, selected_recommendation_ids: ids, ...(deferred_work === undefined ? {} : { deferred_work }) });
+  await assert.rejects(() => invoke(['R1','R2']), /all selected dependency-closure/);
+  assert.equal(f.calls.length, 0);
+  const one = await invoke(['R1']);
+  const reason = [{ work_id: 'other-fix', reason: 'Explicitly defer this selected branch for the next reviewed phase.' }];
+  const two = await invoke(['R1','R2'], reason);
+  assert.notEqual(one.plan_sha256, two.plan_sha256);
+  assert.notEqual(one.scoping.binding_sha256, two.scoping.binding_sha256);
+  const saved = JSON.parse(two.files['scope/selection.json']);
+  assert.deepEqual(saved.recommendation_selection.selected_recommendation_ids, ['R1','R2']);
+  assert.deepEqual(saved.recommendation_selection.deferred_work, reason);
+  assert.equal(saved.recommendation_selection.all_selected_work_assigned, false);
+  assert.match(saved.recommendation_selection.selection_sha256, /^[a-f0-9]{64}$/);
+  assert(two.plan.notes.includes(reason[0].reason));
+  assert.equal(saved.work.find(w=>w.work_id==='other-fix').deferred_reason, reason[0].reason);
+  const changed = await invoke(['R1','R2'], [{work_id:'other-fix',reason:'A different reviewed deferral.'}]);
+  assert.notEqual(changed.scoping.binding_sha256, two.scoping.binding_sha256);
+  await assert.rejects(() => invoke(['R1','R2'], [{work_id:'fix',reason:'Already assigned.'}]), /unique selected, unassigned/);
+  await assert.rejects(() => invoke(['R1','R2'], [{work_id:'other-fix',reason:''}]), /explicit reason/);
+  await assert.rejects(() => invoke(['R1','R2'], [...reason,...reason]), /unique selected, unassigned/);
+  await assert.rejects(() => invoke(['R1'], reason), /unique selected, unassigned/);
+  const all = await invoke(['R1','R2'], undefined, full, assignments(p));
+  assert.equal(all.scoping.recommendation_selection.all_selected_work_assigned, true);
+  assert.deepEqual(all.scoping.recommendation_selection.deferred_work, []);
+  assert.equal(all.review.grants_execution_authority, false);
 });

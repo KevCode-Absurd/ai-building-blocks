@@ -265,6 +265,17 @@ export function findPython() {
   return null;
 }
 
+// A failed launch can have no stdout/stderr. Keep the actual process diagnostic
+// and fail the check instead of throwing while formatting its error.
+function pythonFailure(result) {
+  return [
+    result.error && `${result.error.code ?? result.error.name}: ${result.error.message}`,
+    result.signal && `signal ${result.signal}`,
+    Number.isInteger(result.status) && `exit ${result.status}`,
+    typeof result.stderr === "string" && result.stderr.trim().split("\n").at(-1),
+  ].filter(Boolean).join("; ") || "process returned no status or diagnostic";
+}
+
 /** Way 4, the AI's code: run the Python the skill gives the AI, on every example, and compare. */
 export function checkPython(tool, examples, code, python = findPython()) {
   if (!python) return { skipped: true, problems: [] };
@@ -275,12 +286,12 @@ export function checkPython(tool, examples, code, python = findPython()) {
     fs.writeFileSync(file, code);
     fs.writeFileSync(data, JSON.stringify(examples.map((ex) => exampleValues(tool, ex))));
     const r = spawnSync(python, ["-I", file, "--json", data], { encoding: "utf8" });
-    if (r.status !== 0) return { skipped: false, problems: [`python: the code failed: ${r.stderr.trim().split("\n").at(-1)}`] };
+    if (r.status !== 0) return { skipped: false, problems: [`python: the code failed: ${pythonFailure(r)}`] };
     const got = JSON.parse(r.stdout);
     const problems = examples.flatMap((ex, k) => diff("python", ex, got[k]));
     // And it runs as the AI will run it, printing the working, without an error.
     const plain = spawnSync(python, ["-I", file], { encoding: "utf8" });
-    if (plain.status !== 0) problems.push(`python: printing the working failed: ${plain.stderr.trim().split("\n").at(-1)}`);
+    if (plain.status !== 0) problems.push(`python: printing the working failed: ${pythonFailure(plain)}`);
     else if (!/THE WORKING, LINE BY LINE/.test(plain.stdout)) problems.push("python: didn't print the working");
     return { skipped: false, problems, printed: plain.stdout };
   } finally {

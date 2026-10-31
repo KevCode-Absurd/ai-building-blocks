@@ -178,14 +178,14 @@ const mcpClient = async () => {
 };
 const loose = z.object({}).passthrough();
 
-test('an official SDK client sees thirteen tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
+test('an official SDK client sees eighteen tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
-    assert.equal(client.getServerVersion().version, '2.0.0');
+    assert.equal(client.getServerVersion().version, '2.1.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
     const toolNames=(await client.listTools()).tools.map(t=>t.name);
-    assert.equal(toolNames.length, 13);
+    assert.equal(toolNames.length, 18);
     assert(toolNames.includes('prepare_specialist_team')&&toolNames.includes('checkpoint_specialist_team'));
     for (const [name, args] of [['search_library', { query: 'margin' }], ['get_item', { id: 'pic-maker' }], ['get_skill', { slug: 'brief-writer' }], ['get_workflow', { slug: 'ad-flow' }], ['search', { query: 'brief' }], ['fetch', { id: 'skill/draft-checker' }]]) {
       const result = await client.callTool({ name, arguments: args });

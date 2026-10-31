@@ -1,3 +1,4 @@
+import { SCOPE_REST_OPERATIONS } from '../intake/request-scope-mcp.mjs';
 import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js';
 import { apiSecurity, type SecurityEnv } from './api-security.ts';
 import { PublicCatalogueService, PublicApiError } from './public-catalogue.ts';
@@ -144,14 +145,14 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       mcp: { url: `${url.origin}/mcp`, server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
-    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints') {
+    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route)) {
       if (request.method !== 'POST') return finish(publicJson(405, { error: { code: 'method_not_allowed', message: 'Use POST.' } }, { allow: 'POST, OPTIONS' }));
       if (!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type') ?? '')) return finish(publicJson(415, { error: { code: 'unsupported_media_type', message: 'Use application/json.' } }));
       let input: unknown;
       try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request))); }
       catch (error) { if (error instanceof PublicApiError) throw error; throw new PublicApiError(400, 'invalid_json', 'Send a valid JSON object.'); }
       if (!input || typeof input !== 'object' || Array.isArray(input)) throw new PublicApiError(400, 'invalid_arguments', 'Send a JSON object.');
-      const operation=route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow';
+      const operation=(SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
       return finish(publicJson(200, await service.callTool(operation, input as Record<string, unknown>)));
     }
     if (route === '/api/v1/specialists' || /^\/api\/v1\/specialists\/[a-z0-9][a-z0-9-]{0,69}$/.test(route)) {
@@ -200,6 +201,7 @@ function openApi(origin: string) {
     '/api/v1/items/{id}': { get: { operationId: 'get_item', parameters: parameters('get_item', 'id'), responses: { '200': response } } },
     '/api/v1/documents': { get: { operationId: 'search', parameters: parameters('search'), responses: { '200': response } } },
     '/api/v1/documents/{id}': { get: { operationId: 'fetch', description: 'id is type/id from search, such as skill/ad-angle-planner.', parameters: parameters('fetch', 'id'), responses: { '200': response } } },
+    ...Object.fromEntries(Object.entries(SCOPE_REST_OPERATIONS).map(([path, operationId]) => [path, { post: { operationId, description: 'Stateless host-authored scope and recommendation preparation; no persistence, hosted execution or action authority. Existing request-body limits apply.', requestBody: { required: true, content: { 'application/json': { schema: schema(operationId) } } }, responses: { '200': response } } }])),
     '/api/v1/workflow-preparations': { post: { operationId: 'prepare_workflow', requestBody: { required: true, content: { 'application/json': { schema: schema('prepare_workflow') } } }, responses: { '200': response } } },
     '/api/v1/specialists': { get: {operationId:'find_specialist',parameters:parameters('find_specialist'),responses:{'200':response}} },
     '/api/v1/specialists/{role_id}': {get:{operationId:'get_specialist',parameters:[{name:'role_id',in:'path',required:true,schema:{type:'string'}}],responses:{'200':response}}},

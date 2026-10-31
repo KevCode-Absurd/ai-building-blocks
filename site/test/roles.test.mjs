@@ -33,8 +33,8 @@ test('every existing agent and complete workflow has a distinct role setup with 
 });
 test('role capabilities, inputs, outputs and usage come from their real methods, with complete sources and credits',()=>{
  for(const r of built.profiles){
-  const p=page(r.lead);assert.deepEqual(r.inputs,strings(p.you_give),r.id);assert.deepEqual(r.deliverables,strings(p.you_get),r.id);
-  assert.deepEqual(r.fit,strings(p.when),r.id);assert.deepEqual(r.limits,[...strings(p.not_for),...strings(FEATURED_ROLES.find(seed=>seed.id===r.id)?.limits)],r.id);assert.deepEqual(r.method,strings(p.how_to_use),r.id);
+  const p=page(r.lead), seed=FEATURED_ROLES.find(seed=>seed.id===r.id);assert.deepEqual(r.inputs,strings(seed?.remit?.inputs??p.you_give),r.id);assert.deepEqual(r.deliverables,strings(seed?.remit?.deliverables??p.you_get),r.id);
+  assert.deepEqual(r.fit,strings(seed?.remit?.fit??p.when),r.id);assert.deepEqual(r.limits,[...strings(seed?.remit?.limits??p.not_for),...strings(seed?.limits)],r.id);assert.deepEqual(r.method,strings(p.how_to_use),r.id);
   assert(r.capabilities.length&&r.functions.length&&r.inputs.length&&r.deliverables.length,r.id);
   assert.equal(r.catalogueHash,c.sourceHash);assert(r.instructions.includes('not executed'));
   assert.equal(YAML.parse(r.instructions.split('---')[1]).name,'custom-role-'+r.id);
@@ -71,4 +71,12 @@ test('the role directory opens only one complete batch while all identities rema
  assert(gzipSync(Buffer.from(JSON.stringify(starter))).length<50_000,'Initial role data must stay small despite directory breadth.');
  const search=JSON.parse(read('data/roles-search.json'));assert.deepEqual(search.roles,built.index.roles);assert.equal(search.starter,undefined);
  for(let p=2;p<=Math.ceil(built.profiles.length/24);p++){const paged=JSON.parse(read('data/roles-pages/'+p+'.json')),from=(p-1)*24;assert.deepEqual(paged.roles.slice(from,from+24),built.index.roles.slice(from,from+24));}
+});
+
+test('the media-buyer role covers existing-account diagnosis while retaining complete individual methods',()=>{
+ const r=byId.get('media-buyer');
+ assert(r.fit.some(x=>x.includes('existing')));
+ for(const slug of ['meta-results-review-agent','ad-sales-drop-analyst'])assert(r.resources.some(x=>x.slug===slug),slug);
+ assert(r.limits.some(x=>x.includes('Platform reporting alone')));
+ assert(r.instructions.includes('source-method')||r.instructions.includes('method limits')||r.instructions.includes('their scope, limitations'));
 });

@@ -1,5 +1,5 @@
 import {TASK_DELIVERABLE} from './specialist-worker.mjs';
-import {useEffect,useMemo,useRef,useState,useSyncExternalStore} from 'react';
+import {useEffect,useLayoutEffect,useMemo,useRef,useState,useSyncExternalStore} from 'react';
 import {Link,navigate} from '../lib/router';
 import {flows,uid,type Flow} from '../lib/store';
 import {library} from '../lib/library-storage';
@@ -21,7 +21,7 @@ function RoleForm({role,owner,toast}:{role:RoleProfile;owner:string;toast:(text:
  const business=useBusiness();
  const heading=useRef<HTMLHeadingElement>(null),alive=useRef(true),flowId=useRef(uid());
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;};},[]);
- useEffect(()=>{try{sessionStorage.setItem(draftKey(role.id,owner),JSON.stringify(draft));}catch{}},[draft,role.id,owner]);
+ useLayoutEffect(()=>{try{sessionStorage.setItem(draftKey(role.id,owner),JSON.stringify(draft));}catch{}},[draft,role.id,owner]);
  const update=(change:Partial<Draft>)=>{setDraft(d=>({...d,...change}));setError('');setSaved(null);};
  const selected=role.resources.filter(r=>draft.resources.includes(r.slug));
  const context=useMemo(()=>draft.useMe?meFor(business,selected).trim():'',[draft.useMe,draft.resources,role,business]);

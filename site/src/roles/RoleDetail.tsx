@@ -1,12 +1,18 @@
-import {lazy,Suspense,useState} from 'react';
+import {lazy,Suspense,useState,useSyncExternalStore} from 'react';
+import {library} from '../lib/library-storage';
 import WorkerGuide from './WorkerGuide';
 import BaseSpecialistPanel from './BaseSpecialistPanel';
 import {Link} from '../lib/router';
 import type {RoleView} from './role-types';
 import './roles.css';
 const TaskSetup=lazy(()=>import('./RoleTaskSetup'));
+function TaskContext({role,toast,owner}:{role:RoleView;toast:(text:string)=>void;owner:string}){
+ const key='abb:role-context-open:'+owner+':'+role.id;
+ const [open,setOpen]=useState(()=>{try{return sessionStorage.getItem(key)==='true';}catch{return false;}}),[loaded,setLoaded]=useState(open);
+ return <details className="role-context-option" open={open} onToggle={e=>{const next=e.currentTarget.open;setOpen(next);if(next)setLoaded(true);try{sessionStorage.setItem(key,String(next));}catch{}}}><summary>Add task context before downloading (optional)</summary>{loaded&&<Suspense fallback={<section className="role-form"><p role="status">Opening task setup…</p></section>}><TaskSetup role={role} toast={toast}/></Suspense>}</details>;
+}
 export default function RoleDetail({role,toast}:{role:RoleView|null;toast:(text:string)=>void}){
- const [setupOpened,setSetupOpened]=useState(false);
+ const owner=useSyncExternalStore(library.subscribe,()=>library.snapshot().user??'guest');
  if(!role)return <section className="wrap role-pending"><p role="status">Opening this role…</p></section>;
  return <div className="wrap role-profile-grid"><div className="role-profile" data-testid="role-profile">
   <div className="role-details-count"><span>{role.resourceCount} core {role.resourceCount===1?'method':'methods'}</span><span>Full sources included</span><span>Runs in your AI</span></div>
@@ -18,5 +24,5 @@ export default function RoleDetail({role,toast}:{role:RoleView|null;toast:(text:
   <section className="role-profile-section"><h2>Functions and deliverables</h2><p className="small">Each method gives this role a function it can use for your task. It keeps the source's scope, instructions and credits.</p><ul className="role-methods">{role.resources.map(r=><li className="role-method" key={r.slug}><span className="role-method-kind">{r.kind}{r.slug===role.lead?' · primary method':r.onboarding?' · context setup when needed':r.bundled?' · included with the primary method':''}</span><h3><Link to={r.path}>{r.name} ↗</Link></h3><p>{r.summary}</p>{role.functions.find(f=>f.method===r.slug)?.deliverables.length?<details><summary>Deliverables from this function</summary><ul>{role.functions.find(f=>f.method===r.slug)!.deliverables.map((d,i)=><li key={i}>{d}</li>)}</ul></details>:null}{r.by&&<span className="small">{r.by}{r.license?` · ${r.license}`:''}</span>}</li>)}</ul><Link to="/api-and-mcp">Give your AI access to the wider library</Link></section>
   <section className="role-profile-section"><h2>Best way to use this role</h2><p>Give it one clear outcome, your actual files and a definition of done. Keep the work in the same AI project so it can reuse the checked context and earlier files.</p>{role.method.length>0&&<details><summary>Primary method's usage guide</summary><ol>{role.method.map((m,i)=><li key={i}>{m}</li>)}</ol></details>}<ol><li>Describe the task and choose the deliverables you need.</li><li>Add the real source material, tool access and limits. Keep secrets out of task notes.</li><li>Review the launch brief, then give the complete pack to your AI.</li><li>Ask it to carry out the work and check the resulting files. Resolve required missing inputs and approvals as they arise.</li><li>Keep its files, check results and handoff together for the next task.</li></ol></section>
   <section className="role-profile-section"><details><summary>Limits to check before starting</summary><ul>{role.limits.map(d=><li key={d}>{d}</li>)}</ul></details><p className="small">This setup has not run your task. The final report must name checks that passed, failed or could not run.</p></section>
- </div><div className="role-start-options"><BaseSpecialistPanel key={role.id} role={role} toast={toast}/><details className="role-context-option" onToggle={e=>{if(e.currentTarget.open)setSetupOpened(true);}}><summary>Add task context before downloading (optional)</summary>{setupOpened&&<Suspense fallback={<section className="role-form"><p role="status">Opening task setup…</p></section>}><TaskSetup role={role} toast={toast}/></Suspense>}</details></div></div>;
+ </div><div className="role-start-options"><BaseSpecialistPanel key={role.id} role={role} toast={toast}/><TaskContext key={role.id+':'+owner} role={role} owner={owner} toast={toast}/></div></div>;
 }

@@ -155,6 +155,13 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       const operation=(SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
       return finish(publicJson(200, await service.callTool(operation, input as Record<string, unknown>)));
     }
+    const specialistPack=route.match(/^\/api\/v1\/specialists\/([a-z0-9][a-z0-9-]{0,69})\/pack$/);
+    if(specialistPack){
+      if(!['GET','HEAD'].includes(request.method))return finish(publicJson(405,{error:{code:'method_not_allowed',message:'Use GET.'}},{allow:'GET, HEAD, OPTIONS'}));
+      if(url.search)throw new PublicApiError(400,'invalid_arguments','The base specialist pack does not accept task context or query parameters.');
+      const pack=await service.specialistPack(specialistPack[1]);
+      return finish(new Response(pack.bytes as BodyInit,{headers:{'content-type':'application/zip','content-disposition':`attachment; filename="${pack.filename}"`,'cache-control':'no-store','x-content-sha256':await sha256(pack.bytes)}}));
+    }
     if (route === '/api/v1/specialists' || /^\/api\/v1\/specialists\/[a-z0-9][a-z0-9-]{0,69}$/.test(route)) {
       if (!['GET','HEAD'].includes(request.method)) return finish(publicJson(405,{error:{code:'method_not_allowed',message:'Use GET.'}},{allow:'GET, HEAD, OPTIONS'}));
       if(route!=='/api/v1/specialists'){
@@ -205,6 +212,7 @@ function openApi(origin: string) {
     '/api/v1/workflow-preparations': { post: { operationId: 'prepare_workflow', requestBody: { required: true, content: { 'application/json': { schema: schema('prepare_workflow') } } }, responses: { '200': response } } },
     '/api/v1/specialists': { get: {operationId:'find_specialist',parameters:parameters('find_specialist'),responses:{'200':response}} },
     '/api/v1/specialists/{role_id}': {get:{operationId:'get_specialist',parameters:[{name:'role_id',in:'path',required:true,schema:{type:'string'}}],responses:{'200':response}}},
+    '/api/v1/specialists/{role_id}/pack': {get:{operationId:'download_base_specialist',parameters:[{name:'role_id',in:'path',required:true,schema:{type:'string'}}],responses:{'200':{description:'Complete base specialist ZIP with verified methods, supporting files and licences; no private task context.',content:{'application/zip':{schema:{type:'string',format:'binary'}}}}}}},
     '/api/v1/specialist-preparations': {post:{operationId:'prepare_specialist',requestBody:{required:true,content:{'application/json':{schema:schema('prepare_specialist')}}},responses:{'200':response}}},
     '/api/v1/specialist-team-preparations': {post:{operationId:'prepare_specialist_team',requestBody:{required:true,content:{'application/json':{schema:schema('prepare_specialist_team')}}},responses:{'200':response}}},
     '/api/v1/specialist-team-checkpoints': {post:{operationId:'checkpoint_specialist_team',requestBody:{required:true,content:{'application/json':{schema:schema('checkpoint_specialist_team')}}},responses:{'200':response}}},

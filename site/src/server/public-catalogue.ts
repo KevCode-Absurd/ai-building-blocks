@@ -3,6 +3,7 @@ import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import {rankSpecialists} from "../roles/specialist-matching.mjs";
 import {specialistFiles,specialistPorts,TASK_DELIVERABLE} from "../roles/specialist-worker.mjs";
 import {roleLaunchPrompt,validateRoleBrief} from "../roles/role-runtime.ts";
+import {baseSpecialistFiles,baseSpecialistPrompt} from '../roles/base-specialist.mjs';
 import {prepareTeamPlan,createTeamRun,reconcileTeamRun,recordTeamArtifact,acceptTeamInput,recordTeamCheck,setTeamStageState,recordTeamAction} from '../teams/team-contract.mjs';
 import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
 import { scanSourceFiles } from "./community-safety.ts";
@@ -698,11 +699,20 @@ export class PublicCatalogueService {
     if(index.schema!=="ai-blocks-roles/1"||index.sourceHash!==c.manifest.catalogue_sha256) return fail(503,"stale_roles","The specialist directory differs from the current catalogue.");
     if(!index.areas.some((a:{id:string})=>a.id===area))return fail(400,"invalid_arguments","Choose an area from aiblocks://roles.");
     const candidates=rankSpecialists(index,task,limit,area);
-    return {schema:"ai-blocks-specialist-matches/1",candidates,selection:candidates.length?"CANDIDATES_REQUIRE_SCOPE_CHECK":"NO_MATCH",model_calls:0,notice:"Task-word retrieval over real roles and their methods. The host AI must check the complete selected worker against all requested deliverables and private context; this is not a quality guarantee. Keep unrelated private information out of discovery.",next_action:candidates.length?"Use prepare_specialist with the selected role_id, task and relevant authorized context. Compare alternatives if the remit does not cover the job.":"Clarify the work or use search_library for a missing method. Do not force an unrelated specialist."};
+    return {schema:"ai-blocks-specialist-matches/1",candidates,selection:candidates.length?"CANDIDATES_REQUIRE_SCOPE_CHECK":"NO_MATCH",user_acceptance_required:true,model_calls:0,notice:"Task-word retrieval over real roles and their methods. The host AI must check the complete selected worker against all requested deliverables and private context; this is not a quality guarantee. Keep unrelated private information out of discovery.",next_action:candidates.length?"Show the proposed specialists and why each fits; let the user accept or change the selection. Then call prepare_specialist with role_id only, resolving task/context in the host AI. Compare alternatives if the remit does not cover the job.":"Clarify the work or use search_library for a missing method. Do not force an unrelated specialist."};
   }
 
   async prepareSpecialist(args: Record<string,unknown>) {
     keys(args,["role_id","task","context","tools","training","me","deliverables"]);
+    if(args.task===undefined){
+      const role=await this.baseSpecialistRole(args.role_id);
+      if(Object.keys(args).some(k=>k!=='role_id'))return fail(400,'invalid_arguments','For a base specialist, supply role_id only. Add the task and context in your AI, or include task for a contextual preparation.');
+      const c=await this.catalogue(),methods=role.resources.map((r:{slug:string;revision:string})=>{
+        const {entry:e}=this.entry(c,r.slug);
+        return {slug:r.slug,revision_sha256:r.revision,instruction:{...e.instruction,url:this.baseUrl+e.instruction.path},files:e.files??[],archive:e.archive?{...e.archive,url:this.baseUrl+e.archive.path}:null,retrieval:{tool:'get_resource',slug:r.slug,complete_read_required:true}};
+      });
+      return {schema:'ai-blocks-base-specialist/1',state:'AWAITING_TASK',selected_role:{id:role.id,name:role.name,selection:'EXPLICIT'},files:baseSpecialistFiles(role),launch_prompt:baseSpecialistPrompt(role),methods,download_url:`${this.baseUrl}/api/v1/specialists/${role.id}/pack`,execution:{location:'user-ai-environment',model_calls_by_service:0,stored_by_service:false},next_action:'Read START_HERE.md and INTAKE.md in the host AI. Reuse the current request; ask only missing task/output/context questions. Read complete relevant pinned methods and supporting files through get_resource or download the full pack. Do not invent a task or demand website setup. An explicitly chosen specialist needs no second hiring approval; suggested teams require user acceptance. Continue authorized work under host rules.'};
+    }
     const task=string(args.task,"task",3000),chosen=string(args.role_id,"role_id",70,true);
     const matches=await this.findSpecialist({task,limit:5});
     const id=chosen||matches.candidates[0]?.id;
@@ -718,6 +728,22 @@ export class PublicCatalogueService {
     const preparation=await this.prepare({name:role.name,goal:task,...(notes?{notes}:{}),steps:[{id:"specialist",slug:role.custom_skill.slug}],custom_skills:[role.custom_skill],user_inputs:["short_text"]});
     const workerFiles=specialistFiles(role,brief);
     return {schema:"ai-blocks-specialist-preparation/1",state:"NOT_STARTED",selected_role:{id,name:role.name,url:`${this.baseUrl}/roles/${id}`,selection:chosen?"EXPLICIT":"TASK_CANDIDATE",scope_review:"NOT_RUN"},alternatives:matches.candidates.filter((r:{id:string})=>r.id!==id),context_review:JSON.parse(workerFiles["worker.json"]).intake,worker:JSON.parse(workerFiles["worker.json"]),worker_files:workerFiles,worker_sha256:await sha256(encoder.encode(stable(workerFiles))),launch_brief:roleLaunchPrompt(role,brief),preparation,execution:{location:"user-ai-environment",model_calls_by_service:0,stored_by_service:false},next_action:"Use a coordinator to present the contextual team or single-worker plan, incorporate user comments and obtain approval of the exact final version before production. Complete the context intake before strategy or production: reuse the existing brand brain/brief/assets, ask for missing essentials or build the scoped files with the included method. Read the worker files and complete pinned source methods, compare scope against every deliverable, reuse relevant supplied facts, verify real host tools and existing authorization, then execute the supported work in the host AI. Produce native artifacts and actual check evidence. This response does not start a worker or grant external-action permission."};
+  }
+
+  private async baseSpecialistRole(value:unknown){
+    const id=string(value,'role_id',70);
+    if(!/^[a-z0-9][a-z0-9-]{0,69}$/.test(id))return fail(400,'invalid_arguments','Choose a valid specialist role id.');
+    const content=(await this.readResource('aiblocks://roles/'+id)).contents[0];
+    if(!('text'in content))return fail(503,'invalid_role','The specialist resource is not text.');
+    return JSON.parse(content.text);
+  }
+
+  async specialistPack(roleId:unknown){
+    const role=await this.baseSpecialistRole(roleId),c=await this.catalogue();
+    const index=JSON.parse(decoder.decode(await this.read('/data/base-specialist-packs.json',1_000_000)));
+    const pack=index.packs?.[role.id],filename=role.id+'-base-specialist.zip';
+    if(index.schema!=='ai-blocks-base-specialist-packs/1'||index.catalogue_hash!==c.manifest.catalogue_sha256||!pack||pack.role_source_hash!==role.sourceHash||pack.path!=='/specialists/'+filename||!Number.isSafeInteger(pack.bytes)||pack.bytes<=0||pack.bytes>=25_000_000||!HASH.test(pack.sha256))return fail(503,'stale_specialist_pack','The complete specialist download differs from the current catalogue. Reload after publication completes.');
+    return {bytes:await this.read(pack.path,25_000_000,pack),filename,fileCount:pack.files,methodCount:pack.methods};
   }
 
   async prepareSpecialistTeam(args:Record<string,unknown>) {

@@ -181,7 +181,7 @@ const loose = z.object({}).passthrough();
 test('an official SDK client sees eighteen tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
-    assert.equal(client.getServerVersion().version, '2.1.0');
+    assert.equal(client.getServerVersion().version, '2.2.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
     const toolNames=(await client.listTools()).tools.map(t=>t.name);

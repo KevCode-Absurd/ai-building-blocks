@@ -10,7 +10,7 @@ import {git,REPO,worktreeText} from './qa/git-content.mjs';
 import {readSitemaps} from './indexnow-ping.mjs';
 const SITE='https://useaiblocks.com';
 const TS=createRequire(new URL('../site/package.json',import.meta.url))('typescript');
-export const ATTRIBUTION='Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>';
+export const ATTRIBUTION='Co-Authored-By: Codex <noreply@openai.com>';
 export const gateSteps=[
   ['Build minds',process.execPath,['tools/build-minds.mjs'],'.'],
   ['Index catalogue', 'npm',['--prefix','site','run','index'],'.'],

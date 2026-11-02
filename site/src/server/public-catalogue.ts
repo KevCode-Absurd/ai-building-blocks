@@ -1,4 +1,5 @@
 import { createScopeMcpService, scopeMcpTools } from '../intake/request-scope-mcp.mjs';
+import { callOutcomeTool, catalogueResolver, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import {rankSpecialists} from "../roles/specialist-matching.mjs";
 import {specialistFiles,specialistPorts,TASK_DELIVERABLE} from "../roles/specialist-worker.mjs";
@@ -219,6 +220,14 @@ export class PublicCatalogueService {
       catch (error) {
         if (error instanceof PublicApiError) throw error;
         return fail(400, 'invalid_arguments', 'Check scoped work, evidence references, selection, exact digest and current catalogue availability. No work was executed or saved.');
+      }
+    }
+    if (outcomeMcpTools.some(tool => tool.name === name)) {
+      // Outcome messages say exactly what to fix in the host's own brief, research or plan; nothing is stored.
+      try { return await callOutcomeTool(name, args, { resolve: catalogueResolver(this) }); }
+      catch (error) {
+        if (error instanceof PublicApiError) throw error;
+        return fail(400, 'invalid_arguments', `${error instanceof Error ? error.message.slice(0, 800) : 'Invalid outcome arguments.'} Nothing was executed or saved.`);
       }
     }
     switch (name) {

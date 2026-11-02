@@ -8,6 +8,7 @@ import {
 import { z } from 'zod';
 import { PublicApiError } from './public-catalogue.ts';
 import { scopeMcpTools } from '../intake/request-scope-mcp.mjs';
+import { OUTCOME_INSTRUCTIONS, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { outcomeDeliveryInstructions } from '../intake/outcome-delivery.mjs';
 import {TEAM_MCP_TOOLS} from './team-protocol.ts';
 
@@ -26,6 +27,7 @@ export const PUBLIC_MCP_INSTRUCTIONS = [
   'Follow the returned portable execution contract and declared order without silently skipping or replacing steps. Pause affected work on missing required inputs, incomplete files, unavailable tools or conflicting instructions. Keep optional inputs optional. Report PASS, FAIL, NOT_RUN, ERROR and BLOCKED honestly with artifact revisions and evidence; no step has run merely because its plan was prepared.'
   , 'For a base specialist, call prepare_specialist with role_id only and ask missing task/output/context questions in the host AI. No website intake is required. For task-based hiring, call find_specialist, explain the proposed specialists and let the user accept or change the selection before starting work; then load the accepted specialist. An explicitly chosen specialist needs no second hiring approval. Contextual preparation remains available with task and relevant context/preferences. Read its worker files and full methods. You can also read aiblocks://roles and aiblocks://roles/{id}. A role combines its task brief, complete library methods, deliverables and checks. Reuse authorized user context, prepare the returned custom_skill when useful, and carry out the job in the host AI. A role resource does not grant tool access or execution permission.'
 , outcomeDeliveryInstructions()
+, OUTCOME_INSTRUCTIONS
 ].join('\n\n');
 
 const hash = { type: 'string', pattern: '^[a-f0-9]{64}$', description: 'Exact lowercase catalogue SHA-256 revision returned by discovery or retrieval.' };
@@ -82,6 +84,7 @@ const prepareOutput = { type: 'object' as const, properties: {
 const itemOutput = (extra: Record<string, unknown>, required: string[] = []) => ({ type: 'object' as const, properties: { schema: text, slug: text, revision_sha256: text, step_map: stepMapSchema, ...extra }, required: ['schema', 'slug', 'revision_sha256', 'step_map', ...required] });
 
 export const PUBLIC_MCP_TOOLS: Tool[] = [
+...outcomeMcpTools as Tool[],
 ...scopeMcpTools as Tool[],
 ...TEAM_MCP_TOOLS,
 {"name":"find_specialist","title":"Find a specialist for a task","description":"Find worker candidates for a deliverable. Compare their remit and outputs, then use prepare_specialist to onboard the chosen worker. Keep unrelated private context out of discovery.","inputSchema":{"type":"object","properties":{"task":{"type":"string","minLength":1,"maxLength":3000},"area":{"type":"string","minLength":1,"maxLength":80},"limit":{"type":"integer","minimum":1,"maximum":10}},"required":["task"],"additionalProperties":false},"outputSchema":{"type":"object","properties":{"schema":{"type":"string"}},"required":["schema"]},"annotations":{"readOnlyHint":true,"destructiveHint":false,"idempotentHint":true,"openWorldHint":false}},
@@ -226,7 +229,7 @@ const SkillsGetRequestSchema = z.object({ method: z.literal('skills/get'), param
 // Skills results must say they are complete and how long they stay fresh; catalogue data is public.
 const CACHE = { resultType: 'complete', ttlMs: 300_000, cacheScope: 'public' } as const;
 /** Server version, kept in step with the server card (public-api.ts). */
-export const PUBLIC_MCP_VERSION = '2.2.0';
+export const PUBLIC_MCP_VERSION = '2.3.0';
 
 function libraryError(error: unknown): never {
   if (error instanceof PublicApiError && error.status < 500) throw new McpError(ErrorCode.InvalidParams, error.message);

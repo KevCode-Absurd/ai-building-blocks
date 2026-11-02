@@ -59,7 +59,7 @@ test('company OAuth and actual SDK client retrieve private skills and references
   try {
     await client.connect(transport);
     assert.equal(client.getServerVersion().name, 'ai-blocks-company-workspace');
-    assert.deepEqual((await client.listTools()).tools.map(t => t.name), ['list_company_items', 'get_company_item', 'get_company_resource', 'prepare_company_workflow', 'scope_specialist_request', 'prepare_scoped_specialist_work', 'route_scoped_specialist_work', 'prepare_scoped_specialist_team', 'prepare_recommendation_handoff', 'prepare_specialist_team', 'checkpoint_specialist_team', 'find_specialist', 'prepare_specialist', 'search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow', 'get_item', 'search', 'fetch']);
+    assert.deepEqual((await client.listTools()).tools.map(t => t.name), ['list_company_items', 'get_company_item', 'get_company_resource', 'prepare_company_workflow', 'start_outcome', 'advance_outcome', 'record_outcome_decision', 'record_outcome_experiment', 'scope_specialist_request', 'prepare_scoped_specialist_work', 'route_scoped_specialist_work', 'prepare_scoped_specialist_team', 'prepare_recommendation_handoff', 'prepare_specialist_team', 'checkpoint_specialist_team', 'find_specialist', 'prepare_specialist', 'search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow', 'get_item', 'search', 'fetch']);
     const list = await client.callTool({ name: 'list_company_items', arguments: {} });
     assert.ok(list.structuredContent.items.some(i => i.item_id === 'private-skill'));
     assert.doesNotMatch(JSON.stringify(list), /FOREIGN COMPANY SECRET|OWNER_HASH_MUST_NOT_LEAK|IP_HASH_MUST_NOT_LEAK/);
@@ -180,8 +180,8 @@ test('personal saved library uses a distinct OAuth grant and reuses a saved work
     const tools = (await client.listTools()).tools.map(t => t.name);
     assert(tools.includes('list_saved_items') && tools.includes('get_resource'));
     assert(!tools.includes('list_company_items'));
-    // get_me is on the personal server only: four saved-work tools, get_me and eighteen public tools.
-    assert.equal(tools.length, 23); assert.equal(tools.filter(t => t === 'get_me').length, 1);
+    // get_me is on the personal server only: four saved-work tools, get_me and twenty-two public tools.
+    assert.equal(tools.length, 27); assert.equal(tools.filter(t => t === 'get_me').length, 1);
     assert.match(client.getInstructions(), /call get_me with the task/);
     assert(client.getInstructions().indexOf('get_me') < 512, 'the get_me line sits in the first 512 characters');
     const none = await client.callTool({ name: 'get_me', arguments: { for_task: 'Write a LinkedIn post about my launch' } });

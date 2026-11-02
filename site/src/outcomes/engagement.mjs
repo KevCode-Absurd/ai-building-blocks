@@ -32,7 +32,7 @@ export function checkEngagement(input) {
   const e = object(input, 'Engagement');
   keys(e, ['schema', 'id', 'request', 'started', 'phase', 'round', 'autonomy', 'brief', 'research', 'plan', 'plan_version', 'plan_check', 'plan_changes', 'data', 'stages', 'records', 'history'], 'Engagement');
   if (e.schema !== ENGAGEMENT_SCHEMA) fail('Unknown engagement schema.');
-  if (encoder.encode(JSON.stringify(e)).length > 400000) fail('The engagement exceeds 400 KB. Keep evidence in files and reference their paths.');
+  if (encoder.encode(JSON.stringify(e)).length > 200000) fail('The engagement exceeds 200 KB. Keep evidence in files and reference their paths.');
   refuseSecrets(e);
   if (!ID.test(e.id ?? '')) fail('Engagement id is invalid.');
   text(e.request, 'Request', 4000); date(e.started, 'Start date');

@@ -8,6 +8,7 @@ import { engagementDigest, gateFor } from '../src/outcomes/engagement.mjs';
 import { FEATURED_ROLES } from '../src/roles/role-definitions.mjs';
 import { callOutcomeTool, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
 import example from '../src/outcomes/examples/rising-cpa.mjs';
+import { handlePublicApi } from '../src/server/public-api.ts';
 
 const catalogue = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../catalogue-items');
 const folders = fs.readdirSync(catalogue, { withFileTypes: true }).filter(d => d.isDirectory()).flatMap(d => fs.readdirSync(path.join(catalogue, d.name), { withFileTypes: true }).filter(x => x.isDirectory()).map(x => ({ group: d.name, slug: x.name })));
@@ -220,4 +221,26 @@ test('a changed engagement or a plan edited outside the tools is rejected', asyn
   const b = await briefed();
   const unchecked = await callOutcomeTool('advance_outcome', { engagement: b.engagement, engagement_sha256: b.engagement_sha256, event: { type: 'plan', research: example.research, plan: example.plan } });
   assert.ok(unchecked.warnings.some(w => /not checked against the live catalogue/.test(w)));
+});
+
+test('the public API serves outcome tools over REST and MCP, with the larger body limit for outcome calls only', async () => {
+  const limiter = { async limit() { return { success: true }; } };
+  const env = { PUBLIC_API_ENABLED: 'true', API_ALLOWED_HOSTS: 'example.test', API_READ_LIMITER: limiter, API_WRITE_LIMITER: limiter, ASSETS: { fetch: () => new Response('missing', { status: 404 }) } };
+  const post = (route, body) => handlePublicApi(new Request('https://example.test' + route, { method: 'POST', headers: { 'cf-connecting-ip': '192.0.2.9', 'content-type': 'application/json', accept: 'application/json, text/event-stream' }, body: JSON.stringify(body) }), env);
+  const started = await post('/api/v1/outcomes', { request: 'My business is not doing too well', started: '2026-11-02' });
+  assert.equal(started.status, 200);
+  const r = await started.json();
+  assert.equal(r.state, 'NEEDS_BRIEF');
+  const briefed = await (await post('/api/v1/outcome-steps', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event: { type: 'brief', brief: example.brief } })).json();
+  assert.equal(briefed.state, 'NEEDS_PLAN');
+  const bad = await post('/api/v1/outcome-steps', { engagement: r.engagement, engagement_sha256: 'f'.repeat(64), event: { type: 'brief', brief: example.brief } });
+  assert.equal(bad.status, 400);
+  assert.match((await bad.json()).error.message, /changed since.*Nothing was executed or saved/);
+  const padding = 'x'.repeat(70000);
+  const big = await post('/mcp', { jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'advance_outcome', arguments: { engagement: { ...r.engagement, request: padding }, engagement_sha256: r.engagement_sha256, event: { type: 'autonomy', level: 1, by: 'owner' } } } });
+  assert.notEqual(big.status, 413);
+  const other = await post('/mcp', { jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'search_library', arguments: { query: padding } } });
+  assert.equal(other.status, 413);
+  const spec = await (await handlePublicApi(new Request('https://example.test/api/v1/openapi.json', { headers: { 'cf-connecting-ip': '192.0.2.9' } }), env)).json();
+  assert.equal(spec.paths['/api/v1/outcome-steps'].post.operationId, 'advance_outcome');
 });

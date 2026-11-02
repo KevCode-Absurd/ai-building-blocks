@@ -1,4 +1,5 @@
 import { SCOPE_REST_OPERATIONS } from '../intake/request-scope-mcp.mjs';
+import { OUTCOME_MAX_BODY_BYTES, OUTCOME_REST_OPERATIONS, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js';
 import { apiSecurity, type SecurityEnv } from './api-security.ts';
 import { PublicCatalogueService, PublicApiError } from './public-catalogue.ts';
@@ -39,16 +40,17 @@ export async function publicApiSecurity(request: Request, env: PublicApiEnv): Pr
   return apiSecurity(new Request(request.url, { method: request.method, headers }), env);
 }
 
-export async function readPublicBody(request: Request): Promise<Uint8Array> {
+export async function readPublicBody(request: Request, limit = MAX_PUBLIC_BODY_BYTES): Promise<Uint8Array> {
+  const tooLarge = `Keep requests under ${limit.toLocaleString('en-US')} bytes.`;
   const length = request.headers.get('content-length');
-  if (length && (!/^\d+$/.test(length) || Number(length) > MAX_PUBLIC_BODY_BYTES)) throw new PublicApiError(413, 'payload_too_large', 'Keep requests under 64,000 bytes.');
+  if (length && (!/^\d+$/.test(length) || Number(length) > limit)) throw new PublicApiError(413, 'payload_too_large', tooLarge);
   const reader = request.body?.getReader();
   if (!reader) return new Uint8Array();
   const chunks: Uint8Array[] = []; let size = 0;
   for (;;) {
     const { done, value } = await reader.read(); if (done) break;
     size += value.length;
-    if (size > MAX_PUBLIC_BODY_BYTES) { await reader.cancel(); throw new PublicApiError(413, 'payload_too_large', 'Keep requests under 64,000 bytes.'); }
+    if (size > limit) { await reader.cancel(); throw new PublicApiError(413, 'payload_too_large', tooLarge); }
     chunks.push(value);
   }
   const bytes = new Uint8Array(size); let offset = 0;
@@ -133,7 +135,9 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       let forwarded = request;
       if (request.method === 'POST') {
         if (!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type') ?? '')) return finish(publicJson(415, { error: { code: 'unsupported_media_type', message: 'Use application/json.' } }));
-        const bytes = await readPublicBody(request);
+        // Only outcome tool calls, which carry a whole engagement, may use the larger limit.
+        const bytes = await readPublicBody(request, OUTCOME_MAX_BODY_BYTES);
+        if (bytes.length > MAX_PUBLIC_BODY_BYTES && !isOutcomeCall(bytes)) throw new PublicApiError(413, 'payload_too_large', 'Keep requests under 64,000 bytes.');
         forwarded = new Request(request.url, { method: request.method, headers: request.headers, body: bytes });
       }
       return finish(await handlePublicMcp(forwarded, service));
@@ -145,14 +149,14 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       mcp: { url: `${url.origin}/mcp`, server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
-    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route)) {
+    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route) || Object.hasOwn(OUTCOME_REST_OPERATIONS, route)) {
       if (request.method !== 'POST') return finish(publicJson(405, { error: { code: 'method_not_allowed', message: 'Use POST.' } }, { allow: 'POST, OPTIONS' }));
       if (!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type') ?? '')) return finish(publicJson(415, { error: { code: 'unsupported_media_type', message: 'Use application/json.' } }));
       let input: unknown;
-      try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request))); }
+      try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request, Object.hasOwn(OUTCOME_REST_OPERATIONS, route) ? OUTCOME_MAX_BODY_BYTES : MAX_PUBLIC_BODY_BYTES))); }
       catch (error) { if (error instanceof PublicApiError) throw error; throw new PublicApiError(400, 'invalid_json', 'Send a valid JSON object.'); }
       if (!input || typeof input !== 'object' || Array.isArray(input)) throw new PublicApiError(400, 'invalid_arguments', 'Send a JSON object.');
-      const operation=(SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
+      const operation=(SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (OUTCOME_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
       return finish(publicJson(200, await service.callTool(operation, input as Record<string, unknown>)));
     }
     const specialistPack=route.match(/^\/api\/v1\/specialists\/([a-z0-9][a-z0-9-]{0,69})\/pack$/);
@@ -197,6 +201,14 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
   }
 }
 
+/** A JSON-RPC tools/call for an outcome tool, the one MCP request allowed past the general body limit. */
+function isOutcomeCall(bytes: Uint8Array): boolean {
+  try {
+    const message = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+    return message?.method === 'tools/call' && outcomeMcpTools.some(tool => tool.name === message.params?.name);
+  } catch { return false; }
+}
+
 function openApi(origin: string) {
   const response = { description: 'Structured result with explicit revision hashes and execution limitations.' };
   const schema = (name: string) => PUBLIC_MCP_TOOLS.find(tool => tool.name === name)!.inputSchema;
@@ -208,6 +220,7 @@ function openApi(origin: string) {
     '/api/v1/items/{id}': { get: { operationId: 'get_item', parameters: parameters('get_item', 'id'), responses: { '200': response } } },
     '/api/v1/documents': { get: { operationId: 'search', parameters: parameters('search'), responses: { '200': response } } },
     '/api/v1/documents/{id}': { get: { operationId: 'fetch', description: 'id is type/id from search, such as skill/ad-angle-planner.', parameters: parameters('fetch', 'id'), responses: { '200': response } } },
+    ...Object.fromEntries(Object.entries(OUTCOME_REST_OPERATIONS).map(([path, operationId]) => [path, { post: { operationId, description: 'Stateless outcome orchestration: send the engagement and its engagement_sha256 back with each call. No model calls, persistence or action authority. Requests up to 256,000 bytes.', requestBody: { required: true, content: { 'application/json': { schema: schema(operationId) } } }, responses: { '200': response } } }])),
     ...Object.fromEntries(Object.entries(SCOPE_REST_OPERATIONS).map(([path, operationId]) => [path, { post: { operationId, description: 'Stateless host-authored scope and recommendation preparation; no persistence, hosted execution or action authority. Existing request-body limits apply.', requestBody: { required: true, content: { 'application/json': { schema: schema(operationId) } } }, responses: { '200': response } } }])),
     '/api/v1/workflow-preparations': { post: { operationId: 'prepare_workflow', requestBody: { required: true, content: { 'application/json': { schema: schema('prepare_workflow') } } }, responses: { '200': response } } },
     '/api/v1/specialists': { get: {operationId:'find_specialist',parameters:parameters('find_specialist'),responses:{'200':response}} },

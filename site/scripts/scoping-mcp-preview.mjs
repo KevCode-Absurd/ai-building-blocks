@@ -26,7 +26,7 @@ const read = async asset => {
 };
 const catalogueSession = createPreviewCatalogueSession(() => new PublicCatalogueService(read, origin.origin));
 // Direct base-specialist loading is available alongside optional scoped planning.
-const publicTools = PUBLIC_MCP_TOOLS.filter(t => !['prepare_specialist_team', ...scopeMcpTools.map(t => t.name)].includes(t.name));
+const publicTools = PUBLIC_MCP_TOOLS.filter(t => !['prepare_specialist_team', ...scopeMcpTools.map(t => t.name), ...outcomeMcpTools.map(t => t.name)].includes(t.name));
 // Outcome plans are composed by the host; submitted plans are checked against the live catalogue.
 const tools = [...outcomeMcpTools, ...scopeMcpTools, ...publicTools];
 const server = new Server({ name: 'ai-blocks-scoping-preview', version: '0.4.0' }, {

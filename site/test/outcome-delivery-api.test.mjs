@@ -15,7 +15,7 @@ test('official HTTP MCP client discovers outcome tools and transfers selected wo
   try {
     await client.connect(transport);
     const inventory = (await client.listTools()).tools;
-    assert.equal(inventory.length, 18); assert.equal(new Set(inventory.map(t => t.name)).size, 18);
+    assert.equal(inventory.length, 22); assert.equal(new Set(inventory.map(t => t.name)).size, 22);
     const call = async (name, args) => { const r = await client.callTool({ name, arguments: args }); assert(!r.isError, JSON.stringify(r.content)); return r.structuredContent; };
     const p = await call('prepare_scoped_specialist_work', { scope: outcomeScope() });
     const h = await call('prepare_recommendation_handoff', { scope: p.scope, scope_sha256: p.scope_sha256, selected_recommendation_ids: ['R1'] });

@@ -1,7 +1,7 @@
 import {Link} from '../lib/router';
-import type {RoleProfile} from './role-types';
+import type {RoleView} from './role-types';
 // The role's own working judgment, example, checks, reviewers and version history.
-export default function RoleExpertise({role}:{role:RoleProfile}){
+export default function RoleExpertise({role}:{role:RoleView}){
  const e=role.expertise,x=role.workedExample,ev=role.evaluation,minds=role.resources.filter(r=>r.reviewer),lead=role.resources.find(r=>r.slug===role.lead);
  const checks=ev?.rubric.map(c=>c.criterion).filter(c=>!c.startsWith('Delivers: '))??[];
  return <>

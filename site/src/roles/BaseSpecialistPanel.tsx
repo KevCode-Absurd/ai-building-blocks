@@ -1,8 +1,8 @@
 import {useEffect,useRef,useState} from 'react';
-import type {RoleProfile} from './role-types';
+import type {RoleView} from './role-types';
 import {baseSpecialistPrompt} from './base-specialist.mjs';
 
-export default function BaseSpecialistPanel({role,toast}:{role:RoleProfile;toast:(s:string)=>void}){
+export default function BaseSpecialistPanel({role,toast}:{role:RoleView;toast:(s:string)=>void}){
  const [busy,setBusy]=useState(false),[error,setError]=useState('');const alive=useRef(true);
  useEffect(()=>{alive.current=true;return()=>{alive.current=false;};},[]);
  async function download(){

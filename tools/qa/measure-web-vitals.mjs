@@ -43,6 +43,12 @@ try {
       } else if (route === '/compose') {
         const request = page.getByTestId('compose-goal'); await request.fill('Turn supplied meeting notes into a checked action list');
         await request.press('End'); await request.press('s'); await request.press('Backspace');
+      } else if (route === '/roles') {
+        const search = page.getByTestId('role-search'); await search.fill('coding');
+        await page.waitForTimeout(1600); await search.press('End'); await search.press('s'); await search.press('Backspace');
+      } else if (route.startsWith('/roles/')) {
+        const detail = page.getByTestId('base-specialist').getByText('Use through MCP or API', {exact: true});
+        await detail.click(); await detail.click();
       } else if (route.startsWith('/skills/')) {
         const detail = page.locator('details > summary').first(); if (await detail.isVisible()) { await detail.click(); await detail.click(); }
       }

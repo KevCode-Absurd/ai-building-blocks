@@ -494,3 +494,32 @@ for (const mobile of [false, true]) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 }
+
+for(const mobile of [false,true]){
+ test((mobile?'@mobile ':'')+'base specialist stays usable while optional task setup is delayed',async({page})=>{
+  if(mobile)await page.setViewportSize({width:390,height:844});
+  await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'Local read-only fixture'}}));
+  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:async(text:string)=>{(window as any).__specialistCopied=text;}}}));
+  let release!:()=>void;const held=new Promise<void>(r=>{release=r;});const requested:string[]=[],fullProfiles:string[]=[];
+  page.on('request',r=>{if(/RoleTaskSetup/.test(r.url()))requested.push(r.url());if(new URL(r.url()).pathname==='/data/roles/coding-specialist.json')fullProfiles.push(r.url());});
+  await page.route(/(?:\/assets\/RoleTaskSetup-[^/]+\.js|\/src\/roles\/RoleTaskSetup\.tsx)/,async r=>{await held;await r.continue();});
+  try{
+   await page.goto('/roles/coding-specialist');await expect(page.getByTestId('base-specialist-copy')).toBeVisible();expect(requested).toEqual([]);expect(fullProfiles).toEqual([]);
+   await page.getByText('Add task context before downloading (optional)',{exact:true}).click();await expect(page.getByRole('status').filter({hasText:'Opening task setup…'})).toBeVisible();
+   await page.getByTestId('base-specialist-copy').click();expect(await page.evaluate(()=>(window as any).__specialistCopied)).toContain('"role_id":"coding-specialist"');
+   await expect(page.getByTestId('base-specialist-download')).toBeEnabled();release();await expect(page.getByTestId('role-goal')).toBeVisible();expect(fullProfiles).toHaveLength(1);
+   await page.getByTestId('role-goal').fill('Fix the supplied bug and return the code changes.');
+   await page.getByText('Add task context before downloading (optional)',{exact:true}).click();await page.getByText('Add task context before downloading (optional)',{exact:true}).click();
+   await expect(page.getByTestId('role-goal')).toHaveValue('Fix the supplied bug and return the code changes.');
+  }finally{release();}
+ });
+ test((mobile?'@mobile ':'')+'a still globe keeps its bitmap until its size actually changes',async({page})=>{
+  if(mobile)await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});
+  await page.route('**/api/**',r=>r.fulfill({status:401,json:{error:'Local read-only fixture'}}));
+  await page.addInitScript(()=>{(window as any).__globeClears=0;const clear=CanvasRenderingContext2D.prototype.clearRect;CanvasRenderingContext2D.prototype.clearRect=function(x,y,w,h){if(this.canvas.classList.contains('globe'))(window as any).__globeClears++;return clear.call(this,x,y,w,h);};});
+  await page.route(/(?:\/assets\/Globe-[^/]+\.js|\/src\/Globe\.tsx)/,async r=>{await page.evaluate(()=>document.fonts.ready);await r.continue();});
+  await page.goto('/');await expect(page.getByTestId('globe')).toBeVisible();await expect.poll(()=>page.evaluate(()=>(window as any).__globeClears)).toBe(1);
+  await page.waitForTimeout(180);expect(await page.evaluate(()=>(window as any).__globeClears)).toBe(1);
+  await page.setViewportSize({width:mobile?420:1380,height:mobile?844:900});await expect.poll(()=>page.evaluate(()=>(window as any).__globeClears)).toBeGreaterThan(1);
+ });
+}

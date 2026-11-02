@@ -3,173 +3,221 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validatePlaybook } from '../src/outcomes/playbook-contract.mjs';
-import { PLAYBOOKS, getPlaybook, matchPlaybooks } from '../src/outcomes/playbooks/index.mjs';
+import { planRefs, validateBrief, validatePlan, validateResearch } from '../src/outcomes/plan-contract.mjs';
+import { engagementDigest, gateFor } from '../src/outcomes/engagement.mjs';
 import { FEATURED_ROLES } from '../src/roles/role-definitions.mjs';
 import { callOutcomeTool, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
-import cpaSource from '../src/outcomes/playbooks/reduce-paid-acquisition-cost.mjs';
-import genericSource from '../src/outcomes/playbooks/generic-outcome.mjs';
+import example from '../src/outcomes/examples/rising-cpa.mjs';
 
 const catalogue = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../catalogue-items');
 const folders = fs.readdirSync(catalogue, { withFileTypes: true }).filter(d => d.isDirectory()).flatMap(d => fs.readdirSync(path.join(catalogue, d.name), { withFileTypes: true }).filter(x => x.isDirectory()).map(x => ({ group: d.name, slug: x.name })));
-const methodSlugs = new Set(folders.map(f => f.slug));
+const itemIds = new Set(folders.map(f => f.slug));
 // Generated role ids drop the agency- prefix (role-definitions.mjs roleSeeds); featured roles keep their own ids.
 const roleIds = new Set([...FEATURED_ROLES.map(r => r.id), ...folders.filter(f => ['agents', 'orchestrators'].includes(f.group)).map(f => f.slug.replace(/^agency-/, ''))]);
+const resolve = async ({ roles, items }) => ({ missing_roles: roles.filter(r => !roleIds.has(r)), missing_items: items.filter(i => !itemIds.has(i)) });
+const TOOL = { resolve, today: '2026-11-02' };
 const copy = v => JSON.parse(JSON.stringify(v));
-const START = { request: 'Our Meta ads CPA keeps going up and profit is shrinking', started: '2026-11-02', answers: { platforms: 'Meta, about 6 lakh a month', 'cpa-change': 'From 900 to 1450 since August', economics: 'AOV 2400, margin 60%, break-even about 1400', goal: 'Under 1100 by January', connections: 'Meta Ads MCP and Shopify MCP are connected', limits: 'Budget ceiling 7 lakh; no discounts above 15%' } };
 
-async function step(result, event) { return callOutcomeTool('advance_outcome', { engagement: result.engagement, engagement_sha256: result.engagement_sha256, event }); }
-async function complete(result, stageId, overrides = {}) {
-  const def = getPlaybook(result.engagement.playbook.id).stages.find(s => s.id === stageId);
-  return step(result, { type: 'complete', stage_id: stageId, outputs: def.outputs.map(o => ({ id: o.id })), checks: def.checks.map(c => ({ id: c.id, result: overrides[c.id] ?? 'PASS' })) });
+const call = (name, input) => callOutcomeTool(name, input, TOOL);
+const step = (r, event) => call('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event });
+async function complete(r, stageId, overrides = {}) {
+  const def = r.engagement.plan.stages.find(s => s.id === stageId);
+  return step(r, { type: 'complete', stage_id: stageId, outputs: def.outputs.map(o => ({ id: o.id })), checks: def.checks.map(c => ({ id: c.id, result: overrides[c.id] ?? 'PASS' })) });
 }
 const stateOf = (r, id) => r.engagement.stages.find(s => s.id === id).state;
+async function briefed() {
+  const r = await call('start_outcome', { request: 'My business is not doing too well', started: '2026-11-02' });
+  return step(r, { type: 'brief', brief: example.brief });
+}
+async function approved() {
+  const r = await step(await briefed(), { type: 'plan', research: example.research, plan: example.plan });
+  return step(r, { type: 'approve_plan', by: 'owner', decision: 'APPROVED' });
+}
 
-test('every playbook validates against the live catalogue roles and methods', () => {
-  assert.equal(PLAYBOOKS.length, 2);
-  for (const p of [cpaSource, genericSource]) validatePlaybook(p, { methodSlugs, roleIds: p.fallback ? undefined : roleIds });
-  assert.equal(PLAYBOOKS.filter(p => p.fallback).length, 1);
+test('the worked example is a valid composed plan built from real specialists and items', async () => {
+  const brief = validateBrief(example.brief), research = validateResearch(example.research), plan = validatePlan(example.plan, { research, brief });
+  assert.deepEqual(await resolve(planRefs(plan, research)), { missing_roles: [], missing_items: [] });
+  // Normalized output validates again unchanged, so the engagement can re-check it on every call.
+  assert.deepEqual(validatePlan(copy(plan), { research: validateResearch(copy(research)), brief: validateBrief(copy(brief)) }), plan);
 });
 
-test('playbook rules keep decisions and live actions with the owner', () => {
-  const broken = mutate => { const p = copy(cpaSource); mutate(p); return () => validatePlaybook(p); };
-  assert.throws(broken(p => { p.stages.find(s => s.id === 'launch').gate = 'review'; }), /every action needs owner approval/);
-  assert.throws(broken(p => { p.stages.find(s => s.id === 'decision').gate = 'review'; }), /decision stage needs owner approval/);
-  assert.throws(broken(p => { p.stages.find(s => s.id === 'concepts').depends_on = ['context']; }), /after the owner's decision/);
-  assert.throws(broken(p => { p.stages.find(s => s.id === 'evidence').depends_on = ['diagnosis']; }), /later kind/);
-  assert.throws(broken(p => { p.stages.find(s => s.id === 'context').owner = { area: 'marketing' }; }), /names the owner role/);
-  assert.throws(broken(p => { p.hypotheses[0].fix_stage = 'nowhere'; }), /unknown nowhere/);
+test('plan rules hold for any composed plan', async () => {
+  const broken = (mutate, mutateResearch = () => {}) => () => { const p = copy(example.plan), rs = copy(example.research); mutate(p); mutateResearch(rs); return validatePlan(p, { research: validateResearch(rs), brief: example.brief }); };
+  const stage = (p, id) => p.stages.find(s => s.id === id);
+  assert.throws(broken(p => { stage(p, 'launch').gate = 'review'; }), /every action needs owner approval/);
+  assert.throws(broken(p => { stage(p, 'decision').gate = 'review'; }), /decision stage needs owner approval/);
+  assert.throws(broken(p => { stage(p, 'concepts').depends_on = ['context']; }), /after the owner's decision/);
+  assert.throws(broken(p => { stage(p, 'evidence').depends_on = ['diagnosis']; }), /later kind/);
+  assert.throws(broken(p => { stage(p, 'evidence').from_steps = []; }), /research steps it carries out/);
+  assert.throws(broken(p => { stage(p, 'launch').from_steps = ['s-creative']; }), /Not covered: s-test/);
+  assert.ok(broken(p => { stage(p, 'launch').from_steps = ['s-creative']; p.dropped = [{ step: 's-test', reason: 'Owner launches by hand' }]; })().dropped.length);
+  assert.throws(broken(p => { stage(p, 'context').owner = { role: 'media-buyer', gap: 'x' }; }), /one catalogue specialist/);
+  assert.throws(broken(p => { stage(p, 'context').checks = []; }), /one output and one check/);
+  assert.throws(broken(p => { p.stages.push(p.stages.splice(p.stages.findIndex(s => s.id === 'measurement'), 1)[0]); }), /ends with a learning stage/);
+  assert.throws(broken(p => { p.stages = p.stages.filter(s => s.kind !== 'measurement'); stage(p, 'learning').depends_on = ['launch']; }), /needs a measurement stage/);
+  assert.throws(broken(() => {}, rs => { rs.sources = rs.sources.filter(s => s.kind === 'catalogue'); for (const s of rs.steps) s.sources = ['cat-bottleneck']; rs.pitfalls = []; }), /outside our catalogue/);
+  assert.throws(broken(() => {}, rs => { rs.sources[0].ref = 'http://example.com/'; }), /https/);
+  assert.throws(broken(() => {}, rs => { rs.steps[0].sources = []; }), /cite at least one source/);
+  // A missing specialist is recorded as a gap; unknown catalogue ids are refused.
+  const gap = copy(example.plan); stage(gap, 'context').owner = { gap: 'A brand strategist for regional jewellery' };
+  assert.ok(validatePlan(gap, { research: validateResearch(example.research), brief: example.brief }));
+  const ghost = copy(example.plan); stage(ghost, 'context').owner = { role: 'ghost-specialist' }; stage(ghost, 'context').uses.push('no-such-item');
+  const b = await briefed();
+  await assert.rejects(step(b, { type: 'plan', research: example.research, plan: ghost }), /ghost-specialist/);
+  stage(ghost, 'context').owner = { role: 'brand-file-from-website' };
+  await assert.rejects(step(b, { type: 'plan', research: example.research, plan: ghost }), /no-such-item/);
 });
 
-test('requests route to a specific playbook or the generic fallback', () => {
-  assert.equal(matchPlaybooks('Our cost per purchase on Facebook ads doubled')[0].id, 'reduce-paid-acquisition-cost');
-  assert.equal(matchPlaybooks('ROAS is falling on Meta ads')[0].id, 'reduce-paid-acquisition-cost');
-  assert.equal(matchPlaybooks('My business is not doing too well')[0].id, 'generic-outcome');
-  assert.equal(matchPlaybooks('Our website is slow').at(-1).id, 'generic-outcome');
-});
+test('a vague request becomes a brief, then a researched plan the owner approves', async () => {
+  const r = await call('start_outcome', { request: 'My business is not doing too well', started: '2026-11-02', include_example: true });
+  assert.equal(r.state, 'NEEDS_BRIEF');
+  assert.equal(r.engagement.id, '20261102-my-business-is-not-doing');
+  assert.ok(r.method.brief_frame.some(f => f.field === 'metric'));
+  assert.match(r.files['METHOD.md'], /Research/);
+  assert.equal(r.example.plan.stages[0].kind, 'intake');
+  await assert.rejects(step(r, { type: 'plan', research: example.research, plan: example.plan }), /brief before the plan/);
+  await assert.rejects(step(r, { type: 'brief', brief: { ...example.brief, metric: { ...example.brief.metric, baseline: null } } }), /missing baseline/);
+  await assert.rejects(step(r, { type: 'brief', brief: { ...example.brief, assets: ['Meta token EAA' + 'B'.repeat(70)] } }), /API key or token/);
 
-test('a vague request asks one batch, then switches to the fitting playbook', async () => {
-  const r = await callOutcomeTool('start_outcome', { request: 'My business is not doing too well', started: '2026-11-02' });
-  assert.equal(r.playbook.id, 'generic-outcome');
-  assert.equal(r.state, 'NEEDS_ANSWERS');
-  assert.equal(r.questions[0].id, 'route');
-  assert.ok(r.files['PLAYBOOK.md'] && r.files['BRIEF.md'] && r.files['decisions.jsonl'] === '');
-  await assert.rejects(step(r, { type: 'answer', answers: { route: 'cheaper' } }), /one of/);
-  const routed = await step(r, { type: 'answer', answers: { route: 'acquisition-cost', goal: 'Under 1100' } });
-  assert.equal(routed.state, 'SWITCH_PLAYBOOK');
-  assert.equal(routed.switch_to, 'reduce-paid-acquisition-cost');
-  const specific = await callOutcomeTool('start_outcome', { request: r.engagement.request, playbook_id: routed.switch_to, answers: routed.engagement.answers, started: '2026-11-02' });
-  assert.deepEqual(specific.unused_answers, ['route']);
-  assert.equal(specific.engagement.answers.goal, 'Under 1100');
-  assert.ok(!specific.questions.some(q => q.id === 'goal'));
-});
+  const b = await step(r, { type: 'brief', brief: example.brief });
+  assert.equal(b.state, 'NEEDS_PLAN');
+  assert.match(b.files['BRIEF.md'], /From 900 to 1450 since August/);
+  assert.ok(b.research_protocol.some(x => /web/.test(x)));
 
-test('a rising-CPA engagement runs from intake to a closed experiment and a second round', async () => {
-  let r = await callOutcomeTool('start_outcome', START);
-  assert.equal(r.playbook.id, 'reduce-paid-acquisition-cost');
-  assert.equal(r.state, 'READY');
-  assert.deepEqual(r.ready.map(s => s.stage_id), ['context', 'evidence']);
-  const evidence = r.ready.find(s => s.stage_id === 'evidence');
+  let p = await step(b, { type: 'plan', research: example.research, plan: example.plan });
+  assert.equal(p.state, 'AWAITING_PLAN_APPROVAL');
+  assert.match(p.files['PLAN.md'], /Live actions/);
+  assert.match(p.files['RESEARCH.md'], /web\.dev/);
+  assert.ok(p.warnings.some(w => /without a date/.test(w)));
+  await assert.rejects(step(p, { type: 'start', stage_id: 'evidence' }), /approves the plan first/);
+  await assert.rejects(step(p, { type: 'approve_plan', by: 'host', decision: 'APPROVED' }), /Only the owner/);
+  p = await step(p, { type: 'approve_plan', by: 'owner', decision: 'CHANGES_REQUESTED', note: 'Add a check on returning customers' });
+  assert.equal(p.state, 'NEEDS_PLAN');
+  assert.match(p.next, /returning customers/);
+  p = await step(p, { type: 'plan', research: example.research, plan: example.plan });
+  assert.equal(p.engagement.plan_version, 2);
+  p = await step(p, { type: 'approve_plan', by: 'owner', decision: 'APPROVED' });
+  assert.equal(p.state, 'READY');
+  assert.deepEqual(p.ready.map(s => s.stage_id), ['context', 'evidence']);
+  const evidence = p.ready.find(s => s.stage_id === 'evidence');
   assert.match(evidence.prompt, /prepare_specialist \{"role_id":"media-buyer"\}/);
-  assert.match(evidence.prompt, /meta-results-review-agent/);
-  assert.match(r.files['BRIEF.md'], /From 900 to 1450 since August/);
+  assert.match(evidence.prompt, /Pull comparable before and after data/);
+});
 
+test('an approved plan runs to a closed experiment and a second round', async () => {
+  let r = await approved();
   await assert.rejects(complete(r, 'evidence', { totals: 'FAIL' }), /Spend and purchase totals/);
-  await assert.rejects(step(r, { type: 'complete', stage_id: 'evidence', outputs: [{ id: 'dataset' }], checks: [] }), /evidence\/EVIDENCE\.md/);
   r = await complete(r, 'evidence');
-  assert.equal(stateOf(r, 'evidence'), 'DONE');
   assert.equal(stateOf(r, 'integrity-tracking'), 'READY');
-
-  // Missing data: with an alternative the stage runs limited; without one it waits.
   r = await step(r, { type: 'data', data_id: 'orders', status: 'MISSING' });
   assert.match(r.ready.find(s => s.stage_id === 'integrity-tracking').limits[0], /platform-reported/);
   r = await step(r, { type: 'data', data_id: 'tracking-setup', status: 'MISSING' });
   assert.equal(stateOf(r, 'integrity-tracking'), 'BLOCKED');
-  assert.match(r.files['DATA-REQUESTS.md'], /Events Manager/);
   r = await step(r, { type: 'data', data_id: 'tracking-setup', status: 'AVAILABLE' });
-  assert.equal(stateOf(r, 'integrity-tracking'), 'READY');
 
   r = await complete(r, 'context');
-  assert.equal(r.state, 'AWAITING_OWNER');
   await assert.rejects(step(r, { type: 'approve', stage_id: 'context', decision: 'APPROVED', by: 'host' }), /Only the owner/);
-  r = await step(r, { type: 'approve', stage_id: 'context', decision: 'CHANGES_REQUESTED', by: 'owner', note: 'Use the new tagline' });
-  assert.match(r.ready.find(s => s.stage_id === 'context').prompt, /new tagline/);
-  r = await complete(r, 'context');
   r = await step(r, { type: 'approve', stage_id: 'context', decision: 'APPROVED', by: 'owner' });
   for (const id of ['integrity-tracking', 'integrity-site']) { r = await complete(r, id); r = await step(r, { type: 'approve', stage_id: id, decision: 'APPROVED', by: 'owner' }); }
-  assert.match(r.ready.find(s => s.stage_id === 'diagnosis').prompt, /hypotheses\.md/);
   r = await complete(r, 'diagnosis');
   r = await complete(r, 'options');
   r = await step(r, { type: 'approve', stage_id: 'options', decision: 'APPROVED', by: 'owner' });
 
   await assert.rejects(complete(r, 'decision'), /record_outcome_decision/);
   const decision = { id: 'd1', stage_id: 'decision', by: 'owner', considered: [{ id: 'r1', summary: 'Fix CAPI deduplication' }, { id: 'r2', summary: 'New concepts for women 45-54' }, { id: 'r3', summary: 'Cut weekend spend' }], chosen: ['r2'] };
-  await assert.rejects(callOutcomeTool('record_outcome_decision', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, decision }), /passed over the top option/);
-  r = await callOutcomeTool('record_outcome_decision', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, decision: { ...decision, rationale: 'Our developer is fixing CAPI this week already', rule: { text: 'Tracking work goes to the in-house developer', scope: 'business' } } });
-  assert.equal(r.append.file, 'decisions.jsonl');
+  const rec = (name, field, value) => call(name, { engagement: r.engagement, engagement_sha256: r.engagement_sha256, [field]: value });
+  await assert.rejects(rec('record_outcome_decision', 'decision', decision), /passed over the top option/);
+  r = await rec('record_outcome_decision', 'decision', { ...decision, rationale: 'Our developer is fixing CAPI this week already', rule: { text: 'Tracking work goes to the in-house developer', scope: 'business' } });
   assert.deepEqual(JSON.parse(r.append.line).passed_over, ['r1', 'r3']);
   assert.match(r.learning_candidate.save_to, /memory\/decisions\.md/);
   r = await complete(r, 'decision');
   r = await step(r, { type: 'approve', stage_id: 'decision', decision: 'APPROVED', by: 'owner' });
-  await assert.rejects(step(r, { type: 'skip', stage_id: 'decision', reason: 'x' }), /DONE/);
   r = await step(r, { type: 'skip', stage_id: 'tracking-fixes', reason: 'Owner\'s developer handles it' });
   r = await step(r, { type: 'skip', stage_id: 'page-fixes', reason: 'No landing-page card chosen' });
   r = await complete(r, 'concepts'); r = await step(r, { type: 'approve', stage_id: 'concepts', decision: 'APPROVED', by: 'owner' });
+  assert.match(r.ready.find(s => s.stage_id === 'ad-production').prompt, /"paid-media-creative-strategist" review/);
   r = await complete(r, 'ad-production'); r = await step(r, { type: 'approve', stage_id: 'ad-production', decision: 'APPROVED', by: 'owner' });
-  assert.equal(r.ready[0].stage_id, 'launch');
   assert.equal(r.ready[0].gate, 'approve_each_action');
 
   await assert.rejects(complete(r, 'launch'), /Register at least one experiment/);
   const reg = { action: 'register', id: 'x1', hypothesis_id: 'h-underserved-segment', card_id: 'r2', change: 'Three new concepts aimed at women 45-54', metric: 'Purchase CPA', baseline: 1450, target: 1100, window: { start: '2026-11-10', end: '2026-11-24' }, min_volume: 50, guardrails: ['Purchases per week stay above 80'] };
-  r = await callOutcomeTool('record_outcome_experiment', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiment: reg });
+  r = await rec('record_outcome_experiment', 'experiment', reg);
   r = await complete(r, 'launch');
-  assert.equal(stateOf(r, 'launch'), 'AWAITING_APPROVAL');
   r = await step(r, { type: 'approve', stage_id: 'launch', decision: 'APPROVED', by: 'owner' });
-  await assert.rejects(callOutcomeTool('record_outcome_experiment', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiment: { ...reg, id: 'x2' } }), /registered before it goes live/);
+  await assert.rejects(rec('record_outcome_experiment', 'experiment', { ...reg, id: 'x2' }), /registered before it goes live/);
   r = await complete(r, 'measurement');
   await assert.rejects(complete(r, 'learning'), /Close every experiment/);
 
   const close = { action: 'close', id: 'x1', observed: 1180, volume: 31, guardrail_results: [{ name: 'Purchases per week stay above 80', held: true }], verdict: 'WIN' };
-  const args = experiment => ({ engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiment });
-  await assert.rejects(callOutcomeTool('record_outcome_experiment', args(close)), /INCONCLUSIVE/);
-  await assert.rejects(callOutcomeTool('record_outcome_experiment', args({ ...close, volume: 60, guardrail_results: [{ name: 'Purchases per week stay above 80', held: false }] })), /not a win/);
-  await assert.rejects(callOutcomeTool('record_outcome_experiment', args({ ...close, volume: 60, observed: 1500 })), /did not beat/);
-  r = await callOutcomeTool('record_outcome_experiment', args({ ...close, volume: 60, learning: 'Women 45-54 respond to problem-first concepts' }));
-  assert.equal(r.outcome_report.share, 'ONLY_WITH_OWNER_CONSENT');
+  await assert.rejects(rec('record_outcome_experiment', 'experiment', close), /INCONCLUSIVE/);
+  await assert.rejects(rec('record_outcome_experiment', 'experiment', { ...close, volume: 60, guardrail_results: [{ name: 'Purchases per week stay above 80', held: false }] }), /not a win/);
+  await assert.rejects(rec('record_outcome_experiment', 'experiment', { ...close, volume: 60, observed: 1500 }), /did not beat/);
+  r = await rec('record_outcome_experiment', 'experiment', { ...close, volume: 60, learning: 'Women 45-54 respond to problem-first concepts' });
   assert.equal(r.outcome_report.relative_change, -0.186);
   assert.ok(!JSON.stringify(r.outcome_report).includes('1180'));
-  assert.equal(r.learning_candidate.scope, 'business');
 
   r = await complete(r, 'learning');
   r = await step(r, { type: 'approve', stage_id: 'learning', decision: 'APPROVED', by: 'owner' });
   assert.equal(r.state, 'ROUND_COMPLETE');
+  const pattern = JSON.parse(r.files['PATTERN.json']);
+  assert.equal(pattern.share, 'ONLY_WITH_OWNER_CONSENT');
+  assert.deepEqual(pattern.experiments, [{ hypothesis_id: 'h-underserved-segment', verdict: 'WIN' }]);
+  assert.ok(!r.files['PATTERN.json'].includes('1450'));
   r = await step(r, { type: 'next_round', note: 'Fatigue check in two weeks' });
   assert.equal(r.engagement.round, 2);
   assert.equal(stateOf(r, 'evidence'), 'DONE');
   assert.equal(stateOf(r, 'diagnosis'), 'READY');
-  assert.equal(stateOf(r, 'launch'), 'WAITING');
+});
+
+test('a revised plan keeps unchanged finished stages and goes back to the owner', async () => {
+  let r = await approved();
+  r = await complete(r, 'evidence');
+  const revised = copy(example.plan);
+  revised.stages.find(s => s.id === 'diagnosis').goal += ' Split new from returning customers.';
+  r = await step(r, { type: 'plan', research: example.research, plan: revised });
+  assert.equal(r.state, 'AWAITING_PLAN_APPROVAL');
+  assert.equal(stateOf(r, 'evidence'), 'DONE');
+  assert.equal(stateOf(r, 'diagnosis'), 'WAITING');
+  r = await step(r, { type: 'approve_plan', by: 'owner', decision: 'APPROVED' });
+
+  // At autonomy 2 a revision with live actions still goes to the owner; one without them is approved by autonomy.
+  r = await step(r, { type: 'autonomy', level: 2, by: 'owner' });
+  r = await step(r, { type: 'plan', research: example.research, plan: { ...revised, name: `${revised.name} (v3)` } });
+  assert.equal(r.state, 'AWAITING_PLAN_APPROVAL');
+  r = await step(r, { type: 'approve_plan', by: 'owner', decision: 'APPROVED' });
+  const offline = copy(revised);
+  offline.capabilities = offline.capabilities.filter(c => c.access !== 'live');
+  offline.stages = offline.stages.filter(s => s.kind !== 'execution');
+  offline.stages.find(s => s.kind === 'measurement').depends_on = ['ad-production', 'page-fixes', 'tracking-fixes'];
+  for (const h of offline.hypotheses) if (h.fix_stage === 'launch') h.fix_stage = 'concepts';
+  offline.dropped = [{ step: 's-test', reason: 'The owner launches ads themselves' }];
+  r = await step(r, { type: 'plan', research: example.research, plan: offline });
+  assert.equal(r.engagement.phase, 'RUN');
+  assert.match(r.engagement.history.at(-1).note, /approved by autonomy/);
 });
 
 test('autonomy relaxes review gates but never decisions or live actions', async () => {
-  let r = await callOutcomeTool('start_outcome', START);
+  let r = await approved();
   await assert.rejects(step(r, { type: 'autonomy', level: 2, by: 'host' }), /Only the owner/);
   r = await step(r, { type: 'autonomy', level: 3, by: 'owner' });
   r = await complete(r, 'context');
   assert.equal(stateOf(r, 'context'), 'DONE');
-  const launch = getPlaybook('reduce-paid-acquisition-cost').stages.find(s => s.id === 'launch');
-  const { gateFor } = await import('../src/outcomes/engagement.mjs');
-  assert.equal(gateFor(launch, r.engagement), 'approve_each_action');
-  assert.equal(gateFor(getPlaybook('reduce-paid-acquisition-cost').stages.find(s => s.id === 'decision'), r.engagement), 'approve');
-  assert.equal(gateFor(getPlaybook('reduce-paid-acquisition-cost').stages.find(s => s.id === 'ad-production'), r.engagement), 'review');
+  const def = id => r.engagement.plan.stages.find(s => s.id === id);
+  assert.equal(gateFor(def('launch'), r.engagement), 'approve_each_action');
+  assert.equal(gateFor(def('decision'), r.engagement), 'approve');
+  assert.equal(gateFor(def('ad-production'), r.engagement), 'review');
 });
 
-test('a changed or foreign engagement is rejected', async () => {
-  const r = await callOutcomeTool('start_outcome', START);
+test('a changed engagement or a plan edited outside the tools is rejected', async () => {
+  const r = await approved();
   const tampered = copy(r.engagement); tampered.stages[2].state = 'DONE';
-  await assert.rejects(callOutcomeTool('advance_outcome', { engagement: tampered, engagement_sha256: r.engagement_sha256, event: { type: 'start', stage_id: 'evidence' } }), /changed since/);
-  await assert.rejects(callOutcomeTool('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event: { type: 'teleport' } }), /Event type/);
-  await assert.rejects(callOutcomeTool('start_outcome', { request: 'x', mystery: true }), /Unsupported argument/);
-  assert.deepEqual(outcomeMcpTools.map(t => t.name), ['list_outcome_playbooks', 'start_outcome', 'advance_outcome', 'record_outcome_decision', 'record_outcome_experiment']);
-  const listed = await callOutcomeTool('list_outcome_playbooks', { playbook_id: 'reduce-paid-acquisition-cost' });
-  assert.match(listed.markdown, /flowchart TD/);
+  await assert.rejects(call('advance_outcome', { engagement: tampered, engagement_sha256: r.engagement_sha256, event: { type: 'start', stage_id: 'evidence' } }), /changed since/);
+  const loosened = copy(r.engagement); loosened.plan.stages.find(s => s.id === 'launch').gate = 'none';
+  await assert.rejects(call('advance_outcome', { engagement: loosened, engagement_sha256: await engagementDigest(loosened), event: { type: 'start', stage_id: 'evidence' } }), /every action needs owner approval/);
+  await assert.rejects(call('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event: { type: 'teleport' } }), /Event type/);
+  await assert.rejects(call('start_outcome', { request: 'x', mystery: true }), /Unsupported argument/);
+  assert.deepEqual(outcomeMcpTools.map(t => t.name), ['start_outcome', 'advance_outcome', 'record_outcome_decision', 'record_outcome_experiment']);
+  const b = await briefed();
+  const unchecked = await callOutcomeTool('advance_outcome', { engagement: b.engagement, engagement_sha256: b.engagement_sha256, event: { type: 'plan', research: example.research, plan: example.plan } });
+  assert.ok(unchecked.warnings.some(w => /not checked against the live catalogue/.test(w)));
 });

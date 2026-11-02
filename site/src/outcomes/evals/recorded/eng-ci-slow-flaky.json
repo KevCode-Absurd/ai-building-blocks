@@ -1,0 +1,1050 @@
+{
+  "case": "eng-ci-slow-flaky",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "CI is fast and trustworthy: the median pipeline takes under 15 minutes and fewer than 1 in 50 runs fail at random, within six weeks, with test coverage and required checks kept as they are.",
+    "deliverable": "Reviewed pull requests that speed up the pipeline and fix or quarantine the flaky tests, merged by the team one at a time, with a before-and-after readout from GitHub Actions history.",
+    "done": [
+      "Where the 40 minutes go is measured per workflow, job and step from run history",
+      "Random failures are separated from real failures and traced to their tests or causes",
+      "The platform lead has chosen which changes to make",
+      "Each change is a reviewed pull request that keeps test coverage and every required check",
+      "Median pipeline time is under 15 minutes and random failures are under 1 in 50 runs, read back from run history",
+      "Notes and rules are saved so the pipeline does not slide back"
+    ],
+    "metric": {
+      "name": "Median pipeline time",
+      "direction": "decrease",
+      "unit": "minutes",
+      "baseline": 40,
+      "baseline_source": "reported",
+      "target": 15
+    },
+    "deadline": "Within six weeks of plan approval",
+    "guardrails": [
+      "Test coverage does not drop",
+      "Required checks stay in place",
+      "Random failures fall to fewer than 1 in 50 runs (about 1 in 6 now, reported)"
+    ],
+    "limits": [
+      "Changes go in only through reviewed pull requests",
+      "GitHub access is read plus draft pull requests",
+      "Monorepo with a Python backend and a TypeScript front end on GitHub Actions"
+    ],
+    "assets": [
+      "The monorepo and its GitHub Actions run history"
+    ],
+    "connections": [
+      {
+        "name": "GitHub MCP (read, draft pull requests)",
+        "access": "draft",
+        "status": "connected"
+      }
+    ],
+    "data_home": "Not stated. Proposed: a CI notes folder in the repo, delivered through draft pull requests",
+    "decides": "The platform lead",
+    "unknowns": [
+      "Where the 40 minutes go (queue time, installs, build, which tests)",
+      "Which tests are flaky and whether infrastructure also causes failures",
+      "Current test coverage level and the exact list of required checks",
+      "Whether the CI bill (about $2,800 a month) has a target or ceiling",
+      "Where the team wants the working data kept",
+      "How hands-on the platform lead wants to be with the technical parts"
+    ],
+    "answers": [
+      {
+        "question": "What does the codebase and CI look like?",
+        "answer": "Monorepo with a Python backend and TypeScript front end, GitHub Actions."
+      },
+      {
+        "question": "How slow and how flaky, and where does that come from?",
+        "answer": "Median pipeline is about 40 minutes. Roughly 1 in 6 runs fails and passes on retry. Source: GitHub Actions history, reported."
+      },
+      {
+        "question": "What does CI cost?",
+        "answer": "About $2,800 a month."
+      },
+      {
+        "question": "What can your AI reach?",
+        "answer": "GitHub MCP with read access and draft pull requests."
+      },
+      {
+        "question": "What counts as fixed, by when, and what must not get worse?",
+        "answer": "Median under 15 minutes and fewer than 1 in 50 random failures within six weeks, without dropping test coverage or required checks."
+      },
+      {
+        "question": "How do changes go in and who decides?",
+        "answer": "Through reviewed pull requests. The platform lead decides."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners measure first: they split the pipeline into queue time, setup, build and test per job, and they classify every failed run as a real failure, a flake (fails, then passes on rerun with no code change) or an infrastructure fault, using history rather than one bad week. Speed comes from the critical path: cache dependencies by lock-file hash, run independent jobs in parallel, shard the slowest test job, skip work that a change cannot affect and cancel duplicate runs, watching billed minutes because parallelism adds cost. Flaky tests are fixed at the root cause; while that happens they are quarantined with an owner and an expiry, and keep running so their health is visible. Every workflow change goes through review with coverage and required checks held fixed.",
+    "sources": [
+      {
+        "id": "web-gha-perf",
+        "kind": "web",
+        "title": "How to Optimize GitHub Actions Performance (OneUptime)",
+        "ref": "https://oneuptime.com/blog/post/2026-02-02-github-actions-performance-optimization/view",
+        "date": "2026-02-02",
+        "note": "Caching by lock-file hash, parallel jobs, path filters, shallow checkout; pitfalls: repeated installs, paths with paths-ignore, fail-fast, redundant matrix cells."
+      },
+      {
+        "id": "web-atlassian-flaky",
+        "kind": "web",
+        "title": "Taming test flakiness: how we built a scalable tool to detect and manage flaky tests (Atlassian)",
+        "ref": "https://www.atlassian.com/blog/how-we-build/taming-test-flakiness-how-we-built-a-scalable-tool-to-detect-and-manage-flaky-tests",
+        "date": "2025-12-08",
+        "note": "Rerun and history-based detection, quarantine that keeps tests running, release after a healthy period, ownership and deadlines; flakiness caused up to 21% of master build failures in one repo."
+      },
+      {
+        "id": "cat-ci-workflow",
+        "kind": "catalogue",
+        "title": "GitHub Actions workflow reviewer",
+        "ref": "cut-ci-cost-without-weakening-checks"
+      },
+      {
+        "id": "cat-flaky-fixer",
+        "kind": "catalogue",
+        "title": "Flaky test fixer",
+        "ref": "flaky-test-fixer"
+      },
+      {
+        "id": "cat-actions-efficiency",
+        "kind": "catalogue",
+        "title": "GitHub build cost reviewer",
+        "ref": "copilot-github-actions-efficiency"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-timing",
+        "name": "Break the pipeline time down by workflow, job and step",
+        "why": "Queue time, installs, build and tests need different fixes; you cannot cut 25 minutes without knowing where they are.",
+        "sources": [
+          "cat-ci-workflow",
+          "web-gha-perf",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-classify",
+        "name": "Classify failures as real, flaky or infrastructure from history",
+        "why": "A failure that passes on rerun is a flake; one that fails every time is a regression and must not be quarantined. History over many runs, not one bad week, gives the flake rate per test.",
+        "sources": [
+          "web-atlassian-flaky",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-speed",
+        "name": "Shorten the critical path",
+        "why": "Cache installs, run independent jobs in parallel, shard the slowest tests, skip work a change cannot affect and cancel duplicate runs.",
+        "sources": [
+          "web-gha-perf",
+          "cat-actions-efficiency",
+          "cat-ci-workflow"
+        ]
+      },
+      {
+        "id": "s-cost",
+        "name": "Watch billed minutes next to wall-clock time",
+        "why": "Parallel jobs and bigger matrices cut time but each job is billed, so a faster pipeline can cost more.",
+        "sources": [
+          "web-gha-perf",
+          "cat-actions-efficiency"
+        ]
+      },
+      {
+        "id": "s-flake-fix",
+        "name": "Fix flaky tests at the cause and quarantine with an owner and expiry",
+        "why": "Retries hide flakes. Quarantined tests keep running, have an owner and come back after a healthy period.",
+        "sources": [
+          "web-atlassian-flaky",
+          "cat-flaky-fixer"
+        ]
+      },
+      {
+        "id": "s-protect",
+        "name": "Keep coverage and required checks fixed while changing the pipeline",
+        "why": "Speed bought by dropping checks or tests is not a fix; changes are reviewed with the required-check list as the reference.",
+        "sources": [
+          "cat-ci-workflow",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-remeasure",
+        "name": "Re-measure after each change on the same definitions",
+        "why": "Median time, flake rate and cost are read from run history with the same filters as the baseline.",
+        "sources": [
+          "web-atlassian-flaky",
+          "web-gha-perf"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Treating a test that always fails as flaky and quarantining a real regression; flakes fail at some rate between never and always.",
+        "sources": [
+          "web-atlassian-flaky"
+        ]
+      },
+      {
+        "text": "Fixing flakes with automatic retries, which hides them and still costs minutes.",
+        "sources": [
+          "web-atlassian-flaky"
+        ]
+      },
+      {
+        "text": "Installing dependencies separately in every job, or turning off fail-fast and adding matrix cells with no value.",
+        "sources": [
+          "web-gha-perf"
+        ]
+      },
+      {
+        "text": "Combining paths and paths-ignore for the same event, so jobs skip or run by accident.",
+        "sources": [
+          "web-gha-perf"
+        ]
+      },
+      {
+        "text": "Cutting required checks or tests to hit the time target.",
+        "sources": [
+          "cat-ci-workflow"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Make CI under 15 minutes and stop the random failures",
+    "capabilities": [
+      {
+        "id": "gh-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read workflow runs, jobs, logs, code and branch rules (GitHub MCP)",
+        "why": "Pull run history and logs and read the workflow files and required checks."
+      },
+      {
+        "id": "gh-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Open draft pull requests with workflow changes and notes (GitHub MCP)",
+        "why": "The owner allows draft pull requests; all changes go in by reviewed pull request."
+      },
+      {
+        "id": "merge",
+        "access": "live",
+        "via": "owner",
+        "name": "Merge a reviewed pull request (the team merges, the platform lead decides)",
+        "why": "Merging changes the shared pipeline for everyone, so each merge needs the platform lead."
+      }
+    ],
+    "data": [
+      {
+        "id": "runs",
+        "name": "Workflow run history",
+        "why": "The base for timing, failure classes and flake rate.",
+        "fields": [
+          "workflow",
+          "job",
+          "step",
+          "queued at",
+          "started at",
+          "duration",
+          "conclusion",
+          "run attempt",
+          "event",
+          "branch",
+          "commit",
+          "runner label"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read workflow runs, run attempts and jobs with the GitHub MCP for at least the last 60 days, including failed runs that passed on rerun."
+          },
+          {
+            "kind": "CSV",
+            "how": "GitHub API export of workflow runs and jobs for the same period."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-history"
+        ],
+        "alternative": "With a shorter history, flake rates per test are marked low-confidence."
+      },
+      {
+        "id": "failed-logs",
+        "name": "Logs of failed runs and their reruns",
+        "why": "Shows which tests or steps failed and what passed on the retry.",
+        "fields": [
+          "run id",
+          "attempt",
+          "failed job",
+          "failed test or step",
+          "error text"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read job logs for failed attempts with the GitHub MCP."
+          }
+        ],
+        "required_for": [
+          "diagnosis-flaky"
+        ],
+        "alternative": "Without logs, failures are grouped by job only."
+      },
+      {
+        "id": "rules",
+        "name": "Required checks and coverage level",
+        "why": "The fixed reference every change is checked against.",
+        "fields": [
+          "required status checks",
+          "coverage tool and current level"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read branch protection and the coverage step from the workflow files."
+          },
+          {
+            "kind": "ASK",
+            "how": "The platform lead states the current coverage number and any checks that are not enforced by branch rules."
+          }
+        ],
+        "required_for": [
+          "integrity-history",
+          "speed-prs",
+          "flake-fixes"
+        ]
+      },
+      {
+        "id": "billing",
+        "name": "CI minutes billed per workflow",
+        "why": "Shows what parallelism adds to the roughly $2,800 monthly bill.",
+        "fields": [
+          "workflow",
+          "runner type",
+          "billed minutes",
+          "month"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "GitHub billing usage report for Actions, grouped by workflow, for the last two months."
+          },
+          {
+            "kind": "ASK",
+            "how": "The platform lead exports it if the connector cannot read billing."
+          }
+        ],
+        "required_for": [
+          "options",
+          "measurement"
+        ],
+        "alternative": "Without billing data, cost is estimated from job minutes and marked as an estimate."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the problem",
+        "goal": "Turn the request into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [],
+        "depends_on": [],
+        "outputs": [],
+        "checks": [],
+        "gate": "none"
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Pull the run history and time the pipeline",
+        "goal": "Pull at least 60 days of runs, jobs and steps into one dataset and break the median down by workflow, job, step and queue time.",
+        "from_steps": [
+          "s-timing"
+        ],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [
+          "github-workflow-spec-writer",
+          "copilot-github-actions-efficiency"
+        ],
+        "data": [
+          "runs"
+        ],
+        "needs": [
+          "gh-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "runs-dataset",
+            "name": "Run history dataset",
+            "format": "csv",
+            "path": "evidence/runs.csv"
+          },
+          {
+            "id": "timing",
+            "name": "Where the minutes go",
+            "format": "markdown",
+            "path": "evidence/TIMING.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "coverage-of-history",
+            "name": "Covers at least 60 days and includes reruns with their attempt numbers",
+            "required": true
+          },
+          {
+            "id": "median",
+            "name": "Median per workflow is recomputed from the data and compared with the reported 40 minutes",
+            "required": true
+          },
+          {
+            "id": "critical-path",
+            "name": "Names the longest path through the jobs and the queue time before it",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-history",
+        "kind": "integrity",
+        "name": "Check the history and define a random failure",
+        "goal": "Check the run history is complete enough to trust, recompute the 1 in 6 figure, and fix the definition of a random failure and of the required checks and coverage reference.",
+        "from_steps": [
+          "s-classify"
+        ],
+        "owner": {
+          "role": "testing-test-results-analyzer"
+        },
+        "uses": [
+          "failed-workflow-diagnoser"
+        ],
+        "data": [
+          "runs",
+          "rules"
+        ],
+        "needs": [
+          "gh-read"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "history-check",
+            "name": "History check and definitions",
+            "format": "markdown",
+            "path": "integrity/HISTORY-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "definition",
+            "name": "A random failure is defined as failed then passed on rerun with no code change, and the baseline is recomputed on that definition",
+            "required": true
+          },
+          {
+            "id": "gaps",
+            "name": "Missing days, truncated logs and deleted runs are listed, with what they limit",
+            "required": true
+          },
+          {
+            "id": "reference",
+            "name": "The required-check list and coverage level are written down as the fixed reference",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis-speed",
+        "kind": "diagnosis",
+        "name": "Find where the time is wasted",
+        "goal": "Test the speed hypotheses against the timing data: missing caches, serial jobs, full test runs on every change, duplicate runs, slow tests and runner size.",
+        "from_steps": [
+          "s-speed",
+          "s-cost"
+        ],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [
+          "copilot-github-actions-efficiency",
+          "github-workflow-spec-writer"
+        ],
+        "data": [
+          "runs",
+          "billing"
+        ],
+        "needs": [
+          "gh-read"
+        ],
+        "depends_on": [
+          "integrity-history"
+        ],
+        "outputs": [
+          {
+            "id": "speed-diagnosis",
+            "name": "Speed diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/SPEED.md"
+          },
+          {
+            "id": "speed-hypotheses",
+            "name": "Speed hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses-speed.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every speed hypothesis is SUPPORTED, REFUTED or UNKNOWN with the run or job data that shows it",
+            "required": true
+          },
+          {
+            "id": "minutes",
+            "name": "Each finding states the minutes it costs on the critical path and the billed minutes it costs",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis-flaky",
+        "kind": "diagnosis",
+        "name": "Find which failures are flaky and why",
+        "goal": "Group failures by test and cause, separate flakes from real regressions and infrastructure faults, and rank tests by how many runs they spoil.",
+        "from_steps": [
+          "s-classify"
+        ],
+        "owner": {
+          "role": "testing-test-automation-engineer"
+        },
+        "support": [
+          "testing-test-results-analyzer"
+        ],
+        "uses": [
+          "flaky-test-fixer",
+          "test-suite-auditor",
+          "failed-workflow-diagnoser"
+        ],
+        "data": [
+          "runs",
+          "failed-logs"
+        ],
+        "needs": [
+          "gh-read"
+        ],
+        "depends_on": [
+          "integrity-history"
+        ],
+        "outputs": [
+          {
+            "id": "flaky-diagnosis",
+            "name": "Flaky failure diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/FLAKY.md"
+          },
+          {
+            "id": "flaky-hypotheses",
+            "name": "Flaky hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses-flaky.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every flaky hypothesis is SUPPORTED, REFUTED or UNKNOWN with logs or run pairs that show it",
+            "required": true
+          },
+          {
+            "id": "not-regressions",
+            "name": "Tests that fail every time are reported as regressions and are not proposed for quarantine",
+            "required": true
+          },
+          {
+            "id": "ranking",
+            "name": "Tests and jobs are ranked by the number of runs they spoiled",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Per-test findings need enough runs; thin ones are marked low-confidence",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the changes",
+        "goal": "Turn supported findings into ranked change cards, each with minutes saved, flake reduction, extra billed minutes, risk to coverage or required checks, effort and how it will be measured.",
+        "from_steps": [],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [],
+        "data": [
+          "billing"
+        ],
+        "depends_on": [
+          "diagnosis-speed",
+          "diagnosis-flaky"
+        ],
+        "outputs": [
+          {
+            "id": "change-cards",
+            "name": "Ranked change cards",
+            "format": "markdown",
+            "path": "options/CHANGES.md"
+          },
+          {
+            "id": "change-cards-json",
+            "name": "Change cards as data",
+            "format": "json",
+            "path": "options/changes.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has minutes saved, flake effect, billed-minute change, effort, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "protect",
+            "name": "No card removes a required check or lowers coverage; any card that touches them is flagged",
+            "required": true
+          },
+          {
+            "id": "order",
+            "name": "Cards are ranked by gain per effort, with the biggest flake sources early",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "The platform lead chooses",
+        "goal": "The platform lead picks the change cards to build. Ask why when a top card is passed over and record it. The platform lead also confirms the definitions of a random failure, the required checks and the coverage reference proposed in the history check.",
+        "from_steps": [],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [],
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen changes",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever a top card was passed over",
+            "required": true
+          }
+        ],
+        "gate": "approve"
+      },
+      {
+        "id": "speed-prs",
+        "kind": "production",
+        "name": "Draft the pipeline speed-up pull requests",
+        "goal": "Write each chosen workflow change as its own small draft pull request: caching, job split and parallelism, sharding, path filters, concurrency, runner changes.",
+        "from_steps": [
+          "s-speed",
+          "s-protect"
+        ],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [
+          "copilot-github-actions-efficiency",
+          "pull-request-risk-reviewer",
+          "pull-request-description-writer"
+        ],
+        "data": [
+          "rules"
+        ],
+        "needs": [
+          "gh-read",
+          "gh-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis-speed"
+        ],
+        "outputs": [
+          {
+            "id": "speed-pr-list",
+            "name": "Draft pull requests and what each changes",
+            "format": "markdown",
+            "path": "production/SPEED-PRS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "One change per pull request, only chosen cards",
+            "required": true
+          },
+          {
+            "id": "protected",
+            "name": "Each pull request lists the required checks and coverage step and shows they are unchanged",
+            "required": true
+          },
+          {
+            "id": "proof",
+            "name": "Each pull request states the expected minutes saved and the expected billed-minute change",
+            "required": true
+          },
+          {
+            "id": "reviewed",
+            "name": "Each pull request has a risk review before it leaves draft",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No pipeline speed card was chosen.",
+        "reviewers": [
+          "pull-request-reviewer"
+        ]
+      },
+      {
+        "id": "flake-fixes",
+        "kind": "production",
+        "name": "Draft the flaky-test fixes and the quarantine list",
+        "goal": "Fix the top flaky tests at their cause in draft pull requests, and quarantine only what cannot be fixed yet, with an owner, a reason and an expiry date.",
+        "from_steps": [
+          "s-flake-fix",
+          "s-protect"
+        ],
+        "owner": {
+          "role": "testing-test-automation-engineer"
+        },
+        "uses": [
+          "flaky-test-fixer",
+          "test-suite-auditor",
+          "pull-request-risk-reviewer"
+        ],
+        "data": [
+          "rules"
+        ],
+        "needs": [
+          "gh-read",
+          "gh-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis-flaky"
+        ],
+        "outputs": [
+          {
+            "id": "flake-pr-list",
+            "name": "Draft pull requests for flaky tests",
+            "format": "markdown",
+            "path": "production/FLAKE-PRS.md"
+          },
+          {
+            "id": "quarantine",
+            "name": "Quarantine list with owners and expiry",
+            "format": "markdown",
+            "path": "production/QUARANTINE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "cause",
+            "name": "Each fix states the cause (shared state, timing, external service, resource) and how a rerun loop shows it is gone",
+            "required": true
+          },
+          {
+            "id": "quarantine-rules",
+            "name": "Every quarantined test still runs, has an owner, a reason and an expiry date",
+            "required": true
+          },
+          {
+            "id": "coverage",
+            "name": "No test is deleted or skipped without being on the quarantine list, and coverage is unchanged",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Only chosen cards are included",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No flaky-test card was chosen.",
+        "reviewers": [
+          "pull-request-reviewer"
+        ]
+      },
+      {
+        "id": "land-changes",
+        "kind": "execution",
+        "name": "Land the reviewed pull requests, one at a time",
+        "goal": "The team merges each reviewed pull request; the platform lead approves each merge. After each merge, read the next runs and compare them with the baseline before the next one lands.",
+        "from_steps": [
+          "s-remeasure"
+        ],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [
+          "failed-workflow-diagnoser"
+        ],
+        "needs": [
+          "merge",
+          "gh-read"
+        ],
+        "depends_on": [
+          "speed-prs",
+          "flake-fixes"
+        ],
+        "outputs": [
+          {
+            "id": "merge-log",
+            "name": "Merge log with post-merge readings",
+            "format": "markdown",
+            "path": "execution/MERGE-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each merge has the platform lead's approval recorded before it happened",
+            "required": true
+          },
+          {
+            "id": "required-checks",
+            "name": "Required checks still run and pass on the merged branch",
+            "required": true
+          },
+          {
+            "id": "post-merge",
+            "name": "Median and failure rate over the next runs are compared with baseline before the next merge",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action"
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read the results honestly",
+        "goal": "Read median pipeline time, random failure rate, billed minutes, coverage and required checks from run history on the same definitions as the baseline.",
+        "from_steps": [],
+        "owner": {
+          "role": "testing-test-results-analyzer"
+        },
+        "uses": [
+          "copilot-github-actions-efficiency"
+        ],
+        "data": [
+          "runs",
+          "billing"
+        ],
+        "needs": [
+          "gh-read"
+        ],
+        "depends_on": [
+          "land-changes"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "CI readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-definitions",
+            "name": "Median and random-failure rate use the same definitions and filters as the baseline",
+            "required": true
+          },
+          {
+            "id": "targets",
+            "name": "Median is shown against 15 minutes and random failures against 1 in 50",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Coverage and the required-check list are shown unchanged, and the billed-minute change is stated",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A verdict is given only when enough runs have happened after the last merge; otherwise INCONCLUSIVE",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record what worked, save rules (quarantine expiry, rerun definition, per-job time budgets) with their scope, and plan the next round if a target is missed.",
+        "from_steps": [],
+        "owner": {
+          "role": "cut-ci-cost-without-weakening-checks"
+        },
+        "uses": [],
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          },
+          {
+            "id": "quarantine-closed",
+            "name": "Every quarantined test is fixed, still tracked with an expiry, or removed with the platform lead's approval",
+            "required": true
+          }
+        ],
+        "gate": "review"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-no-cache",
+        "statement": "Dependency installs for the Python and TypeScript parts repeat in every job without a cache, or the cache key changes on every run.",
+        "test": "Read install step durations and cache hit or miss lines in logs per job.",
+        "confirm_if": "Installs take a large share of job time and caches miss most runs.",
+        "refute_if": "Caches hit and installs are short.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-serial-jobs",
+        "statement": "Independent work (lint, backend tests, front-end tests, build) runs one after another, so the pipeline is the sum, not the longest job.",
+        "test": "Map job dependencies and compare the sum of job times with the wall-clock time.",
+        "confirm_if": "Wall-clock is close to the sum of job times and the jobs have no real dependency.",
+        "refute_if": "Jobs already run in parallel and one long job sets the time.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-run-everything",
+        "statement": "The whole monorepo is built and tested on every change, even when a change touches only one part.",
+        "test": "Compare changed paths with jobs run across a sample of recent pull requests.",
+        "confirm_if": "Most runs execute jobs for parts the change did not touch.",
+        "refute_if": "Jobs are already scoped by path or affected-package logic.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-slow-tests",
+        "statement": "A few slow test files or one slow job dominate the critical path and can be sharded.",
+        "test": "Rank test files and jobs by duration from logs or reports.",
+        "confirm_if": "A small set of tests accounts for a large share of the longest job.",
+        "refute_if": "Time is spread evenly or is mostly setup.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-duplicate-runs",
+        "statement": "Runs are duplicated or left running: the same commit triggers on push and on pull request, and superseded runs are not cancelled.",
+        "test": "Count runs per commit by event and runs that finished after a newer push.",
+        "confirm_if": "Many commits have more than one full run, or superseded runs run to the end.",
+        "refute_if": "One run per commit and superseded runs are cancelled.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-shared-state",
+        "statement": "A few tests fail at random because of shared state, ordering or timing, so a small group causes most of the 1 in 6.",
+        "test": "Pair each failed attempt with its passing rerun and count failures per test across history.",
+        "confirm_if": "A small set of tests accounts for most failed-then-passed pairs.",
+        "refute_if": "Failures are spread over many tests with no pattern.",
+        "fix_stage": "flake-fixes"
+      },
+      {
+        "id": "h-infra-flakes",
+        "statement": "Part of the random failures come from infrastructure, not tests: runner resource limits, timeouts, network or an external service.",
+        "test": "Check failed jobs for timeouts, out-of-memory, download or network errors and whether they cluster by runner or time.",
+        "confirm_if": "Failures show infrastructure errors or cluster in time or by runner.",
+        "refute_if": "Failures are assertion errors in tests.",
+        "fix_stage": "speed-prs"
+      },
+      {
+        "id": "h-real-regressions",
+        "statement": "Some failures counted as flaky are real regressions, so quarantine would hide real bugs.",
+        "test": "Check whether each frequent failure is deterministic for a given commit or fails at a steady rate across commits.",
+        "confirm_if": "A failure repeats for the same commit and passes only after a code change.",
+        "refute_if": "It passes and fails on the same commit.",
+        "fix_stage": "flake-fixes"
+      }
+    ],
+    "measurement": {
+      "window": "At least two weeks of runs after the last merge, compared with the 60-day baseline on the same definitions.",
+      "min_volume": "Enough runs after the last merge to see a flake rate near 1 in 50 (at least a few hundred runs); with fewer, report INCONCLUSIVE.",
+      "stop_rule": "Pause further merges if a merged change raises the failure rate, drops a required check or lowers coverage; revert that pull request through the normal review."
+    }
+  }
+}

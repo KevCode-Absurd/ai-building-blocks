@@ -1,0 +1,1180 @@
+{
+  "case": "local-plumber-lead-cost",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Get the cost of each booked plumbing job from Google Ads under 90 dollars within three months, while booked jobs per month stay at least as high as today and the Austin service area stays the same.",
+    "deliverable": "A tracked, cleaned-up Google Ads account where leads can be tied to booked jobs in Housecall Pro, with approved changes applied and a monthly read of cost per booked job in the owner's Google Sheet.",
+    "done": [
+      "The real cost per booked job and the real number of booked jobs a month are measured, not guessed",
+      "Calls, forms and booked jobs can be tied back to Google Ads, or the limits are stated",
+      "Wasted spend is found by search term, hour and campaign, and the owner has chosen what to change",
+      "Approved changes are applied one at a time with registered tests",
+      "Cost per booked job and booked jobs are read against the 90 dollar target and the no-drop guardrail",
+      "What was learned is saved for the next round"
+    ],
+    "metric": {
+      "name": "Cost per booked job from Google Ads",
+      "direction": "decrease",
+      "unit": "USD per booked job",
+      "baseline": null,
+      "baseline_source": "unknown",
+      "target": 90
+    },
+    "deadline": "Within three months of starting",
+    "guardrails": [
+      "Booked jobs per month stay at least as high as now",
+      "The service area does not change"
+    ],
+    "limits": [
+      "No change to the service area",
+      "Nothing goes live in Google Ads without the owner's approval of that action"
+    ],
+    "assets": [
+      "Google Ads account (spend about 6,000 dollars a month, about 120 leads, 50 dollars per lead, reported from the Google Ads dashboard)",
+      "Housecall Pro booking exports",
+      "A Google Sheet for working data"
+    ],
+    "connections": [
+      {
+        "name": "Google Ads MCP",
+        "access": "live",
+        "status": "connected"
+      },
+      {
+        "name": "Housecall Pro (exports only)",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "A Google Sheet (the owner's choice)",
+    "technical_level": "Not stated",
+    "decides": "The owner",
+    "unknowns": [
+      "The real number of booked jobs a month and the real cost per booked job (the owner thinks about a third of leads become booked jobs, but this is not tracked)",
+      "How many calls reach the shared phone from ads and how many are answered",
+      "Whether Housecall Pro records a lead source for each job",
+      "Whether the 6,000 dollar monthly spend may change",
+      "How the owner's Google Sheet can be reached by our AI",
+      "Average job value and margin"
+    ],
+    "answers": [
+      {
+        "question": "What business and where?",
+        "answer": "Plumbing company with six vans in Austin, Texas."
+      },
+      {
+        "question": "Spend and results now?",
+        "answer": "Google Ads spend is 6,000 dollars a month and we get about 120 leads, 50 dollars each (Google Ads dashboard)."
+      },
+      {
+        "question": "How many leads become jobs?",
+        "answer": "I think only a third become booked jobs but we do not track that properly."
+      },
+      {
+        "question": "How are calls and bookings handled?",
+        "answer": "Calls go to a shared phone; we use Housecall Pro for bookings."
+      },
+      {
+        "question": "What access do we have?",
+        "answer": "Google Ads MCP connected with live access, Housecall Pro exports only."
+      },
+      {
+        "question": "What does success look like?",
+        "answer": "Cost per booked job under 90 dollars within three months, keeping booked jobs at least as high as now."
+      },
+      {
+        "question": "Limits, data home and who decides?",
+        "answer": "No changes to our service area. Keep data in a Google Sheet. I decide."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners judge plumbing ads by cost per booked job, not cost per lead, so they fix measurement before touching bids. They confirm that calls and forms are counted once, tie ad clicks and calls to jobs that were really booked, then read the search terms report to cut DIY, job-seeker and parts searches, split campaigns by intent (emergency versus scheduled), tighten timing and location bids inside the area they serve, and send clicks to a service page with click-to-call. Automated bidding on a target cost is used only once there are enough tracked conversions, and each change is made one at a time and read over weeks so the account does not keep restarting its learning.",
+    "sources": [
+      {
+        "id": "web-hcp",
+        "kind": "web",
+        "title": "Google Ads for plumbers (Housecall Pro)",
+        "ref": "https://www.housecallpro.com/resources/google-ads-for-plumbers/",
+        "date": "2026-03-23",
+        "note": "Vendor guide. Judge keywords by which search terms lead to booked jobs, track every call source, keep negative keywords fresh, and do not let automation run unsupervised."
+      },
+      {
+        "id": "web-clicksgeek",
+        "kind": "web",
+        "title": "How to lower cost per lead with Google Ads for plumbing (Clicks Geek)",
+        "ref": "https://clicksgeek.com/how-to-lower-cost-per-lead-google-ads-plumbing/",
+        "date": "2026-07-03",
+        "note": "Agency write-up with an order of work: search terms and match types, negatives, landing pages, geo and schedule, bidding only with enough conversions, one change per test over 2 to 4 weeks. Its benchmark numbers are the agency's claims."
+      },
+      {
+        "id": "web-gads-offline",
+        "kind": "web",
+        "title": "Google Ads Help: About offline conversion imports",
+        "ref": "https://support.google.com/google-ads/answer/2998031?hl=en-GB",
+        "date": "2026-11",
+        "note": "Page is undated; date is when it was read (2026-11-02). Store the click ID with each lead and send back the booked-job outcome; the page notes upload method changes in April and June 2026."
+      },
+      {
+        "id": "web-gads-calls",
+        "kind": "web",
+        "title": "Google Ads Help: Measure calls from ads",
+        "ref": "https://support.google.com/google-ads/answer/6095882",
+        "date": "2026-11",
+        "note": "Page is undated; date is when it was found (2026-11-02). Call conversions can be set by call length or by analysis of recordings; Google forwarding numbers measure calls from ads."
+      },
+      {
+        "id": "cat-ads-review",
+        "kind": "catalogue",
+        "title": "Google Ads results reviewer",
+        "ref": "google-results-review-agent"
+      },
+      {
+        "id": "cat-search-terms",
+        "kind": "catalogue",
+        "title": "Search term sorter",
+        "ref": "search-term-sorter"
+      },
+      {
+        "id": "cat-tracking",
+        "kind": "catalogue",
+        "title": "Conversion tracking setup and repair planner",
+        "ref": "conversion-tracking-fixer"
+      },
+      {
+        "id": "cat-lead-quality",
+        "kind": "catalogue",
+        "title": "Lead quality reviewer",
+        "ref": "inquiry-problem-diagnoser"
+      },
+      {
+        "id": "cat-page",
+        "kind": "catalogue",
+        "title": "Landing page conversion reviewer",
+        "ref": "landing-page-auditor"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-baseline",
+        "name": "Work out the real cost per booked job",
+        "why": "The 50 dollars per lead is a platform figure. Experts line up ad spend, calls and the jobs actually booked in the same dates to get cost per booked job and the number of booked jobs, which is also the guardrail.",
+        "sources": [
+          "web-hcp",
+          "cat-ads-review",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-tracking",
+        "name": "Fix call and form tracking and send booked jobs back to Google",
+        "why": "Calls and forms must each be counted once, short or junk calls filtered, and click IDs or call data kept so that booked jobs can be sent back. Bidding learns from what is counted, so counting booked jobs lets it chase jobs, not calls.",
+        "sources": [
+          "web-gads-offline",
+          "web-gads-calls",
+          "web-hcp",
+          "cat-tracking"
+        ]
+      },
+      {
+        "id": "s-answer",
+        "name": "Check that ad calls are answered and turn into bookings",
+        "why": "With one shared phone, missed or unanswered calls waste paid clicks. Experts compare calls from ads with calls answered and jobs created, by hour, before blaming the ads.",
+        "sources": [
+          "web-gads-calls",
+          "web-hcp",
+          "cat-lead-quality"
+        ]
+      },
+      {
+        "id": "s-waste",
+        "name": "Cut wasted searches with the search terms report",
+        "why": "The fastest saving is to stop paying for DIY, job-seeker and parts searches, tighten match types and add specific negatives, while avoiding negatives so broad they block real jobs.",
+        "sources": [
+          "web-clicksgeek",
+          "web-hcp",
+          "cat-search-terms"
+        ]
+      },
+      {
+        "id": "s-structure",
+        "name": "Split by intent and tighten timing and location inside the service area",
+        "why": "Emergency and scheduled work convert and cost differently. Experts separate them, adjust bids by hour and by zip code inside the area the business serves, and lower rather than switch off bids at quiet hours for round-the-clock services.",
+        "sources": [
+          "web-clicksgeek",
+          "cat-ads-review"
+        ]
+      },
+      {
+        "id": "s-pages",
+        "name": "Send clicks to a service page built to call or book",
+        "why": "Cost per lead is cost per click divided by conversion rate, so a page per service with click-to-call, trust signals, a stated service area and fast mobile loading lowers cost without touching bids.",
+        "sources": [
+          "web-clicksgeek",
+          "cat-page"
+        ]
+      },
+      {
+        "id": "s-bidding",
+        "name": "Choose bidding only after tracking is trusted",
+        "why": "Target-cost bidding needs enough tracked conversions and a learning period. Setting a target far below the current cost starves traffic, so experts verify tracking first and change one thing at a time.",
+        "sources": [
+          "web-clicksgeek",
+          "web-hcp"
+        ]
+      },
+      {
+        "id": "s-test",
+        "name": "Run changes as one-at-a-time tests and read them against booked jobs",
+        "why": "Each change runs for weeks, with the booked-job guardrail checked, so improvements are real and the account does not keep restarting learning.",
+        "sources": [
+          "web-clicksgeek",
+          "web-hcp",
+          "owner"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Judging by cost per lead or by calls, so cheap low-intent calls look like wins.",
+        "sources": [
+          "web-hcp"
+        ]
+      },
+      {
+        "text": "Counting a call and a form from the same visit twice, or counting very short calls as leads.",
+        "sources": [
+          "web-gads-calls",
+          "web-hcp"
+        ]
+      },
+      {
+        "text": "Adding broad negatives that block real jobs, or never refreshing the negative list.",
+        "sources": [
+          "web-clicksgeek"
+        ]
+      },
+      {
+        "text": "Setting a bidding target far below current cost, or letting automated bidding run unsupervised.",
+        "sources": [
+          "web-clicksgeek",
+          "web-hcp"
+        ]
+      },
+      {
+        "text": "Editing many things at once so no test can be read.",
+        "sources": [
+          "web-clicksgeek"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Lower the cost of each booked job from Google Ads",
+    "capabilities": [
+      {
+        "id": "ads-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read Google Ads results (Google Ads MCP)",
+        "why": "Read campaigns, search terms, call reporting, conversion actions and settings."
+      },
+      {
+        "id": "jobs-export",
+        "access": "read",
+        "via": "file",
+        "name": "Housecall Pro job exports",
+        "why": "Read created and booked jobs by date, source and job type to tie leads to jobs."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "owner",
+        "name": "Owner's Google Sheet",
+        "why": "Working data lives here; the owner shares the Sheet or pastes the tabs we prepare."
+      },
+      {
+        "id": "site-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read landing pages (browser)",
+        "why": "Check mobile speed, click-to-call and what each service page says."
+      },
+      {
+        "id": "ads-write",
+        "access": "live",
+        "via": "mcp",
+        "name": "Change Google Ads (Google Ads MCP)",
+        "why": "Add negatives, change settings, create tests and upload booked-job outcomes; each action needs the owner's yes."
+      }
+    ],
+    "data": [
+      {
+        "id": "ads-results",
+        "name": "Google Ads results by day",
+        "why": "The base for spend, clicks, calls and conversions by campaign, ad group, hour and location.",
+        "fields": [
+          "date",
+          "campaign",
+          "ad group",
+          "keyword",
+          "spend",
+          "clicks",
+          "impressions",
+          "calls from ads",
+          "conversions",
+          "conversion action",
+          "hour",
+          "zip code"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read with the Google Ads MCP: the last 90 days, daily, with hour and location breakdowns."
+          },
+          {
+            "kind": "CSV",
+            "how": "Google Ads reports: campaign and ad group by day with hour and location segments; export as CSV."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ]
+      },
+      {
+        "id": "search-terms",
+        "name": "Search terms report",
+        "why": "Shows which searches cost money and which ones lead to jobs.",
+        "fields": [
+          "search term",
+          "match type",
+          "campaign",
+          "spend",
+          "clicks",
+          "conversions"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the search terms report for the last 90 days with the Google Ads MCP."
+          },
+          {
+            "kind": "CSV",
+            "how": "Google Ads, Insights and reports, Search terms; export as CSV."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis",
+          "search-cleanup"
+        ]
+      },
+      {
+        "id": "calls",
+        "name": "Calls from ads",
+        "why": "Shows how many calls ads bring, how long they last and from when.",
+        "fields": [
+          "call date and time",
+          "duration",
+          "campaign",
+          "answered or missed if known"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read call reporting if call assets with Google forwarding numbers are on."
+          },
+          {
+            "kind": "ASK",
+            "how": "If call reporting is off, ask the owner for the shared phone's call log for the last 30 days."
+          }
+        ],
+        "required_for": [
+          "integrity-tracking",
+          "diagnosis"
+        ],
+        "alternative": "Without any call data, answered-call findings stay unknown."
+      },
+      {
+        "id": "jobs",
+        "name": "Housecall Pro jobs",
+        "why": "Shows which leads became booked jobs and when.",
+        "fields": [
+          "job created date",
+          "booked or not",
+          "job type",
+          "lead source if recorded",
+          "job value if recorded"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Housecall Pro export of jobs and estimates for the same 90 days. Keep customer names and phone numbers out of the shared Sheet unless a match needs them; if so, keep them in a separate private tab."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-tracking",
+          "measurement"
+        ],
+        "alternative": "Without a lead source, jobs are matched to calls by date, time and job type and marked as estimates."
+      },
+      {
+        "id": "tracking-setup",
+        "name": "Conversion tracking setup",
+        "why": "Double counting or the wrong conversion definition changes every number.",
+        "fields": [
+          "conversion actions",
+          "which are primary",
+          "call duration threshold",
+          "form events",
+          "bidding strategy",
+          "attribution setting"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read conversion actions and campaign bidding settings with the Google Ads MCP."
+          },
+          {
+            "kind": "ASK",
+            "how": "Screenshots of Tools, Conversions, if the MCP cannot read them."
+          }
+        ],
+        "required_for": [
+          "integrity-tracking"
+        ]
+      },
+      {
+        "id": "landing-pages",
+        "name": "Landing page links",
+        "why": "Needed for speed, click-to-call and ad match checks.",
+        "fields": [
+          "final url of each ad group"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read final URLs from ads with the Google Ads MCP."
+          }
+        ],
+        "required_for": [
+          "integrity-pages"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the goal",
+        "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Gather ad, call and job data in the Sheet",
+        "goal": "Pull 90 days of Google Ads results, search terms, call data and Housecall Pro jobs into the owner's Google Sheet, with totals checked against each source.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "data": [
+          "ads-results",
+          "search-terms",
+          "calls",
+          "jobs"
+        ],
+        "needs": [
+          "ads-read",
+          "jobs-export",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "dataset",
+            "name": "Working dataset (Sheet tabs mirrored as CSV)",
+            "format": "csv",
+            "path": "evidence/dataset.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled, from where, and the Sheet link",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Spend, clicks and conversions match the Google Ads totals for the same dates",
+            "required": true
+          },
+          {
+            "id": "jobs-period",
+            "name": "Jobs cover the same dates, with the date field used stated",
+            "required": true
+          },
+          {
+            "id": "customer-data",
+            "name": "Customer names and phone numbers are left out of shared tabs unless a match needs them, and then kept in a separate private tab",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "uses": [
+          "google-ads-report-auditor",
+          "ad-data-quality-checker"
+        ]
+      },
+      {
+        "id": "integrity-tracking",
+        "kind": "integrity",
+        "name": "Check leads can be tied to booked jobs",
+        "goal": "Check how calls and forms are counted, remove double counting, tie ad calls and clicks to Housecall Pro jobs as far as the data allows, and work out the real booked jobs a month and cost per booked job as a verified baseline.",
+        "owner": {
+          "role": "paid-media-tracking-specialist"
+        },
+        "data": [
+          "calls",
+          "jobs",
+          "tracking-setup"
+        ],
+        "needs": [
+          "ads-read",
+          "jobs-export"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "tracking",
+            "name": "Tracking check and verified baseline",
+            "format": "markdown",
+            "path": "integrity/TRACKING-AND-BASELINE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dedup",
+            "name": "Calls and forms from the same visit are not double counted, and call length rules are recorded",
+            "required": true
+          },
+          {
+            "id": "match",
+            "name": "Leads are matched to booked jobs, with the matched share and the method stated",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "Real booked jobs a month and cost per booked job are stated as verified or estimated, and replace the owner's guess of a third",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-tracking",
+          "s-baseline"
+        ],
+        "uses": [
+          "conversion-tracking-fixer",
+          "conversion-reconciliation"
+        ]
+      },
+      {
+        "id": "integrity-pages",
+        "kind": "integrity",
+        "name": "Check the landing pages",
+        "goal": "Test the pages ads send people to on a phone: speed, click-to-call, trust signals, stated service area and whether each page matches its ad group.",
+        "owner": {
+          "role": "cro-specialist"
+        },
+        "data": [
+          "landing-pages"
+        ],
+        "needs": [
+          "site-read",
+          "ads-read"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "pages",
+            "name": "Landing page check",
+            "format": "markdown",
+            "path": "integrity/LANDING-PAGES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "speed",
+            "name": "Mobile load is measured on the real pages, or marked not tested",
+            "required": true
+          },
+          {
+            "id": "call-path",
+            "name": "Clicks needed to call are counted for each page",
+            "required": true
+          },
+          {
+            "id": "match",
+            "name": "Each ad group's page matches the service searched",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-pages"
+        ],
+        "uses": [
+          "landing-page-auditor",
+          "ad-and-page-match-checker"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find what makes a booked job expensive",
+        "goal": "Test the hypotheses against the evidence: tracking, lead quality, unanswered calls, wasted searches, timing and location, bidding and pages. Keep competing explanations and mark what the data cannot show.",
+        "owner": {
+          "role": "google-results-review-agent"
+        },
+        "support": [
+          "paid-media-search-query-analyst"
+        ],
+        "data": [
+          "ads-results",
+          "search-terms",
+          "calls",
+          "jobs"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-tracking",
+          "integrity-pages"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "Diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with its evidence",
+            "required": true
+          },
+          {
+            "id": "weighted",
+            "name": "Totals are spend-weighted, and cost per booked job uses booked jobs, not leads",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Findings from few booked jobs are marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-answer",
+          "s-waste",
+          "s-structure",
+          "s-bidding"
+        ],
+        "uses": [
+          "inquiry-problem-diagnoser",
+          "google-ads-dip-investigator",
+          "search-term-sorter"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank what to change",
+        "goal": "Turn supported findings into ranked cards, each with the finding behind it, expected effect, effort, confidence, risk and how it will be measured. Put tracking fixes first if tracking is not CHECKED.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "recommendations",
+            "name": "Recommendation cards",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has effect, effort, confidence, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "guardrail",
+            "name": "Every card says how it protects booked jobs and the service area",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "campaign-budget-scenario-planner"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner chooses",
+        "goal": "The owner picks card ids. Ask for the reason when the top card is passed over, and confirm whether the monthly spend may change.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top card was passed over",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "tracking-fixes",
+        "kind": "production",
+        "name": "Prepare the tracking fixes",
+        "goal": "Write the chosen tracking changes as exact steps: call reporting and forwarding numbers, conversion actions and call length rules, and a Sheet template for sending booked jobs back to Google Ads.",
+        "owner": {
+          "role": "paid-media-tracking-specialist"
+        },
+        "depends_on": [
+          "decision",
+          "integrity-tracking"
+        ],
+        "outputs": [
+          {
+            "id": "tracking-fixes",
+            "name": "Tracking fixes",
+            "format": "markdown",
+            "path": "production/TRACKING-FIXES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen fixes are included",
+            "required": true
+          },
+          {
+            "id": "verify",
+            "name": "Each fix says how to confirm it worked in Google Ads or Housecall Pro",
+            "required": true
+          },
+          {
+            "id": "customer-data",
+            "name": "Anything uploaded to Google carries only what the upload needs, with the owner's approval of the data used",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No tracking card was chosen.",
+        "from_steps": [
+          "s-tracking"
+        ],
+        "uses": [
+          "conversion-tracking-fixer",
+          "tracking-plan-builder"
+        ]
+      },
+      {
+        "id": "search-cleanup",
+        "kind": "production",
+        "name": "Prepare search, structure and bid changes",
+        "goal": "Write the chosen changes as a reviewable list: negative keywords by level, match type changes, an emergency versus scheduled split, hour and location bid changes inside the unchanged service area, and bidding changes only if tracking allows.",
+        "owner": {
+          "role": "paid-media-search-query-analyst"
+        },
+        "support": [
+          "paid-media-ppc-strategist"
+        ],
+        "data": [
+          "search-terms"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-tracking"
+        ],
+        "outputs": [
+          {
+            "id": "search-changes",
+            "name": "Search and bid changes for review",
+            "format": "markdown",
+            "path": "production/SEARCH-CHANGES.md"
+          },
+          {
+            "id": "negatives",
+            "name": "Negative keyword list with levels",
+            "format": "csv",
+            "path": "production/negatives.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen changes are included, and the service area is untouched",
+            "required": true
+          },
+          {
+            "id": "negatives",
+            "name": "No negative blocks a term that produced booked jobs; broad single-word negatives are flagged",
+            "required": true
+          },
+          {
+            "id": "one-at-a-time",
+            "name": "Changes are grouped into tests with one main change each, and the old setting is recorded for undo",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No search or bidding card was chosen.",
+        "from_steps": [
+          "s-waste",
+          "s-structure",
+          "s-bidding"
+        ],
+        "uses": [
+          "search-term-sorter",
+          "google-ads-campaign-structure-planner",
+          "google-ads-account-auditor"
+        ]
+      },
+      {
+        "id": "page-call-fixes",
+        "kind": "production",
+        "name": "Prepare page and call-handling fixes",
+        "goal": "Write the chosen page changes (service page copy, click-to-call, speed fixes) and, if calls are being missed, a simple call-answering and callback routine for the shared phone, as drafts the owner can apply.",
+        "owner": {
+          "role": "cro-specialist"
+        },
+        "support": [
+          "customer-support-specialist"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-pages",
+          "integrity-tracking"
+        ],
+        "outputs": [
+          {
+            "id": "page-call-fixes",
+            "name": "Page and call-handling fixes",
+            "format": "markdown",
+            "path": "production/PAGE-AND-CALL-FIXES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen changes are included",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "No licence, insurance, price or guarantee claim is used without proof from the owner",
+            "required": true
+          },
+          {
+            "id": "preview",
+            "name": "Changes are previewed or delivered as ready text with steps",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "optional_when": "No page or call-handling card was chosen.",
+        "from_steps": [
+          "s-pages",
+          "s-answer"
+        ],
+        "uses": [
+          "ad-matched-landing-page-writer",
+          "landing-page-auditor"
+        ]
+      },
+      {
+        "id": "launch",
+        "kind": "execution",
+        "name": "Apply approved changes one at a time",
+        "goal": "Apply each approved Google Ads change, record the previous setting, register the test with its metric and stop rule, and upload booked-job outcomes only after the owner approves the data. Keep spend within the agreed monthly figure.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "needs": [
+          "ads-write"
+        ],
+        "depends_on": [
+          "tracking-fixes",
+          "search-cleanup",
+          "page-call-fixes"
+        ],
+        "outputs": [
+          {
+            "id": "change-log",
+            "name": "Change log with before and after settings",
+            "format": "markdown",
+            "path": "execution/CHANGE-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each action was approved by the owner before it was applied",
+            "required": true
+          },
+          {
+            "id": "registered",
+            "name": "Each test is registered with its metric, date and stop rule before the change goes live",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "Each change is read back from Google Ads and matches the approved list",
+            "required": true
+          },
+          {
+            "id": "spend",
+            "name": "Daily budgets and the service area are unchanged unless the owner approved a change",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-test"
+        ],
+        "uses": [
+          "launch-checklist-runner"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read the results against booked jobs",
+        "goal": "Each month, and per test, compare cost per booked job and booked jobs with the verified baseline and the 90 dollar target, and report in the Google Sheet.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "data": [
+          "ads-results",
+          "jobs"
+        ],
+        "needs": [
+          "ads-read",
+          "jobs-export",
+          "sheet"
+        ],
+        "depends_on": [
+          "launch"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Results readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "Periods, attribution and job definitions match the baseline",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Booked jobs per month are checked against the baseline, and the service area is unchanged",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A verdict needs the minimum booked jobs agreed before launch, otherwise INCONCLUSIVE",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "recurring-kpi-report-maker",
+          "google-ads-report-auditor"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Close each test, record what worked and what did not, propose lasting rules with their scope, and plan the next round.",
+        "owner": {
+          "role": "ad-test-sprint-runner"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "Every registered test is closed with a verdict",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this account, this business or Austin plumbing in general",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "find-out-why-your-ad-test-did-not-win-and-plan-the-next-round"
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-tracking",
+        "statement": "The 50 dollars per lead is misleading because calls and forms are double counted or very short calls count as leads.",
+        "test": "List the conversion actions and call length rules; compare Google Ads conversions with calls from ads and with Housecall Pro jobs created in the same dates.",
+        "confirm_if": "Conversions exceed distinct calls and forms, or many counted calls are very short or unanswered.",
+        "refute_if": "Conversions match distinct calls and forms and short calls are excluded.",
+        "fix_stage": "tracking-fixes"
+      },
+      {
+        "id": "h-lead-quality",
+        "statement": "Many leads are not real jobs: wrong service, price shoppers, DIY questions or job seekers.",
+        "test": "Join search terms and call outcomes to booked jobs; group non-booked leads by reason where recorded.",
+        "confirm_if": "A large share of spend and leads sit on terms or call types that never book.",
+        "refute_if": "Non-booked leads are mostly valid jobs lost after the call.",
+        "fix_stage": "search-cleanup"
+      },
+      {
+        "id": "h-unanswered-calls",
+        "statement": "Many ad calls to the shared phone go unanswered or are not followed up, so paid leads are lost.",
+        "test": "Compare calls from ads with calls answered and jobs created within a day, by hour and weekday.",
+        "confirm_if": "A meaningful share of ad calls is missed, concentrated at certain hours.",
+        "refute_if": "Nearly all ad calls are answered and still do not book.",
+        "fix_stage": "page-call-fixes"
+      },
+      {
+        "id": "h-wasted-searches",
+        "statement": "Broad or phrase matching and thin negatives send spend to DIY, job-seeker and parts searches.",
+        "test": "Search terms by spend and by booked jobs; share of spend on terms with clicks and no booked job.",
+        "confirm_if": "A large share of spend goes to irrelevant terms with no booked jobs.",
+        "refute_if": "Spend sits on relevant terms and most waste is small.",
+        "fix_stage": "search-cleanup"
+      },
+      {
+        "id": "h-timing-location",
+        "statement": "Some hours, days or zip codes inside the service area waste spend.",
+        "test": "Cost per booked job by hour, weekday and zip code inside the service area, with volume noted.",
+        "confirm_if": "Segments with enough volume run far above average cost per booked job.",
+        "refute_if": "Cost per booked job is flat across segments, or segments are too small to judge.",
+        "fix_stage": "search-cleanup"
+      },
+      {
+        "id": "h-bidding-signal",
+        "statement": "Automated bidding optimises for cheap, low-intent calls because booked jobs are not counted.",
+        "test": "Read bidding strategy, learning status and the conversions it optimises; compare cost per booked job by campaign.",
+        "confirm_if": "Campaigns optimise for calls or forms and the cheapest sources have the worst booking rates.",
+        "refute_if": "Booking rates are similar across campaigns, or bidding already uses booked-job data.",
+        "fix_stage": "tracking-fixes"
+      },
+      {
+        "id": "h-page-fit",
+        "statement": "Landing pages are slow or do not match the service searched, so clicks do not call.",
+        "test": "Mobile speed, clicks to call and ad-to-page match for the top-spend ad groups; calls per click before and after any page change.",
+        "confirm_if": "Slow pages, no click-to-call or a mismatch on high-spend ad groups.",
+        "refute_if": "Pages are fast and match, and calls per click are healthy.",
+        "fix_stage": "page-call-fixes"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Read monthly across the three months; each test runs 2 to 4 weeks, and the account is not changed more than once per test.",
+      "min_volume": "A verdict on a test needs the number of booked jobs the owner and AI agree before launch; below that the result is INCONCLUSIVE.",
+      "stop_rule": "Revert a change if booked jobs fall below the baseline guardrail; otherwise run the full test window."
+    }
+  }
+}

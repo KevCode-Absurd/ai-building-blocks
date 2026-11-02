@@ -1,0 +1,1200 @@
+{
+  "case": "eng-android-crashes",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "The Android app stops crashing for customers, especially at checkout: crash-free users back above 99.3% and the Play Store rating back to 4.2, within two months.",
+    "deliverable": "Reviewed fixes for the top Android crash causes, shipped as staged rollouts the mobile lead approves, with a crash and rating readout and notes kept for the next release.",
+    "done": [
+      "Crash causes are ranked by users affected, with checkout crashes traced to a release and a code path",
+      "The mobile lead has chosen which fixes and rating-recovery steps to do",
+      "Each chosen fix is a reviewed pull request with a test that reproduces the crash",
+      "Fixes ship as staged rollouts, with the mobile lead approving each increase and a stop rule that is followed",
+      "Android crash-free users are read back against 99.3% and the Play rating against 4.2",
+      "Release checks that would have caught this are saved for the next release"
+    ],
+    "metric": {
+      "name": "Android crash-free users",
+      "direction": "increase",
+      "unit": "% of users",
+      "baseline": 97.1,
+      "baseline_source": "reported",
+      "target": 99.3
+    },
+    "deadline": "Within two months of plan approval",
+    "guardrails": [
+      "Every release goes out as a staged rollout and each step needs the mobile lead's approval"
+    ],
+    "limits": [
+      "Crashlytics and Play Console are reached through the browser",
+      "GitHub access is read plus draft pull requests",
+      "Releases need the mobile lead's approval"
+    ],
+    "assets": [
+      "The Android (Kotlin) and iOS (Swift) code in GitHub",
+      "Crashlytics crash data",
+      "Play Console vitals, reviews and release history"
+    ],
+    "connections": [
+      {
+        "name": "Firebase Crashlytics (browser)",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Google Play Console (browser)",
+        "access": "live",
+        "status": "connected"
+      },
+      {
+        "name": "GitHub (read, draft pull requests)",
+        "access": "draft",
+        "status": "connected"
+      }
+    ],
+    "data_home": "Not stated. Proposed: a notes folder in the repo, delivered through draft pull requests",
+    "decides": "The mobile lead",
+    "unknowns": [
+      "Which crashes are the biggest and which release introduced them",
+      "Whether the rating drop is all caused by crashes",
+      "How builds reach Play Console (pipeline or manual upload) and who uploads them",
+      "Whether iOS crash-free users or checkout completion have also moved",
+      "Whether mapping files are uploaded so Android stack traces are readable",
+      "Where the working data should be kept, and how hands-on the mobile lead wants to be"
+    ],
+    "answers": [
+      {
+        "question": "What is the app?",
+        "answer": "Grocery delivery app, Kotlin on Android and Swift on iOS."
+      },
+      {
+        "question": "How bad is it and where does that come from?",
+        "answer": "Play Store rating fell from 4.3 to 3.6 in six weeks; crash-free users on Android went from 99.4% to 97.1% (Firebase Crashlytics, reported). Most complaints mention crashes at checkout."
+      },
+      {
+        "question": "What can your AI reach?",
+        "answer": "Crashlytics and Play Console through the browser; GitHub read and draft pull requests."
+      },
+      {
+        "question": "How do releases work?",
+        "answer": "Staged rollout, and each release needs the mobile lead's approval."
+      },
+      {
+        "question": "What counts as fixed, by when?",
+        "answer": "Crash-free users back above 99.3% and rating at 4.2 within two months."
+      },
+      {
+        "question": "Who decides?",
+        "answer": "The mobile lead."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners rank crashes by the number of users affected, not event counts, then slice by app version, Android version and device to find what changed and for whom. They check the data first: stack traces must be readable (mapping files uploaded), and Crashlytics and Play's Android vitals count differently, so they pick one measure and compare like for like. Each top crash is reproduced from its stack trace before it is fixed, the fix gets a regression test, and the build ships as a staged rollout that is watched at each step against the previous version's crash rate, ANRs and new reviews. A bad rollout is halted, and because Play cannot roll back, the repair is a new build. Ratings recover with a lag, so crash-free users are the metric to steer by and the rating is read weekly.",
+    "sources": [
+      {
+        "id": "web-staged-rollout",
+        "kind": "web",
+        "title": "Google Play release rollout guide (aso.dev)",
+        "ref": "https://aso.dev/google-play/rollout/",
+        "date": "2026-10-24",
+        "note": "Staged steps from 1% to 100% with hold times, watch crash rate, ANRs, reviews and Android vitals, halt on a spike; halting is not a rollback, so ship a hotfix."
+      },
+      {
+        "id": "web-aqi",
+        "kind": "web",
+        "title": "Analyze issues from Firebase Crashlytics and Android vitals with App Quality Insights (Android Developers)",
+        "ref": "https://developer.android.com/studio/debug/app-quality-insights",
+        "date": "2026-11-02",
+        "note": "Vendor page with no printed date; read 2026-11-02. Issues sorted by impact, grouped by variants, filtered by version, device and regression; Crashlytics and Android vitals counts can differ."
+      },
+      {
+        "id": "web-android-crash",
+        "kind": "web",
+        "title": "Crashes (Android Developers)",
+        "ref": "https://developer.android.com/topic/performance/vitals/crash",
+        "date": "2026-11-02",
+        "note": "Vendor page with no printed date; read 2026-11-02. Read the stack trace, reproduce with logcat and constrained memory or network, null pointer exceptions are the largest cause on Google Play."
+      },
+      {
+        "id": "web-play-staged",
+        "kind": "web",
+        "title": "Release an app update with a staged rollout (Google Play Console Help)",
+        "ref": "https://support.google.com/googleplay/android-developer/answer/6346149",
+        "date": "2026-11-02",
+        "note": "Vendor page with no printed date; read 2026-11-02. Start, increase, halt and resume steps; resume only if the bundle is sound, otherwise ship a fixed release."
+      },
+      {
+        "id": "web-crashlytics-symbols",
+        "kind": "web",
+        "title": "Debugging native crashes on Android just got easier with Crashlytics (Firebase Blog)",
+        "ref": "https://firebase.blog/posts/2025/11/crashlytics-android-ndk-tombstones/",
+        "date": "2025-11-14",
+        "note": "Symbol files decide whether frames are readable; minidumps and tombstones complement each other for native crashes."
+      },
+      {
+        "id": "cat-bug-fix-workflow",
+        "kind": "catalogue",
+        "title": "Bug repair and pull request reviewer",
+        "ref": "fix-a-bug-with-proof-and-a-clear-pull-request"
+      },
+      {
+        "id": "cat-mobile-release",
+        "kind": "catalogue",
+        "title": "Mobile app release planner",
+        "ref": "agency-engineering-mobile-release-engineer"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-data",
+        "name": "Pull crash, vitals, review and release data for the same period",
+        "why": "The drop is only readable against release dates and versions: crashes by version, vitals, reviews with their app version and the rollout history.",
+        "sources": [
+          "web-aqi",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-trust",
+        "name": "Check the data can be trusted",
+        "why": "Unreadable stack traces, two tools that count differently, and versions without crash reporting all distort the ranking.",
+        "sources": [
+          "web-aqi",
+          "web-crashlytics-symbols"
+        ]
+      },
+      {
+        "id": "s-rank",
+        "name": "Rank crashes by users affected and slice by version, OS and device",
+        "why": "Impact, not event count, decides the order; slicing shows which release and which users, and flags regressed issues.",
+        "sources": [
+          "web-aqi",
+          "web-staged-rollout"
+        ]
+      },
+      {
+        "id": "s-link",
+        "name": "Link complaints and rating drops to crashes and versions",
+        "why": "Reviews that name checkout need to match a crash group and release before anyone assumes crashes cause all of the rating drop.",
+        "sources": [
+          "owner",
+          "web-staged-rollout"
+        ]
+      },
+      {
+        "id": "s-cause",
+        "name": "Reproduce each top crash and find its cause",
+        "why": "The stack trace names the exception and the line; reproducing under low memory, poor network or the affected OS confirms the cause before a fix.",
+        "sources": [
+          "web-android-crash",
+          "cat-bug-fix-workflow"
+        ]
+      },
+      {
+        "id": "s-fix",
+        "name": "Fix with a regression test, one crash group per pull request",
+        "why": "A failing test that reproduces the crash, then a minimal fix, keeps fixes reviewable and reversible.",
+        "sources": [
+          "cat-bug-fix-workflow",
+          "web-android-crash"
+        ]
+      },
+      {
+        "id": "s-release",
+        "name": "Plan the staged rollout with watch rules and a halt rule",
+        "why": "Small steps with hold times and a stop rule limit the damage of a bad build; Play cannot roll back, so the plan is halt and fix forward.",
+        "sources": [
+          "web-staged-rollout",
+          "web-play-staged",
+          "cat-mobile-release"
+        ]
+      },
+      {
+        "id": "s-ship",
+        "name": "Ship in stages and watch each step before increasing",
+        "why": "Each increase waits for crash-free users, ANRs and reviews of the new version to be no worse than the previous one.",
+        "sources": [
+          "web-staged-rollout",
+          "web-play-staged"
+        ]
+      },
+      {
+        "id": "s-readout",
+        "name": "Read crash-free users per version, then the rating with its lag",
+        "why": "Crash-free users move first; ratings follow new reviews, so they are read weekly and not used to stop or accelerate a rollout.",
+        "sources": [
+          "web-staged-rollout",
+          "owner"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Ranking crashes by event count, so one user in a loop outranks a crash that hits many users.",
+        "sources": [
+          "web-aqi"
+        ]
+      },
+      {
+        "text": "Mixing Crashlytics and Android vitals numbers: they count at different times and for different users.",
+        "sources": [
+          "web-aqi"
+        ]
+      },
+      {
+        "text": "Fixing from a stack trace that is not readable because mapping or symbol files were not uploaded.",
+        "sources": [
+          "web-crashlytics-symbols",
+          "web-android-crash"
+        ]
+      },
+      {
+        "text": "Treating a halted rollout as a rollback: users who already updated stay on the bad build until a fixed release ships.",
+        "sources": [
+          "web-staged-rollout",
+          "web-play-staged"
+        ]
+      },
+      {
+        "text": "Resuming a halted rollout without a fix, or raising the percentage after one good day of thin data.",
+        "sources": [
+          "web-play-staged",
+          "web-staged-rollout"
+        ]
+      },
+      {
+        "text": "Assuming all of the rating drop is crashes and not checking the other themes in the reviews.",
+        "sources": [
+          "owner"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Fix the Android crashes and win the rating back through staged releases",
+    "capabilities": [
+      {
+        "id": "crashlytics-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read Crashlytics issues, versions and devices (browser)",
+        "why": "Pull crash groups by users impacted with version, OS and device breakdowns."
+      },
+      {
+        "id": "play-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read Play Console vitals, reviews and release history (browser)",
+        "why": "Pull crash rate and ANR by version, reviews with app version, and rollout history."
+      },
+      {
+        "id": "gh-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read the Android code, releases and history (GitHub)",
+        "why": "Read the diffs between releases and the code on the crash paths."
+      },
+      {
+        "id": "gh-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Open draft pull requests with fixes, tests and notes (GitHub)",
+        "why": "The owner allows draft pull requests; the team reviews and merges."
+      },
+      {
+        "id": "merge-build",
+        "access": "live",
+        "via": "owner",
+        "name": "Merge reviewed pull requests and build the release (the team does it)",
+        "why": "Only the team merges and builds; the mobile lead approves."
+      },
+      {
+        "id": "play-rollout",
+        "access": "live",
+        "via": "browser",
+        "name": "Start, increase or halt a staged rollout in Play Console (browser)",
+        "why": "Every rollout step needs the mobile lead's yes."
+      }
+    ],
+    "data": [
+      {
+        "id": "crash-issues",
+        "name": "Android crash groups",
+        "why": "The base for ranking and slicing.",
+        "fields": [
+          "issue id and title",
+          "exception and top frames",
+          "app version",
+          "Android version",
+          "device model",
+          "events",
+          "users impacted",
+          "first seen",
+          "regressed flag",
+          "screen or checkout step (custom keys)"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Crashlytics, Android app, Issues: filter the last 90 days, sort by users impacted, and export or copy the table; repeat with filters for each version of the last six weeks."
+          },
+          {
+            "kind": "ASK",
+            "how": "The mobile lead signs in and the AI reads the pages in the browser."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-data",
+          "diagnosis-crashes"
+        ],
+        "alternative": "Without custom keys, the checkout path is inferred from stack frames and marked as such."
+      },
+      {
+        "id": "vitals",
+        "name": "Android vitals crash and ANR rates",
+        "why": "The Play-side measure of the same problem, and what Google uses for store visibility.",
+        "fields": [
+          "version",
+          "user-perceived crash rate",
+          "ANR rate",
+          "device",
+          "Android version",
+          "date"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Play Console, Quality, Android vitals, Crashes and ANRs: filter by version, device and Android version; the AI reads the pages in the browser."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-data"
+        ],
+        "alternative": "Crashlytics numbers alone are used, labelled as such."
+      },
+      {
+        "id": "reviews",
+        "name": "Play reviews with dates and app versions",
+        "why": "Links complaints and rating drops to versions and crashes.",
+        "fields": [
+          "date",
+          "stars",
+          "app version",
+          "device",
+          "review text"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Play Console, Ratings and reviews: export reviews for the last 90 days."
+          },
+          {
+            "kind": "ASK",
+            "how": "Read the reviews page when the export is not available."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis-release"
+        ],
+        "alternative": "A sample of recent reviews by hand, labelled as a sample."
+      },
+      {
+        "id": "releases",
+        "name": "Release history and rollout steps",
+        "why": "Dates, versions and rollout percentages explain when the drop began.",
+        "fields": [
+          "version name and code",
+          "release date",
+          "rollout steps and dates",
+          "release notes"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Play Console, Releases, Production: read the history for the last six weeks."
+          },
+          {
+            "kind": "MCP",
+            "how": "Read tags and merged pull requests between releases with the GitHub connector."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis-release",
+          "release-plan"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the problem",
+        "goal": "Turn the request into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [],
+        "depends_on": [],
+        "outputs": [],
+        "checks": [],
+        "gate": "none"
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Pull crashes, vitals, reviews and releases together",
+        "goal": "Pull the last 90 days of crash groups, vitals, reviews and release history into one working dataset, by app version.",
+        "from_steps": [
+          "s-data"
+        ],
+        "owner": {
+          "role": "testing-test-results-analyzer"
+        },
+        "uses": [
+          "error-and-log-debugger",
+          "turn-user-complaints-into-design-questions"
+        ],
+        "data": [
+          "crash-issues",
+          "vitals",
+          "reviews",
+          "releases"
+        ],
+        "needs": [
+          "crashlytics-read",
+          "play-read",
+          "gh-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "crash-dataset",
+            "name": "Crash groups by version",
+            "format": "csv",
+            "path": "evidence/crashes.csv"
+          },
+          {
+            "id": "review-dataset",
+            "name": "Reviews with versions",
+            "format": "csv",
+            "path": "evidence/reviews.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "periods",
+            "name": "Covers the weeks before the drop began and the weeks since, split by app version",
+            "required": true
+          },
+          {
+            "id": "figures",
+            "name": "The reported 99.4% to 97.1% crash-free users and 4.3 to 3.6 rating are found in the data or the difference is explained",
+            "required": true
+          },
+          {
+            "id": "sources-labelled",
+            "name": "Every number says whether it comes from Crashlytics or Android vitals",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-data",
+        "kind": "integrity",
+        "name": "Check the crash data can be trusted",
+        "goal": "Check stack traces are readable (mapping files), crash reporting covers all affected versions, and Crashlytics and Play numbers are reconciled or kept separate.",
+        "from_steps": [
+          "s-trust"
+        ],
+        "owner": {
+          "role": "testing-test-results-analyzer"
+        },
+        "uses": [
+          "error-and-log-debugger"
+        ],
+        "data": [
+          "crash-issues",
+          "vitals"
+        ],
+        "needs": [
+          "crashlytics-read",
+          "play-read"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "data-check",
+            "name": "Crash data check",
+            "format": "markdown",
+            "path": "integrity/DATA-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "readable",
+            "name": "Top crash traces show app class and method names, or missing mapping files are listed as a blocker",
+            "required": true
+          },
+          {
+            "id": "coverage",
+            "name": "Every app version in the period reports to Crashlytics, or the gap is stated",
+            "required": true
+          },
+          {
+            "id": "definitions",
+            "name": "Crash-free users is defined once and used throughout; Crashlytics and Android vitals are not mixed",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis-crashes",
+        "kind": "diagnosis",
+        "name": "Find the top crash causes",
+        "goal": "Rank crash groups by users affected, slice by version, Android version and device, reproduce the top ones from their stack traces and test the cause hypotheses.",
+        "from_steps": [
+          "s-rank",
+          "s-cause"
+        ],
+        "owner": {
+          "role": "fix-a-bug-with-proof-and-a-clear-pull-request"
+        },
+        "support": [
+          "engineering-mobile-app-builder",
+          "testing-test-results-analyzer"
+        ],
+        "uses": [
+          "bug-cause-investigator-team",
+          "bug-diagnoser",
+          "error-and-log-debugger"
+        ],
+        "data": [
+          "crash-issues"
+        ],
+        "needs": [
+          "crashlytics-read",
+          "gh-read"
+        ],
+        "depends_on": [
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "crash-diagnosis",
+            "name": "Crash diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/CRASHES.md"
+          },
+          {
+            "id": "crash-hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the stack frames, versions and devices that show it",
+            "required": true
+          },
+          {
+            "id": "by-users",
+            "name": "Crash groups are ranked by users affected, with event counts shown separately",
+            "required": true
+          },
+          {
+            "id": "checkout",
+            "name": "Checkout crashes are named, with the exact screen or step and the line in the code",
+            "required": true
+          },
+          {
+            "id": "reproduced",
+            "name": "Each top cause is reproduced, or marked \"not reproduced\" with what was tried",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis-release",
+        "kind": "diagnosis",
+        "name": "Find which release and which users",
+        "goal": "Find when each top crash first appeared, which release change introduced it, and how the rating drop lines up with releases and reviews that name crashes versus other themes.",
+        "from_steps": [
+          "s-link"
+        ],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [
+          "release-readiness-reviewer",
+          "turn-user-complaints-into-design-questions"
+        ],
+        "data": [
+          "reviews",
+          "releases",
+          "crash-issues"
+        ],
+        "needs": [
+          "gh-read",
+          "play-read",
+          "crashlytics-read"
+        ],
+        "depends_on": [
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "release-diagnosis",
+            "name": "Release and rating diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/RELEASES.md"
+          },
+          {
+            "id": "release-hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses-release.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "first-seen",
+            "name": "Each top crash has a first-seen version and the changes in that release that touch its code path",
+            "required": true
+          },
+          {
+            "id": "rating-split",
+            "name": "Reviews are split into crash themes and other themes, with counts and sample quotes",
+            "required": true
+          },
+          {
+            "id": "timeline",
+            "name": "The rating timeline is lined up with release dates and rollout steps",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank what to do",
+        "goal": "Turn supported findings into ranked cards: crash fixes, release safeguards and rating-recovery steps (for example asking for a rating after a successful checkout, or replying to crash complaints), each with expected effect, effort, risk and how it will be measured.",
+        "from_steps": [],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [],
+        "depends_on": [
+          "diagnosis-crashes",
+          "diagnosis-release"
+        ],
+        "outputs": [
+          {
+            "id": "cards",
+            "name": "Ranked cards",
+            "format": "markdown",
+            "path": "options/CARDS.md"
+          },
+          {
+            "id": "cards-json",
+            "name": "Cards as data",
+            "format": "json",
+            "path": "options/cards.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has expected effect on crash-free users or rating, effort, confidence, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "order",
+            "name": "Cards are ranked by users affected per effort, with checkout crashes first",
+            "required": true
+          },
+          {
+            "id": "staged",
+            "name": "Every card that changes the app says it ships through a staged rollout",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "The mobile lead chooses",
+        "goal": "The mobile lead picks the cards to build. Ask why when a top card is passed over and record it.",
+        "from_steps": [],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [],
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen cards",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever a top card was passed over",
+            "required": true
+          }
+        ],
+        "gate": "approve"
+      },
+      {
+        "id": "crash-fixes",
+        "kind": "production",
+        "name": "Build the crash fixes",
+        "goal": "For each chosen crash group, write a failing test that reproduces it, a minimal fix, and a draft pull request that links the crash group and states what to check.",
+        "from_steps": [
+          "s-fix"
+        ],
+        "owner": {
+          "role": "fix-a-bug-with-proof-and-a-clear-pull-request"
+        },
+        "support": [
+          "engineering-mobile-app-builder"
+        ],
+        "uses": [
+          "bug-diagnoser",
+          "pull-request-risk-reviewer",
+          "pull-request-description-writer"
+        ],
+        "needs": [
+          "gh-read",
+          "gh-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis-crashes"
+        ],
+        "outputs": [
+          {
+            "id": "fix-prs",
+            "name": "Draft pull requests and what each fixes",
+            "format": "markdown",
+            "path": "production/FIX-PRS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "one-per-group",
+            "name": "One crash group per pull request, and only chosen cards",
+            "required": true
+          },
+          {
+            "id": "repro-test",
+            "name": "Each pull request has a test that fails before the fix and passes after, or says why one is not possible",
+            "required": true
+          },
+          {
+            "id": "checkout-path",
+            "name": "The checkout flow is covered by a test across the changed code, including interruption and poor network where relevant",
+            "required": true
+          },
+          {
+            "id": "risk-review",
+            "name": "Each pull request has a risk review before it leaves draft",
+            "required": true
+          },
+          {
+            "id": "mapping",
+            "name": "Release builds still upload mapping files so the next trace is readable",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No crash-fix card was chosen.",
+        "reviewers": [
+          "pull-request-reviewer",
+          "testing-test-automation-engineer"
+        ]
+      },
+      {
+        "id": "release-plan",
+        "kind": "production",
+        "name": "Plan the staged rollout and its stop rule",
+        "goal": "Set the rollout steps and hold times, what is compared at each step (new version against the previous one), the halt rule, the fix-forward path and the release notes.",
+        "from_steps": [
+          "s-release"
+        ],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [
+          "safe-release-planner",
+          "copilot-devops-rollout-plan",
+          "app-store-release-notes-writer"
+        ],
+        "data": [
+          "releases"
+        ],
+        "needs": [
+          "gh-read",
+          "play-read"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "rollout-plan",
+            "name": "Rollout plan",
+            "format": "markdown",
+            "path": "production/ROLLOUT-PLAN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "steps",
+            "name": "Steps start small and each has a hold time long enough to see crashes, ANRs and new reviews, with the figures the mobile lead sets",
+            "required": true
+          },
+          {
+            "id": "compare",
+            "name": "Each step compares crash-free users, ANR rate and new reviews of the new version with the previous version",
+            "required": true
+          },
+          {
+            "id": "halt",
+            "name": "A halt rule and the fix-forward path are written, and the plan says Play cannot roll back",
+            "required": true
+          },
+          {
+            "id": "approver",
+            "name": "The mobile lead approves every start and every increase",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "review-replies",
+        "kind": "production",
+        "name": "Draft replies to crash reviews",
+        "goal": "Draft short, honest replies to the reviews that name crashes, to post after the fix has reached most users. The mobile lead reviews and posts them.",
+        "from_steps": [
+          "s-link"
+        ],
+        "owner": {
+          "role": "marketing-app-store-optimizer"
+        },
+        "uses": [
+          "customer-review-reply-writer"
+        ],
+        "data": [
+          "reviews"
+        ],
+        "needs": [
+          "play-read"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis-release"
+        ],
+        "outputs": [
+          {
+            "id": "replies",
+            "name": "Draft review replies",
+            "format": "markdown",
+            "path": "production/REVIEW-REPLIES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "true",
+            "name": "Each reply states only what the fix does, and names the version that has it",
+            "required": true
+          },
+          {
+            "id": "no-promises",
+            "name": "No reply promises dates or compensation the owner has not approved",
+            "required": true
+          },
+          {
+            "id": "draft-only",
+            "name": "Delivered as drafts; nothing is posted by this plan",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "optional_when": "No rating-recovery card was chosen."
+      },
+      {
+        "id": "ship-staged",
+        "kind": "execution",
+        "name": "Ship in stages, one approval at a time",
+        "goal": "The team merges and builds; the mobile lead approves each rollout step. After each hold time, read the new version against the previous one before asking for the next increase, and halt if the stop rule trips.",
+        "from_steps": [
+          "s-ship"
+        ],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "support": [
+          "testing-test-results-analyzer"
+        ],
+        "uses": [
+          "safe-release-planner",
+          "copilot-devops-rollout-plan"
+        ],
+        "needs": [
+          "merge-build",
+          "play-rollout",
+          "crashlytics-read",
+          "play-read"
+        ],
+        "depends_on": [
+          "crash-fixes",
+          "release-plan"
+        ],
+        "outputs": [
+          {
+            "id": "rollout-log",
+            "name": "Rollout log with step readings",
+            "format": "markdown",
+            "path": "execution/ROLLOUT-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each start, increase or halt had the mobile lead's yes recorded before it ran",
+            "required": true
+          },
+          {
+            "id": "compared",
+            "name": "Before every increase, the new version's crash-free users, ANR rate and reviews are shown against the previous version",
+            "required": true
+          },
+          {
+            "id": "halt-followed",
+            "name": "If the stop rule tripped, the rollout was halted and the repair went into a new build",
+            "required": true
+          },
+          {
+            "id": "one-at-a-time",
+            "name": "Fixes ship in separate releases or clearly separated steps so effects can be attributed",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action"
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read the results honestly",
+        "goal": "Read Android crash-free users, the checkout crash groups and ANRs by version against the 99.3% target, and the rating weekly against 4.2, with the lag stated.",
+        "from_steps": [
+          "s-readout"
+        ],
+        "owner": {
+          "role": "testing-test-results-analyzer"
+        },
+        "uses": [
+          "turn-user-complaints-into-design-questions"
+        ],
+        "data": [
+          "crash-issues",
+          "vitals",
+          "reviews"
+        ],
+        "needs": [
+          "crashlytics-read",
+          "play-read"
+        ],
+        "depends_on": [
+          "ship-staged"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Crash and rating readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-definition",
+            "name": "Crash-free users uses the same tool, definition and filters as the baseline",
+            "required": true
+          },
+          {
+            "id": "per-version",
+            "name": "Results are shown per app version and for all users, so old versions are not mistaken for the fix",
+            "required": true
+          },
+          {
+            "id": "rating-lag",
+            "name": "The rating is read weekly with the share of new reviews that still mention crashes, and its lag is stated",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A verdict is given only when the new version has enough users for a stable figure; otherwise INCONCLUSIVE",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record what caused the crashes and what would have caught them: release checks, a crash-free-users alert per version, mapping-file upload, staged-rollout rules. Save them with their scope and plan the next round if a target is missed.",
+        "from_steps": [],
+        "owner": {
+          "role": "engineering-mobile-release-engineer"
+        },
+        "uses": [],
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and release checks",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          },
+          {
+            "id": "next",
+            "name": "If a target was missed, the next hypotheses and the data needed are named",
+            "required": true
+          }
+        ],
+        "gate": "review"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-checkout-regression",
+        "statement": "A recent release introduced a crash on the checkout path: an unhandled exception such as a null value, a bad cast or state lost after rotation or process death.",
+        "test": "Find the first-seen version of the top checkout crash groups and read the diff of that release for the changed checkout code.",
+        "confirm_if": "The crash group first appears in the release that changed that path, with a matching stack trace.",
+        "refute_if": "Checkout crashes existed at the same rate before the release.",
+        "fix_stage": "crash-fixes"
+      },
+      {
+        "id": "h-sdk-update",
+        "statement": "A third-party SDK or library update (payments, maps, analytics or Play Services) crashes in the checkout flow.",
+        "test": "Compare dependency versions between releases and check whether the top frames are inside a library.",
+        "confirm_if": "Top frames are in the library and a version changed in the release where crashes began.",
+        "refute_if": "Top frames are in app code and dependencies did not change.",
+        "fix_stage": "crash-fixes"
+      },
+      {
+        "id": "h-os-device",
+        "statement": "The crashes are concentrated on particular Android versions or devices, for example a new OS release or low-memory phones.",
+        "test": "Slice each top crash group by Android version, device model and memory-related exceptions.",
+        "confirm_if": "A small set of OS versions or devices holds most of the affected users.",
+        "refute_if": "Crashes are spread evenly across OS versions and devices.",
+        "fix_stage": "crash-fixes"
+      },
+      {
+        "id": "h-network-api",
+        "statement": "Checkout crashes come from unhandled network errors or a server response the app cannot parse, which a backend change could also cause.",
+        "test": "Read the exception types, check custom keys and logs for request failures, and compare the crash timing with backend releases.",
+        "confirm_if": "Exceptions are network or parsing errors and line up with poor-connection users or a backend change.",
+        "refute_if": "Exceptions are local null, cast or lifecycle errors.",
+        "fix_stage": "crash-fixes"
+      },
+      {
+        "id": "h-obfuscation",
+        "statement": "A minification or obfuscation change in a recent release removed code that the app loads at runtime.",
+        "test": "Look for class-not-found or reflection exceptions that begin in one release, and compare the build settings between releases.",
+        "confirm_if": "Such exceptions begin in a release that changed build or keep rules.",
+        "refute_if": "No such exceptions.",
+        "fix_stage": "crash-fixes"
+      },
+      {
+        "id": "h-measurement",
+        "statement": "Part of the drop is a measurement effect: a version without crash reporting, a change in collection, or ANRs and crashes counted together.",
+        "test": "Check SDK coverage by version and compare Crashlytics with Android vitals for the same versions.",
+        "confirm_if": "Coverage or definitions changed in the period when the figure fell.",
+        "refute_if": "Both tools show the same fall on the same versions.",
+        "fix_stage": "integrity-data"
+      },
+      {
+        "id": "h-rating-other",
+        "statement": "Not all of the rating drop is from crashes: other themes in the reviews (delivery, pricing, bugs outside checkout) also pull it down.",
+        "test": "Classify the last 90 days of reviews by theme and version and compare the star distribution before and after the drop.",
+        "confirm_if": "A large share of low-star reviews do not mention crashes.",
+        "refute_if": "Nearly all low-star reviews name crashes or checkout failures.",
+        "fix_stage": "options"
+      }
+    ],
+    "measurement": {
+      "window": "Crash-free users per version after each rollout step and for at least two weeks after the last fix reaches 100%; the rating weekly for the rest of the two months.",
+      "min_volume": "Enough users on the new version for a stable crash-free figure at each step; below that, report INCONCLUSIVE and hold the step.",
+      "stop_rule": "Halt the rollout if the new version's crash-free users, ANR rate or new reviews are worse than the previous version's at a step, and fix forward in a new build; the mobile lead decides whether to resume."
+    }
+  }
+}

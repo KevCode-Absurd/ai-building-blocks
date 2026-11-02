@@ -182,7 +182,11 @@ export function planWarnings(brief, research, plan, today) {
   const web = research.sources.filter(s => s.kind === 'web');
   const undated = web.filter(s => !s.date), old = web.filter(s => s.date && today && monthsBetween(s.date, today) > 18);
   if (undated.length) w.push(`Web sources without a date: ${undated.map(s => s.id).join(', ')}. Their advice may be out of date.`);
-  if (old.length) w.push(`Web sources older than 18 months: ${old.map(s => s.id).join(', ')}.`);
+  if (old.length) w.push(`Web sources older than 18 months: ${old.map(s => s.id).join(', ')}. Keep one only if it is still the current version, such as a regulator's rules.`);
+  const stops = plan.stages.filter(s => s.gate !== 'none');
+  if (stops.length > 6) w.push(`The plan stops for the owner ${stops.length} times. Keep stops where their judgement changes the result: decisions, live actions and work they must see before it is used.`);
+  const options = plan.stages.filter(s => s.kind === 'options' && s.gate !== 'none');
+  if (options.length) w.push(`The owner sees the options at the decision, so ${options.map(s => s.id).join(', ')} need no gate of their own.`);
   const bare = plan.stages.filter(s => !STANDARD_KINDS.includes(s.kind) && !s.uses.length);
   if (bare.length) w.push(`Stages with no catalogue items, relying on the specialist alone: ${bare.map(s => s.id).join(', ')}.`);
   const gaps = plan.stages.filter(s => s.owner.gap);

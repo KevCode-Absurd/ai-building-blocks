@@ -1,0 +1,1094 @@
+{
+  "case": "saas-organic-signups",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Reach 100 sign-ups a month from Google search within six months, from about 15 today.",
+    "deliverable": "A checked picture of what the blog and site earn from search today, a ranked and owner-approved set of refreshes, new pages and sign-up path fixes, drafted in Webflow for review and published only with approval, and a read-back of organic sign-ups.",
+    "done": [
+      "Organic sign-ups are counted in a way that is checked in GA4, not just reported",
+      "All 45 posts are sorted into keep, refresh, merge or remove with search data behind each call",
+      "The sums show which mix of more visits and better sign-up rate can reach 100 a month with one part-time writer",
+      "The head of marketing has chosen the work, with reasons recorded",
+      "Every claim about HR law or compliance in a draft is backed by a named source or removed",
+      "Each page goes live only after approval, with its tracking in place",
+      "Organic visits and sign-ups are read back against the target",
+      "Learnings are saved for the next round"
+    ],
+    "metric": {
+      "name": "Organic search sign-ups per month",
+      "direction": "increase",
+      "unit": "sign-ups per month",
+      "baseline": 15,
+      "baseline_source": "reported",
+      "target": 100
+    },
+    "deadline": "Six months from plan approval (about May 2027)",
+    "guardrails": [
+      "No claim about legal compliance that we cannot back up",
+      "Existing organic traffic (about 1,200 visits a month) does not fall because of refreshes or merges",
+      "Work fits one part-time writer"
+    ],
+    "limits": [
+      "One part-time writer",
+      "No budget for links",
+      "Webflow access is draft only through the Webflow MCP",
+      "Search Console and GA4 are read-only",
+      "Working data stays in this project"
+    ],
+    "assets": [
+      "Blog with 45 posts",
+      "Google Search Console data",
+      "Google Analytics 4 data",
+      "Webflow site"
+    ],
+    "connections": [
+      {
+        "name": "Google Search Console",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Google Analytics 4",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Webflow MCP",
+        "access": "draft",
+        "status": "connected"
+      }
+    ],
+    "data_home": "Files in this project",
+    "technical_level": "Not stated; the head of marketing decides, so work arrives as drafts and short briefs the writer can use",
+    "decides": "The head of marketing",
+    "unknowns": [
+      "Whether the 15 organic sign-ups are counted correctly in GA4 ('maybe 15', reported)",
+      "Which posts and queries drive the 1,200 monthly visits and which sign-ups they lead to",
+      "Which competitors to name on comparison or alternatives pages",
+      "Who the buyers are (roles, company size) beyond 'small teams', and what words they search with",
+      "How many pieces the part-time writer can produce a month",
+      "Whether Webflow draft access also lets us publish, or the owner must publish each page",
+      "What HR or legal topics the product touches, and which sources the company can cite for them"
+    ],
+    "answers": [
+      {
+        "question": "What is the product and the blog's state?",
+        "answer": "HR software for small teams. The blog has 45 posts and gets about 1,200 organic visits a month."
+      },
+      {
+        "question": "How many sign-ups come from search now, and how is it counted?",
+        "answer": "Maybe 15 a month from organic (Google Analytics 4, reported)."
+      },
+      {
+        "question": "Which tools can your AI reach?",
+        "answer": "Search Console and GA4 read-only. The site is on Webflow; draft access via the Webflow MCP."
+      },
+      {
+        "question": "What is the goal and by when?",
+        "answer": "100 organic sign-ups a month within six months."
+      },
+      {
+        "question": "What are the limits?",
+        "answer": "One part-time writer, no budget for links, and no claims about legal compliance we cannot back up."
+      },
+      {
+        "question": "Where should data live, and who decides?",
+        "answer": "In this project. Our head of marketing decides."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners start with an audit of what already exists: every post is tied to its Search Console clicks, impressions and positions and its GA4 sign-ups, then marked keep, refresh, merge or remove. They fix measurement and the sign-up path on pages that already get visits, refresh pages that sit close to page one before writing anything new, and add pages for buyers who are already comparing options. Work is shipped in batches, re-indexed, and judged by sign-ups per visit for each type of page over 60 to 90 days, because search results move slowly.",
+    "sources": [
+      {
+        "id": "web-rightblogger",
+        "kind": "web",
+        "title": "How to run a content decay audit with Search Console (RightBlogger)",
+        "ref": "https://rightblogger.com/blog/content-decay-audit",
+        "date": "2026-05-22",
+        "note": "Compare periods in the Performance report, export pages, read each decliner's queries, then choose update, merge, redirect or leave, request re-indexing and monitor weekly."
+      },
+      {
+        "id": "web-tenspeed-audit",
+        "kind": "web",
+        "title": "B2B content audit (Tenspeed)",
+        "ref": "https://www.tenspeed.io/blog/b2b-content-audit",
+        "date": "2026-09-10",
+        "note": "Inventory every URL, pull 6 to 12 months of data, score pages, check cannibalization, start with quick wins, and give each URL a keep, refresh, merge or remove action with an owner."
+      },
+      {
+        "id": "web-tenspeed-conversion",
+        "kind": "web",
+        "title": "Content marketing conversion rate (Tenspeed)",
+        "ref": "https://www.tenspeed.io/blog/content-marketing-conversion",
+        "date": "2026-05-08",
+        "note": "Measure conversion by content type, not blended; match calls to action to intent; promote pages that already convert before adding new content."
+      },
+      {
+        "id": "cat-gsc-keeper",
+        "kind": "catalogue",
+        "title": "Search Console content planner",
+        "ref": "monthly-search-console-keeper"
+      },
+      {
+        "id": "cat-refresh",
+        "kind": "catalogue",
+        "title": "Search content refresh planner",
+        "ref": "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it"
+      },
+      {
+        "id": "cat-cluster",
+        "kind": "catalogue",
+        "title": "Search topic and content brief planner",
+        "ref": "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links"
+      },
+      {
+        "id": "cat-claims",
+        "kind": "catalogue",
+        "title": "Marketing claims checker",
+        "ref": "marketing-claims-checker"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-inventory",
+        "name": "List every post and tie it to search and sign-up data",
+        "why": "An audit starts with all URLs and 6 to 12 months of Search Console and GA4 data per page, so every call is backed by numbers.",
+        "sources": [
+          "web-tenspeed-audit",
+          "web-rightblogger",
+          "cat-gsc-keeper"
+        ]
+      },
+      {
+        "id": "s-measure-check",
+        "name": "Check that organic sign-ups are counted correctly",
+        "why": "'Maybe 15' sign-ups is a guess until the GA4 sign-up event, source and landing page are verified; every later number depends on it.",
+        "sources": [
+          "web-tenspeed-conversion",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-audit",
+        "name": "Sort posts into keep, refresh, merge or remove",
+        "why": "Compare periods, read each post's queries for lost rank or shifted intent, and check overlaps; refresh pages close to page one before writing new ones.",
+        "sources": [
+          "web-rightblogger",
+          "web-tenspeed-audit",
+          "cat-refresh"
+        ]
+      },
+      {
+        "id": "s-gaps",
+        "name": "Find buyer-intent topics the site does not cover",
+        "why": "Searches from people comparing options or looking for a solution convert better than general advice posts, so gaps are ranked by intent.",
+        "sources": [
+          "web-tenspeed-conversion",
+          "cat-cluster",
+          "cat-gsc-keeper"
+        ]
+      },
+      {
+        "id": "s-path",
+        "name": "Fix the path from visit to sign-up on pages that already get traffic",
+        "why": "Calls to action matched to intent turn existing visits into sign-ups faster than new content.",
+        "sources": [
+          "web-tenspeed-conversion"
+        ]
+      },
+      {
+        "id": "s-produce",
+        "name": "Write and check refreshes and new pages for accuracy",
+        "why": "Content on HR topics needs sourced facts, and any claim the company cannot support is removed; the writer's limited hours set the batch size.",
+        "sources": [
+          "web-tenspeed-audit",
+          "cat-claims",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-publish",
+        "name": "Publish in batches, request re-indexing and watch weekly",
+        "why": "Updated pages need Google to recrawl them, and weekly monitoring shows early movement.",
+        "sources": [
+          "web-rightblogger"
+        ]
+      },
+      {
+        "id": "s-measure",
+        "name": "Read sign-ups per visit by page type over 60 to 90 days",
+        "why": "A blended average hides what works; each content type needs its own baseline and target.",
+        "sources": [
+          "web-tenspeed-conversion"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Writing new posts before promoting and fixing the ones that already rank or convert.",
+        "sources": [
+          "web-tenspeed-conversion",
+          "web-tenspeed-audit"
+        ]
+      },
+      {
+        "text": "Judging a page on clicks alone and missing lost position, falling click-through or a shifted search intent.",
+        "sources": [
+          "web-rightblogger"
+        ]
+      },
+      {
+        "text": "Averaging all content together, so comparison pages and awareness posts are judged by the same sign-up rate.",
+        "sources": [
+          "web-tenspeed-conversion"
+        ]
+      },
+      {
+        "text": "Refreshing posts only by changing the date, without substantive updates.",
+        "sources": [
+          "web-rightblogger",
+          "web-tenspeed-audit"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Win more sign-ups from search",
+    "capabilities": [
+      {
+        "id": "gsc-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read search performance (Google Search Console)",
+        "why": "Clicks, impressions, positions and queries per page for at least 12 months."
+      },
+      {
+        "id": "ga4-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read sessions and sign-ups (Google Analytics 4)",
+        "why": "Organic sessions, sign-up events and landing pages."
+      },
+      {
+        "id": "webflow-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read the site's posts and pages (Webflow MCP)",
+        "why": "Inventory of all 45 posts and their current text, titles and links."
+      },
+      {
+        "id": "webflow-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Create drafts in Webflow (Webflow MCP, draft access)",
+        "why": "Put refreshes and new pages in the CMS as drafts for review."
+      },
+      {
+        "id": "serp-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Look at search results and competitor pages (browser)",
+        "why": "Check what ranks for each target query and what rivals offer."
+      },
+      {
+        "id": "publish-live",
+        "access": "live",
+        "via": "owner",
+        "name": "Publish pages and request re-indexing (owner)",
+        "why": "Draft access does not cover going live, so the owner publishes each approved page and requests re-indexing in Search Console."
+      }
+    ],
+    "data": [
+      {
+        "id": "search-data",
+        "name": "Search Console performance by page and query",
+        "why": "Shows which posts earn visibility, where they rank, and which searches are missing.",
+        "fields": [
+          "page",
+          "query",
+          "clicks",
+          "impressions",
+          "average position",
+          "click-through rate",
+          "date"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the Performance report by page and by query for the last 16 months, with a prior-period comparison."
+          },
+          {
+            "kind": "CSV",
+            "how": "Search Console: Performance, set dates, Export; one file by page and one by query."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis-search",
+          "measurement"
+        ],
+        "alternative": "Without query data, intent and gap findings rest on page titles and a manual look at results, and are marked low confidence."
+      },
+      {
+        "id": "site-data",
+        "name": "Sessions and sign-ups by landing page",
+        "why": "Ties each page to the sign-ups it leads to.",
+        "fields": [
+          "landing page",
+          "source and medium",
+          "sessions",
+          "sign-up events",
+          "date"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read organic sessions and the sign-up event by landing page from GA4 for 12 months."
+          },
+          {
+            "kind": "CSV",
+            "how": "GA4: Explore, landing page by sessions and key events, filtered to organic search; export."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-signups",
+          "diagnosis-conversion",
+          "measurement"
+        ],
+        "alternative": "If sign-ups cannot be tied to a landing page, only site-wide organic sign-ups are tracked and page-level findings stay unknown."
+      },
+      {
+        "id": "posts",
+        "name": "Post inventory",
+        "why": "The audit needs every post's URL, date, title, word count and links.",
+        "fields": [
+          "url",
+          "title",
+          "publish date",
+          "last updated",
+          "word count",
+          "calls to action",
+          "internal links"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the CMS items with the Webflow MCP."
+          },
+          {
+            "kind": "CSV",
+            "how": "Webflow: export the blog CMS collection as CSV."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis-search"
+        ]
+      },
+      {
+        "id": "competitors",
+        "name": "Rival names and pages",
+        "why": "Comparison and alternatives pages need named rivals and dated facts about them.",
+        "fields": [
+          "rival",
+          "pricing page",
+          "key features",
+          "date seen"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Owner names the rivals buyers compare us with and the honest differences."
+          }
+        ],
+        "required_for": [
+          "diagnosis-search"
+        ],
+        "alternative": "Without rival names, comparison pages are left out and only use-case and how-to pages are planned."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the search goal",
+        "goal": "Turn the owner's words into a measured goal with limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "monthly-search-console-keeper"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Collect search, sign-up and post data",
+        "goal": "Pull 16 months of Search Console data, 12 months of GA4 organic sessions and sign-ups by landing page, and the 45-post inventory into one table, one row per page.",
+        "owner": {
+          "role": "monthly-search-console-keeper"
+        },
+        "data": [
+          "search-data",
+          "site-data",
+          "posts"
+        ],
+        "needs": [
+          "gsc-read",
+          "ga4-read",
+          "webflow-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "pages",
+            "name": "Page table",
+            "format": "csv",
+            "path": "evidence/pages.csv"
+          },
+          {
+            "id": "queries",
+            "name": "Query table",
+            "format": "csv",
+            "path": "evidence/queries.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Page totals match Search Console and GA4 report totals for the same dates",
+            "required": true
+          },
+          {
+            "id": "coverage",
+            "name": "All 45 posts are in the table, including posts with no clicks",
+            "required": true
+          },
+          {
+            "id": "same-dates",
+            "name": "Search Console and GA4 use the same date range and the periods compared are the same length",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-inventory"
+        ],
+        "uses": [
+          "organic-search-report-builder"
+        ]
+      },
+      {
+        "id": "integrity-signups",
+        "kind": "integrity",
+        "name": "Check the sign-up count",
+        "goal": "Verify the GA4 sign-up event fires once per sign-up, that organic search is attributed correctly, and that landing pages are recorded, so the 15 sign-ups becomes a checked figure.",
+        "owner": {
+          "role": "monthly-tracking-health-keeper"
+        },
+        "data": [
+          "site-data"
+        ],
+        "needs": [
+          "ga4-read"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "signup-check",
+            "name": "Sign-up tracking check",
+            "format": "markdown",
+            "path": "integrity/SIGNUP-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "event",
+            "name": "The sign-up event is identified and its count is compared with sign-ups the owner can see in the product",
+            "required": true
+          },
+          {
+            "id": "attribution",
+            "name": "How organic search is defined and where sign-ups are credited to another source is recorded",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the target",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure-check"
+        ],
+        "uses": [
+          "event-tracking-planner"
+        ]
+      },
+      {
+        "id": "diagnosis-search",
+        "kind": "diagnosis",
+        "name": "Audit the posts and find the gaps",
+        "goal": "Mark each post keep, refresh, merge or remove using clicks, impressions, position, queries and overlaps; list pages close to page one; and list buyer-intent topics the site does not cover.",
+        "owner": {
+          "role": "seo-specialist"
+        },
+        "support": [
+          "monthly-content-decay-keeper"
+        ],
+        "data": [
+          "search-data",
+          "posts",
+          "competitors"
+        ],
+        "needs": [
+          "serp-read"
+        ],
+        "depends_on": [
+          "integrity-signups"
+        ],
+        "outputs": [
+          {
+            "id": "audit",
+            "name": "Post audit with an action per URL",
+            "format": "markdown",
+            "path": "diagnosis/POST-AUDIT.md"
+          },
+          {
+            "id": "gaps",
+            "name": "Topic gaps by intent",
+            "format": "markdown",
+            "path": "diagnosis/GAPS.md"
+          },
+          {
+            "id": "search-hypotheses",
+            "name": "Hypothesis verdicts from search data",
+            "format": "json",
+            "path": "diagnosis/search-hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "every-url",
+            "name": "Every post has one action with the numbers behind it",
+            "required": true
+          },
+          {
+            "id": "intent",
+            "name": "Each target topic names the search intent and the kind of page that fits",
+            "required": true
+          },
+          {
+            "id": "overlap",
+            "name": "Overlapping posts are listed with the page to keep",
+            "required": true
+          },
+          {
+            "id": "estimates",
+            "name": "Any traffic estimate is labelled an estimate with its source and limits",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-audit",
+          "s-gaps"
+        ],
+        "uses": [
+          "old-content-refresher",
+          "search-console-quick-win-finder",
+          "keyword-research-planner",
+          "comparison-page-set-planner"
+        ]
+      },
+      {
+        "id": "diagnosis-conversion",
+        "kind": "diagnosis",
+        "name": "Review the path from visit to sign-up",
+        "goal": "Show sign-ups per visit for the top organic landing pages, and review the calls to action and sign-up path on pages that already get traffic.",
+        "owner": {
+          "role": "page-usability-review"
+        },
+        "support": [
+          "seo-specialist"
+        ],
+        "data": [
+          "site-data",
+          "posts"
+        ],
+        "depends_on": [
+          "integrity-signups"
+        ],
+        "outputs": [
+          {
+            "id": "path",
+            "name": "Sign-up path review",
+            "format": "markdown",
+            "path": "diagnosis/SIGNUP-PATH.md"
+          },
+          {
+            "id": "path-hypotheses",
+            "name": "Hypothesis verdicts on the sign-up path",
+            "format": "json",
+            "path": "diagnosis/path-hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "by-type",
+            "name": "Sign-ups per visit are shown by page type, not as one average",
+            "required": true
+          },
+          {
+            "id": "seen",
+            "name": "Every finding names the page it was seen on",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Pages with too few visits to judge are marked low confidence",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-path"
+        ],
+        "uses": [
+          "landing-page-auditor",
+          "call-to-action-writer"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the work and check the sum",
+        "goal": "Turn findings into ranked work cards sized for one part-time writer, and show with numbers which mix of more visits and better sign-up rate could reach 100 a month, or how far it gets.",
+        "owner": {
+          "role": "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links"
+        },
+        "depends_on": [
+          "diagnosis-search",
+          "diagnosis-conversion"
+        ],
+        "outputs": [
+          {
+            "id": "recommendations",
+            "name": "Ranked work cards",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "sum",
+            "name": "Visits-and-rate sum",
+            "format": "csv",
+            "path": "options/target-sum.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has expected effect, effort in writer hours, confidence, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "capacity",
+            "name": "The batch fits the writer's stated hours, or the gap is shown",
+            "required": true
+          },
+          {
+            "id": "honest",
+            "name": "If 100 a month is not reachable in six months, the plan says so and shows the best reachable figure",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "keyword-researcher",
+          "search-console-quick-win-finder"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Head of marketing chooses",
+        "goal": "The head of marketing picks cards. Ask for the reason when the top card is passed over, and record it.",
+        "owner": {
+          "role": "monthly-search-console-keeper"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen work",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded with reasons",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": []
+      },
+      {
+        "id": "page-drafts",
+        "kind": "production",
+        "name": "Draft refreshes, new pages and sign-up fixes",
+        "goal": "Write the chosen refreshes, merges, new pages and call-to-action changes in the brand voice and put them in Webflow as drafts, with titles, descriptions and internal links.",
+        "owner": {
+          "role": "write-a-post-that-beats-the-pages-ranking-today"
+        },
+        "support": [
+          "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it"
+        ],
+        "data": [
+          "posts",
+          "competitors"
+        ],
+        "needs": [
+          "webflow-draft",
+          "serp-read"
+        ],
+        "depends_on": [
+          "decision"
+        ],
+        "outputs": [
+          {
+            "id": "drafts",
+            "name": "Draft pages and change list",
+            "format": "markdown",
+            "path": "production/DRAFTS.md"
+          },
+          {
+            "id": "draft-log",
+            "name": "Webflow draft log",
+            "format": "json",
+            "path": "production/webflow-drafts.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen cards are drafted",
+            "required": true
+          },
+          {
+            "id": "substance",
+            "name": "Each refresh changes real content, not just the date",
+            "required": true
+          },
+          {
+            "id": "drafts-only",
+            "name": "Everything in Webflow is a draft; nothing is live",
+            "required": true
+          },
+          {
+            "id": "tracking",
+            "name": "Each page's sign-up link carries the tracking the integrity check confirmed",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-produce",
+          "s-path"
+        ],
+        "uses": [
+          "search-blog-post-writer",
+          "blog-post-producer",
+          "alternative-page-writer",
+          "call-to-action-writer",
+          "page-seo-optimizer"
+        ]
+      },
+      {
+        "id": "claims-review",
+        "kind": "production",
+        "name": "Check claims and facts",
+        "goal": "Check every draft for statements about HR law, compliance, statistics or product ability. Each is tied to a named source or removed or reworded; nothing promises compliance the company cannot back.",
+        "owner": {
+          "role": "blog-post-publish-check-loop"
+        },
+        "reviewers": [
+          "monthly-review-proof-keeper"
+        ],
+        "depends_on": [
+          "page-drafts"
+        ],
+        "outputs": [
+          {
+            "id": "claims",
+            "name": "Claim and source table",
+            "format": "markdown",
+            "path": "production/CLAIMS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "sourced",
+            "name": "Every legal, compliance or statistics claim names a source with its date, or is removed",
+            "required": true
+          },
+          {
+            "id": "no-promises",
+            "name": "No page says or implies the product makes a customer legally compliant",
+            "required": true
+          },
+          {
+            "id": "owner-flags",
+            "name": "Anything that needs a lawyer's or the company's own confirmation is listed for the owner",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-produce"
+        ],
+        "uses": [
+          "marketing-claims-checker",
+          "claim-and-proof-matcher"
+        ]
+      },
+      {
+        "id": "publish",
+        "kind": "execution",
+        "name": "Publish in batches",
+        "goal": "Register what each batch should change, then have the owner publish approved pages one batch at a time and request re-indexing. Read each live page back.",
+        "owner": {
+          "role": "seo-specialist"
+        },
+        "needs": [
+          "publish-live",
+          "webflow-read"
+        ],
+        "depends_on": [
+          "claims-review"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Publish receipt",
+            "format": "markdown",
+            "path": "execution/PUBLISH-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each page published matches a reviewed draft and its claims table",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "The live page is read back: title, text, links and sign-up tracking",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "Each batch records its date and the pre-change numbers for the pages it touches",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-publish"
+        ],
+        "uses": [
+          "seo-change-tracker",
+          "page-seo-optimizer"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read results by page type",
+        "goal": "Read clicks, positions and sign-ups per visit for changed and new pages against their pre-change numbers, weekly for early signs and at 60 to 90 days for a verdict, and track the organic sign-up total against 100.",
+        "owner": {
+          "role": "monthly-search-console-keeper"
+        },
+        "data": [
+          "search-data",
+          "site-data"
+        ],
+        "needs": [
+          "gsc-read",
+          "ga4-read"
+        ],
+        "depends_on": [
+          "publish"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Results readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "Periods compared have the same length and the same sign-up definition",
+            "required": true
+          },
+          {
+            "id": "window",
+            "name": "No verdict on a page before 60 days; earlier movement is labelled early",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Existing organic traffic and the no-unsupported-claims rule are checked",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "organic-search-report-builder",
+          "seo-change-tracker"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record which page types and topics gained, propose rules with their scope, and plan the next batch within the writer's hours.",
+        "owner": {
+          "role": "monthly-search-console-keeper"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next batch",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          },
+          {
+            "id": "next",
+            "name": "The next batch fits the writer's hours",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": []
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-count",
+        "statement": "The 15 organic sign-ups is wrong: the GA4 sign-up event or its source attribution misses or mislabels sign-ups.",
+        "test": "Compare the GA4 sign-up count with sign-ups the owner can see in the product, and check how sign-ups from organic are credited.",
+        "confirm_if": "GA4 and the product disagree by a clear margin, or sign-ups from organic are credited to direct or other sources.",
+        "refute_if": "Counts agree and organic is credited correctly.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-indexing",
+        "statement": "Some posts are not indexed or cannot be found by Google.",
+        "test": "Posts with zero impressions in Search Console; page indexing status for those URLs.",
+        "confirm_if": "Several posts have no impressions and show as not indexed or blocked.",
+        "refute_if": "Every post is indexed and has impressions for some queries.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-wrong-intent",
+        "statement": "Posts target topics that attract readers who will not sign up, or topics too competitive to rank for.",
+        "test": "Queries and positions per post; intent of the query; top results for each target.",
+        "confirm_if": "Most impressions come from general or broad queries where the page ranks beyond page two.",
+        "refute_if": "Posts already rank for queries from people looking for HR software.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-near-page-one",
+        "statement": "Several posts sit just below page one and could gain with a refresh.",
+        "test": "Pages with enough impressions and average position roughly 8 to 20.",
+        "confirm_if": "A group of posts shows this with meaningful impressions.",
+        "refute_if": "Few posts are near page one.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-overlap",
+        "statement": "Overlapping or thin posts compete with each other.",
+        "test": "Posts ranking for the same queries; word count and overlap in headings.",
+        "confirm_if": "Several posts share queries and none ranks well.",
+        "refute_if": "Posts cover distinct queries.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-weak-path",
+        "statement": "Visits do not convert because posts have no clear next step to sign up.",
+        "test": "Sign-ups per visit by landing page; calls to action on the top pages; see how readers move to the sign-up page.",
+        "confirm_if": "Top pages show a generic or missing call to action and low sign-ups per visit.",
+        "refute_if": "Top pages have clear, relevant calls to action and convert as expected for their type.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-no-buyer-pages",
+        "statement": "The site has no pages for people already comparing HR software, who convert best.",
+        "test": "Compare site pages with queries that name rivals or ask for a type of HR software; check what ranks.",
+        "confirm_if": "Such searches exist and the site has no page for them.",
+        "refute_if": "Such pages exist or such searches show no demand in our data.",
+        "fix_stage": "page-drafts"
+      },
+      {
+        "id": "h-capacity",
+        "statement": "One part-time writer cannot produce enough in six months to reach 100 sign-ups a month.",
+        "test": "Model visits and sign-up rate needed for 100 a month against the writer's hours and the pages they could ship.",
+        "confirm_if": "The model needs more output or a higher sign-up rate than plausible.",
+        "refute_if": "A realistic mix of refreshes and new pages reaches 100.",
+        "fix_stage": "page-drafts"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Weekly checks for early movement; a verdict on each page only after 60 to 90 days; the 100-a-month target read monthly against the checked sign-up count.",
+      "min_volume": "Enough visits per page type to judge sign-ups per visit; pages with only a few visits are marked low confidence rather than judged.",
+      "stop_rule": "Pause a batch and review if organic visits to touched pages fall clearly below their pre-change level, or a claim problem is found."
+    }
+  }
+}

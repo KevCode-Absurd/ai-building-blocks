@@ -1,0 +1,1230 @@
+{
+  "case": "fin-vendor-spend",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Bring software and vendor spend below $36,000 a month within four months, without breaking any tool our team or our clients depend on.",
+    "deliverable": "A complete vendor register with owners and renewal dates in a Google Sheet, savings actions approved and applied one at a time, a purchasing rule so spend stops creeping back, and a monthly spend readout.",
+    "done": [
+      "Every software and vendor charge is in one register with an owner, or flagged as unowned",
+      "Renewal and notice dates are known for the biggest contracts, or named as unknown",
+      "Each tool is marked as client-dependent or not by the team lead",
+      "The owner and COO have chosen the savings actions, with reasons recorded",
+      "Each cancellation or downgrade is confirmed by the team lead and approved by the owner before it is made",
+      "Monthly spend is read on one definition and compared with $36,000"
+    ],
+    "metric": {
+      "name": "Software and vendor spend per month",
+      "direction": "decrease",
+      "unit": "USD per month",
+      "baseline": 46000,
+      "baseline_source": "reported",
+      "target": 36000
+    },
+    "deadline": "Within four months of starting",
+    "guardrails": [
+      "No tool that clients depend on is switched off",
+      "Nothing is cancelled without the team lead confirming and the owner approving",
+      "Delivery to clients is not interrupted"
+    ],
+    "limits": [
+      "Ramp MCP is read-only: nothing is changed in Ramp",
+      "Changes in Google Workspace admin or at vendors are made only one at a time after approval"
+    ],
+    "assets": [
+      "Card statements",
+      "Ramp spend records",
+      "Google Workspace admin console",
+      "Working data kept in a Google Sheet"
+    ],
+    "connections": [
+      {
+        "name": "Ramp MCP",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Google Workspace admin (browser)",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Card statements (export)",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "A Google Sheet",
+    "technical_level": "Not stated",
+    "decides": "The owner, together with the COO",
+    "unknowns": [
+      "Renewal dates for most contracts",
+      "Notice periods and auto-renew terms",
+      "Which tools clients depend on",
+      "Who owns each tool, and usage data for tools outside Google Workspace",
+      "What the 46,000 includes beyond software (other vendors) and whether any annual charges are spread across months",
+      "Whether the AI can write to the Google Sheet directly or the owner pastes the tabs",
+      "How technical the owner wants to be"
+    ],
+    "answers": [
+      {
+        "question": "Business?",
+        "answer": "Software consultancy, 85 staff."
+      },
+      {
+        "question": "Spend now and a year ago?",
+        "answer": "About $46,000 a month, up from $31,000 a year ago (card statements and Ramp, reported)."
+      },
+      {
+        "question": "What can the AI reach?",
+        "answer": "Ramp MCP read-only, Google Workspace admin through the browser."
+      },
+      {
+        "question": "Why did it rise?",
+        "answer": "Many tools were bought by individual teams."
+      },
+      {
+        "question": "Target?",
+        "answer": "Below $36,000 a month within four months."
+      },
+      {
+        "question": "What must not happen?",
+        "answer": "Nothing cancelled without the team lead confirming and my approval; no tool our clients depend on gets switched off."
+      },
+      {
+        "question": "Data home and decision makers?",
+        "answer": "A Google Sheet. I decide with the COO."
+      },
+      {
+        "question": "What is unknown?",
+        "answer": "Renewal dates for most contracts."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners treat software spend as an inventory problem first. They build one list of every subscription from card and expense data, including tools bought by teams on their own, and give each an owner. They measure real use against paid seats, build a renewal calendar with notice periods and alerts at 90, 60 and 30 days, then retain, retire, replace or rightsize each tool. Renewal talks start about 90 days before the end date and use usage data. Before anything is cancelled the owning team and the people who rely on the tool confirm, and purchasing is centralised so spend does not creep back.",
+    "sources": [
+      {
+        "id": "web-zylo",
+        "kind": "web",
+        "title": "Rationalize, rightsize, renew (Zylo)",
+        "ref": "https://zylo.com/blog/rationalize-rightsize-renew",
+        "date": "2026-04-16",
+        "note": "Three-step process, renewal calendar with owners and notice periods; shadow IT; updated 2026-04-16."
+      },
+      {
+        "id": "web-ppg",
+        "kind": "web",
+        "title": "How to optimise your SaaS spend (PayPro Global)",
+        "ref": "https://payproglobal.com/how-to/master-saas-spend-optimization/",
+        "date": "2026-09-28",
+        "note": "Six steps, utilisation and inactivity thresholds, owners, alerts at 30, 60 and 90 days; updated 2026-09-28."
+      },
+      {
+        "id": "web-cloudnuro",
+        "kind": "web",
+        "title": "Guide to SaaS renewals (CloudNuro)",
+        "ref": "https://www.cloudnuro.ai/blog/guide-to-saas-renewals-best-practices-for-cost-optimization-and-security",
+        "date": "2025-05-25",
+        "note": "Notice periods of 30 to 90 days, negotiation levers, IT, finance and end users confirm before dropping a tool; last updated."
+      },
+      {
+        "id": "cat-audit",
+        "kind": "catalogue",
+        "title": "Business subscription usage auditor",
+        "ref": "find-duplicate-and-unused-business-subscriptions",
+        "note": "Tested method: spend savings, agreement status, vendor comparison."
+      },
+      {
+        "id": "cat-renewal",
+        "kind": "catalogue",
+        "title": "Contract renewal and negotiation planner",
+        "ref": "prepare-a-contract-renewal-negotiation",
+        "note": "Deadline plan, risk review, keep, renegotiate or replace options."
+      },
+      {
+        "id": "cat-bills",
+        "kind": "catalogue",
+        "title": "Vendor bill and spend reviewer",
+        "ref": "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "note": "Codes vendor bills, flags odd entries, ranks savings once doubtful charges are checked."
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-inventory",
+        "name": "Build one inventory of every software and vendor charge",
+        "why": "Leaders guess two to three times fewer apps than are in use; card and expense data find the tools teams bought themselves.",
+        "sources": [
+          "web-zylo",
+          "web-ppg",
+          "cat-bills"
+        ]
+      },
+      {
+        "id": "s-owners",
+        "name": "Name an owner for each tool and who depends on it",
+        "why": "Each subscription needs an owner responsible for it, and the people who use it, including client work, must be known before it is touched.",
+        "sources": [
+          "web-ppg",
+          "web-zylo",
+          "web-cloudnuro",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-usage",
+        "name": "Measure real use against paid seats",
+        "why": "Below about half utilisation suggests unused seats; usage data is the basis for rightsizing.",
+        "sources": [
+          "web-ppg",
+          "web-zylo"
+        ]
+      },
+      {
+        "id": "s-renewals",
+        "name": "Build a renewal calendar with notice periods and alerts",
+        "why": "Missed auto-renewals lock in spend; the notice date must come from the signed contract.",
+        "sources": [
+          "web-zylo",
+          "web-ppg",
+          "web-cloudnuro",
+          "cat-renewal"
+        ]
+      },
+      {
+        "id": "s-rationalise",
+        "name": "Retain, retire, replace and merge overlapping tools",
+        "why": "Redundant tools and tools tied to departed staff are the clearest savings, as long as users get an approved replacement.",
+        "sources": [
+          "web-zylo",
+          "web-ppg",
+          "cat-audit"
+        ]
+      },
+      {
+        "id": "s-rightsize",
+        "name": "Rightsize seats and tiers",
+        "why": "Removing inactive users and lowering tiers cuts cost with little disruption.",
+        "sources": [
+          "web-ppg",
+          "web-zylo"
+        ]
+      },
+      {
+        "id": "s-negotiate",
+        "name": "Negotiate renewals about 90 days ahead with usage data",
+        "why": "Vendors give better terms before the deadline, and usage data supports a smaller or cheaper plan.",
+        "sources": [
+          "web-ppg",
+          "web-cloudnuro",
+          "cat-renewal"
+        ]
+      },
+      {
+        "id": "s-confirm",
+        "name": "Confirm with the owning team before any change",
+        "why": "IT, finance and the people who use the tool each see different risks; retiring without checking can break work.",
+        "sources": [
+          "web-cloudnuro",
+          "web-ppg",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-govern",
+        "name": "Centralise approval and read spend monthly",
+        "why": "Spend creeps back unless purchases need approval, renewals are alerted and spend is read on one definition.",
+        "sources": [
+          "web-ppg",
+          "web-zylo"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Underestimating the app count, and missing shadow IT bought on cards or department budgets.",
+        "sources": [
+          "web-zylo",
+          "web-ppg"
+        ]
+      },
+      {
+        "text": "Missed auto-renewals that lock in spend for tools no longer used; talks should start at least 90 days out.",
+        "sources": [
+          "web-zylo",
+          "web-ppg",
+          "web-cloudnuro"
+        ]
+      },
+      {
+        "text": "Retiring a tool without an approved alternative, so users bring back unapproved tools.",
+        "sources": [
+          "web-ppg"
+        ]
+      },
+      {
+        "text": "Weak usage reporting, which makes rightsizing slow, and manual renewal tracking that falls out of date.",
+        "sources": [
+          "web-zylo"
+        ]
+      },
+      {
+        "text": "Long contracts that save money but limit the ability to adjust seats later.",
+        "sources": [
+          "web-cloudnuro"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Cut software and vendor spend below $36,000 a month",
+    "capabilities": [
+      {
+        "id": "ramp-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read spend (Ramp MCP)",
+        "why": "Pull card and vendor transactions, vendors and cardholders for 13 months."
+      },
+      {
+        "id": "card-export",
+        "access": "read",
+        "via": "file",
+        "name": "Card statements (CSV or PDF export)",
+        "why": "Cover charges that are not in Ramp."
+      },
+      {
+        "id": "workspace-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read licences and activity (Google Workspace admin console)",
+        "why": "Licence counts, last sign-in and app usage for Google Workspace and connected apps."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "owner",
+        "name": "Google Sheet for the register (owner shares it, or pastes the tabs)",
+        "why": "The owner wants the register in a Google Sheet; the tabs mirror the files in this project."
+      },
+      {
+        "id": "make-changes",
+        "access": "live",
+        "via": "browser",
+        "name": "Remove licences or change plans (Google Workspace admin and vendor portals)",
+        "why": "Each cancellation or downgrade is made one at a time, only after the team lead confirms and the owner approves."
+      }
+    ],
+    "data": [
+      {
+        "id": "spend",
+        "name": "Card and Ramp transactions for 13 months",
+        "why": "The base for the register and for finding what changed since a year ago.",
+        "fields": [
+          "date",
+          "vendor",
+          "amount",
+          "cardholder",
+          "team",
+          "category",
+          "recurring or one-off",
+          "billing period"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Ramp MCP read: transactions, vendors and cardholders for the last 13 months."
+          },
+          {
+            "kind": "CSV",
+            "how": "Ramp or card provider: export all transactions for 13 months."
+          }
+        ],
+        "required_for": [
+          "vendor-register",
+          "register-check",
+          "diagnosis",
+          "measurement"
+        ]
+      },
+      {
+        "id": "owners",
+        "name": "Tool owners and client dependency",
+        "why": "Nothing is cancelled without the team lead confirming; client-dependent tools stay.",
+        "fields": [
+          "tool",
+          "team lead",
+          "purpose",
+          "users",
+          "client work depends on it (yes, no, unsure)",
+          "replacement if retired"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Send each team lead their tools from the register and ask them to confirm purpose, users and client dependency."
+          }
+        ],
+        "required_for": [
+          "tool-owners",
+          "options",
+          "confirmations",
+          "apply-changes"
+        ]
+      },
+      {
+        "id": "usage",
+        "name": "Usage by tool and seat",
+        "why": "Shows which seats and tools are not used.",
+        "fields": [
+          "tool",
+          "seats paid",
+          "active seats in 30 and 90 days",
+          "last used"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "Google Workspace admin console reports for licences and sign-ins."
+          },
+          {
+            "kind": "CSV",
+            "how": "Each tool's admin page: users and last active exports."
+          },
+          {
+            "kind": "ASK",
+            "how": "Team leads state use where no report exists."
+          }
+        ],
+        "required_for": [
+          "tool-owners",
+          "diagnosis"
+        ],
+        "alternative": "Where usage is not available, the tool is marked unknown and stays out of cancellation lists until the team lead confirms."
+      },
+      {
+        "id": "contracts",
+        "name": "Contract and renewal terms",
+        "why": "Savings only arrive at renewal or after notice; most renewal dates are unknown.",
+        "fields": [
+          "vendor",
+          "start date",
+          "term",
+          "renewal date",
+          "notice period",
+          "auto-renew",
+          "seats",
+          "price",
+          "billing"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Signed order forms, contracts and invoices, from vendors' billing portals or the team lead."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the finance or admin owner who holds contracts and which vendor portals exist."
+          }
+        ],
+        "required_for": [
+          "contract-terms",
+          "options",
+          "renewal-talks"
+        ],
+        "alternative": "Unknown dates are listed by monthly cost so the biggest are chased first."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the problem",
+        "goal": "Turn the owner's words into a measured spend problem, a $36,000 target, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "monthly-subscription-renewal-decision-assistant"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "vendor-register",
+        "kind": "evidence",
+        "name": "Build the vendor register from card and Ramp data",
+        "goal": "Group 13 months of transactions by vendor, flag recurring and one-off charges, and spread annual charges to a monthly figure.",
+        "owner": {
+          "role": "code-vendor-bills-flag-odd-ones-and-find-supplier-savings"
+        },
+        "from_steps": [
+          "s-inventory"
+        ],
+        "data": [
+          "spend"
+        ],
+        "needs": [
+          "ramp-read",
+          "card-export",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "gate": "none",
+        "uses": [
+          "software-spend-auditor",
+          "spend-savings-finder"
+        ],
+        "outputs": [
+          {
+            "id": "register",
+            "name": "Vendor register by month",
+            "format": "csv",
+            "path": "evidence/vendor-register.csv"
+          },
+          {
+            "id": "register-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "monthly-total",
+            "name": "Monthly totals tie to the Ramp and card statement totals for the same months",
+            "required": true
+          },
+          {
+            "id": "thirteen",
+            "name": "Covers 13 months so this month can be compared with a year ago, or the shorter period is stated",
+            "required": true
+          },
+          {
+            "id": "annual",
+            "name": "Annual and quarterly charges are shown as monthly equivalents and marked",
+            "required": true
+          },
+          {
+            "id": "missing",
+            "name": "Any vendor paid outside cards is listed as unknown, not estimated",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "tool-owners",
+        "kind": "evidence",
+        "name": "Find the owner, use and client dependency of each tool",
+        "goal": "For each vendor over a materiality line, collect the team lead, purpose, users, usage and whether client work depends on it.",
+        "owner": {
+          "role": "monthly-subscription-renewal-decision-assistant"
+        },
+        "from_steps": [
+          "s-owners",
+          "s-usage"
+        ],
+        "data": [
+          "owners",
+          "usage"
+        ],
+        "needs": [
+          "workspace-read",
+          "sheet"
+        ],
+        "depends_on": [
+          "vendor-register"
+        ],
+        "gate": "none",
+        "uses": [
+          "software-spend-auditor"
+        ],
+        "outputs": [
+          {
+            "id": "owners-md",
+            "name": "Tool owners, use and dependency",
+            "format": "markdown",
+            "path": "evidence/TOOL-OWNERS.md"
+          },
+          {
+            "id": "owners-csv",
+            "name": "Tool ownership table",
+            "format": "csv",
+            "path": "evidence/tool-owners.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "every-tool",
+            "name": "Every vendor above the materiality line has a team lead or is marked unowned",
+            "required": true
+          },
+          {
+            "id": "client-flag",
+            "name": "Each tool has a client-dependency flag from its team lead, or is marked unsure and treated as dependent",
+            "required": true
+          },
+          {
+            "id": "usage-source",
+            "name": "Each usage figure names its source and date, or is marked unknown",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "contract-terms",
+        "kind": "evidence",
+        "name": "Collect contract and renewal terms",
+        "goal": "For the biggest vendors first, gather the signed terms: renewal date, notice period, auto-renewal, seats and price; build a renewal calendar.",
+        "owner": {
+          "role": "monthly-contract-renewal-keeper"
+        },
+        "from_steps": [
+          "s-renewals"
+        ],
+        "data": [
+          "contracts"
+        ],
+        "needs": [
+          "sheet"
+        ],
+        "depends_on": [
+          "vendor-register"
+        ],
+        "gate": "none",
+        "uses": [
+          "vendor-agreement-status-checker",
+          "supplier-contract-manager",
+          "saas-terms-check"
+        ],
+        "outputs": [
+          {
+            "id": "calendar",
+            "name": "Renewal calendar with notice dates",
+            "format": "csv",
+            "path": "evidence/renewal-calendar.csv"
+          },
+          {
+            "id": "terms-md",
+            "name": "Contract terms and gaps",
+            "format": "markdown",
+            "path": "evidence/CONTRACT-TERMS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "source",
+            "name": "Each renewal and notice date comes from the signed contract or the vendor's billing page, not from a quote or email",
+            "required": true
+          },
+          {
+            "id": "unknown",
+            "name": "Vendors with unknown dates are listed by monthly cost so the largest are chased first",
+            "required": true
+          },
+          {
+            "id": "alerts",
+            "name": "Every known date has alerts set at 90, 60 and 30 days before the notice date",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "register-check",
+        "kind": "integrity",
+        "name": "Check the register is complete and right",
+        "goal": "Check for duplicate vendors across cards, charges not in Ramp, personal or one-off items counted as recurring, and whether the total matches the owner's $46,000.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-inventory"
+        ],
+        "data": [
+          "spend"
+        ],
+        "needs": [
+          "ramp-read",
+          "card-export"
+        ],
+        "depends_on": [
+          "vendor-register",
+          "tool-owners"
+        ],
+        "gate": "none",
+        "uses": [
+          "unusual-transaction-finder",
+          "spend-savings-finder"
+        ],
+        "outputs": [
+          {
+            "id": "register-md",
+            "name": "Register check",
+            "format": "markdown",
+            "path": "integrity/REGISTER-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "baseline",
+            "name": "Current monthly spend is computed on one definition and compared with the owner's reported $46,000",
+            "required": true
+          },
+          {
+            "id": "duplicates",
+            "name": "Same vendor under different names or cards is merged and listed",
+            "required": true
+          },
+          {
+            "id": "scope",
+            "name": "The definition of software and vendor spend is written down, including what is excluded",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the savings estimate",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find where the rise came from and what is waste",
+        "goal": "Compare this month with a year ago by vendor, then test each hypothesis: new tools, price rises, seat growth, overlaps, unused seats and tools tied to departed staff.",
+        "owner": {
+          "role": "find-duplicate-and-unused-business-subscriptions"
+        },
+        "from_steps": [
+          "s-rationalise",
+          "s-rightsize"
+        ],
+        "data": [
+          "spend",
+          "usage"
+        ],
+        "depends_on": [
+          "register-check",
+          "contract-terms"
+        ],
+        "gate": "none",
+        "support": [
+          "monthly-subscription-renewal-decision-assistant"
+        ],
+        "uses": [
+          "software-spend-auditor",
+          "spend-savings-finder",
+          "vendor-comparison-writer"
+        ],
+        "outputs": [
+          {
+            "id": "rise",
+            "name": "What drove the rise and the waste",
+            "format": "markdown",
+            "path": "diagnosis/WHERE-IT-WENT.md"
+          },
+          {
+            "id": "waste-table",
+            "name": "Candidate savings by vendor",
+            "format": "csv",
+            "path": "diagnosis/candidate-savings.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "bridge",
+            "name": "The change from $31,000 to the current figure is split by vendor into new, price, seats and one-off, and adds up",
+            "required": true
+          },
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is marked SUPPORTED, REFUTED or UNKNOWN with evidence",
+            "required": true
+          },
+          {
+            "id": "overlaps",
+            "name": "Overlapping tools are grouped by job with the cost of each",
+            "required": true
+          },
+          {
+            "id": "reports",
+            "name": "Owner-reported numbers are labelled as reports",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the savings",
+        "goal": "Turn findings into ranked actions (retire, merge, rightsize, renegotiate, switch billing), each with monthly saving, when it arrives, client risk, effort and what the team lead must confirm.",
+        "owner": {
+          "role": "find-duplicate-and-unused-business-subscriptions"
+        },
+        "from_steps": [
+          "s-negotiate"
+        ],
+        "data": [
+          "owners",
+          "contracts"
+        ],
+        "depends_on": [
+          "diagnosis",
+          "tool-owners"
+        ],
+        "gate": "none",
+        "uses": [
+          "spend-savings-finder",
+          "vendor-comparison-writer",
+          "change-impact-checker"
+        ],
+        "outputs": [
+          {
+            "id": "options-md",
+            "name": "Ranked savings",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "options-csv",
+            "name": "Savings as data",
+            "format": "csv",
+            "path": "options/savings.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every action cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "timing",
+            "name": "Each saving shows the month it arrives, given the notice date and contract term",
+            "required": true
+          },
+          {
+            "id": "target",
+            "name": "The recommended set is totalled against the $10,000 gap, with the shortfall stated if it falls short",
+            "required": true
+          },
+          {
+            "id": "dependency",
+            "name": "No client-dependent or unsure tool is proposed for removal",
+            "required": true
+          },
+          {
+            "id": "replacement",
+            "name": "Each retire action names the replacement tool or says none is needed",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "prepare-a-contract-renewal-negotiation"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner and COO choose",
+        "goal": "The owner and COO pick the actions. Ask why when a top action is passed over and record it.",
+        "owner": {
+          "role": "monthly-subscription-renewal-decision-assistant"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "gate": "approve",
+        "outputs": [
+          {
+            "id": "decision-md",
+            "name": "Chosen actions",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over actions are recorded with reasons",
+            "required": true
+          },
+          {
+            "id": "conditions",
+            "name": "Each chosen action states that it still needs team lead confirmation before it is made",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "confirmations",
+        "kind": "production",
+        "name": "Draft team lead confirmations and change requests",
+        "goal": "For each chosen action, write the request to the team lead (what, why, what changes for them, what to confirm) and a change request with impact, risks and rollback.",
+        "owner": {
+          "role": "monthly-subscription-renewal-decision-assistant"
+        },
+        "from_steps": [
+          "s-confirm"
+        ],
+        "data": [
+          "owners"
+        ],
+        "depends_on": [
+          "decision",
+          "tool-owners"
+        ],
+        "gate": "review",
+        "uses": [
+          "change-request-writer",
+          "change-impact-checker"
+        ],
+        "outputs": [
+          {
+            "id": "confirm-md",
+            "name": "Confirmation requests and change requests",
+            "format": "markdown",
+            "path": "production/CONFIRMATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "plain",
+            "name": "Each request says in plain words what will stop, what replaces it and the date",
+            "required": true
+          },
+          {
+            "id": "rollback",
+            "name": "Each change has a rollback step and data is exported before removal",
+            "required": true
+          },
+          {
+            "id": "client",
+            "name": "Each request asks the team lead to confirm no client work depends on the tool",
+            "required": true
+          },
+          {
+            "id": "no-send",
+            "name": "Requests are drafts; the owner sends them",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "renewal-talks",
+        "kind": "production",
+        "name": "Prepare renewal and rightsizing talks",
+        "goal": "For vendors with renewals in the next 120 days and the biggest ones overall, prepare a brief with usage, price, options and an opening ask.",
+        "owner": {
+          "role": "prepare-a-contract-renewal-negotiation"
+        },
+        "from_steps": [
+          "s-negotiate",
+          "s-rightsize"
+        ],
+        "data": [
+          "contracts",
+          "usage"
+        ],
+        "depends_on": [
+          "decision",
+          "contract-terms"
+        ],
+        "gate": "none",
+        "uses": [
+          "vendor-comparison-writer",
+          "negotiation-prep-coach",
+          "contract-risk-reviewer"
+        ],
+        "outputs": [
+          {
+            "id": "talks-md",
+            "name": "Renewal briefs and asks",
+            "format": "markdown",
+            "path": "production/RENEWAL-TALKS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "deadline",
+            "name": "Each brief shows the notice date taken from the signed contract and the date to start the talk",
+            "required": true
+          },
+          {
+            "id": "usage",
+            "name": "Each ask rests on usage numbers, with their source",
+            "required": true
+          },
+          {
+            "id": "limits",
+            "name": "Nothing commits the company to longer terms or minimums the owner has not approved",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "spend-policy",
+        "kind": "production",
+        "name": "Draft the purchasing rule and the monthly review",
+        "goal": "Write a short purchasing rule (who may buy, approval above a limit, one owner per tool, renewal alerts) and the monthly spend review, so teams stop buying tools on their own.",
+        "owner": {
+          "role": "finance-fpa-analyst"
+        },
+        "from_steps": [
+          "s-govern"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "gate": "review",
+        "uses": [
+          "software-spend-auditor"
+        ],
+        "outputs": [
+          {
+            "id": "policy",
+            "name": "Purchasing rule and monthly review",
+            "format": "markdown",
+            "path": "production/SPEND-POLICY.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "owners",
+            "name": "Every tool must have a named team lead owner and a financial owner",
+            "required": true
+          },
+          {
+            "id": "limit",
+            "name": "The approval limit is left for the owner and COO to set, not assumed",
+            "required": true
+          },
+          {
+            "id": "alerts",
+            "name": "Renewal alerts at 90, 60 and 30 days are part of the routine",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "apply-changes",
+        "kind": "execution",
+        "name": "Make approved changes one at a time",
+        "goal": "After the team lead has confirmed and the owner has approved, remove each licence or change each plan, read it back, and log it. Never touch a client-dependent or unsure tool.",
+        "owner": {
+          "role": "monthly-contract-renewal-keeper"
+        },
+        "from_steps": [
+          "s-confirm",
+          "s-rightsize"
+        ],
+        "data": [
+          "owners"
+        ],
+        "needs": [
+          "make-changes",
+          "workspace-read"
+        ],
+        "depends_on": [
+          "confirmations",
+          "renewal-talks"
+        ],
+        "gate": "approve_each_action",
+        "uses": [
+          "change-request-writer",
+          "vendor-agreement-status-checker"
+        ],
+        "outputs": [
+          {
+            "id": "change-log",
+            "name": "Change log with confirmations and read-back",
+            "format": "markdown",
+            "path": "execution/CHANGE-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "both",
+            "name": "Each change has the team lead's confirmation and the owner's approval recorded before it is made",
+            "required": true
+          },
+          {
+            "id": "not-dependent",
+            "name": "No change touches a tool flagged client-dependent or unsure",
+            "required": true
+          },
+          {
+            "id": "export",
+            "name": "Data is exported or backed up before any licence is removed or any tool cancelled",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "The new licence count or plan is read back from the admin console or vendor page",
+            "required": true
+          },
+          {
+            "id": "notice",
+            "name": "Cancellation notice was given inside the notice period, or the next renewal date is recorded",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read spend against $36,000 every month",
+        "goal": "Each month compute spend on the agreed definition, compare it with the baseline and target, check realised against promised savings and note anything that broke.",
+        "owner": {
+          "role": "finance-fpa-analyst"
+        },
+        "from_steps": [
+          "s-govern"
+        ],
+        "data": [
+          "spend"
+        ],
+        "needs": [
+          "ramp-read"
+        ],
+        "depends_on": [
+          "apply-changes"
+        ],
+        "gate": "none",
+        "uses": [
+          "spend-savings-finder",
+          "software-spend-auditor"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Monthly spend readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-def",
+            "name": "Each month uses the same definition, vendor list and monthly equivalents as the baseline",
+            "required": true
+          },
+          {
+            "id": "realised",
+            "name": "Realised savings are compared with the promised savings by action, and gaps are explained",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Incidents, team complaints and client issues linked to a change are listed",
+            "required": true
+          },
+          {
+            "id": "window",
+            "name": "No verdict on the $36,000 target before the savings dates have passed",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record which savings were real, which tools proved essential, the purchasing rule that stuck and the renewal dates still unknown; plan the next round.",
+        "owner": {
+          "role": "finance-fpa-analyst"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "gate": "review",
+        "uses": [
+          "software-spend-auditor"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          },
+          {
+            "id": "open",
+            "name": "Contracts with unknown dates are carried into the next round",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-team-buying",
+        "statement": "The rise comes mostly from many new team-bought tools, not price rises on old ones.",
+        "test": "Split the change from a year ago by vendor into new vendors, existing vendors with higher cost and one-offs.",
+        "confirm_if": "New vendors account for most of the rise.",
+        "refute_if": "Price rises or seat growth on existing vendors account for most.",
+        "fix_stage": "spend-policy"
+      },
+      {
+        "id": "h-shelfware",
+        "statement": "A meaningful share of paid seats and tools is not used.",
+        "test": "Active users in the last 30 and 90 days against seats paid, for tools with usage data.",
+        "confirm_if": "Utilisation is low (around half or less) on tools with material cost.",
+        "refute_if": "Utilisation is high.",
+        "fix_stage": "apply-changes"
+      },
+      {
+        "id": "h-overlap",
+        "statement": "Several tools do the same job across teams (for example more than one project, design or chat tool).",
+        "test": "Group vendors by job and count tools and cost per job.",
+        "confirm_if": "More than one tool with real spend serves the same job.",
+        "refute_if": "Each job has one tool.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-seat-growth",
+        "statement": "Seat counts grew faster than headcount, or leavers still hold licences.",
+        "test": "Compare seats paid with active staff and with sign-ins of departed users.",
+        "confirm_if": "Seats exceed active staff, or departed users still have licences.",
+        "refute_if": "Seats track headcount.",
+        "fix_stage": "apply-changes"
+      },
+      {
+        "id": "h-auto-renew",
+        "statement": "Auto-renewals and price rises at renewal pushed up cost unnoticed.",
+        "test": "Compare price at renewal with the prior term for vendors with known dates.",
+        "confirm_if": "Renewals show price rises or silent upgrades.",
+        "refute_if": "Prices at renewal were flat.",
+        "fix_stage": "renewal-talks"
+      },
+      {
+        "id": "h-client-tools",
+        "statement": "Some of the largest charges are tools clients depend on, so the savings must come elsewhere.",
+        "test": "Team lead dependency flags against the cost ranking.",
+        "confirm_if": "Client-dependent tools make up a large share of spend, so the $10,000 gap cannot be closed from the rest.",
+        "refute_if": "Few big charges are client-dependent.",
+        "fix_stage": "options"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Monthly for four months, each month read after savings dates (notice periods and renewals) have passed.",
+      "min_volume": "At least three monthly readings on the same definition before judging whether the saving holds; annual charges counted as monthly equivalents.",
+      "stop_rule": "Stop further changes and review with the owner if a change breaks a team workflow or touches a tool a client depends on."
+    }
+  }
+}

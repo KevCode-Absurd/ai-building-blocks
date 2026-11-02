@@ -1,0 +1,898 @@
+{
+  "case": "local-salon-no-shows",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Cut no-shows at the five-stylist Manchester salon from 18% of booked appointments to under 8% within two months, without losing regular clients.",
+    "deliverable": "A fair no-show and cancellation setup in Fresha (reminders, card or deposit rules aimed at the right clients, a clear policy and client messages), switched on in stages with the owner's approval, plus a weekly read of the no-show rate.",
+    "done": [
+      "The 18% figure is checked against Fresha appointment records and split into no-shows and late cancellations, by client type, day, time, service and booking lead time",
+      "The causes are tested and the owner has chosen the rules, with reasons recorded",
+      "Reminder, card or deposit rules and the written policy are ready, fair and shown to clients at booking",
+      "Regular clients were told personally before any rule affected them",
+      "Changes were switched on in stages, each approved before it was applied",
+      "The no-show rate and regular clients' rebooking are read weekly against under 8% and the no-lost-regulars guardrail"
+    ],
+    "metric": {
+      "name": "No-show rate",
+      "direction": "decrease",
+      "unit": "% of booked appointments",
+      "baseline": 18,
+      "baseline_source": "reported",
+      "target": 8
+    },
+    "deadline": "Within two months of starting",
+    "guardrails": [
+      "Regular clients keep booking: their rebooking does not fall",
+      "Cancellation and deposit terms stay fair and are shown before the client commits"
+    ],
+    "limits": [
+      "Changes are made in Fresha settings by the owner, who can change them",
+      "Nothing is sent to clients and no rule is switched on without the owner's approval"
+    ],
+    "assets": [
+      "Fresha booking report (18% no-shows over the last three months, reported)",
+      "Fresha's current single reminder 24 hours before the appointment",
+      "A spreadsheet in this project for working data"
+    ],
+    "connections": [
+      {
+        "name": "Fresha (browser)",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Fresha settings (changed by the owner)",
+        "access": "live",
+        "status": "available"
+      }
+    ],
+    "data_home": "A spreadsheet in this project (the owner's choice)",
+    "technical_level": "Can change Fresha settings; otherwise not stated",
+    "decides": "The owner",
+    "unknowns": [
+      "How the 18% splits between no-shows and late cancellations, and whether Fresha counts same-day cancellations as no-shows",
+      "Which clients and which days, times, services and stylists the no-shows come from",
+      "How many appointments the salon books a month",
+      "How the owner defines a regular client",
+      "Whether the salon has a written cancellation policy and whether clients see it at booking",
+      "Which Fresha features the salon's plan includes (card capture, deposits, reminder timing)"
+    ],
+    "answers": [
+      {
+        "question": "What kind of business?",
+        "answer": "Hair salon with five stylists in Manchester."
+      },
+      {
+        "question": "What is the no-show rate now?",
+        "answer": "18% of booked appointments over the last three months (Fresha booking report)."
+      },
+      {
+        "question": "What do you do today?",
+        "answer": "Fresha sends one reminder 24 hours before. We do not take deposits now."
+      },
+      {
+        "question": "What does a no-show cost?",
+        "answer": "About 45 pounds on average."
+      },
+      {
+        "question": "What is the target?",
+        "answer": "No-shows under 8% within two months without losing regular clients."
+      },
+      {
+        "question": "Access and data home?",
+        "answer": "Fresha access is through the browser; I can change settings myself. Keep data in a spreadsheet here."
+      },
+      {
+        "question": "Who decides?",
+        "answer": "I decide."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Salon practitioners combine four levers in a set order: measure the no-shows and who they come from, set a clear and fair cancellation policy, remind clients more than once in a way that lets them cancel easily, and put a financial commitment (card capture or deposit) on the riskiest bookings first, such as new clients, past no-shows, long services and peak slots, rather than on everyone. Regular clients are protected by telling them personally first, using gentler fee rules for them, and waiving fees for real emergencies. In the UK the terms must be fair and clear before the client commits: fees should reflect the salon's real loss and rise on a sliding scale, and a deposit should be small, not a penalty. The effect is read over weeks, not days, with the regulars' rebooking watched as the guardrail.",
+    "sources": [
+      {
+        "id": "web-fresha-policies",
+        "kind": "web",
+        "title": "Fresha Help Centre: Set up payment policies",
+        "ref": "https://www.fresha.com/help-center/knowledge-base/payments/101660-set-up-payment-policies",
+        "date": "2026-11",
+        "note": "Page is undated; date is when it was read (2026-11-02). Deposits or card capture, free-cancellation window, late and no-show fee percentages, apply to client groups such as new clients or past no-shows, per service, minimum value."
+      },
+      {
+        "id": "web-fresha-blog",
+        "kind": "web",
+        "title": "How to protect your business against no-shows and late cancellations (Fresha)",
+        "ref": "https://www.fresha.com/blog/how-to-protect-your-business-against-no-shows-and-late-cancellations",
+        "date": "2026-11",
+        "note": "Vendor blog, published 2022-03 and shown as last updated 2026-11-02. Up to two reminders at 3, 24, 48 or 72 hours; show the policy at booking; blocking online booking is a last resort. Its percentage claims are vendor claims."
+      },
+      {
+        "id": "web-heygoldie",
+        "kind": "web",
+        "title": "Deposits vs cancellation fees: which reduces no-shows faster? (Goldie)",
+        "ref": "https://heygoldie.com/blog/deposits-vs-cancellation-fees",
+        "date": "2026-03-16",
+        "note": "Vendor blog. Deposits act faster, especially for new clients and long services; fees are gentler for loyal clients; publish the policy and repeat it in confirmations; waive for genuine emergencies. No data on how much no-shows fall."
+      },
+      {
+        "id": "web-sprintlaw",
+        "kind": "web",
+        "title": "Refund and cancellation terms for UK hair salons (Sprintlaw)",
+        "ref": "https://sprintlaw.co.uk/articles/refund-and-cancellation-terms-for-uk-hair-salons/",
+        "date": "2026-06-13",
+        "note": "Law firm article, not legal advice. Terms should be fair, transparent and shown before the client is bound; charges proportionate to real loss; say what happens if the salon cancels; keep records."
+      },
+      {
+        "id": "web-cma",
+        "kind": "web",
+        "title": "CMA: Wedding venues advised to play fair",
+        "ref": "https://www.gov.uk/government/news/wedding-venues-advised-to-play-fair",
+        "date": "2016-03-02",
+        "note": "Official advice for another sector, used by analogy: a deposit should only reserve the booking and be a small share of the price, and cancellation charges should follow a sliding scale that reflects likely loss."
+      },
+      {
+        "id": "cat-no-show",
+        "kind": "catalogue",
+        "title": "Appointment no-show analyst",
+        "ref": "explain-appointment-no-show-patterns"
+      },
+      {
+        "id": "cat-booking-terms",
+        "kind": "catalogue",
+        "title": "Customer booking terms explainer",
+        "ref": "explain-service-booking-terms-to-customers"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-measure-base",
+        "name": "Measure the no-shows and who they come from",
+        "why": "An 18% average hides who is missing: new clients, a few repeat no-showers, long services or certain days. Splitting no-shows from late cancellations and counting by client type, day, time, service and lead time shows where a rule will help and where it would hit regulars.",
+        "sources": [
+          "cat-no-show",
+          "web-fresha-blog",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-policy",
+        "name": "Set a clear, fair cancellation policy before any fee",
+        "why": "Clients must see the free-cancellation window and the fees before they commit. Fees follow a sliding scale tied to the salon's real loss, a deposit stays small, and the policy says what happens if the salon cancels. Fresha generates the cancellation terms from the policy settings.",
+        "sources": [
+          "web-sprintlaw",
+          "web-cma",
+          "web-fresha-policies",
+          "cat-booking-terms"
+        ]
+      },
+      {
+        "id": "s-reminders",
+        "name": "Send reminders earlier and more than once, with an easy way to cancel",
+        "why": "One reminder at 24 hours leaves little time to refill a slot. Practitioners send a second reminder, such as at 48 hours as well as 24, repeat the policy in confirmations and make cancelling easy.",
+        "sources": [
+          "web-fresha-blog",
+          "web-heygoldie"
+        ]
+      },
+      {
+        "id": "s-commitment",
+        "name": "Put a card or deposit on the riskiest bookings first",
+        "why": "Card capture or a small deposit works best on new clients, clients with past no-shows, long services and peak slots, and can be limited to those client groups so regulars are not hit.",
+        "sources": [
+          "web-fresha-policies",
+          "web-heygoldie",
+          "web-fresha-blog"
+        ]
+      },
+      {
+        "id": "s-regulars",
+        "name": "Tell regular clients personally first and allow for emergencies",
+        "why": "Loyal clients take rules better when they hear them directly, see them in every confirmation and know genuine emergencies are waived. Blocking online booking is the last step, after other efforts.",
+        "sources": [
+          "web-heygoldie",
+          "web-fresha-blog"
+        ]
+      },
+      {
+        "id": "s-rollout",
+        "name": "Switch changes on in stages and read the effect weekly",
+        "why": "Changes are introduced one at a time, each recorded with its date, so the effect on no-shows and on regulars can be told apart. Results are read over weeks.",
+        "sources": [
+          "web-fresha-blog",
+          "web-heygoldie",
+          "owner"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Charging a large non-refundable deposit or a flat full-price penalty, which can be unfair under consumer law.",
+        "sources": [
+          "web-cma",
+          "web-sprintlaw"
+        ]
+      },
+      {
+        "text": "Writing strict rules for clients but nothing about what happens when the salon cancels or moves an appointment.",
+        "sources": [
+          "web-sprintlaw"
+        ]
+      },
+      {
+        "text": "Applying a deposit or card rule to everyone, including long-standing regulars, instead of the riskiest groups.",
+        "sources": [
+          "web-fresha-policies",
+          "web-heygoldie"
+        ]
+      },
+      {
+        "text": "Bookings made by staff default to no policy in Fresha, so the rules do not apply unless the setting is checked.",
+        "sources": [
+          "web-fresha-policies"
+        ]
+      },
+      {
+        "text": "Treating vendor percentages as promises, and judging after a week or two.",
+        "sources": [
+          "web-fresha-blog",
+          "web-heygoldie"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Bring no-shows under 8% without losing regulars",
+    "capabilities": [
+      {
+        "id": "fresha-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read Fresha reports and settings (browser)",
+        "why": "Read appointment records, current reminders and current payment policy."
+      },
+      {
+        "id": "workbook",
+        "access": "draft",
+        "via": "file",
+        "name": "Spreadsheet in this project",
+        "why": "Working data and weekly results are kept here; client names are not stored."
+      },
+      {
+        "id": "fresha-settings",
+        "access": "live",
+        "via": "owner",
+        "name": "Change Fresha settings (the owner changes them)",
+        "why": "Reminders, payment policy, client groups and fees; each change needs the owner's yes before it is made."
+      },
+      {
+        "id": "client-messages",
+        "access": "live",
+        "via": "owner",
+        "name": "Send messages to clients (the owner sends them)",
+        "why": "The notice to regular clients and the policy text; the owner approves the wording and each send."
+      }
+    ],
+    "data": [
+      {
+        "id": "appointments",
+        "name": "Fresha appointments, last three months or more",
+        "why": "The base for the no-show rate and every breakdown.",
+        "fields": [
+          "appointment date and time",
+          "date booked",
+          "service",
+          "stylist",
+          "price",
+          "status (completed, no-show, late cancellation, cancelled)",
+          "booking channel",
+          "new or returning client",
+          "anonymous client key",
+          "reminder sent"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Fresha reports: appointments for at least the last three months, with status and booking channel; export as CSV and drop client names before it enters the spreadsheet."
+          },
+          {
+            "kind": "URL",
+            "how": "If no export is available, read the appointment report in the browser."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis",
+          "measurement"
+        ]
+      },
+      {
+        "id": "current-setup",
+        "name": "Current reminder and payment settings",
+        "why": "Shows what clients are told today and what Fresha already supports.",
+        "fields": [
+          "reminder timing",
+          "payment policy on all bookings",
+          "client group rules",
+          "cancellation terms shown at booking"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "Read Settings, Payments and the notification settings in Fresha in the browser."
+          },
+          {
+            "kind": "ASK",
+            "how": "The owner shares screenshots of the same screens."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "settings-pack"
+        ]
+      },
+      {
+        "id": "regular-definition",
+        "name": "What counts as a regular client",
+        "why": "The guardrail needs a clear, fixed definition.",
+        "fields": [
+          "rule for a regular (for example visits in the last 12 months)"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "The owner states the rule; it is fixed before the baseline is taken."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "measurement"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the goal",
+        "goal": "Turn the owner's words into a measured target, a guardrail for regular clients, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "customer-support-specialist"
+        },
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Gather three months of appointments",
+        "goal": "Pull Fresha appointments and current settings into the spreadsheet, without client names, and fix the definition of a regular client before the baseline is taken.",
+        "owner": {
+          "role": "explain-appointment-no-show-patterns"
+        },
+        "data": [
+          "appointments",
+          "current-setup",
+          "regular-definition"
+        ],
+        "needs": [
+          "fresha-read",
+          "workbook"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "dataset",
+            "name": "Working dataset (no client names)",
+            "format": "csv",
+            "path": "evidence/appointments.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled, how and the definitions used",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Appointment and no-show counts match the Fresha report totals for the same dates",
+            "required": true
+          },
+          {
+            "id": "no-names",
+            "name": "Client names and contact details are not in the spreadsheet; clients are anonymous keys",
+            "required": true
+          },
+          {
+            "id": "regular",
+            "name": "The definition of a regular client is written down before any result is read",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure-base"
+        ],
+        "uses": [
+          "explain-appointment-no-show-patterns",
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "integrity-data",
+        "kind": "integrity",
+        "name": "Check the 18% means what we think",
+        "goal": "Check how Fresha records a no-show, whether late cancellations and same-day cancellations are counted as no-shows, whether staff mark no-shows consistently, and what share of bookings are made by staff, where no policy applies by default.",
+        "owner": {
+          "role": "check-a-spreadsheet-before-sharing-the-results"
+        },
+        "support": [
+          "explain-appointment-no-show-patterns"
+        ],
+        "data": [
+          "appointments",
+          "current-setup"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "data-check",
+            "name": "No-show definition and data check",
+            "format": "markdown",
+            "path": "integrity/NO-SHOW-DEFINITION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "definition",
+            "name": "The no-show and late-cancellation rules used by Fresha and the salon are written down, and the 18% is re-calculated under them",
+            "required": true
+          },
+          {
+            "id": "split",
+            "name": "No-shows and late cancellations are reported separately",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure-base"
+        ],
+        "uses": [
+          "check-a-spreadsheet-before-sharing-the-results",
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find who misses appointments and why",
+        "goal": "Test the hypotheses: no-shows by client type, repeat offenders, day and time, service, lead time and reminder status, with regular clients shown separately. Leave reasons unknown unless the records support them.",
+        "owner": {
+          "role": "explain-appointment-no-show-patterns"
+        },
+        "data": [
+          "appointments"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "No-show pattern diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with its table",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Groups with few appointments are marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "regulars",
+            "name": "Regular clients' no-show rate and rebooking are shown on their own",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure-base"
+        ],
+        "uses": [
+          "explain-appointment-no-show-patterns"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the rule options",
+        "goal": "Turn supported findings into ranked options, such as a second reminder, card capture for new clients and past no-shows, a small deposit on long services, a sliding late-cancellation fee, and last-step online booking limits. Each shows its finding, expected effect, effort, risk to regular clients, fairness and how it will be measured.",
+        "owner": {
+          "role": "explain-appointment-no-show-patterns"
+        },
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "options",
+            "name": "Ranked options",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every option cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has effect, effort, risk to regulars, fairness and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "targeted",
+            "name": "Options aimed at specific client groups come before rules for everyone",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner chooses the rules",
+        "goal": "The owner picks options and sets the free-cancellation window, fee or deposit levels, client groups and emergency waivers. Ask for the reason when the top option is passed over.",
+        "owner": {
+          "role": "explain-appointment-no-show-patterns"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen rules",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top option was passed over",
+            "required": true
+          },
+          {
+            "id": "fees",
+            "name": "Fee and deposit levels are written down as exact figures and the reason for each",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "settings-pack",
+        "kind": "production",
+        "name": "Prepare the Fresha settings, policy text and client messages",
+        "goal": "Write the exact Fresha settings (reminder timings, payment policy, client groups, fees, per-service rules), the policy text for the website and confirmations, a plain note to regular clients, and an emergency-waiver rule. Check fairness against the UK terms points found in research.",
+        "owner": {
+          "role": "explain-service-booking-terms-to-customers"
+        },
+        "support": [
+          "customer-support-specialist"
+        ],
+        "reviewers": [
+          "support-legal-compliance-checker"
+        ],
+        "data": [
+          "current-setup"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "settings-spec",
+            "name": "Fresha settings, step by step",
+            "format": "markdown",
+            "path": "production/FRESHA-SETTINGS.md"
+          },
+          {
+            "id": "client-messages",
+            "name": "Policy text and client messages for approval",
+            "format": "markdown",
+            "path": "production/CLIENT-MESSAGES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen rules are included, each with its exact Fresha setting path",
+            "required": true
+          },
+          {
+            "id": "fair",
+            "name": "The free-cancellation window, sliding fees, small deposit and salon-cancels rule are written out and checked as fair and clear before the client commits",
+            "required": true
+          },
+          {
+            "id": "staff-bookings",
+            "name": "Staff-made bookings are covered, since Fresha applies no policy to them by default",
+            "required": true
+          },
+          {
+            "id": "plain",
+            "name": "Messages are plain, kind and say how to cancel",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-policy",
+          "s-reminders",
+          "s-commitment",
+          "s-regulars"
+        ],
+        "uses": [
+          "explain-service-booking-terms-to-customers",
+          "customer-reply-drafter"
+        ]
+      },
+      {
+        "id": "rollout",
+        "kind": "execution",
+        "name": "Switch the changes on in stages",
+        "goal": "With the owner, apply each approved change in Fresha and send each approved message, one stage at a time: regular clients are told first, then reminders, then card or deposit rules for the chosen groups. Record the date and the rule before each goes live.",
+        "owner": {
+          "role": "customer-support-specialist"
+        },
+        "needs": [
+          "fresha-settings",
+          "client-messages"
+        ],
+        "depends_on": [
+          "settings-pack"
+        ],
+        "outputs": [
+          {
+            "id": "rollout-log",
+            "name": "Rollout log with dates, settings and messages sent",
+            "format": "markdown",
+            "path": "execution/ROLLOUT-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each setting change and each message was approved by the owner before it was applied or sent",
+            "required": true
+          },
+          {
+            "id": "order",
+            "name": "Regular clients were told before any rule applied to them",
+            "required": true
+          },
+          {
+            "id": "registered",
+            "name": "Each change is recorded with its date, setting and metric before it goes live, so its effect can be read",
+            "required": true
+          },
+          {
+            "id": "undo",
+            "name": "Each change records how to undo it",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-rollout"
+        ],
+        "uses": [
+          "launch-checklist-runner"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read the no-show rate and regulars every week",
+        "goal": "Each week, report the no-show rate, late cancellations, the rate for each client group and regular clients' rebooking, against the 18% baseline, the under 8% target and the date of each change.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "data": [
+          "appointments",
+          "regular-definition"
+        ],
+        "needs": [
+          "fresha-read",
+          "workbook"
+        ],
+        "depends_on": [
+          "rollout"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Weekly results readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "The no-show definition and regular-client rule match the baseline",
+            "required": true
+          },
+          {
+            "id": "guardrail",
+            "name": "Regular clients' rebooking is checked every read",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Rates use four-week windows or the volume agreed before launch, otherwise INCONCLUSIVE",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "recurring-kpi-report-maker"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record which rule moved no-shows and what it cost in client goodwill, propose lasting rules with their scope, and plan the next round if the target was missed.",
+        "owner": {
+          "role": "project-management-experiment-tracker"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "Every change is closed with a result",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this salon or for salons in general",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [],
+        "uses": []
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-new-and-repeat",
+        "statement": "Most no-shows come from new clients and a small group of repeat no-showers.",
+        "test": "No-show rate and share of all no-shows by new clients, returning clients and clients with two or more earlier no-shows.",
+        "confirm_if": "These groups make up a large share of no-shows while being a small share of appointments.",
+        "refute_if": "No-shows are spread evenly across client types.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-regulars-spread",
+        "statement": "Regular clients also no-show enough that rules aimed at new clients will not reach the target.",
+        "test": "Regular clients' no-show and late-cancellation rate and their share of all no-shows, under the fixed regular definition.",
+        "confirm_if": "Regular clients account for a large share of no-shows.",
+        "refute_if": "Regular clients rarely no-show.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-reminder-too-late",
+        "statement": "A single reminder 24 hours before is too late or too hard to act on.",
+        "test": "No-show and late-cancellation rate by reminder status and by how long before the appointment the client last changed the booking.",
+        "confirm_if": "Many no-shows had no earlier chance to be refilled, or clients without a reminder no-show more.",
+        "refute_if": "Reminded and unreminded clients no-show at similar rates.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-lead-time",
+        "statement": "Appointments booked far ahead are missed more often.",
+        "test": "No-show rate by days between booking and appointment.",
+        "confirm_if": "The rate rises clearly with lead time.",
+        "refute_if": "The rate is flat across lead times.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-service-and-slot",
+        "statement": "Certain services, stylists, days or times carry most of the lost value.",
+        "test": "No-show rate and lost price by service, stylist, weekday and time slot, with volume noted.",
+        "confirm_if": "A few services or slots with enough volume account for a large share of the lost value.",
+        "refute_if": "Rates and lost value are even.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-no-consequence",
+        "statement": "With no card or deposit, clients face no cost for missing an appointment.",
+        "test": "Compare no-show rates for clients who booked through staff, who have no policy by default, and online; look for any history of cancellation fees.",
+        "confirm_if": "Groups with no commitment no-show far more than groups with any commitment.",
+        "refute_if": "Rates are similar with or without any commitment.",
+        "fix_stage": "settings-pack"
+      },
+      {
+        "id": "h-recording",
+        "statement": "The 18% is overstated because late cancellations or unmarked appointments are counted as no-shows.",
+        "test": "Re-count the 18% under the written definition and check how staff mark missed appointments.",
+        "confirm_if": "The re-count under the written definition is clearly lower than 18%.",
+        "refute_if": "The re-count matches 18%.",
+        "fix_stage": "settings-pack"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Weekly over the two months, read as four-week rates; judge each change only after enough weeks following its date.",
+      "min_volume": "Judge group rates only with the number of appointments agreed with the owner before the first read; smaller groups are INCONCLUSIVE.",
+      "stop_rule": "Pause the newest rule if regular clients' rebooking falls or clients complain it is unfair; otherwise keep each rule for its full window."
+    }
+  }
+}

@@ -1,0 +1,1376 @@
+{
+  "case": "ecom-peak-sale-ready",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Get the Shopify home goods store through the Black Friday weekend without the site slowing down or the top two products selling out, and beat last year's $84,000 with $100,000 while keeping margin per order above $18.",
+    "deliverable": "A reorder placed in time for the top two products, a faster sale-day store with a rehearsal and rollback plan, an offer ladder inside the 25% limit, ad and support plans, a live check-in routine for the weekend, and a readout of the weekend against $100,000.",
+    "done": [
+      "Last year's weekend and the margin per order checked against Shopify and cost data",
+      "Stock cover worked out for the top products, with the reorder decided and placed before the supplier's three-week lead time runs out",
+      "Site speed measured with the sale features switched on, with the heaviest apps and scripts cut or deferred as the owners approve",
+      "Offer ladder set within 25% off, with each rung's margin per order above $18",
+      "Ad plan and support plan ready, with switch triggers and a rollback plan",
+      "Owners have chosen the plan, with reasons recorded",
+      "Each change made live only with the owners' yes",
+      "Weekend sales, margin, stock, speed and support read back against the goal",
+      "Learnings saved for the next sale"
+    ],
+    "metric": {
+      "name": "Black Friday weekend revenue",
+      "direction": "increase",
+      "unit": "US dollars over the weekend",
+      "baseline": 84000,
+      "baseline_source": "reported",
+      "target": 100000
+    },
+    "deadline": "Black Friday weekend, about four weeks from now",
+    "guardrails": [
+      "Margin per order stays above $18",
+      "No discount deeper than 25%",
+      "The top two products do not sell out before the weekend ends",
+      "The site stays fast and the checkout works through the traffic peak",
+      "Support replies keep up with ticket volume"
+    ],
+    "limits": [
+      "Discounts up to 25%, nothing deeper",
+      "Supplier needs three weeks lead time for reorders",
+      "Shopify is read-only, so store changes are prepared for the owners to apply",
+      "Meta Ads and Google Ads are reachable only through exports, so ad changes are prepared for the owners to apply"
+    ],
+    "assets": [
+      "Shopify report for last Black Friday weekend ($84,000)",
+      "Gorgias support desk and its ticket history"
+    ],
+    "connections": [
+      {
+        "name": "Shopify MCP",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Meta Ads exports",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Google Ads exports",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Gorgias",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "Files in this project",
+    "technical_level": "Not stated",
+    "decides": "The owner and the co-founder, together",
+    "unknowns": [
+      "Which two products sold out, how many units short, and the stock on hand now",
+      "Whether a reorder has already been placed",
+      "Cost, shipping and fee per order, so today's margin per order is not yet known",
+      "Why the site slowed last Friday morning (apps, theme, traffic spike or plan limits)",
+      "How much revenue the slowdown and the stock-outs cost",
+      "How much was spent on Meta and Google last year and what they returned",
+      "What access level Gorgias gives our AI",
+      "Which email or SMS tool is used, and the size of the list",
+      "Supplier minimum order and whether three weeks is firm"
+    ],
+    "answers": [
+      {
+        "question": "What kind of store and where?",
+        "answer": "Home goods store on Shopify, US"
+      },
+      {
+        "question": "What happened last year?",
+        "answer": "Black Friday weekend did $84,000 (Shopify report); the site slowed on Friday morning and the top two products ran out by Saturday"
+      },
+      {
+        "question": "When is the sale?",
+        "answer": "Black Friday is in about four weeks"
+      },
+      {
+        "question": "How deep may discounts go?",
+        "answer": "Up to 25%, nothing deeper"
+      },
+      {
+        "question": "Which tools can your AI reach?",
+        "answer": "Shopify MCP read access; Meta Ads and Google Ads through exports only; Gorgias for support"
+      },
+      {
+        "question": "What are the supply limits?",
+        "answer": "The supplier needs three weeks lead time for reorders"
+      },
+      {
+        "question": "What is the target and the floor?",
+        "answer": "$100,000 over the weekend, keeping margin per order above $18"
+      },
+      {
+        "question": "Where should data live and who decides?",
+        "answer": "Keep data in this project; the owner and the co-founder decide together"
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners prepare for a peak sale by working backwards from fixed dates: the supplier's lead time for hero products, a storefront code freeze about two weeks out, load and speed testing with the sale features switched on, and support headcount confirmed before the event. They protect margin with structured offers (tiers, bundles, capped discounts, a curated set of bestsellers) computed on landed cost including peak shipping, rather than a deep sitewide cut. During the event a small team watches orders per hour, ad cost per sale, uptime, support volume and stock in one place, and avoids deploying changes.",
+    "sources": [
+      {
+        "id": "web-hypersku",
+        "kind": "web",
+        "title": "HyperSKU: BFCM 2026 timeline, shipping costs and tips to protect margins",
+        "ref": "https://www.hypersku.com/blog/bfcm-2026/",
+        "date": "2026-09-29",
+        "note": "Date-driven preparation, work backwards from shipping and stock cut-offs, landed cost with peak shipping before setting discount depth, revisit free-shipping thresholds, bundles. Vendor blog."
+      },
+      {
+        "id": "web-nostra",
+        "kind": "web",
+        "title": "Nostra: BFCM site speed checklist 2026",
+        "ref": "https://www.nostra.ai/blogs-collection/bfcm-site-speed-checklist-2026",
+        "date": "2026-08-13",
+        "note": "Ordered speed checklist: baseline the pages campaigns land on, audit apps and scripts, load test with promotions on, code freeze, rollback plan, dress rehearsal; mobile thresholds for LCP, INP and CLS. Vendor blog."
+      },
+      {
+        "id": "web-cartylabs",
+        "kind": "web",
+        "title": "Cartylabs: Shopify BFCM playbook",
+        "ref": "https://cartylabs.com/blog/shopify-bfcm-playbook",
+        "date": "2025-09-08",
+        "note": "Code freeze 14 days out, load test about 30 days out, order hero SKUs early and check stock 7 days out, support headcount confirmed early with tickets 4 to 6 times normal, shared monitoring during the event. Agency blog, one year old."
+      },
+      {
+        "id": "web-yotpo",
+        "kind": "web",
+        "title": "Yotpo: Black Friday sale ideas",
+        "ref": "https://www.yotpo.com/blog/black-friday-sale-ideas/",
+        "date": "2026-09-30",
+        "note": "Offer structures that protect margin: tiered ladder, gift with purchase, bundles, capped discounts, a curated set of bestsellers; early access for subscribers; quick cart recovery during the sale. Vendor blog."
+      },
+      {
+        "id": "cat-sale-day",
+        "kind": "catalogue",
+        "title": "Sale-day store speed review and checklist",
+        "ref": "get-your-store-ready-for-a-big-sale-day"
+      },
+      {
+        "id": "cat-reorder",
+        "kind": "catalogue",
+        "title": "Stock reorder and inbound shipment planner",
+        "ref": "reorder-stock-before-you-run-out-and-track-the-shipment"
+      },
+      {
+        "id": "cat-pacing",
+        "kind": "catalogue",
+        "title": "Sale profit limit and daily budget planner",
+        "ref": "plan-a-big-sales-budget-and-daily-pacing"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-dates",
+        "name": "Work backwards from the fixed dates",
+        "why": "Supplier lead time, the storefront code freeze, load testing and support headcount each have a last safe date, and the three-week supplier lead time leaves little room.",
+        "sources": [
+          "web-cartylabs",
+          "web-hypersku",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-baseline",
+        "name": "Rebuild last year's weekend hour by hour, by product and by channel",
+        "why": "Last year's orders, stock-outs, slowdown and ad results are the base for the forecast and show what actually broke.",
+        "sources": [
+          "web-cartylabs",
+          "cat-sale-day",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-stock",
+        "name": "Forecast hero product demand and reorder early",
+        "why": "The top two products ran out last year. Practitioners order hero products first and check stock a week before the event.",
+        "sources": [
+          "web-cartylabs",
+          "cat-reorder",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-speed",
+        "name": "Audit speed on the pages the sale uses, with sale features switched on",
+        "why": "A quiet-day score hides what happens with banners, timers and pop-ups. Apps and scripts are the usual cause of a slow peak.",
+        "sources": [
+          "web-nostra",
+          "cat-sale-day"
+        ]
+      },
+      {
+        "id": "s-offer",
+        "name": "Structure offers on landed cost and a margin floor",
+        "why": "Tiers, bundles and capped discounts hold margin better than one sitewide cut, and discount depth must be set on landed cost including peak shipping.",
+        "sources": [
+          "web-yotpo",
+          "web-hypersku",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-ads",
+        "name": "Set a profit limit and daily pacing for paid ads",
+        "why": "Ad spend that looks fine at full price can lose money at 25% off. A cost-per-sale ceiling and a daily pace keep spend inside the margin.",
+        "sources": [
+          "cat-pacing",
+          "web-hypersku"
+        ]
+      },
+      {
+        "id": "s-support",
+        "name": "Plan support for four to six times normal tickets",
+        "why": "Ticket volume rises sharply in the sale and stock-outs make it worse. Headcount, saved replies and stock-out replies are settled in advance.",
+        "sources": [
+          "web-cartylabs"
+        ]
+      },
+      {
+        "id": "s-freeze",
+        "name": "Freeze changes, rehearse and agree a rollback",
+        "why": "Late theme or app changes are a common cause of sale-day failures. A rehearsal with promotions on and a named rollback owner limit the damage.",
+        "sources": [
+          "web-nostra",
+          "web-cartylabs"
+        ]
+      },
+      {
+        "id": "s-monitor",
+        "name": "Watch the weekend live in one place",
+        "why": "Orders per hour, stock, speed, ad cost per sale and support volume let the owners act before a problem costs a day of sales.",
+        "sources": [
+          "web-cartylabs",
+          "cat-sale-day"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Leaving the reorder until the plan is finished, so it cannot arrive inside the supplier's lead time.",
+        "sources": [
+          "web-cartylabs",
+          "owner"
+        ]
+      },
+      {
+        "text": "Testing speed on a quiet day without banners, timers and pop-ups.",
+        "sources": [
+          "web-nostra"
+        ]
+      },
+      {
+        "text": "Setting discount depth on product price instead of landed cost with peak shipping.",
+        "sources": [
+          "web-hypersku"
+        ]
+      },
+      {
+        "text": "Changing the theme or adding apps in the final two weeks.",
+        "sources": [
+          "web-nostra",
+          "web-cartylabs"
+        ]
+      },
+      {
+        "text": "Counting on vendor traffic and conversion claims; use last year's own numbers as the base.",
+        "sources": [
+          "web-yotpo",
+          "owner"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Be ready for Black Friday and reach $100,000 above the margin floor",
+    "capabilities": [
+      {
+        "id": "store-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read orders, products and stock (Shopify MCP, read-only)",
+        "why": "Rebuild last year's weekend, read stock and sell-through, and watch orders and stock during the sale."
+      },
+      {
+        "id": "ads-files",
+        "access": "read",
+        "via": "file",
+        "name": "Read Meta Ads and Google Ads exports",
+        "why": "Read last year's and recent spend and results from the exports the owners provide."
+      },
+      {
+        "id": "support-read",
+        "access": "read",
+        "via": "file",
+        "name": "Read Gorgias ticket history (export)",
+        "why": "Count last weekend's tickets and their reasons to plan support, since Gorgias access level is not confirmed."
+      },
+      {
+        "id": "site-browser",
+        "access": "read",
+        "via": "browser",
+        "name": "Measure the live store pages (browser, PageSpeed)",
+        "why": "Measure speed on the home, collection, top product and cart pages with sale features switched on."
+      },
+      {
+        "id": "owner-apply",
+        "access": "live",
+        "via": "owner",
+        "name": "Owners place the reorder and apply changes in Shopify and the ad platforms",
+        "why": "Our access is read-only or by export, so the owners place the purchase order, change the theme and apps, create discounts, and upload ads, and tell us when each is done."
+      }
+    ],
+    "data": [
+      {
+        "id": "last-year-sales",
+        "name": "Last year's Black Friday weekend orders",
+        "why": "The base for the forecast, and the record of when the site slowed and which products ran out.",
+        "fields": [
+          "order time",
+          "order id",
+          "sku",
+          "units",
+          "order value",
+          "discount",
+          "traffic source",
+          "device"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read orders for the weekend and the four weeks before with the Shopify MCP."
+          },
+          {
+            "kind": "CSV",
+            "how": "Shopify admin, Orders: export as CSV for the same dates."
+          }
+        ],
+        "required_for": [
+          "evidence-sales",
+          "integrity-data",
+          "diagnosis",
+          "measurement"
+        ]
+      },
+      {
+        "id": "stock-supplier",
+        "name": "Stock on hand, in transit and supplier terms",
+        "why": "Decides how many units to reorder and by what date.",
+        "fields": [
+          "sku",
+          "on hand",
+          "in transit",
+          "weekly sales",
+          "supplier lead time",
+          "minimum order",
+          "unit cost"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read inventory levels and 12 weeks of sales per product with the Shopify MCP."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owners for supplier lead time, minimum order, unit cost and anything already on order."
+          }
+        ],
+        "required_for": [
+          "diagnosis",
+          "stock-plan",
+          "place-reorder"
+        ],
+        "alternative": "Without supplier terms, the reorder date stays UNKNOWN and the plan assumes the stated three weeks."
+      },
+      {
+        "id": "costs-margin",
+        "name": "Cost per order",
+        "why": "The $18 margin floor can only be checked with product cost, shipping and fees per order.",
+        "fields": [
+          "sku",
+          "price",
+          "unit cost",
+          "shipping cost per order",
+          "payment fees",
+          "packaging"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Ask the owners for unit cost, average shipping cost and fee rates."
+          },
+          {
+            "kind": "CSV",
+            "how": "Shopify admin, Products: export with cost per item, and the shipping cost report from the carrier."
+          }
+        ],
+        "required_for": [
+          "integrity-data",
+          "diagnosis",
+          "sale-plan",
+          "ad-plan"
+        ],
+        "alternative": "Without cost data the margin floor cannot be checked and offer depth stays at a cautious placeholder."
+      },
+      {
+        "id": "ad-exports",
+        "name": "Meta and Google ad results",
+        "why": "Last year's and recent spend, cost per sale and return set how much paid traffic the budget can add.",
+        "fields": [
+          "date",
+          "platform",
+          "campaign",
+          "spend",
+          "clicks",
+          "purchases",
+          "purchase value"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Meta Ads Manager and Google Ads, Reports: daily, by campaign, last year's sale weekend and the last 90 days, export as CSV."
+          }
+        ],
+        "required_for": [
+          "evidence-sales",
+          "ad-plan"
+        ]
+      },
+      {
+        "id": "speed-and-apps",
+        "name": "Speed reports and installed apps",
+        "why": "Shows which pages and apps slow the store, and the baseline for the sale-day limits.",
+        "fields": [
+          "page url",
+          "mobile LCP",
+          "INP",
+          "CLS",
+          "app name",
+          "script weight",
+          "loaded on pages"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "Run PageSpeed Insights on the home, a collection, the top two product pages and the cart."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owners for the list of installed apps and which are used for the sale."
+          }
+        ],
+        "required_for": [
+          "integrity-site",
+          "site-fixes"
+        ]
+      },
+      {
+        "id": "support-history",
+        "name": "Support tickets",
+        "why": "Last weekend's ticket volume and reasons size the support plan.",
+        "fields": [
+          "created time",
+          "channel",
+          "topic",
+          "first response time",
+          "resolved time"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Gorgias, Statistics or Tickets: export for last Black Friday weekend and the last 90 days."
+          }
+        ],
+        "required_for": [
+          "diagnosis",
+          "support-plan"
+        ],
+        "alternative": "Without it, support is planned at the four to six times normal volume that practitioners assume."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the sale goal",
+        "goal": "Turn the owners' words into a measured goal, a dated plan with last-safe dates, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "evidence-sales",
+        "kind": "evidence",
+        "name": "Rebuild last year's weekend",
+        "goal": "Pull last year's weekend orders hour by hour, by product and by channel, current stock, and ad results into CSV files in the project.",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "owner": {
+          "role": "weekly-store-numbers-watcher"
+        },
+        "support": [
+          "media-buyer"
+        ],
+        "uses": [
+          "utm-revenue-reader"
+        ],
+        "data": [
+          "last-year-sales",
+          "ad-exports"
+        ],
+        "needs": [
+          "store-read",
+          "ads-files"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "dataset",
+            "name": "Weekend dataset",
+            "format": "csv",
+            "path": "evidence/weekend-dataset.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Weekend revenue matches the $84,000 Shopify report, or the gap is explained",
+            "required": true
+          },
+          {
+            "id": "hours",
+            "name": "Orders are shown by hour so the Friday morning slowdown is visible",
+            "required": true
+          },
+          {
+            "id": "stockouts",
+            "name": "The time each top product sold out is found from the data",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-data",
+        "kind": "integrity",
+        "name": "Check the numbers and the margin floor",
+        "goal": "Reconcile ad exports with Shopify orders, work out margin per order from cost data, and test which discount depths keep margin per order above $18. Ends with a verdict on what can be trusted.",
+        "from_steps": [
+          "s-offer"
+        ],
+        "owner": {
+          "role": "weekly-store-numbers-watcher"
+        },
+        "uses": [
+          "discount-impact-checker"
+        ],
+        "data": [
+          "last-year-sales",
+          "costs-margin"
+        ],
+        "needs": [
+          "store-read",
+          "ads-files"
+        ],
+        "depends_on": [
+          "evidence-sales"
+        ],
+        "outputs": [
+          {
+            "id": "data-check",
+            "name": "Data and margin check",
+            "format": "markdown",
+            "path": "integrity/DATA-AND-MARGIN-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "reconcile",
+            "name": "Ad platform purchases and Shopify orders agree within 15%, or the gap is explained",
+            "required": true
+          },
+          {
+            "id": "margin",
+            "name": "Margin per order is computed from cost, shipping and fees, with every assumption listed",
+            "required": true
+          },
+          {
+            "id": "depth",
+            "name": "The deepest discount that keeps margin per order above $18 is stated by product group",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the plan",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-site",
+        "kind": "integrity",
+        "name": "Check the store can take the traffic",
+        "goal": "Measure mobile speed on the home, collection, top product and cart pages with the sale features switched on, list the apps and scripts and what each costs in load time, and find what likely slowed the site last Friday.",
+        "from_steps": [
+          "s-speed"
+        ],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "support": [
+          "monthly-store-speed-keeper"
+        ],
+        "uses": [
+          "store-speed-report-reader",
+          "fix-what-slows-your-shopify-store-in-the-order-that-pays-back"
+        ],
+        "data": [
+          "speed-and-apps"
+        ],
+        "needs": [
+          "site-browser"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "speed-check",
+            "name": "Speed and apps check",
+            "format": "markdown",
+            "path": "integrity/SPEED-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "pages",
+            "name": "The pages the sale will send traffic to are measured on mobile",
+            "required": true
+          },
+          {
+            "id": "sale-mode",
+            "name": "Measured with banners, timers and pop-ups on, or marked as not yet testable",
+            "required": true
+          },
+          {
+            "id": "apps",
+            "name": "Every installed app and script is listed with its owner and whether the sale needs it",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find what will limit or break the weekend",
+        "goal": "Test each hypothesis: stock cover for the top products against the forecast and the reorder deadline, speed risk, margin floor, ad capacity and support load. Keep competing explanations.",
+        "from_steps": [
+          "s-dates",
+          "s-stock"
+        ],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "support": [
+          "reorder-stock-before-you-run-out-and-track-the-shipment",
+          "customer-support-specialist"
+        ],
+        "uses": [
+          "promotion-and-stock-planner",
+          "demand-and-stock-planner",
+          "support-capacity-planner"
+        ],
+        "data": [
+          "last-year-sales",
+          "stock-supplier",
+          "costs-margin",
+          "support-history"
+        ],
+        "needs": [
+          "store-read",
+          "support-read"
+        ],
+        "depends_on": [
+          "evidence-sales",
+          "integrity-data",
+          "integrity-site"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "Diagnosis and last-safe dates",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "required": true
+          },
+          {
+            "id": "dates",
+            "name": "The last safe date for the reorder, the code freeze, load testing and support headcount is written down",
+            "required": true
+          },
+          {
+            "id": "forecast",
+            "name": "Demand is forecast as a low, middle and high range with growth assumptions listed",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank what to do before the sale",
+        "goal": "Turn findings into ranked cards: reorder quantities and date first, then speed cuts, the offer ladder, ad pacing and support cover. Each card gives expected effect on revenue, margin, effort, risk and its last safe date.",
+        "from_steps": [
+          "s-offer",
+          "s-ads"
+        ],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "uses": [
+          "sale-offer-ladder-planner",
+          "store-offer-picker",
+          "next-dollar-budget-allocator"
+        ],
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "recommendations",
+            "name": "Recommendation cards",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "recommendations-json",
+            "name": "Recommendation cards as data",
+            "format": "json",
+            "path": "options/recommendations.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has expected effect, effort, confidence, risk, last safe date and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "limits",
+            "name": "No card goes beyond 25% off or below $18 margin per order",
+            "required": true
+          },
+          {
+            "id": "order",
+            "name": "The reorder card is first and flagged with the date the decision is needed by",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner and co-founder choose",
+        "goal": "The owner and co-founder pick card IDs, reorder first and the same day, the rest soon after. Ask for the reason when they pass on a top card; record it as a decision.",
+        "from_steps": [],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top card was passed over",
+            "required": true
+          }
+        ],
+        "gate": "approve"
+      },
+      {
+        "id": "stock-plan",
+        "kind": "production",
+        "name": "Prepare the reorder",
+        "goal": "Prepare the chosen reorder: quantity per product, the date it must be placed, a draft purchase order and an inbound shipment tracker. Nothing is ordered by us.",
+        "from_steps": [
+          "s-stock"
+        ],
+        "owner": {
+          "role": "reorder-stock-before-you-run-out-and-track-the-shipment"
+        },
+        "uses": [
+          "reorder-quantity-planner",
+          "purchase-order-reorder"
+        ],
+        "data": [
+          "stock-supplier"
+        ],
+        "needs": [
+          "store-read"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "reorder",
+            "name": "Reorder plan and draft purchase order",
+            "format": "markdown",
+            "path": "production/REORDER.md"
+          },
+          {
+            "id": "tracker",
+            "name": "Inbound shipment tracker",
+            "format": "csv",
+            "path": "production/inbound-tracker.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "lead-time",
+            "name": "Placed date plus three weeks lands before the stock-out risk date, or the shortfall is stated with a fallback",
+            "required": true
+          },
+          {
+            "id": "range",
+            "name": "Quantity covers the middle forecast and states the high-case shortfall",
+            "required": true
+          },
+          {
+            "id": "draft",
+            "name": "The purchase order is a draft with supplier terms listed, not placed",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No reorder card was chosen."
+      },
+      {
+        "id": "site-fixes",
+        "kind": "production",
+        "name": "Prepare the speed fixes and rollback plan",
+        "goal": "Prepare the chosen speed changes: apps and scripts to remove or defer, image and layout fixes, a code freeze date, a sale-day rehearsal script and a named rollback for each risky feature.",
+        "from_steps": [
+          "s-speed",
+          "s-freeze"
+        ],
+        "owner": {
+          "role": "monthly-store-speed-keeper"
+        },
+        "uses": [
+          "page-speed-fixer",
+          "hero-image-loading-fixer",
+          "layout-shift-fixer"
+        ],
+        "data": [
+          "speed-and-apps"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-site"
+        ],
+        "outputs": [
+          {
+            "id": "site-changes",
+            "name": "Speed fixes, freeze date and rollback plan",
+            "format": "markdown",
+            "path": "production/SITE-FIXES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen changes are included, each with its expected speed gain and what it could break",
+            "required": true
+          },
+          {
+            "id": "freeze",
+            "name": "A code freeze date is set at least 14 days before Black Friday, or the exception is stated",
+            "required": true
+          },
+          {
+            "id": "rollback",
+            "name": "Each risky change has a rollback with a named person and a time to complete",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No speed card was chosen."
+      },
+      {
+        "id": "sale-plan",
+        "kind": "production",
+        "name": "Prepare the offer ladder and sale messages",
+        "goal": "Set the offer ladder inside 25% off: main offer, ordered backups, switch triggers if stock runs low, and a subscriber early-access plan, with the email and text drafts and cart-recovery timing for the sale.",
+        "from_steps": [
+          "s-offer"
+        ],
+        "owner": {
+          "role": "plan-a-sale-across-email-and-sms"
+        },
+        "uses": [
+          "sale-offer-ladder-planner",
+          "discount-impact-checker",
+          "reason-why-deal-writer"
+        ],
+        "data": [
+          "costs-margin"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "offer-ladder",
+            "name": "Offer ladder and message drafts",
+            "format": "markdown",
+            "path": "production/SALE-PLAN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "depth",
+            "name": "No rung is deeper than 25% off",
+            "required": true
+          },
+          {
+            "id": "margin",
+            "name": "Every rung keeps margin per order above $18 on the stated assumptions",
+            "required": true
+          },
+          {
+            "id": "triggers",
+            "name": "Switch triggers name the stock level at which a product leaves or changes the offer",
+            "required": true
+          },
+          {
+            "id": "consent",
+            "name": "Text messages are planned only for people who opted in",
+            "required": true
+          }
+        ],
+        "gate": "review"
+      },
+      {
+        "id": "ad-plan",
+        "kind": "production",
+        "name": "Prepare the ad budget and daily pacing",
+        "goal": "Set a cost-per-sale ceiling from the margin floor and a daily budget pace for Meta and Google, with the campaigns to change, as upload files and steps for the owners.",
+        "from_steps": [
+          "s-ads"
+        ],
+        "owner": {
+          "role": "plan-a-big-sales-budget-and-daily-pacing"
+        },
+        "support": [
+          "media-buyer"
+        ],
+        "uses": [
+          "meta-and-google-budget-comparison-reviewer",
+          "next-dollar-budget-allocator"
+        ],
+        "data": [
+          "ad-exports",
+          "costs-margin"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-data"
+        ],
+        "outputs": [
+          {
+            "id": "ad-pacing",
+            "name": "Ad budget and pacing plan",
+            "format": "markdown",
+            "path": "production/AD-PACING.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "ceiling",
+            "name": "The cost-per-sale ceiling is derived from the margin floor and the discount in force",
+            "required": true
+          },
+          {
+            "id": "pace",
+            "name": "Daily budgets and stop rules are stated for each day of the weekend",
+            "required": true
+          },
+          {
+            "id": "stock",
+            "name": "Ads on a product stop or move when its stock trigger is reached",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No paid ads card was chosen."
+      },
+      {
+        "id": "support-plan",
+        "kind": "production",
+        "name": "Prepare the support plan",
+        "goal": "Size support cover from last year's tickets and the sale forecast, and draft saved replies for shipping, discounts, stock-outs and delays in Gorgias.",
+        "from_steps": [
+          "s-support"
+        ],
+        "owner": {
+          "role": "customer-support-specialist"
+        },
+        "uses": [
+          "support-capacity-planner",
+          "gorgias-weekly-support-report"
+        ],
+        "data": [
+          "support-history"
+        ],
+        "needs": [
+          "support-read"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "support-pack",
+            "name": "Support cover and saved replies",
+            "format": "markdown",
+            "path": "production/SUPPORT-PLAN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "cover",
+            "name": "Hours of cover are stated per day against forecast tickets, with the assumption listed",
+            "required": true
+          },
+          {
+            "id": "replies",
+            "name": "Saved replies match the offer terms and stock rules and carry no promise the owners did not approve",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "place-reorder",
+        "kind": "execution",
+        "name": "Owners place the reorder",
+        "goal": "Hand the owners the draft purchase order with the date it must be placed. The owners place it with the supplier and confirm the date and quantity. Track the shipment.",
+        "from_steps": [
+          "s-stock"
+        ],
+        "owner": {
+          "role": "reorder-stock-before-you-run-out-and-track-the-shipment"
+        },
+        "needs": [
+          "owner-apply"
+        ],
+        "depends_on": [
+          "stock-plan"
+        ],
+        "outputs": [
+          {
+            "id": "reorder-log",
+            "name": "Reorder confirmation and tracker",
+            "format": "markdown",
+            "path": "execution/REORDER-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "placed",
+            "name": "The owners confirm the order, quantity and promised arrival date from the supplier",
+            "required": true
+          },
+          {
+            "id": "tracked",
+            "name": "The arrival date is in the tracker with a check-in seven days before Black Friday",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "optional_when": "No reorder card was chosen.",
+        "uses": [
+          "purchase-order-reorder"
+        ]
+      },
+      {
+        "id": "go-live",
+        "kind": "execution",
+        "name": "Owners apply the sale changes",
+        "goal": "After the code freeze plan is agreed, hand the owners the changes in order: speed fixes, discount setup, ads upload, saved replies. Run the dress rehearsal with promotions on and record the result before each goes live.",
+        "from_steps": [
+          "s-freeze"
+        ],
+        "owner": {
+          "role": "get-your-store-ready-for-a-big-sale-day"
+        },
+        "uses": [
+          "get-your-store-ready-for-a-big-sale-day"
+        ],
+        "needs": [
+          "owner-apply",
+          "site-browser"
+        ],
+        "depends_on": [
+          "site-fixes",
+          "sale-plan",
+          "ad-plan",
+          "support-plan"
+        ],
+        "outputs": [
+          {
+            "id": "change-log",
+            "name": "Change log and rehearsal result",
+            "format": "markdown",
+            "path": "execution/CHANGE-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "rehearsal",
+            "name": "Promotions were switched on for a rehearsal and speed and checkout were measured before the sale",
+            "required": true
+          },
+          {
+            "id": "codes",
+            "name": "Each discount is tested on a test cart for the right price, the 25% cap and the margin floor",
+            "required": true
+          },
+          {
+            "id": "confirmed",
+            "name": "The owners confirm each change is live and we check it on the store",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action"
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Watch the weekend and read the result",
+        "goal": "During the weekend, read orders per hour against the pace for $100,000, stock, speed, ad cost per sale, margin per order and tickets, and flag breaches to the owners. Afterwards, read the weekend against last year and the goal.",
+        "from_steps": [
+          "s-monitor"
+        ],
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "data": [
+          "last-year-sales"
+        ],
+        "needs": [
+          "store-read",
+          "ads-files",
+          "support-read"
+        ],
+        "depends_on": [
+          "go-live",
+          "place-reorder"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Weekend readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "monitor",
+            "name": "Hourly check-in routine",
+            "format": "markdown",
+            "path": "measurement/MONITOR.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "pace",
+            "name": "Revenue is shown against the hourly pace needed for $100,000 and last year's same hours",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Margin per order, discount depth, stock of the top products, speed and support response are checked",
+            "required": true
+          },
+          {
+            "id": "source",
+            "name": "Revenue comes from Shopify orders, not ad platform numbers",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record what worked and broke, the forecast against actual, stock and speed lessons with their scope, and a calendar for next year's sale with its last safe dates.",
+        "from_steps": [],
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "uses": [
+          "trial-log-planner"
+        ],
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next sale calendar",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "forecast",
+            "name": "Forecast and actual are compared per top product",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this store or for sales in general",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-stockout-repeat",
+        "statement": "The top two products will sell out again even with some growth.",
+        "test": "Last year's units per hour for the two products against stock now plus anything on order, under the low, middle and high forecast.",
+        "confirm_if": "At the middle forecast, stock plus incoming is below demand before the weekend ends.",
+        "refute_if": "Stock plus incoming covers the high forecast.",
+        "fix_stage": "stock-plan"
+      },
+      {
+        "id": "h-reorder-too-late",
+        "statement": "A reorder placed after the plan is finished cannot arrive inside the three-week lead time.",
+        "test": "Compare today's date plus three weeks, and any supplier confirmation delay, with the date stock is needed.",
+        "confirm_if": "The latest placement date is within days or already passed.",
+        "refute_if": "There is slack of a week or more after the owners' decision.",
+        "fix_stage": "place-reorder"
+      },
+      {
+        "id": "h-apps-slow-site",
+        "statement": "Apps, scripts and heavy sale features caused the Friday morning slowdown.",
+        "test": "Hourly order and traffic pattern last Friday, speed reports for sale pages and the cost in load time of each app and script.",
+        "confirm_if": "A few apps or scripts account for most of the load time, or the slowdown matches a feature switched on that morning.",
+        "refute_if": "Pages are fast with all features on and the slowdown matches only a traffic spike beyond plan limits.",
+        "fix_stage": "site-fixes"
+      },
+      {
+        "id": "h-margin-floor",
+        "statement": "Discounts up to 25% on some products push margin per order below $18.",
+        "test": "Margin per order at each discount depth by product group, using cost, shipping and fees.",
+        "confirm_if": "Some product groups fall below $18 at depths inside the 25% limit.",
+        "refute_if": "Every group stays above $18 at 25% off.",
+        "fix_stage": "sale-plan"
+      },
+      {
+        "id": "h-ads-capacity",
+        "statement": "More ad spend will not add enough profitable sales to bridge the gap to $100,000.",
+        "test": "Cost per sale and return by spend level in last year's weekend and recent weeks, against the cost-per-sale ceiling at the sale margin.",
+        "confirm_if": "Cost per sale rises past the ceiling at spend levels needed to add the missing sales.",
+        "refute_if": "Cost per sale stays under the ceiling at higher spend.",
+        "fix_stage": "ad-plan"
+      },
+      {
+        "id": "h-support-overload",
+        "statement": "Ticket volume will exceed current support cover and slow replies.",
+        "test": "Last weekend's tickets and first response times against the forecast and available hours.",
+        "confirm_if": "Forecast tickets exceed what the current cover can answer within the target time.",
+        "refute_if": "Cover handles the forecast with room to spare.",
+        "fix_stage": "support-plan"
+      },
+      {
+        "id": "h-gap-from-traffic",
+        "statement": "The gap from $84,000 to $100,000 is mostly lost sales from stock-outs and slowness, not a need for more traffic.",
+        "test": "Estimate sales lost after the stock-outs and during the slowdown from hourly orders and traffic.",
+        "confirm_if": "Estimated lost sales are close to or above the $16,000 gap.",
+        "refute_if": "Lost sales are small, so more traffic or higher order value must close the gap.",
+        "fix_stage": "options"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Hourly from the start of the sale through Cyber Monday, then a full readout within a week.",
+      "min_volume": "Pace is read each hour; the result is read on the full weekend total from Shopify orders.",
+      "stop_rule": "Tell the owners at once and propose a switch (back off a rung, pause ads on a product, roll back a feature) if margin per order falls below $18, a top product is within a day of selling out, checkout errors rise, or tickets back up; nothing changes without their yes."
+    }
+  }
+}

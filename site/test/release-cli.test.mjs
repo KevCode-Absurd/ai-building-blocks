@@ -9,7 +9,7 @@ test('an interrupted or unlaunchable release command also stops the sequence',as
  for(const result of [{status:null},{error:new Error('fixture')},undefined]){const ran=[];await assert.rejects(runSteps([['first'],['never']],step=>{ran.push(step[0]);return result;}));assert.deepEqual(ran,['first']);}
 });
 test('release order retains all old gates, including both indices and the generated check before units',()=>{
- assert.deepEqual(gateSteps.map(step=>step[0]),['Build minds','Index catalogue','Generate Before and After','Reindex catalogue','Check generated sections','Check source','Unit tests','Production build','SEO','Browser checks']);
+ assert.deepEqual(gateSteps.map(step=>step[0]),['Build minds','Index catalogue','Generate Before and After','Reindex catalogue','Check generated sections','Check source','Unit tests','Outcome evals scorecard','Production build','SEO','Browser checks']);
  assert.ok(gateSteps.every(step=>!step[2].some(arg=>/lighthouse|--all|--baseline|deploy|screen-items/.test(arg))));
  assert.deepEqual(gateSteps.at(-1)[2],['playwright','test','--config','playwright.context.config.ts']);
 });

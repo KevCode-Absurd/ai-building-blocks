@@ -55,6 +55,7 @@ site/.copyable-build/
 !/tools/package-lock.json
 !/tools/.gitkeep
 !/tools/eval-roles.mjs
+!/tools/outcome-evals.mjs
 !/tools/role-feedback.mjs
 !/tools/lib/
 !/tools/test/

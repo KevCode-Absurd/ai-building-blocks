@@ -1,0 +1,1312 @@
+{
+  "case": "ecom-product-launch",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Launch the smoked mango habanero hot sauce on Shopify and Amazon next month and sell 1,000 bottles in the first 30 days, within a $5,000 launch budget and with no health claims.",
+    "deliverable": "A launched flavour: emails drafted in Klaviyo, Meta ads built and switched on with the owner's approval, an Instagram plan, a Shopify page and an Amazon listing pack ready to upload, plus a daily readout of sales against 1,000 and the budget.",
+    "done": [
+      "Product facts, price and margin per bottle confirmed, and approved claims listed with no health claims",
+      "Shopify page, checkout and tracking tested before launch day",
+      "Amazon listing path checked, with a fallback if approval is not in time",
+      "Stock split between Shopify and Amazon decided so neither sells out of or oversells the 3,000 bottles",
+      "Owner has chosen the channel mix, budget split and dates, with reasons recorded",
+      "Emails, ads, Instagram posts and listing built and checked against the claims list",
+      "Each live action approved by the owner one at a time",
+      "Bottles sold read back against 1,000 and spend against $5,000",
+      "Learnings saved for the next flavour"
+    ],
+    "metric": {
+      "name": "Bottles of the new flavour sold in the first 30 days",
+      "direction": "reach",
+      "unit": "bottles",
+      "baseline": 0,
+      "baseline_source": "reported",
+      "target": 1000
+    },
+    "deadline": "30 days after launch day; launch is next month and the first batch arrives in about four weeks",
+    "guardrails": [
+      "Total launch spend stays within $5,000",
+      "No health claims on the label, ads, emails, Instagram or listing",
+      "Sales of the existing flavours on Shopify and Amazon do not fall because of the launch",
+      "Email unsubscribes and spam complaints stay near the list's normal level",
+      "The 3,000 bottles are not oversold on either channel"
+    ],
+    "limits": [
+      "Launch budget is $5,000 in total",
+      "No health claims on the label or in ads",
+      "Amazon Seller Central is reachable only through CSV exports, so listing changes are prepared for the owner to upload",
+      "Klaviyo allows drafts only, so the owner sends or schedules the emails",
+      "Meta ads may be created and switched on through the Meta Ads MCP only with approval of each action"
+    ],
+    "assets": [
+      "Klaviyo email list of 14,000",
+      "Instagram account with 22,000 followers",
+      "Existing Shopify store (about 600 orders a month) and Amazon presence"
+    ],
+    "connections": [
+      {
+        "name": "Meta Ads MCP",
+        "access": "live",
+        "status": "connected"
+      },
+      {
+        "name": "Klaviyo",
+        "access": "draft",
+        "status": "connected"
+      },
+      {
+        "name": "Amazon Seller Central CSV exports",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "A Google Sheet",
+    "technical_level": "Not stated",
+    "decides": "The owner",
+    "unknowns": [
+      "Whether Amazon will approve the listing in time for launch day",
+      "The launch date",
+      "Price, cost and margin per bottle, so the highest affordable cost per sale is not yet known",
+      "How the 3,000 bottles are to be split between Shopify and Amazon",
+      "Whether the 1,000 bottles count Shopify and Amazon together",
+      "How engaged the 14,000 email list is (opens, clicks, past purchases)",
+      "How past Meta ads performed (cost per sale, audiences)",
+      "Whether the new flavour is a child of an existing Amazon listing family or a separate listing",
+      "Whether the $5,000 also covers samples, influencers or design work"
+    ],
+    "answers": [
+      {
+        "question": "What is the business and the product?",
+        "answer": "Small hot sauce brand in the US, selling on Shopify (about 600 orders a month) and on Amazon; the new flavour is smoked mango habanero"
+      },
+      {
+        "question": "How much stock and when?",
+        "answer": "First batch is 3,000 bottles, arriving in four weeks"
+      },
+      {
+        "question": "What counts as success?",
+        "answer": "1,000 sold in the first 30 days"
+      },
+      {
+        "question": "What is the budget?",
+        "answer": "$5,000 in total"
+      },
+      {
+        "question": "What audience do you already have?",
+        "answer": "Email list of 14,000 in Klaviyo (draft access); Instagram 22k followers"
+      },
+      {
+        "question": "Which tools can your AI reach?",
+        "answer": "Meta Ads MCP with live access; Klaviyo with draft access; Amazon Seller Central through CSV exports only"
+      },
+      {
+        "question": "What must not be said or done?",
+        "answer": "No health claims on the label or ads"
+      },
+      {
+        "question": "Where should data live and who decides?",
+        "answer": "Keep things in a Google Sheet; the owner decides"
+      },
+      {
+        "question": "What are you unsure about?",
+        "answer": "The owner does not know if Amazon will approve the listing in time"
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners launching a food product work backwards from the date: they fix the scope and budget, lock the product facts and the claims they may make, and confirm the store, the marketplace listing and the stock before dates are announced. They build the audience they already own first (email list, waitlist, social) with a short countdown, add paid ads late and small, launch in a fixed order, and read daily for two weeks. On Amazon, a new flavour is normally added as a child of an existing family, but reviews are no longer assumed to carry over, so reviews must be planned for from day one.",
+    "sources": [
+      {
+        "id": "web-attn",
+        "kind": "web",
+        "title": "ATTN Agency: Product launch countdown marketing for DTC brands",
+        "ref": "https://www.attnagency.com/blog/product-launch-countdown-marketing-strategies-dtc-brands",
+        "date": "2026-03-19",
+        "note": "Phased countdown (4 to 6 weeks for food and beverage), waitlist and email sequence, launch-week and launch-day order, paid media timing. Agency content; its targets are directional."
+      },
+      {
+        "id": "web-jarvio",
+        "kind": "web",
+        "title": "Jarvio: Amazon review changes 2026",
+        "ref": "https://jarvio.io/blog/amazon-review-changes-2026",
+        "date": "2026-02-05",
+        "note": "Reviews for functionally different variations are being split across child listings; plan Vine, review requests and strong content for a new variation."
+      },
+      {
+        "id": "web-goat",
+        "kind": "web",
+        "title": "GOAT Consulting: Amazon product variations, create, manage and fix",
+        "ref": "https://www.goatconsulting.com/merchandising/amazon-product-variations",
+        "date": "2026-04-20",
+        "note": "Steps to add a flavour as a child of an existing parent, common listing errors, a unique main image per flavour, and checking child-level reports after launch."
+      },
+      {
+        "id": "cat-small-launch",
+        "kind": "catalogue",
+        "title": "Small product launch planner",
+        "ref": "smaller-product-launch"
+      },
+      {
+        "id": "cat-amazon-launch",
+        "kind": "catalogue",
+        "title": "Amazon product launch preparation",
+        "ref": "launch-an-amazon-product-with-sales-from-day-one"
+      },
+      {
+        "id": "cat-launch-emails",
+        "kind": "catalogue",
+        "title": "Launch email sequence planner",
+        "ref": "launch-email-sequence-planner"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-scope",
+        "name": "Fix the scope, date and budget and cut to the core",
+        "why": "A fixed date and a $5,000 cap mean the plan must drop anything that does not move the 1,000.",
+        "sources": [
+          "cat-small-launch",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-facts",
+        "name": "Lock product facts and the claims that are allowed",
+        "why": "The owner allows no health claims. Every email, ad, post, page and listing must work from one approved list, and Amazon can suppress a listing for restricted claims.",
+        "sources": [
+          "owner",
+          "cat-small-launch",
+          "web-goat"
+        ]
+      },
+      {
+        "id": "s-baseline",
+        "name": "Gather the audience, sales and stock baseline",
+        "why": "The email list, Instagram following, past sales and past Meta results decide how much of 1,000 can come from owned channels.",
+        "sources": [
+          "web-attn",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-ready",
+        "name": "Check the store, the Amazon listing path and the stock split",
+        "why": "Listing approval timing is unknown, a new flavour needs a unique image and valid variation settings, and 3,000 bottles must be split so neither channel runs out.",
+        "sources": [
+          "web-goat",
+          "web-jarvio",
+          "cat-amazon-launch"
+        ]
+      },
+      {
+        "id": "s-size",
+        "name": "Size the target against list, social, ads and Amazon",
+        "why": "Before spending, test whether the audience and the budget can plausibly reach 1,000 and which channel has to carry the gap.",
+        "sources": [
+          "web-attn",
+          "cat-small-launch"
+        ]
+      },
+      {
+        "id": "s-plan",
+        "name": "Choose the channel mix and a short countdown",
+        "why": "Food and beverage launches use a 4 to 6 week countdown: waitlist or preview for the email list, teasers, a launch-day email, and paid media late.",
+        "sources": [
+          "web-attn",
+          "cat-launch-emails"
+        ]
+      },
+      {
+        "id": "s-build",
+        "name": "Build the emails, ads, social posts, page and listing",
+        "why": "Each asset is written from the approved facts and checked before the owner sees it. Amazon needs a unique main image per flavour and a plan for reviews.",
+        "sources": [
+          "cat-launch-emails",
+          "cat-amazon-launch",
+          "web-goat",
+          "web-jarvio"
+        ]
+      },
+      {
+        "id": "s-launch",
+        "name": "Launch in a fixed order, paid ads created paused first",
+        "why": "Launch-day order matters: owned audience first, paid media intensified later in the day.",
+        "sources": [
+          "web-attn"
+        ]
+      },
+      {
+        "id": "s-read",
+        "name": "Read daily for the first two weeks and move budget on evidence",
+        "why": "Practitioners check child-level Amazon reports and channel results, fix stock or pricing gaps and shift spend to what sells.",
+        "sources": [
+          "web-goat",
+          "web-attn"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Announcing a date before knowing whether stock and the Amazon listing will be ready.",
+        "sources": [
+          "web-goat",
+          "cat-amazon-launch"
+        ]
+      },
+      {
+        "text": "Assuming the new flavour inherits the family's reviews on Amazon.",
+        "sources": [
+          "web-jarvio"
+        ]
+      },
+      {
+        "text": "Using the same main image for every flavour, which can suppress the variation selector.",
+        "sources": [
+          "web-goat"
+        ]
+      },
+      {
+        "text": "Spending the paid budget early, before the owned audience shows how much demand exists.",
+        "sources": [
+          "web-attn"
+        ]
+      },
+      {
+        "text": "Claims in copy that go further than the approved list, such as implied health benefits.",
+        "sources": [
+          "owner",
+          "web-goat"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Launch smoked mango habanero and sell 1,000 bottles in 30 days",
+    "capabilities": [
+      {
+        "id": "ads-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read ad results and tracking health (Meta Ads MCP)",
+        "why": "Read past campaign results, the tracking setup and live results during the launch."
+      },
+      {
+        "id": "ads-write",
+        "access": "live",
+        "via": "mcp",
+        "name": "Create and switch on Meta ads (Meta Ads MCP)",
+        "why": "Create paused campaigns and ads, then switch on or change only what the owner approves, one action at a time."
+      },
+      {
+        "id": "email-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Draft launch emails (Klaviyo)",
+        "why": "Save the countdown and launch emails as drafts. The owner sends or schedules them."
+      },
+      {
+        "id": "amazon-files",
+        "access": "read",
+        "via": "file",
+        "name": "Read Seller Central CSV exports",
+        "why": "Read sales, traffic, inventory and ad reports for the existing listing and, after launch, the new flavour."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "owner",
+        "name": "Working data in the owner's Google Sheet",
+        "why": "Keep the baseline, plan, budget tracker and daily readout in a Google Sheet the owner opens; we prepare each tab as CSV to paste in."
+      },
+      {
+        "id": "site-browser",
+        "access": "read",
+        "via": "browser",
+        "name": "Check the live store pages (browser)",
+        "why": "Check the flavour page, cart and checkout on a phone-sized screen without placing a real order."
+      },
+      {
+        "id": "owner-apply",
+        "access": "live",
+        "via": "owner",
+        "name": "Owner sends emails, posts, uploads the listing and publishes the page",
+        "why": "We have draft or file access only for these, so the owner makes each one live and tells us when it is done."
+      }
+    ],
+    "data": [
+      {
+        "id": "product-facts",
+        "name": "Product facts, price and unit economics",
+        "why": "Price, cost and margin per bottle set how much can be spent per sale; the label and facts set what may be claimed.",
+        "fields": [
+          "price on Shopify",
+          "price on Amazon",
+          "cost per bottle",
+          "fees and shipping per order",
+          "batch size and arrival date",
+          "label text",
+          "ingredients and allergens",
+          "planned stock split"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Ask the owner for price, cost per bottle, fees, the label text and the planned split of the 3,000 bottles."
+          }
+        ],
+        "required_for": [
+          "context",
+          "integrity-claims",
+          "integrity-readiness",
+          "diagnosis"
+        ],
+        "alternative": "Without cost per bottle, no ad budget cap per sale is set and paid spend stays at a small test."
+      },
+      {
+        "id": "store-sales",
+        "name": "Shopify sales history",
+        "why": "Shows normal weekly sales of existing flavours, to check the launch is adding sales and not just moving them.",
+        "fields": [
+          "order date",
+          "sku",
+          "units",
+          "order value",
+          "traffic source",
+          "new or returning"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Shopify admin, Orders: export as CSV for the last 6 months."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "measurement"
+        ]
+      },
+      {
+        "id": "list-engagement",
+        "name": "Email list engagement",
+        "why": "Opens, clicks and past purchases show how much of 1,000 the 14,000 list can carry.",
+        "fields": [
+          "list size",
+          "active in last 90 days",
+          "opens",
+          "clicks",
+          "orders from past campaigns",
+          "unsubscribes per send"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Klaviyo, Analytics, Campaigns and Lists: export last 6 months as CSV."
+          },
+          {
+            "kind": "MCP",
+            "how": "Read list and campaign metrics with Klaviyo if the draft connection also allows reads."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ],
+        "alternative": "Without engagement data, the email contribution is a wide range and marked low-confidence."
+      },
+      {
+        "id": "meta-history",
+        "name": "Past Meta ad results",
+        "why": "Cost per sale and best audiences on past campaigns size what $5,000 can buy.",
+        "fields": [
+          "date",
+          "campaign",
+          "ad set",
+          "spend",
+          "purchases",
+          "purchase value",
+          "audience",
+          "placement"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the last 90 days daily, by campaign and ad set, with the Meta Ads MCP."
+          },
+          {
+            "kind": "CSV",
+            "how": "Ads Manager, Reports: export as CSV."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ],
+        "alternative": "Without history, paid spend starts as a small capped test."
+      },
+      {
+        "id": "amazon-reports",
+        "name": "Amazon reports for the existing listing",
+        "why": "Shows normal units, conversion, ad cost and inventory, and whether a variation family already exists.",
+        "fields": [
+          "date",
+          "asin",
+          "units",
+          "sessions",
+          "conversion",
+          "ad spend",
+          "inventory on hand",
+          "review count and rating"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Seller Central, Reports, Business Reports, Advertising and Inventory: export as CSV for the last 90 days."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-readiness",
+          "measurement"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the launch",
+        "goal": "Turn the owner's words into a measured launch goal, a date range, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
+        "owner": {
+          "role": "smaller-product-launch"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "context",
+        "kind": "context",
+        "name": "Lock the product facts and approved claims",
+        "goal": "Build one sourced facts-and-claims file: flavour, ingredients, label, price, and which statements are approved and which are banned (all health claims). Every later asset works from it.",
+        "from_steps": [
+          "s-scope",
+          "s-facts"
+        ],
+        "owner": {
+          "role": "brand-file-from-website"
+        },
+        "uses": [
+          "website-brand-brain-builder",
+          "launch-scope-cutter"
+        ],
+        "data": [
+          "product-facts"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "facts-claims",
+            "name": "Product facts and claims file",
+            "format": "markdown",
+            "path": "context/FACTS-AND-CLAIMS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "sources",
+            "name": "Every fact names its source (label, supplier, owner)",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "Claims are sorted into approved and banned, and every health or wellness claim is banned",
+            "required": true
+          },
+          {
+            "id": "scope",
+            "name": "Launch scope is cut to the core that fits the date and $5,000",
+            "required": true
+          }
+        ],
+        "gate": "review"
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Gather the audience, sales and stock baseline",
+        "goal": "Pull the email list engagement, Shopify and Amazon sales, past Meta results and current stock into tabs of the Google Sheet.",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "owner": {
+          "role": "weekly-store-numbers-watcher"
+        },
+        "support": [
+          "media-buyer",
+          "amazon-monthly-account-keeper"
+        ],
+        "data": [
+          "store-sales",
+          "list-engagement",
+          "meta-history",
+          "amazon-reports"
+        ],
+        "needs": [
+          "ads-read",
+          "amazon-files",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "baseline-data",
+            "name": "Baseline data tabs",
+            "format": "csv",
+            "path": "evidence/baseline.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Order, unit and spend totals match the source reports for the same dates",
+            "required": true
+          },
+          {
+            "id": "periods",
+            "name": "Periods are the same across Shopify, Amazon and Meta",
+            "required": true
+          },
+          {
+            "id": "gaps",
+            "name": "Missing data (list engagement, margin) is listed rather than assumed",
+            "required": true
+          }
+        ],
+        "uses": [
+          "next-dollar-budget-allocator"
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-claims",
+        "kind": "integrity",
+        "name": "Check the label and claims are safe to use",
+        "goal": "Read the label text and the planned copy themes against the approved list. Flag any health or wellness implication, and any claim Amazon or Meta may restrict, before anything is written.",
+        "from_steps": [
+          "s-facts"
+        ],
+        "owner": {
+          "role": "creative-evidence-review-agent"
+        },
+        "uses": [
+          "pre-launch-ad-checker"
+        ],
+        "data": [
+          "product-facts"
+        ],
+        "depends_on": [
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "claims-check",
+            "name": "Claims check",
+            "format": "markdown",
+            "path": "integrity/CLAIMS-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "label",
+            "name": "Label text is checked line by line against the approved and banned claims",
+            "required": true
+          },
+          {
+            "id": "platforms",
+            "name": "Meta and Amazon claim restrictions are checked for the planned wording",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with a pass or fix call for each planned message theme",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity-readiness",
+        "kind": "integrity",
+        "name": "Check store, Amazon path and stock are ready",
+        "goal": "Test the Shopify flavour page, cart and tracking; check the Amazon route (child of an existing listing or new listing, variation settings, unique main image, review plan, approval timing) and set the stock split. Give a go or fallback date for each channel.",
+        "from_steps": [
+          "s-ready"
+        ],
+        "owner": {
+          "role": "pre-launch-store-checker"
+        },
+        "support": [
+          "amazon-monthly-account-keeper"
+        ],
+        "uses": [
+          "launch-an-amazon-product-with-sales-from-day-one",
+          "set-up-tracking-you-can-trust-before-you-scale"
+        ],
+        "data": [
+          "product-facts",
+          "amazon-reports"
+        ],
+        "needs": [
+          "site-browser",
+          "ads-read",
+          "amazon-files"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "readiness",
+            "name": "Launch readiness check",
+            "format": "markdown",
+            "path": "integrity/READINESS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "amazon-path",
+            "name": "The Amazon route, its approval steps and the latest safe submission date are written down",
+            "required": true
+          },
+          {
+            "id": "fallback",
+            "name": "A Shopify-first fallback is defined if Amazon is not approved by launch day",
+            "required": true
+          },
+          {
+            "id": "stock",
+            "name": "The stock split gives each channel at least its expected 30-day sales with a buffer",
+            "required": true
+          },
+          {
+            "id": "store",
+            "name": "Shopify page, cart and tracking are tested without a real order, or marked not tested",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Test whether 1,000 in 30 days is reachable",
+        "goal": "Test each risk hypothesis against the baseline: how much the list, Instagram, ads and Amazon can each plausibly deliver, and what the $5,000 can buy at the margin per bottle.",
+        "from_steps": [
+          "s-size"
+        ],
+        "owner": {
+          "role": "media-buyer"
+        },
+        "uses": [
+          "new-product-line-checker",
+          "next-dollar-budget-allocator"
+        ],
+        "data": [
+          "product-facts",
+          "list-engagement",
+          "meta-history"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-claims",
+          "integrity-readiness"
+        ],
+        "outputs": [
+          {
+            "id": "feasibility",
+            "name": "Reachability check",
+            "format": "markdown",
+            "path": "diagnosis/FEASIBILITY.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "required": true
+          },
+          {
+            "id": "ranges",
+            "name": "Each channel gives a low, middle and high estimate with its assumptions listed",
+            "required": true
+          },
+          {
+            "id": "margin",
+            "name": "Ad budget is capped by margin per bottle, or stays a small test if margin is unknown",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the launch plans",
+        "goal": "Offer two or three launch plans (channel mix, budget split across the $5,000, countdown dates, Amazon timing), each with expected bottles, effort, risk and what will be measured.",
+        "from_steps": [
+          "s-plan"
+        ],
+        "owner": {
+          "role": "smaller-product-launch"
+        },
+        "uses": [
+          "launch-channel-picker",
+          "campaign-budget-scenario-planner",
+          "launch-teaser-to-preview-planner"
+        ],
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "launch-options",
+            "name": "Launch plan options",
+            "format": "markdown",
+            "path": "options/LAUNCH-OPTIONS.md"
+          },
+          {
+            "id": "launch-options-json",
+            "name": "Launch plan options as data",
+            "format": "json",
+            "path": "options/launch-options.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "budget",
+            "name": "Every option sums to no more than $5,000",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has expected bottles as a range, effort, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "dates",
+            "name": "Dates work backwards from the stock arrival and the Amazon fallback",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner chooses the plan",
+        "goal": "The owner picks the launch plan, budget split and dates. Ask for the reason when they pass on the top option; record it as a decision.",
+        "from_steps": [],
+        "owner": {
+          "role": "smaller-product-launch"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen launch plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "The chosen plan and passed-over options are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top option was passed over",
+            "required": true
+          }
+        ],
+        "gate": "approve"
+      },
+      {
+        "id": "launch-emails",
+        "kind": "production",
+        "name": "Draft the countdown and launch emails",
+        "goal": "Draft the waitlist or preview email, countdown emails and the launch-day email for the 14,000 list, segmented by engagement, as Klaviyo drafts. Nothing is scheduled.",
+        "from_steps": [
+          "s-build"
+        ],
+        "owner": {
+          "role": "marketing-email-strategist"
+        },
+        "reviewers": [
+          "creative-evidence-review-agent"
+        ],
+        "uses": [
+          "launch-email-sequence-planner",
+          "launch-teaser-to-preview-planner"
+        ],
+        "needs": [
+          "email-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "email-pack",
+            "name": "Launch email drafts",
+            "format": "markdown",
+            "path": "production/LAUNCH-EMAILS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "claims",
+            "name": "Every line passes the approved claims list, with no health claims",
+            "required": true
+          },
+          {
+            "id": "timing",
+            "name": "Send dates follow the chosen plan and the stock arrival date",
+            "required": true
+          },
+          {
+            "id": "drafts",
+            "name": "Everything is saved as Klaviyo drafts and read back, nothing is scheduled",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "ad-build",
+        "kind": "production",
+        "name": "Build the Meta ads",
+        "goal": "Write the ad concepts, copy and settings for the chosen budget. Check each ad against the claims list and Meta policy, and match it to the Shopify page it sends traffic to.",
+        "from_steps": [
+          "s-build"
+        ],
+        "owner": {
+          "role": "offer-image-ads"
+        },
+        "reviewers": [
+          "creative-evidence-review-agent"
+        ],
+        "uses": [
+          "meta-setup-of-new-ad-campaigns-with-new-creatives-planner",
+          "pre-launch-ad-checker"
+        ],
+        "depends_on": [
+          "decision",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "ad-pack",
+            "name": "Ad pack for review",
+            "format": "markdown",
+            "path": "production/AD-PACK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "claims",
+            "name": "Every ad passes the approved claims list, with no health claims",
+            "required": true
+          },
+          {
+            "id": "policy",
+            "name": "Every ad passes the pre-launch ad check",
+            "required": true
+          },
+          {
+            "id": "budget",
+            "name": "Daily budgets add up to the chosen paid share of the $5,000",
+            "required": true
+          },
+          {
+            "id": "match",
+            "name": "Each ad matches the page it sends traffic to",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "The chosen plan uses no paid ads."
+      },
+      {
+        "id": "amazon-pack",
+        "kind": "production",
+        "name": "Prepare the Amazon listing and ads",
+        "goal": "Write the listing content for the new flavour, the variation settings, the main image brief and the Sponsored Products plan with bids and stop rules, as files for the owner to upload.",
+        "from_steps": [
+          "s-build"
+        ],
+        "owner": {
+          "role": "launch-an-amazon-product-with-sales-from-day-one"
+        },
+        "uses": [
+          "amazon-listing-writer",
+          "amazon-ppc-launch-builder"
+        ],
+        "data": [
+          "product-facts"
+        ],
+        "depends_on": [
+          "decision",
+          "context",
+          "integrity-readiness"
+        ],
+        "outputs": [
+          {
+            "id": "amazon-listing",
+            "name": "Amazon listing and ads pack",
+            "format": "markdown",
+            "path": "production/AMAZON-PACK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "claims",
+            "name": "Title, bullets and keywords carry no health claims and nothing the facts file does not support",
+            "required": true
+          },
+          {
+            "id": "variation",
+            "name": "Parent, theme and flavour value are set so the flavour is unique in the family, with its own main image",
+            "required": true
+          },
+          {
+            "id": "reviews",
+            "name": "A plan for early reviews is included, not assuming reviews carry over",
+            "required": true
+          },
+          {
+            "id": "ppc",
+            "name": "Sponsored Products spend fits the chosen Amazon share of the budget",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "Amazon is not part of the chosen launch window."
+      },
+      {
+        "id": "social-plan",
+        "kind": "production",
+        "name": "Plan and draft the Instagram content",
+        "goal": "Plan the countdown and launch-week posts, Reels and Stories for the 22k followers, with drafts, in line with the approved claims.",
+        "from_steps": [
+          "s-build"
+        ],
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "uses": [
+          "content-calendar-builder"
+        ],
+        "depends_on": [
+          "decision",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "social-pack",
+            "name": "Instagram plan and drafts",
+            "format": "markdown",
+            "path": "production/INSTAGRAM.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "claims",
+            "name": "Every caption and on-screen line passes the approved claims list",
+            "required": true
+          },
+          {
+            "id": "dates",
+            "name": "Posts follow the chosen countdown dates",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "launch-ads",
+        "kind": "execution",
+        "name": "Create the ads paused, then switch on with approval",
+        "goal": "Create the campaigns and ads paused through the Meta Ads MCP, read them back, register the plan for reading results, then switch on only what the owner approves, when the owner approves it.",
+        "from_steps": [
+          "s-launch"
+        ],
+        "owner": {
+          "role": "media-buyer"
+        },
+        "uses": [
+          "meta-account-structure-planner"
+        ],
+        "needs": [
+          "ads-write",
+          "ads-read"
+        ],
+        "depends_on": [
+          "ad-build",
+          "launch-emails"
+        ],
+        "outputs": [
+          {
+            "id": "ads-receipt",
+            "name": "Ads launch receipt with entity IDs",
+            "format": "markdown",
+            "path": "execution/ADS-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "paused",
+            "name": "Everything was created paused and read back from the platform",
+            "required": true
+          },
+          {
+            "id": "settings",
+            "name": "Budgets, audiences and dates match the chosen plan and stay within the $5,000",
+            "required": true
+          },
+          {
+            "id": "approved",
+            "name": "Each switch-on, budget change or pause was approved by the owner first",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "optional_when": "The chosen plan uses no paid ads."
+      },
+      {
+        "id": "launch-owned",
+        "kind": "execution",
+        "name": "Owner sends, posts, uploads and publishes",
+        "goal": "Hand the owner each launch-day action in order, with the exact content: publish the Shopify flavour page, upload the Amazon listing, schedule the emails, post to Instagram. Record each as done.",
+        "from_steps": [
+          "s-launch"
+        ],
+        "owner": {
+          "role": "smaller-product-launch"
+        },
+        "needs": [
+          "owner-apply"
+        ],
+        "depends_on": [
+          "launch-emails",
+          "social-plan",
+          "amazon-pack"
+        ],
+        "outputs": [
+          {
+            "id": "launch-log",
+            "name": "Launch day log",
+            "format": "markdown",
+            "path": "execution/LAUNCH-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "order",
+            "name": "Actions follow the chosen launch-day order and no step runs before its dependencies",
+            "required": true
+          },
+          {
+            "id": "confirmed",
+            "name": "The owner confirms each action is live and we check it on the store or marketplace",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "uses": [
+          "launch-teaser-to-preview-planner"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read sales and spend honestly",
+        "goal": "Read bottles sold by channel, spend, stock left and the guardrails every day for two weeks and then weekly. Propose budget moves for the owner to approve.",
+        "from_steps": [
+          "s-read"
+        ],
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "uses": [
+          "ad-fatigue-watcher"
+        ],
+        "data": [
+          "store-sales",
+          "amazon-reports"
+        ],
+        "needs": [
+          "ads-read",
+          "amazon-files",
+          "sheet"
+        ],
+        "depends_on": [
+          "launch-ads",
+          "launch-owned"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Launch readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "tracker",
+            "name": "Daily tracker",
+            "format": "csv",
+            "path": "measurement/tracker.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "sources",
+            "name": "Bottles sold are counted from Shopify orders and Amazon reports, not from ad platform numbers",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Spend, stock, unsubscribes and sales of existing flavours are checked",
+            "required": true
+          },
+          {
+            "id": "pace",
+            "name": "Pace against 1,000 is shown with the day it was read, and the verdict waits for day 30",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record what worked by channel, what the 30 days delivered against 1,000 and $5,000, rules for the next flavour with their scope, and the next round.",
+        "from_steps": [],
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "uses": [
+          "trial-log-planner"
+        ],
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next flavour plan",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdict",
+            "name": "The 30-day result is stated against 1,000 bottles and $5,000, with what is still unknown",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this flavour, this brand or launches in general",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-owned-audience-carries",
+        "statement": "The email list and Instagram following can deliver more than half of the 1,000 bottles with little paid spend.",
+        "test": "Active share of the 14,000 list, past campaign click and order rates, and Instagram reach; model low, middle and high.",
+        "confirm_if": "The middle estimate from owned channels is at least 500 bottles.",
+        "refute_if": "Even the high estimate from owned channels is well under 500, so paid ads and Amazon must carry more.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-budget-too-thin",
+        "statement": "$5,000 cannot buy the remaining bottles at an affordable cost per sale.",
+        "test": "Past Meta cost per sale and margin per bottle; bottles bought by $5,000 at that cost.",
+        "confirm_if": "At the past cost per sale, the paid share of the budget buys far fewer bottles than the gap to 1,000.",
+        "refute_if": "Past cost per sale is low enough that the budget closes the gap.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-amazon-late",
+        "statement": "The Amazon listing will not be approved and live by launch day.",
+        "test": "Listing route, required fields and images, latest safe submission date and past approval times from the owner.",
+        "confirm_if": "The route needs steps that cannot finish before the stock arrives, or the owner has had delays before.",
+        "refute_if": "The new flavour can be added to the existing family in time.",
+        "fix_stage": "amazon-pack"
+      },
+      {
+        "id": "h-stock-split",
+        "statement": "The 3,000 bottles run out on one channel while sitting unsold on the other.",
+        "test": "Expected 30-day sales by channel against the planned split, and what each channel does at the high estimate.",
+        "confirm_if": "At the high estimate one channel sells out before day 30.",
+        "refute_if": "Both channels cover their high estimate with the planned split.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-claims-drift",
+        "statement": "Copy written for appeal drifts into implied health benefits that breach the owner's rule or platform policy.",
+        "test": "Check label text and draft themes line by line against the approved and banned lists.",
+        "confirm_if": "Any draft line implies a health effect.",
+        "refute_if": "All lines stay within approved claims.",
+        "fix_stage": "launch-emails"
+      },
+      {
+        "id": "h-cannibalise",
+        "statement": "The new flavour mostly takes sales from existing flavours instead of adding new orders.",
+        "test": "Compare existing flavour sales in the weeks before and after launch, and buyers who bought both.",
+        "confirm_if": "Existing flavour sales fall by about as much as the new flavour sells.",
+        "refute_if": "Existing flavour sales hold while the new flavour sells.",
+        "fix_stage": "learning"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Daily for the first 14 days, then weekly to day 30, counted from launch day.",
+      "min_volume": "No channel verdict before 7 days of sales; the overall verdict waits for day 30.",
+      "stop_rule": "Pause paid ads and ask the owner at once if spend passes its daily cap, stock on a channel falls below three days of sales, or any ad or post is flagged for claims; otherwise run the plan."
+    }
+  }
+}

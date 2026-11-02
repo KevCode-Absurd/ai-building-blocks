@@ -400,7 +400,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [
           "s-context"
         ],
@@ -516,7 +516,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [
           "s-tracking"
         ],
@@ -569,7 +569,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [
           "s-site"
         ],
@@ -692,7 +692,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [],
         "uses": [
           "break-even-ad-target-finder",
@@ -767,7 +767,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "optional_when": "No measurement card was chosen.",
         "from_steps": [
           "s-tracking"
@@ -880,7 +880,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "optional_when": "No creative card was chosen.",
         "from_steps": [
           "s-creative"
@@ -937,7 +937,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "optional_when": "No landing-page card was chosen.",
         "from_steps": [
           "s-site"
@@ -1087,7 +1087,7 @@ export default {
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [],
         "uses": [
           "image-ad-test-learnings",

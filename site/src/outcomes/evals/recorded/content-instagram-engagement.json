@@ -1,0 +1,1024 @@
+{
+  "case": "content-instagram-engagement",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Bring the coffee roaster's Instagram engagement rate back up from about 1.8% to 3.5% within three months, with a consistent look and a posting routine the three staff can keep, without paid influencer deals.",
+    "deliverable": "A brand look guide built from the owner's colour and logo files, three content pillars, a posting routine for the three staff, a four-week calendar with drafted captions and shot ideas, posts scheduled in Meta Business Suite with approval, and a two-weekly readout of engagement against 3.5%.",
+    "done": [
+      "The engagement drop checked against the account's own post data, with one agreed definition of engagement rate",
+      "Diagnosis names what changed over six months, with competing explanations",
+      "Owner and cafe manager have chosen what to change, with reasons recorded",
+      "Brand look guide and caption voice written from the Drive files and approved",
+      "A calendar and routine in use that three staff can keep without a plan living in someone's head",
+      "Every post scheduled or published only after approval",
+      "Engagement read every two weeks against 3.5% and the look checked, learnings saved"
+    ],
+    "metric": {
+      "name": "Instagram engagement rate",
+      "direction": "reach",
+      "unit": "percent (definition to be confirmed)",
+      "baseline": 1.8,
+      "baseline_source": "reported",
+      "target": 3.5
+    },
+    "deadline": "Within three months of starting (about early February 2027)",
+    "guardrails": [
+      "Followers (about 9,400) do not fall",
+      "No paid influencer deals",
+      "Posts stay true to the cafes: no invented offers, prices, events or product claims",
+      "The posting routine stays within the staff time the cafe manager agrees",
+      "The brand look is used on new posts, checked in each two-week review"
+    ],
+    "limits": [
+      "No paid influencer deals",
+      "Brand colours and logo come from the owner's Drive folder; no new logo or rebrand",
+      "Three staff post, so the routine must fit their shifts",
+      "Nothing is scheduled, posted or replied to without the owner or cafe manager approving it"
+    ],
+    "assets": [
+      "Brand colours and logo files in a Drive folder",
+      "Instagram account with about 9,400 followers",
+      "Six months of post history and Instagram insights"
+    ],
+    "connections": [
+      {
+        "name": "Meta Business Suite (Instagram)",
+        "access": "live",
+        "status": "available"
+      },
+      {
+        "name": "Google Drive brand folder",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "Files in this project (the owner said keep data here)",
+    "technical_level": "Not stated by the owner; explain in plain words and hand over ready drafts and templates for staff to use",
+    "decides": "The owner together with the cafe manager",
+    "unknowns": [
+      "How the reported engagement rate is calculated (by followers or by reach, and which actions count)",
+      "What changed in the six months: posting gaps, formats, follower growth or content",
+      "Which staff post, how often, and how much time they have",
+      "Whether a website, menu or photo library exists to draw on beyond the Drive folder",
+      "Whether any paid promotion budget exists (not stated)",
+      "Whether 3.5% is reachable: published benchmarks for the same measure are much lower, so the definition matters"
+    ],
+    "answers": [
+      {
+        "question": "What is the business?",
+        "answer": "Specialty coffee roaster with two cafes."
+      },
+      {
+        "question": "How big is the account and what changed?",
+        "answer": "Instagram 9,400 followers, engagement rate fell from about 4% to 1.8% over six months (Instagram insights, reported)."
+      },
+      {
+        "question": "How is it run now?",
+        "answer": "Three staff post whenever they have time; no plan and no brand guide."
+      },
+      {
+        "question": "What access do you have?",
+        "answer": "Instagram access through Meta Business Suite with live access."
+      },
+      {
+        "question": "What do you want?",
+        "answer": "Engagement back to 3.5% and a consistent look within three months."
+      },
+      {
+        "question": "What is off limits?",
+        "answer": "No paid influencer deals."
+      },
+      {
+        "question": "Assets, data and decisions?",
+        "answer": "Brand colours and logo files are in a Drive folder. Keep data here. I decide with our cafe manager."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Social managers facing falling engagement first check the measure, then the posting habits, then the content. They confirm how engagement rate is calculated and compare like with like, because rates by followers and rates by reach differ a lot and follower growth lowers a rate even when interactions hold. They split results by format and look at saves, shares and comments, which matter more than likes now. They check cadence gaps and posting times from the account's own data and review the last 90 days of top posts for topic and hook patterns. The fix is usually a small set of repeatable content pillars, a written look and voice guide, a cadence the team can keep, and a calendar planned ahead, then two-week review loops that change one thing at a time.",
+    "sources": [
+      {
+        "id": "web-vista",
+        "kind": "web",
+        "title": "Why Instagram posts are getting fewer likes (Vista Social)",
+        "ref": "https://vistasocial.com/insights/instagram-posts-getting-fewer-likes/",
+        "date": "2026-04-20",
+        "note": "Checks saves, shares and comments first, then cadence gaps, audience active times, top posts of the last 90 days, format mix and reply habits. A tool vendor's blog; ranking claims are not Meta statements."
+      },
+      {
+        "id": "web-benchmark",
+        "kind": "web",
+        "title": "2026 Instagram Organic Benchmarks (Socialinsider)",
+        "ref": "https://www.socialinsider.io/blog/instagram-benchmark-report/",
+        "date": "2026-02-20",
+        "note": "Engagement defined as likes plus comments over followers averages about 0.5% by format (carousel highest on saves); images are falling fastest. The page contradicts itself on the year-on-year drop, so use only for scale and for the point that definitions differ."
+      },
+      {
+        "id": "web-calendar",
+        "kind": "web",
+        "title": "Instagram content calendar (Small Business Trends)",
+        "ref": "https://smallbiztrends.com/instagram-content-calendar/",
+        "date": "2026-01-28",
+        "note": "Set a measurable goal, choose pillars and formats, set a cadence of 3 to 5 posts a week, plan ahead, audit past posts and review regularly."
+      },
+      {
+        "id": "cat-curator",
+        "kind": "catalogue",
+        "title": "Instagram content planner",
+        "ref": "agency-marketing-instagram-curator"
+      },
+      {
+        "id": "cat-weekly",
+        "kind": "catalogue",
+        "title": "Weekly social post writer",
+        "ref": "weekly-social-content-planner"
+      },
+      {
+        "id": "cat-twoweek",
+        "kind": "catalogue",
+        "title": "Two-week social post and results reviewer",
+        "ref": "post-for-two-weeks-and-learn-what-worked-and-flopped"
+      },
+      {
+        "id": "cat-brand",
+        "kind": "catalogue",
+        "title": "Brand file and style guide builder",
+        "ref": "build-a-brand-file-and-style-guide-from-scratch"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-brand",
+        "name": "Find and organise the brand assets and write a short look and voice guide",
+        "why": "Staff cannot post consistently without a written look and voice.",
+        "sources": [
+          "web-calendar",
+          "cat-brand",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-data",
+        "name": "Pull six months of post and follower data",
+        "why": "The drop has to be seen post by post, by format and by week.",
+        "sources": [
+          "web-vista",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-measure",
+        "name": "Check the engagement-rate definition and the size of the drop",
+        "why": "Rates differ by denominator and actions counted; a target is only meaningful on the same measure.",
+        "sources": [
+          "web-benchmark",
+          "web-vista"
+        ]
+      },
+      {
+        "id": "s-diagnose",
+        "name": "Diagnose cadence, format mix, timing, content and reply habits",
+        "why": "Each cause needs a different fix.",
+        "sources": [
+          "web-vista",
+          "cat-weekly"
+        ]
+      },
+      {
+        "id": "s-pillars",
+        "name": "Choose a few content pillars and a cadence the staff can keep",
+        "why": "Repeatable pillars and a fixed rhythm replace posting whenever there is time.",
+        "sources": [
+          "web-calendar",
+          "web-vista",
+          "cat-curator"
+        ]
+      },
+      {
+        "id": "s-calendar",
+        "name": "Plan a calendar ahead with drafts, roles and approval",
+        "why": "A plan with an owner for each post makes the routine work across three staff.",
+        "sources": [
+          "web-calendar",
+          "cat-weekly"
+        ]
+      },
+      {
+        "id": "s-schedule",
+        "name": "Schedule in Meta Business Suite and reply to comments",
+        "why": "Scheduling and replying are live actions that need approval.",
+        "sources": [
+          "web-vista",
+          "web-calendar"
+        ]
+      },
+      {
+        "id": "s-review",
+        "name": "Review every two weeks and change one thing",
+        "why": "Short loops show what worked on the same measure.",
+        "sources": [
+          "web-vista",
+          "cat-twoweek"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Chasing a target rate on a different definition than the one reported.",
+        "sources": [
+          "web-benchmark"
+        ]
+      },
+      {
+        "text": "Reading likes alone while saves, shares and comments move.",
+        "sources": [
+          "web-vista"
+        ]
+      },
+      {
+        "text": "Posting in bursts with long gaps, which slows reach on the posts that follow.",
+        "sources": [
+          "web-vista"
+        ]
+      },
+      {
+        "text": "Writing a brand guide no one uses because staff have no templates or schedule.",
+        "sources": [
+          "web-calendar"
+        ]
+      },
+      {
+        "text": "Changing format, timing and content all at once, so nothing can be learned.",
+        "sources": [
+          "web-vista",
+          "web-calendar"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Make the roaster's Instagram consistent and win engagement back",
+    "capabilities": [
+      {
+        "id": "bizsuite-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read Instagram posts and Insights in Meta Business Suite (browser)",
+        "why": "Export or read per-post reach, likes, comments, saves, shares and follower history."
+      },
+      {
+        "id": "drive-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read the brand folder in Google Drive (browser)",
+        "why": "Find the colour palette, logo files and any past brand notes."
+      },
+      {
+        "id": "bizsuite-write",
+        "access": "live",
+        "via": "browser",
+        "name": "Schedule and publish posts in Meta Business Suite (browser)",
+        "why": "Used only for posts the owner or cafe manager has approved one by one."
+      }
+    ],
+    "data": [
+      {
+        "id": "post-history",
+        "name": "Six months of posts with results",
+        "why": "The base for every cadence, format, timing and content finding.",
+        "fields": [
+          "post date and time",
+          "format (photo, carousel, Reel, Story)",
+          "caption",
+          "who posted",
+          "reach or views",
+          "likes",
+          "comments",
+          "saves",
+          "shares",
+          "follows from the post"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Meta Business Suite, Insights, content, export for the last 6 months."
+          },
+          {
+            "kind": "ASK",
+            "how": "If export is limited, screenshots of Insights for the top and bottom 10 posts and the weekly follower chart."
+          }
+        ],
+        "required_for": [
+          "evidence-posts",
+          "integrity-measure",
+          "diagnosis"
+        ],
+        "alternative": "Without post-level data only account totals exist; format and timing findings stay unknown."
+      },
+      {
+        "id": "followers",
+        "name": "Follower count by week",
+        "why": "Shows whether follower growth changed the rate.",
+        "fields": [
+          "week",
+          "followers",
+          "follows",
+          "unfollows"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Insights, Audience, follower chart for 6 months."
+          }
+        ],
+        "required_for": [
+          "integrity-measure",
+          "diagnosis"
+        ],
+        "alternative": "Without it, the effect of follower growth on the rate stays unknown."
+      },
+      {
+        "id": "brand-files",
+        "name": "Brand colours and logo files",
+        "why": "The base for the look guide and templates.",
+        "fields": [
+          "colour values",
+          "logo files",
+          "fonts if any",
+          "past posts that look right to the owner"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "The Drive folder the owner named."
+          }
+        ],
+        "required_for": [
+          "context"
+        ],
+        "alternative": "If incomplete, the guide lists the gaps and uses colours read from the logo, marked as derived."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the goal, measure and limits",
+        "goal": "Turn the owner's words into a measured goal with one agreed definition of engagement rate, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "context",
+        "kind": "context",
+        "name": "Build the brand look and voice guide",
+        "goal": "Find the brand files in Drive, read the account's best posts, and write a one-page look and voice guide with colour pairs, logo use, photo style, caption voice and templates.",
+        "owner": {
+          "role": "build-a-brand-file-and-style-guide-from-scratch"
+        },
+        "data": [
+          "brand-files"
+        ],
+        "needs": [
+          "drive-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "brand-guide",
+            "name": "Brand look and voice guide",
+            "format": "markdown",
+            "path": "context/BRAND-GUIDE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "sources",
+            "name": "Every colour, logo rule and voice rule traces to a Drive file or a post the owner approved",
+            "required": true
+          },
+          {
+            "id": "gaps",
+            "name": "Missing items are listed as questions for the owner, not invented",
+            "required": true
+          },
+          {
+            "id": "usable",
+            "name": "Staff can follow it in one page, with an example good post and a not-this example",
+            "required": true
+          },
+          {
+            "id": "contrast",
+            "name": "Colour pairs used for text are checked for readability",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-brand"
+        ],
+        "uses": [
+          "brand-materials-finder",
+          "brand-style-guide-writer",
+          "brand-voice-guide-builder"
+        ]
+      },
+      {
+        "id": "evidence-posts",
+        "kind": "evidence",
+        "name": "Pull the post and follower history",
+        "goal": "Export six months of post results and the weekly follower chart into the project data folder and note exactly what was pulled.",
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "data": [
+          "post-history",
+          "followers"
+        ],
+        "needs": [
+          "bizsuite-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "posts-csv",
+            "name": "Post history",
+            "format": "csv",
+            "path": "evidence/posts.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "period",
+            "name": "Covers six months before and after the drop began, or states what is missing",
+            "required": true
+          },
+          {
+            "id": "totals",
+            "name": "Post counts and follower totals match what Insights shows for the same dates",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Format, poster and saves, shares and comments are present or their absence is noted",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-data"
+        ],
+        "uses": [
+          "creator-profile-teardown-writer"
+        ]
+      },
+      {
+        "id": "integrity-measure",
+        "kind": "integrity",
+        "name": "Check the drop and the definition",
+        "goal": "Recompute engagement rate from the post data in both ways (by followers and by reach), compare with the reported 4% and 1.8%, and note how follower growth changed the rate.",
+        "owner": {
+          "role": "check-a-spreadsheet-before-sharing-the-results"
+        },
+        "data": [
+          "post-history",
+          "followers"
+        ],
+        "depends_on": [
+          "evidence-posts"
+        ],
+        "outputs": [
+          {
+            "id": "measure-check",
+            "name": "Measure check",
+            "format": "markdown",
+            "path": "integrity/MEASURE-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "definition",
+            "name": "The rate is computed by followers and by reach, with the actions counted, and the owner picks the one the target uses",
+            "required": true
+          },
+          {
+            "id": "drop",
+            "name": "The reported fall from about 4% to 1.8% is reproduced or the difference explained",
+            "required": true
+          },
+          {
+            "id": "growth",
+            "name": "The effect of follower growth and non-follower Reels reach on the rate is shown",
+            "required": true
+          },
+          {
+            "id": "benchmark",
+            "name": "Published averages are shown only with their definition, and a 3.5% target is checked against them",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the target",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find what changed",
+        "goal": "Test the hypotheses against the post data: cadence gaps, format mix, timing, content themes, replies and look consistency. Keep competing explanations.",
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "data": [
+          "post-history",
+          "followers"
+        ],
+        "depends_on": [
+          "evidence-posts",
+          "integrity-measure",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "Diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the posts and weeks behind it",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Format and timing findings state how many posts each rests on; small groups are marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          },
+          {
+            "id": "saves",
+            "name": "Saves, shares and comments are read apart from likes",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-diagnose"
+        ],
+        "support": [
+          "weekly-social-content-planner"
+        ],
+        "uses": [
+          "creator-profile-teardown-writer",
+          "post-for-two-weeks-and-learn-what-worked-and-flopped"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank what to change",
+        "goal": "Turn supported findings into a short list of changes (pillars, formats, cadence, templates, reply routine), each with the finding it rests on, expected effect, staff effort, confidence, risk and how it will be measured.",
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "recommendations",
+            "name": "Ranked changes",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "recommendations-json",
+            "name": "Ranked changes as data",
+            "format": "json",
+            "path": "options/recommendations.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every option cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has expected effect, staff hours a week, confidence, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "capacity",
+            "name": "The total weekly staff time fits three people posting around shifts",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "States whether 3.5% on the agreed definition is likely, and what would have to be true",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-pillars"
+        ],
+        "uses": [
+          "agency-marketing-instagram-curator",
+          "agency-marketing-carousel-growth-engine"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner and cafe manager choose",
+        "goal": "The owner and cafe manager pick what to change and the posting rhythm. Ask why when a top option is passed over, and record it.",
+        "owner": {
+          "role": "marketing-instagram-curator"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options and the reasons are recorded",
+            "required": true
+          },
+          {
+            "id": "rhythm",
+            "name": "The posting rhythm is one the cafe manager agrees staff can keep",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "templates",
+        "kind": "production",
+        "name": "Make the post templates and look checklist",
+        "goal": "Turn the brand guide into reusable carousel and Reel cover recipes, a caption pattern per pillar and a short look checklist for staff to run before posting.",
+        "owner": {
+          "role": "build-a-brand-file-and-style-guide-from-scratch"
+        },
+        "depends_on": [
+          "decision",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "templates",
+            "name": "Templates and look checklist",
+            "format": "markdown",
+            "path": "production/TEMPLATES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "brand",
+            "name": "Every template uses the approved colours, logo rules and fonts",
+            "required": true
+          },
+          {
+            "id": "checklist",
+            "name": "The checklist can be run in under two minutes by a staff member",
+            "required": true
+          },
+          {
+            "id": "owner-files",
+            "name": "Only files from the Drive folder are used; nothing is invented",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-brand"
+        ],
+        "reviewers": [
+          "design-brand-guardian"
+        ],
+        "uses": [
+          "reusable-reel-cover-recipe-builder",
+          "brand-guide-builder"
+        ],
+        "optional_when": "No look or template change was chosen."
+      },
+      {
+        "id": "calendar",
+        "kind": "production",
+        "name": "Write the calendar, roles and drafts",
+        "goal": "Plan four weeks of posts by pillar, format and day, give each post an owner among the three staff, and draft captions and shot ideas from facts the cafes confirm.",
+        "owner": {
+          "role": "weekly-social-content-planner"
+        },
+        "depends_on": [
+          "decision",
+          "templates"
+        ],
+        "outputs": [
+          {
+            "id": "calendar",
+            "name": "Four-week calendar and drafts",
+            "format": "markdown",
+            "path": "production/CALENDAR.md"
+          },
+          {
+            "id": "routine",
+            "name": "Staff posting routine",
+            "format": "markdown",
+            "path": "production/POSTING-ROUTINE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "facts",
+            "name": "No offer, price, event or product claim appears unless the cafe confirmed it",
+            "required": true
+          },
+          {
+            "id": "owner-per-post",
+            "name": "Every post has a staff owner, a day and an approver",
+            "required": true
+          },
+          {
+            "id": "voice",
+            "name": "Captions pass the brand voice guide",
+            "required": true
+          },
+          {
+            "id": "cadence",
+            "name": "The count of posts a week matches the chosen rhythm",
+            "required": true
+          },
+          {
+            "id": "alt",
+            "name": "Each post has alt text and a call for a save, share or comment that fits it",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-calendar"
+        ],
+        "reviewers": [
+          "brand-voice-reviewer"
+        ],
+        "uses": [
+          "social-post-planner",
+          "standing-social-calendar-maker",
+          "weekly-social-content-planner"
+        ]
+      },
+      {
+        "id": "schedule",
+        "kind": "execution",
+        "name": "Schedule posts after approval",
+        "goal": "Register what each batch should change, then with approval schedule the approved posts in Meta Business Suite and read the calendar back. Replies to comments are drafted and posted only when approved.",
+        "owner": {
+          "role": "weekly-social-content-planner"
+        },
+        "needs": [
+          "bizsuite-write"
+        ],
+        "depends_on": [
+          "calendar"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Scheduling receipt",
+            "format": "markdown",
+            "path": "execution/SCHEDULE-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "registered",
+            "name": "Each batch is written down with its expected result before it is scheduled",
+            "required": true
+          },
+          {
+            "id": "approved",
+            "name": "Only posts the owner or cafe manager approved are scheduled",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "Date, time, format and caption in Business Suite match the approved draft",
+            "required": true
+          },
+          {
+            "id": "one-change",
+            "name": "Each two-week batch changes one thing so the result can be read",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-schedule"
+        ],
+        "uses": [
+          "standing-social-calendar-maker"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read results every two weeks",
+        "goal": "Every two weeks read engagement on the agreed definition against 3.5%, by format, with saves, shares and comments, followers, posting count and the look check.",
+        "owner": {
+          "role": "post-for-two-weeks-and-learn-what-worked-and-flopped"
+        },
+        "needs": [
+          "bizsuite-read"
+        ],
+        "depends_on": [
+          "schedule"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Two-week readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "Each readout uses the same definition and compares with the same earlier period",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "No format verdict from fewer than the planned number of posts; otherwise INCONCLUSIVE",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Followers, posting count, look checklist pass rate and approved-only posting are checked",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "The gap to 3.5% is shown",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-review"
+        ],
+        "uses": [
+          "post-for-two-weeks-and-learn-what-worked-and-flopped",
+          "agency-project-management-experiment-tracker"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Close each two-week test, record what worked, propose rules with their scope, and plan the next quarter.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "Every test is closed with a verdict",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each rule says if it holds for this post, this account or all cafes",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-definition",
+        "statement": "Part of the drop is the measure: follower growth or Reels reaching non-followers lowered a rate that is calculated by followers.",
+        "test": "Recompute by followers and by reach and compare with follower growth by week.",
+        "confirm_if": "The rate by reach is steadier than the rate by followers.",
+        "refute_if": "Both fall by a similar amount.",
+        "fix_stage": "intake"
+      },
+      {
+        "id": "h-cadence",
+        "statement": "Posting in bursts and gaps lowered reach on following posts.",
+        "test": "Posts per week and the gaps between posts against reach per post.",
+        "confirm_if": "Reach falls after gaps of two weeks or more.",
+        "refute_if": "Reach is steady across gaps.",
+        "fix_stage": "calendar"
+      },
+      {
+        "id": "h-format",
+        "statement": "The format mix shifted toward images, which earn fewer saves and shares, and away from carousels and Reels.",
+        "test": "Share of posts and median saves, shares and comments by format over time.",
+        "confirm_if": "Image share rose and its saves and shares are lower.",
+        "refute_if": "Mix is stable or images perform as well.",
+        "fix_stage": "calendar"
+      },
+      {
+        "id": "h-content",
+        "statement": "Content drifted from what the audience saves and shares to generic or promotional posts.",
+        "test": "Top 10 and bottom 10 posts of the last 90 days by saves and shares, by topic and hook.",
+        "confirm_if": "Top posts share a theme the recent posts lack.",
+        "refute_if": "Recent posts match the top themes.",
+        "fix_stage": "calendar"
+      },
+      {
+        "id": "h-look",
+        "statement": "The messy look reduces recognition and engagement because posts do not read as one brand.",
+        "test": "Rate the grid against the new guide and compare engagement of posts that match with those that do not.",
+        "confirm_if": "Posts that match the look do better.",
+        "refute_if": "No difference by look.",
+        "fix_stage": "templates"
+      },
+      {
+        "id": "h-replies",
+        "statement": "Comments and messages go unanswered, which lowers reach and repeat engagement.",
+        "test": "Share of comments and DMs answered within a day and engagement on posts after replies.",
+        "confirm_if": "Replies are rare and engagement on posts with replies is higher.",
+        "refute_if": "Replies are regular.",
+        "fix_stage": "calendar"
+      }
+    ],
+    "measurement": {
+      "window": "Read every two weeks for three months; judge a format or pillar change after at least two review periods.",
+      "min_volume": "No format or pillar verdict from fewer than 6 posts per group; always use the same engagement definition the owner chose.",
+      "stop_rule": "Pause a change if followers fall, if a post carries a claim the cafes did not confirm, or if the look checklist is skipped; otherwise finish the two weeks before judging."
+    }
+  }
+}

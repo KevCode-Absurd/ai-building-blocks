@@ -1,0 +1,1074 @@
+{
+  "case": "fin-overdue-invoices",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Get the share of open invoices that are past due under 15% within three months, without losing any retainer clients.",
+    "deliverable": "A running collections routine: cleaned receivables, approved reminder drafts and call plans in use, a payment terms policy, and a weekly overdue-share readout.",
+    "done": [
+      "Open invoices are checked against the FreshBooks aging report and the true overdue share is measured",
+      "Every overdue client is grouped by age, size and likely reason, with disputes separated from slow payers",
+      "The owner has chosen the reminder cadence, the worst-account approach and the payment terms policy",
+      "Reminders and calls go out only after the owner approves each one",
+      "The overdue share is read every week on the same definition and compared with 15%",
+      "No retainer client is lost because of the collections work"
+    ],
+    "metric": {
+      "name": "Share of open invoices that are past due",
+      "direction": "decrease",
+      "unit": "percent of open invoices",
+      "baseline": 40,
+      "baseline_source": "reported",
+      "target": 15
+    },
+    "deadline": "Within three months of starting",
+    "guardrails": [
+      "No retainer client is lost",
+      "No email goes to a client without the owner approving it",
+      "Client relationships stay polite: no threats, no public naming"
+    ],
+    "limits": [
+      "FreshBooks MCP has draft access: drafts are created for approval, nothing is sent by the AI",
+      "Late fees or pausing work are only used if the owner decides and the terms support them"
+    ],
+    "assets": [
+      "FreshBooks (55 retainer clients, monthly invoices on 30-day terms)",
+      "FreshBooks aging report",
+      "Working files kept in this project"
+    ],
+    "connections": [
+      {
+        "name": "FreshBooks MCP",
+        "access": "draft",
+        "status": "connected"
+      }
+    ],
+    "data_home": "Files in this project",
+    "technical_level": "Not stated",
+    "decides": "The owner",
+    "unknowns": [
+      "Whether 40% is by number of invoices or by value (it is the owner's report from the FreshBooks aging report)",
+      "Total value of open invoices and of the over-90-day invoices",
+      "Whether any overdue invoices are disputed or have unapplied payments",
+      "What the client agreements say about late fees or pausing work",
+      "How the owner sends approved emails (from FreshBooks or their own mailbox)",
+      "Whether clients have a card or direct debit available",
+      "How technical the owner wants to be"
+    ],
+    "answers": [
+      {
+        "question": "Business and billing?",
+        "answer": "Marketing agency with 55 retainer clients, invoiced monthly on 30-day terms in FreshBooks."
+      },
+      {
+        "question": "How bad is it?",
+        "answer": "About 40% of open invoices are past due (FreshBooks aging report, reported), worst ones over 90 days."
+      },
+      {
+        "question": "What happens now?",
+        "answer": "Reminders are sent by hand when someone remembers."
+      },
+      {
+        "question": "What access and rules?",
+        "answer": "FreshBooks MCP with draft access; emails to clients go out only after I approve them."
+      },
+      {
+        "question": "Target and constraint?",
+        "answer": "Overdue share under 15% within three months without losing clients."
+      },
+      {
+        "question": "Data home and decider?",
+        "answer": "Keep data in this project. I decide."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners clean the receivables first, so nobody is chased for a paid or disputed invoice, then age and rank what is left. They separate clients who are late from clients who are unhappy, because reminders do not fix disputes. A dated cadence runs from a courtesy reminder before the due date through a friendly nudge, a firmer follow-up with a phone call, and a formal notice with a deadline. The worst accounts get a call and a short written payment plan, and new work is paused on seriously overdue accounts. Prevention comes from clear written terms, the right billing contact and a card or direct debit on file for retainers. Every contact is logged and the overdue share is tracked weekly.",
+    "sources": [
+      {
+        "id": "web-dunning",
+        "kind": "web",
+        "title": "Unpaid invoices: a dunning cadence for a team with no collector (Beancount.io)",
+        "ref": "https://beancount.io/blog/2026/10/06/unpaid-invoices-dunning-cadence-no-collector-guide",
+        "date": "2026-10",
+        "note": "Cadence from a pre-due reminder to a day-60 decision, payment plans, credit hold, pitfalls. Date taken from the page address."
+      },
+      {
+        "id": "web-wayfront",
+        "kind": "web",
+        "title": "Client not paying an invoice: a practical guide for agency owners (Wayfront)",
+        "ref": "https://wayfront.com/blog/client-not-paying-invoice",
+        "date": "2025-11-28",
+        "note": "Agency escalation by days overdue, contract clauses, disputes, pausing work; last-updated date."
+      },
+      {
+        "id": "web-ramp",
+        "kind": "web",
+        "title": "Accounts receivable collections (Ramp)",
+        "ref": "https://ramp.com/blog/accounts-payable/accounts-receivable-collections",
+        "date": "2026-09-20",
+        "note": "Reminder 3 to 5 days before due, escalation by age, DSO with collection effectiveness."
+      },
+      {
+        "id": "cat-chaser",
+        "kind": "catalogue",
+        "title": "Late invoice and cash forecast reviewer",
+        "ref": "weekly-invoice-and-cash-chaser",
+        "note": "Tracks unpaid invoices, drafts reminders, separates promises from money received."
+      },
+      {
+        "id": "cat-reminder",
+        "kind": "catalogue",
+        "title": "Overdue invoice reminder writer",
+        "ref": "get-a-late-invoice-paid-and-keep-the-customer",
+        "note": "Tested method: polite reminder, ways to pay, firmer note with only approved next steps."
+      },
+      {
+        "id": "cat-unpaid",
+        "kind": "catalogue",
+        "title": "Unpaid invoice chaser",
+        "ref": "unpaid-invoice-chaser",
+        "note": "One tone-matched reminder per customer for review before sending."
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-clean",
+        "name": "Clean the receivables before chasing",
+        "why": "Reconcile payments so only truly outstanding invoices are chased; unapplied payments, credits and disputes must not get reminders.",
+        "sources": [
+          "web-dunning",
+          "web-wayfront",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-segment",
+        "name": "Age, segment and rank what is overdue",
+        "why": "Ageing buckets by size and client show where the money is and which accounts need a call and which need only a nudge.",
+        "sources": [
+          "web-dunning",
+          "web-ramp"
+        ]
+      },
+      {
+        "id": "s-reason",
+        "name": "Find the real reason: late versus unhappy",
+        "why": "Reminders do not fix a dispute; a call finds out whether the client is late, stuck in approvals, short of cash or unhappy.",
+        "sources": [
+          "web-wayfront",
+          "web-dunning"
+        ]
+      },
+      {
+        "id": "s-prevent",
+        "name": "Prevent lateness: clear terms, right contact, card or direct debit",
+        "why": "Written terms, the right accounts contact and automatic payment for retainers stop lateness before it starts.",
+        "sources": [
+          "web-wayfront",
+          "web-ramp"
+        ]
+      },
+      {
+        "id": "s-cadence",
+        "name": "Run a dated reminder cadence with an approved tone",
+        "why": "A pre-due reminder and dated follow-ups catch invoices stuck in approval queues and make chasing routine and polite.",
+        "sources": [
+          "web-dunning",
+          "web-ramp",
+          "cat-reminder",
+          "cat-unpaid"
+        ]
+      },
+      {
+        "id": "s-plans",
+        "name": "Offer short written payment plans and pause work on severe cases",
+        "why": "Plans of a few instalments with a clear missed-payment consequence recover cash, and pausing new work protects the agency.",
+        "sources": [
+          "web-dunning",
+          "web-wayfront"
+        ]
+      },
+      {
+        "id": "s-track",
+        "name": "Log every contact and track the overdue share weekly",
+        "why": "A written log and a weekly read on one definition show whether the routine works and support any later escalation.",
+        "sources": [
+          "web-dunning",
+          "web-ramp",
+          "cat-chaser"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Chasing disputed invoices or unpaid ones that have an unapplied payment, which damages the relationship.",
+        "sources": [
+          "web-wayfront",
+          "web-dunning"
+        ]
+      },
+      {
+        "text": "Adding late fees that were not disclosed before the work began, or above legal limits.",
+        "sources": [
+          "web-dunning",
+          "web-wayfront"
+        ]
+      },
+      {
+        "text": "Letting invoices pass 90 days with no owner or next step; recovery odds fall sharply.",
+        "sources": [
+          "web-dunning"
+        ]
+      },
+      {
+        "text": "Lifting a pause or credit hold as soon as a client complains, or extending new credit to an account on a payment plan.",
+        "sources": [
+          "web-dunning",
+          "web-wayfront"
+        ]
+      },
+      {
+        "text": "Looking only at average days outstanding and missing a few severely late accounts.",
+        "sources": [
+          "web-ramp"
+        ]
+      },
+      {
+        "text": "Not logging contacts, and charging a saved card without the client's agreement.",
+        "sources": [
+          "web-dunning",
+          "web-wayfront"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Bring overdue invoices under 15% in three months",
+    "capabilities": [
+      {
+        "id": "fb-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read invoices, payments and clients (FreshBooks MCP)",
+        "why": "Pull open invoices, payment history, credit notes and billing contacts."
+      },
+      {
+        "id": "fb-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Create draft reminders and notes (FreshBooks MCP)",
+        "why": "Prepare reminder drafts for the owner to approve. Nothing is sent by the AI."
+      },
+      {
+        "id": "outreach",
+        "access": "live",
+        "via": "owner",
+        "name": "Send reminders and make calls (owner sends)",
+        "why": "Anything that reaches a client is sent or said by the owner, one approved message at a time."
+      }
+    ],
+    "data": [
+      {
+        "id": "open-invoices",
+        "name": "Open invoices with ageing",
+        "why": "The base for the overdue share and for ranking who to contact.",
+        "fields": [
+          "client",
+          "invoice number",
+          "issue date",
+          "due date",
+          "amount",
+          "amount paid",
+          "days overdue",
+          "status"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "FreshBooks MCP read: all open invoices with due dates and payments."
+          },
+          {
+            "kind": "CSV",
+            "how": "FreshBooks: Reports, Accounts aging, and the invoice list exported as CSV."
+          }
+        ],
+        "required_for": [
+          "open-picture",
+          "receivables-check",
+          "diagnosis"
+        ]
+      },
+      {
+        "id": "payment-history",
+        "name": "Payments for the last 12 months",
+        "why": "Shows who usually pays late and by how much, and finds unapplied payments.",
+        "fields": [
+          "client",
+          "invoice number",
+          "payment date",
+          "amount",
+          "method",
+          "credit notes"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "FreshBooks MCP read of payments and credit notes for 12 months."
+          },
+          {
+            "kind": "CSV",
+            "how": "FreshBooks payments collected report as CSV."
+          }
+        ],
+        "required_for": [
+          "open-picture",
+          "receivables-check",
+          "diagnosis"
+        ]
+      },
+      {
+        "id": "client-contacts",
+        "name": "Billing contacts and payment methods",
+        "why": "Invoices sent to the wrong person are a common cause of lateness.",
+        "fields": [
+          "client",
+          "billing contact",
+          "email",
+          "payment method on file",
+          "contract start"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "FreshBooks MCP read of client records."
+          },
+          {
+            "kind": "ASK",
+            "how": "The owner confirms the right accounts contact for the top overdue clients."
+          }
+        ],
+        "required_for": [
+          "diagnosis",
+          "reminder-sequence",
+          "worst-accounts"
+        ]
+      },
+      {
+        "id": "client-terms",
+        "name": "Retainer agreement terms on payment",
+        "why": "Late fees and pausing work are only possible if the agreement supports them.",
+        "fields": [
+          "payment terms",
+          "late fee clause",
+          "pause-work clause",
+          "notice period"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "The standard retainer agreement and any special terms for the largest overdue clients."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owner whether the agreement mentions late fees or pausing work."
+          }
+        ],
+        "required_for": [
+          "terms-policy",
+          "worst-accounts"
+        ],
+        "alternative": "Without the agreement, late fees and work pauses are not proposed."
+      },
+      {
+        "id": "contact-history",
+        "name": "Past reminders and promises",
+        "why": "Avoids repeating a reminder or ignoring a promise to pay.",
+        "fields": [
+          "client",
+          "date",
+          "channel",
+          "what was said",
+          "promise date"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "The owner lists the reminders sent by hand and any promises made."
+          }
+        ],
+        "required_for": [
+          "diagnosis",
+          "reminder-sequence",
+          "worst-accounts"
+        ],
+        "alternative": "Without it, every client starts at the first reminder step."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the problem",
+        "goal": "Turn the owner's words into a measured overdue problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "open-picture",
+        "kind": "evidence",
+        "name": "Pull open invoices and payment history",
+        "goal": "Collect open invoices, 12 months of payments, client contacts and the retainer terms into this project, with totals checked against FreshBooks.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "from_steps": [
+          "s-clean"
+        ],
+        "data": [
+          "open-invoices",
+          "payment-history",
+          "client-contacts",
+          "client-terms",
+          "contact-history"
+        ],
+        "needs": [
+          "fb-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "gate": "none",
+        "uses": [
+          "cash-tied-up-finder"
+        ],
+        "outputs": [
+          {
+            "id": "invoices",
+            "name": "Open invoices with ageing",
+            "format": "csv",
+            "path": "evidence/open-invoices.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Open invoice count and total match the FreshBooks aging report for the same date",
+            "required": true
+          },
+          {
+            "id": "history",
+            "name": "At least 12 months of payments are included, or the shorter period is stated",
+            "required": true
+          },
+          {
+            "id": "unknowns",
+            "name": "Missing data is named as unknown, not estimated",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "receivables-check",
+        "kind": "integrity",
+        "name": "Check what is really overdue",
+        "goal": "Match payments to invoices, find unapplied payments, credit notes and duplicates, and recompute the overdue share by count and by value so the 40% is verified or corrected.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-clean"
+        ],
+        "data": [
+          "open-invoices",
+          "payment-history"
+        ],
+        "needs": [
+          "fb-read"
+        ],
+        "depends_on": [
+          "open-picture"
+        ],
+        "gate": "none",
+        "uses": [
+          "invoice-totals-checker",
+          "reconciliation-break-tracer"
+        ],
+        "outputs": [
+          {
+            "id": "real-overdue",
+            "name": "Verified overdue picture",
+            "format": "markdown",
+            "path": "integrity/REAL-OVERDUE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "applied",
+            "name": "Unapplied payments and credit notes are matched or listed, so no paid invoice is counted as overdue",
+            "required": true
+          },
+          {
+            "id": "share",
+            "name": "The overdue share is stated by count and by value, next to the owner's reported 40%",
+            "required": true
+          },
+          {
+            "id": "definition",
+            "name": "The definition of overdue and the as-at date are written down for use in every later reading",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find why invoices go late",
+        "goal": "Rank overdue money by age, size and client, separate disputes from slow payers, and test each hypothesis against the evidence.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "from_steps": [
+          "s-segment",
+          "s-reason"
+        ],
+        "data": [
+          "open-invoices",
+          "payment-history",
+          "client-contacts",
+          "contact-history"
+        ],
+        "depends_on": [
+          "receivables-check"
+        ],
+        "gate": "none",
+        "support": [
+          "quarterly-client-rate-reviewer"
+        ],
+        "uses": [
+          "cash-tied-up-finder",
+          "unpaid-invoice-chaser"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis-md",
+            "name": "Why invoices are late and verdicts",
+            "format": "markdown",
+            "path": "diagnosis/WHY-LATE.md"
+          },
+          {
+            "id": "ranked",
+            "name": "Overdue clients ranked by age and size",
+            "format": "csv",
+            "path": "diagnosis/overdue-ranked.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "buckets",
+            "name": "Overdue money is split into current, 1 to 30, 31 to 60, 61 to 90 and over 90 days, by count and by value",
+            "required": true
+          },
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is marked SUPPORTED, REFUTED or UNKNOWN with evidence",
+            "required": true
+          },
+          {
+            "id": "reason",
+            "name": "Each client over 60 days has a likely reason marked as known or unknown",
+            "required": true
+          },
+          {
+            "id": "reports",
+            "name": "Owner-reported numbers are labelled as reports",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the ways to get paid",
+        "goal": "Turn findings into ranked options (reminder cadence, calls, payment plans, direct debit, terms and pause policy), each with the overdue share it should remove, client risk, effort and how it will be measured.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "from_steps": [
+          "s-prevent"
+        ],
+        "depends_on": [
+          "diagnosis"
+        ],
+        "gate": "none",
+        "uses": [
+          "get-a-late-invoice-paid-and-keep-the-customer",
+          "cash-tied-up-finder"
+        ],
+        "outputs": [
+          {
+            "id": "options-md",
+            "name": "Ranked options",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every option cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has expected effect, client risk, effort and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "target",
+            "name": "The chosen set is shown against the 15% target, with what it would not reach",
+            "required": true
+          },
+          {
+            "id": "terms-law",
+            "name": "Late fees are flagged for the owner to check against the signed agreement and local rules",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "quarterly-client-rate-reviewer"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner chooses",
+        "goal": "The owner picks the options. Ask why when the top option is passed over and record it.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "gate": "approve",
+        "outputs": [
+          {
+            "id": "decision-md",
+            "name": "Chosen options",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
+            "required": true
+          },
+          {
+            "id": "lines",
+            "name": "The owner states which clients get a call from them and which get drafted reminders",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "reminder-sequence",
+        "kind": "production",
+        "name": "Draft the reminder sequence and this week's reminders",
+        "goal": "Write the dated cadence, a before-due reminder and the overdue steps in the agency's tone, and a draft for each overdue client at its current step.",
+        "owner": {
+          "role": "get-a-late-invoice-paid-and-keep-the-customer"
+        },
+        "from_steps": [
+          "s-cadence"
+        ],
+        "data": [
+          "client-contacts",
+          "contact-history"
+        ],
+        "needs": [
+          "fb-read",
+          "fb-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "gate": "none",
+        "uses": [
+          "payment-reminder-letter-writer",
+          "unpaid-invoice-chaser",
+          "invoice-totals-checker"
+        ],
+        "outputs": [
+          {
+            "id": "cadence",
+            "name": "Reminder cadence and templates",
+            "format": "markdown",
+            "path": "production/REMINDER-CADENCE.md"
+          },
+          {
+            "id": "reminder-drafts",
+            "name": "Reminder drafts by client",
+            "format": "markdown",
+            "path": "production/REMINDER-DRAFTS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "amounts",
+            "name": "Each draft states the right invoice number, amount and due date, checked against FreshBooks",
+            "required": true
+          },
+          {
+            "id": "excluded",
+            "name": "Disputed invoices and invoices with unapplied payments are not chased",
+            "required": true
+          },
+          {
+            "id": "tone",
+            "name": "Wording is polite, one invoice per message, with no threats or claims the owner has not approved",
+            "required": true
+          },
+          {
+            "id": "contact",
+            "name": "Each draft goes to the billing contact on file or flags that none is known",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "worst-accounts",
+        "kind": "production",
+        "name": "Plan calls and payment plans for the worst accounts",
+        "goal": "For clients over 60 days or with disputes, prepare a call script, questions to find the real reason, and a short written payment plan where it fits.",
+        "owner": {
+          "role": "prepare-a-price-talk-with-a-sum-they-can-pay"
+        },
+        "from_steps": [
+          "s-reason",
+          "s-plans"
+        ],
+        "data": [
+          "client-contacts",
+          "client-terms",
+          "contact-history"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "gate": "none",
+        "uses": [
+          "can-they-pay-deal-checker",
+          "payment-reminder-letter-writer",
+          "negotiation-prep-coach"
+        ],
+        "outputs": [
+          {
+            "id": "calls",
+            "name": "Call plans and payment plan drafts",
+            "format": "markdown",
+            "path": "production/WORST-ACCOUNTS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "plan-shape",
+            "name": "Each payment plan has two to four instalments with dates, amounts and the missed-payment consequence in writing",
+            "required": true
+          },
+          {
+            "id": "pause",
+            "name": "A pause of new work is proposed only where the agreement or the owner supports it",
+            "required": true
+          },
+          {
+            "id": "retention",
+            "name": "Each plan states the retention risk for that client and who talks to them",
+            "required": true
+          },
+          {
+            "id": "no-credit",
+            "name": "No new credit is proposed for an account on a plan",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "weekly-invoice-and-cash-chaser"
+        ]
+      },
+      {
+        "id": "terms-policy",
+        "kind": "production",
+        "name": "Draft the payment terms and prevention changes",
+        "goal": "Write clear payment wording for invoices and agreements, a card or direct debit option for retainers, a right billing contact check and a pause-work policy for the owner to adopt or not.",
+        "owner": {
+          "role": "quarterly-client-rate-reviewer"
+        },
+        "from_steps": [
+          "s-prevent"
+        ],
+        "data": [
+          "client-terms",
+          "client-contacts"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis"
+        ],
+        "gate": "review",
+        "uses": [
+          "payment-reminder-letter-writer"
+        ],
+        "outputs": [
+          {
+            "id": "terms",
+            "name": "Payment terms and prevention changes",
+            "format": "markdown",
+            "path": "production/PAYMENT-TERMS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "plain",
+            "name": "Terms state due date, accepted methods, any late fee and any pause rule in plain words",
+            "required": true
+          },
+          {
+            "id": "not-legal",
+            "name": "The draft is marked for the owner or a lawyer to check; no late fee is applied to work already done without prior notice",
+            "required": true
+          },
+          {
+            "id": "consent",
+            "name": "Charging a saved card or direct debit only happens with the client's written agreement",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "send-and-call",
+        "kind": "execution",
+        "name": "Send approved reminders and make approved calls",
+        "goal": "Each week the owner approves, then sends, the reminders and makes the calls. The AI logs what was sent, said and promised.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "from_steps": [
+          "s-cadence",
+          "s-plans",
+          "s-track"
+        ],
+        "needs": [
+          "outreach"
+        ],
+        "depends_on": [
+          "reminder-sequence",
+          "worst-accounts",
+          "terms-policy"
+        ],
+        "gate": "approve_each_action",
+        "uses": [
+          "unpaid-invoice-chaser",
+          "payment-reminder-letter-writer"
+        ],
+        "outputs": [
+          {
+            "id": "contact-log",
+            "name": "Contact log with promises to pay",
+            "format": "markdown",
+            "path": "execution/CONTACT-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each message has the owner's recorded approval before it goes",
+            "required": true
+          },
+          {
+            "id": "logged",
+            "name": "Every reminder, call and promise is logged with date and channel",
+            "required": true
+          },
+          {
+            "id": "promises",
+            "name": "Promised payment dates are kept as promises until the payment appears in FreshBooks",
+            "required": true
+          },
+          {
+            "id": "hold",
+            "name": "A pause of work or any change of terms is made only by the owner, in writing to the client",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read the overdue share every week",
+        "goal": "Each week compute the overdue share on the agreed definition and compare it with the baseline, the 15% target and the guardrails.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "from_steps": [
+          "s-track"
+        ],
+        "needs": [
+          "fb-read"
+        ],
+        "depends_on": [
+          "send-and-call"
+        ],
+        "gate": "none",
+        "uses": [
+          "cash-tied-up-finder"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Weekly overdue readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-def",
+            "name": "Every reading uses the same definition, as-at date and count-or-value basis",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Clients lost or paused and complaints are listed every week",
+            "required": true
+          },
+          {
+            "id": "over-90",
+            "name": "Invoices over 90 days are listed with an owner and a next step",
+            "required": true
+          },
+          {
+            "id": "window",
+            "name": "No verdict on the 15% target before the three months are complete",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record which steps got money in, which clients need a different approach, and the rules for the routine; plan the next round.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "gate": "review",
+        "uses": [
+          "get-a-late-invoice-paid-and-keep-the-customer"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          },
+          {
+            "id": "standing",
+            "name": "The weekly routine is written so it continues without the AI",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-no-routine",
+        "statement": "Invoices go late mainly because reminders are sent by hand and irregularly.",
+        "test": "Compare days late for clients who were reminded with those who were not, using the owner's list of past reminders.",
+        "confirm_if": "Reminded invoices are paid sooner than similar unreminded ones.",
+        "refute_if": "Reminded and unreminded invoices are paid at the same speed.",
+        "fix_stage": "reminder-sequence"
+      },
+      {
+        "id": "h-chronic-few",
+        "statement": "A handful of clients hold most of the overdue money, so the fix is account by account.",
+        "test": "Share of overdue value by client, and how many clients are late on most invoices.",
+        "confirm_if": "A small number of clients hold most of the overdue value.",
+        "refute_if": "Lateness is spread across many clients.",
+        "fix_stage": "worst-accounts"
+      },
+      {
+        "id": "h-disputes",
+        "statement": "Some of the oldest invoices are held back by a dispute or unhappiness with the work, not slow payment.",
+        "test": "Call or review notes for clients over 90 days and mark each as late, stuck or disputing.",
+        "confirm_if": "Several of the over-90-day invoices have a stated dispute.",
+        "refute_if": "None is disputed.",
+        "fix_stage": "worst-accounts"
+      },
+      {
+        "id": "h-wrong-contact",
+        "statement": "Invoices go to the wrong person or get stuck in client approvals.",
+        "test": "Compare the billing contact on file with the accounts contact and check bounce or no-open signs.",
+        "confirm_if": "Late clients have no accounts contact on file or a changed one.",
+        "refute_if": "Contacts are right and invoices are seen.",
+        "fix_stage": "terms-policy"
+      },
+      {
+        "id": "h-no-autopay",
+        "statement": "Retainer clients with a card or direct debit on file pay on time and the rest do not.",
+        "test": "Compare days late by payment method.",
+        "confirm_if": "Automatic payers are clearly later less often than invoice payers.",
+        "refute_if": "Payment method makes no difference.",
+        "fix_stage": "terms-policy"
+      },
+      {
+        "id": "h-count-vs-value",
+        "statement": "The 40% figure overstates or understates the problem because it mixes count and value or includes paid invoices.",
+        "test": "Recompute from the invoice list after matching payments, by count and by value.",
+        "confirm_if": "The checked share differs from 40% on either basis.",
+        "refute_if": "The checked share is about 40% on both.",
+        "fix_stage": "receivables-check"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Weekly for three months from the first approved reminder; the target is judged at the end of the third month.",
+      "min_volume": "At least eight weekly readings on the same definition before any claim, as 55 clients make weekly swings large.",
+      "stop_rule": "Stop chasing a client and tell the owner the same day if the client disputes the invoice, threatens to leave, or a promise is broken twice; stop all steps if a client is lost because of them."
+    }
+  }
+}

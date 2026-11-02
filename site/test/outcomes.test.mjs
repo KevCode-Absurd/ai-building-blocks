@@ -1,21 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { planRefs, validateBrief, validatePlan, validateResearch } from '../src/outcomes/plan-contract.mjs';
 import { engagementDigest, gateFor } from '../src/outcomes/engagement.mjs';
-import { FEATURED_ROLES } from '../src/roles/role-definitions.mjs';
+import { localResolver } from '../src/outcomes/evals/local-catalogue.mjs';
 import { callOutcomeTool, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
 import example from '../src/outcomes/examples/rising-cpa.mjs';
 import { handlePublicApi } from '../src/server/public-api.ts';
 
-const catalogue = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../catalogue-items');
-const folders = fs.readdirSync(catalogue, { withFileTypes: true }).filter(d => d.isDirectory()).flatMap(d => fs.readdirSync(path.join(catalogue, d.name), { withFileTypes: true }).filter(x => x.isDirectory()).map(x => ({ group: d.name, slug: x.name })));
-const itemIds = new Set(folders.map(f => f.slug));
-// Generated role ids drop the agency- prefix (role-definitions.mjs roleSeeds); featured roles keep their own ids.
-const roleIds = new Set([...FEATURED_ROLES.map(r => r.id), ...folders.filter(f => ['agents', 'orchestrators'].includes(f.group)).map(f => f.slug.replace(/^agency-/, ''))]);
-const resolve = async ({ roles, items }) => ({ missing_roles: roles.filter(r => !roleIds.has(r)), missing_items: items.filter(i => !itemIds.has(i)) });
+const resolve = localResolver();
 const TOOL = { resolve, today: '2026-11-02' };
 const copy = v => JSON.parse(JSON.stringify(v));
 
@@ -116,13 +108,8 @@ test('an approved plan runs to a closed experiment and a second round', async ()
   assert.equal(stateOf(r, 'integrity-tracking'), 'BLOCKED');
   r = await step(r, { type: 'data', data_id: 'tracking-setup', status: 'AVAILABLE' });
 
-  r = await complete(r, 'context');
-  await assert.rejects(step(r, { type: 'approve', stage_id: 'context', decision: 'APPROVED', by: 'host' }), /Only the owner/);
-  r = await step(r, { type: 'approve', stage_id: 'context', decision: 'APPROVED', by: 'owner' });
-  for (const id of ['integrity-tracking', 'integrity-site']) { r = await complete(r, id); r = await step(r, { type: 'approve', stage_id: id, decision: 'APPROVED', by: 'owner' }); }
-  r = await complete(r, 'diagnosis');
-  r = await complete(r, 'options');
-  r = await step(r, { type: 'approve', stage_id: 'options', decision: 'APPROVED', by: 'owner' });
+  // Internal stages that their checks cover need no owner stop; the owner sees the findings at the decision.
+  for (const id of ['context', 'integrity-tracking', 'integrity-site', 'diagnosis', 'options']) { r = await complete(r, id); assert.equal(stateOf(r, id), 'DONE'); }
 
   await assert.rejects(complete(r, 'decision'), /record_outcome_decision/);
   const decision = { id: 'd1', stage_id: 'decision', by: 'owner', considered: [{ id: 'r1', summary: 'Fix CAPI deduplication' }, { id: 'r2', summary: 'New concepts for women 45-54' }, { id: 'r3', summary: 'Cut weekend spend' }], chosen: ['r2'] };
@@ -135,9 +122,11 @@ test('an approved plan runs to a closed experiment and a second round', async ()
   r = await step(r, { type: 'approve', stage_id: 'decision', decision: 'APPROVED', by: 'owner' });
   r = await step(r, { type: 'skip', stage_id: 'tracking-fixes', reason: 'Owner\'s developer handles it' });
   r = await step(r, { type: 'skip', stage_id: 'page-fixes', reason: 'No landing-page card chosen' });
-  r = await complete(r, 'concepts'); r = await step(r, { type: 'approve', stage_id: 'concepts', decision: 'APPROVED', by: 'owner' });
+  r = await complete(r, 'concepts');
+  await assert.rejects(step(r, { type: 'approve', stage_id: 'concepts', decision: 'APPROVED', by: 'host' }), /Only the owner/);
+  r = await step(r, { type: 'approve', stage_id: 'concepts', decision: 'APPROVED', by: 'owner' });
   assert.match(r.ready.find(s => s.stage_id === 'ad-production').prompt, /"paid-media-creative-strategist" review/);
-  r = await complete(r, 'ad-production'); r = await step(r, { type: 'approve', stage_id: 'ad-production', decision: 'APPROVED', by: 'owner' });
+  r = await complete(r, 'ad-production');
   assert.equal(r.ready[0].gate, 'approve_each_action');
 
   await assert.rejects(complete(r, 'launch'), /Register at least one experiment/);
@@ -158,7 +147,6 @@ test('an approved plan runs to a closed experiment and a second round', async ()
   assert.ok(!JSON.stringify(r.outcome_report).includes('1180'));
 
   r = await complete(r, 'learning');
-  r = await step(r, { type: 'approve', stage_id: 'learning', decision: 'APPROVED', by: 'owner' });
   assert.equal(r.state, 'ROUND_COMPLETE');
   const pattern = JSON.parse(r.files['PATTERN.json']);
   assert.equal(pattern.share, 'ONLY_WITH_OWNER_CONSENT');
@@ -206,7 +194,7 @@ test('autonomy relaxes review gates but never decisions or live actions', async 
   const def = id => r.engagement.plan.stages.find(s => s.id === id);
   assert.equal(gateFor(def('launch'), r.engagement), 'approve_each_action');
   assert.equal(gateFor(def('decision'), r.engagement), 'approve');
-  assert.equal(gateFor(def('ad-production'), r.engagement), 'review');
+  assert.equal(gateFor(def('concepts'), r.engagement), 'review');
 });
 
 test('a changed engagement or a plan edited outside the tools is rejected', async () => {

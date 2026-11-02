@@ -1,0 +1,1035 @@
+{
+  "case": "content-podcast-launch",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Launch a podcast for the owner's coaching business for engineers moving into management within eight weeks, and have it bring at least 4 discovery calls a month within six months of launch.",
+    "deliverable": "A launched podcast: a chosen format and name, cover art, a trailer and the first episodes recorded and edited, the show live on the main podcast apps, a listener page with a booking link, and a way to tell which calls came from the podcast, all inside the budget, with a monthly readout of calls.",
+    "done": [
+      "Baseline of discovery calls a month and how callers found the owner, read from Calendly",
+      "Format (interview, solo or mix) chosen by the owner from costed options",
+      "Show name, description, cover art and a trailer ready and approved",
+      "At least the launch episodes recorded and edited without the owner needing editing skills",
+      "Show live on the major podcast apps, with a page and booking link that records where callers came from",
+      "Calls from the podcast counted each month against 4 a month",
+      "Learnings saved for the next season"
+    ],
+    "metric": {
+      "name": "Discovery calls a month that came from the podcast",
+      "direction": "reach",
+      "unit": "calls per month",
+      "baseline": null,
+      "baseline_source": "unknown",
+      "target": 4
+    },
+    "deadline": "Launch within eight weeks (about 28 December 2026); 4 calls a month within six months of starting (about May 2027)",
+    "guardrails": [
+      "Spend stays within $1,500 for setup and $200 a month after",
+      "The owner's existing LinkedIn audience and email list are not spammed: promotion is spread out and unsubscribes are watched",
+      "Episodes are published on a schedule the owner can keep",
+      "Calls from other sources are not neglected or double counted as podcast calls"
+    ],
+    "limits": [
+      "Budget $1,500 for setup and $200 a month after",
+      "The owner has a decent microphone, so no new microphone is bought unless the owner agrees",
+      "The owner has no editing skills, so editing is done by a tool or an outside editor within budget",
+      "Calendly stays the booking tool",
+      "Nothing is published, sent or changed in Calendly without the owner approving that action"
+    ],
+    "assets": [
+      "A decent microphone",
+      "About 4,000 LinkedIn followers",
+      "An email list of about 1,200",
+      "A Calendly account for discovery calls"
+    ],
+    "connections": [
+      {
+        "name": "Calendly",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "Files in this project (the owner's choice)",
+    "technical_level": "Not stated by the owner; the owner has no editing skills, so keep technical steps plain and do them for the owner where possible",
+    "decides": "The owner",
+    "unknowns": [
+      "Interview format or solo (the owner named this as unknown)",
+      "How many discovery calls a month there are today and how callers find the owner",
+      "Whether the LinkedIn and email audience will listen, and how many",
+      "Which podcast host and editing route fit the budget",
+      "How much time a week the owner can give to recording and promotion",
+      "The owner's coaching fee and conversion from call to client, which decide whether 4 calls a month is the right target"
+    ],
+    "answers": [
+      {
+        "question": "Who are you and who do you serve?",
+        "answer": "Career coach for engineers moving into management."
+      },
+      {
+        "question": "What audience do you have?",
+        "answer": "4,000 LinkedIn followers and an email list of 1,200."
+      },
+      {
+        "question": "What result do you want?",
+        "answer": "The podcast should bring at least 4 discovery calls a month within six months."
+      },
+      {
+        "question": "What is the budget?",
+        "answer": "$1,500 for setup and $200 a month after."
+      },
+      {
+        "question": "What skills and equipment do you have?",
+        "answer": "A decent microphone but no editing skills."
+      },
+      {
+        "question": "When should it launch?",
+        "answer": "Within eight weeks."
+      },
+      {
+        "question": "Which tools, where are files, who decides, what is unknown?",
+        "answer": "Calendly for calls. Keep files in this project. I decide. Unknown: interview format or solo."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners launching a podcast to win clients work backwards from the call: they name one listener and the problem that listener has, choose a format they can keep up, and decide the call to action before recording. They launch with a trailer and at least two or three episodes ready so a new listener can binge, host the audio with a service that makes the RSS feed, and submit that feed to Apple Podcasts and Spotify. They build a page for the show with a clear route to booking, and they measure calls by asking callers how they found them as well as counting downloads, because downloads alone do not show business. A solo-led or coaching-style show is the usual choice for lead generation, with interviews used when guests bring a real audience. Editing is either learned, done by a tool, or bought, and is planned before recording starts.",
+    "sources": [
+      {
+        "id": "web-hubspot",
+        "kind": "web",
+        "title": "Starting a podcast checklist (HubSpot)",
+        "ref": "https://blog.hubspot.com/marketing/starting-a-podcast-checklist",
+        "date": "2026-07-14",
+        "note": "Order: niche, ideal listener, name, format and schedule, host, cover art, equipment, outline 10 to 20 episodes, record three, show notes, trailer, upload, submit, market. Pick a schedule you can keep."
+      },
+      {
+        "id": "web-apple",
+        "kind": "web",
+        "title": "Apple Podcasts requirements (Apple Podcasts for Creators)",
+        "ref": "https://podcasters.apple.com/support/823-podcast-requirements",
+        "date": "2026-11",
+        "note": "Public RSS 2.0 feed, artwork, at least one episode, stable episode IDs. Page is undated; read 2026-11."
+      },
+      {
+        "id": "web-leadgen",
+        "kind": "web",
+        "title": "Podcast strategy for lead generation (Sproutworth)",
+        "ref": "https://www.sproutworth.com/podcast-strategy-for-lead-generation/",
+        "date": "2026-10",
+        "note": "Choose a format for strengths and audience, put calls to action at the start, middle and end, track which episodes drive leads. The page shows 2024-08-15 and 2026-10-13; the later is taken as the update. A marketing blog, so guidance not evidence."
+      },
+      {
+        "id": "cat-strategist",
+        "kind": "catalogue",
+        "title": "Global podcast strategist agent",
+        "ref": "agency-marketing-global-podcast-strategist"
+      },
+      {
+        "id": "cat-pilot",
+        "kind": "catalogue",
+        "title": "Podcast pilot brief builder",
+        "ref": "podcast-pilot-brief-builder"
+      },
+      {
+        "id": "cat-notes",
+        "kind": "catalogue",
+        "title": "Podcast show notes writer",
+        "ref": "podcast-show-notes-writer"
+      },
+      {
+        "id": "cat-assume",
+        "kind": "catalogue",
+        "title": "Business assumption and customer test planner",
+        "ref": "plan-assumption-tests"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-baseline",
+        "name": "Find today's discovery-call baseline and how callers find the owner",
+        "why": "Without a baseline the podcast's calls cannot be told from other sources.",
+        "sources": [
+          "web-leadgen",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-listener",
+        "name": "Define the listener and what they need from the show",
+        "why": "Every launch checklist starts with one listener and one problem.",
+        "sources": [
+          "web-hubspot",
+          "cat-assume",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-shows",
+        "name": "Study comparable shows for format, length and cadence",
+        "why": "Shows the owner's listeners already hear and what is missing.",
+        "sources": [
+          "web-hubspot",
+          "web-leadgen",
+          "cat-strategist"
+        ]
+      },
+      {
+        "id": "s-format",
+        "name": "Choose format, host and editing route within budget",
+        "why": "Format and editing are the decisions the owner is unsure about and the budget limits them.",
+        "sources": [
+          "web-hubspot",
+          "web-leadgen",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-design",
+        "name": "Design the show: name, cover, trailer, first episodes and the call to action",
+        "why": "The call to action and the first episodes are set before recording.",
+        "sources": [
+          "web-hubspot",
+          "web-leadgen",
+          "cat-pilot"
+        ]
+      },
+      {
+        "id": "s-produce",
+        "name": "Record, edit and write show notes for the launch episodes",
+        "why": "Launching with a few episodes ready lets new listeners binge.",
+        "sources": [
+          "web-hubspot",
+          "cat-notes"
+        ]
+      },
+      {
+        "id": "s-track",
+        "name": "Build the listener page, booking route and call tracking",
+        "why": "A clear route to the booking link and a how-did-you-hear question make calls countable.",
+        "sources": [
+          "web-leadgen",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-launch",
+        "name": "Submit the feed and launch with promotion spread over weeks",
+        "why": "Directories need a valid feed and one episode; promotion drives the first listeners.",
+        "sources": [
+          "web-apple",
+          "web-hubspot"
+        ]
+      },
+      {
+        "id": "s-measure",
+        "name": "Count calls and downloads monthly and adjust",
+        "why": "Leads, not downloads, are the goal; find which episodes bring calls.",
+        "sources": [
+          "web-leadgen"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Recording before the listener, format and call to action are decided.",
+        "sources": [
+          "web-hubspot",
+          "web-leadgen"
+        ]
+      },
+      {
+        "text": "Launching with one episode, or with no way to submit because the feed is invalid.",
+        "sources": [
+          "web-hubspot",
+          "web-apple"
+        ]
+      },
+      {
+        "text": "Counting downloads as success when no booking is traced to the show.",
+        "sources": [
+          "web-leadgen"
+        ]
+      },
+      {
+        "text": "A format the owner cannot keep up weekly, so the show stops after a few episodes.",
+        "sources": [
+          "web-hubspot"
+        ]
+      },
+      {
+        "text": "Weak or hidden calls to action, so listeners enjoy the show but never book.",
+        "sources": [
+          "web-leadgen"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Launch a podcast that brings discovery calls",
+    "capabilities": [
+      {
+        "id": "calendly-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read Calendly bookings and booking questions (browser)",
+        "why": "Count discovery calls by month and see what callers were asked."
+      },
+      {
+        "id": "web-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read public podcast pages and directories",
+        "why": "Study comparable shows, hosting prices and directory requirements."
+      },
+      {
+        "id": "calendly-write",
+        "access": "live",
+        "via": "browser",
+        "name": "Add a how-did-you-hear question and a podcast booking link in Calendly (browser)",
+        "why": "Make calls from the podcast countable. Changes the owner's live booking page."
+      },
+      {
+        "id": "host-live",
+        "access": "live",
+        "via": "browser",
+        "name": "Publish episodes and submit the feed in the chosen podcast host (browser)",
+        "why": "Upload the trailer and episodes and submit the feed to Apple Podcasts and Spotify."
+      },
+      {
+        "id": "owner-send",
+        "access": "live",
+        "via": "owner",
+        "name": "The owner sends the list email and LinkedIn posts from their own accounts",
+        "why": "The owner's email tool is not stated, so the owner publishes the approved drafts."
+      }
+    ],
+    "data": [
+      {
+        "id": "bookings",
+        "name": "Calendly booking history",
+        "why": "Gives the baseline of discovery calls a month and any source answers.",
+        "fields": [
+          "date",
+          "event type",
+          "booker's answer to how they found the owner (if asked)",
+          "status"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Calendly, Analytics or event export for the last 6 months; remove names before copying."
+          },
+          {
+            "kind": "ASK",
+            "how": "If no export, ask for the number of discovery calls per month by screenshot."
+          }
+        ],
+        "required_for": [
+          "evidence-baseline",
+          "integrity-baseline"
+        ],
+        "alternative": "Owner's estimate only; the baseline stays unknown and the target is read as calls from the podcast only."
+      },
+      {
+        "id": "audience-signals",
+        "name": "What the owner's audience responds to",
+        "why": "Shows the problems engineers moving into management ask about.",
+        "fields": [
+          "LinkedIn posts with most comments and saves (last 6 months)",
+          "replies to the email list",
+          "questions raised in discovery calls (themes only)"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "The owner pastes the top posts and common questions; no client names."
+          }
+        ],
+        "required_for": [
+          "evidence-audience"
+        ],
+        "alternative": "If thin, the show's first topics rest on comparable shows and are marked low-confidence."
+      },
+      {
+        "id": "comparable-shows",
+        "name": "Comparable podcasts",
+        "why": "Shows formats, episode length, cadence and gaps for career-in-management shows.",
+        "fields": [
+          "show",
+          "format",
+          "episode length",
+          "cadence",
+          "start date",
+          "call to action"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "Public podcast directory pages found by search."
+          }
+        ],
+        "required_for": [
+          "evidence-shows"
+        ],
+        "alternative": "If few shows are found, format advice rests on the sources and the owner's judgment."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the goal, budget and limits",
+        "goal": "Turn the owner's words into a measured goal, a budget, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "evidence-baseline",
+        "kind": "evidence",
+        "name": "Read the discovery-call baseline",
+        "goal": "Count discovery calls a month and any source answers from Calendly for the last six months.",
+        "owner": {
+          "role": "turn-a-raw-dataset-into-a-checked-brief-of-top-insights"
+        },
+        "data": [
+          "bookings"
+        ],
+        "needs": [
+          "calendly-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "baseline",
+            "name": "Call baseline",
+            "format": "markdown",
+            "path": "evidence/CALL-BASELINE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "months",
+            "name": "Calls are counted per month for six months, or the gap is stated",
+            "required": true
+          },
+          {
+            "id": "source",
+            "name": "States how many callers said how they found the owner, and that the rest is unknown",
+            "required": true
+          },
+          {
+            "id": "private",
+            "name": "No booker names or emails are copied into project files",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "uses": [
+          "turn-a-raw-dataset-into-a-checked-brief-of-top-insights"
+        ]
+      },
+      {
+        "id": "evidence-audience",
+        "kind": "evidence",
+        "name": "Define the listener and what they need",
+        "goal": "From the owner's top posts, replies and call questions, write one listener profile and the five questions they ask most.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "data": [
+          "audience-signals"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "listener",
+            "name": "Listener profile",
+            "format": "markdown",
+            "path": "evidence/LISTENER.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "sourced",
+            "name": "Each question traces to a post, reply or call theme the owner gave",
+            "required": true
+          },
+          {
+            "id": "one",
+            "name": "One listener and one core problem, not a list of everyone",
+            "required": true
+          },
+          {
+            "id": "assumptions",
+            "name": "Guesses are marked as assumptions to test",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-listener"
+        ],
+        "support": [
+          "plan-assumption-tests"
+        ],
+        "uses": [
+          "plan-assumption-tests"
+        ]
+      },
+      {
+        "id": "evidence-shows",
+        "kind": "evidence",
+        "name": "Study comparable shows",
+        "goal": "List career and management shows for engineers or technical people: format, episode length, cadence, call to action and what is missing.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "data": [
+          "comparable-shows"
+        ],
+        "needs": [
+          "web-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "shows",
+            "name": "Comparable shows",
+            "format": "markdown",
+            "path": "evidence/COMPARABLE-SHOWS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "count",
+            "name": "At least five shows, with when each was read",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "States what no comparable show does that this one could",
+            "required": true
+          },
+          {
+            "id": "no-stats",
+            "name": "No download or revenue figures are quoted unless a source gives them",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-shows"
+        ],
+        "uses": [
+          "agency-marketing-global-podcast-strategist"
+        ]
+      },
+      {
+        "id": "integrity-baseline",
+        "kind": "integrity",
+        "name": "Check the baseline can be trusted",
+        "goal": "Check the call counts and what the booking page records today, and say whether a podcast call can be told apart.",
+        "owner": {
+          "role": "check-a-spreadsheet-before-sharing-the-results"
+        },
+        "data": [
+          "bookings"
+        ],
+        "depends_on": [
+          "evidence-baseline"
+        ],
+        "outputs": [
+          {
+            "id": "baseline-check",
+            "name": "Baseline check",
+            "format": "markdown",
+            "path": "integrity/BASELINE-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "duplicates",
+            "name": "Rescheduled and cancelled bookings are not counted as new calls",
+            "required": true
+          },
+          {
+            "id": "attribution",
+            "name": "States whether Calendly records a source today and what must be added",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for judging 4 calls a month",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "uses": [
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Cost the format, host and editing options",
+        "goal": "Build two or three complete options (solo, interview, mix; host; editing route) each with launch cost, monthly cost, weekly owner hours, risk and how it will be measured. Show which fit $1,500 and $200 a month.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "depends_on": [
+          "evidence-audience",
+          "evidence-shows",
+          "integrity-baseline"
+        ],
+        "outputs": [
+          {
+            "id": "options",
+            "name": "Costed options",
+            "format": "markdown",
+            "path": "options/OPTIONS.md"
+          },
+          {
+            "id": "options-json",
+            "name": "Options as data",
+            "format": "json",
+            "path": "options/options.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "budget",
+            "name": "Every option shows setup cost and monthly cost against $1,500 and $200, with prices dated and sourced",
+            "required": true
+          },
+          {
+            "id": "editing",
+            "name": "Every option says who edits, since the owner cannot",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has owner hours a week, risk and how success is measured",
+            "required": true
+          },
+          {
+            "id": "unknown",
+            "name": "Interview versus solo is not assumed; both are costed",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-format"
+        ],
+        "uses": [
+          "agency-marketing-global-podcast-strategist"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner chooses",
+        "goal": "The owner picks the format, host and editing route. Ask why when a top option is passed over, and record it.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options and the reasons are recorded",
+            "required": true
+          },
+          {
+            "id": "budget",
+            "name": "The chosen option fits the budget or the owner has accepted the difference",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "show-design",
+        "kind": "production",
+        "name": "Design the show and the first episodes",
+        "goal": "Write the show's promise, name options, description, cover art brief, trailer script, a plan for the launch episodes and the call to action in each.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "depends_on": [
+          "decision",
+          "evidence-audience"
+        ],
+        "outputs": [
+          {
+            "id": "show",
+            "name": "Show design for review",
+            "format": "markdown",
+            "path": "production/SHOW-DESIGN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "listener",
+            "name": "The promise names the listener and the problem in the owner's words",
+            "required": true
+          },
+          {
+            "id": "cta",
+            "name": "Each episode has one call to action to book a discovery call, at the start, middle and end",
+            "required": true
+          },
+          {
+            "id": "eight-weeks",
+            "name": "The plan reaches launch within eight weeks with a trailer and at least three episodes ready",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "No promise of promotion, pay rise or other results",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-design"
+        ],
+        "uses": [
+          "podcast-pilot-brief-builder",
+          "agency-marketing-global-podcast-strategist"
+        ]
+      },
+      {
+        "id": "recording",
+        "kind": "production",
+        "name": "Prepare recording, editing and show notes",
+        "goal": "Make a recording checklist and run sheets for the launch episodes, an editing brief for the chosen route, and show notes for each episode.",
+        "owner": {
+          "role": "video-audio-finishing-plan"
+        },
+        "depends_on": [
+          "decision",
+          "show-design"
+        ],
+        "outputs": [
+          {
+            "id": "recording-pack",
+            "name": "Recording and editing pack",
+            "format": "markdown",
+            "path": "production/RECORDING-PACK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "no-skill",
+            "name": "Every step is doable without editing skill, or says who does it",
+            "required": true
+          },
+          {
+            "id": "audio",
+            "name": "Includes a sound check for the owner's existing microphone before the first full recording",
+            "required": true
+          },
+          {
+            "id": "notes",
+            "name": "Show notes link the booking page and name the call to action",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-produce"
+        ],
+        "uses": [
+          "video-audio-finishing-plan",
+          "podcast-show-notes-writer",
+          "podcast-pilot-brief-builder"
+        ]
+      },
+      {
+        "id": "listener-page",
+        "kind": "production",
+        "name": "Draft the listener page, tracking and announcements",
+        "goal": "Draft a simple show page with player and booking link, the Calendly question and tracked link, the email to the list and LinkedIn posts. Nothing is sent.",
+        "owner": {
+          "role": "marketing-email-strategist"
+        },
+        "depends_on": [
+          "decision",
+          "show-design",
+          "integrity-baseline"
+        ],
+        "outputs": [
+          {
+            "id": "funnel",
+            "name": "Page, tracking and announcement drafts",
+            "format": "markdown",
+            "path": "production/LISTENER-PAGE-AND-ANNOUNCEMENTS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "route",
+            "name": "A listener reaches the booking link in two clicks from the page and the show notes",
+            "required": true
+          },
+          {
+            "id": "source",
+            "name": "A booking made from the show can be told apart from other bookings",
+            "required": true
+          },
+          {
+            "id": "spread",
+            "name": "Promotion to the existing audience is spread over several weeks",
+            "required": true
+          },
+          {
+            "id": "drafts",
+            "name": "All messages are drafts for the owner to send",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-track"
+        ],
+        "uses": [
+          "conversion-landing-page-designer",
+          "landing-page-auditor"
+        ]
+      },
+      {
+        "id": "launch",
+        "kind": "execution",
+        "name": "Go live one approved action at a time",
+        "goal": "Register what each action should do, then with the owner's approval set up the Calendly question and link, upload the trailer and episodes, submit the feed, and send the announcements.",
+        "owner": {
+          "role": "marketing-global-podcast-strategist"
+        },
+        "needs": [
+          "calendly-write",
+          "host-live",
+          "owner-send"
+        ],
+        "depends_on": [
+          "recording",
+          "listener-page"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Launch receipt",
+            "format": "markdown",
+            "path": "execution/LAUNCH-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "registered",
+            "name": "Each action has its expected result written down before it goes live",
+            "required": true
+          },
+          {
+            "id": "feed",
+            "name": "The feed passes the apps' requirements and the show appears in the apps, or the wait is noted",
+            "required": true
+          },
+          {
+            "id": "test-booking",
+            "name": "A test booking from the show page records the source",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "What is live matches what the owner approved",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-launch"
+        ],
+        "uses": [
+          "podcast-show-notes-writer"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Count calls and downloads monthly",
+        "goal": "Each month, count calls from the podcast against 4, with downloads, completion and which episodes and calls to action brought bookings.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "needs": [
+          "calendly-read"
+        ],
+        "depends_on": [
+          "launch"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Monthly readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "source",
+            "name": "Calls from the podcast are counted by the recorded source, and the unknown share is shown",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Spend against $200 a month and the email unsubscribe rate are checked",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A verdict on a format or call to action is given only after at least four episodes; otherwise INCONCLUSIVE",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "The gap to 4 calls a month is shown each month",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "agency-project-management-experiment-tracker"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Close each test, record what brought calls, propose rules with their scope, and plan the next season.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next season",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "Every test is closed with a verdict",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each rule says if it holds for this episode, this show or all shows",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-format",
+        "statement": "A solo or coaching-style show with a discovery-call offer in every episode brings more calls than guest interviews.",
+        "test": "Compare calls and booking-page visits by episode type over the first episodes.",
+        "confirm_if": "Solo or coaching-style episodes bring more bookings per download.",
+        "refute_if": "Interview episodes bring as many or more bookings.",
+        "fix_stage": "show-design"
+      },
+      {
+        "id": "h-cta",
+        "statement": "Listeners enjoy the show but do not book because the call to action is weak or hidden.",
+        "test": "Booking-page visits and bookings per episode, with the call to action wording changed one at a time.",
+        "confirm_if": "Downloads are healthy but visits and bookings are low.",
+        "refute_if": "Visits are healthy and bookings follow.",
+        "fix_stage": "show-design"
+      },
+      {
+        "id": "h-audience",
+        "statement": "The existing 4,000 followers and 1,200 list are enough to start the show, but few will click through to listen.",
+        "test": "Listens and visits from the first announcements, split by LinkedIn and email.",
+        "confirm_if": "First-week listens are low relative to list size.",
+        "refute_if": "Listens come easily from both.",
+        "fix_stage": "listener-page"
+      },
+      {
+        "id": "h-editing",
+        "statement": "Editing, not recording, is the bottleneck because the owner has no editing skill.",
+        "test": "Hours and cost to get from raw audio to published episode for the first episodes.",
+        "confirm_if": "Editing time or cost passes the budget or delays episodes.",
+        "refute_if": "Editing fits the budget and schedule.",
+        "fix_stage": "recording"
+      },
+      {
+        "id": "h-source",
+        "statement": "Podcast calls will be undercounted because bookers are not asked how they found the owner.",
+        "test": "Share of bookings with a recorded source, before and after the question is added.",
+        "confirm_if": "Most bookings have no source today.",
+        "refute_if": "Source is already recorded for most bookings.",
+        "fix_stage": "listener-page"
+      },
+      {
+        "id": "h-target",
+        "statement": "Four calls a month may not be the right measure if call-to-client conversion is unknown.",
+        "test": "Ask the owner for call-to-client rate and fee after the baseline is known.",
+        "confirm_if": "Rate and fee show 4 calls does not meet the owner's real business goal.",
+        "refute_if": "4 calls a month meets the goal.",
+        "fix_stage": "options"
+      }
+    ],
+    "measurement": {
+      "window": "Read calls monthly for six months after launch; judge each episode type or call to action after at least four episodes.",
+      "min_volume": "No format verdict from fewer than four episodes or fewer than ten booking-page visits per variant; downloads alone never decide.",
+      "stop_rule": "Stop and review if spend passes $200 a month, if unsubscribes from the owner's list rise above their normal level after announcements, or if a claim in an episode cannot be supported."
+    }
+  }
+}

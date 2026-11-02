@@ -1,6 +1,6 @@
 // The orchestrator's method: written once, used for every outcome. It replaces per-outcome playbooks.
 // The host AI follows it to pin down the outcome, research how experts do the job and compose a plan from our catalogue.
-export const METHOD_VERSION = 1;
+export const METHOD_VERSION = 2;
 
 export const BRIEF_FRAME = [
   { field: 'outcome', ask: 'What do you want to be true when this is done?', note: 'In the owner\'s terms, made specific.' },
@@ -32,7 +32,7 @@ export const KIND_GUIDE = {
   evidence: 'Gather the data into the agreed data home, with totals checked against the source.',
   integrity: 'Check the data and the systems behind it can be trusted before anyone reasons from them: tracking, speed, data quality.',
   diagnosis: 'Test hypotheses against the evidence; keep competing explanations.',
-  options: 'Ranked options, each with the finding it rests on, expected effect, effort, confidence, risk and how it will be measured.',
+  options: 'Ranked options, each with the finding it rests on, expected effect, effort, confidence, risk and how it will be measured. No gate: the owner sees them at the decision.',
   decision: 'The owner chooses. Always gate approve.',
   production: 'Build the deliverable: creatives, pages, code, documents, fixes. Only after a decision.',
   execution: 'Apply or launch live. Live capabilities need gate approve_each_action. Register experiments before anything goes live.',
@@ -47,7 +47,7 @@ export const COMPOSITION_RULES = [
   'List the catalogue items the stage uses (skills, workflows, prompts, AI tools, mini tools, minds) by their search_library ids. Prefer items whose inputs match what the stage has.',
   'Declare each capability once (read, draft or live; via mcp, api_key, file, browser or owner) and reference it from the stages that need it. A key is asked for only when its stage is ready, and stays with the host.',
   'Every stage after intake writes at least one output at a path inside the engagement folder and has at least one check that makes the output trustworthy, specific to this job.',
-  'Gates: none for internal steps that checks cover, review where the owner should see the work, approve for decisions, approve_each_action for anything live.',
+  'Gates: every owner stop costs the owner time, so add one only where their judgement changes the result. Most plans need three to five. none for internal steps that checks cover (evidence, integrity, diagnosis, options, measurement: the owner sees their findings at the decision or in the readout); approve for decisions; review for work the owner must see before it is used, batched into one review when pieces are used together, and left out when an approve_each_action stage will show the same work; approve_each_action for anything live. Learning needs review only when it proposes a rule for the whole business.',
   'Write the hypotheses an expert would test first, from the research pitfalls and the brief, each with a test, what supports it, what refutes it and the stage that fixes it.',
   'Run independent stages in parallel: only add a dependency where a stage truly needs another\'s output.',
   'End with measurement (when there is a metric and anything goes live) and learning.',

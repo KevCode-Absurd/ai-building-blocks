@@ -1,0 +1,1201 @@
+{
+  "case": "local-gym-memberships",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Grow active members at the Denver gym from 610 to 750 by June 1 by cancelling fewer memberships and signing more local members, while keeping the no-long-term-contract promise the gym is known for.",
+    "deliverable": "A retention and local acquisition program, built and switched on with the owners' approval of each action: first-90-days and at-risk member routines, an exit survey, and tested Meta trial-offer ads within the 2,000 dollar monthly budget, with a monthly read of active members.",
+    "done": [
+      "The member flow (active, joins, cancellations, freezes) is checked against the Mindbody report and split by months of membership and join source",
+      "The reason members cancel is no longer unknown: an exit survey or call routine has run and its answers are counted",
+      "The owners chose which retention and acquisition changes to make, with reasons recorded",
+      "Approved member messages and ads were switched on one action at a time, with ads created paused and spend within 2,000 dollars a month",
+      "Active members are read monthly against the 610 baseline and the 750 target",
+      "What was learned is saved for the next round"
+    ],
+    "metric": {
+      "name": "Active members",
+      "direction": "increase",
+      "unit": "active members",
+      "baseline": 610,
+      "baseline_source": "reported",
+      "target": 750
+    },
+    "deadline": "June 1 (the next June 1; the owner gave no year)",
+    "guardrails": [
+      "No long-term contracts: the gym stays known for no lock-in",
+      "Cancelling stays easy; no step is added to make leaving harder"
+    ],
+    "limits": [
+      "Marketing budget 2,000 dollars a month",
+      "Nothing goes live in Meta Ads or to members without the owners' approval of that action",
+      "Mindbody is read through exports only"
+    ],
+    "assets": [
+      "Mindbody report: 610 active members, about 45 cancellations and 40 new joins a month (reported)",
+      "Instagram account with 3,100 followers",
+      "Meta Ads account reachable through the Meta Ads MCP",
+      "A Google Sheet for working data"
+    ],
+    "connections": [
+      {
+        "name": "Meta Ads MCP",
+        "access": "live",
+        "status": "connected"
+      },
+      {
+        "name": "Mindbody (exports only)",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "A Google Sheet (the owner's choice)",
+    "technical_level": "Not stated",
+    "decides": "The owner and their partner together",
+    "unknowns": [
+      "Why members cancel; the gym has never asked",
+      "How long members have been members when they cancel",
+      "Where the 40 monthly joins come from",
+      "Whether cancellations include freezes, failed payments or non-renewals",
+      "What Meta Ads have produced so far, if anything",
+      "Membership price, margin and class capacity",
+      "Whether the gym has a website or booking page for ad clicks",
+      "How the Google Sheet can be reached by our AI",
+      "Year of the June 1 deadline"
+    ],
+    "answers": [
+      {
+        "question": "What kind of gym?",
+        "answer": "Independent gym in Denver with group classes."
+      },
+      {
+        "question": "Where are members now?",
+        "answer": "610 active members, about 45 cancellations and 40 new joins a month (Mindbody report)."
+      },
+      {
+        "question": "What is the target?",
+        "answer": "750 active members by June 1."
+      },
+      {
+        "question": "Budget and channels?",
+        "answer": "Marketing budget 2,000 dollars a month. Instagram 3,100 followers, Meta Ads MCP connected with live access, Mindbody exports only."
+      },
+      {
+        "question": "What must not change?",
+        "answer": "No long-term contracts; we are known for no lock-in and want to keep that."
+      },
+      {
+        "question": "Data home and who decides?",
+        "answer": "Keep data in a Google Sheet. My partner and I decide."
+      },
+      {
+        "question": "What is unknown?",
+        "answer": "Why members cancel; we have never asked."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Fitness practitioners treat membership as a leaky bucket: with about 45 members leaving for every 40 joining, they fix the leak and the tap together, leak first because it is cheaper. They measure retention by months of membership and join source, find out why people leave with a short exit survey plus conversations and with behaviour signals such as falling attendance, then run a first-90-days routine (welcome in 24 hours, a habit window, a check-in near day 60), and act early on members whose own attendance pattern slips, offering freezes or downgrades rather than discounts. For new members they run a small, local test with a low-friction trial offer, a page or form built for the ad, fast follow-up, and a funnel read from lead to trial to member, not cost per lead. Ads must avoid language that implies something about the viewer's body.",
+    "sources": [
+      {
+        "id": "web-keepme",
+        "kind": "web",
+        "title": "Why are members cancelling my gym? (Keepme)",
+        "ref": "https://www.keepme.ai/blog/why-are-members-cancelling-my-gym",
+        "date": "2026-06-02",
+        "note": "Vendor blog. Reasons are blunt in forms, so pair exit surveys with conversations; watch attendance drops and freeze or cancellation-page visits; measure retention by tenure, cohort and lead source; offer controlled alternatives such as freezes."
+      },
+      {
+        "id": "web-fithive",
+        "kind": "web",
+        "title": "How to reduce gym member churn: a practical retention system (FitHive)",
+        "ref": "https://myfithive.com/blog/view/gym-member-retention-playbook",
+        "date": "2026-08-11",
+        "note": "Vendor blog. Judge each member against their own pattern, sort into risk levels with a named owner and response, diagnose before offering anything, track cohort retention at 90, 180 and 365 days; pitfalls include discounting instead of diagnosing and generic messages."
+      },
+      {
+        "id": "web-clubworx",
+        "kind": "web",
+        "title": "How to retain new gym members: the 90-day retention strategy (Clubworx)",
+        "ref": "https://www.clubworx.com/blog/how-to-retain-new-gym-members-the-90-day-retention-strategy-that-works",
+        "date": "2026-04-27",
+        "note": "Vendor blog, figures unsourced. Welcome within 24 hours, track attendance in days 8 to 42, personal check-in around day 60."
+      },
+      {
+        "id": "web-webtonic",
+        "kind": "web",
+        "title": "Fitness Facebook ads statistics 2026: CPC, CPL and conversion benchmarks (Webtonic)",
+        "ref": "https://www.webtonic.io/blog/fitness-facebook-ads-statistics",
+        "date": "2026-07-18",
+        "note": "Agency blog, benchmarks directional. Track cost per trial booking, show-up rate, trial-to-member rate; send paid traffic to a page built for it; tight radius; avoid asking for a card up front; watch saturation."
+      },
+      {
+        "id": "web-adm-meta",
+        "kind": "web",
+        "title": "2026 health advertising policies on social media (Accelerated Digital Media)",
+        "ref": "https://www.accelerateddigitalmedia.com/insights/guide-to-social-media-health-ad-restrictions-2026/",
+        "date": "2026-08-27",
+        "note": "Agency summary, not Meta's own page: ads may not assert or imply a viewer's personal attributes or put down appearance; verify against Meta's current policy pages before launch."
+      },
+      {
+        "id": "cat-churn-watcher",
+        "kind": "catalogue",
+        "title": "Subscriber cancellation and retention reviewer",
+        "ref": "subscription-churn-watcher"
+      },
+      {
+        "id": "cat-cohort",
+        "kind": "catalogue",
+        "title": "Retention cohort analyst",
+        "ref": "retention-cohort-analyst"
+      },
+      {
+        "id": "cat-onboarding",
+        "kind": "catalogue",
+        "title": "New customer onboarding reviewer",
+        "ref": "customer-onboarding-keeper"
+      },
+      {
+        "id": "cat-meta-test",
+        "kind": "catalogue",
+        "title": "Meta test campaign planner",
+        "ref": "meta-test-campaign-planner"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-rules",
+        "name": "Write down the promises and ad rules first",
+        "why": "The gym's no-lock-in promise and the Meta rules on body-related wording shape every offer, message and ad, so they are fixed before anything is written.",
+        "sources": [
+          "web-adm-meta",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-flow",
+        "name": "Measure the member flow and check the counts",
+        "why": "Active members, joins, cancellations and freezes by month, and months of membership at cancellation, show whether the leak is early or late. The reported 610, 45 and 40 are checked against the export and definitions first.",
+        "sources": [
+          "web-fithive",
+          "web-keepme",
+          "cat-cohort",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-why",
+        "name": "Find out why members leave",
+        "why": "The reason has never been asked. Practitioners combine a short exit survey with a follow-up conversation and the behaviour signals before the cancellation, since stated reasons such as price are blunt.",
+        "sources": [
+          "web-keepme",
+          "web-fithive",
+          "cat-churn-watcher"
+        ]
+      },
+      {
+        "id": "s-onboard",
+        "name": "Build a first-90-days routine",
+        "why": "Early weeks decide who forms a habit. Practitioners send a welcome within a day, check the first sessions, watch attendance in the habit window and hold a progress check-in near day 60.",
+        "sources": [
+          "web-clubworx",
+          "web-fithive",
+          "cat-onboarding"
+        ]
+      },
+      {
+        "id": "s-atrisk",
+        "name": "Act early on members whose attendance is slipping",
+        "why": "Cancellations build over weeks. Each member is judged against their own pattern, sorted into risk levels with a named owner, and offered the fix that matches the problem, such as a schedule change, freeze or downgrade, not a blanket discount.",
+        "sources": [
+          "web-fithive",
+          "web-keepme"
+        ]
+      },
+      {
+        "id": "s-acquire",
+        "name": "Run a small local trial-offer test",
+        "why": "To add members, practitioners test a low-friction trial or first-month offer to people near the gym, with a landing page or lead form built for it, a tight radius, copy that follows Meta's rules, and spend capped to the budget.",
+        "sources": [
+          "web-webtonic",
+          "web-adm-meta",
+          "cat-meta-test"
+        ]
+      },
+      {
+        "id": "s-followup",
+        "name": "Follow up fast and read the whole funnel",
+        "why": "Cost per lead is not the result. Practitioners count leads, trial bookings, trials attended, members joined and cost per member, and respond quickly to each lead.",
+        "sources": [
+          "web-webtonic"
+        ]
+      },
+      {
+        "id": "s-measure",
+        "name": "Read members monthly by cohort and source",
+        "why": "Active members are tracked monthly with retention by join month and source, so the effect of each change is read separately and the path to 750 stays honest.",
+        "sources": [
+          "web-fithive",
+          "web-keepme",
+          "owner"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Discounting or sending generic we-miss-you messages instead of diagnosing why a member is drifting.",
+        "sources": [
+          "web-fithive"
+        ]
+      },
+      {
+        "text": "Treating the exit-form reason, especially price, as the whole story.",
+        "sources": [
+          "web-keepme"
+        ]
+      },
+      {
+        "text": "Judging ads by cost per lead, or sending paid traffic to a homepage.",
+        "sources": [
+          "web-webtonic"
+        ]
+      },
+      {
+        "text": "Ad wording that implies something about the viewer's body, which Meta can reject.",
+        "sources": [
+          "web-adm-meta"
+        ]
+      },
+      {
+        "text": "Relying on one blended retention number that hides which members and which months leak.",
+        "sources": [
+          "web-fithive"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Grow active members to 750 without lock-in",
+    "capabilities": [
+      {
+        "id": "mindbody-export",
+        "access": "read",
+        "via": "file",
+        "name": "Mindbody exports",
+        "why": "Members, joins, cancellations, freezes, visits and join source, as exports from the gym."
+      },
+      {
+        "id": "meta-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read Meta Ads results (Meta Ads MCP)",
+        "why": "Read past campaign, lead and spend results."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "owner",
+        "name": "Owner's Google Sheet",
+        "why": "Working data lives here; the owner shares the Sheet or pastes the tabs we prepare."
+      },
+      {
+        "id": "ads-write",
+        "access": "live",
+        "via": "mcp",
+        "name": "Create and switch on Meta ads (Meta Ads MCP)",
+        "why": "Create paused ads, read them back, and switch on only what the owners approve."
+      },
+      {
+        "id": "member-messages",
+        "access": "live",
+        "via": "owner",
+        "name": "Send messages and the exit survey to members (the owner sends)",
+        "why": "The owner sends each approved message or survey; Mindbody is read through exports only."
+      }
+    ],
+    "data": [
+      {
+        "id": "member-flow",
+        "name": "Monthly member flow",
+        "why": "The baseline of 610 and the monthly joins and cancellations.",
+        "fields": [
+          "month",
+          "active members at start",
+          "joins",
+          "cancellations",
+          "freezes started and ended",
+          "active members at end"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Mindbody export of membership counts by month for the last 12 months or as far back as available."
+          },
+          {
+            "kind": "ASK",
+            "how": "If the export lacks freezes, the owner states how freezes are counted."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "integrity-members",
+          "measurement"
+        ]
+      },
+      {
+        "id": "cancellations",
+        "name": "Cancellation records",
+        "why": "Shows when in membership people leave and what happened before.",
+        "fields": [
+          "anonymous member key",
+          "join date",
+          "cancel date",
+          "plan",
+          "last visit date",
+          "visits in the 8 weeks before cancelling",
+          "reason code if any"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Mindbody export of cancelled memberships for the last 12 months with the fields above. Names and contact details are removed before the data enters the Sheet."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ],
+        "alternative": "Without visit history, behaviour signals before cancelling stay unknown."
+      },
+      {
+        "id": "attendance",
+        "name": "Class visits by member",
+        "why": "Shows each member's own pattern and the early signs of drifting.",
+        "fields": [
+          "anonymous member key",
+          "week",
+          "visits",
+          "class type",
+          "class fill rate if available"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Mindbody visit export for the last 6 months, by member key and week."
+          }
+        ],
+        "required_for": [
+          "diagnosis",
+          "retention-pack"
+        ]
+      },
+      {
+        "id": "join-sources",
+        "name": "How new members found the gym",
+        "why": "Shows which sources bring members who stay.",
+        "fields": [
+          "anonymous member key",
+          "join date",
+          "source or referral field",
+          "intro offer used"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Mindbody lead source or referral field in the new-member export."
+          },
+          {
+            "kind": "ASK",
+            "how": "If no field exists, the owners estimate the split and mark it as an estimate."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis",
+          "ads-pack"
+        ],
+        "alternative": "Without a source field, acquisition findings stay low-confidence."
+      },
+      {
+        "id": "ad-history",
+        "name": "Past Meta ads results",
+        "why": "Shows what has been tried and what leads cost.",
+        "fields": [
+          "campaign",
+          "date",
+          "spend",
+          "leads",
+          "cost per lead",
+          "creative",
+          "audience and radius"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the last 12 months of campaigns, ad sets and ads with the Meta Ads MCP."
+          }
+        ],
+        "required_for": [
+          "integrity-ads",
+          "diagnosis",
+          "ads-pack"
+        ],
+        "alternative": "If there is no history, the first test is treated as a fresh start."
+      },
+      {
+        "id": "lead-funnel",
+        "name": "Lead to member funnel",
+        "why": "Shows what happens after someone asks about a trial.",
+        "fields": [
+          "week",
+          "leads",
+          "contacted within a day",
+          "trials booked",
+          "trials attended",
+          "joined"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "The front desk keeps a weekly tally of counts during the test; no personal details."
+          },
+          {
+            "kind": "FILE",
+            "how": "Mindbody intro-offer or prospect export, counts only."
+          }
+        ],
+        "required_for": [
+          "integrity-ads",
+          "measurement"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the goal",
+        "goal": "Turn the owners' words into a measured target, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "customer-success-manager"
+        },
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "context",
+        "kind": "context",
+        "name": "Write down the promises and ad rules",
+        "goal": "Record what the gym promises (no long-term contracts, easy cancelling), the offers and wording that are allowed, and the Meta rules on fitness ads, so every later message and ad fits.",
+        "owner": {
+          "role": "brand-voice-reviewer"
+        },
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "rules",
+            "name": "Promises, offer limits and ad rules",
+            "format": "markdown",
+            "path": "context/PROMISES-AND-RULES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "no-lock-in",
+            "name": "The no-lock-in promise and easy cancelling are written as rules no offer or message may break",
+            "required": true
+          },
+          {
+            "id": "meta-rules",
+            "name": "Rules on body-related wording and before-and-after images are listed with the source and date, and marked to verify on Meta's own pages",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "Any claim about results or members is marked approved, needs proof or banned",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-rules"
+        ],
+        "uses": [
+          "meta-ads-compliance-checker",
+          "marketing-claims-checker"
+        ]
+      },
+      {
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Pull the member data into the Sheet",
+        "goal": "Gather the monthly member flow, cancellation records, visit data and join sources from Mindbody exports into the Google Sheet, with member keys anonymised.",
+        "owner": {
+          "role": "support-analytics-reporter"
+        },
+        "data": [
+          "member-flow",
+          "cancellations",
+          "attendance",
+          "join-sources"
+        ],
+        "needs": [
+          "mindbody-export",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "dataset",
+            "name": "Working dataset (anonymised)",
+            "format": "csv",
+            "path": "evidence/members.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled, how and the Sheet link",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Active, joins and cancellations match the Mindbody report for the same months, or the gap is explained",
+            "required": true
+          },
+          {
+            "id": "anonymous",
+            "name": "Member names, contact details and health information are not in the Sheet",
+            "required": true
+          },
+          {
+            "id": "definitions",
+            "name": "How freezes, failed payments and non-renewals are counted is stated",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-flow"
+        ],
+        "uses": [
+          "retention-cohort-analyst",
+          "recurring-kpi-report-maker"
+        ]
+      },
+      {
+        "id": "integrity-members",
+        "kind": "integrity",
+        "name": "Check the member counts add up",
+        "goal": "Check that last month's members plus joins minus cancellations equals this month's, that cancellations mean the same thing each month, and that the 610, 45 and 40 figures match the exports.",
+        "owner": {
+          "role": "check-a-spreadsheet-before-sharing-the-results"
+        },
+        "data": [
+          "member-flow"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "member-check",
+            "name": "Member count check",
+            "format": "markdown",
+            "path": "integrity/MEMBER-COUNT-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "rollforward",
+            "name": "Each month rolls forward from the previous one within a stated tolerance",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "The reported 610, 45 and 40 are matched to the exports, or marked reported only",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-flow"
+        ],
+        "uses": [
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "integrity-ads",
+        "kind": "integrity",
+        "name": "Check ad tracking and lead handling",
+        "goal": "Read past Meta results and check how a lead reaches the gym today: form or page, who replies, how fast, and whether a lead can be tied to a trial and a joined member.",
+        "owner": {
+          "role": "paid-media-tracking-specialist"
+        },
+        "data": [
+          "ad-history",
+          "lead-funnel"
+        ],
+        "needs": [
+          "meta-read"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "ads-check",
+            "name": "Ad tracking and lead handling check",
+            "format": "markdown",
+            "path": "integrity/ADS-AND-LEADS-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "path",
+            "name": "The path from ad to lead to trial to member is described, with any break named",
+            "required": true
+          },
+          {
+            "id": "speed",
+            "name": "Time to first reply to a lead is recorded or marked unknown",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for ad findings",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-followup"
+        ],
+        "uses": [
+          "conversion-tracking-fixer",
+          "meta-results-review-agent"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find where members are lost and where joins can come from",
+        "goal": "Test the hypotheses against the data: when members leave, what their attendance did first, which classes and sources keep members, and how leads are handled. State plainly that stated reasons for leaving are still unknown until the exit survey runs.",
+        "owner": {
+          "role": "subscription-churn-watcher"
+        },
+        "support": [
+          "customer-onboarding-keeper"
+        ],
+        "data": [
+          "cancellations",
+          "attendance",
+          "join-sources",
+          "ad-history"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-members",
+          "integrity-ads"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "Diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "required": true
+          },
+          {
+            "id": "cohorts",
+            "name": "Retention is shown by months of membership and by join source, not as one blended figure",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Groups with few members are marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-why",
+          "s-flow"
+        ],
+        "uses": [
+          "retention-cohort-analyst",
+          "churn-risk-finder",
+          "subscription-churn-audit"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank what to change",
+        "goal": "Turn supported findings into ranked cards across keeping members and adding members, each with the finding behind it, how many members it could add or save, effort, cost within the 2,000 dollar budget, risk to the no-lock-in promise, confidence and how it will be measured. Put the exit survey first as a cheap way to learn why members leave.",
+        "owner": {
+          "role": "find-your-business-growth-channel"
+        },
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "recommendations",
+            "name": "Recommendation cards",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every card cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every card has expected members saved or added, effort, cost, risk, confidence and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "path",
+            "name": "The cards show how far the chosen set gets toward 750 by June 1, with the assumptions stated",
+            "required": true
+          },
+          {
+            "id": "promise",
+            "name": "No card adds a contract, a notice trap or a harder cancel step",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "The owners choose",
+        "goal": "The owner and partner pick card ids and set the monthly split of the 2,000 dollar budget. Ask for the reason when the top card is passed over.",
+        "owner": {
+          "role": "find-your-business-growth-channel"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen plan",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over cards are recorded",
+            "required": true
+          },
+          {
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top card was passed over",
+            "required": true
+          },
+          {
+            "id": "budget",
+            "name": "The monthly budget split is written down and sums to no more than 2,000 dollars",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
+      },
+      {
+        "id": "retention-pack",
+        "kind": "production",
+        "name": "Prepare the retention routines and exit survey",
+        "goal": "Write the chosen member routines: the first-90-days messages and check-ins, risk levels from each member's own attendance pattern with a named owner and response for each, save options such as freezes and downgrades that respect the no-lock-in promise, and a short exit survey with a follow-up call script.",
+        "owner": {
+          "role": "customer-success-manager"
+        },
+        "support": [
+          "customer-onboarding-keeper"
+        ],
+        "data": [
+          "attendance"
+        ],
+        "depends_on": [
+          "decision",
+          "diagnosis",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "retention-pack",
+            "name": "Retention routines, messages and exit survey",
+            "format": "markdown",
+            "path": "production/RETENTION-PACK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "scoped",
+            "name": "Only chosen routines are included, each with an owner and a trigger",
+            "required": true
+          },
+          {
+            "id": "promise",
+            "name": "No message or save offer adds friction to cancelling or hints at a contract",
+            "required": true
+          },
+          {
+            "id": "survey",
+            "name": "The exit survey has few questions, one open question, and says answers are used to improve the gym",
+            "required": true
+          },
+          {
+            "id": "personal",
+            "name": "Messages reference the member's own pattern and are not generic",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "optional_when": "No retention card was chosen.",
+        "from_steps": [
+          "s-onboard",
+          "s-atrisk",
+          "s-why"
+        ],
+        "uses": [
+          "churn-reducer",
+          "customer-feedback-report-from-survey-tools",
+          "retention-problem-fixer"
+        ]
+      },
+      {
+        "id": "ads-pack",
+        "kind": "production",
+        "name": "Draft the local trial-offer ads and follow-up",
+        "goal": "Draft a capped Meta test for people near the gym: an offer with no lock-in, ad copy and images that follow the ad rules, the page or lead form it leads to, a follow-up script for the front desk, and the funnel tally to keep.",
+        "owner": {
+          "role": "plan-ad-tests-run-them-and-keep-what-they-teach"
+        },
+        "support": [
+          "paid-media-creative-strategist"
+        ],
+        "data": [
+          "ad-history",
+          "join-sources"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-ads",
+          "context"
+        ],
+        "outputs": [
+          {
+            "id": "ads-pack",
+            "name": "Meta test plan, ads and follow-up script",
+            "format": "markdown",
+            "path": "production/ADS-PACK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "budget",
+            "name": "Planned spend stays within the budget chosen at the decision and within 2,000 dollars a month",
+            "required": true
+          },
+          {
+            "id": "policy",
+            "name": "Copy and images pass the ad rules, with no wording that implies something about the viewer's body",
+            "required": true
+          },
+          {
+            "id": "match",
+            "name": "Each ad matches the page or form it leads to and the offer is honest about terms",
+            "required": true
+          },
+          {
+            "id": "funnel",
+            "name": "The lead, trial, attended and joined tally is ready before launch",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No acquisition card was chosen.",
+        "from_steps": [
+          "s-acquire",
+          "s-followup"
+        ],
+        "uses": [
+          "meta-test-campaign-planner",
+          "meta-ad-copywriter",
+          "meta-ads-compliance-checker",
+          "ad-and-page-match-checker"
+        ]
+      },
+      {
+        "id": "launch",
+        "kind": "execution",
+        "name": "Switch on messages and ads one action at a time",
+        "goal": "With the owners, send each approved member message and the exit survey, and create the Meta ads paused, read them back and register each test before switching on only what is approved.",
+        "owner": {
+          "role": "media-buyer"
+        },
+        "support": [
+          "customer-success-manager"
+        ],
+        "needs": [
+          "ads-write",
+          "member-messages"
+        ],
+        "depends_on": [
+          "retention-pack",
+          "ads-pack"
+        ],
+        "outputs": [
+          {
+            "id": "launch-log",
+            "name": "Launch log with dates, entity ids and messages sent",
+            "format": "markdown",
+            "path": "execution/LAUNCH-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each message, survey send and ad switch-on was approved by the owners before it happened",
+            "required": true
+          },
+          {
+            "id": "paused",
+            "name": "Ads were created paused and read back from Meta, matching the approved plan and budget",
+            "required": true
+          },
+          {
+            "id": "registered",
+            "name": "Each test is registered with its metric, dates and stop rule before it goes live",
+            "required": true
+          },
+          {
+            "id": "promise",
+            "name": "Nothing sent or shown breaks the no-lock-in promise",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-onboard",
+          "s-atrisk",
+          "s-why",
+          "s-acquire",
+          "s-followup"
+        ],
+        "uses": [
+          "launch-checklist-runner"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read members every month",
+        "goal": "Each month, report active members, joins, cancellations, retention by months of membership and join source, exit survey counts, and the ad funnel from lead to member, against the 610 baseline, the 750 target and the path to June 1.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "data": [
+          "member-flow",
+          "lead-funnel"
+        ],
+        "needs": [
+          "mindbody-export",
+          "meta-read",
+          "sheet"
+        ],
+        "depends_on": [
+          "launch"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Monthly results readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "Members, cancellations and freezes are counted the same way as at baseline",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "The no-lock-in promise and the budget limit are checked every read",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A verdict on a change needs the member or lead counts agreed before launch, otherwise INCONCLUSIVE",
+            "required": true
+          },
+          {
+            "id": "path",
+            "name": "Progress is shown against the straight-line path to 750 by June 1",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "recurring-kpi-report-maker",
+          "retention-cohort-analyst",
+          "google-ads-report-auditor"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Close each test, record why members say they leave, which routines and offers worked, propose lasting rules with their scope, and plan the next round if 750 is out of reach by June 1.",
+        "owner": {
+          "role": "traction-experiment-keeper"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "Every registered test is closed with a verdict",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this gym, gyms in Denver or gyms in general",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [],
+        "uses": [
+          "find-out-why-your-ad-test-did-not-win-and-plan-the-next-round"
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-early-churn",
+        "statement": "Most cancellations come from members in their first three months.",
+        "test": "Cancellations by months of membership at the time of leaving, for the last 12 months.",
+        "confirm_if": "A large share of cancellations has under three months of membership.",
+        "refute_if": "Cancellations are spread across long-standing members.",
+        "fix_stage": "retention-pack"
+      },
+      {
+        "id": "h-attendance-drift",
+        "statement": "Members visibly drift before they cancel, so many cancellations could be caught early.",
+        "test": "Compare each cancelled member's visits in the 8 weeks before cancelling with their earlier pattern.",
+        "confirm_if": "Most cancelled members show a clear fall in visits well before cancelling.",
+        "refute_if": "Many cancel with steady attendance and no earlier signal.",
+        "fix_stage": "retention-pack"
+      },
+      {
+        "id": "h-class-fit",
+        "statement": "Certain classes, times or crowded sessions drive members away.",
+        "test": "Retention and cancellations by main class type, time slot and class fill rate where available.",
+        "confirm_if": "Members of certain classes or crowded slots leave at clearly higher rates.",
+        "refute_if": "Retention is similar across classes and times.",
+        "fix_stage": "retention-pack"
+      },
+      {
+        "id": "h-unavoidable",
+        "statement": "A large share of cancellations is unavoidable, such as moves, injury or season, so retention cannot carry the target alone.",
+        "test": "Exit survey reasons grouped as preventable or not, and cancellations by month.",
+        "confirm_if": "Most stated reasons are life changes, or cancellations bunch in particular seasons.",
+        "refute_if": "Most reasons are about value, schedule, crowding or service.",
+        "fix_stage": "retention-pack"
+      },
+      {
+        "id": "h-source-quality",
+        "statement": "Members who joined from some sources or intro offers leave much faster.",
+        "test": "Retention at 90 days by join source and intro offer, with volume noted.",
+        "confirm_if": "One source or offer with enough volume has clearly worse retention.",
+        "refute_if": "Retention is similar across sources.",
+        "fix_stage": "ads-pack"
+      },
+      {
+        "id": "h-slow-followup",
+        "statement": "Interested people are lost because trial requests are answered slowly or not tracked.",
+        "test": "Weekly funnel tally of leads, time to first reply, trials booked and attended, and joins.",
+        "confirm_if": "Many leads are contacted late or never, and trials booked rarely turn into joins.",
+        "refute_if": "Leads are answered quickly and the drop is elsewhere.",
+        "fix_stage": "ads-pack"
+      },
+      {
+        "id": "h-ads-untested",
+        "statement": "Meta ads have not been tested with a local trial offer, so there is untapped demand within a short distance.",
+        "test": "Read past Meta results for any local trial offer; judge demand from the capped test, not from estimates.",
+        "confirm_if": "The test brings trial bookings that attend and join at a cost per member the owners accept.",
+        "refute_if": "Past or test results show leads that do not book or join.",
+        "fix_stage": "ads-pack"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Monthly until June 1; each retention routine is read after at least one full 90-day cohort, each ad test after the lead and trial counts agreed before launch.",
+      "min_volume": "Read retention for groups only with the member counts the owners agree before the first read; ad tests need the lead and trial counts agreed before launch.",
+      "stop_rule": "Pause any message or ad that breaks the no-lock-in promise or draws complaints; stop ad spend that would pass 2,000 dollars in a month."
+    }
+  }
+}

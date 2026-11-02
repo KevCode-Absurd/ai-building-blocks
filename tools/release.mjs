@@ -19,6 +19,7 @@ export const gateSteps=[
   ['Check generated sections',process.execPath,['tools/add-needs.mjs','--check'],'.'],
   ['Check source',process.execPath,['tools/qa/check.mjs','--worktree'],'.'],
   ['Unit tests','npm',['run','test:unit'],'site'],
+  ['Outcome evals scorecard',process.execPath,['tools/outcome-evals.mjs','score'],'.'],
   ['Production build','npm',['run','build'],'site'],
   ['SEO','npm',['run','seo'],'site'],
   ['Browser checks','npx',['playwright','test','--config','playwright.context.config.ts'],'site'],

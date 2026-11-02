@@ -1,0 +1,1059 @@
+{
+  "case": "saas-pricing-review",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Raise average revenue per account by 25% within the year, by pricing and packaging that customers accept, without monthly churn going above 2.5%.",
+    "deliverable": "A checked pricing recommendation built on billing data, competitor prices and what customers say, with a plan for new and existing customers that keeps the 12-month price promise, drafted for the founders to decide on and then tested on new customers first.",
+    "done": [
+      "Current revenue per account, seats and churn are rebuilt from Stripe and the customer list",
+      "Competitor prices are compared like for like, not just by headline number",
+      "Customers have been asked about value and price, with enough replies to trust the answer or the limit stated",
+      "The sums show whether a 25% lift is reachable inside the year given the 12-month price protection",
+      "The founders have chosen a pricing change together, with reasons recorded",
+      "The change reaches new customers first, each step approved before it goes out",
+      "Revenue per account and churn are read back against the target and the 2.5% limit",
+      "Learnings are saved for the next round"
+    ],
+    "metric": {
+      "name": "Average revenue per account",
+      "direction": "increase",
+      "unit": "USD per account per month",
+      "baseline": 232,
+      "baseline_source": "reported",
+      "target": 290
+    },
+    "deadline": "Within the year (read as 12 months from plan approval, about November 2027)",
+    "guardrails": [
+      "Monthly churn stays at or below 2.5% (now 1.8%, Stripe)",
+      "Existing customers keep their current price for at least 12 months"
+    ],
+    "limits": [
+      "Existing customers keep their price for at least 12 months",
+      "We may email customers for a survey",
+      "Working data stays in a Google Sheet",
+      "Stripe access is read-only"
+    ],
+    "assets": [
+      "Stripe billing history",
+      "Customer list export",
+      "Competitor price range of $40 to $70 per user per month, as the owner reports it"
+    ],
+    "connections": [
+      {
+        "name": "Stripe",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Customer list export",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Customer email for a survey",
+        "access": "live",
+        "status": "available"
+      },
+      {
+        "name": "Google Sheet",
+        "access": "draft",
+        "status": "missing"
+      }
+    ],
+    "data_home": "A Google Sheet",
+    "technical_level": "Not stated; recommendations arrive as drafts for the founders to review and apply themselves",
+    "decides": "The founders, together",
+    "unknowns": [
+      "Whether 12 months of price protection runs from today or from each customer's start or renewal date",
+      "Which competitors charge $40 to $70 and whether their plans include the same features",
+      "Whether sales' view that firms rarely push back on price holds up outside the firms that bought",
+      "What customers would pay and what they value most; no survey has been run",
+      "What it costs to serve a customer, which affects floors and margins",
+      "How many new customers sign up each month, which sets how fast a new-customer price can lift the average",
+      "Whether the $232 average (8 users at $29) matches Stripe once discounts and plan changes are counted",
+      "How to connect to the Google Sheet (no sharing details given yet)"
+    ],
+    "answers": [
+      {
+        "question": "What do you sell and to whom?",
+        "answer": "Project management tool for architecture firms, 340 customers."
+      },
+      {
+        "question": "What is the current price and account size?",
+        "answer": "One plan at $29 per user per month; the average account has 8 users."
+      },
+      {
+        "question": "What do you know about competitors and price pushback?",
+        "answer": "Competitors charge $40 to $70. Sales say firms rarely push back on price."
+      },
+      {
+        "question": "What is the goal and the limit?",
+        "answer": "Average revenue per account up 25% within the year without monthly churn going above 2.5% (now 1.8%, Stripe)."
+      },
+      {
+        "question": "What is off limits?",
+        "answer": "Existing customers must keep their price for at least 12 months."
+      },
+      {
+        "question": "What data and tools can your AI reach?",
+        "answer": "Stripe read access, a customer list export, and we can email customers for a survey."
+      },
+      {
+        "question": "Where should data live, and who decides?",
+        "answer": "A Google Sheet. The founders decide together."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners check that price is the lever by looking at billing and churn data, compare competitors like for like rather than by headline price, and ask real customers about value and price with enough replies to trust. They model several options against the revenue and churn limits, launch the new price to new customers first, and move existing customers later, with a clear notice and a better plan, so risk stays small and the test can be undone.",
+    "sources": [
+      {
+        "id": "web-saasrise",
+        "kind": "web",
+        "title": "How to do a SaaS price increase (SaaSRise)",
+        "ref": "https://www.saasrise.com/blog/how-to-do-a-saas-price-increase",
+        "date": "2026-08-27",
+        "note": "Check churn and usage first, segment the base and test the pricing meter, launch to new customers first, migrate existing customers over about six to twelve months, and do not rely on surveys alone."
+      },
+      {
+        "id": "web-cleverx",
+        "kind": "web",
+        "title": "Pricing sensitivity survey and Van Westendorp guide (CleverX)",
+        "ref": "https://cleverx.com/blog/pricing-sensitivity-survey-van-westendorp-guide",
+        "date": "2026-07-21",
+        "note": "Screen respondents, ask the four price questions on one product description, plan around 150 to 200 replies per segment, and validate with a real-market test because answers are stated, not actual, behaviour."
+      },
+      {
+        "id": "cat-wtp",
+        "kind": "catalogue",
+        "title": "Price survey planner",
+        "ref": "willingness-to-pay-survey"
+      },
+      {
+        "id": "cat-price-test",
+        "kind": "catalogue",
+        "title": "Price test planner",
+        "ref": "price-test-planner"
+      },
+      {
+        "id": "cat-saas-pricing",
+        "kind": "catalogue",
+        "title": "SaaS pricing designer",
+        "ref": "saas-pricing-designer"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-baseline",
+        "name": "Rebuild revenue per account, seats and churn from billing",
+        "why": "Check that price, not usage or fit, is the lever, and fix what average revenue per account and churn mean before changing either.",
+        "sources": [
+          "web-saasrise",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-market",
+        "name": "Compare competitors like for like",
+        "why": "A $40 to $70 range means little unless units, tiers and features match. Pricing in the middle of the band can also leave a product hard to position.",
+        "sources": [
+          "web-saasrise",
+          "cat-saas-pricing"
+        ]
+      },
+      {
+        "id": "s-value",
+        "name": "Ask customers about value and price",
+        "why": "Sales' impression comes from firms that bought. A survey of current customers, with enough replies, shows the range they accept and which features matter.",
+        "sources": [
+          "web-cleverx",
+          "cat-wtp"
+        ]
+      },
+      {
+        "id": "s-segments",
+        "name": "Segment the base and test the pricing meter",
+        "why": "Accounts differ by seats and use, so a per-user price, tiers or add-ons may lift revenue per account differently.",
+        "sources": [
+          "web-saasrise",
+          "cat-saas-pricing"
+        ]
+      },
+      {
+        "id": "s-model",
+        "name": "Model options against the revenue and churn limits",
+        "why": "With existing customers protected for 12 months, show how much of a 25% lift new customers, tiers, add-ons and seat growth can supply, and what churn would have to stay under.",
+        "sources": [
+          "cat-price-test",
+          "cat-saas-pricing",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-launch",
+        "name": "Launch to new customers first and move existing customers later",
+        "why": "New-customer pricing gives clean feedback with no churn risk in the base. Existing customers move only after the protected period, with notice and a better plan.",
+        "sources": [
+          "web-saasrise",
+          "cat-price-test"
+        ]
+      },
+      {
+        "id": "s-read",
+        "name": "Read the test and watch churn",
+        "why": "Survey answers are stated behaviour; the live test on new customers and churn in each cohort are the proof.",
+        "sources": [
+          "web-cleverx",
+          "cat-price-test"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Relying on a customer survey alone; stated willingness to pay does not set the real ceiling.",
+        "sources": [
+          "web-saasrise",
+          "web-cleverx"
+        ]
+      },
+      {
+        "text": "Calling a price result from a survey with too few replies per segment.",
+        "sources": [
+          "web-cleverx",
+          "cat-wtp"
+        ]
+      },
+      {
+        "text": "Grandfathering existing customers with no end date, which breeds resentment and caps revenue growth.",
+        "sources": [
+          "web-saasrise"
+        ]
+      },
+      {
+        "text": "Matching a competitor's headline price without checking what their plan includes.",
+        "sources": [
+          "web-saasrise",
+          "cat-saas-pricing"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Raise revenue per account without breaking the price promise",
+    "capabilities": [
+      {
+        "id": "billing-read",
+        "access": "read",
+        "via": "api_key",
+        "name": "Read subscriptions, seats and churn (Stripe, read-only)",
+        "why": "Rebuild revenue per account, seats, discounts and churn."
+      },
+      {
+        "id": "customer-list",
+        "access": "read",
+        "via": "file",
+        "name": "Read the customer list export",
+        "why": "Segment by seats, firm size and tenure where the export holds them."
+      },
+      {
+        "id": "web-read",
+        "access": "read",
+        "via": "browser",
+        "name": "Read competitor pricing pages (browser)",
+        "why": "Collect public prices and plan contents for the competitor table."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "owner",
+        "name": "Working Google Sheet",
+        "why": "Keep the data where the owner asked; the owner creates it and shares edit access, or imports CSV tabs we prepare."
+      },
+      {
+        "id": "survey-send",
+        "access": "live",
+        "via": "owner",
+        "name": "Email the customer survey (owner's email)",
+        "why": "We draft the survey and recipient list; the owner sends it after approving the exact text and list."
+      },
+      {
+        "id": "ship-changes",
+        "access": "live",
+        "via": "owner",
+        "name": "Publish new-customer prices and send customer notices (owner)",
+        "why": "Stripe is read-only for us, so the owner makes each approved price or notice change."
+      }
+    ],
+    "data": [
+      {
+        "id": "billing",
+        "name": "Billing and seat history",
+        "why": "Revenue per account, discounts, seats and churn come from billing records.",
+        "fields": [
+          "customer id",
+          "start date",
+          "seats",
+          "price per seat",
+          "discounts",
+          "billing interval",
+          "cancel date",
+          "plan changes"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read subscriptions, items and invoices with the read-only Stripe access for the last 24 months."
+          },
+          {
+            "kind": "CSV",
+            "how": "Stripe dashboard: export subscriptions and customers."
+          }
+        ],
+        "required_for": [
+          "evidence-billing",
+          "integrity-baseline",
+          "options"
+        ],
+        "alternative": "Without billing history, churn and revenue per account rest on the owner's report and stay unverified."
+      },
+      {
+        "id": "customers",
+        "name": "Customer list",
+        "why": "Needed to segment accounts and choose survey recipients.",
+        "fields": [
+          "customer id",
+          "firm name",
+          "contact email",
+          "seats",
+          "start date",
+          "firm size if held",
+          "projects or usage if held"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Owner shares the customer list export as a CSV or sheet tab."
+          }
+        ],
+        "required_for": [
+          "evidence-billing",
+          "evidence-survey",
+          "diagnosis"
+        ]
+      },
+      {
+        "id": "competitors",
+        "name": "Competitor prices and plan contents",
+        "why": "To compare units, tiers and features rather than a price range alone.",
+        "fields": [
+          "competitor",
+          "price unit",
+          "price per unit",
+          "plan names",
+          "included features",
+          "date seen"
+        ],
+        "routes": [
+          {
+            "kind": "URL",
+            "how": "Read each competitor's public pricing page; the owner names the competitors."
+          },
+          {
+            "kind": "ASK",
+            "how": "Owner lists the competitors behind the $40 to $70 range and any quotes won or lost."
+          }
+        ],
+        "required_for": [
+          "evidence-market"
+        ],
+        "alternative": "If competitors are not named, the market table covers only those we can find ourselves and is marked incomplete."
+      },
+      {
+        "id": "survey-replies",
+        "name": "Customer survey replies",
+        "why": "What customers value and the range they accept, by segment.",
+        "fields": [
+          "customer id or segment",
+          "four price answers",
+          "most valued features",
+          "role of respondent"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Survey tool export, or the reply sheet, once the owner has sent the survey."
+          }
+        ],
+        "required_for": [
+          "diagnosis"
+        ],
+        "alternative": "With too few replies per segment, price findings are marked directional and the test carries the decision."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the pricing question",
+        "goal": "Turn the owner's words into a measured goal with limits, the 12-month price promise and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "specialized-pricing-analyst"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "evidence-billing",
+        "kind": "evidence",
+        "name": "Collect billing and customer data",
+        "goal": "Pull subscriptions, seats, discounts and cancellations from Stripe and join them to the customer list in the Google Sheet.",
+        "owner": {
+          "role": "weekly-saas-numbers-keeper"
+        },
+        "data": [
+          "billing",
+          "customers"
+        ],
+        "needs": [
+          "billing-read",
+          "customer-list",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "billing-table",
+            "name": "Account table",
+            "format": "csv",
+            "path": "evidence/accounts.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "totals",
+            "name": "Customer count and monthly recurring revenue match Stripe for the same date",
+            "required": true
+          },
+          {
+            "id": "join",
+            "name": "Share of Stripe customers matched to the customer list is reported",
+            "required": true
+          },
+          {
+            "id": "privacy",
+            "name": "Contact emails stay in the owner's sheet and are not copied into reports",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "uses": [
+          "price-test-planner"
+        ]
+      },
+      {
+        "id": "evidence-market",
+        "kind": "evidence",
+        "name": "Build the competitor price table",
+        "goal": "Record competitors' public prices, units, tiers and included features with the date each was seen.",
+        "owner": {
+          "role": "specialized-pricing-analyst"
+        },
+        "data": [
+          "competitors"
+        ],
+        "needs": [
+          "web-read",
+          "sheet"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "competitor-table",
+            "name": "Competitor price table",
+            "format": "markdown",
+            "path": "evidence/COMPETITORS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dated",
+            "name": "Every price has a source link and the date it was seen",
+            "required": true
+          },
+          {
+            "id": "like-for-like",
+            "name": "Each competitor's price unit and included features are shown beside our single plan",
+            "required": true
+          },
+          {
+            "id": "range",
+            "name": "The $40 to $70 range is checked against the table, or marked unconfirmed",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-market"
+        ],
+        "uses": [
+          "competitor-battle-card-builder",
+          "saas-pricing-designer"
+        ]
+      },
+      {
+        "id": "evidence-survey",
+        "kind": "evidence",
+        "name": "Ask customers about value and price",
+        "goal": "Draft a short survey (the four price questions plus most valued features) and the recipient list by segment. The owner sends it after approving the exact text and list. Replies are collected into the sheet.",
+        "owner": {
+          "role": "set-your-price-from-what-buyers-say-then-test-it-safely"
+        },
+        "support": [
+          "product-feedback-synthesizer"
+        ],
+        "data": [
+          "customers",
+          "survey-replies"
+        ],
+        "needs": [
+          "survey-send",
+          "sheet"
+        ],
+        "depends_on": [
+          "evidence-billing"
+        ],
+        "outputs": [
+          {
+            "id": "survey",
+            "name": "Survey text and recipient list",
+            "format": "markdown",
+            "path": "evidence/SURVEY.md"
+          },
+          {
+            "id": "replies",
+            "name": "Survey replies",
+            "format": "csv",
+            "path": "evidence/survey-replies.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-offer",
+            "name": "Every respondent prices the same written description of the product",
+            "required": true
+          },
+          {
+            "id": "sample",
+            "name": "Replies per segment are counted against the planned number, and thin segments are marked",
+            "required": true
+          },
+          {
+            "id": "no-promise",
+            "name": "The survey does not hint at or promise a price change",
+            "required": true
+          },
+          {
+            "id": "list",
+            "name": "The owner has approved the recipient list and no one is emailed twice",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-value"
+        ],
+        "uses": [
+          "willingness-to-pay-survey",
+          "willingness-to-pay-pricing"
+        ]
+      },
+      {
+        "id": "integrity-baseline",
+        "kind": "integrity",
+        "name": "Check the starting numbers",
+        "goal": "Rebuild average revenue per account, seat counts and monthly churn from billing, and compare them with the reported $232 and 1.8%.",
+        "owner": {
+          "role": "report-definition-drift-review-assistant"
+        },
+        "support": [
+          "weekly-saas-numbers-keeper"
+        ],
+        "data": [
+          "billing"
+        ],
+        "needs": [
+          "billing-read"
+        ],
+        "depends_on": [
+          "evidence-billing"
+        ],
+        "outputs": [
+          {
+            "id": "baseline",
+            "name": "Verified baseline",
+            "format": "markdown",
+            "path": "integrity/BASELINE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "arpa",
+            "name": "Revenue per account is rebuilt with discounts and billing intervals counted, and compared with $232",
+            "required": true
+          },
+          {
+            "id": "churn",
+            "name": "Churn is rebuilt with a written definition and compared with 1.8%",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the model",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-baseline"
+        ],
+        "uses": [
+          "subscription-churn-audit"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Test the underpriced belief",
+        "goal": "Test whether we are underpriced: customer segments by seats and use, competitor comparison like for like, survey ranges, and what price-related churn exists today.",
+        "owner": {
+          "role": "specialized-pricing-analyst"
+        },
+        "support": [
+          "product-feedback-synthesizer"
+        ],
+        "data": [
+          "billing",
+          "customers",
+          "survey-replies"
+        ],
+        "depends_on": [
+          "integrity-baseline",
+          "evidence-market",
+          "evidence-survey"
+        ],
+        "outputs": [
+          {
+            "id": "diagnosis",
+            "name": "Pricing diagnosis",
+            "format": "markdown",
+            "path": "diagnosis/DIAGNOSIS.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Segment findings meet a minimum number of accounts or replies, or are marked low confidence",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names a competing explanation",
+            "required": true
+          },
+          {
+            "id": "stated",
+            "name": "Survey results are labelled as stated, not actual, behaviour",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-segments"
+        ],
+        "uses": [
+          "saas-pricing-designer",
+          "pricing-strategist",
+          "retention-cohort-analyst"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Model and rank pricing options",
+        "goal": "Model new-customer price, tiers, add-ons and seat growth against the revenue target and the churn limit, with existing customers protected for 12 months, and rank the options.",
+        "owner": {
+          "role": "price-your-software-in-tiers-people-pick-then-test-it"
+        },
+        "support": [
+          "weekly-saas-numbers-keeper"
+        ],
+        "data": [
+          "billing"
+        ],
+        "depends_on": [
+          "diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "options",
+            "name": "Ranked pricing options",
+            "format": "markdown",
+            "path": "options/OPTIONS.md"
+          },
+          {
+            "id": "model",
+            "name": "Revenue model",
+            "format": "csv",
+            "path": "options/model.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "reach",
+            "name": "Each option shows what share of the 25% lift it supplies inside the year and when, given the 12-month protection",
+            "required": true
+          },
+          {
+            "id": "churn",
+            "name": "Each option shows the churn it would need to stay under and the evidence for it",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has effort, confidence, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "honest",
+            "name": "If no option reaches 25% in the year, the plan says so and shows the best reachable figure",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-model"
+        ],
+        "uses": [
+          "price-test-planner",
+          "pricing-decision-planner"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Founders choose",
+        "goal": "The founders pick an option together. Ask for the reason when the top option is passed over, and record it.",
+        "owner": {
+          "role": "specialized-pricing-analyst"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen pricing change",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": []
+      },
+      {
+        "id": "rollout-pack",
+        "kind": "production",
+        "name": "Draft the rollout",
+        "goal": "Draft the new pricing page copy for new customers, the plan for existing customers after the protected period, the customer notice emails, and a reversible price test for new customers.",
+        "owner": {
+          "role": "price-test-keeper"
+        },
+        "support": [
+          "customer-success-manager"
+        ],
+        "reviewers": [
+          "experiment-readout-desk"
+        ],
+        "depends_on": [
+          "decision"
+        ],
+        "outputs": [
+          {
+            "id": "pack",
+            "name": "Rollout pack",
+            "format": "markdown",
+            "path": "production/ROLLOUT.md"
+          },
+          {
+            "id": "test-plan",
+            "name": "New-customer price test plan",
+            "format": "markdown",
+            "path": "production/TEST-PLAN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "promise",
+            "name": "Nothing in the pack changes an existing customer's price before 12 months; the start of that period is stated",
+            "required": true
+          },
+          {
+            "id": "reversible",
+            "name": "The test can be undone and says what would make us stop",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "Notice emails make no claim about added value the product does not deliver",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-launch"
+        ],
+        "uses": [
+          "price-test-planner",
+          "price-display-planner"
+        ]
+      },
+      {
+        "id": "rollout",
+        "kind": "execution",
+        "name": "Launch to new customers first",
+        "goal": "Register the test, then have the owner publish the new-customer price and send any notices one at a time. Read the live pricing page back.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "needs": [
+          "ship-changes"
+        ],
+        "depends_on": [
+          "rollout-pack"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Launch receipt",
+            "format": "markdown",
+            "path": "execution/LAUNCH-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "registered",
+            "name": "The test is registered with its start date, price and stop rule before it goes live",
+            "required": true
+          },
+          {
+            "id": "new-only",
+            "name": "The new price is live only for new customers",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "The live page and checkout show the registered price",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-launch"
+        ],
+        "uses": [
+          "price-test-planner"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Read results and churn",
+        "goal": "Read new-customer conversion and revenue per account for the new price, and churn for all cohorts against the 2.5% limit.",
+        "owner": {
+          "role": "price-test-keeper"
+        },
+        "support": [
+          "weekly-saas-numbers-keeper"
+        ],
+        "data": [
+          "billing"
+        ],
+        "needs": [
+          "billing-read"
+        ],
+        "depends_on": [
+          "rollout"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Results readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "volume",
+            "name": "A verdict is given only when enough new customers have been seen; otherwise INCONCLUSIVE",
+            "required": true
+          },
+          {
+            "id": "churn",
+            "name": "Churn is checked against the 2.5% limit for each cohort",
+            "required": true
+          },
+          {
+            "id": "protected",
+            "name": "No existing customer's price changed inside the protected period",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-read"
+        ],
+        "uses": [
+          "price-test-planner",
+          "retention-cohort-analyst"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Close the test, record what customers accepted, propose rules with their scope and plan the move for existing customers when their protection ends.",
+        "owner": {
+          "role": "experiment-readout-desk"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next round",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "closed",
+            "name": "The test is closed with a verdict",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": []
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-underpriced",
+        "statement": "We are priced below the value customers get, so a higher price would be accepted.",
+        "test": "Survey ranges by segment, competitor table like for like, and how much customers use the product.",
+        "confirm_if": "Survey 'getting expensive' prices sit clearly above $29 per user in segments with enough replies and comparable competitors charge more.",
+        "refute_if": "Most segments call prices near $29 expensive, or comparable competitors charge about the same.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-no-pushback-bias",
+        "statement": "Sales' impression that firms rarely push back reflects who bought, not how all firms would react.",
+        "test": "Compare survey answers from current customers with any record of lost deals or price-related cancels the owner can provide.",
+        "confirm_if": "Survey or lost-deal records show real price sensitivity that sales did not see.",
+        "refute_if": "Customers, including recent cancels, show little price sensitivity.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-not-comparable",
+        "statement": "Competitors' higher prices buy different features or units, so they are not a fair guide.",
+        "test": "Competitor table: price unit, tiers and included features beside our plan.",
+        "confirm_if": "Higher-priced competitors include features we lack or price on a different unit.",
+        "refute_if": "Comparable plans are priced at $40 or more per user.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-seat-meter",
+        "statement": "Per-user pricing is the wrong meter: it caps revenue from larger or heavier-using firms.",
+        "test": "Revenue and use by seat count and by firm segment; survey answers by segment.",
+        "confirm_if": "Heavier-use or larger firms say they would pay clearly more for a different unit or tier.",
+        "refute_if": "Willingness to pay tracks seats closely.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-tiers",
+        "statement": "A single plan leaves revenue unclaimed that tiers or add-ons could capture without raising the base price.",
+        "test": "Survey feature-value answers and usage by segment.",
+        "confirm_if": "A group values specific features highly and others do not.",
+        "refute_if": "Feature value is uniform across segments.",
+        "fix_stage": "rollout-pack"
+      },
+      {
+        "id": "h-arithmetic",
+        "statement": "A 25% lift inside the year is not reachable from price on new customers alone while existing customers are protected for 12 months.",
+        "test": "Model new customers per month, the new price and seat growth against $232 and 340 accounts.",
+        "confirm_if": "The model shows the lift needs more new customers or a higher new price than is plausible.",
+        "refute_if": "The model reaches $290 inside the year with plausible new-customer volume and no change for existing customers.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-churn-risk",
+        "statement": "A price rise would push monthly churn above 2.5%.",
+        "test": "Compare churn of price-sensitive segments, survey answers and the new-customer test cohorts.",
+        "confirm_if": "New-price cohorts churn at a clearly higher rate or price comes up as a reason to leave.",
+        "refute_if": "New-price cohorts churn at or below today's rate.",
+        "fix_stage": "rollout-pack"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "Read new-customer conversion and revenue per account after enough new sign-ups at the new price; read churn monthly for every cohort for the full year.",
+      "min_volume": "Enough new customers at the new price to compare with the old; with 340 accounts and no stated sign-up rate, this is set once the monthly new-customer count is known.",
+      "stop_rule": "Stop the new price early if monthly churn approaches 2.5% or new-customer conversion falls sharply; never change an existing customer's price inside the 12-month protection."
+    }
+  }
+}

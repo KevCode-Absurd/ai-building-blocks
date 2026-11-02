@@ -1,0 +1,1178 @@
+{
+  "case": "fin-month-end-close",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Close each month in 5 working days instead of about 15, with no errors in the board pack.",
+    "deliverable": "A new close process running live: a dated close calendar and checklist, reconciliations and accruals drafted for approval, a board pack that ties to the ledger, and one measured close.",
+    "done": [
+      "The slowest tasks in today's close are timed and the critical path is named",
+      "A close calendar with cut-offs, owners and day targets is approved by the finance manager and the owner",
+      "Bank, Stripe and inventory reconciliations are current at the start of close, with open items listed",
+      "Accruals come from one schedule with draft journals; nothing is posted without the finance manager's approval",
+      "The board pack ties to the ledger line by line, with an error count of zero found after review",
+      "A close on the new calendar is measured against 5 working days and the result is recorded honestly"
+    ],
+    "metric": {
+      "name": "Working days to close the month",
+      "direction": "decrease",
+      "unit": "working days",
+      "baseline": 15,
+      "baseline_source": "reported",
+      "target": 5
+    },
+    "deadline": "By March (next March; exact date not given)",
+    "guardrails": [
+      "No errors in the board pack",
+      "Nothing is posted to the ledger without the finance manager approving it",
+      "Reconciliations stay complete: no unexplained bank, Stripe or inventory differences left at sign-off"
+    ],
+    "limits": [
+      "Xero MCP has read and draft access only; posting to the ledger is done or approved by the finance manager",
+      "Two-person finance team: the new process must fit their hours"
+    ],
+    "assets": [
+      "Xero (organisation with three bank accounts and a Stripe account)",
+      "Accruals spreadsheet",
+      "Inventory system (reconciled by hand today)",
+      "Working files kept in this project"
+    ],
+    "connections": [
+      {
+        "name": "Xero MCP",
+        "access": "draft",
+        "status": "connected"
+      },
+      {
+        "name": "Stripe payout and balance report (export)",
+        "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Inventory system export",
+        "access": "read",
+        "status": "available"
+      }
+    ],
+    "data_home": "Files in this project",
+    "technical_level": "Not stated",
+    "decides": "The owner and the finance manager",
+    "unknowns": [
+      "How the 15 working days split by task; the owner's figure is an estimate",
+      "Which inventory system is used and how it can be exported",
+      "Whether the AI can read Stripe directly or only from exported reports",
+      "Whether a budget exists for the board pack variance view",
+      "The exact March deadline date and how many months of closes it allows to practise",
+      "How technical the owner wants to be"
+    ],
+    "answers": [
+      {
+        "question": "Business, team and systems?",
+        "answer": "Distribution company, 60 staff, on Xero with three bank accounts and a Stripe account. Two-person finance team."
+      },
+      {
+        "question": "How long does the close take now?",
+        "answer": "About 15 working days (owner's estimate)."
+      },
+      {
+        "question": "What slows it down?",
+        "answer": "Bank feeds are on but reconciliations pile up; accruals are done in a spreadsheet; inventory is in a separate system and reconciled by hand."
+      },
+      {
+        "question": "Target and deadline?",
+        "answer": "Close in 5 working days by March, without errors in the board pack."
+      },
+      {
+        "question": "What access does the AI have, and what must not happen?",
+        "answer": "Xero MCP with read and draft access. Nothing posted to the ledger without the finance manager approving it."
+      },
+      {
+        "question": "Where should working data live, and who decides?",
+        "answer": "Working files in this project. The finance manager and the owner decide."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners who bring a close down to about five days stop treating it as one month-end rush. They fix a calendar with cut-offs and named preparers and reviewers, reconcile cash and payment platforms early and continuously, run accruals and prepayments from a schedule with auto-reversing journals, reconcile the balance sheet from stable support, review accounts before every task is finished, and lock the period last. After each close they remove one root cause. In Xero the lock date and the Bank Reconciliation Summary are the final gates.",
+    "sources": [
+      {
+        "id": "web-xero",
+        "kind": "web",
+        "title": "Month-end close process (Xero guide)",
+        "ref": "https://www.xero.com/au/guides/month-end-close-process/",
+        "date": "2026-07-25",
+        "note": "Eight-step close from coding transactions to reviewer sign-off and period lock."
+      },
+      {
+        "id": "web-numeric",
+        "kind": "web",
+        "title": "Month-end close process on Xero (Numeric)",
+        "ref": "https://numeric.io/blog/month-end-close-process-on-xero",
+        "date": "2025-06-19",
+        "note": "Sequence, key checks and pitfalls for a Xero close; updated 2026-09-23."
+      },
+      {
+        "id": "web-forvis",
+        "kind": "web",
+        "title": "10 tips to improve your month-end process (Forvis Mazars)",
+        "ref": "https://www.forvismazars.com/au/en/insights/latest-news/10-tips-to-improve-your-month-end-process",
+        "date": "2026-09-07",
+        "note": "Reconcile bank, card and Stripe daily or weekly; accruals, cut-off and common errors."
+      },
+      {
+        "id": "web-xenett",
+        "kind": "web",
+        "title": "How to close the books faster (Xenett)",
+        "ref": "https://www.xenett.com/blog/faster-month-end-close",
+        "date": "2026-01-16",
+        "note": "Close calendar with backup owners, cash on day 1, review-first close, one fix per month."
+      },
+      {
+        "id": "cat-planner",
+        "kind": "catalogue",
+        "title": "Month-end close planner",
+        "ref": "month-end-close-planner",
+        "note": "Finds the longest chain of tasks that sets close time."
+      },
+      {
+        "id": "cat-workflow",
+        "kind": "catalogue",
+        "title": "Month-end financial statement preparer",
+        "ref": "close-the-month-and-explain-every-line-that-moved",
+        "note": "Tested method: plan, sort costs, accruals, statements, variance commentary."
+      },
+      {
+        "id": "cat-accrual",
+        "kind": "catalogue",
+        "title": "Accrual schedule drafter",
+        "ref": "accrual-schedule-drafter",
+        "note": "Accruals with support and a draft journal for the controller."
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-baseline",
+        "name": "Time today's close and find the critical path",
+        "why": "The longest chain of dependent tasks sets the close length; speeding up other tasks changes nothing.",
+        "sources": [
+          "cat-planner",
+          "owner",
+          "web-xenett"
+        ]
+      },
+      {
+        "id": "s-calendar",
+        "name": "Fix a close calendar with cut-offs, owners and backups",
+        "why": "A standard calendar with day targets and escalation stops the team renegotiating dates each month.",
+        "sources": [
+          "web-xenett",
+          "web-forvis",
+          "cat-planner"
+        ]
+      },
+      {
+        "id": "s-reconcile",
+        "name": "Reconcile bank, card and Stripe accounts early and continuously",
+        "why": "Cash is the first integrity check and pile-ups here delay everything after it.",
+        "sources": [
+          "web-forvis",
+          "web-xenett",
+          "web-numeric"
+        ]
+      },
+      {
+        "id": "s-subledgers",
+        "name": "Reconcile inventory, receivables, payables and suspense",
+        "why": "Balance sheet accounts must tie to their support, with differences explained and nothing left in suspense.",
+        "sources": [
+          "web-numeric",
+          "web-xero"
+        ]
+      },
+      {
+        "id": "s-accruals",
+        "name": "Run accruals and prepayments from one schedule",
+        "why": "Xero has no native schedule, so the schedule must tie to the ledger and accruals should reverse automatically.",
+        "sources": [
+          "web-numeric",
+          "web-forvis",
+          "cat-accrual"
+        ]
+      },
+      {
+        "id": "s-review",
+        "name": "Review statements against last month and budget before sign-off",
+        "why": "Early account-level review finds issues while they are small and gives each big movement an explanation.",
+        "sources": [
+          "web-forvis",
+          "web-xero",
+          "web-xenett",
+          "cat-workflow"
+        ]
+      },
+      {
+        "id": "s-lock",
+        "name": "Sign off, post approved entries and lock the period",
+        "why": "Without a lock date, entries can be back-dated into the closed month and published reports stop matching the ledger.",
+        "sources": [
+          "web-numeric",
+          "web-xero"
+        ]
+      },
+      {
+        "id": "s-retro",
+        "name": "Hold a short retrospective and remove one root cause a month",
+        "why": "Tracking late accounts and late inputs turns each close into a faster one.",
+        "sources": [
+          "web-xenett",
+          "cat-planner"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Skipping the lock date, so entries are back-dated into closed periods and published reports stop matching the ledger.",
+        "sources": [
+          "web-numeric"
+        ]
+      },
+      {
+        "text": "Overlapping CSV imports and live bank feeds create duplicate bank lines.",
+        "sources": [
+          "web-numeric"
+        ]
+      },
+      {
+        "text": "Items left in suspense get harder to trace the longer they sit.",
+        "sources": [
+          "web-numeric",
+          "web-forvis"
+        ]
+      },
+      {
+        "text": "Expenses or revenue recorded in the wrong period, or accruals and prepayments not reviewed against prior months.",
+        "sources": [
+          "web-forvis"
+        ]
+      },
+      {
+        "text": "Late review creates rework; a close whose length varies each month erodes confidence in the numbers.",
+        "sources": [
+          "web-xenett",
+          "web-numeric"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Close the month in five working days",
+    "capabilities": [
+      {
+        "id": "xero-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read the ledger (Xero MCP)",
+        "why": "Read trial balance, bank reconciliation reports, aged receivables and payables, journals and lock date."
+      },
+      {
+        "id": "xero-draft",
+        "access": "draft",
+        "via": "mcp",
+        "name": "Draft journals (Xero MCP)",
+        "why": "Create draft accrual and fee journals for the finance manager to review. Nothing is posted by the AI."
+      },
+      {
+        "id": "xero-post",
+        "access": "live",
+        "via": "owner",
+        "name": "Post journals and set the lock date (finance manager in Xero)",
+        "why": "Posting to the ledger and locking the period are done by the finance manager, one approved entry at a time."
+      },
+      {
+        "id": "stripe-report",
+        "access": "read",
+        "via": "file",
+        "name": "Stripe payout and balance reports (export)",
+        "why": "Tie Stripe payouts, fees and refunds to the bank and the clearing account."
+      },
+      {
+        "id": "inventory-export",
+        "access": "read",
+        "via": "file",
+        "name": "Inventory valuation export",
+        "why": "Reconcile stock value to the ledger."
+      },
+      {
+        "id": "accruals-sheet",
+        "access": "read",
+        "via": "file",
+        "name": "Accruals spreadsheet",
+        "why": "Today's accrual workings, the starting point for one schedule."
+      }
+    ],
+    "data": [
+      {
+        "id": "close-tasks",
+        "name": "Close tasks with owner, start and finish day",
+        "why": "The owner's 15 days is an estimate; the real critical path needs task timings.",
+        "fields": [
+          "task",
+          "owner",
+          "start day",
+          "finish day",
+          "waiting on",
+          "rework"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "The two finance team members list the tasks from the last close with the day each started and finished."
+          }
+        ],
+        "required_for": [
+          "baseline",
+          "diagnosis"
+        ],
+        "alternative": "Without timings the critical path is a hypothesis from the account state alone."
+      },
+      {
+        "id": "ledger-state",
+        "name": "Ledger state at close",
+        "why": "Shows how far reconciliations, suspense and journals are behind.",
+        "fields": [
+          "account",
+          "balance",
+          "unreconciled items",
+          "oldest unreconciled date",
+          "statement balance",
+          "lock date"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Xero MCP read: bank reconciliation summary, account transactions, trial balance, aged receivables and payables, journals."
+          },
+          {
+            "kind": "CSV",
+            "how": "Xero reports exported as CSV for the last two closes."
+          }
+        ],
+        "required_for": [
+          "baseline",
+          "integrity-books",
+          "reconciliations"
+        ]
+      },
+      {
+        "id": "stripe-data",
+        "name": "Stripe payouts, fees and refunds",
+        "why": "Stripe settles net of fees, so payouts rarely match invoices one to one.",
+        "fields": [
+          "payout date",
+          "gross",
+          "fees",
+          "refunds",
+          "net payout",
+          "bank deposit date"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Stripe dashboard, balance change from activity report, for the last two months."
+          }
+        ],
+        "required_for": [
+          "integrity-books",
+          "reconciliations"
+        ],
+        "alternative": "Without it the Stripe clearing account is checked against the bank only and stays LIMITED."
+      },
+      {
+        "id": "inventory-data",
+        "name": "Inventory valuation by item",
+        "why": "The stock subledger must tie to the inventory account.",
+        "fields": [
+          "item",
+          "quantity",
+          "unit cost",
+          "value",
+          "as-at date"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Inventory system valuation report at the month-end date."
+          },
+          {
+            "kind": "ASK",
+            "how": "Name the system and the report that gives value by item."
+          }
+        ],
+        "required_for": [
+          "reconciliations"
+        ]
+      },
+      {
+        "id": "accrual-data",
+        "name": "Accrual workings and supporting invoices or orders",
+        "why": "Accruals must cite support and reverse correctly.",
+        "fields": [
+          "item",
+          "supplier",
+          "period",
+          "amount",
+          "basis",
+          "reverses on"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "The current accruals spreadsheet and the last two months of reversals."
+          }
+        ],
+        "required_for": [
+          "accruals"
+        ]
+      },
+      {
+        "id": "pack-history",
+        "name": "Last board pack and any budget",
+        "why": "The pack is rebuilt to tie to the ledger and the variance view needs a comparison.",
+        "fields": [
+          "pack lines",
+          "prior period",
+          "budget (if any)"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "The last board pack and budget file if one exists."
+          }
+        ],
+        "required_for": [
+          "board-pack"
+        ],
+        "alternative": "Without a budget, variances are against last month and the same month last year only."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the problem",
+        "goal": "Turn the owner's words into a measured close problem, target, limits and the data we can reach. Writes BRIEF.md.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "baseline",
+        "kind": "evidence",
+        "name": "Time the current close and pull the ledger state",
+        "goal": "Collect the last close's task timings from the team and the account state from Xero, so the baseline is measured and not just reported.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-baseline"
+        ],
+        "data": [
+          "close-tasks",
+          "ledger-state"
+        ],
+        "needs": [
+          "xero-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "gate": "none",
+        "uses": [
+          "month-end-close-planner"
+        ],
+        "outputs": [
+          {
+            "id": "timings",
+            "name": "Close task timings",
+            "format": "csv",
+            "path": "evidence/close-timings.csv"
+          },
+          {
+            "id": "ledger",
+            "name": "Ledger state at close",
+            "format": "markdown",
+            "path": "evidence/LEDGER-STATE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "every-task",
+            "name": "Every task from the last close has an owner and start and finish day, or is marked unknown",
+            "required": true
+          },
+          {
+            "id": "tie",
+            "name": "Account balances in the notes match the Xero trial balance for the same date",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "The measured close length is stated next to the owner's estimate of 15 days",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "integrity-books",
+        "kind": "integrity",
+        "name": "Check the books are ready to close",
+        "goal": "Find what is unreconciled and why: unreconciled bank and card lines by age, the Stripe clearing balance, duplicate bank lines, suspense balances and the lock date.",
+        "owner": {
+          "role": "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l"
+        },
+        "from_steps": [
+          "s-reconcile",
+          "s-subledgers"
+        ],
+        "data": [
+          "ledger-state",
+          "stripe-data"
+        ],
+        "needs": [
+          "xero-read",
+          "stripe-report"
+        ],
+        "depends_on": [
+          "baseline"
+        ],
+        "gate": "none",
+        "uses": [
+          "bank-and-ledger-matcher",
+          "reconciliation-break-tracer",
+          "ledger-to-subledger-reconciler"
+        ],
+        "outputs": [
+          {
+            "id": "books",
+            "name": "Books readiness check",
+            "format": "markdown",
+            "path": "integrity/BOOKS-READINESS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "per-account",
+            "name": "Each of the three bank accounts and the Stripe clearing account has a ledger balance, a statement balance, the gap and the count and age of open items",
+            "required": true
+          },
+          {
+            "id": "duplicates",
+            "name": "Overlapping imports and feed lines are checked for duplicates",
+            "required": true
+          },
+          {
+            "id": "suspense",
+            "name": "Suspense and unidentified balances are listed with age",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "finance-bookkeeper-controller"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find what sets the close length",
+        "goal": "Build the critical path from the timings and test each hypothesis against the evidence; keep competing explanations.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-baseline"
+        ],
+        "data": [
+          "close-tasks"
+        ],
+        "depends_on": [
+          "baseline",
+          "integrity-books"
+        ],
+        "gate": "none",
+        "support": [
+          "close-the-month-and-explain-every-line-that-moved"
+        ],
+        "uses": [
+          "month-end-close-planner",
+          "month-end-close-day-planner"
+        ],
+        "outputs": [
+          {
+            "id": "critical-path",
+            "name": "Critical path and hypothesis verdicts",
+            "format": "markdown",
+            "path": "diagnosis/CRITICAL-PATH.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "chain",
+            "name": "The longest chain of dependent tasks is named with days per task",
+            "required": true
+          },
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is marked SUPPORTED, REFUTED or UNKNOWN with evidence",
+            "required": true
+          },
+          {
+            "id": "limits",
+            "name": "Findings that rest on owner-reported numbers are labelled as reports",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the changes that cut days",
+        "goal": "Turn supported findings into ranked changes, each with the days it should save, effort, risk and how it will be measured.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "depends_on": [
+          "diagnosis"
+        ],
+        "gate": "none",
+        "uses": [
+          "month-end-close-planner"
+        ],
+        "outputs": [
+          {
+            "id": "options-md",
+            "name": "Ranked changes",
+            "format": "markdown",
+            "path": "options/RECOMMENDATIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "evidence",
+            "name": "Every option cites the finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has days saved, effort, risk and how it will be measured",
+            "required": true
+          },
+          {
+            "id": "capacity",
+            "name": "Total effort fits a two-person team",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Finance manager and owner choose",
+        "goal": "The finance manager and owner pick the changes to make. Ask why when the top option is passed over and record it.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "gate": "approve",
+        "outputs": [
+          {
+            "id": "decision-md",
+            "name": "Chosen changes",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "close-calendar",
+        "kind": "production",
+        "name": "Write the close calendar and checklist",
+        "goal": "Build the dated close calendar with cut-offs, preparer, reviewer and backup for each task, day targets and an escalation path for late inputs.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-calendar"
+        ],
+        "depends_on": [
+          "decision"
+        ],
+        "gate": "review",
+        "uses": [
+          "month-end-close-day-planner",
+          "month-end-close-planner"
+        ],
+        "outputs": [
+          {
+            "id": "calendar",
+            "name": "Close calendar and checklist",
+            "format": "markdown",
+            "path": "production/CLOSE-CALENDAR.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "five-days",
+            "name": "The calendar reaches sign-off by working day 5 and the critical path fits it",
+            "required": true
+          },
+          {
+            "id": "owners",
+            "name": "Every task has a preparer, a reviewer and a backup, and no one person is overloaded",
+            "required": true
+          },
+          {
+            "id": "cutoffs",
+            "name": "Cut-off dates for sales, bills and payroll are written down",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "reconciliations",
+        "kind": "production",
+        "name": "Catch up and standardise reconciliations",
+        "goal": "Match bank, card and Stripe lines to the ledger, trace each break, reconcile inventory to its valuation report and propose bank rules and fee journals as drafts.",
+        "owner": {
+          "role": "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l"
+        },
+        "from_steps": [
+          "s-reconcile",
+          "s-subledgers"
+        ],
+        "data": [
+          "ledger-state",
+          "stripe-data",
+          "inventory-data"
+        ],
+        "needs": [
+          "xero-read",
+          "xero-draft",
+          "stripe-report",
+          "inventory-export"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-books"
+        ],
+        "gate": "none",
+        "uses": [
+          "bank-and-ledger-matcher",
+          "reconciliation-break-tracer",
+          "ledger-to-subledger-reconciler",
+          "journal-entry-drafter"
+        ],
+        "outputs": [
+          {
+            "id": "recs",
+            "name": "Reconciliation pack with open items",
+            "format": "markdown",
+            "path": "production/RECONCILIATIONS.md"
+          },
+          {
+            "id": "rules",
+            "name": "Proposed bank rules and draft fee journals",
+            "format": "csv",
+            "path": "production/proposed-rules-and-journals.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "statement-tie",
+            "name": "Each reconciled balance equals the statement or report balance, or the gap is itemised",
+            "required": true
+          },
+          {
+            "id": "stripe-tie",
+            "name": "Stripe gross less fees and refunds equals bank deposits for the month, or the gap is itemised",
+            "required": true
+          },
+          {
+            "id": "inventory-tie",
+            "name": "Inventory valuation equals the ledger inventory account, with differences explained",
+            "required": true
+          },
+          {
+            "id": "drafts-only",
+            "name": "Everything written to Xero is a draft; nothing is posted",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "finance-bookkeeper-controller"
+        ]
+      },
+      {
+        "id": "accruals",
+        "kind": "production",
+        "name": "Build one accrual schedule with draft journals",
+        "goal": "Move the spreadsheet into one schedule with support, basis and reversal date, and draft the journals, auto-reversing where the entry reverses.",
+        "owner": {
+          "role": "close-the-month-and-explain-every-line-that-moved"
+        },
+        "from_steps": [
+          "s-accruals"
+        ],
+        "data": [
+          "accrual-data"
+        ],
+        "needs": [
+          "xero-read",
+          "xero-draft",
+          "accruals-sheet"
+        ],
+        "depends_on": [
+          "decision"
+        ],
+        "gate": "none",
+        "uses": [
+          "accrual-schedule-drafter",
+          "journal-entry-drafter",
+          "journal-entry-preparer"
+        ],
+        "outputs": [
+          {
+            "id": "schedule",
+            "name": "Accrual and prepayment schedule",
+            "format": "csv",
+            "path": "production/accrual-schedule.csv"
+          },
+          {
+            "id": "journals",
+            "name": "Draft journals for approval",
+            "format": "markdown",
+            "path": "production/DRAFT-JOURNALS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "support",
+            "name": "Every accrual cites its support and basis",
+            "required": true
+          },
+          {
+            "id": "ties",
+            "name": "Schedule totals tie to the Xero accrual and prepayment accounts, with any gap documented",
+            "required": true
+          },
+          {
+            "id": "balanced",
+            "name": "Every draft journal balances and states its reversal date",
+            "required": true
+          },
+          {
+            "id": "prior-months",
+            "name": "Last month's accruals are checked for reversal and for actual invoices received",
+            "required": true
+          }
+        ],
+        "reviewers": [
+          "finance-bookkeeper-controller"
+        ]
+      },
+      {
+        "id": "board-pack",
+        "kind": "production",
+        "name": "Build the board pack that ties to the ledger",
+        "goal": "Draft statements and variance commentary from the reconciled ledger, with every pack number traced to a Xero report.",
+        "owner": {
+          "role": "close-the-month-and-explain-every-line-that-moved"
+        },
+        "from_steps": [
+          "s-review"
+        ],
+        "data": [
+          "pack-history"
+        ],
+        "needs": [
+          "xero-read"
+        ],
+        "depends_on": [
+          "decision",
+          "reconciliations",
+          "accruals"
+        ],
+        "gate": "review",
+        "reviewers": [
+          "finance-fpa-analyst",
+          "finance-bookkeeper-controller"
+        ],
+        "uses": [
+          "financial-statement-preparer",
+          "variance-commentary",
+          "expense-sorter"
+        ],
+        "outputs": [
+          {
+            "id": "pack",
+            "name": "Draft board pack with commentary",
+            "format": "markdown",
+            "path": "production/BOARD-PACK.md"
+          },
+          {
+            "id": "tie-out",
+            "name": "Pack to ledger tie-out",
+            "format": "csv",
+            "path": "production/pack-tie-out.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "tie-out",
+            "name": "Every figure in the pack is traced to a named Xero report and the difference is zero",
+            "required": true
+          },
+          {
+            "id": "balance",
+            "name": "Balance sheet balances and cash agrees to the bank reconciliations",
+            "required": true
+          },
+          {
+            "id": "variance",
+            "name": "Every line beyond the agreed limit has a reason and its evidence",
+            "required": true
+          },
+          {
+            "id": "pending",
+            "name": "Figures that depend on unposted drafts are marked",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "post-and-lock",
+        "kind": "execution",
+        "name": "Finance manager posts approved entries and locks the period",
+        "goal": "The finance manager posts the approved draft journals one at a time in Xero, switches on each approved bank rule, then sets the lock date. This is where the drafts from reconciliations and accruals are seen. The AI re-ties the pack to the posted ledger.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-lock"
+        ],
+        "needs": [
+          "xero-read",
+          "xero-post"
+        ],
+        "depends_on": [
+          "reconciliations",
+          "accruals",
+          "board-pack"
+        ],
+        "gate": "approve_each_action",
+        "uses": [
+          "financial-statement-preparer",
+          "reconciliation-break-tracer"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Posting and lock receipt",
+            "format": "markdown",
+            "path": "execution/POSTING-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "approved",
+            "name": "Each entry posted has a recorded approval by the finance manager",
+            "required": true
+          },
+          {
+            "id": "retie",
+            "name": "After posting, the pack ties to the ledger again and the difference is zero",
+            "required": true
+          },
+          {
+            "id": "lock",
+            "name": "The lock date is set and read back from Xero",
+            "required": true
+          },
+          {
+            "id": "no-extra",
+            "name": "Nothing was posted that was not on the approved list",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Measure the close against five days",
+        "goal": "Time the first close on the new calendar and compare it with the baseline and the guardrails.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "from_steps": [
+          "s-retro"
+        ],
+        "needs": [
+          "xero-read"
+        ],
+        "depends_on": [
+          "post-and-lock"
+        ],
+        "gate": "none",
+        "uses": [
+          "month-end-close-planner"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Close time readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "same-def",
+            "name": "Close days use the same start and end definition as the baseline",
+            "required": true
+          },
+          {
+            "id": "guardrails",
+            "name": "Board pack errors found after sign-off and unreconciled differences are counted",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "One close is reported as a result for that month, not as proof the target is reached",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Keep what we learned",
+        "goal": "Record the slowest task of the close, the one root cause to remove next month, and the rules for the calendar and checklist.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "gate": "review",
+        "uses": [
+          "month-end-close-planner"
+        ],
+        "outputs": [
+          {
+            "id": "learnings",
+            "name": "Learnings and next close",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "one-fix",
+            "name": "One root cause is chosen for next month with an owner",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each proposed rule says whether it holds for this close, this business or the playbook",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-recs-backlog",
+        "statement": "Reconciliation backlog on the bank, card and Stripe accounts sits on the critical path.",
+        "test": "Count unreconciled lines and oldest dates per account at day 0, and compare with when the reconciliation task finished.",
+        "confirm_if": "Large or old backlogs exist at day 0 and downstream tasks wait for reconciliation.",
+        "refute_if": "Accounts are current at day 0 and reconciliation finishes early.",
+        "fix_stage": "reconciliations"
+      },
+      {
+        "id": "h-accrual-sheet",
+        "statement": "The accruals spreadsheet is late or error-prone and holds up the journals.",
+        "test": "Compare the last three months of accruals with the invoices that arrived and check whether reversals match.",
+        "confirm_if": "Accruals are finished late or reversals and actuals disagree.",
+        "refute_if": "Accruals finish early and reverse cleanly.",
+        "fix_stage": "accruals"
+      },
+      {
+        "id": "h-inventory-manual",
+        "statement": "Hand reconciliation of the separate inventory system finishes late and leaves differences.",
+        "test": "Note when inventory was reconciled in the last close and the unexplained gap between valuation and ledger.",
+        "confirm_if": "Inventory finishes in the last days or leaves unexplained gaps.",
+        "refute_if": "It finishes early and ties.",
+        "fix_stage": "reconciliations"
+      },
+      {
+        "id": "h-stripe-clearing",
+        "statement": "Stripe payouts net of fees make the bank reconciliation slow and leave a clearing balance.",
+        "test": "Compare the Stripe clearing account with the Stripe balance report and bank deposits.",
+        "confirm_if": "The clearing balance drifts or payouts need manual splitting.",
+        "refute_if": "Payouts match cleanly.",
+        "fix_stage": "reconciliations"
+      },
+      {
+        "id": "h-no-calendar",
+        "statement": "There is no fixed calendar, so inputs arrive late and tasks wait on each other.",
+        "test": "List who waited on whom in the timings and when inputs were due versus received.",
+        "confirm_if": "Waiting time is a large share of the 15 days.",
+        "refute_if": "Tasks run back to back with little waiting.",
+        "fix_stage": "close-calendar"
+      },
+      {
+        "id": "h-late-review",
+        "statement": "Review starts after everything is done, so rework stretches the close and lets errors reach the board pack.",
+        "test": "Count review comments and corrections after the first pack draft and when the review began.",
+        "confirm_if": "Most corrections are found at the end and trace to earlier tasks.",
+        "refute_if": "Few corrections arise late.",
+        "fix_stage": "board-pack"
+      },
+      {
+        "id": "h-pack-copying",
+        "statement": "The board pack is assembled by copying figures, so errors creep in.",
+        "test": "Trace each line of the last pack to a Xero report and count differences.",
+        "confirm_if": "Any line cannot be traced or differs.",
+        "refute_if": "Every line ties.",
+        "fix_stage": "board-pack"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "The first full close run on the new calendar, then the next close to confirm; each close measured from last day of month to sign-off and lock.",
+      "min_volume": "At least two closes before any claim that 5 working days is reached; one close is a single result.",
+      "stop_rule": "Stop and go back to the approved process for that month if a board pack error is found or anything is posted without approval."
+    }
+  }
+}

@@ -1,0 +1,995 @@
+{
+  "case": "saas-security-questionnaire",
+  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
+  "recorded": "2026-11-02",
+  "method_version": 2,
+  "brief": {
+    "outcome": "Return a complete, honest answer to the hospital group's 212-question security questionnaire by its deadline, with every answer backed by evidence we hold and signed off by the CTO, in the strongest truthful position for the deal.",
+    "deliverable": "The completed questionnaire spreadsheet with an evidence reference for every yes, plain statements of every gap with its dated plan, a short cover note and attachment list for the prospect, and a log of the owner's decisions on how to handle the gaps.",
+    "done": [
+      "The questionnaire is read in full and every question is sorted by topic and by what evidence it asks for",
+      "Every yes points to a dated document or record we hold; nothing is claimed without one",
+      "Every gap, including SOC 2 and vendor management, is stated plainly with what we do have and a dated plan",
+      "The CTO has signed off every answer",
+      "The owner has decided how to present the gaps and whether to ask the prospect about a SOC 2 roadmap",
+      "The response and each attachment is sent only after the owner approves it",
+      "A reusable answer library is saved with owners and dates"
+    ],
+    "metric": {
+      "name": "Questions answered with evidence and signed off by the CTO",
+      "direction": "reach",
+      "unit": "of 212 questions",
+      "baseline": null,
+      "baseline_source": "unknown",
+      "target": 212
+    },
+    "deadline": "12 days from the owner's message (about 14 November 2026)",
+    "guardrails": [
+      "No claim we cannot back with a document or record",
+      "No document shared with the prospect without the owner's approval"
+    ],
+    "limits": [
+      "We are not SOC 2 certified; an audit is booked for next spring",
+      "We have written policies for access control and incident response, but not for vendor management",
+      "The CTO signs off every answer",
+      "The Google Drive policy folder is read-only to us"
+    ],
+    "assets": [
+      "The questionnaire (a spreadsheet of 212 questions)",
+      "Written access control policy",
+      "Written incident response policy",
+      "Google Drive folder with our policies",
+      "AWS infrastructure"
+    ],
+    "connections": [
+      {
+        "name": "Google Drive policy folder",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "AWS account evidence",
+        "access": "read",
+        "status": "missing"
+      },
+      {
+        "name": "Working copy of the questionnaire",
+        "access": "draft",
+        "status": "available"
+      }
+    ],
+    "data_home": "Not chosen by the owner; proposed: working files in this project folder, to be confirmed",
+    "technical_level": "Not stated; the CTO reviews the technical answers, so drafts arrive with evidence references the CTO can check quickly",
+    "decides": "The owner decides on the deal; the CTO signs off the answers",
+    "unknowns": [
+      "Whether the prospect will accept a SOC 2 roadmap instead of a report",
+      "What the questionnaire asks of us beyond security, such as health-data handling or a business associate agreement (we have not read it yet)",
+      "Whether the prospect's confidentiality terms allow the questionnaire to be processed by an AI service",
+      "Whether we hold other proof the questionnaire may ask for, such as a penetration test, backup test results or staff training records",
+      "How we can get evidence from AWS; no access has been given, so the CTO would provide exports or screenshots",
+      "The exact date of the booked audit and its scope and type",
+      "Where to keep working files (proposed: this project)",
+      "How much time the CTO has for review during the 12 days"
+    ],
+    "answers": [
+      {
+        "question": "What do you sell and how big are you?",
+        "answer": "Customer support software, 40 staff."
+      },
+      {
+        "question": "What is the questionnaire and the deal?",
+        "answer": "A hospital group sent a spreadsheet of 212 questions, due in 12 days. The deal is about $180,000 a year."
+      },
+      {
+        "question": "What certifications and policies do you have?",
+        "answer": "Not SOC 2 certified; an audit is booked for next spring. Written policies for access control and incident response, none for vendor management."
+      },
+      {
+        "question": "What infrastructure and evidence can your AI reach?",
+        "answer": "Infrastructure is on AWS. A Google Drive folder with our policies is connected read-only."
+      },
+      {
+        "question": "What are the limits?",
+        "answer": "We cannot claim anything we do not have."
+      },
+      {
+        "question": "Who decides?",
+        "answer": "Our CTO signs off answers; I decide on the deal."
+      },
+      {
+        "question": "What is still unknown?",
+        "answer": "Whether they will accept a SOC 2 roadmap instead of a report."
+      }
+    ]
+  },
+  "research": {
+    "approach": "Practitioners treat a questionnaire as a set of commitments, not a form. They read the whole thing first, sort each question into yes with proof, no with a plan, or not applicable with a reason, gather evidence in one dated place, and have the people who run each control answer it. Where a certification is missing they say so, offer interim documents and a dated plan, and ask the buyer early what they will accept. Answers are checked for consistency, signed off and saved in a library for the next buyer.",
+    "sources": [
+      {
+        "id": "web-decryption",
+        "kind": "web",
+        "title": "Vendor security questionnaire: how to respond (Decryption Digest)",
+        "ref": "https://www.decryptiondigest.com/blog/vendor-security-questionnaire-how-to-respond",
+        "date": "2026-06-26",
+        "note": "Sort answers into yes with an evidence path, no with a remediation plan, or not applicable; for a missing certification say so, give a target date and offer interim documents."
+      },
+      {
+        "id": "web-bubble",
+        "kind": "web",
+        "title": "How to answer a vendor security questionnaire (Bubble)",
+        "ref": "https://bubble.io/blog/vendor-security-questionnaire/",
+        "date": "2026-10-07",
+        "note": "Confirm scope first, assign owners, keep evidence in one versioned folder, lead with a direct answer and link proof, keep answers consistent, and review before sending."
+      },
+      {
+        "id": "web-wolfia",
+        "kind": "web",
+        "title": "Vendor security questionnaire: a practical guide (Wolfia)",
+        "ref": "https://wolfia.com/blog/vendor-security-questionnaire-guide",
+        "date": "2026-04-05",
+        "note": "Each domain has an owner; answers must be tied to a real control, accurately scoped and backed by evidence because buyers rely on them; keep a central knowledge base."
+      },
+      {
+        "id": "cat-response",
+        "kind": "catalogue",
+        "title": "Vendor security questionnaire response writer",
+        "ref": "prepare-a-vendor-security-questionnaire-response"
+      },
+      {
+        "id": "cat-rfp",
+        "kind": "catalogue",
+        "title": "RFP response builder",
+        "ref": "rfp-response-builder"
+      },
+      {
+        "id": "cat-soc2",
+        "kind": "catalogue",
+        "title": "SOC 2 readiness planner",
+        "ref": "soc-2-readiness-planner"
+      },
+      {
+        "id": "owner",
+        "kind": "owner",
+        "title": "Owner answers",
+        "ref": "BRIEF.md"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s-scope",
+        "name": "Read the whole questionnaire and confirm scope",
+        "why": "Reading all 212 questions first shows what is in scope, which questions need a certificate, which need health-data terms, and which are unclear and should be asked about early.",
+        "sources": [
+          "web-bubble",
+          "cat-rfp",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-evidence",
+        "name": "Gather the evidence in one dated place",
+        "why": "Every yes needs a document or record with a date, so policies and configuration proof are collected and indexed before anything is answered.",
+        "sources": [
+          "web-bubble",
+          "web-decryption",
+          "cat-response"
+        ]
+      },
+      {
+        "id": "s-verify",
+        "name": "Check that written policy matches what is actually in place",
+        "why": "Answers become commitments, so the person who runs a control confirms it, not just the policy that describes it.",
+        "sources": [
+          "web-wolfia",
+          "web-decryption"
+        ]
+      },
+      {
+        "id": "s-gaps",
+        "name": "Sort gaps and decide how to present them",
+        "why": "A missing certificate or policy is stated plainly, with what exists today, interim documents and a dated plan, and the buyer is asked early what they will accept.",
+        "sources": [
+          "web-decryption",
+          "cat-soc2",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-draft",
+        "name": "Draft answers with evidence references",
+        "why": "Lead with a direct answer, point to the proof, and keep wording the same for the same control across answers.",
+        "sources": [
+          "web-bubble",
+          "web-decryption",
+          "cat-response"
+        ]
+      },
+      {
+        "id": "s-signoff",
+        "name": "Review, sign off and send",
+        "why": "The owner of each control signs off, answers are checked for consistency, and the sender knows exactly what is committed.",
+        "sources": [
+          "web-wolfia",
+          "web-bubble"
+        ]
+      },
+      {
+        "id": "s-library",
+        "name": "Save approved answers as a reusable library",
+        "why": "Starting each questionnaire from a blank page costs time and invites inconsistent answers.",
+        "sources": [
+          "web-wolfia",
+          "web-decryption"
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "text": "Answering yes to get through quickly, when a yes without proof is a misrepresentation that can become a contract commitment.",
+        "sources": [
+          "web-decryption",
+          "web-bubble"
+        ]
+      },
+      {
+        "text": "Vague answers such as 'mostly' or 'we have backups' that give the reviewer nothing to verify and draw follow-up questions.",
+        "sources": [
+          "web-bubble"
+        ]
+      },
+      {
+        "text": "Describing the same control differently in different documents or questionnaires.",
+        "sources": [
+          "web-bubble",
+          "web-wolfia"
+        ]
+      },
+      {
+        "text": "Leaving it to the end to ask the buyer what they will accept in place of a missing certificate.",
+        "sources": [
+          "web-decryption"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "name": "Answer the security questionnaire honestly and on time",
+    "capabilities": [
+      {
+        "id": "questionnaire-file",
+        "access": "read",
+        "via": "file",
+        "name": "Read the questionnaire spreadsheet (from the owner)",
+        "why": "The 212 questions and the prospect's format and instructions."
+      },
+      {
+        "id": "drive-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read the policy folder (Google Drive, read-only)",
+        "why": "Find and date the access control and incident response policies and anything else filed there."
+      },
+      {
+        "id": "aws-evidence",
+        "access": "read",
+        "via": "owner",
+        "name": "AWS evidence supplied by the CTO",
+        "why": "We have no AWS access; the CTO supplies exports or screenshots, or runs read-only checks."
+      },
+      {
+        "id": "workbook",
+        "access": "draft",
+        "via": "file",
+        "name": "Working copy of the questionnaire (this project)",
+        "why": "Draft answers in a copy; the original stays untouched."
+      },
+      {
+        "id": "send-to-prospect",
+        "access": "live",
+        "via": "owner",
+        "name": "Send the response, documents and messages to the prospect (owner)",
+        "why": "Anything leaving the company goes out only when the owner sends it after approving it."
+      }
+    ],
+    "data": [
+      {
+        "id": "questionnaire",
+        "name": "The questionnaire",
+        "why": "Every later step starts from the 212 questions.",
+        "fields": [
+          "question number",
+          "question text",
+          "required answer format",
+          "attachments requested",
+          "instructions and definitions"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Owner shares the spreadsheet; we work in a copy."
+          }
+        ],
+        "required_for": [
+          "triage",
+          "answers"
+        ]
+      },
+      {
+        "id": "policies",
+        "name": "Policies and records we hold",
+        "why": "Evidence for yes answers, and proof of what we can honestly say we have.",
+        "fields": [
+          "document name",
+          "version",
+          "date approved",
+          "owner",
+          "what it covers"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the Google Drive policy folder (read-only)."
+          },
+          {
+            "kind": "ASK",
+            "how": "Owner and CTO list any other proof not in the folder, such as test reports or training records."
+          }
+        ],
+        "required_for": [
+          "evidence-index",
+          "control-check"
+        ],
+        "alternative": "Without a document for a control, the answer is 'no evidence yet' and is handled as a gap."
+      },
+      {
+        "id": "aws-config",
+        "name": "AWS configuration proof",
+        "why": "Shows whether practice matches policy on access, logging, encryption and backups.",
+        "fields": [
+          "control",
+          "setting",
+          "region or account scope",
+          "date captured",
+          "captured by"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "CTO provides dated exports or screenshots for the controls the questionnaire asks about."
+          },
+          {
+            "kind": "MCP",
+            "how": "If the CTO sets up read-only access, run the AWS security checker skill's read-only commands."
+          }
+        ],
+        "required_for": [
+          "control-check"
+        ],
+        "alternative": "Without it, technical answers are marked 'not confirmed' and go to the CTO to answer from first-hand knowledge."
+      }
+    ],
+    "stages": [
+      {
+        "id": "intake",
+        "kind": "intake",
+        "name": "Pin down the deadline and the rules",
+        "goal": "Confirm the deadline, who signs off, and what we may not claim, and ask the owner for the questionnaire. Writes BRIEF.md.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "gate": "none"
+      },
+      {
+        "id": "triage",
+        "kind": "evidence",
+        "name": "Read and sort the questionnaire",
+        "goal": "Read all 212 questions, sort them by topic and answer format, and flag questions that ask for a certificate, specific attachments or health-data terms.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "data": [
+          "questionnaire"
+        ],
+        "needs": [
+          "questionnaire-file",
+          "workbook"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "triage",
+            "name": "Sorted question list",
+            "format": "csv",
+            "path": "evidence/triage.csv"
+          },
+          {
+            "id": "scope-notes",
+            "name": "Scope and unclear terms",
+            "format": "markdown",
+            "path": "evidence/SCOPE.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "count",
+            "name": "All 212 questions are in the list, matching the original numbering",
+            "required": true
+          },
+          {
+            "id": "flags",
+            "name": "Questions needing a certificate, an attachment or regulated-data terms are flagged",
+            "required": true
+          },
+          {
+            "id": "confidential",
+            "name": "Any confidentiality or AI-use terms in the questionnaire are noted before drafting",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-scope"
+        ],
+        "uses": [
+          "rfp-response-builder",
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "evidence-index",
+        "kind": "evidence",
+        "name": "Index the evidence we hold",
+        "goal": "List every policy and record in the Drive folder and any other proof the owner or CTO names, with its date, version and owner, in one evidence table.",
+        "owner": {
+          "role": "prepare-evidence-for-a-compliance-review"
+        },
+        "data": [
+          "policies"
+        ],
+        "needs": [
+          "drive-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "evidence-index",
+            "name": "Evidence index",
+            "format": "csv",
+            "path": "evidence/evidence-index.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dated",
+            "name": "Every item has a date, a version and a named owner, or is marked undated",
+            "required": true
+          },
+          {
+            "id": "read-only",
+            "name": "Nothing in the Drive folder is changed",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-evidence"
+        ],
+        "uses": [
+          "compliance-checklist"
+        ]
+      },
+      {
+        "id": "control-check",
+        "kind": "integrity",
+        "name": "Check policy against practice",
+        "goal": "For the controls the questionnaire asks about, compare what the written policies say with the dated AWS proof the CTO supplies, and mark each control implemented with proof, partial or not in place.",
+        "owner": {
+          "role": "security-compliance-auditor"
+        },
+        "support": [
+          "quarterly-compliance-readiness-keeper"
+        ],
+        "data": [
+          "policies",
+          "aws-config"
+        ],
+        "needs": [
+          "drive-read",
+          "aws-evidence"
+        ],
+        "depends_on": [
+          "triage",
+          "evidence-index"
+        ],
+        "outputs": [
+          {
+            "id": "control-check",
+            "name": "Control status table",
+            "format": "csv",
+            "path": "integrity/control-status.csv"
+          },
+          {
+            "id": "control-notes",
+            "name": "Mismatches and open items for the CTO",
+            "format": "markdown",
+            "path": "integrity/CONTROL-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "proof",
+            "name": "Each 'implemented' control points to a dated document or record",
+            "required": true
+          },
+          {
+            "id": "mismatch",
+            "name": "Where policy and practice differ, it is listed, not smoothed over",
+            "required": true
+          },
+          {
+            "id": "unconfirmed",
+            "name": "Controls with no proof from the CTO are marked 'not confirmed'",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-verify"
+        ],
+        "uses": [
+          "soc-2-readiness-planner",
+          "aws-security-checker"
+        ]
+      },
+      {
+        "id": "gap-diagnosis",
+        "kind": "diagnosis",
+        "name": "Find the gaps that matter for this buyer",
+        "goal": "List every question where the honest answer is no or partial, rank them by how much they could hurt the deal, and test what the buyer will probably accept in place of a SOC 2 report.",
+        "owner": {
+          "role": "security-compliance-auditor"
+        },
+        "support": [
+          "prepare-a-vendor-security-questionnaire-response"
+        ],
+        "depends_on": [
+          "control-check"
+        ],
+        "outputs": [
+          {
+            "id": "gaps",
+            "name": "Ranked gap list",
+            "format": "markdown",
+            "path": "diagnosis/GAPS.md"
+          },
+          {
+            "id": "gap-hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the question numbers behind it",
+            "required": true
+          },
+          {
+            "id": "no-spin",
+            "name": "No gap is reworded as a partial or yes without proof",
+            "required": true
+          },
+          {
+            "id": "unknowns",
+            "name": "What only the prospect can tell us is listed as a question to ask them",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-gaps"
+        ],
+        "uses": [
+          "soc-2-readiness-checker",
+          "compliance-checklist"
+        ]
+      },
+      {
+        "id": "options",
+        "kind": "options",
+        "name": "Lay out how to handle the gaps",
+        "goal": "For each gap type give the options: interim documents, compensating controls we truly have, a dated plan, drafting the missing vendor management policy for adoption, and asking the prospect early about a SOC 2 roadmap. State the cost, risk and effect on the deadline of each.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "depends_on": [
+          "gap-diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "options",
+            "name": "Options for the gaps",
+            "format": "markdown",
+            "path": "options/OPTIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "truthful",
+            "name": "Every option can be done without claiming something we do not have",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option has effort, risk to the deal and who must act",
+            "required": true
+          },
+          {
+            "id": "time",
+            "name": "Each option is checked against the 12-day deadline",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "soc-2-readiness-planner",
+          "rfp-response-builder"
+        ]
+      },
+      {
+        "id": "decision",
+        "kind": "decision",
+        "name": "Owner decides how to present the gaps",
+        "goal": "The owner chooses how to handle each gap and whether to ask the prospect about a SOC 2 roadmap now, and confirms the go or no-go on responding. Ask for a reason when the top option is passed over, and record it.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "depends_on": [
+          "options"
+        ],
+        "outputs": [
+          {
+            "id": "decision",
+            "name": "Chosen handling of gaps",
+            "format": "markdown",
+            "path": "decision/DECISION.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
+            "required": true
+          }
+        ],
+        "gate": "approve",
+        "from_steps": []
+      },
+      {
+        "id": "answers",
+        "kind": "production",
+        "name": "Draft answers for CTO sign-off",
+        "goal": "Draft every answer in a copy of the questionnaire: a direct answer, the evidence reference and date, and a plain statement and dated plan for each gap. The CTO reviews and signs off each answer.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "support": [
+          "security-compliance-auditor"
+        ],
+        "data": [
+          "questionnaire"
+        ],
+        "needs": [
+          "workbook",
+          "drive-read"
+        ],
+        "depends_on": [
+          "decision",
+          "control-check",
+          "triage"
+        ],
+        "outputs": [
+          {
+            "id": "answers",
+            "name": "Completed questionnaire draft",
+            "format": "xlsx",
+            "path": "production/questionnaire-answers.xlsx"
+          },
+          {
+            "id": "evidence-table",
+            "name": "Evidence table for every yes",
+            "format": "csv",
+            "path": "production/evidence-table.csv"
+          },
+          {
+            "id": "open-questions",
+            "name": "Questions for the CTO and the prospect",
+            "format": "markdown",
+            "path": "production/OPEN-QUESTIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "yes-proof",
+            "name": "Every yes has a file and a date in the evidence table; a yes without proof is changed to no evidence yet",
+            "required": true
+          },
+          {
+            "id": "gaps-plain",
+            "name": "Every gap is stated plainly with what exists today and a dated plan, using only dates the owner has confirmed",
+            "required": true
+          },
+          {
+            "id": "consistent",
+            "name": "The same control is described the same way in every answer and attachment",
+            "required": true
+          },
+          {
+            "id": "all-212",
+            "name": "All 212 questions have an answer, a gap statement or a reason for not applicable",
+            "required": true
+          },
+          {
+            "id": "cto",
+            "name": "The CTO's sign-off is recorded for every answer before the owner sees it as final",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-draft",
+          "s-signoff"
+        ],
+        "uses": [
+          "prepare-a-vendor-security-questionnaire-response",
+          "spreadsheet-checker",
+          "plain-english-editor"
+        ]
+      },
+      {
+        "id": "cover-pack",
+        "kind": "production",
+        "name": "Draft the cover note and attachment list",
+        "goal": "Draft a short cover note to the prospect that states our certification position plainly, offers interim documents, and asks what they will accept in place of a SOC 2 report; list which documents could be attached.",
+        "owner": {
+          "role": "security-compliance-auditor"
+        },
+        "depends_on": [
+          "decision",
+          "control-check"
+        ],
+        "outputs": [
+          {
+            "id": "cover",
+            "name": "Cover note and attachment list",
+            "format": "markdown",
+            "path": "production/COVER-NOTE.md"
+          },
+          {
+            "id": "vendor-policy",
+            "name": "Draft vendor management policy for the CTO to adopt or reject",
+            "format": "markdown",
+            "path": "production/VENDOR-POLICY-DRAFT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "no-overclaim",
+            "name": "The note says we are not SOC 2 certified and gives only the audit facts the owner has confirmed",
+            "required": true
+          },
+          {
+            "id": "policy-status",
+            "name": "The vendor management policy is described as adopted only after the CTO approves and dates it; until then answers say it does not exist",
+            "required": true
+          },
+          {
+            "id": "attachments",
+            "name": "Each attachment is listed with its date and whether it contains confidential details",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "The owner chooses not to approach the prospect before sending the response and not to draft a vendor management policy.",
+        "from_steps": [
+          "s-gaps"
+        ],
+        "uses": [
+          "plain-english-editor",
+          "soc-2-readiness-planner"
+        ]
+      },
+      {
+        "id": "send",
+        "kind": "execution",
+        "name": "Send to the prospect",
+        "goal": "The owner sends the signed-off response, then each attachment and message, one at a time, after approving it. Save a copy of exactly what was sent.",
+        "owner": {
+          "role": "prepare-a-vendor-security-questionnaire-response"
+        },
+        "needs": [
+          "send-to-prospect"
+        ],
+        "depends_on": [
+          "answers",
+          "cover-pack"
+        ],
+        "outputs": [
+          {
+            "id": "receipt",
+            "name": "Send receipt and copy of what was sent",
+            "format": "markdown",
+            "path": "execution/SEND-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "signed-off",
+            "name": "The file sent is the CTO-signed-off version",
+            "required": true
+          },
+          {
+            "id": "each-doc",
+            "name": "Each attachment and message is approved by the owner before it goes",
+            "required": true
+          },
+          {
+            "id": "copy",
+            "name": "A copy of the response and attachments as sent is saved",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-signoff"
+        ],
+        "uses": [
+          "rfp-response-builder"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Check the response and track follow-ups",
+        "goal": "Check the sent copy against the signed-off copy, count answered questions with evidence against 212, and log each follow-up question from the prospect with who answered and when.",
+        "owner": {
+          "role": "quarterly-compliance-readiness-keeper"
+        },
+        "depends_on": [
+          "send"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Response check and follow-up log",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "count",
+            "name": "Answered, evidenced and signed-off counts are shown against 212",
+            "required": true
+          },
+          {
+            "id": "same",
+            "name": "The sent file matches the signed-off file",
+            "required": true
+          },
+          {
+            "id": "followups",
+            "name": "Every follow-up is logged and any new answer is signed off before it is sent",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "spreadsheet-checker"
+        ]
+      },
+      {
+        "id": "learning",
+        "kind": "learning",
+        "name": "Save the answer library",
+        "goal": "Save approved answers with their evidence, owner and date as a reusable library, record what the prospect accepted or asked for, and list the controls to fix before the next audit.",
+        "owner": {
+          "role": "quarterly-compliance-readiness-keeper"
+        },
+        "depends_on": [
+          "measurement"
+        ],
+        "outputs": [
+          {
+            "id": "library",
+            "name": "Answer library and lessons",
+            "format": "markdown",
+            "path": "learning/LEARNINGS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dated",
+            "name": "Each saved answer has an owner, an evidence reference and a review date",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this deal, this business or the playbook",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-library"
+        ],
+        "uses": [
+          "compliance-checklist"
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "id": "h-soc2-hard-requirement",
+        "statement": "The prospect treats a SOC 2 report as a pass or fail requirement that no roadmap can replace.",
+        "test": "Read how the questionnaire and its instructions refer to certifications and attestations, and list the questions that ask for a report; ask the prospect early.",
+        "confirm_if": "Instructions say a report is required, or many questions can only be answered by attaching one.",
+        "refute_if": "Questions accept 'planned' or 'in progress' answers, or the prospect says a roadmap is acceptable.",
+        "fix_stage": "decision"
+      },
+      {
+        "id": "h-vendor-management",
+        "statement": "The missing vendor management policy leaves a cluster of questions we cannot answer yes.",
+        "test": "Count and list questions on third-party and supplier risk, and mark which have no supporting document.",
+        "confirm_if": "A group of questions asks for a vendor management policy or process we lack.",
+        "refute_if": "Few questions touch vendor management, or other documents answer them honestly.",
+        "fix_stage": "cover-pack"
+      },
+      {
+        "id": "h-policy-practice",
+        "statement": "Written policies describe more than what is in place in AWS today.",
+        "test": "Compare policy statements on access, logging, encryption and backups with the CTO's dated proof.",
+        "confirm_if": "A control is described in a policy but the proof is missing or shows something different.",
+        "refute_if": "Proof matches policy for the controls the questionnaire asks about.",
+        "fix_stage": "answers"
+      },
+      {
+        "id": "h-health-terms",
+        "statement": "The questionnaire asks for health-data commitments, such as a business associate agreement, beyond what we have documented.",
+        "test": "Flag questions about health data, patient information or regulated-data agreements.",
+        "confirm_if": "Such questions appear and we hold no matching document.",
+        "refute_if": "The questionnaire contains no health-data terms.",
+        "fix_stage": "decision"
+      },
+      {
+        "id": "h-interim-evidence",
+        "statement": "Existing policies and records cover most of the 212 questions honestly, so only a minority are true gaps.",
+        "test": "Share of questions answerable yes or partial with a dated document.",
+        "confirm_if": "A clear majority has supporting proof.",
+        "refute_if": "Fewer than half have proof, so the response will be mostly gaps.",
+        "fix_stage": "answers"
+      },
+      {
+        "id": "h-time",
+        "statement": "CTO review time, not drafting, is what limits finishing in 12 days.",
+        "test": "Count questions needing CTO knowledge and compare with the CTO's available hours.",
+        "confirm_if": "Technical questions exceed the hours the CTO can give before the deadline.",
+        "refute_if": "The CTO can review all technical answers in time.",
+        "fix_stage": "answers"
+      }
+    ],
+    "dropped": [],
+    "measurement": {
+      "window": "From the first draft to the deadline, count progress daily; after sending, log follow-ups until the prospect closes the review.",
+      "min_volume": "Not applicable to a single questionnaire; the check covers all 212 questions.",
+      "stop_rule": "Stop and ask the owner if any answer would need a claim we cannot back with proof, or if the deadline cannot be met without skipping CTO sign-off."
+    }
+  }
+}

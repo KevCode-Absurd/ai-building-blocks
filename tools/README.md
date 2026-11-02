@@ -9,6 +9,8 @@
 | `readability.mjs` | The grade formula (Flesch-Kincaid) the two above and the site's tests share |
 | `apply-renames.mjs`, `make-orchestrators.mjs` | Rename block folders; build the ready workflows |
 | `import-skills.mjs` | Copies skills from a cloned skills repo into `catalogue-items/imported/`, as they are, with their licence and credit. Checks the licence (Apache 2.0, MIT and CC BY copy; anything else is skipped with the reason), finds skills we may already have, checks our name and summary, and keeps `NOTICE.md` up to date. A dry run only writes the report in `reports/`; `--write` copies. Names, jobs and summaries live in `import-map.yaml`. Steps in `docs/IMPORTING-SKILLS.md` |
+| `eval-roles.mjs` | Tests AI specialists on their own golden tasks: one model works as the specialist, another grades the answer against the role's checks. `plan` prices the run without calling a model; `run --roles a,b` (or `--area x`) calls the API under the spend cap and saves results to `site/src/roles/role-evals.json`, which the next role build shows on each role page |
+| `role-feedback.mjs` | Adds a reviewed lesson (principle, pitfall or quality check) to a specialist with its source, or imports records in the pack's FEEDBACK.md format. Lessons live in `site/src/roles/role-learned.json`; the next role build puts them first and records a new version |
 | `build-mini-tool.mjs` | Builds every mini tool five ways from its formula file in `mini-tools/` (download, embed, spreadsheet, AI skill and prompt; the site page reads the file directly) and checks each way against the worked examples. Runs with the site's `npm run index`. Tests: `npm run test:mini-tools` here |
 
 ## Item factory (planned, not built)

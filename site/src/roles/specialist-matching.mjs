@@ -14,6 +14,28 @@ const aliases={
 };
 const stem=w=>w.replace(/(?:ing|ers|er|ed|s)$/,'');
 const words=s=>[...new Set((s.toLowerCase().match(/[a-z0-9]+/g)??[]).filter(w=>w.length>1&&!STOP.has(w)).map(stem))];
+// Everyday words people use for the same job. Each query word also matches its synonyms at a
+// lower weight, so "translate" finds translation roles and "GA4" finds tracking roles. Keys are stems.
+const SYNONYMS={
+ translate:'translation localization localisation language',translation:'translate localization localisation language',locali:'translation localization language',
+ hire:'hiring recruit recruiter recruitment interview candidate',hir:'hire recruit recruiter recruitment interview candidate',recruit:'hire hiring recruiter recruitment interview candidate',
+ contract:'clause legal agreement terms',agreement:'contract clause legal terms',nda:'contract confidentiality legal clause',employment:'employee staff job',
+ ga4:'analytics tracking tag event google',analytic:'tracking event tag measurement',track:'analytics event tag measurement',pixel:'tracking conversion event tag',
+ bookkeep:'accounting ledger reconciliation',reconcile:'reconciliation ledger bank bookkeeping',invoice:'billing accounts payable receivable',
+ cold:'outreach prospect',outreach:'prospect cold sales',newsletter:'email',
+ launch:'release go market',onboard:'onboarding',churn:'retention cancel',refund:'returns support',
+ proofread:'proof editor edit grammar copyedit',edit:'editor proofread',logo:'brand identity design',copy:'copywriting copywriter',ux:'usability user experience',ui:'interface design',
+};
+// Words that place a job in an area; matching roles there rank higher and others lower.
+const AREA_INTENTS=[
+ ['people',/\b(?:hire|hiring|recruit\w*|interview(?:ing)? candidates?|interview questions? for|job (?:ad|post|description)|onboard(?:ing)? (?:a |new )?(?:hire|employee)|performance review)\b/i],
+ ['security',/\b(?:contract|agreement|clause|nda|terms of service|privacy policy|gdpr|compliance|legal)\b/i],
+ ['finance',/\b(?:bookkeeping|reconcil\w*|ledger|invoices?|tax|payroll|cash ?flow|xero|quickbooks)\b/i],
+ ['data',/\b(?:ga4|google analytics|tracking plan|event tracking|dashboard|sql|statistic\w*)\b/i],
+];
+// In "hire a backend engineer" the job title names who is hired, not the specialist needed.
+const hiredTitle=task=>{const m=task.match(/\b(?:hire|hiring|recruit\w*|interview questions? for)\s+(?:(?:an?|our|my|the|for|for an?)\s+)?([^.!?]+)/i);return new Set(m?words(m[1]):[]);};
+const expand=terms=>new Map(terms.map(t=>[t,words(SYNONYMS[t]??'').filter(x=>x!==t)]));
 // Broad jobs should start with a complete matching remit rather than an incidental word.
 // Determine the requested artifact before its business domain: coding an SEO API
 // needs implementation methods; auditing a site's SEO still needs an SEO remit.
@@ -44,14 +66,20 @@ const intents=[
 export function rankSpecialists(index,task,limit=5,area='all') {
  const terms=words(task);if(!terms.length)return [];
  const preferred=artifactIntent(task)??intents.find(([pattern])=>pattern.test(task))?.[1];
- const docs=index.roles.filter(r=>area==='all'||r.area===area).map(r=>({r,fields:[words(r.name),words(r.summary),words(r.deliverables.join(' ')),words(aliases[r.id]??'')]}));
- const frequency=new Map(terms.map(t=>[t,docs.filter(d=>d.fields.some(f=>f.includes(t))).length]));
+ const synonyms=expand(terms),boost=new Set(AREA_INTENTS.filter(([,pattern])=>pattern.test(task)).map(([id])=>id));
+ const hired=hiredTitle(task),core=terms.filter(t=>!hired.has(t));
+ const docs=index.roles.filter(r=>area==='all'||r.area===area).map(r=>({r,fields:[words(r.name),words(r.summary),words(r.deliverables.join(' ')),words((aliases[r.id]??'')+' '+(r.keywords??''))]}));
+ const all=[...new Set([...terms,...[...synonyms.values()].flat()])];
+ const frequency=new Map(all.map(t=>[t,docs.filter(d=>d.fields.some(f=>f.includes(t))).length]));
+ const weigh=(t,fields,factor)=>Math.log(1+docs.length/(1+frequency.get(t)))*fields.reduce((n,f,i)=>n+(f.includes(t)?[8,2,2,1.5][i]:0),0)*factor;
  return docs.map(({r,fields})=>{
-  const matched=terms.filter(t=>fields.some(f=>f.includes(t)));
-  let score=matched.reduce((n,t)=>n+Math.log(1+docs.length/(1+frequency.get(t)))*fields.reduce((n,f,i)=>n+(f.includes(t)?[8,2,2,3][i]:0),0),0);
-  score*=matched.length/terms.length;
+  const matched=terms.filter(t=>fields.some(f=>f.includes(t))||synonyms.get(t).some(x=>fields.some(f=>f.includes(x))));
+  // A hired job title counts a little, and does not reduce coverage when absent.
+  let score=matched.reduce((n,t)=>n+Math.max(weigh(t,fields,1),...synonyms.get(t).map(x=>weigh(x,fields,0.7)))*(hired.has(t)?0.25:1),0);
+  score*=(core.length?matched.filter(t=>!hired.has(t)).length/core.length:matched.length/terms.length);
+  if(boost.size)score*=boost.has(r.area)?2.2:0.7;
   if(task.toLowerCase().includes(r.name.toLowerCase()))score+=50;
   if(r.id===preferred&&matched.length)score+=1000;
   return {role:r,matched,score};
- }).filter(r=>r.matched.length).sort((a,b)=>b.score-a.score||a.role.id.localeCompare(b.role.id)).slice(0,limit).map(({role,matched})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
+ }).filter(r=>r.matched.length&&r.score>0).sort((a,b)=>b.score-a.score||a.role.id.localeCompare(b.role.id)).slice(0,limit).map(({role,matched})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
 }

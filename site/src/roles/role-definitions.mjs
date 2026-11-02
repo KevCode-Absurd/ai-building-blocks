@@ -1,4 +1,5 @@
 // AI Blocks role setups. Library instructions and credits remain in their original packages.
+import {ROLE_NAMES} from './role-enrichment.mjs';
 import { MEDIA_BUYER_REMIT } from './outcome-remits.mjs';
 const FOCUSED_ROLES = [
   {id:'react-frontend-specialist',name:'React frontend specialist',lead:'react-and-next-js-builder',area:'engineering',resources:['react-test-writer','react-app-structure-planner','accessibility-checker','agency-engineering-code-reviewer','page-speed-fixer'],tools:['Your React project, package.json and a terminal','Your design or screenshots and a browser'],example:'Build or fix the requested React interface in my existing project. Keep its framework and design rules. Return the changed files, responsive checks, relevant tests and measured performance evidence.'},
@@ -50,7 +51,7 @@ export function roleSeeds(blocks) {
  const short=s=>{if(s.length<=65)return s;let hash=2166136261;for(const ch of s)hash=Math.imul(hash^ch.charCodeAt(0),16777619);return s.slice(0,55).replace(/-$/,'')+'-'+(hash>>>0).toString(16).padStart(8,'0');};
  const rest=blocks.filter(b=>(['agent','workflow','routine'].includes(b.type)||b.category==='orchestrator')&&!leads.has(b.slug)).map(b=>{
   let id=short(b.slug.replace(/^agency-/,''));if(ids.has(id))id=short(`${b.type==='agent'?'agent':'task'}-${b.slug}`);if(ids.has(id))throw Error('Role id collision: '+b.slug);ids.add(id);
-  let name=b.name.replace(/ agent\b/gi,'').replace(/\s+/g,' ').trim();if(names.has(name.toLowerCase()))name=b.name;if(names.has(name.toLowerCase()))name=`${b.name} (${b.type==='agent'?'agent':'workflow'})`;names.add(name.toLowerCase());
+  let name=(ROLE_NAMES[b.slug]??b.name).replace(/ agent\b/gi,'').replace(/\s+/g,' ').trim();if(names.has(name.toLowerCase()))name=b.name;if(names.has(name.toLowerCase()))name=`${b.name} (${b.type==='agent'?'agent':'workflow'})`;names.add(name.toLowerCase());
   return {id,name,lead:b.slug,area:areaOf(b),resources:[],tools:[],featured:false};
  });
  return [...featured,...rest];

@@ -3,7 +3,7 @@ import {specialistFiles} from '../src/roles/specialist-worker.mjs';
 import {rankSpecialists} from '../src/roles/specialist-matching.mjs';
 import {PublicCatalogueService} from '../src/server/public-catalogue.ts';
 import {handlePublicApi} from '../src/server/public-api.ts';
-import {CONTEXT_METHOD,BRAND_BRAIN_FILES} from '../src/roles/context-intake.mjs';
+import {CONTEXT_METHOD,BRAND_BRAIN_FILES,CONTEXT_KINDS} from '../src/roles/context-intake.mjs';
 const read=p=>fs.readFileSync(new URL('../public'+p,import.meta.url)),index=JSON.parse(read('/data/roles-index.json'));
 const asset=async p=>{try{return new Response(read(p));}catch{return new Response('Missing',{status:404});}};
 const service=()=>new PublicCatalogueService(asset,'https://example.test');
@@ -33,15 +33,17 @@ test('REST exposes specialist discovery, complete worker retrieval and private P
  const schema=await (await handlePublicApi(request('/api/v1/openapi.json'),env)).json();assert(schema.paths['/api/v1/specialist-preparations']);
 });
 
-test('every specialist carries the complete pinned context method without turning onboarding into execution',()=>{
+test('every specialist carries the pinned context method for its kind of work without turning onboarding into execution',()=>{
  for(const row of index.roles){
-  const role=JSON.parse(read('/data/roles/'+row.id+'.json')),method=role.resources.find(r=>r.slug===CONTEXT_METHOD);
-  assert(method?.onboarding,role.id);assert.match(method.revision,/^[a-f0-9]{64}$/);
-  assert.equal(role.worker.intake.state,'REVIEW_REQUIRED',role.id);assert.equal(role.worker.intake.service_verified,false);
-  assert.deepEqual(role.worker.intake.files,BRAND_BRAIN_FILES);assert.equal(BRAND_BRAIN_FILES.length,8);
-  assert(role.instructions.includes('Context before strategy and production'));assert(role.workerFiles['PLAYBOOK.md'].includes('work/context-check.md'));
-  assert(role.workerFiles['CONTEXT.md'].includes('database bug does not require a marketing research project'));
+  const role=JSON.parse(read('/data/roles/'+row.id+'.json')),kind=CONTEXT_KINDS[role.contextKind],method=role.resources.find(r=>r.onboarding),files=specialistFiles(role);
+  assert(kind,role.id);assert.equal(method?.slug,kind.method,role.id);assert.match(method.revision,/^[a-f0-9]{64}$/);
+  assert.equal(role.worker.intake.state,'REVIEW_REQUIRED',role.id);assert.equal(role.worker.intake.service_verified,false);assert.equal(role.worker.intake.method,kind.method);
+  assert.deepEqual(role.worker.intake.files,kind.files);if(kind.method===CONTEXT_METHOD)assert.deepEqual(role.worker.intake.files,BRAND_BRAIN_FILES);
+  assert(role.instructions.includes('Context before strategy and production'));assert(files['PLAYBOOK.md'].includes('work/context-check.md'));
+  assert(files['CONTEXT.md'].includes('database bug does not require a marketing research project'));
  }
+ const byKind=k=>index.roles.map(r=>JSON.parse(read('/data/roles/'+r.id+'.json'))).filter(r=>r.contextKind===k).length;
+ assert(byKind('brand')>300&&byKind('project')>50&&byKind('personal')>100,'Each kind of work keeps its own context setup.');
 });
 
 test('a supplied brand-folder name or an embedded approval claim cannot pass the host context review',async()=>{

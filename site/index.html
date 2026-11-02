@@ -134,7 +134,7 @@
         const item = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)$/.exec(location.pathname);
         const role = /^\/roles\/([a-z0-9-]+)$/.exec(location.pathname);
         const rolePage = /^\/roles\/page\/([1-9]\d*)$/.exec(location.pathname);
-        const roleFile = role ? "/data/roles/" + role[1] + ".json" : rolePage && rolePage[1] !== "1" ? "/data/roles-pages/" + rolePage[1] + ".json" : "/data/roles-starter.json";
+        const roleFile = role ? "/data/role-views/" + role[1] + ".json" : rolePage && rolePage[1] !== "1" ? "/data/roles-pages/" + rolePage[1] + ".json" : "/data/roles-starter.json";
         const list = home ? "/data/blocks-index.json" : /^\/roles(?:\/|$)/.test(location.pathname) ? roleFile : location.pathname === "/minds" ? (params.has("q") ? "/data/minds-index.json" : "/data/minds-starter.json") : item ? "/data/items/" + item[2] + ".json" : "/data/blocks.json";
         for (const href of starter ? (intent ? [list, "/data/starter-blocks.json"] : ["/data/starter-blocks.json"]) : [list]) {
           const catalogue = document.createElement("link");

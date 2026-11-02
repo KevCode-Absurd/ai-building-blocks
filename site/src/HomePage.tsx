@@ -232,19 +232,16 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
   const [buildOpen, setBuildOpen] = useState(() => location.hash === "#build");
   const [showGlobe, setShowGlobe] = useState(false);
   useEffect(() => {
-    // Keep the decorative globe and its CPU work out of first paint. Start after
-    // the hero has been visible for a moment, then wait for an idle browser slot.
+    // Effects run after the hero commits. Use the next idle slot to draw the
+    // decoration without an extra blank second after the usable first screen.
     let idleId = 0;
     const idleWindow = window as Window & {
       requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
       cancelIdleCallback?: (id: number) => void;
     };
-    const timer = window.setTimeout(() => {
-      if (idleWindow.requestIdleCallback) idleId = idleWindow.requestIdleCallback(() => setShowGlobe(true), { timeout: 1800 });
-      else idleId = window.setTimeout(() => setShowGlobe(true), 250);
-    }, 1000);
+    if (idleWindow.requestIdleCallback) idleId = idleWindow.requestIdleCallback(() => setShowGlobe(true), { timeout: 1800 });
+    else idleId = window.setTimeout(() => setShowGlobe(true), 0);
     return () => {
-      window.clearTimeout(timer);
       if (idleWindow.cancelIdleCallback && idleId) idleWindow.cancelIdleCallback(idleId);
       else if (idleId) window.clearTimeout(idleId);
     };

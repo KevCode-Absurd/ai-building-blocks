@@ -2,7 +2,7 @@ import {lazy,Suspense} from 'react';
 import {Link} from './lib/router';
 import {StartupReady} from './StartupReady';
 import {roleOpeningTitle,useRoleData} from './roles/role-data';
-import type {RoleIndex,RoleProfile} from './roles/role-types';
+import type {RoleIndex,RoleView} from './roles/role-types';
 import './roles-opening.css';
 const Browse=lazy(()=>import('./roles/RoleBrowse'));
 const Detail=lazy(()=>import('./roles/RoleDetail'));
@@ -19,7 +19,7 @@ export default function RolesRoute({path,toast}:{path:string;toast:(text:string)
   {error&&data&&<div className="wrap"><p role="alert">{error}</p><button className="btn btn-line" onClick={retry}>Try again</button></div>}
   {!valid||error&&!data?<section className="wrap role-pending"><p role="alert">{valid?error:'This role could not be found.'}</p>{valid&&<button className="btn btn-line" onClick={retry}>Try again</button>} <Link to="/roles">Browse all roles</Link></section>:
    <Suspense fallback={<section className="wrap role-pending"><p role="status">Opening the role library…</p></section>}>
-    {id?<Detail key={id} role={data?.schema==='ai-blocks-role/1'?data as RoleProfile:null} toast={toast}/>:<Browse key={page??'1'} page={Number(page??1)} data={data?.schema==='ai-blocks-roles/1'?data as RoleIndex:null} complete={data?.schema==='ai-blocks-roles/1'&&!data.starter} onNeedFull={requestFull}/>}
+    {id?<Detail key={id} role={data?.schema==='ai-blocks-role-view/1'?data as RoleView:null} toast={toast}/>:<Browse key={page??'1'} page={Number(page??1)} data={data?.schema==='ai-blocks-roles/1'?data as RoleIndex:null} complete={data?.schema==='ai-blocks-roles/1'&&!data.starter} onNeedFull={requestFull}/>}
    </Suspense>}
  </main>;
 }

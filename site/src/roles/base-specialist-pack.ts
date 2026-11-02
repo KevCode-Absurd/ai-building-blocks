@@ -72,7 +72,7 @@ export async function buildBaseSpecialistPack(role:RoleProfile,catalogue:Catalog
  return {bytes,filename:role.id+'-base-specialist.zip',fileCount:Object.keys(files).length,methodCount:sources.length};
 }
 
-export async function loadBaseSpecialistPack(role:RoleProfile){
+export async function loadBaseSpecialistPack(role:Pick<RoleProfile,'id'|'sourceHash'|'catalogueHash'>){
  const read:Read=async(path,max,expected)=>{
   if(!path.startsWith('/')||path.startsWith('//')||/[\\?#%]/.test(path)||path.includes('..'))throw Error('Invalid published asset path.');
   const r=await fetch(path);if(!r.ok||!r.body)throw Error('The complete specialist files could not load. Try again.');

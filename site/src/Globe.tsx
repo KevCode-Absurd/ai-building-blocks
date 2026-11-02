@@ -110,12 +110,16 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
     const resize = () => {
       const box = canvas.getBoundingClientRect();
       const next = Math.min(window.devicePixelRatio || 1, touch ? 1.5 : 2);
+      // ResizeObserver also reports the initial size. Keep the existing bitmap
+      // and sprite cache when its dimensions have not actually changed.
+      if (box.width === w && box.height === h && next === dpr) return false;
       if (next !== dpr) sprites.clear();
       dpr = next; w = box.width; h = box.height;
       canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const f = Math.max(0.55, Math.min(0.9, (geom().R / 430) * 0.9 + 0.2));
       if (Math.abs(f - fs) > 0.01) { fs = f; sprites.clear(); }
+      return true;
     };
     const geom = () => ({ R: Math.min(w * 0.46, h * 0.56, 430), cx: w / 2, cy: h * 0.54 });
 
@@ -196,7 +200,10 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
       const busy = !still || drag || spin || Math.abs(hovTarget - hov) > 0.01 || px > -9000 || tapFade > 0;
       raf = busy && visible && !document.hidden ? requestAnimationFrame(tick) : 0;
     };
-    const start = () => { if (!raf && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(tick); } };
+    const start = () => {
+      if (still && !drag && !spin && Math.abs(hovTarget - hov) <= 0.01 && px < -9000 && !tapFade) return;
+      if (!raf && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(tick); }
+    };
 
     // Pointing and dragging. The globe sits behind the words, so listen on the hero and leave links and text alone.
     const local = (e: PointerEvent) => { const b = canvas.getBoundingClientRect(); return { x: e.clientX - b.left, y: e.clientY - b.top }; };
@@ -244,8 +251,9 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
     };
     const noSelect = (e: Event) => { if (drag) e.preventDefault(); };
 
-    readTheme(); resize(); draw(0);
-    const ro = new ResizeObserver(() => { resize(); draw(0); });
+    let disposed = false;
+    readTheme(); resize(); draw(0); last = performance.now();
+    const ro = new ResizeObserver(() => { if (resize()) draw(0); });
     ro.observe(canvas);
     const mo = new MutationObserver(() => { readTheme(); draw(0); });
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
@@ -261,9 +269,12 @@ export default function Globe({ calm = false }: { calm?: boolean }) {
     host.addEventListener("lostpointercapture", up);
     window.addEventListener("pointermove", dragMove);
     document.addEventListener("selectstart", noSelect);
-    document.fonts?.ready.then(() => { sprites.clear(); draw(0); });
+    // The preloaded font is usually ready. Rebuild sprites only if a font was
+    // actually pending; an already-resolved ready promise needs no second draw.
+    if (document.fonts?.status === "loading") document.fonts.ready.then(() => { if (!disposed) { sprites.clear(); draw(0); } });
     start();
     return () => {
+      disposed = true;
       cancelAnimationFrame(raf); ro.disconnect(); mo.disconnect(); io.disconnect();
       document.removeEventListener("visibilitychange", onVis);
       host.removeEventListener("pointermove", move); host.removeEventListener("pointerleave", leave); host.removeEventListener("pointerdown", down);

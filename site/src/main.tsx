@@ -6,10 +6,9 @@ import App from "./App";
 import { Persistence } from "./AccountPersistence";
 import PublicOpening from "./PublicOpening";
 import { CommunityStars } from "./CommunityStars";
-import { installDither } from "./lib/pixel";
+import "./dither-masks.css";
 import { keepInitialHtml } from "./lib/public-opening";
 
-installDither();
 
 // Built pages arrive with a plain first screen for search engines (scripts/prerender.mjs); the app replaces it.
 let root = document.getElementById("root")!;

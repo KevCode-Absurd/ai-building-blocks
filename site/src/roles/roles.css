@@ -5,3 +5,5 @@
 .role-capabilities{display:grid;gap:16px;margin:0}.role-capabilities dt{font-weight:600;line-height:1.4}.role-capabilities dd{margin:6px 0 0;line-height:1.65;font-size:14px}.role-profile details ol{padding:12px 0 12px 20px}
 
 .role-profile code{font-size:.85em;overflow-wrap:anywhere}.role-profile p{overflow-wrap:anywhere}.role-method details{margin:12px 0}.role-profile-section+ .role-profile-section{margin-top:30px}
+
+.role-start-options{min-width:0}.role-context-option{margin-top:20px}.role-context-option>summary{cursor:pointer;min-height:44px;line-height:1.5;padding:12px 0}.role-context-option>.role-form{margin-top:12px}.base-specialist{overflow-wrap:anywhere}.base-specialist>ol{padding-left:20px;line-height:1.65}.base-specialist details{margin-top:20px}.base-specialist summary{cursor:pointer;min-height:32px}.base-specialist code{font-size:.85em;overflow-wrap:anywhere}.base-specialist pre{white-space:pre-wrap;overflow-wrap:anywhere}.base-specialist .role-form-actions{margin-top:18px}@media(max-width:700px){.role-start-options{width:100%;order:-1}}

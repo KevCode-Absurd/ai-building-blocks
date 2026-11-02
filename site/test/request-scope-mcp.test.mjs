@@ -115,8 +115,9 @@ test('official MCP stdio client completes qualification, scoped matching, source
     await client.connect(transport);
     const tools = (await client.listTools()).tools.map(t => t.name);
     assert(tools.includes('scope_specialist_request') && tools.includes('prepare_scoped_specialist_team'));
-    assert(!tools.includes('find_specialist') && !tools.includes('prepare_specialist_team'));
+    assert(tools.includes('find_specialist') && tools.includes('prepare_specialist') && !tools.includes('prepare_specialist_team'));
     const call = async (name, args) => { const result = await client.callTool({ name, arguments: args }); assert(!result.isError, JSON.stringify(result.content)); return result.structuredContent; };
+    const base=await call('prepare_specialist',{role_id:'coding-specialist'});assert.equal(base.state,'AWAITING_TASK');assert(base.files['INTAKE.md']);
     const triage = await call('scope_specialist_request', { request: 'My business is failing.' }); assert.equal(triage.state, 'QUALIFICATION_REQUIRED');
     const s = directScope(), p = await call('prepare_scoped_specialist_work', { scope: s });
     const route = await call('route_scoped_specialist_work', { scope: s, scope_sha256: p.scope_sha256 }); assert(route.routed[0].candidates.length);

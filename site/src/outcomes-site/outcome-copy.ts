@@ -1,6 +1,6 @@
 // The words on the owner pages, kept in one place so the app, the prerendered HTML and the reading-level test use the
 // same copy. Plain words for an owner who has never used AI for work (docs/WRITING.md, brand/COPYWRITING.md).
-import { OUTCOME_PATHS } from "./owner-view.ts";
+import { OUTCOME_PATHS } from "./owner-message.ts";
 
 export const START = {
   kicker: "For a whole job, not one task",

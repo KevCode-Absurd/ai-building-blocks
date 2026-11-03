@@ -11,7 +11,7 @@ import { grade } from '../../tools/readability.mjs';
 const read = (file) => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const copy = (v) => JSON.parse(JSON.stringify(v));
 
-test('the goal box hands the job to the owner\'s own AI through start_outcome', () => {
+test('the goal box hands the job to the owner\'s own AI through start_outcome', async () => {
   const message = outcomeMessage('  Our ad costs keep going up  ');
   assert.match(message, /start_outcome/);
   assert.match(message, /"Our ad costs keep going up"/);
@@ -19,8 +19,8 @@ test('the goal box hands the job to the owner\'s own AI through start_outcome', 
   assert.match(message, /nothing goes live without my yes/);
   assert.ok(message.includes(MCP_URL));
   assert.match(outcomeMessage('   '), /say the job in your own words/);
-  assert.equal(looksLikeSecret('Fix my ads, budget 6 lakh'), false);
-  assert.equal(looksLikeSecret('my key is sk-ant-api03-abcdefghijklmnopqrstuvwxyz'), true);
+  assert.equal(await looksLikeSecret('Fix my ads, budget 6 lakh'), false);
+  assert.equal(await looksLikeSecret('my key is sk-ant-api03-abcdefghijklmnopqrstuvwxyz'), true);
 });
 
 test('the walkthrough is built from the worked example, so it changes when the example does', () => {
@@ -153,4 +153,13 @@ test('crawlers get the same pages: prerendered HTML, sitemap entries, a route an
   assert.match(app, /isOutcomePath\(path\) \? \(\s*<OutcomesRoute/);
   assert.match(app, /!isOutcomePath\(path\)/, 'the pages load no library data');
   assert.match(read('../src/SiteHeader.tsx'), /<Link to="\/get-it-done"[^>]*>Get a whole job done<\/Link>/);
+});
+
+test('the start page stays light: the checks and the worked example load only on the pages that use them', () => {
+  for (const file of ['../src/outcomes-site/StartJob.tsx', '../src/outcomes-site/owner-message.ts', '../src/outcomes-site/OutcomeTabs.tsx', '../src/outcomes-site/OutcomesPage.tsx']) {
+    const source = read(file);
+    assert.doesNotMatch(source, /^import [^;]*from "\.\/owner-view|^import [^;]*engagement\.mjs|^import [^;]*rising-cpa/m, file);
+  }
+  assert.match(read('../src/outcomes-site/OutcomesPage.tsx'), /lazy\(\(\) => import\("\.\/ExampleJob"\)\)/);
+  assert.match(read('../src/outcomes-site/OutcomesPage.tsx'), /lazy\(\(\) => import\("\.\/JobStatusPage"\)\)/);
 });

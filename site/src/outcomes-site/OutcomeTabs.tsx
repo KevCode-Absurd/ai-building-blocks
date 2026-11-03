@@ -1,5 +1,5 @@
 import { Link } from "../lib/router";
-import { OUTCOME_PATHS } from "./owner-view";
+import { OUTCOME_PATHS } from "./owner-message";
 
 const TABS = [
   [OUTCOME_PATHS.start, "Start a job"],

@@ -1,7 +1,7 @@
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Link } from "../lib/router";
 import { ArrowIcon } from "../ui";
-import { BRIEF_QUESTIONS, JOB_MAX, OUTCOME_PATHS, looksLikeSecret, outcomeMessage } from "./owner-view";
+import { BRIEF_QUESTIONS, JOB_MAX, OUTCOME_PATHS, looksLikeSecret, outcomeMessage } from "./owner-message";
 import { OutcomeTabs } from "./OutcomeTabs";
 import { START } from "./outcome-copy";
 
@@ -12,7 +12,8 @@ export default function StartJob({ path, toast }: { path: string; toast: (messag
   const preview = useRef<HTMLPreElement>(null);
   const id = useId();
   const message = outcomeMessage(job);
-  const secret = looksLikeSecret(job);
+  const [secret, setSecret] = useState(false);
+  useEffect(() => { let live = true; void looksLikeSecret(job).then(found => { if (live) setSecret(found); }); return () => { live = false; }; }, [job]);
   const empty = !job.trim();
 
   async function copy() {

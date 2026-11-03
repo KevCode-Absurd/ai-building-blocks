@@ -1,36 +1,11 @@
 // What owners see of the outcome orchestrator: the message that starts a job, the worked example as a walkthrough,
 // and where a job stands from its engagement.json. Pure functions over the orchestrator's own code (src/outcomes),
 // shared by the pages, the prerendered HTML and the tests. Nothing here calls a model, the network or storage.
-import { advanceEngagement, checkEngagement, describeEngagement, gateFor, refuseSecrets, startEngagement } from "../outcomes/engagement.mjs";
+import { advanceEngagement, checkEngagement, describeEngagement, gateFor, startEngagement } from "../outcomes/engagement.mjs";
 import { planWarnings, validateBrief, validatePlan, validateResearch } from "../outcomes/plan-contract.mjs";
-import { BRIEF_FRAME } from "../outcomes/method.mjs";
 import example from "../outcomes/examples/rising-cpa.mjs";
 
-export const MCP_URL = "https://useaiblocks.com/mcp";
-export const OUTCOME_PATHS = { start: "/get-it-done", example: "/get-it-done/example", status: "/get-it-done/status" } as const;
-export const JOB_MAX = 2000;
-
-/** The questions the orchestrator's brief covers, in the owner's words, straight from the method. */
-export const BRIEF_QUESTIONS: string[] = BRIEF_FRAME.map(f => f.ask).filter(Boolean);
-
-/** The message an owner pastes into their own AI. It starts the job through MCP and repeats the owner's rules. */
-export function outcomeMessage(job: string): string {
-  const words = job.trim().replace(/\n{3,}/g, "\n\n") || "(say the job in your own words)";
-  return [
-    "Use the AI Blocks start_outcome tool to get this job done for me:",
-    "",
-    `"${words}"`,
-    "",
-    "Ask me your questions in one batch. Then research how experts do this job, build the plan from AI Blocks specialists and tools, and show me the plan before any work starts. I make the decisions, and nothing goes live without my yes. Keep the job's files in an outcomes folder so we can pick it up later.",
-    "",
-    `If you can't see the AI Blocks tools, help me connect ${MCP_URL} first.`,
-  ].join("\n");
-}
-
-/** True when the text looks like an API key or token, by the same rule the orchestrator uses to refuse one. */
-export function looksLikeSecret(text: string): boolean {
-  try { refuseSecrets(text); return false; } catch { return true; }
-}
+export { BRIEF_QUESTIONS, JOB_MAX, MCP_URL, OUTCOME_PATHS, looksLikeSecret, outcomeMessage } from "./owner-message.ts";
 
 export const KIND_LABEL: Record<string, string> = {
   intake: "The brief", context: "Know the business", evidence: "Gather the data", integrity: "Check the data can be trusted",

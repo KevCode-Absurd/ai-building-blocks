@@ -9,7 +9,10 @@ import BrowserTool from "./BrowserTool";
 import { BROWSER_TOOLS } from "./browser-tools.mjs";
 import { ArrowIcon, SearchIcon } from "../ui";
 import { Link, setSearch, useLocation } from "../lib/router";
-import { monthOf, pathOf, useCatalogue } from "../lib/data";
+import { monthOf } from "../lib/data";
+// Names and addresses of the suggested next items, resolved when the site is built (scripts/vite-site-data.mjs),
+// so a calculator never downloads the full catalogue.
+import NEXT_STEPS from "virtual:tool-next-steps";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, type Input, type Line, type Tool } from "./registry";
 import { STARTER_TOOLS, searchTools } from "./tool-search";
 
@@ -106,7 +109,6 @@ function Way({ n, title, children, testId }: { n: number; title: string; childre
 }
 
 function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
-  const c = useCatalogue();
   // Your numbers come back next time: from your account when signed in, otherwise from this browser.
   const saved = readToolInputs(tool.slug);
   const [preset, setPreset] = useState(() => (tool.presets.some((p) => p.id === saved.preset) ? saved.preset! : tool.presets[0].id));
@@ -208,8 +210,8 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
                 <div className="mt-next" data-testid="next-step">
                   <h2 className="mt-h">Next step</h2>
                   {next.map((n) => {
-                    const b = c?.bySlug[n.slug];
-                    return <p key={n.slug}>{n.why} {b ? <Link to={pathOf(b)}>{b.name} <ArrowIcon size={12} /></Link> : null}</p>;
+                    const b = NEXT_STEPS[n.slug];
+                    return <p key={n.slug}>{n.why} {b ? <Link to={b.path}>{b.name} <ArrowIcon size={12} /></Link> : null}</p>;
                   })}
                 </div>
               )}

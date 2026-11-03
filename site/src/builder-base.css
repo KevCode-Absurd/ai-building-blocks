@@ -6,7 +6,7 @@
 .palette-top { padding: 14px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
 .palette-top .search { height: 38px; flex: none; }
 .palette-list { overflow: auto; padding: 6px 8px 16px; flex: 1; }
-.pal-group { font: 500 11.5px var(--mono); color: var(--faint); padding: 14px 8px 6px; }
+.pal-group { font: 500 12px var(--mono); color: var(--faint); padding: 14px 8px 6px; }
 .pal-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 8px; border-radius: 8px; cursor: grab; user-select: none; }
 .pal-item:hover { background: var(--panel-2); }
 .pal-item b { display: block; font-size: 13.5px; font-weight: 500; line-height: 1.35; }
@@ -15,14 +15,15 @@
 .pal-item .add:hover { color: var(--text); border-color: var(--text); }
 .tpl { display: block; width: 100%; text-align: left; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); cursor: pointer; font-size: 13px; margin-bottom: 6px; color: var(--text); }
 .tpl:hover { border-color: var(--text); }
-.tpl small { display: block; color: var(--faint); font: 400 11px var(--mono); }
+.tpl small { display: block; color: var(--faint); font: 400 12px var(--mono); }
 .stage { position: relative; min-height: 0; background: var(--bg); }
 .builder .stage > .task-file-transfer { padding: 20px; margin-top: 0; }
 .stage-bar { position: absolute; z-index: 5; top: 12px; left: 12px; right: 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; pointer-events: none; }
 .stage-bar > * { pointer-events: auto; }
 .stage-bar .spacer { flex: 1; }
 .flow-name { height: 36px; padding: 0 12px; flex: 1 1 140px; min-width: 120px; max-width: 300px; text-overflow: ellipsis; border-radius: 8px; border: 1px solid transparent; background: color-mix(in srgb, var(--bg) 70%, transparent); font-size: 15px; font-weight: 500; }
-.flow-name:hover, .flow-name:focus { outline: none; border-color: var(--line-2); background: var(--panel); }
+.flow-name:hover { border-color: var(--line-2); background: var(--panel); }
+.flow-name:focus { outline: none; border-color: var(--text); box-shadow: 0 0 0 1px var(--text); background: var(--panel); }
 .stage-bar .select { max-width: 190px; text-overflow: ellipsis; }
 .stage-empty { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; pointer-events: none; }
 .stage-empty h3 { color: var(--text); margin-bottom: 8px; }
@@ -32,9 +33,9 @@
 .node { position: relative; width: 240px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 8px; padding: 11px 13px; font-family: var(--sans); color: var(--text); }
 .react-flow__node.selected .node { border-color: var(--text); box-shadow: 3px 3px 0 var(--text); }
 .node .top { display: flex; align-items: center; gap: 7px; }
-.node .step-n { margin-left: auto; font: 400 11px var(--mono); color: var(--faint); }
+.node .step-n { margin-left: auto; font: 400 12px var(--mono); color: var(--faint); }
 .node .nm { font-size: 14px; font-weight: 500; line-height: 1.3; margin: 7px 0 5px; }
-.node .io { display: block; font-size: 11.5px; color: var(--faint); line-height: 1.45; }
+.node .io { display: block; font-size: 12px; color: var(--faint); line-height: 1.45; }
 .node .io b { color: var(--muted); font-weight: 500; }
 .node .x { position: absolute; top: 6px; right: 6px; display: none; border: 0; background: var(--raise); color: var(--muted); width: 22px; height: 22px; border-radius: 6px; cursor: pointer; line-height: 1; }
 .react-flow__node.selected .node .x { display: block; }
@@ -59,7 +60,7 @@
 
 
 /* Builder: what each connection carries, and a preview run */
-.edge-label { position: absolute; padding: 2px 8px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--muted); font: 500 11px/1.4 var(--mono); white-space: nowrap; pointer-events: none; }
+.edge-label { position: absolute; padding: 2px 8px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--muted); font: 500 12px/1.4 var(--mono); white-space: nowrap; pointer-events: none; }
 .edge-label.warn { color: var(--warn); border-style: dashed; }
 .builder.previewing .edge-label { color: var(--text); border-color: var(--text); }
 .bits span { position: absolute; left: 0; top: 0; offset-rotate: 0deg; offset-distance: 0%; font: 700 12px/1 var(--mono); color: var(--text); opacity: 0; animation: bit-run 0.8s linear both; }
@@ -87,7 +88,7 @@
 .sp-list li { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-2); }
 .sp-list b { display: block; font-size: 13.5px; font-weight: 500; }
 .sp-list small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); line-height: 1.45; }
-.sp-list .opt { font: 400 11px var(--mono); color: var(--faint); }
+.sp-list .opt { font: 400 12px var(--mono); color: var(--faint); }
 .sp-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 .sp-job { margin: 12px 0 0; }
 
@@ -96,7 +97,7 @@
 .goal-q { font-size: 13px; color: var(--muted); }
 .goal-row { display: flex; gap: 6px; }
 .goal-row input { flex: 1; min-width: 0; height: 36px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--panel); color: var(--text); font: 400 14px var(--sans); }
-.goal-row input:focus { outline: 0; border-color: var(--text); }
+.goal-row input:focus { outline: 0; border-color: var(--text); box-shadow: 0 0 0 1px var(--text); }
 .goal-row .btn { flex: none; }
 @media (max-width: 480px) {
   .goal-row { flex-direction: column; gap: 10px; }
@@ -137,8 +138,8 @@
 .sl-ctl .icon-btn { width: 32px; height: 32px; }
 .sl-pass { display: flex; align-items: center; gap: 10px; height: 30px; padding-left: 23px; }
 .sl-line { position: relative; width: 2px; height: 100%; background: var(--line-2); overflow: visible; }
-.sl-carry { font: 500 11.5px var(--mono); color: var(--muted); }
-.sl-bits { position: absolute; left: -4px; top: 0; writing-mode: vertical-lr; font: 700 10px/1 var(--mono); color: var(--text); opacity: 0; animation: sl-bits 0.7s linear both; }
+.sl-carry { font: 500 12px var(--mono); color: var(--muted); }
+.sl-bits { position: absolute; left: -4px; top: 0; writing-mode: vertical-lr; font: 700 12px/1 var(--mono); color: var(--text); opacity: 0; animation: sl-bits 0.7s linear both; }
 @keyframes sl-bits { 0% { transform: translateY(-14px); opacity: 0; } 20%, 80% { opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   .bits, .sl-bits { display: none; }
@@ -164,12 +165,12 @@
 
 /* Preview: a few lines of what each step made in a real run */
 .node-out { position: absolute; left: -6px; top: calc(100% + 10px); z-index: 10; width: 300px; margin: 0; border: 1px solid var(--text); border-radius: 8px; background: var(--panel); box-shadow: var(--hard); overflow: hidden; pointer-events: none; text-align: left; }
-.node-out figcaption { padding: 5px 10px; font: 500 10.5px var(--mono); color: var(--muted); border-bottom: 1px solid var(--line-2); background: repeating-linear-gradient(180deg, var(--panel) 0 2px, var(--line-2) 2px 3px); }
-.node-out pre { margin: 0; padding: 8px 10px 10px; min-height: 8.6em; font: 400 11px/1.55 var(--mono); color: var(--text); white-space: pre-wrap; word-break: break-word; }
+.node-out figcaption { padding: 5px 10px; font: 500 12px var(--mono); color: var(--muted); border-bottom: 1px solid var(--line-2); background: repeating-linear-gradient(180deg, var(--panel) 0 2px, var(--line-2) 2px 3px); }
+.node-out pre { margin: 0; padding: 8px 10px 10px; min-height: 8.6em; font: 400 12px/1.55 var(--mono); color: var(--text); white-space: pre-wrap; word-break: break-word; }
 .node-out .cursor { height: 1em; width: 0.5em; }
 .run-out { left: 12px; top: auto; bottom: 58px; z-index: 6; width: min(400px, calc(100% - 100px)); animation: atf-in 0.18s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .run-out pre { font-size: 12px; }
 @media (prefers-reduced-motion: reduce) { .run-out { animation: none; } }
 .step-list .node-out { position: static; width: auto; margin: 8px 0 4px 42px; }
-.sp-sample { margin: 6px 0 0; padding: 10px 12px; max-height: 220px; overflow: auto; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg-2); font: 400 11.5px/1.55 var(--mono); white-space: pre-wrap; word-break: break-word; }
+.sp-sample { margin: 6px 0 0; padding: 10px 12px; max-height: 220px; overflow: auto; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg-2); font: 400 12px/1.55 var(--mono); white-space: pre-wrap; word-break: break-word; }
 

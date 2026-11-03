@@ -419,6 +419,28 @@ for (const mobile of [false, true]) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 
+  test((mobile ? '@mobile ' : '') + 'sign-in, account, community and calculator pages open without the full catalogue', async ({page}) => {
+    await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+    if (mobile) await page.setViewportSize({width: 412, height: 823});
+    const catalogue: string[] = [];
+    page.on('request', r => { const p = new URL(r.url()).pathname; if (/^\/data\/blocks\.json$|^\/assets\/blocks-[0-9a-f]+\.json$/.test(p)) catalogue.push(p); });
+    await page.goto('/sign-in');
+    await expect(page.getByTestId('account-welcome')).toBeVisible();
+    await page.goto('/account');
+    await expect(page.getByTestId('account-page')).toBeVisible();
+    await page.goto('/community');
+    await expect(page.getByRole('heading', {level: 1})).toBeVisible();
+    await page.goto('/tools/order-margin');
+    await expect(page.getByTestId('tool-page')).toBeVisible();
+    // Next steps still name their library items, resolved when the site was built.
+    const next = page.getByTestId('next-step').getByRole('link').first();
+    await expect(next).toHaveAttribute('href', /^\/(skills|prompts|workflows|agents)\/[a-z0-9-]+$/);
+    await expect(next).not.toHaveText('');
+    await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
+    await page.waitForTimeout(1200);
+    expect(catalogue).toEqual([]);
+  });
+
   test((mobile ? '@mobile ' : '') + 'typing survives a delayed workflow-tools download', async ({page}) => {
     await page.route('**/api/**', r => r.fulfill({json: {configured: false, enabled: true}}));
     if (mobile) await page.setViewportSize({width: 412, height: 823});

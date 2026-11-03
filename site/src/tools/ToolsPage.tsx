@@ -3,14 +3,14 @@
 // kept in this browser, or in the signed-in account library (lib/saved-work.ts). Loaded on demand, so the home page never waits for it.
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./tools.css";
+import { readToolInputs, saveToolInputs } from "../lib/saved-work";
+import { changedFields } from "../lib/saved-work-data";
 import BrowserTool from "./BrowserTool";
 import { BROWSER_TOOLS } from "./browser-tools.mjs";
 import { ArrowIcon, SearchIcon } from "../ui";
 import { Link, setSearch, useLocation } from "../lib/router";
 import { monthOf, pathOf, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, type Input, type Line, type Tool } from "./registry";
-import { readToolInputs, saveToolInputs } from "../lib/saved-work";
-import { changedFields } from "../lib/saved-work-data";
 
 const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const store = {

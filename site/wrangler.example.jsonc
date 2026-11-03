@@ -19,6 +19,15 @@
       "/connect-mcp.html"
     ]
   },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.25,
+    "redact_query_string": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false
+    }
+  },
   "compatibility_date": "2026-10-21",
   "compatibility_flags": [
     "assets_navigation_has_no_effect"
@@ -92,6 +101,15 @@
   "env": {
     "staging": {
       "name": "ai-building-blocks-staging",
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "invocation_logs": false
+        }
+      },
       "workers_dev": true,
       "preview_urls": false,
       "assets": {

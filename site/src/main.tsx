@@ -8,6 +8,10 @@ import PublicOpening from "./PublicOpening";
 import { CommunityStars } from "./CommunityStars";
 import "./dither-masks.css";
 import { keepInitialHtml } from "./lib/public-opening";
+import { installChunkRecovery } from "./lib/chunk-recovery";
+
+// After a deploy, a page opened earlier may ask for code files that were replaced: reload once to get the new ones.
+installChunkRecovery();
 
 
 // Built pages arrive with a plain first screen for search engines (scripts/prerender.mjs); the app replaces it.

@@ -1,5 +1,6 @@
 import { Component, useLayoutEffect, type ReactNode } from "react";
 import { Link } from "./lib/router";
+import { isChunkError, recoverFromChunkError, reportClientError } from "./lib/chunk-recovery";
 import "./navigation-usability.css";
 
 function RecoveryScreen() {
@@ -17,9 +18,14 @@ function RecoveryScreen() {
 }
 
 /** Keep navigation usable when a route fails. The path key resets this boundary
- * when the person chooses another page; rejected module loads need a reload. */
+ * when the person chooses another page. A page whose code failed to load (usually
+ * after a deploy) reloads once by itself; every other failure is reported. */
 export default class PageRecovery extends Component<{ children: ReactNode }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch(error: unknown) {
+    if (isChunkError(error) && recoverFromChunkError(error)) return;
+    reportClientError(isChunkError(error) ? "chunk" : "boundary", error);
+  }
   render() { return this.state.failed ? <RecoveryScreen /> : this.props.children; }
 }

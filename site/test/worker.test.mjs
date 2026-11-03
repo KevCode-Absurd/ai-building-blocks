@@ -73,22 +73,46 @@ test('unknown pages keep the custom 404 HTML and its headers with a real 404 sta
 });
 
 test('missing typed links redirect to the real block type, preserve queries and retain unknown 404s', async () => {
+  // Item pages are static files; renamed slugs come from catalogue-items/renamed.json, bundled into the Worker.
+  const pages = new Set(['/prompts/example-prompt', '/workflows/example-routine', '/skills/cac-by-source']);
+  const asked = [];
   const env = { ASSETS: { async fetch(request) {
-    if (new URL(request.url).pathname === '/data/blocks.json') return Response.json({ blocks: [
-      { slug: 'example-prompt', type: 'prompt' }, { slug: 'example-routine', type: 'routine' },
-    ], renamed: { 'old-prompt': 'example-prompt' } });
+    const asset = new URL(request.url).pathname;
+    asked.push(asset);
+    if (request.method === 'HEAD' && pages.has(asset)) return new Response(null, { status: 200 });
     return new Response('Custom not found', { status: 404 });
   } } };
-  for (const [path, expected] of [['/skills/example-prompt', '/prompts/example-prompt'], ['/agents/example-routine', '/workflows/example-routine'], ['/skills/old-prompt', '/prompts/example-prompt']]) {
+  for (const [path, expected] of [['/skills/example-prompt', '/prompts/example-prompt'], ['/agents/example-routine', '/workflows/example-routine'], ['/prompts/acquisition-cost-by-source-calculator', '/skills/cac-by-source']]) {
     const response = await worker.fetch(new Request('https://example.test' + path + '?source=saved'), env);
     assert.equal(response.status, 301);
     assert.equal(response.headers.get('location'), 'https://example.test' + expected + '?source=saved');
   }
-  for (const path of ['/skills/no-such-slug', '/prompts/example-prompt']) {
+  for (const path of ['/skills/no-such-slug', '/minds/no-such-slug']) {
+    asked.length = 0;
     const response = await worker.fetch(new Request('https://example.test' + path), env);
     assert.equal(response.status, 404);
     assert.equal(await response.text(), 'Custom not found');
+    // The asset itself, four other kinds, then the 404 page: never the 4.5 MB catalogue.
+    assert.equal(asked.length, 6);
   }
+  assert(!asked.includes('/data/blocks.json'));
+});
+
+test('a code file from an older build gets a plain uncached 404, not the HTML 404 page', async () => {
+  const response = await worker.fetch(new Request('https://example.test/assets/index-old123.js'), { ASSETS: { async fetch(req) {
+    return new URL(req.url).pathname === '/404' ? new Response('Custom 404 page') : new Response('Missing', { status: 404 });
+  } } });
+  assert.equal(response.status, 404);
+  assert.equal(response.headers.get('content-type'), 'text/plain; charset=utf-8');
+  assert.equal(response.headers.get('cache-control'), 'no-store');
+});
+
+test('an unexpected throw becomes a 500 with an error id instead of a Cloudflare error page', async () => {
+  const env = { ASSETS: { async fetch() { throw new TypeError('secret stored text'); } } };
+  const page = await worker.fetch(new Request('https://example.test/skills/anything.md'), env);
+  assert.equal(page.status, 500);
+  assert.match(page.headers.get('x-error-id'), /^[0-9a-f]{8}$/);
+  assert.doesNotMatch(await page.text(), /secret/);
 });
 
 test('missing saved-tour pages retain their own 404 for GET and HEAD while other paths use the site 404', async () => {

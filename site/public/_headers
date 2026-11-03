@@ -24,8 +24,10 @@
   X-Robots-Tag: noindex, nofollow
 /s/*
   X-Robots-Tag: noindex, nofollow
+# Item pages point at hashed code files: a browser may use its copy for 5 minutes, then a stale copy for at most
+# 10 more while it fetches the new one, so a page never outlives the code it names by long after a deploy.
 /skills/*
-  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+  Cache-Control: public, max-age=300, stale-while-revalidate=600
 # The skill files and zips are for downloading and for AI assistants; the page for each skill is what search shows.
 /skills/:slug/SKILL.md
   X-Robots-Tag: noindex
@@ -47,10 +49,62 @@
   Cache-Control: private, no-store
   Referrer-Policy: no-referrer
   X-Robots-Tag: noindex, nofollow
+# Strict-Transport-Security: browsers use HTTPS only, for a year, on this domain and its subdomains.
+# Content-Security-Policy-Report-Only enforces nothing yet: browsers report what it would block to /api/client-error
+# (Workers Logs, docs/MONITORING.md). The sha256 values are index.html's three inline scripts and the home page's
+# four (scripts/build-home-initial-shell.mjs). site/test/security-headers.test.mjs checks the first three; the release
+# gate (scripts/byte-budgets.mjs) checks built pages and prints any missing hash. Enforce only after a week of reports
+# shows nothing real blocked.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(self), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'sha256-YgYxUhM4AZPWpVUyCsZle//WbdFj1FspcYcdKhZ+ckg=' 'sha256-qn7qNPV4435gY/U6avX84yIhQEtp+tLKPMRh7pUFRVA=' 'sha256-CJa2xyv7cam6ZALuz633CwXTuJBSvDQ/z4ipVtCu++c=' 'sha256-NBowib0lNPggIHL2E6PxnOhLudwpDESgDjY1e0P3E9s=' 'sha256-p/7zk3joNUP56NUWX6iQR+1U6LSWdhbmZ8GErbmsJ2o=' 'sha256-shOs6umuCUKhDle3NpYQrpQdcPVUfOr40KklREWedqY=' 'sha256-LBI3MoTU1ZHsAyToumisRX7mEb7yJ+ymUDZpJ2CIW3c=' https://www.googletagmanager.com https://*.clarity.ms https://challenges.cloudflare.com https://clerk.useaiblocks.com https://*.clerk.accounts.dev; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com https://clerk.useaiblocks.com https://*.clerk.accounts.dev https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; report-uri /api/client-error
+
+# Account, sign-in and publishing pages are never shown inside another site's frame (clickjacking).
+/account
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/account/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/space
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/space/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/sign-in
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/sign-in/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/sign-up
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/sign-up/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/publish
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/publish/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/my-submissions
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/my-submissions/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/admin
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+/admin/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
 
 # Preview images change rarely.
 /support-chat-frame.html

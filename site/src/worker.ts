@@ -14,11 +14,16 @@ import { previewSessionRoute } from "./server/preview-session.ts";
 import { handlePublicApi, isPublicApiRoute } from "./server/public-api.ts";
 import { handleCompanyApi, isCompanyApiRoute, type CompanyApiEnv } from "./server/company-api.ts";
 import { itemTwin } from "./server/twins.ts";
+import { withRequestLog } from "./server/request-log.ts";
+import { clientError, CLIENT_ERROR_PATH } from "./server/client-error.ts";
+// Old item addresses and their new ones, bundled into the Worker (about 50 KB), so a missing page never has to read
+// the 4.5 MB catalogue. scripts/build-index.mjs makes the same file into public/_redirects.
+import renamedItems from "../../catalogue-items/renamed.json" with { type: "json" };
 
 type Env = Parameters<typeof comments>[0]["env"] & Parameters<typeof spaces>[0]["env"] &
   Parameters<typeof compose>[0]["env"] & Parameters<typeof community>[0]["env"] & CompanyApiEnv;
 
-export default {
+const router = {
   async fetch(request: Request, env: Env): Promise<Response> {
     const session = await previewSessionRoute(request, env);
     if (session) return session;
@@ -40,6 +45,7 @@ export default {
     if (path === "/api/comments") return comments({ request, env });
     if (path === "/api/spaces" || path.startsWith("/api/spaces/")) return spaces({ request, env });
     if (path === "/api/compose") return compose({ request, env });
+    if (path === CLIENT_ERROR_PATH) return clientError(request, env);
     if (path === "/api" || path.startsWith("/api/")) {
       const denied = await apiSecurity(request, env);
       if (denied) return denied;
@@ -57,20 +63,21 @@ export default {
     // behavior for missing typed paths while retaining a real 404 for unknown slugs.
     const typed = path.match(/^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)(?:\.html)?$/);
     if (response.status === 404 && typed && ['GET', 'HEAD'].includes(request.method)) {
-      const asset = await env.ASSETS.fetch(new Request(new URL('/data/blocks.json', request.url)));
-      if (asset.ok) {
-        const catalogue = await asset.json() as { renamed?: Record<string, string>; blocks: { slug: string; type?: string; category?: string }[] };
-        const slug = catalogue.renamed?.[typed[2]] ?? typed[2];
-        const block = catalogue.blocks.find(b => b.slug === slug);
-        if (block) {
-          const kind = block.type === 'mind' ? 'minds' : block.type === 'agent' ? 'agents' : block.category === 'orchestrator' || block.type === 'workflow' || block.type === 'routine' ? 'workflows' : block.type === 'prompt' ? 'prompts' : 'skills';
-          const target = `/${kind}/${block.slug}`;
-          if (target !== path) {
-            const url = new URL(request.url); url.pathname = target;
-            return Response.redirect(url.toString(), 301);
-          }
+      // Each item's page is a static file under its kind, so a few cheap file checks find the right one.
+      const slug = (renamedItems as Record<string, string>)[typed[2]] ?? typed[2];
+      for (const kind of ['skills', 'prompts', 'workflows', 'agents', 'minds']) {
+        const target = `/${kind}/${slug}`;
+        if (target === path) continue;
+        const page = await env.ASSETS.fetch(new Request(new URL(target, request.url), { method: 'HEAD' }));
+        if (page.ok) {
+          const url = new URL(request.url); url.pathname = target;
+          return Response.redirect(url.toString(), 301);
         }
       }
+    }
+    // A code file from an older build (a page opened before a deploy): a plain, uncached 404 tells the app to reload.
+    if (response.status === 404 && path.startsWith('/assets/')) {
+      return new Response('Not found', { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' } });
     }
     if (response.status === 404 && ['GET', 'HEAD'].includes(request.method)) {
       if (path.startsWith('/example-app/')) {
@@ -82,4 +89,9 @@ export default {
     }
     return response;
   },
+};
+
+// Every request the Worker runs is logged (route, status, time) and an unexpected throw becomes a 500 with an error id.
+export default {
+  fetch: (request: Request, env: Env): Promise<Response> => withRequestLog(request, () => router.fetch(request, env)),
 };

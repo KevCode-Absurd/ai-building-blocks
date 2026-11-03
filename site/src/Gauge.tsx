@@ -21,7 +21,7 @@ export function Gauge({ level, why }: { level: Thinking; why?: string }) {
   const step = 180 / SEGS, gap = 3;
   return (
     <div className={`gauge g-${level}`} data-testid="thinking" data-level={level}>
-      <svg viewBox="0 0 120 76" width="120" height="76" role="img" aria-label={`Thinking it needs: ${t.name}`}>
+      <svg viewBox="0 0 120 80" width="120" height="80" role="img" aria-label={`Thinking it needs: ${t.name}`}>
         {Array.from({ length: SEGS }, (_, i) => (
           <path key={i} d={seg(i * step + gap / 2, (i + 1) * step - gap / 2)} className={i < FILL[level] ? "on" : "off"} />
         ))}
@@ -29,8 +29,8 @@ export function Gauge({ level, why }: { level: Thinking; why?: string }) {
           <line x1={C.x} y1={C.y} x2={C.x} y2={C.y - R + 12} />
         </g>
         <circle cx={C.x} cy={C.y} r="4.5" className="hub" />
-        <text x={C.x - R} y="72" textAnchor="middle" className="end">Low</text>
-        <text x={C.x + R} y="72" textAnchor="middle" className="end">High</text>
+        <text x={C.x - R} y="75" textAnchor="middle" className="end">Low</text>
+        <text x={C.x + R} y="75" textAnchor="middle" className="end">High</text>
       </svg>
       <div className="gauge-text">
         <span className="gauge-k">Thinking it needs</span>

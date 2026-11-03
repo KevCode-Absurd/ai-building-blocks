@@ -1,21 +1,22 @@
 // The orchestrator's method: written once, used for every outcome. It replaces per-outcome playbooks.
 // The host AI follows it to pin down the outcome, research how experts do the job and compose a plan from our catalogue.
+// Brief-frame examples show the shape of list and object fields; they are not rules, so they do not change METHOD_VERSION.
 export const METHOD_VERSION = 2;
 
 export const BRIEF_FRAME = [
   { field: 'outcome', ask: 'What do you want to be true when this is done?', note: 'In the owner\'s terms, made specific.' },
   { field: 'deliverable', ask: 'What should you have in hand at the end?', note: 'The finished thing: launched ads, a fixed site, a closed month. Not advice.' },
-  { field: 'done', ask: 'How will we both know it is finished?', note: 'A short checklist.' },
-  { field: 'metric', ask: 'Which one number shows it worked, what is it now, where does that figure come from, and what would count as success?', note: 'name, direction (decrease, increase or reach), unit, baseline, baseline_source (reported, verified or unknown), target. Leave out only when the deliverable has no number, such as a policy.' },
+  { field: 'done', ask: 'How will we both know it is finished?', note: 'A short checklist.', example: ['Booking page fixed and checked', 'Changes launched with your approval'] },
+  { field: 'metric', ask: 'Which one number shows it worked, what is it now, where does that figure come from, and what would count as success?', note: 'name, direction (decrease, increase or reach), unit, baseline, baseline_source (reported, verified or unknown), target. Leave out only when the deliverable has no number, such as a policy.', example: { name: 'Bookings per week', direction: 'increase', unit: 'bookings', baseline: null, baseline_source: 'unknown', target: null } },
   { field: 'deadline', ask: 'By when?', note: '' },
-  { field: 'guardrails', ask: 'What must not get worse while we do this?', note: 'Numbers where possible: volume, margin, quality.' },
-  { field: 'limits', ask: 'What may we change, and what is off limits: budget, brand claims, systems, people?', note: '' },
-  { field: 'assets', ask: 'What exists already that we should reuse: brand guide or brand brain, past work, documents, links?', note: '' },
-  { field: 'connections', ask: 'Which tools can your AI already reach (MCP connectors, exports, accounts), and with what access?', note: 'name, access (read, draft, live), status (connected, available, missing). Never ask for keys here; ask when a stage needs one.' },
+  { field: 'guardrails', ask: 'What must not get worse while we do this?', note: 'Numbers where possible: volume, margin, quality.', example: ['Cost per booking stays below what a booking earns', 'Review rating does not drop'] },
+  { field: 'limits', ask: 'What may we change, and what is off limits: budget, brand claims, systems, people?', note: '', example: ['Ad budget stays at the current monthly spend', 'No discounts'] },
+  { field: 'assets', ask: 'What exists already that we should reuse: brand guide or brand brain, past work, documents, links?', note: '', example: ['Brand guide (brand/brand-brain.md)', 'Last quarter\'s ad export'] },
+  { field: 'connections', ask: 'Which tools can your AI already reach (MCP connectors, exports, accounts), and with what access?', note: 'name, access (read, draft, live), status (connected, available, missing). Never ask for keys here; ask when a stage needs one.', example: [{ name: 'Google Ads', access: 'read', status: 'connected' }, { name: 'Booking system', access: 'read', status: 'missing' }] },
   { field: 'data_home', ask: 'Where should we keep the working data: a file in this project, a Google Sheet, your database, or should we choose?', note: '' },
   { field: 'technical_level', ask: 'How hands-on do you want to be with the technical parts?', note: 'Sets how much we explain and how changes are handed over.' },
   { field: 'decides', ask: 'Who makes the final calls?', note: '' },
-  { field: 'unknowns', ask: '', note: 'Anything still unknown after the questions. Name it; never guess it.' },
+  { field: 'unknowns', ask: '', note: 'Anything still unknown after the questions. Name it; never guess it.', example: ['Profit per booking'] },
 ];
 
 export const RESEARCH_PROTOCOL = [
@@ -71,7 +72,7 @@ export const METHOD = {
 
 export function methodMarkdown() {
   return `# How this engagement works (method v${METHOD_VERSION})\n\n${METHOD.loop.map((s, i) => `${i + 1}. ${s}`).join('\n')}\n\n` +
-    `## 1. Brief\n\n${METHOD.question_rules.map(r => `- ${r}`).join('\n')}\n\n| Field | Ask | Note |\n|---|---|---|\n${BRIEF_FRAME.map(f => `| ${f.field} | ${f.ask || '-'} | ${f.note || '-'} |`).join('\n')}\n\n` +
+    `## 1. Brief\n\n${METHOD.question_rules.map(r => `- ${r}`).join('\n')}\n\n| Field | Ask | Note | Example |\n|---|---|---|---|\n${BRIEF_FRAME.map(f => `| ${f.field} | ${f.ask || '-'} | ${f.note || '-'} | ${f.example === undefined ? '-' : `\`${JSON.stringify(f.example)}\``} |`).join('\n')}\n\n` +
     `## 2. Research\n\n${RESEARCH_PROTOCOL.map((r, i) => `${i + 1}. ${r}`).join('\n')}\n\n` +
     `## 3. Compose\n\n${COMPOSITION_RULES.map(r => `- ${r}`).join('\n')}\n\n| Kind | For |\n|---|---|\n${Object.entries(KIND_GUIDE).map(([k, v]) => `| ${k} | ${v} |`).join('\n')}\n\n` +
     `## 4. Run\n\n${RUN_RULES.map(r => `- ${r}`).join('\n')}\n`;

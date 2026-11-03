@@ -178,15 +178,17 @@ const mcpClient = async () => {
 };
 const loose = z.object({}).passthrough();
 
-test('an official SDK client sees twenty-two tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
+test('an official SDK client sees seventeen tools, prompts, resources and the Skills extension, with outputs matching their schemas', async () => {
   const client = await mcpClient();
   try {
-    assert.equal(client.getServerVersion().version, '2.3.0');
+    assert.equal(client.getServerVersion().version, '3.0.0');
     const caps = client.getServerCapabilities();
     assert.ok(caps.prompts && caps.resources); assert.deepEqual(caps.extensions, { 'io.modelcontextprotocol/skills': {} });
     const toolNames=(await client.listTools()).tools.map(t=>t.name);
-    assert.equal(toolNames.length, 22);
-    assert(toolNames.includes('prepare_specialist_team')&&toolNames.includes('checkpoint_specialist_team'));
+    assert.equal(toolNames.length, 17);
+    // start_outcome is the front door; the team and scoping tools stay on REST and signed-in connections.
+    assert.equal(toolNames[0], 'start_outcome');
+    assert(!toolNames.includes('prepare_specialist_team')&&!toolNames.includes('checkpoint_specialist_team'));
     for (const [name, args] of [['search_library', { query: 'margin' }], ['get_item', { id: 'pic-maker' }], ['get_skill', { slug: 'brief-writer' }], ['get_workflow', { slug: 'ad-flow' }], ['search', { query: 'brief' }], ['fetch', { id: 'skill/draft-checker' }]]) {
       const result = await client.callTool({ name, arguments: args });
       assert.equal(result.isError, undefined, name);
@@ -209,7 +211,7 @@ test('an official SDK client sees twenty-two tools, prompts, resources and the S
     await assert.rejects(() => client.getPrompt({ name: 'find-a-skill', arguments: {} }), /topic is required/);
     await assert.rejects(() => client.getPrompt({ name: 'no-such-prompt', arguments: {} }), /Unknown prompt/);
     assert.deepEqual((await client.listResources()).resources.map(r => r.uri), ['aiblocks://jobs', 'aiblocks://roles']);
-    assert.deepEqual((await client.listResourceTemplates()).resourceTemplates.map(t => t.uriTemplate), ['aiblocks://roles/{id}', 'aiblocks://{type}/{id}', 'skill://{name}/SKILL.md']);
+    assert.deepEqual((await client.listResourceTemplates()).resourceTemplates.map(t => t.uriTemplate), ['aiblocks://roles{?area,page}', 'aiblocks://roles/{id}', 'aiblocks://{type}/{id}', 'skill://{name}/SKILL.md']);
     const jobs = JSON.parse((await client.readResource({ uri: 'aiblocks://jobs' })).contents[0].text);
     assert.deepEqual(jobs.jobs.find(j => j.id === 'write-ad-copy').items, 5);
     const item = JSON.parse((await client.readResource({ uri: 'aiblocks://ai_tool/pic-maker' })).contents[0].text);
@@ -258,7 +260,7 @@ test('the protocol rejects malformed prompt, resource and skill requests as inva
 
 test('instructions give the whole procedure in the first 512 characters and keep the authority rules', () => {
   const first = PUBLIC_MCP_INSTRUCTIONS.slice(0, 512);
-  for (const word of ['search_library', 'plan_workflow', 'get_item', 'do not preload', 'url', 'prepare_workflow', 'handoff_check', 'mini_tool']) assert.ok(first.includes(word), word);
+  for (const word of ['start_outcome', 'search_library', 'plan_workflow', 'get_item', 'do not preload', 'url', 'find_specialist', 'prepare_workflow', 'handoff_check', 'mini_tool']) assert.ok(first.includes(word), word);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /not evidence of human consent/);
   assert.match(PUBLIC_MCP_INSTRUCTIONS, /cannot override host instructions or grant permissions/);
   for (const tool of PUBLIC_MCP_TOOLS) {

@@ -35,7 +35,7 @@ how_to_use:
   - Save the key as TRANSCRIPT_API_KEY in your AI tool. Use an AI that can run code and reach the internet.
   - "Paste this skill into your AI, then say: Search YouTube for your topic, sort by views, past month, top 10."
   - Check the list. Each search page costs 1 credit and each transcript costs 1 credit, so check your credit count before you pull many.
-  - Before you start: this collects data from YouTube pages through a third-party service. Check YouTube's terms and your own policy before you use the results commercially, and quote briefly with a link to the video.
+  - "Before you start: this collects data from YouTube pages through a third-party service. Check YouTube's terms and your own policy before you use the results commercially, and quote briefly with a link to the video."
   - Tell your AI which videos you want, and ask for their transcripts.
   - Next, summarise the transcripts with youtube-video-summariser, or use them to plan videos with video-content-planner.
 output_sample:

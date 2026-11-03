@@ -36,7 +36,7 @@ how_to_use:
   - The validator step is optional. The validator script and report-schema.md are only for that code step.
   - Paste the skill text from this page into the chat. If you want the validator step, also attach references/report-schema.md and scripts/validate_report.py. Without them, skip that step and ask for the table in plain text.
   - Type the claim you want checked, word for word. Add links to any sources you already trust, how deep to go, and any topics that must not be searched.
-  - The result is a table with one row per claim: the claim, the source IDs, which sources support it and which contradict it, whether it is sourced or an inference, its confidence (low, medium or high) and whether sources conflict. A list of gaps follows. Read the table by confidence first. Then read the conflicts and gaps before you use the claim.
+  - "The result is a table with one row per claim: the claim, the source IDs, which sources support it and which contradict it, whether it is sourced or an inference, its confidence (low, medium or high) and whether sources conflict. A list of gaps follows. Read the table by confidence first. Then read the conflicts and gaps before you use the claim."
   - Click the cited links yourself for anything important. The check shows how well sources agree. It does not prove a claim is true.
   - Running the validator (scripts/validate_report.py) needs an AI that can run code, plus Python 3. It needs no API key. Without code, ask for the table in plain text.
   - Carry each claim into your final report with its confidence level and conflicts beside it.

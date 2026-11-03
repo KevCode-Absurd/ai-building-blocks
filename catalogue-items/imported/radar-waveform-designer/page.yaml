@@ -32,7 +32,7 @@ you_get:
   - Ambiguity function plots
   - Sidelobe and resolution figures
 how_to_use:
-  - Gather first: your range, range resolution, target speed, radar or sonar, and your MATLAB release. You need paid MATLAB with the Phased Array System Toolbox. Versions. nlfmspec2freq needs R2023a. legendreseq, mlseq, apaseq and pnkcode need R2024a. shapespectrum and sidelobelevel need R2024b. radarWaveformGenerator needs R2026a. The skill's licence lets you use it only with MathWorks products.
+  - "Gather first: your range, range resolution, target speed, radar or sonar, and your MATLAB release. You need paid MATLAB with the Phased Array System Toolbox. Versions. nlfmspec2freq needs R2023a. legendreseq, mlseq, apaseq and pnkcode need R2024a. shapespectrum and sidelobelevel need R2024b. radarWaveformGenerator needs R2026a. The skill's licence lets you use it only with MathWorks products."
   - Open your AI and paste the skill, or upload the skill folder.
   - Tell it your range, resolution and speed needs, and whether it is radar or sonar.
   - Answer any questions it asks about your use. It may ask about range scale, target speed and limits.

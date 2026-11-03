@@ -46,6 +46,7 @@ output_sample:
     - An AI that can read your email, such as through a Gmail, Outlook or IMAP connector
     - The files made by the inbox setup skill, saved in your Email folder
     - An AI that can save files
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Overview
       contains: Two or three sentences on what came in and whether anything is urgent.

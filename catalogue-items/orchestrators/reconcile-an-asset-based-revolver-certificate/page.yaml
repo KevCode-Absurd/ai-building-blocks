@@ -32,9 +32,9 @@ you_give:
   - The certificate date, the currency and the scale, such as thousands
 
 you_get:
-  - A receivables line: aging less ineligibles and concentration excess, times the advance rate, less the reserve
-  - An inventory line: the lowest of the cost-based, appraisal-based and sublimit amounts, less the reserve, with the limit that applied named
-  - Availability: both lines added, capped at your commitment, less drawn loan, letters of credit and blocks. It is signed, so a negative shows as an overadvance
+  - "A receivables line: aging less ineligibles and concentration excess, times the advance rate, less the reserve"
+  - "An inventory line: the lowest of the cost-based, appraisal-based and sublimit amounts, less the reserve, with the limit that applied named"
+  - "Availability: both lines added, capped at your commitment, less drawn loan, letters of credit and blocks. It is signed, so a negative shows as an overadvance"
   - A comparison with your draft certificate, each difference explained or flagged
   - Every MISSING item, and any check that could not run
 

@@ -34,7 +34,7 @@ you_get:
   - Suggested price metric
   - Pricing score with next fixes
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. The skill points to five reference files in its references folder: wtp-conversations, four-failures, packaging-tiers, monetization-models and case-studies. Paste or attach them too. Without them it still runs, but you lose the exact question scripts, the tier scoring steps and the worked cases. No code or paid tool is needed.
+  - "Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. The skill points to five reference files in its references folder: wtp-conversations, four-failures, packaging-tiers, monetization-models and case-studies. Paste or attach them too. Without them it still runs, but you lose the exact question scripts, the tier scoring steps and the worked cases. No code or paid tool is needed."
   - "Which file feeds which part: wtp-conversations gives the survey questions and how to read the answers. four-failures gives the diagnosis of what is wrong with a current price. packaging-tiers gives the tier table and the leader, filler and killer labels. monetization-models gives the price metric. case-studies gives worked cases."
   - Paste your product description and your target customer groups.
   - Add your current price, plans, competitor prices and any research you have. Skip what you lack.

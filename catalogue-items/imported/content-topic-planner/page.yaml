@@ -30,12 +30,12 @@ you_get:
   - Content calendar
   - First pieces to write, ranked
 how_to_use:
-  - Before you start, gather these files: notes from sales calls, your support tickets and a list of your existing post titles. They show what customers ask.
+  - "Before you start, gather these files: notes from sales calls, your support tickets and a list of your existing post titles. They show what customers ask."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
   - Answer its questions on your business, your customers, your current content and your competitors. Paste in your sales questions, support tickets and post titles.
   - If you have keyword exports, paste them in. Exports from Ahrefs or SEMrush need a paid subscription. Google Search Console is free and gives you the searches that already bring people to your site.
   - Without keyword exports, your AI uses web search for ideas, and it cannot see exact search volumes. It should say so.
-  - A few terms: your ideal customer profile (ICP) is the kind of customer you most want. LTV is the total a customer is worth to you over time. ORB means owned, rented and borrowed channels.
+  - "A few terms: your ideal customer profile (ICP) is the kind of customer you most want. LTV is the total a customer is worth to you over time. ORB means owned, rented and borrowed channels."
   - Check the ranked topic list. The scoring weights (customer impact 40%, fit 30%, search 20%, effort 10%) are a starting point. Change them if you know your readers better.
   - Start with the top pieces on the list and follow the calendar. Set a date to review the calendar.
   - Next, write the top topic with Content brief writer, then hand the brief to your writer. For the hub structure, use Content hub planner.

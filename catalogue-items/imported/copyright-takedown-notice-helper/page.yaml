@@ -47,7 +47,7 @@ output_sample:
     - Proof that you own the work
     - The notice you received (optional)
   prerequisites:
-    - Optional: a saved practice profile from the setup-interview. Without it, give the approver, the facts of the work and your fair-use read in the chat
+    - "Optional: a saved practice profile from the setup-interview. Without it, give the approver, the facts of the work and your fair-use read in the chat"
     - An AI that can read and write files in a folder
   output:
     - name: notice-v1.md

@@ -32,7 +32,7 @@ you_get:
   - SUMO files for the scenario
   - Setup fixes for common start-up errors
 how_to_use:
-  - Gather first: your .sumocfg file and route files (if you have them), and the path to your SUMO folder for SUMO_HOME.
+  - "Gather first: your .sumocfg file and route files (if you have them), and the path to your SUMO folder for SUMO_HOME."
   - Install MATLAB, Simulink, SUMO and the SUMO support package. MATLAB and Simulink are paid MathWorks products, and the licence allows this skill only with MathWorks products (see LICENSE.md). SUMO is free. Set SUMO_HOME to your SUMO folder.
   - Open an AI that can run MATLAB code, for example one with a MATLAB connection (MCP) set up, and add this skill. If yours cannot run MATLAB, ask it for the code and run it yourself.
   - Describe your traffic test. Add your .sumocfg file if you have one (optional).

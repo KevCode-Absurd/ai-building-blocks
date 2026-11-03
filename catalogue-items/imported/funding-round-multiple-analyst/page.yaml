@@ -31,7 +31,7 @@ you_get:
   - Chart and short explanation
   - Notes on estimated figures
 how_to_use:
-  - Gather first: the round dates and amounts, where each ARR figure comes from, and any figures you trust. Then open Claude, ChatGPT or Gemini with web search turned on, and paste in the skill text. Also give it references/benchmarks.md if you can.
+  - "Gather first: the round dates and amounts, where each ARR figure comes from, and any figures you trust. Then open Claude, ChatGPT or Gemini with web search turned on, and paste in the skill text. Also give it references/benchmarks.md if you can."
   - Every ARR figure you use must carry its source, or the word "estimate", before it goes into a memo. The skill's market multiples, its ZIRP premium (about 2 to 5 times) and its April 2026 drawdowns have no source links. Treat them as unverified.
   - Type the company name. Add rounds, peers or revenue figures you trust if you have them (optional).
   - Let your AI search for each round and its revenue. Charts need a chat that can draw them.

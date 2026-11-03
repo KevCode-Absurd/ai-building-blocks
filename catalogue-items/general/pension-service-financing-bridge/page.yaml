@@ -94,6 +94,7 @@ output_sample:
   prerequisites:
     - "The company's pension note for the year and the year before"
     - "A reviewer who can confirm the accounts follow IAS 19"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with the note it came from, its date, currency, scale and period."

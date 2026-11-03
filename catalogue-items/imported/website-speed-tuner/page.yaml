@@ -32,7 +32,7 @@ you_get:
   - Target numbers for each fix
   - Re-test plan
 how_to_use:
-  - Gather these first: a PageSpeed Insights or Lighthouse report for your top three pages (a saved or copied export is fine), your hosting provider, your framework and its version, and the top three pages that matter most.
+  - "Gather these first: a PageSpeed Insights or Lighthouse report for your top three pages (a saved or copied export is fine), your hosting provider, your framework and its version, and the top three pages that matter most."
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Add your site address, or paste your code. Add your hosting, your framework and the pages that matter most.
   - Paste your current speed scores if you have them (optional). If your AI cannot run code or open a browser, these give it numbers to start from.

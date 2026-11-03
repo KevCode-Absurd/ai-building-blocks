@@ -44,6 +44,7 @@ output_sample:
     - Your pricing and terms, if you get pitches or offers (optional)
   prerequisites:
     - An AI that can save files to a workspace folder, or one you can copy the files from by hand
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: email-taxonomy.md
       contains: Your sorting scheme for email types, plus how and when you want your triage report delivered.

@@ -45,7 +45,7 @@ output_sample:
     - Your best alternative use of the same money or time (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - The handoff pack for this workflow: HANDOFF.md plus one skill file for each step
+    - "The handoff pack for this workflow: HANDOFF.md plus one skill file for each step"
   output:
     - name: step-01-circle-of-competence-mapper.md
       contains: The parts of the deal rated known, partly known or not known, your edge, and a basket of in, learn first or pass.

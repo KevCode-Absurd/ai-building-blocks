@@ -33,7 +33,7 @@ you_get:
   - Template to reuse
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed. Paste in the skill text, the summary template (assets/executive_summary_template.md) and the two guides in the references folder. Or upload the whole skill folder if your AI takes files.
-  - Have these ready: the full report, the impact figures with where each came from, and the name of the person who decides. Paste the report. Say who will read the summary and what they must decide.
+  - "Have these ready: the full report, the impact figures with where each came from, and the name of the person who decides. Paste the report. Say who will read the summary and what they must decide."
   - Add the impact number for each finding. Give your length limit, such as one page.
   - Ask your AI to write the summary using the template, with the answer first.
   - Check every number against your report. Fix any figure your AI guessed.

@@ -20,7 +20,7 @@ not_for:
   - "You want to send the minutes or cancel a meeting automatically: this agent never sends or cancels, so do that step yourself."
 you_give:
   - This week's rough notes or transcript, with who was there
-  - Last week's action list (from the second week on), with a row per action: action, owner, date, status and weeks open
+  - "Last week's action list (from the second week on), with a row per action: action, owner, date, status and weeks open"
   - What the meeting is for (optional, the first time)
 you_get:
   - Short minutes with decisions, actions and open questions
@@ -37,7 +37,7 @@ how_to_use:
 output_sample:
   input:
     - This week's rough notes or transcript, with who was there
-    - Last week's action list (from the second week on), with a row per action: action, owner, date, status and weeks open
+    - "Last week's action list (from the second week on), with a row per action: action, owner, date, status and weeks open"
     - What the meeting is for (optional, the first time)
   prerequisites:
     - An AI chat that can read pasted text

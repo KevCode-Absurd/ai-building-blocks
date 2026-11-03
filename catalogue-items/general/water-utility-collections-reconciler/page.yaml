@@ -95,6 +95,7 @@ output_sample:
   prerequisites:
     - "Billing records and a bank or cash book for the same period"
     - "A named person who approved the adjustments"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND DATED SOURCES"
       contains: "Each figure with its source, date, unit, currency, scale and the period it covers."

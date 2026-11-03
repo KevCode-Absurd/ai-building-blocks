@@ -29,7 +29,7 @@ you_get:
   - Each assumption scored for impact and risk, marked as an estimate or as based on your data
   - A four-box matrix showing where each one lands
   - A test for each high-impact, high-risk assumption, with a metric and a pass line
-  - A call on each assumption: test, build, wait or drop
+  - "A call on each assumption: test, build, wait or drop"
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill.
   - Paste your idea in a sentence or two, then your assumptions, one per line. Add any real numbers you have.

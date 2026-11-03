@@ -36,7 +36,7 @@ you_get:
   - Open questions that need a person's decision before work starts
 how_to_use:
   - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini. An AI that can read your code files gives the best inventory. Without it, paste component lists.
-  - Attach what you have: component files or list, the list of planned changes, platforms and release dates.
+  - "Attach what you have: component files or list, the list of planned changes, platforms and release dates."
   - After step 1, read the inventory with your team. Mark each difference as on purpose or drift.
   - After step 2, confirm the target patterns and each dropped variant. The AI marks unconfirmed ones as proposed.
   - After step 3, check each stage has an owner and a visual check. Fill every MISSING line before the plan goes out.

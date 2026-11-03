@@ -88,6 +88,7 @@ output_sample:
   prerequisites:
     - A git repository, so each stage has a return point
     - At least one test or build check you can run
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Version change
       contains: The package, current and target versions, and how big the jump is.

@@ -53,6 +53,7 @@ output_sample:
   prerequisites:
     - An AI that can search the web
     - An X export file or a paid X API key, only if you want X results
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: TL;DR
       contains: A short summary of the main findings on your topic for the time window.

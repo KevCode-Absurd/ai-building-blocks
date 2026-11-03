@@ -49,6 +49,7 @@ output_sample:
     - The error message you see (optional)
   prerequisites:
     - MATLAB with Data Acquisition Toolbox, if you want your AI to run the checks
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Ported script
       contains: Your code rewritten with the current DataAcquisition interface in place of the old session calls.

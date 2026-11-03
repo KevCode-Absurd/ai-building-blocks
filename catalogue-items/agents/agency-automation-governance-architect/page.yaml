@@ -26,14 +26,14 @@ not_for:
   - You want a full spec for a software workflow with every failure path. Use the Workflow Architect agent.
   - You need a legal or privacy ruling on the data it handles. Ask a qualified professional.
 you_give:
-  - The process in plain steps: what happens now and what you want automated.
+  - "The process in plain steps: what happens now and what you want automated."
   - The tools and systems it touches, such as a CRM, email, billing or a spreadsheet.
   - How often it runs and how long it takes by hand each time.
   - What data it handles, such as customer, payment or contract records.
   - Who owns the process and who fixes it when it breaks (optional)
   - The tool you plan to use, such as n8n, Zapier or Make (optional)
 you_get:
-  - One verdict: approve, approve as a pilot, automate part only, defer or reject, with the reason
+  - "One verdict: approve, approve as a pilot, automate part only, defer or reject, with the reason"
   - Scores for time saved, data risk, outside dependencies and growth
   - A safe design with ten stages, an error path and a manual fallback
   - Naming and version rules, and what to log on every run

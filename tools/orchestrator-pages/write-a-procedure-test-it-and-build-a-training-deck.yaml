@@ -28,7 +28,7 @@ you_get:
   - A proofread list of slips and mixed-up terms
   - A training deck with speaker notes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Process and SOP writer, SOP and runbook checker, Technical doc proofreader and Presentation builder.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Process and SOP writer, SOP and runbook checker, Technical doc proofreader and Presentation builder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job step by step, or paste notes. Answer the questions it asks about owners and edge cases.
   - After the gap check, ask someone who has never done the job to follow the procedure while you watch. Do not coach them. Count their questions and write down where they stall.

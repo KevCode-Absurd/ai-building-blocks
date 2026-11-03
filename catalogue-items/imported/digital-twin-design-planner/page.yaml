@@ -30,7 +30,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill folder if your AI accepts files.
   - Describe, in this order, the system, its data sources, the decision the twin should help with, the owner, the risk level and the actions it may take. If you do not know one, say so.
   - Ask for the classification first, then the plan and the release checklist.
-  - Read the open gaps and fill them in before you trust the plan. Then ask the named owner to approve, hold or block the release, and act on that decision: approve means proceed, hold means fill the gaps, block means stop.
+  - "Read the open gaps and fill them in before you trust the plan. Then ask the named owner to approve, hold or block the release, and act on that decision: approve means proceed, hold means fill the gaps, block means stop."
   - No code or paid tool is needed. The plan is a document, not a running twin.
 output_sample:
   input:

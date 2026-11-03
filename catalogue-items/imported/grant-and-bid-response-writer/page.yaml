@@ -49,7 +49,7 @@ output_sample:
   prerequisites:
     - An AI that can read web pages, if you want it to search portals for you
     - Your past submissions as files or pasted text, so drafts use your real work
-    - Optional connectors the skill names: Google Drive or Microsoft 365 for past files, DocuSign for signatures, Trello for a pipeline board, Calendar for deadlines, and Zapier for tools that are not linked. Each needs its own account, and some of them are paid. None is required
+    - "Optional connectors the skill names: Google Drive or Microsoft 365 for past files, DocuSign for signatures, Trello for a pipeline board, Calendar for deadlines, and Zapier for tools that are not linked. Each needs its own account, and some of them are paid. None is required"
   output:
     - name: Organisation profile
       contains: Your entity type, registrations, codes, certifications, service area, budget, capacity and past performance, saved once for every later step.

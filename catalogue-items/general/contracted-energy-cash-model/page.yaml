@@ -91,6 +91,7 @@ output_sample:
     - "Meter or settlement statements for each year"
     - "A person who can review the sources before anyone relies on the result"
     - "A file-capable AI if you want the editable workbook (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure listed with where it came from, its date, currency, unit and the period it covers."

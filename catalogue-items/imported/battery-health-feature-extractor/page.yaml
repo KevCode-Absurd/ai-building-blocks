@@ -49,6 +49,7 @@ output_sample:
     - An AI that can run MATLAB code
     - MATLAB with the Predictive Maintenance Toolbox
     - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Cycling feature table
       contains: One row per cycle, with named feature groups and more than 165 columns of features, from simple statistics to cumulative values, ready for health or life models.

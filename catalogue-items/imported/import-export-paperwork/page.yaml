@@ -37,7 +37,7 @@ you_get:
   - Common mistakes to avoid
 how_to_use:
   - Open Claude, ChatGPT or Gemini with web search turned on. Paste the skill instructions into the chat.
-  - Gather the facts: your goods, materials, use, origin, destination, value and transport mode. Add them to the chat.
+  - "Gather the facts: your goods, materials, use, origin, destination, value and transport mode. Add them to the chat."
   - Let the AI check the official sources, then classify the goods and pick an Incoterm. Read Open questions first and send the missing facts.
   - Ask for the document list for your route.
   - Open each official source link and confirm the code and rate yourself. Check any penalty amount or filing deadline in the result against the customs authority's current guidance. The amounts in the skill may be out of date.

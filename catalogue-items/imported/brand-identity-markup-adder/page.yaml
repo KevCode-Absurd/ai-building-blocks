@@ -36,7 +36,7 @@ how_to_use:
   - Leave preview mode on for the first run. Read the snippet and the one line it adds to theme.liquid.
   - Paste the previewed snippet into a structured data validator, such as Google's Rich Results Test. Fix anything it flags before you go on.
   - If it looks right, ask your AI to run it again with preview off. This writes to your live theme straight away, which is why you duplicated it first.
-  - Then check your live store: the snippet loads in the page head and the validator passes. If it fails, restore the duplicated theme.
+  - "Then check your live store: the snippet loads in the page head and the validator passes. If it fails, restore the duplicated theme."
 output_sample:
   input:
     - Your store domain

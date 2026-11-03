@@ -30,7 +30,7 @@ you_get:
   - Change log by slide
   - Flags for numbers that do not tie
 how_to_use:
-  - Open your AI in a tool that can edit files, such as the PowerPoint add-in or a chat that accepts uploads. The skill uses a prompt tool called ask_user_question; if your AI has none, it asks you in chat instead. The only Indian rules it applies are the two written in the skill: April to March years, and lakh and crore units.
+  - "Open your AI in a tool that can edit files, such as the PowerPoint add-in or a chat that accepts uploads. The skill uses a prompt tool called ask_user_question; if your AI has none, it asks you in chat instead. The only Indian rules it applies are the two written in the skill: April to March years, and lakh and crore units."
   - Paste the skill, then upload your deck.
   - Paste your old-to-new numbers, or upload the spreadsheet. Say if growth rates and shares should be recalculated.
   - Read the update plan and the flagged list. Approve it, skip the flagged items, or fix the mapping first.

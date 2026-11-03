@@ -20,7 +20,7 @@ not_for:
   - "You want to design or edit anything that is not Markdown converted to HTML: use your design tool instead."
   - "You want a full accessibility audit of a page: use a dedicated accessibility checker. This only checks text contrast."
 you_give:
-  - Answers to ten setup questions: save folder, main colour, accent colour, heading font, body font, look, code theme, contents style, company name and logo
+  - "Answers to ten setup questions: save folder, main colour, accent colour, heading font, body font, look, code theme, contents style, company name and logo"
   - A main brand colour (optional)
   - Font choices (optional)
   - A folder for saved output (optional)
@@ -32,7 +32,7 @@ you_get:
   - Project-level overrides
 how_to_use:
   - You need Python 3 and a terminal (or an AI that can run code). Nothing else is needed. Have your main colour, fonts, company name and logo link ready for the ten questions.
-  - Download the skill folder and the Markdown to HTML converters. The converters are separate items on AI Blocks, and they are not in this folder: Markdown to web page maker (md-document), Code review page maker (md-review) and Markdown slide deck maker (md-slides). The wizard shows nothing by itself. The converters read your saved style.
+  - "Download the skill folder and the Markdown to HTML converters. The converters are separate items on AI Blocks, and they are not in this folder: Markdown to web page maker (md-document), Code review page maker (md-review) and Markdown slide deck maker (md-slides). The wizard shows nothing by itself. The converters read your saved style."
   - Run onboard.py in a terminal, or ask an AI that can run code to run it. Answer the ten questions.
   - For a fast start with default choices, run onboard.py with the --defaults option.
   - To change one value, use --set, for example --set brand.primary=#FF6B35. Use --reset to start over.

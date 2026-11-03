@@ -75,6 +75,7 @@ output_sample:
   prerequisites:
     - "The annual report pages that show EPS and weighted average shares"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Split terms", contains: "The factor in new shares per old share, with announced and effective dates."}
     - {name: "Restated table", contains: "Each year's reported and restated EPS and shares, side by side, with earnings."}

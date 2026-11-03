@@ -51,6 +51,7 @@ output_sample:
   prerequisites:
     - An adult asking for coaching in their own words
     - A chat AI that can read the skill files, so it can follow the safety rules
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Agreement on the help
       contains: A short check of your topic, the kind of help you want and any limits.

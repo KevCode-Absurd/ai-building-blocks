@@ -28,7 +28,7 @@ you_give:
   - The measure that counts as success, such as use of one feature
   - Your tour tool, if you have one (optional)
 you_get:
-  - A verdict: build a tour, build a small one, or do not build one
+  - "A verdict: build a tour, build a small one, or do not build one"
   - A tip plan with the trigger, placement, dismissal and re-show rule for each tip
   - A draft line of tip text for each row
   - A tracking plan that shows if a tip led to real feature use

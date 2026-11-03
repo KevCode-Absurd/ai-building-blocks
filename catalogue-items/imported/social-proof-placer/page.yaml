@@ -32,7 +32,7 @@ you_get:
   - Flags on weak or unverifiable claims
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Your AI works in this order: it learns your buyer, lists their doubts, reads your proof, builds the proof map, places each piece, then flags weak claims.
+  - "Your AI works in this order: it learns your buyer, lists their doubts, reads your proof, builds the proof map, places each piece, then flags weak claims."
   - Describe your buyer and how well they know you. Say what you want them to do.
   - List the doubts that hold them back, such as price, fit or trust.
   - "Paste the proof you have: quotes, numbers, logos and case studies. Only real proof. For reviews and quotes, paste the exact words with the date and where each one came from."

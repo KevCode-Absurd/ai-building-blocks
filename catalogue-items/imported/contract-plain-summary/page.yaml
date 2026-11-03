@@ -36,7 +36,7 @@ how_to_use:
   - Paste the contract text too, so quotes can be checked against it. Say which side you are on and who will read the summary.
   - Check the result. It should be under 200 words, not counting the escalation status, and every quoted clause should keep its full condition.
   - Add the renewal date to your calendar yourself. The summary cannot set a reminder for you.
-  - Every summary starts with one line: Confidential, first-pass summary, not legal advice. Read it as a first check, not as clearance to sign.
+  - "Every summary starts with one line: Confidential, first-pass summary, not legal advice. Read it as a first check, not as clearance to sign."
   - If the review names no approvers, the escalation line is left out. It is optional.
   - If your AI mentions plugin commands or config files, ignore them. Your AI works from the review and contract you pasted.
   - Next, send the summary by email, or by chat if it fits in 150 words. Use the questions list for your call with the lawyer.

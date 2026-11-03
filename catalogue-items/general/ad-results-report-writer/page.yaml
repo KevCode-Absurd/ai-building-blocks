@@ -27,7 +27,7 @@ not_for:
   - "You want a quick first pass with fewer checks: use the Ad results brief writer."
 
 you_give:
-  - This period's totals from your ad platform export (Meta Ads Manager or Google Ads: spend, impressions, clicks, purchases, revenue), with the dates, the currency and what each column counts
+  - "This period's totals from your ad platform export (Meta Ads Manager or Google Ads: spend, impressions, clicks, purchases, revenue), with the dates, the currency and what each column counts"
   - The same columns for the period before, of the same length, so the two compare fairly
   - Your own orders and revenue for both periods, from your store (optional, but it is what makes the overall return trustworthy)
   - Your targets for cost per sale or return (optional)
@@ -45,7 +45,7 @@ how_to_use:
   - Paste the totals for this period and the one before, in the same columns.
   - Say the dates, the currency and the attribution window if you know it.
   - Add your targets if you want each number judged against them.
-  - Recalculate one number yourself before you trust it: total spend divided by total purchases is your cost per sale. Check one share or percentage the same way.
+  - "Recalculate one number yourself before you trust it: total spend divided by total purchases is your cost per sale. Check one share or percentage the same way."
   - Fill in the owner of each action, and make each "done when" something a person can look at, before you send the report. Nothing in it has been done until you have a record that it was.
 
 how_it_works:

@@ -28,12 +28,12 @@ not_for:
 you_give:
   - The contracts in scope, pasted or attached, and what the protocol is supposed to do.
   - The invariants you believe must always hold, such as "total shares times price equals total assets" (optional, but it sharpens the review).
-  - Any external dependencies: price oracles, bridges, other protocols you call into.
+  - "Any external dependencies: price oracles, bridges, other protocols you call into."
   - Past audit reports or known issues, if you have them (optional).
 you_get:
-  - A scope list: every contract in scope, its size and its external dependencies.
-  - An invariant list: what must always hold, and where it could break.
-  - A findings table: each issue, its severity (critical to informational), the attack scenario and the fix.
+  - "A scope list: every contract in scope, its size and its external dependencies."
+  - "An invariant list: what must always hold, and where it could break."
+  - "A findings table: each issue, its severity (critical to informational), the attack scenario and the fix."
   - A methodology note saying what was checked by reading the code versus what still needs a tool like Slither or a fuzzer.
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.

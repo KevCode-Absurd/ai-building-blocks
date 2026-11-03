@@ -44,6 +44,8 @@ output_sample:
     - The date of each review (optional)
     - The star rating of each review (optional)
     - Whether each reviewer is a verified buyer (optional)
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Authenticity score
       contains: A score from 0 to 100 for how real the reviews look.

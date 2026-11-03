@@ -36,7 +36,7 @@ how_to_use:
   - Use an AI that can run commands and connect to Shopify, such as Claude Code, Cursor, Codex or Gemini CLI. These tools usually need an account and a paid plan or an API key, so check yours first. A plain chat window cannot read your store.
   - Sign in to your store with read access to content. The skill only reads, so nothing in your store changes.
   - Tell your AI to run the Thin page finder on your store address. Add a minimum body length or ask for unpublished items if you want.
-  - Open the CSV file it makes. The issue column says what is wrong: empty body, short body, missing SEO title or missing SEO description. Sort by that column. Start with your About, FAQ and Contact pages.
+  - "Open the CSV file it makes. The issue column says what is wrong: empty body, short body, missing SEO title or missing SEO description. Sort by that column. Start with your About, FAQ and Contact pages."
   - Spot-check a few flagged pages in Shopify. The search title and description are read from Shopify's default fields, so a store that keeps them elsewhere can show false "missing" flags.
   - Give the list to a writer, or fix the empty pages and missing search fields yourself. Then run the Store SEO gap finder to check your products and collections.
 output_sample:

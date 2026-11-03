@@ -83,6 +83,7 @@ output_sample:
   prerequisites:
     - "Counts from your ticket, time or transaction system, and the cost from your ledger"
     - "Your allocation policy, if one exists (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Pool and period", contains: "The period, currency, cost pool, driver unit and normal capacity."}
     - {name: "Rate", contains: "The cost per unit of activity, with the sum shown."}

@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB on your computer
     - A MATLAB licence (a paid product from MathWorks)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Interface Spec
       contains: The public functions your toolbox offers, for you to review and approve.

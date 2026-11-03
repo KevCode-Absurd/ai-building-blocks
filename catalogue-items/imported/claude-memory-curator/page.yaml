@@ -44,6 +44,7 @@ output_sample:
   prerequisites:
     - Claude Code with auto-memory turned on
     - An AI that can read and change your project files
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Memory review
       contains: A table with one row per note and the columns note, decision (keep, merge or delete) and reason.

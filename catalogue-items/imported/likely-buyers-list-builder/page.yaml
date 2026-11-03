@@ -41,7 +41,7 @@ you_get:
 how_to_use:
   - Write a short brief on the company. Use the list above. State the currency, the units (for example crore) and the fiscal year end used for revenue and profit. Say who you are, such as the owner, the adviser or an analyst.
   - First check whether web search is switched on in your AI. If it is, buyers come with sources. If it is not, every decision maker is marked TO FIND, and you look them up on the buyer's own site, its annual report and its exchange filings. Without web search, every buyer and fund fact stays TO VERIFY. Do not use any of them in a pitch until you have checked it.
-  - Know that the India files the skill used to name (india-market-conventions, india-market-data and NOT-ADAPTABLE.md) are not in the library, and the skill no longer asks for them. It runs on the two Indian rules written in it: the April to March fiscal year, and lakh and crore units. Your AI should say so.
+  - "Know that the India files the skill used to name (india-market-conventions, india-market-data and NOT-ADAPTABLE.md) are not in the library, and the skill no longer asks for them. It runs on the two Indian rules written in it: the April to March fiscal year, and lakh and crore units. Your AI should say so."
   - Open the skill and paste the brief.
   - Add the names the seller wants in or out before you read the list.
   - Check every row marked TO VERIFY against the buyer's own site, exchange filings or news of past deals.

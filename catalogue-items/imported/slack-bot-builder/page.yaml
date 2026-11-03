@@ -26,7 +26,7 @@ not_for:
   - "You only want a first test that replies Pong to ping: use the First Slack Bot coding prompt."
 you_give:
   - What the bot should do, in one or two sentences
-  - Your language: Python, JavaScript or Java
+  - "Your language: Python, JavaScript or Java"
   - Whether only your workspace or other workspaces will use it
   - A Slack workspace where you can create apps
 you_get:

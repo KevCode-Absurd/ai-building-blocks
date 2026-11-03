@@ -42,7 +42,7 @@ how_to_use:
   - "6. Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency."
   - "7. If the memory estimate is more than your computer has, ask your AI to coarsen the mesh before you approve a full-wave solve."
   - "8. Compare the quick estimate with the full result, since they differ near resonance."
-  - The skill file points to other MathWorks skills by their original names. Each has a match in this library: matlab-manage-pcb-material is the PCB material setup helper, matlab-analyze-em is the PCB signal loss analyzer, matlab-optimize-pcb-design is the PCB design optimizer, matlab-integrate-pcb-circuit is the PCB circuit combiner, matlab-design-pcb-filter is the PCB RF filter designer and matlab-design-pcb-coupler is the PCB coupler designer. The layout-assembly skill (matlab-assemble-pcb-layout) is not in this library yet. Paste the related skills into the same chat if you want your AI to follow them.
+  - "The skill file points to other MathWorks skills by their original names. Each has a match in this library: matlab-manage-pcb-material is the PCB material setup helper, matlab-analyze-em is the PCB signal loss analyzer, matlab-optimize-pcb-design is the PCB design optimizer, matlab-integrate-pcb-circuit is the PCB circuit combiner, matlab-design-pcb-filter is the PCB RF filter designer and matlab-design-pcb-coupler is the PCB coupler designer. The layout-assembly skill (matlab-assemble-pcb-layout) is not in this library yet. Paste the related skills into the same chat if you want your AI to follow them."
 output_sample:
   input:
     - The part type, such as spiral inductor, balun or ring resonator

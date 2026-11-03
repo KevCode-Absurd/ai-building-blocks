@@ -31,7 +31,7 @@ you_get:
   - A status view of every agent
 how_to_use:
   - Open your project in an AI tool that can run code, use git and start helper agents, such as Claude Code. Install the skill folder there.
-  - The skill names /hub commands from the original AgentHub plugin, which this item does not include. Ask in plain words instead, in this order: start a session, launch the agents, rank the results, merge the winner.
+  - "The skill names /hub commands from the original AgentHub plugin, which this item does not include. Ask in plain words instead, in this order: start a session, launch the agents, rank the results, merge the winner."
   - Start a session and give it your task in one sentence, how many agents to run, and how to score them. It sets up the session files and a baseline.
   - "Pick a ready-made pattern if one fits: speed tuning, code cleanup, test writing or bug fixing."
   - Launch the agents. Each one works on its own branch and cannot see the others. Ask for the status view to see how far each has got.

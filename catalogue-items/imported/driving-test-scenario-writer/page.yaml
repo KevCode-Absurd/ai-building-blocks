@@ -49,6 +49,7 @@ output_sample:
     - MATLAB and RoadRunner, both licensed and installed
     - An AI that can run MATLAB code
     - A RoadRunner session already open and connected
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scenario setup
       contains: Code that opens your scene and starts a new scenario in RoadRunner.

@@ -32,7 +32,7 @@ you_get:
 next: [privacy-impact-assessment-writer]
 how_to_use:
   - Open your AI chat and paste the skill text from this page.
-  - Name your scope, such as a product, a team or a data flow. Pull your records first: record of processing, lawful basis notes, impact assessments, request log, transfer assessments and breach log. No scripts or API keys are needed.
+  - "Name your scope, such as a product, a team or a data flow. Pull your records first: record of processing, lawful basis notes, impact assessments, request log, transfer assessments and breach log. No scripts or API keys are needed."
   - Answer the six questions one at a time. Say so when you have no proof for an answer.
   - Read the verdict and the top 3 actions. Fix the red items first.
   - Take any item marked for outside counsel to your DPO or a privacy lawyer.
@@ -44,6 +44,7 @@ output_sample:
     - Your past impact assessments and your breach log (optional)
   prerequisites:
     - "An AI chat. The skill lists scripts, but you do not need them: answer in the chat."
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: The six questions
       contains: Six pointed questions, each tied to a GDPR article, on records, lawful basis, impact assessments, requests, transfers and breaches.

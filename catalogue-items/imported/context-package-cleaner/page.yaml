@@ -35,7 +35,7 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md as your first message. No code, files or paid tools are needed.
   - Paste your chunks next. Label each one with its source name, and add its search score if you have one.
   - Add your question and your size limit in tokens. If you do not know the limit, ask your AI to suggest one. A chat cannot count tokens exactly, so your AI will estimate them.
-  - Ask your AI to run the skill and return six things in this order: the starting count, the chunks kept and removed, the scores, the ordered block, the coverage check and the log of removed chunks.
+  - "Ask your AI to run the skill and return six things in this order: the starting count, the chunks kept and removed, the scores, the ordered block, the coverage check and the log of removed chunks."
   - If you gave no search scores, the relevance and density scores are your AI's own judgement, not a measurement. Treat the ranking as a good guess.
   - Check the log. If a needed chunk was removed, ask your AI to add it back.
   - Paste the ordered block into your prompt. Run the skill again when your question changes.

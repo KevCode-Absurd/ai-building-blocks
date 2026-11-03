@@ -24,7 +24,7 @@ not_for:
   - You want the decision made for you. This workflow prepares the evidence. A person decides.
 you_give:
   - The pilot goal in one or two sentences, written before the pilot if you have it
-  - The baseline: how the work was done and measured before AI, with dates
+  - "The baseline: how the work was done and measured before AI, with dates"
   - The test cases and results, as a sheet or a table, with failures included
   - What the pilot cost and what rollout would cost (optional)
   - Your go or stop checklist, with the pass line for each item

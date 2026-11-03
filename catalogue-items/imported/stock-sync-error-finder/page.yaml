@@ -68,6 +68,7 @@ output_sample:
   prerequisites:
     - Read-only Shopify access for your AI, or an exported inventory file
     - Inventory tracking turned on for the products you want checked
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Summary table
       contains: Per location, how many variants were scanned and how many were flagged for each problem.

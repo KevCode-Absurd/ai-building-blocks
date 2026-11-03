@@ -36,7 +36,7 @@ how_to_use:
   - Export last month from Search Console with the same date range each month. Put it in one folder with your page list, or attach them in the chat.
   - Tell it what a visitor is worth once. It saves it.
   - Read the quick wins. Make the changes you agree with on your site, then tell the agent which were done.
-  - Run it again on the second Monday of next month. It judges what you changed. It does not run on its own: you start it, or set up a scheduled task yourself.
+  - "Run it again on the second Monday of next month. It judges what you changed. It does not run on its own: you start it, or set up a scheduled task yourself."
 output_sample:
   input:
     - Last month's Search Console export with queries, pages, clicks, impressions and position

@@ -32,13 +32,13 @@ you_get:
   - Draft memo and audience summaries
 how_to_use:
   - This skill is built for the employment-legal plugin from Claude for Legal, which saves files under your AI's plugin folder. Use an AI that can create and keep files, and put the skill folder in it. If /employment-legal:cold-start-interview is missing, use the setup-interview folder inside the skill.
-  - Without the plugin: if the /employment-legal commands or your CLAUDE.md work-product header are missing, ask your employment counsel for the exact header text and put it at the top of every file. The skill stops and asks you for it, and it never makes one up. Without the commands, say "open an investigation" or "add a document" in plain words and your AI follows the same steps.
+  - "Without the plugin: if the /employment-legal commands or your CLAUDE.md work-product header are missing, ask your employment counsel for the exact header text and put it at the top of every file. The skill stops and asks you for it, and it never makes one up. Without the commands, say \"open an investigation\" or \"add a document\" in plain words and your AI follows the same steps."
   - Confirm first that a lawyer directs the investigation. Marking a file does not create privilege.
   - "Open the matter: describe the complaint, who is involved and the dates. Your AI sets up the log and a sources checklist."
   - Add each document or interview note one at a time. Check each log entry and the list of gaps before you add the next.
   - Ask questions of the log, then ask for the draft memo. Have your lawyer review it before anyone else sees it.
   - Before any file is made, copy the work-product header from your own CLAUDE.md (the Outputs section) into the matter. Share the memo only with counsel and the named investigators. Give HR or leadership the audience summary, not the full memo.
-  - After the memo: send the draft memo, the evidence log and the sources checklist to your counsel first. Counsel reviews the memo, then the audience summaries, and only then does anything go to HR or leadership. Keep the log and every file where privileged papers are kept.
+  - "After the memo: send the draft memo, the evidence log and the sources checklist to your counsel first. Counsel reviews the memo, then the audience summaries, and only then does anything go to HR or leadership. Keep the log and every file where privileged papers are kept."
 output_sample:
   input:
     - A plain description of the complaint

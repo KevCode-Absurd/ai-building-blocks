@@ -45,6 +45,7 @@ output_sample:
     - MATLAB with GPU Coder installed
     - An NVIDIA GPU
     - An AI that can run MATLAB code and read files
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Files
       contains: The original file, the best optimized version, and the session folder that holds all work files.

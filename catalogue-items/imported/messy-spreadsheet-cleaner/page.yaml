@@ -30,7 +30,7 @@ you_get:
   - A cleaned copy of your sheet, with fixes in helper columns
   - Dates and numbers in one format
   - Duplicates marked, and removed only after you say yes
-  - A table of every fix: column, issue, count and fix used
+  - "A table of every fix: column, issue, count and fix used"
   - A list of columns that mix types, for you to review
 how_to_use:
   - Start a chat and add the skill. Attach your .xlsx file. Name the range or columns to clean, if you only want part of the sheet.

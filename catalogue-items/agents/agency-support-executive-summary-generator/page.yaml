@@ -38,7 +38,7 @@ you_give:
   - Owners and deadlines that already exist, such as "[NAME] owns this, due [DATE]" (optional).
 you_get:
   - A summary of 325 to 475 words, never over 500.
-  - Five sections: situation, key findings, business impact, recommendations and next steps.
+  - "Five sections: situation, key findings, business impact, recommendations and next steps."
   - 3 to 5 findings, each with a number and a bold line on why it matters.
   - 3 to 4 actions ranked Critical, High or Medium, each with an owner, a deadline and an expected result.
   - A short list of gaps, such as a missing number or an owner to confirm.

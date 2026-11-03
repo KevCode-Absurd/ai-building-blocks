@@ -79,6 +79,7 @@ output_sample:
   prerequisites:
     - "The term sheet or purchase agreement pages that show the share class and price"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Deal terms", contains: "Your figures, the currency and scale, and whether same class and price is confirmed."}
     - {name: "Sums", contains: "Rolled amount, seller cash, total equity and the seller's ownership share, each with its working."}

@@ -38,7 +38,7 @@ how_to_use:
   - Say which part of the business matters most, if you know.
   - Read the glossary first and check each term with someone from the business.
   - Use the area map to plan where to split your system. Then fix the checks that failed.
-  - A complete result has these parts in order: the glossary, the business areas and their borders, the data groups, the core area, then the score out of 10 with the checks that failed.
+  - "A complete result has these parts in order: the glossary, the business areas and their borders, the data groups, the core area, then the score out of 10 with the checks that failed."
 output_sample:
   input:
     - Your business rules and processes, in plain words

@@ -32,9 +32,9 @@ you_give:
   - Any known-benign activity that looks similar to the technique, so false positives can be named up front (optional).
 you_get:
   - A Sigma detection rule for the named technique, built against the log sources you actually have.
-  - A false-positive list: the normal activity most likely to trigger it, named before deployment, not after.
-  - A MITRE ATT&CK coverage note: where this technique sits, and what's still a gap nearby.
-  - A validation plan: how to confirm the rule fires on the real technique and stays quiet on normal activity.
+  - "A false-positive list: the normal activity most likely to trigger it, named before deployment, not after."
+  - "A MITRE ATT&CK coverage note: where this technique sits, and what's still a gap nearby."
+  - "A validation plan: how to confirm the rule fires on the real technique and stays quiet on normal activity."
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
   - Name the technique you want to detect and the log sources you actually collect.

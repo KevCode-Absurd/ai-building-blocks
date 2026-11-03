@@ -89,6 +89,7 @@ output_sample:
   prerequisites:
     - "Annual accounts or sales records for both years"
     - "A person who can confirm which year has the extra week"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency, scale and the period it covers."

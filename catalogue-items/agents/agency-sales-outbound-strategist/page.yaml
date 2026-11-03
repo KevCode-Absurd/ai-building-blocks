@@ -40,7 +40,7 @@ you_get:
   - A short list of numbers to track and the first test to run
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
-  - Write five or six lines: what you sell, who buys, your best customers and the channels you can use. Paste any account list or signals you have. No code or web access is needed.
+  - "Write five or six lines: what you sell, who buys, your best customers and the channels you can use. Paste any account list or signals you have. No code or web access is needed."
   - Type "Build my outbound plan. Do not invent any customer, signal or number I did not give you."
   - Read the target profile and the signal list first. Cut anything that does not match your real buyers, then ask for the plan again.
   - Check each draft message for a claim you cannot prove. Fill every placeholder in angle brackets with a real fact.

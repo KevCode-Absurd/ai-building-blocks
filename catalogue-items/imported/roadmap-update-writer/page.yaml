@@ -23,7 +23,7 @@ not_for:
   - "You want to rewrite a list of features as goals: use the Feature roadmap to outcomes rewriter."
 you_give:
   - Your plans, initiatives or feature list, with any dates, owners and status
-  - Who will read the update: executives, engineers or customers
+  - "Who will read the update: executives, engineers or customers"
   - What you want written, such as a roadmap story, release notes or a changelog
   - A release date or version range (optional)
   - Your git commit messages or git access, for a changelog (optional)

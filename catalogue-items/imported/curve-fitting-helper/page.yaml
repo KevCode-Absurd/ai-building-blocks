@@ -43,6 +43,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Curve Fitting Toolbox
     - An AI that can run MATLAB, or you run the steps in the Curve Fitter app yourself
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Fit and formula
       contains: The chosen fit type, its formula, and the coefficients with their confidence intervals.

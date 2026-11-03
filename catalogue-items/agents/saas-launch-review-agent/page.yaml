@@ -25,7 +25,7 @@ you_give:
   - Dated results, such as signups, activations and paid customers (if any)
   - Your saved state file from the last run (if any)
 you_get:
-  - A dated decision log: test, revise or keep, with the evidence behind it
+  - "A dated decision log: test, revise or keep, with the evidence behind it"
   - An updated state file for your next run
   - Missing facts, actions waiting for your approval and one next action
 how_to_use:

@@ -31,7 +31,7 @@ you_get:
   - A short tag list of about 15, for spellings and tool names only
   - Three searches your video should win
   - A check that your title and first lines use those searches
-  - A last question: ship it, or change it?
+  - "A last question: ship it, or change it?"
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat.
   - Paste the video topic or the transcript. Add the search phrases you want and any link you want near the top (optional).

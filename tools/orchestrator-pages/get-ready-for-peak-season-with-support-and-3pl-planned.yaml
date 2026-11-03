@@ -45,7 +45,7 @@ output_sample:
     - "After peak: the warehouse invoice, rate card and your orders for the month"
   prerequisites:
     - An AI that can read files and work with spreadsheets
-    - The handoff pack: HANDOFF.md plus one skill file for each step
+    - "The handoff pack: HANDOFF.md plus one skill file for each step"
   output:
     - name: Peak forecast
       contains: Daily orders and revenue, new and returning customers, your sales calendar, the gap to target and actions to close it.

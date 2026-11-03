@@ -81,6 +81,7 @@ output_sample:
   prerequisites:
     - "The lender statement and the rate and fee terms from your credit agreement"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Period and sources", contains: "The dates, currency and documents used, so a reviewer can trace every figure."}
     - {name: "Inputs", contains: "Each figure you gave with its source, and a MISSING line for any you did not."}

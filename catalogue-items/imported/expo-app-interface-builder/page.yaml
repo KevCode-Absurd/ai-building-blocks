@@ -39,7 +39,7 @@ you_get:
   - The list of packages to install
 how_to_use:
   - "Know this before you start. The code examples call handlers that are not written for you: handleSharePress, handleBlockPress, handleCopyPress and handleDeletePress in the skill, and handlePress, handleAdd and handleSettings in the visual effects note. Write each one, or replace it with a real action, before the screens run."
-  - Before any code is written, ask your AI to check three imports against your Expo SDK version in the current Expo docs: native tabs (expo-router/unstable-native-tabs), Color from expo-router, and expo-router/react-navigation.
+  - "Before any code is written, ask your AI to check three imports against your Expo SDK version in the current Expo docs: native tabs (expo-router/unstable-native-tabs), Color from expo-router, and expo-router/react-navigation."
   - Open Claude Code, or any AI that can read and write your project files. Paste in this skill, or add the whole folder, so it can open the notes for each area. Tell it your Expo SDK version and Node version first, since the code depends on them.
   - Gather your screens. Describe each one in a line or two and say how people move between them. Say whether you have a project already.
   - Ask your AI to create the route files, then the layouts for stacks and tabs.

@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - Read-only access to your Shopify products, orders and inventory, or exports of each as CSV
     - The read_all_orders permission if your window is longer than 60 days
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Dead stock report
       contains: Items with stock, items with no sales, the percent that is dead, and the estimated cash value.

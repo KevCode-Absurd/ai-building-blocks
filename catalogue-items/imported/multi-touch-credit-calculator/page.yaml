@@ -79,6 +79,7 @@ output_sample:
   prerequisites:
     - A BigQuery project and an AI that can run SQL
     - The references folder from the skill download
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Credit ledger
       contains: Every sale split across its touches under five rules, with credit share and allocated value.

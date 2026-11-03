@@ -36,7 +36,7 @@ you_get:
   - A k6 test script to adapt for your path, with notes on what to change first.
   - A ranked list of bottlenecks, drawn only from results you paste.
   - Ranked fixes with the effort and the likely gain, marked as an estimate.
-  - A status against your goal: MEETS, FAILS or NOT DETERMINED, with the reason.
+  - "A status against your goal: MEETS, FAILS or NOT DETERMINED, with the reason."
 how_to_use:
   - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
   - "Say what you want tested and your goal. Ask for a plan first, such as: Plan a baseline and a test for this page. Do not invent numbers."

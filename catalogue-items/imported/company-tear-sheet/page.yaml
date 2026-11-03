@@ -44,7 +44,7 @@ how_to_use:
   - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
   - Check the figures and dates against the latest results. Note that the price data is delayed.
   - Put the sheet in your pack only after you have checked it. Refresh it after each results release. To value the company, use the company fair value modeler. For a pitch slide, use the company strip profile slide maker.
-  - The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source.
+  - "The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source."
 output_sample:
   input:
     - The company name or ticker

@@ -28,7 +28,7 @@ you_give:
   - The minimum orders and the At Risk cut-off (optional)
 you_get:
   - A 0 to 100 churn score for each repeat customer
-  - A group for each: Active, Cooling, At Risk or Likely Churned
+  - "A group for each: Active, Cooling, At Risk or Likely Churned"
   - Each customer's usual gap and days since last order
   - Past spend of the late customers
   - A CSV you can export

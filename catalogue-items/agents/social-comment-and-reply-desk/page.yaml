@@ -30,7 +30,7 @@ you_get:
   - Questions people keep asking, with counts, as topics for your next posts
   - A log that keeps your openings from repeating
 how_to_use:
-  - Add the writer skill for each platform you use: X reply writer, LinkedIn comment writer, YouTube comment reply writer. The agent needs them to write the replies.
+  - "Add the writer skill for each platform you use: X reply writer, LinkedIn comment writer, YouTube comment reply writer. The agent needs them to write the replies."
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to go through today's items.
   - The first time, paste your voice samples. It saves a voice file.
   - Paste the posts or comments, with the platform and how long ago each was posted. It does not fetch them for you, so paste fresh items each time you run it.

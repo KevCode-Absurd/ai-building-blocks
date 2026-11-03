@@ -25,12 +25,12 @@ not_for:
   - You need a full application security program with CI gates and dependency scanning set up. Use the Application Security Engineer agent.
   - You have an active incident, not a pre-merge review. Use the Incident Responder agent.
 you_give:
-  - The code to review: a file, a diff, or a pull request's changed lines, pasted or attached.
-  - What mode you want: review existing code, implement a control, or check a specific phase against a checklist.
+  - "The code to review: a file, a diff, or a pull request's changed lines, pasted or attached."
+  - "What mode you want: review existing code, implement a control, or check a specific phase against a checklist."
   - Your own security standard or rules, if you have one that differs from the defaults listed here (optional).
 you_get:
-  - A security scan result, run first, every time code is given: findings by severity (Critical, High) with the line and the rule it breaks.
-  - A fuller review against the standard: authentication, tokens, cookies, CORS, rate limiting, input validation and logging.
+  - "A security scan result, run first, every time code is given: findings by severity (Critical, High) with the line and the rule it breaks."
+  - "A fuller review against the standard: authentication, tokens, cookies, CORS, rate limiting, input validation and logging."
   - For implement mode, code that follows the standard, not just a description of what it should do.
   - For checklist mode, a pass or fail per item for the phase you named.
 how_to_use:

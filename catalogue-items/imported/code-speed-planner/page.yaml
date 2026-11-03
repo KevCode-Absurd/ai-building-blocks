@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the text of this skill's SKILL.md file.
   - Describe the task, or paste the code or pull request you want checked.
-  - Gather first: the code or the diff, the language, the database you use and rough row counts. Add typical data size if you know it. To check for one-query-per-row (N+1) problems, also paste your database schema or a query log. The code alone does not show how often the database is hit.
+  - "Gather first: the code or the diff, the language, the database you use and rough row counts. Add typical data size if you know it. To check for one-query-per-row (N+1) problems, also paste your database schema or a query log. The code alone does not show how often the database is hit."
   - The skill routes very large data work (a million items or more) to a skill called mathguard. It is not in this library, so skip that route and use the rules in the skill file instead.
   - Read the plan and the cost it states before you accept any code.
   - Review the slow patterns it lists, then use the faster replacement.

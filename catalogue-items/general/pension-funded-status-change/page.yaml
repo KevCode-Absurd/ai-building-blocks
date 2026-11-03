@@ -96,6 +96,7 @@ output_sample:
     - "The pension note's rows for service cost, interest and remeasurement (optional)"
   prerequisites:
     - "The company's pension note for the year, with the opening balances from the year before"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with the note it came from, its date, currency and scale."

@@ -39,7 +39,7 @@ how_to_use:
   - Write your own ideas first, before you read any from the AI. Add the views of others if you work in a group.
   - Let it cluster the ideas, attack the weak points and list the hidden assumptions behind each.
   - Check the scoring. Change a weight if it does not match what matters to you, then ask it to rerun the ranking.
-  - Read the shortlist. It is a table with one row per idea: raw ratings, uncertainty range, how the rank changes when weights change, and a decision status. Then read the decision log. Keep the log with your project notes.
+  - "Read the shortlist. It is a table with one row per idea: raw ratings, uncertainty range, how the rank changes when weights change, and a decision status. Then read the decision log. Keep the log with your project notes."
 output_sample:
   input:
     - Your research area or question

@@ -32,7 +32,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
   - Gather the page or price text, who buys, and the point where people drop off. If you use an agent tool that reads .agents/product-marketing.md, say so.
   - Paste your page text, offer or price. Say who buys and where they hesitate.
-  - Ask for four sections: models that fit, why each works, one change per model, and an honest use note.
+  - "Ask for four sections: models that fit, why each works, one change per model, and an honest use note."
   - Add your product context file if you have one (optional). It helps the advice fit your buyers.
   - Read the models it picks. Check that each one fits what you see in real buyers.
   - Pick one or two changes and test them on your page. Keep the honest use notes in mind.

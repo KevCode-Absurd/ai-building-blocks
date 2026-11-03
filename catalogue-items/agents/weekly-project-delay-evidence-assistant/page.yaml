@@ -37,7 +37,7 @@ you_get:
   - MISSING lines for stages with no timing, and a record for the next week
 how_to_use:
   - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Trace why work keeps missing deadlines workflow and the Project risk and portfolio manager. Or download the pack and attach it.
-  - Paste this week's task export (one row per task: ID, stage, start date, wait, finish date, estimate; dates as YYYY-MM-DD, with the timezone) and describe the fix you are testing. Say what a new pattern means to you, or let the agent propose a rule. From week two, paste last week's record.
+  - "Paste this week's task export (one row per task: ID, stage, start date, wait, finish date, estimate; dates as YYYY-MM-DD, with the timezone) and describe the fix you are testing. Say what a new pattern means to you, or let the agent propose a rule. From week two, paste last week's record."
   - Remove staff names and other personal details from the export before you paste it. Task IDs and stage names are enough.
   - Read the trend brief. Check the sample size before you believe any change. The first run only builds your baseline, so it gives no keep, revise or stop call yet.
   - If the brief says the evidence is too thin, leave the fix as it is.

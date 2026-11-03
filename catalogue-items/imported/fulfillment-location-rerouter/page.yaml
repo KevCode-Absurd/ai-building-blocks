@@ -37,7 +37,7 @@ how_to_use:
   - Run the preview first. The search the skill uses to find orders was not tested on a live store. Check that the preview list matches the orders you expect at the source location in Shopify Admin before you type yes.
   - Check that the destination has stock for every item. This step is required. This skill does not move stock, so transfer it first in Shopify Admin if it is short.
   - Tell your AI to go ahead by typing yes. The skill must not move any order until you do. Then open the CSV log and check for errors.
-  - After the move, spot-check a few orders in Shopify Admin. Then reconcile the CSV log against your counts: the number moved plus the errors should equal the number of orders you saw at the source, and the source location should show no open orders left from that list.
+  - "After the move, spot-check a few orders in Shopify Admin. Then reconcile the CSV log against your counts: the number moved plus the errors should equal the number of orders you saw at the source, and the source location should show no open orders left from that list."
 output_sample:
   input:
     - Your store address

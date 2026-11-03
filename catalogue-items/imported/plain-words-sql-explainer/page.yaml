@@ -44,6 +44,8 @@ output_sample:
     - The business question the query answers
     - Notes on what key tables and columns mean (optional)
     - Rules for status values, dates or currency (optional)
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Purpose
       contains: What the query is meant to answer, in one or two plain sentences.

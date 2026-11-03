@@ -35,7 +35,7 @@ how_to_use:
   - Add your list size, your audience and your offer. Share your seed test addresses if you have them.
   - Connect your platform through an API or connector only if you want drafts built there. Otherwise ask for the copy and plan in the chat.
   - Check the send packet it shows. Nothing goes to more than one person until you type "send it".
-  - Fix anything it flags, such as a missing unsubscribe link or sender authentication, before you approve. A few terms it uses: DMARC, SPF and DKIM are the checks that prove mail really comes from your domain. RFC 8058 is the one-click unsubscribe Gmail and Yahoo require for bulk mail. Postmaster tools are Google's and Microsoft's free reports on how your mail is treated. Liquid is the tag language some platforms use to insert names and other fields.
+  - "Fix anything it flags, such as a missing unsubscribe link or sender authentication, before you approve. A few terms it uses: DMARC, SPF and DKIM are the checks that prove mail really comes from your domain. RFC 8058 is the one-click unsubscribe Gmail and Yahoo require for bulk mail. Postmaster tools are Google's and Microsoft's free reports on how your mail is treated. Liquid is the tag language some platforms use to insert names and other fields."
   - After you approve, watch the first results for bounces, complaints and unsubscribes. Ask it to set up failure alerts in your platform, or a recurring health digest of flows that stopped or metrics that dropped. If bounces or complaints rise, run its spam diagnosis again.
 output_sample:
   input:

@@ -47,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can write code, and a Next.js project with Tailwind CSS to paste it into
     - You must replace example numbers and claims with true facts before you publish
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Hero section
       contains: A headline, short text and two buttons, in one of five layouts, written with a copy pattern.

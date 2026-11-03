@@ -38,7 +38,7 @@ how_to_use:
   - "First run: the first run only records a baseline. You will see a dated snapshot of your key pages and their search data, and no change report. Comparing starts with the second run, which needs the same URLs and date range."
   - For a comparison, paste your last snapshot and say which dates each one covers. Use the same URLs and date range both times.
   - If your chat cannot save files, it prints the snapshot in the chat. Copy it into a file you keep, because the next comparison needs it pasted back in.
-  - How often: take a baseline before each release or redesign, and a comparison right after. For a quiet site, compare once a month.
+  - "How often: take a baseline before each release or redesign, and a comparison right after. For a quiet site, compare once a month."
   - Read the critical items first. Check each one on the live page before you act.
   - Hand the repairs to your developer or whoever runs your site's CMS. Then ask for a new baseline and compare it using the same URLs and date range, so the check stays fair.
 output_sample:

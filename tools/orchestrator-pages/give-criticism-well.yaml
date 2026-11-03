@@ -41,7 +41,7 @@ output_sample:
     - What you honestly value in them (optional)
   prerequisites:
     - An AI that can work through a folder of files and save each result, such as Claude Code or a Claude Project. Check that your Claude plan includes one of them. A free chat tool that cannot open files cannot run the folder workflow
-    - The handoff pack zip from this page: HANDOFF.md plus one skill file for each step
+    - "The handoff pack zip from this page: HANDOFF.md plus one skill file for each step"
   output:
     - name: "Step 1: Behaviour and fix notes"
       contains: One watchable behaviour, why they may do it, their true strengths and the smallest fix.

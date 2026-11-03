@@ -30,7 +30,7 @@ you_give:
   - How many problems you want and how long learners have (optional)
   - Real learner answers, if you have them (optional)
 you_get:
-  - A staged sequence: a full model, problems with fading steps and problems to solve alone
+  - "A staged sequence: a full model, problems with fading steps and problems to solve alone"
   - Comparable problems with worked answers and a note on how hard each one is
   - A short understanding check that asks why, with a feedback line for each likely wrong answer
   - A rule for what to practise next after each kind of mistake

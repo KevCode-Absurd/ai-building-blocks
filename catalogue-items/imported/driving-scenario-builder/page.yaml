@@ -61,6 +61,7 @@ output_sample:
     - RoadRunner installed, if you export to RoadRunner
     - An AI that can write and run MATLAB scripts
     - Data already imported and synced, using Driving data importer if not
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Format table
       contains: A check of your data against what Scenario Builder expects, with timestamp scale and any flips or fixes needed.

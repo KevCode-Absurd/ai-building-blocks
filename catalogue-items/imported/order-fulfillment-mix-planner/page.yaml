@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
   - Paste your locations, stock, order volume by channel, delivery times and cost per order. A spreadsheet export works.
-  - Say your main goal. Pick one: faster delivery, lower cost or using up stock.
+  - "Say your main goal. Pick one: faster delivery, lower cost or using up stock."
   - Answer its questions. It marks anything you cannot answer as missing.
   - Read the routing rules and test them on five real orders from last week. Do they pick the location you would?
   - Replace any cost or benefit figure that is not from your own data before you use it in a budget.

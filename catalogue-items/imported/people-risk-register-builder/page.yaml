@@ -36,7 +36,7 @@ you_get:
   - Escalation steps for serious incidents
   - An audit checklist of five to eight questions
 how_to_use:
-  - Write a few lines on your company: size, industry, countries and any change under way. Add past incidents if you have them.
+  - "Write a few lines on your company: size, industry, countries and any change under way. Add past incidents if you have them."
   - Open Claude, ChatGPT or Gemini and paste in this skill, then your notes.
   - Read the top five risks first. Change any score you disagree with, and tell the AI why.
   - Give each risk to a real person and add a review date.

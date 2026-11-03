@@ -54,7 +54,7 @@ output_sample:
 
 you_give:
   - The receivables, payables and firm commitments due in one currency on one date, with their IDs (from your ledgers)
-  - The forward contract confirmation: buy or sell, foreign amount, forward rate, due date and ID (from your bank)
+  - "The forward contract confirmation: buy or sell, foreign amount, forward rate, due date and ID (from your bank)"
   - The settlement rate and any fees (from the bank's settlement notice or contract)
   - The reporting currency, and the base rate and any scenario rate you want tested
   - Any bank collateral notice and your list of restricted cash (optional, only if a block is in question)
@@ -62,8 +62,8 @@ you_give:
 
 you_get:
   - What changed since the last review, source by source
-  - An exposure bridge: receipts, payments, the forward and the open amount in foreign currency, translated at your rates
-  - A settlement schedule: cash locked by the forward, cash bought at the settlement rate, fees, and any over-hedge or open amount
+  - "An exposure bridge: receipts, payments, the forward and the open amount in foreign currency, translated at your rates"
+  - "A settlement schedule: cash locked by the forward, cash bought at the settlement rate, fees, and any over-hedge or open amount"
   - A cash check against a bank collateral block, when one is documented
   - A short record to paste into the next review, plus MISSING lines and any checks that could not run
 
@@ -71,7 +71,7 @@ how_to_use:
   - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Currency exposure and forward settlement checker workflow and the Spendable cash balance checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
   - Say whether this is the first run. If not, paste last time's record. Then attach the ledger lines for the due date, the forward confirmation and the settlement notice.
   - State the quote direction once, such as "dollars per euro". Check that every rate in the result uses it.
-  - Check that the forward amount appears once in the exposure bridge and once in the settlement. Check that the cash adds up: locked cash, plus bought cash, plus fees.
+  - "Check that the forward amount appears once in the exposure bridge and once in the settlement. Check that the cash adds up: locked cash, plus bought cash, plus fees."
   - Fix every MISSING line. Run it again whenever a bill, a confirmation, a rate or a bank notice changes. Installing it sets up no schedule.
 
 how_it_works:

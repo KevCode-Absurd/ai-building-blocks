@@ -23,7 +23,7 @@ you_give:
   - Anything public about them, such as a site, talk or post (optional)
   - Where and how long you will meet
   - Your rough notes after the meeting, with the name as spelled and anything you promised
-  - An AI that can keep files, such as Claude Code or a Claude Project. These can need a paid plan. For a free route, use any chat window: paste HANDOFF.md and then each skill file in turn.
+  - "An AI that can keep files, such as Claude Code or a Claude Project. These can need a paid plan. For a free route, use any chat window: paste HANDOFF.md and then each skill file in turn."
 you_get:
   - A one-page brief on what they care about, the people around them and the one question only they can answer
   - A meeting plan with their name, open questions, listening rules and a close

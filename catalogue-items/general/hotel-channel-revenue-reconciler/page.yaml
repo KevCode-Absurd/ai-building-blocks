@@ -94,6 +94,7 @@ output_sample:
   prerequisites:
     - "A property system (PMS) export or night audit for the period"
     - "The commission terms or a commission statement"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency and the stay period it covers."

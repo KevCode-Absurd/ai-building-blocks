@@ -39,6 +39,7 @@ output_sample:
     - An AI that can read and edit files in your project
     - A running Redis server, either local or a cloud one such as Upstash
     - Permission to install the bullmq and ioredis packages
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: lib/queue/connection.ts
       contains: One shared Redis connection that reads REDIS_URL, stops with a clear error if it is missing, and handles cloud links.

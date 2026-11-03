@@ -33,7 +33,7 @@ you_get:
   - Fix list to improve
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
-  - Write your brief first as a short list: the data you store, your top three read and write patterns, and the one failure that must never happen. Add your uptime needs and your current design if you have one.
+  - "Write your brief first as a short list: the data you store, your top three read and write patterns, and the one failure that must never happen. Add your uptime needs and your current design if you have one."
   - Give your AI the brief. It asks for anything missing, such as how much you read compared with write, or what your database does by default.
   - It then marks each of the seven checks pass or fail, with one line of evidence from your brief.
   - It gives its picks for storage, copies, splitting and consistency, with the trade-off for each.

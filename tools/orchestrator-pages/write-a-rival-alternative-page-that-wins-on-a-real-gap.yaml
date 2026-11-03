@@ -29,7 +29,7 @@ you_get:
   - A fair alternative page that leads with a gap you can back
   - A ranked list of fixes before the page goes live
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Competitor messaging comparer, Competitor white space mapper, Alternative page writer and Landing page conversion review.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Competitor messaging comparer, Competitor white space mapper, Alternative page writer and Landing page conversion review."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Name the rivals and the one buyer question you want the page to answer. Your AI needs web access to read their public pages. If it has none, paste each rival's homepage and pricing text.
   - Check every rival price and claim on their own site before you publish.

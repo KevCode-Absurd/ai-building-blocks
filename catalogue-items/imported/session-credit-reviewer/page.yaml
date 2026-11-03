@@ -70,6 +70,7 @@ output_sample:
   prerequisites:
     - Claude Code in a project that uses git
     - python3, only for the optional token count
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Signal rating
       contains: High, medium or low, with a one-line reason.

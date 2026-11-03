@@ -21,7 +21,7 @@ not_for:
   - "You want the cover drawn for you now. This skill writes the recipe and prompt. ChatGPT or Gemini draws it."
   - "Your covers are square posts or have no portrait. The recipe assumes a tall cover with a portrait at the bottom right."
 you_give:
-  - An approved portrait: a photo you own or have consent to use
+  - "An approved portrait: a photo you own or have consent to use"
   - Your Reel title, or the topic if you want title options
   - Your brand colors for background, text and accent (optional)
   - The word you want highlighted (optional)

@@ -29,7 +29,7 @@ you_give:
   - The tools you have installed, if you use a draft sync tool (optional)
 you_get:
   - A fit check for each platform, with a reason for each yes or no
-  - A table of the details used: topic, platforms, original or repost, tags
+  - "A table of the details used: topic, platforms, original or repost, tags"
   - One draft per platform you keep, in that platform's voice
   - A limits check on title length, body length and images, for you to confirm in each editor
   - A draft-only publishing plan, with the steps in order and a place for each draft link

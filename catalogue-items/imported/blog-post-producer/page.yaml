@@ -37,7 +37,7 @@ how_to_use:
   - Tell it your topic, reader, goal and length. Add your search term and related page links if you have them.
   - Check that your AI can search the web. If it can't, paste in the sources you trust. Never accept a quote or number without a source.
   - Read the brief first. Fix the angle before you ask for the full draft.
-  - Ask for the polish pass. The four Python scripts in the scripts folder (SEO, score, brand voice and quality gates) are optional and need code running. If your AI can't run code, it does the same checks by hand: word count against target, keyword in the title, first 100 words and one heading, sentence length and the quality-gate list.
+  - "Ask for the polish pass. The four Python scripts in the scripts folder (SEO, score, brand voice and quality gates) are optional and need code running. If your AI can't run code, it does the same checks by hand: word count against target, keyword in the title, first 100 words and one heading, sentence length and the quality-gate list."
   - Check every fact and link by hand before you publish. Any claim marked UNVERIFIED needs a source or has to go.
   - Next, make it easier for AI assistants to quote with the AI search visibility optimiser. Add more posts to the plan with the content topic planner.
 next: [ai-search-visibility-optimiser, content-topic-planner]

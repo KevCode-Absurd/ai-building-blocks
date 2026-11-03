@@ -26,7 +26,7 @@ you_get:
   - A plain explanation of the service role key, and what the test should print
 how_to_use:
   - Open your project in Claude Code. This prompt creates files, so it needs an AI that can write to your project.
-  - Install the two packages it needs: npm install @supabase/supabase-js and npm install -D tsx. The prompt asks before it installs them.
+  - "Install the two packages it needs: npm install @supabase/supabase-js and npm install -D tsx. The prompt asks before it installs them."
   - Save your Supabase URL and service role key in .env.local. Keep that file out of git, because the service role key skips Row Level Security.
   - Paste the prompt from the download and let it create the two files.
   - Run npx tsx scripts/test-db-connection.ts in your terminal.

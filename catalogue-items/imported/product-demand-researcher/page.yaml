@@ -34,7 +34,7 @@ how_to_use:
   - Open an AI that can run code, such as Claude with code tools turned on, and add the skill instructions.
   - Add your API key where your AI tool keeps secret settings. Do not paste it into a shared chat.
   - Check each platform's terms of service and rate limits, and collect only what they allow. Each search spends credits on your paid ScrapeCreators plan.
-  - Type your product idea or niche. Add platforms and competitor names if you have them. A good first run: search Reddit first, then TikTok and YouTube comments, take up to 20 posts or videos per query, and look at the last 12 months.
+  - "Type your product idea or niche. Add platforms and competitor names if you have them. A good first run: search Reddit first, then TikTok and YouTube comments, take up to 20 posts or videos per query, and look at the last 12 months."
   - Read the Verdict first, then check a few source links yourself. Strong means the same pain in 10 or more distinct posts from 3 or more sources. Medium means 5 to 9 posts or 2 sources. Weak means fewer than 5 or one source. These are the catalogue's own cut-offs.
   - Next, take the top two buyer phrases into an ad or landing page test. Or turn the objections into questions for customer interviews.
 output_sample:

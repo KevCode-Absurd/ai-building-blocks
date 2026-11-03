@@ -56,6 +56,8 @@ output_sample:
     - A description of the job, or a skill file to review
     - Who will use it and which AI tool runs it (optional)
     - Any past problems with the skill (optional)
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Trigger check
       contains: Your current description if you gave one, and a better one that says what, when and how it differs.

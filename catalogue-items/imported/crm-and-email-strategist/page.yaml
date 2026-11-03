@@ -50,7 +50,7 @@ output_sample:
     - Recent metrics and current flows (optional)
     - Sending domain checks, such as SPF, DKIM and DMARC results (optional)
   prerequisites:
-    - Web access helps, so it can read the wiki. Without it, the bundled notes are used, and the fallback is partial: the full compliance and tracking-consent pages are online only.
+    - "Web access helps, so it can read the wiki. Without it, the bundled notes are used, and the fallback is partial: the full compliance and tracking-consent pages are online only."
   output:
     - name: Executive summary
       contains: The 3 to 5 biggest gaps in your email program, in plain words.

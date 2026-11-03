@@ -41,6 +41,7 @@ output_sample:
     - Permission for your AI to run shell commands
   prerequisites:
     - A coding agent that can read files and run shell commands, such as Claude Code, Codex, Cursor or Gemini
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Locate, then read
       contains: Your AI checks file size and searches first, then reads only the lines it needs.

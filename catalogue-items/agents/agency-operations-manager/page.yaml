@@ -38,7 +38,7 @@ you_get:
 how_to_use:
   - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
   - Describe the process step by step, as it runs today, not as it should run. Add the numbers you have, even rough ones.
-  - Pick one job per run, such as "Review this process" or "Draft the procedure for it". With no numbers yet, ask for a quick pass: it maps the steps and lists the numbers to collect first.
+  - "Pick one job per run, such as \"Review this process\" or \"Draft the procedure for it\". With no numbers yet, ask for a quick pass: it maps the steps and lists the numbers to collect first."
   - Read the baseline section first. If key numbers are missing, collect them for a week before you act on the fixes.
   - Check each root cause against what your team knows. Ask the people who do the work if the map matches.
   - Pilot one fix, measure it against the baseline, then decide whether to roll it out.

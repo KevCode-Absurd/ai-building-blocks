@@ -42,7 +42,7 @@ how_to_use:
   - Paste your component code or describe it, then give your frequency range and port impedance.
   - Say if you want speed or accuracy. Ask your AI to explain its solver and mesh choice.
   - Check the S-parameter plots and the loss at your key frequencies before you build the board.
-  - The answer comes in order: S-parameters with a table of loss at your key frequencies, the solver choice, the sweep setup, the mesh and memory check, then fields and currents.
+  - "The answer comes in order: S-parameters with a table of loss at your key frequencies, the solver choice, the sweep setup, the mesh and memory check, then fields and currents."
   - If the loss misses your spec, tune the dimensions with the PCB design optimizer. To join the part into a larger circuit, use the PCB circuit combiner. To release the board, use the PCB Gerber exporter.
 output_sample:
   input:

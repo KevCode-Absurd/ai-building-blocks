@@ -34,7 +34,7 @@ you_get:
   - A checklist before sending or replying
 how_to_use:
   - "In plain chat, answer three setup questions first. How firm do you want to be? Who must approve a letter? Where are your rights registered? Your AI uses your answers in place of the plugin setup that the original skill expected."
-  - Have your enforcement approach ready: how firm you want to be, who must approve a letter, and where your rights are registered. If your AI has no saved setup, it will ask you for these in the chat.
+  - "Have your enforcement approach ready: how firm you want to be, who must approve a letter, and where your rights are registered. If your AI has no saved setup, it will ask you for these in the chat."
   - Open your AI tool that can read files and make Word documents. Add the skill and say whether you are sending a letter or got one.
   - Describe what happened, or paste the letter you received. Add who the other party is and what you want.
   - Read the draft in the chat. Fix anything marked VERIFY or CITE.

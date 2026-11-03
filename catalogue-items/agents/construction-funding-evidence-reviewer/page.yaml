@@ -65,7 +65,7 @@ you_give:
 you_get:
   - What changed since the last review, source by source
   - A draw schedule by year, equity first, with debt capped at what is left to draw
-  - An interest schedule: opening loan, draws, share of the year outstanding, interest and closing loan, year by year
+  - "An interest schedule: opening loan, draws, share of the year outstanding, interest and closing loan, year by year"
   - The final loan against its limit, with any interest the loan cannot cover shown as a funding gap
   - A short record to paste into the next review, plus MISSING lines and any checks that could not run
 
@@ -130,7 +130,7 @@ test:
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
   - Keep the record from each review in one folder named by date, so the next run starts from the true earlier state.
-  - Write the loan's interest rule once in the agent's file: the rate, and whether interest is added each year or paid in cash.
+  - "Write the loan's interest rule once in the agent's file: the rate, and whether interest is added each year or paid in cash."
   - Keep every bank draw notice with its date. The interest depends on those dates, and an estimate hides the drift.
   - Pair it with the Loan covenant cash cover reviewer once the project starts to repay, and with the Project completion funding checker when you only need the last step.
 

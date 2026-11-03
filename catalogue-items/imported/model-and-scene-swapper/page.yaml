@@ -54,6 +54,7 @@ output_sample:
   prerequisites:
     - An image model that can edit photos, such as GPT Image, through a dLazy account or API key
     - Image runs are paid per image, and the dry-run option shows the cost first
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Mode choice
       contains: Which of the three modes fits your goal, and what must stay locked in the photo.

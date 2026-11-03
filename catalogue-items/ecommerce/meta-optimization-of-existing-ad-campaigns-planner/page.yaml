@@ -23,7 +23,7 @@ not_for:
   - "Purchases are missing or counted twice. Fix tracking first with the Meta server tracking checker."
 you_give:
   - Your Meta Ads Manager results at campaign, ad set and ad level, for a recent window and the one before it (CSV or pasted table)
-  - The columns it needs: date, campaign, ad set, ad, spend, purchases and revenue. Helpful extras are impressions, link clicks, frequency and add to cart
+  - "The columns it needs: date, campaign, ad set, ad, spend, purchases and revenue. Helpful extras are impressions, link clicks, frequency and add to cart"
   - Your time zone, currency and attribution window, shown in your export settings
   - Your break-even cost per sale, or your contribution per order after product and running costs
   - The most you will let one ad spend with no purchase, and how long buyers take to buy after a click

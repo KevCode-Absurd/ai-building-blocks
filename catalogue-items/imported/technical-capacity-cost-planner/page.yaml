@@ -28,7 +28,7 @@ how_to_use:
   - Gather your traffic history, current resource counts, and a cost export for the same period.
   - Add your reliability targets, budget cap and the names of who owns each decision.
   - Open Claude, ChatGPT or Gemini and paste in the skill. No code or paid tool is needed.
-  - Paste your inputs and ask for a capacity and cost plan. Give your AI the matching template from the skill folder: capacity-model.md for a growth projection, load-soak-test-plan.md for tests, unit-economics-record.md for unit cost, or budget-quota-decision.md for spend rules.
+  - "Paste your inputs and ask for a capacity and cost plan. Give your AI the matching template from the skill folder: capacity-model.md for a growth projection, load-soak-test-plan.md for tests, unit-economics-record.md for unit cost, or budget-quota-decision.md for spend rules."
   - Check the flagged gaps. Any claim marked as untested needs a real load test before you rely on it.
   - Next, find waste in the bill with the cloud bill waste finder, and set your uptime target with the reliability target setter.
 

@@ -71,6 +71,7 @@ output_sample:
     - Your framework (optional)
   prerequisites:
     - The skill folder with its notes, so your AI can read the deeper guidance (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Risk score
       contains: A number from minus 15 to plus 10 with a 0 to 5 score and reason for each of five points.

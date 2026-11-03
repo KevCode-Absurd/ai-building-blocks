@@ -40,10 +40,10 @@ how_to_use:
   - Download the skill folder and add it to your AI that can run code, such as Claude Code. A plain chat can explain the steps but cannot fit the models.
   - "Use only data you have written permission to use, with names and IDs removed. Follow your own rules for patient or customer data. Never paste patient records into a chat."
   - Ask your AI to set up a Python 3.11 or later environment with uv, and to install scikit-survival there.
-  - Before you fit anything, check three things: the time column, the event column coded 1 (the event happened) or 0 (cut off), and the feature columns. Ask it to check your table with validate_survival_csv.py. It must pass before any model is trained, so fix any error first.
+  - "Before you fit anything, check three things: the time column, the event column coded 1 (the event happened) or 0 (cut off), and the feature columns. Ask it to check your table with validate_survival_csv.py. It must pass before any model is trained, so fix any error first."
   - Tell it your time column, event column and features, and the question you want answered. It then trains the models with train_survival_model.py and scores them with evaluate_survival_metrics.py.
   - Ask for model_report.py to write the summary. Take that summary to a statistician or an expert in your field before you act on any score.
-  - Known limit: the report helper cannot confirm that the training summary and the metrics summary come from the same model and the same test group. Check that yourself before you combine them.
+  - "Known limit: the report helper cannot confirm that the training summary and the metrics summary come from the same model and the same test group. Check that yourself before you combine them."
   - The scikit-survival library is licensed GPL-3.0-or-later, even though this skill is MIT. Check the library's licence before you redistribute anything built on it.
 output_sample:
   input:

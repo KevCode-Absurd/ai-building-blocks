@@ -44,7 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can run code and read your project files
     - The compiler or runtime for your language installed, such as gcc, go, rustc, a JDK or Node.js
-    - Optional: the analyzer script ct_analyzer/analyzer.py from the upstream Trail of Bits project. It is not included here. Without it you get a manual review only
+    - "Optional: the analyzer script ct_analyzer/analyzer.py from the upstream Trail of Bits project. It is not included here. Without it you get a manual review only"
   output:
     - name: Result
       contains: PASSED if no slow, value-dependent operations were found, or FAILED with each risky instruction listed.

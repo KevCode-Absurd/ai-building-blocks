@@ -16,7 +16,7 @@ explain: |
   It reviews and reports. It does not move money, trade, contact the bank, file anything or start a schedule. You run it when the evidence changes, and a person who owns the cash policy checks the sources and the floor.
 
 when:
-  - Month end: the bank balance moved and you need to know how much is really spendable.
+  - "Month end: the bank balance moved and you need to know how much is really spendable."
   - The bank adds or lifts a restriction or a collateral block, and you want to see what it does to next week.
   - Last week's cash forecast missed, and you want the drift explained before you update the next one.
   - A payment run is due on Tuesday and you need the lowest balance before the receipts arrive.
@@ -34,8 +34,8 @@ you_give:
 
 you_get:
   - What changed since the last review, restriction by restriction
-  - Accessible cash: bank balance less restricted, pledged and pending amounts, with headroom over the floor
-  - Forecast drift: errors by period, average error and the closing-cash gap, tied back to the sum of errors
+  - "Accessible cash: bank balance less restricted, pledged and pending amounts, with headroom over the floor"
+  - "Forecast drift: errors by period, average error and the closing-cash gap, tied back to the sum of errors"
   - A settlement ladder by day from today's accessible cash, with the lowest balance and any funding gap against the floor
   - A bank fee check when a charge is in question, with the difference to query
   - A short record to paste into the next review, plus MISSING lines and any checks that could not run
@@ -44,7 +44,7 @@ how_to_use:
   - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files, so you keep the record it hands back.
   - Say whether this is the first run. If not, paste the record from last time. Then attach or paste the bank balances, restrictions, the frozen forecast with actuals and the confirmed flows by day.
   - Read "what changed" first. If a restriction is new or gone, check it against the bank letter before you go on.
-  - Check the ladder's lowest day against your own sheet. Then read the funding gap line: it is the floor less the lowest balance.
+  - "Check the ladder's lowest day against your own sheet. Then read the funding gap line: it is the floor less the lowest balance."
   - Fix every MISSING line. Run it again whenever a balance, restriction, cutoff or confirmed payment changes. Installing it sets up no schedule.
 
 how_it_works:

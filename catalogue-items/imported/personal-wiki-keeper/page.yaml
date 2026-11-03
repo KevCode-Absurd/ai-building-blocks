@@ -46,6 +46,7 @@ output_sample:
     - Obsidian installed, with a vault folder
     - An AI that can read and write files in your vault, such as Claude Code
     - Python, only if you want the optional helper scripts
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: raw/
       contains: Your original sources, kept as they are. The AI reads them and never changes them.

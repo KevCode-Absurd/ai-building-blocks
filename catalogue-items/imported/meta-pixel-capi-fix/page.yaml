@@ -48,6 +48,7 @@ output_sample:
     - An AI that can run shell scripts
     - A Meta access token from a system user with the pixel assigned to it, and with ads_management and ads_read permissions (no other scopes)
     - Access to Events Manager to confirm the real match quality score
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Pixel audit scorecard
       contains: Pass, fail or warning for each check, an estimated match quality per event type, and a fix list in order of impact.

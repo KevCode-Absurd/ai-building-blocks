@@ -35,7 +35,7 @@ how_to_use:
   - Paste the skill text into the chat. Also upload the three Python files from its scripts folder (data_profiler.py, missing_value_analyzer.py, outlier_detector.py), because the checks run them. Then upload your CSV or spreadsheet.
   - Tell your AI what each column means, where the data came from, and what looks wrong.
   - Ask for a full audit. For one problem column, ask for a targeted scan instead.
-  - If your AI cannot run code, skip the scripts. Paste a sample of your rows and ask it to do the checks by hand: missing values per column, duplicate rows, values far outside the usual range, and cross-column rules such as end dates before start dates. The checks will be less exact.
+  - "If your AI cannot run code, skip the scripts. Paste a sample of your rows and ask it to do the checks by hand: missing values per column, duplicate rows, values far outside the usual range, and cross-column rules such as end dates before start dates. The checks will be less exact."
   - Read the Bottom Line first. Then fix the top items in How to Act, starting with the one that affects the most rows or the numbers people rely on.
   - Next, run the audit again on the fixed file to confirm the score went up, and repeat it each time the data source changes. This is a copy of a public MIT-licensed skill, so check the scoring method fits your data.
 output_sample:

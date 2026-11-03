@@ -75,6 +75,7 @@ output_sample:
     - Your current schema or project folder (optional)
   prerequisites:
     - An AI that can read your project files, if you want it to look at an existing schema
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Database pick
       contains: The database that fits your app, why it fits and what you give up.

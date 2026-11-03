@@ -36,7 +36,7 @@ how_to_use:
   - Give your AI your raw idea and say how technical you are. It sorts the idea by size and writes a questions file.
   - Answer every question before research starts. If you skip some, it must say which assumptions it made.
   - Let it research and write the product brief, then the phased plan. It works best when your AI can search the web and save files. If yours cannot, it should go on only with the assumptions it states, and mark every number it could not source as [assumption]. Check every number in the research against its source.
-  - Save the four files in order: questions, research, brief, plan. Review the stop criteria after the first phase.
+  - "Save the four files in order: questions, research, brief, plan. Review the stop criteria after the first phase."
   - Next, hand the brief to the Idea to dev brief writer or the Product requirements writer.
 not_for:
   - You want a quick gut-check, not four files. Use the Idea sharpener.

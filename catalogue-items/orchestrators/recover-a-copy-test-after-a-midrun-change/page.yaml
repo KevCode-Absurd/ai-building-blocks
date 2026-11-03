@@ -20,7 +20,7 @@ you_get:
   - A table of which groups are still fair to compare, and why the others are not
   - A result table (group, period, people, conversions, rate, difference) with a supported, unclear or unusable call for each comparison
   - A small copy fix for any stale fact, or a note that none is needed
-  - A recovery plan: resume, restart, run a new test or stop, with one thing to change, limits, an owner and a next decision date
+  - "A recovery plan: resume, restart, run a new test or stop, with one thing to change, limits, an owner and a next decision date"
 how_to_use:
   - Download the pack and add it to your AI, or paste the instructions into a chat.
   - Attach the test plan, your results export and the change log. Say which approved facts are current.

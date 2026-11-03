@@ -37,7 +37,7 @@ you_get:
   - A raise, hold or restructure verdict
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
-  - Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost.
+  - "Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost."
   - Ask for the value check first. Give your best estimate of what a customer would otherwise spend on the problem. If you do not know what the alternative costs, ask the skill to run its questions first to find it, before the value check.
   - Ask for the model pick, the free line and the enterprise call plan. Fix any line marked MISSING with real numbers.
   - Treat the price multiples and the raised-price story in the skill as the author's experience, not proof for your product.

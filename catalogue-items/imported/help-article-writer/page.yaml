@@ -30,7 +30,7 @@ you_get:
   - Troubleshooting sections for common errors
   - Search-friendly titles and related links
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed to write the article. You do these parts by hand: take screenshots, check links, and set review dates or alerts in your help desk.
+  - "Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed to write the article. You do these parts by hand: take screenshots, check links, and set review dates or alerts in your help desk."
   - Paste in the skill instructions, or upload the skill file if your AI allows it.
   - Paste your list of ticket themes or search terms, then your product notes and exact menu names.
   - Ask for one article or FAQ at a time, and name who will read it.

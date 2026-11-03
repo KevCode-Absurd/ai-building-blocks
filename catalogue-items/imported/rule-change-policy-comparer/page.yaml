@@ -30,7 +30,7 @@ you_get:
   - Which policies need editing
   - A clear warning if scope was limited
 how_to_use:
-  - Before you start: the skill reads your policy list from a folder the full Claude plugin sets up. Without that plugin, paste your policy list into the chat, with the owner of each policy.
+  - "Before you start: the skill reads your policy list from a folder the full Claude plugin sets up. Without that plugin, paste your policy list into the chat, with the owner of each policy."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It works best where your AI can read files.
   - Paste the rule name, text or a summary. If you only have part of the rule, the AI will ask before it looks anything up.
   - Add your list of policies, with the owner of each. Say if any section should be left out (optional).

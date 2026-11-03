@@ -48,6 +48,7 @@ output_sample:
     - MATLAB with Experiment Manager installed
     - An AI that can run MATLAB code, such as through the MATLAB MCP tool
     - The skill's scripts folder added to your MATLAB path
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: New experiment
       contains: An experiment in Experiment Manager built from your script, with its strategy and parameters set.

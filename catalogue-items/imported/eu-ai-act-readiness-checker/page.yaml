@@ -32,7 +32,7 @@ you_get:
   - 30, 60 and 90 day plan
   - Questions for counsel
 how_to_use:
-  - Start here, in this order: fill in the inventory CSV, run the checker on it, then ask for the gap register and the 90 day plan. Gather first the list of your AI systems, your role for each and the countries where each is used.
+  - "Start here, in this order: fill in the inventory CSV, run the checker on it, then ask for the gap register and the 90 day plan. Gather first the list of your AI systems, your role for each and the countries where each is used."
   - Open an AI that can browse the web and run Python code, such as Claude with code and web search turned on, or ChatGPT with code running and browsing on. These features may need a paid plan on some AI apps, so check yours. A free chat without both cannot check the law or run the inventory checker.
   - Upload the whole skill folder, not just the text. The AI needs the checklist, the sources file and the checker script. Say you want an EU AI Act readiness check.
   - Fill in the blank inventory template in the folder (assets/ai-system-inventory-template.csv) with your AI systems, your role for each, and the countries where they are used.

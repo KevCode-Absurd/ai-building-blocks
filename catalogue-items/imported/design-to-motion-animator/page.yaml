@@ -32,7 +32,7 @@ you_get:
   - Still-frame, motion and loop-check notes with visible limits.
   - MP4 or GIF exports when requested and successfully rendered.
 how_to_use:
-  - Before you start, get three things ready: a Figma access token, an AI coding tool that can open a browser page, and FFmpeg for MP4 or GIF files. If that is new to you, ask a developer to set them up once.
+  - "Before you start, get three things ready: a Figma access token, an AI coding tool that can open a browser page, and FFmpeg for MP4 or GIF files. If that is new to you, ask a developer to set them up once."
   - Download the complete folder and read AI-BLOCKS-USAGE.md.
   - Give it to an AI coding environment that can read files and preview a browser page.
   - Supply the design, choose the showcase or website scope, and name requested formats.

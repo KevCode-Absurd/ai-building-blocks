@@ -40,7 +40,7 @@ you_get:
   - A list of claims in the drafts that you must be able to prove
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
-  - Say which job you want: first outreach, a reply to something they said, or a deal check.
+  - "Say which job you want: first outreach, a reply to something they said, or a deal check."
   - Paste what you sell, the prospect's details and any reply or past messages. Mark what you know and what you are guessing. No code or web access is needed.
   - Type "Draft this. Use only the facts I gave. Put brackets where a fact is missing."
   - Read the email out loud. If it sounds like a template or runs over a minute, ask for it shorter and more specific to this person.

@@ -37,7 +37,7 @@ how_to_use:
   - Before you upload, check that the files are de-identified (no names, dates of birth or faces in the scans) and that participant consent allows sharing them with an AI tool. Keep the original scanner files in your own storage.
   - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
   - Add your files or folder, then say what the study is, how many subjects and sessions, and which kind of data it is.
-  - First run, in this order. Install PyBIDS and the BIDS validator. Run the validator on the raw folder to see what is wrong. Apply the fixes: names, folders, sidecar files, participants.tsv and dataset_description.json. Re-run the validator. Then index the result with PyBIDS to confirm it reads.
+  - "First run, in this order. Install PyBIDS and the BIDS validator. Run the validator on the raw folder to see what is wrong. Apply the fixes: names, folders, sidecar files, participants.tsv and dataset_description.json. Re-run the validator. Then index the result with PyBIDS to confirm it reads."
   - Name your target archive if you have one, so your AI can note any extra rules to check.
   - Read the problem list. Fix or approve each item, then ask your AI to run the validator again.
   - Run it until the report is clean. Then read your target archive's own submission rules, and only then deposit or share the dataset.

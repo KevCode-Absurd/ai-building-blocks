@@ -23,11 +23,11 @@ not_for:
   - You want to know what your team's hours earn after costs. Use the Reconcile service capacity and shared cost workflow.
   - You are checking a product mix against machine or plant limits. Use the Product mix capacity checker.
 you_give:
-  - Your committed work: each job, who is on it and its due date
+  - "Your committed work: each job, who is on it and its due date"
   - A low, likely and high effort estimate for each job, in hours or days
   - Who is available in the window and for how many hours, after leave and meetings
   - What each job waits on, such as a supplier, a customer reply or a person
-  - The new request: what it is, the date asked for and any date that cannot move
+  - "The new request: what it is, the date asked for and any date that cannot move"
   - Your priorities or rules, such as which customers come first (optional)
 you_get:
   - A capacity view of available hours against committed work for the window

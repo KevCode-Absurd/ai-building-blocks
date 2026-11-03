@@ -50,6 +50,7 @@ output_sample:
     - Your management review notes (optional)
   prerequisites:
     - An AI chat tool. No code needs to run if you answer the checks by hand.
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: The Decision Being Made
       contains: "Which kind of call this is: programme plan, finding severity, certification readiness or incident follow-up."

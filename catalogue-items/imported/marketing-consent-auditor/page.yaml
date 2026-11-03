@@ -42,6 +42,7 @@ output_sample:
   prerequisites:
     - An AI that can run Shopify CLI commands and save files
     - A signed-in Shopify CLI session with permission to read customers
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Start banner
       contains: The skill name, your store domain and the start time.

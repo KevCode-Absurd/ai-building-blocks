@@ -33,7 +33,7 @@ how_to_use:
   - Wait for the build and launch. A real window should open. If it does not, ask your AI to keep debugging.
   - Open the project in Visual Studio. Ask for the first screen or feature, one at a time.
 you_get:
-  - A machine check: what is ready, missing or unsure
+  - "A machine check: what is ready, missing or unsure"
   - A new WinUI 3 project folder
   - A build result from dotnet build
   - Proof that the app opened, such as its window title

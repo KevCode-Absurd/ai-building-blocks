@@ -95,6 +95,7 @@ output_sample:
     - "The tax benefit the company reported on that amortization"
   prerequisites:
     - "The income statement, the intangibles note and the tax note for the same period"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency, scale and period."

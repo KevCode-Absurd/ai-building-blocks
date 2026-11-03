@@ -33,7 +33,7 @@ you_get:
   - Code changes that log each fit inside a tracked run
   - Settings, versions, seed and checks saved for each run
   - The full results file saved with the run
-  - A label on each run: exploring, reportable or mock
+  - "A label on each run: exploring, reportable or mock"
   - Steps to compare runs and to reload a saved model
 how_to_use:
   - Download the skill folder from this page and add it to an AI that can edit code and run Python, such as Claude Code. Keep the references folder with SKILL.md.

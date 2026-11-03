@@ -80,6 +80,7 @@ output_sample:
   prerequisites:
     - "The forecast file as it was before the period, and bank statements or ledger actuals"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Sources and cutoffs", contains: "The forecast version and date, where actuals came from, and the period boundaries."}
     - {name: "Periods", contains: "Forecast, actual, signed error and absolute error for each period."}

@@ -84,6 +84,7 @@ output_sample:
   prerequisites:
     - "The segment note and the income statement from the annual report"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Scope", contains: "The period, currency, scale and pages used, and which group measure the bridge ties to."}
     - {name: "Segment measures", contains: "Each segment's measure and definition, and whether it matches group operating profit."}

@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say what counts as a conversion, such as a form, a booked call or a purchase.
   - List your site and the platforms you use, like GA4, Meta or Google Ads. Add screenshots of your tags if you have them.
-  - Answer its three starting questions: what counts as a conversion, which platforms it must reach, and which form, booking or checkout tool runs it (and whether Google Tag Manager is installed). With nothing set up yet it runs a setup. If something exists, it runs an audit.
+  - "Answer its three starting questions: what counts as a conversion, which platforms it must reach, and which form, booking or checkout tool runs it (and whether Google Tag Manager is installed). With nothing set up yet it runs a setup. If something exists, it runs an audit."
   - Fire a test conversion and check it shows up. Live checks need an AI that can run code and open a browser.
   - Next, once a test conversion arrives, plan bidding with an ads skill or a full event plan with an analytics skill. Run this audit again after any change to your site, forms or checkout.
 output_sample:

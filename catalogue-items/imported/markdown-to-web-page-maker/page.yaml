@@ -31,7 +31,7 @@ you_get:
   - Your brand colors and fonts on the page
 how_to_use:
   - Check your file has 100 lines or more. Shorter files are refused.
-  - Brand colors and fonts come from the author's full pack (alirezarezvani/claude-skills): run its /cs:design-system command once. This folder holds only the three scripts. If you skip the pack, tell your AI to build with the default look (the render step has a --no-config option).
+  - "Brand colors and fonts come from the author's full pack (alirezarezvani/claude-skills): run its /cs:design-system command once. This folder holds only the three scripts. If you skip the pack, tell your AI to build with the default look (the render step has a --no-config option)."
   - Use an AI that can run code, such as Claude Code or Codex. Give it your markdown file and the skill folder, and run it from the folder's top level, where the scripts folder sits.
   - "Ask it to run the three steps in order: parse the markdown, build the page, then add search and copy buttons."
   - Open document.html in your browser. Check the contents bar, search and a code copy button.

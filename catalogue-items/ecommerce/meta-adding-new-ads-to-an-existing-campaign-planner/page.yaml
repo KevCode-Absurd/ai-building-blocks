@@ -26,13 +26,13 @@ you_give:
   - An existing ad to copy from
   - The new creatives, as files or previews, and what each one tests
   - Your approved offer text, with any end dates
-  - Your spend limits: the daily cap and the most the new ads may spend before your first review
+  - "Your spend limits: the daily cap and the most the new ads may spend before your first review"
   - Recent results and your target cost per sale (optional)
   - Whether you want drafts only, or drafts plus submission (the default is drafts only)
 you_get:
   - The ad set settings to keep, written down as a baseline
   - A draft list with a creative ID, a name, what it tests, a launch date and a status for each new ad
-  - A pre-launch checklist for each ad: media, crop, copy, offer dates, link, tracking and placements
+  - "A pre-launch checklist for each ad: media, crop, copy, offer dates, link, tracking and placements"
   - Spend limits, a review date and a keep, hold or stop rule
   - A list of what is missing, and the checks that were not run
 how_to_use:

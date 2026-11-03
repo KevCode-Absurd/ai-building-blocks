@@ -32,7 +32,7 @@ you_get:
   - Segment-level translation edits
   - Regenerated audio after each change
 how_to_use:
-  - Cost: ElevenLabs charges your account for each dub and each regeneration, and this page cannot quote a price. Check the current price at elevenlabs.io/pricing before you start, and try one language first.
+  - "Cost: ElevenLabs charges your account for each dub and each regeneration, and this page cannot quote a price. Check the current price at elevenlabs.io/pricing before you start, and try one language first."
   - Open an AI tool that can run code and a terminal, such as Claude Code. A plain chat window cannot run the setup command. Add the skill folder or paste in the SKILL.md text. Editing a transcript or translation needs an enterprise workspace. On other plans, skip the fix steps below.
   - Add your video, audio file or public link, and name the languages you want.
   - Set your ElevenLabs API key as an environment variable, or let the setup command create one for the project. Don't paste the key into a shared chat or a file you will share.

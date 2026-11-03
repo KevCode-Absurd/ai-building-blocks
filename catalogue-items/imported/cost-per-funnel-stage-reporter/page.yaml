@@ -81,6 +81,7 @@ output_sample:
   prerequisites:
     - A BigQuery project and an AI that can run SQL, such as Claude Code with the bq tool
     - The references folder from the skill download
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Stage ledger
       contains: One row per lead and stage, marked achieved, not achieved or unknown, with date and value.

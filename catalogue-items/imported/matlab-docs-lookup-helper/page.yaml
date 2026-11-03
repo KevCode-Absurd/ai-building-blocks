@@ -44,6 +44,7 @@ output_sample:
   prerequisites:
     - MATLAB with a licence (paid software from MathWorks)
     - An AI tool that can run MATLAB code and read web pages from MATLAB
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Syntax
       contains: The exact call forms for the function, taken from the official reference page.

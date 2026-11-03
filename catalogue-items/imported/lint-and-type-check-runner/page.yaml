@@ -33,7 +33,7 @@ you_get:
   - A list of checks that did not run
   - The commands used and their exit results
 how_to_use:
-  - Gather two things first: the list of files you changed, and which lint or type check commands your project already has (look in package.json or your project settings, or ask a developer).
+  - "Gather two things first: the list of files you changed, and which lint or type check commands your project already has (look in package.json or your project settings, or ask a developer)."
   - Commit or stash your work first, so you can undo any automatic fix.
   - Open your AI tool in your project folder. It needs to run commands, so use a tool that can, such as Claude Code.
   - Paste this skill, or add it to your tool's skills.

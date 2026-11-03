@@ -30,7 +30,7 @@ you_get:
   - A title and meta description draft
   - A ranked list of fixes for the published page, covering title, description, headings, links, images, address and markup
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Search page brief writer, Search blog post writer and On-page SEO tuner.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Search page brief writer, Search blog post writer and On-page SEO tuner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the keyword and the links to the top pages. If it cannot open them, paste each page's title and headings.
   - Edit the post before you publish. Add your own facts and cut anything you cannot stand behind.

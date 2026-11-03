@@ -25,7 +25,7 @@ not_for:
 you_give:
   - The identity that needs access, such as an app, a group or a person
   - What it must do, in plain words
-  - The scope: subscription, resource group or one resource
+  - "The scope: subscription, resource group or one resource"
   - What it must never do (optional)
   - An AI with the Azure MCP tools connected, and an Azure subscription
 you_get:

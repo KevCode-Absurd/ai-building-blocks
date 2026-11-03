@@ -40,7 +40,7 @@ how_to_use:
   - Say what the screen loads or saves. Add your design style if the code does not show it.
   - Check the table of states it returns, then the changed code. Look for guessed wording and a retry button that calls the real reload.
   - Test in your own app with a slow request and a failed request. This works best when your AI can read and edit your project files.
-  - The skill file's "risk: critical" line is the source collection's own label, because the skill edits your code. Review every change before you commit it.
+  - "The skill file's \"risk: critical\" line is the source collection's own label, because the skill edits your code. Review every change before you commit it."
   - Next, have the new wording checked with the Interface microcopy writer, and run the Accessibility checker on the new states.
 how_it_works:
   - title: Find the data areas

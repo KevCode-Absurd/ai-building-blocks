@@ -48,6 +48,7 @@ output_sample:
     - MATLAB with the Statistics and Machine Learning Toolbox (paid MathWorks software that needs a licence)
     - An AI tool that can run MATLAB code
     - Parallel Computing Toolbox for faster training (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Trained models
       contains: The models you asked for, trained in Classification Learner or Regression Learner on your table.

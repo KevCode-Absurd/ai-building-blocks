@@ -34,10 +34,10 @@ you_get:
   - A trade-off summary for each choice
 how_to_use:
   - Open Claude, ChatGPT or Gemini and add this skill, or paste the skill file (SKILL.md). For the diagram and dependency check, also give your AI the references and scripts folders from the skill.
-  - Describe what you are building. Answer these first: what the data looks like, how many reads and writes, which regions, your budget, your current stack and your team size. Add expected users and traffic.
+  - "Describe what you are building. Answer these first: what the data looks like, how many reads and writes, which regions, your budget, your current stack and your team size. Add expected users and traffic."
   - Add constraints like budget or cloud provider if you have them (optional).
   - For a diagram and dependency check on existing code, use an AI that can run Python and upload your project folder.
-  - Read the recommendation and trade-offs. Ask for a decision record to share with your team. It is about one page: context, options, decision, reasons and trade-offs. The diagram is one Mermaid block.
+  - "Read the recommendation and trade-offs. Ask for a decision record to share with your team. It is about one page: context, options, decision, reasons and trade-offs. The diagram is one Mermaid block."
   - In a chat with no code running, you get the recommendation and the decision record, but not the diagram or the dependency check.
   - Save the decision record in your team's repo, and run the dependency check again after your first milestone. Use the decision record writer to keep later choices in the same format.
 next: [decision-record-writer, codebase-architecture-reviewer]

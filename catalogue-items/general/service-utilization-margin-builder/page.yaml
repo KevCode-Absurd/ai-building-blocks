@@ -81,6 +81,7 @@ output_sample:
   prerequisites:
     - "Payroll or time-tool records, and your invoices for the month"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Period and sources", contains: "The month, the currency and where each figure came from."}
     - {name: "Hours", contains: "Paid, fixed duty, leave, available and billable hours, and the utilization share."}

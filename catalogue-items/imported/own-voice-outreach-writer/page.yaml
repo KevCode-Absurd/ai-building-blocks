@@ -31,7 +31,7 @@ you_get:
   - Follow-ups in your tone
   - Subject line options
 how_to_use:
-  - Source: this is an Anthropic skill, originally named outreach-composer, shared under the Apache 2.0 licence.
+  - "Source: this is an Anthropic skill, originally named outreach-composer, shared under the Apache 2.0 licence."
   - Open your AI and paste in the skill. Add your prospects, one per row, with a note on what you want from each.
   - Add 15 to 30 of your sent emails. If you can't, paste three emails you were happy with.
   - Read the voice profile it makes. Fix anything that does not sound like you.

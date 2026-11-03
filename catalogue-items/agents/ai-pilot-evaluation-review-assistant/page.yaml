@@ -38,7 +38,7 @@ you_get:
   - Your checklist applied in order, each item marked Pass, Fail or Unknown, with the evidence
   - A call of Go, Stop or Cannot decide yet, with the reason
   - A short record to start your next review from
-  - A next step: take the brief and gap list to the person who decides, and set the next gate or results date
+  - "A next step: take the brief and gap list to the person who decides, and set the next gate or results date"
 how_to_use:
   - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read your files. Without file access, paste your results table as text.
   - Attach your results table, your baseline and your checklist. Type the goal, the budget and the results date. Add your last record on a repeat run.

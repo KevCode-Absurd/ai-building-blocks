@@ -38,7 +38,7 @@ how_to_use:
   - Check the answers to the six quick checks. Fix any that are wrong for your setup and ask for a new score.
   - Read the fixes for choice, skill growth and purpose. Pick one or two to try first.
   - Look at the rewards to drop or change. Remove if-then rewards before you add anything new.
-  - What to do next: take the one or two chosen fixes into your team or product plan, try them for a set period such as a quarter, then ask your AI to score the same brief again and compare.
+  - "What to do next: take the one or two chosen fixes into your team or product plan, try them for a set period such as a quarter, then ask your AI to score the same brief again and compare."
 output_sample:
   input:
     - A short description of your team, product or program

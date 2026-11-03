@@ -26,14 +26,14 @@ not_for:
   - You need a formal SOC 2, ISO 27001 or HIPAA gap assessment signed off by a certified assessor. Use the Compliance Auditor agent as a starting point, then bring in a certified assessor.
 you_give:
   - Your cloud provider (AWS, Azure, GCP, or more than one) and how your accounts or projects are organized.
-  - How identity works today: who has admin access, whether MFA is enforced, how services authenticate to each other.
-  - Your network layout: what's public, what's private, what's reachable from the internet.
+  - "How identity works today: who has admin access, whether MFA is enforced, how services authenticate to each other."
+  - "Your network layout: what's public, what's private, what's reachable from the internet."
   - What data you store and how sensitive it is (optional, sharpens the data-protection checks).
   - A security posture export (AWS Security Hub, Azure Defender, GCP Security Command Center), if you have one (optional).
 you_get:
-  - A posture checklist across five areas: identity, network, data, logging and compute, each marked Pass, Gap or Unknown.
-  - A ranked gap list: the issue, the breach pattern it matches, and the fix.
-  - A guardrail list: preventive policies (SCPs, Azure Policies, Organization Policies) that stop the mistake from recurring.
+  - "A posture checklist across five areas: identity, network, data, logging and compute, each marked Pass, Gap or Unknown."
+  - "A ranked gap list: the issue, the breach pattern it matches, and the fix."
+  - "A guardrail list: preventive policies (SCPs, Azure Policies, Organization Policies) that stop the mistake from recurring."
   - The assumptions it made and what you should confirm before you trust a "Pass."
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.

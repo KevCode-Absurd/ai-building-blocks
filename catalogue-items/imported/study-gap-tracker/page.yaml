@@ -35,7 +35,7 @@ how_to_use:
   - Do the practice it suggests for the top one or two gaps.
   - Come back after practice, paste how it went, and let it update the list.
   - Two clean checks in a row mean a gap is improving. Three mean it is closed.
-  - The score runs from 1 to 5: repeats times error weight (Surface 1, Structural 2, Deep 3), plus 1 if you have not worked on it for three sessions, capped at 5. Score 1 or 2 means more practice questions, 3 or 4 means re-learn the topic, 5 means ask your AI to question you on why you got it wrong, then look for a wrong idea behind it.
+  - "The score runs from 1 to 5: repeats times error weight (Surface 1, Structural 2, Deep 3), plus 1 if you have not worked on it for three sessions, capped at 5. Score 1 or 2 means more practice questions, 3 or 4 means re-learn the topic, 5 means ask your AI to question you on why you got it wrong, then look for a wrong idea behind it."
   - The skill's extra skills (check-understanding, challenge-generator and so on) are not needed. Ask your AI in plain words for practice questions or a re-explanation.
 next: [study-understanding-check, study-revision-coach]
 output_sample:

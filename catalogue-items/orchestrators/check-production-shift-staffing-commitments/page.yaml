@@ -30,7 +30,7 @@ you_give:
   - The planned shift hours, breaks and known leave
   - Who decides on moves, such as the production owner (optional)
 you_get:
-  - A staffing comparison: hours needed against qualified hours available, by role and line
+  - "A staffing comparison: hours needed against qualified hours available, by role and line"
   - A list of dependency gaps, such as a missing qualification or equipment that is down
   - Handover options for the shift lead, each with what it needs and what blocks it
   - A list of decisions the production owner must make

@@ -49,6 +49,7 @@ output_sample:
   prerequisites:
     - Your own figures. Anything you leave out is marked NOT CHECKED
     - An API key only if you want your AI to read Shopify or a 3PL directly
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: The bottleneck
       contains: The one area hurting you most, with the numbers that show it.

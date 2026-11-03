@@ -23,7 +23,7 @@ not_for:
 you_give:
   - The code, diff or pull request
   - The language and what it should do
-  - Which engineers you want (optional). Only those with an entry in the principles file work: Torvalds, Thompson, Carmack, Beck, Brooks, Jobs, Cagan and Traynor
+  - "Which engineers you want (optional). Only those with an entry in the principles file work: Torvalds, Thompson, Carmack, Beck, Brooks, Jobs, Cagan and Traynor"
 you_get:
   - Findings ranked critical, warning and note
   - A named principle and confidence level for each

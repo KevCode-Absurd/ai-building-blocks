@@ -35,7 +35,7 @@ you_get:
   - The unknowns that could change the answer
   - The quickstart to follow next
 how_to_use:
-  - Write 5 to 8 lines about your project: test or live, rough size, whether a network trip is fine, and who runs the servers. Say "unknown" where you do not know.
+  - "Write 5 to 8 lines about your project: test or live, rough size, whether a network trip is fine, and who runs the servers. Say \"unknown\" where you do not know."
   - Paste the skill, then your lines. Any chat AI works. No code or login is needed.
   - Read the recommendation and the table. Check the main risk against what your team can really run, such as backups and monitoring.
   - Answer any unknowns it lists and ask it to run the choice again if an answer changes.

@@ -35,7 +35,7 @@ how_to_use:
   - "Fill in the pricing brief first: your industry, deal size, customer count, value drivers and competitor models."
   - Ask your AI to pick the pricing model from your brief. Read the trade-offs before you move on.
   - The survey is optional. Without it, the skill still picks a model and builds tiers, but gives no survey-based price range.
-  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. If you have more than one type of customer, keep the answers in separate groups, with at least 30 people in each group. Do not read one range across mixed groups. Each person answers four questions: at what price is it too cheap, a bargain, getting expensive, and too expensive. If you have not run the survey yet, use the Willingness-to-pay survey designer to write the questions. Ask for the acceptable price range.
+  - "If you have survey answers, add them next. You need at least 30 people, and 100 is better. If you have more than one type of customer, keep the answers in separate groups, with at least 30 people in each group. Do not read one range across mixed groups. Each person answers four questions: at what price is it too cheap, a bargain, getting expensive, and too expensive. If you have not run the survey yet, use the Willingness-to-pay survey designer to write the questions. Ask for the acceptable price range."
   - Add your feature list and ask for good, better, best tiers. Fix any packaging flags, then choose your own price.
   - Next, test the price range in the market with a small price test on new customers. Then pass the chosen tiers to your discount rules, for example your deal approval step.
 output_sample:

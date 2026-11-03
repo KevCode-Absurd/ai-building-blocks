@@ -35,7 +35,7 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach a photo or spec sheet of the product, along with the quote and your yearly volume.
   - When it pauses, run the talks with the factory and write down the new prices, price breaks and payment terms they agree to.
-  - Bring those figures back as a table: unit price, each price break, deposit, balance, net days and lead time. The final cash check starts from it.
+  - "Bring those figures back as a table: unit price, each price break, deposit, balance, net days and lead time. The final cash check starts from it."
   - Ask whoever handles your finances for stock and debt numbers if you do not have them.
 output_sample:
   input:

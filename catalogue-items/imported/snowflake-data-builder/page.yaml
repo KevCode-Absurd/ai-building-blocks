@@ -31,7 +31,7 @@ you_get:
   - Performance and security tips
 how_to_use:
   - Collect your table definitions and a few sample rows. Write down how fresh the data must be.
-  - Open Claude, ChatGPT or Gemini. Paste the skill text, then describe the data job in plain words. The reply comes in this order: the code, the pipeline choice and why, the Cortex AI calls (if you need them), performance and security notes, then steps to test it in a dev schema.
+  - "Open Claude, ChatGPT or Gemini. Paste the skill text, then describe the data job in plain words. The reply comes in this order: the code, the pipeline choice and why, the Cortex AI calls (if you need them), performance and security notes, then steps to test it in a dev schema."
   - Paste your table and column details. Say if you want SQL, Snowpark Python or dbt.
   - Read the code and the pipeline choice. Ask your AI to explain anything you do not follow.
   - Run the code in a dev schema in your own Snowflake account first. Your AI cannot run it for you in a chat.

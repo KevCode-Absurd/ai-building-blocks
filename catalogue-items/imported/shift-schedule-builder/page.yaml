@@ -30,7 +30,7 @@ you_give:
 you_get:
   - A shift schedule by day and role
   - A coverage check against demand
-  - A rule-by-rule list: met, broken or not checked
+  - "A rule-by-rule list: met, broken or not checked"
   - A cost comparison of schedule options
   - A short list of what a manager must review
 how_to_use:

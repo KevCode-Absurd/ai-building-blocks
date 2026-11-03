@@ -31,7 +31,7 @@ you_get:
   - An analysis plan with variance reduction
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder.
-  - Gather these first so the sample size check can run: your baseline rate for the main metric, the smallest change you care about, your daily traffic, and how long you can run the test. Say so if you do not have one.
+  - "Gather these first so the sample size check can run: your baseline rate for the main metric, the smallest change you care about, your daily traffic, and how long you can run the test. Say so if you do not have one."
   - Tell your AI your warehouse, your test idea, your main metric and the field that identifies users.
   - Ask for the platform or warehouse call first. Check it fits your team before you go on.
   - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test. The SQL returns only the t-statistic. To turn it into a p-value and a confidence interval, ask your AI for the Python step (or a warehouse function) that does the conversion."

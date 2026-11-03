@@ -26,18 +26,18 @@ not_for:
   - You want a one-time scan of a repo for exposed secrets, not a full inventory and rotation plan. Use the Exposed secrets finder.
   - You want a lighter day-to-day habit check, not a structured engineering review. Use the Secrets hygiene checker.
 you_give:
-  - Where your secrets live today: which repos, config files, environment variables and CI systems hold them.
+  - "Where your secrets live today: which repos, config files, environment variables and CI systems hold them."
   - The cloud or CI provider you use (AWS, Azure, GCP, GitHub Actions, and so on).
   - How each credential is currently created and who or what uses it, as far as you know.
   - Any secret scanner output you already have, such as from Gitleaks or GitHub secret scanning (optional).
 you_get:
-  - A credential table: each secret's location, type, how it's stored, and its exposure risk.
-  - A rotation plan: which to rotate first, on what schedule, and the cutover steps that avoid an outage.
-  - A storage fix per credential: move to a vault, switch to a short-lived token, or scope it down.
-  - A leak-response runbook: the exact order to follow the moment a secret is exposed.
+  - "A credential table: each secret's location, type, how it's stored, and its exposure risk."
+  - "A rotation plan: which to rotate first, on what schedule, and the cutover steps that avoid an outage."
+  - "A storage fix per credential: move to a vault, switch to a short-lived token, or scope it down."
+  - "A leak-response runbook: the exact order to follow the moment a secret is exposed."
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
-  - List where your secrets live: repos, .env files, CI variables, config, images, and which provider each one is for.
+  - "List where your secrets live: repos, .env files, CI variables, config, images, and which provider each one is for."
   - Say how each credential is used today and by what, as far as you know.
   - Say "Build the inventory and rotation plan. Tell me which one to fix first."
   - If a key already leaked, say so immediately and ask for the leak-response runbook first, before anything else.

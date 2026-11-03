@@ -23,7 +23,7 @@ not_for:
   - You want one follow-up email drafted from one thread. Use the Due task follow up drafter.
   - You expect it to send emails, update your task app or run every morning. It prepares drafts and files only. You send, and you set any schedule.
 you_give:
-  - New notes since the last run: meeting notes, a transcript or email threads, pasted in or attached (only the ones in scope)
+  - "New notes since the last run: meeting notes, a transcript or email threads, pasted in or attached (only the ones in scope)"
   - Your saved action list as a CSV, a spreadsheet export or pasted text, with task, owner, due date and status (skip it on the first run)
   - The two state files from last time, agent-state.json and decision-log.md, in a folder you choose (optional on the first run; in a plain chat, paste them back)
   - Today's date and your timezone
@@ -31,13 +31,13 @@ you_give:
 you_get:
   - A list of commitments marked new, changed, unchanged or blocked, each with its source note and date
   - Follow-up drafts only for tasks that are due and still need a message, with To, subject and body
-  - A short work brief: what changed, what is due and what you are waiting on
+  - "A short work brief: what changed, what is due and what you are waiting on"
   - Updated agent-state.json and decision-log.md files, or the same text to save in a note
   - Missing facts, and one next action
 how_to_use:
   - Open Claude, ChatGPT or Gemini and add the pack, which holds this agent and its three skills. Add all three. If one is missing, the agent says so and reads it from its page. If your AI can't keep files, paste the agent first.
-  - First run: paste your notes or action list and say there is no saved state. Pick a folder for the two state files, or ask for them as text to save in a note.
-  - Later runs: paste the new notes and the saved state files, then give today's date and your timezone.
+  - "First run: paste your notes or action list and say there is no saved state. Pick a folder for the two state files, or ask for them as text to save in a note."
+  - "Later runs: paste the new notes and the saved state files, then give today's date and your timezone."
   - Check the line that says which path ran. If you gave it new notes and it says nothing changed, ask it to show which notes it read.
   - Read every draft before you use it. Check the recipient, the date and any promise. Send it yourself, and mark the task done yourself.
   - Save the new state files. You will paste them in next time.

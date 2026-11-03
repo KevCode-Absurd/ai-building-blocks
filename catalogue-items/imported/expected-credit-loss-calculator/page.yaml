@@ -20,7 +20,7 @@ not_for:
   - "You want to post the journal entry without review: have a qualified accountant check the numbers first."
   - "You only want a quick look at which credit risks exist: list them with a person who knows your lenders or customers first."
 you_give:
-  - Loan or receivable list, one row per item: balance, days past due, asset type, start date and a default flag or rating
+  - "Loan or receivable list, one row per item: balance, days past due, asset type, start date and a default flag or rating"
   - Past losses or default history, if you have it
   - Asset type and accounting standard
   - Economic scenarios and weights (optional)

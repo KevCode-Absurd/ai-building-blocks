@@ -50,6 +50,7 @@ output_sample:
     - MATLAB installed on your computer. MATLAB is paid software, so you need a licence
     - MATLAB R2026b or later, only if you want App Designer plain-text files
     - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Recommendation
       contains: The build route it suggests, the signals behind it, and the main trade-off, so you can confirm or change it.

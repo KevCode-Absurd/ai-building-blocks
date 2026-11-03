@@ -51,6 +51,7 @@ output_sample:
     - MATLAB with the SimBiology toolbox installed and licensed (both are paid)
     - An AI that can run MATLAB code
     - The skill's scripts folder copied into your project, so the helper scripts can be found
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Basic simulation
       contains: Time-course results for your model, with a quick plot of each species over time.

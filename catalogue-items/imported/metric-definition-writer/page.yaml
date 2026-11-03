@@ -48,7 +48,7 @@ output_sample:
   prerequisites:
     - An AI that can run code, so it can run the template and checking scripts
     - The skill folder, which holds the scripts and reference notes
-    - Optional and possibly paid: a dbt Cloud plan, needed only if you deploy to the dbt Semantic Layer. Check yours before you plan to deploy
+    - "Optional and possibly paid: a dbt Cloud plan, needed only if you deploy to the dbt Semantic Layer. Check yours before you plan to deploy"
   output:
     - name: assets/metric_definition.yaml
       contains: The filled metric definition, with its calculation, business context, edge cases and known traps.

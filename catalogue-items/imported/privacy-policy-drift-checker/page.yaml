@@ -37,7 +37,7 @@ how_to_use:
   - Read each gap marked required first. These are places where your policy says something untrue.
   - The suggested wording is a draft. Your lawyer must approve each change before you publish it.
   - If your AI cannot read saved files, paste the policy and the practice into the chat. The check still works.
-  - Next steps: send every gap marked required to your lawyer. Publish the approved wording before the new practice goes live. Fix advisable gaps at your next policy update.
+  - "Next steps: send every gap marked required to your lawyer. Publish the approved wording before the new practice goes live. Fix advisable gaps at your next policy update."
 output_sample:
   input:
     - Your current privacy policy text

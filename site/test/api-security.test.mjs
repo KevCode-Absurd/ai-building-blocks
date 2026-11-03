@@ -115,7 +115,7 @@ test('deployment disables public previews and isolates staging limits', () => {
   const config = JSON.parse(fs.readFileSync('wrangler.example.jsonc', 'utf8'));
   for (const c of [config, config.env.staging]) {
     assert.equal(c.preview_urls, false);
-    assert.deepEqual(c.ratelimits.map(x => [x.name, x.simple.limit, x.simple.period]), [['API_READ_LIMITER', 120, 60], ['API_WRITE_LIMITER', 30, 60], ['AI_LIMITER', 3, 60]]);
+    assert.deepEqual(c.ratelimits.map(x => [x.name, x.simple.limit, x.simple.period]), [['API_READ_LIMITER', 120, 60], ['API_WRITE_LIMITER', 30, 60], ['AI_LIMITER', 3, 60], ['PUBLIC_READ_LIMITER', 600, 60]]);
     assert(!('TURNSTILE_SECRET_KEY' in c.vars)); assert(!('SECURITY_LOCAL' in c.vars));
   }
   assert.equal(config.workers_dev, false);

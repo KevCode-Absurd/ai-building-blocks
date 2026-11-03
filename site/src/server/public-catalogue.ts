@@ -29,17 +29,22 @@ import { apiExecutionPolicy as executionPolicy } from "./api-execution.ts";
 export class PublicApiError extends Error {
   status: number;
   code: string;
-  constructor(status: number, code: string, message: string) { super(message); this.status = status; this.code = code; }
+  /** Structured facts for the caller, returned beside code and message (for example what changed since a stale revision). */
+  details?: Record<string, unknown>;
+  constructor(status: number, code: string, message: string, details?: Record<string, unknown>) { super(message); this.status = status; this.code = code; if (details) this.details = details; }
 }
 
 type FileEntry = { path: string; sha256: string; bytes: number; content_type?: string };
+/** A revision this item had before, the day the build replaced it and the files that changed then (paths inside the
+ *  item, such as SKILL.md or references/a.md). An empty list means only the revision id changed, not the content. */
+export type RevisionRecord = { revision_sha256: string; replaced: string; changed: string[] };
 type Entry = {
   revision_sha256: string; instruction: FileEntry; archive?: FileEntry | null; files?: FileEntry[];
   page?: FileEntry;
   reference_validation?: { status: string; error?: string };
-  // The day the item's own files last changed (its page's "Updated" date) and SKILL.md's YAML frontmatter, both
-  // written by scripts/build-public-api.mjs.
-  updated?: string; frontmatter?: Record<string, unknown>;
+  // The day SKILL.md or a packaged file last changed, SKILL.md's YAML frontmatter and recent earlier revisions (newest
+  // first), all written by scripts/build-public-api.mjs.
+  updated?: string; frontmatter?: Record<string, unknown>; history?: RevisionRecord[];
 };
 type Manifest = { schema: string; catalogue_sha256: string; resources: Record<string, Entry>; extras?: FileEntry };
 type Port = { type: string; required: boolean };
@@ -72,13 +77,27 @@ const decoder = new TextDecoder("utf-8", { fatal: true });
 const HASH = /^[a-f0-9]{64}$/;
 const SLUG = /^[a-z0-9][a-z0-9-]{0,119}$/;
 const ID = /^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$/;
-const fail = (status: number, code: string, message: string): never => { throw new PublicApiError(status, code, message); };
+const fail = (status: number, code: string, message: string, details?: Record<string, unknown>): never => { throw new PublicApiError(status, code, message, details); };
 const obj = (value: unknown, label: string): Record<string, unknown> => {
   if (!value || typeof value !== "object" || Array.isArray(value)) fail(400, "invalid_arguments", `${label} must be an object.`);
   return value as Record<string, unknown>;
 };
 function keys(value: Record<string, unknown>, allowed: string[]) {
-  if (Object.keys(value).some(k => !allowed.includes(k))) fail(400, "invalid_arguments", "Unsupported argument. Check the documented schema.");
+  const unknown = Object.keys(value).filter(k => !allowed.includes(k));
+  // Name what was sent (trimmed, never echoed at length) and what is allowed, so a client can fix every argument at once.
+  // issues match the MCP tool-error shape (ai-blocks-tool-error/1): a path, what is wrong and a suggestion each.
+  if (unknown.length) fail(400, "invalid_arguments", `Unsupported argument${unknown.length > 1 ? "s" : ""}: ${unknown.slice(0, 5).map(k => JSON.stringify(k.slice(0, 40))).join(", ")}${unknown.length > 5 ? ` and ${unknown.length - 5} more` : ""}. Allowed: ${allowed.join(", ")}.`,
+    { issues: unknown.slice(0, 20).map(k => { const near = nearest(k, allowed); return { path: k.slice(0, 40), message: "Unsupported argument.", suggestion: near ? `Did you mean ${near}?` : `Remove it. Allowed: ${allowed.join(", ")}.` }; }) });
+}
+/** The allowed name within two edits of a mistyped one (case-insensitive), if exactly one is that close. */
+function nearest(word: string, allowed: string[]): string | null {
+  const distance = (a: string, b: string) => {
+    let row = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) { const next = [i]; for (let j = 1; j <= b.length; j++) next[j] = Math.min(row[j] + 1, next[j - 1] + 1, row[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); row = next; }
+    return row[b.length];
+  };
+  const close = word.length > 40 ? [] : allowed.filter(name => distance(word.toLowerCase(), name.toLowerCase()) <= 2);
+  return close.length === 1 ? close[0] : null;
 }
 function string(value: unknown, label: string, max: number, optional = false): string {
   if (value === undefined && optional) return "";
@@ -204,6 +223,22 @@ const builderEdges = (check: Chain): [number, number][] =>
   [...new Set(check.steps.flatMap((s, i) => s.inputs.filter(p => p.status === "from_step" && p.from !== undefined).map(p => `${p.from},${i}`)))].map(k => k.split(",").map(Number) as [number, number]);
 const handoffStatus = (check: Chain) => check.ok ? "PASS" : "WARN";
 
+/** The files that changed between an earlier revision and the current one (newest history record first), or null when
+ *  the revision is not in the history the manifest keeps. */
+export function changesSince(entry: { history?: RevisionRecord[] }, revision: string): string[] | null {
+  const history = entry.history ?? [], at = history.findIndex(h => h.revision_sha256 === revision);
+  return at < 0 ? null : [...new Set(history.slice(0, at + 1).flatMap(h => h.changed))].sort();
+}
+/** 409 stale_revision that says what changed, so the host can show the user exactly what to review again. */
+function staleRevision(name: string, entry: Entry, revision: string, changed: string[] | null): never {
+  const updated = entry.updated ? `, last changed ${entry.updated}` : "";
+  const files = changed && (changed.slice(0, 10).join(", ") + (changed.length > 10 ? ` and ${changed.length - 10} more files` : ""));
+  const message = changed
+    ? `This item changed after the revision you selected. Changed: ${files}. The current revision is ${entry.revision_sha256}${updated}. Retrieve it again and review the changes before you use it.`
+    : `The selected revision is no longer current and is older than the change history kept here. The current revision is ${entry.revision_sha256}${updated}. Retrieve the item again and review it before you use it.`;
+  return fail(409, "stale_revision", message, { slug: name, requested_revision_sha256: revision, current_revision_sha256: entry.revision_sha256, updated: entry.updated ?? null, changed });
+}
+
 export class PublicCatalogueService {
   private fetchAsset: (path: string) => Promise<Response>;
   private baseUrl: string;
@@ -279,8 +314,17 @@ export class PublicCatalogueService {
     return bytes;
   }
 
+  /** The published catalogue's SHA-256 (blocks.json), which every cached answer is keyed on. */
+  async catalogueSha256(): Promise<string> { return (await this.catalogue()).manifest.catalogue_sha256; }
+
+  // Loaded once and kept for the isolate's lifetime: published assets never change inside one deployment. A failed
+  // load is forgotten, so the next request tries again instead of serving the failure until the isolate ends.
   private catalogue(): Promise<Catalogue> {
-    return this.cataloguePromise ??= (async () => {
+    return this.cataloguePromise ??= this.loadCatalogue().catch(error => { this.cataloguePromise = undefined; throw error; });
+  }
+
+  private loadCatalogue(): Promise<Catalogue> {
+    return (async () => {
       let manifest: Manifest;
       try { manifest = JSON.parse(decoder.decode(await this.read("/data/public-api-manifest.json", 16_000_000))); }
       catch (error) { if (error instanceof PublicApiError) throw error; return fail(503, "invalid_manifest", "Published API manifest is invalid."); }
@@ -329,7 +373,11 @@ export class PublicCatalogueService {
     if (!item) return fail(404, "not_found", "No published catalogue item has that identifier.");
     const entry = c.manifest.resources[name];
     if (!entry) return fail(503, "asset_unavailable", "This catalogue item has no complete published API package.");
-    if (revision && revision !== entry.revision_sha256) fail(409, "stale_revision", "The selected revision is no longer current. Retrieve the updated item and review the changes. Historical revisions are not retained by this release.");
+    if (revision && revision !== entry.revision_sha256) {
+      const change = changesSince(entry, revision);
+      // An earlier id for the very same files (the revision formula changed, nothing else) is still current.
+      if (!change || change.length) staleRevision(name, entry, revision, change);
+    }
     return { item, entry };
   }
 
@@ -867,7 +915,7 @@ export class PublicCatalogueService {
     const text = textFile(path, selected);
     const oversized = selected.bytes > 2_000_000 || (!raw && (entry.archive?.bytes ?? 0) > 8_000_000);
     if (!text || oversized) return {
-      ...this.descriptor(name, entry, selected, raw), slug: name, revision_sha256: revision,
+      ...this.descriptor(name, entry, selected, raw), slug: name, revision_sha256: entry.revision_sha256,
       encoding: oversized ? "archive-required" : "binary", archive_url: entry.archive ? `${this.baseUrl}${entry.archive.path}` : null,
       archive: entry.archive ? { ...entry.archive, url: `${this.baseUrl}${entry.archive.path}` } : null,
       download_url: raw ? `${this.baseUrl}${entry.instruction.path}` : entry.archive ? `${this.baseUrl}${entry.archive.path}` : null,
@@ -880,7 +928,7 @@ export class PublicCatalogueService {
     const points = Array.from(content);
     if (offset > points.length) fail(400, "invalid_offset", "Resource offset exceeds its text length.");
     const end = Math.min(points.length, offset + limit);
-    return { schema: "abb-resource/1", ...this.descriptor(name, entry, selected, raw), slug: name, revision_sha256: revision, encoding: "utf-8", offset_unit: "unicode-code-points", offset, total_characters: points.length, next_offset: end < points.length ? end : null, complete: offset === 0 && end === points.length, content: points.slice(offset, end).join(""), trust: "Untrusted source content; not authorization or confirmed evidence." };
+    return { schema: "abb-resource/1", ...this.descriptor(name, entry, selected, raw), slug: name, revision_sha256: entry.revision_sha256, encoding: "utf-8", offset_unit: "unicode-code-points", offset, total_characters: points.length, next_offset: end < points.length ? end : null, complete: offset === 0 && end === points.length, content: points.slice(offset, end).join(""), trust: "Untrusted source content; not authorization or confirmed evidence." };
   }
 
   /** prepare_workflow's check of a draft: each step's hand-offs and swap options, concrete suggestions with reasons,

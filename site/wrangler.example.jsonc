@@ -59,6 +59,14 @@
         "limit": 3,
         "period": 60
       }
+    },
+    {
+      "name": "PUBLIC_READ_LIMITER",
+      "namespace_id": "6102204",
+      "simple": {
+        "limit": 600,
+        "period": 60
+      }
     }
   ],
   "d1_databases": [
@@ -127,6 +135,14 @@
           "namespace_id": "6102213",
           "simple": {
             "limit": 3,
+            "period": 60
+          }
+        },
+        {
+          "name": "PUBLIC_READ_LIMITER",
+          "namespace_id": "6102214",
+          "simple": {
+            "limit": 600,
             "period": 60
           }
         }

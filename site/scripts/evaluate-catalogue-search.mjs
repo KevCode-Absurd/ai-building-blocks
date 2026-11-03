@@ -91,7 +91,8 @@ const cases = [
 ];
 const results = [];
 for (const [mode, index] of Object.entries(indexes)) for (const example of cases) {
-  const ranked = [...searchLibraryIndex(index, example.query)].sort((a, b) => b[1].score - a[1].score || (bySlug.get(a[0]).name ?? a[0]).localeCompare(bySlug.get(b[0]).name ?? b[0]));
+  // Catalogue items only: the published index also holds the mini tools (minitool-<slug>).
+  const ranked = [...searchLibraryIndex(index, example.query)].filter(([slug]) => bySlug.has(slug)).sort((a, b) => b[1].score - a[1].score || (bySlug.get(a[0]).name ?? a[0]).localeCompare(bySlug.get(b[0]).name ?? b[0]));
   const first = ranked.slice(0, example.within ?? 5).map(([slug]) => slug);
   const reasons = [];
   if (example.expected?.some(slug => !first.includes(slug))) reasons.push('expected result missing');

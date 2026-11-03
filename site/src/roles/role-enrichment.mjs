@@ -1,3 +1,4 @@
+import {sentenceName,startsWithOrder} from './role-copy.mjs';
 // Library-derived additions for each specialist: support methods, reviewer minds, a worked
 // example, role-specific checks and a family. Deterministic, so every build gives the same roles.
 const STOP=new Set('a an the and or of to in on for with from by your you it its this that is are be as at get give share make into each who what when how one two any all can will use using their them they than then more most out up our we us not no new some'.split(' '));
@@ -86,3 +87,32 @@ export const ROLE_NAMES={
  'validate-lab-data-before-system-import':'Lab data import checker',
 };
 export function familyOf(lead,tasks){const t=tasks.get(lead.task);return t?{id:t.id,name:t.name}:{id:'other',name:'Other work'};}
+// Plain words at the top of every role page (docs/WRITING.md, .claude/skills/plain-writing): the summary and the
+// short "what you give" and "what you get" lists read at grade 8 or lower. Chosen by rule from the role's own page
+// text, never written by hand: the first candidate that reads at grade 8 or lower wins, else the easiest one.
+export const PLAIN_GRADE=8;
+const SWAPS=[[/\butili[sz]e(s|d)?\b/gi,'use$1'],[/\bleverag(e|es|ed|ing)\b/gi,(m,e)=>({e:'use',es:'uses',ed:'used',ing:'using'})[e.toLowerCase()]],[/\bin order to\b/gi,'to'],[/\bprior to\b/gi,'before'],[/\bfacilitat(e|es)\b/gi,(m,e)=>e.toLowerCase()==='e'?'help':'helps'],[/\bobtain\b/gi,'get'],[/\badditional\b/gi,'more'],[/\bnumerous\b/gi,'many'],[/\bsufficient\b/gi,'enough'],[/\bregarding\b/gi,'about'],[/\bdemonstrat(e|es)\b/gi,(m,e)=>e.toLowerCase()==='e'?'show':'shows'],[/\bcommence\b/gi,'start'],[/\bterminate\b/gi,'end'],[/\bfunctionality\b/gi,'features']];
+export const plainSwap=s=>SWAPS.reduce((t,[re,to])=>t.replace(re,(...m)=>{const out=typeof to==='function'?to(...m):to.replace('$1',m[1]??'');return /^[A-Z]/.test(m[0])?out.replace(/^./,c=>c.toUpperCase()):out;}),String(s??'')).replace(/\s+/g,' ').trim();
+// "DISRUPTION: state the facts" and "Overlap check: which pages compete" read as labels; the page shows the plain part.
+const unlabel=s=>String(s).replace(/^[A-Z][A-Z0-9_ ]{2,}:\s*/,'').replace(/^./,c=>c.toUpperCase());
+const sentencesOf=s=>String(s??'').match(/[^.!?]+(?:[.!?]+|$)/g)?.map(x=>x.trim()).filter(Boolean)??[];
+const lowerStart=s=>{const w=String(s).split(' ')[0];return /^(A|An|The)$/.test(w)||sentenceName(w)!==w?String(s).replace(/^./,c=>c.toLowerCase()):String(s);};
+const asSentence=s=>{const t=String(s).trim().replace(/[.;:,\s]+$/,'');return t?t+'.':'';};
+export function plainSummary({summary,subhead,inputs=[],deliverables=[]},grade){
+ const subs=sentencesOf(subhead),give=subs.find(x=>/^(Give|Share|Paste|Tell|Describe|Add|Attach|Upload|Send|List|Bring|Provide)\b/.test(x)),get=subs.find(x=>/^You get\b/.test(x)&&!/\bstep files?\b/.test(x));
+ const input=unlabel(inputs[0]??'').replace(/[.\s]+$/,''),result=unlabel(deliverables[0]??'').replace(/[.\s]+$/,'');
+ const clause=String(summary??'').split(/:\s|,\s(?:with|plus|so|and then|then)\s/)[0].trim().replace(/[.,;\s]+$/,'');
+ const candidates=[summary,give&&get?`${give} ${get}`:'',input&&result&&!startsWithOrder(input)?`Give it ${lowerStart(input)}. You get ${lowerStart(result)}.`:'',sentencesOf(summary)[0]??'',clause&&clause!==String(summary).trim()?clause+'.':'']
+  .map(plainSwap).filter(s=>s.length>=30&&s.length<=240);
+ if(!candidates.length)return plainSwap(summary);
+ return candidates.find(s=>grade(s)<=PLAIN_GRADE)??[...candidates].sort((a,b)=>grade(a)-grade(b))[0];
+}
+// Up to `max` items in their own order, each easy to read, and the list as a whole at grade 8 or lower. When fewer
+// than two pass, the easiest of the rest fill in, so the page still shows two (the reading check counts these roles).
+export function plainList(items,max,grade){
+ const all=[...new Set(items.map(raw=>asSentence(plainSwap(unlabel(raw))).replace(/\.$/,'')).filter(Boolean))],out=[];
+ for(const item of all){if(grade(item)>PLAIN_GRADE||item.length>140)continue;if(grade([...out,item].join('\n'))>PLAIN_GRADE)continue;out.push(item);if(out.length===max)break;}
+ const rest=all.filter(x=>!out.includes(x)).sort((a,b)=>grade(a)-grade(b));
+ while(out.length<Math.min(2,max,all.length))out.push(rest.shift());
+ return all.filter(x=>out.includes(x));
+}

@@ -7,7 +7,7 @@ async function setup(page:Page){await page.goto('/roles/coding-specialist');awai
 for(const mobile of [false,true]){
  test(`${mobile?'@mobile ':''}roles load one batch, search the full library, paginate and keep navigation usable`,async({page})=>{
   if(mobile)await page.setViewportSize({width:390,height:844});await offline(page);const requests:string[]=[];page.on('request',r=>requests.push(new URL(r.url()).pathname));
-  await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);await expect(page.getByRole('link',{name:'Set up role: Coding specialist',exact:true})).toBeVisible();
+  await page.goto('/roles');await expect(page.getByTestId('role-card')).toHaveCount(24);await expect(page.getByRole('link',{name:'Hire an AI coding specialist',exact:true})).toBeVisible();
   expect(requests).not.toContain('/data/blocks.json');expect(requests).not.toContain('/data/roles-search.json');
   await page.getByTestId('roles-more').click();await expect(page.getByTestId('role-card')).toHaveCount(48);
   await page.getByTestId('role-search').fill('executive assistant');await expect(page.getByTestId('role-card').filter({hasText:'Executive assistant'})).toBeVisible();
@@ -18,6 +18,9 @@ for(const mobile of [false,true]){
  });
  test(`${mobile?'@mobile ':''}role explains capabilities, tasks, functions and deliverables and preserves the task through a reload`,async({page},info)=>{
   if(mobile)await page.setViewportSize({width:390,height:844});await offline(page);await setup(page);
+  await expect(page.getByRole('heading',{level:1,name:'Hire an AI coding specialist',exact:true})).toBeVisible();
+  for(const name of ['What you give','What you get','An example'])await expect(page.getByTestId('role-profile').getByRole('heading',{name,exact:true})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Capabilities',exact:true})).toBeHidden();await page.getByTestId('role-details').locator('summary').first().click();
   for(const name of ['Capabilities','Tasks you can use it for','How the role works','Functions and deliverables','Best way to use this role'])await expect(page.getByRole('heading',{name,exact:true})).toBeVisible();
   await page.getByText('Review the complete launch brief',{exact:true}).click();await expect(page.getByTestId('role-prompt-preview')).toContainText(goal);await expect(page.getByTestId('role-prompt-preview')).toContainText('Synthetic project files attached');
   await page.getByTestId('role-save').click();await expect(page.getByTestId('role-setup').getByText('Saved with your workflows.',{exact:false})).toBeVisible();

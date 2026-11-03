@@ -8,6 +8,7 @@
 - Server card: [https://useaiblocks.com/mcp/server-card](https://useaiblocks.com/mcp/server-card), listed in [/.well-known/ai-catalog.json](https://useaiblocks.com/.well-known/ai-catalog.json)
 - REST API: [OpenAPI description](https://useaiblocks.com/api/v1/openapi.json). Search with https://useaiblocks.com/api/v1/search?q=ad+angles, read one item with https://useaiblocks.com/api/v1/items/ad-angle-planner
 - Setup guide for ChatGPT, Claude, Claude Code and Codex: [Connect your AI](https://useaiblocks.com/api-and-mcp)
+- For a whole business goal, an owner pastes one message into their AI, which calls start_outcome: [Get a whole job done](https://useaiblocks.com/get-it-done), with a [worked example](https://useaiblocks.com/get-it-done/example) and a [job status page](https://useaiblocks.com/get-it-done/status)
 - Every item page has a Markdown version and a JSON version: [/skills/ad-angle-planner.md](https://useaiblocks.com/skills/ad-angle-planner.md) and [.json](https://useaiblocks.com/skills/ad-angle-planner.json), linked from each page's head.
 - New and changed items: [JSON Feed](https://useaiblocks.com/feed.json) and [RSS](https://useaiblocks.com/feed.xml), plus lastmod dates in the [sitemap](https://useaiblocks.com/sitemap.xml)
 
@@ -25,7 +26,7 @@ Once connected, ask in plain words:
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last changed 2026-10-29. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
+- Last changed 2026-11-03. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
 
 ## Planning and privacy
 

@@ -42,6 +42,7 @@ export default function SiteHeader() {
           <Link to="/space" aria-current={current("/space")} data-testid="nav-space">Team space</Link>
         </section>
         <section aria-label="Your AI">
+          <Link to="/get-it-done" aria-current={path === "/get-it-done" || path.startsWith("/get-it-done/") ? "page" : undefined} data-testid="nav-get-it-done">Get a whole job done</Link>
           <Link to="/api-and-mcp" aria-current={current("/api-and-mcp")} data-testid="nav-api-mcp">Connect your AI</Link>
         </section>
         <section className="site-menu-account" aria-label="My account">

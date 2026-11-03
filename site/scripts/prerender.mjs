@@ -19,6 +19,7 @@ import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emai
 import path from "node:path";
 import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
 import { BRAND, describe, fitTitle, itemSeo, lowerFirst, mindTitle, pageTitle, titleLadder, trimDescription } from "../src/lib/seo-meta.mjs";
+import { outcomePage } from "./lib/outcome-pages.mjs";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
@@ -263,6 +264,8 @@ function underH3(html) {
 const itemList = (entries) => ({ "@type": "ItemList", numberOfItems: entries.length, itemListElement: entries.map(([name, u], i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${u}`, name })) });
 
 function pageFor(url) {
+  const outcome = outcomePage(url, { itemHref: (s) => (bySlug[s] && hasPage(bySlug[s]) ? hrefOf(bySlug[s]) : null), roleHref: (id) => (roleIndex.roles.some((r) => r.id === id) ? `/roles/${id}` : null) });
+  if (outcome) return outcome;
   if (url.startsWith("/minds/page/")) { const page = mindDirectory(url, directoryMinds); return page ? {...page, plain: true, hub: true, collection: true, crumbs: [["Minds", "/minds"]]} : null; }
   if(url==="/teams")return {title:"Plan your AI team",documentTitle:"Plan an AI specialist team with checked handoffs | AI Blocks",h1:"Plan your AI team",desc:"Plan a team of AI specialists around your task. Review context, methods, handoffs and checks, then save, download and share the workflow with your AI.",content:`<h1>Plan your AI team</h1><p>A coordinator checks the context, offers routes and chooses the smallest useful specialist team. Review the exact plan before production.</p><h2>Start with the right context</h2><p>Reuse your brand brain, brief, assets and project files, or build missing context from verified sources. Load only the relevant current facts and preferences.</p><h2>Review the team and handoffs</h2><p>Choose roles, method revisions, real inputs and outputs, dependencies, tools, permissions and acceptance checks. Edits need fresh review.</p><h2>Save, reuse and share</h2><p>Sign in to save versioned personal or company workflows. Retrieve accepted edits, export complete source files and review a sanitized template before creating a revocable link. Private memory and run data are excluded from sharing.</p><h2>Execute with your connected AI</h2><p>Your AI carries out authorized work with its real tools, checks handoff artifacts and records actual results. A prepared plan does not run a worker, connect an account or activate a schedule.</p><p><a href="/roles">Browse all specialists</a> · <a href="/api-and-mcp">Connect through API and MCP</a></p>`,main:{"@type":"CreativeWork",name:"AI specialist team planner",description:"Review and prepare a contextual team plan for your AI",isAccessibleForFree:true}};
   if (url === "/roles" || url.startsWith("/roles/")) return rolePage(url, roleIndex, id => JSON.parse(fs.readFileSync(`public/data/roles/${id}.json`, "utf8")));

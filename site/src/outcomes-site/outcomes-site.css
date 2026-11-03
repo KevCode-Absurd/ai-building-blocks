@@ -1,0 +1,108 @@
+/* Get it done: the owner pages for the outcome orchestrator (/get-it-done, /example, /status). */
+.gd-body { margin-top: 40px; padding-bottom: 72px; }
+.gd-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 4px; }
+.gd-tabs a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--muted); }
+.gd-tabs a:hover { color: var(--text); border-color: var(--text); }
+.gd-tabs a[aria-current="page"] { color: var(--bg); background: var(--text); border-color: var(--text); }
+.gd-note { margin: 22px 0 0; max-width: 46em; padding: 12px 16px; border: 1px dashed var(--line-2); border-radius: 8px; font-size: 14px; color: var(--text-2); }
+.gd-warn { margin: 12px 0; padding: 10px 14px; border-left: 3px solid var(--warn); background: var(--panel-2); font-size: 14.5px; color: var(--text); max-width: 46em; }
+.gd-h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; margin: 32px 0 12px; }
+.gd-mini-h { margin: 12px 0 4px; font: 600 12px var(--mono); color: var(--muted); }
+.gd-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; color: var(--text-2); }
+.gd-quote { margin: 0 0 18px; padding: 14px 18px; border-left: 3px solid var(--text); background: var(--panel); font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+.gd-link { padding: 0; border: 0; background: none; color: var(--text); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 24px; }
+.gd-n { display: inline-grid; place-items: center; width: 28px; height: 28px; flex: none; border: 1px solid var(--text); border-radius: 6px; font: 600 12.5px var(--mono); color: var(--text); }
+
+/* The goal box */
+.gd-goal { max-width: 820px; padding: clamp(18px, 3vw, 28px); border: 1px solid var(--text); border-radius: 12px; background: var(--panel); box-shadow: var(--hard); }
+.gd-goal-h { font-family: var(--display); font-weight: 600; font-size: clamp(22px, 2.4vw, 28px); letter-spacing: -0.02em; margin: 0 0 14px; }
+.gd-job { display: block; width: 100%; min-height: 96px; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg); color: var(--text); font: 400 16px/1.5 inherit; resize: vertical; }
+.gd-job:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.gd-goal .small { margin: 8px 0 0; }
+.gd-starters, .gd-picker { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+.gd-picker .small { width: 100%; margin: 0; }
+.gd-chip { min-height: 44px; padding: 8px 14px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--bg); color: var(--text-2); font-size: 14px; text-align: left; cursor: pointer; max-width: 100%; }
+.gd-chip:hover, .gd-chip[aria-pressed="true"] { border-color: var(--text); color: var(--text); }
+.gd-sub-h { margin: 26px 0 10px; font: 600 13px var(--mono); color: var(--muted); }
+.gd-message { margin: 0; padding: 14px 16px; border: 1px dashed var(--line-2); border-radius: 8px; background: var(--bg); font: 400 13.5px/1.6 var(--mono); color: var(--text-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.gd-actions { margin-top: 18px; }
+.gd-status { min-height: 1.4em; }
+
+/* Lists of stops, facts and next steps */
+.gd-stops, .gd-facts, .gd-items { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.gd-stops li, .gd-items li { display: grid; gap: 4px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.gd-stops b, .gd-items b { font-size: 15.5px; }
+.gd-stops span, .gd-items span { font-size: 14.5px; color: var(--muted); line-height: 1.55; }
+.gd-stops.numbered { counter-reset: stop; }
+.gd-stops.numbered li { counter-increment: stop; grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; }
+.gd-stops.numbered li::before { content: counter(stop); grid-row: span 2; display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--text); border-radius: 6px; font: 600 12.5px var(--mono); }
+.gd-facts li { padding: 12px 0; border-top: 1px solid var(--line); font-size: 15.5px; color: var(--text-2); }
+.gd-facts li:last-child { border-bottom: 1px solid var(--line); }
+.gd-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .gd-cards { grid-template-columns: 1fr; } }
+.gd-card { display: grid; gap: 6px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
+.gd-card:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
+.gd-card span { font-size: 14.5px; color: var(--muted); }
+
+/* The worked example */
+.gd-screens ol { list-style: none; margin: 0 0 28px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 900px) { .gd-screens ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .gd-screens ol { grid-template-columns: 1fr; } }
+.gd-screens button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--muted); font-size: 14.5px; text-align: left; cursor: pointer; }
+.gd-screens button:hover { color: var(--text); border-color: var(--text); }
+.gd-screens button[aria-current="step"] { color: var(--text); border-color: var(--text); box-shadow: 3px 3px 0 var(--text); }
+.gd-screens button[aria-current="step"] .gd-n { background: var(--text); color: var(--bg); }
+.gd-screen { max-width: 860px; }
+.gd-screen > p:not(.small):not(.bp-note), .gd-screen dd p { font-size: 15.5px; color: var(--text-2); line-height: 1.65; }
+.gd-screen h2:focus { outline: none; }
+.gd-screen h2:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.gd-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+.gd-pager .btn { max-width: 100%; white-space: normal; text-align: center; min-height: 44px; height: auto; padding-top: 8px; padding-bottom: 8px; }
+.gd-illustrative { margin: 20px 0; padding: 14px 16px 16px; border: 1px dashed var(--warn); border-radius: 10px; }
+.gd-illustrative-h { margin: 0 0 10px; font: 600 12px var(--mono); color: var(--warn); }
+.gd-qa, .gd-facts-list { margin: 0; display: grid; gap: 14px; }
+.gd-qa dt, .gd-facts-list dt { font: 600 12.5px var(--mono); color: var(--muted); margin-bottom: 4px; }
+.gd-qa dd, .gd-facts-list dd { margin: 0; font-size: 15.5px; color: var(--text-2); line-height: 1.55; overflow-wrap: anywhere; }
+.gd-facts-list + .gd-illustrative, .gd-illustrative + .gd-facts-list { margin-top: 20px; }
+.gd-steps { margin: 0; padding-left: 22px; display: grid; gap: 12px; font-size: 15px; color: var(--text-2); line-height: 1.6; }
+.gd-srcs { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: 4px; vertical-align: middle; }
+.gd-src { display: inline-block; padding: 1px 8px; border: 1px solid var(--line-2); border-radius: 999px; font: 400 12px/1.7 var(--mono); color: var(--muted); }
+a.gd-src { text-decoration: underline; text-underline-offset: 2px; }
+a.gd-src:hover { color: var(--text); border-color: var(--text); }
+.gd-stages { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.gd-stage { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.gd-stage.stops { border-color: var(--text); }
+.gd-stage p { margin: 6px 0 0; font-size: 14.5px; color: var(--text-2); line-height: 1.55; }
+.gd-stage .went-in { margin-top: 8px; }
+.gd-kind { margin: 0 !important; font: 600 11.5px var(--mono) !important; color: var(--muted) !important; }
+.gd-stage-h { margin: 4px 0 0; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.gd-gate { font: 500 12.5px var(--mono) !important; color: var(--muted) !important; }
+.gd-stage.stops .gd-gate { color: var(--text) !important; }
+.gd-stage a, .gd-screen dd a, .gd-items a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Where my job stands */
+.gd-drop { max-width: 820px; padding: clamp(18px, 3vw, 28px); border: 2px dashed var(--line-2); border-radius: 12px; background: var(--panel); }
+.gd-drop.over { border-color: var(--text); background: var(--panel-2); }
+.gd-drop > p:first-child { margin: 0; font-size: 15.5px; color: var(--text-2); line-height: 1.6; }
+.gd-drop .bp-actions { margin-top: 18px; }
+.gd-drop .small { margin: 14px 0 0; }
+.gd-drop .small a { text-decoration: underline; text-underline-offset: 3px; }
+.gd-result { max-width: 860px; margin-top: 36px; }
+.gd-result h2:focus { outline: none; }
+.gd-progress p { margin: 0 0 6px; font: 500 13.5px var(--mono); }
+.gd-bar { display: block; height: 8px; border: 1px solid var(--text); border-radius: 999px; overflow: hidden; }
+.gd-bar > span { display: block; height: 100%; background: var(--text); }
+.gd-status-list { list-style: none; margin: 0; padding: 0; }
+.gd-status-list li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: start; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.gd-status-list li:last-child { border-bottom: 1px solid var(--line); }
+.gd-status-name { display: grid; gap: 2px; min-width: 0; }
+.gd-status-name b { font-size: 15px; }
+.gd-badge { padding: 2px 10px; border: 1px solid var(--line-2); border-radius: 999px; font: 500 12px/1.7 var(--mono); color: var(--muted); white-space: nowrap; }
+.gd-badge.done, .gd-badge.skipped { color: var(--ok); border-color: var(--ok); }
+.gd-badge.awaiting_approval, .gd-badge.blocked { color: var(--bg); background: var(--text); border-color: var(--text); }
+.gd-badge.ready, .gd-badge.in_progress { color: var(--text); border-color: var(--text); }
+@media (max-width: 480px) {
+  .gd-status-list li { grid-template-columns: 28px minmax(0, 1fr); }
+  .gd-badge { grid-column: 2; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) { .gd-card { transition: none; } .gd-card:hover { transform: none; } }

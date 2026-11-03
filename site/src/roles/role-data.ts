@@ -1,5 +1,6 @@
 import {useCallback,useEffect,useState} from 'react';
 import type {RoleCard,RoleIndex,RoleView} from './role-types';
+import {roleHeading} from './role-copy.mjs';
 let index:RoleIndex|null=null;
 const starters=new Map<number,RoleIndex>();
 const profiles=new Map<string,RoleView>();
@@ -7,7 +8,8 @@ const cards=new Map<string,RoleCard>();
 const pending=new Map<string,Promise<RoleIndex|RoleView>>();
 const initialPath=location.pathname;
 const initialHeading=document.querySelector('#role-heading')?.textContent??'';
-export const roleOpeningTitle=(path:string,id:string|null)=>!id?'Hire an AI specialist':profiles.has(id)?`Set up your ${profiles.get(id)!.name.toLowerCase()}`:cards.has(id)?`Set up your ${cards.get(id)!.name.toLowerCase()}`:path===initialPath&&initialHeading?initialHeading:'Set up your AI specialist';
+// One heading for the prerendered page and the app (role-copy.mjs): "Hire an AI SEO specialist", acronyms kept.
+export const roleOpeningTitle=(path:string,id:string|null)=>!id?'Hire an AI specialist':profiles.has(id)?roleHeading(profiles.get(id)!.name):cards.has(id)?roleHeading(cards.get(id)!.name):path===initialPath&&initialHeading?initialHeading:'Hire an AI specialist';
 async function load(id:string|null,page=1,full=false):Promise<RoleIndex|RoleView>{
  if(id&&!/^[a-z0-9][a-z0-9-]{0,69}$/.test(id))throw Error('This role could not be found.');
  if(!id&&index)return index;if(!id&&!full&&starters.has(page))return starters.get(page)!;if(id&&profiles.has(id))return profiles.get(id)!;

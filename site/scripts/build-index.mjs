@@ -14,7 +14,7 @@ import { acquireBuildLock } from "./lib/build-lock.mjs";
 import { INFO_PAGES, POLICY_DATE } from "../src/lib/site-info.mjs";
 import { makeTaskRecipe } from "../src/lib/copyable-task.mjs";
 import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
-import {roleSeeds} from "../src/roles/role-definitions.mjs";
+import {roleSeeds,sameJobAgentPages} from "../src/roles/role-definitions.mjs";
 import { compileClassifications } from "./lib/catalogue-classification.mjs";
 import { gitDates } from "./lib/git-dates.mjs";
 import { FEEDS, connectLines, feedItems, jobHubDates, jsonFeed, newest, pageFacts, rssFeed, sitemapIndex, urlset as sitemapUrlset } from "./lib/crawl-files.mjs";
@@ -454,7 +454,9 @@ for (const t of TOOLS) if (t.updated) lastmod[`/tools/${t.slug}`] = String(t.upd
 const policyDay = (() => { const t = Date.parse(`${POLICY_DATE} UTC`); return Number.isNaN(t) ? "" : new Date(t).toISOString().slice(0, 10); })();
 // The policy and info pages show this date as "Effective and last updated" and carry it as dateModified.
 for (const page of INFO_PAGES) if (policyDay) lastmod[page.path] = policyDay;
-const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/tools/growth-channel-planner"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+// An agency agent page whose role page does the same job names the role as canonical, so only the role is listed.
+const sameJobAgents = sameJobAgentPages(roles, blocks, (b) => !!b.headline);
+const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/tools/growth-channel-planner"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/") && !sameJobAgents.has(u)), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 const aiToolsRoot = path.join(ROOT, "ai-tools");
 if (fs.existsSync(aiToolsRoot)) {
   const guides = fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).sort();
@@ -510,7 +512,7 @@ const intro = [
   ...connectLines(example),
   "## Key facts", "",
   "- Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.",
-  `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${nMinds} minds and ${TOOLS.length} mini tools.`,
+  `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${roles.length} specialists, ${nMinds} minds and ${TOOLS.length} mini tools.`,
   "- Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.",
   "- Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.",
   "- Skills that scrape websites or need a paid outside account say so on their page.",
@@ -536,13 +538,15 @@ const intro = [
   `- [Mini tools](${SITE}/tools): calculators for prices, margins, discounts and AI costs`,
   `- [Apps](${SITE}/apps): an example AI app and a starter pack`, "",
 ];
+// llms/specialists.txt itself is written by build-roles.mjs, which runs after this file.
+const specialistsLine = `- [Specialists](${SITE}/llms/specialists.txt): ${roles.length} AI specialists you can hire, each bundling the methods for one kind of job`;
 const jobLine = ([t, bs]) => `- [${TASK_NAMES[t] ?? t}](${SITE}/llms/${t}.txt): ${bs.length} skills and workflows, such as ${bs.slice(0, 2).map((b) => b.name).join(" and ")}`;
 fs.rmSync("public/llms", { recursive: true, force: true });
 fs.mkdirSync("public/llms", { recursive: true });
 for (const [t, bs] of tasksBySize) fs.writeFileSync(`public/llms/${t}.txt`, [`# ${TASK_NAMES[t] ?? t}: AI Blocks`, "", `> ${bs.length} free AI skills and workflows for this job. Each page links its SKILL.md.`, "", ...[...bs].sort((x, y) => x.name.localeCompare(y.name)).map(line), ""].join("\n"));
 fs.writeFileSync("public/llms/minds.txt", ["# Minds: AI Blocks", "", "> AIs built from great thinkers' public work. Not the people themselves.", "", ...paged.filter((b) => b.type === "mind").sort((x, y) => x.name.localeCompare(y.name)).map(line), ""].join("\n"));
-fs.writeFileSync("public/llms.txt", [...intro, "## Skills by job", "", ...tasksBySize.map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds, from founders and investors to writers and scientists`, "", "## Optional", "", `- [Every job file in one list](${SITE}/llms-full.txt)`, ""].join("\n"));
-fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...tasksBySize].sort((a, b) => (TASK_NAMES[a[0]] ?? a[0]).localeCompare(TASK_NAMES[b[0]] ?? b[0])).map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds`, ""].join("\n"));
+fs.writeFileSync("public/llms.txt", [...intro, "## Skills by job", "", ...tasksBySize.map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds, from founders and investors to writers and scientists`, specialistsLine, "", "## Optional", "", `- [Every job file in one list](${SITE}/llms-full.txt)`, ""].join("\n"));
+fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...tasksBySize].sort((a, b) => (TASK_NAMES[a[0]] ?? a[0]).localeCompare(TASK_NAMES[b[0]] ?? b[0])).map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds`, specialistsLine, ""].join("\n"));
 
 // Old addresses answer with a real 301 to the new one (Cloudflare Pages _redirects), so links and search results carry
 // over. A rename never changes a block's kind, so one rule each. The app's own routes with no page file come last

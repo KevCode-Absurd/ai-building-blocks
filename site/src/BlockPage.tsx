@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "re
 import Comments from "./Comments";
 import FactCheckNotes from "./FactCheckNotes";
 import SkillNeighbours from "./SkillNeighbours";
+import SpecialistsForItem from "./roles/SpecialistsForItem";
 import { StarButton } from "./CommunityStars";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, KitMenu, Drawer } from "./ui";
@@ -536,6 +537,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         )}
 
         <FactCheckNotes checks={p?.fact_checks} />
+        {!isMind && <SpecialistsForItem slug={b.slug} />}
 
         <DetailsPanel watch={p}>
           <nav className="bp-jump" aria-label="In the details">

@@ -52,7 +52,10 @@ export function patchHomeInitialShell(html,{css,cssHref,introFont,introCodepoint
   assert(intro && introFont instanceof Uint8Array && introFont.length<10000,'Expected the verified small intro font');
   assert.equal(intro,introText,'Keep the initial and interactive introductions equal');
   assert(Array.isArray(introCodepoints) && [...intro].every(char=>introCodepoints.includes(char.codePointAt(0))),'Rebuild the intro font after changing its copy');
-  const introCss=`@font-face{font-family:"AI Blocks Intro Mono";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,${Buffer.from(introFont).toString('base64')}) format("woff2")}html .hero .lede{font-family:"AI Blocks Intro Mono",var(--mono)}`;
+  const introCss=`@font-face{font-family:"AI Blocks Intro Mono";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,${Buffer.from(introFont).toString('base64')}) format("woff2")}html .hero .lede{font-family:"AI Blocks Intro Mono",var(--mono)}`
+    // The three-line headline is the largest thing on a phone. Painting it in a fallback font and then again in Space Grotesk
+    // made the app's redraw count as the page's main paint (2.8 s instead of under 1 s). Wait briefly for the preloaded face instead.
+    +`@font-face{font-family:"AI Blocks Hero";font-style:normal;font-weight:300 700;font-display:block;src:url(/fonts/space-grotesk.woff2) format("woff2")}html .hero .h1{font-family:"AI Blocks Hero","Space Grotesk",var(--sans)}`;
   let next=html.replace(tag,tag.replace('>',' media="print" data-home-full-css>')+'<noscript>'+tag+'</noscript>');
   const start=next.indexOf('    <!-- APP_LOADER_START -->'),end=next.indexOf('    <!-- APP_LOADER_END -->');assert(start>=0&&end>start);
   next=next.slice(0,start)+'    <!-- APP_LOADER_START -->\n'+initialShell+'\n<script>updateShellTheme();</script>\n'+next.slice(end);

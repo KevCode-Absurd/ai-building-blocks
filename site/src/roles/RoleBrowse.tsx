@@ -1,7 +1,8 @@
 import {useMemo,useState} from 'react';
 import {Link,navigate} from '../lib/router';
 import {flows,useStore} from '../lib/store';
-import type {RoleIndex} from './role-types';
+import type {RoleCard,RoleIndex} from './role-types';
+import {isStrongRoleMatch,rankRoles} from './specialist-matching.mjs';
 import './roles.css';
 const PAGE=24;
 export default function RoleBrowse({data,page=1,complete=true,onNeedFull}:{data:RoleIndex|null;page?:number;complete?:boolean;onNeedFull?:()=>void}){
@@ -9,7 +10,15 @@ export default function RoleBrowse({data,page=1,complete=true,onNeedFull}:{data:
  const allFlows=useStore(s=>s.flows);
  const saved=useMemo(()=>allFlows.filter(f=>f.customSkills?.some(skill=>skill.slug.startsWith('custom-role-'))),[allFlows]);
  const pendingSearch=!complete&&!!(query.trim()||area!=='all'||family!=='all');
- const rows=useMemo(()=>{if(pendingSearch)return [];const terms=query.toLowerCase().trim().split(/\s+/).filter(Boolean);return data?.roles.filter(r=>(area==='all'||r.area===area)&&(family==='all'||r.family===family)&&terms.every(t=>`${r.name} ${r.summary} ${r.deliverables.join(' ')} ${r.keywords??''}`.toLowerCase().includes(t)))??[];},[data,query,area,family,pendingSearch]);
+ // One ranking for this box and find_specialist (specialist-matching.mjs): best fit first, owners' words understood.
+ const {rows,strong}=useMemo(()=>{
+  if(pendingSearch||!data)return {rows:[] as RoleCard[],strong:0};
+  const inFamily=(r:RoleCard)=>(area==='all'||r.area===area)&&(family==='all'||r.family===family);
+  if(!query.trim())return {rows:data.roles.filter(inFamily),strong:0};
+  const ranked=(rankRoles(data,query,area) as {role:RoleCard;matched:string[]}[]).filter(row=>inFamily(row.role));
+  return {rows:ranked.map(row=>row.role),strong:ranked.filter(row=>isStrongRoleMatch(row,query)).length};
+ },[data,query,area,family,pendingSearch]);
+ const suggestions=useMemo(()=>(data?.roles??[]).filter(r=>r.featured).slice(0,6),[data]);
  const families=useMemo(()=>{const ids=new Set(data?.roles.filter(r=>area==='all'||r.area===area).map(r=>r.family));return (data?.families??[]).filter(f=>ids.has(f.id));},[data,area]);
  if(!data)return <section className="wrap role-pending"><p role="status">Opening the role library…</p></section>;
  const offset=query.trim()||area!=='all'||family!=='all'?0:(page-1)*PAGE;
@@ -21,9 +30,9 @@ export default function RoleBrowse({data,page=1,complete=true,onNeedFull}:{data:
   <section aria-label="Find an AI role"><div className="role-search-row"><div><label htmlFor="role-search">Find the specialist you need</label><input id="role-search" type="search" value={query} placeholder="Try coding, SEO, executive assistant or support" onFocus={()=>onNeedFull?.()} onChange={e=>{setQuery(e.currentTarget.value);setCount(PAGE);onNeedFull?.();}} data-testid="role-search"/></div><span className="small role-total">{data.roles.length} role setups</span></div>
    <div className="role-areas" role="group" aria-label="Filter roles by area">{data.areas.map(a=><button key={a.id} className="role-area" aria-pressed={area===a.id} onClick={()=>{setArea(a.id);setFamily('all');setCount(PAGE);onNeedFull?.();}}>{a.name}</button>)}</div>
    {families.length>1&&<div className="role-family-filter"><label htmlFor="role-family">Kind of work</label><select id="role-family" value={family} onChange={e=>{setFamily(e.currentTarget.value);setCount(PAGE);onNeedFull?.();}} data-testid="role-family"><option value="all">All kinds of work</option>{families.map(f=><option key={f.id} value={f.id}>{f.name}</option>)}</select></div>}
-   <div className="role-results-meta"><p className="small" role="status">{pendingSearch?'Searching all roles…':<>{rows.length} {rows.length===1?'role':'roles'}{area!=='all'?` in ${data.areas.find(a=>a.id===area)?.name}`:''}</>}</p>{(query||area!=='all'||family!=='all')&&<button className="link-btn" onClick={reset}>Clear search and filters</button>}</div>
+   <div className="role-results-meta"><p className="small" role="status">{pendingSearch?'Searching all roles…':<>{rows.length} {rows.length===1?'role':'roles'}{area!=='all'?` in ${data.areas.find(a=>a.id===area)?.name}`:''}{query.trim()&&rows.length?`, best fit first${strong&&strong<rows.length?`. ${strong} match every word`:''}`:''}</>}</p>{(query||area!=='all'||family!=='all')&&<button className="link-btn" onClick={reset}>Clear search and filters</button>}</div>
    <ul className="role-grid" data-testid="role-grid">{rows.slice(offset,offset+paintCount).map(r=><li className="role-card" key={r.id} data-testid="role-card"><div className="role-card-top"><span className="role-mark" aria-hidden="true">{r.name.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase()}</span><span className="mono small">{data.areas.find(a=>a.id===r.area)?.name}</span></div><h2><Link to={`/roles/${r.id}`}>{r.name}</Link></h2><p className="role-card-summary">{r.summary}</p><ul className="role-card-deliverables">{r.deliverables.slice(0,2).map(d=><li key={d}>{d}</li>)}</ul><div className="role-card-foot"><span className="small">{r.resourceCount} {r.resourceCount===1?'core method':'core methods'} + your task brief</span><Link to={`/roles/${r.id}`} className="role-card-link" aria-label={`Set up role: ${r.name}`}>Set up role <span aria-hidden="true">↗</span></Link></div></li>)}</ul>
-   {!rows.length&&!pendingSearch&&<p className="role-empty">No roles match that search. Try a shorter job title or clear the filters.</p>}
+   {!rows.length&&!pendingSearch&&<div className="role-empty"><p>No roles match that search. Try a shorter job title or clear the filters.</p>{suggestions.length>0&&<><p>Or start with one of these:</p><ul data-testid="role-suggestions">{suggestions.map(r=><li key={r.id}><Link to={`/roles/${r.id}`}>{r.name}</Link>: {r.summary}</li>)}</ul></>}</div>}
    {rows.length>offset+count&&<div className="role-more"><p className="small">Showing {Math.min(paintCount,rows.length-offset)} of {rows.length}{offset?` · starting at role ${offset+1}`:''}</p><button className="btn btn-line" disabled={!complete&&count>PAGE} onClick={()=>{setCount(n=>n+PAGE);onNeedFull?.();}} data-testid="roles-more">{!complete&&count>PAGE?'Opening more roles…':<>Show {Math.min(PAGE,rows.length-offset-count)} more roles</>}</button></div>}
    <nav className="hub-pages" aria-label="Role pages">{Array.from({length:Math.ceil(data.roles.length/PAGE)},(_,i)=>i===page-1?<b key={i} aria-current="page">Page {i+1}</b>:<Link key={i} to={i?`/roles/page/${i+1}`:'/roles'}>Page {i+1}</Link>)}</nav>
   </section>

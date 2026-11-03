@@ -1,5 +1,7 @@
 // Deterministic candidate retrieval; the host AI checks the full remit against private context.
-const STOP=new Set('a an the i my our your we you please need want help me with for to of in on and or as at by from it this that some task specialist role ai can do use using have would like'.split(' '));
+import {WORD_ALIASES} from '../lib/library-search-language.ts';
+import {SPECIALIST_REQUEST} from '../lib/catalogue-audience.mjs';
+const STOP=new Set('a an the i my our your we you please need want help me with for to of in on and or as at by from it this that some task specialist role ai can do use using have would like get more how what should much many is are not too'.split(' '));
 const aliases={
  'react-frontend-specialist':'react nextjs next frontend typescript javascript component components hooks testing',
  'shopify-theme-specialist':'shopify theme liquid section sections snippet templates storefront',
@@ -63,12 +65,30 @@ const intents=[
  [/\b(?:support tickets?|customer support|helpdesk)\b/i,'customer-support-specialist'],
  [/\bcro\b|\b(?:landing page|website|store|checkout|funnel)\b.*\bconversion\b|\bconversion\s+(?:rate|audit|optimi[sz])/i,'cro-specialist'],
 ];
-export function rankSpecialists(index,task,limit=5,area='all') {
+// Owners' words for a job (lib/library-search-language.ts, shared with library search): "google maps" also
+// means a local listing, "estimate" a quote. Each phrase's words also match the catalogue's words, at a discount.
+let ownerRules;
+function ownerSynonyms(task,synonyms){
+ const lower=task.toLowerCase();
+ ownerRules??=WORD_ALIASES.map(([pattern,alias])=>[new RegExp(pattern.source,'g'),words(alias)]);
+ for(const [pattern,instead] of ownerRules)for(const match of lower.matchAll(pattern))for(const t of words(match[0]))if(synonyms.has(t))synonyms.set(t,[...new Set([...synonyms.get(t),...instead.filter(x=>x!==t)])]);
+ return synonyms;
+}
+// Each role's words, worked out once per index (the /roles search box ranks on every keystroke).
+const roleWords=new WeakMap();
+function docsOf(index){
+ let docs=roleWords.get(index);
+ if(!docs)roleWords.set(index,docs=index.roles.map(r=>({r,fields:[words(r.name),words(r.summary),words((r.deliverables??[]).join(' ')),words((aliases[r.id]??'')+' '+(r.keywords??''))]})));
+ return docs;
+}
+/** Every matching role with its score, best first. Owners come first: coding and engineering roles sit lower
+ *  unless the task is a developer's (SPECIALIST_REQUEST) or an engineering area was chosen. */
+export function rankRoles(index,task,area='all') {
  const terms=words(task);if(!terms.length)return [];
  const preferred=artifactIntent(task)??intents.find(([pattern])=>pattern.test(task))?.[1];
- const synonyms=expand(terms),boost=new Set(AREA_INTENTS.filter(([,pattern])=>pattern.test(task)).map(([id])=>id));
- const hired=hiredTitle(task),core=terms.filter(t=>!hired.has(t));
- const docs=index.roles.filter(r=>area==='all'||r.area===area).map(r=>({r,fields:[words(r.name),words(r.summary),words(r.deliverables.join(' ')),words((aliases[r.id]??'')+' '+(r.keywords??''))]}));
+ const synonyms=ownerSynonyms(task,expand(terms)),boost=new Set(AREA_INTENTS.filter(([,pattern])=>pattern.test(task)).map(([id])=>id));
+ const hired=hiredTitle(task),core=terms.filter(t=>!hired.has(t)),forSpecialist=SPECIALIST_REQUEST.test(task);
+ const docs=docsOf(index).filter(({r})=>area==='all'||r.area===area);
  const all=[...new Set([...terms,...[...synonyms.values()].flat()])];
  const frequency=new Map(all.map(t=>[t,docs.filter(d=>d.fields.some(f=>f.includes(t))).length]));
  const weigh=(t,fields,factor)=>Math.log(1+docs.length/(1+frequency.get(t)))*fields.reduce((n,f,i)=>n+(f.includes(t)?[8,2,2,1.5][i]:0),0)*factor;
@@ -78,8 +98,14 @@ export function rankSpecialists(index,task,limit=5,area='all') {
   let score=matched.reduce((n,t)=>n+Math.max(weigh(t,fields,1),...synonyms.get(t).map(x=>weigh(x,fields,0.7)))*(hired.has(t)?0.25:1),0);
   score*=(core.length?matched.filter(t=>!hired.has(t)).length/core.length:matched.length/terms.length);
   if(boost.size)score*=boost.has(r.area)?2.2:0.7;
+  if(!forSpecialist&&!boost.size&&area==='all'&&r.area==='engineering')score*=0.6;
   if(task.toLowerCase().includes(r.name.toLowerCase()))score+=50;
   if(r.id===preferred&&matched.length)score+=1000;
   return {role:r,matched,score};
- }).filter(r=>r.matched.length&&r.score>0).sort((a,b)=>b.score-a.score||a.role.id.localeCompare(b.role.id)).slice(0,limit).map(({role,matched})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
+ }).filter(r=>r.matched.length&&r.score>0).sort((a,b)=>b.score-a.score||a.role.id.localeCompare(b.role.id));
+}
+/** A role that covers every word of the task (or a synonym): a strong match, not a passing one. */
+export const isStrongRoleMatch=(row,task)=>row.matched.length===words(task).length;
+export function rankSpecialists(index,task,limit=5,area='all') {
+ return rankRoles(index,task,area).slice(0,limit).map(({role,matched,score})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,score:Math.round(score*10)/10,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
 }

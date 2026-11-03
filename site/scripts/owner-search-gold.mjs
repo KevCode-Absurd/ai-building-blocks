@@ -1,0 +1,70 @@
+// Owner-phrased search requests and the items that answer them, for the release gate in
+// scripts/evaluate-catalogue-search.mjs --check and test/owner-search.test.mjs.
+// Each row: the words a small business owner types, then every item that is a right first answer.
+// A query passes at top-N when any listed item is in the first N results. Slugs are checked against
+// the built catalogue, so a renamed item fails loudly instead of quietly lowering the score.
+// The first 30 are the 3 Nov 2026 audit set (baseline top-1 11, top-3 15, top-8 20). On all 57 the old engine
+// scored 19 / 27 / 35 and the owner-words engine 35 / 47 / 54 (3 Nov 2026).
+export const OWNER_GOLD = [
+  ['my facebook ads cost too much', ['ad-performance-diagnoser', 'six-pattern-ad-performance-diagnoser', 'meta-delivery-troubleshooter', 'ad-sales-drop-analyst', 'meta-ads-weekly-account-keeper', 'ad-performance-early-warning-reviewer', 'break-even-roas-and-cpa-calculator']],
+  ['lower my facebook ad cost', ['ad-performance-diagnoser', 'six-pattern-ad-performance-diagnoser', 'meta-delivery-troubleshooter', 'meta-ads-weekly-account-keeper', 'ad-performance-early-warning-reviewer']],
+  ['write a refund policy', ['returns-policy-designer', 'policy-page-drafter', 'guarantee-designer']],
+  ['chase unpaid invoices', ['unpaid-invoice-chaser', 'get-a-late-invoice-paid-and-keep-the-customer']],
+  ['get more google reviews', ['review-request-and-reply-planner', 'reply-to-your-reviews-safely-and-plan-how-to-get-more', 'testimonial-request-writer', 'local-search-listing-manager']],
+  ['ask customers for a review', ['review-request-and-reply-planner', 'testimonial-request-writer', 'reply-to-your-reviews-safely-and-plan-how-to-get-more']],
+  ['reply to a bad review', ['customer-review-reply-writer', 'public-review-reply-drafter']],
+  ['write a job ad', ['inclusive-job-post-writer', 'job-ad-campaign-planner']],
+  ['price my services', ['hourly-rate-calculator', 'three-tier-price-ladder-drafter', 'client-fee-and-cap-setter', 'prepare-your-first-freelance-project-quote']],
+  ['what should I charge per hour', ['hourly-rate-calculator']],
+  ['write a quote for a customer', ['quote-and-proposal-builder', 'prepare-your-first-freelance-project-quote']],
+  ['send an estimate to a client', ['quote-and-proposal-builder', 'prepare-your-first-freelance-project-quote']],
+  ['write terms and conditions for my website', ['terms-of-service-drafter', 'policy-page-drafter']],
+  ['write a privacy policy', ['privacy-policy-drafter']],
+  ['fix my google business profile', ['local-search-listing-manager']],
+  ['get found on google maps', ['local-search-listing-manager']],
+  ['reduce no-shows for appointments', ['explain-appointment-no-show-patterns']],
+  ['customers not coming back', ['win-back-flow-builder', 'lapsed-customer-finder', 'win-back-lapsed-buyers-and-clean-out-the-rest']],
+  ['win back old customers', ['win-back-flow-builder', 'lapsed-customer-finder', 'win-back-lapsed-buyers-and-clean-out-the-rest']],
+  ['how do I get more leads', ['lead-magnet-planner', 'pick-a-lead-magnet-then-build-its-path-and-page', 'agency-sales-offer-lead-gen-strategist']],
+  ['write a cold email to get clients', ['cold-email-writer']],
+  ['plan social media posts for a month', ['social-post-planner', 'standing-social-calendar-maker']],
+  ['write a newsletter', ['prepare-a-useful-customer-newsletter-issue', 'weekly-newsletter-keeper']],
+  ['write product descriptions', ['product-description-writer']],
+  ['cash flow problems', ['cash-forecast-builder', 'cash-lever-ranker']],
+  ['write a business plan', ['startup-business-planner']],
+  ['write a contract for freelance work', ['contract-and-proposal-drafter']],
+  ['write an about us page', ['write-your-founder-story-and-cut-it-to-what-moves']],
+  ['my instagram is not growing', ['agency-marketing-instagram-curator', 'social-post-planner', 'platform-native-content-planner']],
+  ['write a proposal for a client', ['sales-proposal-writer', 'quote-and-proposal-builder']],
+  // Added 3 Nov 2026: growth goals, local services and owners' own words for things.
+  ['I want more customers', ['find-your-business-growth-channel', 'first-customers-by-hand-planner', 'word-of-mouth-planner', 'referral-program-designer', 'lead-magnet-planner']],
+  ['get more customers for my salon', ['local-search-listing-manager', 'review-request-and-reply-planner', 'find-your-business-growth-channel', 'word-of-mouth-planner', 'booking-page-designer', 'referral-program-designer']],
+  ['marketing ideas for my bakery', ['find-your-business-growth-channel', 'word-of-mouth-planner', 'local-search-listing-manager', 'first-customers-by-hand-planner']],
+  ['how can my plumbing business get more jobs', ['local-search-listing-manager', 'find-your-business-growth-channel', 'review-request-and-reply-planner', 'word-of-mouth-planner']],
+  ['more bookings for my dental practice', ['booking-page-designer', 'local-search-listing-manager', 'explain-appointment-no-show-patterns', 'review-request-and-reply-planner']],
+  ['I need more leads for my cleaning business', ['lead-magnet-planner', 'pick-a-lead-magnet-then-build-its-path-and-page', 'local-search-listing-manager', 'find-your-business-growth-channel']],
+  ['my cafe needs more reviews', ['review-request-and-reply-planner', 'reply-to-your-reviews-safely-and-plan-how-to-get-more', 'testimonial-request-writer']],
+  ['set up a referral scheme', ['referral-program-designer', 'word-of-mouth-planner']],
+  ['find my first customers', ['first-customers-by-hand-planner']],
+  ['write a quote for a plumbing job', ['quote-and-proposal-builder', 'prepare-your-first-freelance-project-quote']],
+  ['T&Cs for my online shop', ['terms-of-service-drafter', 'policy-page-drafter']],
+  ['get my cafe on google maps', ['local-search-listing-manager']],
+  ['update my business profile on google', ['local-search-listing-manager']],
+  ['too many no-shows at my salon', ['explain-appointment-no-show-patterns']],
+  ['raise my prices without losing customers', ['price-rise-letter-writer', 'price-rise-readiness-checker']],
+  ['tell customers about a price increase', ['price-rise-letter-writer']],
+  ['people leave items in their cart', ['abandoned-checkout-reader', 'cart-recovery-flow-builder', 'abandoned-cart-code-maker', 'browse-abandonment-flow-builder']],
+  ['a customer wants a refund', ['refund-request-reply-writer']],
+  ['write a returns policy for my shop', ['returns-policy-designer', 'policy-page-drafter']],
+  ['make an invoice', ['invoice-maker']],
+  ['design a flyer for my bakery', ['poster-designer', 'type-led-poster-planner', 'make-a-readable-event-poster']],
+  ['loyalty card for my coffee shop', ['loyalty-and-vip-program-designer', 'loyalty-customer-list-builder']],
+  ['sell gift cards in my shop', ['gift-card-issuer', 'gift-card-liability-calculator']],
+  ['write a job post for a barista', ['plain-job-post-drafter', 'job-post-writer', 'inclusive-job-post-writer']],
+  ['reply to all my google reviews', ['review-reply-batch-writer', 'customer-review-reply-writer', 'public-review-reply-drafter', 'reply-to-your-reviews-safely-and-plan-how-to-get-more']],
+  ['get testimonials for my website', ['testimonial-request-writer']],
+  ['meta ads not getting sales', ['ad-performance-diagnoser', 'six-pattern-ad-performance-diagnoser', 'ad-sales-drop-analyst', 'meta-delivery-troubleshooter']],
+];
+/** Release floors on the owner set (out of OWNER_GOLD.length), set just under the measured result so a
+ *  change that loses owner answers stops the release. Raise them when search gets better. */
+export const OWNER_FLOORS = { top1: 32, top3: 44, top8: 51 };

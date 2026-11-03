@@ -90,10 +90,12 @@ test('a catalogue without extras still searches and plans, with the same block r
 test('search_library finds every kind with compact rows and filters by type, job, level, tested and since', async () => {
   const s = service();
   const pictures = await s.callTool('search_library', { query: 'pictures' });
-  assert.deepEqual(pictures.items[0], { id: 'pic-maker', type: 'ai_tool', title: 'Pic Maker', url: 'https://useaiblocks.com/ai-tools/pic-maker', one_line: 'Make pictures from a prompt.', tested: false });
+  const { score, ...picture } = pictures.items[0];
+  assert.equal(typeof score, 'number');
+  assert.deepEqual(picture, { id: 'pic-maker', type: 'ai_tool', title: 'Pic Maker', url: 'https://useaiblocks.com/ai-tools/pic-maker', one_line: 'Make pictures from a prompt.', tested: false, strong: true });
   const margin = await s.callTool('search_library', { query: 'margin' });
   assert.deepEqual(margin.items.map(r => `${r.type}:${r.id}`).sort(), ['mini_tool:margin-check', 'skill:margin-check']);
-  for (const row of margin.items) assert.deepEqual(Object.keys(row), ['id', 'type', 'title', 'url', 'one_line', 'tested']);
+  for (const row of margin.items) assert.deepEqual(Object.keys(row), ['id', 'type', 'title', 'url', 'one_line', 'tested', 'score', 'strong']);
   assert.equal((await s.callTool('search_library', { query: 'margin', type: 'mini_tool' })).items[0].url, 'https://useaiblocks.com/tools/margin-check');
   assert.equal((await s.callTool('search_library', { query: 'margin', type: 'mini-tools' })).total, 1, 'plain kind words work');
   const job = await s.callTool('search_library', { job: 'write-ad-copy' });

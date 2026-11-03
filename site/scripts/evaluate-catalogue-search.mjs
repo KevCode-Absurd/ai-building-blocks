@@ -6,6 +6,9 @@ import YAML from 'yaml';
 import { compileClassifications } from './lib/catalogue-classification.mjs';
 import { makeSearchDocument } from '../src/lib/search-document.mjs';
 import { buildLibrarySearchIndex, searchLibraryIndex } from '../src/lib/library-search-core.ts';
+import { ENGINE_FILES } from './build-library-search.mjs';
+import { scoreOwnerGold } from './lib/owner-search-eval.mjs';
+import { OWNER_FLOORS } from './owner-search-gold.mjs';
 
 const root = process.env.CATALOGUE_EVAL_ROOT || (process.argv.includes('--dist') ? 'dist' : 'public');
 const project = process.argv.includes('--project');
@@ -24,7 +27,7 @@ if (!project) {
   const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
   assert.equal(artifact.sourceHash, hash(fs.readFileSync(`${root}/data/blocks.json`)), 'Published search must match the catalogue');
   const engineHashes = {};
-  for (const file of ['library-search-core.ts', 'library-search-intents.ts', 'catalogue-taxonomy.mjs', 'search-document.mjs']) engineHashes[file] = hash(fs.readFileSync(new URL('../src/lib/' + file, import.meta.url)));
+  for (const file of ENGINE_FILES) engineHashes[file] = hash(fs.readFileSync(new URL('../src/lib/' + file, import.meta.url)));
   assert.equal(artifact.engineHash, hash(JSON.stringify(engineHashes)), 'Published search must match the current ranking rules');
   for (const [id, chunk] of artifact.shards.files.entries()) {
     const bytes = fs.readFileSync(path.join(root, chunk.file));
@@ -88,7 +91,8 @@ const cases = [
 ];
 const results = [];
 for (const [mode, index] of Object.entries(indexes)) for (const example of cases) {
-  const ranked = [...searchLibraryIndex(index, example.query)].sort((a, b) => b[1].score - a[1].score || (bySlug.get(a[0]).name ?? a[0]).localeCompare(bySlug.get(b[0]).name ?? b[0]));
+  // Catalogue items only: the published index also holds the mini tools (minitool-<slug>).
+  const ranked = [...searchLibraryIndex(index, example.query)].filter(([slug]) => bySlug.has(slug)).sort((a, b) => b[1].score - a[1].score || (bySlug.get(a[0]).name ?? a[0]).localeCompare(bySlug.get(b[0]).name ?? b[0]));
   const first = ranked.slice(0, example.within ?? 5).map(([slug]) => slug);
   const reasons = [];
   if (example.expected?.some(slug => !first.includes(slug))) reasons.push('expected result missing');
@@ -99,9 +103,15 @@ for (const [mode, index] of Object.entries(indexes)) for (const example of cases
   if (example.empty && ranked.length) reasons.push('unsupported query has results');
   results.push({ mode, query: example.query, pass: !reasons.length, reasons, top: ranked.slice(0, 10).map(([slug, hit]) => ({ slug, name: bySlug.get(slug).name, score: Math.round(hit.score), field: hit.field, reason: hit.reason })) });
 }
+// Owner-phrased requests, ranked the way the library page ranks them (scripts/owner-search-gold.mjs).
+const owner = scoreOwnerGold(blocks, indexes.published ?? indexes.full);
 const reportRoot = process.env.CATALOGUE_EVAL_REPORTS || '../reports/2026-10-26-library-taxonomy';
 fs.mkdirSync(reportRoot, { recursive: true });
-const report = { projected: project, entries: blocks.length, queries: cases.length, checks: results.length, passed: results.filter(r => r.pass).length, results };
+const report = { projected: project, entries: blocks.length, queries: cases.length, checks: results.length, passed: results.filter(r => r.pass).length, results, owner };
 fs.writeFileSync(`${reportRoot}/search-${project ? 'projected' : 'evaluation'}.json`, JSON.stringify(report, null, 2) + '\n');
-console.log(JSON.stringify({ ...report, results: results.map(r => ({ mode: r.mode, query: r.query, pass: r.pass, reasons: r.reasons, top: r.top.slice(0, 5).map(t => t.slug) })) }, null, 2));
-if (process.argv.includes('--check')) assert.equal(report.passed, report.checks, 'Search relevance evaluation failed');
+console.log(JSON.stringify({ ...report, owner: { queries: owner.queries, top1: owner.top1, top3: owner.top3, top8: owner.top8, floors: OWNER_FLOORS, missing: owner.missing, misses: owner.rows.filter(r => !r.best || r.best > 8).map(r => r.query) }, results: results.map(r => ({ mode: r.mode, query: r.query, pass: r.pass, reasons: r.reasons, top: r.top.slice(0, 5).map(t => t.slug) })) }, null, 2));
+if (process.argv.includes('--check')) {
+  assert.equal(report.passed, report.checks, 'Search relevance evaluation failed');
+  assert.deepEqual(owner.missing, [], 'Owner search answers must be published items');
+  for (const n of ['top1', 'top3', 'top8']) assert(owner[n] >= OWNER_FLOORS[n], `Owner search ${n} fell to ${owner[n]} of ${owner.queries} (floor ${OWNER_FLOORS[n]})`);
+}

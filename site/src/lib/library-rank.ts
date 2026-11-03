@@ -1,9 +1,11 @@
 /** Orders library search matches. Shared by the library page (App.tsx) and the offline evaluation
  *  (scripts/evaluate-recommendations.mjs), so what is measured is what ships. No network, no model. */
-import { queryTokens, searchTokens, type SearchHit } from "./library-search-core.ts";
+import { isWordForm, queryTokens, searchTokens, type SearchHit } from "./library-search-core.ts";
+import { audienceOf, SPECIALIST_REQUEST } from "./catalogue-audience.mjs";
 
-export type RankBlock = { slug: string; name: string; aliases?: string[]; type?: string; task?: string; headline?: string };
-type Options<B> = { isTested: (b: B) => boolean; suggestion?: string };
+export type RankBlock = { slug: string; name: string; aliases?: string[]; type?: string; task?: string; headline?: string; audience?: string };
+/** `scores`, when given, receives each item's final ranking score (higher is better), for callers that report it. */
+type Options<B> = { isTested: (b: B) => boolean; suggestion?: string; scores?: Map<string, number> };
 
 // Role words say what kind of tool it is, not what it is about; they never count against a name.
 const TOOL_WORDS = ["writer", "write", "planner", "plan", "checker", "check", "builder", "build", "maker", "make", "reviewer", "review", "finder", "find", "analyst", "analyse", "tool", "guide", "helper", "creator", "designer", "design", "drafter", "draft", "editor", "generator", "agent", "workflow", "prompt", "skill", "coach", "assistant", "reader", "tracker", "auditor", "audit", "scorer", "picker"];
@@ -17,12 +19,12 @@ const nameWords = (b: RankBlock) => { let found = names.get(b); if (!found) name
 const variants = new WeakMap<object, string[][]>();
 const nameVariants = (b: RankBlock) => { let found = variants.get(b); if (!found) variants.set(b, (found = [b.name, ...(b.aliases ?? [])].map(name => searchTokens(name)))); return found; };
 /** The same word in another form: "test" and "testing", "price" and "prices". A longer word that merely starts
- *  the same way is a different word ("project" is not "projection", "product" not "production"). */
-const FORM = /^(?:s|es|d|ed|er|ers|ing|ings|ment|ments|ly)$/;
-const sameWord = (a: string, b: string) => {
+ *  the same way is a different word ("project" is not "projection", "review" not "reviewer", "lead" not
+ *  "leader"); see isWordForm. */
+export const sameWord = (a: string, b: string) => {
   const [short, long] = a.length <= b.length ? [a, b] : [b, a];
   if (short.length < 3 || !long.startsWith(short.endsWith("e") ? short.slice(0, -1) : short)) return short === long;
-  return short === long || FORM.test(long.slice(short.length)) || short.endsWith("e") && FORM.test(long.slice(short.length - 1));
+  return short === long || isWordForm(short, long.slice(short.length)) || short.endsWith("e") && isWordForm(short, long.slice(short.length - 1));
 };
 /** A name word the typed word starts ("analy" in "analytics"): still said, at a stand-in's discount. */
 const begins = (word: string, token: string) => token.length >= 5 && word.startsWith(token);
@@ -42,7 +44,7 @@ function nearly(a: string, b: string): boolean {
   }
   return before[b.length] <= max;
 }
-const EXACT = 0.3;
+const EXACT = 0.3, SPECIALIST_NUDGE = 0.5, GOAL_NAMED = 1.4;
 const jaccard = (a: string[], b: string[]) => { const x = new Set(a.filter(w => !DUPLICATE_ROLE.has(w))), y = new Set(b.filter(w => !DUPLICATE_ROLE.has(w))); let n = 0; for (const w of x) if (y.has(w)) n++; return n / Math.max(1, x.size + y.size - n); };
 
 /**
@@ -52,7 +54,7 @@ const jaccard = (a: string[], b: string[]) => { const x = new Set(a.filter(w => 
  * kept below methods unless the request names minds or the person; "Tested" only nudges, so it never buries
  * the right answer. Near-identical names doing the same job do not fill the top results twice.
  */
-export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<string, SearchHit>, query: string, { isTested, suggestion }: Options<B>): B[] {
+export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<string, SearchHit>, query: string, { isTested, suggestion, scores }: Options<B>): B[] {
   const { hard, soft, alternatives, sequence, phrase } = queryTokens(query);
   // A typed word is also said by a catalogue stand-in, a near spelling, or a word it was split from ("tik tok" in "TikTok").
   const standIns: Record<string, string[]> = {}, joined: Record<string, string[]> = {};
@@ -70,6 +72,8 @@ export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<s
   const same = memo(sameWord);
   const says = memo((w, t) => same(w, t) || standIns[t].some(a => sameWord(w, a)) || joined[t].includes(w) || begins(w, t) || nearly(t, w));
   const wantsMinds = /\b(?:minds?|experts?|thinkers?|people|person|who)\b/i.test(query);
+  // Owners first: a developer's, investor's or researcher's item sits a little lower unless the request is theirs.
+  const forSpecialist = SPECIALIST_REQUEST.test(query);
   const score = new Map<string, number>();
   for (const b of blocks) {
     const hit = hits.get(b.slug), words = nameWords(b);
@@ -100,11 +104,16 @@ export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<s
       const unsaid = named > 0 ? name.filter(w => !ROLE.has(w) && !typedWords.some(t => says(w, t))).length : 0;
       if (named || extras) value = Math.max(value, 1.2 * named + (named === 1 ? 0.4 : 0) + 0.25 * Math.min(2, extras) - Math.min(0.4, 0.08 * unsaid) + (named === 1 && !unsaid && extras === soft.length ? EXACT : 0) - (i ? 0.1 : 0));
     });
+    // A name that states the goal asked for ("Growth channel planner" for "more customers") says the request as
+    // surely as one that repeats its words.
+    if (hit?.reason?.startsWith("Matches goal") && hit.field === "title") value = Math.max(value, GOAL_NAMED);
     value = (value === -Infinity ? 0 : value) + base;
     if (b.type === "mind" && !wantsMinds && typed < 1) value -= 1.2;
+    if (!forSpecialist && audienceOf(b) === "specialist") value -= SPECIALIST_NUDGE;
     if (isTested(b)) value += 0.15;
     if (b.slug === suggestion) value += 0.5;
     score.set(b.slug, value);
+    scores?.set(b.slug, value);
   }
   const sorted = [...blocks].sort((a, b) => score.get(b.slug)! - score.get(a.slug)! || Number(isTested(b)) - Number(isTested(a)) || a.name.localeCompare(b.name));
   // Keep the first of each near-identical pair near the top; move the copy below the first ten.
@@ -115,4 +124,13 @@ export function rankLibraryResults<B extends RankBlock>(blocks: B[], hits: Map<s
     else later.push(b);
   }
   return [...top, ...later];
+}
+
+/** How many results are strong matches (lib/library-search-core.ts SearchHit.strong): every subject word in the name
+ *  or summary, or a stated purpose that matches. "Refund" mentions thousands of items; a handful are about refunds.
+ *  Pass the ranked slugs to count only what is shown (the reviewed suggestion counts as strong). */
+export function countStrongMatches(hits: Map<string, SearchHit>, among?: Iterable<string>, suggestion?: string): number {
+  let n = 0;
+  for (const slug of among ?? hits.keys()) if (hits.get(slug)?.strong || slug === suggestion) n++;
+  return n;
 }

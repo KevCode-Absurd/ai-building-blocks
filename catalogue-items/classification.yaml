@@ -370,3 +370,34 @@ secondary:
     - agency-finance-tax-strategist
   manage-projects:
     - project-cost-progress-tracker
+# Who an item is for (site/src/lib/catalogue-audience.mjs). Items for developers, engineers, investors and
+# researchers are "specialist" by their job (build-software, test-and-fix-code, ship-and-host, secure-code,
+# engineer-systems, manage-it, connect-tools, make-skills, money-and-investing, research-topics) or a developer
+# tool id (copilot-, python- ...). Search ranks owner items first unless a request is a specialist's.
+# List only the reviewed exceptions here.
+audience:
+  owner:
+    - ai-tool-list-drafter
+    - automation-flow-sketcher
+    - no-code-automation-planner
+    - traction-existing-platforms
+    - small-team-it-fixer
+    - repeat-job-skill-drafter
+    - repeated-work-skill-finder
+    - skill-making-guide
+    - write-a-skill-and-check-it-is-safe-to-share
+    - compare-a-list-of-options-and-get-one-checked-report
+    - research-a-question-and-write-a-cited-report
+    - size-a-market-and-separate-facts-from-guesses
+    - market-research-report-writer
+    - community-needs-research-planner
+    - social-listening-brief-writer
+    - fact-vs-opinion-sorter
+    - study-headline-claim-checker
+    - persuasive-claim-truth-checker
+    - ai-answer-doubt-check
+    - nonprofit-grant-funder-researcher
+    - agency-product-trend-researcher
+    - cited-research-assistant
+    - community-evidence-researcher
+    - survey-answer-truth-checker

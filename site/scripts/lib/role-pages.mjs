@@ -5,10 +5,14 @@ const list=rows=>`<ul>${rows.map(s=>`<li>${s}</li>`).join('')}</ul>`;
 const cut=(s,max)=>s.length<=max?s:s.slice(0,max+1).replace(/\s+\S*$/,'').replace(/[\s.,;:&-]+$/,'');
 const roleTitle=r=>{
  const heading=roleHeading(r.name),title=pageTitle(heading,['free, works in your own AI','free, runs in your AI','free and runs in your AI','free to use','free']);
- if(title.endsWith(' | AI Blocks'))return title;
- const name=r.name.split(' '),tail=name.slice(-3).join(' ');
- const short=tail.length<27?`${cut(r.name,40-tail.length)}… ${tail}`:cut(r.name,43);
- return `Hire ${short} | AI Blocks`;
+ if(title.endsWith(' | AI Blocks')&&title.length>=50)return title;
+ // A long name keeps its start and its last three words: "Hire an AI staff policy… and rollout writer | AI Blocks".
+ const phrase=sentenceName(r.name),tail=phrase.split(' ').slice(-3).join(' ');
+ for(const prefix of /^AI\b/.test(phrase)?['Hire an ','Hire ']:['Hire an AI ','Hire ']){
+  const room=60-prefix.length-' | AI Blocks'.length,short=phrase.length<=room?phrase:tail.length<room-8?`${cut(phrase,room-tail.length-2)}… ${tail}`:cut(phrase,room);
+  const t=`${prefix}${short} | AI Blocks`;if(t.length>=50&&t.length<=60)return t;
+ }
+ return title.endsWith(' | AI Blocks')?title:`Hire ${cut(phrase,43)} | AI Blocks`;
 };
 const fitDescription=text=>{
  const raw=clean(text);

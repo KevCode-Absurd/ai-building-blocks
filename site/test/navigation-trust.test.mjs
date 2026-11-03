@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { isTested, trustLabel } from '../src/lib/verification.ts';
+import { roleSeeds, sameJobAgentPages } from '../src/roles/role-definitions.mjs';
 
 const read = (file) => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const catalogue = JSON.parse(read('../public/data/blocks.json'));
@@ -51,7 +52,10 @@ test('imported blocks stay in the sitemap and their pages stay indexable', () =>
   const thin = catalogue.blocks.filter((b) => b.origin === 'imported' && b.headline !== '');
   assert.ok(thin.length > 0);
   const sitemaps = fs.readdirSync(new URL('../public/', import.meta.url)).filter((f) => /^sitemap-.*\.xml$/.test(f)).map((f) => read(`../public/${f}`)).join('');
-  for (const b of thin) assert.ok(sitemaps.includes(`<loc>https://useaiblocks.com/${kindPath(b)}/${b.slug}</loc>`), `${b.slug} is missing from the sitemap`);
+  // An agency agent page that is the same job as a role page names the role as canonical; the role is listed instead.
+  const sameJob = sameJobAgentPages(roleSeeds(catalogue.blocks), catalogue.blocks);
+  assert.equal(sameJob.size, 282);
+  for (const b of thin) { const own = `/${kindPath(b)}/${b.slug}`, listed = sameJob.get(own) ?? own; assert.ok(sitemaps.includes(`<loc>https://useaiblocks.com${listed}</loc>`), `${b.slug} is missing from the sitemap`); if (sameJob.has(own)) assert.ok(!sitemaps.includes(`<loc>https://useaiblocks.com${own}</loc>`), `${own} is listed although its canonical is ${listed}`); }
   assert.ok(!sitemaps.includes('/apps/starter-pack<'));
   const prerender = read('../scripts/prerender.mjs');
   assert.match(prerender, /const html = render\(url, p\);/);

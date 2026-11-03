@@ -62,7 +62,7 @@ test('role preparation rejects missing inputs, unknown sources, dropped bundled 
  assert.throws(()=>runtime.withCustomSkills(c,custom),/unavailable/);
 });
 test('role pages describe real functions and best use, use CreativeWork instead of vacancy markup, and keep unique titles',()=>{
- const titles=new Set();for(const r of built.profiles){const p=rolePage('/roles/'+r.id,built.index,id=>byId.get(id));assert(p);assert(!titles.has(p.documentTitle),'Duplicate role title '+p.documentTitle);titles.add(p.documentTitle);assert(p.content.includes('<h2>Capabilities</h2>'));assert(p.content.includes('<h2>Functions and deliverables</h2>'));assert(p.content.includes('<h2>Best way to use this role</h2>'));assert.equal(p.main['@type'],'CreativeWork');assert(!JSON.stringify(p).includes('JobPosting'));}
+ const titles=new Set();for(const r of built.profiles){const p=rolePage('/roles/'+r.id,built.index,id=>byId.get(id));assert(p);assert(!titles.has(p.documentTitle),'Duplicate role title '+p.documentTitle);titles.add(p.documentTitle);assert(p.content.includes('<h3>Capabilities</h3>'));assert(p.content.includes('<h3>Functions and deliverables</h3>'));assert(p.content.includes('<h3>Best way to use this role</h3>'));assert.equal(p.main['@type'],'CreativeWork');assert(!JSON.stringify(p).includes('JobPosting'));}
  const all=[];for(let page=1;page<=Math.ceil(built.profiles.length/24);page++){const p=rolePage(page===1?'/roles':'/roles/page/'+page,built.index,id=>byId.get(id));assert(p.main.itemListElement.length<=24);all.push(...p.main.itemListElement.map(i=>i.url));}assert.equal(new Set(all).size,built.profiles.length);
 });
 test('the role directory opens only one complete batch while all identities remain available for complete search on intent',()=>{

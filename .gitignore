@@ -37,6 +37,7 @@ site/.copyable-build/
 
 # docs: only the rules and pages the build and the content tools read.
 /docs/*
+!/docs/MONITORING.md
 !/docs/WRITING.md
 !/docs/PAGE-FORMAT.md
 !/docs/QUALITY-BAR.md

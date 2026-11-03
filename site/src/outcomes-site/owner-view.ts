@@ -37,7 +37,18 @@ export type Brief = {
   connections: { name: string; access: string; status: string }[]; data_home: string; technical_level: string | null; decides: string; unknowns: string[];
   answers: { question: string; answer: string }[];
 };
-type Stage = ReturnType<typeof validatePlan>["stages"][number];
+// plan-contract.mjs collects every problem through closures, so TypeScript cannot infer what its validators return.
+// These are the fields the owner pages read from a validated plan and research.
+type Named = { id: string; name: string };
+type Stage = Named & {
+  kind: string; goal: string; owner: { role?: string | null; gap?: string | null }; support: string[]; reviewers: string[]; uses: string[];
+  needs: string[]; outputs: Named[]; checks: Named[]; gate: string; optional_when: string | null;
+};
+type Plan = {
+  name: string; stages: Stage[]; capabilities: (Named & { access: string; why: string })[];
+  hypotheses: { statement: string; test: string }[]; dropped: { step: string; reason: string }[]; measurement: { window?: string; min_volume?: string; stop_rule?: string } | null;
+};
+type Research = { approach: string; steps: (Named & { why: string; sources: string[] })[]; pitfalls: { text: string; sources: string[] }[]; sources: unknown[] };
 
 function stopFor(s: Stage, n: number): Stop {
   const at = { stage: s.name, n };
@@ -49,7 +60,7 @@ const PLAN_STOP: Stop = { stage: null, n: null, title: "Approve the plan", detai
 
 /** The worked example as owner-facing screens. Built from the example's own data, so it stays true when the example changes. */
 export function walkthrough(ex: Example = example) {
-  const research = validateResearch(ex.research), plan = validatePlan(ex.plan, { research, brief: validateBrief(ex.brief) });
+  const research = validateResearch(ex.research) as Research, plan = validatePlan(ex.plan, { research, brief: validateBrief(ex.brief) }) as Plan;
   const brief = validateBrief(ex.brief) as Brief;
   const sources = research.sources as Source[];
   const byId = new Map(sources.map(s => [s.id, s]));
@@ -175,7 +186,7 @@ const SAMPLE_DAY = "2026-11-02";
  * Built by the orchestrator's own moves, so it is a real engagement.json. Stage results are made up for the sample. */
 export function sampleEngagement() {
   let e = startEngagement({ request: example.request, started: SAMPLE_DAY, id: "20261102-ad-costs-sample" });
-  const brief = validateBrief(example.brief), research = validateResearch(example.research), plan = validatePlan(example.plan, { research, brief });
+  const brief = validateBrief(example.brief), research = validateResearch(example.research) as Research, plan = validatePlan(example.plan, { research, brief }) as Plan;
   const move = (event: Record<string, unknown>, opts?: Record<string, unknown>) => { e = advanceEngagement(e, event, opts); };
   move({ type: "brief", brief: example.brief, at: SAMPLE_DAY });
   move({ type: "plan", research: example.research, plan: example.plan, at: "2026-11-03" }, { planCheck: { catalogue_checked: true, warnings: planWarnings(brief, research, plan, "2026-11-03") } });

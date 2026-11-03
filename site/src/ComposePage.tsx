@@ -17,6 +17,8 @@ import "./compose.css";
 import "./workflow-simplicity.css";
 import { protectedHeaders } from "./lib/turnstile";
 import { useComposerAccount } from "./lib/composer-account";
+import AimHigher, { type AimAnswers } from "./AimHigher";
+import { aimHigherText } from "./lib/aim-higher.mjs";
 const ExecutionPrompt = lazy(() => import("./ExecutionPrompt"));
 const TransferGuide = lazy(() => import("./DownloadDialog").then(m => ({default: m.TransferGuide})));
 
@@ -54,6 +56,7 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
   const defaultChoice = (id: string) => id === "mode" ? "Create from scratch" : id === "reference" ? "Original direction" : id === "delivery" ? "Source code" : "Follow your request";
   const abortRef = useRef<AbortController | null>(null);
   const [context, setContext] = useState("");
+  const [aim, setAim] = useState<AimAnswers>({});
   const [contextChoice, setUseContext] = useState<boolean | null>(null);
   // null: choose for the visitor. A free quick plan before sign-in; an AI plan once signed in and available.
   const [mode, setMode] = useState<"free" | "ai" | null>(null);
@@ -259,6 +262,8 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
             <div className="compose-request-footer"><VoiceRequest value={goal} onChange={changeGoal} disabled={busy} onListeningChange={setDictating} /><span className="compose-voice-count small">{goal.length.toLocaleString()} / {LIMITS.request.toLocaleString()} characters{goal.length > LIMITS.request ? " · Shorten this draft before creating a new workflow." : ""}</span></div>
           </div>
           <p className="small compose-goal-help" id="compose-goal-help">Say what you need, who it is for and what you want back. Try an example below if you are unsure.</p>
+          {goal.trim() && <AimHigher request={goal} answers={aim} onChange={setAim} toast={toast} addLabel="Add to the plan's context"
+            onAdd={() => { const added = aimHigherText(aim); setContext(current => (current.trim() ? `${current.trim()}\n\n${added}` : added).slice(0, LIMITS.context)); setAim({}); toast("Added to the plan's context"); }} />}
           {planner === "ai" && <div><label className="compose-check"><input type="checkbox" data-testid="compose-assign-minds" checked={assignMinds} disabled={busy || dictating} onChange={event => setAssignMinds(event.currentTarget.checked)} aria-describedby="compose-minds-help" /> Assign minds to tasks</label><p className="small" id="compose-minds-help">Uses a suggested perspective for each step. Complex decisions may use a small group. You can change or remove them.</p></div>}
           </div>{goal.trim() && <details className="compose-settings-pane workflow-options"><summary>Customize the plan (optional)</summary>
           {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Starting point: {defaultChoice(id)}</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}

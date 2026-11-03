@@ -1,0 +1,9 @@
+/* details.aim-higher outranks page-wide details rules such as .compose-page details. */
+details.aim-higher, .compose-page details.aim-higher { margin: 14px 0 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+.aim-higher > summary { cursor: pointer; font-weight: 600; min-height: 24px; }
+.aim-higher > summary .small { font-weight: 400; color: var(--muted); }
+.aim-higher > p.small { margin: 10px 0 0; }
+.aim-field { display: grid; gap: 6px; margin: 12px 0 0; font-size: 14px; }
+.aim-field input { box-sizing: border-box; width: 100%; min-height: 40px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--text); font: inherit; }
+.aim-field input:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
+.aim-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }

@@ -3,15 +3,17 @@ import { Link } from "../lib/router";
 import { ArrowIcon } from "../ui";
 import { BRIEF_QUESTIONS, JOB_MAX, OUTCOME_PATHS, looksLikeSecret, outcomeMessage } from "./owner-message";
 import { OutcomeTabs } from "./OutcomeTabs";
+import AimHigher, { type AimAnswers } from "../AimHigher";
 import { START } from "./outcome-copy";
 
 export default function StartJob({ path, toast }: { path: string; toast: (message: string) => void }) {
   const [job, setJob] = useState("");
+  const [aim, setAim] = useState<AimAnswers>({});
   const [status, setStatus] = useState("");
   const box = useRef<HTMLTextAreaElement>(null);
   const preview = useRef<HTMLPreElement>(null);
   const id = useId();
-  const message = outcomeMessage(job);
+  const message = outcomeMessage(job, aim);
   const [secret, setSecret] = useState(false);
   useEffect(() => { let live = true; void looksLikeSecret(job).then(found => { if (live) setSecret(found); }); return () => { live = false; }; }, [job]);
   const empty = !job.trim();
@@ -52,6 +54,8 @@ export default function StartJob({ path, toast }: { path: string; toast: (messag
           <div className="gd-starters" role="group" aria-label="Or start from one of these">
             {START.starters.map(s => <button key={s} type="button" className="gd-chip" onClick={() => { setJob(s); setStatus(""); box.current?.focus(); }}>{s}</button>)}
           </div>
+
+          <AimHigher request={job} answers={aim} onChange={next => { setAim(next); setStatus(""); }} toast={toast} />
 
           <h3 className="gd-sub-h">Your message for your AI</h3>
           <pre ref={preview} className="gd-message" data-testid="outcome-message">{message}</pre>

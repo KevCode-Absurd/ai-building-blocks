@@ -13,7 +13,7 @@ async function guestLoading(page:Page,attach:(name:string,options:any)=>Promise<
   await page.waitForTimeout(2200);
   const initial=[...requests];
   expect(initial.some(url=>/\/data\/blocks(?:-index)?\.json(?:\?|$)/.test(url))).toBe(false);
-  expect(initial.some(url=>/\/assets\/clerk-|clerk\.accounts\.|clerk\.com\//i.test(url))).toBe(false);
+  expect(initial.some(url=>/\/assets\/clerk[.-]|clerk\.accounts\.|clerk\.com\//i.test(url))).toBe(false);
   const index=page.waitForResponse(response=>new URL(response.url()).pathname==='/data/blocks-index.json'&&response.ok());
   await page.getByTestId('library-search').fill('meeting notes');await index;
   await expect(page.getByTestId('library-search')).toHaveValue('meeting notes');

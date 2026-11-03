@@ -29,8 +29,8 @@ for(const failure of ['server','rate-limit','lost-response'] as const)test(`save
 for(const tokenFailure of ['empty','stalled'])test(`${tokenFailure} token refresh keeps the account boundary and retries without signing out`,async({page})=>{
  await page.clock.install();await mockComposerAccount(page,true,'retry-user','retry-token');
  const sdk=`export class Clerk {session={id:'retry-session',status:'active',user:{id:'retry-user'},getToken:async()=>{const n=Number(sessionStorage.getItem('retry-tokens')||0);sessionStorage.setItem('retry-tokens',String(n+1));return n? 'retry-token':${tokenFailure==='stalled'?'new Promise(()=>{})':'null'};}};async load(){} addListener(fn){fn();return ()=>{};}}`;
- await page.route('**/assets/clerk-*.js',route=>route.fulfill({contentType:'text/javascript',body:sdk}));
- await page.route('**/@clerk_clerk-js.js*',route=>route.fulfill({contentType:'text/javascript',body:sdk}));
+ await page.route('**/assets/clerk*.js',route=>route.fulfill({contentType:'text/javascript',body:sdk}));
+ await page.route('**/@clerk_clerk-js*.js*',route=>route.fulfill({contentType:'text/javascript',body:sdk}));
  await page.route('**/api/library',route=>route.fulfill({json:{data:initial(),revision:1}}));
  await page.goto('/account');
  if(tokenFailure==='stalled'){await expect.poll(()=>page.evaluate(()=>sessionStorage.getItem('retry-tokens'))).toBe('1');await page.clock.runFor(20000);}

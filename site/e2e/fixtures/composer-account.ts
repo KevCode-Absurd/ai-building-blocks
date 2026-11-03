@@ -15,6 +15,7 @@ export async function mockComposerAccount(page: Page, signedIn = true, userId = 
       async redirectToSignIn(options) { sessionStorage.setItem("fixture:redirect", JSON.stringify(options)); }
       async redirectToSignUp(options) { sessionStorage.setItem("fixture:signup", JSON.stringify(options)); }
       openUserProfile() { sessionStorage.setItem("fixture:profile", "opened"); }
+      async redirectToUserProfile() { sessionStorage.setItem("fixture:profile", "opened"); }
       async signOut(options) { sessionStorage.setItem("fixture:signout", "called"); sessionStorage.setItem("fixture:active-user", "null"); this.session = null; location.assign(options?.redirectUrl || "/account"); }
     }
   `;
@@ -23,7 +24,8 @@ export async function mockComposerAccount(page: Page, signedIn = true, userId = 
   // Real Clerk leaves a __client_uat cookie, and the app opens Clerk only when it sees a possible session
   // (src/lib/composer-account.ts). Keep the fixture SDK loaded on every page, as these tests expect.
   await page.addInitScript(() => { document.cookie = "__client_uat=1700000000; path=/"; });
-  for (const pattern of ["**/@clerk_clerk-js.js*", "**/assets/clerk-*.js"]) {
+  // The app imports the headless no-rhc build (@clerk_clerk-js_no-rhc.js in dev, assets/clerk.no-rhc-*.js built).
+  for (const pattern of ["**/@clerk_clerk-js*.js*", "**/assets/clerk*.js"]) {
     await page.route(pattern, route => route.fulfill({ contentType: "text/javascript", body: sdkFixture }));
   }
 }

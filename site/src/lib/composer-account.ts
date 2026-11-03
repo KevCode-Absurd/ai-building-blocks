@@ -46,7 +46,9 @@ function config() {
   return configPromise ??= fetch("/api/auth").then(r => { if (!r.ok) throw Error(); return r.json(); }).catch(error => { configPromise = null; throw error; });
 }
 async function client(key: string) {
-  if (!clientPromise) clientPromise = import("@clerk/clerk-js").then(async ({ Clerk }) => {
+  // The no-rhc build is the same headless client without code for wallets, billing and on-page captcha, which this
+  // site never uses (sign-in and sign-up happen on Clerk's own pages). It is about 180 KB smaller compressed.
+  if (!clientPromise) clientPromise = import("@clerk/clerk-js/no-rhc").then(async ({ Clerk }) => {
     const clerk = new Clerk(key);
     await clerk.load();
     return clerk;
@@ -136,7 +138,8 @@ export function useComposerAccount(active: boolean, loadUsage = true, eager = fa
       setHint(`pending:${Date.now()}`);
       return signUp ? sdk.redirectToSignUp(options) : sdk.redirectToSignIn(options);
     },
-    manageProfile: () => clerk.current?.openUserProfile(),
+    // This client carries no UI components (openUserProfile would throw), so the profile opens on Clerk's own page.
+    manageProfile: () => clerk.current?.redirectToUserProfile(),
     signOut: async () => {
       const sdk = clerk.current, session = sdk?.session;
       if (!sdk || !session) return;

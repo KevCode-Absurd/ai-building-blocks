@@ -11,7 +11,7 @@ for (const mobile of [false, true]) {
   await page.route(/\/fonts\/(?:jetbrains-mono|space-grotesk)\.woff2$/, async r => { await fonts; await r.continue(); });
   await page.addInitScript(() => {
    (window as any).__introPaints = [];
-   new PerformanceObserver(list => { for (const e of list.getEntries()) if ((e as any).element?.textContent?.startsWith('Turn hours of work into minutes.')) (window as any).__introPaints.push(e.startTime); }).observe({type: 'largest-contentful-paint', buffered: true});
+   new PerformanceObserver(list => { for (const e of list.getEntries()) if ((e as any).element?.textContent?.startsWith('Type what you need done.')) (window as any).__introPaints.push(e.startTime); }).observe({type: 'largest-contentful-paint', buffered: true});
   });
   try {
    await page.goto('/', {waitUntil: 'domcontentloaded'});
@@ -149,7 +149,7 @@ for (const mobile of [false, true]) {
       expect(Math.abs(after!.height - before!.height)).toBeLessThan(1);
       await page.waitForTimeout(1800);
       expect(await live.evaluate(el => el === (window as any).__firstHomeIntro)).toBe(true);
-      await page.locator('#root .hero-actions').getByRole('link', {name: 'Start with a task', exact: true}).click();
+      await page.locator('#root .hero-goal').getByRole('button', {name: 'Find help'}).click();
       await expect(page.getByTestId('library-search')).toBeFocused();
       await page.getByTestId('hero-connect').getByRole('link').click();
       await expect(page).toHaveURL(/\/api-and-mcp$/);

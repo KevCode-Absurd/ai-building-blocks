@@ -25,11 +25,11 @@ const WORKFLOW = "review-image-ads";
 
 test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
-  await expect(page.locator(".hero .lede")).toContainText("Turn hours of work into minutes");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Get your ads, emails and plans done with AI");
+  await expect(page.locator(".hero .lede")).toContainText("Type what you need done");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
-  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Start with a task", "Build a workflow", "Connect your AI once"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(4);
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Hire an AI specialist", "Plan a job", "Connect your AI once"]);
+  await expect(page.locator(".hero-in > *")).toHaveCount(5);
   await expect(page.locator(".nav a").first()).toHaveText("How it works");
   await expect(page.getByTestId("home-goal")).toHaveCount(0);
   const globe = page.getByTestId("globe");
@@ -67,7 +67,7 @@ test("header links jump to the library and the builder", async ({ page }) => {
     await page.locator(".nav").getByRole("link", { name: label }).click();
     await expect(page.locator(`#${id}`)).toBeInViewport();
   }
-  await page.locator(".hero").getByRole("link", { name: "Build a workflow" }).click();
+  await page.locator("#home-workflows").getByRole("link", { name: /Open the workflow builder/ }).click();
   await expect(page.getByTestId("builder")).toBeInViewport();
 });
 

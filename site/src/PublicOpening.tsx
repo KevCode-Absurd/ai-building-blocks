@@ -12,8 +12,8 @@ export default function PublicOpening({ html }: { html: string }) {
   return <div data-testid="public-opening">
     <header className="wrap header-in"><a className="brand" href="/">AI Blocks</a><nav aria-label="Public pages"><a href="/#library">Find a task</a><span aria-hidden="true"> · </span><a href="/how-it-works">Help</a><span aria-hidden="true"> · </span><a href="/tools">Browser tools</a></nav><a className="btn btn-ghost btn-sm" href="/account" data-testid="account-link">My saved work</a></header>
     <main className="wrap bp-hero">
-      <h1 className="bp-h1">{location.pathname === "/" ? "Use AI like the top 1%" : "Find a task for your work"}</h1>
-      {location.pathname === "/" && <p className="lede">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>}
+      <h1 className="bp-h1">{location.pathname === "/" ? "Get your ads, emails and plans done with AI" : "Find a task for your work"}</h1>
+      {location.pathname === "/" && <p className="lede">Type what you need done. Then copy free instructions into the chatbot you use. Or hire a specialist for the whole task.</p>}
       <section id="library"><h2 className="h3">Explore the library</h2><nav className="public-type-links" aria-label="Task types">{[["", "All"], ["prompt", "Prompts"], ["skill", "Skills"], ["workflow", "Workflows"], ["agent", "Agents"], ["mind", "Minds"]].map(([kind, label]) => <a key={kind} href={`/?${kind ? `kind=${kind}` : ""}#library`}>{label}</a>)}</nav><p><a href="/jobs">Browse all tasks by job</a></p></section>
       <p role="status" className="small">Public tasks are available. Your saved work is opening separately.</p>
     </main>

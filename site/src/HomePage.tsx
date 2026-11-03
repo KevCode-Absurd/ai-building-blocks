@@ -2,9 +2,10 @@ import FeaturedTools from "./tools/FeaturedTools";
 import { HomeMinds, HomeWorkflows, HomeAgents } from "./HomeSections";
 import { useLibrarySearch } from "./lib/library-search";
 import { rankLibraryResults } from "./lib/library-rank";
-import { Suspense, lazy, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { ArrowIcon, BlockCard, SearchIcon, Select } from "./ui";
-import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindOf, useCatalogueState, workflowEntries } from "./lib/data";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, availableTasks, availableFunctions, classificationText, QUICK_JOB_IDS, FUNCTIONS, FUNCTION_MOVED, KINDS, TASKS, taskIdsOf, functionsOf, kindInfo, kindOf, pathOf, useCatalogueState, workflowEntries } from "./lib/data";
+import { namesAMind } from "./lib/search-person";
 import { queueForCanvas } from "./lib/store";
 import { usePersistence } from "./AccountPersistence";
 import { reviewedTask } from "./lib/task-discovery";
@@ -14,8 +15,9 @@ import "./home-library.css";
 import { Link, navigate, setSearch, useLocation, warmRoute } from "./lib/router";
 import MindsForSearch from "./MindsForSearch";
 import { openBusiness } from "./Business";
-import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
+import { SMALL_BUSINESS, STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
 import { useCommunityStars } from "./CommunityStars";
+import { seedRolePlanner } from "./roles/role-transfer";
 import { isTested } from "./lib/verification";
 
 import {StartupReady} from "./StartupReady";
@@ -37,6 +39,21 @@ function libraryFilters(search: URLSearchParams): Filters {
   const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
   const fn = FUNCTIONS.find(x => x.id === fnId)?.id ?? "";
   return { ...NONE, q: search.get("q") ?? "", starred: search.get("starred") === "1" ? "1" : "", scope: search.get("scope") === "tested" ? "tested" : "", audience: starterFor(search.get("audience") ?? "")?.id ?? "", area: AREAS.some(a => a.id === search.get("area")) ? search.get("area")! : "", fn, task, kind: KINDS.some(k => k.id === search.get("kind")) ? search.get("kind") as Kind : "all" };
+}
+
+/** "Plan a job" carries whatever is already typed in the hero goal box into the planner. */
+function planJobLink(from: Element) {
+  const goal = from.closest(".hero-in")?.querySelector<HTMLInputElement>(".hero-goal input")?.value.trim() ?? "";
+  if (!goal) return "/compose";
+  try { return seedRolePlanner(goal, "", false); } catch { return "/compose"; }
+}
+
+/** The one place the library decides what its count says. Until the full list and its search have loaded,
+ *  a search says "Searching…", never a false "0 results".
+ *  MERGE (lead): Stream A adds countStrongMatches(hits, rankedSlugs?, suggestion?) to lib/library-rank.ts.
+ *  Switch `total` to that count (and the labels to "strong matches") here; nothing else needs to change. */
+function resultCount({ hasQuery, complete, loading, results }: { hasQuery: boolean; complete: boolean; loading: boolean; results: Block[] }) {
+  return { searching: hasQuery && (!complete || loading), total: results.length };
 }
 
 /** `complete` is false while home shows only the starter picks; any search or filter asks for the full list. */
@@ -77,6 +94,8 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
     return () => window.removeEventListener("keydown", on);
   }, []);
   useEffect(() => { setLimit(PAGE); }, [f]);
+  // A search that arrives in the address (the hero goal box, a shared link) needs the full list to answer.
+  useEffect(() => { if (!complete && f.q.trim()) onNeedFull?.(); }, [complete, f.q, onNeedFull]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
@@ -127,6 +146,11 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
   const shownResults = results.slice(0, limit);
   const hasFilters = f.kind !== "all" || !!f.starred || !!(f.audience || f.area || f.fn || f.task);
   const formats = LIBRARY_FORMATS;
+  const { searching, total } = resultCount({ hasQuery, complete, loading: searchState.loading, results });
+  // Minds follow the tasks, unless the search names one of them. No tasks and no named person: no minds.
+  const personNamed = useMemo(() => hasQuery && namesAMind(c.blocks, df.q), [c, df.q, hasQuery]);
+  const showMinds = hasQuery && complete && !searching && f.kind !== "mind" && (personNamed || results.length > 0);
+  const minds = showMinds ? <MindsForSearch c={c} q={df.q} /> : null;
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
@@ -144,6 +168,13 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
         </button>)}
       </div>
       <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onFocus={() => { if (!complete) onNeedFull?.(); }} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
+      {hasQuery && <div className="library-top-hits" data-testid="library-top-hits">
+        {results.length > 0 ? <>
+          <ol aria-label="Top matches">{results.slice(0, 3).map(b => <li key={b.slug}><Link to={pathOf(b)}><b>{b.name}</b><small>{kindInfo(b).name}</small></Link></li>)}</ol>
+          {!searching && results.length > 3 && <a className="small" href="#library-results">See all {total.toLocaleString("en-US")} results <span aria-hidden="true">↓</span></a>}
+        </> : <p className="small">{searching ? "Searching…" : "No matches yet. Try the job name, such as “meeting notes”."}</p>}
+      </div>}
+      {!f.audience && <p className="small library-starter-path" data-testid="starter-small-business">Running a small business? <button type="button" className="link-btn" onClick={() => set({ audience: SMALL_BUSINESS })}>Start with {starterFor(SMALL_BUSINESS)!.slugs.length} tasks picked for owners</button></p>}
       {!complete && (error
         ? <p className="small" role="alert">{error} <button type="button" className="library-retry" onClick={retry}>Try the full library again</button></p>
         : <p className="small" role="status">Showing starter picks. Search or scroll to open the full library.</p>)}
@@ -173,19 +204,19 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
       </div>}
       <div id="library-results" role="tabpanel" aria-labelledby={`format-${f.kind}`}>
       <div className="result-line">
-        {complete && <span data-testid="result-count" role="status" aria-atomic="true">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</span>}
+        {(complete || searching) && <span data-testid="result-count" role="status" aria-atomic="true">{searching ? "Searching…" : <>{total} result{total === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</>}</span>}
         {hasFilters && <button type="button" className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button>}
       </div>
-      {hasQuery && complete && f.kind !== "mind" && <MindsForSearch c={c} q={df.q} />}
+      {personNamed && minds}
       {hidden > 0 && <p className="small library-scope-note" data-testid="scope-note">Showing tested blocks only. {hidden.toLocaleString("en-US")} block{hidden === 1 ? " hasn't" : "s haven't"} been tested yet. <button type="button" className="link-btn" onClick={() => set({ scope: "" })} data-testid="scope-show-all">Show all</button></p>}
-      {hasQuery && searchState.loading && <p className="small" role="status">Searching full instructions…</p>}
       {hasQuery && searchState.error && <p className="small" role="alert">Full instructions could not be searched. These results use titles and descriptions. <button type="button" className="link-btn" onClick={searchState.retry}>Try full search again</button></p>}
       {f.starred && account.state !== "signed-in" ? <div className="empty"><h3 className="h3">Your starred library</h3><p>Sign in to keep useful skills and workflows close, across devices.</p><button className="btn btn-dark" onClick={() => void account.signIn()}>Sign in to see your stars</button></div> : f.starred && loadError ? <div className="empty"><h3 className="h3">Your stars could not be loaded</h3><p>Please try again to see your saved stars.</p><button className="btn btn-dark" onClick={reload}>Try again</button></div> : f.starred && starsLoading ? <p role="status">Loading your stars...</p> : results.length ? (
         <>
           {!!shownResults.length && <div className="grid">{shownResults.map((b) => <BlockCard key={b.slug} b={b} workflowBuilder />)}</div>}
           {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button></div>}
+          {!personNamed && minds}
         </>
-      ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : !searchState.loading && (
+      ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : searching ? null : (
         <div className="empty"><h3 className="h3">We couldn't find that task</h3><p>Your search is still here. Try the job name, such as “meeting notes” or “email reply”.</p>{hidden > 0 && <p><button className="link-btn" onClick={() => set({ scope: "" })}>Include {hidden.toLocaleString("en-US")} block{hidden === 1 ? "" : "s"} not tested yet</button></p>}{hasFilters && <p><button className="link-btn" onClick={clear}>Search again without filters</button></p>}<button className="btn btn-dark" onClick={() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()}>Edit my search</button></div>
       )}
       </div>
@@ -197,6 +228,17 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
   // The first HTML already contains the real introduction. Keep those nodes
   // when the ready app takes over instead of painting the same text twice.
   const [initialHero] = useState(() => document.querySelector<HTMLElement>('#app-loader[data-home-shell] .hero-in'));
+  // The hero goal box hands its words to the library search below and brings the matches into view.
+  const startGoal = useCallback((goal: string) => {
+    const q = goal.trim().slice(0, 300);
+    onNeedFull(); trackUxEvent('task_started');
+    navigate(q ? `/?q=${encodeURIComponent(q)}#library` : '/#library');
+    requestAnimationFrame(() => {
+      const input = document.querySelector<HTMLInputElement>('[data-testid="library-search"]');
+      input?.focus({ preventScroll: true });
+      input?.closest('.library-search-field')?.scrollIntoView({ block: 'start', behavior: 'instant' as ScrollBehavior });
+    });
+  }, [onNeedFull]);
   useLayoutEffect(() => {
     if (!initialHero) return;
     const follow = (event: MouseEvent) => {
@@ -204,29 +246,37 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
       const link = event.target.closest('a');
       if (!link || !initialHero.contains(link) || link.target || link.hasAttribute('download')) return;
       const href = link.getAttribute('href');
-      if (href !== '/#library' && href !== '/#build' && href !== '/api-and-mcp') return;
+      if (href !== '/#library' && href !== '/#build' && href !== '/api-and-mcp' && href !== '/roles' && href !== '/compose') return;
       event.preventDefault();
       if (href === '/#library' || href === '/#build') onNeedFull();
       if (href === '/#library') trackUxEvent('task_started');
-      navigate(href);
+      navigate(href === '/compose' ? planJobLink(link) : href);
       if (href === '/#library') requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus());
+    };
+    const submit = (event: SubmitEvent) => {
+      const form = event.target instanceof HTMLFormElement ? event.target : null;
+      if (!form?.matches('.hero-goal')) return;
+      event.preventDefault();
+      startGoal(String(new FormData(form).get('q') ?? ''));
     };
     const warm = (event: Event) => {
       const link = event.target instanceof Element ? event.target.closest('a') : null;
       const href = link?.getAttribute('href');
-      if (href === '/#library' || href === '/#build' || href === '/api-and-mcp') warmRoute(href);
+      if (href === '/#library' || href === '/#build' || href === '/api-and-mcp' || href === '/roles' || href === '/compose') warmRoute(href);
     };
     initialHero.addEventListener('click', follow);
+    initialHero.addEventListener('submit', submit);
     initialHero.addEventListener('pointerenter', warm, true);
     initialHero.addEventListener('focusin', warm);
     initialHero.addEventListener('touchstart', warm, {passive: true});
     return () => {
       initialHero.removeEventListener('click', follow);
+      initialHero.removeEventListener('submit', submit);
       initialHero.removeEventListener('pointerenter', warm, true);
       initialHero.removeEventListener('focusin', warm);
       initialHero.removeEventListener('touchstart', warm);
     };
-  }, [initialHero, onNeedFull]);
+  }, [initialHero, onNeedFull, startGoal]);
   const { search } = useLocation();
   const selectedWorkflow = search.get("workflow") ?? "";
   const [buildOpen, setBuildOpen] = useState(() => location.hash === "#build");
@@ -287,11 +337,15 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
       <section className="hero" data-home-hero-host={initialHero ? '' : undefined}>
         {showGlobe && <Suspense fallback={null}><Globe /></Suspense>}
         {!initialHero && <div className="wrap hero-in">
-          <h1 className="h1">Use AI like the top 1%</h1>
-          <p className="lede typed" data-done="true">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>
+          <h1 className="h1">Get your ads, emails and plans done with AI</h1>
+          <p className="lede typed" data-done="true">Type what you need done. Then copy free instructions into the chatbot you use. Or hire a specialist for the whole task.</p>
+          <form className="hero-goal" action="/#library" method="get" role="search" onSubmit={e => { e.preventDefault(); startGoal(String(new FormData(e.currentTarget).get("q") ?? "")); }}>
+            <input name="q" type="search" aria-label="What do you want to get done?" placeholder="What do you want to get done?" autoComplete="off" maxLength={300} data-testid="hero-goal" />
+            <button type="submit" className="btn btn-primary">Find help <ArrowIcon /></button>
+          </form>
           <div className="hero-actions">
-            <Link to="/#library" className="btn btn-primary" onClick={e => { e.preventDefault(); onNeedFull(); trackUxEvent("task_started"); navigate("/#library"); requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()); }}>Start with a task <ArrowIcon /></Link>
-            <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow" onClick={onNeedFull}>Build a workflow <ArrowIcon /></Link>
+            <Link to="/roles" className="btn btn-line" data-testid="hero-hire">Hire an AI specialist <ArrowIcon /></Link>
+            <Link to="/compose" className="btn btn-line" data-testid="hero-build-workflow" onClick={e => { const to = planJobLink(e.currentTarget); if (to !== "/compose") { e.preventDefault(); navigate(to); } }}>Plan a job <ArrowIcon /></Link>
           </div>
           <p className="hero-connect small" data-testid="hero-connect"><Link to="/api-and-mcp">Connect your AI once</Link>. Then it pulls any skill or workflow it needs, when it needs it.</p>
         </div>}

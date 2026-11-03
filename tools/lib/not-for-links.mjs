@@ -3,11 +3,13 @@
 // so the build can show the current name as a link and tools/check-pages.mjs can report the names that are out of date.
 // Pure functions, no file access: site/scripts/build-index.mjs, tools/check-pages.mjs and the tests share them.
 
-const STOP_KEY = new Set(["the", "a", "an"]);
 // Words as they are compared: lower case, apostrophes dropped ("founder's" and "founders" read the same).
 const tokenRe = /[A-Za-z0-9]+(?:['’][A-Za-z]+)*/g;
 const norm = (w) => w.toLowerCase().replace(/['’]/g, "");
-const wordsOf = (s) => (String(s ?? "").match(tokenRe) ?? []).map(norm).filter((w, i) => i > 0 || !STOP_KEY.has(w));
+const wordsOf = (s) => (String(s ?? "").match(tokenRe) ?? []).map(norm);
+// A name never starts or ends inside a joined word ("A/B", "Meta-ads").
+const joinedBefore = (s, at) => at > 1 && /[/-]/.test(s[at - 1]) && /[A-Za-z0-9]/.test(s[at - 2]);
+const joinedAfter = (s, at) => /[/-]/.test(s[at] ?? "") && /[A-Za-z0-9]/.test(s[at + 1] ?? "");
 // A rough stem, only so that "checker" and "check", "ads" and "ad", "planner" and "plan" compare equal.
 export function stem(w) {
   let x = w;
@@ -73,7 +75,9 @@ export function makeNameIndex(items, renamed = {}) {
   return { bySlug, exact: pick(exact), old: pick(old), fuzzy: pick(fuzzy), maxWords };
 }
 
-const SEP = /^[\s\-–&/+]+$/;
+// What may sit between two words of one name. A comma or bracket is allowed because a match must still equal a real name
+// ("Cloud and AI bills, waste and spend limits"), so it never joins two items listed side by side.
+const SEP = /^[\s\-–&/+,()]+$/;
 /**
  * The item names in one line, left to right, longest first, never overlapping.
  * how: "name" when the line already says the current name (any case), "old" when it says an earlier name or a slug.
@@ -85,7 +89,7 @@ export function findItemNames(text, index, selfSlug) {
   const toks = [...s.matchAll(tokenRe)].map((m) => ({ w: norm(m[0]), start: m.index, end: m.index + m[0].length }));
   const out = [];
   for (let i = 0; i < toks.length; i++) {
-    if (STOP_KEY.has(toks[i].w)) continue;
+    if (joinedBefore(s, toks[i].start)) continue;
     for (let n = Math.min(index.maxWords, toks.length - i); n >= 2; n--) {
       const part = toks.slice(i, i + n);
       if (part.slice(1).some((t, k) => !SEP.test(s.slice(part[k].end, t.start)))) continue;
@@ -94,14 +98,19 @@ export function findItemNames(text, index, selfSlug) {
       if (slug === undefined) { slug = index.old.get(exactKey(words)); how = "old"; }
       if (slug === undefined) slug = index.fuzzy.get(stemKey(words));
       if (!slug || slug === selfSlug) continue;
-      const start = part[0].start, end = part[n - 1].end, said = s.slice(start, end);
+      const start = part[0].start;
+      let end = part[n - 1].end;
+      if (joinedAfter(s, end)) continue;
+      const item = index.bySlug.get(slug);
+      // A name with brackets in it ("Delivery route planner (vehicle routing)") is taken whole when it is written out.
+      if (item.name.length > end - start && s.slice(start, start + item.name.length).toLowerCase() === item.name.toLowerCase()) end = start + item.name.length;
+      const said = s.slice(start, end);
       // A name written in lower case counts only right after "the" or "use": "ask a data analyst" means a person.
       if (!/^[A-Z0-9]/.test(said) && !/\b(?:use|the)\s+$/i.test(s.slice(0, start))) continue;
-      const item = index.bySlug.get(slug);
       if (how === "name" && said.toLowerCase() !== item.name.toLowerCase()) how = "old";
       if (how === "old" && said.toLowerCase() === item.name.toLowerCase()) how = "name";
       out.push({ start, end, said, slug, name: item.name, href: item.href, how });
-      i += n - 1;
+      while (i + 1 < toks.length && toks[i + 1].start < end) i++;
       break;
     }
   }

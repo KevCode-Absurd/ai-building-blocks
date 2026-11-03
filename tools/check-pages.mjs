@@ -190,6 +190,9 @@ function nameTargets(items) {
 }
 const renamedMap = () => { try { return JSON.parse(fs.readFileSync(path.join(ITEMS, "renamed.json"), "utf8")); } catch { return {}; } };
 
+// An earlier name is put right only when the current name passes the banned-word rule; otherwise the page would fail on
+// the word instead (the current name is then for a person to fix in display-copy.yaml).
+const fixable = (hit) => hit.how === "old" && !BANNED.some((b) => b.re.test(hit.name));
 // Rewrites the earlier names in one page file's not_for, keeping the file's own quoting and line endings where it can.
 function fixNames(file, index, slug) {
   const raw = fs.readFileSync(file, "utf8");
@@ -200,7 +203,7 @@ function fixNames(file, index, slug) {
   let fixed = 0;
   for (const node of seq.items) {
     if (!node || typeof node.value !== "string" || !node.range) continue;
-    const hits = findItemNames(node.value, index, slug).filter((h) => h.how === "old");
+    const hits = findItemNames(node.value, index, slug).filter(fixable);
     if (!hits.length) continue;
     const [start, end] = node.range;
     let src = raw.slice(start, end);
@@ -232,7 +235,7 @@ if (args.includes("--fix-names")) {
   for (const it of picked) if (it.file && !it.parseOnly) { const k = fixNames(it.file, nameIndex, it.slug); if (k) { n += k; files++; } }
   console.log(`Put the current name in for ${n} earlier item names on ${files} pages.`);
 }
-const pointerStats = { lines: 0, linked: 0, items: 0, old: 0, unmatched: [] };
+const pointerStats = { lines: 0, linked: 0, items: 0, old: 0, kept: new Set(), unmatched: [] };
 // not_for lines: the earlier names they use (fixable, so they fail) and the pointers that name no item (counted only).
 function pointerFails(it) {
   if (!it.file || it.type === "ai-tool") return [];
@@ -244,7 +247,8 @@ function pointerFails(it) {
     pointerStats.lines++;
     const found = findItemNames(line, nameIndex, it.slug);
     if (found.length) { pointerStats.linked++; pointerStats.items += found.length; }
-    for (const f of found.filter((x) => x.how === "old")) { pointerStats.old++; fails.push({ rule: "not-for-name", msg: `not_for says "${f.said}": the item is now called "${f.name}" (node tools/check-pages.mjs --fix-names)` }); }
+    for (const f of found.filter((x) => x.how === "old" && !fixable(x))) pointerStats.kept.add(f.name);
+    for (const f of found.filter(fixable)) { pointerStats.old++; fails.push({ rule: "not-for-name", msg: `not_for says "${f.said}": the item is now called "${f.name}" (node tools/check-pages.mjs --fix-names)` }); }
     for (const u of unresolvedPointers(line, found)) pointerStats.unmatched.push(`${it.slug}: ${u}`);
   }
   return fails;
@@ -261,6 +265,7 @@ for (const it of picked) {
 }
 console.log(`\n${picked.length - failing} of ${picked.length} items pass, ${failing} fail.`);
 console.log(`not_for: ${pointerStats.lines} lines, ${pointerStats.linked} link to an item (${pointerStats.items} links), ${pointerStats.old} use an earlier name, ${pointerStats.unmatched.length} "use the ..." pointers name no item we know.`);
+if (pointerStats.kept.size) console.log(`Earlier names kept because the current name uses a banned word: ${[...pointerStats.kept].join(", ")}.`);
 if (args.includes("--pointers")) for (const u of pointerStats.unmatched) console.log(`  unmatched: ${u}`);
 if (tally && failing) console.log(Object.entries(rules).sort((a, b) => b[1] - a[1]).map(([r, n]) => `${r}: ${n}`).join(", "));
 if (failing || process.exitCode) process.exit(1);

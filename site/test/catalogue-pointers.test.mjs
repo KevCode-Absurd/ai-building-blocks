@@ -18,6 +18,9 @@ const items = [
   { slug: 'agency-data-analyst', name: 'Data analyst', href: '/agents/agency-data-analyst' },
   { slug: 'ad-angle-planner', name: 'Ad angle planner', href: '/skills/ad-angle-planner' },
   { slug: 'self-item', name: 'Self item checker', href: '/skills/self-item' },
+  { slug: 'cloud-bills', name: 'Cloud and AI bills, waste and spend limits', aliases: ['Monthly cloud and AI bill keeper'], href: '/workflows/cloud-bills' },
+  { slug: 'route-planner', name: 'Delivery route planner (vehicle routing)', aliases: ['Delivery route planner'], href: '/skills/route-planner' },
+  { slug: 'ab-test-design-planner', name: 'A/B test design planner', aliases: ['Split-run test planner'], href: '/skills/ab-test-design-planner' },
 ];
 const index = makeNameIndex(items, { 'ad-concept-grid-planner': 'ad-angle-planner' });
 
@@ -34,6 +37,15 @@ test('not_for names: the current name links, an earlier name is put right, every
   // A page never links to itself, and a sentence break is never part of a name.
   assert.deepEqual(findItemNames('Use the Self item checker.', index, 'self-item'), []);
   assert.deepEqual(findItemNames('Ask about meta. Ad angle planner.', index, 'x').map((f) => f.slug), ['ad-angle-planner']);
+  // A name with a slash is matched whole, never from its second half.
+  assert.deepEqual(findItemNames('Use the A/B test design planner.', index, 'x').map((f) => [f.said, f.how]), [['A/B test design planner', 'name']]);
+  assert.deepEqual(linkNotFor(['Use the Split-run test planner.'], index, 'x').lines, ['Use the A/B test design planner.']);
+  // Names with a comma or brackets still match whole once they are written in, so a fix is never undone or repeated.
+  for (const [old, now] of [['Use the Monthly cloud and AI bill keeper.', 'Use the Cloud and AI bills, waste and spend limits.'], ['Use the Delivery route planner.', 'Use the Delivery route planner (vehicle routing).']]) {
+    const fixed = linkNotFor([old], index, 'x');
+    assert.deepEqual(fixed.lines, [now]);
+    assert.deepEqual(findItemNames(now, index, 'x').map((f) => f.how), ['name']);
+  }
 });
 
 test('linkNotFor rewrites earlier names and records where each link sits; notForParts splits on them', () => {

@@ -11,6 +11,7 @@ import {TARGET_METHODS,MAX_ADDED,supportMethods,reviewerMinds,workedExample,role
 import {grade} from '../../tools/readability.mjs';
 import {TASKS} from '../src/lib/catalogue-taxonomy.mjs';
 import {nextVersion} from '../src/roles/role-versions.mjs';
+import {roleLearning} from '../src/roles/training-rules.mjs';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const strings=value=>Array.isArray(value)?value.flatMap(v=>typeof v==='string'&&v.trim()?[v.trim()]:v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).length===1&&typeof Object.values(v)[0]==='string'?[`${Object.keys(v)[0]}: ${Object.values(v)[0]}`]:[]):[];
 const toolsOf=page=>Array.isArray(page.works_best_with?.tools)?page.works_best_with.tools.filter(t=>typeof t?.name==='string'&&typeof t?.why==='string').map(t=>`${t.name}: ${t.why}`):strings(page.works_best_with);
@@ -57,6 +58,7 @@ export function buildRoles({catalogue,manifest,page,skill,reference=()=>'',evals
   const short=v=>sha(JSON.stringify(v)).slice(0,16);
   const parts={remit:short([profile.name,summary,deliverables,inputs,fit,profile.limits,capabilities]),expertise:short(expertise),checks:short(profile.evaluation.rubric),example:short(example),methods:resources.map(r=>r.slug+'@'+r.revision.slice(0,12))};
   if(versions){ledger[seed.id]=nextVersion(ledger[seed.id],parts,today);profile.version={number:ledger[seed.id].version,since:ledger[seed.id].since,changes:ledger[seed.id].changes.slice(0,5)};}
+  profile.learning=roleLearning(learned[seed.id]);
   profile.worker=workerContract(profile);
   profile.instructions=roleInstructions(profile,resourceIds);
   profile.sourceHash=sha(JSON.stringify(profile));

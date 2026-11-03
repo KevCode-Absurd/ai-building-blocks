@@ -1,0 +1,4237 @@
+{
+ "about": "Near-duplicate items in the same job, made by tools/cluster-siblings.mjs. Do not edit by hand: rerun it with --write. Each group shows as Similar items and how they differ on its members' pages, with start first.",
+ "groups": [
+  {
+   "job": "audit-landing-page",
+   "start": "advertorial-story-and-belief-checker",
+   "items": [
+    "advertorial-story-and-belief-checker",
+    "advertorial-readiness-checker"
+   ]
+  },
+  {
+   "job": "audit-landing-page",
+   "start": "customer-question-finder",
+   "items": [
+    "customer-question-finder",
+    "buyer-doubt-gap-finder"
+   ]
+  },
+  {
+   "job": "audit-landing-page",
+   "start": "find-where-your-page-loses-buyers-and-prove-the-fix",
+   "items": [
+    "find-where-your-page-loses-buyers-and-prove-the-fix",
+    "page-drop-off-fix"
+   ]
+  },
+  {
+   "job": "audit-landing-page",
+   "start": "product-page-screenshot-auditor",
+   "items": [
+    "product-page-screenshot-auditor",
+    "landing-page-30-point-checker",
+    "landing-page-auditor",
+    "product-page-auditor"
+   ]
+  },
+  {
+   "job": "brand-file",
+   "start": "brand-family-planner",
+   "items": [
+    "brand-family-planner",
+    "store-brand-architecture-planner"
+   ]
+  },
+  {
+   "job": "brand-file",
+   "start": "brand-health-auditor",
+   "items": [
+    "brand-health-auditor",
+    "brand-perception-auditor"
+   ]
+  },
+  {
+   "job": "brand-file",
+   "start": "brand-style-guide-writer",
+   "items": [
+    "brand-style-guide-writer",
+    "brand-file-from-website",
+    "build-a-brand-file-and-style-guide-from-scratch"
+   ]
+  },
+  {
+   "job": "brand-file",
+   "start": "brand-voice-one-pager-writer",
+   "items": [
+    "brand-voice-one-pager-writer",
+    "brand-voice-guide-builder",
+    "voice-and-tone-guide-writer"
+   ]
+  },
+  {
+   "job": "brand-file",
+   "start": "tagline-score-card",
+   "items": [
+    "tagline-score-card",
+    "tagline-tester"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "agency-game-designer",
+   "items": [
+    "agency-game-designer",
+    "agency-roblox-experience-designer"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "code-to-requirements-writer",
+   "items": [
+    "code-to-requirements-writer",
+    "product-requirements-writer"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "feature-launch-planner",
+   "items": [
+    "feature-launch-planner",
+    "product-launch-planner"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "job-story-writer",
+   "items": [
+    "job-story-writer",
+    "user-story-writer"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "launch-scope-halver",
+   "items": [
+    "launch-scope-halver",
+    "launch-scope-cutter",
+    "smaller-product-launch"
+   ]
+  },
+  {
+   "job": "build-product",
+   "start": "new-project-planner",
+   "items": [
+    "new-project-planner",
+    "saas-blueprint-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "3d-image-viewer-builder",
+   "items": [
+    "3d-image-viewer-builder",
+    "image-viewer-builder"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "5g-waveform-generator",
+   "items": [
+    "5g-waveform-generator",
+    "wi-fi-waveform-generator"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "adaptive-filter-designer",
+   "items": [
+    "adaptive-filter-designer",
+    "digital-filter-designer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "agency-engineering-china-network-engineer",
+   "items": [
+    "agency-engineering-china-network-engineer",
+    "agency-engineering-network-engineer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "agency-engineering-data-engineer",
+   "items": [
+    "agency-engineering-data-engineer",
+    "agency-gis-spatial-data-engineer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "agency-engineering-developer-tooling-engineer",
+   "items": [
+    "agency-engineering-developer-tooling-engineer",
+    "agency-engineering-platform-engineer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "agency-unity-multiplayer-engineer",
+   "items": [
+    "agency-unity-multiplayer-engineer",
+    "agency-godot-multiplayer-engineer",
+    "agency-unreal-multiplayer-architect"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "agent-database-migration-planner",
+   "items": [
+    "agent-database-migration-planner",
+    "agent-database-setup-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "ai-data-extractor-builder",
+   "items": [
+    "ai-data-extractor-builder",
+    "structured-data-extractor"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "ai-model-code-generator",
+   "items": [
+    "ai-model-code-generator",
+    "small-device-ai-deployer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "api-designer",
+   "items": [
+    "api-designer",
+    "rest-api-designer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "apify-actor-builder",
+   "items": [
+    "apify-actor-builder",
+    "apify-actor-converter"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "bluetooth-network-simulator",
+   "items": [
+    "bluetooth-network-simulator",
+    "wireless-network-simulator"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "build-first-slack-bot-builder-prompt",
+   "items": [
+    "build-first-slack-bot-builder-prompt",
+    "slack-bot-builder"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "build-the-display-placement-auditor-builder-prompt",
+   "items": [
+    "build-the-display-placement-auditor-builder-prompt",
+    "build-the-quality-score-triage-module-builder-prompt"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "build-the-keyword-tier-classifier-builder-prompt",
+   "items": [
+    "build-the-keyword-tier-classifier-builder-prompt",
+    "build-the-shopping-feed-auditor-builder-prompt"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "chart-and-app-styler",
+   "items": [
+    "chart-and-app-styler",
+    "matlab-app-builder"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "code-documentation-writer",
+   "items": [
+    "code-documentation-writer",
+    "code-walkthrough-writer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "coding-task-planner",
+   "items": [
+    "coding-task-planner",
+    "task-breakdown-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "copilot-creating-oracle-to-postgres-master-migration-plan",
+   "items": [
+    "copilot-creating-oracle-to-postgres-master-migration-plan",
+    "copilot-planning-oracle-to-postgres-migration-integration-testing"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "copilot-creating-oracle-to-postgres-migration-integration-tests",
+   "items": [
+    "copilot-creating-oracle-to-postgres-migration-integration-tests",
+    "copilot-scaffolding-oracle-to-postgres-migration-test-project"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "data-pipeline-builder",
+   "items": [
+    "data-pipeline-builder",
+    "snowflake-data-builder"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "data-system-designer",
+   "items": [
+    "data-system-designer",
+    "system-design-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "database-schema-designer",
+   "items": [
+    "database-schema-designer",
+    "postgres-schema-designer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "driving-data-importer",
+   "items": [
+    "driving-data-importer",
+    "tracking-data-importer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "edge-case-list-maker",
+   "items": [
+    "edge-case-list-maker",
+    "test-list-writer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "google-ads-report-code-builder-prompt",
+   "items": [
+    "google-ads-report-code-builder-prompt",
+    "google-ads-operator-agent-builder-prompt",
+    "google-bid-budget-code-prompt",
+    "google-search-term-code-prompt"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "huge-image-processor",
+   "items": [
+    "huge-image-processor",
+    "image-processing-coder"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "issues-how-agents-track-work-implementation-planner",
+   "items": [
+    "issues-how-agents-track-work-implementation-planner",
+    "the-10-step-heartbeat-protocol-implementation-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "language-model-trainer",
+   "items": [
+    "language-model-trainer",
+    "model-merger"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "llm-fine-tuning-guide",
+   "items": [
+    "llm-fine-tuning-guide",
+    "low-memory-fine-tuning-guide"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "longer-context-stretcher",
+   "items": [
+    "longer-context-stretcher",
+    "model-preference-tuning-guide"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "new-teammate-guide-writer",
+   "items": [
+    "new-teammate-guide-writer",
+    "codebase-onboarding-guide-writer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "pull-request-writer",
+   "items": [
+    "pull-request-writer",
+    "pull-request-description-writer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "radio-transmit-capture",
+   "items": [
+    "radio-transmit-capture",
+    "triggered-radio-capture-helper"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "rag-pipeline-designer",
+   "items": [
+    "rag-pipeline-designer",
+    "agency-engineering-rag-pipeline-engineer"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "road-map-author",
+   "items": [
+    "road-map-author",
+    "road-map-converter"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "robot-arm-modeler",
+   "items": [
+    "robot-arm-modeler",
+    "robot-arm-motion-planner"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "snowflake-sql-helper",
+   "items": [
+    "snowflake-sql-helper",
+    "sql-query-helper"
+   ]
+  },
+  {
+   "job": "build-software",
+   "start": "usrp-radio-setup-helper",
+   "items": [
+    "usrp-radio-setup-helper",
+    "databricks-connection-setup",
+    "matlab-project-setup-helper",
+    "training-experiment-setup-helper",
+    "vehicle-network-setup-helper"
+   ]
+  },
+  {
+   "job": "build-websites",
+   "start": "accessible-ui-builder",
+   "items": [
+    "accessible-ui-builder",
+    "react-and-next-js-builder"
+   ]
+  },
+  {
+   "job": "build-websites",
+   "start": "font-pair-shortlist-maker",
+   "items": [
+    "font-pair-shortlist-maker",
+    "web-font-pairing-picker"
+   ]
+  },
+  {
+   "job": "build-websites",
+   "start": "interface-builder",
+   "items": [
+    "interface-builder",
+    "screenshot-to-interface-builder"
+   ]
+  },
+  {
+   "job": "build-websites",
+   "start": "web-form-designer",
+   "items": [
+    "web-form-designer",
+    "multi-step-form-designer"
+   ]
+  },
+  {
+   "job": "build-websites",
+   "start": "website-art-director",
+   "items": [
+    "website-art-director",
+    "interface-designer"
+   ]
+  },
+  {
+   "job": "check-ads",
+   "start": "ad-and-page-match-checker",
+   "items": [
+    "ad-and-page-match-checker",
+    "ad-and-page-policy-checker"
+   ]
+  },
+  {
+   "job": "check-ads",
+   "start": "ad-claim-proof-gap-finder",
+   "items": [
+    "ad-claim-proof-gap-finder",
+    "claim-and-proof-matcher"
+   ]
+  },
+  {
+   "job": "check-ads",
+   "start": "ad-sameness-checker",
+   "items": [
+    "ad-sameness-checker",
+    "ad-distraction-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "accessibility-standards-checker",
+   "items": [
+    "accessibility-standards-checker",
+    "federal-accessibility-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "agency-security-compliance-auditor",
+   "items": [
+    "agency-security-compliance-auditor",
+    "agency-support-legal-compliance-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "australia-gov-security-check",
+   "items": [
+    "australia-gov-security-check",
+    "nz-gov-security-check"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "contract-risk-reviewer",
+   "items": [
+    "contract-risk-reviewer",
+    "contract-reviewer"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "data-request-reply-drafter",
+   "items": [
+    "data-request-reply-drafter",
+    "legal-inquiry-reply-drafter"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "defense-export-rules-checker",
+   "items": [
+    "defense-export-rules-checker",
+    "us-export-rules-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "eu-ai-act-readiness-checker",
+   "items": [
+    "eu-ai-act-readiness-checker",
+    "eu-ai-act-risk-classifier"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "eu-sustainability-report-checker",
+   "items": [
+    "eu-sustainability-report-checker",
+    "financial-it-resilience-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "it-controls-audit-planner",
+   "items": [
+    "it-controls-audit-planner",
+    "privacy-management-audit-planner"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "nda-traffic-light-checker",
+   "items": [
+    "nda-traffic-light-checker",
+    "nda-quick-checker"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "plain-words-contract-summary",
+   "items": [
+    "plain-words-contract-summary",
+    "contract-plain-summary"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "prepare-a-contract-amendment-for-review",
+   "items": [
+    "prepare-a-contract-amendment-for-review",
+    "review-a-contract-and-get-edits-and-a-plain-summary"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "preserve-a-procurement-decision-audit-trail",
+   "items": [
+    "preserve-a-procurement-decision-audit-trail",
+    "procurement-evidence-gap-review-assistant"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "privacy-impact-assessment-writer",
+   "items": [
+    "privacy-impact-assessment-writer",
+    "ai-impact-assessment-writer"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "privacy-policy-drafter",
+   "items": [
+    "privacy-policy-drafter",
+    "policy-page-drafter"
+   ]
+  },
+  {
+   "job": "check-contracts",
+   "start": "vietnam-data-privacy-checker",
+   "items": [
+    "vietnam-data-privacy-checker",
+    "brazil-data-privacy-checker",
+    "health-data-privacy-checker",
+    "india-data-privacy-checker"
+   ]
+  },
+  {
+   "job": "connect-tools",
+   "start": "ai-tool-definition-writer",
+   "items": [
+    "ai-tool-definition-writer",
+    "ai-tool-designer"
+   ]
+  },
+  {
+   "job": "connect-tools",
+   "start": "ai-tool-list-drafter",
+   "items": [
+    "ai-tool-list-drafter",
+    "mcp-tool-set-designer"
+   ]
+  },
+  {
+   "job": "connect-tools",
+   "start": "copilot-dotnet-mcp-builder",
+   "items": [
+    "copilot-dotnet-mcp-builder",
+    "mcp-tool-server-builder"
+   ]
+  },
+  {
+   "job": "connect-tools",
+   "start": "copilot-python-mcp-server-generator",
+   "items": [
+    "copilot-python-mcp-server-generator",
+    "copilot-go-mcp-server-generator",
+    "copilot-typescript-mcp-server-generator"
+   ]
+  },
+  {
+   "job": "connect-tools",
+   "start": "google-ads-developer-access-setup-planner",
+   "items": [
+    "google-ads-developer-access-setup-planner",
+    "google-ads-oauth-setup-planner"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "agency-technical-artist",
+   "items": [
+    "agency-technical-artist",
+    "agency-unreal-technical-artist"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "apple-interface-reviewer",
+   "items": [
+    "apple-interface-reviewer",
+    "interface-principles-checker"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "bento-grid-style-guide-writer",
+   "items": [
+    "bento-grid-style-guide-writer",
+    "ai-assistant-style-guide",
+    "bold-border-style-guide-writer",
+    "frosted-glass-style-guide-writer",
+    "raw-brutalist-style-guide-writer"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "brand-mark-system-planner",
+   "items": [
+    "brand-mark-system-planner",
+    "identity-system-planner"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "conversion-page-style-guide",
+   "items": [
+    "conversion-page-style-guide",
+    "story-page-style-guide"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "design-ten-principles-reviewer",
+   "items": [
+    "design-ten-principles-reviewer",
+    "ruthless-simplicity-reviewer"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "dot-pattern-style-guide-writer",
+   "items": [
+    "dot-pattern-style-guide-writer",
+    "risograph-style-guide"
+   ]
+  },
+  {
+   "job": "design-work",
+   "start": "minimal-style-guide-writer",
+   "items": [
+    "minimal-style-guide-writer",
+    "hand-drawn-style-guide-writer",
+    "magazine-layout-style-guide",
+    "retro-style-guide",
+    "soft-clay-style-guide-writer",
+    "soft-shadow-style-guide-writer"
+   ]
+  },
+  {
+   "job": "document-work",
+   "start": "process-and-sop-writer",
+   "items": [
+    "process-and-sop-writer",
+    "process-change-note-writer"
+   ]
+  },
+  {
+   "job": "document-work",
+   "start": "repeat-task-how-to-writer",
+   "items": [
+    "repeat-task-how-to-writer",
+    "make-a-recurring-process-easier-to-hand-over",
+    "repeat-task-step-guide-writer"
+   ]
+  },
+  {
+   "job": "document-work",
+   "start": "weekly-status-update-writer",
+   "items": [
+    "weekly-status-update-writer",
+    "status-report-writer"
+   ]
+  },
+  {
+   "job": "engineer-systems",
+   "start": "antenna-designer",
+   "items": [
+    "antenna-designer",
+    "large-antenna-analyzer"
+   ]
+  },
+  {
+   "job": "engineer-systems",
+   "start": "pcb-material-setup-helper",
+   "items": [
+    "pcb-material-setup-helper",
+    "pcb-passive-part-designer"
+   ]
+  },
+  {
+   "job": "engineer-systems",
+   "start": "pcb-rf-filter-designer",
+   "items": [
+    "pcb-rf-filter-designer",
+    "pcb-coupler-designer",
+    "pcb-trace-designer"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "agency-marketing-baidu-seo-specialist",
+   "items": [
+    "agency-marketing-baidu-seo-specialist",
+    "agency-marketing-seo-specialist"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "ai-search-audit",
+   "items": [
+    "ai-search-audit",
+    "ai-search-platform-checker",
+    "ai-search-visibility-audit",
+    "ai-shortlist-readiness-checker"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "collection-page-planner",
+   "items": [
+    "collection-page-planner",
+    "comparison-page-set-planner"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "collection-page-seo-builder",
+   "items": [
+    "collection-page-seo-builder",
+    "product-page-seo-builder"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "keyword-researcher",
+   "items": [
+    "keyword-researcher",
+    "keyword-research-planner"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "search-blog-post-writer",
+   "items": [
+    "search-blog-post-writer",
+    "wordpress-blog-writer"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "search-console-traffic-drop-diagnoser",
+   "items": [
+    "search-console-traffic-drop-diagnoser",
+    "traffic-drop-investigator"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "search-intent-keyword-mapper",
+   "items": [
+    "search-intent-keyword-mapper",
+    "store-keyword-map-builder"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "search-page-brief-writer",
+   "items": [
+    "search-page-brief-writer",
+    "content-brief-writer"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "search-title-and-snippet-writer",
+   "items": [
+    "search-title-and-snippet-writer",
+    "title-and-meta-tag-writer"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "seo-site-auditor",
+   "items": [
+    "seo-site-auditor",
+    "seo-auditor",
+    "technical-seo-auditor"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "store-navigation-planner",
+   "items": [
+    "store-navigation-planner",
+    "store-blog-plan-builder"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "topic-cluster-mapper",
+   "items": [
+    "topic-cluster-mapper",
+    "content-hub-planner"
+   ]
+  },
+  {
+   "job": "get-found-in-search",
+   "start": "youtube-title-and-tags-writer",
+   "items": [
+    "youtube-title-and-tags-writer",
+    "youtube-description-tags"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "agency-marketing-content-creator",
+   "items": [
+    "agency-marketing-content-creator",
+    "agency-marketing-linkedin-content-creator"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "agency-marketing-douyin-strategist",
+   "items": [
+    "agency-marketing-douyin-strategist",
+    "agency-marketing-kuaishou-strategist"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "creator-partnership-planner",
+   "items": [
+    "creator-partnership-planner",
+    "creator-pay-planner",
+    "tiktok-creator-outreach-planner"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "developer-community-builder",
+   "items": [
+    "developer-community-builder",
+    "agency-marketing-developer-community-builder"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "flop-post-diagnoser",
+   "items": [
+    "flop-post-diagnoser",
+    "post-flop-reason-finder"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "founder-video-series-planner",
+   "items": [
+    "founder-video-series-planner",
+    "founder-video-month"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "linkedin-content-strategy",
+   "items": [
+    "linkedin-content-strategy",
+    "content-channel-planner",
+    "sales-led-content-planner"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "shorts-clip-finder",
+   "items": [
+    "shorts-clip-finder",
+    "cut-chapter-and-clip-a-long-video-into-five-shorts"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "social-post-planner",
+   "items": [
+    "social-post-planner",
+    "weekly-social-content-planner"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "tiktok-shop-content-planner",
+   "items": [
+    "tiktok-shop-content-planner",
+    "agency-marketing-tiktok-strategist"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "video-opening-line-batch-writer",
+   "items": [
+    "video-opening-line-batch-writer",
+    "short-video-hook-writer"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "x-and-linkedin-post-pair-writer",
+   "items": [
+    "x-and-linkedin-post-pair-writer",
+    "cross-platform-post-writer",
+    "linkedin-comment-writer",
+    "linkedin-hook-post-writer",
+    "linkedin-post-writer",
+    "voice-matched-post-writer"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "x-reply-writer",
+   "items": [
+    "x-reply-writer",
+    "youtube-comment-reply-writer"
+   ]
+  },
+  {
+   "job": "grow-social",
+   "start": "youtube-video-finder",
+   "items": [
+    "youtube-video-finder",
+    "youtube-viral-video-finder"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "agency-customer-service",
+   "items": [
+    "agency-customer-service",
+    "agency-healthcare-customer-service"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "agency-retail-customer-returns",
+   "items": [
+    "agency-retail-customer-returns",
+    "agency-support-support-responder"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "angry-customer-reply-checker",
+   "items": [
+    "angry-customer-reply-checker",
+    "complaint-reply-promise-checker"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "customer-reply-drafter",
+   "items": [
+    "customer-reply-drafter",
+    "angry-customer-reply-writer"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "freshdesk-ticket-priority-planner",
+   "items": [
+    "freshdesk-ticket-priority-planner",
+    "gorgias-ticket-priority-planner",
+    "zendesk-ticket-priority-planner",
+    "zoho-desk-ticket-priority-planner"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "gorgias-and-hubspot-customer-brief",
+   "items": [
+    "gorgias-and-hubspot-customer-brief",
+    "gorgias-refund-review-brief"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "gorgias-duplicate-ticket-finder",
+   "items": [
+    "gorgias-duplicate-ticket-finder",
+    "gorgias-ticket-tag-planner"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "gorgias-support-metrics-report",
+   "items": [
+    "gorgias-support-metrics-report",
+    "gorgias-weekly-support-report"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "refund-request-reply-writer",
+   "items": [
+    "refund-request-reply-writer",
+    "gorgias-support-reply-writer"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "review-reply-batch-writer",
+   "items": [
+    "review-reply-batch-writer",
+    "public-review-reply-drafter"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "review-request-and-reply-planner",
+   "items": [
+    "review-request-and-reply-planner",
+    "reply-to-your-reviews-safely-and-plan-how-to-get-more"
+   ]
+  },
+  {
+   "job": "help-customers",
+   "start": "solved-ticket-help-page-writer",
+   "items": [
+    "solved-ticket-help-page-writer",
+    "help-article-from-ticket-writer"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "candidate-message-drafter",
+   "items": [
+    "candidate-message-drafter",
+    "candidate-reply-drafter"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "headcount-forecast-builder",
+   "items": [
+    "headcount-forecast-builder",
+    "headcount-plan-builder"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "hr-ai-use-policy-writer",
+   "items": [
+    "hr-ai-use-policy-writer",
+    "hr-policy-drafter"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "inclusive-job-post-writer",
+   "items": [
+    "inclusive-job-post-writer",
+    "job-post-writer"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "interview-process-planner",
+   "items": [
+    "interview-process-planner",
+    "hiring-interview-designer"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "interview-question-set-maker",
+   "items": [
+    "interview-question-set-maker",
+    "structured-interview-guide"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "new-hire-plan-builder",
+   "items": [
+    "new-hire-plan-builder",
+    "agency-hr-onboarding",
+    "new-hire-first-week-planner"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "nonprofit-board-recruitment-planner",
+   "items": [
+    "nonprofit-board-recruitment-planner",
+    "nonprofit-volunteer-program-planner"
+   ]
+  },
+  {
+   "job": "hire-people",
+   "start": "pay-and-benefits-plan-builder",
+   "items": [
+    "pay-and-benefits-plan-builder",
+    "set-fair-pay-bands-and-a-pay-and-benefits-plan"
+   ]
+  },
+  {
+   "job": "keep-customers",
+   "start": "traction-community-building",
+   "items": [
+    "traction-community-building",
+    "traction-viral-marketing"
+   ]
+  },
+  {
+   "job": "keep-customers",
+   "start": "unboxing-card-and-note-planner",
+   "items": [
+    "unboxing-card-and-note-planner",
+    "unboxing-insert-and-gift-planner"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "fatigued-ad-reviver",
+   "items": [
+    "fatigued-ad-reviver",
+    "tired-ad-hook-refresher"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "five-gate-campaign-scaling-planner",
+   "items": [
+    "five-gate-campaign-scaling-planner",
+    "meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner",
+    "meta-scaling-campaign-planner",
+    "meta-set-up-a-bid-cap-campaign-planner"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "meta-account-structure-planner",
+   "items": [
+    "meta-account-structure-planner",
+    "clean-up-your-meta-account-and-rebuild-it-to-scale"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "meta-adding-new-ads-to-an-existing-campaign-planner",
+   "items": [
+    "meta-adding-new-ads-to-an-existing-campaign-planner",
+    "meta-setup-of-new-ad-campaigns-with-new-creatives-planner"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "meta-ads-weekly-account-keeper",
+   "items": [
+    "meta-ads-weekly-account-keeper",
+    "tiktok-ads-weekly-account-keeper"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "meta-manage-ads-on-a-daily-basis-planner",
+   "items": [
+    "meta-manage-ads-on-a-daily-basis-planner",
+    "meta-optimization-of-existing-ad-campaigns-planner"
+   ]
+  },
+  {
+   "job": "launch-and-scale-ads",
+   "start": "retargeting-ad-sequence-planner",
+   "items": [
+    "retargeting-ad-sequence-planner",
+    "win-back-visitors-who-did-not-buy-on-meta"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "change-rollout-planner",
+   "items": [
+    "change-rollout-planner",
+    "nonprofit-change-rollout-planner"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "feedback-conversation-planner",
+   "items": [
+    "feedback-conversation-planner",
+    "ask-for-feedback-then-give-it"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "five-whys-session-planner",
+   "items": [
+    "five-whys-session-planner",
+    "failure-root-cause"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "informed-captain-decisions",
+   "items": [
+    "informed-captain-decisions",
+    "team-goals-one-on-ones"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "team-culture-memo-writer",
+   "items": [
+    "team-culture-memo-writer",
+    "write-your-team-culture-memo-and-make-it-real-in-daily-habits"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "tough-feedback-note-drafter",
+   "items": [
+    "tough-feedback-note-drafter",
+    "hard-feedback-message-writer"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "turn-employee-feedback-into-owned-actions",
+   "items": [
+    "turn-employee-feedback-into-owned-actions",
+    "employee-feedback-action-review-assistant"
+   ]
+  },
+  {
+   "job": "lead-people",
+   "start": "word-for-word-no-writer",
+   "items": [
+    "word-for-word-no-writer",
+    "hard-no-planner"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "circled-flaw-image-ad-maker",
+   "items": [
+    "circled-flaw-image-ad-maker",
+    "empty-room-image-ad-maker"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "clay-scene-image-ad-maker",
+   "items": [
+    "clay-scene-image-ad-maker",
+    "clay-town-image-ad-maker",
+    "comic-strip-image-ad-maker",
+    "visual-twist-image-ad-maker"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "customer-quote-image-ad",
+   "items": [
+    "customer-quote-image-ad",
+    "quote-image-ads"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "ignored-reminders-image-ad-maker",
+   "items": [
+    "ignored-reminders-image-ad-maker",
+    "fact-caption-image-ad-maker",
+    "feared-outcome-image-ad-maker",
+    "leftover-mess-image-ad-maker",
+    "problem-moment-image-ad-maker",
+    "tracker-chart-image-ad-maker"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "image-ad-maker-with-exact-text",
+   "items": [
+    "image-ad-maker-with-exact-text",
+    "accurate-product-image-ad-maker",
+    "six-image-ad-prompt-set"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "image-ad-remake-planner",
+   "items": [
+    "image-ad-remake-planner",
+    "single-image-ad-planner"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "image-style-picker-for-story-ads",
+   "items": [
+    "image-style-picker-for-story-ads",
+    "story-ad-picture-brief-writer"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "sticky-note-image-ad-maker",
+   "items": [
+    "sticky-note-image-ad-maker",
+    "chat-screenshot-image-ad-maker",
+    "handwritten-note-image-ad-maker",
+    "odd-one-out-image-ad-maker",
+    "phone-note-image-ad",
+    "tried-before-image-ad"
+   ]
+  },
+  {
+   "job": "make-image-ads",
+   "start": "talking-object-image-ad-maker",
+   "items": [
+    "talking-object-image-ad-maker",
+    "3d-cutaway-image-ad-maker",
+    "knitted-wool-image-ad-maker",
+    "paper-craft-image-ad-maker",
+    "paper-cutout-image-ad-maker",
+    "watercolor-image-ad-maker"
+   ]
+  },
+  {
+   "job": "make-images",
+   "start": "article-cover-maker",
+   "items": [
+    "article-cover-maker",
+    "article-illustrator"
+   ]
+  },
+  {
+   "job": "make-images",
+   "start": "image-maker-and-editor",
+   "items": [
+    "image-maker-and-editor",
+    "fashion-scene-image-maker",
+    "gemini-image-and-video-maker"
+   ]
+  },
+  {
+   "job": "make-images",
+   "start": "marketing-image-prompt-writer",
+   "items": [
+    "marketing-image-prompt-writer",
+    "marketing-image-maker"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "after-sale-offer-planner",
+   "items": [
+    "after-sale-offer-planner",
+    "cart-and-checkout-upsell-planner"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "bonus-idea-matcher",
+   "items": [
+    "bonus-idea-matcher",
+    "bonus-stack-builder"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "front-end-offer-picker",
+   "items": [
+    "front-end-offer-picker",
+    "first-offer-new-buyers"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "gift-with-purchase-planner",
+   "items": [
+    "gift-with-purchase-planner",
+    "cart-bundle-and-gift-planner"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "lead-magnet-planner",
+   "items": [
+    "lead-magnet-planner",
+    "lead-offer-planner"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "offer-name-batch-writer",
+   "items": [
+    "offer-name-batch-writer",
+    "offer-name-writer"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "paid-first-step-planner",
+   "items": [
+    "paid-first-step-planner",
+    "turn-a-free-checker-into-leads-and-a-paid-first-step"
+   ]
+  },
+  {
+   "job": "make-offer",
+   "start": "subscription-payback-checker",
+   "items": [
+    "subscription-payback-checker",
+    "launch-a-subscription-offer-you-can-afford-to-fund"
+   ]
+  },
+  {
+   "job": "make-skills",
+   "start": "skill-making-guide",
+   "items": [
+    "skill-making-guide",
+    "repeat-job-skill-drafter"
+   ]
+  },
+  {
+   "job": "make-skills",
+   "start": "skill-trigger-auditor",
+   "items": [
+    "skill-trigger-auditor",
+    "skill-portability-checker"
+   ]
+  },
+  {
+   "job": "make-skills",
+   "start": "skill-writer",
+   "items": [
+    "skill-writer",
+    "skill-writer-and-reviewer"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "claymation-video-prompts",
+   "items": [
+    "claymation-video-prompts",
+    "clay-town-video-prompts",
+    "knitted-wool-video-prompts",
+    "skeleton-video-prompts",
+    "watercolor-video-prompts"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "founder-ad-shoot-planner",
+   "items": [
+    "founder-ad-shoot-planner",
+    "shoot-a-batch-of-founder-ads-in-one-afternoon"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "satisfying-motion-ad-script",
+   "items": [
+    "satisfying-motion-ad-script",
+    "knitted-wool-ad-script",
+    "motion-comic-ad-script",
+    "motion-graphics-ad-script",
+    "paper-craft-ad-script",
+    "paper-cutout-ad-script"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "selfie-style-ad-script",
+   "items": [
+    "selfie-style-ad-script",
+    "founder-video-ad-script-writer",
+    "phone-video-ad-scriptwriter",
+    "podcast-style-ad-script",
+    "quote-video-ad-script"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "selfie-style-video-prompts",
+   "items": [
+    "selfie-style-video-prompts",
+    "podcast-style-video-prompts",
+    "talking-object-video-prompts"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "short-film-ad-script",
+   "items": [
+    "short-film-ad-script",
+    "3d-explainer-video-script",
+    "animated-video-ad-script",
+    "clay-town-video-ad-script-writer",
+    "long-form-video-ad-script-writer"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "short-film-video-prompts",
+   "items": [
+    "short-film-video-prompts",
+    "animated-video-ad-prompts",
+    "anime-video-clip-prompt-writer",
+    "motion-comic-video-prompts",
+    "paper-craft-video-prompts",
+    "paper-cutout-video-prompts"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "spoken-video-ad-opening-writer",
+   "items": [
+    "spoken-video-ad-opening-writer",
+    "wordless-video-ad-opening-writer"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "talking-object-ad-script",
+   "items": [
+    "talking-object-ad-script",
+    "anime-video-ad-script-writer",
+    "claymation-ad-script",
+    "jingle-video-ad-script-writer",
+    "skeleton-video-ad-script-writer",
+    "watercolor-ad-script"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "video-ad-edit-planner",
+   "items": [
+    "video-ad-edit-planner",
+    "video-ad-text-overlays"
+   ]
+  },
+  {
+   "job": "make-video-ads",
+   "start": "video-ad-format-picker",
+   "items": [
+    "video-ad-format-picker",
+    "video-ad-script-angle-chooser",
+    "video-ad-script-type-picker"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "account-reconciler",
+   "items": [
+    "account-reconciler",
+    "ledger-to-subledger-reconciler"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "check-supplier-invoices-before-approval",
+   "items": [
+    "check-supplier-invoices-before-approval",
+    "recurring-invoice-exception-review-assistant"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "explain-inventory-accounting-margin-effects",
+   "items": [
+    "explain-inventory-accounting-margin-effects",
+    "inventory-accounting-comparability-review-assistant"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "financial-statement-builder",
+   "items": [
+    "financial-statement-builder",
+    "financial-statement-preparer"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "journal-entry-drafter",
+   "items": [
+    "journal-entry-drafter",
+    "journal-entry-preparer"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "month-end-close-planner",
+   "items": [
+    "month-end-close-planner",
+    "month-end-close-day-planner"
+   ]
+  },
+  {
+   "job": "manage-accounting",
+   "start": "reconcile-basic-and-diluted-issuer-eps",
+   "items": [
+    "reconcile-basic-and-diluted-issuer-eps",
+    "issuer-eps-reconciliation-review-assistant"
+   ]
+  },
+  {
+   "job": "manage-it",
+   "start": "build-a-backup-recovery-rehearsal",
+   "items": [
+    "build-a-backup-recovery-rehearsal",
+    "recovery-rehearsal-evidence-assistant"
+   ]
+  },
+  {
+   "job": "manage-personal-finances",
+   "start": "big-purchase-pause-check",
+   "items": [
+    "big-purchase-pause-check",
+    "spending-story-reviewer"
+   ]
+  },
+  {
+   "job": "manage-projects",
+   "start": "agency-project-management-project-shepherd",
+   "items": [
+    "agency-project-management-project-shepherd",
+    "agency-project-management-studio-producer"
+   ]
+  },
+  {
+   "job": "manage-projects",
+   "start": "prepare-a-client-scope-change-brief",
+   "items": [
+    "prepare-a-client-scope-change-brief",
+    "client-scope-decision-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "build-a-clean-surplus-residual-income-model",
+   "items": [
+    "build-a-clean-surplus-residual-income-model",
+    "common-equity-residual-income-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "business-value-range-calculator",
+   "items": [
+    "business-value-range-calculator",
+    "earnings-value-range-builder"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "buyout-returns-modeler",
+   "items": [
+    "buyout-returns-modeler",
+    "deal-returns-sensitivity-builder"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "cash-and-pik-interest-checker",
+   "items": [
+    "cash-and-pik-interest-checker",
+    "construction-interest-schedule-builder"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "check-adviser-fees-in-seller-proceeds",
+   "items": [
+    "check-adviser-fees-in-seller-proceeds",
+    "reconcile-seller-closing-cash",
+    "seller-closing-revision-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "check-management-payout-and-sponsor-receipts",
+   "items": [
+    "check-management-payout-and-sponsor-receipts",
+    "sponsor-receipt-timing-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "currency-exposure-netting-checker",
+   "items": [
+    "currency-exposure-netting-checker",
+    "currency-maturity-evidence-reviewer",
+    "reconcile-currency-exposure-and-settlement"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "debt-cash-sweep-checker",
+   "items": [
+    "debt-cash-sweep-checker",
+    "review-sponsor-debt-cash-demands"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "debt-reserve-rollforward-builder",
+   "items": [
+    "debt-reserve-rollforward-builder",
+    "reconcile-project-reserves-and-payment-priority"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "debt-service-covenant-headroom-checker",
+   "items": [
+    "debt-service-covenant-headroom-checker",
+    "debt-service-covenant-evidence-reviewer",
+    "loan-life-cash-cover-checker"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "due-diligence-checklist-builder",
+   "items": [
+    "due-diligence-checklist-builder",
+    "acquisition-due-diligence"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "earnings-preview-writer",
+   "items": [
+    "earnings-preview-writer",
+    "earnings-recap-writer"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "earnout-payout-checker",
+   "items": [
+    "earnout-payout-checker",
+    "check-an-escrow-funded-earnout"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "fixed-charge-coverage-bridge-builder",
+   "items": [
+    "fixed-charge-coverage-bridge-builder",
+    "review-contractual-debt-service-cash-tests"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "inventory-borrowing-base-builder",
+   "items": [
+    "inventory-borrowing-base-builder",
+    "receivables-borrowing-base-builder"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "investment-property-nav-bridge",
+   "items": [
+    "investment-property-nav-bridge",
+    "reconcile-property-nav-and-book-value"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "locked-box-leakage-checker",
+   "items": [
+    "locked-box-leakage-checker",
+    "locked-box-recovery-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "management-fee-stepdown-checker",
+   "items": [
+    "management-fee-stepdown-checker",
+    "fund-fee-revision-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "net-leverage-covenant-checker",
+   "items": [
+    "net-leverage-covenant-checker",
+    "leverage-covenant-change-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "no-catchup-waterfall-checker",
+   "items": [
+    "no-catchup-waterfall-checker",
+    "check-a-no-catchup-fund-distribution"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "nonparticipating-preference-checker",
+   "items": [
+    "nonparticipating-preference-checker",
+    "capped-participation-checker",
+    "compare-preferred-exit-payout-terms"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "one-off-items-separator",
+   "items": [
+    "one-off-items-separator",
+    "real-earning-power"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "price-versus-value-gap-judge",
+   "items": [
+    "price-versus-value-gap-judge",
+    "stock-margin-of-safety"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "project-cash-available-bridge",
+   "items": [
+    "project-cash-available-bridge",
+    "bridge-availability-payments-into-project-cash"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "reconcile-conglomerate-valuation-perimeters",
+   "items": [
+    "reconcile-conglomerate-valuation-perimeters",
+    "conglomerate-perimeter-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "refinancing-closing-cost-checker",
+   "items": [
+    "refinancing-closing-cost-checker",
+    "refinancing-payoff-revision-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "review-equity-valuation-sensitivity-assumptions",
+   "items": [
+    "review-equity-valuation-sensitivity-assumptions",
+    "equity-assumption-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "revolver-availability-checker",
+   "items": [
+    "revolver-availability-checker",
+    "borrowing-base-evidence-reviewer"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "rollover-equity-ownership-checker",
+   "items": [
+    "rollover-equity-ownership-checker",
+    "separate-rollover-and-management-incentives"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "secondary-nav-price-checker",
+   "items": [
+    "secondary-nav-price-checker",
+    "check-secondary-purchase-cash-exposure"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "separate-pension-cost-funding-and-remeasurement",
+   "items": [
+    "separate-pension-cost-funding-and-remeasurement",
+    "issuer-pension-evidence-review-assistant"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "stock-and-bond-split-planner",
+   "items": [
+    "stock-and-bond-split-planner",
+    "investing-style-split"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "subscription-line-timing-checker",
+   "items": [
+    "subscription-line-timing-checker",
+    "review-a-fund-bridge-and-hurdle"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "terminal-growth-reinvestment-consistency",
+   "items": [
+    "terminal-growth-reinvestment-consistency",
+    "implied-terminal-reinvestment"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "toll-revenue-ramp-model-builder",
+   "items": [
+    "toll-revenue-ramp-model-builder",
+    "connect-toll-operating-cash-to-debt-repayment"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "transaction-fee-offset-checker",
+   "items": [
+    "transaction-fee-offset-checker",
+    "reconcile-private-fund-fee-charges"
+   ]
+  },
+  {
+   "job": "money-and-investing",
+   "start": "unfunded-commitment-checker",
+   "items": [
+    "unfunded-commitment-checker",
+    "fund-commitment-change-assistant",
+    "reconcile-a-private-fund-capital-call"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "brain-dump-sorter",
+   "items": [
+    "brain-dump-sorter",
+    "brain-dump-organizer"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "check-a-catering-order-before-service",
+   "items": [
+    "check-a-catering-order-before-service",
+    "catering-order-change-review-assistant"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "executive-daily-digest",
+   "items": [
+    "executive-daily-digest",
+    "prepare-your-executive-day"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "meeting-minutes-writer",
+   "items": [
+    "meeting-minutes-writer",
+    "agency-project-management-meeting-notes-specialist",
+    "copilot-meeting-minutes",
+    "rough-notes-to-minutes-writer"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "notion-research-writer",
+   "items": [
+    "notion-research-writer",
+    "notion-wiki-writer"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "prepare-a-construction-variation-decision",
+   "items": [
+    "prepare-a-construction-variation-decision",
+    "construction-variation-review-assistant"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "prepare-a-referral-administration-handover",
+   "items": [
+    "prepare-a-referral-administration-handover",
+    "referral-administration-evidence-review-assistant"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "prepare-a-restaurant-shift-handover",
+   "items": [
+    "prepare-a-restaurant-shift-handover",
+    "restaurant-shift-exception-review-assistant"
+   ]
+  },
+  {
+   "job": "organise-work",
+   "start": "prepare-a-team-absence-handover",
+   "items": [
+    "prepare-a-team-absence-handover",
+    "weekly-team-coverage-review-assistant"
+   ]
+  },
+  {
+   "job": "plan-ad-tests",
+   "start": "creative-volume-planner",
+   "items": [
+    "creative-volume-planner",
+    "sale-creative-volume-planner"
+   ]
+  },
+  {
+   "job": "plan-ad-tests",
+   "start": "funnel-stage-creative-brief-builder",
+   "items": [
+    "funnel-stage-creative-brief-builder",
+    "creative-brief-writer"
+   ]
+  },
+  {
+   "job": "plan-ad-tests",
+   "start": "keyed-headline-test-planner",
+   "items": [
+    "keyed-headline-test-planner",
+    "headline-test"
+   ]
+  },
+  {
+   "job": "plan-ad-tests",
+   "start": "small-budget-ad-test-planner",
+   "items": [
+    "small-budget-ad-test-planner",
+    "small-launch-test-planner",
+    "small-test-and-rollout-planner"
+   ]
+  },
+  {
+   "job": "plan-ad-tests",
+   "start": "story-ad-test-planner",
+   "items": [
+    "story-ad-test-planner",
+    "meta-concept-diversity-test-planner",
+    "meta-test-campaign-planner"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "cash-pool-interest-allocator",
+   "items": [
+    "cash-pool-interest-allocator",
+    "reconcile-cash-pool-interest-and-fees"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "completion-funding-gap-checker",
+   "items": [
+    "completion-funding-gap-checker",
+    "construction-funding-evidence-reviewer"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "connect-production-yield-to-mix-contribution",
+   "items": [
+    "connect-production-yield-to-mix-contribution",
+    "production-contribution-evidence-reviewer"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "financial-model-builder",
+   "items": [
+    "financial-model-builder",
+    "linked-financial-model-builder",
+    "startup-financial-model-builder",
+    "store-financial-model-builder"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "fleet-replacement-cash-comparer",
+   "items": [
+    "fleet-replacement-cash-comparer",
+    "compare-transport-cash-and-fleet-replacement"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "hotel-channel-revenue-reconciler",
+   "items": [
+    "hotel-channel-revenue-reconciler",
+    "reconcile-hotel-room-and-food-contribution"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "project-debt-cash-evidence-reviewer",
+   "items": [
+    "project-debt-cash-evidence-reviewer",
+    "project-reserve-evidence-reviewer"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "separate-financing-effects-from-operating-cash",
+   "items": [
+    "separate-financing-effects-from-operating-cash",
+    "operating-cash-financing-review-assistant"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "startup-runway-forecaster",
+   "items": [
+    "startup-runway-forecaster",
+    "forecast-your-startup-runway-and-prepare-a-finance-pack"
+   ]
+  },
+  {
+   "job": "plan-budgets-and-cash",
+   "start": "treasury-forecast-backtest-checker",
+   "items": [
+    "treasury-forecast-backtest-checker",
+    "treasury-settlement-evidence-reviewer"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "90-day-plan-builder",
+   "items": [
+    "90-day-plan-builder",
+    "check-your-strategy-then-turn-it-into-a-90-day-plan"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "brand-and-sales-budget-splitter",
+   "items": [
+    "brand-and-sales-budget-splitter",
+    "brand-sales-budget-split"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "content-topic-planner",
+   "items": [
+    "content-topic-planner",
+    "content-strategy-planner"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "copilot-gtm-developer-ecosystem",
+   "items": [
+    "copilot-gtm-developer-ecosystem",
+    "build-a-developer-partner-program"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "copilot-gtm-positioning-strategy",
+   "items": [
+    "copilot-gtm-positioning-strategy",
+    "marketing-strategy-advisor"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "event-marketing-planner",
+   "items": [
+    "event-marketing-planner",
+    "marketing-plan-writer",
+    "one-page-marketing-plan-builder"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "find-your-saas-growth-channel",
+   "items": [
+    "find-your-saas-growth-channel",
+    "find-your-business-growth-channel"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "give-up-list-planner",
+   "items": [
+    "give-up-list-planner",
+    "strategy-trade-off-planner"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "launch-teaser-to-preview-planner",
+   "items": [
+    "launch-teaser-to-preview-planner",
+    "brand-launch-planner"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "nonprofit-program-expansion-planner",
+   "items": [
+    "nonprofit-program-expansion-planner",
+    "nonprofit-program-outcome-planner"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "okr-goal-writer",
+   "items": [
+    "okr-goal-writer",
+    "okr-writer"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "one-goal-marketing-plan-builder",
+   "items": [
+    "one-goal-marketing-plan-builder",
+    "fix-your-marketing-plan-and-cut-it-to-one-goal"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "one-line-position-writer",
+   "items": [
+    "one-line-position-writer",
+    "positioning-statement-writer"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "process-waste-finder",
+   "items": [
+    "process-waste-finder",
+    "process-waste-cause"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "publicity-first-launch-planner",
+   "items": [
+    "publicity-first-launch-planner",
+    "new-category-launch"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "traction-affiliate-programs",
+   "items": [
+    "traction-affiliate-programs",
+    "traction-offline-ads"
+   ]
+  },
+  {
+   "job": "plan-strategy",
+   "start": "traction-channel-ranker",
+   "items": [
+    "traction-channel-ranker",
+    "traction-research-agent"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "cost-per-sellable-unit-finder",
+   "items": [
+    "cost-per-sellable-unit-finder",
+    "landed-cost-calculator"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "explain-a-warehouse-stock-count-variance",
+   "items": [
+    "explain-a-warehouse-stock-count-variance",
+    "warehouse-count-discrepancy-review-assistant"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "food-supply-chain-planner",
+   "items": [
+    "food-supply-chain-planner",
+    "supply-chain-backup-plan-builder"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "multi-stop-route-planner",
+   "items": [
+    "multi-stop-route-planner",
+    "multi-warehouse-route-planner",
+    "return-pickup-route-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "picking-batch-planner",
+   "items": [
+    "picking-batch-planner",
+    "warehouse-picker-route-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "prepare-a-supplier-corrective-action-review",
+   "items": [
+    "prepare-a-supplier-corrective-action-review",
+    "supplier-correction-evidence-review-assistant"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "production-plan-builder",
+   "items": [
+    "production-plan-builder",
+    "production-schedule-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "rod-and-pipe-cutting-planner",
+   "items": [
+    "rod-and-pipe-cutting-planner",
+    "sheet-cutting-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "shelf-layout-planner",
+   "items": [
+    "shelf-layout-planner",
+    "warehouse-layout-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "store-delivery-route-planner",
+   "items": [
+    "store-delivery-route-planner",
+    "delivery-route-planner",
+    "delivery-time-slot-route-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "supplier-order-splitter",
+   "items": [
+    "supplier-order-splitter",
+    "set-your-order-size-and-split-it-across-suppliers"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "truck-load-builder",
+   "items": [
+    "truck-load-builder",
+    "truck-loading-planner"
+   ]
+  },
+  {
+   "job": "plan-supply-chain",
+   "start": "warehouse-location-planner",
+   "items": [
+    "warehouse-location-planner",
+    "warehouse-stock-level-planner"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "ai-product-photo-inspector",
+   "items": [
+    "ai-product-photo-inspector",
+    "product-page-image-checker"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "eight-picture-product-page-planner",
+   "items": [
+    "eight-picture-product-page-planner",
+    "product-page-gallery-planner"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "fabric-close-up-maker",
+   "items": [
+    "fabric-close-up-maker",
+    "fabric-swap-sample-maker"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "marketplace-photo-rule-checker",
+   "items": [
+    "marketplace-photo-rule-checker",
+    "make-matching-photos-for-a-product-sheet-and-check-them"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "phone-product-photoshoot",
+   "items": [
+    "phone-product-photoshoot",
+    "three-look-product-photos"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "photo-product-gallery",
+   "items": [
+    "photo-product-gallery",
+    "product-gallery-answers"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "product-background-swapper",
+   "items": [
+    "product-background-swapper",
+    "product-photo-set-builder"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "product-shot-list-writer",
+   "items": [
+    "product-shot-list-writer",
+    "product-shoot-brief-writer"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "reference-product-photos",
+   "items": [
+    "reference-product-photos",
+    "flash-product-photos",
+    "product-photo-batch-maker"
+   ]
+  },
+  {
+   "job": "product-photos",
+   "start": "virtual-try-on-photo-maker",
+   "items": [
+    "virtual-try-on-photo-maker",
+    "accessory-try-on-photo-maker",
+    "social-post-photo-maker"
+   ]
+  },
+  {
+   "job": "protect-your-store",
+   "start": "fraud-rules-setter",
+   "items": [
+    "fraud-rules-setter",
+    "stop-fake-orders-card-testing-and-bot-abuse"
+   ]
+  },
+  {
+   "job": "protect-your-store",
+   "start": "store-script-and-app-risk-auditor",
+   "items": [
+    "store-script-and-app-risk-auditor",
+    "cut-risky-apps-and-scripts-from-your-store"
+   ]
+  },
+  {
+   "job": "protect-your-store",
+   "start": "store-security-checkup",
+   "items": [
+    "store-security-checkup",
+    "quarterly-store-security-keeper"
+   ]
+  },
+  {
+   "job": "raise-funding",
+   "start": "convertible-note-interest-checker",
+   "items": [
+    "convertible-note-interest-checker",
+    "cap-and-discount-conversion-checker",
+    "check-a-convertible-note-conversion",
+    "note-conversion-revision-assistant"
+   ]
+  },
+  {
+   "job": "raise-funding",
+   "start": "debt-maturity-funding-ladder",
+   "items": [
+    "debt-maturity-funding-ladder",
+    "maturity-funding-evidence-reviewer",
+    "review-maturity-funding-and-credit-limits"
+   ]
+  },
+  {
+   "job": "raise-funding",
+   "start": "post-money-safe-ownership-checker",
+   "items": [
+    "post-money-safe-ownership-checker",
+    "check-a-safe-into-priced-financing",
+    "safe-financing-revision-assistant"
+   ]
+  },
+  {
+   "job": "raise-funding",
+   "start": "weighted-average-antidilution-checker",
+   "items": [
+    "weighted-average-antidilution-checker",
+    "review-a-down-round-rights-change"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "ad-results-brief-writer",
+   "items": [
+    "ad-results-brief-writer",
+    "ad-results-report-writer"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "campaign-keep-or-change-checker",
+   "items": [
+    "campaign-keep-or-change-checker",
+    "ad-works-check"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "meta-campaign-purpose-checker",
+   "items": [
+    "meta-campaign-purpose-checker",
+    "meta-ads-daily-checker"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "monthly-channel-budget-reviewer",
+   "items": [
+    "monthly-channel-budget-reviewer",
+    "move-budget-by-buyer-answers-then-catch-fading-channels"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "seventeen-section-advertising-report-writer",
+   "items": [
+    "seventeen-section-advertising-report-writer",
+    "marketing-performance-report"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "six-pattern-ad-performance-diagnoser",
+   "items": [
+    "six-pattern-ad-performance-diagnoser",
+    "ad-performance-diagnoser",
+    "ad-sales-drop-analyst"
+   ]
+  },
+  {
+   "job": "read-ad-results",
+   "start": "tiktok-ads-account-auditor",
+   "items": [
+    "tiktok-ads-account-auditor",
+    "ad-account-audit",
+    "google-ads-account-auditor",
+    "linkedin-ads-account-auditor",
+    "microsoft-ads-account-auditor"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "cell-direction-velocity-analyst",
+   "items": [
+    "cell-direction-velocity-analyst",
+    "single-cell-rna-pipeline"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "cited-research-report-writer",
+   "items": [
+    "cited-research-report-writer",
+    "gemini-research-report-writer",
+    "market-research-report-writer"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "compare-conflicting-research-findings",
+   "items": [
+    "compare-conflicting-research-findings",
+    "research-contradiction-review-assistant"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "manuscript-peer-review-drafter",
+   "items": [
+    "manuscript-peer-review-drafter",
+    "review-a-paper-and-write-a-fair-peer-review"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "map-journal-reviewer-requests-to-evidence",
+   "items": [
+    "map-journal-reviewer-requests-to-evidence",
+    "reviewer-response-progress-assistant"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "research-a-question-and-write-a-cited-report",
+   "items": [
+    "research-a-question-and-write-a-cited-report",
+    "cited-research-assistant"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "research-question-outliner",
+   "items": [
+    "research-question-outliner",
+    "research-outline-builder"
+   ]
+  },
+  {
+   "job": "research-topics",
+   "start": "study-headline-claim-checker",
+   "items": [
+    "study-headline-claim-checker",
+    "study-claim-checker"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "bestseller-shopping-campaign-builder",
+   "items": [
+    "bestseller-shopping-campaign-builder",
+    "shopping-campaign-tuner"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "branded-campaigns-builder",
+   "items": [
+    "branded-campaigns-builder",
+    "problem-aware-search-campaign-builder"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "demand-gen-cold-campaign-builder",
+   "items": [
+    "demand-gen-cold-campaign-builder",
+    "add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "google-ads-launch-planner",
+   "items": [
+    "google-ads-launch-planner",
+    "google-ads-campaign-structure-planner"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "google-ads-purchase-tracking-checker",
+   "items": [
+    "google-ads-purchase-tracking-checker",
+    "google-ads-store-account-auditor"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "google-ads-scale-gate-checker",
+   "items": [
+    "google-ads-scale-gate-checker",
+    "youtube-readiness-checker"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "performance-max-routine-keeper",
+   "items": [
+    "performance-max-routine-keeper",
+    "google-ads-weekly-account-keeper"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "search-term-junk-sorter",
+   "items": [
+    "search-term-junk-sorter",
+    "search-term-sorter"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "shopify-google-conversion-tracking-builder",
+   "items": [
+    "shopify-google-conversion-tracking-builder",
+    "launch-google-ads-with-trusted-tracking-and-a-clean-feed"
+   ]
+  },
+  {
+   "job": "run-google-ads",
+   "start": "shopping-title-rewriter",
+   "items": [
+    "shopping-title-rewriter",
+    "shopping-feed-title-writer"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "90-day-marketing-plan",
+   "items": [
+    "90-day-marketing-plan",
+    "online-store-marketing-planner"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "agency-marketing-china-ecommerce-operator",
+   "items": [
+    "agency-marketing-china-ecommerce-operator",
+    "agency-marketing-cross-border-ecommerce"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "amazon-brand-protection-planner",
+   "items": [
+    "amazon-brand-protection-planner",
+    "store-brand-protection-planner"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "amazon-product-edge-finder",
+   "items": [
+    "amazon-product-edge-finder",
+    "store-product-edge-finder"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "amazon-seller-profit-calculator",
+   "items": [
+    "amazon-seller-profit-calculator",
+    "online-store-profit-calculator"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "customer-note-bulk-adder",
+   "items": [
+    "customer-note-bulk-adder",
+    "customer-tag-bulk-updater"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "customer-record-merger",
+   "items": [
+    "customer-record-merger",
+    "duplicate-customer-finder"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "delivery-time-analyzer",
+   "items": [
+    "delivery-time-analyzer",
+    "carrier-performance-comparer"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "inventory-value-calculator",
+   "items": [
+    "inventory-value-calculator",
+    "inventory-value-report-builder"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "lapsed-customer-finder",
+   "items": [
+    "lapsed-customer-finder",
+    "vip-customer-finder"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "product-tag-bulk-editor",
+   "items": [
+    "product-tag-bulk-editor",
+    "product-field-bulk-editor"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "reorder-quantity-planner",
+   "items": [
+    "reorder-quantity-planner",
+    "stock-and-reorder-planner"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "return-reason-finder",
+   "items": [
+    "return-reason-finder",
+    "return-request-creator"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "stock-count-updater",
+   "items": [
+    "stock-count-updater",
+    "stock-transfer-mover"
+   ]
+  },
+  {
+   "job": "run-your-store",
+   "start": "support-hiring-date-planner",
+   "items": [
+    "support-hiring-date-planner",
+    "support-capacity-planner"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "aws-security-checker",
+   "items": [
+    "aws-security-checker",
+    "security-posture-auditor"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "diff-security-skimmer",
+   "items": [
+    "diff-security-skimmer",
+    "code-security-reviewer",
+    "code-security-scanner",
+    "security-focused-change-reviewer"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "django-access-control-auditor",
+   "items": [
+    "django-access-control-auditor",
+    "marketplace-access-auditor"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "gdpr-audit-prep-coach",
+   "items": [
+    "gdpr-audit-prep-coach",
+    "iso-27001-audit-prep-coach"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "gdpr-privacy-checker",
+   "items": [
+    "gdpr-privacy-checker",
+    "copilot-gdpr-compliant"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "github-actions-attack-finder",
+   "items": [
+    "github-actions-attack-finder",
+    "ai-workflow-security-checker",
+    "copilot-github-actions-hardening"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "skill-safety-auditor",
+   "items": [
+    "skill-safety-auditor",
+    "skill-safety-reviewer"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "soc-2-readiness-checker",
+   "items": [
+    "soc-2-readiness-checker",
+    "soc-2-readiness-planner"
+   ]
+  },
+  {
+   "job": "secure-code",
+   "start": "threat-modeler",
+   "items": [
+    "threat-modeler",
+    "copilot-threat-model-analyst",
+    "threat-model-writer"
+   ]
+  },
+  {
+   "job": "sell-and-negotiate",
+   "start": "deal-health-reviewer",
+   "items": [
+    "deal-health-reviewer",
+    "deal-desk-reviewer"
+   ]
+  },
+  {
+   "job": "sell-and-negotiate",
+   "start": "negotiation-call-prep-planner",
+   "items": [
+    "negotiation-call-prep-planner",
+    "negotiation-prep-coach"
+   ]
+  },
+  {
+   "job": "sell-on-amazon",
+   "start": "amazon-listing-first-draft-writer",
+   "items": [
+    "amazon-listing-first-draft-writer",
+    "amazon-listing-writer"
+   ]
+  },
+  {
+   "job": "sell-on-amazon",
+   "start": "amazon-unit-profit-checker",
+   "items": [
+    "amazon-unit-profit-checker",
+    "amazon-fee-and-margin-checker"
+   ]
+  },
+  {
+   "job": "set-prices",
+   "start": "discount-wording-planner",
+   "items": [
+    "discount-wording-planner",
+    "sale-price-wording-picker"
+   ]
+  },
+  {
+   "job": "set-prices",
+   "start": "price-presentation-planner",
+   "items": [
+    "price-presentation-planner",
+    "resale-store-pricing-and-layout-planner"
+   ]
+  },
+  {
+   "job": "set-prices",
+   "start": "pricing-model-designer",
+   "items": [
+    "pricing-model-designer",
+    "usage-pricing-designer"
+   ]
+  },
+  {
+   "job": "set-prices",
+   "start": "saas-pricing-designer",
+   "items": [
+    "saas-pricing-designer",
+    "pricing-strategist"
+   ]
+  },
+  {
+   "job": "set-prices",
+   "start": "willingness-to-pay-survey",
+   "items": [
+    "willingness-to-pay-survey",
+    "willingness-to-pay-pricing"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "copilot-mcp-implementation-security-review",
+   "items": [
+    "copilot-mcp-implementation-security-review",
+    "copilot-mcp-security-audit"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "google-results-review-agent",
+   "items": [
+    "google-results-review-agent",
+    "meta-results-review-agent"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "job-to-agent-goal-writer",
+   "items": [
+    "job-to-agent-goal-writer",
+    "agent-goal-writer"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "me-md-builder",
+   "items": [
+    "me-md-builder",
+    "make-your-me-md-and-set-it-up-in-every-ai",
+    "me-md-refresher",
+    "me-md-short-core-writer"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "prepare-an-ai-pilot-go-decision",
+   "items": [
+    "prepare-an-ai-pilot-go-decision",
+    "ai-pilot-evaluation-review-assistant"
+   ]
+  },
+  {
+   "job": "set-up-ai",
+   "start": "repeatable-ai-loop-designer",
+   "items": [
+    "repeatable-ai-loop-designer",
+    "agent-loop-designer"
+   ]
+  },
+  {
+   "job": "set-up-store",
+   "start": "agency-engineering-drupal-shopping-cart",
+   "items": [
+    "agency-engineering-drupal-shopping-cart",
+    "agency-engineering-wordpress-shopping-cart"
+   ]
+  },
+  {
+   "job": "set-up-store",
+   "start": "ai-store-build-planner",
+   "items": [
+    "ai-store-build-planner",
+    "plan-your-store-pages-and-get-a-safe-ai-build-plan"
+   ]
+  },
+  {
+   "job": "set-up-store",
+   "start": "shopify-store-setup-planner",
+   "items": [
+    "shopify-store-setup-planner",
+    "shopify-markets-setup-planner",
+    "store-tax-setup-planner",
+    "woocommerce-store-setup-planner"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "copilot-aws-cost-optimize",
+   "items": [
+    "copilot-aws-cost-optimize",
+    "copilot-az-cost-optimize"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "copilot-aws-resource-health-diagnose",
+   "items": [
+    "copilot-aws-resource-health-diagnose",
+    "copilot-azure-resource-health-diagnose"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "copilot-aws-well-architected-review",
+   "items": [
+    "copilot-aws-well-architected-review",
+    "copilot-azure-well-architected-review"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "copilot-qdrant-monitoring",
+   "items": [
+    "copilot-qdrant-monitoring",
+    "monitoring-system-planner"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "deploy-verifier",
+   "items": [
+    "deploy-verifier",
+    "release-a-new-version-and-prove-it-is-live"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "domain-redirect-layout-planner",
+   "items": [
+    "domain-redirect-layout-planner",
+    "domain-and-dns-planner"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "netlify-publisher",
+   "items": [
+    "netlify-publisher",
+    "render-publisher"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "release-day-rollback-planner",
+   "items": [
+    "release-day-rollback-planner",
+    "safe-release-planner"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "release-proof-checker",
+   "items": [
+    "release-proof-checker",
+    "release-manager"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "reliability-target-setter",
+   "items": [
+    "reliability-target-setter",
+    "service-target-planner"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "review-aws-cost-and-resilience",
+   "items": [
+    "review-aws-cost-and-resilience",
+    "review-azure-cost-and-resilience"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "ship-readiness-gate",
+   "items": [
+    "ship-readiness-gate",
+    "release-readiness-reviewer"
+   ]
+  },
+  {
+   "job": "ship-and-host",
+   "start": "vercel-publisher",
+   "items": [
+    "vercel-publisher",
+    "vercel-deployer"
+   ]
+  },
+  {
+   "job": "speak-and-persuade",
+   "start": "figures-to-plain-pictures-writer",
+   "items": [
+    "figures-to-plain-pictures-writer",
+    "number-to-picture-translator"
+   ]
+  },
+  {
+   "job": "speak-and-persuade",
+   "start": "lesson-talk-writer",
+   "items": [
+    "lesson-talk-writer",
+    "launch-talk-writer"
+   ]
+  },
+  {
+   "job": "speak-and-persuade",
+   "start": "stress-test-a-case-competition-recommendation",
+   "items": [
+    "stress-test-a-case-competition-recommendation",
+    "case-competition-evidence-review-assistant"
+   ]
+  },
+  {
+   "job": "speak-and-persuade",
+   "start": "traction-offline-events",
+   "items": [
+    "traction-offline-events",
+    "traction-speaking-engagements"
+   ]
+  },
+  {
+   "job": "speed-up-store",
+   "start": "agency-engineering-drupal-performance",
+   "items": [
+    "agency-engineering-drupal-performance",
+    "agency-engineering-wordpress-performance"
+   ]
+  },
+  {
+   "job": "speed-up-store",
+   "start": "speed-budget-and-sale-check",
+   "items": [
+    "speed-budget-and-sale-check",
+    "get-your-store-ready-for-a-big-sale-day"
+   ]
+  },
+  {
+   "job": "speed-up-store",
+   "start": "store-speed-report-reader",
+   "items": [
+    "store-speed-report-reader",
+    "speed-report-translator"
+   ]
+  },
+  {
+   "job": "study-and-practice",
+   "start": "personal-study-notebook",
+   "items": [
+    "personal-study-notebook",
+    "study-notebook-review"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "ad-library-teardown-writer",
+   "items": [
+    "ad-library-teardown-writer",
+    "competitor-ad-teardown-writer"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "competitor-ad-theme-and-gap-mapper",
+   "items": [
+    "competitor-ad-theme-and-gap-mapper",
+    "competitor-ad-gap-finder"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "competitor-idea-video-script",
+   "items": [
+    "competitor-idea-video-script",
+    "competitor-video-ad-script"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "competitor-messaging-comparer",
+   "items": [
+    "competitor-messaging-comparer",
+    "rival-store-comparer"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "competitor-product-analyst",
+   "items": [
+    "competitor-product-analyst",
+    "competitor-product-review-writer"
+   ]
+  },
+  {
+   "job": "study-competitors",
+   "start": "rival-matchup-scorer",
+   "items": [
+    "rival-matchup-scorer",
+    "rival-go-no-go"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "accessible-lesson-auditor",
+   "items": [
+    "accessible-lesson-auditor",
+    "overloaded-lesson-checker"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "argument-writing-scaffold-maker",
+   "items": [
+    "argument-writing-scaffold-maker",
+    "subject-writing-frame-maker"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "classroom-nature-layout-planner",
+   "items": [
+    "classroom-nature-layout-planner",
+    "classroom-layout-redesigner"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "critical-thinking-task-writer",
+   "items": [
+    "critical-thinking-task-writer",
+    "subject-thinking-task-writer"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "group-knowledge-task",
+   "items": [
+    "group-knowledge-task",
+    "group-work-task-planner"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "lesson-opener-planner",
+   "items": [
+    "lesson-opener-planner",
+    "prompt-quality-lesson-planner"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "lesson-understanding-check",
+   "items": [
+    "lesson-understanding-check",
+    "understanding-check-picker"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "nature-inquiry-cycle",
+   "items": [
+    "nature-inquiry-cycle",
+    "nature-inquiry-unit"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "revision-schedule-planner",
+   "items": [
+    "revision-schedule-planner",
+    "plan-a-unit-from-the-end-goal-and-schedule-the-revision"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "self-explanation-question-writer",
+   "items": [
+    "self-explanation-question-writer",
+    "why-and-how-question-writer"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "student-work-marking-desk",
+   "items": [
+    "student-work-marking-desk",
+    "mark-student-work-against-a-rubric-and-sharpen-your-feedback"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "who-wrote-it-lesson",
+   "items": [
+    "who-wrote-it-lesson",
+    "compare-sources-lesson",
+    "primary-source-lesson"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "worked-example-practice",
+   "items": [
+    "worked-example-practice",
+    "online-worked-example-builder"
+   ]
+  },
+  {
+   "job": "teach-and-train",
+   "start": "written-feedback-checker",
+   "items": [
+    "written-feedback-checker",
+    "ai-feedback-quality-checker"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "build-risk-reviewer",
+   "items": [
+    "build-risk-reviewer",
+    "product-idea-risk-checker"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "business-model-guess-tester",
+   "items": [
+    "business-model-guess-tester",
+    "plan-assumption-tests",
+    "riskiest-guess-test"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "guess-test-metrics",
+   "items": [
+    "guess-test-metrics",
+    "test-your-ideas-riskiest-risk-and-decide-what-next"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "one-change-experiment-planner",
+   "items": [
+    "one-change-experiment-planner",
+    "mvp-experiment-planner",
+    "thought-experiment-planner"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "plan-guess-ranker",
+   "items": [
+    "plan-guess-ranker",
+    "assumption-stress-test"
+   ]
+  },
+  {
+   "job": "test-an-idea",
+   "start": "two-day-paid-ask-planner",
+   "items": [
+    "two-day-paid-ask-planner",
+    "five-day-idea-test-planner"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "agency-engineering-section-508-specialist",
+   "items": [
+    "agency-engineering-section-508-specialist",
+    "agency-testing-accessibility-auditor"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "agent-system-tester",
+   "items": [
+    "agent-system-tester",
+    "ai-agent-tester"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "api-test-suite-builder",
+   "items": [
+    "api-test-suite-builder",
+    "test-suite-writer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "browser-automation-scripter",
+   "items": [
+    "browser-automation-scripter",
+    "browser-task-runner"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "browser-test-migrator",
+   "items": [
+    "browser-test-migrator",
+    "test-framework-migrator"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "browser-test-setup-builder",
+   "items": [
+    "browser-test-setup-builder",
+    "browser-test-writer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "bug-root-cause-finder",
+   "items": [
+    "bug-root-cause-finder",
+    "bug-diagnoser"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "change-test-prover",
+   "items": [
+    "change-test-prover",
+    "test-suite-auditor"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "code-change-reviewer",
+   "items": [
+    "code-change-reviewer",
+    "agency-engineering-code-reviewer",
+    "matlab-code-reviewer",
+    "woocommerce-code-checker",
+    "wordpress-code-checker"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "copilot-react18-lifecycle-patterns",
+   "items": [
+    "copilot-react18-lifecycle-patterns",
+    "copilot-react18-legacy-context",
+    "copilot-react18-string-refs"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "copilot-react19-source-patterns",
+   "items": [
+    "copilot-react19-source-patterns",
+    "copilot-react19-test-patterns"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "failing-test-fixer",
+   "items": [
+    "failing-test-fixer",
+    "test-failure-repair-loop"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "flaky-test-fixer",
+   "items": [
+    "flaky-test-fixer",
+    "copilot-cypress-flake-fixer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "live-code-debugger",
+   "items": [
+    "live-code-debugger",
+    "live-screen-debugger"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "matlab-speed-test-writer",
+   "items": [
+    "matlab-speed-test-writer",
+    "matlab-unit-test-writer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "parallel-code-reviewer",
+   "items": [
+    "parallel-code-reviewer",
+    "generated-code-reviewer",
+    "hostile-code-reviewer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "pull-request-risk-reviewer",
+   "items": [
+    "pull-request-risk-reviewer",
+    "pull-request-reviewer",
+    "pull-request-risk-scorer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "slow-code-fixer",
+   "items": [
+    "slow-code-fixer",
+    "slow-query-fixer"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "test-gap-finder",
+   "items": [
+    "test-gap-finder",
+    "copilot-test-gap-audit",
+    "test-coverage-gap-finder"
+   ]
+  },
+  {
+   "job": "test-and-fix-code",
+   "start": "web-app-tester",
+   "items": [
+    "web-app-tester",
+    "desktop-app-tester"
+   ]
+  },
+  {
+   "job": "test-store-changes",
+   "start": "store-test-program-runner",
+   "items": [
+    "store-test-program-runner",
+    "run-one-store-test-and-know-whether-to-ship-the-change"
+   ]
+  },
+  {
+   "job": "test-store-changes",
+   "start": "test-result-trust-checker",
+   "items": [
+    "test-result-trust-checker",
+    "store-test-readiness-checker",
+    "store-test-verdict-maker"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "claim-fact-checker",
+   "items": [
+    "claim-fact-checker",
+    "ai-answer-fact-checker",
+    "fact-cross-checker"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "decision-bias-pileup-checker",
+   "items": [
+    "decision-bias-pileup-checker",
+    "plan-bias-check"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "decision-checklist-builder",
+   "items": [
+    "decision-checklist-builder",
+    "decision-checklist"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "dip-or-dead-end-checker",
+   "items": [
+    "dip-or-dead-end-checker",
+    "decide-whether-to-quit-a-project-and-set-the-evidence-bar"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "literature-review-finder",
+   "items": [
+    "literature-review-finder",
+    "paper-research-assistant"
+   ]
+  },
+  {
+   "job": "think-and-decide",
+   "start": "plan-pre-mortem-runner",
+   "items": [
+    "plan-pre-mortem-runner",
+    "plan-inversion-checker"
+   ]
+  },
+  {
+   "job": "think-with-minds",
+   "start": "advisory-council",
+   "items": [
+    "advisory-council",
+    "three-mind-debate-brief"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "constant-currency-revenue-bridge",
+   "items": [
+    "constant-currency-revenue-bridge",
+    "organic-revenue-perimeter-bridge"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "find-duplicate-and-unused-business-subscriptions",
+   "items": [
+    "find-duplicate-and-unused-business-subscriptions",
+    "monthly-subscription-renewal-decision-assistant"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "grant-spending-evidence-review-assistant",
+   "items": [
+    "grant-spending-evidence-review-assistant",
+    "prepare-a-grant-spending-evidence-pack"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "mlflow-experiment-tracker",
+   "items": [
+    "mlflow-experiment-tracker",
+    "model-run-tracker"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "north-star-metric-picker",
+   "items": [
+    "north-star-metric-picker",
+    "startup-metrics-picker"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "numbers-drop-explainer",
+   "items": [
+    "numbers-drop-explainer",
+    "metric-drop-investigator"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "sales-drop-cause-finder",
+   "items": [
+    "sales-drop-cause-finder",
+    "store-sales-drop-splitter"
+   ]
+  },
+  {
+   "job": "track-numbers",
+   "start": "share-of-search-tracker-planner",
+   "items": [
+    "share-of-search-tracker-planner",
+    "brand-health-metrics-planner"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "buyer-brief-writer",
+   "items": [
+    "buyer-brief-writer",
+    "buyer-instinct-brief-writer"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "churn-risk-finder",
+   "items": [
+    "churn-risk-finder",
+    "customer-health-and-churn-scorer"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "customer-discovery-plan",
+   "items": [
+    "customer-discovery-plan",
+    "customer-job-interview-planner"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "customer-path-mapper",
+   "items": [
+    "customer-path-mapper",
+    "customer-path-blueprint-maker"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "ideal-customer-profile-writer",
+   "items": [
+    "ideal-customer-profile-writer",
+    "ideal-customer-profiler"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "interview-and-research-planner",
+   "items": [
+    "interview-and-research-planner",
+    "user-research-planner"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "interview-fact-sorter",
+   "items": [
+    "interview-fact-sorter",
+    "customer-interview-notes"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "job-hunting-spot-finder",
+   "items": [
+    "job-hunting-spot-finder",
+    "store-unmet-job-finder"
+   ]
+  },
+  {
+   "job": "understand-customers",
+   "start": "review-reason-spotter",
+   "items": [
+    "review-reason-spotter",
+    "customer-buying-reasons-finder"
+   ]
+  },
+  {
+   "job": "work-with-audio",
+   "start": "agency-marketing-global-podcast-strategist",
+   "items": [
+    "agency-marketing-global-podcast-strategist",
+    "agency-marketing-podcast-strategist"
+   ]
+  },
+  {
+   "job": "work-with-audio",
+   "start": "recording-transcriber",
+   "items": [
+    "recording-transcriber",
+    "whisper-speech-transcriber"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "agency-engineering-pdf-engine-architect",
+   "items": [
+    "agency-engineering-pdf-engine-architect",
+    "agency-engineering-universal-document-compiler"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "chart-maker",
+   "items": [
+    "chart-maker",
+    "python-chart-maker"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "data-story-writer",
+   "items": [
+    "data-story-writer",
+    "report-builder"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "editable-slide-deck-builder",
+   "items": [
+    "editable-slide-deck-builder",
+    "powerpoint-template-populator",
+    "storyboard-to-powerpoint-deck-builder"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "excel-powerpoint-number-checker",
+   "items": [
+    "excel-powerpoint-number-checker",
+    "review-revised-excel-and-powerpoint-files"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "markdown-slide-deck-maker",
+   "items": [
+    "markdown-slide-deck-maker",
+    "html-slide-deck-maker",
+    "slide-deck-image-maker"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "rough-text-to-article-tidier",
+   "items": [
+    "rough-text-to-article-tidier",
+    "article-formatter"
+   ]
+  },
+  {
+   "job": "work-with-files",
+   "start": "spreadsheet-checker",
+   "items": [
+    "spreadsheet-checker",
+    "spreadsheet-formula-auditor"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "ad-opening-line-batch-writer",
+   "items": [
+    "ad-opening-line-batch-writer",
+    "ad-first-line-writer-and-scorer",
+    "five-tactic-ad-hook-writer"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "call-to-action-writer",
+   "items": [
+    "call-to-action-writer",
+    "ad-ask-line-writer"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "five-angle-ad-headline-writer",
+   "items": [
+    "five-angle-ad-headline-writer",
+    "ad-headline-writer"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "flaw-first-ad-writer",
+   "items": [
+    "flaw-first-ad-writer",
+    "flaw-first-ad"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "story-carousel-ad-writer",
+   "items": [
+    "story-carousel-ad-writer",
+    "story-ads-carousel",
+    "story-image-ad-writer"
+   ]
+  },
+  {
+   "job": "write-ad-copy",
+   "start": "theme-based-ad-copy-set-writer",
+   "items": [
+    "theme-based-ad-copy-set-writer",
+    "fact-based-ad-copy-writer",
+    "one-buyer-ad-copy"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "blog-post-writer",
+   "items": [
+    "blog-post-writer",
+    "blog-post-producer"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "daily-word-quota-planner",
+   "items": [
+    "daily-word-quota-planner",
+    "daily-writing-session-planner"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "ending-first-story-planner",
+   "items": [
+    "ending-first-story-planner",
+    "serial-story-planner"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "feeling-to-action-rewriter",
+   "items": [
+    "feeling-to-action-rewriter",
+    "show-dont-tell-scene-rewriter"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "first-reader-question-writer",
+   "items": [
+    "first-reader-question-writer",
+    "reader-feedback-sorter"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "message-stickiness-rewriter",
+   "items": [
+    "message-stickiness-rewriter",
+    "memorable-message-writer"
+   ]
+  },
+  {
+   "job": "write-and-tell-stories",
+   "start": "unplotted-first-draft-writer",
+   "items": [
+    "unplotted-first-draft-writer",
+    "fast-first-draft"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "campaign-email-writer",
+   "items": [
+    "campaign-email-writer",
+    "story-email-writer"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "cold-email-claim-checker",
+   "items": [
+    "cold-email-claim-checker",
+    "cold-email-pre-send-checker"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "customer-email-reply-drafter",
+   "items": [
+    "customer-email-reply-drafter",
+    "new-inquiry-reply-drafter"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "email-draft-reviewer",
+   "items": [
+    "email-draft-reviewer",
+    "email-send-readiness-scorer"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "executive-email-draft",
+   "items": [
+    "executive-email-draft",
+    "write-a-clear-executive-reply"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "follow-up-email-sequence-writer",
+   "items": [
+    "follow-up-email-sequence-writer",
+    "cold-email-writer",
+    "email-sequence-writer",
+    "outbound-email-sequence-writer"
+   ]
+  },
+  {
+   "job": "write-emails",
+   "start": "nonprofit-annual-appeal-planner",
+   "items": [
+    "nonprofit-annual-appeal-planner",
+    "plan-a-nonprofit-supporter-newsletter"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "ad-matched-landing-page-writer",
+   "items": [
+    "ad-matched-landing-page-writer",
+    "article-landing-page"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "conversion-page-writer",
+   "items": [
+    "conversion-page-writer",
+    "honest-conversion-copywriter"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "product-listing-writer",
+   "items": [
+    "product-listing-writer",
+    "tiktok-shop-listing-writer"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "proof-backed-sales-copy-writer",
+   "items": [
+    "proof-backed-sales-copy-writer",
+    "proof-sales-copy"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "sales-letter-outline-planner",
+   "items": [
+    "sales-letter-outline-planner",
+    "sales-letter-outline"
+   ]
+  },
+  {
+   "job": "write-landing-page",
+   "start": "store-social-proof-placer",
+   "items": [
+    "store-social-proof-placer",
+    "social-proof-placer"
+   ]
+  }
+ ]
+}

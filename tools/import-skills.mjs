@@ -39,7 +39,9 @@ for (const f of mapFiles) for (const [k, v] of Object.entries(parseMap(f))) {
 // --chunk 2/5 takes the second of five equal slices of the repo's skills (by folder path), for sharing a big repo out.
 const [CHUNK, CHUNKS] = (arg("chunk") ?? "1/1").split("/").map(Number);
 const TYPES = new Set(Object.values(YAML.parse(fs.readFileSync(path.join(CAT, "_types.yaml"), "utf8"))).flatMap((g) => Object.keys(g)));
-const TASKS = [...fs.readFileSync(path.join(ROOT, "site/src/lib/data.ts"), "utf8").matchAll(/\{ id: "([a-z-]+)", name: "[^"]+" \}/g)].map((m) => m[1]);
+// The jobs moved from data.ts to catalogue-taxonomy.mjs; read both so an older checkout still works.
+const TASKS = ["site/src/lib/data.ts", "site/src/lib/catalogue-taxonomy.mjs"].filter((f) => fs.existsSync(path.join(ROOT, f)))
+  .flatMap((f) => [...fs.readFileSync(path.join(ROOT, f), "utf8").matchAll(/\{ id: "([a-z-]+)", name: "[^"]+"/g)].map((m) => m[1]));
 const BANNED = ["delve", "foster", "leverage", "utilize", "facilitate", "empower", "streamline", "robust", "cutting-edge", "game changer", "unlock", "supercharge", "harness", "elevate", "seamless", "effortless", "transformative", "revolutionize", "paradigm", "synergy", "holistic", "journey", "ecosystem", "best-in-class", "world-class", "next-level"];
 const commit = (() => { try { return execSync("git rev-parse --short HEAD", { cwd: FROM }).toString().trim(); } catch { return "unknown"; } })();
 const today = new Date().toISOString().slice(0, 10);

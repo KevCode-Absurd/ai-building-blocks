@@ -1,0 +1,37 @@
+slug: ambition-planner
+name: Ambition planner
+summary: Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: prompt
+uses: []
+origin: imported
+source:
+  by: RoboNuggets
+  repo: robonuggets/be-ambitious
+  path: .
+  url: https://github.com/robonuggets/be-ambitious
+  licence: MIT
+  licence_file: LICENSE
+  commit: dc116a3
+  original_name: be-ambitious
+  imported: 2026-11-03
+version: 1.0.0
+credits:
+  - title: be-ambitious skill
+    by: RoboNuggets
+    url: https://github.com/robonuggets/be-ambitious
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: "How to be more ambitious: a tutorial for humans with models (article the skill is built on)"
+    by: Felix Rieseberg
+    url: https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/
+    used: The skill's ideas (altitude, depth, range, the deeper-not-bigger prompt) come from this article, as its README credits.

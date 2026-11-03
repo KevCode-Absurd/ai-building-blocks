@@ -1,0 +1,11 @@
+# robonuggets/be-ambitious (MIT), built on Felix Rieseberg's article "How to be more ambitious"
+"robonuggets/be-ambitious:be-ambitious":
+  name: Ambition planner
+  summary: Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: high
+  thinking_why: It weighs the goal behind the task, what a top expert would do and what would prove the result right.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}, {type: prompt}]

@@ -3350,3 +3350,11 @@ Claude Code learning coach and Claude Code quiz coach adapt the self-assessment 
 ## Elaya design animation skill
 
 Design animator imports the original design-to-motion instructions from elayadesign/ai-design-skills at 38bbe5765600b9178b5395a823c9f6c8d2b8e730, MIT, copyright (c) 2026 Elaya. The complete instructions, original licence and source credits are retained. The author credits general motion rules adapted from emilkowalski/skills, Owl-Listener/designer-skills and dylantarre/animation-principles; no additional third-party code was imported. The existing landing-page skill is retained without duplicate publication because its source text is unchanged.
+
+## Imported from robonuggets/be-ambitious
+
+Copied as they are from https://github.com/robonuggets/be-ambitious at dc116a3ebd8cf772e4d0930626f67369bd60399d, MIT, copyright (c) 2026 RoboNuggets, with its licence file. The skill turns Felix Rieseberg's article "How to be more ambitious: a tutorial for humans with models" (https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/) into steps; the ideas are his, as the skill credits. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/ambition-planner` | be-ambitious, https://github.com/robonuggets/be-ambitious | MIT |

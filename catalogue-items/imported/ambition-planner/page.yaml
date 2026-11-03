@@ -1,0 +1,51 @@
+thinking: high
+thinking_why: It weighs the goal behind the task, what a top expert would do and what would prove the result right.
+new_slug: ambition-planner
+name: Ambition planner
+summary: Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.
+job: set-up-ai
+headline: Ambition planner
+subhead: Give it the task you were about to type. Your AI finds what you really want to happen next, plans it the way a top expert would, and rewrites your prompt to end with a check that proves it worked.
+explain: |
+  Most people ask AI for exactly the task they typed. This skill aims it higher, without making the job bigger. It follows Felix Rieseberg's article on being more ambitious with AI, and uses three of his ideas.
+
+  Altitude asks what you want to happen after the task is done, and builds three steps up from there. Depth asks what the best person in the field would do here, which raw data they would start from, and what outside check would show the result is right. Range asks which other kinds of expert would help, and what they would actually do. Most tasks need only one or two of these.
+
+  You get a short plan, a list of what data and access it needs, and a rewritten prompt you can copy. If you gave it a task, it then starts on the highest step it can finish and check. It asks first before anything that spends money or cannot be undone.
+when:
+  - You are about to ask AI for something that matters, and want more than the obvious answer.
+  - A task feels routine, like updating a report, and you suspect there is a better way to reach the goal behind it.
+  - You want your AI to work like a top expert in the field, not just sound like one.
+  - You need a clear way to tell whether the result is right before you rely on it.
+not_for:
+  - "Your request is unclear and you want it written as a clean, structured prompt: use the Prompt editor."
+  - "You are not sure yet what you want and need to talk it through first: use the Intent interviewer."
+  - "The task is small and exact, like fixing a typo or renaming a file: just ask your AI to do it."
+you_give:
+  - The task or prompt, in your own words
+  - Where the real data lives, such as your sales export or ad account (optional)
+  - Which tools your AI can reach (optional)
+you_get:
+  - The goal behind your task, in one line
+  - A short plan that raises the standard, not the size of the job
+  - The data, tools and access it needs, marked as there or missing
+  - A rewritten prompt that ends with a check and what counts as a pass
+how_to_use:
+  - Download the skill folder and add it to your AI tool, or paste the text of SKILL.md into a new chat.
+  - Type your task after it, such as "make our monthly sales report from the attached export".
+  - Read the goal behind the task and the plan. Tell it if the goal is wrong.
+  - Copy the rewritten prompt, or let your AI start on the step it picked.
+  - Check the result against the pass check at the end of the prompt.
+output_sample:
+  input:
+    - Your task, such as "write a follow-up email to people who did not book"
+    - Your booking numbers for the last month (optional)
+  output:
+    - name: Goal behind the goal
+      contains: One line on what you really want, such as more of these people booking this month.
+    - name: Plan
+      contains: The ideas that fit the task, each with a short reason, and the ones skipped.
+    - name: What it needs
+      contains: Data, tools and access, each marked as already there or missing.
+    - name: Rewritten prompt
+      contains: A prompt you can copy, ending with an outside check and what counts as a pass.

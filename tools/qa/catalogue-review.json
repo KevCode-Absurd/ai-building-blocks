@@ -343,6 +343,24 @@
           "rationale": "The actual query and token budget are required to choose and order context. The method does not invent either one."
         }
       ]
+    },
+    "catalogue-items/imported/ambition-planner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude Code)",
+      "reviewed_on": "2026-11-03",
+      "method_sha256": "3888a28b822abe158327c29f2b8e898dc663e1918eacacec446b0e0291be33a6",
+      "inputs": [
+        {
+          "type": "brief",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "brief",
+          "quote": "The task is whatever follows `/be-ambitious`. If nothing follows, use the user's most recent request.",
+          "rationale": "The method starts from the task or prompt the person typed, in their own words, which is a brief. Data, tools and access are optional and listed as present or missing."
+        }
+      ]
     }
   },
   "handoffs": {

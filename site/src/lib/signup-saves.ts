@@ -1,4 +1,5 @@
 import { validateLibrary, type LibraryData } from "./library-data.ts";
+import { WORK_KEY, mergeWork } from "./saved-work-data.ts";
 
 export type BrowserSave = { id: string; capturedAt: number; data: LibraryData };
 type Entry = Record<string, any>;
@@ -41,5 +42,6 @@ export function mergeSignUpSaves(account: LibraryData, incoming: BrowserSave): L
   remote.browserSaves = [...browserSaves(account), { ...incoming, data: guest }];
   result["abb:v1"] = JSON.stringify(remote);
   for (const [key, raw] of Object.entries(guest)) if (result[key as keyof LibraryData] === undefined) result[key as keyof LibraryData] = raw;
+  if (guest[WORK_KEY] && account[WORK_KEY]) result[WORK_KEY] = mergeWork(account[WORK_KEY], guest[WORK_KEY]);
   return validateLibrary(result);
 }

@@ -1,5 +1,6 @@
 // Stable storage names are independent of the deployed release/version.
-export const LIBRARY_KEYS = ["abb:v1", "abb:business", "abb:composer", "aib-council-draft"] as const;
+import { WORK_KEY, validateWork } from "./saved-work-data.ts";
+export const LIBRARY_KEYS = ["abb:v1", "abb:business", "abb:composer", "aib-council-draft", "abb:work"] as const;
 export type LibraryData = Partial<Record<typeof LIBRARY_KEYS[number], string>>;
 export type Library = { data: LibraryData; revision: number };
 const record = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
@@ -18,6 +19,7 @@ export function validateLibrary(value: unknown): LibraryData {
     if (key === "abb:v1" && (!Array.isArray(parsed.kits) || !parsed.kits.every((k: unknown) => record(k) && typeof k.id === "string" && typeof k.name === "string" && strings(k.slugs)) || !Array.isArray(parsed.flows) || !parsed.flows.every(validFlow) || !strings(parsed.recent) || parsed.draft != null && !validFlow(parsed.draft))) throw Error("Invalid kits and workflows");
     if (key === "abb:business" && (!record(parsed) || !Object.values(parsed).every(v => typeof v === "string"))) throw Error("Invalid context");
     if (key === "aib-council-draft" && !strings(parsed)) throw Error("Invalid council");
+    if (key === WORK_KEY) validateWork(parsed);
     data[key as keyof LibraryData] = raw;
   }
   return data;

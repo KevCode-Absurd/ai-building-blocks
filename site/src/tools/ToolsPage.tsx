@@ -1,6 +1,6 @@
 // The Tools pages: a list of the free mini tools (/tools), and one page per tool (/tools/<slug>).
-// Every answer comes from the tool's formula file through the shared engine, as you type. Nothing is sent anywhere:
-// what you type is kept only in this browser. Loaded on demand, so the home page never waits for it.
+// Every answer comes from the tool's formula file through the shared engine, as you type. The numbers you change are
+// kept in this browser, or in the signed-in account library (lib/saved-work.ts). Loaded on demand, so the home page never waits for it.
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./tools.css";
 import BrowserTool from "./BrowserTool";
@@ -9,6 +9,8 @@ import { ArrowIcon, SearchIcon } from "../ui";
 import { Link, setSearch, useLocation } from "../lib/router";
 import { monthOf, pathOf, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, type Input, type Line, type Tool } from "./registry";
+import { readToolInputs, saveToolInputs } from "../lib/saved-work";
+import { changedFields } from "../lib/saved-work-data";
 
 const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const store = {
@@ -104,8 +106,8 @@ function Way({ n, title, children, testId }: { n: number; title: string; childre
 
 function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
   const c = useCatalogue();
-  const key = `abb:tool:${tool.slug}`;
-  const saved = store.get<{ preset?: string; raw?: Record<string, string> }>(key, {});
+  // Your numbers come back next time: from your account when signed in, otherwise from this browser.
+  const saved = readToolInputs(tool.slug);
   const [preset, setPreset] = useState(() => (tool.presets.some((p) => p.id === saved.preset) ? saved.preset! : tool.presets[0].id));
   const [raw, setRaw] = useState<Record<string, string>>(() => saved.raw && saved.preset === preset ? { ...asText(E.defaults(tool, preset)), ...saved.raw } : asText(E.defaults(tool, preset)));
   const [symSaved, setSym] = useState(() => store.get("abb:currency", "$"));
@@ -123,7 +125,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
     return () => io.disconnect();
   }, []);
   useEffect(() => { document.title = `${tool.name} · AI Blocks`; return () => { document.title = TITLE; }; }, [tool]);
-  useEffect(() => { store.set(key, { preset, raw }); }, [key, preset, raw]);
+  useEffect(() => { const fields = changedFields(raw, asText(E.defaults(tool, preset))); saveToolInputs(tool.slug, { preset, raw: fields, name: tool.name }, preset !== tool.presets[0].id || Object.keys(fields).length > 0); }, [tool, preset, raw]);
   useEffect(() => { fetch(`${filesOf(tool.slug)}/prompt.txt`).then((r) => (r.ok ? r.text() : null)).then((t) => setPrompt(t && !t.trimStart().startsWith("<!doctype") ? t : null)).catch(() => setPrompt(null)); }, [tool]);
 
   const pick = (id: string) => { setPreset(id); setRaw(asText(E.defaults(tool, id))); };
@@ -156,7 +158,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
     <main className="bp mt" data-testid="tool-page">
       <header className="wrap bp-hero">
         <Link to="/tools" className="back"><span aria-hidden="true">←</span> All mini tools</Link>
-        <p className="bp-kicker"><span className="kind">{tool.short}</span>Free. No sign-up. What you type stays in this browser.</p>
+        <p className="bp-kicker"><span className="kind">{tool.short}</span>Free. No sign-up. Your numbers stay in this browser, or in your account when you sign in.</p>
         <h1 className="bp-h1">{tool.headline}</h1>
         <p className="bp-sub">{tool.summary}</p>
       </header>

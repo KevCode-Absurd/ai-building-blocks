@@ -1,4 +1,5 @@
 import { LIBRARY_KEYS, validateLibrary, type LibraryData } from "./library-data.ts";
+import { WORK_KEY, mergeWork } from "./saved-work-data.ts";
 
 const object = (value: any): value is Record<string, any> => !!value && typeof value === "object" && !Array.isArray(value);
 const canonical = (value: any): any => Array.isArray(value) ? value.map(canonical) : object(value) ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])])) : value;
@@ -68,6 +69,8 @@ export function mergeLibraries(base: LibraryData, local: LibraryData, remote: Li
   for (const key of LIBRARY_KEYS) {
     if (local[key] === base[key] || local[key] === remote[key]) { if (remote[key] !== undefined) result[key] = remote[key]; continue; }
     if (remote[key] === base[key]) { if (local[key] !== undefined) result[key] = local[key]; continue; }
+    // Calculator numbers and opened specialists: the newest entry wins, so they never block saving.
+    if (key === WORK_KEY) { const value = mergeWork(remote[key], local[key]); if (value !== undefined) result[key] = value; continue; }
     const parse = (raw: string | undefined) => raw === undefined ? undefined : JSON.parse(raw);
     const value = merge(parse(base[key]), parse(local[key]), parse(remote[key]));
     if (value !== undefined) result[key] = JSON.stringify(value);

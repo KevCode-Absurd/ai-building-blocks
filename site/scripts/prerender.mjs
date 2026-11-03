@@ -10,6 +10,7 @@ import { factCheckHtml } from "./lib/fact-check-html.mjs";
 import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
+import { pageShell } from "./lib/page-shell.mjs";
 import {rolePage} from "./lib/role-pages.mjs";
 import { loadRoleLinks, specialistsSection, hubSpecialists } from "./lib/role-links.mjs";
 import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
@@ -169,7 +170,7 @@ const SEO_PAGES = {
   "/me-md": ["me.md: one file that tells every AI who you are | AI Blocks", "Make one private file that tells ChatGPT, Claude and Gemini who you are. Get the template, three prompts to make it, and where to put it in each AI."],
   "/tools/growth-channel-planner": ["Growth channel planner: compare 19 channels | AI Blocks", "Prepare a growth brief for any business. Compare 19 channels, define customer outcomes and download a complete planning skill pack. No sign-in needed."],
   "/support": ["Get help with AI Blocks skills and workflows | AI Blocks", "Ask a question, report a broken skill or get help with your workflow. Write to Kevin Mark at hello@useaiblocks.com and get a reply from a person."],
-  "/about": ["About: free reusable AI skills and workflows | AI Blocks", "AI Blocks is a free library of AI skills, prompts, workflows, minds and mini tools, run by Kevin Mark in India. See what it is for and who makes it."],
+  "/about": ["About: free reusable AI skills and workflows | AI Blocks", "AI Blocks is a free library of AI skills, prompts, workflows, minds and mini tools, run by Kevin Mark. See what it is for and who makes it."],
   "/privacy": ["Privacy policy: accounts, saved work and AI use | AI Blocks", "How AI Blocks handles saved work, accounts, AI requests and optional visitor analytics, and how to contact us about your data or ask for it to be deleted."],
   "/terms": ["Terms of service: accounts, licences, AI output | AI Blocks", "The terms for using AI Blocks, including free access, accounts, acceptable use, content licences, third-party tools and what to know about AI output."],
   "/cookies": ["Cookies and browser storage: what we save | AI Blocks", "What AI Blocks saves in your browser, which sign-in and security storage it uses, and how Google Analytics and Microsoft Clarity cookies work."],
@@ -577,6 +578,8 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     : p.hub
     ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
     : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
+  // The loading cover shows this page's header and heading at once, styled (scripts/lib/page-shell.mjs). Home has its own.
+  const picture = plain || url === "/" ? "" : pageShell({ logo, h1: esc(p.h1), body, content: p.content ?? "", mainClass: p.mainClass ?? "api-mcp-docs" });
   const metadata = { title, description: desc, canonical, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
@@ -593,6 +596,7 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     `<meta name="robots" content="${metadata.robots}" />`,
   ].filter(Boolean).join("\n    ");
   return injectPrerender((plain ? plainShell : shell)
+    .replace(/<div id="app-loader"[^>]*>/, (open) => open + picture)
     .replace(/<meta name="robots"[^>]*>\s*/g, "")
     .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))

@@ -60,11 +60,13 @@
       .boot-recovery a { display: inline-block; color: inherit; padding: 8px 12px; text-underline-offset: 4px; }
       .boot-recovery a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
       html[data-boot="error"] .boot-recovery { display: block; }
-      /* Item pages: the server's readable page shows at once; the app opens hidden behind it (main.tsx) and replaces it in one frame. */
-      html[data-boot="loading"]:has(#root > [data-static-first]) #app-loader, html[data-boot="static"] #app-loader { display: none; }
-      html[data-boot="loading"]:has(#root > [data-static-first]) #root { visibility: visible; }
-      html[data-boot="loading"]:has(#root > [data-static-first]) body, html[data-boot="static"] body { overflow: auto; }
-      html[data-boot="static"] #root { visibility: hidden; position: absolute; top: 0; left: 0; right: 0; height: 0; overflow: hidden; }
+      /* Built pages put a styled picture of their header and heading in the cover (scripts/lib/page-shell.mjs), so the top
+         of the page shows at once and the loading bar sits under it until the rest arrives. */
+      html[data-boot] #app-loader:has(> .page-shell) { display: block; place-items: normal; text-align: left; padding: 0; overflow: hidden; }
+      #app-loader:has(> .page-shell) .boot-content { min-height: 0; display: block; width: 100%; max-width: calc(var(--max, 1200px) + 2 * var(--gutter, 20px)); margin: 0 auto; padding: 28px var(--gutter, 20px) 0; text-align: left; }
+      #app-loader:has(> .page-shell) .boot-loading { justify-items: start; }
+      #app-loader:has(> .page-shell) .boot-brand { display: none; }
+      #app-loader:has(> .page-shell) .boot-recovery { margin: 24px 0 0; text-align: left; }
       @media (prefers-reduced-motion: reduce) { html[data-boot] #app-loader { transition: none; } .boot-progress { animation: none; } }
     </style>
     <script>

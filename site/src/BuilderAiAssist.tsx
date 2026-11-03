@@ -113,7 +113,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     if (!selectedAvailable) { setError("Choose an available AI model to continue."); return; }
     const expectedUser = account.userId;
     if (account.state !== "signed-in" || !expectedUser) { setError("Sign in or create a free account to make your workflow."); return; }
-    if (left === 0) { setError("You have used today's allowance. It resets at 00:00 UTC (5:30 a.m. India time)."); return; }
+    if (left === 0) { setError("You have used today's allowance. It resets at 00:00 UTC."); return; }
     const id = ++request.current, controller = new AbortController();
     const current = () => mounted.current && request.current === id && identity.current.state === "signed-in" && identity.current.userId === expectedUser;
     locked.current = true; abort.current = controller; setBusy(true);
@@ -173,7 +173,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     {service === "unavailable" && <div className="builder-ai-service"><p className="small">AI assist is unavailable right now. You can still edit your workflow below.</p><button type="button" className="link-btn" onClick={() => setServiceRevision(value => value + 1)}>Try AI assist again</button></div>}
     {error && <p className="builder-ai-error" role="alert">{error}</p>}
     {status && <p className="small" role="status">{status}</p>}
-    <details className="builder-ai-help"><summary>Usage and privacy</summary><p className="small">{unlimited ? `Service spending and safety limits still apply.${networkNote}` : "Failed attempts count toward the daily allowance. It resets at 00:00 UTC (5:30 a.m. India time). No payment details needed."}</p><p className="small">Your request, context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service stores generated results and usage records. For adults aged 18 or older. Read our <Link to="/terms">Terms</Link> and <Link to="/privacy#server">Privacy policy</Link>.</p></details>
+    <details className="builder-ai-help"><summary>Usage and privacy</summary><p className="small">{unlimited ? `Service spending and safety limits still apply.${networkNote}` : "Failed attempts count toward the daily allowance. It resets at 00:00 UTC. No payment details needed."}</p><p className="small">Your request, context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service stores generated results and usage records. For adults aged 18 or older. Read our <Link to="/terms">Terms</Link> and <Link to="/privacy#server">Privacy policy</Link>.</p></details>
     <Link to="/compose" className="builder-ai-advanced" onClick={event => {
       if (busy || signingIn) { event.preventDefault(); return; }
       try { sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices: {}, useContext, customSkills: [], assignMinds })); }

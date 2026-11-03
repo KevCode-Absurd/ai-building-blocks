@@ -15,19 +15,10 @@ installChunkRecovery();
 
 
 // Built pages arrive with a plain first screen for search engines (scripts/prerender.mjs); the app replaces it.
-let root = document.getElementById("root")!;
+// While it opens, the loading cover shows a styled picture of the page's header and heading (scripts/lib/page-shell.mjs).
+const root = document.getElementById("root")!;
 const publicOpeningHtml = root.innerHTML;
 keepInitialHtml(publicOpeningHtml);
-// Item pages keep that screen on view (renamed in place, so nothing repaints) while the app opens in a fresh,
-// hidden #root behind it; index.html removes it when the app is ready.
-if (document.documentElement.dataset.boot === "loading" && root.querySelector(":scope > [data-static-first]")) {
-  const app = document.createElement("div");
-  document.documentElement.dataset.boot = "static";
-  root.id = "static-view";
-  root.after(app);
-  app.id = "root";
-  root = app;
-}
 root.replaceChildren();
 createRoot(root).render(
   <StrictMode>

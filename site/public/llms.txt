@@ -22,7 +22,7 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
-- 5021 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
+- 5022 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -77,7 +77,7 @@ Once connected, ask in plain words:
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 101 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
 - [Understand your customers](https://useaiblocks.com/llms/understand-customers.txt): 99 skills and workflows, such as Customer community finder and Best customer finder
 - [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 99 skills and workflows, such as Supplier quote comparison planner and Warehouse bid and agreement terms builder
-- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 93 skills and workflows, such as AI coding agent rules writer and AI model training debugger
+- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 94 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 92 skills and workflows, such as Document proofreader and Excel workbook handover writer
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 88 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
 - [Make video ads](https://useaiblocks.com/llms/make-video-ads.txt): 87 skills and workflows, such as 3D how-it-works video prompt writer and 3D explainer ad script writer

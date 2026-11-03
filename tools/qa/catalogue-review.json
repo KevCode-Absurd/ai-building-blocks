@@ -347,7 +347,7 @@
     "catalogue-items/imported/ambition-planner/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude Code)",
       "reviewed_on": "2026-11-03",
-      "method_sha256": "3888a28b822abe158327c29f2b8e898dc663e1918eacacec446b0e0291be33a6",
+      "method_sha256": "8a2b7f86434f3bacc7705938f72cd3e0098be480d95654ee5faca3724e55442a",
       "inputs": [
         {
           "type": "brief",

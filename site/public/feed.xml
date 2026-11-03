@@ -8,6 +8,16 @@
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Ambition planner</title>
+      <link>https://useaiblocks.com/skills/ambition-planner</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/ambition-planner</guid>
+      <description>Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.</description>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
       <title>3D map scene developer</title>
       <link>https://useaiblocks.com/agents/agency-gis-3d-scene-developer</link>
       <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-3d-scene-developer</guid>
@@ -838,6 +848,16 @@
       <category>Run meetings, notes and plans</category>
     </item>
     <item>
+      <title>FedRAMP and RMF compliance planner</title>
+      <link>https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance</link>
+      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance</guid>
+      <description>Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.</description>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>agent</category>
+      <category>Check contracts and rules</category>
+    </item>
+    <item>
       <title>Feishu integration planner</title>
       <link>https://useaiblocks.com/agents/agency-engineering-feishu-integration-developer</link>
       <guid isPermaLink="true">https://useaiblocks.com/agents/agency-engineering-feishu-integration-developer</guid>
@@ -986,26 +1006,6 @@
       <category>updated</category>
       <category>agent</category>
       <category>Research a topic properly</category>
-    </item>
-    <item>
-      <title>Geoprocessing specialist agent</title>
-      <link>https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist</guid>
-      <description>Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script.</description>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Research a topic properly</category>
-    </item>
-    <item>
-      <title>Geospatial machine learning planner</title>
-      <link>https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer</guid>
-      <description>Plan a model that finds buildings, roads or land cover in satellite and aerial images, with data checks, a test plan and deployment steps.</description>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>agent</category>
-      <category>Build and ship software</category>
     </item>
   </channel>
 </rss>

@@ -80,8 +80,8 @@ Finish with the assumptions made and `CHECKS MISSED:` listing any check that cou
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
-- The [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker). It takes the audit report.
 - The [Internal controls testing planner](https://useaiblocks.com/skills/internal-controls-testing). It takes the plan.
+- The [Compliance auditor agent](https://useaiblocks.com/skills/agency-security-compliance-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

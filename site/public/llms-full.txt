@@ -22,7 +22,7 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
-- 5021 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
+- 5022 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -104,7 +104,7 @@ Once connected, ask in plain words:
 - [Run your online store](https://useaiblocks.com/llms/run-your-store.txt): 130 skills and workflows, such as 3PL bill auditor and Live auction show planner
 - [Sell and negotiate](https://useaiblocks.com/llms/sell-and-negotiate.txt): 123 skills and workflows, such as Sales closing question planner and Proposal discussion planner
 - [Sell on Amazon](https://useaiblocks.com/llms/sell-on-amazon.txt): 16 skills and workflows, such as Amazon brand registry planner and Amazon fee and margin checker
-- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 93 skills and workflows, such as AI coding agent rules writer and AI model training debugger
+- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 94 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Set up your brand file](https://useaiblocks.com/llms/brand-file.txt): 49 skills and workflows, such as Brand guide builder and Brand voice one-pager writer
 - [Set up your online store](https://useaiblocks.com/llms/set-up-store.txt): 20 skills and workflows, such as Etsy shop opening planner and Shopify theme build planner
 - [Set your prices](https://useaiblocks.com/llms/set-prices.txt): 42 skills and workflows, such as Discount consistency checker and Hourly rate calculator

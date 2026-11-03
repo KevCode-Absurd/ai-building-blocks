@@ -30,7 +30,7 @@ credits:
   - title: be-ambitious skill
     by: RoboNuggets
     url: https://github.com/robonuggets/be-ambitious
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: "How to be more ambitious: a tutorial for humans with models (article the skill is built on)"
     by: Felix Rieseberg
     url: https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/

@@ -13,6 +13,19 @@ Every idea here comes from Felix Rieseberg's article [How to be more ambitious: 
 
 Most people use a model at the size of the task they typed. Model skills grow unevenly, "astounding in some directions, while inadequate in others" (Terence Tao), so the only way to find the astounding parts is to aim higher than feels reasonable.
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
 ## The rules that matter most
 
 1. **Better, not bigger.** Each type raises something: the outcome (Altitude), the standard (Depth) or the set of perspectives (Range). None of them means more deliverables, features or side quests. If a suggestion makes the job larger without making it better, drop it.
@@ -89,6 +102,15 @@ Size the output to the task: a one-line prompt gets a few lines of plan, because
 4. **What it needs**: the data, tools and access, marked as already there or missing.
 5. **The rewritten prompt** in one fenced block the user can copy, written the way they'd type it, ending with the outside judge and what counts as a pass.
 6. **Next.** Pick the highest rung you can finish and check with the access you have now. For a prompt to improve, name that rung and stop. For a task to do, name it in one line and start. If even the first rung needs access you don't have, ask for it and stop. Ask first, too, when the rung replaces what the user asked for instead of raising it, spends money, or can't be undone. Ambition raises the standard, not the permissions.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review). It takes the prompt.
+- The [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester). It takes the prompt.
+- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## A short example
 

@@ -15,6 +15,38 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/ambition-planner",
+   "url": "https://useaiblocks.com/skills/ambition-planner",
+   "title": "Ambition planner",
+   "summary": "Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.",
+   "content_text": "Give it your task or prompt. Get the goal behind it, an expert-level plan, a pass check and a rewritten prompt.",
+   "date_published": "2026-11-03T00:00:00Z",
+   "date_modified": "2026-11-03T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/ambition-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/ambition-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/ambition-planner.md",
+    "json": "https://useaiblocks.com/skills/ambition-planner.json",
+    "skill": "https://useaiblocks.com/skills/ambition-planner/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer",
    "url": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer",
    "title": "3D map scene developer",
@@ -2671,6 +2703,38 @@
    }
   },
   {
+   "id": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance",
+   "url": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance",
+   "title": "FedRAMP and RMF compliance planner",
+   "summary": "Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.",
+   "content_text": "Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor. Updated 2026-11-03.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-11-03T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Check contracts and rules"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-specialized-fedramp-rmf-compliance/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.md",
+    "json": "https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance.json",
+    "skill": "https://useaiblocks.com/skills/agency-specialized-fedramp-rmf-compliance/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/agents/agency-engineering-feishu-integration-developer",
    "url": "https://useaiblocks.com/agents/agency-engineering-feishu-integration-developer",
    "title": "Feishu integration planner",
@@ -3148,70 +3212,6 @@
     "markdown": "https://useaiblocks.com/agents/agency-academic-geographer.md",
     "json": "https://useaiblocks.com/agents/agency-academic-geographer.json",
     "skill": "https://useaiblocks.com/skills/agency-academic-geographer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist",
-   "url": "https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist",
-   "title": "Geoprocessing specialist agent",
-   "summary": "Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script.",
-   "content_text": "Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script. Updated 2026-11-03.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-11-03T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Research a topic properly"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist.md",
-    "json": "https://useaiblocks.com/agents/agency-gis-geoprocessing-specialist.json",
-    "skill": "https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer",
-   "url": "https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer",
-   "title": "Geospatial machine learning planner",
-   "summary": "Plan a model that finds buildings, roads or land cover in satellite and aerial images, with data checks, a test plan and deployment steps.",
-   "content_text": "Plan a model that finds buildings, roads or land cover in satellite and aerial images, with data checks, a test plan and deployment steps. Updated 2026-11-03.",
-   "date_published": "2026-10-26T00:00:00Z",
-   "date_modified": "2026-11-03T00:00:00Z",
-   "tags": [
-    "updated",
-    "agent",
-    "Build and ship software"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/agency-gis-geoai-ml-engineer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "agent",
-    "markdown": "https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer.md",
-    "json": "https://useaiblocks.com/agents/agency-gis-geoai-ml-engineer.json",
-    "skill": "https://useaiblocks.com/skills/agency-gis-geoai-ml-engineer/SKILL.md"
    }
   }
  ]

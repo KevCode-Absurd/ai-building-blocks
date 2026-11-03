@@ -110,9 +110,6 @@ Do not set pay, bands or promotion decisions. Say the user must decide those, an
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job skills and level planner](https://useaiblocks.com/skills/role-skills-framework-builder). It takes the plan.
-- The [Interview process planner](https://useaiblocks.com/skills/interview-process-planner). It takes the document.
-- The [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package). It takes the document.
 - **Lead the team** with the [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

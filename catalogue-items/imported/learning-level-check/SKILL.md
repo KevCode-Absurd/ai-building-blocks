@@ -86,8 +86,6 @@ How to start:
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the plan.
-- The [Flawed example writer](https://useaiblocks.com/skills/flawed-example-writer). It takes the plan.
 - The [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

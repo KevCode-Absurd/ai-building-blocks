@@ -54,16 +54,16 @@ test('How we test says plainly what the scores cannot show, and follows the scor
   assert.match(strip(page({ card: graded }).body), /in 3 of the 30 requests, the work the steps produce/);
   assert.equal(stageGrading(card).graded, false);
   // Stream K's fields are optional: a grading field with no results yet says so, and shows no number.
-  const pending = { ...card, stage_grades: { recorded: 0, cases: [] }, v2_average: 70.2 };
+  const { rubric_v2: _v2, ...v1Only } = card;
+  const pending = { ...v1Only, stage_grades: { recorded: 0, cases: [] }, v2_average: 70.2 };
   assert.deepEqual(stageGrading(pending), { graded: false, cases: 0, started: true });
   const said = strip(page({ card: pending }).body);
   assert.match(said, /set up, but it has no results yet/);
   assert.ok(said.includes('harder rubric (version 2). Plans average 70.2 on it. It is reported only'), 'second rubric reported');
   assert.ok(said.includes(`${card.average} out of 100`), 'the first rubric stays the headline number');
   assert.match(strip(page({ card: { ...card, rubric_v2: { average: 71, rubric_version: 2 } } }).body), /Plans average 71 on it/);
-  const { rubric_v2: _v2, ...v1Only } = card;
   assert.doesNotMatch(strip(page({ card: v1Only }).body), /harder rubric/);
-  assert.match(strip(page().body), /Plans average 70\.2 on it/, 'the real scorecard reports rubric v2 by its mean');
+  assert.ok(strip(page().body).includes(`Plans average ${card.rubric_v2.mean} on it`), 'the real scorecard reports rubric v2 by its mean');
 });
 
 test('every rubric check, broken plan and industry has plain words, with a fallback for new ones', () => {

@@ -3,7 +3,7 @@
 // No model calls and no network. Usage:
 //   node scripts/evaluate-recommendations.mjs [--fixture test/fixtures/x.json] [--out ../reports/x.json] [--legacy-order] [--only search|keywords|next|composer[,...]] [--keyword-sample N] [--verbose]
 // --only keywords: catalogue-wide keyword search, queries derived mechanically from every item's name (scripts/keyword-queries.mjs);
-//   hit@1 / hit@5 by item type and query kind. --keyword-sample N scores every Nth item only (quicker). Not part of the default run.
+//   hit@1 / hit@5 by item type and query kind. --keyword-sample N scores about 1 in N items, picked by slug hash (quicker). Not part of the default run.
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -117,7 +117,10 @@ if (wants('search') || wants('keywords')) {
 if (wants('keywords')) {
   const { keywordQueries, scoreKeywords } = await import('./keyword-queries.mjs');
   const sample = Number(arg('--keyword-sample')) || 1;
-  const position = new Map(blocks.map((b, i) => [b.slug, i])), queries = keywordQueries(blocks).filter(q => position.get(q.slug) % sample === 0);
+  // Sampled by a hash of the slug, not catalogue position: adding one item reshuffled every position sample after
+  // it, which moved hit@1 between 0.893 and 0.910 with no ranking change (2026-11-03). Hash buckets stay at 0.901-0.904.
+  const bucket = slug => crypto.createHash('sha256').update(slug).digest()[0] % sample;
+  const queries = keywordQueries(blocks).filter(q => bucket(q.slug) === 0);
   const timings = [];
   const result = scoreKeywords(blocks, queries, q => { const t = performance.now(), ranked = searchOne(q).map(b => b.slug); timings.push(performance.now() - t); return ranked; });
   timings.sort((a, b) => a - b);

@@ -2,6 +2,8 @@
 // library search gets worse than the level measured on 2026-10-27 (keyword ranking pass), minus 0.02.
 //  - Original labelled fixture (test/fixtures/recommendation-eval.json): top-1 0.704, top-5 0.933.
 //  - Catalogue-wide keyword search (scripts/keyword-queries.mjs, every 4th item, ~3,900 queries): hit@1 0.917, hit@5 0.984.
+//    Since 2026-11-03 the sample is about 1 in 4 items by slug hash, so adding an item no longer reshuffles it
+//    (position samples ranged 0.893-0.910 on one build). Measured then: hit@1 0.904, hit@5 0.981; floors unchanged.
 // The first run reads every page and SKILL.md (a few minutes); later runs reuse the cached documents (--fast).
 // Same as: node scripts/evaluate-recommendations.mjs --only search,keywords --fast --keyword-sample 4
 //

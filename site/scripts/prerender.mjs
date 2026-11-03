@@ -12,6 +12,7 @@ import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
 import {rolePage} from "./lib/role-pages.mjs";
 import {mindDirectory, mindDirectoryUrls} from "./lib/mind-directory.mjs";
+import { brokenLinks, guidesSitemap, trustPages } from "./lib/trust-pages.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -120,7 +121,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">My space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -691,6 +692,14 @@ for (const [t, bs] of tasks) {
     hubUrls.push(url);
   }
 }
+
+// How we test and the industry pages (scripts/lib/trust-pages.mjs): plain pages built from the outcome scorecard and the
+// catalogue, listed in their own sitemap (sitemap-guides.xml). A pick that no longer exists or a link that goes nowhere fails the build.
+const trustTools = [...BROWSER_TOOLS, ...TOOLS];
+const trust = await trustPages({ cat, readPage, roles: roleIndex, tools: trustTools, routeExists: (u) => urls.includes(u) || fs.existsSync(path.join(DIST, `${u.slice(1)}.html`)) });
+problems.push(...trust.problems, ...brokenLinks(trust.pages, { cat, roles: roleIndex, tools: trustTools, sitePaths: [...urls, ...hubUrls] }).map((l) => `guide page link goes nowhere: ${l}`));
+for (const pg of trust.pages) write(pg.url, render(pg.url, pg, { plain: true }));
+guidesSitemap(trust.pages, DIST);
 
 for (const url of urls) {
   // Job hubs and their pagination are rendered by the dedicated loop above.

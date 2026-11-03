@@ -27,7 +27,7 @@ test("support and policies navigate without the catalogue and update page metada
   await page.goBack();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Cookies and browser storage");
   await page.getByRole("link", { name: "AI Blocks, home", exact: true }).click();
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Get your ads, emails and plans done with AI");
   await expect(page).toHaveTitle("Free AI Skills & Custom Workflow Builder | AI Blocks");
 });
 

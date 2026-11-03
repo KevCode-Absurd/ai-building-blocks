@@ -33,6 +33,7 @@ import { normalizeSkillHtml } from "./lib/skill-html.mjs";
 import { TASK_STARTERS } from "./lib/task-discovery";
 import CopyableTask from "./CopyableTask";
 import BlockHeader from "./BlockHeader";
+import ItemMainAction, { RunInMyAi } from "./ItemMainAction";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
@@ -343,6 +344,9 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
     catch { setCopyFailed(true); }
   };
 
+  // The text "Run in my AI" opens a chat with (or copies). Null while the instructions load.
+  const runText = skill ? () => withBusiness(skill, getBusiness(), [b]) : null;
+
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const showExplanation = !!p?.explain && p.explain.trim() !== (p.subhead || b.summary).trim();
   // The workflows this skill is a step in, or for a mind, the workflows from their work.
@@ -409,6 +413,16 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
       <div className="wrap bp-flow">
         {page === undefined && <p className="small" role="status">Loading…</p>}
         {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
+
+        {/* The main action sits right under the opening; every other way to use it is in "More ways" (#run). */}
+        {/* MERGE (lead): Stream C adds flowMessage() (lib/handoff.ts) and specialistMessage(). To give workflows and
+            agents the same "Run in my AI" button, return their one paste-ready message from runText and drop the textTask check. */}
+        <ItemMainAction moreId="run" render={compact => textTask
+          ? <RunInMyAi getText={runText} noun={noun} toast={toast} compact={compact} onRun={() => setTransferred(true)} />
+          : <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "main-download"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>}
+          note={textTask
+            ? <>Pick ChatGPT, Claude or Gemini. A new chat opens with the {noun} filled in or ready to paste. Your AI asks for anything it needs.{hasFill && <> Or <a href="#task-start">add your details first</a>.</>}</>
+            : <>Unzip it and give all the files to your AI.{bring.length > 0 && <> It will ask for <a href="#task-start">what to bring</a>.</>}</>} />
 
         {hasGet && (
           <section className="bp-part bp-get" id="get" aria-labelledby="get-h">
@@ -484,11 +498,11 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         )}
 
         <section className="bp-part task-primary" id="run" data-testid="task-primary" aria-labelledby="run-h">
-          <h2 className="bp-h2" id="run-h">{num()}Run it</h2>
+          <h2 className="bp-h2" id="run-h">{num()}More ways to run it</h2>
           <p className="bp-note">{isFlow ? "Download the complete files and open them in your AI. Copy gives you the main instructions." : `Add the ${noun} to your AI to reuse it. Pasting it into a chat works too.`}{b.hasFiles && !isFlow && " Use the download to include supporting files."} <Link to="/how-it-works#use-in-ai">How to use</Link></p>
           <div className="task-primary-actions">
             {(kind.id === "skill" || kind.id === "workflow") && <StarButton target={`catalogue:${b.slug}`} title={b.name} />}
-            <button className="btn btn-primary" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {noun}</button>
+            <button className="btn btn-line" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {noun}</button>
             <button className="btn btn-line" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid="download-task">{downloading ? "Preparing download…" : `Download ${noun}`}</button>
             {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
           </div>
@@ -501,7 +515,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
               const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
               toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
             }}>Start a council with {mindName}</button><Link to="/minds" className="btn btn-ghost">Pick other minds</Link></div>}
-            <details className="task-more" data-testid="task-more"><summary>More ways to use this</summary><div className="bp-actions">
+            <details className="task-more" data-testid="task-more"><summary>Save it, adapt it or add it to a workflow</summary><div className="bp-actions">
               {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
                 <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
               </>}

@@ -48,3 +48,16 @@
 @media (max-width: 380px) {
   .library-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+/* On a phone the full grid sits far below the search box: show the top 3 matches right under it. */
+.library-top-hits { display: none; }
+.library-starter-path { margin: 10px 0 0; color: var(--muted); }
+.library-starter-path .link-btn { min-height: 44px; }
+@media (max-width: 720px) {
+  .library-top-hits { display: block; margin: 10px 0 0; }
+  .library-top-hits ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .library-top-hits a { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--panel); color: var(--text); text-decoration: none; }
+  .library-top-hits a b { font-weight: 500; overflow-wrap: anywhere; }
+  .library-top-hits a small { flex: none; font: 400 12px var(--mono); color: var(--muted); }
+  .library-top-hits > a.small { display: inline-flex; min-height: 44px; align-items: center; border: 0; background: none; padding: 0; color: var(--text); text-decoration: underline; }
+  .library-top-hits p { margin: 0; }
+}

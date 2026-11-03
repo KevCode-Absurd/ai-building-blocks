@@ -66,7 +66,7 @@ test("public library download starts while account setup is still waiting", asyn
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await expect.poll(() => requested).toBe(true);
-    await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
     await expect(page.locator("#app-loader")).toHaveCount(0);
     await expect(page.getByText("Saved to your account.", { exact: true })).toHaveCount(0);
   } finally { release(); }

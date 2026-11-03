@@ -4,7 +4,7 @@
 
 Copyright 2020 The JetBrains Mono Project Authors. The subset uses the SIL Open Font License 1.1 in [LICENSE-jetbrains-mono.txt](LICENSE-jetbrains-mono.txt). It retains the original copyright and embeds the full licence in its name table. Its internal family and PostScript names are changed to AI Blocks Intro Mono.
 
-Rebuild after changing the introduction in `tools/lib/home-initial-shell.mjs`:
+The font may cover more characters than the current introduction (the receipt keeps the text it was built from). The build only requires every character of the introduction to be in the font. Rebuild after the introduction in `tools/lib/home-initial-shell.mjs` gains a character the font lacks:
 
 ```sh
 python -m pip install fonttools==4.68.0 brotli==1.2.1

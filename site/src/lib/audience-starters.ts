@@ -1,6 +1,12 @@
 /** Editorial starting points, not claims of audience-wide suitability or model testing. */
 export const AUDIENCE_STARTERS = [
   {
+    id: "small-business", name: "Small businesses",
+    goal: "Win customers, answer reviews, get paid and plan your cash.",
+    bring: "Your website link, a few real reviews, your prices and costs, and the invoices and bills due in the next three months.",
+    slugs: ["website-brand-brain-builder", "customer-review-reply-writer", "fact-based-ad-copy-writer", "landing-page-30-point-checker", "follow-up-email-sequence-writer", "invoice-maker", "cash-forecast-builder", "pricing-decision-planner"],
+  },
+  {
     id: "students", name: "Students",
     goal: "Learn a topic, check your understanding or prepare an application.",
     bring: "Your syllabus or notes, what you already know, your deadline and the rules for AI use on your course.",
@@ -53,13 +59,15 @@ export const WORK_STARTERS = [
   },
 ] as const;
 
-// Keep shared links useful while exposing only the four audience choices.
+// Keep shared links useful while exposing only the five audience choices.
 const LEGACY_AUDIENCES: Record<string, string> = {
-  workers: "professionals", "small-businesses": "startups",
+  workers: "professionals", "small-businesses": "small-business",
   presentations: "professionals", "case-competitions": "students",
   "research-documents": "students", "equity-research": "professionals",
 };
 export const STARTER_PATHS = AUDIENCE_STARTERS;
+/** Shown on the home page without opening More filters. */
+export const SMALL_BUSINESS = "small-business";
 export const starterFor = (id: string) => AUDIENCE_STARTERS.find(a => a.id === (LEGACY_AUDIENCES[id] ?? id));
 export const isAudienceStarter = (slug: string, id: string) => !id || !!starterFor(id)?.slugs.some(s => s === slug);
 export const starterTemplate = (id: string) => id === "equity-research" ? "/templates/equity-research-brief.txt" : id === "research-documents" ? "/templates/research-writing-brief.txt" : ["presentations", "case-competitions"].includes(id) ? "/templates/presentation-brief.txt" : "/templates/work-context.txt";

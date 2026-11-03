@@ -600,10 +600,11 @@ const homeFlows = cat.blocks.filter(b => kindPath(b) === "workflows" && hasPage(
 const homeAgents = cat.blocks.filter(b => b.type === "agent" && hasPage(b) && !isThin(b)).sort((a, b) => (b.tested ? 1 : 0) - (a.tested ? 1 : 0));
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
-  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Use AI like the top 1%",
+  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Get your ads, emails and plans done with AI",
   body: [
-    `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>`,
-    `<p><a class="btn btn-line" href="/#build" data-testid="hero-build-workflow">Build a workflow →</a></p>`,
+    `<p class="bp-sub">Type what you need done. Then copy free instructions into the chatbot you use. Or hire a specialist for the whole task.</p>`,
+    `<form class="hero-goal" action="/#library" method="get" role="search"><input name="q" type="search" aria-label="What do you want to get done?" placeholder="What do you want to get done?" maxlength="300"><button type="submit" class="btn btn-primary">Find help →</button></form>`,
+    `<p><a class="btn btn-line" href="/roles" data-testid="hero-hire">Hire an AI specialist →</a> <a class="btn btn-line" href="/compose" data-testid="hero-build-workflow">Plan a job →</a></p>`,
     `<section id="library"><h2>Explore the library</h2><nav aria-label="Task types">${list(homeTypes.map(([kind, name, description]) => `<a href="/${kind ? `?kind=${kind}` : ""}#library"><b>${name}</b></a>: ${description}`))}</nav>${list(cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16).map(b => `${link(b)}: ${esc(b.summary)}`))}<p><a href="/jobs">Browse all tasks by job</a> · <a href="/how-it-works">How it works</a></p><p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p></section>`,
     `<section id="home-minds"><h2>Minds</h2>${list(homeMinds.slice(0, 8).map(link))}<p><a href="/minds">Explore all ${homeMinds.length} minds</a></p></section>`,
     `<section id="home-workflows"><h2>Workflows and builder</h2><p><a href="/#build">Open the workflow builder</a> · <a href="/compose">Plan from a goal</a> · <a href="/apps">See an example</a></p>${list(homeFlows.slice(0, 6).map(link))}<p><a href="/?kind=workflow#library">Browse all workflows</a></p></section>`,

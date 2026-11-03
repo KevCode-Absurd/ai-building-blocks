@@ -34,7 +34,7 @@ async function openAccountPage(page: Page, path: string) {
   await expect(page.getByTestId("account-page")).toHaveAttribute("data-save-status", "saved");
   if (path === "/#build") {
     await page.getByRole("link", { name: "AI Blocks, home", exact: true }).click();
-    await page.locator(".hero").getByRole("link", { name: "Build a workflow", exact: true }).click();
+    await page.locator("#home-workflows").getByRole("link", { name: /Open the workflow builder/ }).click();
     return;
   }
   await page.goto(path);

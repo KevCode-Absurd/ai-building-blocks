@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import {type Block,type Page,cap,kindInfo,taskOf,paidService} from './lib/data';
 import {Link,libraryReturnTo} from './lib/router';
+import {capSentences} from './lib/item-actions';
 import './block-opening.css';
 
 /** The public opening stays mounted while the task controls and references load. */
@@ -12,7 +13,8 @@ export default function BlockHeader({b,p,portrait,labels}:{b:Block;p:Page|null;p
   <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
   <h1 className="bp-h1">{p?.headline||b.name}</h1>
   {isMind&&b.identity&&<p className="bp-identity" data-testid="mind-identity">{b.identity}</p>}
-  <p className="bp-sub">{p?.subhead||b.summary}</p>
+  {/* One to three sentences, so the main action below stays near the top on a phone. */}
+  <p className="bp-sub">{capSentences(p?.subhead||b.summary,3)}</p>
   <p className="bp-badges" data-testid="bp-badges">
    <span>{cap(b.level)}</span>
    {tested&&<span className="is-tested" data-testid="tested" title="Passed our safety check, with a clear list of what goes in and what you get">Tested</span>}

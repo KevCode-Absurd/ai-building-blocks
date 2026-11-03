@@ -31,7 +31,7 @@ export default function BaseSpecialistPanel({role,toast}:{role:RoleView;toast:(s
  async function copyMessage(){
   setError('');setCopied(null);
   const pending=build();
-  try{const built=await pending;await copyText(pending.then(b=>b.text));if(!alive.current)return;setCopied(built);setPreview(built);toast('Message copied. Paste it into ChatGPT, Claude or Gemini.');}
+  try{await copyText(pending.then(b=>b.text));const built=await pending;if(!alive.current)return;setCopied(built);setPreview(built);toast('Message copied. Paste it into ChatGPT, Claude or Gemini.');}
   catch{if(!alive.current)return;setError('Copy did not work. Open "Read the message before you copy" and copy it by hand.');void pending.then(b=>{if(alive.current)setPreview(b);}).catch(()=>{});}
  }
  async function download(){

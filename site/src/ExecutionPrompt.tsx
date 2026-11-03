@@ -41,7 +41,7 @@ export default function ExecutionPrompt({ goal, name, instructions, copyTestId =
   const copyMessage = async () => {
     setMessageState(""); setMessageError("");
     const pending = build();
-    try { const built = await pending; await copyText(pending.then(b => b.text)); setMessage(built); setMessageState("copied"); }
+    try { await copyText(pending.then(b => b.text)); const built = await pending; setMessage(built); setMessageState("copied"); }
     catch (e) {
       setMessageState("failed");
       try { setMessage(await pending); setMessageError("Copy did not work. Select and copy the message below."); }

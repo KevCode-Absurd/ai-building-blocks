@@ -64,6 +64,7 @@ async function current(input) {
  * Without it a plan is accepted on structure alone and the result says the catalogue was not checked.
  */
 export async function callOutcomeTool(name, input = {}, { resolve, today } = {}) {
+  if (Object.hasOwn(LOOP_HANDLERS, name)) return LOOP_HANDLERS[name](input, { today });
   const a = args(name, input);
   if (name === 'start_outcome') {
     const e = startEngagement({ request: a.request, id: a.engagement_id, started: a.started });
@@ -94,3 +95,43 @@ export function catalogueResolver(catalogue) {
     return { missing_roles: roles.filter(r => !known.has(r)), missing_items: items.filter((_, i) => !found[i]) };
   };
 }
+
+// ---- Scheduled read-backs (B4) and plan patterns (B5) ----
+// Kept in one block so it merges cleanly. These tools are opt-in: callOutcomeTool routes them, but they are not in
+// outcomeMcpTools, so the public tool list is unchanged until ...outcomeLoopMcpTools is added there on purpose.
+import { planReadbacks, readBack } from './monitoring.mjs';
+import { preparePattern } from './patterns.mjs';
+
+const day = { type: 'string', pattern: '^\d{4}-\d{2}-\d{2}$' };
+const termList = { type: 'array', maxItems: 50, items: str(100) };
+export const outcomeLoopMcpTools = [
+  definition('read_back_outcome_experiment', 'Read back a running experiment', 'Without a reading: the read-back schedule for every open experiment and a routine prompt for a host scheduler (Claude Code scheduled task or cron). With a reading: compares it with the registered baseline, minimum volume and guardrails; flags a guardrail breach at once; once the window ends, returns an honest verdict and the close payload for record_outcome_experiment. Budget and pause ideas come back as proposals for the owner; nothing is ever changed.', {
+    engagement, engagement_sha256: hash, experiments: { type: 'string', maxLength: 100000, description: 'The text of experiments.jsonl.' },
+    reading: { type: 'object', description: '{"experiment_id","at":"YYYY-MM-DD","observed","volume","guardrails":[{"name","held"} or {"name","value","limit","worse_if":"above|below"}],"spend":{"to_date","cap"},"source":"where it was read"}' },
+    schedule: obj({ every_days: { type: 'integer', enum: [1, 2, 3, 7, 14] }, settle_days: { type: 'integer', minimum: 0, maximum: 14 }, hour: { type: 'integer', minimum: 0, maximum: 23 } }, []),
+  }, ['engagement', 'engagement_sha256', 'experiments']),
+  definition('prepare_outcome_pattern', 'Prepare a plan pattern to share', 'After a finished round, returns the exact anonymised PATTERN.json the owner would share (names, figures, links and contact details removed) and its sha256. Only if the owner says yes to that file, call again with consent to get PATTERN-SUBMISSION.json for review by a person at AI Blocks. Nothing is sent or published.', {
+    engagement, engagement_sha256: hash, experiments: { type: 'string', maxLength: 100000, description: 'Optional text of experiments.jsonl, to include results as relative change.' },
+    remove: { ...termList, description: 'More words that identify the business.' }, keep: { ...termList, description: 'Public words to keep, such as a platform name.' },
+    consent: obj({ pattern_sha256: hash, by: { type: 'string', enum: ['owner'] }, consented: { type: 'boolean' }, at: day }, ['pattern_sha256', 'by', 'consented', 'at']),
+  }, ['engagement', 'engagement_sha256']),
+];
+function loopArgs(name, input) {
+  const def = outcomeLoopMcpTools.find(t => t.name === name);
+  if (!input || typeof input !== 'object' || Array.isArray(input)) fail('Use documented outcome tool arguments.');
+  const extra = Object.keys(input).find(k => !Object.hasOwn(def.inputSchema.properties, k));
+  if (extra) fail(`Unsupported argument ${extra}.`);
+  const missing = def.inputSchema.required.find(k => !Object.hasOwn(input, k));
+  if (missing) fail(`Missing argument ${missing}.`);
+  return input;
+}
+const LOOP_HANDLERS = {
+  read_back_outcome_experiment: async (input, { today }) => {
+    const a = loopArgs('read_back_outcome_experiment', input), e = await current(a), when = today ?? new Date().toISOString().slice(0, 10);
+    return a.reading ? readBack(e, a.experiments, a.reading, { today: when, ...a.schedule }) : planReadbacks(e, a.experiments, { today: when, ...a.schedule });
+  },
+  prepare_outcome_pattern: async input => {
+    const a = loopArgs('prepare_outcome_pattern', input);
+    return preparePattern(await current(a), { keep: a.keep, remove: a.remove, experiments: a.experiments, consent: a.consent });
+  },
+};

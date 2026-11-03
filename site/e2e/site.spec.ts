@@ -25,11 +25,11 @@ const WORKFLOW = "review-image-ads";
 
 test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Get your ads, emails and plans done with AI");
-  await expect(page.locator(".hero .lede")).toContainText("Type what you need done");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
+  await expect(page.locator(".hero .lede")).toContainText("Turn hours of work into minutes");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
-  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Hire an AI specialist", "Plan a job", "Connect your AI once"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(5);
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Start with a task", "Build a workflow", "Connect your AI once"]);
+  await expect(page.locator(".hero-in > *")).toHaveCount(4);
   await expect(page.locator(".nav a").first()).toHaveText("How it works");
   await expect(page.getByTestId("home-goal")).toHaveCount(0);
   const globe = page.getByTestId("globe");
@@ -67,25 +67,21 @@ test("header links jump to the library and the builder", async ({ page }) => {
     await page.locator(".nav").getByRole("link", { name: label }).click();
     await expect(page.locator(`#${id}`)).toBeInViewport();
   }
-  await page.locator("#home-workflows").getByRole("link", { name: /Open the workflow builder/ }).click();
+  await page.locator(".hero").getByRole("link", { name: "Build a workflow" }).click();
   await expect(page.getByTestId("builder")).toBeInViewport();
 });
 
-test("the library leads with six formats and keeps domains in a filter", async ({ page }) => {
+test("the library leads with six formats and keeps domains in the link", async ({ page }) => {
   await page.goto("/#library");
-  await expect(page.getByRole("tablist", { name: "Format" }).getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Agents/, /^Minds/]);
+  await expect(page.getByRole("tablist", { name: "Format" }).getByRole("tab")).toHaveText([/^All/, /^Skills/, /^Prompts/, /^Workflows/, /^Agents/, /^Minds/]);
+  await expect(page.getByTestId("tab-specialists")).toHaveAttribute("href", "/roles");
   await expect(page.locator(".fns, #library .areas")).toHaveCount(0);
-  await expect(page.getByTestId("filter-work")).toHaveCount(0);
-  await expect(page.getByTestId("filter-by")).toHaveCount(0);
-  await page.getByTestId("filter-domain").click();
-  await page.getByRole("option", { name: /^Design/ }).click();
+  for (const id of ["filter-work", "filter-by", "filter-domain", "filter-task", "more-filters", "scope-toggle", "library-minds-link"]) await expect(page.getByTestId(id)).toHaveCount(0);
+  await page.goto("/?area=design#library");
   await expect(page).toHaveURL(/area=design/);
-  await page.getByTestId("more-filters").click();
-  await page.getByTestId("filter-work").click();
-  await expect(page.getByRole("option", { name: /^Make product photos/ })).toBeVisible();
-  await expect(page.getByRole("option", { name: /^Write copy that sells/ })).toHaveCount(0);
-  await page.keyboard.press("Escape");
-  await page.getByRole("button", { name: "Clear all" }).click();
+  await expect(page.getByTestId("result-count")).toContainText("in Design");
+  await page.getByRole("button", { name: "Clear filters", exact: true }).click();
+  await expect(page).not.toHaveURL(/area=/);
   for (const kind of ["prompt", "skill", "workflow", "agent", "mind"]) {
     await page.getByTestId(`tab-${kind}`).click();
     await expect(cards(page).first()).toHaveAttribute("data-kind", kind);
@@ -111,20 +107,17 @@ test("picking a function, a job and filters narrow the library; the choice is ke
   const count = page.getByTestId("result-count");
   const all = parseInt(await count.innerText());
   expect(all).toBeGreaterThan(100);
-  await page.getByTestId("more-filters").click();
-  await page.getByTestId("filter-work").click();
-  await page.getByRole("option", { name: /^Write copy that sells/ }).click();
+  await page.goto("/?fn=copywriter#library");
+  await expect(count).toContainText("Write copy that sells");
   const forFn = parseInt(await count.innerText());
   expect(forFn).toBeLessThan(all);
-  await expect(page.getByTestId("filter-task")).toBeVisible();
-  await page.getByTestId("filter-task").click();
-  await page.getByRole("option", { name: /^Write ad copy/ }).click();
-  await expect(page.getByTestId("filter-task")).toContainText("Write ad copy");
+  await page.goto("/?fn=copywriter&job=write-ad-copy#library");
+  await expect(count).toContainText("Write ad copy");
   await expect(cards(page).first().locator(".type")).toHaveText("Write ad copy");
   await expect(page).toHaveURL(/job=write-ad-copy/);
   await page.reload();
-  await expect(page.getByTestId("filter-task")).toContainText("Write ad copy");
-  await page.getByRole("button", { name: "Clear all" }).click();
+  await expect(count).toContainText("Write ad copy");
+  await page.getByRole("button", { name: "Clear filters", exact: true }).click();
   await expect(count).toHaveText(new RegExp(`^${all} results`));
   // The dropdowns: pick with the mouse, then with the keyboard.
   await expect(page.getByTestId("filter-biz"), "every skill is for anyone, so there is no 'Made for' filter").toHaveCount(0);
@@ -146,14 +139,12 @@ test("picking a function, a job and filters narrow the library; the choice is ke
 
 test("create ads: image ads and video ads sit apart, and a page links to the same look in the other format", async ({ page }) => {
   await page.goto("/?fn=video#library"); // the old function link lands on Create ads
-  await expect(page.getByTestId("filter-work")).toContainText("Create ads");
-  await page.getByTestId("filter-task").click();
-  await page.getByRole("option", { name: /^Make image ads/ }).click();
+  await expect(page.getByTestId("result-count")).toContainText("Create ads");
+  await page.goto("/?fn=ads&job=make-image-ads#library");
   await expect(cards(page).first().locator(".type")).toHaveText("Image ad");
   const types = await cards(page).locator(".type").allInnerTexts();
   expect(new Set(types)).toEqual(new Set(["Image ad"]));
-  await page.getByTestId("filter-task").click();
-  await page.getByRole("option", { name: /^Make video ads/ }).click();
+  await page.goto("/?fn=ads&job=make-video-ads#library");
   await expect(cards(page).first().locator(".type")).toHaveText("Video ad");
   // A video script page says it makes video, and links to its image twin; the twin links back.
   await page.goto("/skills/watercolor-ad-script");

@@ -5,23 +5,20 @@ test.beforeEach(async ({ page }) => {
   await page.route("**/api/compose", route => route.fulfill({ json: { enabled: false } }));
 });
 
-test("job functions are one click away and use cases remain visible", async ({ page }) => {
-  await page.goto("/#library");
-  await page.getByTestId("job-coding").click();
-  await expect(page.getByTestId("job-coding")).toHaveAttribute("aria-pressed", "true");
+test("job function links filter the library and combine with format tabs", async ({ page }) => {
+  await page.goto("/?area=coding#library");
+  await expect(page.getByTestId("job-coding")).toHaveCount(0);
   await expect(page.getByTestId("result-count")).toContainText("in Coding");
   await expect(page.locator('#library a[href="/prompts/code-explainer-for-newcomers"]')).toBeVisible();
   await expect(page).toHaveURL(/area=coding/);
-  await page.getByTestId("filter-task").click();
-  await expect(page.getByRole("listbox", { name: "Use case", exact: true })).toBeVisible();
-  await page.keyboard.press("Escape");
-  await page.getByTestId("job-marketing").click();
+  await page.goto("/?area=marketing#library");
   await expect(page.getByTestId("result-count")).toContainText("in Marketing");
-  await expect(page.getByTestId("filter-domain")).toContainText("Marketing");
   await page.getByTestId("tab-agent").click();
   await expect(page.locator("#library .grid > a").first()).toHaveAttribute("href", /^\/agents\//);
+  await expect(page).toHaveURL(/area=marketing/);
   await page.getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(page.getByTestId("job-all")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByTestId("tab-all")).toHaveAttribute("aria-selected", "true");
+  await expect(page).not.toHaveURL(/area=/);
 });
 
 test("AEO finds useful methods across types and filters retain relevance", async ({ page }) => {
@@ -90,17 +87,14 @@ test("@mobile type names, controls and cards fit small screens", async ({ page }
   for (const width of [320, 390, 768]) {
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/#library");
-    await expect(page.getByTestId("filter-task")).toBeVisible();
+    await expect(page.getByTestId("library-search")).toBeVisible();
     for (const kind of ["all", "prompt", "skill", "workflow", "agent", "mind"]) {
       const tab = page.getByTestId(`tab-${kind}`);
       await expect(tab).toBeVisible();
       expect(await tab.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
     }
-    await page.getByTestId("filter-domain").click();
-    const options = page.getByRole("listbox", { name: "Job function", exact: true });
-    await expect(options).toBeVisible();
-    const box = await options.boundingBox(); expect(box!.x).toBeGreaterThanOrEqual(0); expect(box!.x + box!.width).toBeLessThanOrEqual(width + 1);
-    await page.keyboard.press("Escape");
+    await expect(page.getByTestId("tab-specialists")).toBeVisible();
+    await expect(page.getByTestId("filter-domain")).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
     await page.screenshot({ path: info.outputPath(`library-${width}.png`) });
   }

@@ -3,21 +3,23 @@ import fs from 'node:fs';
 import {unzipSync,strFromU8} from 'fflate';
 
 test('one catalogue search combines with domain and format and survives reload',async({page})=>{
- await page.goto('/#library');
+ await page.goto('/?area=coding#library');
  await expect(page.getByTestId('results-search')).toHaveCount(0);
+ await expect(page.getByTestId('filter-domain')).toHaveCount(0);
  await page.getByTestId('library-search').fill('Qdrant');
  await expect(page.getByTestId('block-card').first()).toContainText('Qdrant');
- await page.getByTestId('filter-domain').click();
- await page.getByRole('option',{name:/^Coding/}).click();
+ await expect(page.getByTestId('result-count')).toContainText('in Coding');
  await page.getByTestId('tab-skill').click();
  await expect(page.getByTestId('block-card').first()).toHaveAttribute('data-kind','skill');
  await page.reload();
  await expect(page.getByTestId('library-search')).toHaveValue('Qdrant');
- await expect(page.getByTestId('filter-domain')).toContainText('Coding');
+ await expect(page.getByTestId('result-count')).toContainText('in Coding');
  await expect(page.getByTestId('tab-skill')).toHaveAttribute('aria-selected','true');
- await page.getByRole('button',{name:'Clear all'}).click();
- await expect(page.getByTestId('library-search')).toHaveValue('');
- await expect(page.getByTestId('filter-domain')).toContainText('All domains');
+ await page.getByRole('button',{name:'Clear filters',exact:true}).click();
+ await expect(page.getByTestId('library-search')).toHaveValue('Qdrant');
+ await expect(page.getByTestId('result-count')).not.toContainText('in Coding');
+ await expect(page.getByTestId('tab-all')).toHaveAttribute('aria-selected','true');
+ expect(new URL(page.url()).searchParams.get('area')).toBeNull();
 });
 
 test('new workflow packs retain the governing method and complete imported files',async({page},info)=>{
@@ -122,7 +124,7 @@ test('@mobile goal search, context and compact filters fit without page overflow
 function infoPath(name:string){return test.info().outputPath(name);}
 
 
-test('format tiles support keyboard navigation and active secondary filters stay indicated when collapsed',async({page})=>{
+test('format tiles support keyboard navigation',async({page})=>{
  await page.goto('/#library');
  await page.getByTestId('tab-all').focus();
  await page.keyboard.press('End');
@@ -131,16 +133,6 @@ test('format tiles support keyboard navigation and active secondary filters stay
  await expect(page.getByTestId('block-card').first()).toHaveAttribute('data-kind','mind');
  await page.keyboard.press('Home');
  await expect(page.getByTestId('tab-all')).toBeFocused();
- await page.getByTestId('more-filters').click();
- await page.getByTestId('filter-level').click();
- await page.getByRole('option',{name:/^Beginner/}).click();
- await expect(page).toHaveURL(/level=beginner/);
- await page.getByTestId('more-filters').click();
+ await expect(page.getByTestId('more-filters')).toHaveCount(0);
  await expect(page.getByTestId('filter-level')).toHaveCount(0);
- await expect(page.getByTestId('more-filters')).toContainText('1');
- await page.reload();
- await expect(page.getByTestId('more-filters')).toHaveAttribute('aria-expanded','true');
- await expect(page.getByTestId('filter-level')).toContainText('Beginner');
- await page.getByRole('button',{name:'Clear all'}).click();
- await expect(page.getByTestId('filter-level')).toContainText('Any');
 });

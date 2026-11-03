@@ -56,3 +56,10 @@ export function roleSeeds(blocks) {
  });
  return [...featured,...rest];
 }
+// An agency agent and the role built on it are one job on two pages (/agents/agency-x and /roles/x). The role page
+// is the fuller one, so the agent page names it as its canonical address and stays out of the sitemap.
+export function sameJobAgentPages(seeds, blocks, hasPage = b => b.headline !== '') {
+ const bySlug = new Map(blocks.map(b => [b.slug, b]));
+ return new Map(seeds.filter(r => /^agency-/.test(r.lead) && r.id === r.lead.slice(7) && bySlug.get(r.lead)?.type === 'agent' && hasPage(bySlug.get(r.lead)))
+  .map(r => [`/agents/${r.lead}`, `/roles/${r.id}`]));
+}

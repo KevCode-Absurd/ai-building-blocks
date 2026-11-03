@@ -11,6 +11,8 @@ import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
 import {rolePage} from "./lib/role-pages.mjs";
+import { loadRoleLinks, specialistsSection, hubSpecialists } from "./lib/role-links.mjs";
+import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
 import {mindDirectory, mindDirectoryUrls} from "./lib/mind-directory.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
@@ -66,6 +68,9 @@ const plainShell = shell
 const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
 const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"));
 const roleIndex = JSON.parse(fs.readFileSync("public/data/roles-index.json", "utf8"));
+// Specialists who use each item, and the agency agent pages that are the same job as a role page (canonical: the role).
+const roleLinks = loadRoleLinks();
+const sameJobAgents = sameJobAgentPages(roleSeeds(cat.blocks), cat.blocks);
 const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
 const directoryMinds = cat.blocks.filter(b => b.type === "mind");
@@ -180,7 +185,7 @@ function howItWorksBody() {
     `<p class="bp-sub">${esc(sub)}</p>`,
     `<h2>Start with one task</h2><ol><li>Choose what you want to do in <a href="/#library">Find a task</a>. Try meeting notes or an email reply.</li><li>Add the details the task asks for. Optional details can wait.</li><li>Copy the request into your AI chat, or give your AI the downloaded files. Send it to start the work.</li></ol>`,
     `<h2>Six kinds, from one message to an app</h2><p>Each one does more than the one before. Start with the smallest one that does your job.</p>${list(kinds.map(([n, l]) => `<b>${esc(n)}</b>: ${esc(l)}`))}`,
-    `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use a ${esc(kind.toLowerCase())}.`))}`,
+    `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use ${/^[aeiou]/i.test(kind) ? "an" : "a"} ${esc(kind.toLowerCase())}.`))}`,
     `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Build a workflow from your goal</a> · <a href="/apps">See an example app</a></p>`,
     `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
     `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Tested means the item ran on a real business's files and a second AI graded the result against the page's own checks. Imported items say when they have not been tested yet."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
@@ -318,13 +323,15 @@ function pageFor(url) {
     if (url === "/tools") extra = `<p><a href="/ai-tools">Read the AI tool guides</a>: find the right AI product for the job.</p>` + list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
     const [documentTitle, seoDesc] = SEO_PAGES[url] ?? [];
     if (url === "/how-it-works") extra = howItWorksBody();
+    // The heading the app shows (src/HowItWorks.tsx), so the page does not change heading when the app opens.
+    const appH1 = url === "/how-it-works" ? grab("src/HowItWorks.tsx").match(/className="bp-h1">([^<]+)</)?.[1] : null;
     if (url === "/apps") extra = appsBody();
     if (url === "/compose") extra = composeBody();
     if (url === "/from-a-source") extra = sourceBody();
     if (url === "/community") extra = communityBody();
     const lede = ["/how-it-works", "/apps", "/compose", "/from-a-source", "/community"].includes(url) ? "" : `<p class="bp-sub">${esc(seoDesc ?? d)}</p>`;
     const main = url === "/minds" ? mindDirectory(url, directoryMinds)?.main : url === "/tools" ? itemList([["Growth channel planner", "/tools/growth-channel-planner"], ...ALL_TOOLS.map((x) => [x.name ?? x.short, `/tools/${x.slug}`])]) : undefined;
-    return { title: t, documentTitle, desc: seoDesc ?? d, h1: t, crumbs: [], collection: !!main, main, body: `${lede}${extra}`, ld: { "@type": "WebPage" } };
+    return { title: t, documentTitle, desc: seoDesc ?? d, h1: appH1 ?? t, crumbs: [], collection: !!main, main, body: `${lede}${extra}`, ld: { "@type": "WebPage" } };
   }
   const [, kind, slug] = url.split("/");
   if (kind === "tools") {
@@ -437,6 +444,7 @@ function pageFor(url) {
       `<section id="${give.length ? "run" : "task-start"}"><h2>Run it</h2><p>${isCoordinator ? `Download the complete workflow pack. Give it to your AI, then ask it to read ${coordinatorFiles} and follow the governing instructions and checkpoints.` : isFlow ? "Get the plan and all the skill files. Give the complete pack to your AI, then ask it to follow HANDOFF.md." : requiresFiles ? "Download the complete instructions and supporting files. Add them to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Pasting the instructions into a chat works too." : "Add your task details in the form when the page opens. Copy the complete request into your AI. Or add the skill to Claude, ChatGPT or Gemini once and ask for it by name. Your AI does the work."}</p>${!isFlow ? `<p><a href="/skills/${esc(slug)}${b.hasFiles ? ".zip" : "/SKILL.md"}" download>${b.hasFiles ? "Download all files" : "Download the instructions"}</a></p>` : ""}</section>`,
       neighbourView || (nextSteps.length ? `<section id="next"><h2>What to do next</h2>${list(nextSteps.map((x) => `<a href="${esc(String(x.url).replace(/^https:\/\/useaiblocks\.com/, ""))}">${esc(x.name)}</a>: ${esc(x.label)}`))}</section>` : ""),
       factCheckHtml(page.fact_checks, esc),
+      specialistsSection(roleLinks.get(slug)),
       `<details id="details"><summary><h2>Details</h2></summary>${[
         by && src.url ? `<p class="small">From ${esc(by)}. <a href="${esc(src.url)}" rel="noopener">See the original on GitHub</a>; shared under its licence, with a plain name for this library.</p>` : "",
         explain ? `<section id="explain"><h3>What it does</h3><p>${esc(words(explain, 150))}</p></section>` : "",
@@ -529,6 +537,7 @@ function jobsSitemap(hubUrls) {
 // One page's HTML: the shell with this page's head tags, structured data and first screen.
 function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
   const full = `${SITE}${url === "/" ? "/" : url}`;
+  const canonical = p.canonical ? `${SITE}${p.canonical}` : full;
   const suffixed = `${p.title} | ${BRAND}`;
   const title = SEO_TITLES[url] || p.documentTitle || (suffixed.length <= 60 ? suffixed : p.title);
   const desc = trimDescription(p.desc);
@@ -548,7 +557,7 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     : p.hub
     ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
     : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
-  const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
+  const metadata = { title, description: desc, canonical, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
@@ -567,8 +576,8 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     .replace(/<meta name="robots"[^>]*>\s*/g, "")
     .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
-    .replace(/(<link rel="canonical" href=")[^"]*/, (_, prefix) => prefix + full)
-    .replace(/(<meta property="og:url" content=")[^"]*/, (_, prefix) => prefix + full)
+    .replace(/(<link rel="canonical" href=")[^"]*/, (_, prefix) => prefix + canonical)
+    .replace(/(<meta property="og:url" content=")[^"]*/, (_, prefix) => prefix + canonical)
     .replace(/(<meta property="og:title" content=")[^"]*/, (_, prefix) => prefix + esc(title))
     .replace(/(<meta property="og:description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
     .replace(/(<meta name="twitter:title" content=")[^"]*/, (_, prefix) => prefix + esc(title))
@@ -589,6 +598,7 @@ if (!urls.includes("/me-md")) urls.push("/me-md");
 // Imported pages without a Tested label still get a page and stay indexable.
 const thinUrls = new Set(cat.blocks.filter((b) => hasPage(b) && isThin(b)).map(hrefOf));
 for (const u of thinUrls) if (!urls.includes(u)) urls.push(u);
+for (const u of sameJobAgents.keys()) if (!urls.includes(u)) urls.push(u);
 let wrote = 0;
 const titles = new Map(), problems = [];
 
@@ -644,6 +654,7 @@ function hubIntro(t, name, bs) {
     gets.length ? `<p class="hub-gets">Examples of what you get: ${gets.map((g) => esc(lowerFirst(g))).join("; ")}.</p>` : "",
     hubSearch(bs.length, `Search the ${bs.length.toLocaleString("en-US")} items for this job`, t),
     `<h2 class="hub-h2">Start with these</h2><div class="grid hub-grid">${best.map(hubCard).join("")}</div>`,
+    hubSpecialists(roleIndex, t),
     `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
   ].join("");
 }
@@ -696,6 +707,7 @@ for (const url of urls) {
   // Job hubs and their pagination are rendered by the dedicated loop above.
   if (url === "/" || url === "/people" || url === "/jobs" || url.startsWith("/jobs/")) continue;
   const p = crawlPage(url, pageFor(url));
+  if (p && sameJobAgents.has(url)) p.canonical = sameJobAgents.get(url);
   if (!p) { problems.push(`no page data for ${url}`); continue; }
   const html = render(url, p);
   const t = html.match(/<title>([^<]*)<\/title>/)[1];

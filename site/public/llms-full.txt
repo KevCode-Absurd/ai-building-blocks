@@ -21,7 +21,7 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
-- 5021 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
+- 5021 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -126,3 +126,4 @@ Once connected, ask in plain words:
 - [Write down how work gets done](https://useaiblocks.com/llms/document-work.txt): 57 skills and workflows, such as Handover note writer and Lessons learned note writer
 - [Write emails that get read](https://useaiblocks.com/llms/write-emails.txt): 74 skills and workflows, such as Cold email claim checker and Company update email rewriter
 - [Minds](https://useaiblocks.com/llms/minds.txt): 505 minds
+- [Specialists](https://useaiblocks.com/llms/specialists.txt): 1063 AI specialists you can hire, each bundling the methods for one kind of job

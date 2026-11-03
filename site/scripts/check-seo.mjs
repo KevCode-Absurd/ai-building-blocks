@@ -23,6 +23,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { DESC, TITLE, itemSeo } from "../src/lib/seo-meta.mjs";
 import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
+import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
 const JOB = Object.fromEntries(TASKS.map((t) => [t.id, t.name]));
 
 const DIST = process.env.SEO_DIST || "dist";
@@ -30,7 +31,7 @@ const stampFile = path.join(DIST, "data/content-fingerprints.json");
 const contentStamps = fs.existsSync(stampFile) ? JSON.parse(fs.readFileSync(stampFile, "utf8")).urls : {};
 const SITE = "https://useaiblocks.com";
 const arg = (k) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : null; };
-const KINDS = ["skills", "prompts", "workflows", "agents", "minds"]; // catalogue item pages
+const KINDS = ["skills", "prompts", "workflows", "agents", "minds", "roles"]; // catalogue item pages and specialist (role) pages
 // Pages that must be noindex, and the only ones that may be.
 const NOINDEX = new Set(["/404", "/account", "/sign-in", "/sign-up", "/space", "/people", "/publish", "/my-submissions", "/admin/review", "/shared-space-shell", "/connect-mcp", "/support-chat-frame", "/analytics-privacy"]);
 const SKIP_DIRS = new Set(["assets", "data", "metadata", "example-app", "example-app-shots", "mini-tools", "fonts", "og", "llms", "examples", "templates"]);
@@ -68,6 +69,9 @@ const dataDir = exists(path.join(DIST, "data", "blocks.json")) ? path.join(DIST,
 const cat = JSON.parse(read(path.join(dataDir, "blocks.json")));
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
 const readPage = (slug) => { try { return JSON.parse(read(path.join(dataDir, "pages", `${slug}.json`))); } catch { return null; } };
+const readRole = (id) => { try { return JSON.parse(read(path.join(dataDir, "roles", `${id}.json`))); } catch { return null; } };
+// An agency agent page that is the same job as a role page names the role as its canonical address (prerender.mjs).
+const canonicalOf = sameJobAgentPages(roleSeeds(cat.blocks), cat.blocks);
 
 // ---- redirects and robots ----------------------------------------------------------------------------------------
 const redirects = new Map();
@@ -80,7 +84,7 @@ const disallows = [...robotsTxt.matchAll(/^Disallow:\s*(\S+)/gim)].map((m) => m[
 // ---- parse each page ----------------------------------------------------------------------------------------------
 const meta = (h, attr, key) => un(h.match(new RegExp(`<meta ${attr}="${key}" content="([^"]*)"`))?.[1] ?? "");
 const stats = {};
-const titles = new Map(), descs = new Map(), inbound = {}, words = {};
+const titles = new Map(), descs = new Map(), inbound = {}, inboundNotList = {}, words = {};
 const indexable = [];
 const heads = [];
 for (const pg of pages) {
@@ -119,13 +123,13 @@ for (const pg of pages) {
 
   // Canonical: this page, in its one address.
   const canonical = un(h.match(/<link rel="canonical" href="([^"]*)"/)?.[1] ?? "");
-  const want = `${SITE}${url}`;
-  if (canonical !== want) bad("canonical is not this page's own address", `${url} -> ${canonical || "none"}`);
+  const want = `${SITE}${url}`, canon = `${SITE}${canonicalOf.get(url) ?? url}`;
+  if (canonical !== canon) bad(canonicalOf.has(url) ? "a same-job agent page does not name its role page as canonical" : "canonical is not this page's own address", `${url} -> ${canonical || "none"}`);
   if (/[?#]|\.html$|\/$/.test(canonical.replace(`${SITE}/`, "x")) || /[A-Z]/.test(canonical.replace(SITE, ""))) bad("canonical has a query, slash, .html or capital", url);
   // Social tags.
   if (meta(h, "property", "og:title") !== title) bad("og:title differs from the title", url);
   if (meta(h, "property", "og:description") !== desc) bad("og:description differs from the description", url);
-  if (meta(h, "property", "og:url") !== want) bad("og:url is not the canonical address", url);
+  if (meta(h, "property", "og:url") !== canon) bad("og:url is not the canonical address", url);
   if (meta(h, "name", "twitter:title") !== title || meta(h, "name", "twitter:description") !== desc) bad("twitter title or description differs", url);
   if (meta(h, "name", "twitter:card") !== "summary_large_image") bad("no twitter:card", url);
   const img = meta(h, "property", "og:image");
@@ -168,7 +172,7 @@ for (const pg of pages) {
   (words[kind] ??= []).push(pg.words);
   if (!body) bad("no prerendered body for crawlers that skip JavaScript", url);
   pg.links = [...body.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]);
-  for (const href of new Set(pg.links)) { const p = href.split(/[?#]/)[0] || "/"; if (p !== url) inbound[p] = (inbound[p] ?? 0) + 1; }
+  for (const href of new Set(pg.links)) { const p = href.split(/[?#]/)[0] || "/"; if (p !== url) { inbound[p] = (inbound[p] ?? 0) + 1; if (!/^\/roles(?:\/page\/\d+)?$/.test(url)) inboundNotList[p] = (inboundNotList[p] ?? 0) + 1; } }
 }
 
 function checkLd(j, pg, want, desc) {
@@ -200,7 +204,7 @@ function checkLd(j, pg, want, desc) {
   }
   const main = page.mainEntity;
   const mt = main?.["@type"];
-  const allowed = { skills: ["CreativeWork"], prompts: ["CreativeWork"], agents: ["CreativeWork"], minds: ["CreativeWork"], workflows: ["CreativeWork", "HowTo"], jobs: ["ItemList"], tools: ["WebApplication"] };
+  const allowed = { skills: ["CreativeWork"], prompts: ["CreativeWork"], agents: ["CreativeWork"], minds: ["CreativeWork"], roles: ["CreativeWork"], workflows: ["CreativeWork", "HowTo"], jobs: ["ItemList"], tools: ["WebApplication"] };
   if (pg.kind in allowed && url !== "/tools" && !allowed[pg.kind].includes(mt)) {
     if (!(pg.kind === "tools" && url === "/tools/growth-channel-planner")) bad(`${pg.kind} page without a ${allowed[pg.kind].join(" or ")} in its JSON-LD`, url);
   }
@@ -235,7 +239,8 @@ for (const m of smIndex.matchAll(/<loc>([^<]+)<\/loc>/g)) {
     else if (byUrl.get(u)?.noindex) bad("a noindex page is in the sitemap", u);
   }
 }
-for (const pg of indexable) if (!inSitemap.has(pg.url)) bad("an indexable page is missing from the sitemaps", pg.url);
+for (const pg of indexable) if (!inSitemap.has(pg.url) && !canonicalOf.has(pg.url)) bad("an indexable page is missing from the sitemaps", pg.url);
+for (const u of canonicalOf.keys()) if (inSitemap.has(u)) bad("a page whose canonical is another page is in the sitemap", u);
 if (!robotsTxt.includes(`Sitemap: ${SITE}/sitemap.xml`)) bad("robots.txt does not point to the sitemap index", "/robots.txt");
 for (const d of disallows) for (const u of inSitemap.keys()) if (u.startsWith(d)) { bad("robots.txt blocks a page that is in the sitemap", u); break; }
 // The saved example app is noindex (a meta tag and a header), and robots.txt must let crawlers read that.
@@ -286,14 +291,15 @@ if (home) {
   } catch { bad("home page structured data could not be read", "/"); }
 }
 // Every item links back up to its job hub, and every hub links down to the pages it lists.
-const noHub = items.filter((p) => !["minds"].includes(p.kind) && bySlug[p.url.split("/")[2]]?.task && !p.body.includes(`href="/jobs/${bySlug[p.url.split("/")[2]].task}"`));
+const noHub = items.filter((p) => !["minds", "roles"].includes(p.kind) && bySlug[p.url.split("/")[2]]?.task && !p.body.includes(`href="/jobs/${bySlug[p.url.split("/")[2]].task}"`));
 for (const p of noHub) bad("an item page with no link up to its job hub", p.url);
 
 // ---- content --------------------------------------------------------------------------------------------------------
-const MIN_WORDS = { skills: 150, prompts: 150, workflows: 150, agents: 150, minds: 120 };
+const MIN_WORDS = { skills: 150, prompts: 150, workflows: 150, agents: 150, minds: 120, roles: 150 };
 for (const pg of items) {
   const slug = pg.url.split("/")[2];
   if (pg.words < (MIN_WORDS[pg.kind] ?? 0)) bad(`fewer than ${MIN_WORDS[pg.kind]} words in the prerendered body`, pg.url);
+  if (pg.kind === "roles") { checkRole(pg, slug); continue; }
   const page = readPage(slug);
   if (!page) continue;
   // Freshness: the page says when it last changed, and its structured data says the same day.
@@ -313,6 +319,19 @@ for (const pg of items) {
     if (weOk && !pg.body.includes('id="sample"')) bad("page has an output sample but the body has none", pg.url);
     if (page.subhead && !un(pg.body.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").includes(String(page.subhead).replace(/\s+/g, " ").trim().split(" ").slice(0, 6).join(" "))) warn("the page's subhead is not in the prerendered body", pg.url);
   }
+}
+// A specialist page opens with what you give, what you get and its plain summary under a "Hire" heading, keeps the
+// rest under Details, links to related specialists or its job hub, and says where to read it as data.
+function checkRole(pg, id) {
+  const role = readRole(id);
+  if (!role) { bad("a role page with no role data", pg.url); return; }
+  const h1 = un(pg.h.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]+>/g, "").trim() ?? "");
+  if (!/^Hire an? /.test(h1)) bad('a role page whose heading does not start with "Hire"', pg.url);
+  if (!pg.body.includes("<h2>What you give</h2>") || !pg.body.includes("<h2>What you get</h2>")) bad("a role page that does not open with what you give and what you get", pg.url);
+  if (!un(pg.body).includes(role.summary)) bad("a role page without its summary in the prerendered body", pg.url);
+  if (!pg.body.includes('id="details"')) bad("a role page that does not keep its detail under Details", pg.url);
+  if (role.family?.id && role.family.id !== "other" && byUrl.has(`/jobs/${role.family.id}`) && !pg.body.includes(`href="/jobs/${role.family.id}"`)) bad("a role page with no link up to its job hub", pg.url);
+  if (!pg.body.includes(`href="/api/v1/specialists/${id}"`)) bad("a role page with no link to its data", pg.url);
 }
 // Pages built mostly in the browser still say what they are for.
 for (const u of ["/how-it-works", "/apps", "/compose", "/from-a-source", "/community", "/minds", "/tools"]) {
@@ -371,6 +390,8 @@ console.table(stats);
 const nTitleOk = indexable.filter((p) => p.title.length >= TITLE.min && p.title.length <= TITLE.max).length;
 const nDescOk = indexable.filter((p) => p.desc.length >= DESC.min && p.desc.length <= DESC.max).length;
 console.log(`${pages.length} pages read, ${indexable.length} indexable, ${inSitemap.size} in ${sitemapFiles} sitemaps, ${linkCount} distinct internal links checked`);
+const rolePages = indexable.filter((p) => p.kind === "roles"), rolesLinked = rolePages.filter((p) => inboundNotList[p.url]).length;
+console.log(`specialist pages: ${rolePages.length} checked; ${rolesLinked} linked from a page that is not a role list; ${canonicalOf.size} same-job agent pages point their canonical at the role`);
 console.log(`titles ${TITLE.min}-${TITLE.max}: ${nTitleOk}/${indexable.length}; descriptions ${DESC.min}-${DESC.max}: ${nDescOk}/${indexable.length}; ${titles.size} distinct titles, ${descs.size} distinct descriptions; head size median ${heads.sort((a, b) => a - b)[heads.length >> 1]} bytes`);
 const show = (map, label) => {
   if (!map.size) return;
@@ -380,6 +401,6 @@ const show = (map, label) => {
 };
 show(warnings, "warnings");
 show(problems, "problems");
-if (arg("json")) fs.writeFileSync(arg("json"), JSON.stringify({ pages: pages.length, indexable: indexable.length, sitemapUrls: inSitemap.size, titlesInRange: nTitleOk, descriptionsInRange: nDescOk, problems: Object.fromEntries([...problems].map(([k, v]) => [k, v.length])), warnings: Object.fromEntries([...warnings].map(([k, v]) => [k, v.length])) }, null, 1));
+if (arg("json")) fs.writeFileSync(arg("json"), JSON.stringify({ pages: pages.length, indexable: indexable.length, sitemapUrls: inSitemap.size, rolePages: rolePages.length, rolePagesLinkedFromNonListPages: rolesLinked, sameJobAgentCanonicals: canonicalOf.size, titlesInRange: nTitleOk, descriptionsInRange: nDescOk, problems: Object.fromEntries([...problems].map(([k, v]) => [k, v.length])), warnings: Object.fromEntries([...warnings].map(([k, v]) => [k, v.length])) }, null, 1));
 if (!problems.size) console.log("\nseo check passed");
 process.exitCode = problems.size ? 1 : 0;

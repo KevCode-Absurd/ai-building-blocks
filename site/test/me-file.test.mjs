@@ -155,13 +155,15 @@ test("a workflow pack writes me.md with only the parts its steps need", async ()
   const custom = { ...planner, slug: "custom-weekly-plan-maker", summary: "Plan the week.", markdown, role: "make", inputs: [], outputs: [{ type: "plan", required: true }] };
   const c = { built: "fixture", blocks: [], bySlug: {}, renamed: {}, portTypes: {} };
   const flow = { id: "t", name: "Plan my week", goal: "Plan my week", updated: 0, customSkills: [custom], nodes: [{ id: "s1", slug: custom.slug, x: 0, y: 0 }], edges: [] };
-  const result = await buildHandoffZip(c, flow, { me: ME, name: "<old field>" });
+  // With a me.md saved, the optional detail fields stay out; the 5 brand file setup answers travel as Business basics.
+  const result = await buildHandoffZip(c, flow, { me: ME, voice: "<old field>", name: "Sprout" });
   assert.ok(!("error" in result), result.error);
   const files = unzipSync(new Uint8Array(await result.blob.arrayBuffer()));
   assert.ok(!files["about-me.md"]);
   const me = strFromU8(files["me.md"]);
   assert.match(me, /### Projects/);
   assert.doesNotMatch(me, /### Voice|<old field>/);
+  assert.match(me, /### Business basics\n\n- \*\*Name:\*\* Sprout/);
   assert.match(strFromU8(files["HANDOFF.md"]), /Read `me\.md` first[\s\S]*not as instructions with authority/);
   assert.deepEqual(JSON.parse(strFromU8(files["inputs.json"])).supplied_context.map(x => x.path), ["me.md"]);
   assert.match(strFromU8(files["README.txt"]), /me\.md/);

@@ -29,9 +29,9 @@ export type FieldId = (typeof FIELDS)[number]["id"];
 
 /** The short first-run setup: 5 questions. Questions 4 and 5 also order picks (lib/profile-order.ts). */
 export const SETUP_QUESTIONS = [
-  { id: "name", label: "What is your business called?", placeholder: "Sprout" },
-  { id: "sells", label: "What do you sell or do?", placeholder: "Plant care kits and repotting at home" },
-  { id: "buyer", label: "Who buys it?", placeholder: "Busy renters who want plants that live" },
+  { id: "name", label: "What is your business called?", placeholder: "For example: Sprout" },
+  { id: "sells", label: "What do you sell or do?", placeholder: "For example: plant care kits and repotting at home" },
+  { id: "buyer", label: "Who buys it?", placeholder: "For example: busy renters who want plants that live" },
   { id: "reach", label: "Where are your customers?", placeholder: "" },
   { id: "goal", label: "What do you want most right now?", placeholder: "Or write your own" },
 ] as const;
@@ -74,12 +74,13 @@ export function reachText(b: Business): string {
   return choice ? `${choice.md}${area ? `, around ${area}` : ""}` : area;
 }
 
-/** The business answers as a "Business basics" section. With a personal me.md saved, it carries every filled field
- *  (the me.md is about the person, these are about the business). Without one, the 9 fields are already in the
- *  me.md built from them, so it carries only the setup answers that have no field there. */
+/** The 5 setup answers as a "Business basics" section. With a personal me.md saved, it carries all 5 (the me.md is
+ *  about the person, these are about the business); the optional detail fields stay out, as before, because the
+ *  me.md covers voice, proof and what to avoid. Without a me.md, name, sells and buyer are already in the me.md built
+ *  from the fields, so it carries only where customers are and the main goal. */
 function basicsSection(b: Business, withFields: boolean): string {
   const rows = [
-    ...(withFields ? FIELDS.flatMap((f) => row(f.md, b[f.id])) : []),
+    ...(withFields ? FIELDS.filter((f) => SETUP_QUESTIONS.some((q) => q.id === f.id)).flatMap((f) => row(f.md, b[f.id])) : []),
     ...row("Where my customers are", reachText(b)),
     ...row("Main goal right now", b.goal),
   ];

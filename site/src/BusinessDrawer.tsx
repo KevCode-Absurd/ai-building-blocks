@@ -97,7 +97,7 @@ export default function BusinessDrawer({ onClose, toast }: { onClose: () => void
 
         <details className="me-choice me-basics" open={startOpen.details} data-testid="me-basics">
           <summary><h3>Add more detail (optional)</h3></summary>
-          <p className="small">Proof, your voice and what never to say help your AI write things you can use as they are.</p>
+          <p className="small">{hasFile ? "Your me.md below is used for these. They are added only when there is no me.md." : "Proof, your voice and what never to say help your AI write things you can use as they are."}</p>
           {DETAIL_FIELDS.map((f) => (
             <label key={f.id} className="biz-field">
               <span>{f.label}</span>

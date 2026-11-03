@@ -1,4 +1,4 @@
-/* The me.md drawer: three choices, loaded with BusinessDrawer.tsx only when the drawer opens. */
+/* The brand file drawer: 5 quick questions, more detail and the optional me.md. Loaded with BusinessDrawer.tsx only when the drawer opens. */
 .me-drawer .me-private { margin: -6px 0 0; color: var(--text-2); }
 .me-choice { display: grid; gap: 10px; padding: 16px 0 4px; border-top: 1px solid var(--line); min-width: 0; }
 .me-choice h3 { margin: 0; font: 600 15px/1.3 var(--sans); color: var(--text); }
@@ -16,3 +16,9 @@
 .me-basics[open] > summary::after { content: "−"; }
 .me-basics[open] { gap: 14px; }
 .me-drawer textarea[aria-invalid="true"] { border-color: var(--warn); }
+.biz-choices { display: grid; gap: 8px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.biz-choices legend { padding: 0; margin-bottom: 6px; font-size: 14px; color: var(--muted); }
+.biz-choice { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line-2); border-radius: 8px; font-size: 15px; color: var(--text); cursor: pointer; }
+.biz-choice input { width: 18px; height: 18px; margin: 0; flex: none; accent-color: var(--text); }
+.biz-choice:has(input:checked) { border-color: var(--text); }
+.biz-choice:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }

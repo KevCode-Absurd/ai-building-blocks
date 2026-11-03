@@ -1,7 +1,13 @@
 import { useEffect, useRef, type MouseEvent } from "react";
 import content from "./content/me-md.html?raw";
 import { openBusiness } from "./Business";
+import { drawerFocus } from "./lib/business";
 import "./me-md.css";
+
+// The me.md is the optional, personal part of the brand file (lib/business.ts). This line says so under the hero.
+const BRAND_NOTE = `<p class="note me-brand-note" data-testid="me-brand-note">Your me.md is the optional, personal part of your brand file. Running a business? Start with <button class="text-button" type="button" data-open-brand>5 quick questions about it</button>.</p>`;
+const HERO_NOTE = "It is never public.</p>";
+const html = content.includes(HERO_NOTE) ? content.replace(HERO_NOTE, HERO_NOTE + BRAND_NOTE) : content;
 
 /** /me-md: what a me.md is, three ways to make it, the starter pack, setup per AI and the privacy rules.
  *  Static, repository-owned HTML (also prerendered by scripts/prerender.mjs); the only script is copy and open. */
@@ -13,7 +19,8 @@ export default function MeMdPage() {
 
   async function click(event: MouseEvent<HTMLElement>) {
     const target = event.target as Element;
-    if (target.closest("[data-open-me]")) { openBusiness(); return; }
+    if (target.closest("[data-open-me]")) { drawerFocus.me = true; openBusiness(); return; }
+    if (target.closest("[data-open-brand]")) { openBusiness(); return; }
     const button = target.closest<HTMLButtonElement>("button[data-copy]");
     const root = main.current;
     if (!button || !root?.contains(button) || button.disabled) return;
@@ -38,5 +45,5 @@ export default function MeMdPage() {
     timers.current.add(timer);
   }
 
-  return <main ref={main} className="wrap me-md-docs" data-testid="me-md-page" onClick={click} dangerouslySetInnerHTML={{ __html: content }} />;
+  return <main ref={main} className="wrap me-md-docs" data-testid="me-md-page" onClick={click} dangerouslySetInnerHTML={{ __html: html }} />;
 }

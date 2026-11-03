@@ -15,6 +15,7 @@ const edgeHeaders = { 'cf-connecting-ip': '192.0.2.7' };
 const rpcHeaders = { ...edgeHeaders, 'content-type': 'application/json', accept: 'application/json, text/event-stream', 'mcp-protocol-version': '2025-11-25' };
 const init = { jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 'api-test', version: '1' } } };
 const get = (path, headers = {}) => new Request(origin + path, { headers: { ...edgeHeaders, ...headers } });
+const prepareCall = { jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'prepare_workflow', arguments: { name: 'Mine', goal: 'Draft', steps: [{ id: 'first', slug: 'sample', revision_sha256: revision }] } } };
 const post = (path, value, headers = {}) => new Request(origin + path, { method: 'POST', headers: { ...rpcHeaders, ...headers }, body: typeof value === 'string' ? value : JSON.stringify(value) });
 
 function environment(overrides = {}) {
@@ -33,9 +34,11 @@ test('public wrapper fails closed for disabled service, untrusted transport/host
     [get('/api/v1/status'), { API_ALLOWED_HOSTS: '' }, 503],
     [new Request(origin + '/api/v1/status'), {}, 503],
     [get('/api/v1/status'), { API_READ_LIMITER: undefined }, 503],
-    [post('/mcp', init), { API_WRITE_LIMITER: undefined }, 503],
+    [post('/mcp', init), { API_READ_LIMITER: undefined }, 503],
+    [post('/mcp', prepareCall), { API_WRITE_LIMITER: undefined }, 503],
     [get('/api/v1/status'), { API_READ_LIMITER: { async limit() { throw Error('unavailable'); } } }, 503],
-    [post('/mcp', init), { API_WRITE_LIMITER: { async limit() { return { success: false }; } } }, 429]
+    [post('/mcp', init), { API_READ_LIMITER: { async limit() { return { success: false }; } } }, 429],
+    [post('/mcp', prepareCall), { API_WRITE_LIMITER: { async limit() { return { success: false }; } } }, 429]
   ];
   for (const [request, changes, expected] of cases) {
     const response = await handlePublicApi(request, environment(changes));
@@ -44,13 +47,23 @@ test('public wrapper fails closed for disabled service, untrusted transport/host
   }
 });
 
-test('native clients and same-origin clients work; cross-origin access requires an exact configured origin', async () => {
-  for (const headers of [{}, { origin }, { origin: 'https://approved-client.test' }]) {
+test('anonymous catalogue GETs are open to any origin; MCP and POST requests require an exact configured origin', async () => {
+  for (const headers of [{}, { origin }, { origin: 'https://approved-client.test' }, { origin: 'https://untrusted.test' }]) {
     const response = await handlePublicApi(get('/api/v1/status', headers), environment({ PUBLIC_API_ALLOWED_ORIGINS: 'https://approved-client.test' }));
     assert.equal(response.status, 200);
-    assert.equal(response.headers.get('access-control-allow-origin'), headers.origin ?? null);
-    if (headers.origin) assert.match(response.headers.get('vary'), /Origin/);
+    assert.equal(response.headers.get('access-control-allow-origin'), '*');
+    assert.doesNotMatch(response.headers.get('vary') ?? '', /Origin/);
   }
+  const preflight = method => new Request(origin + '/api/v1/search', { method: 'OPTIONS', headers: { ...edgeHeaders, origin: 'https://untrusted.test', 'access-control-request-method': method } });
+  const readPreflight = await handlePublicApi(preflight('GET'), environment());
+  assert.equal(readPreflight.status, 204);
+  assert.equal(readPreflight.headers.get('access-control-allow-origin'), '*');
+  assert.match(readPreflight.headers.get('access-control-allow-headers'), /If-None-Match/);
+  assert.equal((await handlePublicApi(preflight('POST'), environment())).status, 403);
+  const approvedPost = await handlePublicApi(post('/api/v1/workflow-preparations', prepareCall.params.arguments, { origin: 'https://approved-client.test' }), environment({ PUBLIC_API_ALLOWED_ORIGINS: 'https://approved-client.test' }));
+  assert.equal(approvedPost.status, 200);
+  assert.equal(approvedPost.headers.get('access-control-allow-origin'), 'https://approved-client.test');
+  assert.equal((await handlePublicApi(post('/api/v1/workflow-preparations', prepareCall.params.arguments, { origin: 'https://untrusted.test' }), environment())).status, 403);
   for (const clientOrigin of ['null', 'https://untrusted.test', 'https://approved-client.test.evil.test']) {
     const denied = await handlePublicApi(post('/mcp', init, { origin: clientOrigin }), environment({ PUBLIC_API_ALLOWED_ORIGINS: 'https://approved-client.test' }));
     assert.equal(denied.status, 403);

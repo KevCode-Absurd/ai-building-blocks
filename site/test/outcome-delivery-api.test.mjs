@@ -9,14 +9,17 @@ import { outcomeScope } from './fixtures/outcome-delivery-fixtures.mjs';
 
 const origin = 'https://example.test';
 const service = () => new PublicCatalogueService(async () => { assert.fail('Scope and selection need no remote catalogue read.'); }, origin);
-test('official HTTP MCP client discovers outcome tools and transfers selected work without execution', async () => {
+test('official HTTP MCP client lists start_outcome as the front door; scoped handoffs moved to REST and still transfer selected work without execution', async () => {
   const s = service(), client = new Client({ name: 'outcome-handoff-test', version: '1' });
   const transport = new StreamableHTTPClientTransport(new URL(origin + '/mcp'), { fetch: (input, init) => handlePublicMcp(new Request(input, init), s) });
   try {
     await client.connect(transport);
     const inventory = (await client.listTools()).tools;
-    assert.equal(inventory.length, 22); assert.equal(new Set(inventory.map(t => t.name)).size, 22);
-    const call = async (name, args) => { const r = await client.callTool({ name, arguments: args }); assert(!r.isError, JSON.stringify(r.content)); return r.structuredContent; };
+    assert.equal(inventory.length, 15); assert.equal(new Set(inventory.map(t => t.name)).size, 15); assert.equal(inventory[0].name, 'start_outcome');
+    // A client with a cached tool list gets a readable answer naming the REST route, not a protocol error.
+    const moved = await client.callTool({ name: 'prepare_scoped_specialist_work', arguments: { scope: outcomeScope() } });
+    assert.equal(moved.isError, true); assert.match(moved.content[0].text, /start_outcome.*POST https:\/\/example\.test\/api\/v1\/scoped-work-preparations /);
+    const call = async (name, args) => s.callTool(name, args);
     const p = await call('prepare_scoped_specialist_work', { scope: outcomeScope() });
     const h = await call('prepare_recommendation_handoff', { scope: p.scope, scope_sha256: p.scope_sha256, selected_recommendation_ids: ['R1'] });
     assert.deepEqual(h.selected_recommendation_ids, ['R1']);
@@ -24,7 +27,7 @@ test('official HTTP MCP client discovers outcome tools and transfers selected wo
     assert.equal(h.stored_by_service, false); assert.equal(h.model_calls, 0); assert.equal(h.hosted_execution, false);
     assert.equal(h.files['prompts/other-fix.txt'], undefined);
     const changed = structuredClone(p.scope); changed.delivery.after += ' changed';
-    await assert.rejects(() => client.callTool({ name: 'prepare_recommendation_handoff', arguments: { scope: changed, scope_sha256: p.scope_sha256, selected_recommendation_ids: ['R1'] } }), error => error.code === -32602);
+    await assert.rejects(() => s.callTool('prepare_recommendation_handoff', { scope: changed, scope_sha256: p.scope_sha256, selected_recommendation_ids: ['R1'] }), error => error.status === 400);
   } finally { await client.close(); }
 });
 

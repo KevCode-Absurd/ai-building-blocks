@@ -84,7 +84,7 @@ A hosted chat cannot be promised laptop filesystem access. Use its actual suppor
 
 ## Public interfaces
 
-The additive release exposes five stateless scoping tools through the shared public/personal/company catalogue registry. The complete public registry has 18 tools; the isolated local preview has 15 because it keeps direct specialist selection behind the scoped path. Existing private record grants, exports, expected versions and approval gates are unchanged.
+The five stateless scoping tools stay in the shared catalogue registry: REST, the OpenAPI document and signed-in personal/company connections expose them. Since public MCP 3.0.0 the anonymous public MCP server no longer lists them; `start_outcome` is its front door, and a call to a scoping tool there returns a tool error naming its REST route (see [README.md](README.md)). The isolated local preview still lists them. Existing private record grants, exports, expected versions and approval gates are unchanged.
 
 REST equivalents are POST `/api/v1/request-scopes`, `/api/v1/scoped-work-preparations`, `/api/v1/scoped-work-routes`, `/api/v1/scoped-team-preparations` and `/api/v1/recommendation-handoffs`. Existing body/rate limits and no-store responses apply. No raw client data belongs in public catalogue content or a URL query. OpenAPI and discovery derive from the same schemas.
 

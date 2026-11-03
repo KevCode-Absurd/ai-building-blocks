@@ -12,7 +12,7 @@ for (const tag of ["", "@mobile "]) {
     const menu = page.getByTestId('site-menu');
     await expect(menu.getByRole('link').first()).toHaveText('My Account');
     await expect(menu.getByRole('link').first()).toBeFocused();
-    for (const label of ['My saved work', 'Sign in', 'Find a task', 'Workflow Builder', 'Plan a workflow', 'Prompts', 'Skills', 'Workflows', 'Agents', 'Minds', 'Browser tools', 'Apps', 'AI tools', 'Growth planner', 'Create skills from content', 'My space', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
+    for (const label of ['My work', 'Sign in', 'Find a task', 'Workflow Builder', 'Plan a job', 'Prompts', 'Skills', 'Workflows', 'Agents', 'Minds', 'Browser tools', 'Apps', 'AI tools', 'Growth planner', 'Create skills from content', 'Team space', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
     await page.keyboard.press('Escape'); await expect(trigger).toBeFocused(); await expect(menu).toHaveCount(0);
     await trigger.click(); await header.click({ position: { x: 4, y: 4 } }); await expect(menu).toHaveCount(0);
     for (const width of [320, 390]) {

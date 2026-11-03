@@ -11,6 +11,8 @@ The other listed tools serve narrower jobs:
 | Job | Tools |
 |---|---|
 | A whole business goal | `start_outcome`, `advance_outcome`, `record_outcome_decision`, `record_outcome_experiment` |
+| After a test goes live | `read_back_outcome_experiment` (scheduled read-backs and guardrail alerts; REST `/api/v1/outcome-readbacks`) |
+| Sharing a plan that worked | `prepare_outcome_pattern` (anonymised, owner consent, human review; REST `/api/v1/outcome-patterns`) |
 | One item | `search_library`, then `get_skill`, `get_workflow` or `get_item`; `get_resource` for supporting files |
 | One specialist | `find_specialist`, then `prepare_specialist` |
 | A multi-step workflow | `plan_workflow`, then `prepare_workflow` |
@@ -65,7 +67,7 @@ The `advance_outcome` event schema is a `oneOf` on `type`, built from the same f
 
 | | 2.3.0 | 3.0.0 |
 |---|---|---|
-| `tools/list` | 100,861 bytes, 22 tools | 53,955 bytes, 15 tools |
+| `tools/list` | 100,861 bytes, 22 tools | 53,955 bytes, 15 tools (17 tools after the read-back and pattern tools were added) |
 | Server instructions | 11,865 characters | 1,829 characters |
 | `start_outcome` result | 17,605 bytes (35,960 as an MCP reply) | 10,454 bytes (21,502 as an MCP reply) |
 | `aiblocks://roles` | about 274 KB, all roles | one page of 100 roles |

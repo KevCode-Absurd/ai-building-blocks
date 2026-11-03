@@ -3,7 +3,7 @@ import { OUTCOME_MAX_BODY_BYTES, OUTCOME_REST_OPERATIONS, outcomeMcpTools } from
 import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js';
 import { apiSecurity, type LimitClass, type SecurityEnv } from './api-security.ts';
 import { PublicCatalogueService, PublicApiError } from './public-catalogue.ts';
-import { handlePublicMcp, PUBLIC_MCP_TOOLS, PUBLIC_MCP_VERSION, SKILLS_EXTENSION } from './public-mcp.ts';
+import { handlePublicMcp, PUBLIC_MCP_LISTED_TOOLS, PUBLIC_MCP_TOOLS, PUBLIC_MCP_VERSION, SKILLS_EXTENSION } from './public-mcp.ts';
 import { sha256 } from '../lib/workflow-execution.ts';
 
 export type PublicApiEnv = SecurityEnv & {
@@ -233,7 +233,7 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       service: 'ai-blocks', api_version: 'v1', model_calls: false, hosted_execution: false,
       persistence: 'client', authentication: 'public-catalogue-only', historical_revisions: false,
       tools: PUBLIC_MCP_TOOLS.map(tool => tool.name),
-      mcp: { url: `${url.origin}/mcp`, server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
+      mcp: { url: `${url.origin}/mcp`, tools: PUBLIC_MCP_LISTED_TOOLS.map(tool => tool.name), server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
     if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route) || Object.hasOwn(OUTCOME_REST_OPERATIONS, route)) {

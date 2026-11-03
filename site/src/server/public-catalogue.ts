@@ -263,7 +263,7 @@ export class PublicCatalogueService {
       try { return await callOutcomeTool(name, args, { resolve: catalogueResolver(this) }); }
       catch (error) {
         if (error instanceof PublicApiError) throw error;
-        return fail(400, 'invalid_arguments', `${error instanceof Error ? error.message.slice(0, 800) : 'Invalid outcome arguments.'} Nothing was executed or saved.`);
+        return fail(400, 'invalid_arguments', `${error instanceof Error ? error.message.slice(0, 6000) : 'Invalid outcome arguments.'} Nothing was executed or saved.`);
       }
     }
     switch (name) {

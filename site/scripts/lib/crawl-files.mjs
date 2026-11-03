@@ -113,6 +113,7 @@ export function connectLines(example) {
     `- Server card: [${SITE}/mcp/server-card](${SITE}/mcp/server-card), listed in [/.well-known/ai-catalog.json](${SITE}/.well-known/ai-catalog.json)`,
     `- REST API: [OpenAPI description](${SITE}/api/v1/openapi.json). Search with ${SITE}/api/v1/search?q=ad+angles, read one item with ${SITE}/api/v1/items/${slug}`,
     `- Setup guide for ChatGPT, Claude, Claude Code and Codex: [Connect your AI](${SITE}/api-and-mcp)`,
+    `- For a whole business goal, an owner pastes one message into their AI, which calls start_outcome: [Get a whole job done](${SITE}/get-it-done), with a [worked example](${SITE}/get-it-done/example) and a [job status page](${SITE}/get-it-done/status)`,
     `- Every item page has a Markdown version and a JSON version: [${path}.md](${page}.md) and [.json](${page}.json), linked from each page's head.`,
     `- New and changed items: [JSON Feed](${SITE}${FEEDS.json}) and [RSS](${SITE}${FEEDS.rss}), plus lastmod dates in the [sitemap](${SITE}/sitemap.xml)`, "",
     "Once connected, ask in plain words:", "",

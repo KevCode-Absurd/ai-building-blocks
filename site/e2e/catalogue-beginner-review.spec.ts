@@ -17,7 +17,7 @@ for(const tag of ['', '@mobile ']){
   const toggle=page.getByTestId('menu-btn');
   await toggle.click();await expect(toggle).toHaveAttribute('aria-expanded','true');
   if(info.project.name==='mobile')await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'My Account',exact:true})).toBeFocused();
-  for(const name of ['Workflow Builder','Plan a workflow','Browser tools','Apps','Minds','AI tools','Growth planner','Create skills from content','My space','Help & contact'])await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name,exact:true})).toBeVisible();
+  for(const name of ['Workflow Builder','Plan a job','Browser tools','Apps','Minds','AI tools','Growth planner','Create skills from content','Team space','Help & contact'])await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name,exact:true})).toBeVisible();
   if(info.project.name==='mobile'){
    await page.screenshot({path:info.outputPath('mobile-menu-top.png')});
    const last=page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Help & contact',exact:true});await last.scrollIntoViewIfNeeded();await expect(last).toBeInViewport();

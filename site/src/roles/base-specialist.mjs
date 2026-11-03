@@ -1,4 +1,5 @@
-// A portable base role, intentionally independent of any user's task or business.
+// A portable base role, intentionally independent of any user's task or business. The owner's brand file is added
+// only in their own browser at click time (BaseSpecialistPanel.tsx with base-specialist-message.mjs), never here.
 import {expertiseText,checksText,exampleText,reviewerNote} from './specialist-worker.mjs';
 const bullets=rows=>rows.map(s=>'- '+s).join('\n');
 export function baseSpecialistPrompt(role) {

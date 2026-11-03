@@ -55,28 +55,32 @@ codex mcp login ai-blocks-personal --scopes saved:read --oauth-client-registrati
         <p class="intro">The API lets your app find saved work, read its files and prepare it for your AI. Your app supplies the AI and the tools that do the job.</p>
         <h3>Try the public API</h3>
         <p>No account or API key is needed for the public library. Search first. Each result has an <code>id</code>, <code>type</code>, page <code>url</code> and one line. Then get the one you want. Replies are short by default. Add <code>response_format=detailed</code> when you need the full instructions.</p>
+        <p>These GET requests work from any web page, a server or a script. Each reply has an <code>ETag</code>. Send it back as <code>If-None-Match</code> and you get a short <code>304</code> reply when nothing changed. Every error looks the same: <code>{ "error": { "code": "…", "message": "…" } }</code>. The message says what to fix.</p>
         <pre><code id="api-curl">curl 'https://useaiblocks.com/api/v1/search?query=writing&amp;type=skill&amp;limit=5'</code></pre>
         <button class="copy" type="button" data-copy="api-curl">Copy curl example</button>
-        <pre><code id="api-js">const base = 'https://useaiblocks.com/api/v1';
-const response = await fetch(`${base}/search?query=writing&amp;type=skill&amp;limit=5`);
-if (!response.ok) throw new Error(`Search failed: ${response.status}`);
-const { items } = await response.json();
+        <pre><code id="api-js">// Runs in a browser on any site, or in Node 18 and later. No key needed.
+const base = 'https://useaiblocks.com/api/v1';
+async function getJson(url) {
+  const response = await fetch(url);
+  const body = await response.json();
+  if (!response.ok) throw new Error(`${response.status} ${body.error.code}: ${body.error.message}`);
+  return body;
+}
+const { items } = await getJson(`${base}/search?query=writing&amp;type=skill&amp;limit=5`);
 if (items.length) {
   const { id, type } = items[0];
-  const item = await fetch(`${base}/items/${id}?type=${type}&amp;response_format=detailed`);
-  if (!item.ok) throw new Error(`Item retrieval failed: ${item.status}`);
-  console.log(await item.json());
+  console.log(await getJson(`${base}/items/${encodeURIComponent(id)}?type=${type}&amp;response_format=detailed`));
 }</code></pre>
         <button class="copy" type="button" data-copy="api-js">Copy JavaScript example</button>
         <h3 style="margin-top:28px">Public REST reference</h3>
         <div class="table-wrap"><table><thead><tr><th scope="col">Method and path</th><th scope="col">Purpose</th><th scope="col">Arguments</th></tr></thead><tbody>
           <tr><td><code>GET /api/v1/status</code></td><td>Check public API capabilities.</td><td>None. <a href="/api/v1/status">Open status</a>.</td></tr>
-          <tr><td><code>GET /api/v1/search</code></td><td>Find anything in the library: skills, workflows, agents, prompts, minds, AI tools and mini tools (calculators).</td><td><code>query</code>, <code>type</code>, <code>job</code>, <code>level</code>, <code>tested</code> (<code>true</code> or <code>false</code>), <code>since</code> (a date, for what's new), <code>limit</code> (1–25), <code>offset</code>, <code>response_format</code>. Leave out <code>query</code> to browse a job or what's new. Follow <code>next_offset</code> until null. <a href="/api/v1/search?since=2026-10-20&amp;limit=5">See what's new</a>.</td></tr>
+          <tr><td><code>GET /api/v1/search</code></td><td>Find anything in the library: skills, workflows, agents, prompts, minds, AI tools and mini tools (calculators).</td><td><code>query</code> (or <code>q</code> for short), <code>type</code>, <code>job</code>, <code>level</code>, <code>tested</code> (<code>true</code> or <code>false</code>), <code>since</code> (a date, for what's new), <code>limit</code> (1–25), <code>offset</code>, <code>response_format</code>. Leave out <code>query</code> to browse a job or what's new. Follow <code>next_offset</code> until null. <a href="/api/v1/search?since=2026-10-20&amp;limit=5">See what's new</a>.</td></tr>
           <tr><td><code>GET /api/v1/items/{id}</code></td><td>Get one item of any kind by its <code>id</code>.</td><td>Optional <code>type</code> (needed only when two kinds share an id) and <code>response_format</code>.</td></tr>
-          <tr><td><code>GET /api/v1/plan</code></td><td>Plan the steps for a job. Get the best first steps, ready workflows that already do it, and what comes before and after the best step, with the input each one passes on.</td><td><code>q</code> (what you want, in plain words) or <code>slug</code> (one step to map). Optional <code>limit</code> (1–8) and <code>response_format</code> (<code>concise</code> or <code>detailed</code>). Each item has an <code>id</code>, <code>title</code>, page <code>url</code>, one line and its Tested label. <a href="/api/v1/plan?q=a%20landing%20page%20for%20my%20best%20ad">Try a plan</a>.</td></tr>
+          <tr><td><code>GET /api/v1/plan</code></td><td>Plan the steps for a job. Get the best first steps, ready workflows that already do it, and what comes before and after the best step, with the input each one passes on.</td><td><code>request</code> (what you want, in plain words; <code>q</code> for short) or <code>slug</code> (one step to map). Optional <code>limit</code> (1–8) and <code>response_format</code> (<code>concise</code> or <code>detailed</code>). Each item has an <code>id</code>, <code>title</code>, page <code>url</code>, one line and its Tested label. <a href="/api/v1/plan?q=a%20landing%20page%20for%20my%20best%20ad">Try a plan</a>.</td></tr>
           <tr><td><code>GET /api/v1/skills/{slug}</code></td><td>Read a skill: what it does, its inputs and outputs, its files and the steps that usually come before and after it.</td><td>Optional <code>revision_sha256</code> pins the selected version. <code>response_format=detailed</code> adds the full instructions.</td></tr>
           <tr><td><code>GET /api/v1/workflows/{slug}</code></td><td>Read a workflow, its ordered steps and which step passes each input to the next.</td><td>Optional <code>revision_sha256</code>. <code>response_format=detailed</code> adds its instructions and step notes.</td></tr>
-          <tr><td><code>GET /api/v1/documents?q=</code> and <code>GET /api/v1/documents/{type}/{id}</code></td><td>Search and fetch in the shape ChatGPT deep research uses.</td><td>Search gives <code>id</code>, <code>title</code> and <code>url</code>. Fetch gives the full text, link and details.</td></tr>
+          <tr><td><code>GET /api/v1/documents?query=</code> and <code>GET /api/v1/documents/{type}/{id}</code></td><td>Search and fetch in the shape ChatGPT deep research uses.</td><td><code>query</code> (or <code>q</code>). Search gives <code>id</code>, <code>title</code> and <code>url</code>. Fetch gives the full text, link and details.</td></tr>
           <tr><td><code>GET /api/v1/resources/{slug}</code></td><td>Read a supporting text file.</td><td><code>path</code>, <code>revision_sha256</code>, optional <code>offset</code> and <code>limit</code>. Follow all chunks.</td></tr>
           <tr><td><code>POST /api/v1/outcomes</code>, <code>/outcome-steps</code>, <code>/outcome-decisions</code>, <code>/outcome-experiments</code></td><td>Run a whole job: start it, move it forward, record your decisions and record each test. Each reply says what to do next and gives the files to save.</td><td>Send the same JSON as the matching MCP tool. Send the job file and its <code>engagement_sha256</code> back with every call. Requests up to 256,000 bytes.</td></tr>
           <tr><td><code>POST /api/v1/workflow-preparations</code></td><td>Validate a proposed workflow and prepare an unsaved draft. The reply warns when a step is missing an input or comes too early.</td><td>Send JSON with <code>Content-Type: application/json</code>. See <a href="/api/v1/openapi.json">the schema</a> for the complete preparation body.</td></tr>
@@ -115,7 +119,7 @@ Preparation body:
         <h3 style="margin-top:28px">Also on the same server</h3>
         <ul>
           <li><strong>Prompts.</strong> Apps that support them show these as slash commands: Find a skill, Build a workflow, What's new, and ten ready workflows.</li>
-          <li><strong>Skills.</strong> Apps that support the MCP Skills extension can list skills and load one only when needed, at <code>skill://{name}/SKILL.md</code>. Each file comes with its size and SHA-256 hash.</li>
+          <li><strong>Skills.</strong> Apps that support the MCP Skills extension can list skills and load one only when needed, at <code>skill://{name}/SKILL.md</code>, such as <code>skill://ad-angle-planner/SKILL.md</code>. Use the <code>uri</code> that <code>skills/list</code> gives: <code>{name}</code> is the skill's own name, which is usually its id. Its other files are at <code>skill://{name}/{path}</code>, and each file comes with its size and SHA-256 hash.</li>
           <li><strong>Resources.</strong> Any item at <code>aiblocks://{type}/{id}</code>, and every job id at <code>aiblocks://jobs</code>.</li>
           <li><strong>Discovery.</strong> Apps can find the server from <a href="/.well-known/ai-catalog.json">/.well-known/ai-catalog.json</a> and its <a href="/mcp/server-card">server card</a>.</li>
           <li><strong>Pages your AI can read.</strong> Every item page has a Markdown version and a JSON version: add <code>.md</code> or <code>.json</code> to its address, as in <a href="/skills/ad-angle-planner.md">/skills/ad-angle-planner.md</a>. New and changed items are in the <a href="/feed.json">JSON Feed</a> and <a href="/feed.xml">RSS feed</a>.</li>
@@ -127,10 +131,10 @@ Preparation body:
         <div class="table-wrap"><table><thead><tr><th scope="col">Response or symptom</th><th scope="col">What to do</th></tr></thead><tbody>
           <tr><td><code>400</code> / invalid arguments</td><td>Check the OpenAPI schema or MCP tool schema. Use the exact argument names and valid ranges.</td></tr>
           <tr><td><code>401</code> / sign-in needed</td><td>Reconnect the private server through OAuth. Use <code>saved:read</code> for personal work or <code>company:read</code> for company work.</td></tr>
-          <tr><td><code>403</code> / access denied</td><td>Check the signed-in account and company Space permissions with its owner.</td></tr>
+          <tr><td><code>403</code> / access denied</td><td>Public library: <code>origin_forbidden</code> means a web page sent a request only apps may send. GET requests work from any page. Send MCP and POST requests from your server or app. <code>host_forbidden</code> means use <code>https://useaiblocks.com</code>. Private routes: check the signed-in account and Space permissions with its owner.</td></tr>
           <tr><td><code>404</code> / not found</td><td>Search again and use the returned slug or saved item ID. Public and saved-work routes have different identifiers.</td></tr>
-          <tr><td><code>409</code> / stale revision</td><td>Retrieve the current version and review the changes before preparing the workflow again.</td></tr>
-          <tr><td><code>429</code> / rate limited</td><td>Pause requests and retry with backoff. Avoid repeated parallel searches.</td></tr>
+          <tr><td><code>409</code> / stale revision</td><td>The item changed after the version you chose. The error lists the changed files and the current <code>revision_sha256</code>. Get the item again and review those changes before you prepare the workflow again.</td></tr>
+          <tr><td><code>429</code> / rate limited</td><td>Wait the number of seconds in <code>Retry-After</code>, then try again. Searches and reads have a bigger allowance than workflow checks and outcome calls. On MCP the same error comes back as a JSON-RPC error.</td></tr>
           <tr><td><code>503</code> / unavailable</td><td>Retry later. A failed retrieval does not mean the workflow ran.</td></tr>
           <tr><td>Opening an MCP URL in a browser fails</td><td>Add the URL to an MCP client. It is a protocol endpoint; use this guide for human-readable documentation.</td></tr>
         </tbody></table></div>

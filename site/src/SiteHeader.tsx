@@ -4,6 +4,7 @@ import { Link, useLocation } from "./lib/router";
 import { usePersistence } from "./AccountPersistence";
 import AccountSessionActions from "./AccountSessionActions";
 import { openBusiness } from "./Business";
+import { rememberVisit } from "./lib/saved-work";
 import "./site-header.css";
 
 export default function SiteHeader() {
@@ -14,6 +15,7 @@ export default function SiteHeader() {
   const trigger = useRef<HTMLButtonElement>(null);
   const previousPath = useRef(path);
   useEffect(() => { if (previousPath.current !== path) { previousPath.current = path; setOpen(false); } }, [path]);
+  useEffect(() => rememberVisit(path), [path]);
   useEffect(() => {
     if (!open) return;
     menu.current?.querySelector<HTMLAnchorElement>('nav a[href]')?.focus();
@@ -34,10 +36,10 @@ export default function SiteHeader() {
         <section aria-label="Main sections">
           <Link to="/#library" aria-current={current("/")} data-testid="nav-find">Find a task</Link>
           <Link to="/roles" aria-current={path === "/roles" || path.startsWith("/roles/") ? "page" : undefined} data-testid="nav-roles">Hire an AI specialist</Link>
-          <Link to="/compose" aria-current={current("/compose")} data-testid="nav-compose">Build a workflow</Link>
+          <Link to="/compose" aria-current={current("/compose")} data-testid="nav-compose">Plan a job</Link>
           <Link to="/minds" aria-current={current("/minds")} data-testid="nav-minds">Minds</Link>
           <Link to="/tools" aria-current={inTools ? "page" : undefined} data-testid="nav-tools">Tools</Link>
-          <Link to="/space" aria-current={current("/space")} data-testid="nav-space">My space</Link>
+          <Link to="/space" aria-current={current("/space")} data-testid="nav-space">Team space</Link>
         </section>
         <section aria-label="Your AI">
           <Link to="/api-and-mcp" aria-current={current("/api-and-mcp")} data-testid="nav-api-mcp">Connect your AI</Link>
@@ -45,7 +47,7 @@ export default function SiteHeader() {
         <section className="site-menu-account" aria-label="My account">
           <Link to="/account?view=settings" aria-current={current("/account")} className="site-menu-account-link">My Account{problem && <span className="account-alert-dot" aria-label="Saving needs attention" />}</Link>
           <p className="small">{account.state === "signed-in" ? "Signed in" : account.state === "loading" ? "Opening your account…" : "Your account and browser saves"}</p>
-          <Link to="/account" data-testid="open-saved-work">My saved work</Link>
+          <Link to="/account" data-testid="open-saved-work">My work</Link>
           <AccountSessionActions onSignedOut={() => setOpen(false)} />
           <button type="button" data-close-menu onClick={openBusiness} data-testid="nav-brand-file">Your brand file</button>
         </section>

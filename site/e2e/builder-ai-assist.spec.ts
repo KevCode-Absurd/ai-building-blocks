@@ -2,7 +2,7 @@ import { test, expect, type Page, type Route } from "@playwright/test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 import fs from "node:fs/promises";
 import { unzipSync } from "fflate";
-import { exportEditable } from "./fixtures/workflow-ui";
+import { choosePlanner, exportEditable } from "./fixtures/workflow-ui";
 
 // Every AI request and account write is intercepted. These tests never call a provider.
 const models = ["gpt-6-luna", "gpt-6.1-sol", "claude-haiku-5-5"].map(id => ({ id, label: id, available: true }));
@@ -85,7 +85,7 @@ for (const tag of ["", "@mobile "]) {
     await expect(page.getByTestId("builder-ai-assign-minds")).not.toBeChecked();
     expect(posts).toBe(0);
     await expect(page.getByTestId("builder-ai-goal")).toHaveValue(goal);
-    await panel.getByRole("link", { name: "More planning options", exact: true }).click();
+    await panel.getByRole("link", { name: "Open in Plan a job", exact: true }).click();
     await expect(page).toHaveURL(/\/compose$/);
     await expect(page.getByTestId("compose-assign-minds")).not.toBeChecked();
     await expect(page.getByTestId("compose-goal")).toHaveValue(goal);
@@ -244,10 +244,12 @@ for (const tag of ["", "@mobile "]) {
       return route.fulfill({ json: { plan: { ...plan, steps: plan.steps.map(step => ({ ...step, minds: body.assignMinds ? ["steve-jobs", "jeff-bezos"] : [] })) }, model: "gpt-6-luna", cost: 0, latencyMs: 0 } });
     });
     await page.goto("/compose");
+    // Signed-out visitors start on the free quick plan; minds belong to the AI plan.
+    await choosePlanner(page, "ai");
     await expect(page.getByTestId("compose-assign-minds")).toBeChecked();
     await page.getByTestId("compose-assign-minds").uncheck();
     await page.getByTestId("compose-goal").fill(goal);
-    await page.getByTestId("compose-submit").click();
+    await expect(page.getByTestId("compose-submit")).toHaveText("Sign in for an AI plan");
     await page.getByTestId("compose-account").getByRole("button", { name: "Sign in", exact: true }).click();
     expect(await page.evaluate(() => JSON.parse(sessionStorage.getItem("abb:composer-signin")!).assignMinds)).toBe(false);
     await page.evaluate(() => sessionStorage.setItem("fixture:active-user", JSON.stringify("user_browser_fixture")));

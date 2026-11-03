@@ -6,31 +6,31 @@ const fixture = JSON.parse(fs.readFileSync(new URL("../test/fixtures/composer-pl
 async function importPlan(page: import("@playwright/test").Page) {
   await page.route("**/api/compose", route => route.fulfill({ json: { enabled: false } }));
   await page.goto("/compose");
-  await page.getByText("Customize: planner, minds and imports", { exact: true }).click();
+  await page.getByText("More options: plan type, minds and imports", { exact: true }).click();
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify({ format: "ai-blocks-composition/1", goal: fixture.goal, context: "", choices: {}, plan: fixture.plan, model: fixture.model, cost: fixture.cost })) });
   await expect(page.getByTestId("plan-ready")).toContainText("No steps have run");
   // These tests exercise list editing explicitly; new builders default to Diagram view.
   await page.getByTestId("workflow-list-view").click();
 }
 
-test("goal comes before settings and unavailable AI never silently uses browser matching", async ({ page }) => {
+test("goal comes before settings, the free plan says it is made in the browser, and an unavailable AI plan is never sent", async ({ page }) => {
   const errors: string[] = []; page.on("pageerror", error => errors.push(error.message));
   let posts = 0;
   await page.route("**/api/compose", route => { if (route.request().method() === "POST") posts++; return route.fulfill({ json: { enabled: false } }); });
   await page.goto("/compose");
   await expect(page.getByTestId("compose-account")).toHaveCount(0);
-  await expect(page.getByRole("tab", { name: "Find steps from the library" })).not.toBeVisible();
+  await expect(page.getByRole("tab", { name: "Quick plan" })).not.toBeVisible();
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code");
-  await page.getByTestId("compose-submit").click();
+  await expect(page.getByTestId("compose-plan-note")).toContainText("Made in your browser");
+  await page.getByText("More options: plan type, minds and imports", { exact: true }).click();
+  await page.getByRole("tab", { name: "AI plan" }).click();
   await expect(page.getByTestId("compose-submit")).toBeDisabled();
-  await expect(page.getByText(/AI planning is unavailable. Choose library matching/)).toBeVisible();
-  await expect(page.getByTestId("compose-steps")).toHaveCount(0);
-  await page.getByText("Customize: planner, minds and imports", { exact: true }).click();
-  await page.getByRole("tab", { name: "Find steps from the library" }).click();
+  await expect(page.getByTestId("compose-plan-note")).toContainText("AI plans are not available right now");
+  await page.getByRole("tab", { name: "Quick plan" }).click();
   await page.getByTestId("compose-submit").click();
-  await expect(page.getByTestId("step-list")).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId("plan-ready")).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId("compose-steps")).toBeVisible();
   expect(errors).toEqual([]);
-  await expect(page.getByTestId("flow-node")).toHaveCount(0);
   expect(posts).toBe(0);
 });
 

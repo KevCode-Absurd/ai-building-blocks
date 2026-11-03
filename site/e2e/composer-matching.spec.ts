@@ -34,7 +34,7 @@ test("unmatched requests disclose the repeated template and preserve the request
   await expect(page.getByTestId("compose-unmatched")).toContainText("Different unmatched requests produce the same steps");
   await expect(page.getByTestId("compose-download")).toHaveCount(0); await expect(page.getByTestId("compose-steps")).toHaveCount(0);
   await page.getByRole("button", { name: "Use AI composition for this request" }).click();
-  await expect(page.getByRole("tab", { name: "AI planning", exact: true })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tab", { name: "AI plan", exact: true })).toHaveAttribute("aria-selected", "true");
   await expect(page.getByTestId("compose-goal")).toHaveValue(request);
 });
 

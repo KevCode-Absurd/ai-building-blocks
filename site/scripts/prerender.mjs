@@ -134,7 +134,7 @@ const STATIC = {
   "/publish": ["Share your skill or workflow", "Create a submission with your instructions and supporting files for our team to review."],
   "/my-submissions": ["Your community submissions", "Track your drafts, review feedback and published submissions."],
   "/admin/review": ["Review community submissions", "Backend review queue for community skills and workflows."],
-  "/compose": ["Build a custom workflow", "Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI."],
+  "/compose": ["Plan a job", "Say what you want done. Get a free step-by-step plan with the right skills and checks. Edit it, then give it to your AI. No sign-up needed."],
   "/how-it-works": ["How AI Blocks works", "Start with one prompt, add skills, join them into a workflow and build up to your own AI app. Free, step by step."],
   "/minds": ["Minds: hire great thinkers to work on your problem", "Over 500 minds built from public sources. Get practical help with everyday life, learning, work and creative projects, using their methods and questions."],
   "/from-a-source": ["Create AI skills from articles, transcripts and notes", "Paste source text and download a handoff pack. Your AI uses it to turn the source's method into reusable skills and a workflow you can review."],

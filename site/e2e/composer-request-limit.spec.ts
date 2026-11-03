@@ -24,7 +24,7 @@ for (const tag of ["", "@mobile "]) test(tag + "composer limits new requests to 
   expect((await request.inputValue()).length).toBe(3000);
   await expect(page.locator(".compose-voice-count")).toContainText("3,000 / 3,000 characters");
   await composerOptions(page);
-  await page.getByRole("tab", { name: "Find steps from the library", exact: true }).click();
+  await page.getByRole("tab", { name: "Quick plan", exact: true }).click();
   const legacy = { format: "ai-blocks-composition/1", goal: legacyGoal, context: "Original context is preserved.", choices: {}, plan: oldPlan, model: "free", cost: 0 };
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(legacy)) });
   expect(await page.getByRole("alert").allTextContents()).toEqual([]);
@@ -46,7 +46,7 @@ for (const tag of ["", "@mobile "]) test(tag + "composer limits new requests to 
   await expect(page.getByTestId("compose-submit")).toBeDisabled();
   await expect(page.getByTestId("compose-download")).toBeEnabled();
   await composerOptions(page);
-  await page.getByRole("tab", { name: "Find steps from the library", exact: true }).click();
+  await page.getByRole("tab", { name: "Quick plan", exact: true }).click();
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(exported)) });
   await expect(page.getByTestId("compose-goal")).toHaveValue(legacyGoal);
   await expect(page.getByTestId("compose-submit")).toBeDisabled();

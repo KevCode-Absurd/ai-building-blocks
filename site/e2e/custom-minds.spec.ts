@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }, info) => { if (info.project.name === "desktop")
 
 const profile = { slug: "my-mind-own-voice", name: "My writing voice", specialty: "Write clear copy", voice: "Warm, brief and specific", principles: "Check every claim", avoid: "Jargon", examples: "A small useful change. Then another." };
 async function createMind(page: any) {
-  if (new URL(page.url()).pathname === "/compose") await page.getByText("Customize: planner, minds and imports", { exact: true }).click();
+  if (new URL(page.url()).pathname === "/compose") await page.getByText("More options: plan type, minds and imports", { exact: true }).click();
   const library = page.getByTestId("my-minds"); if (!new URL(page.url()).searchParams.has("view")) await library.locator("summary").click();
   await library.getByRole("button", { name: "Create a mind", exact: true }).click();
   await library.getByLabel("Name", { exact: true }).fill(profile.name);
@@ -52,7 +52,7 @@ test("custom mind plus recommended council survives reload, complete ZIP and imp
   expect(Object.values(files).some(bytes=>strFromU8(bytes).includes("DO-NOT-EXPORT-THIS-SAMPLE"))).toBe(false);
   const fresh = await browser.newContext(), imported = await fresh.newPage();
   await imported.goto(new URL("/compose",page.url()).href);
-  await imported.getByText("Customize: planner, minds and imports", { exact: true }).click();
+  await imported.getByText("More options: plan type, minds and imports", { exact: true }).click();
   await imported.getByLabel("Import workflow JSON").setInputFiles({name:"workflow.edit.json",mimeType:"application/json",buffer:Buffer.from(files["workflow.edit.json"])});
   await imported.getByTestId("workflow-diagram-view").click();
   await expect(imported.getByTestId("flow-node").first()).toContainText("Council of 3");
@@ -84,7 +84,7 @@ test("@mobile build a mind in Minds, reuse in Compose and keep councils while re
 });
 
 test("mind import errors stay usable and writing sample is reviewed before saving",async({page})=>{
-  await page.goto("/compose"); await page.getByText("Customize: planner, minds and imports", { exact: true }).click(); const library=page.getByTestId("my-minds"); await library.locator("summary").click();
+  await page.goto("/compose"); await page.getByText("More options: plan type, minds and imports", { exact: true }).click(); const library=page.getByTestId("my-minds"); await library.locator("summary").click();
   await page.getByLabel("Import mind file").setInputFiles({name:"wrong.json",mimeType:"application/json",buffer:Buffer.from('{"format":"wrong"}')});
   await expect(library.getByRole("status")).toContainText("exported AI Blocks");
   await page.getByLabel("Import mind file").setInputFiles({name:"My voice.txt",mimeType:"text/plain",buffer:Buffer.from("Here is a sample of my writing.")});

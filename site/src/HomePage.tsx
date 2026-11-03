@@ -20,6 +20,7 @@ import { isTested } from "./lib/verification";
 
 import {StartupReady} from "./StartupReady";
 import LibraryLoading, {LIBRARY_FORMATS} from "./LibraryLoading";
+import YourWork from "./YourWork";
 const Builder = lazy(() => import("./Builder"));
 const Globe = lazy(() => import("./Globe"));
 // Shown first: things most people can use this week.
@@ -297,6 +298,7 @@ export default function Home({ c, toast, error, retry, complete, onNeedFull }: {
         </div>}
       </section>
 
+      <YourWork />
       {c ? <Library c={c} complete={complete} error={error ?? ""} retry={retry} onNeedFull={onNeedFull} /> : <LibraryLoading error={error} retry={retry} />}
 
       {c && complete && <HomeMinds c={c} />}

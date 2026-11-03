@@ -49,7 +49,6 @@ test("AI planner uses saved work, filters expired facts, and reopens without dup
   const api = await setup(page);
   await openAccountPage(page, "/compose");
   await page.getByTestId("compose-goal").fill(goal);
-  await page.getByTestId("compose-submit").click();
   await planOptions(page);
   await page.getByText("Add context and constraints", { exact: true }).click();
   const include = page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" });
@@ -101,6 +100,8 @@ test("legacy planner exports retain old notes with automatic profile appending o
 test("free matching stays model-free and opens a skill with before and after additions", async ({ page }) => {
   const api = await setup(page); await openAccountPage(page, "/compose"); await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Write a brand voice guide"); await submitPlan(page);
+  await expect(page.getByTestId("plan-ready")).toBeVisible();
+  await page.getByTestId("compose-pick-start").click();
   await expect(page.getByTestId("compose-start")).toBeVisible();
   await page.getByRole("button", { name: "Start with: Voice and tone guide writer", exact: true }).click();
   await expect(page.getByTestId("builder")).toBeVisible();

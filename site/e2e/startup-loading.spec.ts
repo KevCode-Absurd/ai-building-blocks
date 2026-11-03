@@ -133,7 +133,7 @@ test("private account routes keep the designed loading cover until auth resolves
     await expect(page.locator("#app-loader")).toHaveCSS("background-color", "rgb(250, 250, 250)");
     await page.screenshot({ path: test.info().outputPath("private-account-loading.png") });
   } finally { release(); }
-  await expect(page.getByRole("heading", { name: "Your saved work", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "My work", exact: true })).toBeVisible();
   await expect(page.locator("html")).toHaveAttribute("data-boot", "ready");
   await expect(page.locator("#app-loader")).toHaveCount(0);
 });

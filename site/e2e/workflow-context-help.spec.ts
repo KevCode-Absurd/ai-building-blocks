@@ -15,7 +15,7 @@ test.beforeEach(async ({ context }) => {
 });
 async function importPlan(page: import("@playwright/test").Page) {
   await page.goto("/compose");
-  await page.getByText("Customize: planner, minds and imports", { exact: true }).click();
+  await page.getByText("More options: plan type, minds and imports", { exact: true }).click();
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify({ format: "ai-blocks-composition/1", goal: fixture.goal, context: "Keep this context", choices: {}, plan: fixture.plan, model: fixture.model, cost: fixture.cost })) });
   await expect(page.getByTestId("plan-ready")).toContainText("No steps have run");
   await page.getByTestId("workflow-list-view").click();

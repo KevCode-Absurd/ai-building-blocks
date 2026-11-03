@@ -2,14 +2,26 @@ import { choosePlanner, submitPlan, composerOptions } from "./fixtures/workflow-
 import { test, expect } from "./fixtures/staging-aware-test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 
-test("anonymous visitors can switch to free assembly without sending AI requests", async ({ page }) => {
+test("anonymous visitors get a free plan before sign-in, without sending AI requests", async ({ page }) => {
   await page.route("**/api/auth", route => route.fulfill({ json: { configured: false, publishableKey: null } }));
   let authRequests = 0, aiRequests = 0;
   page.on("request", req => { if (req.url().includes("/api/auth")) authRequests++; if (req.method() === "POST" && req.url().includes("/api/compose")) aiRequests++; });
   await page.goto("/compose");
-  await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
-  await submitPlan(page);
+  // Goal to plan in one click: no Continue step and no sign-in.
+  await expect(page.getByTestId("compose-submit")).toHaveText("Create my plan");
+  await page.getByTestId("compose-submit").click();
+  await expect(page.getByTestId("plan-ready")).toBeVisible();
+  await expect(page.getByTestId("compose-saved")).toContainText("Saved in this browser");
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("abb:v1") ?? "{}").flows?.length)).toBe(1);
+  // Editing the request keeps the plan; it is only marked as made for the earlier request.
+  await page.getByTestId("compose-goal").fill("Build a landing page from scratch for a bakery");
+  await expect(page.getByTestId("compose-stale")).toBeVisible();
+  await expect(page.getByTestId("plan-ready")).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("abb:composer") ?? "{}").goal)).toBe("Build a landing page from scratch");
+  await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
+  await composerOptions(page);
+  await page.getByTestId("compose-pick-start").click();
   await expect(page.getByTestId("compose-start")).toBeVisible();
   await page.getByTestId("compose-start").getByRole("button", {name: /^Start with:/}).first().click();
   await expect(page.getByTestId("builder")).toBeVisible();
@@ -23,13 +35,13 @@ test("AI asks for login and preserves the request across the sign-in redirect @m
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await choosePlanner(page, "ai");
   await expect(page.getByRole("button", { name: "Sign in", exact: true })).toBeVisible();
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await expect(page.getByTestId("compose-submit")).toHaveText("Sign in for an AI plan");
   await expect(page.getByText("No payment details needed.", { exact: false })).toBeVisible();
   await page.getByRole("button", { name: "Sign in", exact: true }).click();
   await expect.poll(() => page.evaluate(() => sessionStorage.getItem("fixture:redirect"))).toBeTruthy();
   await page.reload(); await composerOptions(page);
   await expect(page.getByTestId("compose-goal")).toHaveValue("Build a landing page from scratch");
-  await expect(page.getByRole("tab", { name: "AI planning" })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tab", { name: "AI plan" })).toHaveAttribute("aria-selected", "true");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
@@ -71,7 +83,7 @@ test("AI refreshes the token after human verification, shows usage and handles a
   await expect(page.getByRole("alert")).toContainText("session expired");
   expect(sent?.authorization).toBe("Bearer token-after-human-check");
   expect(sent?.["x-turnstile-token"]).toBe("auth-ui-fixture-token");
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await expect(page.getByTestId("compose-submit")).toHaveText("Sign in for an AI plan");
   await expect(page.getByRole("button", { name: "Sign in", exact: true })).toBeVisible();
 });
 
@@ -83,7 +95,7 @@ test("missing Clerk configuration leaves free assembly usable", async ({ page })
   await choosePlanner(page, "ai");
   // Guest pages defer account configuration until a sign-in is requested.
   await page.getByRole("button", {name: "Sign in", exact: true}).click();
-  await expect(page.getByTestId("compose-submit")).toHaveText("Continue");
+  await expect(page.getByTestId("compose-submit")).toBeDisabled();
   await expect(page.getByTestId("compose-goal")).toHaveValue("Build a landing page from scratch");
   await choosePlanner(page, "ai");
   await expect(page.getByTestId("compose-account")).toContainText("Sign-in is unavailable");
@@ -91,6 +103,8 @@ test("missing Clerk configuration leaves free assembly usable", async ({ page })
   await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await submitPlan(page);
+  await expect(page.getByTestId("plan-ready")).toBeVisible();
+  await page.getByTestId("compose-pick-start").click();
   await expect(page.getByTestId("compose-start")).toBeVisible();
   await page.getByTestId("compose-start").getByRole("button", {name: /^Start with:/}).first().click();
   await expect(page.getByTestId("builder")).toBeVisible();
